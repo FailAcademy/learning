@@ -1,0 +1,18 @@
+---
+layout: default
+title: Home
+---
+
+<div class="page">
+   <p>Welcome to the home page!</p>
+   <p>The following lessons are available for you to view:</p>
+
+   <ul>
+      {% for lesson in site.lessons %}
+         <li>
+            <a href="{{lesson.url}}">{{lesson.title}}</a>
+         </li>
+      {% endfor %}
+   </ul>
+
+</div>

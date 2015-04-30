@@ -1,0 +1,24 @@
+// Custom
+//
+// Tesitng out some custom styles
+
+html {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: "Roboto", Helvetica, Arial, sans-serif;
+   font-weight: 700;
+}
+
+.theme-base-08 .sidebar,
+.theme-base-08 .sidebar-toggle:active,
+.theme-base-08 #sidebar-checkbox:checked ~ .sidebar-toggle {
+   background-color: $brand_red;
+}
+.theme-base-08 .container a,
+.theme-base-08 .sidebar-toggle,
+.theme-base-08 .related-posts li a:hover {
+   color: $brand_red;
+}

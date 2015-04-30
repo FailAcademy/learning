@@ -1,0 +1,131 @@
+// Slideshows
+//
+// Styles for remark.js slideshows
+
+.remark-slide {
+
+   // Layouts
+
+   .inverse {
+      background: #272822;
+      color: #777872;
+      text-shadow: 0 0 20px #333;
+
+      h1,
+      h2 {
+         color: #f3f3f3;
+         line-height: 0.8em;
+      }
+   }
+}
+
+.remark-slide-content {
+
+   // Typography
+   font-size: 26px;
+
+   h1, h2, h3, h4, h5, h6 {
+      font-family: "Roboto", Helvetica, Arial, sans-serif;
+      margin-bottom: .5em
+   }
+
+   h1 {
+      font-size: 2.4em;
+      font-weight: 700;
+   }
+
+   h2 {
+      font-size: 1.8em;
+      font-weight: 700;
+      color: $brand_red;
+   }
+
+   h3 {
+      font-size: 1.5em;
+      font-weight: 700;
+   }
+
+   h4 {
+      font-size: 1.2em;
+      font-weight: 100;
+      color: $brand_red;
+   }
+
+   h5 {
+      font-size: 1em;
+      font-weight: 100;
+   }
+
+   h6 {
+      font-size: .9em;
+      font-weight: 100;
+   }
+
+   p, li {
+      margin-bottom: 1em;
+   }
+
+   .footnote {
+      position: absolute;
+      bottom: 2em;
+      font-size: 80%;
+   }
+
+   pre {
+      padding: 0;
+   }
+
+   // Helper classes
+
+   .red { color: $brand-red; }
+   .large { font-size: 2em; }
+
+   .pull-left {
+      float: left;
+      width: 47%;
+   }
+
+   .pull-right {
+      float: right;
+      width: 47%;
+   }
+
+   .pull-right ~ p {
+      clear: both;
+   }
+
+   // Two-column layout
+
+   .left-column {
+      color: #777;
+      width: 30%;
+      height: 92%;
+      float: left;
+
+      // h2:last-of-type,
+      // h3:last-child {
+      //    color: #000;
+      // }
+   }
+
+   .right-column {
+      width: 65%;
+      float: right;
+      padding-top: 1em;
+   }
+}
+
+// Code blocks
+
+.remark-code,
+.remark-inline-code {
+   font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+.remark-code {
+   font-size: 16px;
+}
+
+.remark-code-line-highlighted {
+   background-color: #373832;
+}

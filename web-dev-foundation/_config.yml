@@ -1,0 +1,40 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               Web Developer Essentials Learning Materials
+tagline:             'by RED Academy'
+description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:                 http://redacademy.com
+baseurl:             ''
+paginate:            5
+paginate_path:       '/news/page:num/'
+
+# About/contact
+author:
+  name:              Mandi Wise (forked from Mark Otto)
+  url:               https://twitter.com/mandiwise
+  email:             mandi@redacademy.com
+
+# Custom vars
+version:             1.0.0
+github:
+  repo:              https://github.com/redacademy
+
+# Collections
+collections:
+   lessons:
+      output: true
+   slides:
+      output: true
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  sass_dir: _scss
+  style: :expanded # You might prefer to minify using :compressed
+
+# Exclusions
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'README.md', 'LICENSE.md']

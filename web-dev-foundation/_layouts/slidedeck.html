@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+   {% include head.html %}
+
+   {% comment %}
+      NOTE: If the content tag in the following <textarea> is preceded by 
+      any whitespace to the left, then the remark slideshow will not work!
+   {% endcomment %}
+
+   <textarea id="source">
+{{ content|strip_html }}
+   </textarea>
+
+   <body>
+
+     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+     <script>
+         var hljs = remark.highlighter.engine;
+         var slideshow = remark.create({
+            highlightStyle: 'tomorrow-night-bright',
+            highlightLanguage: 'xml'
+         });
+      </script>
+   </body>
+</html>
