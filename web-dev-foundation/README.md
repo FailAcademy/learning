@@ -9,11 +9,9 @@ Every learning materials repo will have two branches, but only one is used for a
 - `master` for development. **All pull requests should be to submitted against `master`.**
 - `production` for the Heroku-hosted site. **This branch is for deployment purposes only.**
 
-## Author
+## Contributing
 
-**Mandi Wise**
-- <mailto:mandiwise@redacademy.com>
-- <https://twitter.com/mandiwise>
+Want to report a bug or contribute to this repository? Awesome! Please see our [contributing guidelines](CONTRIBUTING.md).
 
 ## Props
 
@@ -23,6 +21,6 @@ Lesson slidedecks are generated via [remark](https://github.com/gnab/remark) by 
 
 ## License
 
-Structural files are open sourced under the [MIT license](LICENSE.md). Content is copyright (c) 2015 RED Academy.
+Structural code is open-sourced under the [MIT license](LICENSE.md). Learning materials content is copyright (c) 2015 RED Academy.
 
 <3
