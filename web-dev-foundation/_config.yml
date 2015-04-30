@@ -7,7 +7,7 @@ relative_permalinks: true
 # Setup
 title:               Web Developer Essentials Learning Materials
 tagline:             'by RED Academy'
-description:         'Learning materials for RED Academy's Web Developer Essentials course.'
+description:         'Learning materials for the RED Academy Web Developer Essentials course.'
 url:                 http://redacademy.com
 baseurl:             ''
 paginate:            10
