@@ -13,6 +13,8 @@ From the HTML & CSS textbook:
 ## Learning Objectives
 
 - Be awesome
+- Be happy always
+- May the force be with you
 
 ## Keywords
 
