@@ -4,6 +4,8 @@ This is the readme file...we'll need to update it with more info before we launc
 
 Add another line to the readme.
 
+Aimee's first commit!!
+
 ## Development
 
 Every learning materials repo will have two branches, but only one is used for active development.
