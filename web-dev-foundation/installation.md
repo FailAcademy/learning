@@ -33,12 +33,12 @@ Once the Heroku Toolbelt is installed, you can log into RED Academy's Heroku acc
 
 ### Step 1: GitHub Configuration
 
-1. Set-up a GitHub team for the course learners if one hasn't been set-up already. **Be sure to add yourself to the team!**
-2. To configure Jekyll Auth to only allow members of that team to view the learning materials site, you'll need the team ID. To get the team's ID, generate [a personal access token](https://github.com/settings/tokens/new) with "read:org" privileges only and run:
+- Set-up a GitHub team for the course learners if one hasn't been set-up already. **Be sure to add yourself to the team!**
+- To configure Jekyll Auth to only allow members of that team to view the learning materials site, you'll need the team ID. To get the team's ID, generate [a personal access token](https://github.com/settings/tokens/new) with "read:org" privileges only and run:
 ```bash
 curl -H "Authorization: token <very-long-access-token>" https://api.github.com/orgs/redacademy/teams
 ```
-3. Go to RED Academy's GitHub account and follow [these 5 steps](https://github.com/benbalter/jekyll-auth#create-a-github-application) to set up the GitHub application that we will use for authentication purposes.
+- Go to RED Academy's GitHub account and follow [these 5 steps](https://github.com/benbalter/jekyll-auth#create-a-github-application) to set up the GitHub application that we will use for authentication purposes.
 
 *Note: If you mistakenly create the app under your personal account, be sure to transfer ownership of the app to RED Academy.*
 
@@ -46,10 +46,10 @@ curl -H "Authorization: token <very-long-access-token>" https://api.github.com/o
 
 Get set-up locally:
 
-1. Download RED's base learning materials and unzip it wherever you would like this directory to live on your local computer.
-2. Be sure to change the name of the directory to the name of the course, of course!
-3. Open up your Terminal and `cd` into the directory you just renamed.
-4. Run `git init` and make an initial commit to master in your local repo.
+- Download RED's base learning materials and unzip it wherever you would like this directory to live on your local computer.
+- Be sure to change the name of the directory to the name of the course, of course!
+- Open up your Terminal and `cd` into the directory you just renamed.
+- Run `git init` and make an initial commit to master in your local repo.
 
 If you like, at this point you can now run `jekyll serve` if you want to see what the base learning materials site looks like running locally in your browser.
 
@@ -80,7 +80,7 @@ Make sure you're checked out on the new `production` orphan branch (although kee
 
 Next, we're going to manually configure our `production` branch for deployment and finally deploy our Heroku site (note: do not use the "auto configure" command that Jekyll Auth provides).
 
-1. First we need to make an initial commit to the production branch of our repo, and we also need to force add some files that are ignored on `master` but need to included on the `production` branch. Run the following commands:
+- First we need to make an initial commit to the production branch of our repo, and we also need to force add some files that are ignored on `master` but need to included on the `production` branch. Run the following commands:
 ```bash
 git status
 git add -A
@@ -90,20 +90,20 @@ git add -f config.ru
 git add -f Rakefile
 git commit -m "Added necessary deployment files." # or another descriptive message
 ```
-2. Next, create your Heroku app by running the following command from your local repo's directory:
+- Next, create your Heroku app by running the following command from your local repo's directory:
 ```bash
 heroku create COURSE-NAME
 ```
 *Note: The course name must match the name of the GitHub application you previously created*
-3. Using the team ID and GitHub app credentials you previously acquired, run:
+- Using the team ID and GitHub app credentials you previously acquired, run:
 ```bash
 heroku config:set GITHUB_CLIENT_ID=XXX GITHUB_CLIENT_SECRET=XXX GITHUB_TEAM_ID=XXX
 ```
-4. Push the content of your local `production` branch to the Heroku `master` branch:
+- Push the content of your local `production` branch to the Heroku `master` branch:
 ```bash
 git push heroku production:master
 ```
-5. Finally, push the content of the `production` branch to GitHub to keep things in sync, and switch back to your `master` branch:
+- Finally, push the content of the `production` branch to GitHub to keep things in sync, and switch back to your `master` branch:
 ```bash
 git push origin production
 git checkout master
@@ -119,28 +119,28 @@ Changes are you're going to want to make some changes to the site after you depl
 
 To do that, follow these steps:
 
-1. Make sure you are logged into Heroku via the command line.
-2. On the `master` branch in your local repo, make sure you have no uncommitted changes, then run the following command to make sure you are up-to-date with the origin:
+- Make sure you are logged into Heroku via the command line.
+- On the `master` branch in your local repo, make sure you have no uncommitted changes, then run the following command to make sure you are up-to-date with the origin:
 ```bash
 git checkout master
 git pull origin master
 ```
-3. Make your own changes, if necessary (if you do it on a local feature branch, make sure you merge them to the `master` branch):
+- Make your own changes, if necessary (if you do it on a local feature branch, make sure you merge them to the `master` branch):
 ```bash
 git status
 git add  -A
 git commit -m "Some descriptive message."
 git push origin master
 ```
-4. Checkout the production branch:
+- Checkout the production branch:
 ```bash
 git checkout production
 ```
-5. Rebase (or merge if you prefer) the production branch to bring it up to date with master:
+- Rebase (or merge if you prefer) the production branch to bring it up to date with master:
 ```bash
 git rebase master
 ```
-6. Push the changes to the Heroku App master branch and the GitHub production branch, and then return to the master branch:
+- Push the changes to the Heroku App master branch and the GitHub production branch, and then return to the master branch:
 ```bash
 git push heroku production:master
 git push origin production
