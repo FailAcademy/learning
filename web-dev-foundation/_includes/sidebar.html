@@ -31,7 +31,7 @@
    </div>
 
    <nav class="sidebar-nav">
-      {% assign lesson_list = site.lessons | sort:"url" %}
+      {% assign lesson_list = site.lessons %}
       {% for node in lesson_list %}
          {% if node.title != null %}
             {% if node.layout == "lesson" %}

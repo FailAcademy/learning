@@ -1,12 +1,14 @@
 ---
 layout: lesson
 title: Intro to HTML
-slides: ['_slides/week1/01-html-intro.md']
+slides: ['_slides/01-html/01-html-intro.md']
 ---
 
-##Hello world!
+## Hello world!
 
 Copy this file or customize it with with whatever you like...
+
+Try adding some highlighted syntax:
 
 {% highlight html %}
 
@@ -23,3 +25,7 @@ Copy this file or customize it with with whatever you like...
 </html>
 
 {% endhighlight %}
+
+Or include an image:
+
+![My helpful screenshot](/public/img/human-to-machine.png)

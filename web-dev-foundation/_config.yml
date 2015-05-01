@@ -8,7 +8,7 @@ relative_permalinks: true
 title:               Web Developer Essentials Learning Materials
 tagline:             'by RED Academy'
 description:         'Learning materials for the RED Academy Web Developer Essentials course.'
-url:                 http://redacademy.com
+url:                 http://web-dev-essentials.herokuapp.com
 baseurl:             ''
 paginate:            10
 paginate_path:       '/news/page:num/'
@@ -28,8 +28,10 @@ github:
 collections:
    lessons:
       output: true
+      permalink: /lesson/:title/
    slides:
       output: true
+      permalink: /slides/:title/
 
 # Set the Sass partials directory, as we're using @imports
 sass:
