@@ -5,8 +5,8 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               Web Developer Essentials Learning Materials
-tagline:             'by RED Academy'
+title:               Web Developer Essentials
+tagline:             'Learning Materials'
 description:         'Learning materials for the RED Academy Web Developer Essentials course.'
 url:                 http://web-dev-essentials.herokuapp.com
 baseurl:             ''
@@ -21,7 +21,7 @@ author:
 
 # Custom vars
 version:             1.0.0
-github:              
+github:
   repo:              https://github.com/redacademy/web-dev-essentials
 
 # Collections
