@@ -1,0 +1,23 @@
+/*
+ * Global resets
+ *
+ * Update the foundational and global aspects of the page.
+ */
+
+/* Prevent scroll on narrow devices */
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+   font-family: "Roboto", Helvetica, Arial, sans-serif;
+   font-weight: 100;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: "Roboto", Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   color: #313131;
+   letter-spacing: -.025rem;
+}
