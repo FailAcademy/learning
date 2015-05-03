@@ -15,7 +15,7 @@ If you're interested in how Jekyll Auth works, please see:
 
 **Dependencies:**
 
-To run a learning materials app locally for development purposes, you'll need to have [Jekyll](http://jekyllrb.com/docs/installation/) installed. Jekyll is a Ruby gem, so you'll need to make sure you have [RubyGems](https://rubygems.org/pages/download) installed first. Once you have RubyGems installed, you can run the following command to install Jekyll:
+To run a learning materials app locally for development purposes, you'll need to have Xcode or Xcode Command Line Tools installed, and [Jekyll](http://jekyllrb.com/docs/installation/) installed. Jekyll is a Ruby gem, so you'll need to make sure you have [RubyGems](https://rubygems.org/pages/download) installed first. Once you have RubyGems installed, you can run the following command to install Jekyll:
 
 ```bash
 gem install jekyll

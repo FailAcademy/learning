@@ -21,7 +21,7 @@ author:
 
 # Custom vars
 version:             1.0.0
-github:
+github:              
   repo:              https://github.com/redacademy/web-dev-essentials
 
 # Collections
@@ -32,6 +32,12 @@ collections:
    slides:
       output: true
       permalink: /slides/:title/
+   labs:
+      output: true
+      permalink: /lab/:title/
+   projects:
+      output: true
+      permalink: /project/:title/
 
 # Set the Sass partials directory, as we're using @imports
 sass:
