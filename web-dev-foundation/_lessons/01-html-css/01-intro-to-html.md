@@ -43,7 +43,7 @@ start tag 			   end tag
 <p> This is a paragraph </p>
 ~~~
 
-** Tags with Attributes**
+**Tags with Attributes**
 <tag attribute=”value”> content </tag>
        start tag 			    end tag
        
@@ -51,7 +51,7 @@ start tag 			   end tag
 <p class="red_italics"> content </p>
 ~~~       
 
-** Nested Tags **
+**Nested Tags**
 <tag1><tag2> content </tag2></tag1>
 
 ### Setting up a Root Folder ###
