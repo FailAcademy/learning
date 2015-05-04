@@ -10,11 +10,13 @@ From the HTML & CSS textbook:
 
 - **Chapter 15: Layout** (pp. 378-386)
 
+Some introductory reading on responsive web design:
+
+- [Chapter 4: Responsive Web Design](http://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
+
 This article by Ethan Marcotte on A List Apart, which is widely credited with kicking off the responsive web design movement:
 
 - [Responsive Web Design](http://alistapart.com/article/responsive-web-design/)
-
-http://learn.shayhowe.com/advanced-html-css/responsive-web-design/
 
 ## Learning Objectives
 
