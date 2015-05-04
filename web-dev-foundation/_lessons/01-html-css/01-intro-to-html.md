@@ -49,10 +49,11 @@ Using this *Codepen HTML Exercise 1* (this has the doctype, body, head, title ta
 <p data-height="268" data-theme-id="0" data-slug-hash="eNpNLw" data-default-tab="result" data-user="redacademy" class='codepen'>See the Pen <a href='http://codepen.io/redacademy/pen/eNpNLw/'>eNpNLw</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-
+```
 #####let's move this musical code pen creation to a separate section of inspiring code pen or other interactive examples of javascript code#####
 <p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+```
 
 ## Exercise 2
 
