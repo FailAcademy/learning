@@ -12,9 +12,13 @@ From the HTML & CSS textbook:
 
 ## Learning Objectives
 
-- Be awesome
-- Be happy always
-- May the force be with you
+- Explore concept of what a markup language is
+- Learn the function of HTML as mark-up language and its best practices
+- Install a text editor (eg. Sublime Text), use it to open & edit HTML documents
+- Learn to write clean HTML, including elements, attributes, and nesting
+- Use basic HTML tags including headings, paragraphs, links, and lists
+- Recognize key differences between XHTML/HTML5 doctypes and tags (e.g header, section, article, footer)
+
 
 ## Keywords
 
