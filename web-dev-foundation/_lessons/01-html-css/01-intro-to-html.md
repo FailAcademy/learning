@@ -23,6 +23,8 @@ From the HTML & CSS textbook:
 ## Keywords
 
 - [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- [Attribute](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
+- [Doctype](http://www.sitepoint.com/web-foundations/doctypes/)
 
 ## Exercise 1
 
