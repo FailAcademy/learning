@@ -84,13 +84,13 @@ Using this *Codepen HTML Exercise 1* (this has the doctype, body, head, title ta
 
 Work through this next activity in class:
 
-Using this *[Codepen Exercise 2](http://codepen.io/)* (this has the doctype, body, head, title tags all set up, you won't need to add them to the code view), you will add **examples of links** to modify the text content in the passage.
+Using this *[Codepen Exercise 2]* (this has the doctype, body, head, title tags all set up, you won't need to add them to the code view), you will add **examples of links** to modify the text content in the passage. Apply internal, external, email and anchor links to your page for further practice.
 
-## Lab Activity
+<p data-height="268" data-theme-id="0" data-slug-hash="XbmmoR" data-default-tab="result" data-user="redacademy" class='codepen'>See the Pen <a href='http://codepen.io/redacademy/pen/XbmmoR/'>XbmmoR</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-This is a description of the lab activity...
 
-## Afternoon Lab 
+## Afternoon Lab Activity
 Using the preset **HTML template** (this has the doctype, body, head, title tags all set up),  markup the text as a HTML5 document using best practices discussed in the morning using a combination of headers, sections, articles, and footer elements, as well as proper nested basic elements. 
 
 *Match the visual example* provided as closely as possible.  You will have a chance to practice using the following tags: paragraphs, headers, line‐breaks, strong, emphasis, links as well as others that the instructor has shown in class today. There are no images are required for this exercise.   
