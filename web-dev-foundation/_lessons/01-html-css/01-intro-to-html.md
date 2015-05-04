@@ -36,23 +36,27 @@ From the HTML & CSS textbook:
 HTML tags are surrounded with square brackets and that is how they are distinguished from the text that we see on a webpage.  HTML tags are what web browsers read to interpret the code into the visual format  and  layout  of  a  web  page.  The  process  of  adding  tags  around  page  elements  to  modify  their  visual properties is called marking up, hence “mark‐up language”.  
 
 **Basic Tags**
-<tag>      content      </tag>
-start tag 			   end tag
+This is an example of a basic tag, with its start tag and end tag.
 
 ~~~
 <p> This is a paragraph </p>
 ~~~
 
 **Tags with Attributes**
-<tag attribute=”value”> content </tag>
-       start tag 			    end tag
+This is an example of a tag with an attribute, note that only the start tag contains the attribute.
        
 ~~~
 <p class="red_italics"> content </p>
 ~~~       
 
 **Nested Tags**
-<tag1><tag2> content </tag2></tag1>
+
+This is an example of a nested tag. It uses 2 or more tags that are nested together, like the russian *Matryoshka* dolls.
+
+![Russian Nesting Dolls](img src="http://upload.wikimedia.org/wikipedia/commons/7/71/Russian-Matroshka.jpg" alt="Russian-Matroshka.jpg" height="480" width="640")
+
+img src="http://upload.wikimedia.org/wikipedia/commons/7/71/Russian-Matroshka.jpg" alt="Russian-Matroshka.jpg" height="480" width="640"
+
 
 ### Setting up a Root Folder ###
 It  is  a  common  practice  to  create  a  folder  on  your  computer  (in  a  location  that  is  easy  to  access  and  remember)  that  will  contain  ALL  the  files  used  to  build  your  webpage.    This  folder  is  called  the  **Root folder** and can contain any number of sub‐folder in which to organize the web files further.  It is highly recommended  that  you  create  a  new  root  folder  for  every  different  website  that  you’re  working  on.  However, you can continue working with the same root folder when you are building on an existing site. 
