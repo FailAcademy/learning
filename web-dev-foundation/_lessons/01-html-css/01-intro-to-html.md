@@ -36,11 +36,18 @@ It  is  a  common  practice  to  create  a  folder  on  your  compute
 
 Creating HTML webpages requires some planning ahead of time of what you are planning to put in your page, and especially with media files, such as picture, graphics, sound, movies,  they  need  to  be  placed  in  their  respective  folders  or  sub‐folders before you plan to reference/(link) them in your HTML file.  Many linking issues will arise if the desired media file is not placed in the root folder before it is referenced.   
 
+
+## File & Folder Naming Recommendations ##
+
+
 ## Exercise 1
 
 Work through this activity in class:
 
-Using this *[Codepen Exercise 1](http://codepen.io/)* (this has the doctype, body, head, title tags all set up, you won't need to add them to the code view), you will add **paragraphs and headers** to modify the text content in the passage.
+Using this *Codepen HTML Exercise 1* (this has the doctype, body, head, title tags all set up, you won't need to add them to the code view), you will add **paragraphs & headers** to modify the text content in the passage. Apply italics, strong, and line-breaks for further practice.
+
+<p data-height="268" data-theme-id="0" data-slug-hash="eNpNLw" data-default-tab="result" data-user="redacademy" class='codepen'>See the Pen <a href='http://codepen.io/redacademy/pen/eNpNLw/'>eNpNLw</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 
 #####let's move this musical code pen creation to a separate section of inspiring code pen or other interactive examples of javascript code#####
@@ -58,7 +65,9 @@ Using this *[Codepen Exercise 2](http://codepen.io/)* (this has the doctype, bod
 This is a description of the lab activity...
 
 ## Afternoon Lab 
-Using the preset **HTML template** (this has the doctype, body, head, title tags all set up),  markup the text as a HTML5 document using best practices discussed in the morning using a combination of headers, sections, articles, and footer elements, as well as proper nested basic elements. *Match the visual example* provided as closely as possible.  You will have a chance to practice using the following tags: paragraphs, headers, line‐breaks, strong, emphasis, links as well as others that the instructor has shown in class today. There are no images are required for this exercise.   
+Using the preset **HTML template** (this has the doctype, body, head, title tags all set up),  markup the text as a HTML5 document using best practices discussed in the morning using a combination of headers, sections, articles, and footer elements, as well as proper nested basic elements. 
+
+*Match the visual example* provided as closely as possible.  You will have a chance to practice using the following tags: paragraphs, headers, line‐breaks, strong, emphasis, links as well as others that the instructor has shown in class today. There are no images are required for this exercise.   
 Please save your file as: **firstname_html_assign1.html** 
 
 
