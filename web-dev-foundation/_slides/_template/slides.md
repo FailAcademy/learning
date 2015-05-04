@@ -1,7 +1,6 @@
 ---
 layout: slidedeck
 title: Intro to HTML Slides
-published: false
 ---
 
 {% highlight html %}
