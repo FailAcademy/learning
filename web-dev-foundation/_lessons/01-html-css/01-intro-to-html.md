@@ -46,7 +46,7 @@ Work through this activity in class:
 
 Using this *Codepen HTML Exercise 1* (this has the doctype, body, head, title tags all set up, you won't need to add them to the code view), you will add **paragraphs & headers** to modify the text content in the passage. Consider applying italics, strong, and line-breaks for further practice.
 
-<p data-height="268" data-theme-id="0" data-slug-hash="eNpNLw" data-default-tab="HTML" data-user="redacademy" class='codepen'>See the Pen <a href='http://codepen.io/redacademy/pen/eNpNLw/'>eNpNLw</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<p data-height="268" data-theme-id="0" data-slug-hash="eNpNLw" data-default-tab="html" data-user="redacademy" class='codepen'>See the Pen <a href='http://codepen.io/redacademy/pen/eNpNLw/'>eNpNLw</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 [comment]: <> (This is a comment, it will not be included)
