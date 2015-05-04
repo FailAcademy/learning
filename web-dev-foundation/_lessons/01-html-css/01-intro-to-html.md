@@ -31,6 +31,29 @@ From the HTML & CSS textbook:
 
 **Markup** is a term that refers to how text is supposed to be presented in the browser by way of placing different combination of tags around the text.  
 
+### Using HTML Tags
+
+HTML tags are surrounded with square brackets and that is how they are distinguished from the text that we see on a webpage.  HTML tags are what web browsers read to interpret the code into the visual format  and  layout  of  a  web  page.  The  process  of  adding  tags  around  page  elements  to  modify  their  visual properties is called marking up, hence “mark‐up language”.  
+
+**Basic Tags**
+<tag>      content      </tag>
+start tag 			   end tag
+
+~~~
+<p> This is a paragraph </p>
+~~~
+
+** Tags with Attributes**
+<tag attribute=”value”> content </tag>
+       start tag 			    end tag
+       
+~~~
+<p class="red_italics"> content </p>
+~~~       
+
+** Nested Tags **
+<tag1><tag2> content </tag2></tag1>
+
 ### Setting up a Root Folder ###
 It  is  a  common  practice  to  create  a  folder  on  your  computer  (in  a  location  that  is  easy  to  access  and  remember)  that  will  contain  ALL  the  files  used  to  build  your  webpage.    This  folder  is  called  the  **Root folder** and can contain any number of sub‐folder in which to organize the web files further.  It is highly recommended  that  you  create  a  new  root  folder  for  every  different  website  that  you’re  working  on.  However, you can continue working with the same root folder when you are building on an existing site. 
 
@@ -38,7 +61,12 @@ Creating HTML webpages requires some planning ahead of time of what you are plan
 
 
 ## File & Folder Naming Recommendations ##
-
+- Stick to lowercase consistently
+- Do not use SPACES in your file names, instead use hyphens- or underscores_ 
+to separate words
+- Do not use any symbols (such as #@*&><) in your file name
+- Choose a logical, descriptive, and standard convention names
+- Stick either to .html or .htm, but don’t flip‐flop between them
 
 ## Exercise 1
 
@@ -50,8 +78,7 @@ Using this *Codepen HTML Exercise 1* (this has the doctype, body, head, title ta
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 [comment]: <> (This is a comment, it will not be included)
-[//]: <> (This is also a comment.)
-[//]: # (This may be the most platform independent comment)
+
 
 ## Exercise 2
 
