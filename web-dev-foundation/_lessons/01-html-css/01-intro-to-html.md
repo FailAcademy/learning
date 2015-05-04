@@ -53,7 +53,7 @@ This is an example of a tag with an attribute, note that only the start tag cont
 
 This is an example of a nested tag. It uses 2 or more tags that are nested together, like the russian *Matryoshka* dolls.
 
-![Russian Nesting Dolls](img src="http://upload.wikimedia.org/wikipedia/commons/7/71/Russian-Matroshka.jpg" alt="Russian-Matroshka.jpg" height="480" width="640")
+![Russian Nesting Dolls](http://upload.wikimedia.org/wikipedia/commons/7/71/Russian-Matroshka.jpg)
 
 img src="http://upload.wikimedia.org/wikipedia/commons/7/71/Russian-Matroshka.jpg" alt="Russian-Matroshka.jpg" height="480" width="640"
 
