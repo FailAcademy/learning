@@ -30,17 +30,19 @@ From the HTML & CSS textbook:
 
 Work through this activity in class:
 
-Using the preset **HTML template** (this has the doctype, body, head, title tags all set up), you will add **paragraphs and headers** to modify the text content in the passage using a code editor like Sublime.
+Using the preset **HTML template file** (this has the doctype, body, head, title tags all set up), you will add **paragraphs and headers** to modify the text content in the passage using a code editor like Sublime.
 
 
-
+####let's move this musical code pen creation to a separate section of inspiring code pen or other interactive examples of javascript code####
 <p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 ## Exercise 2
 
-Another activity...
-Create basic links in HTML
+Work through this next activity in class:
+
+Using the preset **HTML template file** (this has the doctype, body, head, title tags all set up), you will add **examples of links** to the same passage of text as used in the first activity.
+
 ## Lab Activity
 
 This is a description of the lab activity...
