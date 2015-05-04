@@ -27,12 +27,12 @@ From the HTML & CSS textbook:
 - [Doctype](http://www.sitepoint.com/web-foundations/doctypes/)
 
 ## HTML Intro
-Hypertext  is  a  system  of  clickable  text  links  that  let  you  view  information  in  a  non‐linear  way.    The  hypertext term has been updated to also include a non‐text link, such as a image or a button. Note that links  don’t  necessarily  always  get  you  to  another page,  a  hyperlink can also be set-up to run a script that can play a video or sound, or make something happen dynamically.
+**Hypertext**  is  a  system  of  clickable  text  links  that  let  you  view  information  in  a  non‐linear  way.    The  hypertext term has been updated to also include a non‐text link, such as a image or a button. Note that links  don’t  necessarily  always  get  you  to  another page,  a  hyperlink can also be set-up to run a script that can play a video or sound, or make something happen dynamically.
 
-Markup is a term that refers to how text is supposed to be presented in the browser by way of placing different combination of tags around the text.  
+**Markup** is a term that refers to how text is supposed to be presented in the browser by way of placing different combination of tags around the text.  
 
 ### Setting up a Root Folder ###
-It  is  a  common  practice  to  create  a  folder  on  your  computer  (in  a  location  that  is  easy  to  access  and  remember)  that  will  contain  ALL  the  files  used  to  build  your  webpage.    This  folder  is  called  the  Root folder and can contain any number of sub‐folder in which to organize the web files further.  It is highly recommended  that  you  create  a  new  root  folder  for  every  different  website  that  you’re  working  on.  However, you can continue working with the same root folder when you are building on an existing site. 
+It  is  a  common  practice  to  create  a  folder  on  your  computer  (in  a  location  that  is  easy  to  access  and  remember)  that  will  contain  ALL  the  files  used  to  build  your  webpage.    This  folder  is  called  the  **Root folder** and can contain any number of sub‐folder in which to organize the web files further.  It is highly recommended  that  you  create  a  new  root  folder  for  every  different  website  that  you’re  working  on.  However, you can continue working with the same root folder when you are building on an existing site. 
 
 Creating HTML webpages requires some planning ahead of time of what you are planning to put in your page, and especially with media files, such as picture, graphics, sound, movies,  they  need  to  be  placed  in  their  respective  folders  or  sub‐folders before you plan to reference/(link) them in your HTML file.  Many linking issues will arise if the desired media file is not placed in the root folder before it is referenced.   
 
@@ -65,4 +65,4 @@ Please save your file as: **firstname_html_assign1.html** 
 
 ## Additional Resources
 
-- :smile_cat: Go to these websites for more information...
+- Go to these websites for more information...
