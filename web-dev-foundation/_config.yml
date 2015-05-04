@@ -44,5 +44,11 @@ sass:
   sass_dir: _scss
   style: :compressed # You might prefer to un-minify using :expanded
 
+# Markdown Processors
+markdown: redcarpet
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
+redcarpet:
+  extensions: ['smart']
+
 # Exclusions
 exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'README.md', 'LICENSE.md', 'CONTRIBUTING.md', 'installation.md']
