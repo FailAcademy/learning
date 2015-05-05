@@ -4,10 +4,6 @@ title: Custom Web Fonts
 slides:
 ---
 
-# Intro to JavaScript
-
-.title-logo[![Red logo](../../public/img/red-logo-white.svg)]
-
 ## Recommended Reading
 
 From the HTML & CSS textbook:
@@ -26,11 +22,16 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
+### Can You download this stylesheet and fix using @font-face?
+
+<p data-height="268" data-theme-id="0" data-slug-hash="vONZxd" data-default-tab="result" data-user="redacademy" class='codepen'>See the Pen <a href='http://codepen.io/redacademy/pen/vONZxd/'>vONZxd</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
 Paste in Codepen...
 
 ## Exercise 2
 
-## Can You fix this using google fonts?
+### Can You fix this stylesheet using google web fonts?
 
 <p data-height="268" data-theme-id="0" data-slug-hash="vONZxd" data-default-tab="result" data-user="redacademy" class='codepen'>See the Pen <a href='http://codepen.io/redacademy/pen/vONZxd/'>vONZxd</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
