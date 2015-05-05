@@ -20,9 +20,10 @@ layout: false
 # Agenda
 
 1. What is JavaScript?
-2. Let's create some basic JS programs!
-3. How does JS work?
-4. How to debug JS using your browser
+2. How does JS work?
+3. Let's create some basic JS programs!
+4. Including scripts on a webpage
+5. How to debug JS using your browser
 
 ---
 template: inverse
@@ -41,7 +42,7 @@ class: center, middle
 
 ### JavaScript is not "Java"
 
-The name is just an unfortunate remnant from the 1990s.
+The shared name is just a remnant from the 1990s.
 
 ---
 template: inverse
@@ -56,13 +57,39 @@ class: center, middle
 From "JavaScript: The Good Parts"
 
 ---
+template: inverse
+
+# But What Is It for Exactly?
+
+---
+class: center, middle
+
+.large[
+   **HTML** &rarr; the content layer
+
+   **CSS** &rarr; the presentation layer
+
+   **JS** &rarr; the behaviour layer
+]
+
+---
 
 # Client-side / Server-side
 
 - Client-side scripts run in the **browser**
-- For the most part, JS is the only ubiquitous client-side script today
+- For the most part, JS is the only client-side script today
 - Server-side scripts run on a **server**
-- PHP, Ruby, and Python run on the server side (but JS can run server-side as well today using Node.js)
+- PHP, Ruby, and Python run on the server side
+- But JS can run server-side as well today using Node.js...
+
+---
+
+# The Console
+
+- Because JS is "client-side" you can see it in your browser
+- You can even write it right in your browser too...
+
+[NEED SCREENCAP]
 
 ---
 
@@ -75,56 +102,334 @@ From "JavaScript: The Good Parts"
 
 ---
 
-.left-column[
-  ## Column Layout
-]
+# JavaScript Syntax
 
-.right-column[
-You can make two-column layouts as well.red[*] in a slideshow!
+Say hello:
 
-A sample unordered list:
+```javascript
+var name = 'Bob';
+alert('Hi ' + name + '!');
+```
 
-- List item 1
-- List item 2
-- List item 3
+You can try running these lines of code in your browser console right now!
 
-.footnote[.red[*] And add footnotes too]
+---
+
+# JavaScript Syntax
+
+Figure out if it's Tuesday:
+
+```javascript
+var today = new Date;
+var dayOfWeek = today.getDay();
+var greeting;
+
+if ( dayOfWeek == 2 ) {
+   greeting = 'Today is Tuesday';
+} else {
+   greeting = 'Nope, not Tuesday!';
+}
+
+document.write('<h2>' + greeting + '</h2>');
+```
+
+---
+class: center, middle
+
+.large[
+   **Remember, a variable is an arbitrary "bucket" for temporarily storing information in memory.**
 ]
 
 ---
 
-# Syntax Highlighting
+# Variables
 
-```xml
-<!-- A bit of sample HTML with syntax highlighting-->
+In JS, we use the "var" keyword to define our variables.
 
+We can define variables as strings (with HTML tags):
+
+```javascript
+var color = 'red';
+var heading = '<h1>Page Heading</h1>';
+var numberString = '10';
+
+var question = 'What\'s your name?';
+```
+
+String must be wrapped in quotes, and quotes within a string must be "escaped" with a backslash.
+
+---
+
+# Variables
+
+Variables can be integers or booleans:
+
+```javascript
+var height = 7;
+var width = 5;
+
+var aliveAndWell = true;
+```
+
+Integers and booleans do not need to be wrapped in quotes.
+
+---
+
+# Variables
+
+And we can "concatenate" different pieces together:
+
+```javascript
+var salutation = 'Ms.';
+
+var addressee = 'Dear ' + salutation +  ' Sunshine:'
+```
+
+Notice the use of the plus sign to join variable and strings.
+
+---
+
+# Variable Pro Tips
+
+- Make sure your variable names are descriptive (i.e. not `var a = 'First'`)
+- Use camelCase for defining JS variables
+- You can only use the dollar sign and underscore special characters in variable names
+
+---
+
+# Comments
+
+- We can add "comments" to our code too
+- Comments are hidden from execution in the script
+
+```javascript
+   var foo = "Hello World;"
+
+   // Add a single line comment with 2 forward slashes
+
+   /*
+      Add a multi-line comment like this
+   */
+
+   document.write(foo);
+```
+
+---
+
+.left-column[
+  ## The Window Object
+]
+
+.right-column[
+   The "window object" is the browser's representation of each window or tab.
+
+   (NEED GRAPHIC)
+]
+
+---
+
+.left-column[
+  ## The Document Object
+]
+
+.right-column[
+   The document object is the model of the current web page inside of the window/tab.
+
+   It represents the HTML page:
+
+   (NEED GRAPHIC)
+]
+
+---
+class: center, middle
+
+### We've already seen examples of how you can alter the window and document objects:
+
+`alert('Hi ' + name + '!');`
+
+`document.write('<h2>' + greeting + '</h2>');`
+
+---
+
+# Methods
+
+- `alert()` and `document.write()` are examples of object methods
+- Methods perform certain tasks for the objects
+- The `alert()` method will open an alert box in front of the window
+- The `write()` will add content to page wherever the script is executed
+- `prompt` is another handy method
+
+---
+class: center, middle
+
+# Try Them Out!
+
+Open a new browser tab and open the console, and type in each line one at a time:
+
+`alert('Hello World!')`
+
+`prompt('What\'s your name?')`
+
+`document.write('<h1>Hi There!</h1>')`
+
+---
+# Exercise 1
+
+More complex example using prompt and returning the value to the document...
+
+---
+template: inverse
+
+# Let's Get Fancy
+
+---
+
+# Arithmetic Operators
+
+- Operators allow us to create a single value from multiple values
+- We can use +, -, /, and * to calculate values and store them in variables
+
+```javascript
+var quantity = 3 + 2;
+var total = (4 - 1) * 3; // parentheses evaluated first
+```
+
+# Arithmetic Operators
+
+- There are also special operators that allow us to increment or decrement a value
+
+```javascript
+var i = 5;
+i++; // returns 6
+```
+
+```javascript
+var i = 5;
+i--; // returns 4
+```
+
+- Or find the remainder of an expression
+
+```javascript
+var 10 % 3; // returns 1
+var 6 % 2; // returns 0
+```
+
+# Comparison Operators
+
+- We can also compare values and evaluate their result
+
+```javascript
+3 > 2 // returns true
+3 >= 2 // returns true
+3 < 2 // returns false
+3 == 2 // returns false
+3 != 2 // returns true
+```
+
+---
+
+# Conditionals
+
+- Just like in Scratch, we can decide whether we want to run code depending on if a condition is met
+- In JS, we use "if," "else if," and "else" with curly braces for conditional statements
+
+```javascript
+var highScore = 150;
+var score = 149;
+
+if ( highScore < score ) {
+   document.write('You beat your high score!');
+} else if ( highScore == score ) {
+   document.write('You matched your high score!');
+} else {
+   document.write('Please try again.');
+}
+```
+
+---
+
+# For Loops
+
+- And again, like Scratch, we can create "loops" in our code
+- Loops allow us to repeat a set of instructions a set number of times
+
+```javascript
+
+```
+
+---
+
+# Exercise 2
+
+User variables, operators, conditionals, and loops at the same time...
+
+---
+
+template: inverse
+
+# Using JavaScript on a Website
+
+---
+
+# Right in the HTML
+
+```html
+<!DOCTYPE html>
 <html>
    <head>
-      <title>An Awesome Website</title>
+      <title>Spot's Dog Grooming</title>
    </head>
    <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
+      <h1>Spot's Dog Grooming</h1>
+      <script>
+         document.write('Welcome to Spot\'s!');
+      </script>
    </body>
 </html>
 ```
 
 ---
 
-.left-column[
-  ## Remark How-tos
-]
+# As a Separate ".js" File
 
-.right-column[
-   This slideshow is based on [remark.js](https://github.com/gnab/remark).
+```html
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Spot's Dog Grooming</title>
+   </head>
+   <body>
+      <h1>Spot's Dog Grooming</h1>
+      <script src="js/say-hello.js"></script>
+   </body>
+</html>
+```
 
-   To learn more about building a slideshow with remark, check out:
+```javascript
+// js/sayhello.js
 
-   - [The remark formatting guide](https://github.com/gnab/remark/wiki/Formatting)
-   - [The remark Markdown guide](https://github.com/gnab/remark/wiki/Markdown)
-]
+document.write('Welcome to Spot\'s!');
+```
 
 ---
+
+# Head tag or bottom of page?
+
+- You can include a `<script>` in the `<head>` tag or anywhere inside the `<body>`
+- The best practice is to put scripts in the footer to prevent them from blocking the page load
+- But some scripts must go in the `<head>`...
+
+---
+
+# Debugging
+
+You can use the console to help find bugs in your JS code.
+
+(NEED AN EXAMPLE...)
+
+---
+
 template: inverse
 
 # Fin!

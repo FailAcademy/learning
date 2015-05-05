@@ -45,6 +45,10 @@ This is a link to the lab activity...
 
 ## Additional Resources
 
+Nine GIFs that explain the principles of responsive web design:
+
+- [9 basic principles of responsive web design](http://blog.froont.com/9-basic-principles-of-responsive-web-design/)
+
 A collection of responsive web design patterns and resources:
 
 - [This is Responsive](http://bradfrost.github.io/this-is-responsive/)
