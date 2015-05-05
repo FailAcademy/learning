@@ -1,10 +1,17 @@
-// Slideshows
-//
-// Styles for remark.js slideshows
+/*
+ * Slideshows
+ *
+ * Styles for remark.js slideshows.
+ */
 
 .remark-slide {
 
    // Layouts
+
+   .remark-slide-content:not(.inverse) {
+      background: #fff url('../public/img/red-logo.svg') no-repeat 20px bottom;
+      background-size: 150px 75px;
+   }
 
    .inverse {
       background: #272822;
@@ -14,7 +21,16 @@
       h1,
       h2 {
          color: #f3f3f3;
-         line-height: 0.8em;
+         line-height: 1.15em;
+      }
+
+      .title-logo {
+         display: block;
+         width: 300px;
+         position: absolute;
+         bottom: 5%;
+         left: 50%;
+         transform: translateX(-50%);
       }
    }
 }
@@ -22,6 +38,7 @@
 .remark-slide-content {
 
    // Typography
+
    font-size: 26px;
 
    h1, h2, h3, h4, h5, h6 {
@@ -63,6 +80,15 @@
 
    p, li {
       margin-bottom: 1em;
+   }
+
+   blockquote {
+      font-size: 1.2em;
+      color: $brand_red;
+      font-weight: 400;
+      text-align: center;
+      border-left: 0;
+      padding: 0;
    }
 
    .footnote {

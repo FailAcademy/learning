@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Intro to HTML
-slides: ['_slides/01-html/01-html-intro.md']
+slides: ['_slides/01-html-css/01-html-intro.md']
 ---
 
 ## Recommended Reading
@@ -44,10 +44,10 @@ This is an example of a basic tag, with its start tag and end tag.
 
 **Tags with Attributes**
 This is an example of a tag with an attribute, note that only the start tag contains the attribute.
-       
+
 ~~~
 <p class="red_italics"> content </p>
-~~~       
+~~~
 
 **Nested Tags**
 
@@ -59,14 +59,14 @@ img src="http://upload.wikimedia.org/wikipedia/commons/7/71/Russian-Matroshka.jp
 
 
 ### Setting up a Root Folder ###
-It  is  a  common  practice  to  create  a  folder  on  your  computer  (in  a  location  that  is  easy  to  access  and  remember)  that  will  contain  ALL  the  files  used  to  build  your  webpage.    This  folder  is  called  the  **Root folder** and can contain any number of sub‐folder in which to organize the web files further.  It is highly recommended  that  you  create  a  new  root  folder  for  every  different  website  that  you’re  working  on.  However, you can continue working with the same root folder when you are building on an existing site. 
+It  is  a  common  practice  to  create  a  folder  on  your  computer  (in  a  location  that  is  easy  to  access  and  remember)  that  will  contain  ALL  the  files  used  to  build  your  webpage.    This  folder  is  called  the  **Root folder** and can contain any number of sub‐folder in which to organize the web files further.  It is highly recommended  that  you  create  a  new  root  folder  for  every  different  website  that  you’re  working  on.  However, you can continue working with the same root folder when you are building on an existing site.
 
-Creating HTML webpages requires some planning ahead of time of what you are planning to put in your page, and especially with media files, such as picture, graphics, sound, movies,  they  need  to  be  placed  in  their  respective  folders  or  sub‐folders before you plan to reference/(link) them in your HTML file.  Many linking issues will arise if the desired media file is not placed in the root folder before it is referenced.   
+Creating HTML webpages requires some planning ahead of time of what you are planning to put in your page, and especially with media files, such as picture, graphics, sound, movies,  they  need  to  be  placed  in  their  respective  folders  or  sub‐folders before you plan to reference/(link) them in your HTML file.  Many linking issues will arise if the desired media file is not placed in the root folder before it is referenced.
 
 
 ## File & Folder Naming Recommendations ##
 - Stick to lowercase consistently
-- Do not use SPACES in your file names, instead use hyphens- or underscores_ 
+- Do not use SPACES in your file names, instead use hyphens- or underscores_
 to separate words
 - Do not use any symbols (such as #@*&><) in your file name
 - Choose a logical, descriptive, and standard convention names
@@ -95,11 +95,11 @@ Using this *[Codepen Exercise 2]* (this has the doctype, body, head, title tags 
 
 
 ## Afternoon Lab Activity
-Using the preset **HTML template** (this has the doctype, body, head, title tags all set up),  markup the text as a HTML5 document using best practices discussed in the morning using a combination of headers, sections, articles, and footer elements, as well as proper nested basic elements. 
+Using the preset **HTML template** (this has the doctype, body, head, title tags all set up),  markup the text as a HTML5 document using best practices discussed in the morning using a combination of headers, sections, articles, and footer elements, as well as proper nested basic elements.
 
 [comment]: Insert a visual image of the end result of the page to style
 
-*Match the visual example* provided as closely as possible.  You will have a chance to practice using the following tags: paragraphs, headers, line‐breaks, strong, emphasis, links as well as others that the instructor has shown in class today. There are no images are required for this exercise.   
+*Match the visual example* provided as closely as possible.  You will have a chance to practice using the following tags: paragraphs, headers, line‐breaks, strong, emphasis, links as well as others that the instructor has shown in class today. There are no images are required for this exercise.
 Please save your file as: **firstname_html_assign1.html** 
 
 
