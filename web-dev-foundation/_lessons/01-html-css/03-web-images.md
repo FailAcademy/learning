@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Using Images on the Web
-slides:
+slides: ['_slides/01-html-css/03-web-images-slides.md']
 ---
 
 
