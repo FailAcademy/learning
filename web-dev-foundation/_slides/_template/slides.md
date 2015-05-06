@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to HTML Slides
+title: The Slide Deck Title (used for the URL slug, and must be unique)
 ---
 
 {% highlight html %}
@@ -11,6 +11,8 @@ class: center, middle, inverse
 ---
 
 # Slideshow Title
+
+.title-logo[![Red logo](../../public/img/red-logo-white.svg)]
 
 ---
 layout: false
@@ -43,7 +45,7 @@ A sample unordered list:
 
 # Syntax Highlighting
 
-```xml
+```html
 <!-- A bit of sample HTML with syntax highlighting-->
 
 <html>
