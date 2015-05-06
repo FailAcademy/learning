@@ -24,8 +24,9 @@ layout: false
 3. Tags with Attributes/ Nested Tags
 4. Importance of Root Folder
 5. File & Folder Naming Recommendations
-6. Doctypes
-7. Role of Browser
+6. Differences in Doctypes
+7. HTML5 Layout Tags
+8. Common HTML Tags
 
 ---
 template: inverse
@@ -91,12 +92,12 @@ template: inverse
 ---
 class: center, middle
 
-> It  is  a  common  practice  to  create  a  folder  on  your  computer  (in  a  location  that  is  easy  to  access  and  remember)  that  will  contain  ALL  the  files  used  to  build  your  webpage.    This  folder  is  called  the  *Root folder* and can contain any number of sub‐folder in which to organize the web files further. 
+It  is  a  common  practice  to  create  a  folder  on  your  computer  (in  a  location  that  is  easy  to  access  and  remember)  that  will  contain  ALL  the  files  used  to  build  your  webpage.    This  folder  is  called  the  *Root folder* and can contain any number of sub‐folder in which to organize the web files further. 
 
 
 ---
 class: center, middle
-> It is highly recommended  that  you  create  a  new  root  folder  for  every  different  website  that  you’re  working  on.  However, you can continue working with the same root folder when you are building on an existing site.
+It is highly recommended  that  you  create  a  new  root  folder  for  every  different  website  that  you’re  working  on.  However, you can continue working with the same root folder when you are building on an existing site.
 
 ---
 
@@ -105,20 +106,36 @@ template: inverse
 # Root Folder Best Practices
 
 ---
+class: center, middle
 
+##Preparing Content in the Root Folder
 >Creating HTML webpages requires some planning ahead of time of what you are planning to put in your page, and especially with media files, such as picture, graphics, sound, movies,  they  need  to  be  placed  in  their  respective  folders  or  sub‐folders before you plan to reference/(link) them in your HTML file.  Many linking issues will arise if the desired media file is not placed in the root folder before it is referenced.
 
+---
+
+## File & Folder Naming Recommendations ##
+- Stick to lowercase consistently
+- Do not use SPACES in your file names, instead use hyphens- or underscores_
+to separate words
+- Do not use any symbols (such as #@*&><) in your file name
+- Choose a logical, descriptive, and standard convention names
+- Stick either to .html or .htm, but don’t flip‐flop between them
+
+
+---
+template: inverse
+Key Differences in Doctype of XHTML/HTML5
 ---
 
 
 class: center, middle
 
-.large[
-   **HTML** &rarr; the content layer
+.medium[
+   ***XHTML*** 
+   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
-   **CSS** &rarr; the presentation layer
-
-   **JS** &rarr; the behaviour layer
+   ***HTML5*** 
+   <!DOCTYPE html>
 ]
 
 ---

@@ -27,14 +27,6 @@ From the HTML & CSS textbook:
 - [Doctype](http://www.sitepoint.com/web-foundations/doctypes/)
 
 
-## File & Folder Naming Recommendations ##
-- Stick to lowercase consistently
-- Do not use SPACES in your file names, instead use hyphens- or underscores_
-to separate words
-- Do not use any symbols (such as #@*&><) in your file name
-- Choose a logical, descriptive, and standard convention names
-- Stick either to .html or .htm, but don’t flip‐flop between them
-
 ## Exercise 1
 
 Work through this activity in class:
