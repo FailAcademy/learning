@@ -23,21 +23,23 @@ From the HTML & CSS textbook:
 ## Keywords
 
 - [CSS](https://developer.mozilla.org/en/docs/Web/HTML/Element)
-- [Selector]
-- [Class]
-- [ID]
-- [Box model]
-- [Web inspector]
+- [Selector](#)
+- [Class](#)
+- [ID](#)
+- [Box model](#)
+- [Web inspector](#)
 
 
 ## Exercise 1
 
 Do this activity!
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+-Initialize styles for an HTML document in 3 different ways (inline, internal stylesheet, and external stylesheet)
 
 ## Exercise 2
+-Create classes and IDs and use them to target elements in a HTML document with varying degrees of specificity (including font styles and sizes)
+
+-Create classes and IDs and use them to target elements in a HTML document with varying degrees of specificity (including font styles and sizes)
 
 This is how you add highlighted syntax to a lesson page:
 

@@ -60,12 +60,26 @@ template: inverse
 ---
 Use image to illustrate previous topic.
 ---
+template: inverse
 
-## Using HTML Tags
-
-HTML tags are surrounded with square brackets and that is how they are distinguished from the text that we see on a webpage.  HTML tags are what web browsers read to interpret the code into the visual format  and  layout  of  a  web  page.  The  process  of  adding  tags  around  page  elements  to  modify  their  visual properties is called marking up, hence “mark‐up language”.  
+## Types of CSS
 
 ---
+
+
+## Specificity
+
+Discuss topic further. 
+
+---
+
+## Inheritance
+
+Discuss topic further. 
+
+---
+# CSS Selectors
+
 class: center, middle
 
 ### Basic HTML Tags
