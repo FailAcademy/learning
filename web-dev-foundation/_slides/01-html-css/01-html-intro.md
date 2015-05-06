@@ -113,7 +113,7 @@ class: center, middle
 
 ---
 
-## File & Folder Naming Recommendations ##
+## File & Folder Naming Recommendations
 - Stick to lowercase consistently
 - Do not use SPACES in your file names, instead use hyphens- or underscores_
 to separate words
@@ -130,7 +130,7 @@ template: inverse
 
 class: center, middle
 
-.large[
+.medium[
    ***XHTML*** 
    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
@@ -144,19 +144,30 @@ template: inverse
 #HTML5 Semantic Tags
 
 ---
-## Useful Layout Tags
--article
--aside
--footer
--header
--nav
--section
+## Useful Layout Tags##
+- article
+- aside
+- footer
+- header
+- nav
+- section
 
+---
+(Need graphic to illustrate the previous concept)
 ---
 template: inverse
 #Common HTML Tags
 ---
 
+#Useful Tags in a Basic Page
+
+****h1**** &rarr; headings
+****p**** &rarr; paragraphs
+****img**** &rarr; images
+
+
+
+----
 template: inverse
 
 # Fin!
