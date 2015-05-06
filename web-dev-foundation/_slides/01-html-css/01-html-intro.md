@@ -42,7 +42,7 @@ Hyper Text Markup Language
 
 **Markup** is a term that refers to how text is supposed to be presented in the browser by way of placing different combination of tags around the text.  
 ---
-template: inverse
+
 class: center, middle
 
 ## Using HTML Tags
@@ -58,17 +58,17 @@ class: center, middle
 <p> content </p>
 ```
 
+This is an example of a basic tag, with its start tag and end tag.
 ---
-
 
 class: center, middle
 
 ### Tags with Attributes
 
 ```html
-<p class="reditalics"> content </p>
+<p class="red_italics"> content </p>
 ```
-
+This is an example of a tag with an attribute, note that only the start tag contains the attribute.
 ---
 
 class: center, middle
@@ -79,16 +79,20 @@ class: center, middle
 <p><em> content </em></p>
 ```
 
+This is an example of a nested tag. It uses 2 or more tags that are nested together, like the russian *Matryoshka* dolls.
+
+![Russian Nesting Dolls](http://upload.wikimedia.org/wikipedia/commons/7/71/Russian-Matroshka.jpg)
 ---
 
 template: inverse
 
-# Why Should I Use JavaScript?
+# Importance of the Root Folder
 
 ---
 class: center, middle
 
-> "There are two answers. The first is that you don't have a choice...The other answer is that, despite it's deficiencies, *JavaScript is really good*."
+> It  is  a  common  practice  to  create  a  folder  on  your  computer  (in  a  location  that  is  easy  to  access  and  remember)  that  will  contain  ALL  the  files  used  to  build  your  webpage.    This  folder  is  called  the  *Root folder* and can contain any number of sub‐folder in which to organize the web files further.  It is highly recommended  that  you  create  a  new  root  folder  for  every  different  website  that  you’re  working  on.  However, you can continue working with the same root folder when you are building on an existing site.
+
 
 From "JavaScript: The Good Parts"
 

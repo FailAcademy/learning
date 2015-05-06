@@ -27,34 +27,7 @@ From the HTML & CSS textbook:
 - [Doctype](http://www.sitepoint.com/web-foundations/doctypes/)
 
 
-
-
-
-**Basic Tags**
-This is an example of a basic tag, with its start tag and end tag.
-
-~~~
-<p> This is a paragraph </p>
-~~~
-
-**Tags with Attributes**
-This is an example of a tag with an attribute, note that only the start tag contains the attribute.
-
-~~~
-<p class="red_italics"> content </p>
-~~~
-
-**Nested Tags**
-
-This is an example of a nested tag. It uses 2 or more tags that are nested together, like the russian *Matryoshka* dolls.
-
-![Russian Nesting Dolls](http://upload.wikimedia.org/wikipedia/commons/7/71/Russian-Matroshka.jpg)
-
-
-
-
 ### Setting up a Root Folder ###
-It  is  a  common  practice  to  create  a  folder  on  your  computer  (in  a  location  that  is  easy  to  access  and  remember)  that  will  contain  ALL  the  files  used  to  build  your  webpage.    This  folder  is  called  the  **Root folder** and can contain any number of sub‐folder in which to organize the web files further.  It is highly recommended  that  you  create  a  new  root  folder  for  every  different  website  that  you’re  working  on.  However, you can continue working with the same root folder when you are building on an existing site.
 
 Creating HTML webpages requires some planning ahead of time of what you are planning to put in your page, and especially with media files, such as picture, graphics, sound, movies,  they  need  to  be  placed  in  their  respective  folders  or  sub‐folders before you plan to reference/(link) them in your HTML file.  Many linking issues will arise if the desired media file is not placed in the root folder before it is referenced.
 
