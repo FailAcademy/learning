@@ -18,16 +18,6 @@ class: center, middle, inverse
 layout: false
 
 # Agenda
-
-1. What is a Mark-up Language
-2. HTML Tags and Syntax
-3. Tags with Attributes/ Nested Tags
-4. Importance of Root Folder
-5. File & Folder Naming Recommendations
-6. Differences in Doctypes
-7. HTML5 Layout Tags / Common HTML Tags
-
-
 1. What is CSS
 2. What are CSS Statements
 3. What is Cascading Order/Specificity
@@ -40,10 +30,10 @@ layout: false
 template: inverse
 
 # What is CSS
-##Cascading Style Sheets
+###Cascading Style Sheets
 ---
 
-## HTML Terminology
+## Definition
 **Hypertext**  is  a  system  of  clickable  text  links  that  let  you  view  information  in  a  non‐linear  way.    The  hypertext term has been updated to also include a non‐text link, such as a image or a button. Note that links  don’t  necessarily  always  get  you  to  another page,  a  hyperlink can also be set-up to run a script that can play a video or sound, or make something happen dynamically.
 
 ---
