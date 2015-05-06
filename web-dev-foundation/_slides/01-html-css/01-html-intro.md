@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: intro-to-html-slides
+title: Intro to HTML Slides
 ---
 
 {% highlight html %}
