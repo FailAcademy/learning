@@ -132,17 +132,6 @@ template: inverse
 
 ---
 
-##One Root Folder For Your Website
-It  is  a  common  practice  to  create  a  folder  on  your  computer  (in  a  location  that  is  easy  to  access  and  remember)  that  will  contain  ALL  the  files  used  to  build  your  webpage.    This  folder  is  called  the  *Root folder* and can contain any number of sub‐folder in which to organize the web files further. 
-
-
----
-
-## Create New New Root Folder for A Different Website
-It is highly recommended  that  you  create  a  new  root  folder  for  every  different  website  that  you’re  working  on.  However, you can continue working with the same root folder when you are building on an existing site.
-
----
-
 template: inverse
 
 # Root Folder Best Practices
@@ -155,13 +144,6 @@ Creating HTML webpages requires some planning ahead of time of what you are plan
 
 ---
 
-## File & Folder Naming Recommendations
-- Stick to lowercase consistently
-- Do not use SPACES in your file names, instead use hyphens- or underscores_
-to separate words
-- Do not use any symbols (such as #@*&><) in your file name
-- Choose a logical, descriptive, and standard convention names
-- Stick either to .html or .htm, but don’t flip‐flop between them
 
 
 ---

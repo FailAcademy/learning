@@ -19,9 +19,11 @@ layout: false
 
 # Agenda
 
-1. Introduction
-2. Deep-dive
-3. ...
+1. Basic Photoshop Overview
+2. Crop, Size and Save for Web
+3. Common Web Formats
+4. Image Best Practices
+5. 
 
 ---
 

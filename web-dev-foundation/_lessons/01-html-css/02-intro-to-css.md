@@ -38,8 +38,8 @@ Do this activity!
 
 ## Exercise 2
 - Create classes and IDs and use them to target elements in a HTML document with varying degrees of specificity (including font styles and sizes)
+- Apply margin, padding, and borders to various elements in an HTML document
 
-- Create classes and IDs and use them to target elements in a HTML document with varying degrees of specificity (including font styles and sizes)
 
 This is how you add highlighted syntax to a lesson page:
 
