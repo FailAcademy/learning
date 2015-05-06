@@ -19,11 +19,12 @@ layout: false
 
 # Agenda
 
-1. What is JavaScript?
-2. How does JS work?
-3. Let's create some basic JS programs!
-4. Including scripts on a webpage
-5. How to debug JS using your browser
+1. What is JavaScript? Why use it? How does it work?
+2. Variables and comments
+3. The window and document "objects"
+4. Arithmetic and comparison operators
+5. Conditionals and loops
+6. Including scripts on a webpage and debugging
 
 ---
 template: inverse
@@ -71,6 +72,10 @@ class: center, middle
 
    **JS** &rarr; the behaviour layer
 ]
+
+---
+
+(Need graphic to illustrate the previous concept)
 
 ---
 
@@ -185,7 +190,9 @@ var salutation = 'Ms.';
 var addressee = 'Dear ' + salutation +  ' Sunshine:'
 ```
 
-Notice the use of the plus sign to join variable and strings.
+The variable `addressee` will now return "Dear Ms. Sunshine:".
+
+Notice the use of the `+` sign to join variable and strings.
 
 ---
 
@@ -199,8 +206,7 @@ Notice the use of the plus sign to join variable and strings.
 
 # Comments
 
-- We can add "comments" to our code too
-- Comments are hidden from execution in the script
+We can add "comments" to our code too:
 
 ```javascript
    var foo = "Hello World;"
@@ -213,6 +219,8 @@ Notice the use of the plus sign to join variable and strings.
 
    document.write(foo);
 ```
+
+Comments are always hidden from execution in the script.
 
 ---
 
@@ -243,7 +251,7 @@ Notice the use of the plus sign to join variable and strings.
 ---
 class: center, middle
 
-### We've already seen examples of how you can alter the window and document objects:
+**We've already seen examples of how you can perform actions on the window and document objects:**
 
 `alert('Hi ' + name + '!');`
 
@@ -280,23 +288,24 @@ More complex example using prompt and returning the value to the document...
 ---
 template: inverse
 
-# Let's Get Fancy
+# Let's Get a Little Bit Fancy Now
 
 ---
 
 # Arithmetic Operators
 
-- Operators allow us to create a single value from multiple values
-- We can use +, -, /, and * to calculate values and store them in variables
+Operators allow us to create a single value from multiple values. We can use `+`, `-`, `/`, and `*` to calculate values and store them in variables:
 
 ```javascript
 var quantity = 3 + 2;
 var total = (4 - 1) * 3; // parentheses evaluated first
 ```
 
+---
+
 # Arithmetic Operators
 
-- There are also special operators that allow us to increment or decrement a value
+There are also special operators that allow us to increment or decrement a value:
 
 ```javascript
 var i = 5;
@@ -308,16 +317,18 @@ var i = 5;
 i--; // returns 4
 ```
 
-- Or find the remainder of an expression
+Or find the remainder of an expression:
 
 ```javascript
 var 10 % 3; // returns 1
 var 6 % 2; // returns 0
 ```
 
+---
+
 # Comparison Operators
 
-- We can also compare values and evaluate their result
+We can also compare values and evaluate their result:
 
 ```javascript
 3 > 2 // returns true
@@ -331,8 +342,7 @@ var 6 % 2; // returns 0
 
 # Conditionals
 
-- Just like in Scratch, we can decide whether we want to run code depending on if a condition is met
-- In JS, we use "if," "else if," and "else" with curly braces for conditional statements
+Just like in Scratch, we can decide whether we want to run code depending on if a condition is met:
 
 ```javascript
 var highScore = 150;
@@ -347,16 +357,101 @@ if ( highScore < score ) {
 }
 ```
 
+In JS, we use "if," "else if," and "else" with curly braces for conditional statements.
+
+---
+
+# Loops
+
+- Again, like in Scratch, we can create loops in JS
+- Loops allow us to repeat a set of instructions over and over again as long as a condition is still `true`
+- Once the condition is no longer true (i.e. it returns `false`), the loop will stop
+- In JS, there are "for" loops, "while" loops, and "do while" loops
+
+---
+
+# Loop Syntax
+
+Initialization:
+
+```javascript
+var i = 0;
+```
+
+Condition:
+
+```javascript
+i < 5;
+```
+
+Update:
+
+```javascript
+i++ // remember that ++ add 1 to an integer
+i-- // and you can decrement too
+```
+
+---
+
+# While Loops
+
+While loops are helpful when you don't know how many times it needs to run:
+
+```javascript
+var i = 0;
+var score = 0;
+
+while (i < 5) {
+  score = i;
+  document.write("Your score : " + score + "<br />");
+  i++;
+}
+```
+
+What do you think the final score will be after this loop runs?
+
+---
+
+# Do While Loops
+
+Do while loops are similar to while loops, but they always run at least once:
+
+```javascript
+var i = 2;
+var score = 0;
+
+do {
+  score = i;
+  document.write("Your score : " + score + "<br />");
+  i++;
+} while (i < 1);
+```
+
+What do you think the loop will return this time?
+
+---
+class: center, middle
+
+## A Word of Caution!
+
+It's very easy to accidentally create an "infinite loop" using while and do while loops!
+
 ---
 
 # For Loops
 
-- And again, like Scratch, we can create "loops" in our code
-- Loops allow us to repeat a set of instructions a set number of times
+For loops allow you to set a specific number of times that the loop will run:
 
 ```javascript
+var score = 0;
 
+for (var i = 0; i < 5; i++) {
+  score = i;
+	document.write('Your score: ' + score + '<br />');
+}
 ```
+
+You will likely find your self using for loops most often with "arrays" (we'll get to those shortly...).
 
 ---
 
@@ -414,7 +509,7 @@ document.write('Welcome to Spot\'s!');
 
 ---
 
-# Head tag or bottom of page?
+# Incude in the head tag or bottom of the page?
 
 - You can include a `<script>` in the `<head>` tag or anywhere inside the `<body>`
 - The best practice is to put scripts in the footer to prevent them from blocking the page load
