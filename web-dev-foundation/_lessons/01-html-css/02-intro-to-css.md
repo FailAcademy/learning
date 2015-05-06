@@ -1,22 +1,34 @@
 ---
 layout: lesson
 title: Intro to CSS
-slides: 
+slides: ['_slides/01-html-css/02-css-intro.md']
 ---
 
 ## Recommended Reading
 
 From the HTML & CSS textbook:
 
-- A Closer Look at Tags (pp. 23-24)
+- Introducing CSS (pp. 228-244)
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Define CSS in relation to HTML
+- Recognize different “cascading order”
+- Learn about specificity function
+- Edit basic HTML elements using selectors, classes and IDs (including font styles).
+- Use browser development tools to view styles on web page
+- Recognize the CSS box model (including margin, padding, and borders)
+
 
 ## Keywords
 
 - [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+Selector
+Class
+ID
+Box model
+Web inspector
+
 
 ## Exercise 1
 
