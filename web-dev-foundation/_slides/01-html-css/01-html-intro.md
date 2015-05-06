@@ -124,13 +124,13 @@ to separate words
 
 ---
 template: inverse
-Key Differences in Doctype of XHTML/HTML5
+#Key Differences in Doctype of XHTML/HTML5
 ---
 
 
 class: center, middle
 
-.medium[
+.large[
    ***XHTML*** 
    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
@@ -140,18 +140,21 @@ class: center, middle
 
 ---
 
-(Need graphic to illustrate the previous concept)
+template: inverse
+#HTML5 Semantic Tags
 
 ---
+## Useful Layout Tags
+-article
+-aside
+-footer
+-header
+-nav
+-section
 
-# Client-side / Server-side
-
-- Client-side scripts run in the **browser**
-- For the most part, JS is the only client-side script today
-- Server-side scripts run on a **server**
-- PHP, Ruby, and Python run on the server side
-- But JS can run server-side as well today using Node.js...
-
+---
+template: inverse
+#Common HTML Tags
 ---
 
 template: inverse
