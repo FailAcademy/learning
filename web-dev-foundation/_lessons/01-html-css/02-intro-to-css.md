@@ -34,12 +34,12 @@ From the HTML & CSS textbook:
 
 Do this activity!
 
--Initialize styles for an HTML document in 3 different ways (inline, internal stylesheet, and external stylesheet)
+- Initialize styles for an HTML document in 3 different ways (inline, internal stylesheet, and external stylesheet)
 
 ## Exercise 2
--Create classes and IDs and use them to target elements in a HTML document with varying degrees of specificity (including font styles and sizes)
+- Create classes and IDs and use them to target elements in a HTML document with varying degrees of specificity (including font styles and sizes)
 
--Create classes and IDs and use them to target elements in a HTML document with varying degrees of specificity (including font styles and sizes)
+- Create classes and IDs and use them to target elements in a HTML document with varying degrees of specificity (including font styles and sizes)
 
 This is how you add highlighted syntax to a lesson page:
 
