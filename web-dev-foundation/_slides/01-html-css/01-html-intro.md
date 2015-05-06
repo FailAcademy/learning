@@ -177,6 +177,21 @@ template: inverse
 ---
 template: inverse
 
+# Block Level Vs Inline Elements 
+
+---
+
+
+##Block Level
+- Notice that when you use paragraphs and headings, they will start on a new line.
+(show screen cap)
+##Inline Level
+- Notice that when you use emphasis or bold tags, that this continue on the same line.
+(show screen cap) 
+---
+
+template: inverse
+
 # Fin!
 
 {% endhighlight %}
