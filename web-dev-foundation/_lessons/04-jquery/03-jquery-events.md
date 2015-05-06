@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: jQuery Event Handling
-slides:
+slides: ['_slides/04-jquery/03-jquery-events-slides.md']
 ---
 
 ## Recommended Reading

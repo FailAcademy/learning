@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to HTML Slides
+title: Intro to jQuery
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Slideshow Title
+# Intro to jQuery
 
 ---
 layout: false

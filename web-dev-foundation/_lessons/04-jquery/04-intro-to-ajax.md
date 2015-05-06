@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Intro to AJAX
-slides:
+slides: ['_slides/04-jquery/04-intro-to-ajax-slides.md']
 ---
 
 ## Recommended Reading

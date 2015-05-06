@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Intro to jQuery
-slides:
+slides: ['_slides/04-jquery/01-intro-to-jquery-slides.md']
 ---
 
 ## Recommended Reading
