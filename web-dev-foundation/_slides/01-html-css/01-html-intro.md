@@ -10,71 +10,82 @@ class: center, middle, inverse
 
 ---
 
-# Slideshow Title
+# Intro to HTML
+
+.title-logo[![Red logo](../../public/img/red-logo-white.svg)]
 
 ---
 layout: false
 
 # Agenda
 
-1. Introduction
-2. Deep-dive
-3. ...
-
----
-
-.left-column[
-  ## Column Layout
-]
-
-.right-column[
-You can make two-column layouts as well.red[*] in a slideshow!
-
-A sample unordered list:
-
-- List item 1
-- List item 2
-- List item 3
-
-.footnote[.red[*] And add footnotes too]
-]
-
----
-
-# Syntax Highlighting
-
-```xml
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
-
----
-
-.left-column[
-  ## Remark How-tos
-]
-
-.right-column[
-   This slideshow is based on [remark.js](https://github.com/gnab/remark).
-
-   To learn more about building a slideshow with remark, check out:
-
-   - [The remark formatting guide](https://github.com/gnab/remark/wiki/Formatting)
-   - [The remark Markdown guide](https://github.com/gnab/remark/wiki/Markdown)
-]
+1. What is a Mark-up Language
+2. HTML Tags and Syntax
+3. Tags with Attributes/ Nested Tags
+4. Importance of Root Folder
+5. File & Folder Naming Recommendations
+6. Doctypes
+7. Role of Browser
 
 ---
 template: inverse
 
-# Fin!
+# What is HTML
 
-{% endhighlight %}
+---
+class: center, middle
+
+### HTML is a Mark-up Language
+
+Computers need you to tell them what to do.
+
+---
+class: center, middle
+
+### JavaScript is not "Java"
+
+The shared name is just a remnant from the 1990s.
+
+---
+template: inverse
+
+# Why Should I Use JavaScript?
+
+---
+class: center, middle
+
+> "There are two answers. The first is that you don't have a choice...The other answer is that, despite it's deficiencies, *JavaScript is really good*."
+
+From "JavaScript: The Good Parts"
+
+---
+template: inverse
+
+# But What Is It for Exactly?
+
+---
+class: center, middle
+
+.large[
+   **HTML** &rarr; the content layer
+
+   **CSS** &rarr; the presentation layer
+
+   **JS** &rarr; the behaviour layer
+]
+
+---
+
+(Need graphic to illustrate the previous concept)
+
+---
+
+# Client-side / Server-side
+
+- Client-side scripts run in the **browser**
+- For the most part, JS is the only client-side script today
+- Server-side scripts run on a **server**
+- PHP, Ruby, and Python run on the server side
+- But JS can run server-side as well today using Node.js...
+
+---
