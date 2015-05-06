@@ -89,4 +89,9 @@ class: center, middle
 - But JS can run server-side as well today using Node.js...
 
 ---
+
+template: inverse
+
+# Fin!
+
 {% endhighlight %}
