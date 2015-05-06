@@ -22,7 +22,7 @@ layout: false
 2. What are CSS Statements
 3. What is Cascading Order/Specificity
 4. CSS Selectors
-5. CSS Classes and IDS
+5. CSS Classes and IDs
 6. Browser Development Tools
 7. What is the CSS box model 
 
@@ -30,7 +30,7 @@ layout: false
 template: inverse
 
 # What is CSS
-###Cascading Style Sheets
+##Cascading Style Sheets
 ---
 
 ## Definition
