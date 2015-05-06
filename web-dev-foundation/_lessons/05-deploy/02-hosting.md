@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Hosting a Website
-slides:
+slides: ['_slides/05-deploy/02-hosting-slides.md']
 ---
 ## Recommended Reading
 
