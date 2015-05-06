@@ -162,7 +162,7 @@ template: inverse
 
 ##Useful Tags in a Basic Page
 
-****h1**** &rarr; headings
+****h1-h6**** &rarr; headings
 
 ****p**** &rarr; paragraphs
 
@@ -170,9 +170,13 @@ template: inverse
 
 ****ol/ul**** &rarr; order/undordered lists
 
+****a**** &rarr; links
 
+****br**** &rarr; line-breaks
 
-----
+****table**** &rarr; tables
+
+---
 template: inverse
 
 # Fin!
