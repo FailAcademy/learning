@@ -261,8 +261,9 @@ class: center, middle
 
 # Methods
 
-- `alert()` and `document.write()` are examples of object methods
-- Methods perform certain tasks for the objects
+Methods perform certain tasks for the objects:
+
+- `alert()` and `document.write()` are examples of object "methods"
 - The `alert()` method will open an alert box in front of the window
 - The `write()` will add content to page wherever the script is executed
 - `prompt` is another handy method

@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: JavaScript Functions, Objects and Arrays
-slides:
+slides: ['_slides/03-js/03-functions-and-objects.md']
 ---
 
 ## Recommended Reading
@@ -9,8 +9,7 @@ slides:
 From the JavaScript & jQuery textbook:
 
 - Chapter 2: Basic JavaScript Instructions (Arrays) (pp. 70-73)
-- Chapter 3: Functions, Methods & Objects (Functions) (pp. 88-97)
-- What Are Built-in Objects? (pp. 120-121)
+- Functions, Methods & Objects (Functions) (pp. 88-144)
 
 ## Learning Objectives
 
@@ -41,4 +40,4 @@ This is a link to the lab activity...
 
 ## Additional Resources
 
-- [Code Academy](http://www.codecademy.com/learn)
+-

@@ -8,9 +8,20 @@ slides: ['_slides/03-js/02-intro-to-js.md']
 
 From the JavaScript & jQuery textbook:
 
+- Methods (pp. 32-33)
 - Web Browsers are Programs Built Using Objects (pp. 36-37)
+- The Document Object Represents an HTML page (p. 38)
+- How HTML, CSS & JavaScript Fit Together (p. 44)
+- Linking to a JavaScript File from an HTML Page (p. 47)
+- Placing the Script in the Page (p. 49)
+- How to Use Objects & Methods (p. 50)
+- Statements (p. 56)
 - Comments (p. 57)
-- Using the Browser Object Model (p. 125)
+- Variables (pp. 58-69)
+- Arithmetic and String Operators (pp. 75-79)
+- Comparison Operators (pp. 150-155)
+- If/Else Statements (pp. 160-163)
+- Loops (For, While, Do While) (pp. 170-177)
 
 ## Learning Objectives
 
@@ -47,4 +58,6 @@ This is a link to the lab activity...
 
 ## Additional Resources
 
--
+An excellent free e-book on JavaScript that's worth bookmarking:
+
+- [Eloquent JavaScript](http://eloquentjavascript.net/)
