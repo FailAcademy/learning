@@ -152,7 +152,7 @@ template: inverse
 - section
 
 ---
-(Need graphic to illustrate the previous concept)
+![HTML5 example layout](http://blogs.msdn.com/cfs-filesystemfile.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-91-03-metablogapi/5086.HTML5PageLayout_5F00_2.jpg)
 ---
 template: inverse
 #Common HTML Tags
