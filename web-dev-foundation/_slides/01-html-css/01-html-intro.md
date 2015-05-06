@@ -42,7 +42,7 @@ Hyper Text Markup Language
 
 **Markup** is a term that refers to how text is supposed to be presented in the browser by way of placing different combination of tags around the text.  
 ---
-
+template: inverse
 class: center, middle
 
 ## Using HTML Tags
@@ -54,7 +54,8 @@ class: center, middle
 
 ### Basic HTML Tags
 
-```<p> content </p>
+```html
+<p> content </p>
 ```
 
 ---
@@ -64,7 +65,8 @@ class: center, middle
 
 ### Tags with Attributes
 
-```<p class="reditalics"> content </p>
+```html
+<p class="reditalics"> content </p>
 ```
 
 ---
@@ -73,7 +75,8 @@ class: center, middle
 
 ### Nested Tags (multiple tags)
 
-```<p><em> content </em></p>
+```html
+<p><em> content </em></p>
 ```
 
 ---
