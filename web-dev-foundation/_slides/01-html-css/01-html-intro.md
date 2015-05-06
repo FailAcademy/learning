@@ -45,18 +45,39 @@ Hyper Text Markup Language
 
 class: center, middle
 
-### Using HTML Tags
+## Using HTML Tags
 
 HTML tags are surrounded with square brackets and that is how they are distinguished from the text that we see on a webpage.  HTML tags are what web browsers read to interpret the code into the visual format  and  layout  of  a  web  page.  The  process  of  adding  tags  around  page  elements  to  modify  their  visual properties is called marking up, hence “mark‐up language”.  
 
 ---
 class: center, middle
 
-### JavaScript is not "Java"
+### Basic HTML Tags
 
-The shared name is just a remnant from the 1990s.
+```<p> content </p>
+```
 
 ---
+
+
+class: center, middle
+
+### Tags with Attributes
+
+```<p class="reditalics"> content </p>
+```
+
+---
+
+class: center, middle
+
+### Nested Tags (multiple tags)
+
+```<p><em> content </em></p>
+```
+
+---
+
 template: inverse
 
 # Why Should I Use JavaScript?
