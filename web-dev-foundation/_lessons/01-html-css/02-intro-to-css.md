@@ -22,12 +22,12 @@ From the HTML & CSS textbook:
 
 ## Keywords
 
-- [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
-Selector
-Class
-ID
-Box model
-Web inspector
+- [CSS](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- [Selector]
+- [Class]
+- [ID]
+- [Box model]
+- [Web inspector]
 
 
 ## Exercise 1
