@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Using Custom Web Fonts
+title: Icon Fonts
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Using Custom Webfonts
+# Icon Fonts
 
 ---
 layout: false

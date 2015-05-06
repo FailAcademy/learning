@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Using Custom Web Fonts
+title: CSS Best Practices
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Using Custom Webfonts
+# CSS Best Practices
 
 ---
 layout: false

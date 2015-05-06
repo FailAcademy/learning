@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Responsive Images
-slides:
+slides: ['_slides/02-rwd/04-rwd_images-slides.md']
 ---
 
 ## Recommended Reading

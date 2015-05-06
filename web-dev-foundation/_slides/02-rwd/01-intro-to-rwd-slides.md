@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Using Custom Web Fonts
+title: Intro to Responsive Web Design
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Using Custom Webfonts
+# Intro to Responsive Web Design
 
 ---
 layout: false

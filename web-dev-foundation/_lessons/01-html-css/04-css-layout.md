@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: CSS Layouts
-slides:
+slides: ['_slides/01-html-css/04-css-layout-slides.md']
 ---
 
 ## Recommended Reading

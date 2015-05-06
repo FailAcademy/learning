@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Intro to RWD
-slides:
+slides: ['_slides/02-rwd/01-intro-to-rwd-slides.md']
 ---
 
 ## Recommended Reading

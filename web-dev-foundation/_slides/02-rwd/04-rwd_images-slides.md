@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Using Custom Web Fonts
+title: Responsive Images
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Using Custom Webfonts
+# Responsive Images
 
 ---
 layout: false

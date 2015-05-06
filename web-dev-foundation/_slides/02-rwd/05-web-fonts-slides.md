@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Using Custom Web Fonts
+title: Custom Web Fonts
 ---
 
 {% highlight html %}

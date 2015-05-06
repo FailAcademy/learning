@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Custom Web Fonts
-slides:
+slides: ['_slides/02-rwd/05-web-fonts-slides.md']
 ---
 
 ## Recommended Reading
