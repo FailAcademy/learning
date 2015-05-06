@@ -28,9 +28,7 @@ From the HTML & CSS textbook:
 
 
 
-### Using HTML Tags
 
-HTML tags are surrounded with square brackets and that is how they are distinguished from the text that we see on a webpage.  HTML tags are what web browsers read to interpret the code into the visual format  and  layout  of  a  web  page.  The  process  of  adding  tags  around  page  elements  to  modify  their  visual properties is called marking up, hence “mark‐up language”.  
 
 **Basic Tags**
 This is an example of a basic tag, with its start tag and end tag.
