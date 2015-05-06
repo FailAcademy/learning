@@ -32,7 +32,7 @@ layout: false
 template: inverse
 
 # What is HTML
-Hyper Text Markup Language
+##Hyper Text Markup Language
 ---
 
 ## HTML Terminology

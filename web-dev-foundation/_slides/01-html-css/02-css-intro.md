@@ -25,14 +25,22 @@ layout: false
 4. Importance of Root Folder
 5. File & Folder Naming Recommendations
 6. Differences in Doctypes
-7. HTML5 Layout Tags
-8. Common HTML Tags
+7. HTML5 Layout Tags / Common HTML Tags
+
+
+1. What is CSS
+2. What are CSS Statements
+3. What is Cascading Order/Specificity
+4. CSS Selectors
+5. CSS Classes and IDS
+6. Browser Development Tools
+7. What is the CSS box model 
 
 ---
 template: inverse
 
-# What is HTML
-Hyper Text Markup Language
+# What is CSS
+##Cascading Style Sheets
 ---
 
 ## HTML Terminology
