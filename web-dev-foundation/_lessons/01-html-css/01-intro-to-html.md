@@ -27,11 +27,6 @@ From the HTML & CSS textbook:
 - [Doctype](http://www.sitepoint.com/web-foundations/doctypes/)
 
 
-### Setting up a Root Folder ###
-
-Creating HTML webpages requires some planning ahead of time of what you are planning to put in your page, and especially with media files, such as picture, graphics, sound, movies,  they  need  to  be  placed  in  their  respective  folders  or  sub‐folders before you plan to reference/(link) them in your HTML file.  Many linking issues will arise if the desired media file is not placed in the root folder before it is referenced.
-
-
 ## File & Folder Naming Recommendations ##
 - Stick to lowercase consistently
 - Do not use SPACES in your file names, instead use hyphens- or underscores_

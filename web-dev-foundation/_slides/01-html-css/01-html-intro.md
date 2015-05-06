@@ -91,17 +91,26 @@ template: inverse
 ---
 class: center, middle
 
-> It  is  a  common  practice  to  create  a  folder  on  your  computer  (in  a  location  that  is  easy  to  access  and  remember)  that  will  contain  ALL  the  files  used  to  build  your  webpage.    This  folder  is  called  the  *Root folder* and can contain any number of sub‐folder in which to organize the web files further.  It is highly recommended  that  you  create  a  new  root  folder  for  every  different  website  that  you’re  working  on.  However, you can continue working with the same root folder when you are building on an existing site.
+> It  is  a  common  practice  to  create  a  folder  on  your  computer  (in  a  location  that  is  easy  to  access  and  remember)  that  will  contain  ALL  the  files  used  to  build  your  webpage.    This  folder  is  called  the  *Root folder* and can contain any number of sub‐folder in which to organize the web files further. 
 
-
-From "JavaScript: The Good Parts"
 
 ---
+class: center, middle
+> It is highly recommended  that  you  create  a  new  root  folder  for  every  different  website  that  you’re  working  on.  However, you can continue working with the same root folder when you are building on an existing site.
+
+---
+
 template: inverse
 
-# But What Is It for Exactly?
+# Root Folder Best Practices
 
 ---
+
+>Creating HTML webpages requires some planning ahead of time of what you are planning to put in your page, and especially with media files, such as picture, graphics, sound, movies,  they  need  to  be  placed  in  their  respective  folders  or  sub‐folders before you plan to reference/(link) them in your HTML file.  Many linking issues will arise if the desired media file is not placed in the root folder before it is referenced.
+
+---
+
+
 class: center, middle
 
 .large[
