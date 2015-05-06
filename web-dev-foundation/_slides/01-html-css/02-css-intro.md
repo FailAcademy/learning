@@ -18,9 +18,9 @@ class: center, middle, inverse
 layout: false
 
 # Agenda
-1. What is CSS
-2. What are CSS Statements
-3. What is Cascading Order/Specificity
+1. What is CSS?
+2. Writing CSS Statements
+3. What is Cascading Order/Specificity Mean?
 4. CSS Selectors
 5. CSS Classes and IDs
 6. Browser Development Tools
@@ -29,17 +29,36 @@ layout: false
 ---
 template: inverse
 
-# What is CSS
+# What is CSS?
 ##Cascading Style Sheets
 ---
 
 ## Definition
-**Hypertext**  is  a  system  of  clickable  text  links  that  let  you  view  information  in  a  non‐linear  way.    The  hypertext term has been updated to also include a non‐text link, such as a image or a button. Note that links  don’t  necessarily  always  get  you  to  another page,  a  hyperlink can also be set-up to run a script that can play a video or sound, or make something happen dynamically.
+**CSS** is the code that styles HTML elements in webpages, specifying their visual appearance and positioning.
 
 ---
-## HTML Terminology
+template: inverse
 
-**Markup** is a term that refers to how text is supposed to be presented in the browser by way of placing different combination of tags around the text.  
+# Writing CSS Statements
+---
+
+## CSS Statement Example
+
+```css
+
+p {
+font-family: Helvetica, Arial, sans-serif;
+color: blue;
+}
+
+```
+---
+template: inverse
+
+# Cascading Order
+
+---
+Use image to illustrate previous topic.
 ---
 
 ## Using HTML Tags
