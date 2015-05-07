@@ -33,42 +33,27 @@ From the HTML & CSS textbook:
 ## Exercise 1
 
 Do this activity!
-
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+- Crop, resize and optimize images for the web using image editor of choice
+- Use the image element on a web page using appropriate attributes
 
 ## Exercise 2
+Do this activity!
+- Use HEX and rgba to style web page elements
 
-This is how you add highlighted syntax to a lesson page:
-
-```html
-
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
 
 ## Lab Activity
+Do this activity!
+-Find and add images to a web page using a variety of techniques, and apply colours to various elements on the page as well.
 
 Copy this content to the lab/projects section later. 
 
+- Stock Photography Web Resources
 - Discuss further the basic copyright concerns, such public domain and Creative Commons.
 - Investigate resources to obtain free stock photography.
 - Use HEX/rgba colours to alter element colours in a web page.
 
 ## Additional Resources
-
-- [Code Academy](http://www.codecademy.com/learn)
+- [Web Images Best Practices]
+(http://www.commercev3.com/website-images-best-practices-2014-seo/)
+- Stock Photography Web Resources (list)
+- 

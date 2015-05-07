@@ -25,8 +25,7 @@ layout: false
 4. Image Best Practices
 5. IMG tag considerations
 6. Web tools for Image Editing
-7. Using Stock Imagery
-8. Copyright & Creative Commons
+7. Copyright & Creative Commons
 
 ---
 
@@ -59,12 +58,14 @@ template: inverse
 
 ****PNG-24****: (Portable Network Graphics)Best for graphics and photos, supports multiple levels of transparency, and millions of colours.
 
-****PNG-8****: Raster image format, limited to 256 colours, no transparency. Preferred format over the GIF as file sizes are 10-30% smaller. 1 level of transparency. Lossless format. 
+****PNG-8****: Raster image format, limited to 256 colours, no transparency. Preferred format over the GIF as file sizes are 10-30% smaller. 1 level of transparency. Lossless format.  Great for flat colour graphics like logos/icons/illustrations.
 
-****GIF****: (Graphics Interchange Format) This is a bitmap image format, but limited to 256 colours, no transparency. Often used now to save GIF animations. 1 level of transparency. Lossless format.
+---
+## Common Web Formats (cont.)
+
+****GIF****: (Graphics Interchange Format) This is a bitmap image format, but limited to 256 colours, no transparency. Often used now to save GIF animations. 1 level of transparency. Lossless format. Great for flat colour graphics like logos/icons/illustrations.
 
 ****SVG***: (Scalable Vector Graphics) Vector graphics for the web that's rendered in XML. No quality loss when zoomed or scaled.
-
 ---
 
 template: inverse
@@ -81,22 +82,19 @@ template: inverse
 - Keep a copy of the original editable .PSD file that you refer back to
 
 ---
+template: inverse
 
-# Syntax Highlighting
+# IMG Tag Usage
 
+
+---
+# Image Tag Attributes
 ```html
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
+<img src="photo.jpg" alt="photo description" title="further description of image" class="float_left />
 ```
+
+***alt tag***: Provide alternate text to describe the image
+*** title tag***: 
 
 ---
 template: inverse
