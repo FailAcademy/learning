@@ -149,7 +149,7 @@ class: center, middle
 
 # Variables
 
-In JS, we use the "var" keyword to define our variables.
+In JS, we use the **var** keyword to define our variables.
 
 We can define variables as strings (with HTML tags):
 
@@ -339,6 +339,8 @@ We can also compare values and evaluate their result:
 3 != 2 // returns true
 ```
 
+Note that `!=` means "does not equal."
+
 ---
 
 # Conditionals
@@ -523,6 +525,17 @@ document.write('Welcome to Spot\'s!');
 You can use the console to help find bugs in your JS code.
 
 (NEED AN EXAMPLE...)
+
+---
+
+# Logging Values to the Console
+
+You can also use `console.log()` to simply print out and test values in the browser's console, instead of writing them to your document.
+
+```javascript
+var greeting = "Hi there!"
+console.log(greeting);
+```
 
 ---
 
