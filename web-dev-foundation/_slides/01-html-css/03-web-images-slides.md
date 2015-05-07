@@ -36,17 +36,52 @@ template: inverse
 ##Using Photoshop for the Web
 
 ---
-##Basic Important Image Functions
+##Basic Photoshop Image Functions
 
 ****Scaling****: Image &rarr; Image Size &rarr;  Input New Size
 
-****Scaling****: Image &rarr; Image Rotation &rarr; Select Rotate Option
+****Rotating****: Image &rarr; Image Rotation &rarr; Select Rotate Option
 
 ****Cropping****: Toolbar &rarr; Select Crop Tool &rarr; Drag Crop Box & Apply Crop 
 
 ****Saving for Web****:  Save for Web &rarr; Select Appropriate Format/Settings
 
 ---
+template: inverse
+
+# Common Web Formats
+##JPG, PNG, GIF, SVG
+
+---
+## Common Web Formats
+
+****JPG****: (Joint Photographers Group) Best for photos, gradients, graphics with tonal variations. Lossy image format.
+
+****PNG-24****: (Portable Network Graphics)Best for graphics and photos, supports multiple levels of transparency, and millions of colours.
+
+****PNG-8****: Raster image format, limited to 256 colours, no transparency. Preferred format over the GIF as file sizes are 10-30% smaller. 1 level of transparency. Lossless format. 
+
+****GIF****: (Graphics Interchange Format) This is a bitmap image format, but limited to 256 colours, no transparency. Often used now to save GIF animations. 1 level of transparency. Lossless format.
+
+****SVG***: (Scalable Vector Graphics) Vector graphics for the web that's rendered in XML. No quality loss when zoomed or scaled.
+
+---
+
+template: inverse
+
+# Image Best Practices
+
+---
+## Image Best Practices
+- Scale down images to the appropriate size for your webpage
+- Choose the correct image format
+- Optimize Images to a good quality and efficient file size
+- Add alt tags to all images
+- Save image names with relevant keywords (that will tie into SEO later)
+- Keep a copy of the original editable .PSD file that you refer back to
+
+---
+
 # Syntax Highlighting
 
 ```html
