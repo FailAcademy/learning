@@ -8,8 +8,8 @@ slides: ['_slides/03-js/03-functions-and-objects.md']
 
 From the JavaScript & jQuery textbook:
 
-- Chapter 2: Basic JavaScript Instructions (Arrays) (pp. 70-73)
-- Functions, Methods & Objects (Functions) (pp. 88-144)
+- Arrays (pp. 70-73)
+- Functions, Methods & Objects (pp. 88-144)
 
 ## Learning Objectives
 
@@ -20,11 +20,10 @@ From the JavaScript & jQuery textbook:
 ## Keywords
 
 - [Function](https://developer.mozilla.org/en-US/docs/Glossary/Function)
-- Object (properties and methods)
+- [Return](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return)
+- [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object)
 - [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/array)
 - [Scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope)
-- [Built-in objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects)
-- [Return](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return)
 
 ## Exercise 1
 
@@ -40,4 +39,4 @@ This is a link to the lab activity...
 
 ## Additional Resources
 
--
+- 
