@@ -9,15 +9,26 @@ slides: ['_slides/01-html-css/03-web-images-slides.md']
 
 From the HTML & CSS textbook:
 
-- A Closer Look at Tags (pp. 23-24)
+- Web Images (pp. 107-123)
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Become familiar with web-friendly image formats (JPG, PNG, GIF).
+- Explore the web tools are available for image editing (such as Photoshop, Gimp, Pixelmator)
+- Demonstrate how to size, crop and transform images
+- Save images optimized for the web
+- Investigate resources to obtain free stock photography
+- Demonstrate how to use the image element in a web page, as well as its corresponding attributes (width, height, and alt text).
+- Discuss basic copyright concerns, such public domain and Creative Commons.
+- Use HEX/rgba colours to adjust element colours in a web page.
+
 
 ## Keywords
 
-- [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- Image formats (JPG, PNG, GIF)
+- Optimization
+- Image element
+
 
 ## Exercise 1
 
@@ -52,7 +63,11 @@ Or include an image:
 
 ## Lab Activity
 
-This is a link to the lab activity...
+Copy this content to the lab/projects section later. 
+
+- Discuss further the basic copyright concerns, such public domain and Creative Commons.
+- Investigate resources to obtain free stock photography.
+- Use HEX/rgba colours to alter element colours in a web page.
 
 ## Additional Resources
 

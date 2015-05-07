@@ -23,28 +23,30 @@ layout: false
 2. Crop, Size and Save for Web
 3. Common Web Formats
 4. Image Best Practices
-5. 
+5. IMG tag considerations
+6. Web tools for Image Editing
+7. Using Stock Imagery
+8. Copyright & Creative Commons
 
 ---
 
-.left-column[
-  ## Column Layout
-]
+template: inverse
 
-.right-column[
-You can make two-column layouts as well.red[*] in a slideshow!
-
-A sample unordered list:
-
-- List item 1
-- List item 2
-- List item 3
-
-.footnote[.red[*] And add footnotes too]
-]
+# Photoshop Overview
+##Using Photoshop for the Web
 
 ---
+##Basic Important Image Functions
 
+****Scaling****: Image &rarr; Image Size &rarr;  Input New Size
+
+****Scaling****: Image &rarr; Image Rotation &rarr; Select Rotate Option
+
+****Cropping****: Toolbar &rarr; Select Crop Tool &rarr; Drag Crop Box & Apply Crop 
+
+****Saving for Web****:  Save for Web &rarr; Select Appropriate Format/Settings
+
+---
 # Syntax Highlighting
 
 ```html
@@ -60,21 +62,6 @@ A sample unordered list:
    </body>
 </html>
 ```
-
----
-
-.left-column[
-  ## Remark How-tos
-]
-
-.right-column[
-   This slideshow is based on [remark.js](https://github.com/gnab/remark).
-
-   To learn more about building a slideshow with remark, check out:
-
-   - [The remark formatting guide](https://github.com/gnab/remark/wiki/Formatting)
-   - [The remark Markdown guide](https://github.com/gnab/remark/wiki/Markdown)
-]
 
 ---
 template: inverse
