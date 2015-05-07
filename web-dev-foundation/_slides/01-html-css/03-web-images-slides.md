@@ -94,7 +94,8 @@ template: inverse
 ```
 
 ***alt tag***: Provide alternate text to describe the image
-*** title tag***: 
+***title tag***:  Provides further information about the image that is displayed in a tool tip
+***class tag***: Provides a link to the CSS stylesheet 
 
 ---
 template: inverse
