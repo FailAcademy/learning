@@ -86,7 +86,6 @@ template: inverse
 
 # IMG Tag Usage
 
-
 ---
 # Image Tag Attributes
 ```html
@@ -94,10 +93,35 @@ template: inverse
 ```
 
 ***alt tag***: Provide alternate text to describe the image
+
 ***title tag***:  Provides further information about the image that is displayed in a tool tip
+
 ***class tag***: Provides a link to the CSS stylesheet 
 
 ---
+template: inverse
+
+# Web Imaging Tools
+---
+## Common Image Editing Software
+
+
+---
+template: inverse
+# Copyright & Creative Commons
+
+---
+
+## Copyright Considerations 
+
+
+---
+
+## Creative Commons
+
+
+---
+
 template: inverse
 
 # Fin!
