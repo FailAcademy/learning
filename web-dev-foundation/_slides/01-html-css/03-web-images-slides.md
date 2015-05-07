@@ -92,11 +92,11 @@ template: inverse
 <img src="photo.jpg" alt="photo description" title="further description of image" class="float_left />
 ```
 
-***alt tag***: Provide alternate text to describe the image
+***alt tag:*** Provide alternate text to describe the image
 
-***title tag***:  Provides further information about the image that is displayed in a tool tip
+***title tag:***  Provides further information about the image that is displayed in a tool tip
 
-***class tag***: Provides a link to the CSS stylesheet 
+***class tag:***: Provides a link to the CSS stylesheet 
 
 ---
 template: inverse
@@ -104,7 +104,10 @@ template: inverse
 # Web Imaging Tools
 ---
 ## Common Image Editing Software
-
+- **Adobe Photoshop** - Industry standard image editing software
+- **Adobe Illustrator** - Industry standard graphics editing software
+- Gimp - Free *GNU* *I*mage *M*anipulating *P*rogram
+- Pixelmator
 
 ---
 template: inverse

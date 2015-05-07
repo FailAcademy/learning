@@ -56,4 +56,9 @@ Copy this content to the lab/projects section later.
 - [Web Images Best Practices]
 (http://www.commercev3.com/website-images-best-practices-2014-seo/)
 - Stock Photography Web Resources (list)
-- 
+-  Web Editing Software Links
+	- Adobe Photoshop
+	- Adobe Illustrator
+	- [Gimp] (http://www.gimp.org)
+	- [Pixelmator](http://www.pixelmator.com/mac/)
+
