@@ -19,7 +19,11 @@
          var hljs = remark.highlighter.engine;
          var slideshow = remark.create({
             highlightStyle: 'tomorrow-night-bright',
-            highlightLanguage: 'xml'
+            highlightLanguage: 'xml',
+            navigation: {
+               scroll: false,
+               click: true
+            }
          });
       </script>
    </body>
