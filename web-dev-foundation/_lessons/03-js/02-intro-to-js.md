@@ -22,6 +22,7 @@ From the JavaScript & jQuery textbook:
 - Comparison Operators (pp. 150-155)
 - If/Else Statements (pp. 160-163)
 - Loops (For, While, Do While) (pp. 170-177)
+- Accessing Elements (pp. 192-203)
 
 ## Learning Objectives
 
