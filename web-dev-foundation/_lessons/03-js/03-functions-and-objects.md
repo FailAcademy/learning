@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: JavaScript Functions, Objects and Arrays
-slides: ['_slides/03-js/03-functions-and-objects.md']
+slides: ['_slides/03-js/03-functions-and-objects-slides.md']
 ---
 
 ## Recommended Reading
@@ -39,4 +39,4 @@ This is a link to the lab activity...
 
 ## Additional Resources
 
-- 
+-

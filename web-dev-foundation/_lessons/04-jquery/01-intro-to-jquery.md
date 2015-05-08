@@ -20,8 +20,8 @@ From the JavaScript & jQuery textbook:
 ## Keywords
 
 - Document Object Model (DOM)
+- Method
 - Traverse
-- jQuery object
 - Chaining
 
 ## Exercise 1

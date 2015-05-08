@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Intro to JavaScript
-slides: ['_slides/03-js/02-intro-to-js.md']
+slides: ['_slides/03-js/02-intro-to-js-slides.md']
 ---
 
 ## Recommended Reading
