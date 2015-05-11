@@ -50,8 +50,7 @@ template: inverse
 <ul style="list-style-type:square">
 	<li>Anakin Skywalker</li>
 	<li>Obi-Wan</li>
-	<li>Darth Vader</li>
-	
+	<li>Darth Vader</li>	
 </ul>
 ```
 
