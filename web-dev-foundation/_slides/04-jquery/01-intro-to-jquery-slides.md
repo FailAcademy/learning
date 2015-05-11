@@ -24,7 +24,7 @@ layout: false
 3. jQuery basics (traversing and chaining)
 4. Working HTML elements and attributes
 5. Working with CSS in jQuery
-6. Showing and hiding content
+6. Creating click events
 
 ---
 
@@ -41,7 +41,7 @@ jQuery is library of code that makes it much easier to perform many essential ta
 - Find elements using CSS-style selectors
 - Change content on the page
 - Add animations to elements
-- Watch what a user does and react to it
+- Watch what a user does and react to what they do
 - Fetch new content
 
 ---
@@ -294,7 +294,7 @@ $('#menu').css('margin-right', '10px');
 
 # Activity 1
 
-Traverse the DOM and change the contents of an element and its relatives using jQuery methods
+Traverse the DOM and change the contents of an element and its relatives using jQuery methods...
 
 ---
 template: inverse
@@ -325,8 +325,8 @@ We can use the `.prepend()`, `.append()`, and `.remove()` methods to update cont
 
 ```javascript
 // Add new a new item to the end of the list:
-var $newContent = $('<li>three</li>');
-$('.numbers').append($newContent);
+var newContent = '<li>three</li>';
+$('.numbers').append(newContent);
 
 // Change the content of the second list item:
 $('.numbers li:nth-child(2)').text('2');
@@ -376,22 +376,85 @@ Ostensibly, `.attr()` and `.prop()` do very similar things, but `.prop()` offers
 
 # Working with CSS
 
+As we saw in an earlier example, we can also use jQuery to get and update an elements styles:
 
+```javascript
+// Get the font size and log it:
+var $fontSize = $('p').css('font-size');
+console.log($fontSize);
+
+// Change the font size:
+$('p').css('font-size', '18px');
+```
+
+We can even make multiple adjustments:
+
+```javascript
+$('p').css({'font-size': '18px', 'font-weight': 'bold'});
+```
 
 ---
 
 # Activity 2
 
-Add content, change attributes and work with CSS in jQuery
+Add content, change attributes and work with CSS in jQuery...
 
 ---
 template: inverse
 
-# jQuery Magic Show: Showing and Hiding Elements
+# Event Handling
 
 ---
 
-# Showing and Hiding
+# Events in jQuery
+
+Website are usually interactive, and jQuery makes it very easy to react to things that website users do while on a page.
+
+To do this, we usually use the `.on()` method:
+
+```javascript
+$('button').on('click', function() {
+   // Code to run when button clicked...
+});
+```
+
+---
+
+# Events in jQuery
+
+For basic event handlers to work, they must be attached to elements that exist when your code makes the call to `.on()`.
+
+If the following button was dynamically added to the page after the page loaded, the alert would not appear:
+
+```javascript
+$('button').on('click', function() {
+   alert('You clicked the button');
+});
+
+$('form').append('<button>My Button</button>');
+```
+
+---
+
+# Event Delegation
+
+Alternatively, we can use **event delegation** to attach events to elements.
+
+Event delegation allows us to attach events to children of an element, even if they do not exist at the time of the page load.
+
+```javascript
+$('div').on('click', 'button', function() {
+   alert('You clicked the button');
+});
+```
+
+Can you spot the difference in this approach?
+
+---
+
+# Event Delegation
+
+Bonus! Using the event delegation approach can also be beneficial for code performance when you can attach an event to a single parent element instead of many lower-level ones.
 
 ---
 
