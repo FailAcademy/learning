@@ -285,7 +285,10 @@ Open a new browser tab and open the console, and type in each line one at a time
 ---
 # Exercise 1
 
-More complex example using prompt and returning the value to the document...
+Now let's try out some of these methods on Codepen:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/RProXV/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/RProXV/'>RProXV</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 template: inverse
@@ -447,21 +450,24 @@ It's very easy to accidentally create an "infinite loop" using while and do whil
 For loops allow you to set a specific number of times that the loop will run:
 
 ```javascript
-var score = 0;
+var count = 0;
 
-for (var i = 0; i < 5; i++) {
-  score = i;
-	document.write('Your score: ' + score + '<br />');
+for (var i = 1; i < 5; i++) {
+  count = i;
+  document.write('Current count: ' + count + '<br />');
 }
 ```
 
-You will likely find your self using for loops most often with "arrays" (we'll get to those shortly...).
+You will likely find yourself using for loops most often with "arrays" (we'll get to those shortly...).
 
 ---
 
 # Exercise 2
 
-User variables, operators, conditionals, and loops at the same time...
+Let's try using loops and conditionals on Codepen:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/EjPZja/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/EjPZja/'>EjPZja</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 
@@ -479,6 +485,8 @@ Sooner or later you're actually going to want to incorporate JS in a real websit
 ---
 
 # Directly in the HTML
+
+You can wrap your JavaScript in `script` tags directly in the HTML document:
 
 ```html
 <!DOCTYPE html>
@@ -498,6 +506,8 @@ Sooner or later you're actually going to want to incorporate JS in a real websit
 ---
 
 # As a Separate ".js" File
+
+Usually, you'll want to link to a separate `.js` file:
 
 ```html
 <!DOCTYPE html>
@@ -585,7 +595,7 @@ We can also store the results of `getElementById` in a variable to make it faste
 
 var el = document.getElementById('message');
 el.innerHTML = 'We love dogs!';
-el.className('red'); // adds class name of "red" to the element
+el.className = 'red'; // adds class name of "red" to the element
 ```
 
 ---
@@ -609,9 +619,12 @@ console.log(greeting);
 
 ---
 
-# Exercise 3...
+# Exercise 3
 
-Target some DOM nodes using `getElementById`, etc.
+Let's try targeting some HTML elements:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/XbXxey/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/XbXxey/'>XbXxey</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 

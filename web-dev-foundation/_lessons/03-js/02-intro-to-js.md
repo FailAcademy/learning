@@ -47,11 +47,24 @@ From the JavaScript & jQuery textbook:
 
 ## Exercise 1
 
-Do this activity!
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/RProXV/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/RProXV/'>RProXV</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+View the [solution](http://codepen.io/redacademy/pen/gpPgOG).
 
 ## Exercise 2
 
-Do this activity!
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/EjPZja/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/EjPZja/'>EjPZja</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+View the [solution](http://codepen.io/redacademy/pen/zGrmzM).
+
+## Exercise 3
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/XbXxey/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/XbXxey/'>XbXxey</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+View the [solution]().
 
 ## Lab Activity
 
