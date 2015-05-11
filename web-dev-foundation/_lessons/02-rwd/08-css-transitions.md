@@ -3,7 +3,7 @@ layout: lesson
 title: Intro to CSS Transitions
 slides: ['_slides/02-rwd/08-css_transitions-slides.md']
 ---
-## Recommended Reading
+## Recommended Pre-Reading
 
 From the HTML & CSS textbook:
 

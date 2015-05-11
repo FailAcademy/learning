@@ -8,10 +8,12 @@ slides: ['_slides/01-html-css/02-css-intro.md']
 
 From the HTML & CSS textbook:
 
-- Introducing CSS (pp. 228-244)
+- Creating Links between Pages (pg. 74-88)
+- Introducing CSS (pg. 228-244)
 
 ## Learning Objectives
 
+- Create different types of links in HTML
 - Define CSS in relation to HTML
 - Recognize different “cascading order”
 - Learn about specificity function
