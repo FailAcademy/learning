@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Slideshow Title
+# CSS Navigation and Layouts
 
 .title-logo[![Red logo](../../public/img/red-logo-white.svg)]
 
@@ -24,6 +24,7 @@ layout: false
 3. CSS positioning (static, relative, absolute, and fixed)
 4. CSS floats/clear floats
 5. Use Images in CSS
+6. Standard Layout Practices
 ---
 template: inverse
 
@@ -32,11 +33,36 @@ template: inverse
 
 ---
 ## Types of Lists
-**Ordered List** displays list items numbered in different styles (numeric, roman and alpha)
+**Ordered List** displays list items numbered in different styles (decimal, roman and alpha)
 
-**Unordered List** displays list items as various bulleted styles (discus, circle, square or custom)  
+**Unordered List** displays list items as various bulleted styles (disc, circle, square or custom) 
+
+*See pg. 333-336 in your HTML/CSS text for further examples* 
 ---
 
+template: inverse
+
+# CSS Reset
+
+---
+## Title
+
+---
+template: inverse
+
+# CSS Positioning
+## Static, Relative, Absolute, Fixed
+
+---
+##CSS Positioning Types
+
+****Static****: Text
+****Relative****: Text
+****Absolute****: Text
+****Fixed***: Text
+
+
+---
 ## Common Web Formats
 
 ```html
