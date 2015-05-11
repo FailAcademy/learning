@@ -9,23 +9,36 @@ slides: ['_slides/01-html-css/04-css-layout-slides.md']
 From the HTML & CSS textbook:
 
 
-
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Learn about lists and list formatting options
+- Understand the concept of what a “CSS reset” is and why they are needed.
+- Demonstrate competence using CSS positioning (static, relative, absolute, and fixed) to move elements around a web page.
+- Demonstrate competence using CSS floats to manipulate elements, and how to clear floats.
+- Use images in CSS as a background image, and apply other CSS techniques to manipulate image elements with a web page.
+
 
 ## Keywords
 
 - [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- CSS Reset
+- Position (absolute, relative, static, fixed)
+- Float (left, right, clear)
+- Z-index
+
 
 ## Exercise 1
 
 Do this activity!
 
+Use CSS to position various elements absolutely and fixed on a page
+
 <p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 ## Exercise 2
+
+Manipulate the display of an HTML list to serve as a navigation menu
 
 This is how you add highlighted syntax to a lesson page:
 
@@ -45,9 +58,6 @@ This is how you add highlighted syntax to a lesson page:
 
 ```
 
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
 
 ## Lab Activity
 

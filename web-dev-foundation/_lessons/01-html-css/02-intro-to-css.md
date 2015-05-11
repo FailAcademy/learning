@@ -61,9 +61,6 @@ This is how you add highlighted syntax to a lesson page:
 
 ```
 
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
 
 ## Lab Activity
 
