@@ -45,7 +45,7 @@ template: inverse
 # CSS Reset
 
 ---
-## Title
+## CSS Reset
 
 ---
 template: inverse
@@ -56,12 +56,16 @@ template: inverse
 ---
 ##CSS Positioning Types
 
-****Static****: Text
-****Relative****: Text
-****Absolute****: Text
-****Fixed***: Text
+****Static/Normal Flow****: Default behaviour of content on a page
+****Relative****: Moves an element from its normal flow
+****Absolute****: This element is removed from its normal flow, and moves in relation to its containing block.
+****Fixed***: Positions the element with relation to the browser window, and does not move when page is scrolled. 
 
+*See pg. 363-376 in your HTML/CSS text for further examples* 
+---
 
+## Z-Index
+- The Z-Index property allows for elements to stack and overlap each other. The higher the z-index, the more closer the element is to the front, the smaller the number, the element will appear more in the background. 
 ---
 ## Common Web Formats
 
