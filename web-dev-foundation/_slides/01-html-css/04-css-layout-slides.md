@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: The Slide Deck Title (used for the URL slug, and must be unique)
+title: Intro to CSS Layout Slides (used for the URL slug, and must be unique)
 ---
 
 {% highlight html %}
@@ -19,31 +19,17 @@ layout: false
 
 # Agenda
 
-1. Introduction
-2. Deep-dive
-3. ...
+1. Create lists (ordered & unordered)
+2. Apply CSS Reset
+3. CSS positioning (static, relative, absolute, and fixed)
+4. CSS floats/clear floats
+5. Use Images in CSS
+---
+## Common Web Formats
 
 ---
 
-.left-column[
-  ## Column Layout
-]
-
-.right-column[
-You can make two-column layouts as well.red[*] in a slideshow!
-
-A sample unordered list:
-
-- List item 1
-- List item 2
-- List item 3
-
-.footnote[.red[*] And add footnotes too]
-]
-
----
-
-# Syntax Highlighting
+## Common Web Formats
 
 ```html
 <!-- A bit of sample HTML with syntax highlighting-->

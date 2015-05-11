@@ -33,9 +33,6 @@ Do this activity!
 
 Use CSS to position various elements absolutely and fixed on a page
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
 ## Exercise 2
 
 Manipulate the display of an HTML list to serve as a navigation menu
