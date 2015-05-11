@@ -35,7 +35,25 @@ template: inverse
 ## Types of Lists
 **Ordered List** displays list items numbered in different styles (decimal, roman and alpha)
 
+```html
+<h3> Star Wars Movies </h3>
+<ol style="list-style-type:upper-roman">
+	<li>The Phantom Menace</li>
+	<li>Attack of the Clones</li>
+	<li>Revenge of the Sith</li>
+</ol>
+```
+
 **Unordered List** displays list items as various bulleted styles (disc, circle, square or custom) 
+```html
+<h3> Star Wars Characters</h3>
+<ul style="list-style-type:square">
+	<li>Anakin Skywalker</li>
+	<li>Obi-Wan</li>
+	<li>Darth Vader</li>
+	
+</ul>
+```
 
 *See pg. 333-336 in your HTML/CSS text for further examples* 
 ---
