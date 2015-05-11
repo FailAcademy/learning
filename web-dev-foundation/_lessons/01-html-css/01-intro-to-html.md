@@ -8,7 +8,8 @@ slides: ['_slides/01-html-css/01-html-intro.md']
 
 From the HTML & CSS textbook:
 
-- Elements and Attributes (p. XX)
+- A Closer Look at Tags (pp. 23-28)
+- Elements and Attributes (p. 40-60)
 
 ## Learning Objectives
 
@@ -53,8 +54,7 @@ Using this *[Codepen Exercise 2]* (this has the doctype, body, head, title tags 
 =======
 ## Lab Activity
 Using the preset **HTML template** (this has the doctype, body, head, title tags all set up),  markup the text as a HTML5 document using best practices discussed in the morning using a combination of headers, sections, articles, and footer elements, as well as proper nested basic elements.
->>>>>>> origin/master
->>>>>>> Stashed changes
+
 
 [comment]: Insert a visual image of the end result of the page to style
 

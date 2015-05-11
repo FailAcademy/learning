@@ -8,7 +8,7 @@ slides: ['_slides/01-html-css/04-css-layout-slides.md']
 
 From the HTML & CSS textbook:
 
-- A Closer Look at Tags (pp. 23-24)
+
 
 ## Learning Objectives
 
