@@ -106,6 +106,15 @@
    .red { color: $brand-red; }
    .large { font-size: 2em; }
 
+   .inline-images {
+      text-align: center;
+      
+      img {
+         display: inline-block;
+         margin: 0 1em 1em;
+      }
+   }
+
    .pull-left {
       float: left;
       width: 47%;

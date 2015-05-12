@@ -23,6 +23,7 @@ From the JavaScript & jQuery textbook:
 - Method
 - Traverse
 - Chaining
+- Event handling
 
 ## Exercise 1
 
