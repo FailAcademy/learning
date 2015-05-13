@@ -58,4 +58,6 @@ This is a link to the lab activity...
 
 ## Additional Resources
 
--
+Reinforce the JavaScript skills you just learned by working through this Code Academy course:
+
+- [Code Academy - JavsScript](http://www.codecademy.com/en/tracks/javascript)
