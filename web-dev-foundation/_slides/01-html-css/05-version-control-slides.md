@@ -64,7 +64,7 @@ template: inverse
 
 `pwd` to figure out where you are:
 
-.center[![pwd command](../../public/img/slide-assets/cli-pwd.gif)]
+![pwd command](../../public/img/slide-assets/cli-pwd.gif)
 
 ---
 
@@ -72,7 +72,7 @@ template: inverse
 
 `ls` to the list files in the current directory:
 
-.center[![ls command](../../public/img/slide-assets/cli-ls.gif)]
+![ls command](../../public/img/slide-assets/cli-ls.gif)
 
 ---
 
@@ -80,7 +80,7 @@ template: inverse
 
 `cd <path>` to get to a sub-folder, and `cd ..` back:
 
-.center[![cd command](../../public/img/slide-assets/cli-cd.gif)]
+![cd command](../../public/img/slide-assets/cli-cd.gif)
 
 You can also `cd ../..` to go up two levels (and so on).
 
@@ -90,7 +90,7 @@ You can also `cd ../..` to go up two levels (and so on).
 
 Pro tip! You can `cd <drag/drop>` to populate the a path and `cd ~` to get all the way back to your home directory:
 
-.center[![cd drag and drop command](../../public/img/slide-assets/cli-cd-drag.gif)]
+![cd drag and drop command](../../public/img/slide-assets/cli-cd-drag.gif)
 
 ---
 
@@ -98,7 +98,7 @@ Pro tip! You can `cd <drag/drop>` to populate the a path and `cd ~` to get all t
 
 `touch <file>` to add a file and `rm <file>` to remove it:
 
-.center[![cd drag and drop command](../../public/img/slide-assets/cli-touch-rm.gif)]
+![cd drag and drop command](../../public/img/slide-assets/cli-touch-rm.gif)
 
 ---
 
@@ -115,7 +115,7 @@ You can also copy and move files within the file system:
 
 `mkdir <folder>` to create a new directory:
 
-.center[![cd drag and drop command](../../public/img/slide-assets/cli-mkdir-rmr.gif)]
+![cd drag and drop command](../../public/img/slide-assets/cli-mkdir-rmr.gif)
 
 Then `rm -r <folder>` to delete it and all of its files.
 
@@ -220,11 +220,17 @@ We can use the command line to run Git commands or a GUI-based app. Let's start 
 
 Creating a new Git repository for a project only requires running `git init` in the root folder of your project:
 
+![git init command](../../public/img/slide-assets/git-init.gif)
+
 ---
 
 # First Steps with Git
 
 If view the hidden files in the the directory where you just ran `git init`, you would now see an `.git` sub-directory there.
+
+.inline-images[
+   ![hidden git folder](../../public/img/slide-assets/git-hidden-folder.png)
+]
 
 ---
 
@@ -232,11 +238,15 @@ If view the hidden files in the the directory where you just ran `git init`, you
 
 Alternatively, you can `git clone <repo address>` to copy an existing Git repository to your computer:
 
+![git clone command](../../public/img/slide-assets/git-clone.gif)
+
 ---
 
 # Committing Changes
 
 As we make changes to our working directory where we initialized Git, we can check on the current state of our project by running `git status`:
+
+![git status command](../../public/img/slide-assets/git-status.gif)
 
 ---
 
@@ -244,13 +254,15 @@ As we make changes to our working directory where we initialized Git, we can che
 
 Next, we need to tell Git that we want to keep track of the files that are currently untracked. To do that, run `git add -A` to add them to the **staging area**:
 
+![git add command](../../public/img/slide-assets/git-add.gif)
+
 ---
 
 # Committing Changes
 
-Now it's actually time to commit our changes to the repository. To do that, run `git commit -m "And and your commit message here."`
+Now it's actually time to **commit** our changes. To do that, run `git commit -m "Your message here."`
 
-Committing changes in Git is like a saving a snapshot of your project in your local copy.
+![git commit command](../../public/img/slide-assets/git-commit.gif)
 
 ---
 
@@ -295,11 +307,15 @@ Branches are helpful when you're working on a new feature for your project and y
 
 To create a new branch, check it out, and begin working on it, you simply run `git checkout -b <branch name> master`:
 
+![git branch command](../../public/img/slide-assets/git-branch.gif)
+
 ---
 
 # Branching and Merging
 
 Once you're done working on your branch, you'll need to **merge** your branch back into the master branch:
+
+![git branch command](../../public/img/slide-assets/git-merge.gif)
 
 ---
 
@@ -319,7 +335,7 @@ git commit -m "Start a feature"
 git add <file>
 git commit -m "Finish a feature"
 
-# Merge in the new-feature branch
+# Merge in the new-feature branch, then delete it
 git checkout master
 git merge new-feature
 git branch -d new-feature
@@ -342,6 +358,31 @@ You can easily add a local repository to your online GitHub account using one of
 .inline-images[
    ![Add repo with GitHub app](../../public/img/slide-assets/github-add-local.png)
 ]
+
+---
+
+# Using a GUI for Git
+
+Once you have added your local repository, you can click the "Publish" button to send your files to GitHub.
+
+Doing this is like running the `git remote add origin <url>` and `git push origin master` commands one after another.
+
+---
+
+# Using a GUI for Git
+
+And similarly, if you are collaborating on a project with others, you can click the "Sync" button to pull in their changes.
+
+This is the same as running the `git pull origin master` command.
+
+---
+
+# Using a GUI for Git
+
+You can learn more about using GitHub for Mac and GitHub for Windows here:
+
+- [GitHub for Mac Help](https://mac.github.com/help.html)
+- [GitHub for Windows Help](https://windows.github.com/help.html)
 
 ---
 
