@@ -291,12 +291,6 @@ $('#menu').css('margin-right', '10px');
 ```
 
 ---
-
-# Activity 1
-
-Traverse the DOM and change the contents of an element and its relatives using jQuery methods...
-
----
 template: inverse
 
 # Doing More with the DOM
@@ -395,9 +389,12 @@ $('p').css({'font-size': '18px', 'font-weight': 'bold'});
 
 ---
 
-# Activity 2
+# Exercise 1
 
-Add content, change attributes and work with CSS in jQuery...
+Let's try traversing the DOM to make some change to an HTML document:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/OVNjLB/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/OVNjLB/'>OVNjLB</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 template: inverse
@@ -458,9 +455,52 @@ Bonus! Using the event delegation approach can also be beneficial for code perfo
 
 ---
 
-# Activity 3
+# The Event Object
 
-Show and hide divs...
+Every event handling function receives and event object, and this object has methods and properties of its own.
+
+To access these methods and properties, we must pass in the event object as a parameter for our function:
+
+```javascript
+$('div').on('click', 'button', function(event) {
+   // Code to run when button is clicked
+});
+```
+
+---
+
+# The Event Object
+
+*And why exactly is this useful?*
+
+Sometimes we want attach events to HTML elements that have default behaviours that we need to override.
+
+For instance, you may want to attach a special click handler to an `a href` that performs a different action than click through to wherever that link points.
+
+---
+
+# The Event Object
+
+The event object has a method that allows us to do this. That method is called `.preventDefault()`:
+
+```javascript
+$('div').on('click', 'button', function(event) {
+
+   // Stop the default behavior on the button click
+   event.preventDefault();
+
+   // Now perform our custom button click actions here...
+});
+```
+
+---
+
+# Exercise 2
+
+Try creating a function that listens for an click event on a link:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/VLazbx/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/VLazbx/'>VLazbx</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 template: inverse
