@@ -115,6 +115,25 @@ Keep in mind that JS functions always return something, even when you don't tell
 
 ---
 
+# Functions in HTML
+
+We can call functions from within an HTML file as well:
+
+```javascript
+function fullName() {
+   var yourName = prompt('What\'s your name?')
+   document.write('<h1>' + yourName + '</h1>');
+}
+```
+
+The function is called using the `onclick` attribute:
+
+```html
+<button onclick="fullName();">Click here!</button>
+```
+
+---
+
 # Not All Functions Are Created Equal...
 
 In JavaScript, you can create different kinds of functions:
@@ -254,7 +273,10 @@ There are pros and cons to each type of variable scope:
 
 # Activity 1
 
-- Mess around with different functions in Codepen
+Time to write a function of your own!
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/gprxEN/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/gprxEN/'>gprxEN</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 template: inverse
@@ -431,8 +453,10 @@ var person = {
 
 # Activity 2
 
-- Build some basic objects JS, and use some built-in ones too
-- Require setting properties AND methods
+Let's try creating an object that has properties and methods:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/QbNqbG/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/QbNqbG/'>QbNqbG</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 template: inverse
@@ -476,7 +500,7 @@ var shoppingList  = [
 Add values to an array by separating them with commas:
 
 ```javascript
-var shoppingList  = ['coffee', 'peppers', 'apple juice'];
+var shoppingList = ['coffee', 'peppers', 'apple juice'];
 ```
 
 Access them by their index number:
@@ -532,7 +556,7 @@ Let's take our shopping list array and print it out in a list:
 var shoppingList  = ['coffee', 'peppers', 'apple juice'];
 
 // Remember how we manually set the max. number of loops before?
-// We can use the array length to get the number automatically.
+// We can use the array "length" to get the number automatically:
 
 var totalItems = shoppingList.length;
 
@@ -547,7 +571,10 @@ Try this out in Codepen and see what you get.
 
 # Activity 3
 
-- Build an array in JS and iterate over it with a for loop (review!)...
+Time to ramp up your JS skills by looping through an array and adding the items in that array to a list:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/YXqryM/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/YXqryM/'>YXqryM</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 template: inverse

@@ -27,11 +27,30 @@ From the JavaScript & jQuery textbook:
 
 ## Exercise 1
 
-Do this activity!
+Time to write a function of your own!
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/gprxEN/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/gprxEN/'>gprxEN</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+View the [solution](http://codepen.io/redacademy/pen/doMzLQ)
 
 ## Exercise 2
 
-Do this activity!
+Let's try creating an object that has properties and methods:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/QbNqbG/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/QbNqbG/'>QbNqbG</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+View the [solution](http://codepen.io/redacademy/pen/oXxGXJ).
+
+## Exercise 3
+
+Time to ramp up your JS skills by looping through an array and adding the items in that array to a list:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/YXqryM/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/YXqryM/'>YXqryM</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+View the [solution](http://codepen.io/redacademy/pen/NqNayj).
 
 ## Lab Activity
 
