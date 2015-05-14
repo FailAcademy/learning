@@ -25,7 +25,7 @@ layout: false
 4. Arithmetic and comparison operators
 5. Conditionals and loops
 6. Accessing elements on a page
-7. Including scripts on a webpage and debugging
+7. Including scripts on a webpage
 
 ---
 template: inverse
@@ -76,10 +76,6 @@ class: center, middle
 
 ---
 
-(Need graphic to illustrate the previous concept)
-
----
-
 # Client-side / Server-side
 
 - Client-side scripts run in the **browser**
@@ -92,10 +88,27 @@ class: center, middle
 
 # The Console
 
-- Because JS is "client-side" you can see it in your browser
-- You can even write it right in your browser too...
+Because JS is "client-side" you can see it in your browser:
 
-[NEED SCREENCAP]
+.border[
+   ![Scripts in page source](../../public/img/slide-assets/elements-screenshot.png)
+]
+
+---
+
+# The Console
+
+You can write it right in your browser too using the **console**:
+
+.inline-images-border[
+   ![Writing scripts in the console](../../public/img/slide-assets/console-screenshot.png)
+]
+
+You can also use the console to identify bugs in your JS code.
+
+.inline-images-border[
+   ![Error in the console](../../public/img/slide-assets/js-error-screenshot.png)
+]
 
 ---
 
@@ -232,7 +245,9 @@ Comments are always hidden from execution in the script.
 .right-column[
    The "window object" is the browser's representation of each window or tab.
 
-   (NEED GRAPHIC)
+   .inline-images[
+      ![Window Object](../../public/img/slide-assets/window-object.svg)
+   ]
 ]
 
 ---
@@ -242,11 +257,11 @@ Comments are always hidden from execution in the script.
 ]
 
 .right-column[
-   The document object is the model of the current web page inside of the window/tab.
+   The document object is the model of the web page inside of the window/tab. It represents the HTML page:
 
-   It represents the HTML page:
-
-   (NEED GRAPHIC)
+   .inline-images[
+      ![Document Object](../../public/img/slide-assets/document-object.svg)
+   ]
 ]
 
 ---
@@ -600,17 +615,9 @@ el.className = 'red'; // adds class name of "red" to the element
 
 ---
 
-# Debugging
-
-You can use the console to help find bugs in your JS code.
-
-(NEED AN EXAMPLE...)
-
----
-
 # Logging Values to the Console
 
-You can also use `console.log()` to simply print out and test values in the browser's console, instead of writing them to your document.
+You can also use `console.log()` to simply print out and test values in the browser's console from your code, instead of writing them to your document.
 
 ```javascript
 var greeting = "Hi there!"

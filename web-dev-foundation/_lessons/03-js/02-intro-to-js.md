@@ -75,3 +75,7 @@ This is a link to the lab activity...
 An excellent free e-book on JavaScript that's worth bookmarking:
 
 - [Eloquent JavaScript](http://eloquentjavascript.net/)
+
+A tool for helping you detect errors or other problems in your JavaScript:
+
+- [JSHint](http://jshint.com/)
