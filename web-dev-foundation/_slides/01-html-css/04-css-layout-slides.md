@@ -137,6 +137,27 @@ template: inverse
 ## Z-Index
 - The Z-Index property allows for elements to stack and overlap each other. The higher the z-index, the more closer the element is to the front, the smaller the number, the element will appear more in the background. 
 ---
+template: inverse
+
+# CSS Floats
+
+---
+
+## Uses for CSS Floats (pg. 370-371, 375)
+**Floating Images with Text** When this float is applied, it moves an element either left or right on the page while the rest of the content flows around it. This is commonly used to wrap text around images in the content section of a page.  
+
+**Floating Images Beside Each Other** When this float is applied, it allows for elements to be situated side by side one another. Typically, each element will contain a width and float property.
+
+**Creating Multi-Column Layouts** When this type of float is applied to divs with different paragraph content, the text will flow as a few columns across the page. Typically, each div column will contain a width and float:left property.
+
+---
+## Clearing Floats (pg. 372)
+Use the -clear- property to remove and prior floats to an element. You can specify: left, right or both.
+
+
+
+---
+
 ## Common Web Formats
 
 ```html
