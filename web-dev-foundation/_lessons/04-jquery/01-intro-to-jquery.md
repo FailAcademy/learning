@@ -52,3 +52,7 @@ This is a link to the lab activity...
 Get extra practice with jQuery basics by completing this free Code School course:
 
 - [Try jQuery](http://try.jquery.com/)
+
+A bookmark-worthy jQuery cheatsheet: 
+
+- [jQuery API Quick Reference](http://oscarotero.com/jquery/)

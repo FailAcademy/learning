@@ -98,9 +98,11 @@ For example, take a typical HTML document:
    <title>My Awesome Website</title>
 </head>
 <body>
-   <h1>My Page</h1>
-   <p class="intro">Welcome to my page!</p>
-   <p>Thanks for stopping by.</p>
+   <div>
+      <p class="intro">
+         Welcome to my page! Thanks for stopping by.
+      </p>
+   </div>
 </body>
 ```
 
@@ -110,7 +112,9 @@ For example, take a typical HTML document:
 
 The a visual representation of the DOM for this page would look something like this:
 
-[NEED GRAPHIC]
+.inline-images[
+   ![DOM diagram](../../public/img/slide-assets/dom-diagram.svg)
+]
 
 ---
 
