@@ -4,6 +4,9 @@
  * Update the foundational and global aspects of the page.
  */
 
+* { margin: 0; padding: 0; }
+*:focus { outline: none; }
+
 /* Prevent scroll on narrow devices */
 html,
 body {
