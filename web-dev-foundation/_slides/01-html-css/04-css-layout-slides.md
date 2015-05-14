@@ -143,7 +143,7 @@ template: inverse
 
 ---
 
-## Uses for CSS Floats (pg. 370-371, 375)
+## Uses for CSS Floats
 **Floating Images with Text** When this float is applied, it moves an element either left or right on the page while the rest of the content flows around it. This is commonly used to wrap text around images in the content section of a page.  
 
 **Floating Images Beside Each Other** When this float is applied, it allows for elements to be situated side by side one another. Typically, each element will contain a width and float property.
@@ -152,7 +152,7 @@ template: inverse
 
 *See pg. 370-371,375 in your HTML/CSS text for further examples*
 ---
-## Clearing Floats (pg. 372)
+## Clearing Floats 
 Use the *clear* property to remove and prior floats to an element. You can specify: left, right or both.
 
 
@@ -164,15 +164,22 @@ template: inverse
 
 ---
 ## CSS Background Properties
-- Background-color (web hexidecimal code)
-- Background-image (relative location or/URL of image)
-- Background-repeat (values: repeat, repeat-x, repeat-y, no-repeat)
-- Background-attachment (values: scroll, fixed)
-- Background-position (values: left, right, top, bottom)
-
+- Background-color: web hexidecimal code
+- Background-image: url(image);
+- Background-repeat -  values: repeat, repeat-x, repeat-y, no-repeat;
+- Background-attachment - values: scroll, fixed;
+- Background-position - values: left, right, top, bottom;
 
 ---
+## CSS Background Shorthand
+Since there are so many properties for specifying backgrounds, you can use the shorthand method by specifying the properties you want in the correct order (and leave out the properties you do not require).
 
+```css
+body {
+    background: #ffffff url("border.png") repeat-x left top;
+}
+
+```
 ---
 template: inverse
 
