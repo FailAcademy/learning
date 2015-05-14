@@ -30,38 +30,20 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-Do this activity!
+Lets open your cap-stone project, and add a favicon to the site.
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+Lets point your name servers to your webhost.
 
-```html
+## Exercise 3
 
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+We are going to connect to your web host using FileZilla FTP
 
 ## Lab Activity
 
-This is a link to the lab activity...
+Lets deploy your cap-stone project to your server for the world to see.
 
 ## Additional Resources
 
@@ -71,6 +53,6 @@ This is a link to the lab activity...
 - FTP Clients:
 - [FileZilla (free, Windows, Mac, Linux)](https://filezilla-project.org/)
 - [FireFTP (free, Firefox, Windows, Mac, Linux)](http://fireftp.net/)
-- [CuteFTP(payed, Windows, Mac)](http://www.cuteftp.com/cuteftpmacpro/tour.aspx)
+- [CuteFTP (payed, Windows, Mac)](http://www.cuteftp.com/cuteftpmacpro/tour.aspx)
 - [SmartFTP (payed, Windows)](https://www.smartftp.com/)
 - [Transmit (payed, Mac)](https://panic.com/transmit/)

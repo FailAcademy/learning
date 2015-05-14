@@ -17,9 +17,13 @@ layout: false
 
 # Agenda
 
-1. Introduction
-2. Deep-dive
-3. ...
+1. Favicons
+3. Domain Name Purchasing
+4. Domain Name: Set Name Servers
+5. Web Hosting
+6. FTP Software
+7. FTP Exercise
+8. Hosting with GitHub Pages
 
 ---
 
