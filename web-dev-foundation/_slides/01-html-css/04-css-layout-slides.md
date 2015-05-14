@@ -23,8 +23,7 @@ layout: false
 2. Apply CSS Reset
 3. CSS positioning (static, relative, absolute, and fixed)
 4. CSS floats/clear floats
-5. Use Images in CSS
-6. Standard Layout Practices
+5. Standard Layout Practices
 ---
 template: inverse
 
@@ -129,32 +128,80 @@ template: inverse
 
 ****Absolute****: This element is removed from its normal flow, and moves in relation to its containing block.
 
-****Fixed***: Positions the element with relation to the browser window, and does not move when page is scrolled. 
+***Fixed***: Positions the element with relation to the browser window, and does not move when page is scrolled. 
 
-*See pg. 363-376 in your HTML/CSS text for further examples* 
+*See pg. 363-368 in your HTML/CSS text for further examples* 
 ---
 
 ## Z-Index
 - The Z-Index property allows for elements to stack and overlap each other. The higher the z-index, the more closer the element is to the front, the smaller the number, the element will appear more in the background. 
 ---
-## Common Web Formats
+template: inverse
 
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
+# CSS Floats
 
 ---
 
+## Uses for CSS Floats
+**Floating Images with Text** When this float is applied, it moves an element either left or right on the page while the rest of the content flows around it. This is commonly used to wrap text around images in the content section of a page.  
+
+**Floating Images Beside Each Other** When this float is applied, it allows for elements to be situated side by side one another. Typically, each element will contain a width and float property.
+
+*See pg. 370-371,375 in your HTML/CSS text for further examples*
+---
+## Uses for CSS Floats cont. 
+
+**Creating Multi-Column Layouts** When this type of float is applied to divs with different paragraph content, the text will flow as a few columns across the page. Typically, each div column will contain a width and float:left property.
+
+*See pg. 375 in your HTML/CSS text for further examples*
+---
+## Clearing Floats 
+Use the *clear* property to remove and prior floats to an element. You can specify: left, right or both.
+
+```css
+
+img {
+    float: left;
+}
+
+.clearfloat {
+	clear: both;
+	}
+
+```
+
+
+*See pg. 372 in your HTML/CSS text for further examples*
+---
+template: inverse
+
+# CSS Backgrounds
+
+---
+## CSS Background Properties
+- Background-color: web hexidecimal code
+- Background-image: url(image);
+- Background-repeat -  values: repeat, repeat-x, repeat-y, no-repeat;
+- Background-attachment - values: scroll, fixed;
+- Background-position - values: left, right, top, bottom;
+
+---
+## CSS Background Shorthand
+Since there are so many properties for specifying backgrounds, you can use the shorthand method by specifying the properties you want in the correct order (and leave out the properties you do not require).
+
+```css
+body {
+    background: #ffffff url("border.png") repeat-x left top;
+}
+
+```
+---
+template: inverse
+
+# Common CSS Layout Examples
+
+---
+Add balsamiq layout sketch of main HTML5 semantic tags
 
 ---
 template: inverse
