@@ -148,12 +148,28 @@ template: inverse
 
 **Floating Images Beside Each Other** When this float is applied, it allows for elements to be situated side by side one another. Typically, each element will contain a width and float property.
 
+*See pg. 370-371,375 in your HTML/CSS text for further examples*
+---
+## Uses for CSS Floats cont. 
+
 **Creating Multi-Column Layouts** When this type of float is applied to divs with different paragraph content, the text will flow as a few columns across the page. Typically, each div column will contain a width and float:left property.
 
-*See pg. 370-371,375 in your HTML/CSS text for further examples*
+*See pg. 375 in your HTML/CSS text for further examples*
 ---
 ## Clearing Floats 
 Use the *clear* property to remove and prior floats to an element. You can specify: left, right or both.
+
+```css
+
+img {
+    float: left;
+}
+
+.clearfloat {
+	clear: both;
+	}
+
+```
 
 
 *See pg. 372 in your HTML/CSS text for further examples*
