@@ -131,7 +131,7 @@ template: inverse
 
 ****Fixed***: Positions the element with relation to the browser window, and does not move when page is scrolled. 
 
-*See pg. 363-376 in your HTML/CSS text for further examples* 
+*See pg. 363-368 in your HTML/CSS text for further examples* 
 ---
 
 ## Z-Index
@@ -150,32 +150,28 @@ template: inverse
 
 **Creating Multi-Column Layouts** When this type of float is applied to divs with different paragraph content, the text will flow as a few columns across the page. Typically, each div column will contain a width and float:left property.
 
+*See pg. 370-371,375 in your HTML/CSS text for further examples*
 ---
 ## Clearing Floats (pg. 372)
-Use the -clear- property to remove and prior floats to an element. You can specify: left, right or both.
+Use the *clear* property to remove and prior floats to an element. You can specify: left, right or both.
 
+
+*See pg. 372 in your HTML/CSS text for further examples*
+---
+template: inverse
+
+# CSS Backgrounds
+
+---
+## CSS Background Properties
+- Background-color (web hexidecimal code)
+- Background-image (relative location or/URL of image)
+- Background-repeat (values: repeat, repeat-x, repeat-y, no-repeat)
+- Background-attachment (values: scroll, fixed)
+- Background-position (values: left, right, top, bottom)
 
 
 ---
-
-## Common Web Formats
-
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
-
----
-
 
 ---
 template: inverse
