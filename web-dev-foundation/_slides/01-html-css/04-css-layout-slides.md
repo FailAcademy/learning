@@ -23,8 +23,7 @@ layout: false
 2. Apply CSS Reset
 3. CSS positioning (static, relative, absolute, and fixed)
 4. CSS floats/clear floats
-5. Use Images in CSS
-6. Standard Layout Practices
+5. Standard Layout Practices
 ---
 template: inverse
 
@@ -129,7 +128,7 @@ template: inverse
 
 ****Absolute****: This element is removed from its normal flow, and moves in relation to its containing block.
 
-****Fixed***: Positions the element with relation to the browser window, and does not move when page is scrolled. 
+***Fixed***: Positions the element with relation to the browser window, and does not move when page is scrolled. 
 
 *See pg. 363-368 in your HTML/CSS text for further examples* 
 ---
@@ -196,6 +195,14 @@ body {
 }
 
 ```
+---
+template: inverse
+
+# Common CSS Layout Examples
+
+---
+Add balsamiq layout sketch of main HTML5 semantic tags
+
 ---
 template: inverse
 
