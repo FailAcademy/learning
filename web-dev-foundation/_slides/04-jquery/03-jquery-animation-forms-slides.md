@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: jQuery Animation
+title: Working with Animation and Forms in jQuery Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# jQuery Animation Handling
+# Working with Animation and Forms in jQuery
 
 .title-logo[![Red logo](../../public/img/red-logo-white.svg)]
 
