@@ -23,7 +23,7 @@ From the JavaScript & jQuery textbook:
 
 ## Exercise 1
 
-Let's try putting jQuery animation together with some form effects:
+Now let's try putting jQuery effects together with form inputs:
 
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/xGVmEq/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/xGVmEq/'>xGVmEq</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
