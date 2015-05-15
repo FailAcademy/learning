@@ -115,13 +115,29 @@ template: inverse
 
 ---
 
-## Copyright Considerations 
-
+## Creative Commons
+- is a non-profit organization devoted to expanding the range of creative works available for others to build upon legally and to share.
+- different types of licenses, as shown in various visual symbols, will show what rights are reserved and waived by the creator so that their work can be used by others
+- allows for free usage of normally copyrighted work
+- provides the author/creator flexibility in how their work is shared
 
 ---
+## Show Images on Different CC Licenses
+---
 
-## Creative Commons
+## Copyright Considerations 
+- Copyright laws are designed to protect a creator's right to be compensated/attributed and to control how their work is used/shared. 
+- All tangible creative works are protected by copyright immediately upon creation. 
+- When in doubt, assume what you want to use is copyrighted material and seek permission to use it or find a suitable royalty free alternative.
+- 
+---
 
+## Copyright Tech DO's and Don'ts
+- The internet is not public domain, things you "google" cannot just be downloaded to be used, examples include graphics, logos, fonts, photographs, and illustrations.
+- Posting links that contain only a URL and the title of the site is generally acceptable.
+- Don't copy a site's HTML or CSS (or any scripting code)
+- Always get permission to use a copyrighted online work from the owner of that work
+- Don't link to sites that contain large amounts of video or audio 
 
 ---
 
