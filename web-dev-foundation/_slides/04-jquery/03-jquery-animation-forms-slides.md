@@ -32,7 +32,7 @@ template: inverse
 
 # Animation with jQuery
 
-jQuery makes it easy to bring a webpage to life with animation. It offers many animation methods out of the box, including:
+jQuery makes it easy to bring a webpage to life with animation. It offers many animation methods out of the box, including*:
 
 - `.show()`
 - `.hide()`
@@ -40,25 +40,50 @@ jQuery makes it easy to bring a webpage to life with animation. It offers many a
 - `.fadeOut()`
 - ...and many more!
 
----
-
-# Show/Hide Effect
-
-```javascript
-
-```
-
-# Show/Hide Effect
-
-```javascript
-
-```
+.footnote[.red[ * ] You can find a complete list of these methods on page 332 of your text book.]
 
 ---
 
-# Effects and Events
+# Toggle Example
 
-- event.preventDefault();
+One of the most basic uses of animation in jQuery is to toggle the visibility of elements:
+
+```html
+<a href="#">Show a div</a>
+<div id="my-div">This div is toggled when the link is clicked</div>
+```
+
+```javascript
+$('a').on('click', function(event) {
+   event.preventDefault();
+   $('#my-div').toggle('fast');
+});
+```
+
+We can pass in `fast`, `slow`, or a speed in milliseconds as parameter for this method.
+
+---
+
+# The .animate() Method
+
+jQuery also offers an `.animate()` method, which will give you finer-grained control over how you implement your effects:
+
+```html
+<a href="#">Resize text</a>
+<div id="my-div">This text will grow when the link is clicked</div>
+```
+
+```javascript
+$('a').on('click', function(event) {
+   event.preventDefault();
+
+   $('#my-div').animate({
+      fontSize: '2em'
+   }, 1000, function() {
+      $(this).css( 'font-size', '1em' );
+   });
+});
+```
 
 ---
 template: inverse
@@ -245,7 +270,7 @@ Similarly, we can also detect when a user chooses an option in a select menu usi
 
 ```javascript
 $('#my-select-menu').on('change', function() {
-   var selected = $(this).val('');
+   var selected = $(this).val();
 
    if ( selected !== '' ) {
       console.log('The value you picked is: ' + selected);
@@ -299,7 +324,10 @@ $('#hamburger').on('change', function() {
 
 # Exercise 1
 
-The exercise goes here...
+Let's try putting jQuery animation together with some form effects:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/xGVmEq/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/xGVmEq/'>xGVmEq</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 template: inverse
