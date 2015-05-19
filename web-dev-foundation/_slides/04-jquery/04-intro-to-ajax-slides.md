@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to Ajax
+title: Intro to Ajax and APIs
 ---
 
 {% highlight html %}
@@ -237,18 +237,54 @@ class: center, middle
    The future!
 ]
 
+.inline-images[
+   ![Back to the Future Gif](../../public/img/slide-assets/back-to-the-future.gif)
+]
+
 ---
 
-### APIs: In Plain English
+# APIs: In Plain English
 
 - API stands for "Application Programming Interface"
-- APIs allow us to
+- User interfaces allow people to work with programs
+- APIs allow our programs to work with other programs
+- APIs will usually restrict access to the application
 
 ---
+class: center, middle
 
+### APIs in the Wild
+
+Have you ever used a smart phone app that integrates a Google or Apple Maps in some way?
+
+---
+class: center, middle
+
+### APIs in the Wild
+
+Have you ever used a social media share button?
+
+---
+class: center, middle
+
+### APIs in the Wild
+
+Have you ever used an app or service that saves a document to your Dropbox?
+
+---
+class: center, middle
+
+### APIs in the Wild
+
+Did you log into this learning materials website with your GitHub account?
+
+---
 # Exercise 1
 
-The exercise goes here...
+Your turn! Pull some data of your own from the GitHub API:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/yNJLgR/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/yNJLgR/'>yNJLgR</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 template: inverse
