@@ -4,30 +4,35 @@
  * Update the foundational and global aspects of the page.
  */
 
-* { margin: 0; padding: 0; }
-*:focus { outline: none; }
+ * { margin: 0; padding: 0; }
+ *:focus { outline: none; }
+ html { overflow-y: scroll; -webkit-text-size-adjust: none; }
+ body { background: white; }
+
+ .screen-reader { position: absolute; left: -9999px; top: -9999px; }
+ .clear { clear: both; }
+ .group:before, .group:after { content: ""; display: table; }
+ .group:after { clear: both; }
+ .group { zoom: 1; } // For IE 6/7 (trigger hasLayout)
+
+ table { border-collapse: separate; border-spacing: 0; }
+ caption, th, td { font-weight: normal;	text-align: left; }
+ fieldset, img { border: 0; }
+ a img { border: 0; }
+ strong, b, strong *, b * { font-style: normal; font-weight: 500 !important; }
+ em , i, em *, i * { font-style: italic; }
+ blockquote, q { quotes: "" ""; }
+ blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+
+ /* Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/ */
+ * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+ }
 
 /* Prevent scroll on narrow devices */
 html,
 body {
   overflow-x: hidden;
-}
-
-html {
-   font-family: "Roboto", Helvetica, Arial, sans-serif;
-   font-weight: 100;
-}
-
-h1, h2, h3, h4, h5, h6 {
-   font-family: "Roboto", Helvetica, Arial, sans-serif;
-   font-weight: 700;
-   color: #313131;
-}
-
-h2, h3 {
-   margin: 2rem 0 1.5rem;
-}
-
-ol, ul {
-   margin-left: 1em;
 }
