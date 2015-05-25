@@ -20,6 +20,8 @@ From the HTML & CSS textbook:
 ## Keywords
 
 - [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- Whitespace
+- CSS-related typography terms
 
 ## Exercise 1
 
@@ -57,4 +59,5 @@ This is a link to the lab activity...
 ## Additional Resources
 
 - [Code Academy](http://www.codecademy.com/learn)
+- [Gestalt Principles] (http://graphicdesign.spokanefalls.edu/tutorials/process/gestaltprinciples/gestaltprinc.htm)
 

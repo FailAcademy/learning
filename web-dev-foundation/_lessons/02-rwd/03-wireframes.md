@@ -21,9 +21,8 @@ From the HTML & CSS textbook:
 ## Keywords
 
 - [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
-- Whitespace
 - Wireframe
-- CSS-related typography terms
+
 
 
 ## Exercise 1
