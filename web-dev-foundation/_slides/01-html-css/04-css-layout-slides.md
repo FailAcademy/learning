@@ -156,7 +156,7 @@ template: inverse
 *See pg. 375 in your HTML/CSS text for further examples*
 ---
 ## Clearing Floats 
-Use the *clear* property to remove and prior floats to an element. You can specify: left, right or both.
+Use the *clear* property to remove and prior floats to an element. You can specify: left, right or both. The clear property can be applied onto ID selectors as well as custom class selectors. 
 
 ```css
 
@@ -201,7 +201,9 @@ template: inverse
 # Common CSS Layout Examples
 
 ---
-Add balsamiq layout sketch of main HTML5 semantic tags
+## Basic DIV Layout Set-up
+
+![Balsamiq Wireframe](../../public/img/slide-assets/div_layout_balsamiq.png)
 
 ---
 template: inverse
