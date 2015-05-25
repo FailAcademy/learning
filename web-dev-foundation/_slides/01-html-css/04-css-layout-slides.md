@@ -203,6 +203,7 @@ template: inverse
 ---
 ## Basic DIV Layout Set-up
 
+
 ![Balsamiq Wireframe](../../public/img/slide-assets/div_layout_balsamiq.png)
 
 ---

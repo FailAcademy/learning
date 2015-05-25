@@ -11,11 +11,20 @@ From the HTML & CSS textbook:
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Understand and employ basic design concepts (e.g. Gestalt principles) to assist in laying out a website
+- Learn how to create an aesthetically pleasing colour palette for a website using basic colour theory.
+- Discover how to combine typefaces together in effective combinations.
+- Utilize online wireframing tools such as Balsamiq to wireframe the layout of sites
+- Explore online design and coding tools such colour palette tools, Colour Scheme Designer, Subtle Patterns, and codepen.io.
+
 
 ## Keywords
 
 - [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- Whitespace
+- Wireframe
+- CSS-related typography terms
+
 
 ## Exercise 1
 
@@ -55,3 +64,6 @@ This is a link to the lab activity...
 ## Additional Resources
 
 - [Code Academy](http://www.codecademy.com/learn)
+- [Top Wireframing Software](http://www.creativebloq.com/wireframes/top-wireframing-tools-11121302)
+- [Balsamiq](http://www.balsamiq.com)
+- [Go Mockingbird](http://www.gomockingbird.com)
