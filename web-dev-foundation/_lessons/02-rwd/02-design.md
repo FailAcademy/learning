@@ -12,7 +12,10 @@ From the HTML & CSS textbook:
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Understand and employ basic design concepts (e.g. Gestalt principles) to assist in laying out a website
+- Learn how to create an aesthetically pleasing colour palette for a website using basic colour theory.
+- Discover how to combine typefaces together in effective combinations.
+- Explore a variety of design tools such colour palette tools, Colour Scheme Designer, Subtle Patterns, etc.
 
 ## Keywords
 
@@ -21,13 +24,11 @@ From the HTML & CSS textbook:
 ## Exercise 1
 
 Do this activity!
-
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+Experiment with creating your own colour palette for your assignment 
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+Experiment with using different font combinations
 
 ```html
 

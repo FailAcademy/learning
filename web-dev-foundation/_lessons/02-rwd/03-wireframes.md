@@ -11,11 +11,11 @@ From the HTML & CSS textbook:
 
 ## Learning Objectives
 
-- Understand and employ basic design concepts (e.g. Gestalt principles) to assist in laying out a website
-- Learn how to create an aesthetically pleasing colour palette for a website using basic colour theory.
-- Discover how to combine typefaces together in effective combinations.
+
 - Utilize online wireframing tools such as Balsamiq to wireframe the layout of sites
-- Explore online design and coding tools such colour palette tools, Colour Scheme Designer, Subtle Patterns, and codepen.io.
+- Discover the key elements to incorporate into the wireframes
+- Learn about different design considerations for smartphones, tablets and desktop web page layouts
+- Explore online design and wireframing tools such Balsamiq, Go Mockingbird, and Photoshop
 
 
 ## Keywords
@@ -29,12 +29,12 @@ From the HTML & CSS textbook:
 ## Exercise 1
 
 ###Do this activity!
-Experiment with colour palette / font combination tool and resources
+
 
 
 ## Exercise 2
 
-Experiment with [Balsamiq](http://www.balsamiq.com) or other wireframing tool as shown in the resource link below.
+Experiment with [Balsamiq](http://www.balsamiq.com) or other wireframing tool as shown in the resource links below.
 
 
 Or include an image:
