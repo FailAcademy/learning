@@ -41,7 +41,7 @@ layout: default
   {% assign prev = links %}
 {% endfor %}
 
-<div class="pagination">
+<nav class="pagination" role="navigation">
    {% if prevurl %}
       <a class="pagination-item older" href="{{prevurl}}" title="{{prevtitle}}">&larr; Previous Lesson</a>
    {% else %}
@@ -52,4 +52,4 @@ layout: default
    {% else %}
       <span class="pagination-item newer">&nbsp;</span>
    {% endif %}
-</div>
+</nav>
