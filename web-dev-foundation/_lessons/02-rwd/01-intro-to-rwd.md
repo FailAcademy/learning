@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Intro to RWD
+title: Intro to Responsive Web Design
 slides: ['_slides/02-rwd/01-intro-to-rwd-slides.md']
 ---
 
@@ -29,6 +29,7 @@ This article by Ethan Marcotte on A List Apart, which is widely credited with ki
 
 - [Responsive web design](http://blog.teamtreehouse.com/modern-field-guide-responsive-web-design)
 - [Media queries](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries)
+- [@media](https://developer.mozilla.org/en-US/docs/Web/CSS/@media)
 - [Mobile first](http://bradfrost.com/blog/web/mobile-first-responsive-web-design/)
 
 ## Exercise 1
@@ -48,6 +49,10 @@ This is a link to the lab activity...
 Nine GIFs that explain the principles of responsive web design:
 
 - [9 basic principles of responsive web design](http://blog.froont.com/9-basic-principles-of-responsive-web-design/)
+
+A CSS Tricks article helps demystify how media queries work:
+
+- [CSS Media Queries & Using Available Space](https://css-tricks.com/css-media-queries/)
 
 A collection of responsive web design patterns and resources:
 

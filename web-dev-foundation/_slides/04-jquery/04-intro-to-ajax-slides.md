@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to Ajax and APIs
+title: Intro to Ajax and APIs Slides
 ---
 
 {% highlight html %}
