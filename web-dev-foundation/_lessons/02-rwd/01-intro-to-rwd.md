@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Intro to RWD
+title: Intro to Responsive Web Design
 slides: ['_slides/02-rwd/01-intro-to-rwd-slides.md']
 ---
 
@@ -12,7 +12,7 @@ From the HTML & CSS textbook:
 
 Some introductory reading on responsive web design:
 
-- [Chapter 4: Responsive Web Design](http://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
+- [Lesson 4: Responsive Web Design](http://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
 
 This article by Ethan Marcotte on A List Apart, which is widely credited with kicking off the responsive web design movement:
 
@@ -29,15 +29,26 @@ This article by Ethan Marcotte on A List Apart, which is widely credited with ki
 
 - [Responsive web design](http://blog.teamtreehouse.com/modern-field-guide-responsive-web-design)
 - [Media queries](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries)
+- [@media](https://developer.mozilla.org/en-US/docs/Web/CSS/@media)
 - [Mobile first](http://bradfrost.com/blog/web/mobile-first-responsive-web-design/)
 
 ## Exercise 1
 
-Paste in Codepen...
+Try converting a fixed layout to flexible layout:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvozXj/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvozXj/'>WvozXj</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+View the [solution](http://codepen.io/redacademy/pen/QbGmrM).
 
 ## Exercise 2
 
-Paste in Codepen...
+Time to try out creating media queries for yourself:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/qdqoKG/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/qdqoKG/'>qdqoKG</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+View the [solution](http://codepen.io/redacademy/pen/LVbdXw).
 
 ## Lab Activity
 
@@ -48,6 +59,10 @@ This is a link to the lab activity...
 Nine GIFs that explain the principles of responsive web design:
 
 - [9 basic principles of responsive web design](http://blog.froont.com/9-basic-principles-of-responsive-web-design/)
+
+A CSS Tricks article helps demystify how media queries work:
+
+- [CSS Media Queries & Using Available Space](https://css-tricks.com/css-media-queries/)
 
 A collection of responsive web design patterns and resources:
 
