@@ -12,7 +12,7 @@ From the HTML & CSS textbook:
 
 Some introductory reading on responsive web design:
 
-- [Chapter 4: Responsive Web Design](http://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
+- [Lesson 4: Responsive Web Design](http://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
 
 This article by Ethan Marcotte on A List Apart, which is widely credited with kicking off the responsive web design movement:
 
@@ -34,11 +34,21 @@ This article by Ethan Marcotte on A List Apart, which is widely credited with ki
 
 ## Exercise 1
 
-Paste in Codepen...
+Try converting a fixed layout to flexible layout:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvozXj/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvozXj/'>WvozXj</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+View the [solution](http://codepen.io/redacademy/pen/QbGmrM).
 
 ## Exercise 2
 
-Paste in Codepen...
+Time to try out creating media queries for yourself:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/qdqoKG/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/qdqoKG/'>qdqoKG</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+View the [solution](http://codepen.io/redacademy/pen/LVbdXw).
 
 ## Lab Activity
 

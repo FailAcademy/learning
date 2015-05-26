@@ -66,6 +66,13 @@ class: center, middle
 ---
 class: center, middle
 
+.inline-images[
+   ![Fail gif](../../public/img/slide-assets/atat-fail.gif)
+]
+
+---
+class: center, middle
+
 > "Design is not just what it looks like and feels like. Design is how it works."
 
 &mdash;Steve Jobs
@@ -191,7 +198,7 @@ Where the **target** is the desired width of the element, **context** is the wid
 
 ---
 
-# An Example
+# Layout Example
 
 Traditionally, you may have had a page layout like this:
 
@@ -220,7 +227,7 @@ aside {
 
 ---
 
-# An Example
+# Layout Example
 
 Now, we opt for percentages to make them flexible:
 
@@ -239,6 +246,23 @@ aside {
    float: right;
 }
 ```
+---
+
+# Font Size Example
+
+Similarly, we can achieve the same scaling effect with our font size using `em` units:
+
+```css
+body {
+   font-size: 16px;
+}
+
+h1 {
+   font-size: 1.5em; /* 16px * 1.5 = 24px */
+}
+```
+
+Keep in mind that `em` units change the size of the text relative to the parent element.
 
 ---
 template: inverse
@@ -290,10 +314,12 @@ Conversely, `min-width` can ensure that a particular element never shrinks below
 
 # Exercise 1
 
-Use percentage widths and min/mix width/height to do something interesting...
+Try converting a fixed layout to flexible layout:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvozXj/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvozXj/'>WvozXj</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
-
 template: inverse
 
 # Media Queries
@@ -496,13 +522,30 @@ You also need to consider:
 
 # Exercise 2
 
-Use media queries...
+Time to try out creating media queries for yourself:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/qdqoKG/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/qdqoKG/'>qdqoKG</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
+template: inverse
 
-# Exercise 3
+# RWD Case Studies
 
-Go through case studies...
+---
+class: center, middle
+
+# [The Boston Globe](http://www.bostonglobe.com/)
+
+---
+class: center, middle
+
+# [Smashing Magazine](http://www.smashingmagazine.com/)
+
+---
+class: center, middle
+
+# [Squarespace](http://squarespace.com/)
 
 ---
 template: inverse
