@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Hosting a Website
+title: Setting up a professional e-mail
 ---
 
 {% highlight html %}
@@ -10,19 +10,17 @@ class: center, middle, inverse
 
 ---
 
-# Web Hosting
+# Hacker Edition:
+## Setting up a professional e-mail
 
 ---
 layout: false
 
 # Agenda
 
-1. Domain Name Purchasing
-2. Choosing the Right Web Hosting
-3. Domain Name: Set Name Servers 
-4. FTP Software
-5. FTP Exercise
-6. Hosting with GitHub Pages
+1. Introduction
+2. Deep-dive
+3. ...
 
 ---
 
@@ -78,26 +76,6 @@ A sample unordered list:
 ---
 template: inverse
 
-# Set Name Servers
-
----
-.right-column[
-You can make two-column layouts as well.red[*] in a slideshow!
-
-Lets point our domain name to our webhost:
-
-- Sign in and select domain to edit.
-- Select "Set Nameservers"
-- Enter in nameservers for your host.
-
-.footnote[.red[*] And add footnotes too]
-]
----
-background-image: url(../../public/img/slide-assets/06-02-web-hosting/1-nameserv.png)
----
-background-image: url(../../public/img/slide-assets/06-02-web-hosting/2-nameserv.png)
----
-background-image: url(../../public/img/slide-assets/06-02-web-hosting/3-nameserv.png)
----
+# Fin!
 
 {% endhighlight %}

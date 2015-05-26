@@ -8,7 +8,7 @@ slides: ['_slides/02-rwd/05-web-fonts-slides.md']
 
 From the HTML & CSS textbook:
 
-- **Chapter 12: Text** (p. 277)
+- **Chapter 12: Text** *(p. 277)*
 
 ## Learning Objectives
 

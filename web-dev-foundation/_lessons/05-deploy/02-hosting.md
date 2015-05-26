@@ -12,8 +12,8 @@ From the HTML & CSS textbook:
 
 ## Learning Objectives
 
-- Learn how to include a Favicon for a website.
-- Purchase a domain name and set nameservers.
+- Purchase/reserve a domain name.
+- Set the name servers to your host.
 - Differentiate between different web hosting options (shared, VPS, etc).
 - Upload files via FTP to a typical web host.
 - Set up a site using GitHub to host a web page.
@@ -21,23 +21,18 @@ From the HTML & CSS textbook:
 
 ## Keywords
 
-- [Favicon](http://www.webdesignerdepot.com/2012/11/whats-the-point-of-favicons/)
 - [Web Server](https://developer.mozilla.org/en-US/Learn/What_is_a_web_server)
 - [FTP](https://developer.mozilla.org/en-US/Learn/Upload_files_to_a_web_server)
 - [Web Host](http://en.wikipedia.org/wiki/Web_hosting_service)
 - [Domain name](https://developer.mozilla.org/en-US/docs/Glossary/Domain_name)
 - [DNS](http://searchnetworking.techtarget.com/definition/domain-name-system)
 
+
 ## Exercise 1
-
-Lets open your cap-stone project, and add a favicon to the site.
-
-
-## Exercise 2
 
 Lets point your name servers to your webhost.
 
-## Exercise 3
+## Exercise 2
 
 We are going to connect to your web host using FileZilla FTP
 
@@ -47,7 +42,7 @@ Lets deploy your cap-stone project to your server for the world to see.
 
 ## Additional Resources
 
-- [Different Types of Web Hosting Video](https://www.youtube.com/watch?v=n7rzi2hGAzA)
+- [Video: Types of Web Hosting Explained](https://www.youtube.com/watch?v=n7rzi2hGAzA)
 - Domain Name Registration:
 - [Hover](https://www.hover.com/)
 - FTP Clients:

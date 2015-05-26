@@ -17,14 +17,14 @@ layout: false
 
 # Agenda
 
-1. Introduction
-2. Deep-dive
-3. ...
+1. Introduction to Web Fonts
+2. Using Google Web Fonts
+3. Using @font-face
 
 ---
 
 .left-column[
-  ## Column Layout
+  ## Web Fonts
 ]
 
 .right-column[
