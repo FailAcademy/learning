@@ -32,6 +32,11 @@ layout: false
 template: inverse
 
 # CSS Transform Types
+---
+#Transform Definition
+- A transformation is an effect that lets an element change shape, size and position.
+
+- CSS3 supports 2D and 3D transformations.
 
 ---
 ##Scale, Rotate, Transform, Skew
@@ -114,19 +119,16 @@ Want to learn more about the difference between SASS and LESS, [Click Here](http
 template: inverse
 
 # What are Animatable Properties?
-##Cascading Style Sheets
+
 ---
-
 ## Animatable Properties
-
+There are many CSS properties that you can animate. The best way is to look at what different designers have done online and experiment with different properties.  
 
 [List of Animatable Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties)
 
 ---
-
-
 ##Transition Timing Functions
-
+Transition timing allows you to 
 
 
 
