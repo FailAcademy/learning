@@ -19,27 +19,11 @@ layout: false
 
 # Agenda
 
-1. Introduction
-2. Deep-dive
-3. ...
+1. CSS Transform types
+2. Vendor Prefixes
+3. Distinguish what properties are animatable in CSS3
+4. Applying basic CSS transitions elements.
 
----
-
-.left-column[
-  ## Column Layout
-]
-
-.right-column[
-You can make two-column layouts as well.red[*] in a slideshow!
-
-A sample unordered list:
-
-- List item 1
-- List item 2
-- List item 3
-
-.footnote[.red[*] And add footnotes too]
-]
 
 ---
 

@@ -10,6 +10,7 @@ From the HTML & CSS textbook:
 
 - Creating Links between Pages (pg. 74-88)
 - Introducing CSS (pg. 228-244)
+- CSS3:Box Shadows & Rounded Corners (pg. 320-322)
 
 ## Learning Objectives
 
