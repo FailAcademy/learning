@@ -36,9 +36,6 @@ From the HTML & CSS textbook:
 Experiment with [Balsamiq](http://www.balsamiq.com) or other wireframing tool as shown in the resource links below.
 
 
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
 
 ## Lab Activity
 

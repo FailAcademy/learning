@@ -43,25 +43,6 @@ Do this activity!
 - Apply margin, padding, and borders to various elements in an HTML document
 
 
-This is how you add highlighted syntax to a lesson page:
-
-```html
-
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-
-```
-
-
 ## Lab Activity
 
 This is a link to the lab activity...
