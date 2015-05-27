@@ -39,12 +39,41 @@ template: inverse
 # What are Vendor Prefixes?
 
 ---
+# Getting to know Vendor Prefixes
 
+This website link [Vendor Prefixes](http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm) explains how if you are building a website that might be viewed on an older browser, that you should add all types of vendor styles. It's recommended you still want to show the W3C standard property in the CSS statement (as shown in the last line).
+
+```CSS
+
+-webkit-transition: all 4s ease;
+-moz-transition: all 4s ease;
+-ms-transition: all 4s ease;
+-o-transition: all 4s ease;
+transition: all 4s ease;  
+
+```
+
+---
+#W3C Standard for CSS Properties
+
+```CSS
+
+border:dashed 5px #000000;
+box-shadow:10px 10px 5px #000000;
+transition: all 4s ease;
+
+```
+
+
+---
 template: inverse
 
 # What are Animatable Properties?
 ##Cascading Style Sheets
 ---
+
+## Animatable Properties
+
 
 [List of Animatable Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties)
 
@@ -56,6 +85,11 @@ template: inverse
 ---
 
 # Applying Basic Transitions
+
+---
+
+## How to Apply Transitions
+Transitions that can be applied with CSS3 onto different elements in your site such as buttons, images, content, divs, links etc.
 
 ---
 # Syntax Highlighting
