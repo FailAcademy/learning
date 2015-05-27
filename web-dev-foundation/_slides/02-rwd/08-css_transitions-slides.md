@@ -81,8 +81,7 @@ transition: all 4s ease;
 
 ---
 ## Not All Vendor Prefixes Are the Same
-You can't assume that the browser-prefixed version of a property is exactly the same as the standard property. 
-Take for instance the **Gradient** property:
+You can't assume that the browser-prefixed version of a property is exactly the same as the standard property. Take for instance the **Gradient** property:
 
 ```CSS
 background: -moz-linear-gradient /* FF3.6+ */
@@ -110,6 +109,7 @@ transition: all 4s ease;
 ## Alternatives to Typing Vendor Prefixes
 There are various other tools such as CSS Scaffold, LESS, or SASS, that allow you to define mixins to avoid repetitive code. 
 
+Want to learn more about the difference between SASS and LESS, [Click Here](https://css-tricks.com/sass-vs-less/)
 ---
 template: inverse
 
