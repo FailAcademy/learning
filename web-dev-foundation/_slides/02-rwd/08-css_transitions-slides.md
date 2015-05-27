@@ -40,12 +40,18 @@ template: inverse
 # What are Vendor Prefixes?
 
 ---
-# Getting to know Vendor Prefixes
+## Getting to know Vendor Prefixes
 
+Chrome, Safari, Android, iOS: ***-webkit-***
+Firefox: ***-moz-***
+Internet Explorer: ***-ms-***
+Opera: ***-o-*** 
+
+---
+## CSS Transition Example with Vendor Prefixes
 This website link [Vendor Prefixes](http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm) explains how if you are building a website that might be viewed on an older browser, that you should add all types of vendor styles. It's recommended you still want to show the W3C standard property in the CSS statement (as shown in the last line).
 
 ```CSS
-
 -webkit-transition: all 4s ease;
 -moz-transition: all 4s ease;
 -ms-transition: all 4s ease;
