@@ -81,7 +81,7 @@ transition: all 4s ease;
 
 ---
 ## Not All Vendor Prefixes Are the Same
-You can't assume that the browser-prefixed version of a property is exactly the same as the standard property. Take for instance the ~Gradient~ property:
+You can't assume that the browser-prefixed version of a property is exactly the same as the standard property. Take for instance the **Gradient** property:
 
 ```CSS
 background: -moz-linear-gradient /* FF3.6+ */
