@@ -124,6 +124,12 @@ template: inverse
 ## Animatable Properties
 There are many CSS properties that you can animate. The best way is to look at what different designers have done online and experiment with different properties.  
 
+#### Some Common Animatable Properties
+- background: color, image, position
+- border: color, width, spacing
+- font: size, weight
+- other: text-shadow, opacity 
+
 [List of Animatable Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties)
 
 ---
@@ -147,7 +153,7 @@ template: inverse
 ##Cascading Style Sheets
 ---
 
-# Applying Basic Transitions
+## Applying Basic Transitions
 Transitions can be triggered in a number of ways, most commonly, they are applied to as a clickable link or even as a rollover link on text or an image/graphic. Transitions can also be triggered by a page load. 
 
 ---
