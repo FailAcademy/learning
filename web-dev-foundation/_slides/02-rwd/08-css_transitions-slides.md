@@ -191,8 +191,8 @@ Transitions that can be applied with CSS3 onto different elements in your site s
 ---
 ## Codepen Example for Rocket Raccoon
 
-<p data-height="268" data-theme-id="0" data-slug-hash="VLmNoz" data-default-tab="result" data-user="redacademy" class='codepen'>See the Pen <a href='http://codepen.io/redacademy/pen/VLmNoz/'>VLmNoz</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/VLmNoz/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/VLmNoz/'>VLmNoz</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 ---
 template: inverse
 
