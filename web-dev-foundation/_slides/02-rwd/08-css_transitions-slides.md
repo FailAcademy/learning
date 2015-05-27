@@ -128,9 +128,15 @@ There are many CSS properties that you can animate. The best way is to look at w
 
 ---
 ##Transition Timing Functions
-Transition timing allows you to 
+Transition timing allows you adjust several settings for what gets animated, how long is it going to animate, what method its going to animate and if there's a delay before it animates. The transition shorthand is as follows:
 
+```CSS
+transition:  [ <transition-property> ||
+               <transition-duration> ||
+               <transition-timing-function> ||
+               <transition-delay> ]
 
+```
 
 ---
 
