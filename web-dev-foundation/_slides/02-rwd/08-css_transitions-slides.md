@@ -42,13 +42,13 @@ template: inverse
 ---
 ## Getting to know Vendor Prefixes
 
-Chrome, Safari, Android, iOS: ***-webkit-***
+###Chrome, Safari, Android, iOS: ***-webkit-***
 
-Firefox: ***-moz-***
+###Firefox: ***-moz-***
 
-Internet Explorer: ***-ms-***
+###Internet Explorer: ***-ms-***
 
-Opera: ***-o-*** 
+###Opera: ***-o-*** 
 
 ---
 ## CSS Transition Example with Vendor Prefixes
