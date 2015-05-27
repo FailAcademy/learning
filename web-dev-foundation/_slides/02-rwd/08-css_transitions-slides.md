@@ -43,8 +43,11 @@ template: inverse
 ## Getting to know Vendor Prefixes
 
 Chrome, Safari, Android, iOS: ***-webkit-***
+
 Firefox: ***-moz-***
+
 Internet Explorer: ***-ms-***
+
 Opera: ***-o-*** 
 
 ---
