@@ -161,6 +161,35 @@ Transitions can be triggered in a number of ways, most commonly, they are applie
 ## How to Apply Transitions
 Transitions that can be applied with CSS3 onto different elements in your site such as buttons, images, content, divs, links etc.
 
+###This example uses two transition properties
+
+```HTML
+<h3> Rocket Racoon fades out as he moves from left to right </h3>
+    <div class="raccoon">
+    <img src="images/rocket_raccoon.jpg" width="300" height="300" alt="racoon"/> 
+    </div>
+```
+
+---
+## CSS for Rocket Raccoon Example
+
+```CSS
+.raccoon {
+	width: 310px;
+	height: 310px;
+	border: dashed medium #003FB2;
+	transition: all 4s ease-in-out;
+	transition-delay: 1.0s;
+	opacity: 1.0;
+}
+
+.raccoon:hover {
+	transform: translate(800px,0) rotate(720deg) scale(0.5); /* try rotateX or rotateY or just rotate */
+	opacity: 0.2;
+}
+```
+
+
 ---
 # Syntax Highlighting
 
