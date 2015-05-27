@@ -7,7 +7,7 @@ slides: ['_slides/02-rwd/03-wireframes-slides.md']
 
 From the HTML & CSS textbook:
 
-- A Closer Look at Tags (pp. 23-24)
+- Wireframes (pp. 463-464)
 
 ## Learning Objectives
 
@@ -48,3 +48,4 @@ Produce a set of wireframes for three different breakpoints for Assignment 2.
 - [Top Wireframing Software](http://www.creativebloq.com/wireframes/top-wireframing-tools-11121302)
 - [Balsamiq](http://www.balsamiq.com)
 - [Go Mockingbird](http://www.gomockingbird.com)
+- [Lovely Charts](http://lovelycharts.com)
