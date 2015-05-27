@@ -22,8 +22,11 @@ Understand what vendor prefixes are, why they are needed, and on which propertie
 ## Keywords
 
 - [CSS Transition](#)
+- [CSS Transform](http://www.css3maker.com/css3-transform.html)
+- [Vendor Prefixes](http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm)
 - [Animatable Property](#)
 - [Transition Timing Function](#)
+- [Easing](http://matthewlein.com/ceaser/)
 
 ## Exercise 1
 
@@ -44,3 +47,4 @@ This is a link to the lab activity...
 - [CSS Transitions](http://css3.bradshawenterprises.com/transitions/)
 - [Using CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_transitions)
 - [CSS Transforms](http://www.css3maker.com/css3-transform.html)
+- [Caesar Easing Tool for CSS Transitions](http://matthewlein.com/ceaser/)
