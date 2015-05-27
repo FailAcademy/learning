@@ -43,11 +43,12 @@ Lets deploy your cap-stone project to your server for the world to see.
 ## Additional Resources
 
 - [Video: Types of Web Hosting Explained](https://www.youtube.com/watch?v=n7rzi2hGAzA)
+- Recommended Web Hosts:
+- [SiteGround](https://www.siteground.com/)
+- [Bluehost](http://www.bluehost.com)
+- [Site5 Hosting](http://www.site5.com)
 - Domain Name Registration:
 - [Hover](https://www.hover.com/)
 - FTP Clients:
-- [FileZilla (free, Windows, Mac, Linux)](https://filezilla-project.org/)
-- [FireFTP (free, Firefox, Windows, Mac, Linux)](http://fireftp.net/)
-- [CuteFTP (payed, Windows, Mac)](http://www.cuteftp.com/cuteftpmacpro/tour.aspx)
-- [SmartFTP (payed, Windows)](https://www.smartftp.com/)
+- [FileZilla (free, Windows, Mac, Linux)](https://filezilla-project.org/download.php?show_all=1)
 - [Transmit (payed, Mac)](https://panic.com/transmit/)
