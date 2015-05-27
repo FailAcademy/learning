@@ -8,12 +8,13 @@ slides: ['_slides/02-rwd/02-design-slides.md']
 
 From the HTML & CSS textbook:
 
-- A Closer Look at Tags (pp. 23-24)
+- Getting Your Message Across Using Design (pp. 465-474)
 
 ## Learning Objectives
 
 - Understand and employ basic design concepts (e.g. Gestalt principles) to assist in laying out a website
 - Learn how to create an aesthetically pleasing colour palette for a website using basic colour theory.
+- Discover the importance of prioritizing and organizing content on a page
 - Discover how to combine typefaces together in effective combinations.
 - Explore a variety of design tools such colour palette tools, Colour Scheme Designer, Subtle Patterns, etc.
 
@@ -32,25 +33,6 @@ Experiment with creating your own colour palette for your assignment
 
 Experiment with using different font combinations
 
-```html
-
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
 
 ## Lab Activity
 
@@ -58,6 +40,7 @@ This is a link to the lab activity...
 
 ## Additional Resources
 
-- [Code Academy](http://www.codecademy.com/learn)
+- [Color Scheme Designer](http://colorschemedesigner.com/csd-3.5/)
+- [Subtle Patterns](http://subtlepatterns.com/)
 - [Gestalt Principles] (http://graphicdesign.spokanefalls.edu/tutorials/process/gestaltprinciples/gestaltprinc.htm)
 
