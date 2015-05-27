@@ -22,11 +22,42 @@ layout: false
 1. CSS Transform types
 2. Vendor Prefixes
 3. Distinguish what properties are animatable in CSS3
-4. Applying basic CSS transitions elements.
+4. Transition Properties
+5. Applying basic CSS transitions to elements.
 
 
 ---
 
+template: inverse
+
+# CSS Transform Types
+##Scale, Rotate, Transform, Skew
+---
+
+template: inverse
+
+# What are Vendor Prefixes?
+
+---
+
+template: inverse
+
+# What are Animatable Properties?
+##Cascading Style Sheets
+---
+
+[List of Animatable Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties)
+
+---
+template: inverse
+
+# Transition Properties
+##Cascading Style Sheets
+---
+
+# Applying Basic Transitions
+
+---
 # Syntax Highlighting
 
 ```html
