@@ -23,7 +23,8 @@ layout: false
 2. Vendor Prefixes
 3. Distinguish what properties are animatable in CSS3
 4. Transition Properties
-5. Applying basic CSS transitions to elements.
+5. Transition Timing Functions
+6. Applying basic CSS transitions to elements.
 
 
 ---
@@ -54,7 +55,7 @@ transition: all 4s ease;
 ```
 
 ---
-#W3C Standard for CSS Properties
+##W3C Standard for CSS Properties
 
 ```CSS
 
@@ -63,9 +64,8 @@ box-shadow:10px 10px 5px #000000;
 transition: all 4s ease;
 
 ```
-
-
 ---
+
 template: inverse
 
 # What are Animatable Properties?
@@ -78,6 +78,19 @@ template: inverse
 [List of Animatable Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties)
 
 ---
+
+
+##Transition Timing Functions
+
+
+
+
+---
+## Alternatives to Typing Vendor Prefixes
+There are various other tools such as CSS Scaffold, LESS, or SASS, that allow you to define mixins to avoid repetitive code. 
+
+---
+
 template: inverse
 
 # Transition Properties
@@ -85,6 +98,7 @@ template: inverse
 ---
 
 # Applying Basic Transitions
+Transitions can be triggered in a number of ways, most commonly, they are applied to as a clickable link or even as a rollover link on text or an image/graphic. Transitions can also be triggered by a page load. 
 
 ---
 
