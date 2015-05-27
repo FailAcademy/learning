@@ -21,7 +21,7 @@ This article by Ethan Marcotte on A List Apart, which is widely credited with ki
 ## Learning Objectives
 
 - Explore what responsive web design (RWD) is, and how it differs from creating a “mobile-only” website
-- Understand the difference between fixed, fluid, and adaptive websites
+- Understand the difference between fixed, fluid, adaptive, and responsive websites
 - Understand how to use a “mobile-first” approach to web development
 - Use media queries to manipulate website styles at various "breakpoints"
 
@@ -45,7 +45,7 @@ View the [solution](http://codepen.io/redacademy/pen/QbGmrM).
 
 Time to try out creating media queries for yourself:
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/qdqoKG/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/qdqoKG/'>qdqoKG</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/qdqoKG/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/qdqoKG/'>qdqoKG</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
 View the [solution](http://codepen.io/redacademy/pen/LVbdXw).
