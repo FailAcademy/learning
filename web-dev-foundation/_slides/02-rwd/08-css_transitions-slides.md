@@ -80,17 +80,36 @@ transition: all 4s ease;
 ```
 
 ---
-##W3C Standard for CSS Properties
+## Not All Vendor Prefixes Are the Same
+You can't assume that the browser-prefixed version of a property is exactly the same as the standard property. Take for instance the ~Gradient~ property:
 
 ```CSS
+background: -moz-linear-gradient /* FF3.6+ */
+background: -webkit-gradient /* Chrome,Safari4+ */
+background: -webkit-linear-gradient /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient /* Opera 11.10+ */
+background: -ms-linear-gradient /* IE10+ */
+background: linear-gradient /*W3C Standard*/
 
+```
+
+
+---
+##W3C Standard for CSS Properties
+
+One day when browsers have all gotten on-board with the latest CSS3 properties, vendor prefixes will no longer to required. The W3C standard for specifying a transition looks like this: 
+
+```CSS
 border:dashed 5px #000000;
 box-shadow:10px 10px 5px #000000;
 transition: all 4s ease;
 
 ```
 ---
+## Alternatives to Typing Vendor Prefixes
+There are various other tools such as CSS Scaffold, LESS, or SASS, that allow you to define mixins to avoid repetitive code. 
 
+---
 template: inverse
 
 # What are Animatable Properties?
@@ -111,10 +130,7 @@ template: inverse
 
 
 ---
-## Alternatives to Typing Vendor Prefixes
-There are various other tools such as CSS Scaffold, LESS, or SASS, that allow you to define mixins to avoid repetitive code. 
 
----
 
 template: inverse
 
