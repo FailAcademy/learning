@@ -520,6 +520,26 @@ You also need to consider:
 
 ---
 
+# A Mobile First Approach
+
+There's nothing particularly fancy about writing media queries to be mobile-first. We simply rely predominantly on `min-width` instead of `max-width`:
+
+```css
+@media screen and (min-width: 480px) {
+
+}
+
+@media screen and (min-width: 600px) {
+
+}
+
+/* and so on... */
+```
+
+Think about mobile-first as being an **additive** rather than **subtractive** approach to web development.
+
+---
+
 # Exercise 2
 
 Time to try out creating media queries for yourself:
