@@ -32,15 +32,31 @@ layout: false
 template: inverse
 
 # CSS Transform Types
-##Scale, Rotate, Transform, Skew
----
 
+---
+##Scale, Rotate, Transform, Skew
+
+```CSS
+#skew {
+  transform:skew(35deg);
+}
+#scale {
+  transform:scale(1,0.5);
+}
+#rotate {
+  transform:rotate(45deg);
+}
+#translate {
+  transform:translate(10px, 20px);
+```
+
+---
 template: inverse
 
 # What are Vendor Prefixes?
 
 ---
-## Getting to know Vendor Prefixes
+## Recognize Vendor Prefixes
 
 ###Chrome, Safari, Android, iOS: ***-webkit-***
 
@@ -51,7 +67,7 @@ template: inverse
 ###Opera: ***-o-*** 
 
 ---
-## CSS Transition Example with Vendor Prefixes
+## CSS Transition Example with Link to Vendor Prefixes
 This website link [Vendor Prefixes](http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm) explains how if you are building a website that might be viewed on an older browser, that you should add all types of vendor styles. It's recommended you still want to show the W3C standard property in the CSS statement (as shown in the last line).
 
 ```CSS
