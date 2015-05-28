@@ -24,19 +24,26 @@ Understand what vendor prefixes are, why they are needed, and on which propertie
 - [CSS Transition](#)
 - [CSS Transform](http://www.css3maker.com/css3-transform.html)
 - [Vendor Prefixes](http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm)
-- [Animatable Property](#)
+- [Animatable Properties](#)
 - [Transition Timing Function](#)
 - [Easing](http://matthewlein.com/ceaser/)
 
 ## Exercise 1
 
-Do this activity!
+Work on their Assignment 2 Project: Simple Responsive 2 page website, well-styled and formatted in CSS
+
  
 ## Exercise 2
 
-Build an example.
+Assignment 2 must incorporate:
+A CSS reset
+A linked external stylesheet
+HTML5 elements (header, section, article, footer)
+Small navigation menu to navigate between the two pages
+Custom web fonts using @font-face
+Media queries targeted at three different breakpoints (phone, tablet, desktop)
+Responsively-incorporated images
 
-![My helpful screenshot](/public/img/human-to-machine.png)
 
 ## Lab Activity
 

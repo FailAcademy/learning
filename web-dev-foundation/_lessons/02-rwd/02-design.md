@@ -27,12 +27,13 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-Do this activity!
-Experiment with creating your own colour palette for your assignment 
+####Design your own colour palette!
+Experiment with creating your own colour palette for your week 2 personal responsive website. Use Photoshop to sample hexidecimal codes as needed and input and adjust colours in [Coolors.co](http://coolors.co/) to output a PDF or PNG of your palette!
 
 ## Exercise 2
 
-Experiment with using different font combinations
+####Find examples of great design
+Find examples of websites that have good color palettes, good design, white space, and organized content. Don't go for standard large corporation website. Find something different that people may not have seen.  
 
 
 ## Lab Activity
