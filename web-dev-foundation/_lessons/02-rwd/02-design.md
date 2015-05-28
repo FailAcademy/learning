@@ -20,7 +20,8 @@ From the HTML & CSS textbook:
 
 ## Keywords
 
-- [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- Gestalt
+- Colour Scheme
 - Whitespace
 - CSS-related typography terms
 
@@ -40,7 +41,8 @@ This is a link to the lab activity...
 
 ## Additional Resources
 
-- [Color Scheme Designer](http://colorschemedesigner.com/csd-3.5/)
-- [Subtle Patterns](http://subtlepatterns.com/)
+- [Coolors.co](http://coolors.co/)
+- [Paletton.com](http://paletton.com/)
+- [SubtlePatterns.com](http://www.subtlepatterns.com)
 - [Gestalt Principles] (http://graphicdesign.spokanefalls.edu/tutorials/process/gestaltprinciples/gestaltprinc.htm)
 
