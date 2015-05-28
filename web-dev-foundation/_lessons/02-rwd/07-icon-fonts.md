@@ -21,18 +21,14 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-Lets use font awesome icons served from the cdn,  to attractively link our social media, and contact links.
-
-<p data-height="268" data-theme-id="0" data-slug-hash="vONJxM" data-default-tab="result" data-user="redacademy" class='codepen'>See the Pen <a href='http://codepen.io/redacademy/pen/vONJxM/'>vONJxM</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
 ## Exercise 2
-
-Lets map our own icon font using icomoon.
 
 ## Lab Activity
 
-Integrate Icon fonts into our project:
+Lets use font awesome icons served from the cdn, to attractively link our social media, and contact links.
+
+<p data-height="268" data-theme-id="0" data-slug-hash="vONJxM" data-default-tab="result" data-user="redacademy" class='codepen'>See the Pen <a href='http://codepen.io/redacademy/pen/vONJxM/'>vONJxM</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 ## Additional Resources
 

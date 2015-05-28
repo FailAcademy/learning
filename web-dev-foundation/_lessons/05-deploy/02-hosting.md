@@ -16,7 +16,6 @@ From the HTML & CSS textbook:
 - Set the name servers to your host.
 - Differentiate between different web hosting options (shared, VPS, etc).
 - Upload files via FTP to a typical web host.
-- Set up a site using GitHub to host a web page.
 
 
 ## Keywords
@@ -30,7 +29,7 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-Lets point your name servers to your webhost.
+Lets point your name servers to your web host.
 
 ## Exercise 2
 

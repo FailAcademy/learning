@@ -23,21 +23,34 @@ layout: false
 
 ---
 
+template: inverse
+
+# Intro to Web Fonts
+
+---
+
 .left-column[
-  ## Web Fonts
+  ## System Safe Fonts
 ]
 
 .right-column[
-You can make two-column layouts as well.red[*] in a slideshow!
+We used to be limited in our font choice:
+Remember these? 
+  - <span style="font-family: Arial">Arial</span>
+  - <span style="font-family: Times">Times New Roman</span>
+  - <span style="font-family: Courier">Courier New / Courier</span>
+  - <span style="font-family: Comic Sans, Comic Sans MS ">Comic Sans</span>
+  ]
 
-A sample unordered list:
+---
 
-- List item 1
-- List item 2
-- List item 3
+## Thanks to better web standards we can now use web fonts
 
-.footnote[.red[*] And add footnotes too]
-]
+---
+
+## Leaving System Safe Fonts as a Thing of the Past
+
+### Web fonts are now a must to ensure consistency across ALL devices (Mobile)
 
 ---
 

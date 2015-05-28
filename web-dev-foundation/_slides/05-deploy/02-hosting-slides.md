@@ -22,7 +22,6 @@ layout: false
 3. Domain Name: Set Name Servers 
 4. FTP Software
 5. FTP Exercise
-6. Hosting with GitHub Pages
 
 ---
 
