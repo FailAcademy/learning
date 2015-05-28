@@ -19,7 +19,7 @@ layout: false
 
 1. Introduction to Web Fonts
 2. Using Google Web Fonts
-3. Using @font-face
+3. Using @font-face and Font Squirrel
 
 ---
 
@@ -50,9 +50,25 @@ Remember these?
 
 ## Leaving System Safe Fonts as a Thing of the Past
 
-### Web fonts are now a must to ensure consistency across ALL devices (Mobile)
+### Web fonts are now a must to ensure consistency across ALL devices mobile)
 
 ---
+
+template: inverse
+
+# Google Web Fonts
+
+---
+
+template: inverse
+
+# @font-face and Font Squirrel
+
+---
+
+
+
+
 
 # Syntax Highlighting
 
