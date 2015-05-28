@@ -17,15 +17,18 @@ layout: false
 
 # Agenda
 
-1. Understand and employ basic design concepts (e.g. Gestalt principles) to assist in laying out a website
-2. Learn how to create an aesthetically pleasing colour palette for a website using basic colour theory.
-3. Discover the importance of prioritizing and organizing content on a page
-4. Discover how to combine typefaces together in effective combinations.
-5. Explore a variety of design tools such colour palette tools, Colour Scheme Designer, Subtle Patterns, etc.
+1. Learn about design concepts (e.g. Gestalt principles)
+2. Build aesthetic colour palettes
+3. Prioritizing and organizing content on a page
+4. Effective combination of typeface
+5. Discover useful design tools
 ---
 template: inverse
 
 # Basic Design Concepts Intro
+
+---
+## Essentials of Gestalt Principles
 
 
 ---
@@ -34,15 +37,36 @@ template: inverse
 # Colour Theory/ Colour Palettes
 
 ---
+## Foundations of Colour Theory
+
+---
 template: inverse
 
 # Prioritizing & Organizing Content
-- 
-- Getting Your Message Across Using Design (pp. 465-474)
+
+---
+## Help Users Find What They Are Looking For Part 1
+By prioritizing content, key messages can be communicated faster.
+
+###Prioritizing
+- Make certain areas more *distinct*
+- Create a *visual hierarchy* to focus on key messages
+
+---
+## Help Users Find What They Are Looking For Part 2
+By organizing content, information can be communicated much clearer.
+
+###Organizing
+- Group together related *chunks of content*
+- Present information in *similar visual styles*
 
 ---
 template: inverse
 #Effective Typeface Combinations
+
+---
+## Effective Typeface Combinations
+
 
 ---
 template: inverse
