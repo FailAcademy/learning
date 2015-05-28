@@ -20,7 +20,7 @@ layout: false
 We are going through the process of getting your site online:
 
 1. Domain Name Purchasing
-2. Choosing the Right Web Hosting
+2. Choose and Purchase Web Hosting
 3. Domain Name: Set Name Servers 
 4. Configure FTP Software
 5. FTP Lab - Upload Website
@@ -62,6 +62,11 @@ background-image: url(../../public/img/slide-assets/06-02-web-hosting/3-nameserv
 template: inverse
 
 # Configure FTP Software
+
+---
+template: inverse
+
+# FTP Lab - Upload Website
 
 ---
 

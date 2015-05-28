@@ -11,14 +11,14 @@ From the HTML & CSS textbook:
 - **Chapter 12: Text** *(p. 277)*
 
 ## Learning Objectives
-
-- Use `@font-face` to incorporate custom typefaces into a web page.
-- Explore Google Fonts as an option for using custom typefaces on a web page.
+ 
+- Use Google Fonts as an option for using custom typefaces on a web page.
+- Explore `@font-face` to incorporate custom typefaces into a web page.
 
 ## Keywords
 
-- [@font-face](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face)
 - [Google Fonts](https://developers.google.com/fonts/docs/getting_started)
+- [@font-face](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face)
 
 ## Exercise 1
 

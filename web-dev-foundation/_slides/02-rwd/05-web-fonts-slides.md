@@ -66,10 +66,6 @@ template: inverse
 
 ---
 
-
-
-
-
 # Syntax Highlighting
 
 ```xml

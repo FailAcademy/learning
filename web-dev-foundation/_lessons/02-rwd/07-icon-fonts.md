@@ -12,7 +12,7 @@ From the HTML & CSS textbook:
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Learn how to use HTML elements and attributes.***
 - Implement font awesome icons on a webpage to link our social media and contact links.
 
 ## Keywords
