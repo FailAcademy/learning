@@ -20,7 +20,7 @@ layout: false
 1. Learn about design concepts (e.g. Gestalt principles)
 2. Build aesthetic colour palettes
 3. Prioritizing and organizing content on a page
-4. Effective combination of typeface
+4. Using Fonts
 5. Discover useful design tools
 ---
 template: inverse
@@ -62,10 +62,16 @@ By organizing content, information can be communicated much clearer.
 
 ---
 template: inverse
-#Effective Typeface Combinations
+#Using Fonts
 
 ---
-## Effective Typeface Combinations
+## System Fonts vs Web Fonts
+Later this week, you will learn about web fonts and how to pull them into your website. This method will open up many more font styling options for your sites.  But for now, you will continue to make use of system fonts and incorporate 2-3 alternates before specifying the font family. Remember, there are 5 font families that can be referenced when using system fonts:
+- Sans-serif
+- Serif
+- Monospace
+- Script
+- Fantasy
 
 
 ---
