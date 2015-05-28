@@ -6,48 +6,37 @@ slides: ['_slides/02-rwd/06-css-best-practices-slides.md']
 
 ## Recommended Reading
 
-From the HTML & CSS textbook:
+Some tips on writing good CSS (and HTML too):
 
-- A Closer Look at Tags (pp. 23-24)
+- [Lesson 1: Performance & Organization](http://learn.shayhowe.com/advanced-html-css/performance-organization/)
+- [Lesson 12: Writing Your Best Code](http://learn.shayhowe.com/html-css/writing-your-best-code/)
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Apply the rules of CSS specificity in an informated, strategic way in a stylesheet.
+- Implement CSS rules in a way that allow them to scale easily.
+- Understand CSS best practices related to an object-oriented CSS approach.
 
 ## Keywords
 
-- [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- Specificity
+- Object-oriented CSS
 
 ## Exercise 1
 
-Do this activity!
+Let's experiment with CSS rule specificity:
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/XbpXdG/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/XbpXdG/'>XbpXdG</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+Let's clean up some code with the best practices we just learned:
 
-```html
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/BNpjxY/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/BNpjxY/'>BNpjxY</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+View the [solution](http://codepen.io/redacademy/pen/KpaVJJ).
 
 ## Lab Activity
 
@@ -55,5 +44,14 @@ This is a link to the lab activity...
 
 ## Additional Resources
 
-- [Code Academy](http://www.codecademy.com/learn)
+Tips to help keep CSS specificity in check:
 
+- [Hacks for dealing with specificity](http://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/)
+
+Test the specificity of the rules in your stylesheet, and view the results in a graph:
+
+- [CSS Specificity Graph Generator](http://jonassebastianohlsson.com/specificity-graph/)
+
+More reading on OOCSS:
+
+- [An Introduction To Object Oriented CSS (OOCSS)](http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)
