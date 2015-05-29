@@ -28,7 +28,7 @@ template: inverse
 # What is a Wireframe?
 
 ---
-
+class: center, middle
 ## What are Wireframes?
 A wireframes is a simple representation of a website in simple visual blocks.
 
