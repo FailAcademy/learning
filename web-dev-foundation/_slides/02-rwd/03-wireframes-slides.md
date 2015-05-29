@@ -67,7 +67,7 @@ class: center, middle
 ### Love to Sketch?
 If you are an artist at heart, and enjoy doodling and drawing, you can always sketch your own wireframe out on paper and define the different areas of a page layout.  Be organized, tidy and keep elements to scale. 
 
-.inline-image[![Sketched Layout Design](../../public/img/slide-assets/sketched_layout.png)]
+.inline-images[![Sketched Layout Design](../../public/img/slide-assets/sketched_layout.png)]
 
 ---
 template: inverse
