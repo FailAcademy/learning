@@ -48,7 +48,7 @@ template: inverse
 ## Help Users Find What They Are Looking For Part 1
 By prioritizing content, key messages can be communicated faster.
 
-###Prioritizing
+###Prioritizing Content
 - Make certain areas more *distinct*
 - Create a *visual hierarchy* to focus on key messages
 
@@ -56,7 +56,7 @@ By prioritizing content, key messages can be communicated faster.
 ## Help Users Find What They Are Looking For Part 2
 By organizing content, information can be communicated much clearer.
 
-###Organizing
+###Organizing Content
 - Group together related *chunks of content*
 - Present information in *similar visual styles*
 
@@ -66,7 +66,7 @@ template: inverse
 
 ---
 ## System Fonts vs Web Fonts
-Later this week, you will learn about web fonts and how to pull them into your website. This method will open up many more font styling options for your sites.  But for now, you will continue to make use of system fonts and incorporate 2-3 alternates before specifying the font family. Remember, there are 5 font families that can be referenced when using system fonts:
+#####Later this week, you will learn about web fonts and how to pull them into your website. This method will open up many more font styling options for your sites.  But for now, you will continue to make use of system fonts and incorporate 2-3 alternates before specifying the font family. Remember, there are 5 font families that can be referenced when using system fonts:
 - Sans-serif
 - Serif
 - Monospace

@@ -10,6 +10,7 @@ class: center, middle, inverse
 
 ---
 
+template: inverse
 # Intro to Wireframing
 
 ---
@@ -17,62 +18,37 @@ layout: false
 
 # Agenda
 
-1. Introduction
-2. Deep-dive
-3. ...
+1. What is a wireframe?
+2. Tools for Wireframing like Balsamiq
+3. Key Elements to include in a wireframe
+4. Sketching as an alternative
+
+
+- Utilize online wireframing tools such as Balsamiq to wireframe the layout of sites
+- Discover the key elements to incorporate into the wireframes
+- Learn about different design considerations for smartphones, tablets and desktop web page layouts
+---
+
+template: inverse
+# What is a Wireframe?
 
 ---
 
-.left-column[
-  ## Column Layout
-]
-
-.right-column[
-You can make two-column layouts as well.red[*] in a slideshow!
-
-A sample unordered list:
-
-- List item 1
-- List item 2
-- List item 3
-
-.footnote[.red[*] And add footnotes too]
-]
+template: inverse
+# Tools for Wireframing
 
 ---
 
-# Syntax Highlighting
-
-```xml
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
+template: inverse
+# How to Wireframe
 
 ---
 
-.left-column[
-  ## Remark How-tos
-]
-
-.right-column[
-   This slideshow is based on [remark.js](https://github.com/gnab/remark).
-
-   To learn more about building a slideshow with remark, check out:
-
-   - [The remark formatting guide](https://github.com/gnab/remark/wiki/Formatting)
-   - [The remark Markdown guide](https://github.com/gnab/remark/wiki/Markdown)
-]
+template: inverse
+# Sketching as an alternative
 
 ---
+
 template: inverse
 
 # Fin!
