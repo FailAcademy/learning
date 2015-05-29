@@ -31,7 +31,7 @@ template: inverse
 ## What are Wireframes?
 Wireframes is a simple representation of a website in simple visual blocks. It's to show the layout of the logo, navigation, content, side bars and footer for the website. 
 
-![Portfolio Wireframe](../../public/img/RED_portfolio_homepage_mockup.png)
+![Portfolio Wireframe](../../public/img/slide-assets/RED_portfolio_homepage_mockup.png)
 
 ---
 template: inverse
