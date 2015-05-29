@@ -31,8 +31,8 @@ template: inverse
 class: center, middle
 ## What are Wireframes?
 A wireframes is a simple representation of a website in simple visual blocks.
-
-.center![Portfolio Wireframe](../../public/img/slide-assets/RED_portfolio_homepage_mockup.png)
+class: center, middle
+![Portfolio Wireframe](../../public/img/slide-assets/RED_portfolio_homepage_mockup.png)
 
 ---
 class: center, middle
