@@ -18,21 +18,21 @@ layout: false
 
 # Agenda
 
-1. What is a wireframe?
-2. Tools for Wireframing like Balsamiq
+1. What is a Wireframe?
+2. Online Tools for Wireframing like Balsamiq
 3. Key Elements to include in a wireframe
-4. Sketching as an alternative
-
-
-- Utilize online wireframing tools such as Balsamiq to wireframe the layout of sites
-- Discover the key elements to incorporate into the wireframes
-- Learn about different design considerations for smartphones, tablets and desktop web page layouts
+4. Different Design considerations for Smartphone, Tablets and Desktop
 ---
 
 template: inverse
 # What is a Wireframe?
 
 ---
+## What are Wireframes?
+Wireframes is a simple representation of a website in simple visual blocks. It's to show the layout of the logo, navigation, content, side bars and footer for the website. 
+
+[Portfolio Wireframe](../../public/img/RED_portfolio_homepage_mockup.png)
+
 
 template: inverse
 # Tools for Wireframing
