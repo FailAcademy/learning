@@ -24,6 +24,7 @@ From the JavaScript & jQuery textbook:
 - Condition
 - Loop
 - Operator
+- Function
 
 ## Exercise 1
 
