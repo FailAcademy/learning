@@ -60,42 +60,67 @@ template: inverse
 
 ---
 
-template: inverse
-
-# @font-face and Font Squirrel
+1. Choose your font
+2. Choose your weights + character sets
+3. Options for using google fonts
+4. Declare the font-family in your css
 
 ---
 
-# Syntax Highlighting
+## 1. Choose your font.
 
-```xml
-<!-- A bit of sample HTML with syntax highlighting-->
+I like to use [google font pairing](http://femmebot.github.io/google-type/ "google font pairing") as a resource for choosing fonts.
 
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
+---
+
+## 2. Choose your weights
+
+![Google Font Weights](../../public/img/slide-assets/02-05-web-fonts/Gfonts1.png)
+
+Like Google Says: only choose what you need, otherwise your page will slow down. 
+
+---
+
+## 2... and character sets.
+
+Google Character Sets
+
+![Google Character Sets](../../public/img/slide-assets/02-05-web-fonts/Gfonts2.png)
+
+Choose your character sets, (Always defaults to Latin Alphabet for english.)
+
+---
+
+## 3. Options for using google fonts
+
+#### HTML , @import and Javascipt
+
+![Deploy Google Fonts](../../public/img/slide-assets/02-05-web-fonts/Gfonts3.png)
+
+I usually use the `<link>` tag in the header of my site as my option for deployment.
+
+---
+
+## 4. Declare the font-family in CSS
+
+### in your css where you want to use the fonts (remember to set fallback fonts)
+
+```css
+
+h1, h2, h3, h4, h5 ,h6 {
+     font-family: ‘Megrim', 'sans-serif';
+ }
+
+body {
+      font-family: ‘Roboto’, ’sans-serif';
+}
+
 ```
 
 ---
+template: inverse
 
-.left-column[
-  ## Remark How-tos
-]
-
-.right-column[
-   This slideshow is based on [remark.js](https://github.com/gnab/remark).
-
-   To learn more about building a slideshow with remark, check out:
-
-   - [The remark formatting guide](https://github.com/gnab/remark/wiki/Formatting)
-   - [The remark Markdown guide](https://github.com/gnab/remark/wiki/Markdown)
-]
+# @font-face and Font Squirrel
 
 ---
 template: inverse

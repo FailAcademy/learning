@@ -65,7 +65,6 @@ Lets apply webfonts to each of your projects, using each of the three methods ou
 
 ## Additional Resources
 
-- [Code Academy](http://www.codecademy.com/learn)
 - [Google Font Pairing](http://femmebot.github.io/google-type/)
 - [Comic Sans Criminal](http://www.comicsanscriminal.com/)
 
