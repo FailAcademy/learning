@@ -65,7 +65,7 @@ template: inverse
 
 ****PNG-24****: (Portable Network Graphics)Best for graphics and photos, supports multiple levels of transparency, and millions of colours.
 
-****SVG***: (Scalable Vector Graphics) Vector graphics for the web that's rendered in XML. No quality loss when zoomed or scaled.
+****SVG****: (Scalable Vector Graphics) Vector graphics for the web that's rendered in XML. No quality loss when zoomed or scaled.
 ---
 ## Word of Caution: PNG-24
 
@@ -128,7 +128,7 @@ template: inverse
 ---
 ## Different CC License Types
 
-![CC License Types](../../public/img/slide-assets/cc_license_types.png)
+.inline-images[![CC License Types](../../public/img/slide-assets/cc_license_types.png)]
 
 ---
 
@@ -142,7 +142,7 @@ template: inverse
 ## Copyright Tech DO's and Don'ts
 - The internet is not public domain, things you "google" cannot just be downloaded to be used, examples include graphics, logos, fonts, photographs, and illustrations.
 
-![CC License Types](../../public/img/slide-assets/google-search-box.png)
+.inline-images[![Google Search Box](../../public/img/slide-assets/google-search-box.png)]
 ---
 
 ## Copyright Tech DO's and Don'ts

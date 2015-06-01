@@ -37,8 +37,6 @@ Use CSS to position various elements absolutely and fixed on a page
 
 Manipulate the display of an HTML list to serve as a navigation menu
 
-This is how you add highlighted syntax to a lesson page:
-
 
 ## Lab Activity
 
@@ -47,3 +45,5 @@ This is a link to the lab activity...
 ## Additional Resources
 
 - [Code Academy](http://www.codecademy.com/learn)
+- [Meyer CSS](Reset http://meyerweb.com/eric/tools/css/reset/index.html)
+- [Box Model Reset](https://sunnyis.me/blog/box-model-reset)
