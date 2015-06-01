@@ -110,8 +110,8 @@ template: inverse
 ## Common Image Editing Software
 - **Adobe Photoshop** - Industry standard image editing software
 - **Adobe Illustrator** - Industry standard graphics editing software
-- Gimp - Free *GNU* *I*mage *M*anipulating *P*rogram
-- Pixelmator - Available for Mac and iOS
+- **Gimp** - Free **G**NU **I**mage **M**anipulating **P**rogram
+- **Pixelmator** - Available for Mac and iOS
 
 ---
 template: inverse
@@ -126,9 +126,9 @@ template: inverse
 - provides the author/creator flexibility in how their work is shared
 
 ---
-## Show Images on Different CC Licenses
+## Different CC License Types
 
-[![CC License Types](../../public/img/cc_license_types.png)]
+![CC License Types](../../public/img/slide-assets/cc_license_types.png)
 
 ---
 
@@ -136,11 +136,16 @@ template: inverse
 - Copyright laws are designed to protect a creator's right to be compensated/attributed and to control how their work is used/shared. 
 - All tangible creative works are protected by copyright immediately upon creation. 
 - When in doubt, assume what you want to use is copyrighted material and seek permission to use it or find a suitable royalty free alternative.
-- 
+
 ---
 
 ## Copyright Tech DO's and Don'ts
 - The internet is not public domain, things you "google" cannot just be downloaded to be used, examples include graphics, logos, fonts, photographs, and illustrations.
+
+![CC License Types](../../public/img/slide-assets/google-search-box.png)
+---
+
+## Copyright Tech DO's and Don'ts
 - Posting links that contain only a URL and the title of the site is generally acceptable.
 - Don't copy a site's HTML or CSS (or any scripting code)
 - Always get permission to use a copyrighted online work from the owner of that work
