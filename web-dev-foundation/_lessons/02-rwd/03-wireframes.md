@@ -28,11 +28,12 @@ From the HTML & CSS textbook:
 ## Exercise 1
 
 ###Do this activity!
-
+Sketch out a wireframe on paper of a small business website of your choice. Be sure to define key areas like logos, headers, navigation, content, footer and side menus (if applicable).
 
 
 ## Exercise 2
 
+###Do this activity!
 Experiment with [Balsamiq](http://www.balsamiq.com) or other wireframing tool as shown in the resource links below.
 
 
