@@ -93,7 +93,7 @@ Choose your character sets, (Always defaults to Latin Alphabet for english.)
 
 ## 3. Options for using google fonts
 
-#### HTML , @import and Javascipt
+### HTML , @import and Javascipt
 
 ![Deploy Google Fonts](../../public/img/slide-assets/02-05-web-fonts/Gfonts3.png)
 
@@ -123,6 +123,41 @@ template: inverse
 # @font-face and Font Squirrel
 
 ---
+
+1. Choose Font
+2. Download
+3. Extract ZIP
+4. Link Stylesheet
+5. Declare Font-Family
+
+---
+
+##1. Choose Font
+
+
+
+---
+
+##2. Download
+
+![Download Font Squirrel](../../public/img/slide-assets/02-05-web-fonts/fs1.png)
+
+---
+
+##3. Extract ZIP
+
+![Download and Extract Zip](../../public/img/slide-assets/02-05-web-fonts/fs2.png)
+
+---
+
+##4. Link Stylesheet
+
+---
+
+##5. Declare Font-Family
+
+---
+
 template: inverse
 
 # Fin!

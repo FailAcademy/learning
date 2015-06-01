@@ -5,7 +5,7 @@ slides: ['_slides/02-rwd/05-web-fonts-slides.md']
 ---
 
 ## Pre-Class Work
-
+- Reading
 
 ## Reading
 
@@ -34,6 +34,7 @@ From the HTML & CSS textbook:
 5. BONUS - Try another web font for the H1 than the body text. Check out [Google Font Pairing](http://femmebot.github.io/google-type/) for ideas.
 
 
+
 <p data-height="500" data-theme-id="0" data-slug-hash="vONZxd" data-default-tab="result" data-user="redacademy" class='codepen'>See the Pen <a href='http://codepen.io/redacademy/pen/vONZxd/'>vONZxd</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
@@ -48,6 +49,7 @@ From the HTML & CSS textbook:
 5. Choose a font and follow the steps to embed the code in index.html using the "link" tag.
 6. Go to style.css and specify the font under font-family in the css.
 8. Refresh your index.html tab.
+
 
 
 <p data-height="500" data-theme-id="0" data-slug-hash="vONZxd" data-default-tab="result" data-user="redacademy" class='codepen'>See the Pen <a href='http://codepen.io/redacademy/pen/vONZxd/'>vONZxd</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
