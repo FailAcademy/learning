@@ -56,18 +56,22 @@ template: inverse
 
 ****JPG****: (Joint Photographers Group) Best for photos, gradients, graphics with tonal variations. Lossy image format.
 
-****PNG-24****: (Portable Network Graphics)Best for graphics and photos, supports multiple levels of transparency, and millions of colours.
-
-****PNG-8****: Raster image format, limited to 256 colours, no transparency. Preferred format over the GIF as file sizes are 10-30% smaller. 1 level of transparency. Lossless format.  Great for flat colour graphics like logos/icons/illustrations.
+****GIF****: (Graphics Interchange Format) This is a bitmap image format, but limited to 256 colours, no transparency. Often used now to save GIF animations. 1 level of transparency. Lossless format. Great for flat colour graphics like logos/icons/illustrations.
 
 ---
 ## Common Web Formats (cont.)
 
-****GIF****: (Graphics Interchange Format) This is a bitmap image format, but limited to 256 colours, no transparency. Often used now to save GIF animations. 1 level of transparency. Lossless format. Great for flat colour graphics like logos/icons/illustrations.
+****PNG-8****: Raster image format, limited to 256 colours, no transparency. Preferred format over the GIF as file sizes are 10-30% smaller. 1 level of transparency. Lossless format.  Great for flat colour graphics like logos/icons/illustrations.
+
+****PNG-24****: (Portable Network Graphics)Best for graphics and photos, supports multiple levels of transparency, and millions of colours.
 
 ****SVG***: (Scalable Vector Graphics) Vector graphics for the web that's rendered in XML. No quality loss when zoomed or scaled.
 ---
+## Word of Caution: PNG-24
 
+NOTE: PNG-24, which has 24 bits of colour (8bits per channel), allowing for up to 16 million colours, and provides greater transparency fading, gradients of colour, and better support for saving for photos. The draw back of this format is the larger file sizes, even larger than JPG, so consider the use of this format carefully, as it will affect download speed of the graphic. 
+
+---
 template: inverse
 
 # Image Best Practices
@@ -96,7 +100,7 @@ template: inverse
 
 ***title tag:***  Provides further information about the image that is displayed in a tool tip
 
-***class tag:***: Provides a link to the CSS stylesheet 
+***class tag:***: Provides a link to the CSS stylesheet in order to style the image with properties like border and padding (from the Box Model)
 
 ---
 template: inverse
@@ -107,7 +111,7 @@ template: inverse
 - **Adobe Photoshop** - Industry standard image editing software
 - **Adobe Illustrator** - Industry standard graphics editing software
 - Gimp - Free *GNU* *I*mage *M*anipulating *P*rogram
-- Pixelmator
+- Pixelmator - Available for Mac and iOS
 
 ---
 template: inverse
@@ -123,6 +127,9 @@ template: inverse
 
 ---
 ## Show Images on Different CC Licenses
+
+[![CC License Types](../../public/img/cc_license_types.png)]
+
 ---
 
 ## Copyright Considerations 

@@ -170,7 +170,6 @@ img {
 
 ```
 
-
 *See pg. 372 in your HTML/CSS text for further examples*
 ---
 template: inverse
