@@ -24,6 +24,7 @@ layout: false
 3. CSS positioning (static, relative, absolute, and fixed)
 4. CSS floats/clear floats
 5. Standard Layout Practices
+6. Navigation List Menus
 ---
 template: inverse
 
@@ -43,6 +44,10 @@ template: inverse
 </ol>
 ```
 
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/yNgWwe/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/yNgWwe/'>yNgWwe</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+---
 **Unordered List** displays list items as various bulleted styles (disc, circle, square or custom) 
 ```html
 <h3> Star Wars Characters</h3>
@@ -206,6 +211,25 @@ template: inverse
 ![Balsamiq Wireframe](../../public/img/slide-assets/div_layout_balsamiq.png)
 
 ---
+template: inverse
+
+# Navigation List Menus
+
+---
+## Converting A List into a Horizontal Menu
+
+There are some key properties that will turn a list into a horizontal menu.
+- **display: block; ** takes the list items and moves them horizontally
+- **list-style-type: none; ** removes the bulleted points from the ul list.
+- **text-decoration: none; ** removes the underline from the button links
+
+---
+## Take a Closer Look at A Basic Horizontal Menu
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvRBYV/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvRBYV/'>WvRBYV</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+---
+
 template: inverse
 
 # Fin!
