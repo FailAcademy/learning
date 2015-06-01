@@ -48,6 +48,7 @@ template: inverse
 </iframe>
 
 ---
+## Types of Lists
 **Unordered List** displays list items as various bulleted styles (disc, circle, square or custom) 
 ```html
 <h3> Star Wars Characters</h3>
@@ -57,6 +58,8 @@ template: inverse
 	<li>Darth Vader</li>	
 </ul>
 ```
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/YXNmwP/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/YXNmwP/'>YXNmwP</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 *See pg. 333-336 in your HTML/CSS text for further examples* 
 ---
@@ -67,7 +70,9 @@ template: inverse
 
 ---
 ## CSS Reset
-- The goal of a reset stylesheet is to reduce browser inconsistencies in things like default line heights, margins and font sizes of headings.
+- The goal of a reset stylesheet is to **reduce browser inconsistencies** in things like default line heights, margins and font sizes of headings.
+
+- The reset styles shown on the next page are **intentionally very generic**. There isn't any default color or background set for the body element, for example, and you'll want to tweak the reset so it works with your website's styling.
 
 ---
 ## Example of Eric Meyer's Reset
@@ -95,7 +100,9 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 ```
+
 ---
+
 ## Example of Eric Meyer's Reset (cont)
 ```css
 body {
@@ -117,6 +124,11 @@ table {
 	border-spacing: 0;
 }
 ```
+---
+## CodePen Example of Meyer's Reset
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/gpgVrM/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/gpgVrM/'>gpgVrM</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 ---
 
 template: inverse
@@ -140,6 +152,7 @@ template: inverse
 
 ## Z-Index
 - The Z-Index property allows for elements to stack and overlap each other. The higher the z-index, the more closer the element is to the front, the smaller the number, the element will appear more in the background. 
+
 ---
 template: inverse
 
@@ -183,22 +196,27 @@ template: inverse
 
 ---
 ## CSS Background Properties
-- Background-color: web hexidecimal code
-- Background-image: url(image);
-- Background-repeat -  values: repeat, repeat-x, repeat-y, no-repeat;
-- Background-attachment - values: scroll, fixed;
-- Background-position - values: left, right, top, bottom;
+- **Background-color:** web hexidecimal code
+- **Background-image:** url(image);
+- **Background-repeat:** values (repeat, repeat-x, repeat-y,            
+ or no-repeat)
+- **Background-attachment:** values (scroll or fixed)
+- **Background-position:** values (left, right, top, bottom)
 
 ---
 ## CSS Background Shorthand
-Since there are so many properties for specifying backgrounds, you can use the shorthand method by specifying the properties you want in the correct order (and leave out the properties you do not require).
+
+###### Since there are so many properties for specifying backgrounds, you can use the shorthand method by specifying the properties you want in the correct order (and leave out the properties you do not require).
 
 ```css
 body {
-    background: #ffffff url("border.png") repeat-x left top;
+    background: #hexcode url("tile.png") repeat-x center top;
 }
 
 ```
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/ZGLgeM/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/ZGLgeM/'>ZGLgeM</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 ---
 template: inverse
 
@@ -207,8 +225,7 @@ template: inverse
 ---
 ## Basic DIV Layout Set-up
 
-
-![Balsamiq Wireframe](../../public/img/slide-assets/div_layout_balsamiq.png)
+.inline-images[![Balsamiq Wireframe](../../public/img/slide-assets/div_layout_balsamiq.png)]
 
 ---
 template: inverse

@@ -30,21 +30,23 @@ template: inverse
 ---
 class: center, middle
 ## What are Wireframes?
-A wireframes is a simple representation of a website in simple visual blocks.
+###### A wireframes is a simple representation of a website in simple visual blocks. It's like a blueprint style of where elements will be situated on the page, without any styling.
 
 .inline-images[![Portfolio Wireframe](../../public/img/slide-assets/RED_portfolio_homepage_mockup.png)]
 
 ---
 class: center, middle
 
-### What to Show
-A wireframe shows the layout of the logo, banner, navigation, content, side bars and footer that you may have in a website. 
+### What to Include in A Wireframe
+###### A wireframe shows the layout of the logo, banner, navigation, content, side bars and footer that you may have in a website. 
+
+.inline-images[![Balsamiq Wireframe](../../public/img/slide-assets/div_layout_balsamiq.png)]
  
 ---
 class: center, middle
 
 ### What Not to Include
-A wireframe *shouldn't* include colour scheme, fonts, background styles or any images. It focuses more on visual hierarchy of information and functional requirements such as accessibility are also addressed.
+A wireframe *shouldn't* include ***colour scheme, fonts, background styles or any images.*** It focuses more on visual hierarchy of information and functional requirements such as accessibility are also addressed.
  
 ---
 template: inverse
