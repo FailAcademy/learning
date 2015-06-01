@@ -8,50 +8,37 @@ slides: ['_slides/04-jquery/02-html-forms-slides.md']
 
 From the HTML & CSS textbook:
 
-- A Closer Look at Tags (pp. 23-24)
+- How Forms Work (pp 149-150)
+- What HTML Forms Are (pp 145)
+- Why Use Forms (pp 147)
+- Various Form Elements (pp 152-163)
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Learn about how forms work
+- Discover why it's importatnt to use forms
+- Get familiar with various form elements
 
 ## Keywords
 
 - [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- Form Elements
+- Form Processing Methods
+- 
 
 ## Exercise 1
 
 Do this activity!
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+Try this exercise out!
 
-```html
-
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
 
 ## Lab Activity
 
-This is a link to the lab activity...
+Build a functional HTML form with a variety of inputs that will tie into the Jquery class.
 
 ## Additional Resources
 

@@ -30,6 +30,14 @@ template: inverse
 ---
 ## Essentials of Gestalt Principles
 
+Let's take a closer look at the key principles:
+
+[Gestalt Principles](http://graphicdesign.spokanefalls.edu/tutorials/process/gestaltprinciples/gestaltprinc.htm)
+
+[How to Use Gestalt Principles in Website Design](http://graphicdesignjunction.com/2013/05/how-to-use-the-gestalt-principle-in-your-web-design-projects/)
+
+.inline-images[![Gestalt Principles Image](https://yusylvia.files.wordpress.com/2010/03/gestalt_illustration-01.jpg)]
+
 
 ---
 template: inverse
@@ -39,6 +47,10 @@ template: inverse
 ---
 ## Foundations of Colour Theory
 
+####Using colour in a harmonious and effective manner is very important in web page design. You want to bring in a right mix of colours to have certain words or sections pop out to attract viewer's attention.
+• [Basic Color Theory](http://www.colormatters.com/color-and-design/basic-color-theory)• [Colour Trends & Inspiration](http://www.colourlovers.com)
+
+.inline-images[![Colour Lovers Palette](../../public/img/slide-assets/sample_colour_lovers_palette.png)]
 ---
 template: inverse
 
@@ -66,13 +78,12 @@ template: inverse
 
 ---
 ## System Fonts vs Web Fonts
-#####Later this week, you will learn about web fonts and how to pull them into your website. This method will open up many more font styling options for your sites.  But for now, you will continue to make use of system fonts and incorporate 2-3 alternates before specifying the font family. Remember, there are 5 font families that can be referenced when using system fonts:
+###### Later this week, you will learn about web fonts and how to pull them into your website. This method will open up many more font styling options for your sites.  But for now, you will continue to make use of system fonts and incorporate 2-3 alternates before specifying the font family. Remember, there are 5 font families that can be referenced when using system fonts:
 - Sans-serif
 - Serif
 - Monospace
 - Script
 - Fantasy
-
 
 ---
 template: inverse

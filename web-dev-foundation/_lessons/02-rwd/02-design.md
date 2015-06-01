@@ -46,4 +46,5 @@ This is a link to the lab activity...
 - [Paletton.com](http://paletton.com/)
 - [SubtlePatterns.com](http://www.subtlepatterns.com)
 - [Gestalt Principles] (http://graphicdesign.spokanefalls.edu/tutorials/process/gestaltprinciples/gestaltprinc.htm)
+- [How to Use Gestalt Principles in Website Design](http://graphicdesignjunction.com/2013/05/how-to-use-the-gestalt-principle-in-your-web-design-projects/)
 

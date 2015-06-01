@@ -37,7 +37,6 @@ Sketch out a wireframe on paper of a small business website of your choice. Be s
 Experiment with [Balsamiq](http://www.balsamiq.com) or other wireframing tool as shown in the resource links below.
 
 
-
 ## Lab Activity
 
 Produce a set of wireframes for three different breakpoints for Assignment 2.
