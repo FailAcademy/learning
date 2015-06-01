@@ -4,7 +4,10 @@ title: Custom Web Fonts
 slides: ['_slides/02-rwd/05-web-fonts-slides.md']
 ---
 
-## Recommended Reading
+## Pre-Class Work
+
+
+## Reading
 
 From the HTML & CSS textbook:
 

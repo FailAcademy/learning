@@ -4,7 +4,10 @@ title: Icon Fonts
 slides: ['_slides/02-rwd/07-icon_fonts-slides.md']
 ---
 
-## Recommended Reading
+## Pre-Class Work
+
+
+## Reading
 
 From the HTML & CSS textbook:
 

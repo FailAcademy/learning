@@ -3,7 +3,15 @@ layout: lesson
 title: Hosting a Website
 slides: ['_slides/05-deploy/02-hosting-slides.md']
 ---
-## Recommended Reading
+
+## Pre-Class Work
+
+- Reading
+- Have a domain name picked out, or ready for class.
+- Install FTP Software, Filezilla, or Transmit (See Resources).
+- Bring your credit card to class if you are purchasing hosting.
+
+## Reading
 
 From the HTML & CSS textbook:
 
