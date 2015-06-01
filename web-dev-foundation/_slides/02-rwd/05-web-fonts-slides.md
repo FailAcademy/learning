@@ -124,33 +124,42 @@ template: inverse
 
 ---
 
-1. Choose Font
-2. Download
-3. Extract ZIP
-4. Link Stylesheet
+1. Choose your Font + Download
+2. Choose your weights
+3. Upload to Web Font Generator
+4. Download + Link Stylesheet
 5. Declare Font-Family
 
 ---
 
-##1. Choose Font
+##1. Choose your Font + Download
 
-
-
----
-
-##2. Download
+Font Squirrel has curated lists.
 
 ![Download Font Squirrel](../../public/img/slide-assets/02-05-web-fonts/fs1.png)
 
----
-
-##3. Extract ZIP
-
-![Download and Extract Zip](../../public/img/slide-assets/02-05-web-fonts/fs2.png)
 
 ---
 
-##4. Link Stylesheet
+##2. Choose your weights
+
+![Choose Weights](../../public/img/slide-assets/02-05-web-fonts/fs2.png)
+
+
+---
+
+##3. Upload to Web Font Generator
+
+![Upload Font Files to Webfont Generator](../../public/img/slide-assets/02-05-web-fonts/fs3.png)
+
+
+---
+
+##4. Download + Link Stylesheet
+
+```html
+
+```
 
 ---
 
