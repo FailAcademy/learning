@@ -19,60 +19,81 @@ layout: false
 
 # Agenda
 
-1. 
-2. Deep-dive
-3. ...
+1.  Discover why it's important to use forms
+2.  Learn about how forms work
+3.  Get familiar with various form control elements
+4.  How to target form elements with values/IDs
 
 ---
 
-.left-column[
-  ## Column Layout
-]
+template: inverse
+#Why Use Forms?
 
-.right-column[
-You can make two-column layouts as well.red[*] in a slideshow!
+---
+## Everyday Uses for Forms
 
-A sample unordered list:
+Forms are a way for the users/viewers of your site to provide you with feedback about anything that you’d like to find out from them. Forms provide a uniform way for those users to interact with a website quickly and easily through their web browser, rather than directly through email. 
 
-- List item 1
-- List item 2
-- List item 3
+---
+## Everyday Uses for Forms
 
-.footnote[.red[*] And add footnotes too]
-]
+Forms that you typically see include ones that ask for your mailing information, like an order forms, or ask for your opinions, like surveys. There are many uses for forms especially in online commerce and retail transactions and online banking. 
+---
+### How Often Do You Google Everyday?
+
+Forms like Google allow us to **GET** information from a database.
+.inline-images[![Google Search box](../../public/img/slide-assets/google-search-box.png)]
+
+---
+### How Often Do You Buy or Pay for Something Online?
+Checkout forms allow you input your information & payment information for a company to process your order. 
+
+.inline-images[![Sample Online Shipping Form](../../public/img/slide-assets/sample_shipping_address_form.jpg)]
+
+---
+template: inverse
+# How Forms Work
+
+---
+template: inverse
+# Types of Form Controls
+
+---
+## Types of Form Controls
+
+###1. Adding Text
+###2. Making Choices
+###3. Submitting Forms
+###4. Uploading Files
+
+---
+## Types of Form Elements
+### 1. Adding Text
+- Text Input (Single Line)
+- Text Area (Multi Line)
+- Password Input
+
+---
+## Types of Form Elements
+### 2. Making Choices
+- Radio Buttons
+- Check Boxes
+- Drop Down Menus
+
+---
+## Types of Form Elements
+### 3. Submitting Forms
+- Submit Buttons
+- Image Buttons
+
+---
+## Types of Form Elements
+### 4. Uploading Files
+- File Upload Button
 
 ---
 
-# Syntax Highlighting
-
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
-
----
-
-.left-column[
-  ## Remark How-tos
-]
-
-.right-column[
-   This slideshow is based on [remark.js](https://github.com/gnab/remark).
-
-   To learn more about building a slideshow with remark, check out:
-
-   - [The remark formatting guide](https://github.com/gnab/remark/wiki/Formatting)
-   - [The remark Markdown guide](https://github.com/gnab/remark/wiki/Markdown)
-]
+## How to Target Form Elements
 
 ---
 template: inverse

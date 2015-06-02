@@ -18,13 +18,16 @@ From the HTML & CSS textbook:
 - Learn about how forms work
 - Discover why it's importatnt to use forms
 - Get familiar with various form elements
+- How to target form elements with values/ids
 
 ## Keywords
 
 - [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
-- Form Elements
+- IDS & Values
+- Form Elements (input, textarea, select, radio, submit..)
+- Form Methods
 - Form Processing Methods
-- 
+
 
 ## Exercise 1
 
