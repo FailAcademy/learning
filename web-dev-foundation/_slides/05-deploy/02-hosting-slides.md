@@ -32,7 +32,7 @@ template: inverse
 
 ---
 
-we use hover because of its simple, no spam design and great customer service.
+we recommend hover because of its simple, no spam design and great customer service.
 
 1. Go to www.hover.com
 2. Type in your desired domain name
@@ -74,18 +74,63 @@ template: inverse
 Now we need to tell your domain name to point to your new web host. 
 First google “Yourwebhost” + Nameservers and get them,
 
-*in my experience it has been ns1.yourhost.com and ns2.yourhost.com, 90% of the time.""
-
 ---
 
 For Hover we also need the IP address, we can look it up here: 
 
-![alt text](../../public/img/slide-assets/06-02-web-hosting/nameserv01.png "Title")
+![Get IP for Nameservers](../../public/img/slide-assets/06-02-web-hosting/nameserv01.png)
 
 ---
 template: inverse
 
 # Configure FTP Software
+
+---
+
+Login to your web host :
+
+Click on FTP Accounts
+
+![C-Panel FTP Symbol](../../public/img/slide-assets/06-02-web-hosting/ftp-1.png)
+
+---
+
+- Configure your own username and password as pictured, *Make sure that your directory is set to public_html*
+
+![C-Panel FTP Symbol](../../public/img/slide-assets/06-02-web-hosting/ftp-2.png)
+
+---
+
+Now open Filezilla, and click on this icon the top right corner: 
+
+![FileZilla](../../public/img/slide-assets/06-02-web-hosting/ftp-4.png)
+
+---
+
+Name your new connection, and put in your information and configure it like so. 
+
+![New Connection](../../public/img/slide-assets/06-02-web-hosting/ftp-5.png)
+
+---
+
+and on Transmit: 
+
+![New Connection](../../public/img/slide-assets/06-02-web-hosting/ftp-transmit1.png)
+
+---
+
+![FTP Side by Side](../../public/img/slide-assets/06-02-web-hosting/ftp-sidebyside.png)
+
+---
+
+![FTP Access](../../public/img/slide-assets/06-02-web-hosting/ftp-6.png)
+
+---
+
+![FTP Access](../../public/img/slide-assets/06-02-web-hosting/ftp-transmit2.png)
+
+---
+
 
 ---
 template: inverse
