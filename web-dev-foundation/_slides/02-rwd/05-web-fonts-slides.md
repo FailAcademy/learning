@@ -128,7 +128,7 @@ template: inverse
 2. Choose your weights
 3. Upload to Web Font Generator
 4. Download + Link Stylesheet
-5. Declare Font-Family
+5. Edit CSS Font-Family
 
 ---
 
@@ -157,13 +157,35 @@ Font Squirrel has curated lists.
 
 ##4. Download + Link Stylesheet
 
+```css
+
+@font-face{ 
+  font-family: 'MyWebFont';
+  src: url('WebFont.eot');
+  src: url('WebFont.eot?#iefix') format('embedded-opentype'),
+       url('WebFont.woff') format('woff'),
+       url('WebFont.ttf') format('truetype'),
+       url('WebFont.svg#webfont') format('svg');
+}
+
+```
+
 ```html
+
+<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
 
 ```
 
 ---
 
-##5. Declare Font-Family
+##5. Edit CSS Font-Family
+
+```css
+
+body {
+  font-family:'MyWebFont', 'Sans-Serif' ;
+}
+```
 
 ---
 
