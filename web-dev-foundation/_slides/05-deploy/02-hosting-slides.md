@@ -74,11 +74,18 @@ template: inverse
 Now we need to tell your domain name to point to your new web host. 
 First google “Yourwebhost” + Nameservers and get them,
 
+I use site5 webhosting, my name servers are:
+
+- dns.site5.com
+- dns2.site5.com
+
 ---
 
-For Hover we also need the IP address, we can look it up here: 
+![Hover Edit Name Servers](../../public/img/slide-assets/06-02-web-hosting/ns-1.png)
 
-![Get IP for Nameservers](../../public/img/slide-assets/06-02-web-hosting/nameserv01.png)
+---
+
+![Hover Edit Name Servers](../../public/img/slide-assets/06-02-web-hosting/ns-2.png)
 
 ---
 template: inverse

@@ -74,13 +74,21 @@ Now is the fun part
 
 Lets say the bicycle icon.
 
-![alt text](../../public/img/slide-assets/02-06-Icon_Fonts/fa-1.png)
+![alt text](../../public/img/slide-assets/05-07-icon-fonts/fa-1.png)
+
+---
+
+Font Awesome uses the `<i>` html tag, with a class that declares the icon, and its size.
+
+`<i class="fa fa-bicycle"></i>`
+
+![alt text](../../public/img/slide-assets/05-07-icon-fonts/fa-4.png)
 
 ---
 
 Need it larger?
 
-![alt text](../../public/img/slide-assets/02-06-Icon_Fonts/fa-2.png)
+![alt text](../../public/img/slide-assets/05-07-icon-fonts/fa-2.png)
 
 Add a class.
 
