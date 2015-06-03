@@ -71,8 +71,8 @@ You can only put one form per HTML page, but that form can contain many form ele
 
 When the form is submitted, the form data is sent to the URL specified in the ACTION attribute. In a basic email handler example, this URL will refer to a client-side program (user’s email program) that will process the form data. The form itself should contain: 
 
-- At least one submit button ```<input type="submit">```
-- Some form data elements  ```<input>,<textarea>,<select>``` 
+- At least one submit button `<input type="submit">`
+- Some form data elements  `<input>,<textarea>,<select>`
 - Additional markup (e.g., identifying data elements through IDs and Values, and presenting instructions as needed. 
 
 ---
@@ -89,14 +89,27 @@ When the form is submitted, the form data is sent to the URL specified in the AC
 ---
 ## BASIC FORM STRUCTURE
 
-This basic form consists of a text field followed by a Submit button.  An example of this type of form would just ask for the user’s e-mail for a website’s monthly email newsletter.
+######This basic form consists of a couple text fields, and a text area followed by a Submit button.  An example of this type of form would just ask for the user’s feedback.######
 
 ```HTML
 <form method=”post”  action=http://www.myserver.com/cgi-bin/mailscript/ enctype="text/plain">
 
-<input type="text" name="text_field" />
-<input type="Submit" value="Submit" />
-
+<label>Your name: </label>
+    <input type="text" id=”firstlast_name” name="firstlast_name" 
+    size=”60” /> 
+    
+<label>Your email address: <label>
+    <input type="text" id=”email_address" name="email_address" 
+    size=”40” /> 
+    
+<label>Your comments? <label>
+    <textarea id=”comments” name="comments" cols=”60” rows=”8”> 
+    Type your comments here.
+</textarea>
+    
+<input type="submit" value="Submit this form!" />
+    <input type="reset" value="Clear form" /> 
+    
 </form>
 ```
 
