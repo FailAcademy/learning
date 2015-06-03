@@ -41,7 +41,7 @@ template: inverse
 
 # Writing CSS Statements
 ---
-class: center, middle
+
 
 ## CSS Statement Example
 
@@ -58,7 +58,8 @@ color: blue;
 ---
 ## CSS Statement Diagram
 
-.inline-images[![CSS Statement](../../public/img/slide-assets/css-statement.jpg)]
+.inline-images[![CSS Statement](../../public/img/slide-assets/css_statement.jpg)]
+
 ---
 template: inverse
 
@@ -76,7 +77,7 @@ template: inverse
 ---
 ## Where Styles Are Placed
 
-A statement can be set up in 3 different areas in an HTML webpage.
+######A statement can be set up in 3 different areas in an HTML webpage.######
 1.	**INLINE:** it can be defined within an HTML tag in the body of the document.
 2.	**EMBEDDED:** it can be defined within the head of a document. 
 3.	**IMPORTED:** it can be referenced from within the head tag and the stylesheet is imported from a local server or external website.
@@ -145,8 +146,18 @@ Inheritance is when styles get **inherited** by child elements from the parent e
 
 ---
 class: center, middle
-# CSS Selectors
+# CSS HTML Selectors
 
+---
+## What are CSS HTML Selectors?
+
+A *HTML selector* is used to define a consistent appearance/behaviour of a certain HTML tag throughout a webpage. It's an efficient method of styling tags in the same visual manner throughout the site. A selector is defined with just the name of the tag before the statement, but without the angle brackets. 
+
+```HTML
+
+p {font-family: Arial, Helvetica, sans-serif; font-size: 1.2em; color: #CCCCCC;}
+
+```
 
 ---
 class: center, middle
@@ -154,7 +165,13 @@ class: center, middle
 ---
 ## What are CSS Custom Classes?
 
-A *custom class selector* is defined by a **dot** before the class name. You can provide whatever class name you like, providing you don’t have any spaces or special characters inside the name. You can use numbers/letters in the name, as long as the name is detailed and relevant. The class selector *can* be applied around any word/phrase inline using the <span> tags or to a paragraph-like text block using the <div> tags.
+A *custom class selector* is defined by a **dot** before the class name. You can provide whatever class name you like, providing you don’t have any spaces or special characters inside the name. You can use numbers/letters in the name, as long as the name is detailed and relevant. The class selector *can* be applied around any word/phrase inline using the *span* tags or to a paragraph-like text block using the *div* tags.
+
+```CSS
+
+.redbold {color: #FF00CC; font-weight:bold;}
+
+```
 
 ---
 class: center, middle
@@ -165,6 +182,15 @@ class: center, middle
 ## What are CSS ID Selectors?
 
 An *ID selector* is similar to a class selector in the way that it can be used to create a unique style that does not have to be applied to any specific HTML selector. ID selectors are defined with a # before the name of the selector. The name can contain numbers and letters in lower or uppercase. Make sure there are no spaces or special characters in the name.
+
+```CSS
+
+#dailyquote {color: #FF00CC; font-family: Papyrus, sans-serif; 
+
+font-style: italic;
+}
+
+```
 
 ---
 
