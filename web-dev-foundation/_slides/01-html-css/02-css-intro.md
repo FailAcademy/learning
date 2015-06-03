@@ -45,15 +45,12 @@ template: inverse
 
 ## CSS Statement Example
 
-```css
+.inline-images[![CSS Statement](../../public/img/slide-assets/css-selectors.png)]
 
-p {
+`p {
 font-family: Helvetica, Arial, sans-serif;
 color: blue;
-}
-
-```
-.inline-images[![CSS Statement](../../public/img/slide-assets/css-selectors.png)]
+}`
 
 ---
 ## CSS Statement Diagram
@@ -68,6 +65,7 @@ template: inverse
 ---
 
 ## Cascading Order
+The cascade order prevents conflicts from happening if one element was styled twice by accident. The style which is **higher on the list** takes more precedence.
 
 ###1. Inline Style (highest priority)
 ###2. Embedded Style in Head
@@ -89,22 +87,17 @@ template: inverse
 
 ####Inline CSS Style Applied Directly into an HTML file####
 
-```HTML
-<p style=”font-size:14pt; font-style:italic;”> The quick brown fox jumped over the lazy dog. </p>
-```
+
+`<p style=”font-size:14pt; font-style:italic; color: blue”> Hello, sir. I am See-Threepio, human-cyborg relations. </p>`
 
 ---
 ## Examples of Imported Styles
 
 ####Imported Stylesheet Applied Directly to an HTML file####
 
-```HTML
-<head>
-<style type=”text/css”>
+`<style type=”text/css”>
 @import url (http://www.website.com/stylesheetfile.css);
-</style>
-</head> 
-```
+</style>`
 
 ---
 template: inverse

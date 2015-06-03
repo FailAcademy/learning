@@ -86,9 +86,10 @@ template: inverse
 - Keep a copy of the original editable .PSD file that you refer back to
 
 ---
+
 template: inverse
 
-# IMG Tag Usage
+# Image Tag Usage
 
 ---
 # Image Tag Attributes

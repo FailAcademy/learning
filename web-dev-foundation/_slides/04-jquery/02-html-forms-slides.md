@@ -30,7 +30,7 @@ template: inverse
 #Why Use Forms?
 
 ---
-## Everyday Uses for Forms
+## Why We Use Forms
 
 Forms are a way for the users/viewers of your site to provide you with feedback about anything that you’d like to find out from them. Forms provide a uniform way for those users to interact with a website quickly and easily through their web browser, rather than directly through email. 
 
@@ -61,10 +61,12 @@ The basic syntax for a form is:
 ```HTML
 <form action="[URL]">
 
+form data elements and input fields
 
 </form>
 ```
-You can only put one form per HTML page, but that form can contain many form elements, as discussed on the next slide.
+
+#####You can only put one form per HTML page, but that form can contain many form elements, as discussed on the next slide.#####
 
 ---
 ## How Do Forms Work?
@@ -87,31 +89,12 @@ When the form is submitted, the form data is sent to the URL specified in the AC
 **ENCTYPE** represents how the input collected is ‘encrypted’. Usually it has a value of “text/plain” for basic forms, to make sure that the data is kept in its raw form, rather than converted into some encrypted text.
 
 ---
-## BASIC FORM STRUCTURE
+## Basic Form Structure
 
 ######This basic form consists of a couple text fields, and a text area followed by a Submit button.  An example of this type of form would just ask for the user’s feedback.######
 
-```HTML
-<form method=”post”  action=http://www.myserver.com/cgi-bin/mailscript/ enctype="text/plain">
-
-<label>Your name: </label>
-    <input type="text" id=”firstlast_name” name="firstlast_name" 
-    size=”60” /> 
-    
-<label>Your email address: <label>
-    <input type="text" id=”email_address" name="email_address" 
-    size=”40” /> 
-    
-<label>Your comments? <label>
-    <textarea id=”comments” name="comments" cols=”60” rows=”8”> 
-    Type your comments here.
-</textarea>
-    
-<input type="submit" value="Submit this form!" />
-    <input type="reset" value="Clear form" /> 
-    
-</form>
-```
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/xGqjZm/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/xGqjZm/'>xGqjZm</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 template: inverse
@@ -129,26 +112,49 @@ template: inverse
 ## Types of Form Elements
 ### 1. Adding Text
 - Text Input (Single Line)
+`<input type="text" name="username" size="20" />`
+
 - Text Area (Multi Line)
+`<textarea name="comments" cols="20" rows="4"> Your Feedback Please! </textarea>`
+
 - Password Input
+`<input type="password" name="password" size="12" maxlength="20" />`
 
 ---
 ## Types of Form Elements
 ### 2. Making Choices
 - Radio Buttons
+`<input type="radio" name="sports" value="hockey" />`
+
 - Check Boxes
+`<input type="checkbox" name="musicservice" value="spotify" />`
+
 - Drop Down Menus
+`<select name="devices">
+	<option value="iPad">`
 
 ---
 ## Types of Form Elements
 ### 3. Submitting Forms
 - Submit Buttons
+`<input type="submit" name="subscribe" value="Subscribe" />`
+
 - Image Buttons
+`<input type="image" src="images/subscribe_btn.jpg" width="200" height="50">`
 
 ---
 ## Types of Form Elements
 ### 4. Uploading Files
-- File Upload Button
+File Upload Button
+`<input type="file" name="client-proposal" /><input type="submit" value="Upload" />`
+
+---
+## Label Form Controls
+Add the label tag to help with accessibility for vision-impaired users. The label tag should be wrapped around both text description and for input type.
+
+`<label>Name:<input type="text" name="fullname" /></label>`
+
+#####*Note* that for radio buttons, the label tag is utilized with a **for** attribute.#####
 
 ---
 
@@ -156,10 +162,7 @@ template: inverse
 
 When defining a form element such as an text input for a **Name** field for instance, you'll want to also put in a **Value** and **ID** as well, so that these elements can be targeted through CSS as well as Javascript.
 
-```HTML
- <input type="text" name="firstname" id=”firstname” size=”60” /> 
- 
- ```
+`<input type="text" name="firstname" id=”firstname” size=”60” />`
 
 ---
 template: inverse
