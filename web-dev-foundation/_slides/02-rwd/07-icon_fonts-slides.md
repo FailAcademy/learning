@@ -60,7 +60,32 @@ all you have to do is add the `<link>` tag into the header of your html.
 
 1. Copy and Paste this Code into your HTML <head>
 
-`<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css”>`
+```html 
+
+ <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css”>
+
+```
+
+---
+
+Now is the fun part
+
+2. Choose your icon
+
+Lets say the bicycle icon.
+
+![alt text](../../public/img/slide-assets/02-06-Icon_Fonts/fa-1.png)
+
+---
+
+Need it larger?
+
+![alt text](../../public/img/slide-assets/02-06-Icon_Fonts/fa-2.png)
+
+Add a class.
+
+---
+
 
 ---
 
