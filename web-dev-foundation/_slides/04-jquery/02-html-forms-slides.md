@@ -55,6 +55,65 @@ template: inverse
 # How Forms Work
 
 ---
+## How Do Forms Work?
+
+The basic syntax for a form is: 
+```HTML
+<form action="[URL]">
+
+
+</form>
+```
+You can only put one form per HTML page, but that form can contain many form elements, as discussed on the next slide.
+
+---
+## How Do Forms Work?
+
+When the form is submitted, the form data is sent to the URL specified in the ACTION attribute. In a basic email handler example, this URL will refer to a client-side program (user’s email program) that will process the form data. The form itself should contain: 
+
+- At least one submit button `<input type="submit">`
+- Some form data elements  `<input>,<textarea>,<select>`
+- Additional markup (e.g., identifying data elements through IDs and Values, and presenting instructions as needed. 
+
+---
+## Parts of a Form
+
+**FORM** tags tells the browser, where it ends and begins. 
+
+**ACTION** tag tells the browser where to send the information. 
+
+**INPUT TYPE** represents the form objects that will gather information.
+
+**ENCTYPE** represents how the input collected is ‘encrypted’. Usually it has a value of “text/plain” for basic forms, to make sure that the data is kept in its raw form, rather than converted into some encrypted text.
+
+---
+## BASIC FORM STRUCTURE
+
+######This basic form consists of a couple text fields, and a text area followed by a Submit button.  An example of this type of form would just ask for the user’s feedback.######
+
+```HTML
+<form method=”post”  action=http://www.myserver.com/cgi-bin/mailscript/ enctype="text/plain">
+
+<label>Your name: </label>
+    <input type="text" id=”firstlast_name” name="firstlast_name" 
+    size=”60” /> 
+    
+<label>Your email address: <label>
+    <input type="text" id=”email_address" name="email_address" 
+    size=”40” /> 
+    
+<label>Your comments? <label>
+    <textarea id=”comments” name="comments" cols=”60” rows=”8”> 
+    Type your comments here.
+</textarea>
+    
+<input type="submit" value="Submit this form!" />
+    <input type="reset" value="Clear form" /> 
+    
+</form>
+```
+
+---
 template: inverse
 # Types of Form Controls
 
@@ -94,6 +153,13 @@ template: inverse
 ---
 
 ## How to Target Form Elements
+
+When defining a form element such as an text input for a **Name** field for instance, you'll want to also put in a **Value** and **ID** as well, so that these elements can be targeted through CSS as well as Javascript.
+
+```HTML
+ <input type="text" name="firstname" id=”firstname” size=”60” /> 
+ 
+ ```
 
 ---
 template: inverse

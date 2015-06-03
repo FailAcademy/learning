@@ -105,3 +105,60 @@ a.pagination-item:hover {
       border-bottom-right-radius: 4px;
    }
 }
+
+/* Other helper classes */
+
+.archive-list {
+   list-style: none;
+   margin-left: 0;
+
+   li {
+      border-bottom: 1px solid #e2e2e2;
+      color: #969696;
+      @include font-size( 1.2 );
+      margin-bottom: 1em;
+      overflow: auto;
+      padding-bottom: .5em;
+
+      a {
+         font-weight: 700;
+      }
+
+      /* For lesson archive lists only */
+
+      .lesson-count,
+      .lesson-name {
+         display: block;
+      }
+
+      .lesson-count {
+         float: left;
+         width: 10%;
+      }
+
+      .lesson-name {
+         margin-left: 10%;
+      }
+
+      @media (min-width: 30em) {
+         .lesson-count {
+            width: 8%;
+         }
+
+         .lesson-name {
+            margin-left: 8%;
+         }
+      }
+
+      /* For project archive lists only */
+
+      .project-name,
+      .project-due {
+         display: block
+      }
+
+      .project-due {
+         @include font-size( 1 );
+      }
+   }
+}

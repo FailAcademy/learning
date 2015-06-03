@@ -92,9 +92,8 @@ template: inverse
 
 ---
 # Image Tag Attributes
-```html
-<img src="photo.jpg" alt="photo description" title="further description of image" class="float_left />
-```
+
+`<img src="photo.jpg" alt="photo description" title="further description of image" class="float_left />`
 
 ***alt tag:*** Provide alternate text to describe the image
 

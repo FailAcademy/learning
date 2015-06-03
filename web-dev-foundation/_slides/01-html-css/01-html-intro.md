@@ -53,9 +53,7 @@ class: center, middle
 
 ### Basic HTML Tags
 
-```html
-<p> content </p>
-```
+`<p> content </p>`
 
 This is an example of a basic tag, with its start tag and end tag.
 ---
@@ -64,9 +62,8 @@ class: center, middle
 
 ### Tags with Attributes
 
-```html
-<p class="red_italics"> content </p>
-```
+`<p class="red_italics"> content </p>`
+
 This is an example of a tag with an attribute, note that only the start tag contains the attribute.
 ---
 
@@ -74,13 +71,12 @@ class: center, middle
 
 ### Nested Tags (multiple tags)
 
-```html
-<p><em> content </em></p>
-```
 
-This is an example of a nested tag. It uses 2 or more tags that are nested together, like the russian *Matryoshka* dolls.
+`<p><em> content </em></p>`
 
-![Russian Nesting Dolls](http://upload.wikimedia.org/wikipedia/commons/7/71/Russian-Matroshka.jpg)
+This is an example of a nested tag. It uses 2 or more tags that are nested together, like the Russian *Matryoshka* dolls.
+
+![Russian Nesting Dolls](../../public/img/slide-assets/russian_nested_dolls.jpg)
 ---
 
 template: inverse
@@ -88,15 +84,23 @@ template: inverse
 # Importance of the Root Folder
 
 ---
+class: center, middle
 
-##One Root Folder For Your Website
-It  is  a  common  practice  to  create  a  folder  on  your  computer  (in  a  location  that  is  easy  to  access  and  remember)  that  will  contain  ALL  the  files  used  to  build  your  webpage.    This  folder  is  called  the  *Root folder* and can contain any number of sub‐folder in which to organize the web files further. 
+##One Root Folder = One Site
 
+It  is  a  common  practice  to  create  a  folder  on  your  computer  (in  a  location  that  is  easy  to  access  and  remember)  that  will  contain  **ALL**  the  web files ***(HTML, CSS, images, scripts etc)*** that are used  to  build  your  webpage.    This  folder  is  known as  the  **root folder**. You can name it anything you'd like and it can contain any number of sub‐folder in which to organize the web files further. 
+
+---
+class: center, middle
+
+![Root Folders](../../public/img/slide-assets/basic-root-folder.png)
 
 ---
 
 ## Create New New Root Folder for A Different Website
 It is highly recommended  that  you  create  a  new  root  folder  for  every  different  website  that  you’re  working  on.  However, you can continue working with the same root folder when you are building on an existing site.
+
+![Root Folders](../../public/img/slide-assets/two-root-folders.png)
 
 ---
 
@@ -107,8 +111,8 @@ template: inverse
 ---
 class: center, middle
 
-##Preparing Content in the Root Folder
-Creating HTML webpages requires some planning ahead of time of what you are planning to put in your page, and especially with media files, such as picture, graphics, sound, movies,  they  need  to  be  placed  in  their  respective  folders  or  sub‐folders before you plan to reference/(link) them in your HTML file.  Many linking issues will arise if the desired media file is not placed in the root folder before it is referenced.
+##Preparing Content for the Root Folder
+Creating HTML webpages requires some planning ahead of time of what you are planning to put in your page, and especially with media files, such as picture, graphics, sound, movies,  they  need  to  be  placed  in  their  respective  folders  or  sub‐folders before you plan to link them in your HTML file.  Many linking issues will arise if the desired media file is not placed in the root folder before it is referenced.
 
 ---
 
@@ -125,9 +129,9 @@ to separate words
 template: inverse
 #Key Differences in Doctype of XHTML/HTML5
 ---
-
-
 class: center, middle
+
+##Differences in Doctype of XHTML/HTML5
 
 .medium[
    ***XHTML*** 
@@ -152,7 +156,8 @@ template: inverse
 - section
 
 ---
-![HTML5 example layout](http://blogs.msdn.com/cfs-filesystemfile.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-91-03-metablogapi/5086.HTML5PageLayout_5F00_2.jpg)
+
+.inline-images[![HTML5 example layout](../../public/img/slide-assets/html5_semantic_tags.png)]
 ---
 template: inverse
 #Common HTML Tags
@@ -180,14 +185,19 @@ template: inverse
 # Block Level Vs Inline Elements 
 
 ---
-
-
-##Block Level
+##Block Level Elements
 - Notice that when you use paragraphs and headings, they will start on a new line.
-(show screen cap)
-##Inline Level
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvpzZQ/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvpzZQ/'>WvpzZQ</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+##Inline Elements
 - Notice that when you use emphasis or bold tags, that this continue on the same line.
-(show screen cap) 
+- We use tags like bold or italics or **span** tags to apply CSS class properties as inline elements.
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/dovmZg/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/dovmZg/'>dovmZg</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
 ---
 
 template: inverse
