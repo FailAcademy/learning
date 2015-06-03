@@ -1,4 +1,5 @@
 ---
-layout: page
-title: Week 2 Project
+layout: project
+title: Project 2
+due: Day 11 (beginning of class)
 ---
