@@ -183,8 +183,8 @@ Version control is a system that records changes to a file or set of files over 
 
 # Git vs. GitHub
 
-- Git is the version control system
-- GitHub is a web-based app where you can create and account and then store and share your Git repositories
+- Git is the **version control system**
+- GitHub is a **web-based app** where you can create and account and then store and share your Git repositories
 - This website is an example of a private GitHub repository
 
 .inline-images[
@@ -226,7 +226,7 @@ Creating a new Git repository for a project only requires running `git init` in 
 
 # First Steps with Git
 
-If view the hidden files in the the directory where you just ran `git init`, you would now see an `.git` sub-directory there.
+If you view the hidden files in the directory where you just ran `git init`, you would now see an `.git` sub-directory there.
 
 .inline-images[
    ![hidden git folder](../../public/img/slide-assets/git-hidden-folder.png)
@@ -297,7 +297,7 @@ And you can see the URLs of any existing remote repositories in your local repo 
 
 # Branching and Merging
 
-**Branches** are a cool feature of Git that allow you to make a copy of your code to make separate commits to.
+**Branches** are a cool feature of Git that allow you to make a copy of your code to which you can make separate commits without affecting the `master` branch.
 
 Branches are helpful when you're working on a new feature for your project and you want to keep it separate from your main code base until it's fully built-out.
 
