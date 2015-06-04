@@ -184,7 +184,18 @@ font-style: italic;
 }
 
 ```
+---
+## Browser Development Tools
 
+Every modern web browser includes a powerful suite of developer tools. These tools do a range of things, from inspecting tags in currently-loaded HTML, CSS and JavaScript.
+
+The development tools (known as devtools) can be found inside the browsers sub-window. They open by default in the Inspector pane.
+
+They can be launched in a few ways: Keyboard, Menubar or Context Menu. **still need to show more info for where these can be found in each browser**
+---
+## What is the CSS box model? 
+
+.inline-images[![CSS Statement](../../public/img/slide-assets/boxmodel.gif)]
 ---
 
 template: inverse
