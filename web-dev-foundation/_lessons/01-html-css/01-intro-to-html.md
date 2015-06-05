@@ -11,6 +11,7 @@ From the HTML & CSS textbook:
 - Structure (pp. 13-32)
 - Text (pp. 40-60)
 - Links (pp. 75-90)
+- Images (pp. 99-100)
 - New HTML5 Layout Elements (p. 432)
 
 ## Learning Objectives
