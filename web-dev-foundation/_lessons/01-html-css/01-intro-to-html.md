@@ -31,25 +31,35 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-Work through this activity in class:
+Now you've seen a few of the main types of code editors, you will now **download** the code editor of your choice onto your laptop and get it installed. 
 
-Using this *Codepen HTML Exercise 1* (this has the doctype, body, head, title tags all set up, you won't need to add them to the code view), you will add **paragraphs & headers** to modify the text content in the passage. Consider applying italics, strong, and line-breaks for further practice.
+In the course folder on your local computer, create a `local root folder` for today's in-class exercise/lab practice.
 
-<p data-height="268" data-theme-id="0" data-slug-hash="eNpNLw" data-default-tab="html" data-user="redacademy" class='codepen'>See the Pen <a href='http://codepen.io/redacademy/pen/eNpNLw/'>eNpNLw</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+Set-up an simple `HTML page` in your code editor with all the basic structural tags (body, head, title), then include a few heading and paragraph tags before saving as `index.html`.
+
+Preview in a browser of your choice by going to the File menu > File Open (browse for your `index.html` page.
+ 
+
 
 ## Exercise 2
 
-Work through this next activity in class:
+Instructions: Using this Codepen example, apply an example of each list type - Ordered and Unordered, add some headings/paragraphs to separate the pages into different sections , try out the `<hr>` as a horizontal rule and `<br>` as a linebreak.
 
-Using this *[Codepen Exercise 2]* (this has the doctype, body, head, title tags all set up, you won't need to add them to the code view), you will add **examples of links** to modify the text content in the passage. Apply internal, external, email and anchor links to your page for further practice.
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvjrrR/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvjrrR/'>WvjrrR</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
-<p data-height="268" data-theme-id="0" data-slug-hash="XbmmoR" data-default-tab="html" data-user="redacademy" class='codepen'>See the Pen <a href='http://codepen.io/redacademy/pen/XbmmoR/'>XbmmoR</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+## Exercise 3
+Using the Codepen example add emphasis, strong, external links, and insert and image with alt tag.
 
 ## Lab Activity
-Using the preset **HTML template** (this has the doctype, body, head, title tags all set up),  markup the text as a HTML5 document using best practices discussed in the morning using a combination of headers, sections, articles, and footer elements, as well as proper nested basic elements.
-
+Using the preset **HTML template** (this has the doctype, body, head, title tags all set up),  go ahead and markup the text using what you've learnt in the morning class using a combination of tags covered:
+- Headings and Paragraphs
+- Linebreaks & Horizontal Rules
+- Links
+- Basic Lists
+- Emphasis and Strong
+- Inserting Images
 
 [comment]: Insert a visual image of the end result of the page to style
 
