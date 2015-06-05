@@ -31,9 +31,9 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-Now you've seen a few of the main types of code editors, you will now **download** the code editor of your choice onto your laptop and get it installed. 
+Now you've seen a few of the main types of code editors (Sublime, Atom, TextWranger, Notepad++), you will now **download** the code editor of your choice onto your laptop and get it installed. 
 
-In the course folder on your local computer, create a `local root folder` for today's in-class exercise/lab practice.
+In the web developer course folder on your local computer, create a `local root folder` for today's in-class exercise/lab practice.
 
 Set-up an simple `HTML page` in your code editor with all the basic structural tags (body, head, title), then include a few heading and paragraph tags before saving as `index.html`.
 
@@ -43,14 +43,20 @@ Preview in a browser of your choice by going to the File menu > File Open (brows
 
 ## Exercise 2
 
-Instructions: Using this Codepen example, apply an example of each list type - Ordered and Unordered, add some headings/paragraphs to separate the pages into different sections , try out the `<hr>` as a horizontal rule and `<br>` as a linebreak.
+*Instructions:*  `Edit this Codepen` and `Fork` the example while in the HTML panel. Go ahead and apply an example of each list type - Ordered and Unordered, add some headings/paragraphs to separate the pages into different sections , try out the `<hr>` horizontal rule and insert some `<br>` linebreaks throughout!
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvjrrR/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvjrrR/'>WvjrrR</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvjrrR/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvjrrR/'>WvjrrR</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
 
 ## Exercise 3
-Using the Codepen example add emphasis, strong, external links, and insert and image with alt tag.
+*Instructions:*  `Edit this Codepen` and `Fork` the example while in the HTML panel.
+This time, add some **semantic tags** like `emphasis`, `strong`, try out some `external links` to your favourite sites, and even `insert an image` with **alt** tag.
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/VLbemJ/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/VLbemJ/'>VLbemJ</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+
 
 ## Lab Activity
 Using the preset **HTML template** (this has the doctype, body, head, title tags all set up),  go ahead and markup the text using what you've learnt in the morning class using a combination of tags covered:

@@ -273,7 +273,13 @@ Use these sanity-saving tips to name your folders and files:
 
 # Exercise 1
 
-The first exercise goes here...
+Now you've seen a few of the main types of code editors (Sublime, Atom, TextWranger, Notepad++), you will now **download** the code editor of your choice onto your laptop and get it installed. 
+
+In the web developer course folder on your local computer, create a `local root folder` for today's in-class exercise/lab practice.
+
+Set-up an simple `HTML page` in your code editor with all the basic structural tags (body, head, title), then include a few heading and paragraph tags before saving as `index.html`.
+
+Preview in a browser of your choice by going to the File menu > File Open (browse for your `index.html` page.
 
 ---
 template: inverse
@@ -437,7 +443,9 @@ So an HTML5 webpage might look a little something like this:
 
 # Exercise 2
 
-The second exercise goes here...
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvjrrR/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvjrrR/'>WvjrrR</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
 
 ---
 template: inverse
@@ -529,7 +537,8 @@ The `title` of the image will appear as a tooltip in most browsers when you hove
 
 # Exercise 3
 
-The third exercise goes here...
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/VLbemJ/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/VLbemJ/'>VLbemJ</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 
