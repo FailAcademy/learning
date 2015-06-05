@@ -50,7 +50,7 @@ Lets deploy your cap-stone project to your server for the world to see.
 ## Additional Resources
 
 - [Video: Types of Web Hosting Explained](https://www.youtube.com/watch?v=n7rzi2hGAzA)
-- [Pointing Domain Name Servers with Hover](https://help.hover.com/entries/21235888-How-to-Point-your-domain-at-your-web-host-using-Hover-DNS)
+- [Tutorial: Pointing Domain Name Servers with Hover](https://help.hover.com/entries/21235888-How-to-Point-your-domain-at-your-web-host-using-Hover-DNS)
 
 #### Recommended Web Hosts:
 
