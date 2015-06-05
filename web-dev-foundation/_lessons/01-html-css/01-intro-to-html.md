@@ -59,7 +59,7 @@ This time, add some **semantic tags** like `emphasis`, `strong`, try out some `e
 
 
 ## Lab Activity
-Using this formatted **Star Wars Word Document**, you'll be using your new found coding skills to `mark-up` the text using what you've learnt in the morning class using a combination of tags covered. Open your `code editor` and create a new HTML document that has the doctype, body, head, and title tags. Your taks will be to try to **match the formatting** style of the Word doc, using the HTML mark-up tags below:
+Using this [Star Wars Formatting Lab Activity](/public/files/labs/01-html-formatting-lab.zip) (zipped), you'll be using your new found coding skills to `mark-up` the text using what you've learnt in the morning class using a combination of tags covered. Open your `code editor` and `create` a new HTML document that has the doctype, body, head, and title tags. Your task will be to try to **match the formatting** style of the *formatted Word* document, using the *plain text* Word version and the HTML mark-up tags below:
 
 - Headings and Paragraphs
 - Linebreaks & Horizontal Rules
