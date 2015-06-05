@@ -57,3 +57,7 @@ This lesson's lab is a choose-your-own-adventure activity. You can create anythi
 A quick-start guide for Scratch:
 
 - [Getting Started with Scratch](https://cdn.scratch.mit.edu/scratchr2/static/__587558227bfd4f7643eb65ad48850d03__//pdfs/help/Getting-Started-Guide-Scratch2.pdf)
+
+IFTTT puts conditional statements into action using your social media and mobile devices.
+
+- [IFTTT - Put the Internet to Work for You](https://ifttt.com/wtf)
