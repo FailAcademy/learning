@@ -35,13 +35,38 @@ template: inverse
 ##Using Photoshop for the Web
 
 ---
-##Basic Photoshop Image Functions
+## Photoshop Essentials
+In this Web Developer Essentials program, we'll be just covering the essentials of this photo-editing program to give you the necessary tools to `Scale`, `Rotate`, `Crop` and `Save for the Web`. This will allow to to insert **optimized** images into your websites!
 
-****Scaling****: Image &rarr; Image Size &rarr;  Input New Size
+---
+##Making Images Smaller
+
+****Scaling****: Image &rarr; Image Size &rarr;  Input New `Height` or `Width`
+
+![Photoshop scaling](../../public/img/slide-assets/r2d2-scaling.png)
+
+---
+## Don't Scale Up Images
+
+Photoshop manipulates `raster` or `bitmapped` images, that are made up of **pixels**, so it's really recommended **NOT** to size up images/photos as they will become *pixelated* and *blurry*! 
+
+![Don't Scale Up Example](../../public/img/slide-assets/r2d2-blurry.png)
+---
+##Rotating Images
 
 ****Rotating****: Image &rarr; Image Rotation &rarr; Select Rotate Option
 
-****Cropping****: Toolbar &rarr; Select Crop Tool &rarr; Drag Crop Box & Apply Crop 
+![Photoshop scaling](../../public/img/slide-assets/image-rotation.png)
+
+![R2D2 Rotations](../../public/img/slide-assets/r2d2-rotations.png)
+
+---
+## Cropping Images
+****Cropping****: Toolbar &rarr; Select Crop Tool &rarr; Drag Crop Box & Press `Return` to **Apply Crop** 
+
+![R2D2 Crop](../../public/img/slide-assets/r2d2-cropping.png)
+
+---
 
 ****Saving for Web****:  Save for Web &rarr; Select Appropriate Format/Settings
 

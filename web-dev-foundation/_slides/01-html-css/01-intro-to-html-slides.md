@@ -491,10 +491,11 @@ template: inverse
 Links are the lifeblood of the web, so let's take a look at how we make one:
 
 ```html
-<p>The <a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a> is a great resource!</p>
+<p>The <a href="https://developer.mozilla.org/en-US/" target="_blank">
+Mozilla Developer Network</a> is a great resource!</p>
 ```
 
-Note that any text contained within the `<a>` tags will be linked to the page inside the quotes of the `href` attribute.
+**Note** that any text contained within the `<a>` tags will be linked to the page inside the quotes of the `href` attribute. The `target` attribute is typically used to call a new window or tab to open for external links. Internal links don't need the `target` attribute.
 
 ---
 
