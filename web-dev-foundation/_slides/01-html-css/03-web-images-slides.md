@@ -19,7 +19,7 @@ layout: false
 
 # Agenda
 
-1. Basic Photoshop Overview
+1. Photoshop Essentials
 2. Crop, Size and Save for Web
 3. Common Web Formats
 4. Image Best Practices
@@ -67,8 +67,13 @@ Photoshop manipulates `raster` or `bitmapped` images, that are made up of **pixe
 ![R2D2 Crop](../../public/img/slide-assets/r2d2-cropping.png)
 
 ---
+## Optimized Web Images
 
 ****Saving for Web****:  Save for Web &rarr; Select Appropriate Format/Settings
+For photos, make sure you choose the 
+`JPG` option, and set it between 70-80% to keep the file size *optimized*.
+
+![Save For Web](../../public/img/slide-assets/save-for-web-photoshop.png)
 
 ---
 template: inverse
@@ -175,6 +180,14 @@ template: inverse
 - Don't copy a site's HTML or CSS (or any scripting code)
 - Always get permission to use a copyrighted online work from the owner of that work
 - Don't link to sites that contain large amounts of video or audio 
+
+---
+
+## What is CC0?
+
+Let's look at this open type concept [Creative Commons Zero](https://creativecommons.org/about/cc0) where the creator waives all their copyright and related rights.
+
+![CC0](../../public/img/slide-assets/cc0-graphic.png)
 
 ---
 
