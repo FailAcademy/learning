@@ -192,6 +192,20 @@ Every modern web browser includes a powerful suite of developer tools. These too
 The development tools (known as devtools) can be found inside the browsers sub-window. They open by default in the Inspector pane.
 
 They can be launched in a few ways: Keyboard, Menubar or Context Menu. **still need to show more info for where these can be found in each browser**
+
+---
+### Chrome
+
+[Chrome Web Developer Tools Website](https://developer.chrome.com/devtools)
+
+---
+### Firefox
+
+
+
+---
+### Safari
+
 ---
 ## What is the CSS box model? 
 
