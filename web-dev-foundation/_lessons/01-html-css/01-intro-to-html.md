@@ -17,7 +17,6 @@ From the HTML & CSS textbook:
 ## Learning Objectives
 
 - Understand what a mark-up language is and the function of HTML on the web
-- Install a text editor (eg. Sublime Text) and use it to open and edit HTML documents
 - Learn to write semantic HTML, including elements, attributes, and nesting
 - Use basic HTML tags including headings, paragraphs, links, and lists
 - Recognize key differences between XHTML and HTML5
@@ -31,7 +30,7 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-Now you've seen a few of the main types of code editors (Sublime, Atom, TextWranger, Notepad++), you will now **download** the code editor of your choice onto your laptop and get it installed. 
+Now you've seen a few of the main types of code editors (Sublime, Atom, TextWranger, Notepad++), you will now **practice** with the code editor that you installed.
 
 In the web developer course folder on your local computer, create a `local root folder` for today's in-class exercise/lab practice.
 
@@ -39,7 +38,6 @@ Set-up an simple `HTML page` in your code editor with all the basic structural t
 
 Preview in a browser of your choice by going to the File menu > File Open (browse for your `index.html` page.
  
-
 
 ## Exercise 2
 
