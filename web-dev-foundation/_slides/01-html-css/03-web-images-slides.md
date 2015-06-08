@@ -69,23 +69,26 @@ Photoshop manipulates `raster` or `bitmapped` images, that are made up of **pixe
 ---
 ## Optimized Web Images
 
-****Saving for Web****:  Save for Web &rarr; Select Appropriate Format/Settings
+****Saving for Web****:  File &rarr; Save for Web &rarr; Select Appropriate Format/Settings
 For photos, make sure you choose the 
-`JPG` option, and set it between 70-80% to keep the file size *optimized*.
+`JPG` option, and set it between **70-80%** to keep the file size *optimized*.
 
 ![Save For Web](../../public/img/slide-assets/save-for-web-photoshop.png)
 
 ---
-## Use HEX/RGBa Colours
+## Using HEX Colours
 As designers, you have a few methods for specifying colour in a webpage. 
 
 ****HEX**** Using the hexidecimal code system to reference colours is fairly simple. There are colour sites like [HTML Color Codes](http://html-color-codes.com), which shows the web safe hex codes shown as a 3 paired number/letter sequence. Alternately, you can use the Colour Picker from Photoshop or other image editor to reference one of the 16 million available colours.
 `White is reference in hexcode by #FFFFFF or #FFF (shorthand)` 
  
-***RGBa**** Using RGBa is more versatile in that you can specify opacity as well as the Red, Green, and Blue colour mixes.
+---
+## Using RGBa Colours 
+ 
+***RGBa*** Using RGBa is more versatile in that you can specify opacity as well as the Red, Green, and Blue colour mixes.
 `rgba(255,255,255,1)`
 
-*****Opacity***** The *a* that represents opacity is specified in decimals, with a range of 0.0 (fully transparent) to 1.0 (solid).
+****Opacity**** The `a` that represents opacity is specified in decimals, with a range of `0.0 (fully transparent)` to `1.0 (solid)`.
 
 ---
 template: inverse
@@ -111,7 +114,7 @@ template: inverse
 ---
 ## Word of Caution: PNG-24
 
-NOTE: PNG-24, which has 24 bits of colour (8bits per channel), allowing for up to 16 million colours, and provides greater transparency fading, gradients of colour, and better support for saving for photos. The draw back of this format is the larger file sizes, even larger than JPG, so consider the use of this format carefully, as it will affect download speed of the graphic. 
+NOTE: **PNG-24,** which has `24 bits of colour (8bits per channel)`, allowing for up to *16 million colours*, and provides greater transparency fading, gradients of colour, and better support for saving for photos. The draw back of this format is the larger file sizes, even larger than JPG, so consider the use of this format carefully, as it will affect download speed of the graphic. 
 
 ---
 template: inverse
@@ -120,12 +123,12 @@ template: inverse
 
 ---
 ## Image Best Practices
-- Scale down images to the appropriate size for your webpage
-- Choose the correct image format
-- Optimize Images to a good quality and efficient file size
-- Add alt tags to all images
-- Save image names with relevant keywords (that will tie into SEO later)
-- Keep a copy of the original editable .PSD file that you refer back to
+- **Scale down images** to the *appropriate size* for your webpage
+- **Choose the correct** *image format* (.png, .svg, .jpg, .gif)
+- **Optimize images** to a *good quality* and *efficient file size*
+- **Add** `alt` tags to all images
+- **Save** image names with *relevant keywords* (that will tie into SEO later)
+- **Keep a copy** of the original *editable .PSD* file that you refer back to
 
 ---
 
@@ -145,14 +148,17 @@ template: inverse
 ***class tag:***: Provides a link to the CSS stylesheet in order to style the image with properties like border and padding (from the Box Model)
 
 ---
-## Specifying Height/Width for Images
+## Specifying Height/Width for Images in HTML
 ***HTML method*** 
 The height and width of a graphic/image can be specified with the HTML tags: height and width.  The browser is able to render the images quicker if it knows the dimensions.
 
 `<img src="logo.png" alt="Logo" height=150px width=150px">`
 
+---
+## Specifying Height/Width for Images in CSS
+
 ***CSS method*** 
-With HTML5 conventions and use of external stylesheets to separate content from styling, you are seeing that height/width are now being referenced further in stylesheet instead. 
+With HTML5 conventions and use of external stylesheets to separate content from styling, this is a best practice to now use. You'll see that the height & width properties are now being referenced in stylesheet instead, along with other visual styling properties.
 
 `img src="logo.png" alt="Logo" class="logostyle">`
 
@@ -160,7 +166,7 @@ With HTML5 conventions and use of external stylesheets to separate content from 
 .logostyle {
 height: 150px;
 width: 150px;
-border: 0px;
+border: 3px solid #FF3300;
 }
 ```
 
