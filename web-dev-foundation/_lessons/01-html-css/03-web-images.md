@@ -17,8 +17,8 @@ From the HTML & CSS textbook:
 - Explore the web tools are available for image editing (such as Photoshop, Gimp, Pixelmator)
 - Demonstrate how to size, crop and transform images
 - Save images optimized for the web
-- Investigate resources to obtain free stock photography
 - Demonstrate how to use the image element in a web page, as well as its corresponding attributes (width, height, and alt text).
+- Look at resources for obtaining free stock photography
 - Discuss basic copyright concerns, such public domain and Creative Commons.
 - Use HEX/rgba colours to adjust element colours in a web page.
 
