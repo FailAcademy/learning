@@ -17,7 +17,6 @@ From the HTML & CSS textbook:
 ## Learning Objectives
 
 - Understand what a mark-up language is and the function of HTML on the web
-- Install a text editor (eg. Sublime Text) and use it to open and edit HTML documents
 - Learn to write semantic HTML, including elements, attributes, and nesting
 - Use basic HTML tags including headings, paragraphs, links, and lists
 - Recognize key differences between XHTML and HTML5
@@ -31,7 +30,7 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-Now you've seen a few of the main types of code editors (Sublime, Atom, TextWranger, Notepad++), you will now **download** the code editor of your choice onto your laptop and get it installed. 
+Now you've seen a few of the main types of code editors (Sublime, Atom, TextWranger, Notepad++), you will now **practice** with the code editor that you installed.
 
 In the web developer course folder on your local computer, create a `local root folder` for today's in-class exercise/lab practice.
 
@@ -39,7 +38,6 @@ Set-up an simple `HTML page` in your code editor with all the basic structural t
 
 Preview in a browser of your choice by going to the File menu > File Open (browse for your `index.html` page.
  
-
 
 ## Exercise 2
 
@@ -59,7 +57,7 @@ This time, add some **semantic tags** like `emphasis`, `strong`, try out some `e
 
 
 ## Lab Activity
-Using this formatted **Star Wars Word Document**, you'll be using your new found coding skills to `mark-up` the text using what you've learnt in the morning class using a combination of tags covered. Open your `code editor` and create a new HTML document that has the doctype, body, head, and title tags. Your taks will be to try to **match the formatting** style of the Word doc, using the HTML mark-up tags below:
+Using this [Star Wars Formatting Lab Activity](/public/files/labs/01-html-formatting-lab.zip) (zipped), you'll be using your new found coding skills to `mark-up` the text using what you've learnt in the morning class using a combination of tags covered. Open your `code editor` and `create` a new HTML document that has the doctype, body, head, and title tags. Your task will be to try to **match the formatting** style of the *formatted Word* document, using the *plain text* Word version and the HTML mark-up tags below:
 
 - Headings and Paragraphs
 - Linebreaks & Horizontal Rules

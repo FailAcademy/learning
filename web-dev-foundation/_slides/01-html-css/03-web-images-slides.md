@@ -19,7 +19,7 @@ layout: false
 
 # Agenda
 
-1. Basic Photoshop Overview
+1. Photoshop Essentials
 2. Crop, Size and Save for Web
 3. Common Web Formats
 4. Image Best Practices
@@ -35,15 +35,60 @@ template: inverse
 ##Using Photoshop for the Web
 
 ---
-##Basic Photoshop Image Functions
+## Photoshop Essentials
+In this Web Developer Essentials program, we'll be just covering the essentials of this photo-editing program to give you the necessary tools to `Scale`, `Rotate`, `Crop` and `Save for the Web`. This will allow to to insert **optimized** images into your websites!
 
-****Scaling****: Image &rarr; Image Size &rarr;  Input New Size
+---
+##Making Images Smaller
+
+****Scaling****: Image &rarr; Image Size &rarr;  Input New `Height` or `Width`
+
+![Photoshop scaling](../../public/img/slide-assets/r2d2-scaling.png)
+
+---
+## Don't Scale Up Images
+
+Photoshop manipulates `raster` or `bitmapped` images, that are made up of **pixels**, so it's really recommended **NOT** to size up images/photos as they will become *pixelated* and *blurry*! 
+
+![Don't Scale Up Example](../../public/img/slide-assets/r2d2-blurry.png)
+---
+##Rotating Images
 
 ****Rotating****: Image &rarr; Image Rotation &rarr; Select Rotate Option
 
-****Cropping****: Toolbar &rarr; Select Crop Tool &rarr; Drag Crop Box & Apply Crop 
+![Photoshop scaling](../../public/img/slide-assets/image-rotation.png)
 
-****Saving for Web****:  Save for Web &rarr; Select Appropriate Format/Settings
+![R2D2 Rotations](../../public/img/slide-assets/r2d2-rotations.png)
+
+---
+## Cropping Images
+****Cropping****: Toolbar &rarr; Select Crop Tool &rarr; Drag Crop Box & Press `Return` to **Apply Crop** 
+
+![R2D2 Crop](../../public/img/slide-assets/r2d2-cropping.png)
+
+---
+## Optimized Web Images
+
+****Saving for Web****:  File &rarr; Save for Web &rarr; Select Appropriate Format/Settings
+For photos, make sure you choose the 
+`JPG` option, and set it between **70-80%** to keep the file size *optimized*.
+
+![Save For Web](../../public/img/slide-assets/save-for-web-photoshop.png)
+
+---
+## Using HEX Colours
+As designers, you have a few methods for specifying colour in a webpage. 
+
+****HEX**** Using the hexidecimal code system to reference colours is fairly simple. There are colour sites like [HTML Color Codes](http://html-color-codes.com), which shows the web safe hex codes shown as a 3 paired number/letter sequence. Alternately, you can use the Colour Picker from Photoshop or other image editor to reference one of the 16 million available colours.
+`White is reference in hexcode by #FFFFFF or #FFF (shorthand)` 
+ 
+---
+## Using RGBa Colours 
+ 
+***RGBa*** Using RGBa is more versatile in that you can specify opacity as well as the Red, Green, and Blue colour mixes.
+`rgba(255,255,255,1)`
+
+****Opacity**** The `a` that represents opacity is specified in decimals, with a range of `0.0 (fully transparent)` to `1.0 (solid)`.
 
 ---
 template: inverse
@@ -69,7 +114,7 @@ template: inverse
 ---
 ## Word of Caution: PNG-24
 
-NOTE: PNG-24, which has 24 bits of colour (8bits per channel), allowing for up to 16 million colours, and provides greater transparency fading, gradients of colour, and better support for saving for photos. The draw back of this format is the larger file sizes, even larger than JPG, so consider the use of this format carefully, as it will affect download speed of the graphic. 
+NOTE: **PNG-24,** which has `24 bits of colour (8bits per channel)`, allowing for up to *16 million colours*, and provides greater transparency fading, gradients of colour, and better support for saving for photos. The draw back of this format is the larger file sizes, even larger than JPG, so consider the use of this format carefully, as it will affect download speed of the graphic. 
 
 ---
 template: inverse
@@ -78,12 +123,12 @@ template: inverse
 
 ---
 ## Image Best Practices
-- Scale down images to the appropriate size for your webpage
-- Choose the correct image format
-- Optimize Images to a good quality and efficient file size
-- Add alt tags to all images
-- Save image names with relevant keywords (that will tie into SEO later)
-- Keep a copy of the original editable .PSD file that you refer back to
+- **Scale down images** to the *appropriate size* for your webpage
+- **Choose the correct** *image format* (.png, .svg, .jpg, .gif)
+- **Optimize images** to a *good quality* and *efficient file size*
+- **Add** `alt` tags to all images
+- **Save** image names with *relevant keywords* (that will tie into SEO later)
+- **Keep a copy** of the original *editable .PSD* file that you refer back to
 
 ---
 
@@ -92,7 +137,7 @@ template: inverse
 # Image Tag Usage
 
 ---
-# Image Tag Attributes
+## Image Tag Attributes
 
 `<img src="photo.jpg" alt="photo description" title="further description of image" class="float_left />`
 
@@ -101,6 +146,29 @@ template: inverse
 ***title tag:***  Provides further information about the image that is displayed in a tool tip
 
 ***class tag:***: Provides a link to the CSS stylesheet in order to style the image with properties like border and padding (from the Box Model)
+
+---
+## Specifying Height/Width for Images in HTML
+***HTML method*** 
+The height and width of a graphic/image can be specified with the HTML tags: height and width.  The browser is able to render the images quicker if it knows the dimensions.
+
+`<img src="logo.png" alt="Logo" height=150px width=150px">`
+
+---
+## Specifying Height/Width for Images in CSS
+
+***CSS method*** 
+With HTML5 conventions and use of external stylesheets to separate content from styling, this is a best practice to now use. You'll see that the height & width properties are now being referenced in stylesheet instead, along with other visual styling properties.
+
+`img src="logo.png" alt="Logo" class="logostyle">`
+
+```CSS
+.logostyle {
+height: 150px;
+width: 150px;
+border: 3px solid #FF3300;
+}
+```
 
 ---
 template: inverse
@@ -150,6 +218,14 @@ template: inverse
 - Don't copy a site's HTML or CSS (or any scripting code)
 - Always get permission to use a copyrighted online work from the owner of that work
 - Don't link to sites that contain large amounts of video or audio 
+
+---
+
+## What is CC0?
+
+Let's look at this open type concept [Creative Commons Zero](https://creativecommons.org/about/cc0) where the creator waives all their copyright and related rights.
+
+![CC0](../../public/img/slide-assets/cc0-graphic.png)
 
 ---
 
