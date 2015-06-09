@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+
+  {% if page.slides %}
+     <p>This lesson's slides:</p>
+     <ul>
+        {% for slidedeck in site.slides %}
+            {% if page.slides contains slidedeck.relative_path %}
+              <li>
+                 <a href="{{slidedeck.url}}">{{slidedeck.title}}</a>
+              </li>
+           {% endif %}
+        {% endfor %}
+     </ul>
+  {% endif %}
+
+  {{ content }}
+</div>
+
+{% capture lessons %}{{page.collection}}{% endcapture %}
+{% if page.collection %}
+   {% assign document = site[lessons]  %}
+{% endif %}
+
+{% for links in document  %}
+   {% if links.title == page.title %}
+      {% unless forloop.first %}
+         {% assign prevurl = prev.url %}
+         {% assign prevtitle = prev.title %}
+      {% endunless %}
+      {% unless forloop.last %}
+         {% assign next = document[forloop.index] %}
+         {% assign nexturl = next.url %}
+         {% assign nexttitle = next.title %}
+      {% endunless %}
+    {% endif %}
+  {% assign prev = links %}
+{% endfor %}
+
+<nav class="pagination" role="navigation">
+   {% if prevurl %}
+      <a class="pagination-item older" href="{{prevurl}}" title="{{prevtitle}}">&larr; Previous Lesson</a>
+   {% else %}
+      <span class="pagination-item older">&nbsp;</span>
+   {% endif %}
+   {% if nexturl %}
+      <a class="pagination-item newer" href="{{nexturl}}" title="{{nexttitle}}">Next Lesson &rarr;</a>
+   {% else %}
+      <span class="pagination-item newer">&nbsp;</span>
+   {% endif %}
+</nav>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+   {% include head.html %}
+
+   {% comment %}
+      NOTE: If the content tag in the following <textarea> is preceded by
+      any whitespace to the left, then the remark slideshow will not work!
+   {% endcomment %}
+
+   <textarea id="source">
+{{ content|strip_html }}
+   </textarea>
+
+   <body>
+
+     <!-- Remark scripts -->
+     <script src="//gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+     <script>
+         var hljs = remark.highlighter.engine;
+         var slideshow = remark.create({
+            highlightStyle: 'tomorrow-night-bright',
+            highlightLanguage: 'xml',
+            navigation: {
+               scroll: false
+               // , click: true
+            }
+         });
+      </script>
+
+      <!-- For embedding Tweets in slides -->
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+   </body>
+</html>
