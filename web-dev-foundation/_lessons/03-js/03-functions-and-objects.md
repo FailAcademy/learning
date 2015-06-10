@@ -24,6 +24,7 @@ From the JavaScript & jQuery textbook:
 - [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object)
 - [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/array)
 - [Scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope)
+- [Hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting)
 
 ## Exercise 1
 

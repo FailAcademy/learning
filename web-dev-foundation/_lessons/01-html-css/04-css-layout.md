@@ -15,9 +15,9 @@ From the HTML & CSS textbook:
 
 ## Learning Objectives
 
-- Demonstrate competence using CSS positioning (static, relative, absolute, and fixed) to move elements around a web page.
-- Use CSS floats to manipulate elements, including navigation menus.
-- Use images in CSS as a background image, and apply other CSS techniques to manipulate image elements with a web page.
+- Use CSS positioning (static, relative, absolute, and fixed) to move elements around a webpage.
+- Use CSS floats to manipulate elements, including list-based navigation menus.
+- Use CSS background properties to set background colors or images.
 - Understand what CSS resets are and why they are needed.
 
 ## Keywords
@@ -30,13 +30,17 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-Do this activity!
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/mJwRxG/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/mJwRxG/'>mJwRxG</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
-Use CSS to position various elements absolutely and fixed on a page
+Find the [solution](http://codepen.io/redacademy/pen/waegmZ)
 
 ## Exercise 2
 
-Manipulate the display of an HTML list to serve as a navigation menu
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/yNXgGO/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/yNXgGO/'>yNXgGO</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+Find the [solution](http://codepen.io/redacademy/pen/xGrgmP)
 
 ## Lab Activity
 
@@ -55,3 +59,4 @@ And some CSS reset resources:
 - [Eric Meyer Reset](http://meyerweb.com/eric/tools/css/reset/index.html)
 - [normalize.css](http://necolas.github.io/normalize.css/)
 - [Box Model Reset](https://sunnyis.me/blog/box-model-reset)
+- [Pure CSS](http://purecss.io/)

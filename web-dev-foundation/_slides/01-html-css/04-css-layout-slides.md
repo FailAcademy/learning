@@ -26,6 +26,7 @@ layout: false
 5. Using CSS resets
 
 ---
+
 template: inverse
 
 # Position
@@ -38,6 +39,7 @@ class: center, middle
 ]
 
 ---
+
 class: center, middle
 
 .inline-images[
