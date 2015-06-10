@@ -4,7 +4,7 @@ title: Intro to HTML
 slides: ['_slides/01-html-css/01-intro-to-html-slides.md']
 ---
 
-## Recommended Pre-Reading
+## Recommended Reading
 
 From the HTML & CSS textbook:
 
@@ -37,7 +37,7 @@ In the web developer course folder on your local computer, create a `local root 
 Set-up an simple `HTML page` in your code editor with all the basic structural tags (body, head, title), then include a few heading and paragraph tags before saving as `index.html`.
 
 Preview in a browser of your choice by going to the File menu > File Open (browse for your `index.html` page.
- 
+
 
 ## Exercise 2
 
