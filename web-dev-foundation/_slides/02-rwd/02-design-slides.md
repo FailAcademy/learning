@@ -38,7 +38,6 @@ Let's take a closer look at the key principles:
 
 .inline-images[![Gestalt Principles Image](https://yusylvia.files.wordpress.com/2010/03/gestalt_illustration-01.jpg)]
 
-
 ---
 template: inverse
 
@@ -58,7 +57,7 @@ template: inverse
 
 ---
 ## Help Users Find What They Are Looking For Part 1
-By prioritizing content, key messages can be communicated faster.
+By prioritizing content, key messages can be `communicated faster`.
 
 ###Prioritizing Content
 - Make certain areas more *distinct*
@@ -66,7 +65,7 @@ By prioritizing content, key messages can be communicated faster.
 
 ---
 ## Help Users Find What They Are Looking For Part 2
-By organizing content, information can be communicated much clearer.
+By organizing content, information can be `communicated much clearer`.
 
 ###Organizing Content
 - Group together related *chunks of content*
@@ -78,7 +77,7 @@ template: inverse
 
 ---
 ## System Fonts vs Web Fonts
-###### Later this week, you will learn about web fonts and how to pull them into your website. This method will open up many more font styling options for your sites.  But for now, you will continue to make use of system fonts and incorporate 2-3 alternates before specifying the font family. Remember, there are 5 font families that can be referenced when using system fonts:
+###### Later this week, you will learn about web fonts and how to pull them into your website. This method will open up many more font styling options for your sites.  But for now, you will continue to make use of system fonts and incorporate **2-3 alternates** before specifying the font family. Remember, there are `5 font families` that can be referenced when using system fonts:
 - Sans-serif
 - Serif
 - Monospace

@@ -19,7 +19,7 @@ layout: false
 
 # Agenda
 
-1. Create HTML lists (ordered & unordered)
+1. Styling HTML lists (ordered & unordered)
 2. Apply CSS Reset
 3. CSS positioning (static, relative, absolute, and fixed)
 4. CSS floats/clear floats
@@ -28,11 +28,11 @@ layout: false
 ---
 template: inverse
 
-# HTML Lists
+# Styling HTML Lists
 ##Ordered and Unordered Lists
 
 ---
-## Types of Lists
+## Ordered List Style
 **Ordered List** displays list items numbered in different styles (decimal, roman and alpha)
 
 ```html
@@ -48,7 +48,7 @@ template: inverse
 </iframe>
 
 ---
-## Types of Lists
+## Unordered List Style
 **Unordered List** displays list items as various bulleted styles (disc, circle, square or custom) 
 ```html
 <h3> Star Wars Characters</h3>
@@ -70,9 +70,9 @@ template: inverse
 
 ---
 ## CSS Reset
-- The goal of a reset stylesheet is to **reduce browser inconsistencies** in things like default line heights, margins and font sizes of headings.
+- The goal of a `reset` stylesheet is to **reduce browser inconsistencies** in things like default line heights, margins and font sizes of headings.
 
-- The reset styles shown on the next page are **intentionally very generic**. There isn't any default color or background set for the body element, for example, and you'll want to tweak the reset so it works with your website's styling.
+- The `reset` styles shown on the next page are **intentionally very generic**. There isn't any default color or background set for the body element, for example, and you'll want to tweak the reset so it works with your website's styling.
 
 ---
 ## Example of Eric Meyer's Reset

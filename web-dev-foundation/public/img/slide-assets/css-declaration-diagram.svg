@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="815px" height="180px" viewBox="0 0 815 180" enable-background="new 0 0 815 180" xml:space="preserve">
+<rect x="25.682" y="69.954" fill="none" width="762.626" height="45.455"/>
+<text transform="matrix(1 0 0 1 25.6821 98.7988)"><tspan x="0" y="0" fill="#646464" font-family="'CourierPrime-Bold'" font-size="45">p { </tspan><tspan x="107.93" y="0" fill="#0841A5" font-family="'CourierPrime-Bold'" font-size="45">background-color:</tspan><tspan x="566.631" y="0" fill="#646464" font-family="'CourierPrime-Bold'" font-size="45"> </tspan><tspan x="593.613" y="0" fill="#ED4343" font-family="'CourierPrime-Bold'" font-size="45">red;</tspan><tspan x="701.543" y="0" fill="#646464" font-family="'CourierPrime-Bold'" font-size="45"> }</tspan></text>
+<rect x="-16.672" y="19.691" fill="none" width="105.051" height="17.172"/>
+<text transform="matrix(1 0 0 1 1.7495 31.8354)" fill="#646464" font-family="'GothamSSm-Medium'" font-size="16">selector</text>
+<rect x="41.903" y="144.662" fill="none" width="106.061" height="33.899"/>
+<text transform="matrix(1 0 0 1 46.9824 156.8062)"><tspan x="0" y="0" fill="#646464" font-family="'GothamSSm-Medium'" font-size="16">declaration </tspan><tspan x="28.359" y="19.199" fill="#646464" font-family="'GothamSSm-Medium'" font-size="16">start</tspan></text>
+<rect x="287.217" y="19.691" fill="none" width="149.496" height="17.172"/>
+<text transform="matrix(1 0 0 1 324.6133 31.835)" fill="#646464" font-family="'GothamSSm-Medium'" font-size="16">property</text>
+<rect x="592.397" y="19.691" fill="none" width="135.354" height="17.172"/>
+<text transform="matrix(1 0 0 1 637.4175 31.835)" fill="#646464" font-family="'GothamSSm-Medium'" font-size="16">value</text>
+<rect x="509.4" y="144.55" fill="none" width="140.404" height="34.122"/>
+<text transform="matrix(1 0 0 1 515.2104 156.6948)"><tspan x="0" y="0" fill="#646464" font-family="'GothamSSm-Medium'" font-size="16">property/value</tspan><tspan x="23.608" y="19.199" fill="#646464" font-family="'GothamSSm-Medium'" font-size="16">separator</tspan></text>
+<rect x="713.267" y="1.328" fill="none" width="106.061" height="33.899"/>
+<text transform="matrix(1 0 0 1 718.3462 13.4717)"><tspan x="0" y="0" fill="#646464" font-family="'GothamSSm-Medium'" font-size="16">declaration </tspan><tspan x="32.016" y="19.2" fill="#646464" font-family="'GothamSSm-Medium'" font-size="16">end</tspan></text>
+<rect x="660.237" y="144.662" fill="none" width="106.061" height="33.899"/>
+<text transform="matrix(1 0 0 1 665.3159 156.8062)"><tspan x="0" y="0" fill="#646464" font-family="'GothamSSm-Medium'" font-size="16">declaration </tspan><tspan x="7.168" y="19.199" fill="#646464" font-family="'GothamSSm-Medium'" font-size="16">separator</tspan></text>
+<g>
+	<g>
+		<line fill="none" stroke="#646464" stroke-width="2" stroke-miterlimit="10" x1="95.439" y1="119.025" x2="95.439" y2="137.025"/>
+		<g>
+			<polygon fill="#646464" points="87.259,125.821 88.724,127.185 95.437,119.961 102.152,127.185 103.617,125.821 95.437,117.025 
+							"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		
+			<line fill="none" stroke="#646464" stroke-width="2" stroke-miterlimit="10" x1="579.439" y1="115.025" x2="579.439" y2="133.025"/>
+		<g>
+			<polygon fill="#646464" points="571.259,121.821 572.724,123.185 579.437,115.961 586.152,123.185 587.617,121.821 
+				579.437,113.025 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		
+			<line fill="none" stroke="#646464" stroke-width="2" stroke-miterlimit="10" x1="713.439" y1="115.025" x2="713.439" y2="133.025"/>
+		<g>
+			<polygon fill="#646464" points="705.259,121.821 706.724,123.185 713.437,115.961 720.152,123.185 721.617,121.821 
+				713.437,113.025 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line fill="none" stroke="#646464" stroke-width="2" stroke-miterlimit="10" x1="35.439" y1="59.025" x2="35.439" y2="41.025"/>
+		<g>
+			<polygon fill="#646464" points="43.619,52.229 42.154,50.865 35.441,58.088 28.726,50.865 27.261,52.229 35.441,61.025 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line fill="none" stroke="#646464" stroke-width="2" stroke-miterlimit="10" x1="362.439" y1="59.025" x2="362.439" y2="41.025"/>
+		<g>
+			<polygon fill="#646464" points="370.619,52.229 369.154,50.865 362.441,58.088 355.726,50.865 354.261,52.229 362.441,61.025 			
+				"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line fill="none" stroke="#646464" stroke-width="2" stroke-miterlimit="10" x1="660.439" y1="59.025" x2="660.439" y2="41.025"/>
+		<g>
+			<polygon fill="#646464" points="668.619,52.229 667.154,50.865 660.441,58.088 653.726,50.865 652.261,52.229 660.441,61.025 			
+				"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line fill="none" stroke="#646464" stroke-width="2" stroke-miterlimit="10" x1="766.439" y1="59.025" x2="766.439" y2="41.025"/>
+		<g>
+			<polygon fill="#646464" points="774.619,52.229 773.154,50.865 766.441,58.088 759.726,50.865 758.261,52.229 766.441,61.025 			
+				"/>
+		</g>
+	</g>
+</g>
+</svg>

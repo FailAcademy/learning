@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="748px" height="518px" viewBox="0 0 748 518" enable-background="new 0 0 748 518" xml:space="preserve">
+<g>
+	<g>
+		<rect x="5" y="5" fill="#FFFFFF" width="738" height="508"/>
+		<g>
+			<polyline fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" points="743,507 743,513 737,513 			"/>
+			
+				<line fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="12,12" x1="725" y1="513" x2="17" y2="513"/>
+			<polyline fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" points="11,513 5,513 5,507 			"/>
+			
+				<line fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="12,12" x1="5" y1="495" x2="5" y2="17"/>
+			<polyline fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" points="5,11 5,5 11,5 			"/>
+			
+				<line fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="12,12" x1="23" y1="5" x2="731" y2="5"/>
+			<polyline fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" points="737,5 743,5 743,11 			"/>
+			
+				<line fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="12,12" x1="743" y1="23" x2="743" y2="501"/>
+		</g>
+	</g>
+	<rect x="79" y="56" fill="#C8C8C8" stroke="#C8C8C8" stroke-width="2" stroke-miterlimit="10" width="589" height="406"/>
+	<g>
+		<rect x="153" y="107" fill="#FFFFFF" width="442" height="304"/>
+		<g>
+			<polyline fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" points="595,405 595,411 589,411 			"/>
+			
+				<line fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="12,12" x1="577" y1="411" x2="165" y2="411"/>
+			<polyline fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" points="159,411 153,411 153,405 			"/>
+			
+				<line fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="12,12" x1="153" y1="394" x2="153" y2="118"/>
+			<polyline fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" points="153,113 153,107 159,107 			"/>
+			
+				<line fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="12,12" x1="171" y1="107" x2="583" y2="107"/>
+			<polyline fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" points="589,107 595,107 595,113 			"/>
+			
+				<line fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="12,12" x1="595" y1="124" x2="595" y2="400"/>
+		</g>
+	</g>
+	<g>
+		<rect x="227" y="157" fill="#FFFFFF" width="294" height="204"/>
+		<g>
+			<polyline fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" points="521,355 521,361 515,361 			"/>
+			
+				<line fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="12,12" x1="503" y1="361" x2="239" y2="361"/>
+			<polyline fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" points="233,361 227,361 227,355 			"/>
+			
+				<line fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="13,13" x1="227" y1="342" x2="227" y2="170"/>
+			<polyline fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" points="227,163 227,157 233,157 			"/>
+			
+				<line fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="12,12" x1="245" y1="157" x2="509" y2="157"/>
+			<polyline fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" points="515,157 521,157 521,163 			"/>
+			
+				<line fill="none" stroke="#464646" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="13,13" x1="521" y1="176" x2="521" y2="348"/>
+		</g>
+	</g>
+	<rect x="282.557" y="13.686" fill="none" width="182.886" height="38.155"/>
+	<text transform="matrix(1 0 0 1 319.458 39.5811)" fill="#EF4343" font-family="'MyriadPro-Regular'" font-size="36.4718">margin</text>
+	<rect x="282.557" y="65.984" fill="none" width="182.886" height="38.155"/>
+	<text transform="matrix(1 0 0 1 322.2666 91.8799)" fill="#EF4343" font-family="'MyriadPro-Regular'" font-size="36.4718">border</text>
+	<rect x="282.557" y="116.192" fill="none" width="182.886" height="38.156"/>
+	<text transform="matrix(1 0 0 1 309.6841 142.0879)" fill="#EF4343" font-family="'MyriadPro-Regular'" font-size="36.4718">padding</text>
+	<rect x="282.557" y="239.923" fill="none" width="182.886" height="38.156"/>
+	<text transform="matrix(1 0 0 1 314.3701 265.8184)" fill="#EF4343" font-family="'MyriadPro-Regular'" font-size="36.4718">content</text>
+</g>
+<rect x="288.5" y="439" fill="none" width="170" height="23"/>
+<text transform="matrix(1 0 0 1 297.48 454.6201)" fill="#EF4343" font-family="'MyriadPro-Regular'" font-size="22">calculated width</text>
+<rect x="646.5" y="154.532" fill="none" width="23" height="208.939"/>
+<text transform="matrix(4.489659e-11 -1 1 4.489659e-11 662.1201 338.4854)" fill="#EF4343" font-family="'MyriadPro-Regular'" font-size="22">calculated height</text>
+<rect x="337.5" y="337.601" fill="none" width="73" height="23"/>
+<text transform="matrix(1 0 0 1 347.3804 353.2207)" fill="#EF4343" font-family="'MyriadPro-Regular'" font-size="22">width</text>
+<rect x="498.189" y="158.532" fill="none" width="23" height="208.939"/>
+<text transform="matrix(4.489659e-11 -1 1 4.489659e-11 513.8096 293.085)" fill="#EF4343" font-family="'MyriadPro-Regular'" font-size="22">height</text>
+</svg>

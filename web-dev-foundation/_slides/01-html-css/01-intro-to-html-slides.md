@@ -57,7 +57,7 @@ It helps us describe the structure of webpage, and its connections with other we
 
 **HyperText** is a system of clickable text links that let you view information in a non‐linear way.
 
-Hypertext also applies to media and non‐text links, such as images or buttons.
+Hypertext also relates to **hyperlinks**, which applies to media and non‐text links, such as images or buttons.
 
 Links don’t necessarily always get you to another page, a hyperlink can also be set-up to run a script that can play a video or sound, or make something happen dynamically.
 
@@ -195,7 +195,7 @@ Some good (free) code editor options include:
 
 ---
 
-# Building Blocks
+# Building Blocks of An HTML Page
 
 Virtually all websites share the same basic structure. They contain a `<head>` and a `<body>`, and those two elements are wrapped in `<html>` tags:
 
@@ -227,7 +227,7 @@ Before long, you're going to want to add additional pages to your site, or other
 
 To keep all of those HTML files and your other webpage assets organized, you'll want to set up a folder somewhere on your computer.
 
-We call this the **root folder** of your project. You can name it anything you'd like and it can contain any number of sub‐folders to further organize your files.
+We call this the **Root Folder** of your project. You can name it anything you'd like and it can contain any number of sub‐folders to further organize your files.
 
 ---
 class: center, middle
@@ -240,9 +240,9 @@ class: center, middle
 
 # Organizing Your Files
 
-You'll want to put some thought in ahead of time to decide how you want to organize your sub-folders and files.
+You'll want to put some thought in ahead of time to decide how you want to organize your **sub-folders** and **files**.
 
-This is especially important for your media files, so you don't end up with broken media links later...
+This is especially important for your media files, so you don't end up with *broken media* links later...
 
 .inline-images[
    ![Broken image link](/public/img/slide-assets/broken-image-link.jpg)
@@ -250,9 +250,9 @@ This is especially important for your media files, so you don't end up with brok
 
 ---
 
-# One Folder = One Site
+#  New Site = New Folder
 
-You'll also want to create a new root folder for each different website that you build:
+You'll also want to create a new `root folder` for each *different* website that you build:
 
 .inline-images[
    ![Root folders](/public/img/slide-assets/html-multiple-sites.svg)
@@ -260,7 +260,7 @@ You'll also want to create a new root folder for each different website that you
 
 ---
 
-# Naming Pro Tips
+# File/Folder Naming Tips
 
 Use these sanity-saving tips to name your folders and files:
 
