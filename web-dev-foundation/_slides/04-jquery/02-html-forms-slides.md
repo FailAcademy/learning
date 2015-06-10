@@ -150,6 +150,15 @@ Add the `readonly` attribute to prevent your text from being editable. This is u
 The characters of the `password` will show up as `• or *` in the text box. Note that just because the characters are hidden doesn't mean that it's secure. Best to use Secure Sockets Layer (SSL) on the server for full security.
 
 ---
+# Exercise 1
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/EjXNLx/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/EjXNLx/'>EjXNLx</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+Look at the [solution](http://codepen.io/redacademy/pen/VLWmxm)
+
+
+---
 ## Types of Form Elements
 ### 2. Making Choices
 - Radio Buttons (Select Only One)
@@ -179,25 +188,51 @@ The characters of the `password` will show up as `• or *` in the text box. Not
 
 ---
 ### Making Choices
-- Drop Down Menus
-`<select name="devices">
-	<option value="iPad">`
+- Drop Down Menus (Select Only One)
+
+Use the `select` tag to create a drop down menu of options that your user would select only one from. 
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/pJwNZq/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/pJwNZq/'>pJwNZq</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+
 
 ---
 ## Types of Form Elements
 ### 3. Submitting Forms
 - Submit Buttons
-`<input type="submit" name="subscribe" value="Subscribe" />`
+`<input type="submit" name="submit" value="Submit Form" />`
 
+`<input type="reset" name="submit" value="Clear Form" />`
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/KpqNGb/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/KpqNGb/'>KpqNGb</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+### Submitting Forms
+- CSS3 Buttons
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/oXwYJY/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/oXwYJY/'>oXwYJY</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+
+
+---
+### Submitting Forms
 - Image Buttons
-`<input type="image" src="images/subscribe_btn.jpg" width="200" height="50">`
+
+`<input type="image" src="images/submit_btn.jpg" width="200" height="50">`
+
+.inline-images[![Submit Button Example](../../public/img/slide-assets/submit-button.png)]
 
 ---
 ## Types of Form Elements
 ### 4. Uploading Files
 File Upload Button
+
 `<input type="file" name="client-proposal" /><input type="submit" value="Upload" />`
 
+.inline-images[![Submit Button Example](../../public/img/slide-assets/image-file-upload.png)]
 ---
 ## Label Form Controls
 Add the label tag to help with accessibility for vision-impaired users. The label tag should be wrapped around both text description and for input type.
