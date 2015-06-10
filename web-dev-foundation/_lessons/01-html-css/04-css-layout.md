@@ -11,10 +11,12 @@ From the HTML & CSS textbook:
 
 ## Learning Objectives
 
-- Learn about lists and list formatting options
-- Understand the concept of what a “CSS reset” is and why they are needed.
 - Demonstrate competence using CSS positioning (static, relative, absolute, and fixed) to move elements around a web page.
 - Demonstrate competence using CSS floats to manipulate elements, and how to clear floats.
+- Look at Standard Layout Practices 
+- Understand the concept of what a “CSS reset” is and why they are needed.
+- Learn about lists and list formatting options
+- Create navigational menus from lists
 - Use images in CSS as a background image, and apply other CSS techniques to manipulate image elements with a web page.
 
 
@@ -29,13 +31,17 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-Do this activity!
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/mJwRxG/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/mJwRxG/'>mJwRxG</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
-Use CSS to position various elements absolutely and fixed on a page
+Find the [solution](http://codepen.io/redacademy/pen/waegmZ)
 
 ## Exercise 2
 
-Manipulate the display of an HTML list to serve as a navigation menu
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/yNXgGO/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/yNXgGO/'>yNXgGO</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+Find the [solution](http://codepen.io/redacademy/pen/xGrgmP)
 
 
 ## Lab Activity
@@ -47,3 +53,4 @@ This is a link to the lab activity...
 - [Code Academy](http://www.codecademy.com/learn)
 - [Meyer CSS](Reset http://meyerweb.com/eric/tools/css/reset/index.html)
 - [Box Model Reset](https://sunnyis.me/blog/box-model-reset)
+- [Pure CSS](http://purecss.io/)
