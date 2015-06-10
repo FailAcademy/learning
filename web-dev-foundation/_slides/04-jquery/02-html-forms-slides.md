@@ -38,15 +38,17 @@ Forms are a way for the users/viewers of your site to provide you with feedback 
 ## Everyday Uses for Forms
 
 Forms that you typically see include ones that ask for your mailing information, like an order forms, or ask for your opinions, like surveys. There are many uses for forms especially in online commerce and retail transactions and online banking. 
+
+We think about how we use different forms to `GET` information and `POST` information.
 ---
 ### How Often Do You Google Everyday?
 
-Forms like Google allow us to **GET** information from a database.
+Forms like Google allow us to **GET** information from a large search database.
 .inline-images[![Google Search box](../../public/img/slide-assets/google-search-box.png)]
 
 ---
 ### How Often Do You Buy or Pay for Something Online?
-Checkout forms allow you input your information & payment information for a company to process your order. 
+Checkout forms allow you input your contact & payment information. This **POST** method is what allows a company to process your order once it has received the form information. 
 
 .inline-images[![Sample Online Shipping Form](../../public/img/slide-assets/sample_shipping_address_form.jpg)]
 
@@ -112,23 +114,71 @@ template: inverse
 ## Types of Form Elements
 ### 1. Adding Text
 - Text Input (Single Line)
-`<input type="text" name="username" size="20" />`
 
+`<input type="text" name="firstname" size="20" />`
+
+This standard `input` type is great for single text fields that the user needs to fill out, such as **Name, Email, Postal Code, etc**. 
+
+---
+### Adding Text
+- Text Input (Single Line with Max Length)
+
+`<input type="text" name="username" size="12" maxlength="12" />`
+
+You can **limit** the amount of characters a user can type by using the `maxlength` attribute.
+---
+### Adding Text
 - Text Area (Multi Line)
+
 `<textarea name="comments" cols="20" rows="4"> Your Feedback Please! </textarea>`
 
+Adjust the `cols` and `rows` to create a bigger text area box for the user to type within.
+---
+### Adding Text
+- Text Area (Multi Line with Read-Only Text)
+
+`<textarea name="eula" cols="50" rows="8" readonly> End User Legal Agreement Document </textarea>`
+
+Add the `readonly` attribute to prevent your text from being editable. This is useful for text that you want the user to read through, but not edit. 
+
+---
+### Adding Text
 - Password Input
-`<input type="password" name="password" size="12" maxlength="20" />`
+
+`<input type="password" name="password" size="8" minlength="6" maxlength="8" />`
+
+The characters of the `password` will show up as `• or *` in the text box. Note that just because the characters are hidden doesn't mean that it's secure. Best to use Secure Sockets Layer (SSL) on the server for full security.
 
 ---
 ## Types of Form Elements
 ### 2. Making Choices
-- Radio Buttons
-`<input type="radio" name="sports" value="hockey" />`
+- Radio Buttons (Select Only One)
 
-- Check Boxes
-`<input type="checkbox" name="musicservice" value="spotify" />`
+```HTML
+<input type="radio" name="gender" value="male" id="female">Male 
+<input type="radio" name="gender" value="female" id="female">Female
+```
 
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/EjXNVJ/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/EjXNVJ/'>EjXNVJ</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+### Making Choices
+- Check Boxes (Select Multiple)
+
+```HTML
+<h3> Select Your Favourite Music Streaming Service </h3>
+<input type="checkbox" name="musicservice" value="spotify"> Spotify <br>
+<input type="checkbox" name="musicservice" value="applemusic"> Apple Music <br>
+<input type="checkbox" name="musicservice" value="tidal"> Tidal <br>
+<input type="checkbox" name="musicservice" value="rdio"> Rdio <br>
+```
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/zGzoKX/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/zGzoKX/'>zGzoKX</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+### Making Choices
 - Drop Down Menus
 `<select name="devices">
 	<option value="iPad">`
