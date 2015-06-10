@@ -414,6 +414,26 @@ To target an element's class in your CSS, you would use a dot plus the class nam
 
 ---
 
+# Pseudo-classes
+
+**Pseudo-classes** allow you change the appearance of an element when users interact with them:
+
+```css
+a {
+   color: red;
+   text-decoration: none;
+}
+
+a:hover {
+   color: blue;
+   text-decoration: underline;
+}
+```
+
+You can use the `:link` and `:visited` pseudo-classes for links, and `:hover`, `:active`, and `:focus` pseudo-classes for a broader array of elements.
+
+---
+
 # IDs in CSS
 
 To target an element's ID in your CSS, you would use a pound sign plus the ID name:
