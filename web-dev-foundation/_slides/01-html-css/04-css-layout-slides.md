@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to CSS Layout Slides
+title: CSS Layout Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# CSS Navigation and Layouts
+# CSS Layouts
 
 .title-logo[![Red logo](../../public/img/red-logo-white.svg)]
 
@@ -19,232 +19,475 @@ layout: false
 
 # Agenda
 
-1. Styling HTML lists (ordered & unordered)
-2. Apply CSS Reset
-3. CSS positioning (static, relative, absolute, and fixed)
-4. CSS floats/clear floats
-5. Standard Layout Practices
-6. Navigation List Menus
+1. Positioning elements with CSS
+2. Floating elements with CSS
+3. List-based navigation menus
+4. Styling the background
+5. Using CSS resets
+
 ---
 template: inverse
 
-# Styling HTML Lists
-##Ordered and Unordered Lists
+# Position
 
 ---
-## Ordered List Style
-**Ordered List** displays list items numbered in different styles (decimal, roman and alpha)
+class: center, middle
 
-```html
-<h3> Star Wars Movies </h3>
-<ol style="list-style-type:upper-roman">
-	<li>The Phantom Menace</li>
-	<li>Attack of the Clones</li>
-	<li>Revenge of the Sith</li>
-</ol>
+.large[
+	Review: Block vs. Inline
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![Block-level element](/public/img/slide-assets/css-block-element.svg)
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![Inline element](/public/img/slide-assets/css-inline-element.svg)
+]
+
+---
+class: center, middle
+
+.large[
+	Review: Boxes in Boxes
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![CSS Box Concept](/public/img/slide-assets/css-box-concept.svg)
+]
+
+---
+
+# Changing Display
+
+Every HTML element has a default display property, but we can override it using the `display` property in your CSS.
+
+For example:
+
+```css
+li {
+	display: inline;
+}
 ```
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/yNgWwe/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/yNgWwe/'>yNgWwe</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+Or:
 
----
-## Unordered List Style
-**Unordered List** displays list items as various bulleted styles (disc, circle, square or custom) 
-```html
-<h3> Star Wars Characters</h3>
-<ul style="list-style-type:square">
-	<li>Anakin Skywalker</li>
-	<li>Obi-Wan</li>
-	<li>Darth Vader</li>	
-</ul>
+```css
+span {
+	display: block;
+}
 ```
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/YXNmwP/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/YXNmwP/'>YXNmwP</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
 
-*See pg. 333-336 in your HTML/CSS text for further examples* 
 ---
 
+# Working with Position
+
+We can take even more control over our layouts using the CSS `position` property. The `position` property can take a specific array of values:
+
+- `static` (the default behaviour, aka **normal flow**)
+- `relative`
+- `absolute`
+- `fixed`
+
+---
+
+# Relative Positioning
+
+Relative positioning moves an element in relation to where it would have been the normal flow:
+
+```css
+header h1 {
+	position: relative;
+	top: 5%;
+	right: 200px;
+}
+```
+
+To adjust an element's position relatively, we can either specify `top` or `bottom`, and `left` or `right` in pixel, percentage, or em units.
+
+---
+
+# Absolute Positioning
+
+This is where things can get really interesting. Setting `position` to `absolute` takes it out of the normal flow.
+
+With absolute positioning, it's like the other elements on the page suddenly forget that it's there.
+
+```css
+header h1 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 200px;
+}
+```
+
+---
+
+# Absolute + Relative
+
+An element will be absolutely positioned to the HTML document unless you set `position: relative` on one of its parent elements.
+
+```css
+.page-wrapper {
+	position: relative;
+}
+
+header h1 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 200px;
+}
+```
+
+---
+
+# Fixed Positioning
+
+Fixed positioning is like absolute positioning, but it positions the element in relation to the browser window instead of the HTML document.
+
+This means that the element will stay put in one place on the screen as you scroll:
+
+```css
+header h1 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #c8c8c8;
+}
+```
+
+---
+
+# z-index
+
+With elements that have `relative`, `absolute`, or `fixed` position set, we can apply another property called `z-index`.
+
+The z-index property let's us specify the stacking order of non-static, overlapping elements.
+
+Elements with a higher z-index will appear on top:
+
+```css
+header h1 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 200px;
+	z-index: 100;
+}
+```
+
+---
+
+# Exercise 1
+
+Do something with positioning...
+
+---
+template: inverse
+
+# Floats
+
+---
+
+# What's a Float?
+
+Floats are another handy layout tool in CSS.
+
+They also take elements out of the normal flow and place to the far left or far right side of their container element.
+
+Text and other inline elements will then wrap around the floated element.
+
+---
+class: center, middle
+
+.inline-images[
+   ![An unfloated element](/public/img/slide-assets/css-float-none.svg)
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![A left-floated element](/public/img/slide-assets/css-float-left.svg)
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![A right-floated element](/public/img/slide-assets/css-float-right.svg)
+]
+
+---
+class: center, middle
+
+.large[
+	Floats are the key to creating multi-column layouts.
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![Two-column website layout](/public/img/slide-assets/css-column-layout.svg)
+]
+
+---
+
+# Using Floats
+
+To float elements in CSS, we use the `float` property:
+
+```css
+article {
+	width: 67%;
+	float: left;
+}
+
+aside {
+	width: 33%;
+	float: right;
+}
+```
+
+We can also stop a previously floated element from floating:
+
+```css
+.sidebar {
+	float: none;
+}
+```
+
+---
+
+# Clearing Floats
+
+The `clear` property is an important one when using floats.
+
+You can clear a float on the `left`, `right`, or `both`:
+
+```css
+article {
+	width: 67%;
+	float: left;
+}
+
+aside {
+	width: 33%;
+	float: right;
+}
+
+footer {
+	clear: both;
+}
+```
+
+---
+class: center, middle
+
+.large[
+	Why do we clear floats?
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![Cleared floats](/public/img/slide-assets/css-floats-not-cleared.svg)
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![Floats not cleared](/public/img/slide-assets/css-floats-cleared.svg)
+]
+
+---
+template: inverse
+
+# Navigation Menus
+
+---
+
+# Creating Nav Menus
+
+Many of the navigation menus you see on websites today structured as unordered lists.
+
+We can then take advantage of floats and other CSS properties to make lists look more like navigation menus.
+
+---
+
+# Creating Nav Menus
+
+For example, the HTML for a typical menu may look like this:
+
+```html
+<nav role="navigation">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Clients</a></li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
+</nav>  
+```
+
+But we don't want it to look like unordered list on our website, so we can use CSS to fix that.
+
+---
+
+# Creating Nav Menus
+
+Using the `float`, `list-style`, and some box-model properties, we can transform our list into a navigation menu:
+
+```css
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  float: left;
+  margin: 5px 10px;
+}
+```
+
+---
+class: center, middle
+
+.large[
+	Which allows us to turn this:
+]
+
+.inline-images[
+   ![Unstyled list](/public/img/slide-assets/css-list-unstyled.png)
+]
+
+---
+class: center, middle
+
+.large[
+	Into this:
+]
+
+.inline-images[
+   ![Floats not cleared](/public/img/slide-assets/css-list-floated.png)
+]
+
+---
+
+# Exercise 2
+
+Do something with floats...
+
+---
+template: inverse
+
+# Backgrounds
+
+---
+
+# Background Properties
+
+CSS gives us a number of tools for controlling the look of the backgrounds of our HTML elements.
+
+We can specify:
+
+- `background-color`: an RGBa or hexidecimal color code
+- `background-image`: an URL of a background image (in parantheses)
+
+---
+
+# Background Properties
+
+And if we specify a `background-image` URL, we can also set these properties for it:
+
+- `background-repeat`: whether to repeat an image across the X or Y axis, or both
+- `background-attachment`: whether the image should **scroll** with the browser or remain **fixed** in place
+- `background-position`: for non-repeated images, specify if it should be anchored at the **left**, **center**. or **right**, and the **top**, **center**, or **bottom**
+
+---
+
+# Background Shorthand
+
+To clean up our code a bit we can also use the `background` shorthand property to specify multiple properties at once:
+
+```css
+body {
+    background: #969696 url('images/bkgd.png') no-repeat center top;
+}
+```
+
+If you don't require all of the properties, you can leave them out:
+
+```css
+body {
+    background: url('images/bkgd-tile.png') fixed;
+}
+```
+
+---
+
+# Background Size
+
+In newer browsers, we can use `background-size`:
+
+```css
+body {
+	background: #969696 url('images/bkgd.png') no-repeat center top;
+	background-size: 80% 80%; /* width, height */
+}
+```
+
+We can also set `background-size` to `contain` (always show the whole image) or `cover` (always fill the screen with the image).
+
+Note that `background-size` isn't supported in IE8!
+
+---
 template: inverse
 
 # CSS Reset
 
 ---
-## CSS Reset
-- The goal of a `reset` stylesheet is to **reduce browser inconsistencies** in things like default line heights, margins and font sizes of headings.
 
-- The `reset` styles shown on the next page are **intentionally very generic**. There isn't any default color or background set for the body element, for example, and you'll want to tweak the reset so it works with your website's styling.
+# What's a CSS Reset?
 
----
-## Example of Eric Meyer's Reset
-```css
-/** Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
- http://cssreset.com */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-```
+The goal of a **css reset** is to **inconsistencies amongst browsers** in things like default line heights, margins, and font sizes of headings.
+
+Reset styles are **intentionally very generic**. They are just meant to standardize how browsers display HTML elements before your start applying your custom styles.
+
+Think of reset as *leveling the playing field*.
 
 ---
 
-## Example of Eric Meyer's Reset (cont)
-```css
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-```
----
-## CodePen Example of Meyer's Reset
+# Popular Resets
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/gpgVrM/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/gpgVrM/'>gpgVrM</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
----
+There are a few popular CSS resets that are commonly used today:
 
-template: inverse
-
-# CSS Positioning
-## Static, Relative, Absolute, Fixed
-
----
-##CSS Positioning Types
-
-****Static/Normal Flow****: Default behaviour of content on a page
-
-****Relative****: Moves an element from its normal flow
-
-****Absolute****: This element is removed from its normal flow, and moves in relation to its containing block.
-
-***Fixed***: Positions the element with relation to the browser window, and does not move when page is scrolled. 
-
-*See pg. 363-368 in your HTML/CSS text for further examples* 
----
-
-## Z-Index
-- The Z-Index property allows for elements to stack and overlap each other. The higher the z-index, the more closer the element is to the front, the smaller the number, the element will appear more in the background. 
-
----
-template: inverse
-
-# CSS Floats
+- [Eric Meyer reset](http://meyerweb.com/eric/tools/css/reset/)
+- [normalize.css](http://necolas.github.io/normalize.css/)
 
 ---
 
-## Uses for CSS Floats
-**Floating Images with Text** When this float is applied, it moves an element either left or right on the page while the rest of the content flows around it. This is commonly used to wrap text around images in the content section of a page.  
+# Using a Reset
 
-**Floating Images Beside Each Other** When this float is applied, it allows for elements to be situated side by side one another. Typically, each element will contain a width and float property.
+To use a reset, you would simply put this CSS at the top of your stylesheet, and then start writing your own code after it.
 
-*See pg. 370-371,375 in your HTML/CSS text for further examples*
----
-## Uses for CSS Floats cont. 
+The key is to pick a reset that makes the most sense for your website, and to only include the CSS rules that you need.
 
-**Creating Multi-Column Layouts** When this type of float is applied to divs with different paragraph content, the text will flow as a few columns across the page. Typically, each div column will contain a width and float:left property.
-
-*See pg. 375 in your HTML/CSS text for further examples*
----
-## Clearing Floats 
-Use the *clear* property to remove and prior floats to an element. You can specify: left, right or both. The clear property can be applied onto ID selectors as well as custom class selectors. 
-
-```css
-
-img {
-    float: left;
-}
-
-.clearfloat {
-	clear: both;
-	}
-
-```
-
-*See pg. 372 in your HTML/CSS text for further examples*
----
-template: inverse
-
-# CSS Backgrounds
-
----
-## CSS Background Properties
-- **Background-color:** web hexidecimal code
-- **Background-image:** url(image);
-- **Background-repeat:** values (repeat, repeat-x, repeat-y,            
- or no-repeat)
-- **Background-attachment:** values (scroll or fixed)
-- **Background-position:** values (left, right, top, bottom)
-
----
-## CSS Background Shorthand
-
-###### Since there are so many properties for specifying backgrounds, you can use the shorthand method by specifying the properties you want in the correct order (and leave out the properties you do not require).
-
-```css
-body {
-    background: #hexcode url("tile.png") repeat-x center top;
-}
-
-```
-
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/ZGLgeM/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/ZGLgeM/'>ZGLgeM</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
----
-template: inverse
-
-# Common CSS Layout Examples
-
----
-## Basic DIV Layout Set-up
-
-.inline-images[![Balsamiq Wireframe](../../public/img/slide-assets/div_layout_balsamiq.png)]
-
----
-template: inverse
-
-# Navigation List Menus
-
----
-## Converting A List into a Horizontal Menu
-
-There are some key properties that will turn a list into a horizontal menu.
-- **display: block; ** takes the list items and moves them horizontally
-- **list-style-type: none; ** removes the bulleted points from the ul list.
-- **text-decoration: none; ** removes the underline from the button links
-
----
-## Take a Closer Look at A Basic Horizontal Menu
-
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvRBYV/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvRBYV/'>WvRBYV</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
 ---
 
 template: inverse

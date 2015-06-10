@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="584px" height="366.5px" viewBox="0 0 584 366.5" enable-background="new 0 0 584 366.5" xml:space="preserve">
+<rect x="-0.5" fill="#969696" width="391" height="266"/>
+<rect x="404.5" fill="#969696" width="179" height="147"/>
+<rect x="-0.5" y="279" fill="#969696" width="584" height="88"/>
+<rect x="106.611" y="110.354" fill="none" width="177.777" height="73.293"/>
+<text transform="matrix(1 0 0 1 117.251 128.9424)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'CourierPrime'" font-size="29">&lt;article&gt;</tspan><tspan x="5.696" y="41" fill="#FFFFFF" font-family="'CourierPrime'" font-size="22">float: left</tspan></text>
+<rect x="405" y="42.354" fill="none" width="177.777" height="73.293"/>
+<text transform="matrix(1 0 0 1 433.0293 60.9419)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'CourierPrime'" font-size="29">&lt;aside&gt;</tspan><tspan x="-18.289" y="41" fill="#FFFFFF" font-family="'CourierPrime'" font-size="22">float: right</tspan></text>
+<rect x="203.111" y="293.207" fill="none" width="177.777" height="73.293"/>
+<text transform="matrix(1 0 0 1 222.4453 311.7959)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'CourierPrime'" font-size="29">&lt;footer&gt;</tspan><tspan x="-2.998" y="41" fill="#FFFFFF" font-family="'CourierPrime'" font-size="22">clear: both</tspan></text>
+</svg>
