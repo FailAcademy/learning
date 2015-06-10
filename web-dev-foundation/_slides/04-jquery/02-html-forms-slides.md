@@ -195,7 +195,13 @@ Use the `select` tag to create a drop down menu of options that your user would 
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/pJwNZq/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/pJwNZq/'>pJwNZq</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
+---
+# Exercise 2
 
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/LVLbKb/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/LVLbKb/'>LVLbKb</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+Look at the [solution](http://codepen.io/redacademy/pen/RPgKbj)
 
 ---
 ## Types of Form Elements
