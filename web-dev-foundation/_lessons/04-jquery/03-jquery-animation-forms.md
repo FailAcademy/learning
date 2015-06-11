@@ -20,6 +20,7 @@ From the JavaScript & jQuery textbook:
 
 - Effect methods
 - Form methods
+- Select Menu
 
 ## Exercise 1
 

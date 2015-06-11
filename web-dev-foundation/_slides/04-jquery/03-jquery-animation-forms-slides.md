@@ -168,7 +168,7 @@ You can also use jQuery to figure out if a checkbox is checked:
 if ( $('input:checkbox').is(':checked') ) {
    console.log('The checkbox is checked.');
 } else {
-   console.log('The checkbox isn\'t checked.');
+   console.log('The checkbox is not checked.');
 }
 ```
 

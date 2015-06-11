@@ -21,7 +21,8 @@ A primer on APIs:
 
 ## Learning Objectives
 
-- Learn what Ajax is (in relation to jQuery) and how to use it make a simple get request from a popular third-party API
+- Learn what Ajax is (in relation to jQuery)
+- How to use it make a simple get request from a popular third-party API
 
 ## Keywords
 

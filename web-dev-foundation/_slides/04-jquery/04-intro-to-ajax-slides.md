@@ -36,12 +36,19 @@ class: center, middle
 
 Ajax provides a way to fetch content from a server and load it in the browser without actually reloading the page.
 
+.inline-images[
+   ![Ajax Browser Load Data](../../public/img/slide-assets/ajax-browser-load.svg)
+]
 ---
 class: center, middle
 
 ### What is it for?
 
 Ajax is often used when submitting web forms and fetching data data from a server, including via third-party APIs.
+
+.inline-images[
+   ![Form Dropdown Menu](../../public/img/slide-assets/dropdown-menu.svg)
+]
 
 ---
 class: center, middle
@@ -149,6 +156,11 @@ class: center, middle
 .large[
    But what exactly is this "data" you're getting back here?
 ]
+.inline-images[
+   ![Question mark Data](../../public/img/slide-assets/questionmark-data.svg)
+]
+
+
 
 ---
 template: inverse
@@ -245,7 +257,7 @@ class: center, middle
 
 # APIs: In Plain English
 
-- API stands for "Application Programming Interface"
+- API stands for **"Application Programming Interface"**
 - User interfaces allow people to work with programs
 - APIs allow our programs to work with other programs
 - APIs will usually restrict access to the application
@@ -257,12 +269,16 @@ class: center, middle
 
 Have you ever used a smart phone app that integrates a Google or Apple Maps in some way?
 
+![Maps Pointer](../../public/img/slide-assets/maps-pointer.svg)
+
 ---
 class: center, middle
 
 ### APIs in the Wild
 
 Have you ever used a social media share button?
+
+![Heart icon](../../public/img/slide-assets/heart-plus-graphic.svg)
 
 ---
 class: center, middle
@@ -271,12 +287,15 @@ class: center, middle
 
 Have you ever used an app or service that saves a document to your Dropbox?
 
+![Dropbox Computer](../../public/img/slide-assets/cloud-imac.svg)
+
 ---
 class: center, middle
 
 ### APIs in the Wild
 
 Did you log into this learning materials website with your GitHub account?
+![Git Hub Octocat](../../public/img/slide-assets/github-cat.svg)
 
 ---
 # Exercise 1
