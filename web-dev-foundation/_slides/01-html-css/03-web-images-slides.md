@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to Web Images Slides
+title: Using Images on the Web Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Intro to Web Images
+# Using Images on the Web
 
 .title-logo[![Red logo](../../public/img/red-logo-white.svg)]
 
@@ -19,213 +19,398 @@ layout: false
 
 # Agenda
 
-1. Photoshop Essentials
-2. Crop, Size and Save for Web
-3. Common Web Formats
-4. Image Best Practices
-5. IMG tag considerations
-6. Web tools for Image Editing
-7. Copyright & Creative Commons
-
----
-
-template: inverse
-
-# Photoshop Overview
-##Using Photoshop for the Web
-
----
-## Photoshop Essentials
-In this Web Developer Essentials program, we'll be just covering the essentials of this photo-editing program to give you the necessary tools to `Scale`, `Rotate`, `Crop` and `Save for the Web`. This will allow to to insert **optimized** images into your websites!
-
----
-##Making Images Smaller
-
-****Scaling****: Image &rarr; Image Size &rarr;  Input New `Height` or `Width`
-
-![Photoshop scaling](../../public/img/slide-assets/r2d2-scaling.png)
-
----
-## Don't Scale Up Images
-
-Photoshop manipulates `raster` or `bitmapped` images, that are made up of **pixels**, so it's really recommended **NOT** to size up images/photos as they will become *pixelated* and *blurry*! 
-
-![Don't Scale Up Example](../../public/img/slide-assets/r2d2-blurry.png)
----
-##Rotating Images
-
-****Rotating****: Image &rarr; Image Rotation &rarr; Select Rotate Option
-
-![Photoshop scaling](../../public/img/slide-assets/image-rotation.png)
-
-![R2D2 Rotations](../../public/img/slide-assets/r2d2-rotations.png)
-
----
-## Cropping Images
-****Cropping****: Toolbar &rarr; Select Crop Tool &rarr; Drag Crop Box & Press `Return` to **Apply Crop** 
-
-![R2D2 Crop](../../public/img/slide-assets/r2d2-cropping.png)
-
----
-## Optimized Web Images
-
-****Saving for Web****:  File &rarr; Save for Web &rarr; Select Appropriate Format/Settings
-For photos, make sure you choose the 
-`JPG` option, and set it between **70-80%** to keep the file size *optimized*.
-
-![Save For Web](../../public/img/slide-assets/save-for-web-photoshop.png)
-
----
-## Using HEX Colours
-As designers, you have a few methods for specifying colour in a webpage. 
-
-****HEX**** Using the hexidecimal code system to reference colours is fairly simple. There are colour sites like [HTML Color Codes](http://html-color-codes.com), which shows the web safe hex codes shown as a 3 paired number/letter sequence. Alternately, you can use the Colour Picker from Photoshop or other image editor to reference one of the 16 million available colours.
-`White is reference in hexcode by #FFFFFF or #FFF (shorthand)` 
- 
----
-## Using RGBa Colours 
- 
-***RGBa*** Using RGBa is more versatile in that you can specify opacity as well as the Red, Green, and Blue colour mixes.
-`rgba(255,255,255,1)`
-
-****Opacity**** The `a` that represents opacity is specified in decimals, with a range of `0.0 (fully transparent)` to `1.0 (solid)`.
+1. Image editing basics
+2. Web-friendly image formats
+3. Colour on the web
+4. Using the `img` element and its attributes
+5. Copyright, the public domain, and Creative Commons
 
 ---
 template: inverse
 
-# Common Web Formats
-##JPG, PNG, GIF, SVG
+# Image Editing Basics
 
 ---
-## Common Web Formats
+class: center, middle
 
-****JPG****: (Joint Photographers Group) Best for photos, gradients, graphics with tonal variations. Lossy image format.
+### Image Editing 101
 
-****GIF****: (Graphics Interchange Format) This is a bitmap image format, but limited to 256 colours, no transparency. Often used now to save GIF animations. 1 level of transparency. Lossless format. Great for flat colour graphics like logos/icons/illustrations.
+We'll be just covering the basics of image editing to give you the necessary tools to **scale**, **rotate**, or **crop** an image, or save it in a way that's **optimized for the web**.
 
 ---
-## Common Web Formats (cont.)
 
-****PNG-8****: Raster image format, limited to 256 colours, no transparency. Preferred format over the GIF as file sizes are 10-30% smaller. 1 level of transparency. Lossless format.  Great for flat colour graphics like logos/icons/illustrations.
+# Scaling an Image Down
 
-****PNG-24****: (Portable Network Graphics)Best for graphics and photos, supports multiple levels of transparency, and millions of colours.
+**Scaling**: Image &rarr; Image Size &rarr; input new **Width** or **Height**
 
-****SVG****: (Scalable Vector Graphics) Vector graphics for the web that's rendered in XML. No quality loss when zoomed or scaled.
+.inline-images[
+   ![Photoshop scaling](../../public/img/slide-assets/r2d2-scaling.png)
+]
+
 ---
-## Word of Caution: PNG-24
 
-NOTE: **PNG-24,** which has `24 bits of colour (8bits per channel)`, allowing for up to *16 million colours*, and provides greater transparency fading, gradients of colour, and better support for saving for photos. The draw back of this format is the larger file sizes, even larger than JPG, so consider the use of this format carefully, as it will affect download speed of the graphic. 
+# Don't Scale Up Images
+
+Photoshop manipulates **raster** or **bitmap** images that are made of **pixels**, so if you try to scale these images or graphics up they will become pixelated and blurry.
+
+.inline-images[
+   ![Don't Scale Up Example](../../public/img/slide-assets/r2d2-blurry.png)
+]
+
+---
+
+# Rotating Images
+
+**Rotating**: Image &rarr; Image Rotation &rarr; Select rotate option...
+
+.inline-images[
+   ![Photoshop scaling](../../public/img/slide-assets/image-rotation.png)
+
+   ![R2D2 Rotations](../../public/img/slide-assets/r2d2-rotations.png)
+]
+
+---
+
+# Cropping Images
+
+**Cropping**: Select Crop Tool &rarr; Drag Crop Box &rarr; Press **Enter** or double-click to apply crop
+
+.inline-images[
+   ![R2D2 Crop](../../public/img/slide-assets/r2d2-cropping.png)
+]
+
+---
+# Optimizing Images
+
+**Saving for Web**: File &rarr; Save for Web... &rarr; Apply your settings
+
+For photos, make sure you choose the **JPEG** option, find a happy medium between retaining as much quality as possible while making the image as small as possible.
+
+.inline-images[
+   ![Save For Web](../../public/img/slide-assets/save-for-web-photoshop.png)
+]
+
+---
+
+# Image Editing Software
+
+- [Adobe Photoshop](http://www.adobe.com/ca/products/photoshop.html) (Mac or PC)
+- [Adobe Illustrator](http://www.adobe.com/ca/products/illustrator.html) (Mac or PC)
+- [GIMP](http://www.gimp.org/) (Mac or PC)
+- [Pixelmator](http://www.pixelmator.com/) (Mac)
 
 ---
 template: inverse
 
-# Image Best Practices
-
----
-## Image Best Practices
-- **Scale down images** to the *appropriate size* for your webpage
-- **Choose the correct** *image format* (.png, .svg, .jpg, .gif)
-- **Optimize images** to a *good quality* and *efficient file size*
-- **Add** `alt` tags to all images
-- **Save** image names with *relevant keywords* (that will tie into SEO later)
-- **Keep a copy** of the original *editable .PSD* file that you refer back to
+# Web-friendly Image Formats
 
 ---
 
+# Common Formats
+
+Today, images for the web are saved in the following formats:
+
+- **JPG/JPEG** (Joint Photographers Group)
+- **GIF** (Graphics Interchange Format)
+- **PNG** (Portable Network Graphics)
+- **SVG** (Scalable Vector Graphics)
+
+---
+
+# JPG/JPEG
+
+This image format is best for **photos**, gradients, and graphics with tonal variations.
+
+It's a **lossy** image format, so this means some of the original image data is lost when saved in this format.
+
+---
+
+# GIF
+
+The GIF format offered a way to save images with one level of transparency in a **lossless** format in the early days of the web, and it's still in use today.
+
+GIFs have a limited colour palette of only **256 colours**, so they work best for simple graphics.
+
+And of course, GIFs are frequently used today for saving **animated graphics**.
+
+---
+
+# PNG
+
+This image format is best images and graphics that need to support **multiple levels of transparency** and a large number of colours.
+
+It's also a **lossless** image format, which means that it preserves all of the file's original data.
+
+---
+
+# PNG-8 vs. PNG-24
+
+*But not all PNGs are created equal!*
+
+**PNG-8** is limited to 256 colours and no transparency, and it's preferable to GIFs for simple images (like icons and logos) with minimal colours.
+
+**PNG-24** is best for photos or graphics that need to support a broader array of colours or multiple levels of transparency.
+
+---
+class: center, middle
+
+### A Word of Caution!
+
+PNG-24 may support greater transparency, fading, and gradients when saving photos, but these files will be much larger than JPG which means they will take more bandwidth to download and longer to render.
+
+---
+
+# SVG
+
+The SVG format is newer on the scene, but offer a lot of flexibility.
+
+The image data is rendered as XML and can **scale down or up** without any loss of quality, just like a vector-based image in Illustrator.
+
+SVGs work best for graphics such as **logos and icons**.
+
+When using SVGs, it important to **provide a fallback** image format if you need to support older browsers.
+
+---
+
+# Format Cheatsheet
+
+- Use **PNG-8** over **GIF** for graphics with simple colors
+- Use **PNG-24** over **JPEG** when using alpha transparency
+- Use **JPEG** over **PNG** for photographic images
+- Use **GIF** for animated graphics
+- Use **SVG** for icons and logos that need to scale
+
+---
+
+# Formatting Pro Tips
+
+- **Scale down images** to the appropriate size for your webpage
+- **Choose the correct** image format
+- **Optimize images** to be the best possible quality at the smallest possible size
+- **Save** image names with relevant names (that will help with SEO later)
+- **Keep a copy** of the original image before optimizing it
+
+---
+
+# Exercise 1
+
+Goes here...
+
+---
 template: inverse
 
-# Image Tag Usage
+# Colour on the Web
 
 ---
-## Image Tag Attributes
 
-`<img src="photo.jpg" alt="photo description" title="further description of image" class="float_left />`
+# Using Color
 
-***alt tag:*** Provide alternate text to describe the image
+On the web, we have four options for specifying the colours of our HTML elements:
 
-***title tag:***  Provides further information about the image that is displayed in a tool tip
-
-***class tag:***: Provides a link to the CSS stylesheet in order to style the image with properties like border and padding (from the Box Model)
-
----
-## Specifying Height/Width for Images in HTML
-***HTML method*** 
-The height and width of a graphic/image can be specified with the HTML tags: height and width.  The browser is able to render the images quicker if it knows the dimensions.
-
-`<img src="logo.png" alt="Logo" height=150px width=150px">`
+- Colour names
+- HEX codes
+- RGB/RGBa values
+- HSLA values
 
 ---
-## Specifying Height/Width for Images in CSS
 
-***CSS method*** 
-With HTML5 conventions and use of external stylesheets to separate content from styling, this is a best practice to now use. You'll see that the height & width properties are now being referenced in stylesheet instead, along with other visual styling properties.
+# Colour Names
 
-`img src="logo.png" alt="Logo" class="logostyle">`
+There are 147 predefined colour names supported by browsers, which we can use like this:
 
-```CSS
-.logostyle {
-height: 150px;
-width: 150px;
-border: 3px solid #FF3300;
+```css
+p {
+   color: maroon;
+}
+
+a {
+   color: MediumSlateBlue;
+}
+```
+
+Check out [this list](http://en.wikipedia.org/wiki/Web_colors) for all of the names of the predefined colours.
+
+---
+
+# HEX Codes
+
+Alternatively, we can specify a HEX code that corresponds to a specific colour.
+
+For example, the HEX code for white is `#FFFFFF` (or `#FFF` in shorthand).
+
+In your CSS, a HEX code would be used like this:
+
+```css
+p {
+   color: #111111; /* very dark grey */
 }
 ```
 
 ---
+
+# HEX Codes
+
+To get a HEX code, you can use an [online colour picker tool](http://www.colorpicker.com/), or use the colour palette in an image editing program.
+
+.inline-images[
+   ![PS colour picker](../../public/img/slide-assets/color-picker-screenshot.png)
+]
+
+---
+
+## RGB/RGBa Colours
+
+We can also use RGB (red, green, blue) values to specify colours in our CSS:
+
+```css
+a {
+   color: rgb(237,67,67);
+}
+```
+
+The equivalent of this RGB colour in HEX would be `#ed4343`.
+
+---
+
+# RGB/RGBa Colours
+
+Or RGBa values to also specify the opacity of the colour:
+
+```css
+header {
+   background-color: rgba(237,67,67,0.5);
+}
+```
+
+The `a` that represents opacity is written as a decimal, with a range of `0` (fully transparent) to `1` (solid).
+
+*Note that RGBa isn't supported by older browsers like IE8.*
+
+---
+
 template: inverse
 
-# Web Imaging Tools
+# More on the Image Tag
+
 ---
-## Common Image Editing Software
-- **Adobe Photoshop** - Industry standard image editing software
-- **Adobe Illustrator** - Industry standard graphics editing software
-- **Gimp** - Free **G**NU **I**mage **M**anipulating **P**rogram
-- **Pixelmator** - Available for Mac and iOS
+class: center, middle
+
+### A Little Bit of History
+
+Images haven't always been a part of the web, but they did arrive early on the scene in 1993. Up until now, the `<img>` tag has only evolved slightly.
+
+---
+
+# The Image Tag
+
+Let's review and dive a little deeper into the `<img>` tag:
+
+```html
+<img src="images/grump-cat.jpg" alt="Grumpy Cat scowls furiously" />
+```
+
+- `src` tells the browser where to find the image
+- `alt` provides a description of the image so the content can be understood by screenreader software and search engines
+
+---
+
+# The Image Tag
+
+We can also specify a few more attributes:
+
+```html
+<img src="images/grump-cat.jpg" alt="Grumpy Cat scowls furiously again" title="The Grumpiest Cat on the Web" width="480" height="320" class="align-center" />
+```
+
+- `title` provides further info about the image and is displayed in a tool tip
+- `width` sets the the width of the image
+- `height` sets the height of the image
+- `class` or `id` targets special styles in your CSS
+
+---
+
+# Images and CSS
+
+We can use CSS to manipulate our image elements as well:
+
+```html
+<img src="images/grump-cat.jpg" alt="Grumpy Cat scowls furiously again" title="The Grumpiest Cat on the Web" class="align-center" />
+```
+
+```css
+.align-center {
+   display: block;
+   margin: 0 auto; /* This centers the element */
+   width: 480px;
+   height: 320px;
+   border: 1px solid #FF3300;
+}
+```
+
+---
+
+# Exercise 2
+
+Goes here...
 
 ---
 template: inverse
+
 # Copyright & Creative Commons
 
 ---
+class: center, middle
 
-## Creative Commons
-- is a non-profit organization devoted to expanding the range of creative works available for others to build upon legally and to share.
-- different types of licenses, as shown in various visual symbols, will show what rights are reserved and waived by the creator so that their work can be used by others
-- allows for free usage of normally copyrighted work
-- provides the author/creator flexibility in how their work is shared
+### What images can you use?
 
----
-## Different CC License Types
-
-.inline-images[![CC License Types](../../public/img/slide-assets/cc_license_types.png)]
+When using others' images on your website, it's important to make sure that you're legally allowed to do so.
 
 ---
 
-## Copyright Considerations 
-- Copyright laws are designed to protect a creator's right to be compensated/attributed and to control how their work is used/shared. 
-- All tangible creative works are protected by copyright immediately upon creation. 
-- When in doubt, assume what you want to use is copyrighted material and seek permission to use it or find a suitable royalty free alternative.
+# Copyrighted Material
+
+- Copyright laws are designed to protect a creator's right to be compensated/attributed and to control how their work is used/shared
+- All tangible creative works are protected by copyright immediately upon creation
+- When in doubt, assume what you want to use is copyrighted material and seek permission to use it or find a suitable royalty-free alternative
 
 ---
 
-## Copyright Tech DO's and Don'ts
-- The internet is not public domain, things you "google" cannot just be downloaded to be used, examples include graphics, logos, fonts, photographs, and illustrations.
+# Creative Commons
 
-.inline-images[![Google Search Box](../../public/img/slide-assets/google-search-box.png)]
----
+Creative Commons is a non-profit organization devoted to expanding the range of creative works available for others to build upon legally and to share.
 
-## Copyright Tech DO's and Don'ts
-- Posting links that contain only a URL and the title of the site is generally acceptable.
-- Don't copy a site's HTML or CSS (or any scripting code)
-- Always get permission to use a copyrighted online work from the owner of that work
-- Don't link to sites that contain large amounts of video or audio 
+Creative Commons licenses allow for free usage of normally copyrighted work and provide the author/creator flexibility in how their work is shared.
+
+.inline-images[
+   ![Creative Commons logo](../../public/img/slide-assets/cc-logo.jpg)
+]
 
 ---
+class: center, middle
 
-## What is CC0?
+.inline-images[
+   ![CC License Types](../../public/img/slide-assets/cc_license_types.png)
+]
 
-Let's look at this open type concept [Creative Commons Zero](https://creativecommons.org/about/cc0) where the creator waives all their copyright and related rights.
+---
 
-![CC0](../../public/img/slide-assets/cc0-graphic.png)
+# What is CC0?
+
+Let's look at this open type concept [Creative Commons Zero](https://creativecommons.org/about/cc0) where the creator waives all their copyright and related rights by putting them in the **public domain**.
+
+.inline-images[
+   ![CC0](../../public/img/slide-assets/cc0-graphic.png)
+]
+
+---
+
+# CC-Licensed Images
+
+A few good places to find royalty-free, CC-licensed images:
+
+- [Flickr CC search](https://www.flickr.com/search/?license=2%2C3%2C4%2C5%2C6%2C9)
+- [The Stocks](http://thestocks.im/)
+- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)
 
 ---
 

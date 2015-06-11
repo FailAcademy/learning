@@ -408,7 +408,7 @@ CSS gives us a number of tools for controlling the look of the backgrounds of ou
 
 We can specify:
 
-- `background-color`: an RGBa or hexidecimal color code
+- `background-color`: an RGBa or hexadecimal color code
 - `background-image`: an URL of a background image (in parantheses)
 
 ---
