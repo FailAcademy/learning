@@ -37,12 +37,16 @@ class: center, middle
 
 As the complexity of your code increases, it's easy for small changes and feature additions to have unexpected impacts.
 
+![Complex Code Graphic](../../public/img/slide-assets/code-complex-problems.svg)
+
 ---
 class: center, middle
 
 ### Why We Test
 
 ...and to ensure that the users who need to access our website can do that in a browser and on a device of their choosing.
+
+![People having choice of computer or smartphone image](../../public/img/slide-assets/people-laptop-smartphone.svg)
 
 ---
 
@@ -61,6 +65,8 @@ class: center, middle
 ### A Ongoing Process, Not a Checklist
 
 Front-end testing isn't something to simply worry about before you launch a website. It's an ongoing process!
+
+![Browser Testing Ongoing](../../public/img/slide-assets/browser-testing-ongoing.svg)
 
 ---
 
@@ -85,6 +91,8 @@ template: inverse
 Validating your code simply means that you make sure it conforms to the norms and standards set forth by various organizations.
 
 Valid code will help ensure your website universally understood.
+
+![Code Checkmark](../../public/img/slide-assets/code-checkmark.svg)
 
 ---
 
@@ -128,9 +136,11 @@ class: center, middle
 
 To know what browsers and devices you need to support, you need to **know who your target audience is**.
 
-Analytics can provide some insight into this, but should be treated with caution.
+Analytics can provide **some insight** into this, but should be treated with caution.
 
-Conducting real user research is best!
+Conducting **real user research** is best!
+
+![Audience Analytics](../../public/img/slide-assets/audience-analytics.svg)
 
 ---
 
@@ -138,24 +148,26 @@ Conducting real user research is best!
 
 The array of browsers and devices you provide support for and test on will also be determined by:
 
-- Your project's budget
-- Available timeline
-- Planned scope of support
+- **Your project's budget**
+- **Available timeline**
+- **Planned scope of support**
 
+
+![Cost Time Scope Graphic](../../public/img/slide-assets/cost-time-scope.svg)
 ---
 
 # Make Informed Choices
 
-Making smart choices about the way you write your code up-front can save you a massive headache when it comes time to cross-browser test:
+Making **smart choices** about the way you write your code up-front can save you a massive headache when it comes time to *cross-browser test*:
 
-- Progressive enhancement vs. graceful degradation
-- Save yourself the guess work and research HTML elements and CSS properties and selectors on [Can I use...](http://caniuse.com/) beforehand
+- **Progressive enhancement** vs. graceful degradation
+- Save yourself the guess work and **research HTML elements and CSS properties** and selectors on [Can I use...](http://caniuse.com/) beforehand
 
 ---
 
 # Browser Testing Tools
 
-There are many (mostly paid) tools that can assist with cross-browser testing:
+There are **many (mostly paid) tools** that can assist with cross-browser testing:
 
 - [BrowserStack](https://www.browserstack.com/)
 - [Browserling](https://www.browserling.com/)
@@ -169,6 +181,8 @@ class: center, middle
 ### Nothing Beats the Real Thing
 
 Wherever you can, test using **real browsers and devices**. But of course, there's this problem again...
+
+![Laptop Smartphone](../../public/img/slide-assets/laptop-smartphone.svg)
 
 ---
 background-image: url(../../public/img/slide-assets/rwd-device-proliferation.jpg)
@@ -184,6 +198,8 @@ background-image: url(../../public/img/slide-assets/rwd-device-proliferation.jpg
 To test on multiple version of IE, checkout the Windows "Virtual Machines" available at [modern.ie](http://dev.modern.ie/tools/vms/).
 
 You can also use a device rental service such as [Wavefront](http://www.wavefrontac.com/national-device-library-rental/) to test on a broad variety of mobile devices.
+
+![Wavefront Logo](../../public/img/slide-assets/wavefront-logo.png)
 
 ---
 template: inverse
