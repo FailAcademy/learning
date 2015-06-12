@@ -44,19 +44,15 @@ Got through and practice:
 
 ## Exercise 2
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvOmvY/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvOmvY/'>WvOmvY</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvOmvY/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvOmvY/'>WvOmvY</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
+
+See the [solution](http://codepen.io/redacademy/pen/VLWReW)
 
 ## Lab Activity
 
-- Find and add images to a web page using a variety of techniques, and apply colours to various elements on the page as well.
+- Find and add images to a web page using a variety of techniques, and apply colours through CSS classes/selectors to various elements on the page.
 
-Copy this content to the lab/projects section later.
-
-- Stock Photography Web Resources
-- Discuss further the basic copyright concerns, such public domain and Creative Commons.
-- Investigate resources to obtain free stock photography.
-- Use HEX/rgba colours to alter element colours in a web page.
 
 ## Additional Resources
 
