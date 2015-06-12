@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: HTML Forms
+title: HTML Forms Slides
 ---
 
 {% highlight html %}
@@ -19,241 +19,294 @@ layout: false
 
 # Agenda
 
-1.  Discover why it's important to use forms
-2.  Learn about how forms work
-3.  Get familiar with various form control elements
-4.  How to target form elements with values/IDs
-
----
-
-template: inverse
-#Why Use Forms?
-
----
-## Why We Use Forms
-
-Forms are a way for the users/viewers of your site to provide you with feedback about anything that you’d like to find out from them. Forms provide a uniform way for those users to interact with a website quickly and easily through their web browser, rather than directly through email. 
-
----
-## Everyday Uses for Forms
-
-Forms that you typically see include ones that ask for your mailing information, like an order forms, or ask for your opinions, like surveys. There are many uses for forms especially in online commerce and retail transactions and online banking. 
-
-We think about how we use different forms to `GET` information and `POST` information.
----
-### How Often Do You Google Everyday?
-
-Forms like Google allow us to **GET** information from a large search database.
-.inline-images[![Google Search box](../../public/img/slide-assets/google-search-box.png)]
-
----
-### How Often Do You Buy or Pay for Something Online?
-Checkout forms allow you input your contact & payment information. This **POST** method is what allows a company to process your order once it has received the form information. 
-
-.inline-images[![Sample Online Shipping Form](../../public/img/slide-assets/sample_shipping_address_form.jpg)]
+1. Creating forms
+2. Common form elements
+3. Working with forms in CSS
 
 ---
 template: inverse
-# How Forms Work
+
+# Creating Forms
 
 ---
-## How Do Forms Work?
+class: center, middle
 
-The basic syntax for a form is: 
-```HTML
-<form action="[URL]">
+### Forms om the Web
 
-form data elements and input fields
+The concept of a **form** on the web is borrowed from print, but today they provide an important way for users to **interact** with a website and **send/receive information** from a server.
 
+---
+class: center, middle
+
+![HTTP request diagram](/public/img/slide-assets/http-request-diagram.svg)
+
+---
+class: center, middle
+
+### How often do you use a search engine?
+
+Forms like Google's search input allow us to **GET** information from a large database.
+
+---
+class: center, middle
+
+### How often do you shop online?
+
+When you fill out a form to make a purchase online, the **POST** method is used to send your payment information and allow a vendor to process your order with the data they receive.
+
+---
+template: inverse
+
+# Common Form Elements
+
+---
+
+# The Form Element
+
+All forms on the web use the `<form>` element:
+
+```html
+<form action="submit.php" method="get">
+   <!-- The form inputs go here... -->
 </form>
 ```
 
-#####You can only put one form per HTML page, but that form can contain many form elements, as discussed on the next slide.#####
+The `action` attribute defines the location (an URL) where the form's collected data should be sent.
+
+The `method` attribute defines which HTTP method to use to send the data (can be `get` or `post`).
 
 ---
-## How Do Forms Work?
 
-When the form is submitted, the form data is sent to the URL specified in the ACTION attribute. In a basic email handler example, this URL will refer to a client-side program (user’s email program) that will process the form data. The form itself should contain: 
+# Input Element
 
-- At least one submit button `<input type="submit">`
-- Some form data elements  `<input>,<textarea>,<select>`
-- Additional markup (e.g., identifying data elements through IDs and Values, and presenting instructions as needed. 
+We can use the `<input>` element inside a form to create a variety of different form controls:
 
----
-## Parts of a Form
+```html
+<form action="submit.php" method="post">
+   <input type="text" name="username" size="12" maxlength="12" />
+   <input type="checkbox" name="registered" checked="checked" />
+</form>
+```
 
-**FORM** tags tells the browser, where it ends and begins. 
+By specifying the `type` attribute, the browser will know what kind of input to display.
 
-**ACTION** tag tells the browser where to send the information. 
-
-**INPUT TYPE** represents the form objects that will gather information.
-
-**ENCTYPE** represents how the input collected is ‘encrypted’. Usually it has a value of “text/plain” for basic forms, to make sure that the data is kept in its raw form, rather than converted into some encrypted text.
+Common input types include `text`, `checkbox`, `radio`, `submit`, and `search`. HTML5 introduced a number of [more specific form input types](http://html5doctor.com/html5-forms-input-types/) as well.
 
 ---
-## Basic Form Structure
 
-######This basic form consists of a couple text fields, and a text area followed by a Submit button.  An example of this type of form would just ask for the user’s feedback.######
+# Input Element
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/xGqjZm/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/xGqjZm/'>xGqjZm</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+To create radio inputs, we simply create multiple `<input>` elements with a type of `radio`:
 
----
-template: inverse
-# Types of Form Controls
+```html
+<form action="submit.php" method="post">
+   <input type="radio" name="gender" value="male" id="male" />Male
+   <input type="radio" name="gender" value="female" id="female" />Female
+</form>
+```
 
----
-## Types of Form Controls
-
-###1. Adding Text
-###2. Making Choices
-###3. Submitting Forms
-###4. Uploading Files
+Radio buttons that have the same value for the `name` attribute are in the same "radio button group"; only one radio button in a group can be selected at one time.
 
 ---
-## Types of Form Elements
-### 1. Adding Text
-- Text Input (Single Line)
 
-`<input type="text" name="firstname" size="20" />`
+# Input Element
 
-This standard `input` type is great for single text fields that the user needs to fill out, such as **Name, Email, Postal Code, etc**. 
+The `password` input type will obfuscate the characters that a user types into it:
 
----
-### Adding Text
-- Text Input (Single Line with Max Length)
+```html
+<input type="password" name="password" size="8" minlength="6" maxlength="8" />
+```
 
-`<input type="text" name="username" size="12" maxlength="12" />`
+Note that while the characters are hidden this doesn't mean that the entered data is secure.
 
-You can **limit** the amount of characters a user can type by using the `maxlength` attribute.
----
-### Adding Text
-- Text Area (Multi Line)
-
-`<textarea name="comments" cols="20" rows="4"> Your Feedback Please! </textarea>`
-
-Adjust the `cols` and `rows` to create a bigger text area box for the user to type within.
----
-### Adding Text
-- Text Area (Multi Line with Read-Only Text)
-
-`<textarea name="eula" cols="50" rows="8" readonly> End User Legal Agreement Document </textarea>`
-
-Add the `readonly` attribute to prevent your text from being editable. This is useful for text that you want the user to read through, but not edit. 
+Best to use Secure Sockets Layer (SSL) on the server for full security.
 
 ---
-### Adding Text
-- Password Input
 
-`<input type="password" name="password" size="8" minlength="6" maxlength="8" />`
+# Textarea Element
 
-The characters of the `password` will show up as `• or *` in the text box. Note that just because the characters are hidden doesn't mean that it's secure. Best to use Secure Sockets Layer (SSL) on the server for full security.
+A `<textarea>` element will create a multi-line text input:
+
+```html
+<form action="submit.php" method="post">
+   <textarea name="message" cols="10" rows="4">Enter your message...</textarea>
+</form>
+```
+
+Using the `cols` and `rows` attributes you can specify the size of the `<textarea>` box.
 
 ---
+
+# Select Element
+
+The `<select>` tag is a special form element that will create a drop-down menu based on the `<option>` tags nested inside:
+
+```html
+<form action="submit.php" method="get">
+   <select>
+      <option value="mac" selected="selected">Mac</option>
+      <option value="pc">PC</option>
+   </select>
+</form>
+```
+
+The `selected` attribute will set a option to be selected by default.
+
+---
+
+# Label Element
+
+The `<label>` tag is used to describe what an input is for, and helps with accessibility for vision-impaired users.
+
+It can be used by wrapping an `<input>` element, or by giving it a `for` attribute that matches the `id` of the input it's labeling:
+
+```html
+<label>
+   First Name: <input type="text" name="first_name" />
+</label>
+
+<label for="terms">I agree to the terms and conditions</label>
+<input type="checkbox" name="terms" id="terms" />
+```
+
+---
+
+# Button Element
+
+Last but not least, you're probably going to want some way for the user to submit the form data.
+
+For that, we have the `<button>` element
+
+```html
+<button type="submit">Submit Form</button>
+```
+
+It's optional to specify `type="submit"` because this is the default. Other types for the `<button>` element include `reset` and `button`.
+
+---
+
+# Button vs. Input
+
+In lieu of a `<button>` element, you can may also see an `<input>` element with `type="submit"`:
+
+```html
+<input type="submit" name="submit" value="Submit Form" />
+```
+
+The main difference between `<button>` and `<input type="submit" />` is that the input element is self-closing, while the button can contain content.
+
+*Functionally they are the same if their types are the same.*
+
+---
+
 # Exercise 1
 
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/EjXNLx/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/EjXNLx/'>EjXNLx</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-Look at the [solution](http://codepen.io/redacademy/pen/VLWmxm)
+---
+template: inverse
 
+# Forms and CSS
 
 ---
-## Types of Form Elements
-### 2. Making Choices
-- Radio Buttons (Select Only One)
 
-```HTML
-<input type="radio" name="gender" value="male" id="female">Male 
-<input type="radio" name="gender" value="female" id="female">Female
+# Styling Forms
+
+We can style forms and their inputs just like any other HTML element, but there are a few extra things to think about.
+
+For example:
+
+- What should happen to an individual form input when a user **focuses** it?
+- How should buttons react when hovered or clicked?
+- How should the form display on a mobile device to assist with usability?
+
+---
+
+# Form Style Tips
+
+We can always target form inputs by their `id` or `class`, but we can also target entire types of form elements using the attribute selector in our CSS:
+
+```css
+input {
+   margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="search"] {
+   color: #111;
+   font-family: Helvetica, sans-serif;
+   padding: 2px 5px;
+}
 ```
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/EjXNVJ/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/EjXNVJ/'>EjXNVJ</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
-
 ---
-### Making Choices
-- Check Boxes (Select Multiple)
 
-```HTML
-<h3> Select Your Favourite Music Streaming Service </h3>
-<input type="checkbox" name="musicservice" value="spotify"> Spotify <br>
-<input type="checkbox" name="musicservice" value="applemusic"> Apple Music <br>
-<input type="checkbox" name="musicservice" value="tidal"> Tidal <br>
-<input type="checkbox" name="musicservice" value="rdio"> Rdio <br>
+# Form Style Tips
+
+The `:focus` pseudo-class also helps us target special styles toward the field that the user has currently activated.
+
+```css
+input {
+   border: 1px solid #969696;
+}
+
+input:focus {
+   border: 1px solid #464646;
+}
 ```
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/zGzoKX/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/zGzoKX/'>zGzoKX</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+---
+
+# Form Style Tips
+
+And the `:active` pseudo-class allows to provide feedback to a user to let them know that a button has been activated:
+
+```css
+button {
+   background-color: blue;
+}
+
+button:hover,
+button:active {
+   background-color: navy;
+}
+```
 
 ---
-### Making Choices
-- Drop Down Menus (Select Only One)
 
-Use the `select` tag to create a drop down menu of options that your user would select only one from. 
+# Form Style Tips
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/pJwNZq/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/pJwNZq/'>pJwNZq</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+We can also get creative spiffying up our buttons use CSS3:
+
+```css
+button {
+   border: 0;
+   background-color: blue;
+   color: #fff;
+   padding: 10px 15px;
+   -webkit-border-radius: 3px;
+   -moz-border-radius:    3px;
+   border-radius:         3px;
+   -webkit-box-shadow:
+      inset 0px -3px 1px rgba(0, 0, 0, 0.45),
+      0px 2px 2px rgba(0, 0, 0, 0.25);
+   -moz-box-shadow:
+      inset 0px -3px 1px rgba(0, 0, 0, 0.45),
+      0px 2px 2px rgba(0, 0, 0, 0.25);
+   box-shadow:
+      inset 0px -3px 1px rgba(0, 0, 0, 0.45),
+      0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+```
 
 ---
+
 # Exercise 2
 
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/LVLbKb/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/LVLbKb/'>LVLbKb</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
-
-Look at the [solution](http://codepen.io/redacademy/pen/RPgKbj)
-
----
-## Types of Form Elements
-### 3. Submitting Forms
-- Submit Buttons
-`<input type="submit" name="submit" value="Submit Form" />`
-
-`<input type="reset" name="submit" value="Clear Form" />`
-
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/KpqNGb/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/KpqNGb/'>KpqNGb</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
-
----
-### Submitting Forms
-- CSS3 Buttons
-
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/oXwYJY/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/oXwYJY/'>oXwYJY</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
-
-
-
----
-### Submitting Forms
-- Image Buttons
-
-`<input type="image" src="images/submit_btn.jpg" width="200" height="50">`
-
-.inline-images[![Submit Button Example](../../public/img/slide-assets/submit-button.png)]
-
----
-## Types of Form Elements
-### 4. Uploading Files
-File Upload Button
-
-`<input type="file" name="client-proposal" /><input type="submit" value="Upload" />`
-
-.inline-images[![Submit Button Example](../../public/img/slide-assets/image-file-upload.png)]
----
-## Label Form Controls
-Add the label tag to help with accessibility for vision-impaired users. The label tag should be wrapped around both text description and for input type.
-
-`<label>Name:<input type="text" name="fullname" /></label>`
-
-#####*Note* that for radio buttons, the label tag is utilized with a **for** attribute.#####
-
----
-
-## How to Target Form Elements
-
-When defining a form element such as an text input for a **Name** field for instance, you'll want to also put in a **Value** and **ID** as well, so that these elements can be targeted through CSS as well as Javascript.
-
-`<input type="text" name="firstname" id=”firstname” size=”60” />`
 
 ---
 template: inverse

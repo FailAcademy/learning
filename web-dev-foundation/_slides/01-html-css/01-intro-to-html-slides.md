@@ -32,7 +32,6 @@ template: inverse
 # What is the Web?
 
 ---
-
 class: center, middle
 
 ![HTTP request diagram](/public/img/slide-assets/http-request-diagram.svg)
@@ -273,7 +272,7 @@ Use these sanity-saving tips to name your folders and files:
 
 # Exercise 1
 
-Now you've seen a few of the main types of code editors (Sublime, Atom, TextWranger, Notepad++), you will now **download** the code editor of your choice onto your laptop and get it installed. 
+Now you've seen a few of the main types of code editors (Sublime, Atom, TextWranger, Notepad++), you will now **download** the code editor of your choice onto your laptop and get it installed.
 
 In the web developer course folder on your local computer, create a `local root folder` for today's in-class exercise/lab practice.
 
