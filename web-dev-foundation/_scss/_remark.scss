@@ -99,6 +99,10 @@
       position: absolute;
       bottom: 3em;
       font-size: 80%;
+
+      &.right {
+         right: 104px;
+      }
    }
 
    pre {
