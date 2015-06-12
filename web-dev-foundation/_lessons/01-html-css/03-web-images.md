@@ -34,12 +34,18 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-- Crop, resize and optimize images for the web using image editor of choice
+Open **Adobe Photoshop** and we'll use **Bridge**(File &rarr; Browser in Bridge)  to view the images in the sample images folder. 
+
+Got through and practice:
+
+- Resizing images through Image &rarr; Image Size
+- Crop using Crop Tool (and Options menu fields for `height` and `width` settings)
+- Optimize Images through File &rarr; Save for Web (use JPGs for images/PNGs for graphics)
 
 ## Exercise 2
 
-- Use the image element on a web page using appropriate attributes
-- Use HEX and rgba to style web page elements
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvOmvY/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvOmvY/'>WvOmvY</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Lab Activity
 

@@ -194,7 +194,13 @@ When using SVGs, it important to **provide a fallback** image format if you need
 
 # Exercise 1
 
-Goes here...
+Open **Adobe Photoshop** and we'll use **Bridge**(File &rarr; Browser in Bridge)  to view the images in the sample images folder. 
+
+Got through and practice:
+
+- Resizing images through Image &rarr; Image Size
+- Crop using Crop Tool (and Options menu fields for `height` and `width` settings)
+- Optimize Images through File &rarr; Save for Web (use JPGs for images/PNGs for graphics)
 
 ---
 template: inverse
@@ -285,6 +291,11 @@ header {
 The `a` that represents opacity is written as a decimal, with a range of `0` (fully transparent) to `1` (solid).
 
 *Note that RGBa isn't supported by older browsers like IE8.*
+---
+##Exercise 2
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvOmvY/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvOmvY/'>WvOmvY</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 
