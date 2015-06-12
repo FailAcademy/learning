@@ -194,7 +194,7 @@ Some good (free) code editor options include:
 
 ---
 
-# Building Blocks of An HTML Page
+# Building Blocks
 
 Virtually all websites share the same basic structure. They contain a `<head>` and a `<body>`, and those two elements are wrapped in `<html>` tags:
 
