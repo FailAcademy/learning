@@ -67,8 +67,6 @@ Using this [Star Wars Formatting Lab Activity](/public/files/labs/01-html-format
 - Nested Tags
 - Inserting Images
 
-[comment]: Insert a visual image of the end result of the page to style
-
 *Match the visual example* provided as closely as possible.  You will have a chance to practice using the following tags: paragraphs, headers, line‐breaks, strong, emphasis, links as well as others that the instructor has shown in class today. There are no images are required for this exercise.
 Please save your file as: **firstname_html_assign1.html** 
 

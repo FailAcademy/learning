@@ -269,16 +269,12 @@ class: center, middle
 
 Have you ever used a smart phone app that integrates a Google or Apple Maps in some way?
 
-![Maps Pointer](../../public/img/slide-assets/maps-pointer.svg)
-
 ---
 class: center, middle
 
 ### APIs in the Wild
 
 Have you ever used a social media share button?
-
-![Heart icon](../../public/img/slide-assets/heart-plus-graphic.svg)
 
 ---
 class: center, middle
@@ -287,7 +283,6 @@ class: center, middle
 
 Have you ever used an app or service that saves a document to your Dropbox?
 
-![Dropbox Computer](../../public/img/slide-assets/cloud-imac.svg)
 
 ---
 class: center, middle
@@ -295,7 +290,6 @@ class: center, middle
 ### APIs in the Wild
 
 Did you log into this learning materials website with your GitHub account?
-![Git Hub Octocat](../../public/img/slide-assets/github-cat.svg)
 
 ---
 # Exercise 1

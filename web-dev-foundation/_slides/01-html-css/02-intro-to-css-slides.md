@@ -165,6 +165,12 @@ class: center, middle
 ]
 
 ---
+# Exercise 1
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/GJEPPJ/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/GJEPPJ/'>GJEPPJ</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+---
 class: center, middle
 
 ### Block vs. Inline
@@ -265,11 +271,6 @@ The `<h1>` inside the header will be rendered in Georgia, and the style that **d
 
 ---
 
-# Exercise 1
-
-Goes here...
-
----
 template: inverse
 
 # Adding CSS to Your Website
@@ -496,7 +497,8 @@ Some tips for naming the classes and IDs in your HTML:
 
 # Exercise 2
 
-Goes here...
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/ZGywWj/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/ZGywWj/'>ZGywWj</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 template: inverse

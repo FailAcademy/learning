@@ -32,17 +32,26 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-Style up some basic mark-up based on the box model...
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/GJEPPJ/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/GJEPPJ/'>GJEPPJ</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+See the [solution](http://codepen.io/redacademy/pen/XbgoLP).
 
 ## Exercise 2
 
-Create classes and IDs and use them to target elements in a HTML document with varying degrees of specificity (including font styles and sizes)
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/ZGywWj/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/ZGywWj/'>ZGywWj</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
-Apply margin, padding, and borders to various elements in an HTML document
+See the [solution](http://codepen.io/redacademy/pen/EjXryM).
+
 
 ## Lab Activity
 
-This is a link to the lab activity...
+Using the Star Wars formatted HTML document from the class 1 lab, you will be using CSS to style different tags. Set up an external linked stylesheet. Work on styling these **selector types**:
+- Tag Selectors (eg. headings, paragraphs, lists etc)
+- Class Selectors (eg. custom classes that you have defined)
+- ID Selectors (eg. matches the one specified after the hash symbol)
+- Descendant Selectors (eg. matches an element that is a descendent of another specified element)
 
 ## Additional Resources
 
