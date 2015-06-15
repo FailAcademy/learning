@@ -286,8 +286,8 @@ button {
    color: #fff;
    padding: 10px 15px;
    -webkit-border-radius: 3px;
-   -moz-border-radius:    3px;
-   border-radius:         3px;
+      -moz-border-radius: 3px;
+           border-radius: 3px;
    -webkit-box-shadow:
       inset 0px -3px 1px rgba(0, 0, 0, 0.45),
       0px 2px 2px rgba(0, 0, 0, 0.25);

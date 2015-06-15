@@ -177,6 +177,10 @@ class: center, middle
    ![Responsive wireframes](../../public/img/slide-assets/responsive-wireframe-sketch.jpeg)
 ]
 
+.footnote.right[
+   Image Credit: [Juan Arreguin](https://dribbble.com/shots/185755-Media-Queries)
+]
+
 ---
 
 # Exercise 2
