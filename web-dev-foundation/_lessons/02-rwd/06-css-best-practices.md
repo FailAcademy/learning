@@ -44,6 +44,10 @@ This is a link to the lab activity...
 
 ## Additional Resources
 
+More on CSS specificity:
+
+- [How CSS Specificity Works](http://sixrevisions.com/css/css-specificity/)
+
 Tips to help keep CSS specificity in check:
 
 - [Hacks for dealing with specificity](http://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/)
