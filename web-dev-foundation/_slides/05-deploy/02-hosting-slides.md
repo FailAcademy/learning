@@ -12,29 +12,65 @@ class: center, middle, inverse
 
 # Web Hosting
 
+.title-logo[![Red logo](../../public/img/red-logo-white.svg)]
+
 ---
 layout: false
 
 # Agenda
 
-We are going through the process of getting your site online:
-
-1. Domain Name Purchasing
-2. Choose and Purchase Web Hosting
-3. Domain Name: Set Name Servers 
-4. Configure FTP Software
-5. FTP Lab - Upload Website
+1. Purchasing a domain name
+2. Selecting a web host
+3. Using FTP
 
 ---
 template: inverse
 
-# Domain Name Purchasing
+# How Websites Get on the Web
+
+---
+class: center, middle
+
+.large[
+   Remember that you need two things to get your website on the web...
+]
+
+---
+class: center, middle
+
+.large[
+   A domain name
+
+   .red[**AND**]
+
+   Space on a web server to host your website files
+]
+
+---
+class: center, middle
+
+![Diagram of HTTP request](/public/img/slide-assets/http-request-diagram.svg)
+
+---
+template: inverse
+
+# Purchasing a Domain Name
 
 ---
 
-we recommend hover because of its simple, no spam design and great customer service.
+# Domain Registrars
 
-1. Go to www.hover.com
+There are plenty of domain name registrars out there...
+
+We recommend [Hover](https://www.hover.com/) because it has a simple user interface and they don't try to up-sell you with extra services that you don't need when you buy your domain.
+
+---
+
+# Buying a Domain
+
+To purchase a domain, follow these simple steps:
+
+1. Go to [www.hover.com](https://www.hover.com/)
 2. Type in your desired domain name
 3. Add the domains you want to your cart
 4. Register for the service and pay (keep this user and password handy)
@@ -42,107 +78,150 @@ we recommend hover because of its simple, no spam design and great customer serv
 ---
 template: inverse
 
-# Choosing the Right Web Hosting
+# Selecting a Web Host
 
 ---
 
-Now that you have a domain now its time to find the right hosting plan for you.
+# Types of Web Hosting
+
+So far, we've seen how we can use GitHub Pages to host our web pages, but there are many other options:
+
+1. **Shared** hosting
+2. **Managed** hosting
+3. **Dedicated/VPS** hosting
 
 ---
 
-There are many good options on the internet:
+# Shared Hosting
+
+Shared hosting is the most **basic** and **inexpensive** hosting option.
+
+The trade-off is that there can be **greater security risks** in these hosting environments, and you're also **sharing server resources** with other websites.
+
+Some shared web hosting options include: [GreenGeeks](http://greengeeks.com/), [SiteGround](https://www.siteground.com/), [Bluehost](http://www.bluehost.com), and [Site5 Hosting](http://www.site5.com).
 
 ---
 
-You can find one that matches your vibe and values
+# Managed Hosting
 
-Larger host is usually better as they can offer customer service. 
--  Consistent uptime
--  c-panel based
--  24 hour support
--  month to month payment option
+Managed hosting is **more hands-on** than a typical shared hosting plan.
 
- We recommend http://www.bluehost.com/ for your website. 
+A managed hosting option will **provide software and security updates** for you, and variety of other potential services such as spam filtering and caching.
+
+Managed hosting is usually **more expensive** that shared hosting plans.
+
+An example of a managed web host is [WP Engine](http://wpengine.com/).
+
+---
+
+# Dedicated/VPS Hosting
+
+Dedicated web hosting means just that&mdash;your website **lives on server by itself** and control what's installed on it.
+
+VPS hosting is like a **hybrid** of shared hosting and dedicated hosting. Your website will live on server with other websites, but you control what's installed on the server.
+
+Your VPS host will also provide a **minimum allocation of resources** for your site 24/7.
+
+[Digital Ocean](https://www.digitalocean.com/) is an example of a VPS hosting option.
+
+---
+
+# Picking a Host
+
+What hosting option you pick will depend on your needs and the type of website you're launching.
+
+The key is to do your homework! Whichever option you choose, you want to make sure your host has:
+
+- Consistent up-time
+- 24/7 support
+- Track record of good customer service
+
+---
+
+# Name Servers
+
+Once you have a domain name and web hosting plan, you'll need to set your domain to point to your web host's public **name servers**.
+
+Name servers will look something like this:
+
+.center[
+   `dns.site5.com`<br />
+   `dns2.site5.com`<br /><br />
+]
+
+Every web host will have unique name servers, and will likely email them to you when you sign-up for your account.
+
+---
+class: center, middle
+
+.inline-images.border[
+   ![Hover Edit Name Servers](../../public/img/slide-assets/set-name-server-01.png)
+]
+
+---
+class: center, middle
+
+.inline-images.border[
+   ![Hover Edit Name Servers](../../public/img/slide-assets/set-name-server-02.png)
+]
+
+---
+class: center, middle
+
+.large[
+   Then wait...
+]
+
+---
+class: center, middle
+
+### Domains with GitHub Pages
+
+You can a custom domain for your GitHub pages too by following [these instructions to configure your DNS](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/).
 
 ---
 template: inverse
 
-# Set Name Servers
+# Using FTP
+
+---
+class: center, middle
+
+### What is FTP?
+
+FTP stands for **File Transfer Protocol**. It allows you to transfer files from your computer to a web server, and vice versa.
 
 ---
 
-Now we need to tell your domain name to point to your new web host. 
-First google “Yourwebhost” + Nameservers and get them,
+# How Does FTP Work?
 
-I use site5 webhosting, my name servers are:
+In order to use FTP, you'll likely want to download and install an FTP client.
 
-- dns.site5.com
-- dns2.site5.com
+Some good options include:
 
----
-
-![Hover Edit Name Servers](../../public/img/slide-assets/06-02-web-hosting/ns-1.png)
+- [FileZilla](https://filezilla-project.org/download.php?show_all=1) (Windows, Mac, Linux)
+- [Cyberduck](https://cyberduck.io/?l=en) (Windows, Mac, Linux)
+- [Transmit](https://panic.com/transmit/) (Mac)
 
 ---
 
-![Hover Edit Name Servers](../../public/img/slide-assets/06-02-web-hosting/ns-2.png)
+# How to FTP
 
----
-template: inverse
+In order to place files on your server, you'll need to log into it:
 
-# Configure FTP Software
-
----
-
-Login to your web host :
-
-Click on FTP Accounts
-
-![C-Panel FTP Symbol](../../public/img/slide-assets/06-02-web-hosting/ftp-1.png)
+.inline-images[
+   ![FTP login](../../public/img/slide-assets/ftp-login.png)
+]
 
 ---
 
-- Configure your own username and password as pictured, *Make sure that your directory is set to public_html*
+# How to FTP
 
-![C-Panel FTP Symbol](../../public/img/slide-assets/06-02-web-hosting/ftp-2.png)
+Once you're in, you can start transferring files:
 
----
-
-Now open Filezilla, and click on this icon the top right corner: 
-
-![FileZilla](../../public/img/slide-assets/06-02-web-hosting/ftp-4.png)
-
----
-
-Name your new connection, and put in your information and configure it like so. 
-
-![New Connection](../../public/img/slide-assets/06-02-web-hosting/ftp-5.png)
-
----
-
-and on Transmit: 
-
-![New Connection](../../public/img/slide-assets/06-02-web-hosting/ftp-transmit1.png)
-
----
-
-![FTP Side by Side](../../public/img/slide-assets/06-02-web-hosting/ftp-sidebyside.png)
-
----
-
-![FTP Access](../../public/img/slide-assets/06-02-web-hosting/ftp-6.png)
-
----
-
-![FTP Access](../../public/img/slide-assets/06-02-web-hosting/ftp-transmit2.png)
-
----
-
-
----
-template: inverse
-
-# FTP Lab - Upload Website
+.inline-images[
+   ![FTP UI screenshot](../../public/img/slide-assets/ftp-ui.png)
+]
 
 ---
 
