@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Custom Web Fonts
+title: Custom Web Fonts Slides
 ---
 
 {% highlight html %}
@@ -10,16 +10,19 @@ class: center, middle, inverse
 
 ---
 
-# Using Custom Webfonts
+# Using Custom Web Fonts
+
+.title-logo[![Red logo](../../public/img/red-logo-white.svg)]
 
 ---
 layout: false
 
 # Agenda
 
-1. Introduction to Web Fonts
-2. Using Google Web Fonts
-3. Using @font-face and Font Squirrel
+1. Custom fonts on the web
+2. Using `@font-face`
+3. Using Google Fonts
+4. Web font services
 
 ---
 
@@ -28,29 +31,115 @@ template: inverse
 # Intro to Web Fonts
 
 ---
+class: center, middle
+
+### A bit of history...
+
+We used to be limited to using **web-safe fonts** on our websites, in other words, fonts that you could be reasonably sure would already be installed on a user's computer system.
+
+---
 
 .left-column[
-  ## System Safe Fonts
+  ## Web-Safe Fonts
 ]
 
 .right-column[
-We used to be limited in our font choice:
-Remember these? 
+As a result, we had very few choices:
+
   - <span style="font-family: Arial">Arial</span>
   - <span style="font-family: Times">Times New Roman</span>
   - <span style="font-family: Courier">Courier New / Courier</span>
-  - <span style="font-family: Comic Sans, Comic Sans MS ">Comic Sans</span>
-  ]
+  - <span style="font-family: Comic Sans, Comic Sans MS">Comic Sans</span>
+  - <span style="font-family: Verdana">Verdana</span>
+]
+
+---
+class: center, middle
+
+.large[
+   Thanks to CSS3, <br />those days are over!
+]
+
+---
+template: inverse
+
+# @font-face
 
 ---
 
-## Thanks to better web standards we can now use web fonts
+# Using @font-face
+
+The `@font-face` property in CSS allows us to embed custom fonts directly in our website.
+
+That means we don't have to depend on a user having that font already installed on their computer.
+
+```css
+@font-face {
+    font-family: 'robotoregular';
+    src: url('Roboto-Regular-webfont.eot');
+}
+```
 
 ---
 
-## Leaving System Safe Fonts as a Thing of the Past
+# Using @font-face
 
-### Web fonts are now a must to ensure consistency across ALL devices mobile)
+Once you've included an `@font-face` declaration at the top of your stylesheet, you can use it throughout your CSS:
+
+```css
+body {
+   font-family: 'robotoregular', Arial, sans-serif;
+}
+```
+
+---
+
+# There's a Catch
+
+Unfortunately, different browsers support different font formats, so when we use `@font-face` we need to make sure we include multiple versions of the same font:
+
+- **EOT** - IE only.
+- **WOFF** - Compressed, emerging standard.
+- **TTF** - Works in most browsers except IE and iPhone.
+- **SVG** - iPhone/iPad.
+
+---
+
+# Font Formats
+
+A full example:
+
+```css
+@font-face {
+    font-family: 'robotoregular';
+    src: url('Roboto-Regular-webfont.eot');
+    src: url('Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Roboto-Regular-webfont.woff') format('woff'),
+         url('Roboto-Regular-webfont.ttf') format('truetype'),
+         url('Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+```
+
+Order matters! You'll want to include the `src` files for your fonts in this order: `eot`, `woff`, `ttf/otf`, and then `svg`.
+
+---
+
+# Font Squirrel
+
+The website [Font Squirrel](http://www.fontsquirrel.com/) is a great resource for finding and creating `@font-face` font packages:
+
+.inline-images[
+   ![Font Squirrel Webfont Generator](../../public/img/slide-assets/font-squirrel-generator.jpg)
+]
+
+---
+class: center, middle
+
+### Thar be copyright dragons!
+
+Before you embed a font on your website using `@font-face` you need to be sure that its license enables you to do so.
 
 ---
 
@@ -60,132 +149,56 @@ template: inverse
 
 ---
 
-1. Choose your font
-2. Choose your weights + character sets
-3. Options for using google fonts
-4. Declare the font-family in your css
+# Using Google Fonts
 
----
+One popular alternative to directly embedding fonts in your website with `@font-face` is to use [Google Fonts](https://www.google.com/fonts).
 
-## 1. Choose your font.
+To use Google Fonts, simple select the font you want to use, and embed the link in the head of your website:
 
-I like to use [google font pairing](http://femmebot.github.io/google-type/ "google font pairing") as a resource for choosing fonts.
+```html
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+```
 
----
-
-## 2. Choose your weights
-
-![Google Font Weights](../../public/img/slide-assets/02-05-web-fonts/Gfonts1.png)
-
-Like Google Says: only choose what you need, otherwise your page will slow down. 
-
----
-
-## 2... and character sets.
-
-Google Character Sets
-
-![Google Character Sets](../../public/img/slide-assets/02-05-web-fonts/Gfonts2.png)
-
-Choose your character sets, (Always defaults to Latin Alphabet for english.)
-
----
-
-## 3. Options for using google fonts
-
-### HTML , @import and Javascipt
-
-![Deploy Google Fonts](../../public/img/slide-assets/02-05-web-fonts/Gfonts3.png)
-
-I usually use the `<link>` tag in the header of my site as my option for deployment.
-
----
-
-## 4. Declare the font-family in CSS
-
-### in your css where you want to use the fonts (remember to set fallback fonts)
+You can then use it throughout your CSS:
 
 ```css
-
-h1, h2, h3, h4, h5 ,h6 {
-     font-family: ‘Megrim', 'sans-serif';
- }
-
 body {
-      font-family: ‘Roboto’, ’sans-serif';
+   font-family: 'Roboto', sans-serif;
 }
-
 ```
+
+---
+
+# Fonts vs. Performance
+When using custom fonts (whether through `@font-face` or Google Fonts), be sure to think about performance:
+
+.inline-images[
+   ![Google Fonts weight](../../public/img/slide-assets/google-fonts-weight.png)
+]
 
 ---
 template: inverse
 
-# @font-face and Font Squirrel
+# Web Font Services
 
 ---
 
-1. Choose your Font + Download
-2. Choose your weights
-3. Upload to Web Font Generator
-4. Download + Link Stylesheet
-5. Edit CSS Font-Family
+# Third-Party Services
+
+For fonts with licensing restrictions, you may have to use a third-party web font services if you want to use the font on your website.
+
+Some of these services include:
+
+- [Typekit](https://typekit.com/)
+- [Hoefler & Co.](http://www.typography.com/cloud/welcome/)
+- [Webtype](http://www.webtype.com/)
+- [Fontdeck](http://fontdeck.com/)
 
 ---
 
-##1. Choose your Font + Download
+# Exercise 1
 
-Font Squirrel has curated lists.
-
-![Download Font Squirrel](../../public/img/slide-assets/02-05-web-fonts/fs1.png)
-
-
----
-
-##2. Choose your weights
-
-![Choose Weights](../../public/img/slide-assets/02-05-web-fonts/fs2.png)
-
-
----
-
-##3. Upload to Web Font Generator
-
-![Upload Font Files to Webfont Generator](../../public/img/slide-assets/02-05-web-fonts/fs3.png)
-
-
----
-
-##4. Download + Link Stylesheet
-
-```css
-
-@font-face{ 
-  font-family: 'MyWebFont';
-  src: url('WebFont.eot');
-  src: url('WebFont.eot?#iefix') format('embedded-opentype'),
-       url('WebFont.woff') format('woff'),
-       url('WebFont.ttf') format('truetype'),
-       url('WebFont.svg#webfont') format('svg');
-}
-
-```
-
-```html
-
-<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
-
-```
-
----
-
-##5. Edit CSS Font-Family
-
-```css
-
-body {
-  font-family:'MyWebFont', 'Sans-Serif' ;
-}
-```
+Goes here...
 
 ---
 
