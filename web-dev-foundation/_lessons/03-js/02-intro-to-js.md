@@ -64,7 +64,7 @@ View the [solution](http://codepen.io/redacademy/pen/zGrmzM).
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/XbXxey/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/XbXxey/'>XbXxey</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-View the [solution]().
+View the [solution](http://codepen.io/redacademy/pen/jPWQVQ).
 
 ## Lab Activity
 
@@ -75,6 +75,10 @@ This is a link to the lab activity...
 An excellent free e-book on JavaScript that's worth bookmarking:
 
 - [Eloquent JavaScript](http://eloquentjavascript.net/)
+
+More resources and online tutorials for learning JavaScript:
+
+- [JavaScript.com - Free Resources](https://www.javascript.com/resources)
 
 A tool for helping you detect errors or other problems in your JavaScript:
 
