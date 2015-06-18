@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Design Principals
+title: Design Toolbox Slides
 ---
 
 {% highlight html %}
@@ -10,90 +10,420 @@ class: center, middle, inverse
 
 ---
 template: inverse
-# Design Principals
+
+# Design Toolbox
+
+.title-logo[![Red logo](../../public/img/red-logo-white.svg)]
 
 ---
 layout: false
 
 # Agenda
 
-1. Learn about design concepts (e.g. Gestalt principles)
-2. Build aesthetic colour palettes
-3. Prioritizing and organizing content on a page
-4. Using Fonts
-5. Discover useful design tools
----
-template: inverse
-
-# Basic Design Concepts Intro
-
----
-## Essentials of Gestalt Principles
-
-Let's take a closer look at the key principles:
-
-[Gestalt Principles](http://graphicdesign.spokanefalls.edu/tutorials/process/gestaltprinciples/gestaltprinc.htm)
-
-[How to Use Gestalt Principles in Website Design](http://graphicdesignjunction.com/2013/05/how-to-use-the-gestalt-principle-in-your-web-design-projects/)
-
-.inline-images[![Gestalt Principles Image](https://yusylvia.files.wordpress.com/2010/03/gestalt_illustration-01.jpg)]
+1. What is design?
+2. Elements of design
+3. Principles of design
+4. Colour theory
 
 ---
 template: inverse
 
-# Colour Theory/ Colour Palettes
+# What Is Design?
 
 ---
-## Foundations of Colour Theory
+class: center, middle
 
-####Using colour in a harmonious and effective manner is very important in web page design. You want to bring in a right mix of colours to have certain words or sections pop out to attract viewer's attention.
-• [Basic Color Theory](http://www.colormatters.com/color-and-design/basic-color-theory)• [Colour Trends & Inspiration](http://www.colourlovers.com)
-
-.inline-images[![Colour Lovers Palette](../../public/img/slide-assets/sample_colour_lovers_palette.png)]
----
-template: inverse
-
-# Prioritizing & Organizing Content
+.large[
+   Design is not art.
+]
 
 ---
-## Help Users Find What They Are Looking For Part 1
-By prioritizing content, key messages can be `communicated faster`.
+class: center, middle
 
-###Prioritizing Content
-- Make certain areas more *distinct*
-- Create a *visual hierarchy* to focus on key messages
+> "Design is concerned with how things work, how they are controlled, and the nature of interaction between people and technology."
+
+&mdash;Donald A. Norman, *The Design of Everyday Things*
 
 ---
-## Help Users Find What They Are Looking For Part 2
-By organizing content, information can be `communicated much clearer`.
+class: center, middle
 
-###Organizing Content
-- Group together related *chunks of content*
-- Present information in *similar visual styles*
+.large[
+   But how is design done?
+]
 
 ---
 template: inverse
-#Using Fonts
+
+# Elements of Design
 
 ---
-## System Fonts vs Web Fonts
-###### Later this week, you will learn about web fonts and how to pull them into your website. This method will open up many more font styling options for your sites.  But for now, you will continue to make use of system fonts and incorporate **2-3 alternates** before specifying the font family. Remember, there are `5 font families` that can be referenced when using system fonts:
-- Sans-serif
-- Serif
-- Monospace
-- Script
-- Fantasy
+
+# Elements of Design
+
+1. Line
+2. Shape
+3. Form
+4. Texture
+5. Colour
+
+---
+
+# Line
+
+- Line is the lifeline of our civilization
+- When we organize lines we get alphabets
+- The character of a line can be changed by varying its width
+
+---
+
+# Line
+
+Other qualities of a line that affect its character:
+
+- Classical (vertical and horizontal) lines are stable
+- Flowing horizontal lines are peaceful
+- Zigzigs are exciting
+- Spiral suggests infinity
+- Swirling linear lines remind us of nature
+
+---
+
+# Shape
+
+- Line is actually just an illusion
+- When you close a line, you get a shape
+- Shapes control and attract our attention
+
+---
+
+# Shape
+
+Shapes also have character:
+
+- **Biomorphic/Organic** shapes are inspired by nature
+
+- **Geometric** shapes are precise
+
+- **Decorative** shapes applied to the surface of another shape
+
+---
+class: center, middle
+
+### Shape is related to space
+
+.inline-images[
+   ![Figure and ground example](../../public/img/slide-assets/figure-ground-01.jpg)  
+]
+
+*Negative and positive space are equally important.*
+
+---
+
+# Form
+
+- Forms are three-dimensional objects
+- They can be geometric or biomorphic/organic
+- They have shadows on their surfaces and cast shadows
+- Can be illustrated or constructed
+
+---
+
+# Texture
+
+- Real texture is the visual surface of an object (can be simulated or implied)
+- Visual texture can also be simulated or implied
+- **Skeuomorphism** is when web and app design takes cues from the physical world
+
+---
+
+# Texture
+
+- When we organize the visual feel of an object, we end up with **pattern**
+- Pattern has to do with repetition
+- We can use colour or texture to create a pattern
+- All patterns have texture, not all textures have patterns
+- Simplest design of a pattern is a **motif**
+
+---
+class: center, middle
+
+.large[
+   That just leaves colour...
+]
 
 ---
 template: inverse
-#Exploring Design Tools
+
+# Colour Theory
 
 ---
-## Useful Design Tools
-###Colour Palette Generator -[Coolors.co](http://coolors.co/)
-###Colour Scheme Designer - [Paletton.com](http://paletton.com/)
-###Patterns - [SubtlePatterns.com](http://www.subtlepatterns.com)
- 
+
+# Colour 101
+
+Colour has three characteristics:
+
+1. Hue
+2. Value
+3. Saturation
+
+---
+
+# Hue
+
+What we refer to as colour is technically referred to **hue**.
+
+Hues can be **chromatic** or **achromatic**.
+
+Hues can be **neutral** (white, black, or grey) or **near-neutral** (beige or off-white).
+
+---
+
+# Value
+
+Value is the potential for a colour to be light or dark.
+
+**High value** colours have white added to them.
+
+**Low value** colours have black added to them.
+
+---
+
+# Saturation
+
+Saturation is the brightness or dullness of a hue.
+
+Colours can be **high chroma** (full intensity).
+
+Colours can be **low chroma** (made dull by adding a complement).
+
+---
+
+.inline-images[
+   ![Hue saturation value model](../../public/img/slide-assets/color-hue-sat-value.jpg)  
+]
+
+---
+class: center, middle
+
+.large[
+   But how do we know which colours go best together?
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![Colour wheel gradient](../../public/img/slide-assets/color-wheel-gradient.png)
+]
+
+---
+
+# The Colour Wheel
+
+The Prang color wheel is a mechanical arrangement that has 12 basic hues:
+
+- Start with **primaries** (red, blue, yellow)
+- Mix those to create **secondaries** (orange, purple, green)
+- Then make **tertiaries** (belongs to primary family and a secondary family)
+
+Using this wheel, we can create **colour harmonies**.
+
+---
+class: center, middle
+
+.inline-images[
+   ![Primary colours](../../public/img/slide-assets/color-wheel-primaries.svg)
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![Secondary colours](../../public/img/slide-assets/color-wheel-secondaries.svg)
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![Tertiary colours](../../public/img/slide-assets/color-wheel-tertiaries.svg)
+]
+
+---
+class: center, middle
+
+### Monochromatic Harmony
+
+.inline-images[
+   ![Monochromatic colour harmony](../../public/img/slide-assets/color-harmony-monochromatic.svg)
+]
+
+---
+
+class: center, middle
+
+### Complementary Harmony
+
+.inline-images[
+   ![Complementary colour harmony](../../public/img/slide-assets/color-harmony-complementary.svg)  
+]
+
+---
+
+class: center, middle
+
+### Analogous Harmony
+
+.inline-images[
+   ![Analogous colour harmony](../../public/img/slide-assets/color-harmony-analogous.svg)
+]
+
+---
+
+class: center, middle
+
+### Split Complementary Harmony
+
+.inline-images[
+   ![Split complementary colour harmony](../../public/img/slide-assets/color-harmony-split-comp.svg)
+]
+
+---
+
+class: center, middle
+
+### Triad Harmony
+
+.inline-images[
+   ![Triad colour harmony](../../public/img/slide-assets/color-harmony-triad.svg)
+]
+
+---
+
+class: center, middle
+
+### Tetrad Harmony
+
+.inline-images[
+   ![Tetrad colour harmony](../../public/img/slide-assets/color-harmony-tetrad.svg)
+]
+
+---
+
+# Colour Quick Tips
+
+- Colours "vibrate" when placed next to their colour partners
+- Primary colours draw our attention
+- Grey will pick-up whatever colour it's next to
+- Colour has powerful emotional qualities and cultural connotations
+- Colours have weight (yellow is the lightest, blue and purple are the heaviest)
+
+---
+
+# Exercise 1
+
+Sign-up for Adobe Kuler and make some test palettes
+
+---
+template: inverse
+
+# Principles of Design
+
+---
+class: center, middle
+
+.large[
+   The **principles** of design are applied to the **elements** of design to bring our designs together.
+]
+
+---
+
+# Principles of Design
+
+1. Unity
+2. Variety
+3. Dominance
+4. Balance
+5. Scale/Proportion
+6. Space
+
+---
+
+# Unity
+
+- All elements working together to support the design as a cohesive whole
+- Related to repetitions&mdash;which occurs when repeating line, shape, colour, patterns, etc.
+- Unity is related to Gestalt theory of perception
+- "The whole is greater than the sum of its parts."
+
+---
+
+# Variety
+
+- A dash or pause, in grammatical terms
+- Variety makes design interesting
+- Variety &ne; Chaos
+- It's about creating variations on a theme
+- Related to contrast&mdash;which is achieved using colour, tone/value, size/shape, and direction
+
+---
+
+# Dominance
+
+- What's different?
+- What's bigger?
+- What draws attention?
+- More important elements usually receive special emphasis
+
+---
+
+# Balance
+
+- Formal balance (symmetrical)
+- Informal balance (asymmetrical)
+- Radial symmetry (like bike spokes)
+- The Golden Ratio
+- White space leaves breathing room
+
+---
+
+# Scale/Proportion
+
+- Scale and proportion are related to size
+- Scale is an outside measure ("this is to that")
+- Proportion is an inside measure ("size of parts to whole")
+- Visual hierarchy communicates priority
+
+---
+
+# Space
+
+- In two-dimentional design (like on the web), space creates the illusion of a third dimension
+- As shapes move back in space they appear to get smaller
+- Overlap creates the illusion of space
+- Aerial perspective (the misty horizon effect)
+- Hard lines help create contrast in space
+- Space can be shallow or deep
+
+---
+class: center, middle
+
+.large[
+   Rules, rules, rules!
+]
+
+---
+class: center, middle
+
+.large[
+   Knowing the rules lets you know when to break them.
+]
+
+---
+
+# Exercise 2
+
+Look for websites that "feel right"...
 
 ---
 template: inverse

@@ -23,6 +23,7 @@ layout: false
 2. Using `@font-face`
 3. Using Google Fonts
 4. Web font services
+5. Choosing and pairing fonts
 
 ---
 
@@ -193,6 +194,52 @@ Some of these services include:
 - [Hoefler & Co.](http://www.typography.com/cloud/welcome/)
 - [Webtype](http://www.webtype.com/)
 - [Fontdeck](http://fontdeck.com/)
+
+---
+template: inverse
+
+# Choosing and Pairing Fonts
+
+---
+class: center, middle
+
+.large[
+   With great power...
+]
+
+---
+class: center, middle
+
+### Contrast
+
+When pairing typefaces, make sure they are discernibly different.
+
+---
+class: center, middle
+
+### Serif + Sans-serif
+
+When pairing serif with sans-serif, look for typefaces based on the same geometric principles.
+
+---
+class: center, middle
+
+### Dial Down the Fancy
+
+If you're using display or script typefaces, stick to just one.
+
+---
+class: center, middle
+
+### Leverage CSS
+
+Take advantage of the many CSS properties that can help adjust text display.
+
+---
+
+### Consider the Message
+
+When choosing a typeface, consider its personality and whether it complements the message to be commuicated by it.
 
 ---
 

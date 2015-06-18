@@ -15,6 +15,7 @@ From the HTML & CSS textbook:
 
 - Explore `@font-face` to incorporate custom typefaces into a web page.
 - Use Google Fonts as an option for using custom typefaces on a web page.
+- Discover how to combine typefaces together in effective combinations.
 
 ## Keywords
 
@@ -80,3 +81,7 @@ Subscription-based web font services:
 - [Hoefler & Co.](http://www.typography.com/cloud/welcome/)
 - [Webtype](http://www.webtype.com/)
 - [Fontdeck](http://fontdeck.com/)
+
+An article series on web typography basics:
+
+- [A-Z of Web Typography](http://webdesign.tutsplus.com/series/a-z-of-web-typography--webdesign-11706)
