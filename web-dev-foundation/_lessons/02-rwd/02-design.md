@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Design Principles
+title: Design Toolbox
 slides: ['_slides/02-rwd/02-design-slides.md']
 ---
 
@@ -18,14 +18,11 @@ From the HTML & CSS textbook:
 
 ## Keywords
 
-- Line, shape, and form
-- Texture
-- Pattern
-- Gestalt principles
-- Colour harmony
+- Line, shape, form, and texture
 - Hue, value, and saturation
+- Colour harmony
 - Whitespace
-- Additive vs. subtractive
+- Unity, variety, dominance, balance, scale, and space
 
 ## Exercise 1
 
