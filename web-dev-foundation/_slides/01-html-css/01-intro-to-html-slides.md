@@ -209,7 +209,7 @@ Virtually all websites share the same basic structure. They contain a `<head>` a
 </html>
 ```
 
-Try copying that HTML into a code editor, save the file as `index.html`, and open the file in your favourite web browser.
+Let's copy that HTML into a code editor, save the file as `index.html`, and open it in a web browser.
 
 ---
 class: center, middle
@@ -222,11 +222,11 @@ When you name a file `index.html` (most) web servers will automatically know tha
 
 # One Folder = One Site
 
-Before long, you're going to want to add additional pages to your site, or other files like images.
+Before long, you're going to want to add additional pages to your site, or other files (like images).
 
 To keep all of those HTML files and your other webpage assets organized, you'll want to set up a folder somewhere on your computer.
 
-We call this the **Root Folder** of your project. You can name it anything you'd like and it can contain any number of sub‐folders to further organize your files.
+We call this the **root folder** of your project. You can name it anything you'd like and it can contain any number of sub‐folders to further organize your files.
 
 ---
 class: center, middle
@@ -272,13 +272,15 @@ Use these sanity-saving tips to name your folders and files:
 
 # Exercise 1
 
-Now you've seen a few of the main types of code editors (Sublime, Atom, TextWranger, Notepad++), you will now **download** the code editor of your choice onto your laptop and get it installed.
+Your turn! Time to create your first webpage.
 
-In the web developer course folder on your local computer, create a `local root folder` for today's in-class exercise/lab practice.
+First things first...you need to pick a code editor to download and install it (if you haven't done so already).
 
-Set-up an simple `HTML page` in your code editor with all the basic structural tags (body, head, title), then include a few heading and paragraph tags before saving as `index.html`.
+Next create a root folder somewhere on our computer and save a new file called `index.html`.
 
-Preview in a browser of your choice by going to the File menu > File Open (browse for your `index.html` page.
+Then open that folder and create a simple webpage containing `<html>`, `<head>`, `<title>`, and `<body>` tags, then add a few paragraphs of text.
+
+Lastly, save and view your new website in a browser.
 
 ---
 template: inverse
@@ -442,9 +444,10 @@ So an HTML5 webpage might look a little something like this:
 
 # Exercise 2
 
+Try marking up this block text as instructed. If you haven't created a Codepen account yet, do that right now and complete this exercise by clicking "Edit on Codepen", and create a "Fork" of the pen to save your answer to your account.
+
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvjrrR/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvjrrR/'>WvjrrR</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
-
 
 ---
 template: inverse
@@ -481,7 +484,7 @@ A browser will display this text as italicized by default.
 ---
 template: inverse
 
-# Last but Not Least...
+# Last but not least...
 
 ---
 
@@ -504,6 +507,12 @@ Links can also be **relative** to the root folder of your website:
 
 ```html
 <a href="about.html">About Us</a>
+```
+
+And if a page is in a sub-folder:
+
+```html
+<a href="sub_pages/about.html">About Us</a>
 ```
 
 ---
@@ -537,25 +546,9 @@ The `title` of the image will appear as a tooltip in most browsers when you hove
 
 # Exercise 3
 
+Now try using an assortment of structural and semantic tags:
+
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/VLbemJ/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/VLbemJ/'>VLbemJ</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
-
----
-
-# Block Level Elements
-
-- Notice that when you use paragraphs and headings, they will start on a new line.
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvpzZQ/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvpzZQ/'>WvpzZQ</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
-
----
-
-# Inline Elements
-
-- Notice that when you use emphasis or bold tags, that this continue on the same line.
-- We use tags like bold or italics or **span** tags to apply CSS class properties as inline elements.
-
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/dovmZg/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/dovmZg/'>dovmZg</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
 ---

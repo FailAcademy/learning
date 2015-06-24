@@ -34,25 +34,37 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-Open **Adobe Photoshop** and we'll use **Bridge**(File &rarr; Browser in Bridge)  to view the images in the sample images folder. 
+If you haven't done so already, download and install an image editing application such as Adobe Photoshop or Gimp.
 
-Got through and practice:
+Next, download **[this image](https://www.flickr.com/photos/jdhancock/12708712045/)**, open it in the image editor, and try:
 
-- Resizing images through Image &rarr; Image Size
-- Crop using Crop Tool (and Options menu fields for `height` and `width` settings)
-- Optimize Images through File &rarr; Save for Web (use JPGs for images/PNGs for graphics)
+- Resizing the image to be a maximum of 800px wide
+- Cropping the image to have a 4:3 aspect ratio
+- Saving the image to be optimized for web (can you make it less than 70KB without sacrificing too much quality?)
+
+If you have additional time, explore other tools inside the image editor, like the rotate tool or text tool.
 
 ## Exercise 2
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvOmvY/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvOmvY/'>WvOmvY</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+Try out some of the different web colour modes below:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvOmvY/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvOmvY/'>WvOmvY</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-See the [solution](http://codepen.io/redacademy/pen/VLWReW)
+View the [solution](http://codepen.io/redacademy/pen/VLWReW)
+
+## Exercise 3
+
+Now try using CSS to style these images:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/mJqwVE/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/mJqwVE/'>mJqwVE</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+View the [solution](http://codepen.io/redacademy/pen/LVOLNY)
 
 ## Lab Activity
 
 - Find and add images to a web page using a variety of techniques, and apply colours through CSS classes/selectors to various elements on the page.
-
 
 ## Additional Resources
 

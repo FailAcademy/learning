@@ -165,9 +165,12 @@ class: center, middle
 ]
 
 ---
+
 # Exercise 1
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/GJEPPJ/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/GJEPPJ/'>GJEPPJ</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+Try adding margin, borders, and padding to some HTML elements as instructed below:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/GJEPPJ/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/GJEPPJ/'>GJEPPJ</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
 ---
@@ -497,7 +500,9 @@ Some tips for naming the classes and IDs in your HTML:
 
 # Exercise 2
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/ZGywWj/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/ZGywWj/'>ZGywWj</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+Now let's try using CSS class and IDs to style some text elements:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/ZGywWj/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/ZGywWj/'>ZGywWj</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
 ---
@@ -523,6 +528,18 @@ class: center, middle
 .inline-images[
    ![Developer tools screenshot](/public/img/slide-assets/developer-tools-screenshot.png)
 ]
+
+---
+
+# Exercise 3
+
+Time to explore the developer tools built into your browser.
+
+Go to a website of your choice, open the web inspector, and try altering some of the styles to see what happens.
+
+Also try "forcing element states", editing the content of some of the HTML elements on the screen, and deleting some elements too.
+
+*Remember that you will lose all of the changes you've made inside the web inspector as soon as you refresh the page.*
 
 ---
 

@@ -30,17 +30,30 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/mJwRxG/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/mJwRxG/'>mJwRxG</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+Let's try out different kinds of positioning in CSS:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/mJwRxG/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/mJwRxG/'>mJwRxG</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-Find the [solution](http://codepen.io/redacademy/pen/waegmZ)
+View the [solution](http://codepen.io/redacademy/pen/waegmZ)
 
 ## Exercise 2
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/yNXgGO/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/yNXgGO/'>yNXgGO</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+Time to try using CSS floats to lay out a webpage:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/yNXgGO/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/yNXgGO/'>yNXgGO</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-Find the [solution](http://codepen.io/redacademy/pen/xGrgmP)
+View the [solution](http://codepen.io/redacademy/pen/xGrgmP)
+
+## Exercise 3
+
+Try implementing CSS backgrounds in three different ways:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/eNeKXr/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/eNeKXr/'>eNeKXr</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+View the [solution](http://codepen.io/redacademy/pen/doZKrB)
 
 ## Lab Activity
 

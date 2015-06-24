@@ -30,33 +30,36 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-Now you've seen a few of the main types of code editors (Sublime, Atom, TextWranger, Notepad++), you will now **practice** with the code editor that you installed.
+Your turn! Time to create your first webpage.
 
-In the web developer course folder on your local computer, create a `local root folder` for today's in-class exercise/lab practice.
+First things first...you need to pick a code editor to download and install it (if you haven't done so already).
 
-Set-up an simple `HTML page` in your code editor with all the basic structural tags (body, head, title), then include a few heading and paragraph tags before saving as `index.html`.
+Next create a root folder somewhere on our computer and save a new file called `index.html`.
 
-Preview in a browser of your choice by going to the File menu > File Open (browse for your `index.html` page.
+Then open that folder and create a simple webpage containing `<html>`, `<head>`, `<title>` and `<body>` tags, then add a few paragraphs of text.
 
+Lastly, save and view your new website in a browser.
 
 ## Exercise 2
 
-*Instructions:*  `Edit this Codepen` and `Fork` the example while in the HTML panel. Go ahead and apply an example of each list type - Ordered and Unordered, add some headings/paragraphs to separate the pages into different sections , try out the `<hr>` horizontal rule and insert some `<br>` linebreaks throughout!
+Try marking up this block text as instructed. If you haven't created a Codepen account yet, do that right now and complete this exercise by clicking "Edit on Codepen", and create a "Fork" of the pen to save your answer to your account.
 
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvjrrR/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvjrrR/'>WvjrrR</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
+View the [solution](http://codepen.io/redacademy/pen/YXEVKR).
 
 ## Exercise 3
-*Instructions:*  `Edit this Codepen` and `Fork` the example while in the HTML panel.
-This time, add some **semantic tags** like `emphasis`, `strong`, try out some `external links` to your favourite sites, and even `insert an image` with **alt** tag.
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/VLbemJ/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/VLbemJ/'>VLbemJ</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+Now try using an assortment of structural and semantic tags:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/VLbemJ/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/VLbemJ/'>VLbemJ</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-
+View the [solution](http://codepen.io/redacademy/pen/ZGaKOy).
 
 ## Lab Activity
+
 Using this [Star Wars Formatting Lab Activity](/public/files/labs/01-html-formatting-lab.zip) (zipped), you'll be using your new found coding skills to `mark-up` the text using what you've learnt in the morning class using a combination of tags covered. Open your `code editor` and `create` a new HTML document that has the doctype, body, head, and title tags. Your task will be to try to **match the formatting** style of the *formatted Word* document, using the *plain text* Word version and the HTML mark-up tags below:
 
 - Headings and Paragraphs
@@ -72,7 +75,7 @@ Please save your file as: **firstname_html_assign1.html** 
 
 ## Additional Resources
 
-Don't let the title of this article series put you off---it has some of the clearest explanations of basic HTML concepts you'll find on the web:
+Don't let the title of this article series put you off&mdash;it has some of the clearest explanations of basic HTML concepts you'll find on the web:
 
 - [Web Design for Kids](http://webdesign.tutsplus.com/series/web-design-for-kids--cms-823)
 

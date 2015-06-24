@@ -194,7 +194,10 @@ header h1 {
 
 # Exercise 1
 
-Do something with positioning...
+Let's try out different kinds of positioning in CSS:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/mJwRxG/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/mJwRxG/'>mJwRxG</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 template: inverse
@@ -393,7 +396,10 @@ class: center, middle
 
 # Exercise 2
 
-Do something with floats...
+Time to try using CSS floats to lay out a webpage:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/yNXgGO/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/yNXgGO/'>yNXgGO</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 template: inverse
@@ -408,7 +414,7 @@ CSS gives us a number of tools for controlling the look of the backgrounds of ou
 
 We can specify:
 
-- `background-color`: an RGBa or hexadecimal color code
+- `background-color`: an RGBa, HSLa, hexadecimal, or named color code
 - `background-image`: an URL of a background image (in parantheses)
 
 ---
@@ -419,7 +425,7 @@ And if we specify a `background-image` URL, we can also set these properties for
 
 - `background-repeat`: whether to repeat an image across the X or Y axis, or both
 - `background-attachment`: whether the image should **scroll** with the browser or remain **fixed** in place
-- `background-position`: for non-repeated images, specify if it should be anchored at the **left**, **center**. or **right**, and the **top**, **center**, or **bottom**
+- `background-position`: for non-repeated images, specify if it should be anchored at the **left**, **center**, or **right**, and the **top**, **center**, or **bottom**
 
 ---
 
@@ -489,6 +495,15 @@ There are a few popular CSS resets that are commonly used today:
 To use a reset, you would simply put this CSS at the top of your stylesheet, and then start writing your own code after it.
 
 The key is to pick a reset that makes the most sense for your website, and to only include the CSS rules that you need.
+
+---
+
+# Exercise 3
+
+Try implementing CSS backgrounds in three different ways:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/eNeKXr/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/eNeKXr/'>eNeKXr</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 

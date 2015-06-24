@@ -194,13 +194,15 @@ When using SVGs, it important to **provide a fallback** image format if you need
 
 # Exercise 1
 
-Open **Adobe Photoshop** and we'll use **Bridge**(File &rarr; Browser in Bridge)  to view the images in the sample images folder. 
+If you haven't done so already, download and install an image editing application such as Adobe Photoshop or Gimp.
 
-Got through and practice:
+Next, download **[this image](https://www.flickr.com/photos/jdhancock/12708712045/)**, open it in the image editor, and try:
 
-- Resizing images through Image &rarr; Image Size
-- Crop using Crop Tool (and Options menu fields for `height` and `width` settings)
-- Optimize Images through File &rarr; Save for Web (use JPGs for images/PNGs for graphics)
+- Resizing the image to be a maximum of 800px wide
+- Cropping the image to have a 4:3 aspect ratio
+- Saving the image to be optimized for web (can you make it less than 70KB without sacrificing too much quality?)
+
+If you have additional time, explore other tools inside the image editor, like the rotate tool or text tool.
 
 ---
 template: inverse
@@ -216,7 +218,7 @@ On the web, we have four options for specifying the colours of our HTML elements
 - Colour names
 - HEX codes
 - RGB/RGBa values
-- HSLA values
+- HSL/HSLa values
 
 ---
 
@@ -264,7 +266,7 @@ To get a HEX code, you can use an [online colour picker tool](http://www.colorpi
 
 ---
 
-## RGB/RGBa Colours
+# RGB/RGBa Colours
 
 We can also use RGB (red, green, blue) values to specify colours in our CSS:
 
@@ -291,8 +293,28 @@ header {
 The `a` that represents opacity is written as a decimal, with a range of `0` (fully transparent) to `1` (solid).
 
 *Note that RGBa isn't supported by older browsers like IE8.*
+
 ---
-##Exercise 2
+
+# HSL/HSLa Colours
+
+Specifying colour using HSLa is similar to using RGA.
+
+However, instead of giving coordinates for the amount of red, blue, or green to mix in the colour, we specify **hue**, **saturation**, and **lightness**.
+
+```css
+header {
+   background-color: hsla(360, 83%, 60%, 0.5);
+}
+```
+
+The relationship between hue, saturation, and lightness will become a bit clearer after the colour theory lesson.
+
+---
+
+# Exercise 2
+
+Try out some of the different web colour modes below:
 
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvOmvY/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvOmvY/'>WvOmvY</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
@@ -360,9 +382,12 @@ We can use CSS to manipulate our image elements as well:
 
 ---
 
-# Exercise 2
+# Exercise 3
 
-Goes here...
+Now try using CSS to style these images:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/mJqwVE/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/mJqwVE/'>mJqwVE</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 template: inverse
