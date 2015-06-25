@@ -113,11 +113,11 @@ A full example:
 ```css
 @font-face {
     font-family: 'robotoregular';
-    src: url('Roboto-Regular-webfont.eot');
-    src: url('Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Roboto-Regular-webfont.woff') format('woff'),
-         url('Roboto-Regular-webfont.ttf') format('truetype'),
-         url('Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    src: url('Roboto-webfont.eot');
+    src: url('Roboto-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Roboto-webfont.woff') format('woff'),
+         url('Roboto-webfont.ttf') format('truetype'),
+         url('Roboto-webfont.svg#robotoregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -138,9 +138,23 @@ The website [Font Squirrel](http://www.fontsquirrel.com/) is a great resource fo
 ---
 class: center, middle
 
-### Thar be copyright dragons!
+## Thar be copyright dragons!
 
 Before you embed a font on your website using `@font-face` you need to be sure that its license enables you to do so.
+
+---
+
+# Exercise 1
+
+Go to **[Font Squirrel](http://www.fontsquirrel.com/)** and pick a font that you like that offers an @font-face kit. Download the font package.
+
+Set-up an `index.html` file in a root folder, and from the package you just downloaded copy in the `stylesheet.css` file and all of the different font formats to as well.
+
+In the `stylesheet.css` file, set the name of your new font as the `font-family` value for the body element.
+
+Now add some copy to your webpage and load it in a browser.
+
+Hint: Link to your external stylesheet in the `<head>`!
 
 ---
 
@@ -171,6 +185,7 @@ body {
 ---
 
 # Fonts vs. Performance
+
 When using custom fonts (whether through `@font-face` or Google Fonts), be sure to think about performance:
 
 .inline-images[
@@ -236,16 +251,20 @@ class: center, middle
 Take advantage of the many CSS properties that can help adjust text display.
 
 ---
+class: center, middle
 
 ### Consider the Message
 
-When choosing a typeface, consider its personality and whether it complements the message to be commuicated by it.
+When choosing a typeface, consider its personality and if it complements the message being communicated.
 
 ---
 
-# Exercise 1
+# Exercise 2
 
-Goes here...
+Now try adding custom web fonts using Google Fonts:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/vONZxd/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/vONZxd/'>vONZxd</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 

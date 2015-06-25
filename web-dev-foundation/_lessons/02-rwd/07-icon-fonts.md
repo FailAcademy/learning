@@ -22,14 +22,16 @@ A quick primer on using icon fonts:
 
 ## Exercise 1
 
-Lets use font awesome icons served from the cdn, to attractively link our social media, and contact links.
+Let's try out Font Awesome:
 
-<p data-height="268" data-theme-id="0" data-slug-hash="vONJxM" data-default-tab="result" data-user="redacademy" class='codepen'>See the Pen <a href='http://codepen.io/redacademy/pen/vONJxM/'>vONJxM</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/vONJxM/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/vONJxM/'>vONJxM</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+View the [solution](http://codepen.io/redacademy/pen/rVYrXB).
 
 ## Lab Activity
 
-Lab goe here...
+Lab goes here...
 
 ## Additional Resources
 

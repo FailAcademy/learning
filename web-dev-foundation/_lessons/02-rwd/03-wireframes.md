@@ -25,11 +25,17 @@ An introductory tutorial on wireframing:
 
 ## Exercise 1
 
-Sketch out a wireframe on paper of a small business website of your choice. Be sure to define key areas like logos, headers, navigation, content, footer and side menus (if applicable).
+Go to **[Unmatched Style](http://unmatchedstyle.com/)** again and pick a website to reductively transform into a wireframe.
+
+Using some of the provided wireframe sketch paper, sketch what you think a wireframe should look like for the desktop width of that website.
+
+If you have time, try sketching out wireframes for its mobile phone and tablet widths too.
+
+Tip: Choose an website with some interesting layout features!
 
 ## Exercise 2
 
-Experiment with [Balsamiq](http://www.balsamiq.com) or other wireframing tool as shown in the resource links below.
+Try out one of the recommended wireframing tools for this lesson, and quickly mock-up a wireframe based on the desktop sketch that you produced in the last exercise.
 
 ## Lab Activity
 

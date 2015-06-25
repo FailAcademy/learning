@@ -177,7 +177,10 @@ Every Font Awesome icon also has a [Unicode value](http://fortawesome.github.io/
 
 # Exercise 1
 
-Do something with Font Awesome...
+Let's try out Font Awesome:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/vONJxM/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/vONJxM/'>vONJxM</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 template: inverse

@@ -322,7 +322,11 @@ class: center, middle
 
 # Exercise 1
 
-Sign-up for Adobe Kuler and make some test palettes
+Let's try creating colour palettes based on the colour harmony rules we just learned.
+
+If you haven't done so already, create an **[Adobe Color CC](https://color.adobe.com/)** account and create at least five different colour palettes each based on a different colour harmony rule.
+
+Don't limit yourself based on the built-in colour rules in the web app&mdash;be sure to try out some of the other you just learned too.
 
 ---
 template: inverse
@@ -423,7 +427,11 @@ class: center, middle
 
 # Exercise 2
 
-Look for websites that "feel right"...
+Go to **[Unmatched Style](http://unmatchedstyle.com/)** and find an example of what you think is a well-designed website.
+
+Jot down some notes about how it uses the elements and principles of design in terms of its layout and overall visual design.
+
+After a few minutes evaluating your chosen website, team up with another class member and exchange your observations.
 
 ---
 template: inverse

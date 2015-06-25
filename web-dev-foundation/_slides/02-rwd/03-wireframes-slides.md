@@ -126,7 +126,13 @@ Wireframing is mostly about roughing-out the user interface and the prioritizati
 
 # Exercise 1
 
-Goes here...
+Go to **[Unmatched Style](http://unmatchedstyle.com/)** again and pick a website to reductively transform into a wireframe.
+
+Using some of the provided wireframe sketch paper, sketch what you think a wireframe should look like for the desktop width of that website.
+
+If you have time, try sketching out wireframes for its mobile phone and tablet widths too.
+
+Tip: Choose an website with some interesting layout features!
 
 ---
 template: inverse
@@ -185,7 +191,7 @@ class: center, middle
 
 # Exercise 2
 
-Goes here...
+Try out one of the recommended wireframing tools for this lesson, and quickly mock-up a wireframe based on the desktop sketch that you produced in the last exercise.
 
 ---
 template: inverse

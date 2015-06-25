@@ -26,15 +26,19 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-Design your own colour palette!
+Let's try creating colour palettes based on the colour harmony rules we just learned.
 
-Experiment with creating your own colour palette for your week 2 personal responsive website. Use Photoshop to sample hexidecimal codes as needed and input and adjust colours in [Coolors.co](http://coolors.co/) to output a PDF or PNG of your palette!
+If you haven't done so already, create an **[Adobe Color CC](https://color.adobe.com/)** account and create at least five different colour palettes each based on a different colour harmony rule.
+
+Don't limit yourself based on the built-in colour rules in the web app&mdash;be sure to try out some of the other you just learned too.
 
 ## Exercise 2
 
-Find examples of great design
+Go to **[Unmatched Style](http://unmatchedstyle.com/)** and find an example of what you think is a well-designed website.
 
-Find examples of websites that have good color palettes, good design, white space, and organized content. Don't go for standard large corporation website. Find something different that people may not have seen.  
+Jot down some notes about how it uses the elements and principles of design in terms of its layout and overall visual design.
+
+After a few minutes evaluating your chosen website, team up with another class member and exchange your observations.
 
 ## Lab Activity
 
@@ -52,7 +56,7 @@ Tips on choosing colours for specific business contexts:
 
 Some colour palette tools:
 
-- [Adobe Kuler](https://color.adobe.com/)
+- [Adobe Color CC](https://color.adobe.com/)
 - [Coolors.co](http://coolors.co/)
 
 A great pattern library:

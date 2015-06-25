@@ -300,7 +300,10 @@ Declaring multiple background is just like declaring a single background, but yo
 
 # Exercise 1
 
-Goes here...
+Try styling a basic buttons using CSS3 properties:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/aOVabd/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/aOVabd/'>aOVabd</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 template: inverse
@@ -311,7 +314,7 @@ template: inverse
 
 # Making Things Move
 
-CSS transitions bring your webpages to life in a way that previously only achievable with JavaScript.
+CSS transitions bring your webpages to life in a way that was previously only achievable with JavaScript.
 
 ```html
 <a href="http://mysite.com">Transition Me!</a>
@@ -418,6 +421,11 @@ If you're ambitious, once you've mastered CSS transitions you'll want to check o
 
 # Exercise 2
 
+Take CSS3 transitions for a spin:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/ZGaMWE/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/ZGaMWE/'>ZGaMWE</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
 ---
 template: inverse
 
@@ -456,7 +464,7 @@ div {
    /* This...*/
    transform: translate(12px, 50%);
 
-   /*Is the same as this...*/
+   /* Is the same as this...*/
    transform: translateX(12px) translateY(50%);
 }
 ```
@@ -580,7 +588,10 @@ class: center, middle
 
 # Exercise 3
 
-Exercise goes here...
+Experiment with CSS3 transforms and transitions together:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/PqOgax/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/PqOgax/'>PqOgax</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 template: inverse
