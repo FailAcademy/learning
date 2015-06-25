@@ -108,7 +108,7 @@ Managed hosting is **more hands-on** than a typical shared hosting plan.
 
 A managed hosting option will **provide software and security updates** for you, and variety of other potential services such as spam filtering and caching.
 
-Managed hosting is usually **more expensive** that shared hosting plans.
+Managed hosting is usually **more expensive** than shared hosting plans.
 
 An example of a managed web host is [WP Engine](http://wpengine.com/).
 
@@ -116,7 +116,7 @@ An example of a managed web host is [WP Engine](http://wpengine.com/).
 
 # Dedicated/VPS Hosting
 
-Dedicated web hosting means just that&mdash;your website **lives on server by itself** and control what's installed on it.
+Dedicated web hosting means just that&mdash;your website **lives on server by itself** and you control what's installed on it.
 
 VPS hosting is like a **hybrid** of shared hosting and dedicated hosting. Your website will live on server with other websites, but you control what's installed on the server.
 
@@ -180,6 +180,12 @@ class: center, middle
 You can a custom domain for your GitHub pages too by following [these instructions to configure your DNS](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/).
 
 ---
+
+# Exercise 1
+
+In this exercise, you're going to purchase a domain name, and configure it's A record to point to your final project website.
+
+---
 template: inverse
 
 # Using FTP
@@ -224,5 +230,16 @@ Once you're in, you can start transferring files:
 ]
 
 ---
+
+# Exercise 2
+
+In this exercise, you're going to practice FTPing a file.
+
+Download an FTP client and use the credentials provided to FTP a file from your computer onto the server.
+
+---
+template: inverse
+
+# Fin!
 
 {% endhighlight %}

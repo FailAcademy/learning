@@ -11,6 +11,8 @@ From the HTML & CSS textbook:
 - Domain Names & Hosting (pp. 487-488)
 - FTP & Third-Party Tools (pp. 489-490)
 
+*Prior to class you'll want to have a domain picked out for your final project website.*
+
 ## Learning Objectives
 
 - Learn how to upload files via FTP to a typical web host.
@@ -27,7 +29,13 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-Goes here...
+In this exercise, you're going to purchase a domain name, and configure it's A record to point to your final project website.
+
+## Exercise 2
+
+In this exercise, you're going to practice FTPing a file.
+
+Download an FTP client and use the credentials provided to FTP a file from your computer onto the server.
 
 ## Lab Activity
 

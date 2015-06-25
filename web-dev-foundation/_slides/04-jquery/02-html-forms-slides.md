@@ -90,7 +90,7 @@ We can use the `<input>` element inside a form to create a variety of different 
 
 By specifying the `type` attribute, the browser will know what kind of input to display.
 
-Common input types include `text`, `checkbox`, `radio`, `submit`, and `search`. HTML5 introduced a number of [more specific form input types](http://html5doctor.com/html5-forms-input-types/) as well.
+Common input types include `text`, `checkbox`, `radio`, and `submit`. HTML5 introduced a number of [more specific form input types](http://html5doctor.com/html5-forms-input-types/) as well.
 
 ---
 
@@ -201,6 +201,8 @@ The main difference between `<button>` and `<input type="submit" />` is that the
 
 # Exercise 1
 
+Try creating a basic contact form:
+
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/EjXNLx/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/EjXNLx/'>EjXNLx</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
@@ -285,15 +287,7 @@ button {
    background-color: blue;
    color: #fff;
    padding: 10px 15px;
-   -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-           border-radius: 3px;
-   -webkit-box-shadow:
-      inset 0px -3px 1px rgba(0, 0, 0, 0.45),
-      0px 2px 2px rgba(0, 0, 0, 0.25);
-   -moz-box-shadow:
-      inset 0px -3px 1px rgba(0, 0, 0, 0.45),
-      0px 2px 2px rgba(0, 0, 0, 0.25);
+   border-radius: 3px;
    box-shadow:
       inset 0px -3px 1px rgba(0, 0, 0, 0.45),
       0px 2px 2px rgba(0, 0, 0, 0.25);
