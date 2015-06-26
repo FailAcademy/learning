@@ -5,10 +5,10 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               Web Developer Essentials
+title:               Web Developer Foundation
 tagline:             'Learning Materials'
-description:         'Learning materials for the RED Academy Web Developer Essentials course.'
-url:                 http://web-dev-essentials.herokuapp.com
+description:         'Learning materials for the RED Academy Web Developer Foundation course.'
+url:                 http://red-wdf.herokuapp.com
 baseurl:             ''
 paginate:            10
 paginate_path:       '/news/page:num/'
@@ -22,7 +22,7 @@ author:
 # Custom vars
 version:             1.0.0
 github:
-  repo:              https://github.com/redacademy/web-dev-essentials
+  repo:              https://github.com/redacademy/web-dev-foundation
 
 # Collections
 collections:
@@ -32,9 +32,6 @@ collections:
    slides:
       output: true
       permalink: /slides/:title/
-   labs:
-      output: true
-      permalink: /lab/:title/
    projects:
       output: true
       permalink: /project/:title/
