@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<html lang="en-us">
+{% include head.html %}
 
-   {% include head.html %}
+   <body>
 
    {% comment %}
       NOTE: If the content tag in the following <textarea> is preceded by
@@ -11,8 +10,6 @@
    <textarea id="source">
 {{ content|strip_html }}
    </textarea>
-
-   <body>
 
      <!-- Remark scripts -->
      <script src="//gnab.github.io/remark/downloads/remark-latest.min.js"></script>
