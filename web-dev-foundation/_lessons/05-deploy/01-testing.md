@@ -70,6 +70,10 @@ Another performance handy testing for determining page size as well:
 
 - [Pingdom Website Speed Test](http://tools.pingdom.com/)
 
+A great reference for assessing the accessibility of a site:
+
+- [The Accessibility Cheatsheet](http://bitsofco.de/2015/the-accessibility-cheatsheet/)
+
 A Chrome extension for running accessibility audits:
 
 - [Accessibility Developer Tools](https://chrome.google.com/webstore/detail/accessibility-developer-t/)
