@@ -481,6 +481,15 @@ class: center, middle
 &mdash;Stephen Hay
 
 ---
+
+# Exercise 2
+
+Write your first media query:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/OVvXWV/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/OVvXWV/'>OVvXWV</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+---
 template: inverse
 
 # Mobile First
@@ -543,9 +552,9 @@ Think about mobile-first as being an **additive** rather than **subtractive** ap
 
 ---
 
-# Exercise 2
+# Exercise 3
 
-Time to try out creating media queries for yourself:
+Time to try out creating mobile-first media queries for yourself:
 
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/qdqoKG/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/qdqoKG/'>qdqoKG</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>

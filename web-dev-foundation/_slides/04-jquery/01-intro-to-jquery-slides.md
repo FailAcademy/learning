@@ -94,16 +94,18 @@ For example, take a typical HTML document:
 
 ```html
 <!DOCTYPE html>
-<head>
-   <title>My Awesome Website</title>
-</head>
-<body>
-   <div>
-      <p class="intro">
-         Welcome to my page! Thanks for stopping by.
-      </p>
-   </div>
-</body>
+<html>
+   <head>
+      <title>My Awesome Website</title>
+   </head>
+   <body>
+      <div>
+         <p class="intro">
+            Welcome to my page! Thanks for stopping by.
+         </p>
+      </div>
+   </body>
+</html>
 ```
 
 ---
@@ -151,13 +153,13 @@ Let's see how we can use jQuery to change the colour of the text in the paragrap
 
 # How Does It Work?
 
-To use jQuery to find the element with a class of `.intro`, we must use the `jQuery()` function and pass the CSS selector as a parameter:
+To use jQuery to find the element with a class of `.intro`, we must use the `jQuery()` method and pass the CSS selector as a parameter:
 
 ```javascript
 jQuery('.intro')
 ```
 
-Although you'll generally see the jQuery function written using a dollar sign as shorthand:
+Although you'll generally see the jQuery method written using a dollar sign as shorthand:
 
 ```javascript
 $('.intro')

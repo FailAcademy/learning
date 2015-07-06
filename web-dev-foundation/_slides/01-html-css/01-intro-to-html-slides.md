@@ -101,7 +101,6 @@ template: inverse
 # Elements & Attributes
 
 ---
-
 class: center, middle
 
 .inline-images[

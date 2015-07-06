@@ -96,7 +96,7 @@ class: center, middle
 
 # A CSS Declaration
 
-But you can do a lot more than just change the color of paragraph text:
+But you can do a lot more than just change the background colour behind some paragraph text.
 
 ```css
 p {
@@ -114,7 +114,7 @@ We can also use CSS to font size, background colours, the position of elements i
 
 # A CSS Declaration
 
-We can also be more specific about targeting those styles to only affect `<p>` tags that are nested inside a particular element:
+We can also be more specific about targeting those styles to only affect `<p>` tags that are inside a particular element:
 
 ```css
 header p {
@@ -163,6 +163,24 @@ class: center, middle
 .inline-images[
    ![CSS Box Model](/public/img/slide-assets/css-box-model.svg)
 ]
+
+---
+
+# Box Model Properties
+
+Using the box model to style our HTML elements, we can use CSS properties such as:
+
+```css
+p {
+   margin: 15px;
+   border-top: 1px solid black;
+   border-bottom: 3px dotted blue;
+   padding-left: 30px;
+   width: 300px;
+}
+```
+
+You can target specific sides of a box by adding `-bottom`, `-top`, `-left`, or `-right` to the properties. Otherwise, the style will apply to all sides.
 
 ---
 
