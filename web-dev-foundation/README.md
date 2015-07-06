@@ -1,10 +1,6 @@
 # README
 
-This is the readme file...we'll need to update it with more info before we launch in July.
-
-Add another line to the readme.
-
-Aimee's first commit!!
+Welcome to RED Academy's Web Developer Foundation learning materials!
 
 ## Development
 
