@@ -136,9 +136,9 @@ git push origin master
 ```bash
 git checkout production
 ```
-- Rebase (or merge if you prefer) the production branch to bring it up to date with master:
+- Merge the production branch to bring it up to date with master:
 ```bash
-git rebase master
+git merge master
 ```
 - Push the changes to the Heroku App master branch and the GitHub production branch, and then return to the master branch:
 ```bash
