@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Intro to Responsive Web Design
+# Responsive Web Design
 
 .title-logo[![Red logo](../../public/img/red-logo-white.svg)]
 

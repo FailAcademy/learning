@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Intro to Responsive Web Design
+title: Responsive Web Design
 slides: ['_slides/02-rwd/01-intro-to-rwd-slides.md']
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Intro to Version Control
+title: Version Control with Git
 slides: ['_slides/01-html-css/05-version-control-slides.md']
 ---
 

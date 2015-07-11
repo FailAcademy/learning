@@ -45,7 +45,7 @@ sass:
 markdown: redcarpet
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
 redcarpet:
-  extensions: ['smart']
+  extensions: ['smart', 'tables', 'autolink']
 
 # Exclusions
 exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'README.md', 'LICENSE.md', 'CONTRIBUTING.md', 'installation.md']

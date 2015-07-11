@@ -162,3 +162,17 @@ a.pagination-item:hover {
       }
    }
 }
+
+.schedule {
+   th:first-child {
+      width: 37.5%;
+   }
+
+   th:last-child {
+      width: 62.5%;
+   }
+
+   td {
+      vertical-align: top;
+   }
+}
