@@ -68,7 +68,7 @@ View the [solution](http://codepen.io/redacademy/pen/jPWQVQ).
 
 ## Lab Activity
 
-This is a link to the lab activity...
+*Lab activity details forthcoming.*
 
 ## Additional Resources
 

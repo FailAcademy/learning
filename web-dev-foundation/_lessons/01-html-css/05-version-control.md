@@ -69,7 +69,7 @@ You can use a GUI-based app to accomplish this, or if you're brave, try doing it
 
 ## Lab Activity
 
-Lab time will be dedicated to working on [Project 1](/project/project-1/). Be sure to commit your changes to your Git repo as you work now!
+Lab activity time will be dedicated to working on [Project 1](/project/project-1/). Be sure to commit your changes to your Git repo as you work now!
 
 ## Additional Resources
 

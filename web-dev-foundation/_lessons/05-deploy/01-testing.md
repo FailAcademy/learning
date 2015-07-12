@@ -30,7 +30,7 @@ Take some of the recommended testing tools (code validators, performance testers
 
 ## Lab Activity
 
-This is a link to the lab activity...
+*Lab activity details forthcoming.*
 
 ## Additional Resources
 

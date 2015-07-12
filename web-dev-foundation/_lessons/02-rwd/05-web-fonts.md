@@ -45,7 +45,15 @@ View the [solution](http://codepen.io/redacademy/pen/GJOBYv).
 
 ## Lab Activity
 
-Lets apply web fonts to each of your projects, using each of the three methods outlined.
+Now that we've learned the technical implementation details of how to use `@font-face` to add custom typefaces, let's learn how to choose typefaces that are suitable for a website's subject matter, and how to effectively pair different typefaces together.
+
+To do that, try out the free **[Typeface Classifications level](http://design.codeschool.com/levels/1/challenges/1)** on Code School. Watch the video and work through the exercises.
+
+Once you've completed the level, return to Font Squirrel and **download a custom font to use for Project 2**. Add the font package to your project and include an `@font-face` rule in your project's main stylesheet so you can use it on your website. Try out multiple fonts to compare which one feels best.
+
+You'll also want to read up on how to **[avoid faux italics and bolding](http://stackoverflow.com/questions/2436749/how-to-add-multiple-font-files-for-the-same-font)** with your `@font-face` typefaces, and adjust your CSS accordingly.
+
+You may select more than one font to include using `@font-face` for Project 2, but you are encouraged to pair your typefaces thoughtfully if you do!
 
 ## Additional Resources
 

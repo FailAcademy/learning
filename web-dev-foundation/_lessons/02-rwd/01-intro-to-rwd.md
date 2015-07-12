@@ -61,7 +61,31 @@ View the [solution](http://codepen.io/redacademy/pen/LVbdXw).
 
 ## Lab Activity
 
-This is a link to the lab activity...
+In this lab activity, you're **refactor the CSS** code for a more complex fixed-width website and turn it into a responsive website **using mobile-first media queries**.
+
+You can download the [website's source code here](/public/files/labs/rwd-lab.zip)
+
+The breakpoints you want to optimize for are: `720px` and `1200px`.
+
+**For our base CSS**:
+
+- The website content should occupy one column
+- The site title should be stacked over the navigation menu
+- Only two gallery images should appear in a row
+
+**At 720px**:
+
+- The site title and the navigation menu should float left and right respectively (do you need to adjust the padding around the menu items or the `h1` size at this breakpoint to make them fit better?)
+- The content area should break into two columns
+- The `artcle` element's column should occupy 2/3 of the space and the sidebar should occupy 1/3 (don't forget about the margin to the right of the `article`!)
+- Four gallery images should now appear in a row
+
+**At 1200px**:
+
+- The `artcle` element's column should occupy 3/4 of the space and the sidebar should occupy 1/4
+- The website should look exactly as it did in the fixed-width version (do you need to reset any elements' CSS properties that you shrunk down to work with the narrower breakpoints?)
+
+Don't forget to **change static units** `px` units into relative units like `em` and `%`!
 
 ## Additional Resources
 

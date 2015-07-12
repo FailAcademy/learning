@@ -42,7 +42,7 @@ After a few minutes evaluating your chosen website, team up with another class m
 
 ## Lab Activity
 
-This is a link to the lab activity...
+Please see the [Wireframing lesson](/lesson/wireframing/) for lab activity details.
 
 ## Additional Resources
 

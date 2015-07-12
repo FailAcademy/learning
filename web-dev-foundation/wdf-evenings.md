@@ -23,7 +23,7 @@ Wednesday, July 29         | [Responsive Web Design](/lesson/responsive-web-desi
 
 Week 4                     | Topics
 -------------------------- | --------------------------
-Monday, August 3 (TBD)     | [Design Toolbox](/lesson/design-toolbox/) <br /> [Wireframing](/lesson/intro-to-wireframing/)
+Monday, August 3 (TBD)     | [Design Toolbox](/lesson/design-toolbox/) <br /> [Wireframing](/lesson/wireframing/)
 Wednesday, August 5        | [GitHub Pages](/lesson/github-pages/) <br /> [Custom Web Fonts](/lesson/custom-web-fonts/)
 
 Week 5                     | Topics

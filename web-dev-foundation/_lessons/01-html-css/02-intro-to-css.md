@@ -60,12 +60,24 @@ Also try "forcing element states", editing the content of some of the HTML eleme
 
 ## Lab Activity
 
-Using the Star Wars formatted HTML document from the previous class, you will be using CSS to style different tags. Set up an external linked stylesheet. Work on styling these **selector types**:
+Time to add a bit of style to your resume from the previous lab activity...
 
-- Tag Selectors (eg. headings, paragraphs, lists etc)
-- Class Selectors (eg. custom classes that you have defined)
-- ID Selectors (eg. matches the one specified after the hash symbol)
-- Descendant Selectors (eg. matches an element that is a descendent of another specified element)
+You're going to add an **external stylesheet** to your root folder, and link it up in the `head` of your HTML file.
+
+From there, experiment with different CSS properties to override the default styles applied by the browser. For instance, you my try:
+
+- Changing the font size, font family, or colour of the text
+- Adjusting the line height
+- Changing the colour of links when they are hovered
+- Using box model properties to adjust the space between headings and paragraphs
+
+But don't stop there! **Have fun experimenting** with a variety of CSS properties.
+
+And be sure to try applying the styles using the different types of **selectors** we learned:
+
+- Type selectors (e.g. `p`, `h1`)
+- Descendant selectors (e.g. `article p`)
+- Class and ID selectors (e.g. `.title`, `#masthead`)
 
 ## Additional Resources
 

@@ -57,7 +57,16 @@ View the [solution](http://codepen.io/redacademy/pen/doZKrB)
 
 ## Lab Activity
 
-This is a link to the lab activity...
+Back to our resumes again! This time we're going **enhance the layout** of our resume using CSS.
+
+Specifically, you want to:
+
+- Add either `absolute` or `fixed` positioning to at least one element
+- Use the `z-index` property on at least one element
+- Use the `float` property on at least one element (do you need to clear your floats?)
+- Add either a repeating or non-repeating background image to your resume (or an element within in it)
+
+Finally, you need to **add a CSS reset** to your resume webpage. Does the reset affect any of your existing styles? Re-adjust your CSS properties where required.
 
 ## Additional Resources
 

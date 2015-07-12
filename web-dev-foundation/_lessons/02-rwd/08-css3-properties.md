@@ -58,7 +58,7 @@ View the [solution](http://codepen.io/redacademy/pen/PqOgax).
 
 ## Lab Activity
 
-This is a link to the lab activity...
+Lab activity time will be dedicated to working on [Project 2](/project/project-2/).
 
 ## Additional Resources
 

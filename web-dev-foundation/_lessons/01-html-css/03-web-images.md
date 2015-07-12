@@ -14,7 +14,7 @@ From the HTML & CSS textbook:
 ## Learning Objectives
 
 - Understand web-friendly image formats (JPG, PNG, GIF, and SVG).
-- Explore the web tools are available for image editing (such as Photoshop, Gimp, or Pixelmator).
+- Explore what tools are available for image editing (such as Photoshop or Gimp).
 - Learn how to load an image in an image editor, crop it, and size it.
 - Save images optimized for the web.
 - Explore the `img` element and its attributes in depth.
@@ -64,13 +64,28 @@ View the [solution](http://codepen.io/redacademy/pen/LVOLNY)
 
 ## Lab Activity
 
-- Find and add images to a web page using a variety of techniques, and apply colours through CSS classes/selectors to various elements on the page.
+In this lab activity, you're going to **practice you image-optimizing skills**.
+
+You can either use images/graphics that you own, or you can explore sources for Creative Commons-licensed and public domain images/graphics.
+
+**Choose at least three images/graphics** and experiment with the different editing tools you just learned. You are encouraged to explore a different file format for each.
+
+Next, **add your newly web-optimized images to a webpage**. You can add them to your resume HTML file, you can create a new webpage if you like.
+
+Finally, in an externally linked stylesheet, **practice using CSS to alter the display** of the image. Focus particularly on using box model properties to adjust its display, and be sure to **try out some HEX, RGBa, and HSLa colours** in your CSS as well.
 
 ## Additional Resources
 
 A list of predefined web colours:
 
 - [Web colors](http://en.wikipedia.org/wiki/Web_colors)
+
+Some Creative Commons-licensed image and icon sources:
+
+- [Flickr CC search](https://www.flickr.com/search/?license=2%2C3%2C4%2C5%2C6%2C9)
+- [The Stocks](http://thestocks.im/)
+- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)
+- [The Noun Project](https://thenounproject.com/)
 
 Some best practices for saving SEO-friendly images:
 

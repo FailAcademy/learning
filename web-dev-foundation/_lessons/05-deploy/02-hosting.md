@@ -39,7 +39,7 @@ Download an FTP client and use the credentials provided to FTP a file from your 
 
 ## Lab Activity
 
-Goes here...
+*Lab activity details forthcoming.*
 
 ## Additional Resources
 

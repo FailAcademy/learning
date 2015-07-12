@@ -46,7 +46,7 @@ To do that, you'll need:
 
 ## Lab Activity
 
-There's no lab activity for this lesson---just time to work on your final project.
+Lab activity time will be dedicated to working on the [Capstone Project](/project/capstone-project/).
 
 ## Additional Resources
 

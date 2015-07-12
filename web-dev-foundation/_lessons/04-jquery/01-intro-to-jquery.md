@@ -45,7 +45,7 @@ View the [solution](http://codepen.io/redacademy/pen/RPaZgY).
 
 ## Lab Activity
 
-This is a link to the lab activity...
+*Lab activity details forthcoming.*
 
 ## Additional Resources
 
@@ -53,6 +53,6 @@ Get extra practice with jQuery basics by completing this free Code School course
 
 - [Try jQuery](http://try.jquery.com/)
 
-A bookmark-worthy jQuery cheatsheet: 
+A bookmark-worthy jQuery cheatsheet:
 
 - [jQuery API Quick Reference](http://oscarotero.com/jquery/)

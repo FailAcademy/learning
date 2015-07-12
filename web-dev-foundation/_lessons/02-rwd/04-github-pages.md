@@ -26,7 +26,7 @@ Your turn! Take GitHub Pages for a spin by deploying the source files for your A
 
 ## Lab Activity
 
-This is a link to the lab activity...
+Please see the [Custom Web Fonts lesson](/lesson/custom-web-fonts/) for lab activity details.
 
 ## Additional Resources
 

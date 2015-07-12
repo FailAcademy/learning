@@ -45,7 +45,7 @@ View the [solution](http://codepen.io/redacademy/pen/RPgKbj)
 
 ## Lab Activity
 
-Build a functional HTML form with a variety of inputs that will tie into the Jquery class.
+Please see the [Working with Animation and Forms in jQuery](/lesson/working-with-animation-and-forms-in-jquery/) for lab activity details.
 
 ## Additional Resources
 

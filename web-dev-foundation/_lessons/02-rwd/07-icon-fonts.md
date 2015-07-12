@@ -31,7 +31,7 @@ View the [solution](http://codepen.io/redacademy/pen/rVYrXB).
 
 ## Lab Activity
 
-Lab goes here...
+Please see the [CSS Best Practices lesson](/lesson/css-best-practices/) for lab activity details.
 
 ## Additional Resources
 

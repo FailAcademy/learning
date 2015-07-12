@@ -40,7 +40,22 @@ View the [solution](http://codepen.io/redacademy/pen/KpaVJJ).
 
 ## Lab Activity
 
-This is a link to the lab activity...
+Time for a little code refactoring!
+
+By now your work on Project 2 should be well underway, which makes this the perfect time to take a step back and see how you can **clean up your CSS a bit**.
+
+First, **watch the video** where Nicole Sullivan (the pioneer of OOCSS) discusses strategies for writing efficient CSS and controlling code bloat:
+
+<iframe src="https://player.vimeo.com/video/72759139" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p>
+
+Based on what you learn from the lesson and Nicole's video, turn a critical eye toward your project's CSS to see what you can clean up and streamline.
+
+Specifically, you want to:
+
+- Make sure rules and properties are in a logical order
+- Use CSS shorthand wherever possible
+- Abstract repeated styles into a helper class, and apply the class where required in the HTML
+- Add some comments to further organize your CSS, and for future reference
 
 ## Additional Resources
 

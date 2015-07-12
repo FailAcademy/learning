@@ -16,10 +16,10 @@ From the HTML & CSS textbook:
 
 ## Learning Objectives
 
-- Understand what a mark-up language is and the function of HTML on the web
-- Learn to write semantic HTML, including elements, attributes, and nesting
-- Use basic HTML tags including headings, paragraphs, links, and lists
-- Recognize key differences between XHTML and HTML5
+- Define what a mark-up language is and the function of HTML on the web.
+- Write semantic HTML, including elements, attributes, and nesting.
+- Use basic HTML tags including headings, paragraphs, links, and lists.
+- Recognize key differences between XHTML and HTML5.
 
 ## Keywords
 
@@ -60,18 +60,20 @@ View the [solution](http://codepen.io/redacademy/pen/ZGaKOy).
 
 ## Lab Activity
 
-Using this [Star Wars Formatting Lab Activity](/public/files/labs/01-html-formatting-lab.zip) (zipped), you'll be using your new found coding skills to `mark-up` the text using what you've learnt in the morning class using a combination of tags covered. Open your `code editor` and `create` a new HTML document that has the doctype, body, head, and title tags. Your task will be to try to **match the formatting** style of the *formatted Word* document, using the *plain text* Word version and the HTML mark-up tags below:
+For this activity, you're going to **turn your resume into an HTML document**.
 
-- Headings and Paragraphs
-- Linebreaks & Horizontal Rules
-- Links
-- Basic Lists
-- Semantic Tags: Emphasis and Strong
-- Nested Tags
-- Inserting Images
+You will **use your code editor** to create a new HTML document that has the HTML5 doctype set, and has `html`, `head`, `title`, and `body` elements.
 
-*Match the visual example* provided as closely as possible.  You will have a chance to practice using the following tags: paragraphs, headers, line‐breaks, strong, emphasis, links as well as others that the instructor has shown in class today. There are no images are required for this exercise.
-Please save your file as: **firstname_html_assign1.html** 
+From there, **mark up the content in your resume** using the following HTML elements:
+
+- headings
+- paragraphs
+- basic lists (ordered or unordered)
+- horizontal rules
+- links (include at least two)
+- strong and emphasis
+
+Be careful when you're nesting your tags, and don't forget to save your resume file as `index.html` inside of your root project folder.
 
 ## Additional Resources
 

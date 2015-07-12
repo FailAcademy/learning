@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Intro to Wireframing
+title: Wireframing
 slides: ['_slides/02-rwd/03-wireframes-slides.md']
 ---
 ## Recommended Reading
@@ -39,7 +39,13 @@ Try out one of the recommended wireframing tools for this lesson, and quickly mo
 
 ## Lab Activity
 
-Produce a set of wireframes for three different breakpoints for Assignment 2.
+Lab activity time will be dedicated to producing a set of **wireframes for Project 2**.
+
+Start by **sketching out wireframes on paper** for each of the three required breakpoints (for at least one page).
+
+Once you've completed paper sketches, select one of the recommended wireframing tools and **produce digital version of your wireframes** for each breakpoint.
+
+You are encouraged to **seek out some inspiration** from other well-designed responsive websites on how to re-layout the elements on your pages at the different breakpoints. Check out [Media Queries](http://mediaqueri.es/) and [Unmatched Style](http://unmatchedstyle.com/tag/responsive) for galleries of RWD case studies.
 
 ## Additional Resources
 
