@@ -45,7 +45,7 @@ Take CSS transitions for a spin:
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/ZGaMWE/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/ZGaMWE/'>ZGaMWE</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-View the [solution](http://codepen.io/redacademy/pen/ZGaMWE).
+View the [solution](http://codepen.io/redacademy/pen/yNjZdN).
 
 ## Exercise 3
 
@@ -54,7 +54,7 @@ Experiment with CSS3 transforms and transitions together:
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/PqOgax/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/PqOgax/'>PqOgax</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-View the [solution](http://codepen.io/redacademy/pen/PqOgax).
+View the [solution](http://codepen.io/redacademy/pen/JdvxQJ).
 
 ## Lab Activity
 
