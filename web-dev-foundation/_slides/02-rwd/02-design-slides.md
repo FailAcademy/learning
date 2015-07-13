@@ -434,8 +434,17 @@ Jot down some notes about how it uses the elements and principles of design in t
 After a few minutes evaluating your chosen website, team up with another class member and exchange your observations.
 
 ---
+
+# What We've Learned
+
+- The difference between design and art
+- The elements and principles of design
+- The difference between hue, value, saturation
+- How to create colour harmonies
+
+---
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}

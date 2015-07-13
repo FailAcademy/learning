@@ -104,8 +104,9 @@ p {
    font-family: Helvetica, Arial, sans-serif;
    font-style: italic;
    line-height: 1.25;
-   margin-bottom: 15px;
 }
+
+/* Comments in CSS also look a little different from HTML */
 ```
 
 We can also use CSS to font size, background colours, the position of elements in the browser window, and much more.
@@ -122,11 +123,31 @@ header p {
    font-family: Helvetica, Arial, sans-serif;
    font-style: italic;
    line-height: 1.25;
-   margin-bottom: 15px;
 }
 ```
 
 This rules is said to be more **specific** than the last rule.
+
+---
+
+# All About that Text
+
+Beyond the example we just saw, CSS provides us with many more powerful properties for adjusting the display of text:
+
+```css
+p {
+   color: black;
+   font-size: 24px;
+   font-style: italic;
+   font-weight: bold;
+   letter-spacing: 2px;
+   line-height: 1.5;
+   text-align: center;
+   text-decoration: underline;
+   text-transform: uppercase;
+   word-spacing: 15px;
+}
+```
 
 ---
 
@@ -181,6 +202,24 @@ p {
 ```
 
 You can target specific sides of a box by adding `-bottom`, `-top`, `-left`, or `-right` to the properties. Otherwise, the style will apply to all sides.
+
+---
+
+
+# Box Model Shorthand
+
+Or instead of writing out all the properties for each side, we can use shorthand:
+
+```css
+header {
+   margin: 0 auto; /* this is horizontal centering trick in CSS */
+   padding: 5px 0 5px 10px;
+}
+```
+
+If you include **two properties**, they are applied to the **top/bottom** and then **left/right**.
+
+If you include **four properties**, they will be applied in the order **top**, **right**, **bottom**, and **left** (like going around a clock).
 
 ---
 
@@ -362,7 +401,7 @@ With external CSS, you put all of your CSS in a separate `.css` file, and link t
 <html>
    <head>
       <title>My Page</title>
-      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" href="style.css">
    <head>
    <body>
       <p>Hello, world!</p>
@@ -436,26 +475,6 @@ To target an element's class in your CSS, you would use a dot plus the class nam
 
 ---
 
-# Pseudo-classes
-
-**Pseudo-classes** allow you change the appearance of an element when users interact with them:
-
-```css
-a {
-   color: red;
-   text-decoration: none;
-}
-
-a:hover {
-   color: blue;
-   text-decoration: underline;
-}
-```
-
-You can use the `:link` and `:visited` pseudo-classes for links, and `:hover`, `:active`, and `:focus` pseudo-classes for a broader array of elements.
-
----
-
 # IDs in CSS
 
 To target an element's ID in your CSS, you would use a pound sign plus the ID name:
@@ -515,6 +534,58 @@ Some tips for naming the classes and IDs in your HTML:
 - Remember that ID names must be unique to the element!
 
 ---
+class: center, middle
+
+.large[
+   Sidebar!
+]
+
+---
+
+# Pseudo-classes
+
+**Pseudo-classes** are special built-in keywords you can add to elements to describe some dynamic state of the element:
+
+```css
+a {
+   color: red;
+   text-decoration: none;
+}
+
+a:hover {
+   color: blue;
+   text-decoration: underline;
+}
+```
+
+You can use the `:link` and `:visited` pseudo-classes for links, and `:hover`, `:active`, and `:focus` pseudo-classes for a broader array of elements.
+
+---
+
+# Pseudo-classes
+
+Pseudo-classes also allow us to select very specific child elements inside of a parent:
+
+```css
+li:first-child {
+   border-left: 0;
+}
+
+li:nth-child(2),
+li:nth-child(odd) {
+   color: blue;
+}
+
+li:nth-child(3n+4) {
+   text-transform: uppercase; /* match children 4, 7, 10, etc. */
+}
+
+li:last-child {
+   border-right: 0;
+}
+```
+
+---
 
 # Exercise 2
 
@@ -561,8 +632,19 @@ Also try "forcing element states", editing the content of some of the HTML eleme
 
 ---
 
+# What We've Learned
+
+- What CSS is in relation to HTML
+- Different ways to include CSS in our webpage
+- What the box model is
+- How specificity and inheritance work
+- How to use classes and IDs to target our styles
+- How to use a browser's developer tools
+
+---
+
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}

@@ -507,8 +507,16 @@ Try implementing CSS backgrounds in three different ways:
 
 ---
 
+# What We've Learned
+
+- Different ways to use the `position` property
+- How to `float` elements
+- How to use the `background` property in CSS
+- What a CSS reset is
+
+---
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}

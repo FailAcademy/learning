@@ -450,8 +450,17 @@ A few good places to find royalty-free, CC-licensed images:
 
 ---
 
+# What We've Learned
+
+- Different image formats that are Web-friendly
+- How to crop, scale, rotate, and optimize and image
+- How to use different colour formats on the web
+- How to work with image elements in CSS
+- Different types of image licensing
+
+---
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}

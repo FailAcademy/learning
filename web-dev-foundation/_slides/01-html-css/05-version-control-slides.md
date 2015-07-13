@@ -395,8 +395,19 @@ You're going to turn your Week 1 Project into a Git repo, and push it to GitHub.
 You can use a GUI-based app to accomplish this, or if you're brave, try doing it entirely from the command line.
 
 ---
+
+# What We've Learned
+
+- What the command line is
+- How to navigate the file system from the CLI
+- What version control is
+- The difference between Git and GitHub
+- How to initialize a Git repository
+- How to use a GUI-based Git app
+
+---
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}

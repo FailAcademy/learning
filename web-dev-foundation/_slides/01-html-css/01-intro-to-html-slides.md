@@ -22,7 +22,7 @@ layout: false
 1. What is HTML?
 2. Elements & Attributes
 3. Creating a Webpage
-4. Differences in Doctypes
+4. Doctypes and Comments
 5. Structural Tags
 6. Semantic Tags
 
@@ -133,9 +133,20 @@ Notice that the text is wrapped in `<p>` tags, and the closing tag contains a `/
 
 ---
 
+# A Basic Element
+
+And if we want to add a second paragraph, we'll enclose its text inside of its own set of `p` tags:
+
+```html
+<p>The quick brown fox jumps over the lazy dog.</p>
+<p>Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
+```
+
+---
+
 # Adding Attributes
 
-An attribute is a bit of information we add inside the element's opening tag.
+An **attribute** is a bit of information we add inside the element's opening tag.
 
 The are made up of two parts, a **name** and a **value** that are separated by an equal sign:
 
@@ -143,7 +154,7 @@ The are made up of two parts, a **name** and a **value** that are separated by a
 <p lang="fr">Bonjour mes amis!</p>
 ```
 
-Some attributes can be used globally on any HTML element, but many are element-specific.
+HTML offers many different attributes. Some can be used **globally** on any element, but many are **element-specific**.
 
 ---
 
@@ -164,6 +175,22 @@ background-image: url(/public/img/slide-assets/russian-nesting-dolls.jpg)
 .footnote.white[
    Image Credit: [Bradley Davis](https://www.flickr.com/photos/backpackphotography/2318055128/)
 ]
+
+---
+
+# Escape Characters
+
+Some characters are reserved for HTML so we need to use **special codes** to represent the in our document.
+
+For example, if we want to use curly double quotes around text, we would use these codes:
+
+```html
+<p>&#8220;Off with her head!&#8221; the Queen shouted at the top of her voice. Nobody moved.</p>
+```
+
+Codes can also be used to represent symbols like &copy; or &trade;.
+
+You can find HTML codes for many characters on **[copypastecharacter.com](http://copypastecharacter.com/)**.
 
 ---
 template: inverse
@@ -284,7 +311,7 @@ Lastly, save and view your new website in a browser.
 ---
 template: inverse
 
-# Doctypes
+# Doctypes & Comments
 
 ---
 
@@ -312,7 +339,7 @@ The important thing to know is that the doctype declaration is not an HTML tag, 
 
 ---
 
-#Where Does It Go?
+# Where Does It Go?
 
 Doctype declarations go at the top of your `.html` files:
 
@@ -326,6 +353,43 @@ Doctype declarations go at the top of your `.html` files:
       <p>This is a paragraph.</p>
    </body>
 </html>
+```
+
+---
+
+# Meta Tags
+
+In addition to adding a doctype, there's other information we can add to the `<head>` of our document to help with rendering and describing our webpage using `meta` tags:
+
+```html
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>This is the Page Title</title>
+
+      <meta name="description" content="A most excellent website">
+      <meta name="author" content="RED Academy">
+   </head>
+   <body>
+      <p>This is a paragraph.</p>
+   </body>
+</html>
+```
+
+---
+
+# Comments
+
+Similar to the doctype declaration, comments aren't HTML elements per se.
+
+Adding comments to our HTML is a good practice to help us **document** our code for ourselves and others.
+
+```html
+<!-- This text will not be visible in the browser window. -->
+<p>The quick brown fox jumps over the lazy dog.</p>
+
+<!-- <p>We can comment-out elements to temporarily hide them.</p> -->
 ```
 
 ---
@@ -347,7 +411,7 @@ In HTML, you can denote 6 different levels of headings with markup like so:
 <h3>Heading 3</h3>
 <h4>Heading 4</h4>
 <h5>Heading 5</h5>
-<h6>Heading 5</h6>
+<h6>Heading 6</h6>
 ```
 
 ---
@@ -437,8 +501,6 @@ So an HTML5 webpage might look a little something like this:
 </footer>
 ```
 
-*This is a bit advanced, so don't worry! We'll come back to this.*
-
 ---
 
 # Exercise 2
@@ -516,6 +578,18 @@ And if a page is in a sub-folder:
 
 ---
 
+# Link Elements
+
+Links can point to email addresses too if we add `mailto:` at the front of the `href` value followed by an email address:
+
+```html
+<a href="mailto:mandi@redacademy.com">Email Mandi</a>
+```
+
+When a user click this link, it will open their default email application with the email address in the "To:" line.
+
+---
+
 # Image Elements
 
 And of course, images!
@@ -552,8 +626,18 @@ Now try using an assortment of structural and semantic tags:
 
 ---
 
+# What We've Learned
+
+- What HTML is and it's basic elements
+- How to create a webpage on your computer
+- The difference between structural and semantic elements
+- New HTML5 elements
+- How to create links and add images
+
+---
+
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}

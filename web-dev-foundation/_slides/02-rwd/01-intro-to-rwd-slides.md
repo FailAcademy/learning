@@ -265,7 +265,17 @@ h1 {
 }
 ```
 
-Keep in mind that `em` units change the size of the text relative to the parent element.
+---
+
+# EM vs. REM
+
+You may also see another `font-size` unit known as `rem`.
+
+The difference is that `em` units change the size of the text relative to the **parent element**, while `rem` units are always relative to the `font-size` of the `<html>` element.
+
+Using `rem` units can make proportionally scaling font sizes a little more manageable (because every resulting size is always based on the same base size), but it's not supported by IE8.
+
+
 
 ---
 template: inverse
@@ -378,6 +388,18 @@ With media queries today, we can translate this directly into CSS as well:
 ```
 
 Bonus! Putting multiple media queries in one stylesheet saves additional HTTP requests, which is better for site performance.
+
+---
+
+# A New Meta Tag
+
+But whichever approach you take, there's a new `meta` tag you may want to include when building a responsive website:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+
+Read more about [managing the viewport](https://css-tricks.com/snippets/html/responsive-meta-tag/).
 
 ---
 
@@ -575,13 +597,17 @@ class: center, middle
 # [Smashing Magazine](http://www.smashingmagazine.com/)
 
 ---
-class: center, middle
 
-# [Squarespace](http://squarespace.com/)
+# What We've Learned
+
+- The difference between fixed, fluid, adaptive, and responsive websites
+- The three things that make a website "responsive"
+- How to write media queries
+- Why and how to take a mobile-first approach to RWD
 
 ---
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}
