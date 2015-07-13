@@ -9,8 +9,9 @@
    // Layouts
 
    .remark-slide-content:not(.inverse) {
-      background: #fff url('../public/img/red-logo.svg') no-repeat left 20px bottom 18px;
+      background: #fff url('../public/img/red-logo.svg') no-repeat left 20px bottom 16px;
       background-size: 180px 30px;
+      border-bottom: 5px solid $brand-red;
    }
 
    .inverse {
