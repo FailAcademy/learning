@@ -148,7 +148,7 @@ And if we want to add a second paragraph, we'll enclose its text inside of its o
 
 An **attribute** is a bit of information we add inside the element's opening tag.
 
-The are made up of two parts, a **name** and a **value** that are separated by an equal sign:
+They are made up of two parts, a **name** and a **value** that are separated by an equal sign:
 
 ```html
 <p lang="fr">Bonjour mes amis!</p>
