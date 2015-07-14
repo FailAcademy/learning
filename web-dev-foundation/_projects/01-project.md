@@ -15,6 +15,8 @@ In general, please avoid any "fan site" topics.
 
 Be sure to **submit your website topic** idea to your instructor before the beginning of class on Day 3.
 
+**[Download the Assessment Guide for Project 1 &rarr;](/public/files/wdf-project1-assessment.pdf)**
+
 ## Requirements
 
 To receive a "Pass" grade for this project, your submission will need to satisfy the following criteria:
@@ -34,19 +36,19 @@ Your project must:
 
 - Use the HTML5 doctype and semantic HTML5 mark-up
 - Include at least two `img` elements with `alt` text
-- Include at least three `a` elements (in addition to the navigation menu)
+- Include at least three `a` elements
 - Make appropriate use of paragraph, heading, and list elements
 
 **CSS requirements:**
 
 Your project must:
 
-- Make appropriate use of classes and IDs
+- Make appropriate use of classes and IDs as selectors
 - Use a CSS reset
 - Use the `background-image` property at least once
 - Use the `position` and `float` properties
 - Demonstrate effective use of box model properties
-- Demonstrate effective use of CSS properties for altering the display of text (e.g. `font-family`, `font-style`, `text-transform`, etc.)
+- Demonstrate effective use of CSS properties for altering the visual display of text (e.g. `font-family`, `font-style`, `text-transform`, etc.)
 
 **Additional requirements:**
 

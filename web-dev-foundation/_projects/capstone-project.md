@@ -65,7 +65,8 @@ Your project must:
 Your project must:
 
 - Have the production version of the jQuery library included in the appropriate location
-- Include an example of jQuery animation, such as `.show()` or `.fadeIn()`
+- Wrap jQuery in `$(document).ready()` method
+- Include an example of context-appropriate jQuery animation, such as `.show()` or `.fadeIn()`
 - Include at least one jQuery event handler (using event delegation) that provides the user feedback after they take an action on the website
 - Not contain any syntax or reference errors in the console
 
