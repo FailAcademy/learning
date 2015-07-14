@@ -69,6 +69,21 @@ class: center, middle
 
 ---
 
+class: center, middle
+
+.large[
+	Review: HTML5 Elements
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![HTML5 example layout](/public/img/slide-assets/html5-semantic-tags.png)
+]
+
+---
+
 # Changing Display
 
 Every HTML element has a default display property, but we can override it using the `display` property in your CSS.

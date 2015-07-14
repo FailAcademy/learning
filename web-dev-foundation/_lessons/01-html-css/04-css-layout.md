@@ -82,3 +82,7 @@ And some CSS reset resources:
 - [normalize.css](http://necolas.github.io/normalize.css/)
 - [Box Model Reset](https://sunnyis.me/blog/box-model-reset)
 - [Pure CSS](http://purecss.io/)
+
+More on the new semantically-names structural elements in HTML5:
+
+- [HTML5 for Web Designers - Semantics](http://html5forwebdesigners.com/semantics/)
