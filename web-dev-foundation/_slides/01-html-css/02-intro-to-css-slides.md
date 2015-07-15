@@ -231,6 +231,11 @@ Try adding margin, borders, and padding to some HTML elements as instructed belo
 </iframe>
 
 ---
+template: inverse
+
+# Block & Inline
+
+---
 class: center, middle
 
 ### Block vs. Inline
@@ -262,7 +267,7 @@ Some inline elements include `<img>`, `<a>`, and `<strong>`.
 ---
 template: inverse
 
-# How CSS Cascade
+# How CSS Cascades
 
 ---
 class: center, middle
