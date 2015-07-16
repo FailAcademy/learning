@@ -435,7 +435,7 @@ class: center, middle
 
 - It's easy to link the same stylesheet to multiple pages across your website
 - It's much easier to make global changes to your CSS that are immediately picked up throughout the website
-- Your website's content is clearly separated form your website's style
+- Your website's content is clearly separated from your website's style
 
 ---
 template: inverse

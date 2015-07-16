@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: Using Images on the Web
-slides: ['_slides/01-html-css/03-web-images-slides.md']
+title: Using Media on the Web
+slides: ['_slides/01-html-css/03-web-media-slides.md']
 ---
 
 ## Recommended Reading
@@ -10,6 +10,7 @@ From the HTML & CSS textbook:
 
 - Images (pp. 95-123)
 - Color (pp. 247-260)
+- Flash, Video & Audio (pp. 200-225)
 
 ## Learning Objectives
 
@@ -21,6 +22,7 @@ From the HTML & CSS textbook:
 - Explore free stock photography resources.
 - Discuss basic copyright concerns, the public domain, and Creative Commons.
 - Use hexadecimal and RGBa to set the colours of HTML elements.
+- Explore the `audio` and `video` elements in HTML5.
 
 ## Keywords
 
@@ -28,6 +30,8 @@ From the HTML & CSS textbook:
 - Optimization
 - Hexadecimal
 - RGBa
+- [audio](https://developer.mozilla.org/en/docs/Web/HTML/Element/audio)
+- [video](https://developer.mozilla.org/en/docs/Web/HTML/Element/video)
 - Copyright
 - Creative Commons
 - Public domain

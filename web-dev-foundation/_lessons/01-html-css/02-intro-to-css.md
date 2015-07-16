@@ -64,7 +64,7 @@ Time to add a bit of style to your resume from the previous lab activity...
 
 You're going to add an **external stylesheet** to your root folder, and link it up in the `head` of your HTML file.
 
-From there, experiment with different CSS properties to override the default styles applied by the browser. For instance, you my try:
+From there, experiment with different CSS properties to override the default styles applied by the browser. For instance, you may try:
 
 - Changing the font size, font family, or colour of the text
 - Adjusting the line height
@@ -80,6 +80,10 @@ And be sure to try applying the styles using the different types of **selectors*
 - Class and ID selectors (e.g. `.title`, `#masthead`)
 
 ## Additional Resources
+
+One of the best websites on CSS out there...bookmark this one!
+
+- [CSS Tricks](https://css-tricks.com/)
 
 A quick reference guide for understanding CSS:
 

@@ -13,7 +13,7 @@ Wednesday, July 15         | [Intro to CSS](/lesson/intro-to-css/)
 
 Week 2                     | Topics
 -------------------------- | --------------------------
-Monday, July 20            | [Using Images on the Web](/lesson/using-images-on-the-web/)
+Monday, July 20            | [Using Media on the Web](/lesson/using-media-on-the-web/)
 Wednesday, July 22         | [CSS Layouts](/lesson/css-layouts/)
 
 Week 3                     | Topics
@@ -23,7 +23,7 @@ Wednesday, July 29         | [Responsive Web Design](/lesson/responsive-web-desi
 
 Week 4                     | Topics
 -------------------------- | --------------------------
-Monday, August 3 (TBD)     | [Design Toolbox](/lesson/design-toolbox/) <br /> [Wireframing](/lesson/wireframing/)
+Tuesday, August 4          | [Design Toolbox](/lesson/design-toolbox/) <br /> [Wireframing](/lesson/wireframing/)
 Wednesday, August 5        | [GitHub Pages](/lesson/github-pages/) <br /> [Custom Web Fonts](/lesson/custom-web-fonts/)
 
 Week 5                     | Topics
@@ -48,7 +48,7 @@ Wednesday, September 2     | [Ajax and APIs](/lesson/intro-to-ajax-and-apis/) <b
 
 Week 9                     | Topics
 -------------------------- | --------------------------
-Monday, September 7 (TBD)  | [Hosting a Website](/lesson/hosting-a-website/)
+Tuesday, September 8       | [Hosting a Website](/lesson/hosting-a-website/)
 Wednesday, September 9     | [Hacker Edition - Intro to LESS](/lesson/hacker-edition-intro-to-less/)
 
 Week 10                    | Topics

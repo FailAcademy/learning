@@ -119,7 +119,7 @@ We can take even more control over our layouts using the CSS `position` property
 
 # Relative Positioning
 
-Relative positioning moves an element in relation to where it would have been the normal flow:
+Relative positioning moves an element in relation to where it would have been in the normal flow:
 
 ```css
 header h1 {
