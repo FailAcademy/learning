@@ -22,8 +22,8 @@ layout: false
 
 1. What is design?
 2. Elements of design
-3. Principles of design
-4. Colour theory
+3. Colour Theory
+4. Principles of design
 
 ---
 template: inverse
@@ -87,6 +87,27 @@ Other qualities of a line that affect its character:
 - Swirling linear lines remind us of nature
 
 ---
+class: center, middle
+
+.inline-images-border[
+   [![The Supply screenshot](../../public/img/slide-assets/design-supply-co-sc.png)](http://www.thesupply.com/)
+]
+
+---
+class: center, middle
+
+.inline-images-border[
+   [![WCM Fest screenshot](../../public/img/slide-assets/design-wmcfest-sc.png)](http://wmcfest.com/)
+]
+
+---
+class: center, middle
+
+.inline-images-border[
+   [![Web Stock 2015](../../public/img/slide-assets/design-webstock-sc.png)](http://www.webstock.org.nz/15/)
+]
+
+---
 
 # Shape
 
@@ -118,6 +139,27 @@ class: center, middle
 *Negative and positive space are equally important.*
 
 ---
+class: center, middle
+
+.inline-images-border[
+   [![Newton Running](../../public/img/slide-assets/design-newton-running-sc.png)](http://runbetter.newtonrunning.com/menu)
+]
+
+---
+class: center, middle
+
+.inline-images-border[
+   [![Navy Design](../../public/img/slide-assets/design-navy-sc.png)](http://www.navydesign.com.au/)
+]
+
+---
+class: center, middle
+
+.inline-images-border[
+   [![Big Cartel](../../public/img/slide-assets/design-big-cartel-sc.png)](http://recap.bigcartel.com/2014/)
+]
+
+---
 
 # Form
 
@@ -127,12 +169,40 @@ class: center, middle
 - Can be illustrated or constructed
 
 ---
+class: center, middle
+
+.inline-images-border[
+   [![CSS Tricks](../../public/img/slide-assets/design-css-tricks-sc.png)](https://css-tricks.com/)
+]
+
+---
+class: center, middle
+
+.large[
+   **[CSS Tetrahedron Experiment](http://paulrhayes.com/experiments/pyramid/)**
+]
+
+---
 
 # Texture
 
 - Real texture is the visual surface of an object (can be simulated or implied)
 - Visual texture can also be simulated or implied
-- **Skeuomorphism** is when web and app design takes cues from the physical world
+- **Skeuomorphism** is when web design takes cues from the physical world
+
+---
+class: center, middle
+
+.inline-images-border[
+   [![Jack Johnson Music](../../public/img/slide-assets/design-jack-johnson-sc.png)](http://jackjohnsonmusic.com/)
+]
+
+---
+class: center, middle
+
+.inline-images-border[
+   [![La Maddalena](../../public/img/slide-assets/design-lamaddalena-sc.png)](http://www.lamaddalena.pl/index-low.html)
+]
 
 ---
 
@@ -143,6 +213,13 @@ class: center, middle
 - We can use colour or texture to create a pattern
 - All patterns have texture, not all textures have patterns
 - Simplest design of a pattern is a **motif**
+
+---
+class: center, middle
+
+.inline-images-border[
+   [![Michi Ramen](../../public/img/slide-assets/design-michiramen-sc.png)](http://www.michiramen.com/)
+]
 
 ---
 class: center, middle
@@ -259,6 +336,13 @@ class: center, middle
 ]
 
 ---
+class: center, middle
+
+.inline-images-border[
+   [![Studio D](../../public/img/slide-assets/design-studio-d-sc.png)](http://studiodyxe.com/)
+]
+
+---
 
 class: center, middle
 
@@ -266,6 +350,13 @@ class: center, middle
 
 .inline-images[
    ![Complementary colour harmony](../../public/img/slide-assets/color-harmony-complementary.svg)  
+]
+
+---
+class: center, middle
+
+.inline-images-border[
+   [![Spotify House](../../public/img/slide-assets/design-spotify-house-sc.png)](http://spotifyhouse.com/)
 ]
 
 ---
@@ -279,13 +370,33 @@ class: center, middle
 ]
 
 ---
+class: center, middle
 
+.inline-images-border[
+   [![Danne Olsson](../../public/img/slide-assets/design-danne-olsson-sc.png)](http://www.danneolsson.se/)
+]
+
+---
+class: center, middle
+
+.inline-images-border[
+   [![Koa](../../public/img/slide-assets/design-drink-koa-sc.png)](http://www.drinkkoa.com/#top)
+]
+
+---
 class: center, middle
 
 ### Split Complementary Harmony
 
 .inline-images[
    ![Split complementary colour harmony](../../public/img/slide-assets/color-harmony-split-comp.svg)
+]
+
+---
+class: center, middle
+
+.inline-images-border[
+   [![Magnet Co.](../../public/img/slide-assets/design-magnet-sc.png)](http://magnet.co/)
 ]
 
 ---
@@ -299,6 +410,13 @@ class: center, middle
 ]
 
 ---
+class: center, middle
+
+.inline-images-border[
+   [![Cake PHP](../../public/img/slide-assets/design-cake-php-sc.png)](http://cakephp.org/)
+]
+
+---
 
 class: center, middle
 
@@ -306,6 +424,13 @@ class: center, middle
 
 .inline-images[
    ![Tetrad colour harmony](../../public/img/slide-assets/color-harmony-tetrad.svg)
+]
+
+---
+class: center, middle
+
+.inline-images-border[
+   [![Twitch TV](../../public/img/slide-assets/design-twitch-tv-sc.png)](http://www.twitch.tv/year/2014)
 ]
 
 ---
@@ -361,6 +486,13 @@ class: center, middle
 - "The whole is greater than the sum of its parts."
 
 ---
+class: center, middle
+
+.inline-images-border[
+   [![Caava Design](../../public/img/slide-assets/design-caava-design-sc.png)](http://caavadesign.com/)
+]
+
+---
 
 # Variety
 
@@ -371,6 +503,13 @@ class: center, middle
 - Related to contrast&mdash;which is achieved using colour, tone/value, size/shape, and direction
 
 ---
+class: center, middle
+
+.inline-images-border[
+   [![Divide by Two](../../public/img/slide-assets/design-dividebytwo-sc.png)](http://dividebytwo.pt/)
+]
+
+---
 
 # Dominance
 
@@ -378,6 +517,13 @@ class: center, middle
 - What's bigger?
 - What draws attention?
 - More important elements usually receive special emphasis
+
+---
+class: center, middle
+
+.inline-images-border[
+   [![We Make Awesome Websites](../../public/img/slide-assets/design-wemakeawesomesh-sc.png)](http://wemakeawesomesh.it/)
+]
 
 ---
 
@@ -390,6 +536,13 @@ class: center, middle
 - White space leaves breathing room
 
 ---
+class: center, middle
+
+.inline-images-border[
+   [![Giang Nguyen](../../public/img/slide-assets/design-giang-nguyen-sc.png)](http://giangnguyendesign.com/)
+]
+
+---
 
 # Scale/Proportion
 
@@ -397,6 +550,13 @@ class: center, middle
 - Scale is an outside measure ("this is to that")
 - Proportion is an inside measure ("size of parts to whole")
 - Visual hierarchy communicates priority
+
+---
+class: center, middle
+
+.inline-images-border[
+   [![Loubsol](../../public/img/slide-assets/design-loubsol-sc.png)](http://loubsol.com/)
+]
 
 ---
 
@@ -408,6 +568,13 @@ class: center, middle
 - Aerial perspective (the misty horizon effect)
 - Hard lines help create contrast in space
 - Space can be shallow or deep
+
+---
+class: center, middle
+
+.inline-images-border[
+   [![Fast Forwrd Labs](../../public/img/slide-assets/design-fast-forward-labs-sc.png)](http://www.fastforwardlabs.com/)
+]
 
 ---
 class: center, middle
