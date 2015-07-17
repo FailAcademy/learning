@@ -576,6 +576,7 @@ A few good places to find royalty-free, CC-licensed images:
 - How to crop, scale, rotate, and optimize and image
 - How to use different colour formats on the web
 - How to work with image elements in CSS
+- How to use HTML5 `audio` and `video` elements
 - Different types of image licensing
 
 ---
