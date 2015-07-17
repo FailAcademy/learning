@@ -450,7 +450,7 @@ The `audio` tag isn't a self-closing tag for reason...not all browsers support t
 To do this, we take the `src` attribute out of the audio element tag, and nest all of our file formats inside some child `source` tags like this:
 
 ```html
-<audio src="macarena.ogg" autoplay="true" controls="controls">
+<audio autoplay loop controls>
    <source src="macarena.ogg" type="audio/ogg">
    <source src="macarena.mp3" type="audio/mpeg">
    <source src="macarena.wav" type="audio/wav">
@@ -464,7 +464,7 @@ To do this, we take the `src` attribute out of the audio element tag, and nest a
 Similar to the audio element, we can add video like this:
 
 ```html
-<video src-"my-video.mp4" controls poster="video-thumb.jpg"></video>
+<video src="my-video.mp4" controls poster="video-thumb.jpg"></video>
 ```
 
 The video element gives us `poster` attribute to specify a custom image that should be shown before the video plays.
@@ -498,6 +498,15 @@ You'll need an app for that:
 - [EasyHTML5Video](http://easyhtml5video.com/)
 
 And if you need to convert audio files check out [media.io](http://media.io/).
+
+---
+
+# Exercise 4
+
+Try out the `audio` and `video` elements for yourself:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/QbBaGE/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/QbBaGE/'>QbBaGE</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 
