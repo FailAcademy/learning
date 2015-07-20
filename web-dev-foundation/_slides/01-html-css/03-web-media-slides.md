@@ -300,7 +300,7 @@ The `a` that represents opacity is written as a decimal, with a range of `0` (fu
 
 # HSL/HSLa Colours
 
-Specifying colour using HSLa is similar to using RGA.
+Specifying colour using HSLa is similar to using RGBa.
 
 However, instead of giving coordinates for the amount of red, blue, or green to mix in the colour, we specify **hue**, **saturation**, and **lightness**.
 
@@ -428,7 +428,7 @@ The audio tag should look familiar. It has a `src` attribute just like an `img` 
 If we wanted to set the audio file to autoplay and give the user controls to manage playback, we can add these attributes:
 
 ```html
-<audio src="macarena.ogg" autoplay="true" controls="controls"></audio>
+<audio src="macarena.ogg" autoplay="autoplay" controls="controls"></audio>
 
 <!-- This syntax is also valid: -->
 <audio src="macarena.ogg" autoplay controls></audio>
@@ -501,15 +501,6 @@ And if you need to convert audio files check out [media.io](http://media.io/).
 
 ---
 
-# Exercise 4
-
-Try out the `audio` and `video` elements for yourself:
-
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/QbBaGE/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/QbBaGE/'>QbBaGE</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
-
----
-
 # Other Concerns
 
 Always consider if hosting your own audio and video files is the right choice for a given website:
@@ -517,6 +508,15 @@ Always consider if hosting your own audio and video files is the right choice fo
 - Do (or your client) you have the **administrative capacity** to juggle all those formats?
 - Does your web host provide the necessary **bandwidth** to deliver those files to users?
 - Would a **third-party** service like Soundcloud, YouTube, or Vimeo be a better choice?
+
+---
+
+# Exercise 4
+
+Try out the `audio` and `video` elements for yourself:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/QbBaGE/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/QbBaGE/'>QbBaGE</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 template: inverse
