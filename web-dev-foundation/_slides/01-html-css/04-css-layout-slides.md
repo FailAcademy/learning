@@ -19,27 +19,33 @@ layout: false
 
 # Agenda
 
-1. Positioning elements with CSS
-2. Floating elements with CSS
-3. List-based navigation menus
-4. Styling the background
-5. Using CSS resets
+1. Review: block vs. inline, HTML5
+2. Positioning elements with CSS
+3. Floating elements with CSS
+4. List-based navigation menus
+5. Styling the background
+6. Using CSS resets
 
 ---
-
 template: inverse
 
-# Position
+# Review+
 
 ---
 class: center, middle
 
 .large[
-	Review: Block vs. Inline
+	Block vs. Inline
 ]
 
 ---
+class: center, middle
 
+### CSS Display Properties
+
+We've learned that HTML elements can be inline or block-level, but there's more to the story than that.
+
+---
 class: center, middle
 
 .inline-images[
@@ -54,39 +60,10 @@ class: center, middle
 ]
 
 ---
-class: center, middle
-
-.large[
-	Review: Boxes in Boxes
-]
-
----
-class: center, middle
-
-.inline-images[
-   ![CSS Box Concept](/public/img/slide-assets/css-box-concept.svg)
-]
-
----
-
-class: center, middle
-
-.large[
-	Review: HTML5 Elements
-]
-
----
-class: center, middle
-
-.inline-images[
-   ![HTML5 example layout](/public/img/slide-assets/html5-semantic-tags.png)
-]
-
----
 
 # Changing Display
 
-Every HTML element has a default display property, but we can override it using the `display` property in your CSS.
+We can override an element default display behaviour using the `display` property in our CSS.
 
 For example:
 
@@ -103,6 +80,241 @@ span {
 	display: block;
 }
 ```
+
+---
+class: center, middle
+
+### Not that simple!
+
+But there's another distinction to be made...<br />an element can also be **inline-block**.
+
+---
+
+# Display Differences
+
+Block                                 | Inline-block                    | Inline
+------------------------------------- | --------------------------------|---------------------------------
+Has top/bottom margin & padding       | Has top/bottom margin & padding | No top/bottom margin or padding
+Has left/right margin & padding       | Has left/right margin & padding | Has left/right margin & padding
+Can have set height and width         | Can have set height and width   | Cannot have set width or height
+Forces a line break after the element | Does not a force a line break   | Does not force a line break
+
+---
+class: center, middle
+
+.inline-images[
+   ![CSS display properties](/public/img/slide-assets/css-display-props.svg)
+]
+
+---
+class: center, middle
+
+.large[
+	HTML5 Elements
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![HTML5 example layout](/public/img/slide-assets/html5-semantic-tags.png)
+]
+
+---
+
+# Div-itis
+
+We've learned that the `<div>` can be used for flowing and organizing groups of related elements or content. Before HTML5, our websites often relied heavily on `<div>` elements:
+
+```html
+<div id="header">
+   <h1>A Tall Tale</h1>
+</div>
+<div class="short-story">
+   <div class="chapter-one">
+      <p>The paragraph goes here...</p>
+   </div>
+</div>
+<div class="widget">
+	<p>"The aside goes here..."</p>
+</div>
+<div id="footer">
+   &copy; 2015.
+</div>
+```
+
+---
+class: center, middle
+
+### HTML5 to the rescue!
+
+With HTML5 we can replace a lot of those `<div>` elements with more semantically names structural elements.
+
+---
+
+# HTML5 Structure
+
+With HTML5, we can now mark-up our website content a bit more semantically with names structural elements:
+
+```html
+<header>
+   <h1>A Tall Tale</h1>
+</header>
+<article class="short-story">
+   <section class="chapter-one">
+      <p>The paragraph goes here...</p>
+   </section>
+</article>
+<aside class="widget">
+	<p>"The aside goes here..."</p>
+</aside>
+<footer>
+   &copy; 2015.
+</footer>
+```
+
+---
+
+# Header
+
+```html
+<header>...</header>
+```
+
+The `<header>` element is used to identify the top of a page, article, section, or other segment of a page. It may even include navigational elements.
+
+**But watch out!**
+
+This element is not to be confused with the `<head>` element (for containing page metadata, etc.) or and of the `<h1>` through `<h6>` elements (for containing actual heading text)!
+
+---
+
+# Nav
+
+```html
+<nav>...</nav>
+```
+
+The `<nav>` element is for wrapping major navigational elements, such as the main website navigation menu, or previous/next links within blog posts.
+
+One-off links shouldn't be wrapped in `<nav>` tags, but should simply be wrapped in `<a>` tags as they always have.
+
+---
+
+# Article
+
+```html
+<article>...</article>
+```
+
+The `<article>` element is used to identify a single, **self-contained** chunk of content such as a blog post, news article, or perhaps even and entire online book.
+
+The key to knowing whether to use an `<article>` element is to ask yourself "if I cut this content out and pasted somewhere else, would that content make sense on its own?"
+
+---
+
+# Section
+
+```html
+<section>...</section>
+```
+
+The section element is for grouping **thematically-related** content together.
+
+That may make it sound like an HTML5 drop-in replacement for the `<div>`, but the key to using the `<section>` element is that its content must be thematically-related.
+
+And similarly, they differ from the `<article>` element because those must be self-contained.
+
+---
+
+# Aside
+
+```html
+<aside>...</aside>
+```
+
+The `<aside>` elements is used for tangentially related content (e.g. an author bio).
+
+However, just because something appears to the right or left of the main content area does not necessarily make it suitable for an `<aside>`.
+
+---
+
+# Footer
+
+```html
+<footer>...</footer>
+```
+
+The `<footer>` element is a companion to the `<header>` element and can be used to wrap elements at the bottom of a page, section, or article.
+
+A `<footer>` element should appear at the very bottom of its parent element.
+
+---
+class: center, middle
+
+.large[
+	Why are these elements <br />better than divs?
+]
+
+---
+class: center, middle
+
+.large[
+	Browser support!
+]
+
+---
+class: center, middle
+
+.large[
+	**[caniuse.com](http://caniuse.com/)**
+]
+
+---
+
+# Making IE Play Nice
+
+- [Modernizr](http://modernizr.com/) &ndash; a bit of beast
+- [HTML5 Shiv](https://github.com/afarkas/html5shiv) &ndash; works in a pinch
+- [Selectivizer](http://selectivizr.com/) &ndash; for CSS3 pseudo-class support
+
+---
+
+# In Use
+
+If you want to use the HTML5 Shiv or Selectivizr, you can download their source files and include them conditionally in the `<head>` of your web page like so:
+
+```html
+<head>
+	<title>My Awesome Website</title>
+
+	<!--[if lt IE 9]>
+		<script src="<js/selectivizr-min.js"></script>
+    	<script src="js/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+```
+
+---
+
+# Exercise 1
+
+Cure this website of its div-itis using HTML5 elements:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/doqVmo/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/doqVmo/'>doqVmo</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+template: inverse
+
+# Position
+
+---
+class: center, middle
+
+.inline-images[
+   ![CSS Box Concept](/public/img/slide-assets/css-box-concept.svg)
+]
 
 ---
 
@@ -207,7 +419,7 @@ header h1 {
 
 ---
 
-# Exercise 1
+# Exercise 2
 
 Let's try out different kinds of positioning in CSS:
 
@@ -285,16 +497,30 @@ aside {
 We can also stop a previously floated element from floating:
 
 ```css
-.sidebar {
+aside {
 	float: none;
 }
 ```
+---
+class: center, middle
+
+.large[
+	Important caveat alert!
+]
+
+---
+
+# Float Weirdness
+
+The `float` property was originally meant to allow content to flow around images, not for layout and positioning purposes.
+
+When using floats to position groups of elements, we often must intentionally **cancel out** the floating behaviour to prevent subsequent elements from floating unintentionally.
 
 ---
 
 # Clearing Floats
 
-The `clear` property is an important one when using floats.
+The `clear` property is how we cancel out floating behaviour.
 
 You can clear a float on the `left`, `right`, or `both`:
 
@@ -336,6 +562,68 @@ class: center, middle
 ]
 
 ---
+
+# Even Better
+
+We can also abstract our float-clearning behaviour into a special class so it can be re-used on other elements too:
+
+```html
+<footer class="clear"><!-- footer content --></footer>
+```
+
+```css
+.clear {
+	clear: both;
+}
+```
+
+---
+
+# Even Better Still
+
+As an alternative to applying the `clear` property to an element, to set the `overflow` property the floated elements' parent to be `auto` or `hidden`:
+
+```html
+<section class="wrapper">
+	<article><!-- article content --></article>
+	<aside><!-- aside content --></aside>
+</section>
+```
+
+```css
+.wrapper {
+	overflow: auto;
+}
+
+article,
+aside {
+	width: 50%;
+	float: left;
+}
+```
+
+---
+
+# Best: The Clearfix
+
+Another popular option is to use the **clearfix** method, which applies the `clear` property to a **pseudo-element** of the container&mdash;an "imaginary" element that follows a real element:
+
+```html
+<section class="clearfix">
+	<!-- float elements in here -->
+</section>
+<!-- imaginary element after the .clearfix element here -->
+```
+
+```css
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+```
+
+---
 template: inverse
 
 # Navigation Menus
@@ -344,9 +632,9 @@ template: inverse
 
 # Creating Nav Menus
 
-Many of the navigation menus you see on websites today structured as unordered lists.
+Many of the navigation menus you see on websites today structured as **unordered lists**.
 
-We can then take advantage of floats and other CSS properties to make lists look more like navigation menus.
+We can then **take advantage of floats** and other CSS properties to make lists look more like navigation menus.
 
 ---
 
@@ -409,7 +697,7 @@ class: center, middle
 
 ---
 
-# Exercise 2
+# Exercise 3
 
 Time to try using CSS floats to lay out a webpage:
 
@@ -513,7 +801,7 @@ The key is to pick a reset that makes the most sense for your website, and to on
 
 ---
 
-# Exercise 3
+# Exercise 4
 
 Try implementing CSS backgrounds in three different ways:
 
@@ -524,10 +812,12 @@ Try implementing CSS backgrounds in three different ways:
 
 # What We've Learned
 
+- The difference between `block`, `inline-block`, and `inline` elements
+- More on HTML5 structural elements
 - Different ways to use the `position` property
 - How to `float` elements
 - How to use the `background` property in CSS
-- What a CSS reset is
+- What a CSS reset is and how to use one
 
 ---
 template: inverse

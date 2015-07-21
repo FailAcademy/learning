@@ -15,6 +15,7 @@ From the HTML & CSS textbook:
 
 ## Learning Objectives
 
+- Use HTML5 elements to structure the mark-up on a webpage.
 - Use CSS positioning (static, relative, absolute, and fixed) to move elements around a webpage.
 - Use CSS floats to manipulate elements, including list-based navigation menus.
 - Use CSS background properties to set background colors or images.
@@ -30,6 +31,15 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
+Cure this website of its div-itis using HTML5 elements:
+
+<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/doqVmo/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/doqVmo/'>doqVmo</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
+</iframe>
+
+View the [solution](http://codepen.io/redacademy/pen/OVoxvm).
+
+## Exercise 2
+
 Let's try out different kinds of positioning in CSS:
 
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/mJwRxG/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/mJwRxG/'>mJwRxG</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
@@ -37,7 +47,7 @@ Let's try out different kinds of positioning in CSS:
 
 View the [solution](http://codepen.io/redacademy/pen/waegmZ)
 
-## Exercise 2
+## Exercise 3
 
 Time to try using CSS floats to lay out a webpage:
 
@@ -46,7 +56,7 @@ Time to try using CSS floats to lay out a webpage:
 
 View the [solution](http://codepen.io/redacademy/pen/xGrgmP)
 
-## Exercise 3
+## Exercise 4
 
 Try implementing CSS backgrounds in three different ways:
 
@@ -61,12 +71,14 @@ Back to our resumes again! This time we're going **enhance the layout** of our r
 
 Specifically, you want to:
 
-- Add either `absolute` or `fixed` positioning to at least one element
+- Add either `absolute` or `fixed` positioning to at least one element...perhaps you want to lock your name at the top of your resume when the page is scrolled?
 - Use the `z-index` property on at least one element
-- Use the `float` property on at least one element (do you need to clear your floats?)
+- Use the `float` property on at least one element...perhaps float an image or the block containing your contact details (and don't forget about float clearing!)
 - Add either a repeating or non-repeating background image to your resume (or an element within in it)
 
 Finally, you need to **add a CSS reset** to your resume webpage. Does the reset affect any of your existing styles? Re-adjust your CSS properties where required.
+
+Need help finding a repeating background image for your resume? Try [Subtle Patterns](http://subtlepatterns.com/) for some CC-licensed pattern images.
 
 ## Additional Resources
 
