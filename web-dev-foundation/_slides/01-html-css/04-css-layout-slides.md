@@ -148,13 +148,13 @@ class: center, middle
 
 ### HTML5 to the rescue!
 
-With HTML5 we can replace a lot of those `<div>` elements with more semantically names structural elements.
+With HTML5 we can replace a lot of those `<div>` elements with more semantically named structural elements.
 
 ---
 
 # HTML5 Structure
 
-With HTML5, we can now mark-up our website content a bit more semantically with names structural elements:
+With HTML5, we can now mark-up our website content a bit more descriptive structural elements:
 
 ```html
 <header>
@@ -260,7 +260,7 @@ class: center, middle
 class: center, middle
 
 .large[
-	Browser support!
+	But browser support!?!
 ]
 
 ---
@@ -276,6 +276,9 @@ class: center, middle
 
 - [Modernizr](http://modernizr.com/) &ndash; a bit of beast
 - [HTML5 Shiv](https://github.com/afarkas/html5shiv) &ndash; works in a pinch
+
+Also related:
+
 - [Selectivizer](http://selectivizr.com/) &ndash; for CSS3 pseudo-class support
 
 ---
@@ -289,7 +292,7 @@ If you want to use the HTML5 Shiv or Selectivizr, you can download their source 
 	<title>My Awesome Website</title>
 
 	<!--[if lt IE 9]>
-		<script src="<js/selectivizr-min.js"></script>
+		<script src="js/selectivizr-min.js"></script>
     	<script src="js/html5shiv.min.js"></script>
 	<![endif]-->
 </head>
@@ -437,9 +440,9 @@ template: inverse
 
 Floats are another handy layout tool in CSS.
 
-They also take elements out of the normal flow and place to the far left or far right side of their container element.
+They also take elements **out of the normal flow** and place to the **far left** or **far right** side of their container element.
 
-Text and other inline elements will then wrap around the floated element.
+Text and other inline elements will then **wrap around** the floated element.
 
 ---
 class: center, middle
@@ -776,7 +779,7 @@ template: inverse
 
 # What's a CSS Reset?
 
-The goal of a **css reset** is to **inconsistencies amongst browsers** in things like default line heights, margins, and font sizes of headings.
+The goal of a **CSS reset** is to **inconsistencies amongst browsers** in things like default line heights, margins, and font sizes of headings.
 
 Reset styles are **intentionally very generic**. They are just meant to standardize how browsers display HTML elements before your start applying your custom styles.
 

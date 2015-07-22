@@ -95,6 +95,6 @@ And some CSS reset resources:
 - [Box Model Reset](https://sunnyis.me/blog/box-model-reset)
 - [Pure CSS](http://purecss.io/)
 
-More on the new semantically-names structural elements in HTML5:
+More on the new semantically-named structural elements in HTML5:
 
 - [HTML5 for Web Designers - Semantics](http://html5forwebdesigners.com/semantics/)
