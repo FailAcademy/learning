@@ -12,14 +12,14 @@ From the HTML & CSS textbook:
 
 ## Learning Objectives
 
-- Understand and employ basic design concepts to assist in laying out a website.
-- Learn how to create an aesthetically pleasing colour palette for a website using basic colour theory.
+- Employ basic design concepts to assist in laying out a website.
+- Create an aesthetically pleasing colour palette for a website using basic colour theory.
 - Experiment with online design tools such colour palette generators and Subtle Patterns.
 
 ## Keywords
 
 - Line, shape, form, and texture
-- Hue, value, and saturation
+- Hue, value/brightness/lightness, and saturation
 - Colour harmony
 - Whitespace
 - Unity, variety, dominance, balance, scale, and space
@@ -30,7 +30,7 @@ Let's try creating colour palettes based on the colour harmony rules we just lea
 
 If you haven't done so already, create an **[Adobe Color CC](https://color.adobe.com/)** account and create at least five different colour palettes each based on a different colour harmony rule.
 
-Don't limit yourself based on the built-in colour rules in the web app&mdash;be sure to try out some of the other you just learned too.
+Don't limit yourself based on the built-in colour rules in the web app&mdash;be sure to try out some of the others you just learned too.
 
 ## Exercise 2
 
@@ -59,6 +59,6 @@ Some colour palette tools:
 - [Adobe Color CC](https://color.adobe.com/)
 - [Coolors.co](http://coolors.co/)
 
-A great pattern library:
+A great library of repeating patterns:
 
 - [SubtlePatterns.com](http://www.subtlepatterns.com)

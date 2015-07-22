@@ -240,7 +240,7 @@ template: inverse
 Colour has three characteristics:
 
 1. Hue
-2. Value
+2. Value (aka Lightness or Brightness)
 3. Saturation
 
 ---
@@ -254,7 +254,17 @@ Hues can be **chromatic** or **achromatic**.
 Hues can be **neutral** (white, black, or grey) or **near-neutral** (beige or off-white).
 
 ---
+class: center, middle
 
+.inline-images[
+   ![Hue](/public/img/slide-assets/color-hue.png)  
+]
+
+.footnote.right[
+   *Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)*
+]
+
+---
 # Value
 
 Value is the potential for a colour to be light or dark.
@@ -262,6 +272,21 @@ Value is the potential for a colour to be light or dark.
 **High value** colours have white added to them.
 
 **Low value** colours have black added to them.
+
+---
+class: center, middle
+
+.inline-images[
+   ![High value](/public/img/slide-assets/color-value-high.png)  
+]
+
+.inline-images[
+   ![Low value](/public/img/slide-assets/color-value-low.png)
+]
+
+.footnote.right[
+   *Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)*
+]
 
 ---
 
@@ -275,8 +300,25 @@ Colours can be **low chroma** (made dull by adding a complement).
 
 ---
 
+class: center, middle
+
 .inline-images[
-   ![Hue saturation value model](../../public/img/slide-assets/color-hue-sat-value.jpg)  
+   ![Saturation](/public/img/slide-assets/color-saturation.png)  
+]
+
+.footnote.right[
+   *Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)*
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![Hue saturation value model](/public/img/slide-assets/color-hue-sat-val.png)  
+]
+
+.footnote.right[
+   *Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)*
 ]
 
 ---
@@ -451,7 +493,7 @@ Let's try creating colour palettes based on the colour harmony rules we just lea
 
 If you haven't done so already, create an **[Adobe Color CC](https://color.adobe.com/)** account and create at least five different colour palettes each based on a different colour harmony rule.
 
-Don't limit yourself based on the built-in colour rules in the web app&mdash;be sure to try out some of the other you just learned too.
+Don't limit yourself based on the built-in colour rules in the web app&mdash;be sure to try out some of the others you just learned too.
 
 ---
 template: inverse
