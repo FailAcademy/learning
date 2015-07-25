@@ -68,13 +68,32 @@ View the [solution](http://codepen.io/redacademy/pen/jPWQVQ).
 
 ## Lab Activity
 
-*Lab activity details forthcoming.*
+Learning how to program with JavaScript can be tricky, but the key is to keep practicing!
+
+For today's lab, you're going to reinforce what was covered in the readings and in-class exercises by completing the two introductory JS modules on **[Code Academy](https://www.codecademy.com/tracks/javascript)**.
+
+- **Getting Started with Programming**
+- **Choose Your Own Adventure!**
+
+In the above modules, you'll learn about some new JS methods we didn't cover in class such as `.substring()` and `.confirm()`.
+
+After you have completed the introductory modules, work through these two modules related to loops:
+
+- **Introduction to 'For' Loops in JS**
+- **Introduction to 'While' Loops in JS**
+
+Note that the **For Loops** module will require that you work with something known as an **array**. We'll cover arrays in greater depth in the next class, so this will be an great warm-up for you.
+
+Similarly, you'll get a sneak peek of what a **function** looks like in the **While Loops** module. No worries, just follow the instructions and there will be more on those in the next class!
+
+Feeling like a JS rockstar now? Then really challenge yourself with these additional modules:
+
+- **Search Text for Your Name**
+- **Dragon Slayer!**
+
+After completing these six modules, you'll have an even better grasp of how to use conditional statements, loops, and different kinds of variables in JS, which will be very important when we learn about functions, arrays, and objects in the next class.
 
 ## Additional Resources
-
-An excellent free e-book on JavaScript that's worth bookmarking:
-
-- [Eloquent JavaScript](http://eloquentjavascript.net/)
 
 More resources and online tutorials for learning JavaScript:
 
@@ -83,3 +102,7 @@ More resources and online tutorials for learning JavaScript:
 A tool for helping you detect errors or other problems in your JavaScript:
 
 - [JSHint](http://jshint.com/)
+
+Some "reserved words" that should not be used for variable or function names in JS:
+
+- [Keywords and reserved words in JavaScript](http://javascriptbook.com/extras/keywords-and-reserved-words/)

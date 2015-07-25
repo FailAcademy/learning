@@ -55,10 +55,22 @@ View the [solution](http://codepen.io/redacademy/pen/NqNayj).
 
 ## Lab Activity
 
-*Lab activity details forthcoming.*
+For today's lab we're going to continue practicing our JS skills by completing more modules on [Code Academy's JavaScript track](https://www.codecademy.com/tracks/javascript/).
+
+First, because functions are such an important part of JS, you'll need to work through these two modules:
+
+- **Introduction to Functions in JS**
+- **Build "Rock, Paper, Scissors"**
+
+Next, continue practicing using arrays and objects by completing these modules:
+
+- **Arrays and Objects in JS**
+- **Contact List**
+
+The above to exercise will introduce you to concepts that we did not cover in class, such as **multi-dimensional** arrays, the difference between **object literal notation** and **object constructors**, and how to loop over objects using a **for/in loop**.
 
 ## Additional Resources
 
-Reinforce the JavaScript skills you just learned by working through this Code Academy course:
+An excellent free e-book on JavaScript that's worth bookmarking:
 
-- [Code Academy - JavaScript](http://www.codecademy.com/en/tracks/javascript)
+- [Eloquent JavaScript](http://eloquentjavascript.net/)
