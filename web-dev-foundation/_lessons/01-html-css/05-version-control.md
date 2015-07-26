@@ -129,6 +129,10 @@ A handy cheat sheet of basic commands:
 
 - [Command Line Cheat Sheet](http://www.git-tower.com/blog/command-line-cheat-sheet)
 
+Some commands you'll want to steer clear of the CLI:
+
+- [9 Lethal Linux Commands You Should Never Run](http://www.makeuseof.com/tag/9-lethal-linux-commands-never-run/)
+
 A helpful visual guide to Git from Atlassian:
 
 - [Getting Git Right](https://www.atlassian.com/git/)
