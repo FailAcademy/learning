@@ -39,7 +39,11 @@ h3 {
 }
 
 ol, ul {
-   margin-left: 1em;
+   margin-left: 1.5em;
+}
+
+li > ol {
+   list-style: lower-roman;
 }
 
 strong {
@@ -48,7 +52,6 @@ strong {
 
 th {
    font-weight: 700;
-
 }
 
 td {

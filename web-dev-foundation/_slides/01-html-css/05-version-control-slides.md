@@ -25,6 +25,14 @@ layout: false
 4. Using Git with the CLI or GUI
 
 ---
+
+# Exercise 1
+
+Let's install Git, GitHub for Windows/Mac, and Git Shell (Windows only) to get our command line ready for use throughout the lesson.
+
+Check out the steps for this exercise on the [learning materials page](/lesson/intro-to-version-control/) for this lesson.
+
+---
 template: inverse
 
 # What is the Command Line for?
@@ -40,19 +48,23 @@ class: center, middle
 ---
 class: center, middle
 
-### With great power also comes great responsibility...
+.large[
+   With great power also comes great responsibility...
+]
 
 ---
 class: center, middle
 
-### But where do I find the "command line"?
+.large[
+   But where do I find the command line?
+]
 
 ---
 
 # Command Line Apps
 
 - On a Mac you can use the built-in Terminal app or download [iTerm2](https://www.iterm2.com/)
-- On Windows, you'll want to have a console emulator like [cmder](http://gooseberrycreative.com/cmder) installed
+- On Windows, you'll want to have a console emulator like Git Shell installed (there are some limitations)
 
 ---
 template: inverse
@@ -146,7 +158,7 @@ Never run `rm -rf /` or `rm -rf *` unless you want to delete everything on your 
 
 ---
 
-# Exercise 1
+# Exercise 2
 
 Time to roll up your sleeves and try out some commands!
 
@@ -162,7 +174,7 @@ class: center, middle
 
 ### What is Version Control?
 
-Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
+Version control is a system that records changes to a file or set of files over time so that you can recall specific versions and revert to previous states later on, if needed.
 
 ---
 
@@ -193,26 +205,25 @@ Version control is a system that records changes to a file or set of files over 
 ]
 
 ---
+class: center, middle
 
-# Exercise 2
-
-Let's install Git together:
-
-- You can check if you have Git installed already by running `git --version` on the command line
-- If you don't have Git, we'll use the [GitHub method](https://help.github.com/articles/set-up-git/) to get you up and running right now
-- You can install the [GitHub for Mac](https://mac.github.com/) or [GitHub for Windows](https://windows.github.com/) app as well and log in with your GitHub credentials
+.large[
+   GitHub tour...
+]
 
 ---
 template: inverse
 
-# Get Gittin'!
+# Let's Use Some Git!
 
 ---
 class: center, middle
 
 ### To GUI or not to GUI?
 
-We can use the command line to run Git commands or a GUI-based app. Let's start by exploring the basics of the command line approach, then try a GUI.
+We can use the CLI to run Git commands or a GUI-based app.
+
+Let's start by exploring the basics of the command line approach, then try a GUI.
 
 ---
 
@@ -242,7 +253,7 @@ Alternatively, you can `git clone <repo address>` to copy an existing Git reposi
 
 ---
 
-# Committing Changes
+# Checking for Changes
 
 As we make changes to our working directory where we initialized Git, we can check on the current state of our project by running `git status`:
 
@@ -250,11 +261,23 @@ As we make changes to our working directory where we initialized Git, we can che
 
 ---
 
-# Committing Changes
+# Adding Changes
 
 Next, we need to tell Git that we want to keep track of the files that are currently untracked. To do that, run `git add -A` to add them to the **staging area**:
 
 ![git add command](../../public/img/slide-assets/git-add.gif)
+
+---
+
+# Ways to Add
+
+The `git add -A` command we just saw will stage all files that have been **added**, **updated** and **deleted**. However, we can be more nuanced about the changes we choose to add to a given commit:
+
+- `git add index.html` will stage that file only
+- `git add .` stages new and modified, without deleted
+- `git add -u` stages modified and deleted, without new
+
+But in most cases, you'll likely use `git add -A`.
 
 ---
 
@@ -263,6 +286,15 @@ Next, we need to tell Git that we want to keep track of the files that are curre
 Now it's actually time to **commit** our changes. To do that, run `git commit -m "Your message here."`
 
 ![git commit command](../../public/img/slide-assets/git-commit.gif)
+
+---
+class: center, middle
+
+### Saving vs. Committing
+
+Saving a file and committing its changes to the repository are not the same thing!
+
+You can save a files many times before you commit it.
 
 ---
 
