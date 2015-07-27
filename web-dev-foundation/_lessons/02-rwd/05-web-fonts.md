@@ -82,3 +82,7 @@ Subscription-based web font services:
 An article series on web typography basics:
 
 - [A-Z of Web Typography](http://webdesign.tutsplus.com/series/a-z-of-web-typography--webdesign-11706)
+
+Some tips for setting digital type (not web-specific, but some general, adaptable rules):
+
+- [26 digital typography rules for beginners](https://medium.com/product-design-ux-ui/26-digital-typography-rules-for-beginners-a04c6a5aaff3)

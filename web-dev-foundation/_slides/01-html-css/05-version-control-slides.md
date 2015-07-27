@@ -405,7 +405,7 @@ Doing this is like running the `git remote add origin <url>` and `git push origi
 
 And similarly, if you are collaborating on a project with others, you can click the "Sync" button to pull in their changes.
 
-This is the same as running the `git pull origin master` command.
+This is the same as running the `git pull origin master` and `git pull origin master` commands.
 
 ---
 

@@ -104,3 +104,7 @@ A collection of responsive web design patterns and resources:
 A showcase of inspirational responsively designed websites:
 
 - [Media Queries](http://mediaqueri.es/)
+
+Confused about `em` vs. `rem`? Then read through this:
+
+- [Comprehensive Guide: When to Use Em vs. Rem](https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984)
