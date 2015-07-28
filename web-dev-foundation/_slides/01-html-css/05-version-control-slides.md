@@ -30,7 +30,7 @@ layout: false
 
 Let's install Git, GitHub for Windows/Mac, and Git Shell (Windows only) to get our command line ready for use throughout the lesson.
 
-Check out the steps for this exercise on the [learning materials page](/lesson/intro-to-version-control/) for this lesson.
+Check out the steps for this exercise on the [learning materials page](/lesson/version-control-with-git/) for this lesson.
 
 ---
 template: inverse
@@ -162,7 +162,7 @@ Never run `rm -rf /` or `rm -rf *` unless you want to delete everything on your 
 
 Time to roll up your sleeves and try out some commands!
 
-Check out the steps for this exercise on the [learning materials page](/lesson/intro-to-version-control/) for this lesson.
+Check out the steps for this exercise on the [learning materials page](/lesson/version-control-with-git/) for this lesson.
 
 ---
 template: inverse

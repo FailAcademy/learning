@@ -127,7 +127,7 @@ The remainder of the lab activity time will be dedicated to working on [Project 
 
 A handy cheat sheet of basic commands:
 
-- [Command Line Cheat Sheet](http://www.git-tower.com/blog/command-line-cheat-sheet)
+- [Command Line Cheat Sheet](http://www.git-tower.com/blog/command-line-cheat-sheet/)
 
 Some commands you'll want to steer clear of the CLI:
 
