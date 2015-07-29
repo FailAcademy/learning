@@ -189,7 +189,7 @@ template: inverse
 
 # Flex It!
 
-Developing flexible grids and layouts require that we let go of the pixel and embrace "relative" units like `em` and `%`.
+Developing flexible grids and layouts require that we let go of the pixel and embrace "relative" units like `em/rem` and `%`.
 
 We have a formula for determining how to size our elements:
 
@@ -492,15 +492,6 @@ background-image: url(../../public/img/slide-assets/rwd-device-proliferation.jpg
 .footnote.white[
    Image Credit: [Luke Wroblewski](https://www.flickr.com/photos/lukew/10430507184/)
 ]
-
----
-class: center, middle
-
-### Reductionist approach to breakpoints:
-
-> "Start with the small screen first, then expand until it looks like shit. TIME FOR A BREAKPOINT!"
-
-&mdash;Stephen Hay
 
 ---
 

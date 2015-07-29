@@ -77,15 +77,15 @@ The breakpoints you want to optimize for are: `720px` and `1200px`.
 
 - The site title and the navigation menu should float left and right respectively (do you need to adjust the padding around the menu items or the `h1` size at this breakpoint to make them fit better?)
 - The content area should break into two columns
-- The `artcle` element's column should occupy 2/3 of the space and the sidebar should occupy 1/3 (don't forget about the margin to the right of the `article`!)
+- The `article` element's column should occupy 2/3 of the space and the sidebar should occupy 1/3 (don't forget about the margin to the right of the `article`!)
 - Four gallery images should now appear in a row
 
 **At 1200px**:
 
-- The `artcle` element's column should occupy 3/4 of the space and the sidebar should occupy 1/4
+- The `article` element's column should occupy 3/4 of the space and the sidebar should occupy 1/4
 - The website should look exactly as it did in the fixed-width version (do you need to reset any elements' CSS properties that you shrunk down to work with the narrower breakpoints?)
 
-Don't forget to **change static units** `px` units into relative units like `em` and `%`!
+Don't forget to **change static units** `px` units into relative units like `em/rem` and `%`!
 
 ## Additional Resources
 
