@@ -108,3 +108,7 @@ A showcase of inspirational responsively designed websites:
 Confused about `em` vs. `rem`? Then read through this:
 
 - [Comprehensive Guide: When to Use Em vs. Rem](https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984)
+
+A detailed case study on a mobile-first approach to improving website performance:
+
+- [Improving Smashing Magazine’s Performance: A Case Study](http://www.smashingmagazine.com/2014/09/08/improving-smashing-magazine-performance-case-study/#top)

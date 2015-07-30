@@ -111,7 +111,6 @@ class: center, middle
 
 # Shape
 
-- Line is actually just an illusion
 - When you close a line, you get a shape
 - Shapes control and attract our attention
 
