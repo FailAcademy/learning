@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# GitHub Pages
+# GitHub Pages<br />(Plus More on Git)
 
 .title-logo[![Red logo](../../public/img/red-logo-white.svg)]
 
@@ -22,6 +22,7 @@ layout: false
 1. Hosting 101
 2. Why use GitHub Pages
 3. Let's deploy!
+4. More on Git
 
 ---
 template: inverse
@@ -93,7 +94,7 @@ It's important to note that there are two different kinds of sites you can deplo
 GitHub pages have a few limitations:
 
 - Static sites only (no database!)
-- Forms are tricky
+- Form submissions are tricky
 - Size limitations (1GB for a repo, 100MB max. per file)
 - Bandwidth, up-time, support (you get what you pay for...)
 
@@ -136,27 +137,14 @@ This branch must be called `gh-pages`:
 
 ```bash
 cd my-repo-folder
-git checkout --orphan gh-pages
+git checkout -b gh-pages master
 ```
 
 ---
-class: center, middle
-
-### Whoa, wait! What's an orphan branch?
-
-An orphan branch is just a branch in your Git repository that shares no history with an existing branch. In other words, it doesn't have a "parent" branch.
-
----
 
 # Getting Started
 
-It's not essential to create an orphan branch for the type of project site we're creating, but it's something to think about when initializing your gh-pages branch.
-
----
-
-# Getting Started
-
-Time to deploy! Let's push our files to the **gh-pages** branch on GitHub now:
+Let's push our files to the **gh-pages** branch on GitHub now:
 
 ```bash
 git push origin gh-pages
@@ -166,15 +154,7 @@ And that's it! In 10 minutes or less, you'll be able to see your project live on
 
 `http://<username>.github.io/<project_name>/`
 
-After deploying, you'll probably want to switch back to your master branch (or other current working branch).
-
----
-
-# Updating Your Site
-
-Keeping your GitHub Pages website up-to-date with the master branch of your repo can easily be done using a few more commands in the Terminal.
-
-First, let's consider what workflow might be involved in keeping our **gh-pages** branch up to date with our **master** branch...
+After deploying, you'll want to **switch back** to your `master `branch (or other current working branch).
 
 ---
 
@@ -182,15 +162,19 @@ First, let's consider what workflow might be involved in keeping our **gh-pages*
 
 Let's say we've deployed our site and we're back working on our master branch locally.
 
-Once we're happy with our changes and we're ready to deploy to GitHub, we need to think about where we're sending our code.
+Once we're happy with our changes and we're ready to deploy to GitHub, we need to think about where we send our code.
 
 ---
 
 # Updating Your Site
 
-First, we want to make sure we deploy to our master branch (as a good habit, and to make sure that other collaborators can pull in our most recent commits).
+First, we want to make sure we update to our master branch (as a good habit, and to make sure that other collaborators can pull in our most recent commits).
 
-Next, we'll want to make sure we merge the current version of the master branch into our gh-pages branch too.
+---
+
+# Updating Your Site
+
+Next, we'll want to make sure we merge the current version of the master branch into our `gh-pages` branch too.
 
 In doing so, we'll be **deploying** our new code live on the web.
 
@@ -236,14 +220,109 @@ git checkout master
 ```
 
 ---
+class: center, middle
+
+### Using a GUI
+
+We can also set up and maintain a GitHub Pages website using GitHub for Mac or GitHub for Windows...
+
+---
+class: center, middle
+
+Step 1: Add and create your repo
+
+.inline-images[
+   ![Add and create your repo](/public/img/slide-assets/gh-pages-01.png)
+]
+
+---
+class: center, middle
+
+Step 2: Make the initial commit
+
+.inline-images[
+   ![Make the initial commit](/public/img/slide-assets/gh-pages-02.png)
+]
+
+---
+class: center, middle
+
+Step 3: Push the repo to GitHub
+
+.inline-images[
+   ![Push the repo to GitHub](/public/img/slide-assets/gh-pages-03.png)
+]
+
+---
+class: center, middle
+
+Step 4: Create a `gh-pages` branch
+
+.inline-images[
+   ![Create a gh-pages branch](/public/img/slide-assets/gh-pages-04.png)
+]
+
+---
+class: center, middle
+
+Step 5: Publish your `gh-pages` branch
+
+.inline-images[
+   ![Publish your gh-pages branch](/public/img/slide-assets/gh-pages-05.png)
+]
+
+---
+class: center, middle
+
+Step 6: Make updates on your `master` branch
+
+.inline-images[
+   ![Make updates on your master branch](/public/img/slide-assets/gh-pages-06.png)
+]
+
+---
+class: center, middle
+
+Step 7: Take a look at your branches...
+
+.inline-images[
+   ![Take a look at your branches](/public/img/slide-assets/gh-pages-07.png)
+]
+
+---
+class: center, middle
+
+Step 8: Merge `master` into the `gh-pages` branch
+
+.inline-images[
+   ![Merge master into the gh-pages branch](/public/img/slide-assets/gh-pages-08.png)
+]
+
+---
+class: center, middle
+
+Step 9: Check out your new merge commit
+
+.inline-images[
+   ![Check out your new merge commit](/public/img/slide-assets/gh-pages-09.png)
+]
+
+---
+class: center, middle
+
+Step 10: Sync new commits to `gh-pages`
+
+.inline-images[
+   ![Sync new commit to gh-pages](/public/img/slide-assets/gh-pages-10.png)
+]
+
+---
 
 # Rebase vs. Merge
 
 Some people choose to use `git rebase master` instead of `git merge master` to bring their gh-pages branch up to date.
 
 Rebasing is like merging, but it rewrites the history of the branch so that it appears all of the changes of the branch being merged in look like they happened on the destination branch.
-
-In other words, it provides a linear history of commits, rather than a split history of commits.
 
 ---
 class: center, middle
@@ -276,19 +355,80 @@ class: center, middle
 
 ### A Word of Caution!
 
-Rebasing can be dangerous if you don't know what you're doing, and you never want to rebase commits on a branch that have been pushed to public, shared repository.
+Rebasing can be dangerous if you don't know what you're doing, and you never want to rebase commits on a branch that has been pushed to public, shared repository.
+
+---
+template: inverse
+
+# Merge Conflicts!!!
 
 ---
 
-# Using a GUI
+# Resolving Conflicts
 
-We can also set up and maintain a GitHub Pages website using GitHub for Mac or GitHub for Windows:
+If you attempt a merge and are told you have a conflict...
 
-.inline-images[
-   ![Merging with GitHub for Mac](/public/img/slide-assets/github-mac-merge.jpg)
+1. **Don't panic!**
+2. Open the files that have conflicts
+3. Edit the files and save your changes
+4. Proceed with your merge in CLI or the GitHub GUI
+
+**Tip:** You can back out of the merge (before completing it) by running `git merge --abort` from the command line.
+
+---
+template: inverse
+
+# Undoing Commits
+
+---
+class: center, middle
+
+### Turning back time...
+
+We can **revert** an individual commit or **rollback** to a specific commit in GitHub for Mac/Windows.
+
+---
+class: center, middle
+
+.large[
+   Reverting...
 ]
 
-Image credit: [GitHub Help](https://help.github.com/articles/merging-branches/)
+---
+class: center, middle
+
+.inline-images[
+   ![Revert a commit in GitHub for Mac](/public/img/slide-assets/gh-mac-revert.png)
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![Reverts result in new commits](/public/img/slide-assets/gh-mac-revert-commit.png)
+]
+
+---
+class: center, middle
+
+.large[
+   Rolling back...
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![Roll back to a commit in GitHub for Mac](/public/img/slide-assets/gh-mac-roll-back.png)
+]
+
+
+---
+class: center, middle
+
+.inline-images[
+   ![Rollbacks result in new commits](/public/img/slide-assets/gh-mac-roll-back-commit.png)
+]
 
 ---
 
@@ -297,8 +437,16 @@ Image credit: [GitHub Help](https://help.github.com/articles/merging-branches/)
 Your turn! Take GitHub Pages for a spin by deploying the source files for your Assignment #1 on a `gh-pages` branch.
 
 ---
+
+# What We've Learned
+
+- How to create a `gh-pages` branch and keep it updated
+- How to deal with merge conflicts
+- How to revert commits in our repositories
+
+---
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}

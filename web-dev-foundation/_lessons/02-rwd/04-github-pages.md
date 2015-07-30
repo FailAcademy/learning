@@ -17,12 +17,14 @@ Browse through this interactive step-by-step guide to to familiarize yourself wi
 ## Keywords
 
 - Project vs. user page
-- Orphan branch
 - Rebase
+- Merge conflict
+- Revert
+- Reset
 
 ## Exercise 1
 
-Your turn! Take GitHub Pages for a spin by deploying the source files for your Assignment #1 on a `gh-pages` branch.
+Your turn! Take GitHub Pages for a spin by deploying the source files for your Project 1 on a `gh-pages` branch.
 
 ## Lab Activity
 
