@@ -227,7 +227,7 @@ class: center, middle
 
 ### Contrast
 
-When pairing typefaces, make sure they are discernibly different.
+When pairing typefaces, make sure they are discernibly different from one another.
 
 ---
 class: center, middle
@@ -268,8 +268,16 @@ Now try adding custom web fonts using Google Fonts:
 
 ---
 
+# What We've Learned
+
+- How to use `@font-face`
+- How to use Google Fonts
+- What licensed font services are available
+
+---
+
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}
