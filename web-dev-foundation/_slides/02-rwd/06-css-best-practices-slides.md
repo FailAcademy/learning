@@ -351,8 +351,16 @@ Let's clean up some code with the best practices we just learned:
 </iframe>
 
 ---
+
+# What We've learned
+
+- How to leverage (and tame) specificity in our CSS
+- How to write write CSS that's future-friendly and easier to maintainable
+- What OOCSS is
+
+---
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}

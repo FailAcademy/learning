@@ -183,8 +183,16 @@ Let's try out Font Awesome:
 </iframe>
 
 ---
+
+# What We've Learned
+
+- What an icon font is
+- The advantages of using an icon font
+- How to use Font Awesome
+
+---
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}

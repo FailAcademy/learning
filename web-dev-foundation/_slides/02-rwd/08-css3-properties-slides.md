@@ -594,8 +594,17 @@ Experiment with CSS3 transforms and transitions together:
 </iframe>
 
 ---
+
+# What We've learned
+
+- The difference between CSS2 and CSS3
+- How to use `border-radius`, `box-shadow`, `gradients`, `opacity`, and multiple backgrounds
+- How to use CSS transitions and transforms
+- What vendor prefixes are, how to use them, and when to use them
+
+---
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}
