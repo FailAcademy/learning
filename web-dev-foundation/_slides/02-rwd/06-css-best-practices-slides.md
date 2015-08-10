@@ -335,6 +335,11 @@ template: inverse
 4. Code reuse
 
 ---
+class: center, middle
+
+While 100% predictable code may never be possible, it's important to understand the trade-offs you make with the conventions you choose. If you follow strict BEM conventions, you will be able to update and add to your CSS in the future with the full confidence that your changes will not have side effects.
+
+---
 
 ```css
    /* Block */
