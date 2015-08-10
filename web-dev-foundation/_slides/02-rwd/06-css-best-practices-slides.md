@@ -21,7 +21,14 @@ layout: false
 
 1. Specificity: taming the specificity beast
 2. CSS that's maintainable and scalable
-3. OOCSS FTW
+3. OOCSS FTW?
+4. BEM
+5. 'Semantic' CSS 
+
+---
+class: center, middle
+
+# Best practice, or best practice.
 
 ---
 template: inverse
