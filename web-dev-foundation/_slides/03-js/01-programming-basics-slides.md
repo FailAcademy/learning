@@ -76,7 +76,7 @@ class: center, middle
 
 ### Fancy Word, Simple Meaning
 
-An algorithm is a self-contained set of instructions to be followed in order to complete a task.
+An algorithm is a **self-contained set of instructions** to be followed in order to complete a task.
 
 ---
 
@@ -169,9 +169,21 @@ Scratch is a programming language that makes it easy to create interactive stori
 
 ---
 
+# Scratch Demo
+
+Let's take a look at a simple Scratch demo:
+
+https://scratch.mit.edu/projects/72835184/#player
+
+---
+
 # Let's Play!
 
-**TBA: find awesome Scratch game to have a student demo for the class...**
+We'll need a some volunteers now...
+
+https://scratch.mit.edu/projects/12352154/#player
+
+https://scratch.mit.edu/projects/232913/#player
 
 ---
 
@@ -276,13 +288,22 @@ In programming, these custom blocks are often referred to as **functions** or **
 
 Your turn...**[create a Scratch account](https://scratch.mit.edu/)** and give it a whirl.
 
-For this exercise, your first task is to create a basic program using one of the Scratch sprites (or more than one if you're feeling ambitious).
+For this exercise, your **first task** is to create a basic program using one of the Scratch sprites (or more than one if you're feeling ambitious).
 
-Your second task is to make sure you have fun with this :)
+Your **second task** is to make sure you have fun with this :)
+
+---
+
+# What We've Learned
+
+1. What pseudocode is
+2. What an algorithm is
+3. How to use a "graphical" programming language like Scratch
+4. What variables, statements, loops, booleans, conditions, operators, and functions are
 
 ---
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}

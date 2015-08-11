@@ -595,7 +595,7 @@ Experiment with CSS3 transforms and transitions together:
 
 ---
 
-# What We've learned
+# What We've Learned
 
 - The difference between CSS2 and CSS3
 - How to use `border-radius`, `box-shadow`, `gradients`, `opacity`, and multiple backgrounds
