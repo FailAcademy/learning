@@ -310,45 +310,27 @@ HTML5 is designed to be **semantic**.
 ```
 
 ---
-class: center, middle
 
-# Semantic - UI
+# Semantics are for CSS too
 
-[Semantic UI Framework (Github Repo)](https://github.com/semantic-org/semantic-ui/)
-
----
-template: inverse
-
-# BEM (Block Element Modifier)
+- [Semantic UI Framework (Github Repo)](https://github.com/semantic-org/semantic-ui/)
+- [BEM (Block Element Modifier)](https://en.bem.info/)
+- [Object-Oriented CSS (OOCSS)](http://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/)
 
 ---
 
-# What is BEM?
-
-- Developed by Russian 'Yahoo' (Yandex)
-- They call it a 'methodology'
-- Started as method for developing maintainable css & is now a standalone platform.
-
----
-
-# Why?
+# Why Worry About This?
 
 1. Fast development and long-lasting results for standard projects
-2. A project involves many people
+2. A project may involve many people
 3. Scalable teams
 4. Code reuse
-
----
-class: center, middle
-
-While 100% predictable code may never be possible, it's important to understand the trade-offs you make with the conventions you choose.
-
-If you follow strict BEM conventions, you will be able to update and add to your CSS in the future with the full confidence that your changes will not have side effects.
+5. Keeps code bloat in check
 
 ---
 template: inverse
 
-# OOCSS
+# A Closer Look at OOCSS
 
 ---
 class: center, middle
@@ -435,7 +417,7 @@ Let's clean up some code with the best practices we just learned:
 
 - How to leverage (and tame) specificity in our CSS
 - How to write write CSS that's future-friendly and easier to maintainable
-- What OOCSS is
+- What Semantic-UI, BEM, and OOCSS are
 
 ---
 template: inverse
