@@ -23,7 +23,7 @@ layout: false
 2. CSS that's maintainable and scalable
 3. OOCSS FTW?
 4. BEM
-5. 'Semantic' CSS 
+5. 'Semantic' CSS
 
 ---
 class: center, middle
@@ -280,7 +280,9 @@ template: inverse
 ---
 class: center, middle
 
-### Semantic === **meaningful**.
+.large[
+   Semantic === **meaningful**
+]
 
 ---
 
@@ -288,26 +290,25 @@ class: center, middle
 
 HTML5 is designed to be **semantic**.
 
-```html<section>
-        <article>
-            <header>
-                <h1>Article #1</h1>
-            </header>
-            <section>
-                This is the first article.  This is <mark>highlighted</mark>.
-            </section>
-        </article>
-        <article>
-            <header>
-                <h1>Article #2</h1>
-            </header>
-            <section>
-                This is the second article.  These articles could be blog posts, etc.  
-            </section>
-        </article>
-    </section>
- ```
- 
+```html
+<article>
+   <header>
+    <h1>Article #1</h1>
+   </header>
+   <section>
+      <p>This is the first article.</p>
+   </section>
+</article>
+<article>
+   <header>
+    <h1>Article #2</h1>
+   </header>
+   <section>
+      <p>This is the second article.</p>
+   </section>
+</article>
+```
+
 ---
 class: center, middle
 
@@ -328,7 +329,10 @@ template: inverse
 - They call it a 'methodology'
 - Started as method for developing maintainable css & is now a standalone platform.
 
+---
+
 # Why?
+
 1. Fast development and long-lasting results for standard projects
 2. A project involves many people
 3. Scalable teams
@@ -337,74 +341,9 @@ template: inverse
 ---
 class: center, middle
 
-While 100% predictable code may never be possible, it's important to understand the trade-offs you make with the conventions you choose. If you follow strict BEM conventions, you will be able to update and add to your CSS in the future with the full confidence that your changes will not have side effects.
+While 100% predictable code may never be possible, it's important to understand the trade-offs you make with the conventions you choose.
 
----
-
-```css
-   /* Block */
-   .btn {
-     text-decoration: none;
-     background-color: white;
-     color: #888;
-     border-radius: 5px;
-     display: inline-block;
-     margin: 10px;
-     font-size: 18px;
-     text-transform: uppercase;
-     font-weight: 600;
-     padding: 10px 5px;
-   }
-   
-   /* Element */
-   .btn__price {
-     background-color: white;
-     color: #fff;
-     padding-right: 12px;
-     padding-left: 12px;
-     margin-right: -10px; /* realign button text padding */
-     font-weight: 600;
-     background-color: #333;
-     opacity: .4;
-     border-radius: 5px 0 0 5px;
-   }
-   
-   /* Element */
-   .btn__text {
-     padding: 0 10px;
-     border-radius: 0 5px 5px 0;
-   }
-   
-   /* Modifier */
-   .btn--big {
-     font-size: 28px;
-     padding: 10px;
-     font-weight: 400;
-   }
-   
-   /* Modifier */
-   .btn--blue {
-     border-color: #0074D9;
-     color: white;
-     background-color: #0074D9;
-   }
-   
-   /* Modifier */
-   .btn--orange {
-     border-color: #FF4136;
-     color: white;
-     background-color: #FF4136;
-   }
-   
-   /* Modifier */
-   .btn--green {
-     border-color: #3D9970;
-     color: white;
-     background-color: #3D9970;
-   }
-```
-
-[BEM Codepen](http://codepen.io/team/css-tricks/pen/226a65c8f7d64615aabd45048d1d3b6d)
+If you follow strict BEM conventions, you will be able to update and add to your CSS in the future with the full confidence that your changes will not have side effects.
 
 ---
 template: inverse
@@ -416,7 +355,7 @@ class: center, middle
 
 ### What is OOCSS?
 
-Object oriented CSS (OOCSS) is a methodology of writing reusable CSS that is fast, scalable, and maintainable.
+Object-oriented CSS (OOCSS) is a methodology of writing reusable CSS that is fast, scalable, and maintainable.
 
 ---
 
