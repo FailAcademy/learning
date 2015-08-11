@@ -156,7 +156,7 @@ document.write('<h2>' + greeting + '</h2>');
 class: center, middle
 
 .large[
-   **Remember, a variable is an arbitrary "bucket" for temporarily storing information in memory.**
+   Remember, a variable is an arbitrary "bucket" for temporarily storing information in your computer's memory.
 ]
 
 ---
@@ -635,8 +635,17 @@ Let's try targeting some HTML elements:
 
 ---
 
+# What We've Learned
+
+1. What JavaScript is and what it's used for
+2. How we can create variables, conditionals, and loops in JS
+3. What the window and documents objects are
+4. How to access HTML elements using JS
+5. How to include JS files in a webpage
+
+---
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}

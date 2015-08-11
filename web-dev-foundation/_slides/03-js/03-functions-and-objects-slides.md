@@ -19,9 +19,9 @@ layout: false
 
 # Agenda
 
-1. Functions
-2. Objects
-3. Arrays
+1. How we create functions in JS, and how they impact "scope"
+2. What are objects? How do we make them?
+3. Arrays (and how to "loop" over them)
 
 ---
 template: inverse
@@ -33,7 +33,14 @@ class: center, middle
 
 ### What is a function?
 
-Functions are specific chunks code that you can use to repeat a set of instructions.
+Functions are specific chunks code that you can use to **repeat a set of instructions**.
+
+---
+class: center, middle
+
+.large[
+   Sound familiar?
+]
 
 ---
 
@@ -48,7 +55,21 @@ Functions are specific chunks code that you can use to repeat a set of instructi
 
 # The Syntax of Functions
 
-Use the **function** keyword, followed by a variable name to store it for re-use later:
+To create a function in JS, we use the `function` keyword.
+
+At a minimum we also use a set of parentheses after it, then a set of curly brackets:
+
+```javascript
+function () {
+
+}
+```
+
+---
+
+# A Little Fancier
+
+We can store our function using a **variable name** in order to re-use later too:
 
 ```javascript
 function add(a, b) {
@@ -56,7 +77,9 @@ function add(a, b) {
 }
 ```
 
-The `a` and `b` in parentheses are called **parameters**. They allow us to pass different values into the function whenever we use it. Note that not all functions have parameters.
+The `a` and `b` in parentheses are called **parameters**. They allow us to pass different values into the function whenever we use it.
+
+Note that not all functions have parameters.
 
 ---
 
@@ -211,54 +234,122 @@ class: center, middle
 
 ---
 
-# How Variables Work with Functions
+# Functions and Scope
 
-- Where you choose to define a variable will determine how you can use it
+Where you define a variable will determine how you can use it:
 - A variable defined inside a function has **local scope**
 - A variable defined outside a function has **global scope**
 
----
-
-# Global vs. Local Scope
-
 ```javascript
-function checkAppointments( currentlyBooked ) {
+// global scope up here…
 
-   // This variable has a local scope within this function:
-   var totalTimeSlots = 100;
+function myFunction() {
 
-   if ( currentlyBooked < totalTimeSlots ) {
-      return 'We have a spot available for you.';
-   } else {
-      return 'Sorry, we\'re fully booked!';
-   }
+	// local scope in here…
+
 }
-
-// This variable has global scope:
-var confirmation = checkAppointments(43);
-
-document.write(confirmation);
 ```
 
 ---
 
-# Global vs. Local Scope
+# What Kind of Scope?
 
-Global variables can be redefined within functions too:
+Let’s look at some variables and figure out if they will have local or global scope...
+
+```javascript
+var fille = “Monique”;
+
+function france() {
+	var garcon = “Henri”;
+}
+```
+
+---
+
+# What Kind of Scope?
+
+A more complex example:
+
+```javascript
+var fille = “Monique”;
+
+function france() {
+	var garcon = “Henri”;
+
+	function paris() {
+		var femme = “Marie”;
+	}
+}
+```
+
+---
+
+# What Kind of Scope?
+
+Global variables can be reassigned within functions to have local-only values too:
 
 ```javascript
 var faveColour = 'blue';
 
 function sayColour() {
    alert(faveColour);
-   faveColour = 'red'; // omit the "var" keyword
+   faveColour = 'red'; // the "var" keyword is omitted!
    alert(faveColour);
 }
 sayColour();
-
 ```
 
-If you use the "var" keyword inside the function, you will get an unexpected result. Try running this script in Codepen with and without the "var" keyword included inside the `sayColour()` function to see what happens.
+If you use the `var` keyword inside the function, you will get an unexpected result. Try this out in CodePen...
+
+---
+
+# Why Does This Happen?
+
+This quirky behaviour happens because of **hoisting**.
+
+Hoisiting will result in the first `alert` returning "undefined":
+
+```javascript
+var faveColour = 'blue';
+
+function sayColour() {
+   alert(faveColour); // faveColour is undefined here
+   var faveColour = 'red'; // faveColour now equals 'red'
+   alert(faveColour);
+}
+sayColour();
+```
+
+Let's see why this happens...
+
+---
+
+# Why Does This Happen?
+
+Whenever our browser looks at a script, it actually **makes two passes over it**.
+
+First, it re-sorts your code and moves all of your declared variable names (aka your not-yet-filled buckets) to the top and waits for your code to fill them with something.
+
+Only then does your browser make a second pass over your script to execute it.
+
+---
+
+# Why Does This Happen?
+
+So in reality, the code your browser sees actually looks like this at the time it's executed:
+
+```javascript
+var faveColour; // bucket waiting to be filled
+faveColour = 'blue'; // now it's filled with blue
+var faveColour; // now it's redeclared and empty again
+
+function sayColour() {
+   alert(faveColour); // our bucket was empty so it's undefined here
+   faveColour = 'red'; // but now we filled the bucket with red
+   alert(faveColour); // so we alert 'red' now
+}
+sayColour();
+```
 
 ---
 
@@ -266,8 +357,8 @@ If you use the "var" keyword inside the function, you will get an unexpected res
 
 There are pros and cons to each type of variable scope:
 
-- Global variables can be reused throughout your code, but they use more memory and you may run into naming collisions with other scripts
-- Local variables are more efficient because they use less memory and their names are protected within the function that they are defined, but they can't be re-used elsewhere in your code
+- **Global variables** can be **reused** throughout your code, but they **use more memory** and you may run into **naming collisions** with other scripts
+- **Local variables** are more efficient because they **use less memory** and their **names are protected** within the function that they are defined, but they **can't be re-used** elsewhere in your code
 
 ---
 
@@ -577,8 +668,17 @@ Time to ramp up your JS skills by looping through an array and adding the items 
 </iframe>
 
 ---
+
+# What We've Learned
+
+- How to create function in JS
+- How variable scope works with function in JS
+- How to create objects that contain properties and methods
+- How to create arrays and loop over them
+
+---
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}
