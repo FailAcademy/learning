@@ -8,6 +8,8 @@ For your second project, you're going to build on Project 1 and turn it into a *
 
 You are also encouraged to **refine the design** of your website based what you learned in the [Design Toolbox](/lesson/design-toolbox/) lesson.
 
+**[Download the Assessment Guide for Project 2 &rarr;](/public/files/wdf-project2-assessment.pdf)**
+
 ## Requirements
 
 To receive a "Pass" grade for this project, your submission must satisfy the following criteria:
