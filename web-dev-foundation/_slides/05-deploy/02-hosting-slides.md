@@ -240,6 +240,6 @@ Download an FTP client and use the credentials provided to FTP a file from your 
 ---
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}

@@ -330,8 +330,15 @@ Now let's try putting jQuery effects together with form inputs:
 </iframe>
 
 ---
+
+# What We've Learned
+
+- How we can bring our websites to life with jQuery's animation methods
+- How to add interactivity to forms with jQuery
+
+---
 template: inverse
 
-# Fin!
+# Questions
 
 {% endhighlight %}

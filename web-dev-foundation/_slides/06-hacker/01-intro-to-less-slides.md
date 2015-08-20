@@ -427,8 +427,16 @@ To do that, you'll need:
 4. Compile away!
 
 ---
+
+# What We've Learned
+
+- What a preprocessor is and how to use one
+- How to use Less to turbo-charge (and organize!) your CSS development
+- How to compile Less
+
+---
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}

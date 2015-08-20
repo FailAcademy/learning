@@ -37,16 +37,12 @@ class: center, middle
 
 As the complexity of your code increases, it's easy for small changes and feature additions to have unexpected impacts.
 
-![Complex Code Graphic](../../public/img/slide-assets/code-complex-problems.svg)
-
 ---
 class: center, middle
 
 ### Why We Test
 
 ...and to ensure that the users who need to access our website can do that in a browser and on a device of their choosing.
-
-![People having choice of computer or smartphone image](../../public/img/slide-assets/people-laptop-smartphone.svg)
 
 ---
 
@@ -65,8 +61,6 @@ class: center, middle
 ### A Ongoing Process, Not a Checklist
 
 Front-end testing isn't something to simply worry about before you launch a website. It's an ongoing process!
-
-![Browser Testing Ongoing](../../public/img/slide-assets/browser-testing-ongoing.svg)
 
 ---
 
@@ -91,8 +85,6 @@ template: inverse
 Validating your code simply means that you make sure it conforms to the norms and standards set forth by various organizations.
 
 Valid code will help ensure your website universally understood.
-
-![Code Checkmark](../../public/img/slide-assets/code-checkmark.svg)
 
 ---
 
@@ -140,8 +132,6 @@ Analytics can provide **some insight** into this, but should be treated with cau
 
 Conducting **real user research** is best!
 
-![Audience Analytics](../../public/img/slide-assets/audience-analytics.svg)
-
 ---
 
 # Brass Tacks
@@ -152,8 +142,6 @@ The array of browsers and devices you provide support for and test on will also 
 - **Available timeline**
 - **Planned scope of support**
 
-
-![Cost Time Scope Graphic](../../public/img/slide-assets/cost-time-scope.svg)
 ---
 
 # Make Informed Choices
@@ -181,8 +169,6 @@ class: center, middle
 ### Nothing Beats the Real Thing
 
 Wherever you can, test using **real browsers and devices**. But of course, there's this problem again...
-
-![Laptop Smartphone](../../public/img/slide-assets/laptop-smartphone.svg)
 
 ---
 background-image: url(../../public/img/slide-assets/rwd-device-proliferation.jpg)
@@ -284,8 +270,18 @@ Time to put your own project under the microscope!
 Take some of the recommended testing tools (code validators, performance testers, etc.) for spin with your own project.
 
 ---
+
+# What We've Learned
+
+- Why we need to test our code
+- How we can validate our HTML and CSS
+- Strategies for cross-browser testing
+- How to test website performance
+- How to test website accessibility
+
+---
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}
