@@ -32,23 +32,30 @@ template: inverse
 ---
 class: center, middle
 
+.large[
+   What is Ajax?
+]
+
+---
+class: center, middle
+
 ### What is Ajax?
 
 Ajax provides a way to fetch content from a server and load it in the browser without actually reloading the page.
 
-.inline-images[
-   ![Ajax Browser Load Data](../../public/img/slide-assets/ajax-browser-load.svg)
+---
+class: center, middle
+
+.large[
+   What is it for?
 ]
+
 ---
 class: center, middle
 
 ### What is it for?
 
 Ajax is often used when submitting web forms and fetching data data from a server, including via third-party APIs.
-
-.inline-images[
-   ![Form Dropdown Menu](../../public/img/slide-assets/dropdown-menu.svg)
-]
 
 ---
 class: center, middle
@@ -156,11 +163,6 @@ class: center, middle
 .large[
    But what exactly is this "data" you're getting back here?
 ]
-.inline-images[
-   ![Question mark Data](../../public/img/slide-assets/questionmark-data.svg)
-]
-
-
 
 ---
 template: inverse
