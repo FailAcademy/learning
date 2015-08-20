@@ -294,6 +294,7 @@ class: center, middle
 Did you log into this learning materials website with your GitHub account?
 
 ---
+
 # Exercise 1
 
 Your turn! Pull some data of your own from the GitHub API:
@@ -302,8 +303,16 @@ Your turn! Pull some data of your own from the GitHub API:
 </iframe>
 
 ---
+
+# What We've Learned
+
+- What Ajax and what it's for
+- How to format data with JSON
+- What an API is and how to interact with someone else's on the front-end of a website
+
+---
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}

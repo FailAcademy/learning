@@ -303,8 +303,16 @@ button {
 </iframe>
 
 ---
+
+# What We've Learned
+
+- How to create a form in an HTML document
+- What special HTML elements we can use to create form elements
+- How to work with form elements in CSS
+
+---
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}

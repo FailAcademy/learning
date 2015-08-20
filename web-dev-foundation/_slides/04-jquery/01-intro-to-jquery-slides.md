@@ -509,8 +509,17 @@ Try creating a function that listens for an click event on a link:
 </iframe>
 
 ---
+
+# What We've Learned
+
+- What jQuery is
+- What the DOM is and how to traverse it
+- How to change the way a website looks using jQuery
+- How to add interactivity to a page with jQuery
+
+---
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}

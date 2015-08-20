@@ -187,6 +187,16 @@ https://scratch.mit.edu/projects/232913/#player
 
 ---
 
+# Exercise 2
+
+Your turn...**[create a Scratch account](https://scratch.mit.edu/)** and give it a whirl.
+
+For this exercise, your **first task** is to create a basic program using one of the Scratch sprites (or more than one if you're feeling ambitious).
+
+Your **second task** is to make sure you have fun with this :)
+
+---
+
 # Statements
 
 Just like in pseudocode, statements provide an individual instruction to computer about a task it needs to perform:
@@ -281,16 +291,6 @@ We can also create custom blocks to encapsulate special chunks of code that we w
 ]
 
 In programming, these custom blocks are often referred to as **functions** or **methods**.
-
----
-
-# Exercise 2
-
-Your turn...**[create a Scratch account](https://scratch.mit.edu/)** and give it a whirl.
-
-For this exercise, your **first task** is to create a basic program using one of the Scratch sprites (or more than one if you're feeling ambitious).
-
-Your **second task** is to make sure you have fun with this :)
 
 ---
 
