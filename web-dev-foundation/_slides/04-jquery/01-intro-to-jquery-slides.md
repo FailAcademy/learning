@@ -126,6 +126,16 @@ The a visual representation of the DOM for this page would look something like t
 - This is very important to keep in mind when we begin **traversing** the DOM (i.e. moving up and down through DOM nodes) using jQuery
 
 ---
+
+# Exercise 1
+
+Let's map the DOM for the homepage of our project sites...
+
+Take a piece of paper and map out in a tree-structure what the DOM looks like for your project site.
+
+Be as detailed as you possibly can. When you're done, pair up with a classmate and explain the design of your DOM diagram to them.
+
+---
 template: inverse
 
 # Let's Use Some jQuery
@@ -139,7 +149,7 @@ Let's get to the fun stuff and look at a basic example. Take our previous code s
 ```html
 <body>
    <h1>My Page</h1>
-   <p class="intro">Welcome to my page!<p>
+   <p class="intro">Welcome to my page!</p>
    <p>Thanks for stopping by.</p>
    <!-- The rest of the page content... -->
    <script src="js/jquery-1.11.3.js"></script>
@@ -395,7 +405,7 @@ $('p').css({'font-size': '18px', 'font-weight': 'bold'});
 
 ---
 
-# Exercise 1
+# Exercise 2
 
 Let's try traversing the DOM to make some change to an HTML document:
 
@@ -417,7 +427,9 @@ To do this, we usually use the `.on()` method:
 
 ```javascript
 $('button').on('click', function() {
+
    // Code to run when button clicked...
+
 });
 ```
 
@@ -436,6 +448,14 @@ $('button').on('click', function() {
 
 $('form').append('<button>My Button</button>');
 ```
+
+---
+
+# Mini-Exercise
+
+Quick! Look up another example of an event that you can pass in as a parameter to the `.on()` method.
+
+Share the method name and what it can be used for with the class.
 
 ---
 
@@ -501,7 +521,7 @@ $('div').on('click', 'button', function(event) {
 
 ---
 
-# Exercise 2
+# Exercise 3
 
 Try creating a function that listens for an click event on a link:
 
