@@ -163,7 +163,9 @@ In JavaScript, you can create different kinds of functions:
 
 - Function declarations
 - Function expressions
-- Immediately invoked function expressions
+- Immediately invoked function expressions .red[* ]
+
+.footnote[.red[* ]More on these later with jQuery...]
 
 ---
 
@@ -202,35 +204,6 @@ document.write(size);
 ```
 
 Unlike function declarations, this function won't be available to use until the interpreter reaches that point in the code.
-
----
-
-# Immediately Invoked Function Expressions
-
-These functions also aren't available until the interpreter finds them, and execute themselves when they are found:
-
-```javascript
-var volume = (function(width, height, depth) {
-   return width * height * depth;
-}());
-
-// The "()" after the end curly brace runs the function immediately
-```
-
-In this case, the variable `volume` will store the returned value of the function, instead of the function itself.
-
----
-class: center, middle
-
-## Now why on earth would we want to write a function this way?
-
----
-
-# Immediately Invoked Function Expressions
-
-- They are used for code that only needs to run once
-- They act as a handy wrapper around a set of code (we'll see more of this when we get to jQuery)
-- They help protect the variables in your code from similarly named variables in other scripts (this is called **scope**)
 
 ---
 
