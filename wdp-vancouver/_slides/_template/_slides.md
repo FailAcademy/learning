@@ -12,7 +12,7 @@ class: center, middle, inverse
 
 # Slideshow Title
 
-.title-logo[![Red logo](../../public/img/red-logo-white.svg)]
+.title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
 layout: false
@@ -75,8 +75,15 @@ A sample unordered list:
 ]
 
 ---
+
+# What We've Learned
+
+- Thing 1
+- Thing 2
+
+---
 template: inverse
 
-# Fin!
+# Questions?
 
 {% endhighlight %}
