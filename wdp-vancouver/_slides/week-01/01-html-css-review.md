@@ -147,6 +147,13 @@ We want to keep our project files organized in a **root folder**:
 - Choose logical and descriptive names for files and folders
 
 ---
+class: center, middle
+
+.inline-images[
+   ![Root folders](/public/img/slide-assets/html-folder-structure.png)
+]
+
+---
 
 # Version Control
 
