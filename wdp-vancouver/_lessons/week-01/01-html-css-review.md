@@ -4,8 +4,6 @@ title: HTML & CSS Review
 slides: ['_slides/week-01/01-html-css-review.md', '_slides/week-01/02-html-css-review.md']
 ---
 
----
-
 ## Pre-Work
 
 Prior to the first day of class, you should be reasonably comfortable with all of the content in this online book:

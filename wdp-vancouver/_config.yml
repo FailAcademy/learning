@@ -5,7 +5,7 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               Course Name
+title:               Front-End Developer
 tagline:             'Learning Materials'
 description:         'Learning materials for the RED Academy [COURSE Name] course.'
 url:                 http://course-name.herokuapp.com

@@ -4,9 +4,7 @@ title: Intro to HTML
 slides: ['_slides/_template/lesson.md']
 ---
 
----
-
-## Required Reading
+## Pre-Work
 
 From the HTML & CSS textbook:
 
@@ -68,5 +66,7 @@ This is a link to the lab activity...
 ---
 
 ## Additional Resources
+
+This line describes the resource:
 
 - [Code Academy](http://www.codecademy.com/learn)
