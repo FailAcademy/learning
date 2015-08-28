@@ -41,7 +41,29 @@ View the [solution](http://codepen.io/redacademy/pen/NqrmWL).
 
 ## Lab Activity
 
-*Lab activity details forthcoming.*
+In this activity, you're going to build a simple form that fetches data from the OpenWeatherMap API to populate a webpage with the current Vancouver forecast as pictured:
+
+![Weather widget prototype](/public/files/labs/ajax-lab.gif)
+
+You're welcome to use either **Codepen** or a **code editor** to complete this assignment.
+
+You'll be using a **GET** method to fetch data via Ajax from the following endpoint:
+
+http://api.openweathermap.org/data/2.5/weather?q=Vancouver,ca
+
+You'll use the `$.ajax()` method just as you did the GitHub API example, but append the required data (the main type of weather, the description, and the icon) when the button is clicked.
+
+This is all the mark-up you will need to complete this assignment:
+
+```html
+<div class="weather-widget">
+  <h1>Vancouver Weather</h1>
+  <div class="results"><p>Click the button to get the current weather conditions...</p></div>
+  <button id="get-weather">Get Weather</button>
+</div>
+```
+
+Writing the CSS and jQuery is up to you. Good luck!
 
 ## Additional Resources
 

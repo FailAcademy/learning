@@ -30,7 +30,7 @@ Take some of the recommended testing tools (code validators, performance testers
 
 ## Lab Activity
 
-*Lab activity details forthcoming.*
+Please see the [Intro to Ajax and APIs](/lesson/intro-to-ajax-and-apis/) for lab activity details.
 
 ## Additional Resources
 

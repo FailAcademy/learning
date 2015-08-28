@@ -50,7 +50,7 @@ Your cheatsheet:
 
 Wondering how to create **triangle shapes** with CSS? You'll want to read this tutorial:
 
-(CSS Triangle)[https://css-tricks.com/snippets/css/css-triangle/]
+- [CSS Triangle](https://css-tricks.com/snippets/css/css-triangle/)
 
 Lastly, the typeface used in the form is called **Open Sans**. You can include from Google Fonts by pasting this at the top of your stylesheet:
 
