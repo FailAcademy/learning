@@ -33,7 +33,32 @@ View the [solution](http://codepen.io/redacademy/pen/YXWKdz).
 
 ## Lab Activity
 
-*Lab activity details forthcoming.*
+In this activity, you're going to use what you just learned about HTML forms and jQuery animation to try to recreate this form:
+
+![Form prototype](/public/files/labs/jquery-form-lab.gif)
+
+You're welcome to use either **Codepen** or a **code editor** to complete this assignment.
+
+Your cheatsheet:
+
+- The body background colour is `#567567`
+- The login form background colour is `#f0f0f0`
+- The input border colour is `#cccccc`
+- The button colour is `##3399cc`
+- The button hover colour is `#2288bb`
+- The entire form should appear or disappear each time the button is clicked
+
+Wondering how to create **triangle shapes** with CSS? You'll want to read this tutorial:
+
+(CSS Triangle)[https://css-tricks.com/snippets/css/css-triangle/]
+
+Lastly, the typeface used in the form is called **Open Sans**. You can include from Google Fonts by pasting this at the top of your stylesheet:
+
+```css
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+```
+
+Good luck!
 
 ## Additional Resources
 
