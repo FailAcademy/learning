@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: HTML & CSS Review
-slides: ['_slides/week-01/01-html-css-review.md', '_slides/week-01/02-html-css-review.md']
+slides: ['_slides/week-01/01a-html-css-review.md', '_slides/week-01/01b-html-css-review.md']
 ---
 
 ## Pre-Work

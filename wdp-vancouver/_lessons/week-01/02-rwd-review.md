@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Responsive Web Design Review
-slides: ['_slides/week-01/03-rwd-review.md']
+slides: ['_slides/week-01/02-rwd-review.md']
 ---
 
 ## Pre-Work
