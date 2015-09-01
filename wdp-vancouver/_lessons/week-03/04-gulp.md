@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Gulp
-slides: ['_slides/week-02/05-gulp.md']
+slides: ['_slides/week-03/04-gulp.md']
 ---
 
 ## Pre-Work

@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Ajax, JSON, and APIs
-slides: ['_slides/week-02/01-ajax-apis.md']
+slides: ['_slides/week-03/01-ajax-apis.md']
 ---
 
 ## Pre-Work

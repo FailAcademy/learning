@@ -3,23 +3,23 @@ layout: default
 ---
 
 <div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
+   <h1 class="post-title">{{ page.title }}</h1>
 
-  {% if page.slides %}
-     <p>This lesson's slides:</p>
-     <ul>
-        {% for slidedeck in site.slides %}
-            {% if page.slides contains slidedeck.relative_path %}
-              <li>
-                 <a href="{{slidedeck.url}}">{{slidedeck.title}}</a>
-              </li>
-           {% endif %}
-        {% endfor %}
-     </ul>
-     <hr />
-  {% endif %}
+   {% if page.slides %}
+      <p>This lesson's slides:</p>
+      <ul>
+      {% for slidedeck in site.slides %}
+         {% if page.slides contains slidedeck.relative_path %}
+            <li>
+               <a href="{{slidedeck.url}}">{{slidedeck.title}}</a>
+            </li>
+         {% endif %}
+      {% endfor %}
+      </ul>
+   {% endif %}
+   <hr />
 
-  {{ content }}
+   {{ content }}
 </div>
 
 {% capture lessons %}{{page.collection}}{% endcapture %}

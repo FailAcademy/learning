@@ -1,18 +1,22 @@
 ---
 layout: lesson
-title: More Sass
-slides: ['_slides/week-02/04-more-sass.md']
+title: Intro to Sass
+slides: ['_slides/week-03/03-intro-to-sass.md']
 ---
 
 ## Pre-Work
 
-From the HTML & CSS textbook:
 
-- A Closer Look at Tags (pp. 23-24)
 
 ---
 
 ## Learning Objectives
+
+- Define what a CSS preprocessor is, and how it can speed up development.
+- Structure Sass files according to best practices, and import them.
+- Implement basic Sass techniques like nesting, variables, mixins, and operations.
+- Install Sass locally and compile it into plain vanilla CSS.
+- Distinguish between different CSS preprocessor such as Sass, SCSS, and Less.
 
 - Apply Sass language skills to writing Sass for responsive websites.
 - Explore best practices for writing Sass that compiles to future-friendly, manageable CSS.
@@ -23,6 +27,16 @@ From the HTML & CSS textbook:
 ---
 
 ## Keywords
+
+- Preprocessor
+- Sass/SCSS
+- Mixin
+- Variable
+- Nesting
+- Operation
+- Partial
+- Ruby Gem
+- Compiler
 
 - Control directives and expressions
 - Operations
