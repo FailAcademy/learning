@@ -6,67 +6,82 @@ slides: ['_slides/week-01/01-intro-to-html.md']
 
 ## Pre-Work
 
-From the HTML & CSS textbook:
+Readings from *Learn to Code HTML & CSS*:
 
-- A Closer Look at Tags (pp. 23-24)
+- [Building Your First Web Page](http://learn.shayhowe.com/html-css/building-your-first-web-page/)
+- [Getting to Know HTML](http://learn.shayhowe.com/html-css/getting-to-know-html/)
+- [Creating Lists](http://learn.shayhowe.com/html-css/creating-lists/) (HTML section only)
 
 ---
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Define what a mark-up language is and the function of HTML on the web.
+- Write well-structured HTML, properly nesting elements and applying appropriate attributes.
+- Use basic HTML tags including headings, paragraphs, links, and lists.
+- Use the HTML5 doctype and elements to semantically structure a web page.
 
 ---
 
 ## Keywords
 
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [Doctype](http://www.sitepoint.com/web-foundations/doctypes/)
 - [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- [Attribute](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
 
 ---
 
 ## Exercise 1
 
-Do this activity!
+Your turn! Time to create your first webpage.
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+First things first...you need to pick a code editor to download and install it (if you haven't done so already).
+
+Next create a root folder somewhere on our computer and save a new file called `index.html`.
+
+Then open that folder and create a simple webpage containing `<html>`, `<head>`, `<title>`, and `<body>` tags, then add a few paragraphs of text.
+
+Lastly, save and view your new website in a browser.
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+Let's explore what these HTML5 elements are good for.
 
-```html
+In teams of two, research your assigned element and report back to the class:
 
-<!-- A bit of sample HTML with syntax highlighting-->
+- What the semantically appropriate usage of the element is
+- Any potential sources of confusion about this element's usage
+- Where you think this element may be used in this week's project (if at all)
 
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
+---
 
-```
+## Exercise 3
 
-Or include an image:
+Let's dive right in and start thinking about how we might tackle the first project's design comp to convert it into semantically-appropriate HTML elements.
 
-![My helpful screenshot](/public/img/human-to-machine.png)
+Jot some idea out on your own, then you'll team up to discuss your approach with a partner. Based on this discussion, is there anything you'd revise in your approach?
+
+Finally, you and your partner will share your insights with the class.
 
 ---
 
 ## Lab Activity
 
-This is a link to the lab activity...
+Today's lab time will be dedicated to the Week 1 Project.
+
+You're goal for the end of the first day is to have the different sections of the website roughed-out in HTML.
 
 ---
 
 ## Additional Resources
 
-This line describes the resource:
+Don't let the title of this article series put you off&mdash;it has some of the clearest explanations of basic HTML concepts you'll find on the web:
 
-- [Code Academy](http://www.codecademy.com/learn)
+- [Web Design for Kids](http://webdesign.tutsplus.com/series/web-design-for-kids--cms-823)
+
+Some background information, for some context (and for fun):
+
+- [Story of the web #web25](http://www.storyoftheweb.org.uk/)

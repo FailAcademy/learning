@@ -6,56 +6,48 @@ slides: ['_slides/week-01/02-intro-to-css.md']
 
 ## Pre-Work
 
-From the HTML & CSS textbook:
+Readings from *Learn to Code HTML & CSS*:
 
-- A Closer Look at Tags (pp. 23-24)
+- [Getting to Know CSS](http://learn.shayhowe.com/html-css/getting-to-know-css/)
 
 ---
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Distinguish what CSS is in relation to HTML.
+- Demonstrate competency with CSS layout principles and box model properties.
+- Adjust the default appearance of HTML elements using a variety of selectors, including classes, IDs, pseudo-elements, and pseudo-classes.
+- Leverage how inheritance and specificity function in CSS.
+- Use browser developer tools to assist with development debugging.
+- Interpret a design comp and build it out as HTML with CSS applied.
 
 ---
 
 ## Keywords
 
-- [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Class](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class)
+- [ID](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)
+- [Box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box_model)
+- [Web/Page Inspector](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector)
 
 ---
 
 ## Exercise 1
 
-Do this activity!
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
 
-```html
 
-<!-- A bit of sample HTML with syntax highlighting-->
+---
 
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
+## Exercise 3
 
-```
 
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
 
 ---
 

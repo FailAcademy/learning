@@ -6,21 +6,26 @@ slides: ['_slides/week-01/04a-html-forms.md', '_slides/week-01/04b-web-fonts.md'
 
 ## Pre-Work
 
-From the HTML & CSS textbook:
 
-- A Closer Look at Tags (pp. 23-24)
 
 ---
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Understand how HTML forms work.
+- Build a functional HTML form with a variety of inputs.
+- Target form elements using CSS.
 
 ---
 
 ## Keywords
 
-- [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- [Form](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
+- [Input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+- [Select](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
+- [Textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
+- [Label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label)
+- [Button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
 
 ---
 
