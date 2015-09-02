@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: WordPress Functions Hooks and Debugging Slides
+title: WordPress Functions, Hooks and Debugging Slides
 ---
 
 {% highlight html %}

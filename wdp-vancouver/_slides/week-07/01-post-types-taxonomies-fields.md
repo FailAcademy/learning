@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Custom Post Types Taxonomies and Fields Slides
+title: Custom Post Types, Taxonomies and Fields Slides
 ---
 
 {% highlight html %}

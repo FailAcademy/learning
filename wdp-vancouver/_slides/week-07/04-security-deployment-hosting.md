@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: WP Security Deployment and Hosting Slides
+title: WP Security, Deployment and Hosting Slides
 ---
 
 {% highlight html %}

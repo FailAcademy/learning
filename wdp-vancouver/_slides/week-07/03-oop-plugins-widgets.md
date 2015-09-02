@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: OOP Plugin Dev and Widget API Slides
+title: OOP, Plugin Dev and Widget API Slides
 ---
 
 {% highlight html %}

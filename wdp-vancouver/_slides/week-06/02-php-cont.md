@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to PHP Continued Slides
+title: Intro to PHP (continued) Slides
 ---
 
 {% highlight html %}
