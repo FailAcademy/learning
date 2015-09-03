@@ -85,3 +85,7 @@ Don't let the title of this article series put you off&mdash;it has some of the 
 Some background information, for some context (and for fun):
 
 - [Story of the web #web25](http://www.storyoftheweb.org.uk/)
+
+A free online version of Jeremy Keith's "HTML5 for Web Designers" book:
+
+- [HTML5 for Web Designers - Semantics](http://html5forwebdesigners.com/semantics/)

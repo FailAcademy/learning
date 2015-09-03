@@ -389,14 +389,28 @@ You'll likely also run into a structural element called a `<div>`:
 </div>
 ```
 
-A `<div>` element is mostly used for flowing content, but with HTML5 we know have more semantic structural elements...
-
 ---
-class: center, middle
 
-.inline-images[
-   ![HTML5 example layout](/public/img/slide-assets/html5-semantic-tags.png)
-]
+# Div-itis
+
+Before HTML5, our websites often relied heavily on `<div>` elements:
+
+```html
+<div id="header">
+   <h1>A Tall Tale</h1>
+</div>
+<div class="short-story">
+   <div class="chapter-one">
+      <p>The paragraph goes here...</p>
+   </div>
+</div>
+<div class="widget">
+	<p>"The aside goes here..."</p>
+</div>
+<div id="footer">
+   &copy; 2015.
+</div>
+```
 
 ---
 
@@ -420,6 +434,13 @@ An HTML5 webpage might look a little something like this:
    &copy; 2015.
 </footer>
 ```
+
+---
+class: center, middle
+
+.inline-images[
+   ![HTML5 example layout](/public/img/slide-assets/html5-semantic-tags.png)
+]
 
 ---
 
