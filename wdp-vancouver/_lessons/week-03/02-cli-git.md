@@ -6,9 +6,14 @@ slides: ['_slides/week-03/02-cli-git.md']
 
 ## Pre-Work
 
-From the HTML & CSS textbook:
+Get your dev environment set up!
 
-- A Closer Look at Tags (pp. 23-24)
+- Install GIT
+	- OSX: [http://git-scm.com/download/mac](http://git-scm.com/download/mac)
+	- Windows: [http://git-scm.com/download/win](http://git-scm.com/download/win)
+- Install Ruby - OSX: (Comes with!), Windows: [http://rubyinstaller.org/](http://rubyinstaller.org/)
+- Install Node & NPM - [https://nodejs.org/en/](https://nodejs.org/en/)
+- Sign up for Github! [https://github.com](https://github.com/join) (If you don't already have an account)
 
 ---
 
