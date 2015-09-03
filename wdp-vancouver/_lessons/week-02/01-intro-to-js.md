@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Intro to JavaScript
+title: JavaScript
 slides: ['_slides/week-02/01-intro-to-js.md']
 ---
 

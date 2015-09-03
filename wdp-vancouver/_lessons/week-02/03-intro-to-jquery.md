@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Intro to jQuery
+title: jQuery
 slides: ['_slides/week-02/03-intro-to-jquery.md']
 ---
 
