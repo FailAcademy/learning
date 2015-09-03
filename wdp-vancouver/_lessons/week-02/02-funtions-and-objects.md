@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: JS Functions, Objects and Arrays
+title: Javascript Functions, Objects and Arrays
 slides: ['_slides/week-02/02-functions-and-objects.md']
 ---
 
