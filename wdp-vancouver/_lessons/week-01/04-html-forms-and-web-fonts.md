@@ -6,7 +6,10 @@ slides: ['_slides/week-01/04a-html-forms.md', '_slides/week-01/04b-web-fonts.md'
 
 ## Pre-Work
 
+Readings from *Learn to Code HTML & CSS*:
 
+- [Building Forms](http://learn.shayhowe.com/html-css/building-forms/)
+- [Working with Typography - Embedding Web Fonts](http://learn.shayhowe.com/html-css/working-with-typography/#embedding-web-fonts)
 
 ---
 
@@ -15,6 +18,10 @@ slides: ['_slides/week-01/04a-html-forms.md', '_slides/week-01/04b-web-fonts.md'
 - Understand how HTML forms work.
 - Build a functional HTML form with a variety of inputs.
 - Target form elements using CSS.
+- Explore `@font-face` to incorporate custom typefaces into a web page.
+- Explore third-party services that incorporate custom typefaces on a web page.
+- Discover how to combine typefaces together in effective combinations.
+- Learn how to implement icon fonts on a website using Font Awesome.
 
 ---
 
@@ -26,52 +33,74 @@ slides: ['_slides/week-01/04a-html-forms.md', '_slides/week-01/04b-web-fonts.md'
 - [Textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
 - [Label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label)
 - [Button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
+- [@font-face](https://developer.mozilla.org/en/docs/Web/CSS/@font-face)
+- Icon font
+- SVG
 
 ---
 
-## Exercise 1
+## Forms: Exercise 1
 
-Do this activity!
+Build this form!
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+![HTML form prototype](/public/files/exercises/html-forms-e1.png)
+
+You cheatsheet:
+
+- The button colour is `#337ab7`
+- The border colour of the inputs is `#ddd`
+- The typeface is Arial
 
 ---
 
-## Exercise 2
+## Web Fonts: Exercise 1
 
-This is how you add highlighted syntax to a lesson page:
+Go to **[Font Squirrel](http://www.fontsquirrel.com/)** and DOWNLOAD THE PROJECT FONT PACKAGE.
 
-```html
+Add it to your project...
 
-<!-- A bit of sample HTML with syntax highlighting-->
+---
 
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
+## Web Fonts: Exercise 2
 
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+Add Font Awesome to your project...
 
 ---
 
 ## Lab Activity
 
-This is a link to the lab activity...
+We'll continue to work on our Week 1 Project in today's lab.
+
+This is the homestretch! You now have all the knowledge you'll need to finish building out Project 1. Wherever you hit a stumbling block, be sure to ask Google, check Stack Overflow, or ask a classmate.
 
 ---
 
 ## Additional Resources
 
-This line describes the resource:
+An intro to building HTML forms and styling them with CSS:
 
-- [Code Academy](http://www.codecademy.com/learn)
+- [My first HTML form](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form)
+
+Open-source font resources:
+
+- [fontsquirrel.com](http://www.fontsquirrel.com/)
+- [fontex.org](http://www.fontex.org/)
+- [openfontlibrary.org](http://openfontlibrary.org/)
+- [Google Fonts](https://www.google.com/fonts#)
+
+Avoiding faux italics and bolding with your `@font-face` fonts:
+
+- [Stack Overflow](http://stackoverflow.com/questions/2436749/how-to-add-multiple-font-files-for-the-same-font)
+
+Some Google Font design inspiration:
+
+- [Google Font Pairing](http://femmebot.github.io/google-type/)
+
+Free icon fonts to use on your websites:
+
+- [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+- [Icomoon](https://icomoon.io/)
+
+Feeling ambitous? You can create your own icons fonts too:
+
+- [Creating and Using a Custom Icon Font - CSS Tricks Video](https://css-tricks.com/video-screencasts/113-creating-and-using-a-custom-icon-font/)

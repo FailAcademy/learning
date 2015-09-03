@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to CSS Slides
+title: CSS Slides
 ---
 
 {% highlight html %}

@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Intro to HTML
+title: HTML
 slides: ['_slides/week-01/01-intro-to-html.md']
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Intro to CSS
+title: CSS
 slides: ['_slides/week-01/02-intro-to-css.md']
 ---
 

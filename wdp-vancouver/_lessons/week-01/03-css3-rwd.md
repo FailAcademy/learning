@@ -1,12 +1,18 @@
 ---
 layout: lesson
 title: CSS3 & Responsive Web Design
-slides: ['_slides/week-01/03a-css3.md', '_slides/week-01/03b-rwd.md']
+slides: ['_slides/week-01/03-rwd.md']
 ---
 
 ## Pre-Work
 
+Readings from *Learn to Code Advanced HTML & CSS*:
 
+- [Responsive Web Design](http://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
+
+This article by Ethan Marcotte on A List Apart, which is widely credited with kicking off the responsive web design movement:
+
+- [Responsive Web Design](http://alistapart.com/article/responsive-web-design/)
 
 ---
 
@@ -34,30 +40,71 @@ slides: ['_slides/week-01/03a-css3.md', '_slides/week-01/03b-rwd.md']
 
 ## Exercise 1
 
+Your task is to find an example of a responsively-designed website. Take notes on:
 
+- Where are the main "breakpoints"? What happens at these breakpoints?
+- What happens to the navigation for mobile widths?
+- Are there ads on the site? How are they handled?
+- Does anything seem to be not-quite-right at any width?
+
+Afterward, we'll pair up and share our findings.
 
 ---
 
 ## Exercise 2
 
+Let's try converting a desktop-only website to be fully responsive and mobile-first.
 
+You'll be optimizing for two breakpoints: `480px` and `720px`
+
+Screenshots of what the website should look like at mobile, tablet, and desktop width have been included in the following package:
+
+**[Download the exercise &rarr;](/public/files/exercises/rwd-review-e2.zip)**
 
 ---
 
 ## Exercise 3
 
+Now that we've had a chance to brush up our RWD skills, let's strategize how we'll apply this to our Week 1 projects.
 
+Take a few moments to review the two new design comps and think about what areas of the site will specifically be affected by the changes that are happening at each breakpoint.
+
+Jot some idea out on your own, then you'll team up to discuss with a partner. We'll then reconvene to discuss each other strategies, as well as any questions or concerns before starting with the lab work.
+
+---
+
+## Exercise 4
+
+Let's teach each other about these CSS3 properties...
+
+Your task is to take your assigned property and create a demo of how it can be used for your classmates.
+
+Also take a look at Project 1, and see if you can recommend where it this property could potentially be used (if at all).
 
 ---
 
 ## Lab Activity
 
-This is a link to the lab activity...
+We'll continue to work on our Week 1 Project in today's lab.
+
+You goal for today is to "refactor" your CSS into mobile-first media queries based on the provided design comps.
 
 ---
 
 ## Additional Resources
 
-This line describes the resource:
+An excellent RWD resource:
 
-- [Code Academy](http://www.codecademy.com/learn)
+- [Responsive Web Design Basics](https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/?hl=en)
+
+A CSS Tricks article helps demystify how media queries work:
+
+- [CSS Media Queries & Using Available Space](https://css-tricks.com/css-media-queries/)
+
+A collection of responsive web design patterns and resources:
+
+- [This is Responsive](http://bradfrost.github.io/this-is-responsive/)
+
+A showcase of inspirational responsively designed websites:
+
+- [Media Queries](http://mediaqueri.es/)
