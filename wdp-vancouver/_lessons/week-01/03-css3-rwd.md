@@ -85,7 +85,7 @@ Also take a look at Project 1, and see if you can recommend where it this proper
 
 ## Lab Activity
 
-We'll continue to work on our Project 1 in today's lab.
+We'll continue to work on Project 1 in today's lab.
 
 You goal for today is to "refactor" your CSS into mobile-first media queries based on the provided design comps.
 
