@@ -6,67 +6,72 @@ slides: ['_slides/week-02/02-functions-and-objects.md']
 
 ## Pre-Work
 
-From the HTML & CSS textbook:
+Provided you finished the [JavaScript for Cats](http://jsforcats.com/) reading yesterday, there is no pre-reading for this class.
 
-- A Closer Look at Tags (pp. 23-24)
+You may wish to review the sections on **functions**, **arrays**, and **objects** for good measure before class.
 
 ---
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Create and use basic JavaScript functions.
+- Build basic JavaScript objects and manipulate their properties and methods.
+- Create JavaScript arrays and iterate over them.
 
 ---
 
 ## Keywords
 
-- [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- [Function](https://developer.mozilla.org/en-US/docs/Glossary/Function)
+- [Return](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return)
+- [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object)
+- Method
+- Property
+- [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/array)
+- [Scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope)
 
 ---
 
 ## Exercise 1
 
-Do this activity!
+Create an `index.html` file with and externally linked JS file included in it. Load that file in your browser window.
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+In your JS file, declare a function called `min` that compares to two numbers and logs out the lower number to the console:
+
+```js
+// Inside your JS file, first create your function declaration...
+
+// Then run:
+
+console.log(min(0, 10));
+// should log out 0 in the console
+
+console.log(min(0, -10));
+// should log out -10 in the console
+```
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+In this exercise, you're going to build a JS object of your own to represent a **hotel**.
 
-```html
+Properties of the hotel object should include the **name** of the hotel (The Quay), the **total number of rooms** (40), the current number of **rooms booked** (25), an array of the **types of rooms** (twin, double, suite), and function to **check the availability**.
 
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+One you've created your object, **create a loop** to log to the console all of the room types one-by-one. Then, **update the booked rooms** to 30, check the new availability, and display that in an **alert box**.
 
 ---
 
 ## Lab Activity
 
-This is a link to the lab activity...
+Today's lab time will be dedicated to Project 2.
+
+We will continue building out the HTML and CSS for this project today, and begin adding the interactive components when we learn about jQuery tomorrow.
 
 ---
 
 ## Additional Resources
 
-This line describes the resource:
+An excellent free e-book on JavaScript that's worth bookmarking:
 
-- [Code Academy](http://www.codecademy.com/learn)
+- [Eloquent JavaScript](http://eloquentjavascript.net/)
