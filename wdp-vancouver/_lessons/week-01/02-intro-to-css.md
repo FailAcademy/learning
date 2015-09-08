@@ -77,7 +77,7 @@ Color and backgrounds...
 
 ## Lab Activity
 
-Today's lab time will be dedicated to the Week 1 Project.
+Today's lab time will be dedicated to the Project 1.
 
 By the end of the second day you'll should have a enough CSS written to begin approximating the general layout of the website.
 

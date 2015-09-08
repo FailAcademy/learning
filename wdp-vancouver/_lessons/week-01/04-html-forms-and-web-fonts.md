@@ -69,7 +69,7 @@ Add Font Awesome to your project...
 
 ## Lab Activity
 
-We'll continue to work on our Week 1 Project in today's lab.
+We'll continue to work on our Project 1 in today's lab.
 
 This is the homestretch! You now have all the knowledge you'll need to finish building out Project 1. Wherever you hit a stumbling block, be sure to ask Google, check Stack Overflow, or ask a classmate.
 

@@ -70,7 +70,7 @@ Finally, you and your partner will share your insights with the class.
 
 ## Lab Activity
 
-Today's lab time will be dedicated to the Week 1 Project.
+Today's lab time will be dedicated to the Project 1.
 
 You're goal for the end of the first day is to have the different sections of the website roughed-out in HTML.
 

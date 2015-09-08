@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: CSS3 & Responsive Web Design
-slides: ['_slides/week-01/03-rwd.md']
+slides: ['_slides/week-01/03-css3-rwd.md']
 ---
 
 ## Pre-Work
@@ -85,7 +85,7 @@ Also take a look at Project 1, and see if you can recommend where it this proper
 
 ## Lab Activity
 
-We'll continue to work on our Week 1 Project in today's lab.
+We'll continue to work on our Project 1 in today's lab.
 
 You goal for today is to "refactor" your CSS into mobile-first media queries based on the provided design comps.
 
