@@ -1,7 +1,7 @@
 ---
 layout: project
-title: Mars Colony Mobile App
-due: Monday October 26th (beginning of class)
+title: Project 1: Resume
+due: Monday Sept 28th (beginning of class)
 ---
 
 Some information about the project goes here...

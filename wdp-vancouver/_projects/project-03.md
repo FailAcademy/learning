@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Instagrid
+title: Project 3: Instagrid
 due: Monday October 19th (beginning of class)
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Restaurant Homepage
+title: Project 2: Restaurant Homepage
 due: Monday October 5th (beginning of class)
 ---
 
