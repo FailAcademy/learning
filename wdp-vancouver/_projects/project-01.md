@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Project 1: Resume
+title: Project 1 - Resume
 due: Monday Sept 28th (beginning of class)
 ---
 
