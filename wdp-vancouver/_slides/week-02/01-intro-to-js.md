@@ -135,6 +135,17 @@ Methods perform certain tasks for the objects:
 
 ---
 
+# Logging Values to the Browser Console
+
+You can also use the `console.log()` method to simply print out and test values in the browser's console from your code, instead of writing them to your document.
+
+```javascript
+var greeting = "Hi there!"
+console.log(greeting);
+```
+
+---
+
 # Exercise 1
 
 Open a new browser tab and open the console, and type in each line one at a time:
@@ -298,7 +309,11 @@ You will likely find yourself using for loops most often with "arrays" (we'll ge
 
 # Exercise 2
 
+Using what you just learned about conditional statements and loops, write a program that uses `console.log()` to print all the numbers from 1 to 100, with two exceptions.
 
+For numbers divisible by 3, print **Fizz** instead of the number, and for numbers divisible by 5 (and not 3), print **Buzz** instead.
+
+When you have that working, modify your program to print **FizzBuzz**, for numbers that are divisible by both 3 and 5 (and still print **Fizz** or **Buzz** for numbers divisible by only one of those).
 
 ---
 template: inverse
@@ -426,17 +441,6 @@ We can also store the results of `getElementById` in a variable to make it faste
 var el = document.getElementById('message');
 el.innerHTML = 'We love dogs!';
 el.className = 'red'; // adds class name of "red" to the element
-```
-
----
-
-# Logging Values to the Browser Console
-
-You can also use `console.log()` to simply print out and test values in the browser's console from your code, instead of writing them to your document.
-
-```javascript
-var greeting = "Hi there!"
-console.log(greeting);
 ```
 
 ---
