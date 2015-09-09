@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Service vs Factory vs Provider SLides
+title: Service vs Factory vs Provider Slides
 ---
 
 {% highlight html %}

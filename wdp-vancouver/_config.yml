@@ -7,7 +7,7 @@ relative_permalinks: true
 # Setup
 title:               Front-End Developer
 tagline:             'Learning Materials'
-description:         'Learning materials for the RED Academy [COURSE Name] course.'
+description:         'Learning materials for the RED Academy Web Developer Professional program.'
 url:                 http://course-name.herokuapp.com
 baseurl:             ''
 paginate:            10
