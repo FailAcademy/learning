@@ -6,67 +6,85 @@ slides: ['_slides/week-02/04-jquery-animation.md']
 
 ## Pre-Work
 
-From the HTML & CSS textbook:
-
-- A Closer Look at Tags (pp. 23-24)
+Provided you finished the readings and Code School tutorial from yesterday, there is no pre-work for this class.
 
 ---
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Use jQuery animation methods to add dynamic behaviours to a webpage.
 
 ---
 
 ## Keywords
 
-- [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- Effect methods
+- Form methods
+- Select menu
 
 ---
 
 ## Exercise 1
 
-Do this activity!
+In this exercise, you're going to use jQuery to create an accordian-style show/hide effect for a basic FAQ list.
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+You're welcome to use either **Codepen** or a **code editor** to complete this exercise.
+
+Using the mark-up below, write a jQuery script to selectively show or hide a particular answer when the question is clicked:
+
+```html
+<ul class="faq-list">
+  <li>
+    <a href="#" rel="acc-1">First question?</a>
+    <p id="acc-1">This is the first answer.</p>
+  </li>
+  <li>
+    <a href="#" rel="acc-2">Second question?</a>
+    <p id="acc-2">This is the second answer.</p>
+  </li>
+  <li>
+    <a href="#" rel="acc-3">Third question?</a>
+    <p id="acc-3">This is the third answer.</p>
+  </li>
+</ul>
+```
+
+Try executing this effect in **two different ways**:
+
+1. The user must click the question to show the answer, and manually click it again to hide the answer (so multiple answers can be viewed at once)
+2. When the user clicks on a particular question to reveal the answer, all of the other questions' answers will automatically be re-hidden.
+
+**Hint:** You'll want to use CSS to initially hide all of the answers.
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+Your second exercise is to research **jQuery plugins**. jQuery plugins are script files containing jQuery that other people have written and that you can include in your website to add extra functionality without having to write all of the code yourself first. For example:
 
-```html
+- An image slider
+- A media lightbox
+- Animated filtering and sorting of content
+- Interactive navigation behaviour
 
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+Your task is to find an example of an interesting jQuery plugin and create a demo for your classmates showing how to use it.
 
 ---
 
 ## Lab Activity
 
-This is a link to the lab activity...
+We’ll continue to work on Project 2 in today’s lab.
+
+You goal for today is to finalize the implementation of the website's interactive features that require jQuery.
 
 ---
 
 ## Additional Resources
 
-This line describes the resource:
+Another great jQuery resource to read through:
 
-- [Code Academy](http://www.codecademy.com/learn)
+- [jQuery Fundamentals](http://jqfundamentals.com/)
+
+More on custom animation with jQuery:
+
+- [A Guide to the jQuery animate() Method](http://www.sitepoint.com/guide-jquery-animate-method/)
