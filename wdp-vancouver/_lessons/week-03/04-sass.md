@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Sass
-slides: ['_slides/week-03/03-sass.md']
+slides: ['_slides/week-03/04-sass.md']
 ---
 
 ## Pre-Work

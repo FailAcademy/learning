@@ -1,77 +1,48 @@
 ---
 layout: lesson
-title: The CLI and Version Control with Git
+title: The Command Line Interface (CLI) and Version Control with Git
 slides: ['_slides/week-03/02-cli-git.md']
 ---
 
 ## Pre-Work
 
-Get your dev environment set up!
+Visit the following sites. Read and complete as much as possible from the exercises that are contained on them.
 
-- Install GIT
-	- OSX: [http://git-scm.com/download/mac](http://git-scm.com/download/mac)
-	- Windows: [http://git-scm.com/download/win](http://git-scm.com/download/win)
-- Install Ruby - OSX: (Comes with!), Windows: [http://rubyinstaller.org/](http://rubyinstaller.org/)
-- Install Node & NPM - [https://nodejs.org/en/](https://nodejs.org/en/)
-- Sign up for Github! [https://github.com](https://github.com/join) (If you don't already have an account)
+- [The Command Line Crash Course](http://cli.learncodethehardway.org/book/)
+- [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)
+
+If you're using a Windows laptop for the course, please make sure you've installed Git.  [Click here to download the installer](https://git-scm.com/download/win)
+
+
+As well as Git, you'll need to make sure you've installed NodeJS on your system.
+[Click here to download the installer](https://nodejs.org/en/)
 
 ---
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Learn about your computer's command-line-interface and how to use basic built-in commands to navigate and manipulate files and folders on your computer.
 
----
+- Learn about Git and why it is an indispensable tool for software development.
 
-## Keywords
+- Learn to use the Git command-line-interface (CLI) to perform common Git tasks.
 
-- [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- Introduce Github and the Git workflows we'll be using for the remainder of the course.
 
----
-
-## Exercise 1
-
-Do this activity!
-
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
----
-
-## Exercise 2
-
-This is how you add highlighted syntax to a lesson page:
-
-```html
-
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+- Learn some of the common ways that web developers interact with command-line applications, other than Git, in their daily workflow.
 
 ---
 
 ## Lab Activity
 
-This is a link to the lab activity...
+Set up your computer for front-end development success!
+
+We'll install and set up the following programs, which we'll make use of during the rest of the course.
+
+- SASS: CSS Preprocessor.
+- GULP: JavaScript task runner.
+- JSHint: Javascript code quality checker.
+- JSCS: Javascript code style checker.
+- Jasmine: Javascript testing framework.
 
 ---
-
-## Additional Resources
-
-This line describes the resource:
-
-- [Code Academy](http://www.codecademy.com/learn)
