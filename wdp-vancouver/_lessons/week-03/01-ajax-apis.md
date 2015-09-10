@@ -6,16 +6,16 @@ slides: ['_slides/week-03/01-ajax-apis.md']
 
 ## Pre-Work
 
-From the HTML & CSS textbook:
+Read this primer on APIs:
 
-- A Closer Look at Tags (pp. 23-24)
+- [What APIs Are And Why They're Important](http://readwrite.com/2013/09/19/api-defined)
 
 ---
 
 ## Learning Objectives
 
 - Define what Ajax and JSON are, particularly in relation to jQuery.
-- Define what an API is and explore popular social media APIs.
+- Define what an API is and explore popular social media/network APIs.
 - Use jQuery Ajax methods to load content a webpage.
 - Handle Ajax errors with jQuery and provide user feedback.
 - Create authentication credentials and use them to access data within a third-party API.
@@ -32,25 +32,29 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-
-
----
-
-## Exercise 2
-
-
+Basic API call...
 
 ---
 
 ## Exercise 2
 
+API call with fail...
 
+---
+
+## Exercise 3
+
+The Instagram API requires that we register a "Client" and get a **client_id** to access many of it's API endpoints.
+
+(Some API requests require actual authentication with an **access_token**, but we won't be needing those for Project 2.)
+
+Let's create a Client for our Instagram project right now...
 
 ---
 
 ## Lab Activity
 
-This is a link to the lab activity...
+iTunes activity...
 
 ---
 
