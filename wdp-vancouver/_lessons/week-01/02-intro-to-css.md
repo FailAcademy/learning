@@ -43,35 +43,60 @@ Readings from *Learn to Code HTML & CSS*:
 
 ## Exercise 1
 
-Basic CSS
+Let's add a CSS file to your Project 1 webpage now.
+
+To do that, create a `style.css` file in the root folder of your website.
+
+Next, just like in the last example, add a <link> tag to the <head> of your HTML file so it knows to apply the styles that we add to this file to your webpage.
 
 ---
 
 ## Exercise 2
 
-Let's add a CSS file to your Project 1 webpage now.
+Let's start styling our project website using what we just learned about CSS text properties and the box model.
 
-To do that, create a `style.css` file in the root folder of your website.
+Your goal is to add CSS for the `<header>` element that will:
 
-Next, just like in the last example, add a <link> tag to the <head> of your HTML file so it knows to apply the styles that we add to this file later on to your page.
+- **center** the text and logo graphic
+- adjust the **size of the text**
+- add the **border** below Laura's name
+- add adequate **margin** above and below it
 
 ---
 
 ## Exercise 3
 
-Classes and IDs...
+Let's get the width of our website under control.
+
+One common way to do that is to create a `container` class and strategically apply to that to various elements to keep their widths in check.
+
+We want our `container` class to keep everything inside of it at a width of `840px`. Create that class in your CSS and begin apply it where you think it's needed.
+
+Is there anywhere that you may need to create an extra wrapping `<div>` around some of your content to contain it without conflicting with the background treatment later?
 
 ---
 
 # Exercise 4
 
-Position and floats...
+Time to start floating some content!
+
+Team up with a partner and go through the comp to figure out where you'll need to apply floats to execute the design.
+
+Work together to rough out the CSS that will float these elements. We'll reconvene as a class and share our solutions.
+
+And don't forget to add a clearfix!
 
 ---
 
 # Exercise 5
 
-Color and backgrounds...
+There are two components to this exercise&mdash;adding some colour, and beginning to add background images.
+
+Change the colour of the links and the orange headings to `#feaa3a` (and for future reference, the grey borders are `#333`).
+
+Also add the bird background image to the `<header>`.
+
+Challenge! How could we get the partially transparent background for the intro section to sit on top of this image?
 
 ---
 

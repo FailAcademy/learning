@@ -20,7 +20,7 @@ layout: false
 # Agenda
 
 1. What CSS is and how to use it
-2. Adding CSS to your website
+2. The box model and block vs. inline
 3. Classes and IDs
 4. Position and float
 5. Color and backgrounds
@@ -119,237 +119,6 @@ p {
 ```
 
 ---
-
-# Boxes Everywhere
-
-When writing CSS, it's helpful to think of every HTML element in your document being wrapped in an invisible box.
-
-.inline-images[
-   ![CSS Box Concept](/public/img/slide-assets/css-box-concept.svg)
-]
-
----
-class: center, middle
-
-.large[
-   This is called the **box model**.<br />It's an important CSS concept.
-]
-
----
-
-# The Box Model
-
-The box model gives additional properties that we can adjust for each HTML too. These properties include:
-
-- `margin`
-- `border`
-- `padding`
-- `width`
-- `height`
-
----
-class: center, middle
-
-.inline-images[
-   ![CSS Box Model](/public/img/slide-assets/css-box-model.svg)
-]
-
----
-
-# Box Model Properties
-
-Using the box model to style our HTML elements, we can use CSS properties such as:
-
-```css
-p {
-   margin: 15px;
-   border-top: 1px solid black;
-   border-bottom: 3px dotted blue;
-   padding-left: 30px;
-   width: 300px;
-}
-```
-
-You can target specific sides of a box by adding `-bottom`, `-top`, `-left`, or `-right` to the properties. Otherwise, the style will apply to all sides.
-
----
-
-
-# Box Model Shorthand
-
-Or instead of writing out all the properties for each side, we can use shorthand:
-
-```css
-header {
-   margin: 0 auto; /* this is horizontal centering trick in CSS */
-   padding: 5px 0 5px 10px;
-}
-```
-
-If you include **two properties**, they are applied to the **top/bottom** and then **left/right**.
-
-If you include **four properties**, they will be applied in the order **top**, **right**, **bottom**, and **left** (like going around a clock).
-
----
-
-class: center, middle
-
-### Block vs. Inline
-
-HTML elements will either be **block-level** or **inline**.
-
----
-class: center, middle
-
-Block elements will always appear to start on a new line.
-
-.inline-images[
-   ![Block-level element](/public/img/slide-assets/css-block-element.svg)
-]
-
-Some block level elements include `<h1>`, `<p>`, and `<ul>`.
-
----
-class: center, middle
-
-Inline elements will appear on the same line and flow with their neighbouring elements.
-
-.inline-images[
-   ![Inline element](/public/img/slide-assets/css-inline-element.svg)
-]
-
-Some inline elements include `<img>`, `<a>`, and `<strong>`.
-
----
-
-# Changing Display
-
-We can override an element default display behaviour using the `display` property in our CSS.
-
-For example:
-
-```css
-li {
-	display: inline;
-}
-```
-
-Or:
-
-```css
-span {
-	display: block;
-}
-```
-
----
-class: center, middle
-
-### Not that simple!
-
-But there's another distinction to be made...<br />an element can also be **inline-block**.
-
----
-
-# Display Differences
-
-Block                                 | Inline-block                    | Inline
-------------------------------------- | --------------------------------|---------------------------------
-Has top/bottom margin & padding       | Has top/bottom margin & padding | No top/bottom margin or padding
-Has left/right margin & padding       | Has left/right margin & padding | Has left/right margin & padding
-Can have set height and width         | Can have set height and width   | Cannot have set width or height
-Forces a line break after the element | Does not a force a line break   | Does not force a line break
-
----
-class: center, middle
-
-.inline-images[
-   ![CSS display properties](/public/img/slide-assets/css-display-props.svg)
-]
-
----
-
-# Exercise 1
-
-
-
----
-template: inverse
-
-# How CSS Cascades
-
----
-class: center, middle
-
-### The "C" in "CSS"
-
-The idea of **cascading order** is the key to how CSS works on our HTML elements.
-
----
-
-# Specificity
-
-How specificity applies to the cascade:
-
-1. Where specificity is equal, **the rule that comes last applies**
-2. Where specificity isn't equal, **the more specific rule applies**
-
----
-
-# Inheritance
-
-Inheritance is another important concept in CSS.
-
-This means exactly what it suggests&mdash;**child elements in your HTML will inherit styles from an parent elements** in which they are nested.
-
-This saves from having to specify the same styles for every element used.
-
----
-
-# Specificity & Inheritance
-
-So given this example:
-
-```css
-header {
-   font-family: Helvetica, sans-serif;
-}
-```
-
-What elements inside the `<header>` by styled in Helvetica:
-
-```html
-<header>
-   <h1>My Site Title</h1>
-   <p>My excellent tagline</p>
-</header>
-```
-
----
-
-# Specificity & Inheritance
-
-And what would we expect to happen in this example?
-
-```css
-header h1 {
-   font-family: Georgia, serif;
-}
-
-header {
-   font-family: Helvetica, sans-serif;
-}
-```
-
-```html
-<header>
-   <h1>My Site Title</h1>
-   <p>My excellent tagline</p>
-</header>
-```
-
----
-
 template: inverse
 
 # Adding CSS to Your Website
@@ -453,13 +222,256 @@ class: center, middle
 
 ---
 
-# Exercise 2
+# Exercise 1
 
 Let's add a CSS file to your Project 1 webpage now.
 
 To do that, create a `style.css` file in the root folder of your website.
 
-Next, just like in the last example, add a <link> tag to the <head> of your HTML file so it knows to apply the styles that we add to this file later on to your page.
+Next, just like in the last example, add a <link> tag to the <head> of your HTML file so it knows to apply the styles that we add to this file to your webpage.
+
+---
+template: inverse
+
+# Boxes and Blocks
+
+---
+
+# Boxes Everywhere
+
+When writing CSS, it's helpful to think of every HTML element in your document being wrapped in an invisible box.
+
+.inline-images[
+   ![CSS Box Concept](/public/img/slide-assets/css-box-concept.svg)
+]
+
+---
+class: center, middle
+
+.large[
+   This is called the **box model**.<br />It's an important CSS concept.
+]
+
+---
+
+# The Box Model
+
+The box model gives additional properties that we can adjust for each HTML too. These properties include:
+
+- `margin`
+- `border`
+- `padding`
+- `width`
+- `height`
+
+---
+class: center, middle
+
+.inline-images[
+   ![CSS Box Model](/public/img/slide-assets/css-box-model.svg)
+]
+
+---
+
+# Box Model Properties
+
+Using the box model to style our HTML elements, we can use CSS properties such as:
+
+```css
+p {
+   margin: 15px;
+   border-top: 1px solid black;
+   border-bottom: 3px dotted blue;
+   padding-left: 30px;
+   width: 300px;
+}
+```
+
+You can target specific sides of a box by adding `-bottom`, `-top`, `-left`, or `-right` to the properties. Otherwise, the style will apply to all sides.
+
+---
+
+# Box Model Shorthand
+
+Or instead of writing out all the properties for each side, we can use shorthand:
+
+```css
+header {
+   margin: 0 auto; /* this is horizontal centering trick in CSS */
+   padding: 5px 0 5px 10px;
+}
+```
+
+If you include **two properties**, they are applied to the **top/bottom** and then **left/right**.
+
+If you include **four properties**, they will be applied in the order **top**, **right**, **bottom**, and **left** (like going around a clock).
+
+---
+
+class: center, middle
+
+### Block vs. Inline
+
+HTML elements will either be **block-level** or **inline**.
+
+---
+class: center, middle
+
+Block elements will always appear to start on a new line.
+
+.inline-images[
+   ![Block-level element](/public/img/slide-assets/css-block-element.svg)
+]
+
+Some block level elements include `<h1>`, `<p>`, and `<ul>`.
+
+---
+class: center, middle
+
+Inline elements will appear on the same line and flow with their neighbouring elements.
+
+.inline-images[
+   ![Inline element](/public/img/slide-assets/css-inline-element.svg)
+]
+
+Some inline elements include `<img>`, `<a>`, and `<strong>`.
+
+---
+
+# Changing Display
+
+We can override an element default display behaviour using the `display` property in our CSS.
+
+For example:
+
+```css
+li {
+	display: inline;
+}
+```
+
+Or:
+
+```css
+span {
+	display: block;
+}
+```
+
+---
+class: center, middle
+
+### Not that simple!
+
+But there's another distinction to be made...<br />an element can also be **inline-block**.
+
+---
+
+# Display Differences
+
+Block                                 | Inline-block                    | Inline
+------------------------------------- | --------------------------------|---------------------------------
+Has top/bottom margin & padding       | Has top/bottom margin & padding | No top/bottom margin or padding
+Has left/right margin & padding       | Has left/right margin & padding | Has left/right margin & padding
+Can have set height and width         | Can have set height and width   | Cannot have set width or height
+Forces a line break after the element | Does not a force a line break   | Does not force a line break
+
+---
+class: center, middle
+
+.inline-images[
+   ![CSS display properties](/public/img/slide-assets/css-display-props.svg)
+]
+
+---
+template: inverse
+
+# How CSS Cascades
+
+---
+class: center, middle
+
+### The "C" in "CSS"
+
+The idea of **cascading order** is the key to how CSS works on our HTML elements.
+
+---
+
+# Specificity
+
+How specificity applies to the cascade:
+
+1. Where specificity is equal, **the rule that comes last applies**
+2. Where specificity isn't equal, **the more specific rule applies**
+
+---
+
+# Inheritance
+
+Inheritance is another important concept in CSS.
+
+This means exactly what it suggests&mdash;**child elements in your HTML will inherit styles from an parent elements** in which they are nested.
+
+This saves from having to specify the same styles for every element used.
+
+---
+
+# Specificity & Inheritance
+
+So given this example:
+
+```css
+header {
+   font-family: Helvetica, sans-serif;
+}
+```
+
+What elements inside the `<header>` by styled in Helvetica:
+
+```html
+<header>
+   <h1>My Site Title</h1>
+   <p>My excellent tagline</p>
+</header>
+```
+
+---
+
+# Specificity & Inheritance
+
+And what would we expect to happen in this example?
+
+```css
+header h1 {
+   font-family: Georgia, serif;
+}
+
+header {
+   font-family: Helvetica, sans-serif;
+}
+```
+
+```html
+<header>
+   <h1>My Site Title</h1>
+   <p>My excellent tagline</p>
+</header>
+```
+
+---
+
+# Exercise 2
+
+Let's start styling our project website using what we just learned about CSS text properties and the box model.
+
+Your goal is to add CSS for the `<header>` element that will:
+
+- **center** the text and logo graphic
+- adjust the **size of the text**
+- add the **border** below Laura's name
+- add adequate **margin** above and below it
+
+Don't worry about the background image yet, we'll get to that.
 
 ---
 template: inverse
@@ -606,7 +618,13 @@ li:last-child {
 
 # Exercise 3
 
+Let's get the width of our website under control.
 
+One common way to do that is to create a `container` class and strategically apply to that to various elements to keep their widths in check.
+
+We want our `container` class to keep everything inside of it at a width of `840px`. Create that class in your CSS and begin apply it where you think it's needed.
+
+Is there anywhere that you may need to create an extra wrapping `<div>` around some of your content to contain it without conflicting with the background treatment later?
 
 ---
 template: inverse
@@ -885,6 +903,14 @@ With the class split into two groups, you'll be assigned a hint for investigatin
 
 # Exercise 4
 
+Time to start floating some content!
+
+Team up with a partner and go through the comp to figure out where you'll need to apply floats to execute the design.
+
+Work together to rough out the CSS that will float these elements. We'll reconvene as a class and share our solutions.
+
+And don't forget to add a clearfix!
+
 ---
 template: inverse
 
@@ -1056,9 +1082,32 @@ Note that `background-size` isn't supported in IE8!
 
 ---
 
+# Multiple Backgrounds
+
+CSS3 lets you set multiple background images for an element:
+
+```css
+header {
+   background:
+      url(watermark.png),  /* on top */
+      url(overlay.png),    /* in the middle */
+      url(texture.png);    /* on the bottom */
+}
+```
+
+Declaring multiple background is just like declaring a single background, but you comma separate you're multiple background values (with the first on top, etc.).
+
+---
+
 # Exercise 5
 
+There are two components to this exercise&mdash;adding some colour, and beginning to add background images.
 
+Change the colour of the links and the orange headings to `#feaa3a` (and for future reference, the grey borders are `#333`).
+
+Also add the bird background image to the `<header>`.
+
+Challenge! How could we get the partially transparent background for the intro section to sit on top of this image?
 
 ---
 template: inverse
