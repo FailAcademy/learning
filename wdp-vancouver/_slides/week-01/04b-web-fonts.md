@@ -145,9 +145,11 @@ Before you embed a font on your website using `@font-face` you need to be sure t
 
 # Exercise 1
 
-Go to **[Font Squirrel](http://www.fontsquirrel.com/)** and DOWNLOAD THE PROJECT FONT PACKAGE.
+Go to **Font Squirrel** and download the Webfont Kit for **[Open San](http://www.fontsquirrel.com/fonts/open-sans)**, the custom font that we'll be using for Project 1.
 
-Add it to your project...
+Project 1 uses two different weights of Open Sans&mdash;**Normal** and **Bold**. You'll need to download both of those weights, and their italic versions too. Use the contents of your downloaded font package to add the required font files and CSS to your project.
+
+You’ll also want to read up on how to **[avoid faux italics and bolding](http://stackoverflow.com/questions/2436749/how-to-add-multiple-font-files-for-the-same-font)** with your `@font-face` typefaces, and adjust your CSS accordingly.
 
 ---
 template: inverse
@@ -404,7 +406,11 @@ Every Font Awesome icon also has a [Unicode value](http://fortawesome.github.io/
 
 # Exercise 2
 
-Add Font Awesome to your project...
+We're going to use Font Awesome to add the social media icons in the footer of the Project 1 website.
+
+Download Font Awesome and add the font files and minified CSS file to your project. Be sure to hook up the stylesheet in the `<head>` of your website too!
+
+To add the social media icons, check out Font Awesome's [Brand Icons](https://fortawesome.github.io/Font-Awesome/icons/#brand).
 
 ---
 
