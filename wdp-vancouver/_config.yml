@@ -5,9 +5,9 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               Front-End Developer
+title:               Web Developer
 tagline:             'Learning Materials'
-description:         'Learning materials for the RED Academy Web Developer Professional program.'
+description:         'Learning materials for the RED Academy Web Developer Professional Program.'
 url:                 http://course-name.herokuapp.com
 baseurl:             ''
 paginate:            10
