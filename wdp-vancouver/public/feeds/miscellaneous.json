@@ -1,0 +1,12 @@
+[
+   {
+      "title": "Thanksgiving",
+      "allDay": true,
+      "start": "2015-10-12"
+   },
+   {
+      "title": "Remembrance Day",
+      "allDay": true,
+      "start": "2015-11-11"
+   }
+]

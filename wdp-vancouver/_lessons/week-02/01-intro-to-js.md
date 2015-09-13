@@ -2,6 +2,7 @@
 layout: lesson
 title: JavaScript Basics
 slides: ['_slides/week-02/01-intro-to-js.md']
+date: 2015-09-28
 ---
 
 ## Pre-Work

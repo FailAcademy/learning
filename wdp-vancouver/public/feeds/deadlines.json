@@ -1,0 +1,44 @@
+[
+   {
+      "title": "Project 1 Due",
+      "allDay": true,
+      "start": "2015-09-28",
+      "url": "/project/project-1-resume/"
+   },
+   {
+      "title": "Project 2 Due",
+      "allDay": true,
+      "start": "2015-10-05",
+      "url": "/project/project-2-restaurant-homepage/"
+   },
+   {
+      "title": "Project 3 Due",
+      "allDay": true,
+      "start": "2015-10-14",
+      "url": "/project/project-3-instagrid/"
+   },
+   {
+      "title": "Project 4 Due",
+      "allDay": true,
+      "start": "2015-10-26",
+      "url": "/project/project-4-mars-colony-hybrid-app/"
+   },
+   {
+      "title": "Project 5 Due",
+      "allDay": true,
+      "start": "2015-11-09",
+      "url": ""
+   },
+   {
+      "title": "Portfolio Due",
+      "allDay": true,
+      "start": "2015-11-30",
+      "url": ""
+   },
+   {
+      "title": "Client Project Due",
+      "allDay": true,
+      "start": "2015-12-11",
+      "url": ""
+   }
+]

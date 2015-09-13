@@ -2,6 +2,7 @@
 layout: lesson
 title: Javascript Functions, Objects and Arrays
 slides: ['_slides/week-02/02-functions-and-objects.md']
+date: 2015-09-29
 ---
 
 ## Pre-Work

@@ -1,0 +1,23 @@
+---
+---
+
+{% assign lesson_events = site.lessons %}
+[{% for lesson in lesson_events %}
+   {% if lesson.date != null %}{% assign start = lesson.date %}{% else %}{% assign start = '1970-01-01' %}{% endif %}
+   {
+      "title": {{lesson.title | jsonify}},
+      "allDay": true,
+      "start": {{start | jsonify}},
+      "url": {{lesson.url | jsonify}}
+   },{% endfor %}
+   {
+      "title": "Review/Work Day",
+      "allDay": true,
+      "start": "2015-09-25"
+   },
+   {
+      "title": "Review/Work Day",
+      "allDay": true,
+      "start": "2015-10-02"
+   }
+]

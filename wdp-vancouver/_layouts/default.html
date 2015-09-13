@@ -48,11 +48,52 @@
       </script>
 
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-      <script src="/public/js/jquery.fitvids.js"></script>
+      <script src="{{ site.baseurl }}/public/js/jquery.fitvids.js"></script>
       <script>
-      	jQuery(document).ready(function() {
-      		jQuery('.fluid-video-wrapper').fitVids();
+      	$(function() {
+      		$('.fluid-video-wrapper').fitVids();
       	});
    	</script>
+
+      {% if page.title == "Home" %}
+         <script src="{{ site.baseurl }}/public/js/moment.min.js"></script>
+         <script src="{{ site.baseurl }}/public/js/fullcalendar.min.js"></script>
+         <script>
+            $(function() {
+               $('#calendar').fullCalendar({
+                  eventSources: [
+                     {
+                        url: 'public/feeds/lessons.json',
+                        color: '#6B2E7F',
+                        textColor: '#fff'
+                     },
+                     {
+                        url: 'public/feeds/deadlines.json',
+                        color: '#e2231a',
+                        textColor: '#fff'
+                     },
+                     {
+                        url: 'public/feeds/miscellaneous.json',
+                        color: '#646464',
+                        textColor: '#fff'
+                     }
+                  ],
+                  header: {
+                     left: 'title',
+                     right: 'today prev,next'
+                  },
+                  defaultView: 'month',
+                  fixedWeekCount: false,
+                  weekends: false,
+                  businessHours: {
+                     start: '09:00',
+                     end: '17:00'
+                  }
+               });
+            });
+         </script>
+
+      {% endif %}
+
    </body>
 </html>
