@@ -13,7 +13,7 @@ Visit the SASS homepage and take a look around!
 
 ### Challenge Yourself:
 
-Visit this site and review the tutorial. The code should seem unfamiliar and challenging. As a challenge, see if you can determine what the code is doing, on your own. This is an advanced example, but it uses all of the features of SASS we'll be covering in this session:
+Visit this site and review the tutorial. The code and concepts should seem unfamiliar. As a challenge to yourself, see if you can determine what the code is doing, on your own. This is an advanced example, but it uses all of the features of SASS we'll be covering in this session:
 
 [Fun with SASS and Icon Fonts - By Jayden Seric](http://jaydenseric.com/blog/fun-with-sass-and-font-icons)
 
@@ -79,3 +79,7 @@ More advanced use-cases and techniques using SASS:
 
 - [The SASS way](http://thesassway.com/)
 - [Level up tutorials (SASS)](http://leveluptuts.com/tutorials/sass-tutorials)
+
+Get to know the other major CSS preprocessor, LESS:
+
+- [LESS (CSS preprocessor) ](http://lesscss.org/)
