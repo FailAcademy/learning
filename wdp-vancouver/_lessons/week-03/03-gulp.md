@@ -30,12 +30,6 @@ slides: ['_slides/week-03/03-gulp.md']
 
 ## Exercise 1
 
-Manual tasks vs automation
-
----
-
-## Exercise 1
-
 Writing Gulp tasks (Single and pipline)
 
 ---
@@ -48,7 +42,7 @@ Setting up a Gulpfile for running multiple tasks in a pipeline.
 
 ## Exercise 3
 
-Look for 2 interesting Gulp tasks, in the Gulp plugin registry and implement them in your project
+Look for 2 interesting Gulp tasks, in the Gulp plugin registry and implement them in your project.
 
 ---
 
