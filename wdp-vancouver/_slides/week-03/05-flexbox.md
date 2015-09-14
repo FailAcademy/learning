@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: CSS3 Transitions and Flexbox Slides
+title: Introduction to Flexbox Slides
 ---
 
 {% highlight html %}

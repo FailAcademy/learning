@@ -8,14 +8,14 @@ slides: ['_slides/week-03/04-sass.md']
 
 Visit the SASS homepage and take a look around!
 
-[SASS Homepage](http://sass-lang.com/guide)
+- [SASS Homepage](http://sass-lang.com/guide)
 
 
 ### Challenge Yourself:
 
-Visit this site and review the tutorial. The code and concepts should seem unfamiliar. As a challenge to yourself, see if you can determine what the code is doing, on your own. This is an advanced example, but it uses all of the features of SASS we'll be covering in this session:
+Visit this site and review the tutorial. The code and concepts should seem unfamiliar. As a challenge to yourself, see if you can determine what the code is doing, and describe it to yourself, in your own words. This is an advanced example, but it uses all of the features of SASS we'll be covering in this session:
 
-[Fun with SASS and Icon Fonts - By Jayden Seric](http://jaydenseric.com/blog/fun-with-sass-and-font-icons)
+- [Fun with SASS and Icon Fonts - By Jayden Seric](http://jaydenseric.com/blog/fun-with-sass-and-font-icons)
 
 ---
 
@@ -33,14 +33,15 @@ Visit this site and review the tutorial. The code and concepts should seem unfam
 
 ## Keywords
 
+- Helpers
 - Preprocessor
+- Compiler
 - SASS/SCSS
 - Mixin
 - Variable
 - Nesting
 - Operation
 - Partial
-- Compiler
 - Control directives and expressions
 - Source map
 - `@extend`
@@ -68,8 +69,8 @@ We’ll implement the following SASS enhancements in your web projects:
 
 - Media query helpers.
 - Basic themeability, using SASS variables.
-- SASS compilation using the LiveReload Gulp task
-- SASS Source-maps for debugging your stylesheets
+- SASS compilation using the LiveReload Gulp task.
+- SASS Source-maps for debugging your stylesheets.
 
 ---
 
