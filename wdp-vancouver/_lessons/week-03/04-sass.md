@@ -10,24 +10,31 @@ Visit the SASS homepage and take a look around!
 
 [SASS Homepage](http://sass-lang.com/guide)
 
+
+### Challenge Yourself:
+
+Visit this site and review the tutorial. The code should seem unfamiliar and challenging. As a challenge, see if you can determine what the code is doing, on your own. This is an advanced example, but it uses all of the features of SASS we'll be covering in this session:
+
+[Fun with SASS and Icon Fonts - By Jayden Seric](http://jaydenseric.com/blog/fun-with-sass-and-font-icons)
+
 ---
 
 ## Learning Objectives
 
 - Define what a CSS preprocessor is, and how it can speed up development.
-- Structure Sass files according to best practices.
-- Implement basic Sass techniques like nesting, variables, mixins, and operations.
-- Apply Sass language skills to writing Sass for responsive websites.
-- Install Sass locally and compile it into plain vanilla CSS.
-- Create and use source maps to assist with Sass debugging.
-- Distinguish between different CSS preprocessor such as Sass, SCSS, and Less.
+- Structure SASS files according to best practices.
+- Implement basic SASS techniques like nesting, variables, mixins, and operations.
+- Apply SASS language skills to writing SASS for responsive websites.
+- Install SASS locally and compile it into plain vanilla CSS.
+- Create and use source maps to assist with SASS debugging.
+- Distinguish between different CSS preprocessor such as SASS, SCSS, and Less.
 
 ---
 
 ## Keywords
 
 - Preprocessor
-- Sass/SCSS
+- SASS/SCSS
 - Mixin
 - Variable
 - Nesting
@@ -41,21 +48,17 @@ Visit the SASS homepage and take a look around!
 
 ---
 
-## Exercise 1
+## Exercise 1	
 
-
-
----
-
-## Exercise 2
-
-
+In this exercise, we'll refactor some CSS into SCSS, using the basic functionality we've learned.
+We'll then discuss the results by examining the SCSS as well as the compiled CSS. 
 
 ---
 
 ## Exercise 2
 
-
+In this exercise we'll create media query helpers using SASS mixins and the `@content` directive, for common breakpoints.
+We'll then discuss, how this techniques saves time when developing responsive websites. 
 
 ---
 
