@@ -37,7 +37,7 @@ As well as Git, you'll need to make sure you've installed NodeJS on your system.
 
 Set up your computer for front-end development success!
 
-We'll install and set up the following programs, which we'll make use of during the rest of the course.
+We'll install and set up the following programs, from the command line.
 
 - SASS: CSS Preprocessor.
 - GULP: JavaScript task runner.

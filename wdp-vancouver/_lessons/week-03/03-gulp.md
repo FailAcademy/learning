@@ -46,6 +46,12 @@ Setting up a Gulpfile for running multiple tasks in a pipeline.
 
 ---
 
+## Exercise 3
+
+Look for 2 interesting Gulp tasks, in the Gulp plugin registry and implement them in your project
+
+---
+
 ## Lab Activity
 
 We'll implement the following Gulp tasks in your web projects:
