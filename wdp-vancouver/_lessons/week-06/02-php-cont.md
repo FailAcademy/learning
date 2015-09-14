@@ -2,7 +2,7 @@
 layout: lesson
 title: More on PHP
 slides: ['_slides/week-06/02-php-cont.md']
-date: '2015-10-27'
+date: 2015-10-27
 ---
 
 ## Pre-Work

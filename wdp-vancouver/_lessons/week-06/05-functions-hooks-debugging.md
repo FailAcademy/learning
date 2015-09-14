@@ -2,7 +2,7 @@
 layout: lesson
 title: WordPress Functions, Hooks & Debugging
 slides: ['_slides/week-06/05-functions-hooks-debugging.md']
-date: '2015-10-30'
+date: 2015-10-30
 ---
 
 ## Pre-Work
