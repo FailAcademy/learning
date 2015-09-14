@@ -2,71 +2,67 @@
 layout: lesson
 title: Custom WordPress Theming
 slides: ['_slides/week-06/04-custom-wordpress-theming.md']
+date: '2015-10-29'
 ---
 
 ## Pre-Work
 
-From the HTML & CSS textbook:
-
-- A Closer Look at Tags (pp. 23-24)
+*There is no pre-work for this lesson.*
 
 ---
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Demonstrate competency converting static HTML files into a WordPress theme.
+- Distinguish the difference between a child theme, parent theme, and starter theme.
+- Use a variety of template tags to dynamically construct a website.
+- Leverage the WordPress template hierarchy to customize page layouts.
+- Develop custom page templates and apply them to pages via the WordPress admin area.
+- Customize comment displays and widgetized areas in a theme.
 
 ---
 
 ## Keywords
 
-- [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- Child theme
+- Parent theme
+- Starter theme
+- Page template
+- Template tag
+- Template hierarchy
 
 ---
 
 ## Exercise 1
 
-Do this activity!
-
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+*Exercise TBA...*
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+*Exercise TBA...*
 
-```html
+---
 
-<!-- A bit of sample HTML with syntax highlighting-->
+## Exercise 3
 
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+*Exercise TBA...*
 
 ---
 
 ## Lab Activity
 
-This is a link to the lab activity...
+*Lab activity TBA...*
 
 ---
 
 ## Additional Resources
 
-This line describes the resource:
+The basic components of a WordPress theme, visualized:
 
-- [Code Academy](http://www.codecademy.com/learn)
+- [The anatomy of a WordPress theme](https://yoast.com/wordpress-theme-anatomy/)
+
+A visual representation of the WordPress template hierarchy:
+
+- [The WordPress Template Hierarchy](http://wphierarchy.com/)

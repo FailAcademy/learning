@@ -2,71 +2,80 @@
 layout: lesson
 title: Intro to PHP
 slides: ['_slides/week-06/01-intro-to-php.md']
+date: '2015-10-26'
 ---
 
 ## Pre-Work
 
-From the HTML & CSS textbook:
+Install MAMP (Mac or Windows version) on your computer:
 
-- A Closer Look at Tags (pp. 23-24)
+- [MAMP](https://www.mamp.info/en/downloads/)
+
+Work through the following sections of the [Codeacademy PHP tutorial](https://www.codecademy.com/en/tracks/php):
+
+- Introduction to PHP
+- Conditionals and Control Flow
+- Arrays
+- For Loops in PHP
+- While Loops in PHP
 
 ---
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Distinguish the difference between a server-side and client-side programming language.
+- Identify the fundamental components of PHP syntax.
+- Use statements, variables, loops, operators, conditionals, and arrays in PHP.
+- Install PHP and configure a development environment.
+- Use functions to create reusable blocks of DRY code.
+- Distinguish the difference between indexed and associative arrays.
 
 ---
 
 ## Keywords
 
-- [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- Statement
+- Variable
+- Boolean
+- Loop
+- Conditional
+- Operator
+- Concatenate
+- Function
+- localhost
 
 ---
 
 ## Exercise 1
 
-Do this activity!
-
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+*Exercise TBA...*
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+*Exercise TBA...*
 
-```html
+---
 
-<!-- A bit of sample HTML with syntax highlighting-->
+## Exercise 3
 
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+*Exercise TBA...*
 
 ---
 
 ## Lab Activity
 
-This is a link to the lab activity...
+*Lab activity TBA...*
 
 ---
 
 ## Additional Resources
 
-This line describes the resource:
+PHP is a well-documented language and you can find its docs here:
 
-- [Code Academy](http://www.codecademy.com/learn)
+- [Documentation](http://php.net/docs.php)
+
+This online book is a bit dated, but the following chapter is still relevant and very explanatory:
+
+- [Hacking with PHP - How PHP is Written](http://www.hackingwithphp.com/2/6/0/how-php-is-written)

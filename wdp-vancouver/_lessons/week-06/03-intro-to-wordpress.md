@@ -2,71 +2,63 @@
 layout: lesson
 title: Intro to WordPress
 slides: ['_slides/week-06/03-intro-to-wordpress.md']
+date: '2015-10-28'
 ---
 
 ## Pre-Work
 
-From the HTML & CSS textbook:
-
-- A Closer Look at Tags (pp. 23-24)
+*There is no pre-work for this lesson.*
 
 ---
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Describe what a content management system is and its role in managing a website.
+- Identify the difference between [wordpress.org](https://wordpress.org/) and [wordpress.com](https://wordpress.com/).
+- Install WordPress in a local server environment.
+- Identify the essential components of a WordPress theme, including the loop.
+- Navigate the WordPress admin area to create posts and pages, and install plugins and themes.
 
 ---
 
 ## Keywords
 
-- [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- Content management system (CMS)
+- Theme
+- Plugin
+- Multisite
 
 ---
 
 ## Exercise 1
 
-Do this activity!
-
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+*Exercise TBA...*
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+*Exercise TBA...*
 
-```html
+---
 
-<!-- A bit of sample HTML with syntax highlighting-->
+## Exercise 3
 
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+*Exercise TBA...*
 
 ---
 
 ## Lab Activity
 
-This is a link to the lab activity...
+*Lab activity TBA...*
 
 ---
 
 ## Additional Resources
 
-This line describes the resource:
+Bookmark these WP resources!
 
-- [Code Academy](http://www.codecademy.com/learn)
+- [Codex](https://codex.wordpress.org/)
+- [Code Reference](https://developer.wordpress.org/reference/)
+- [Getting Started with WordPress](https://codex.wordpress.org/Getting_Started_with_WordPress)
+- [WordPress.tv](http://wordpress.tv/)

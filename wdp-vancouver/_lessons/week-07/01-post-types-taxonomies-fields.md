@@ -2,71 +2,80 @@
 layout: lesson
 title: Custom Post Types, Taxonomies & Fields
 slides: ['_slides/week-07/01-post-types-taxonomies-fields.md']
+date: '2015-11-02'
 ---
 
 ## Pre-Work
 
-From the HTML & CSS textbook:
+Pre-reading on custom post types, taxonomies, and fields:
 
-- A Closer Look at Tags (pp. 23-24)
+- [Creating Custom Content in WordPress: Custom Post Types](http://premium.wpmudev.org/blog/creating-content-custom-post-types/)
+- [Creating Custom Content in WordPress: Taxonomies and Fields](http://premium.wpmudev.org/blog/creating-content-taxonomies-and-fields/)
 
 ---
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Distinguish the difference between custom post types, custom taxonomies, and custom fields, as well as the particular use cases for each.
+- Create custom post types and taxonomies using WordPress functions.
+- Create theme files specific for displaying custom post type posts and custom taxonomy archives.
+- Create custom fields using a plugin, and display their data in theme files.
 
 ---
 
 ## Keywords
 
-- [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- [Custom post type](https://codex.wordpress.org/Post_Types)
+- [Custom taxonomy](https://codex.wordpress.org/Taxonomies)
+- Custom field / metabox
+- [Metadata API](https://codex.wordpress.org/Metadata_API)
+- Information architecture
+- Flushing permalinks
 
 ---
 
 ## Exercise 1
 
-Do this activity!
-
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+*Exercise TBA...*
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+*Exercise TBA...*
 
-```html
+---
 
-<!-- A bit of sample HTML with syntax highlighting-->
+## Exercise 3
 
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+*Exercise TBA...*
 
 ---
 
 ## Lab Activity
 
-This is a link to the lab activity...
+*Lab activity TBA...*
 
 ---
 
 ## Additional Resources
 
-This line describes the resource:
+The related function references for adding custom post types and taxonomies:
 
-- [Code Academy](http://www.codecademy.com/learn)
+- [register_post_type](https://codex.wordpress.org/Function_Reference/register_post_type)
+- [register_taxonomy](https://codex.wordpress.org/Function_Reference/register_taxonomy)
+
+Tools for helping you generate the required code for registering custom post types and taxonomies:
+
+- [GenerateWP: Post Type Generator](https://generatewp.com/post-type/)
+- [GenerateWP: Taxonomy Generator](https://generatewp.com/taxonomy/)
+
+WordPress plugins that facilitate the addition of custom post types, taxonomies, and fields to the admin area:
+
+- [Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/)
+- [Advanced Custom Fields](https://en-ca.wordpress.org/plugins/advanced-custom-fields/)
+- [Custom Field Suite](https://en-ca.wordpress.org/plugins/custom-field-suite/)
+
+A more "hands-on" approach to adding custom fields to the WordPress admin area:
+
+- [CMB2](https://github.com/WebDevStudios/cmb2)

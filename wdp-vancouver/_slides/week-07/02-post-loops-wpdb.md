@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Custom Post, Loops and the WP DB Slides
+title: Custom Post Loops & the WP Database Slides
 ---
 
 {% highlight html %}

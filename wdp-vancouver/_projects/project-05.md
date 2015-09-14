@@ -1,7 +1,7 @@
 ---
 layout: project
-title: Project 3 - Instagrid
-due: Monday, October 19th (beginning of class)
+title: Project 5 - Custom WordPress Theme
+due: Monday, November 9th (beginning of class)
 ---
 
 Some information about the project goes here...

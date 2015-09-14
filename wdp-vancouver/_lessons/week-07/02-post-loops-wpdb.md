@@ -1,72 +1,70 @@
 ---
 layout: lesson
-title: Custom Post Loops & the WP DB
+title: Custom Post Loops & the WP Database
 slides: ['_slides/week-07/02-post-loops-wpdb.md']
+date: '2015-11-03'
 ---
 
 ## Pre-Work
 
-From the HTML & CSS textbook:
+Some pre-reading on creating customized post loops in WordPress:
 
-- A Closer Look at Tags (pp. 23-24)
+- [4 Ways to Loop with WordPress](https://digwp.com/2011/05/loops/)
+- [Mastering WP Query](http://code.tutsplus.com/series/mastering-wp_query--cms-818)
+
+Some pre-reading on the WordPress database:
+
+- [Tour of the WordPress Database](https://deliciousbrains.com/tour-wordpress-database/)
+- [Beginner’s Guide to WordPress Database Management with phpMyAdmin](http://www.wpbeginner.com/beginners-guide/beginners-guide-to-wordpress-database-management-with-phpmyadmin/)
 
 ---
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Distinguish between the four different methods for getting posts in WordPress&mdash;the default loop, `query_posts`, WP Query, and `get_posts`.
+- Identify additional development concerns related to custom loops, including setting up and resetting post data, and pagination quirks.
+- Navigate the WordPress database with confidence and understand how certain actions in WordPress add, update, and delete this data.
 
 ---
 
 ## Keywords
 
-- [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- [WP Query](https://codex.wordpress.org/Class_Reference/WP_Query)
+- Relational database
 
 ---
 
 ## Exercise 1
 
-Do this activity!
-
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+*Exercise TBA...*
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+*Exercise TBA...*
 
-```html
+---
 
-<!-- A bit of sample HTML with syntax highlighting-->
+## Exercise 3
 
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+*Exercise TBA...*
 
 ---
 
 ## Lab Activity
 
-This is a link to the lab activity...
+*Lab activity TBA...*
 
 ---
 
 ## Additional Resources
 
-This line describes the resource:
+Easily manage your MySQL databases using a GUI-based app:
 
-- [Code Academy](http://www.codecademy.com/learn)
+- [Sequel Pro](http://www.sequelpro.com/) (Mac only)
+- [MySQL Workbench](http://www.mysql.com/products/workbench/)
+
+A tool to help you generate the required code for creating custom loop queries:
+
+- [GenerateWP: WP_Query Generator](https://generatewp.com/wp_query/)

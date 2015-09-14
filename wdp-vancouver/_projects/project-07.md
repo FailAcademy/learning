@@ -1,7 +1,7 @@
 ---
 layout: project
-title: Project 3 - Instagrid
-due: Monday, October 19th (beginning of class)
+title: Project 7 - Client Project
+due: Friday, December 11th (beginning of class)
 ---
 
 Some information about the project goes here...

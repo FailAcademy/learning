@@ -2,71 +2,65 @@
 layout: lesson
 title: WordPress Functions, Hooks & Debugging
 slides: ['_slides/week-06/05-functions-hooks-debugging.md']
+date: '2015-10-30'
 ---
 
 ## Pre-Work
 
-From the HTML & CSS textbook:
+Some pre-reading on using "hooks" in Wordpress:
 
-- A Closer Look at Tags (pp. 23-24)
+- [WordPress Hooks: Actions, Filters, and Examples](http://blog.teamtreehouse.com/hooks-wordpress-actions-filters-examples)
+
+Some pre-reading on adding CSS and JS files to a Wordpress theme:
+
+- [Adding Scripts and Styles to WordPress the Right Way With Enqueueing](http://premium.wpmudev.org/blog/adding-scripts-and-styles-wordpress-enqueueing/)
 
 ---
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Include CSS and JS files in WordPress the right way.
+- Use the `functions.php` file to customize or change the behaviour of a theme.
+- Define the two different types of WordPress hooks&mdash;actions and filters&mdash;and use them in the `functions.php` file.
+- Use developer-focused plugins for debugging purposes and to improve development workflows.
 
 ---
 
 ## Keywords
 
-- [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- [Action](http://codex.wordpress.org/Plugin_API/Action_Reference)
+- [Filter](http://codex.wordpress.org/Plugin_API/Filter_Reference)
 
 ---
 
 ## Exercise 1
 
-Do this activity!
-
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+*Exercise TBA...*
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+*Exercise TBA...*
 
-```html
+---
 
-<!-- A bit of sample HTML with syntax highlighting-->
+## Exercise 3
 
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+*Exercise TBA...*
 
 ---
 
 ## Lab Activity
 
-This is a link to the lab activity...
+*Lab activity TBA...*
 
 ---
 
 ## Additional Resources
 
-This line describes the resource:
+Some WordPress plugins that are helpful for debugging:
 
-- [Code Academy](http://www.codecademy.com/learn)
+- [Debug Bar](https://wordpress.org/plugins/debug-bar/)
+- [Query Monitor](https://wordpress.org/plugins/query-monitor/)
+- [Theme Check](https://wordpress.org/plugins/theme-check/)

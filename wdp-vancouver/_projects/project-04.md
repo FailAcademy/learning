@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 4 - Mars Colony Hybrid App
-due: Monday October 26th (beginning of class)
+due: Monday, October 26th (beginning of class)
 ---
 
 Some information about the project goes here...
