@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Sass
+title: SASS (CSS pre-processors)
 slides: ['_slides/week-03/04-sass.md']
 ---
 
@@ -27,7 +27,7 @@ Visit this site and review the tutorial. The code and concepts should seem unfam
 - Apply SASS language skills to writing SASS for responsive websites.
 - Install SASS locally and compile it into plain vanilla CSS.
 - Create and use source maps to assist with SASS debugging.
-- Distinguish between different CSS preprocessor such as SASS, SCSS, and Less.
+- Distinguish between different CSS preprocessor such as SASS, SCSS, and LESS.
 
 ---
 
@@ -80,6 +80,6 @@ More advanced use-cases and techniques using SASS:
 - [The SASS way](http://thesassway.com/)
 - [Level up tutorials (SASS)](http://leveluptuts.com/tutorials/sass-tutorials)
 
-Get to know the other major CSS preprocessor, LESS:
+Get to know the other major CSS pre-processor, LESS:
 
 - [LESS (CSS preprocessor) ](http://lesscss.org/)

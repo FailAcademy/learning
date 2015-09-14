@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Sass Slides
+title: SASS (CSS pre-processors) Slides
 ---
 
 {% highlight html %}
