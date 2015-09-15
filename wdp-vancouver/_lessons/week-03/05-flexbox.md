@@ -1,0 +1,92 @@
+---
+layout: lesson
+title: Introduction to Flexbox
+slides: ['_slides/week-03/05-flexbox.md']
+---
+
+## Pre-Work
+
+<!-- #### CSS Transitions / Transforms
+Dive into these comprehensive lessons on CSS transitions and transforms from "Learn to code advanced HTML & CSS":
+
+- [Lesson 7: Transforms](http://learn.shayhowe.com/advanced-html-css/css-transforms/)
+- [Lesson 8: Transitions & Animations](http://learn.shayhowe.com/advanced-html-css/transitions-animations/) -->
+
+
+<!-- #### Flexbox -->
+Get a sense of why Flexbox is a substantial improvement over traditional CSS, for layouts:
+
+- [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/)
+
+Look over this well written and authoritative summary of Flexbox, to prepare for this session:
+
+- [CSS Tricks - A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+---
+
+## Learning Objectives
+
+<!-- #### CSS Transitions / Transforms
+- Use CSS transitions to add simple animation to elements.
+- Use CSS transforms to change the position of elements.
+- Learn what properties are animatable using CSS3. -->
+
+<!-- #### Flexbox -->
+- Understand the major diffrences between traditional CSS and Flexbox.
+
+- Gain an awareness of the major difficulties in creating layouts with CSS that Flexbox was designed to overcome.
+
+- Learn to use the folowing Flexbox CSS properties:
+	- `flex-direction`
+	- `flex-wrap`
+	- `flex`
+	- `order`
+	- `justify-content`
+	- `align-items`
+
+- Create a basic Flexbox Layout.
+- Create SASS *helpers* to speed up your Flexbox workflow.
+
+---
+
+## Keywords
+
+<!-- #### CSS Transitions / Transforms
+- [Transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
+- [Transition](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
+- Vendor prefix -->
+
+<!-- #### Flexbox -->
+- Box model
+- Flex-container
+- Flex-item
+- Main axis
+- Cross axis
+
+---
+
+## Exercise 1
+
+
+---
+
+## Exercise 2
+
+
+---
+
+## Lab Activity
+
+
+---
+
+## Additional Resources
+<!-- 
+Animate.css is a popular open-source library for adding drop-in CSS animations for your projects.
+
+- [Animate.css](https://daneden.github.io/animate.css/) -->
+
+Here is a comprehensive set of tutorials on Flexbox that will take you from beginned to advanced over the course of 20 videos. Enjoy!
+
+- [What the Flexbox!?](http://flexbox.io)
+
