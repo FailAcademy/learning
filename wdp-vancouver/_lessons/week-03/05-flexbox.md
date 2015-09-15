@@ -2,6 +2,7 @@
 layout: lesson
 title: Introduction to Flexbox
 slides: ['_slides/week-03/05-flexbox.md']
+date: 2015-10-09
 ---
 
 ## Pre-Work
@@ -77,6 +78,7 @@ Look over this well written and authoritative summary of Flexbox, to prepare for
 
 ## Lab Activity
 
+Today we're going to begin to code up the layout for an upcoming project, using Flexbox: our [Mars Colony hybrid application](http://redacademy.com/project/project-4-mars-colony-hybrid-app/)! Follow the link to the project page and check out what we're going to build together in week 5!
 
 ---
 

@@ -2,6 +2,7 @@
 layout: lesson
 title: The Command Line Interface (CLI) and Version Control with Git
 slides: ['_slides/week-03/02-cli-git.md']
+date: 2015-10-06
 ---
 
 ## Pre-Work

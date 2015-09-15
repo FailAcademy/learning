@@ -2,6 +2,7 @@
 layout: lesson
 title: AngularJS Directives
 slides: ['_slides/week-04/05-angular-directives.md']
+date: 2015-10-19
 ---
 
 ## Pre-Work
