@@ -68,11 +68,15 @@ Look over this well written and authoritative summary of Flexbox, to prepare for
 
 ## Exercise 1
 
+**Challenge**: <br>
+Using flexbox, create the "Vertical Centering" layout from the [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/) site.
 
 ---
 
 ## Exercise 2
 
+**Challenge**: <br>
+Create the "Holy Grail Layout" layout from the [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/) site.
 
 ---
 
