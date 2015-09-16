@@ -20,6 +20,35 @@ As well as Git, you'll need to make sure you've installed NodeJS on your system.
 
 ---
 
+## Keywords
+
+- Command Line
+- Git
+- Repository
+- Github
+- Remote
+- Staging area
+
+#### Command line instructions:
+
+- `pwd`
+- `cd`
+- `ls`
+- `touch`
+- `mkdir`
+- `rm`
+
+#### Git commands:
+
+- `status`
+- `add`
+- `push` 
+- `pull` 
+- `merge`
+- `log`
+
+---
+
 ## Learning Objectives
 
 - Learn about your computer's command-line-interface and how to use basic built-in commands to navigate and manipulate files and folders on your computer.
@@ -44,6 +73,7 @@ We'll install and set up the following programs, from the command line.
 - GULP: JavaScript task runner.
 - JSHint: Javascript code quality checker.
 - JSCS: Javascript code style checker.
-- Jasmine: Javascript testing framework.
+
+We'll also set up Git and Github for your 3rd project!
 
 ---
