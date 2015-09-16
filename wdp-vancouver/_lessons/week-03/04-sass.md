@@ -2,6 +2,7 @@
 layout: lesson
 title: SASS (CSS pre-processors)
 slides: ['_slides/week-03/04-sass.md']
+date: 2015-10-08
 ---
 
 ## Pre-Work

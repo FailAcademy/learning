@@ -1,7 +1,8 @@
 ---
 layout: lesson
-title: More on Git and Project Workflows
+title: Coding Workflows with Git
 slides: ['_slides/week-04/03-git-and-workflows.md']
+date: 2015-10-15
 ---
 
 ## Pre-Work

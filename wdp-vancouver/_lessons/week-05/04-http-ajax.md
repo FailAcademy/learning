@@ -2,6 +2,7 @@
 layout: lesson
 title: Angular's $http Service & AJAX 
 slides: ['_slides/week-05/04-http-ajax.md']
+date: 2015-10-23
 ---
 
 ## Pre-Work

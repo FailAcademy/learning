@@ -8,5 +8,15 @@
       "title": "Remembrance Day",
       "allDay": true,
       "start": "2015-11-11"
+   },
+   {
+      "title": "AngularJS @ RED",
+      "allDay": true,
+      "start": "2015-09-23"
+   },
+      {
+      "title": "Meteor @ RED",
+      "allDay": true,
+      "start": "2015-10-05"
    }
 ]

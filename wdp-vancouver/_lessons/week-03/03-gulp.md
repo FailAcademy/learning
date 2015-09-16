@@ -2,6 +2,7 @@
 layout: lesson
 title: Gulp
 slides: ['_slides/week-03/03-gulp.md']
+date: 2015-10-07
 ---
 
 ## Learning Objectives

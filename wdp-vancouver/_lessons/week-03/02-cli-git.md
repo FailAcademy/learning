@@ -2,6 +2,7 @@
 layout: lesson
 title: The Command Line Interface (CLI) and Version Control with Git
 slides: ['_slides/week-03/02-cli-git.md']
+date: 2015-10-06
 ---
 
 ## Pre-Work
@@ -16,6 +17,35 @@ If you're using a Windows laptop for the course, please make sure you've install
 
 As well as Git, you'll need to make sure you've installed NodeJS on your system.
 [Click here to download the installer](https://nodejs.org/en/)
+
+---
+
+## Keywords
+
+- Command Line
+- Git
+- Repository
+- Github
+- Remote
+- Staging area
+
+#### Command line instructions:
+
+- `pwd`
+- `cd`
+- `ls`
+- `touch`
+- `mkdir`
+- `rm`
+
+#### Git commands:
+
+- `status`
+- `add`
+- `push` 
+- `pull` 
+- `merge`
+- `log`
 
 ---
 
@@ -43,6 +73,7 @@ We'll install and set up the following programs, from the command line.
 - GULP: JavaScript task runner.
 - JSHint: Javascript code quality checker.
 - JSCS: Javascript code style checker.
-- Jasmine: Javascript testing framework.
+
+We'll also set up Git and Github for your 3rd project!
 
 ---

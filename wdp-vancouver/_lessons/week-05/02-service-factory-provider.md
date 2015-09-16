@@ -2,6 +2,7 @@
 layout: lesson
 title: Service vs Factory vs Provider
 slides: ['_slides/week-05/02-service-factory-provider.md']
+date: 2015-10-21
 ---
 
 ## Pre-Work

@@ -2,6 +2,7 @@
 layout: lesson
 title: Single Page Applications & Routing
 slides: ['_slides/week-05/03-routing-spa.md']
+date: 2015-10-22
 ---
 
 ## Pre-Work
