@@ -15,7 +15,7 @@ date: 2015-10-29
 
 - Demonstrate competency converting static HTML files into a WordPress theme.
 - Distinguish the difference between a child theme, parent theme, and starter theme.
-- Use a variety of template tags to dynamically construct a website.
+- Use a variety of templates to dynamically construct a website.
 - Leverage the WordPress template hierarchy to customize page layouts.
 - Develop custom page templates and apply them to pages via the WordPress admin area.
 - Customize comment displays and widgetized areas in a theme.
@@ -27,7 +27,7 @@ date: 2015-10-29
 - Child theme
 - Parent theme
 - Starter theme
-- Page template
+- Template
 - Template tag
 - Template hierarchy
 

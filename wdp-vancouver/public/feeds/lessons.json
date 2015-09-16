@@ -28,11 +28,33 @@
    {
       "title": "Review/Work Day",
       "allDay": true,
-      "start": "2015-11-06"
+      "start": "2015-10-14"
    },
    {
       "title": "Review/Work Day",
       "allDay": true,
-      "start": "2015-10-14"
+      "start": "2015-11-06"
+   },
+   {
+      "title": "Cross-Program Day",
+      "allDay": true,
+      "start": "2015-11-10"
+   },
+   {
+      "title": "Review/Work Day",
+      "allDay": true,
+      "start": "2015-11-13"
+   },
+   {
+      "title": "Portfolio Development",
+      "allDay": true,
+      "start": "2015-11-16",
+      "end": "2015-11-27"
+   },
+   {
+      "title": "Client Project Work",
+      "allDay": true,
+      "start": "2015-11-30",
+      "end": "2015-12-11"
    }
 ]

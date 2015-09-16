@@ -27,24 +27,41 @@ date: 2015-10-28
 - Theme
 - Plugin
 - Multisite
+- Permalink
 
 ---
 
 ## Exercise 1
 
-*Exercise TBA...*
+Let's install Wordpress locally:
+
+1. [Download Wordpress](https://wordpress.org/download/)
+2. Unzip your download and move it to your `htdocs` folder (rename the unzipped folder if you like)
+3. Go to phpMyAdmin (via MAMP) and create a new database
+4. Rename `wp-config-sample.php` to `wp-config.php` and fill in your database name and MAMP credentials
+5. Go to http://localhost:8888/YOUR-FOLDER/wp-admin/install.php and complete your install
 
 ---
 
 ## Exercise 2
 
-*Exercise TBA...*
+Let's start customizing our WordPress installation.
+
+Install the [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) plugin and try creating a form. Follow the instructions it provides for including a form in a page (feel free to create a special page for this if you like).
+
+Also try browsing for a new theme to install on your site and activate it. Take a look at the front end of your site to see what effect it had. Did anything weird or unexpected happen?
 
 ---
 
 ## Exercise 3
 
-*Exercise TBA...*
+Let's create our very first (and a very basic) WordPress theme.
+
+Create a new directory in `wp-content/themes/` and in it save an appropriately formatted `style.css` file, and an `index.php` file.
+
+Take the provided HTML template and place its content in `index.php`. Replace the site title, description, and charset with WP template tags so this information is dynamically gathered from your site's database.
+
+Lastly, enqueue you your stylesheet in your `functions.php` file.
 
 ---
 

@@ -62,8 +62,8 @@ Pre-reading on custom post types, taxonomies, and fields:
 
 The related function references for adding custom post types and taxonomies:
 
-- [register_post_type](https://codex.wordpress.org/Function_Reference/register_post_type)
-- [register_taxonomy](https://codex.wordpress.org/Function_Reference/register_taxonomy)
+- [`register_post_type`](https://codex.wordpress.org/Function_Reference/register_post_type)
+- [`register_taxonomy`](https://codex.wordpress.org/Function_Reference/register_taxonomy)
 
 Tools for helping you generate the required code for registering custom post types and taxonomies:
 

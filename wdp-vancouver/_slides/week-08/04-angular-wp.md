@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: WordPress Functions, Hooks and Debugging Slides
+title: AngularJS & WordPress Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# WordPress Functions, Hooks and Debugging
+# AngularJS & WordPress
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 

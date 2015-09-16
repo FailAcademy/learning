@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: WordPress Functions, Hooks and Debugging Slides
+title: Ajax in WordPress & WP API Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# WordPress Functions, Hooks and Debugging
+# Ajax in WordPress & WP API
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
