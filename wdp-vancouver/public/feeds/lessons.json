@@ -1,0 +1,60 @@
+---
+---
+
+{% assign lesson_events = site.lessons %}
+[{% for lesson in lesson_events %}
+   {% if lesson.date != null %}{% assign start = lesson.date %}{% else %}{% assign start = '1970-01-01' %}{% endif %}
+   {
+      "title": {{lesson.title | jsonify}},
+      "allDay": true,
+      "start": {{start | jsonify}},
+      "url": {{lesson.url | jsonify}}
+   },{% endfor %}
+   {
+      "title": "Review/Work Day",
+      "allDay": true,
+      "start": "2015-09-25"
+   },
+   {
+      "title": "Review/Work Day",
+      "allDay": true,
+      "start": "2015-10-02"
+   },
+   {
+      "title": "Review/Work Day",
+      "allDay": true,
+      "start": "2015-10-13"
+   },
+   {
+      "title": "Review/Work Day",
+      "allDay": true,
+      "start": "2015-10-14"
+   },
+   {
+      "title": "Review/Work Day",
+      "allDay": true,
+      "start": "2015-11-06"
+   },
+   {
+      "title": "Cross-Program Day",
+      "allDay": true,
+      "start": "2015-11-10"
+   },
+   {
+      "title": "Review/Work Day",
+      "allDay": true,
+      "start": "2015-11-13"
+   },
+   {
+      "title": "Portfolio Development",
+      "allDay": true,
+      "start": "2015-11-16",
+      "end": "2015-11-27"
+   },
+   {
+      "title": "Client Project Work",
+      "allDay": true,
+      "start": "2015-11-30",
+      "end": "2015-12-11"
+   }
+]
