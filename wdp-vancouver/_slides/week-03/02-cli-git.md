@@ -433,6 +433,8 @@ We'll want to remove our new branch, since we're done with it. Run the following
 
 .medium[`git checkout -d [new_branch_name]`]
 
+This step is optional, but we'll want to keep our **repository** free from unused / finished branches as a matter of organization.
+
 ---
 class: center, middle
 
@@ -445,6 +447,6 @@ Let's push our code to Github!
 ---
 template: inverse
 
-## You made it! Have a cookie!
+# DONE!
 
 {% endhighlight %}
