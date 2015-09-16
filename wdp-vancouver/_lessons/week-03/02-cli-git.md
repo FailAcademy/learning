@@ -63,6 +63,19 @@ As well as Git, you'll need to make sure you've installed NodeJS on your system.
 
 ---
 
+## Exercise 1
+
+Write the apropriate command line commands for these written instructions:
+
+- Create 2 folders, one named Folder1 and one named Folder2, in your home directory
+- Inside Folder1 create 2 files with the extension .txt
+- Copy the two files from Folder1 into Folder2
+- Delete one of the files in Folder1
+- Delete Folder2
+- Rename Folder1 to SuperFolder1
+
+---
+
 ## Lab Activity
 
 Set up your computer for front-end development success!
