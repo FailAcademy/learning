@@ -309,4 +309,142 @@ template: inverse
 
 ##Phew.
 
+---
+template: inverse
+
+##Basic Git Workflow with Github
+
+---
+class: center, middle
+
+Now that you have a git repository set up in your **local** project directory, it's time to add your repository to github and learn the basics of version control with Git & Github!
+
+Lets visit .red[www.github.com] and create your first Github **repository**.
+
+---
+class: center, middle
+
+After you've created your Github repository and copied the `.git` url, run the following command:
+
+.medium[
+   `git remote add origin [your github repository url]`
+]
+<br>
+Obviously, replace `[your github repository url]` with the actual url of your new Github **repo**! 
+
+(Let's examine the `.git` url)
+
+---
+template: inverse
+
+##Send your project files to Github
+
+---
+class: center, middle
+
+OK now that your **local repository** is linked to your **remote repository**, via the `origin` we set, we can send the project files. Run the following command:
+
+.large[
+   `git push -u origin --all`
+]
+---
+template: inverse
+
+ ##Branch, edit, commit, merge
+
+---
+class: center, middle
+
+"Git is  is incredibly good at making **branches**, which are effectively copies of a
+**repository** where we can make (possibly experimental) changes without modifying
+the parent files. In most cases, the parent repository is the **master branch**,
+and we can create a new topic branch by using the command <br> `git checkout -b [new_branch_name]`"
+
+---
+template: inverse
+
+ ##Create a new git branch
+
+---
+class: center, middle
+
+To view all of the branches you've created in your project, run the following command: 
+
+.large[
+   `git branch`
+]
+
+---
+template: inverse
+
+ ##Edit a file in your new branch
+
+---
+class: center, middle
+
+ .large[**Use what you know**: check the `status` of your changes and `commit` them!]
+
+You can `add` and `commit` your files with one command: <br>
+ `git commit -a -m "file has changed"`
+
+---
+
+##Writing good commit messages
+
+Commit messages are the key to understanding the changes you've made to your code, and the best commit messages follow these simple rules: 
+
+- Present tense
+- Less than 50 chars
+
+Most importantly: The commit message should explain what the commit **does**.
+
+---
+template: inverse
+
+ ##Merge new code changes into the master branch
+
+---
+class: center, middle
+
+When we're happy with the changes we've made in our new branch, we'll merge those changes back into the `master` branch.
+The `master` branch should only contiain code we're comitted to using in our projects!
+
+To switch  back inot the `master` branch, run the following command: <br>
+.large[`git checkout master`]
+
+---
+class: center, middle
+
+Now that we're back in our master branch, we'll merge the changes from our new branch. Run the following command: 
+
+.medium[`git merge [new_branch_name]`]
+
+Obviously, replace `[new_branch_name]` with the name of the branch you created.
+
+---
+template: inverse
+
+## Success!
+
+---
+class: center, middle
+
+We'll want to remove our new branch, since we're done with it. Run the following command to do this: 
+
+.medium[`git checkout -d [new_branch_name]`]
+
+---
+class: center, middle
+
+## One last last thing
+
+Let's push our code to Github!
+
+.large[`git push`]
+
+---
+template: inverse
+
+## You made it! Have a cookie!
+
 {% endhighlight %}
