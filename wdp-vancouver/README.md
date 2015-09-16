@@ -1,6 +1,6 @@
 # README
 
-Welcome to RED Academy's [COURSE NAME] learning materials!
+Welcome to RED Academy's Web Developer Professional Program learning materials!
 
 ## Development
 
