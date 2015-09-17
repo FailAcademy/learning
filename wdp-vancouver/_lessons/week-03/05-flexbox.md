@@ -19,10 +19,6 @@ Get a sense of why Flexbox is a substantial improvement over traditional CSS, fo
 
 - [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/)
 
-Look over this well written and authoritative summary of Flexbox, to prepare for this session:
-
-- [CSS Tricks - A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-
 ---
 
 ## Learning Objectives
@@ -91,8 +87,12 @@ Today we're going to begin to code up the layout for an upcoming project, using 
 Animate.css is a popular open-source library for adding drop-in CSS animations for your projects.
 
 - [Animate.css](https://daneden.github.io/animate.css/) -->
-
+<!-- 
 Here is a comprehensive set of tutorials on Flexbox that will take you from beginned to advanced over the course of 20 videos. Enjoy!
 
-- [What the Flexbox!?](http://flexbox.io)
+- [What the Flexbox!?](http://flexbox.io) -->
+
+This is a concise and authoritative summary of the various Flexbox properties and how they work: 
+
+- [CSS Tricks - A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
