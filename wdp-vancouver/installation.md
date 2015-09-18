@@ -147,6 +147,10 @@ git push origin production
 git checkout master
 ```
 
+If something weird happens the first time you try to deploy changes, follow these steps then re-add `jekyll-auth` and all of the necessary deployment files:
+
+http://superuser.com/questions/716818/git-overwrite-branch-with-master
+
 *Possible future feature: Set up automatic deploys to Heroku when "production" branch is pushed to GitHub*
 
 ## Configuring Multiple Heroku Committers for a Site
