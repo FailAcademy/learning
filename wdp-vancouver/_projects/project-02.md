@@ -69,6 +69,8 @@ Your project must:
 
 **Stretch goals:**
 
+Want to challenge yourself? Your project could also:
+
 - Add a datepicker to the date form field and timepicker to the time field (and style it according to the client's brand)
 
 ## Submission Instructions
