@@ -90,6 +90,8 @@ Let's create a Client for our Instagram project right now...
 
 *Lab activity TBA...*
 
+Testing 1, 2, 3...
+
 ---
 
 ## Additional Resources
