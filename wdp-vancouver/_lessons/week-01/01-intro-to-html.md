@@ -73,6 +73,11 @@ Finally, you and your partner will share your insights with the class.
 
 Today's lab time will be dedicated to Project 1.
 
+Before you get started, you should watch these videos to reinforce the concepts learned in class:
+
+- [HTML - Hamburger Mark-up Language](http://www.dontfeartheinternet.com/02-html/)
+- [Don't Fear Starting from Scratch - Part 1: HTML](http://www.dontfeartheinternet.com/04-from-scratch/)
+
 You're goal for the end of the first day is to have the different sections of the website roughed-out in HTML.
 
 ---

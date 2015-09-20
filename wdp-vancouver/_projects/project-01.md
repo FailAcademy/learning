@@ -15,6 +15,7 @@ You can [download the project files here](/public/files/projects/project-01.zip)
 - The headings font family is Open Sans Bold
 - The HEX code for orange brand colour is `#feaa3a`
 - The HEX code for the grey borders is `#333`
+- The width of the content area is `840px`
 
 ## Requirements
 

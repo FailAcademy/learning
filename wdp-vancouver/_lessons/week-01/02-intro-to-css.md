@@ -105,7 +105,13 @@ Challenge! How could we get the partially transparent background for the intro s
 
 Today's lab time will be dedicated to Project 1.
 
-By the end of the second day you'll should have a enough CSS written to begin approximating the general layout of the website.
+Before you get started, you should watch these videos to reinforce the concepts learned in class:
+
+- [Don't Fear the Browser](http://www.dontfeartheinternet.com/03-the-browser/)
+- [Don't Fear Starting from Scratch - Part 2: CSS](http://www.dontfeartheinternet.com/05-from-scratch/)
+- [Don't Fear Layout](http://www.dontfeartheinternet.com/08-layout/)
+
+By the end of the second day you'll should have a enough CSS written to begin approximating the rough layout of the website.
 
 ---
 
