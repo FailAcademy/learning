@@ -33,7 +33,6 @@ template: inverse
 # What is the Command Line Interface (CLI)?
 
 ---
-
 class: center, middle
 
 > "The command line is the ultimate seat of power on your computer...Unfortunately, the price of this power is complexity: nobody ever said that ruling your computer would be easy."

@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Slideshow Title
+# Gulp 
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -19,71 +19,69 @@ layout: false
 
 # Agenda
 
-1. Introduction
-2. Deep-dive
-3. ...
+1. Install Gulp
+2. Set up Gulp in your project
+3. Understand the benefits of automation
+4. Install Gulp tasks in our project!
 
 ---
+class: center, middle
 
-.left-column[
-  ## Column Layout
-]
-
-.right-column[
-You can make two-column layouts as well.red[*] in a slideshow!
-
-A sample unordered list:
-
-- List item 1
-- List item 2
-- List item 3
-
-.footnote[.red[*] And add footnotes too]
-]
+**Visit:** [https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) for the Gulp install tutorial.
 
 ---
+class: center, middle
 
-# Syntax Highlighting
-
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
-
----
-
-.left-column[
-  ## Remark How-tos
-]
-
-.right-column[
-   This slideshow is based on [remark.js](https://github.com/gnab/remark).
-
-   To learn more about building a slideshow with remark, check out:
-
-   - [The remark formatting guide](https://github.com/gnab/remark/wiki/Formatting)
-   - [The remark Markdown guide](https://github.com/gnab/remark/wiki/Markdown)
-]
-
----
-
-# What We've Learned
-
-- Thing 1
-- Thing 2
+Create a file named `Gulpfile.js` in your project folder (root).
+This is where you'll write all of your **Gulp tasks** (Automation tasks) and Gulp configuration.
 
 ---
 template: inverse
 
-# Questions?
+#Common automation tasks
+
+---
+class: center, middle
+
+## 1) Minification
+
+---
+class: center, middle
+
+## 2) Compilation / Concatenation
+
+---
+class: center, middle
+
+## 3) (CSS) Auto-prefixing
+
+---
+template: inverse
+
+#Time is money!<br>
+##(Automation time savers)
+
+---
+class: center, middle
+
+Automatically run Gulp tasks when files in your project change:
+#`gulp watch`
+
+https://github.com/floatdrop/gulp-watch
+
+---
+class: center, middle
+
+Automatically relaod the browser when files in your project change
+(Save decades!)
+
+https://github.com/vohof/gulp-livereload
+
+---
+template: inverse
+
+#Automate all the things!
+(Automate as much as you can in your proects using tools like Gulp to save you time while you develop)
+
 
 {% endhighlight %}
