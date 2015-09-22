@@ -12,7 +12,6 @@ date: 2015-10-07
 	- minification
 	- compilation / concatenation
 	- auto-prefixing
-	- uglification
 
 - Install Gulp globally and as a project dependency.
 - Install Gulp plugins via the command line; build a `gulpfile.js` file, and run related tasks.
