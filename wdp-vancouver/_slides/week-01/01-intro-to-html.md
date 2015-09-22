@@ -205,17 +205,6 @@ class: center, middle
 
 ---
 
-# File/Folder Naming Tips
-
-Use these sanity-saving tips to name your folders and files:
-
-- Stick to lowercase consistently
-- Don't use space in your file names, instead use hyphens or underscores to separate words
-- Don't use special characters in your file names
-- Choose logical and descriptive names for files and folders
-
----
-
 # Exercise 1
 
 Your turn! Time to create your first webpage.

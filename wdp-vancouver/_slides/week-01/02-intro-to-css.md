@@ -1015,7 +1015,83 @@ header {
 }
 ```
 
-The relationship between hue, saturation, and lightness will become a bit clearer after the colour theory lesson.
+---
+
+# Hue
+
+What we refer to as colour is technically referred to **hue**.
+
+Hues can be **chromatic** or **achromatic**.
+
+Hues can be **neutral** (white, black, or grey) or **near-neutral** (beige or off-white).
+
+---
+class: center, middle
+
+.inline-images[
+   ![Hue](/public/img/slide-assets/color-hue.png)  
+]
+
+.footnote.right[
+   *Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)*
+]
+
+---
+# Value
+
+Value is the potential for a colour to be light or dark.
+
+**High value** colours have white added to them.
+
+**Low value** colours have black added to them.
+
+---
+class: center, middle
+
+.inline-images[
+   ![High value](/public/img/slide-assets/color-value-high.png)  
+]
+
+.inline-images[
+   ![Low value](/public/img/slide-assets/color-value-low.png)
+]
+
+.footnote.right[
+   *Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)*
+]
+
+---
+
+# Saturation
+
+Saturation is the brightness or dullness of a hue.
+
+Colours can be **high chroma** (full intensity).
+
+Colours can be **low chroma** (made dull by adding a complement).
+
+---
+
+class: center, middle
+
+.inline-images[
+   ![Saturation](/public/img/slide-assets/color-saturation.png)  
+]
+
+.footnote.right[
+   *Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)*
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![Hue saturation value model](/public/img/slide-assets/color-hue-sat-val.png)  
+]
+
+.footnote.right[
+   *Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)*
+]
 
 ---
 template: inverse
