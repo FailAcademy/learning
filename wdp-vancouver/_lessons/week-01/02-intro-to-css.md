@@ -48,7 +48,7 @@ Let's add a CSS file to your Project 1 webpage now.
 
 To do that, create a `style.css` file in the root folder of your website.
 
-Next, just like in the last example, add a <link> tag to the <head> of your HTML file so it knows to apply the styles that we add to this file to your webpage.
+Next, just like in the last example, add a `<link>` tag to the `<head>` of your HTML file so it knows to apply the styles that we add to this file to your webpage.
 
 ---
 

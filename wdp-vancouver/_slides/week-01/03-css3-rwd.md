@@ -173,7 +173,37 @@ template: inverse
 
 ---
 
-# Targeting CSS
+# More on Media Queries
+
+The idea of targeting media for specific devices has been around for a long time.
+
+Even in pre-CSS3 days, we could target styles for different media types using the `media` attribute in a `link` tag:
+
+```html
+/* These styles are targeted for display in the browser screen */
+<link rel="stylesheet" href="styles.css" media="screen" />
+
+/* These styles customize the page so it works better for print */
+<link rel="stylesheet" href="print.css" media="print" />
+```
+
+---
+
+# Old Dog, New Tricks
+
+Today, we can take that a step further and target our stylesheets for more specific circumstances:
+
+```html
+<link rel="stylesheet" href="styles.css" media="all and (max-width: 960px)">
+```
+
+The CSS in this stylesheet will apply to all types of media, but only if they are 960px wide or less.
+
+Currently available media types include `all`, `screen`, `print`, and `speech`.
+
+---
+
+# Old Dog, New Tricks
 
 We can target entire stylesheets or just parts of them at particular screen sizes, resolutions, orientations or device contexts:
 
