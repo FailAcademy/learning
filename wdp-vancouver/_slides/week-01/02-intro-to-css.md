@@ -228,7 +228,7 @@ Let's add a CSS file to your Project 1 webpage now.
 
 To do that, create a `style.css` file in the root folder of your website.
 
-Next, just like in the last example, add a <link> tag to the <head> of your HTML file so it knows to apply the styles that we add to this file to your webpage.
+Next, just like in the last example, add a `<link>` tag to the `<head>` of your HTML file so it knows to apply the styles that we add to this file to your webpage.
 
 ---
 template: inverse
@@ -526,7 +526,7 @@ To target an ID, use a pound sign plus the ID name:
 
 # Multiple Classes/IDs
 
-You can specify multiple classes or IDs for an element by separating them with a space:
+You can specify multiple classes for an element by separating them with a space:
 
 ```html
 <h1 class="site-title home-title" id="masthead">My Awesome Website</h1>
@@ -549,8 +549,6 @@ In general, you'll want to **stick to classes** wherever possible.
 IDs are considered to be **more specific** than classes in your CSS, which makes the ID-based styles you apply to your website harder to override later on.
 
 Classes are also reusable, which can help make your CSS more efficient.
-
-*More on that when we talk about best practices later on...*
 
 ---
 
