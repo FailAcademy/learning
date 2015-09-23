@@ -31,7 +31,7 @@ template: inverse
 ---
 class: center, middle
 
-### Forms om the Web
+### Forms on the Web
 
 The concept of a **form** on the web is borrowed from print, but today they provide an important way for users to **interact** with a website and **send/receive information** from a server.
 
