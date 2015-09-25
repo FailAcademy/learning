@@ -23,14 +23,10 @@ The evening program classes run from 6:00 to 9:00 p.m. on Monday and Wednesday n
 
 The following schedules are currently available:
 
-- [Summer 2015 - Part-time Evenings](/wdf-evenings/)
+- [Fall 2015 - Part-time Evenings](/wdf-evenings-fall-2015/)
 
 ## Instructor
 
-The lead instructor for the Web Developer Foundation course is Mandi Wise.
+The lead instructor for the Web Developer Foundation course is Airrick Dunfield.
 
-Students project links will be submitted to: mandi@redacademy.com
-
-### Office Hours
-
-Office hours are on **weekdays by appointment only**. Please email Mandi or speak to her in class to make arrangements.
+Students project links will be submitted to: airrick@redacademy.com

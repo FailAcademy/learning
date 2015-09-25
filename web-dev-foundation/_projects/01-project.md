@@ -59,4 +59,4 @@ Your project must:
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a link** to your GitHub repository to [mandi@redacademy.com](mailto:mandi@redacademy.com).
+When you're ready to submit your project, **please email a link** to your GitHub repository to [airrick@redacademy.com](mailto:airrick@redacademy.com).

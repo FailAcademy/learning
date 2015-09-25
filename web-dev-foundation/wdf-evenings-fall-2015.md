@@ -4,7 +4,7 @@ title: Schedule - Fall 2015 / Evenings
 class: schedule
 ---
 
-## Summer 2015
+## Fall 2015
 
 Week 1                     | Topics
 -------------------------- | --------------------------
