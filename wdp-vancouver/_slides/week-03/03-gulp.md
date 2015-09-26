@@ -72,7 +72,7 @@ https://github.com/floatdrop/gulp-watch
 ---
 class: center, middle
 
-Automatically relaod the browser when files in your project change
+Automatically reload the browser when files in your project change
 (Save decades!)
 
 https://github.com/vohof/gulp-livereload

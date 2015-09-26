@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Slideshow Title
+# Introduction to Flexbox
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -19,9 +19,10 @@ layout: false
 
 # Agenda
 
-1. Introduction
-2. Deep-dive
-3. ...
+1. Why Flexbox?
+2. Discover basic Flexbox layout techniques.
+3. Create some functional Flexbox layouts.
+4. Create SASS Helpers to make working with Flexbox more efficient.
 
 ---
 

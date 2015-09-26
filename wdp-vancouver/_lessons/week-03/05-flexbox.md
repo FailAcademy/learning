@@ -9,7 +9,7 @@ date: 2015-10-09
 
 Get a sense of why Flexbox is a substantial improvement over traditional CSS, for layouts:
 
-- [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/)
+- [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/).
 
 ---
 
