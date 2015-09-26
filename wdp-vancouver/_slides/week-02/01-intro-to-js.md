@@ -35,6 +35,20 @@ template: inverse
 ---
 class: center, middle
 
+### JavaScript is a programming language
+
+Computers need you to tell them what to do.
+
+---
+class: center, middle
+
+### JavaScript is not "Java"
+
+The shared name is a long story...
+
+---
+class: center, middle
+
 .large[
    **HTML** &rarr; the content layer
 
@@ -51,10 +65,51 @@ class: center, middle
 ]
 
 ---
+
+# The Console
+
+Because JS is "client-side" you can see it in your browser:
+
+.border[
+   ![Scripts in page source](../../public/img/slide-assets/elements-screenshot.png)
+]
+
+---
+
+# The Console
+
+You can write it right in your browser too using the **console**:
+
+.inline-images-border[
+   ![Writing scripts in the console](../../public/img/slide-assets/console-screenshot.png)
+]
+
+You can also use the console to identify bugs in your JS code.
+
+.inline-images-border[
+   ![Error in the console](../../public/img/slide-assets/js-error-screenshot.png)
+]
+
+---
+
+# What Is Syntax?
+
+- Syntax is the set of rules or "grammar" of a particular programming language
+- It sets the rules that determine how your code should be structured so computers can understand it
+- A text-based language's syntax will permit specific combinations of letter, numbers, and symbols
+
+---
 class: center, middle
 
 .large[
    What's a statement?
+]
+
+---
+class: center, middle
+
+.large[
+   `alert()`
 ]
 
 ---
@@ -68,6 +123,13 @@ class: center, middle
 class: center, middle
 
 .large[
+   `if ( something ) { }`
+]
+
+---
+class: center, middle
+
+.large[
    What's a variable?
 ]
 
@@ -75,15 +137,65 @@ class: center, middle
 class: center, middle
 
 .large[
-   What kinds of variables can we make in JS?
+   `var color = 'red';`
 ]
 
 ---
-class: center, middle
 
-.large[
-   How do we **concatenate** a string?
-]
+# Variables
+
+In JS, we use the **var** keyword to define our variables.
+
+We can define variables as strings (with HTML tags):
+
+```javascript
+var color = 'red';
+var heading = '<h1>Page Heading</h1>';
+var numberString = '10';
+
+var question = 'What\'s your name?';
+```
+
+String must be wrapped in quotes, and quotes within a string must be "escaped" with a backslash.
+
+---
+
+# Variables
+
+Variables can be integers or booleans:
+
+```javascript
+var height = 7;
+var width = 5;
+
+var aliveAndWell = true;
+```
+
+Integers and booleans do not need to be wrapped in quotes.
+
+---
+
+# Variables
+
+And we can "concatenate" different pieces together:
+
+```javascript
+var salutation = 'Ms.';
+
+var addressee = 'Dear ' + salutation +  ' Sunshine:'
+```
+
+The variable `addressee` will now return "Dear Ms. Sunshine:".
+
+Notice the use of the `+` sign to join variable and strings.
+
+---
+
+# Variable Pro Tips
+
+- Make sure your variable names are descriptive (i.e. not `var a = 'First'`)
+- Use camelCase for defining JS variables
+- You can only use the dollar sign and underscore special characters in variable names
 
 ---
 
@@ -108,17 +220,51 @@ alert('<h2>' + greeting + '</h2>');
 Bonus points if you know what the `new Date`, `getDay()` and `alert()` are.
 
 ---
-class: center, middle
 
-.large[
-   What two ways can we add comments to our JS?
+# Comments
+
+We can add comments to our JS too:
+
+```javascript
+   var foo = "Hello World;"
+
+   // Add a single line comment with 2 forward slashes
+
+   /*
+      Add a multi-line comment like this
+   */
+
+   document.write(foo);
+```
+
+Comments are always hidden from execution in the script.
+
+---
+
+.left-column[
+  ## The Window Object
+]
+
+.right-column[
+   The "window object" is the browser's representation of each window or tab.
+
+   .inline-images[
+      ![Window Object](../../public/img/slide-assets/window-object.svg)
+   ]
 ]
 
 ---
-class: center, middle
 
-.large[
-   What's the difference between the `document` and the `window` objects?
+.left-column[
+  ## The Document Object
+]
+
+.right-column[
+   The document object is the model of the web page inside of the window/tab. It represents the HTML page:
+
+   .inline-images[
+      ![Document Object](../../public/img/slide-assets/document-object.svg)
+   ]
 ]
 
 ---
