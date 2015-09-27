@@ -9,7 +9,7 @@ date: 2015-10-09
 
 Get a sense of why Flexbox is a substantial improvement over traditional CSS, for layouts:
 
-- [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/)
+- [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/).
 
 ---
 
@@ -21,9 +21,7 @@ Get a sense of why Flexbox is a substantial improvement over traditional CSS, fo
 
 - Learn to use the folowing Flexbox CSS properties:
 	- `flex-direction`
-	- `flex-wrap`
 	- `flex`
-	- `order`
 	- `justify-content`
 	- `align-items`
 
@@ -53,6 +51,12 @@ Using flexbox, create the "Vertical Centering" layout from the [Solved by Flexbo
 
 **Challenge**: <br>
 Create the "Holy Grail Layout" layout from the [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/) site.
+
+---
+
+## Exercise 3
+**Fill in the blanks**:
+See if you can complete all of the layouts on the [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/) Site!
 
 ---
 
