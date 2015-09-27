@@ -50,13 +50,14 @@ Your project must:
 - Demonstrate effective use of CSS properties for altering the visual display of text (e.g. `font-family`, `font-style`, `text-transform`, etc.)
 - Incorporate custom fonts using `@font-face`
 - Use an icon font
-- Use CSS3 properties where appropriate (e.g. `opacity` or `border-radius`)
+- Use CSS3 properties where appropriate (e.g. `opacity` or `rgba` colour)
+- Use a pseudo-element to incorporate hover states for the links
 
 **JS requirements:**
 
 Your project must:
 
-- Dynamically display whether the restaurant is open or not (based on the day of the week)
+- Dynamically display whether the restaurant is open or not (based on the day of the week&mdash;the restaurant is closed on Saturday and Sunday)
 - Incorporate "smooth scrolling" into the menu that navigates to specific points in the page
 - Incorporate an image slider using a jQuery plugin ([bxSlider](http://bxslider.com/) is a good choice)
 

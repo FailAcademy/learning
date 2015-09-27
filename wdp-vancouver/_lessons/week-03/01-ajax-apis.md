@@ -88,7 +88,65 @@ Let's create a Client for our Instagram project right now...
 
 ## Lab Activity
 
-*Lab activity TBA...*
+You're welcome to use either **Codepen** or a **code editor** to complete either of the following lab options.
+
+### Option 1 (Easier)
+
+Build a simple form that fetches data from the OpenWeatherMap API to populate a webpage with the current Vancouver forecast as pictured:
+
+![Weather widget prototype](/public/files/labs/ajax-lab-weather.gif)
+
+You'll be using a **GET** method to fetch data via Ajax from the following endpoint:
+
+http://api.openweathermap.org/data/2.5/weather?q=Vancouver,ca
+
+You'll use the `$.ajax()` method just as you did the GitHub API example, but append the required data (the main type of weather, the description, and the icon) when the button is clicked.
+
+This is all the mark-up you will need to complete this assignment:
+
+```html
+<div class="weather-widget">
+  <h1>Vancouver Weather</h1>
+  <div class="results"><p>Click the button to get the current weather conditions...</p></div>
+  <button id="get-weather">Get Weather</button>
+</div>
+```
+
+Writing the CSS and jQuery is up to you. Good luck!
+
+### Option 2 (Harder)
+
+Build a simple form that fetches album data for a given artist using the iTunes API, and populate a webpage with that data as pictured:
+
+![iTunes widget prototype](/public/files/labs/ajax-lab-itunes.gif)
+
+You'll be using a **GET** method to fetch data via Ajax from the following endpoint:
+
+https://itunes.apple.com/search?entity=album&limit=6&term=PLUS+THE+ARTIST+NAME
+
+You'll use the `$.ajax()` method just as you did the GitHub API example, but append the required data (the thumbnail album artwork plus the album names) when a user searches for an artist name.
+
+**Additional hints:**
+
+- The iTunes API requires that you use `+` signs and not spaces to occupy whitespace in the artist name...investigate a jQuery method called `.replace()` to figure out how to format the text entered into the `input`
+- You'll likely need to set the `dataType` property to `jsonp` when using the `$.ajax()` method to get this to work
+- You can find additional info about the [iTunes API here](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
+
+This is all the mark-up you will need to complete this assignment:
+
+```html
+<div class="itunes-widget">
+   <form action="#" id="album-search">
+      <div class="artist-search">
+         <input type="text" name="artist_name" id="artist-name" placeholder="Enter artist first and last name" />
+         <input type="submit" value="Get Albums" />
+      </div>
+   </form>
+   <ul class="album-list"></ul>
+</div>
+```
+
+Writing the CSS and jQuery is up to you. Good luck!
 
 ---
 
