@@ -70,7 +70,7 @@ We’ll implement the following SASS enhancements in your web projects:
 
 - Media query helpers.
 - Basic themeability, using SASS variables.
-- SASS compilation using the LiveReload Gulp task.
+- SASS compilation using Gulp.
 - SASS Source-maps for debugging your stylesheets.
 
 ---

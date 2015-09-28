@@ -9,9 +9,9 @@ date: 2015-10-07
 
 - Explain the benefits of automation in web projects.
 - Learn how to implement the following automation tasks:
-	- minification
-	- compilation / concatenation
-	- auto-prefixing
+	- uglification
+	- watch
+	- browser-sync
 
 - Install Gulp globally and as a project dependency.
 - Install Gulp plugins via the command line; build a `gulpfile.js` file, and run related tasks.
@@ -30,29 +30,35 @@ date: 2015-10-07
 
 ## Exercise 1
 
-Writing Gulp tasks (Single and pipline)
+Install Gulp, globally and in your project, and implement 'gulp-uglify'.
 
 ---
 
 ## Exercise 2
 
-Setting up a Gulpfile for running multiple tasks in a pipeline.
+Implement the browser-sync plugin, in your project. <br>
+http://www.browsersync.io/docs/gulp/
 
 ---
 
 ## Exercise 3
 
 Look for 2 interesting Gulp tasks, in the Gulp plugin registry and implement them in your project.
+Visit [Gulp Recipies](https://github.com/gulpjs/gulp/tree/master/docs/recipes) for inspiration.
 
 ---
 
 ## Lab Activity
 
-We'll implement the following Gulp tasks in your web projects:
+Implement the following Gulp tasks in your project:
 
-- minification
-- JSHint
-- live-reloading
+- `gulp-jscs`
+- `gulp-jshint`
+
+Create 2 files: .jshintrc, .jscsrc and use the following configuration files:
+
+- https://github.com/airbnb/javascript/blob/master/linters/jshintrc
+- https://github.com/jscs-dev/node-jscs/blob/master/presets/airbnb.json
 
 ---
 
