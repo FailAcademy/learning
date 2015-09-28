@@ -156,7 +156,7 @@ var numberString = '10';
 var question = 'What\'s your name?';
 ```
 
-String must be wrapped in quotes, and quotes within a string must be "escaped" with a backslash.
+Strings must be wrapped in quotes, and quotes within a string must be "escaped" with a backslash.
 
 ---
 
@@ -182,7 +182,7 @@ And we can "concatenate" different pieces together:
 ```javascript
 var salutation = 'Ms.';
 
-var addressee = 'Dear ' + salutation +  ' Sunshine:'
+var addressee = 'Dear ' + salutation + ' Sunshine:';
 ```
 
 The variable `addressee` will now return "Dear Ms. Sunshine:".
@@ -214,7 +214,7 @@ if ( dayOfWeek == 2 ) {
    greeting = 'Nope, not Tuesday!';
 }
 
-alert('<h2>' + greeting + '</h2>');
+alert(greeting);
 ```
 
 Bonus points if you know what the `new Date`, `getDay()` and `alert()` are.

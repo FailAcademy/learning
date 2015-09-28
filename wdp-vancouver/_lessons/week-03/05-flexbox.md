@@ -55,7 +55,7 @@ Create the "Holy Grail Layout" layout from the [Solved by Flexbox](https://phili
 ---
 
 ## Exercise 3
-**Fill in the blanks**:
+**Fill in the blanks**: <br>
 See if you can complete all of the layouts on the [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/) Site!
 
 ---
