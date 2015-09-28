@@ -48,13 +48,24 @@ Work through the following sections of the [Codeacademy PHP tutorial](https://ww
 
 ## Exercise 1
 
-*Exercise TBA...*
+Time to try out some PHP:
+
+- Create an `index.php` file in your `htdocs` directory (or `www` dir if using WAMP)
+- In that file write `<?php  ?>` so Apache knows it needs to parse it
+- Between your opening and closing PHP tags write `echo "Hello world!";`
+- Go to http://localhost:8888 and check it out
 
 ---
 
 ## Exercise 2
 
-*Exercise TBA...*
+Get ready for your second round of FizzBuzz...PHP-style!
+
+You'll complete this exercise inside of your `index.php` file.
+
+For numbers divisible by 3, `echo` **Fizz** instead of the number, and for numbers divisible by 5 (and not 3), `echo` **Buzz** instead.
+
+When you have that working, modify your program to `echo` **FizzBuzz**, for numbers that are divisible by both 3 and 5 (and still `echo` **Fizz** or **Buzz** for numbers divisible by only one of those).
 
 ---
 

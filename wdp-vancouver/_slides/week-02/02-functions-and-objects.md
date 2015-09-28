@@ -31,9 +31,9 @@ template: inverse
 ---
 class: center, middle
 
-.large[
-   What's a function?
-]
+### What is a function?
+
+Functions are specific chunks code that you can use to **repeat a set of instructions**.
 
 ---
 
@@ -107,28 +107,6 @@ document.write(twoPlusTwo);
 
 ---
 
-# Functions: Two Ways
-
-Does anyone know what the difference is between creating a function in the following ways?
-
-**Example 1:**
-
-```js
-function volume(width, height, depth) {
-   return width * height * depth;
-}
-```
-
-**Example 2:**
-
-```js
-var volume = function(width, height, depth) {
-   return width * height * depth;
-}
-```
-
----
-
 # Another Example
 
 Notice that we don't explicitly "return" anything from this function, we just write out the result:
@@ -162,6 +140,56 @@ The function is called using the `onclick` attribute:
 ```html
 <button onclick="fullName();">Click here!</button>
 ```
+
+---
+
+# Not All Functions Are Created Equal...
+
+In JavaScript, you can create different kinds of functions:
+
+- Function declarations
+- Function expressions
+- Immediately invoked function expressions .red[* ]
+
+.footnote[.red[* ]More on these later with jQuery...]
+
+---
+
+# Function Declarations
+
+Function declarations are exactly what we've seen so far.
+
+These functions can be called before they are even declared in your code (due to a concept in JS known as **hoisting**):
+
+```javascript
+var size = volume(3, 4, 5);
+
+document.write(size);
+
+function volume(width, height, depth) {
+   return width * height * depth;
+}
+```
+
+---
+
+# Function Expressions
+
+Function expressions usually don't have a name. Functions without names are known as an **anonymous functions**.
+
+This function expression is stored in a variable called `area`:
+
+```javascript
+var volume = function(width, height, depth) {
+   return width * height * depth;
+}
+
+var size = volume(3, 4, 5);
+
+document.write(size);
+```
+
+Unlike function declarations, this function won't be available to use until the interpreter reaches that point in the code.
 
 ---
 
@@ -215,11 +243,13 @@ function france() {
 ```
 
 ---
-class: center, middle
 
-.large[
-   What are the relative advantages and disadvantages of globally or locally defined variables?
-]
+# Global vs. Local Scope
+
+There are pros and cons to each type of variable scope:
+
+- **Global variables** can be **reused** throughout your code, but they **use more memory** and you may run into **naming collisions** with other scripts
+- **Local variables** are more efficient because they **use less memory** and their **names are protected** within the function that they are defined, but they **can't be re-used** elsewhere in your code
 
 ---
 
@@ -249,16 +279,9 @@ template: inverse
 ---
 class: center, middle
 
-.large[
-   What's an object?
-]
+### What are objects?
 
----
-class: center, middle
-
-.large[
-   How do we create one in JS?
-]
+Objects are like containers that hold groups of related variables and functions to create an organized model of something in your code.
 
 ---
 
@@ -289,49 +312,42 @@ document.write();
 
 ---
 
-# Using Objects
+# The Syntax of Objects
 
-There are two ways we can access properties inside an object.
+We define objects in JS just like we define any other variables, but they are wrapped in curly braces:
 
-If we wanted to store the `beard` property in a variable, what two ways could we write it?
-
-```js
+```javascript
 var person  = {
-   firstName: 'Silent',
-   lastName: 'Bob',
-   height: 1.75,
-   beard: true,
-   getName: function() {
-      return this.firstName + ' ' + this.lastName;
-   }
-}
+   // your properties and methods will go here...
+};
 ```
 
 ---
 
-# Using Objects
+# The Syntax of Objects
 
-After this object is declared, how could we later update the `beard` property to false?
+Properties and methods are defined for the object using **key/value pairs**.
 
-```js
+This simply means that instead of writing `var firstName =` we write `firstName:` and separate multiple properties with commas instead of semi-colons.
+
+```javascript
 var person  = {
    firstName: 'Silent',
    lastName: 'Bob',
    height: 1.75,
-   beard: true,
-   getName: function() {
-      return this.firstName + ' ' + this.lastName;
-   }
-}
+   beard: true
+};
 ```
 
 ---
 
-# Using Objects
+# The Syntax of Objects
 
-And how could we store the result of the `getName` method in a variable outside the object?
+And the same goes for creating methods.
 
-```js
+For object methods, we write `getName: function() {...}` instead of `function getName() {...}`:
+
+```javascript
 var person  = {
    firstName: 'Silent',
    lastName: 'Bob',
@@ -340,7 +356,90 @@ var person  = {
    getName: function() {
       return this.firstName + ' ' + this.lastName;
    }
-}
+};
+```
+
+---
+
+# Using Object Properties
+
+To access one of the object's properties or methods, we can use **dot notation**:
+
+```javascript
+var person = {
+   // ...
+   beard: true,
+   //...
+};
+
+var hasBeard = person.beard; // will equal true
+```
+
+Or use square brackets with the property key in quotes:
+
+```javascript
+var hasBeard = person['beard']; // will equal true
+```
+
+---
+
+# Using Object Properties
+
+And just like variables, we can update object property values after they've been initially defined:
+
+```javascript
+var person = {
+   // ...
+   beard: true,
+   //...
+};
+
+person.beard = false;
+```
+
+Or even add new ones:
+
+```javascript
+person.justShaved = true;
+```
+
+---
+
+# Using Object Methods
+
+We can also use dot notation to access object methods:
+
+```javascript
+var person = {
+   // ...
+   getName: function() {
+      return this.firstName + ' ' + this.lastName;
+   }
+};
+
+var fullName = person.getName(); // will return "Silent Bob"
+```
+
+---
+
+# What Is "This"?
+
+In JS, `this` is a special word and it always refers to one object (which object it refers to will depend on the context).
+
+Inside of an object's method, it refers to the object itself:
+
+```javascript
+var person = {
+   firstName: 'Silent',
+   lastName: 'Bob',
+   // ...
+   getName: function() {
+
+      // use "this" to get properties of the object inside of a method
+
+      return this.firstName + ' ' + this.lastName;
+   }
+};
 ```
 
 ---
@@ -351,9 +450,10 @@ template: inverse
 ---
 class: center, middle
 
-.large[
-   What's the difference between and object and an array?
-]
+### What are arrays?
+
+Arrays are special object in JavaScript that store a list of values, but the key for each value is an **index number**.
+
 
 ---
 
@@ -363,6 +463,20 @@ class: center, middle
 - But instead of choosing the names, they are always set to numbers in ascending order
 - **Weirdness alert!** In JavaScript, counting always starts at 0
 - Index numbers allow us to assign and access values in arrays
+
+---
+
+# The Syntax of Arrays
+
+Like normal objects, there's a special way to define arrays as variables.
+
+For arrays, we use square brackets (instead of curly braces):
+
+```javascript
+var shoppingList  = [
+   // your array items will go here...
+];
+```
 
 ---
 
@@ -390,10 +504,26 @@ shoppingList.push('oranges');
 *How do we find out how many items are in the above array?*
 
 ---
+
+# Arrays in Objects
+
+We can also store arrays as properties in objects:
+
+```javascript
+var errands = {
+   date: new Date(),
+   complete: false,
+   locations: ['Post Office', 'Grocery Store', 'Hardware Store']
+};
+
+var firstStop = errands.locations[0]; // will equal "Post Office"
+```
+
+---
 class: center, middle
 
 .large[
-   And lastly, what's a loop?
+   And lastly, back to loops...
 ]
 
 ---
@@ -441,7 +571,7 @@ for (var prop in bob) {
 }
 ```
 
-*What will the following loop output?*
+*Any guesses as to what the following loop will output?*
 
 ---
 
