@@ -196,7 +196,7 @@ This function expression is stored in a variable called `area`:
 ```javascript
 var volume = function(width, height, depth) {
    return width * height * depth;
-}
+};
 
 var size = volume(3, 4, 5);
 
@@ -338,7 +338,7 @@ var person  = {
    lastName: 'Bob',
    height: 1.75,
    beard: true
-}
+};
 ```
 
 ---
@@ -358,7 +358,7 @@ var person  = {
    getName: function() {
       return this.firstName + ' ' + this.lastName;
    }
-}
+};
 ```
 
 ---
@@ -372,7 +372,7 @@ var person = {
    // ...
    beard: true,
    //...
-}
+};
 
 var hasBeard = person.beard; // will equal true
 ```
@@ -394,7 +394,7 @@ var person = {
    // ...
    beard: true,
    //...
-}
+};
 
 person.beard = false;
 ```
@@ -417,7 +417,7 @@ var person = {
    getName: function() {
       return this.firstName + ' ' + this.lastName;
    }
-}
+};
 
 var fullName = person.getName(); // will return "Silent Bob"
 ```
@@ -441,7 +441,7 @@ var person = {
 
       return this.firstName + ' ' + this.lastName;
    }
-}
+};
 ```
 
 ---
@@ -485,7 +485,7 @@ For arrays, we use square brackets (instead of curly braces):
 ```javascript
 var shoppingList  = [
    // your array items will go here...
-]
+];
 ```
 
 ---
@@ -523,7 +523,7 @@ var errands = {
    date: new Date(),
    complete: false,
    locations: ['Post Office', 'Grocery Store', 'Hardware Store']
-}
+};
 
 var firstStop = errands.locations[0]; // will equal "Post Office"
 ```
