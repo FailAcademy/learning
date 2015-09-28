@@ -89,3 +89,7 @@ Another great jQuery resource to read through:
 More on custom animation with jQuery:
 
 - [A Guide to the jQuery animate() Method](http://www.sitepoint.com/guide-jquery-animate-method/)
+
+Feeling ambitious? Try creating your own jQuery plugin:
+
+- [Writing Your Own jQuery Plugins](http://blog.teamtreehouse.com/writing-your-own-jquery-plugins)

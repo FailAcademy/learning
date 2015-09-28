@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Slideshow Title
+# jQuery Animation <br />(and Plugins too)
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -389,6 +389,25 @@ In this exercise, you're going to use jQuery to create an accordian-style show/h
 [See the lesson page](/lesson/jquery-animation/) for further instructions.
 
 ---
+template: inverse
+
+# jQuery Plugins
+
+---
+class: center, middle
+
+### What's a plugin?
+
+Plugins allow us to extend jQuery to add additional functionality to suit needs of our websites (i.e. add more cool stuff to our websites...).
+
+---
+class: center, middle
+
+### Why create a plugin?
+
+Plugins allow you to create re-usable components for your webpages, and makes it easier to share that code with other developers too.
+
+---
 
 # Exercise 2
 
@@ -402,6 +421,7 @@ Your task is to find an example of an interesting **jQuery plugin** and create a
 
 - How we can bring our websites to life with jQuery's animation methods
 - How to add interactivity to forms with jQuery
+- What jQuery plugins are
 
 ---
 template: inverse
