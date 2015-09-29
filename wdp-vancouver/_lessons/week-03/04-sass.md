@@ -9,9 +9,9 @@ date: 2015-10-08
 
 Be sure to [follow these directions to install Sass](http://sass-lang.com/install) before class.
 
-Then visit the SASS homepage and take a look around!
+Then visit the Sass homepage and take a look around!
 
-- [SASS Homepage](http://sass-lang.com/guide)
+- [Sass Homepage](http://sass-lang.com/guide)
 
 ### Challenge Yourself:
 
