@@ -426,6 +426,7 @@ https://github.com/floridoo/gulp-sourcemaps
 - What a preprocessor is and how to use one
 - How to use SASS to turbo-charge (and organize!) your CSS development
 - How to compile SASS
+- How to use SASS sourcemaps for debugging
 
 ---
 template: inverse
