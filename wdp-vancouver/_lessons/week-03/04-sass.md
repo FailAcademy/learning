@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: SASS (CSS pre-processors)
+title: Sass (CSS pre-processors)
 slides: ['_slides/week-03/04-sass.md']
 date: 2015-10-08
 ---
@@ -55,7 +55,7 @@ Visit this site and review the tutorial. The code and concepts should seem unfam
 
 In this exercise, we'll refactor some CSS into Sass, using the basic functionality we've learned.
 
-You can [download the exercise file here](/public/files/sass-e1.zip).
+You can [download the exercise file here](/public/files/exercises/sass-e1.zip).
 
 Take a look at the code in the `.scss` file, and refactor it into actual Sass by doing the following:
 
