@@ -9,7 +9,7 @@ date: 2015-10-07
 
 Download and install Node (with npm) before class:
 
-- (nodejs.org)[https://nodejs.org/en/]
+- [nodejs.org](https://nodejs.org/en/)
 
 *We need Node and npm installed to use Gulp, so you want to be ready for this!*
 
