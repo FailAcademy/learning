@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: CSS3 Transitions / Transformations
-slides: ['_slides/week-04/03-git-and-workflows.md']
+slides: ['_slides/week-04/03-css-transitions-transforms.md']
 date: 2015-10-14
 ---
 
@@ -19,59 +19,25 @@ Dive into these comprehensive lessons on CSS transitions and transforms from "Le
 
 - Use CSS transitions to add simple animation to elements.
 - Use CSS transforms to change the position of elements.
+- Use 3D transforms with perspective.
 - Learn what properties are animatable using CSS3.
+- Learn how to create keyframe animations.
 
 ---
 
 ## Keywords
 - [Transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
 - [Transition](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
-
----
-
-## Exercise 1
-
-Do this activity!
-
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
----
-
-## Exercise 2
-
-This is how you add highlighted syntax to a lesson page:
-
-```html
-
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
-
----
-
-## Lab Activity
-
-This is a link to the lab activity...
+- `@keyframe`
 
 ---
 
 ## Additional Resources
 
-This line describes the resource:
+A list of all transitionable CSS properties:
+http://www.w3.org/TR/css3-transitions/#properties-from-css-
 
-- [Code Academy](http://www.codecademy.com/learn)
+Here are some exellent tutorials / demonstrations for learning about CSS transitions and transforms:
+
+- [CSS3 = Awesome] (http://css3.bradshawenterprises.com/)
+- [3D Transforms](https://desandro.github.io/3dtransforms/)
