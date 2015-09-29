@@ -7,10 +7,11 @@ date: 2015-10-08
 
 ## Pre-Work
 
-Visit the SASS homepage and take a look around!
+Be sure to [follow these directions to install Sass](http://sass-lang.com/install) before class.
+
+Then visit the SASS homepage and take a look around!
 
 - [SASS Homepage](http://sass-lang.com/guide)
-
 
 ### Challenge Yourself:
 
@@ -37,7 +38,7 @@ Visit this site and review the tutorial. The code and concepts should seem unfam
 - Helpers
 - Preprocessor
 - Compiler
-- SASS/SCSS
+- Sass/SCSS
 - Mixin
 - Variable
 - Nesting
@@ -50,17 +51,30 @@ Visit this site and review the tutorial. The code and concepts should seem unfam
 
 ---
 
-## Exercise 1	
+## Exercise 1
 
-In this exercise, we'll refactor some CSS into SCSS, using the basic functionality we've learned.
-We'll then discuss the results by examining the SCSS as well as the compiled CSS. 
+In this exercise, we'll refactor some CSS into Sass, using the basic functionality we've learned.
+
+You can [download the exercise file here](/public/files/sass-e1.zip).
+
+Take a look at the code in the `.scss` file, and refactor it into actual Sass by doing the following:
+
+- Nest selectors where appropriate (but be careful not to over-nest them!)
+- Abstract repeated styles (colours, spacing units, etc.) into variables (hint: make these go at the top of the stylesheet)
+- Create a mixin to take care of auto-prefixing where required
+- Use a math operation to adjust the size of the base spacing unit on elements where applicable
+
+Last but not least, you'll need to **compile** your Sass into CSS so your browser can read it.
+
+We'll discuss the results by examining the SCSS as well as the compiled CSS.
 
 ---
 
 ## Exercise 2
 
 In this exercise we'll create media query helpers using SASS mixins and the `@content` directive, for common breakpoints.
-We'll then discuss, how this techniques saves time when developing responsive websites. 
+
+We'll then discuss, how this techniques saves time when developing responsive websites.
 
 ---
 

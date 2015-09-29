@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: SASS / CSS Pre-processors Slides
+title: Sass / CSS Pre-processors Slides
 ---
 
 {% highlight html %}
@@ -10,9 +10,9 @@ class: center, middle, inverse
 
 ---
 
-# Intro to SASS
+# Intro to Sass
 
-.title-logo[![Red logo](../../public/img/red-logo-white.svg)]
+.title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
 layout: false
@@ -20,10 +20,10 @@ layout: false
 # Agenda
 
 1. What is a preprocessor?
-2. SASS vs. LESS
-3. SASS features
-4. Using SASS on a project
-5. Compiling SASS into CSS
+2. Sass vs. Less
+3. Sass features
+4. Using Sass on a project
+5. Compiling Sass into CSS
 
 ---
 template: inverse
@@ -45,8 +45,8 @@ CSS preprocessors allow you to write CSS in a unconventional (but usually more i
 
 Today, there are a few CSS preprocessors in popular use:
 
-- [SASS](http://sass-lang.com/)
-- [LESS](http://lesscss.org/)
+- [Sass](http://sass-lang.com/)
+- [Less](http://lesscss.org/)
 - [Stylus](https://learnboost.github.io/stylus/)
 - [Myth](http://www.myth.io/)
 
@@ -54,7 +54,7 @@ Today, there are a few CSS preprocessors in popular use:
 
 # Less vs. Sass vs. etc.
 
-SASS and LESS are the most widely used of the preprocessor options today.
+Sass and Less are the most widely used of the preprocessor options today.
 
 The main differences between these two preprocessor options are their **installation processes** and the **syntax** you use to write your code.
 
@@ -71,19 +71,19 @@ It depends...sometimes it's a matter of taste, other times it's what your team i
 class: center, middle
 
 .inline-images[
-   ![SASS logo](http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png)
+   ![Sass logo](http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png)
 ]
 
 ---
 template: inverse
 
-# SASS Features
+# Sass Features
 
 ---
 
-# SASS Features
+# Sass Features
 
-SASS has some cool features compared to plain vanilla CSS:
+Sass has some cool features compared to plain vanilla CSS:
 
 - Nested rules
 - Variables
@@ -95,7 +95,7 @@ SASS has some cool features compared to plain vanilla CSS:
 
 # Nested Rules
 
-One of the handiest features of SASS is the ability to nest your CSS selectors. For instance, instead of writing this:
+One of the handiest features of Sass is the ability to nest your CSS selectors. For instance, instead of writing this:
 
 ```css
 .main-navigation {
@@ -111,7 +111,7 @@ One of the handiest features of SASS is the ability to nest your CSS selectors. 
 
 # Nested Rules
 
-You can write the same code this way with SASS:
+You can write the same code this way with Sass:
 
 ```css
 .main-navigation {
@@ -155,7 +155,7 @@ h3 {
 
 # Variables
 
-SASS also allows you to define variables (much like in JS!), which can help you standardize properties and save time if you ever need to update a property globally.
+Sass also allows you to define variables (much like in JS!), which can help you standardize properties and save time if you ever need to update a property globally.
 
 In Less you define variables as follows:
 
@@ -170,9 +170,10 @@ a {
 You'll want to make sure you choose intuitive, semantic variables names.
 
 ---
+
 # Operations
 
-With SASS, you can do math right in your CSS! For example:
+With Sass, you can do math right in your CSS! For example:
 
 ```css
 $base-margin: 1.5em;
@@ -205,7 +206,7 @@ select {
 
 # `@function`
 
-SASS has a number of built-in functions that assist with doing math, manipulating colours, and more.
+Sass has a number of built-in functions that assist with doing math, manipulating colours, and more.
 
 You can also write your own functions:
 
@@ -220,7 +221,7 @@ $gutter-width: 10px;
 #sidebar { width: grid-width(5); }
 ```
 
-You can check-out the full [SASS function reference here](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#function_directives).
+You can check-out the full [Sass function reference here](http://sass-lang.com/documentation/file.Sass_REFERENCE.html#function_directives).
 
 ---
 
@@ -272,7 +273,7 @@ You can 'extend' functionality of your CSS classes like so:
 
 # `@content`
 
- This SASS directive allows us to pass a content block into a mixin.
+ This Sass directive allows us to pass a content block into a mixin.
 
 ```css
 @mixin apply-to-ie6-only {
@@ -289,19 +290,26 @@ You can 'extend' functionality of your CSS classes like so:
 ```
 ---
 
-#Media query example using `@content`
+# Smarter Media Queries
+
+Media query example using `@content`:
 
 ```css
 @mixin media($width) {
-  @media only screen and (max-width: $width) {
+  @media only screen and (min-width: $width) {
     @content;
   }
 }
 
-@include media(320px) {
-  background: red;
+body {
+   background-color: blue;
+
+   @include media(320px) {
+     background-color: red;
+   }
 }
 ```
+
 ---
 class: center, middle
 
@@ -313,29 +321,24 @@ class: center, middle
 
 # Exercise 1
 
-Let's refactor some plain vanilla CSS in to SCSS:
+In this exercise, we'll refactor some CSS into SCSS, using the basic functionality we've learned.
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/NqdjQP/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/NqdjQP/'>NqdjQP</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+See the [lesson page](/lesson/sass-css-pre-processors/) for more details.
 
 ---
 template: inverse
 
-# Using SCSS
-
----
-
-# Using SCSS
+# Using Sass/SCSS
 
 ---
 
 # Organizing SCSS Files
 
-You'll likely find many projects that use SASS organize their code into many specific **partials** and import them into a `style.scss` file.
+You'll likely find many projects that use Sass organize their code into many specific **partials** and import them into a `style.scss` file.
 
 For example, for a project with a `scss` sub-folder and `style.scss` file at the root, you would like find a list of `@import` statements inside `style.scss` file:
 
-```css
+```sass
 @import 'scss/variables';
 @import 'scss/mixins';
 @import 'scss/reset';
@@ -349,7 +352,7 @@ For example, for a project with a `scss` sub-folder and `style.scss` file at the
 
 Note that you can add of leave off the `.scss` extension the file names, and also import CSS files as-is too:
 
-```css
+```sass
 @import 'foo';      // foo.scss is imported
 @import 'foo.scss'; // foo.scss is imported
 @import 'foo.css';  // statement left in place, as-is
@@ -365,12 +368,12 @@ CSS from the imported files is added in place, so the order of your imports matt
 When creating partials, name your partial files beginning with an underscore:
 e.g. `_typography.scss`
 
-Using an underscore tells the SASS compiler that the file is a partial.
+Using an underscore tells the Sass compiler that the file is a partial.
 
 ---
 template: inverse
 
-# Compiling SCSS
+# Compiling SCSS <br />(the easy way)
 
 ---
 class: center, middle
@@ -383,8 +386,10 @@ When you compile code, you convert it from one form (that you have written) to a
 
 # How to Compile Less
 
-Let's create a Gulp task to compile SASS for our project:
-Here is an example of a basic gulp task for compiling SASS
+Let's create a Gulp task to compile Sass for our project.
+
+Here is an example of a basic gulp task for compiling Sass:
+
 ```js
 // ...
 
@@ -403,18 +408,17 @@ gulp.task('sass', function () {
 
 # Exercise 2
 
-In this exercise we’ll create media query helpers inside your project using SASS mixins and the `@content` directive, for common breakpoints. We’ll then discuss, how this techniques saves time when developing responsive websites.
+In this exercise we’ll create media query helpers inside your project using Sass mixins and the `@content` directive, for common breakpoints. We’ll then discuss, how this techniques saves time when developing responsive websites.
 
 ---
 template: inverse
 
-#BONUS ROUND
+# BONUS ROUND
 
 ---
-
 class: center, middle
 
-Implement SASS sourcemaps using Google Chrome:
+Implement Sass sourcemaps using Google Chrome:
 
 https://github.com/dlmanning/gulp-sass
 https://github.com/floridoo/gulp-sourcemaps
@@ -424,9 +428,9 @@ https://github.com/floridoo/gulp-sourcemaps
 # What We've Learned
 
 - What a preprocessor is and how to use one
-- How to use SASS to turbo-charge (and organize!) your CSS development
-- How to compile SASS
-- How to use SASS sourcemaps for debugging
+- How to use Sass to turbo-charge (and organize!) your CSS development
+- How to compile Sass
+- How to use Sass sourcemaps for debugging
 
 ---
 template: inverse
