@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: More on Git and Project Workflows Slides
+title: Web Apps and JS Frameworks Slides
 ---
 
 {% highlight html %}

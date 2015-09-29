@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: Coding Workflows with Git
-slides: ['_slides/week-04/03-git-and-workflows.md']
+title: Web Apps and JS Frameworks
+slides: ['_slides/week-04/03-apps-and-frameworks.md']
 date: 2015-10-15
 ---
 
