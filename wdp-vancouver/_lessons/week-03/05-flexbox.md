@@ -15,18 +15,11 @@ Get a sense of why Flexbox is a substantial improvement over traditional CSS, fo
 
 ## Learning Objectives
 
-- Understand the major diffrences between traditional CSS and Flexbox.
-
+- Understand the major differences between traditional CSS and Flexbox.
 - Gain an awareness of the major difficulties in creating layouts with CSS that Flexbox was designed to overcome.
-
-- Learn to use the folowing Flexbox CSS properties:
-	- `flex-direction`
-	- `flex`
-	- `justify-content`
-	- `align-items`
-
+- Learn to use the folowing Flexbox CSS properties: `flex-direction`, `flex`, `justify-content`, and `align-items`
 - Create a basic Flexbox Layout.
-- Create SASS *helpers* to speed up your Flexbox workflow.
+- Create Sass *helpers* to speed up your Flexbox workflow.
 
 ---
 
@@ -42,41 +35,44 @@ Get a sense of why Flexbox is a substantial improvement over traditional CSS, fo
 
 ## Exercise 1
 
-**Challenge**: <br>
-Using flexbox, create the "Vertical Centering" layout from the [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/) site.
+In this exercise, you're going to use what you've learned about flexbox to recreate the vertical centering layout found here:
+
+**[Solved by Flexbox - Vertical Centering](https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/)**
 
 ---
 
 ## Exercise 2
 
-**Challenge**: <br>
-Create the "Holy Grail Layout" layout from the [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/) site.
+Create the “Holy Grail Layout” layout from the Solved by Flexbox site:
+
+**[Solved by Flexbox - Holy Grail Layout ](https://philipwalton.github.io/solved-by-flexbox/demos/holy-grail/)**
 
 ---
 
 ## Exercise 3
-**Fill in the blanks**: <br>
-See if you can complete all of the layouts on the [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/) Site!
+
+See if you can recreate the rest of the demos on the Solved by Flexbox site!
+
+**[Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/)**
 
 ---
 
 ## Lab Activity
 
-Today we're going to begin to code up the layout for an upcoming project, using Flexbox: our [Mars Colony hybrid application](http://redacademy.com/project/project-4-mars-colony-hybrid-app/)! Follow the link to the project page and check out what we're going to build together in week 5!
+We'll continue working on Project 3 today, but specifically we want to set up the layout of retrieved Instagram photos to use flexbox instead of of the other traditional CSS methods we've learned so far.
 
 ---
 
 ## Additional Resources
-<!-- 
+<!--
 Animate.css is a popular open-source library for adding drop-in CSS animations for your projects.
 
 - [Animate.css](https://daneden.github.io/animate.css/) -->
-<!-- 
-Here is a comprehensive set of tutorials on Flexbox that will take you from beginned to advanced over the course of 20 videos. Enjoy!
+<!--
+Here is a comprehensive set of tutorials on Flexbox that will take you from beginner to advanced over the course of 20 videos. Enjoy!
 
 - [What the Flexbox!?](http://flexbox.io) -->
 
-This is a concise and authoritative summary of the various Flexbox properties and how they work: 
+This is a concise and authoritative summary of the various Flexbox properties and how they work:
 
 - [CSS Tricks - A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-
