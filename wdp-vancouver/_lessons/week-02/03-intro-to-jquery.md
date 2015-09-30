@@ -87,7 +87,7 @@ You can complete this activity in a basic HTML file in a text editor of your cho
 
 We’ll continue to work on Project 2 in today’s lab.
 
-You goal for today is to being implementing the required interactive elements to the website using jQuery.
+You goal for today is to begin implementing the required interactive elements to the website using jQuery.
 
 ---
 
