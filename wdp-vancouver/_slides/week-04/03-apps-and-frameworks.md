@@ -279,7 +279,7 @@ https://en.wikipedia.org/wiki/Comparison_of_JavaScript_frameworks
 
 Visit each of the frameworks mentioned in the previous slide. Browse through the documentation and try to discover the tools that are provided for creating Models, Views and Controllers, and how they are meant to be used together.
 <br>
-You're not expected to produce details or correct analysis, it's more of a discovery, but try to be as thorough as possible, and provide an explanation, in your own words, for each.
+You're not expected to produce in depth technical details, just describe things as you see them in your own words and try to be as thorough as possible.
 
 ---
 
