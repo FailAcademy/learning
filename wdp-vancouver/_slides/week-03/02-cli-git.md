@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: The Command Line and Version Control with Git Slides
+title: The Command Line and Version Control Slides
 ---
 
 {% highlight html %}
@@ -135,6 +135,8 @@ The `-r` is known as a **flag** or **option** for the command.
 
 In this case, the `-r` roughly translates to "recursively delete all of the folder's files too."
 
+**This does NOT send the folder/files to the Trash or Recycle Bin. They will be gone forever!**
+
 ---
 
 # Work with Folders
@@ -151,8 +153,11 @@ class: center, middle
 Never run `rm -rf /` or `rm -rf *` unless you want to delete everything on your computer!
 
 ---
-template: inverse
-#Files are people too 
+class: center, middle
+
+.large[
+   Files are people too...
+]
 
 ---
 template: inverse
@@ -195,50 +200,49 @@ Version control is a system that records changes to a file or set of files over 
 ]
 
 ---
-
-# What We've Learned
-
-- What the command line is
-- How to navigate the file system from the CLI
-- What version control is
-- The difference between Git and GitHub
-
----
-template: inverse
-
-# Let's dive in
-
----
-### First time post-install setup:
-
-Once you have Git installed on your computer, you'll need to run the following commands, one after the other from the command line, to ensure that Git knows how to publish information about the code you write.
-
-`git config --global user.name "Your Name"`<br>
-`git config --global user.email you@email.com`<br>
-`git config --global push.default matching`<br>
-`git config --global alias.co checkout`<br>
-
-
----
-
 class: center, middle
 
-Initialize a new Git **repository** *('repo' for short)* using this command. `cd` into your project directory and type:
+.large[
+   Let's dive in...
+]
+
+---
+
+# Post-Install Set-up
+
+Once you have Git installed on your computer, you'll need to run the following commands, one after the other from the command line, to ensure that Git knows how to publish information about the code you write:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email you@email.com
+git config --global push.default matching
+git config --global alias.co checkout
+```
+
+---
+class: center, middle
+
+Now let's initialize a new Git **repository** ("repo" for short).
+
+`cd` into your project directory and type:
 
 .large[
    `git init`
 ]
 
 ---
-template: inverse
-
-##Welcome to the world of Version Control with Git!
-
----
-
 class: center, middle
 
-Now that you've initialized a Git repository in your project directory, let's `add` your project files to the new **repository**. Run the following command:
+.large[
+   Welcome to the world of version control with Git!
+]
+
+---
+class: center, middle
+
+Now that you've initialized a Git repository in your project directory, let's `add` your project files to the new **repository**.
+
+Run the following command:
 
 .large[
    `git add -A`
@@ -247,7 +251,11 @@ Now that you've initialized a Git repository in your project directory, let's `a
 ---
 class: center, middle
 
-What happenned? Let's find out.  Check the `status` of your new **repository**. Run the following command:
+What happenned? Let's find out...
+
+Check the `status` of your new **repository**.
+
+Run the following command:
 
 .large[
    `git status`
@@ -256,7 +264,11 @@ What happenned? Let's find out.  Check the `status` of your new **repository**. 
 ---
 class: center, middle
 
-Once we've added all of the files, we need to `commit` them to our **repository**. Be sure to leave a message about wjhat you're `commit`ting, so others will know what you've changed or added. Run the following command:
+Once we've added our files, we then need to `commit` them to our repository.
+
+Be sure to leave a message about what you're committing, so others will know what you've changed or added.
+
+Run the following command:
 
 .medium[
    `git commit -m "Initialize new repository!"`
@@ -265,30 +277,40 @@ Once we've added all of the files, we need to `commit` them to our **repository*
 ---
 class: center, middle
 
-#Awesome
-Let's check the `log` and take a look at your first `commit`. Run the following command: 
+### Awesome!
+
+Let's check the `log` and take a look at your first `commit`.
+
+Run the following command:
 
 .large[
    `git log`
 ]
 
 ---
-template: inverse
+class: center, middle
 
-##So, umm what?
-
----
-template: inverse
-
-##Delete a folder in your project. Go Ahead, I'll wait.
-(hint: use `ls` to list the folders in your project directory, and then `rm -rf` one of them)
-
-.red[DANGER: Don't use `rm -rf` outside your project directory, you wont be able to recover your files!]
+.large[
+   So, umm what?
+]
 
 ---
 class: center, middle
 
-Let's check the `log` and see what Git says about what we've done. Run the `log` command again.
+### Delete a folder in your project.<br> Go ahead, I'll wait.
+
+**Hint:** use `ls` to list the folders in your project directory, and then `rm -rf` one of them.
+
+.red[
+   **DANGER:** Don't use `rm -rf` outside your project directory, you wont be able to recover your files!
+]
+
+---
+class: center, middle
+
+Check the `log` and see what Git says about what we did.
+
+Run the `log` command again:
 
 .large[
    `git log`
@@ -304,148 +326,189 @@ Fear not, we can undo our changes using the following command:
 ]
 
 ---
-template: inverse
-
-##Phew.
-
----
-template: inverse
-
-##Basic Git Workflow with Github
-
----
 class: center, middle
-
-Now that you have a git repository set up in your **local** project directory, it's time to add your repository to github and learn the basics of version control with Git & Github!
-
-Lets visit .red[www.github.com] and create your first Github **repository**.
-
----
-class: center, middle
-
-After you've created your Github repository and copied the `.git` url, run the following command:
-
-.medium[
-   `git remote add origin [your github repository url]`
-]
-<br>
-Obviously, replace `[your github repository url]` with the actual url of your new Github **repo**! 
-
-(Let's examine the `.git` url)
-
----
-template: inverse
-
-##Send your project files to Github
-
----
-class: center, middle
-
-OK now that your **local repository** is linked to your **remote repository**, via the `origin` we set, we can send the project files. Run the following command:
 
 .large[
-   `git push -u origin --all`
+   Phew.
 ]
----
-template: inverse
-
- ##Branch, edit, commit, merge
-
----
-class: center, middle
-
-"Git is  is incredibly good at making **branches**, which are effectively copies of a
-**repository** where we can make (possibly experimental) changes without modifying
-the parent files. In most cases, the parent repository is the **master branch**,
-and we can create a new topic branch by using the command <br> `git checkout -b [new_branch_name]`"
 
 ---
 template: inverse
 
- ##Create a new git branch
+# Basic Git Workflow with Github
+
+---
+
+# Now Add GitHub
+
+Now that you have a git repository set up in your **local** project directory, it's time to add your repository to github and learn the basics of version control with Git & Github.
+
+Lets visit [github.com](https://github.com/) and create your first Github **repo**.
+
+---
+
+# Add A Remote
+
+After you've created your Github repository and copied the `.git` URL, run the following command:
+
+```bash
+git remote add origin [your github repository url]
+```
+
+Obviously, replace `[your github repository url]` with the actual URL of your new Github **repo**!
+
+Let's examine the `.git` URL...
+
+---
+
+# Push to Github
+
+OK now that your **local repository** is linked to your **remote repository** via the `origin` we set, we can send your project files to GitHub.
+
+Run the following command:
+
+```bash
+git push -u origin --all
+```
+
+---
+template: inverse
+
+# Branch, Edit, Commit & Merge
+
+---
+
+# Branches
+
+Git is incredibly good at making **branches**, which are effectively copies of a **repository** where we can make (possibly experimental) changes without modifying the parent files.
+
+In most cases, the parent repository is the **master branch**, and we can create a new topic branch by using the following command:
+
+```bash
+git checkout -b [new_branch_name]
+```
+
+---
+
+# Viewing Branches
+
+To view all of the branches you've created in your project, run the following command:
+
+```bash
+git branch
+```
 
 ---
 class: center, middle
-
-To view all of the branches you've created in your project, run the following command: 
 
 .large[
-   `git branch`
+   Let's try editing a file while checked out on the new branch...
 ]
 
 ---
-template: inverse
 
- ##Edit a file in your new branch
+# Commit on the Branch
+
+**Use what you know**: Check the `status` of your changes and `commit` them.
+
+Shortcut! You can `add` and `commit` your files with one command:
+
+```bash
+git commit -a -m "file has changed"
+```
+
+(Just be sure this is what you want to do...)
 
 ---
-class: center, middle
 
- .large[**Use what you know**: check the `status` of your changes and `commit` them!]
+# On Writing Good Commit Messages
 
-You can `add` and `commit` your files with one command: <br>
- `git commit -a -m "file has changed"`
-
----
-
-##Writing good commit messages
-
-Commit messages are the key to understanding the changes you've made to your code, and the best commit messages follow these simple rules: 
+Commit messages are the key to understanding the changes you've made to your code, and the best commit messages follow these simple rules:
 
 - Present tense
-- Less than 50 chars
+- Less than 50 characters
 
-Most importantly: The commit message should explain what the commit **does**.
-
----
-template: inverse
-
- ##Merge new code changes into the master branch
+**Most importantly:** The commit message should explain what the committed code *does*.
 
 ---
 class: center, middle
+
+.large[
+   Now how do we update our `master` branch?
+]
+
+---
+
+# Merging onto master
 
 When we're happy with the changes we've made in our new branch, we'll merge those changes back into the `master` branch.
-The `master` branch should only contiain code we're comitted to using in our projects!
 
-To switch  back inot the `master` branch, run the following command: <br>
-.large[`git checkout master`]
+The `master` branch should only contain code we're committed to using in our projects!
+
+To switch back into the `master` branch, run the following command:
+
+```bash
+git checkout master
+```
 
 ---
-class: center, middle
 
-Now that we're back in our master branch, we'll merge the changes from our new branch. Run the following command: 
+# Merging onto master
 
-.medium[`git merge [new_branch_name]`]
+Now that we're back in our master branch, we'll merge the changes from our new branch. Run the following command:
+
+```bash
+git merge [new_branch_name]
+```
 
 Obviously, replace `[new_branch_name]` with the name of the branch you created.
 
 ---
-template: inverse
-
-## Success!
-
----
 class: center, middle
 
-We'll want to remove our new branch, since we're done with it. Run the following command to do this: 
+.large[
+   Success!
+]
 
-.medium[`git checkout -d [new_branch_name]`]
+---
+
+# Cleaning Up
+
+We'll want to remove our new branch, since we're done with it.
+
+Run the following command to do this:
+
+```bash
+git checkout -d [new_branch_name]
+```
 
 This step is optional, but we'll want to keep our **repository** free from unused / finished branches as a matter of organization.
 
 ---
 class: center, middle
 
-## One last last thing
+### One last last thing...
 
 Let's push our code to Github!
 
-.large[`git push`]
+.large[
+   `git push`
+]
+
+---
+
+# What We've Learned
+
+- What the command line is
+- How to navigate the file system from the CLI
+- What version control is
+- The difference between Git and GitHub
+- How to push code to Github
+- How to manage workflows with branching and merging
 
 ---
 template: inverse
 
-# DONE!
+# Questions?
 
 {% endhighlight %}

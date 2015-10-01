@@ -161,29 +161,7 @@ template: inverse
 ---
 class: center, middle
 
-### First things first...
-
-What actually happens when you submit a form on the web?
-
----
-
-# The Server Side
-
-We already learned that JavaScript is a programming language for writing client-side scripts.
-
-In most cases, when a user submits a form on a web page we want to send that data to server, and likely save it in a database there too.
-
-We can use HTML forms as tools to collect information from users on the **client-side** (their browser) and submit that data to the **server side** (our web server) using the **HTTP protocol**.
-
----
-class: center, middle
-
-![HTTP request diagram](../../public/img/slide-assets/http-request-diagram.svg)
-
----
-class: center, middle
-
-### Souping Up Your Forms with JQuery
+### Souping Up Your Forms with jQuery
 
 jQuery has some special features that make it much easier to work with and enhance HTML forms.
 
@@ -198,8 +176,6 @@ jQuery has special selectors that allow you to easily grab onto form elements, s
 - `:focus`
 - `:selected`
 - `:submit`
-
-.footnote[.red[ * ] You can find a complete list of these selectors on page 342 of your text book.]
 
 ---
 
