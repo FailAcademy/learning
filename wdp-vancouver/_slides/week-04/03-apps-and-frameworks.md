@@ -231,6 +231,8 @@ Models also allow us to apply *rules for modifying data related to itself*.
 <br>
 These elements together provide us with a basic understanding of what we mean when talking about Models: **the 'M' in MVC.**
 
+.footnote[Other examples: Account, booking]
+
 ---
 
 #"V" -> View
