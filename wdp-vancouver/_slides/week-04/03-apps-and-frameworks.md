@@ -84,7 +84,7 @@ class: center, middle
  </body>
 </html>
 ```
-The code inside `<?php ?>` is actually executed by the **server** when the page containing this html is requested! This is different from anything we've seen in the course up until now, and it's key to understanding why php is important.
+The code inside `<?php ?>` is actually executed by the **server** when the page containing this HTML is requested! This is different from anything we've seen in the course up until now, and it's key to understanding why PHP is important.
 <br>
 We're going to learn all about PHP later in the course, so I'll stop there :)
 
@@ -187,7 +187,7 @@ We've seen how the development of AJAX delivered a solution; we've seen how it c
 
 ####Unsolved mysteries
 - What about changing pages, or dealing with links to other content within my application?
-- What about menaging the state of really complicated widgets?
+- What about managing the state of really complicated widgets?
 - Do I always have to manually check for changes to my data and then manually update my HTML if it has?
 - My project is going to be large, how should I organize my code?
 ...
@@ -202,7 +202,7 @@ template: inverse
 class: center, middle
 
 These are some of the questions that Frameworks attempt to provide an answer.
-JQuery gave us convenient abstractions for working with JavaScript's native DOM manupulation methods and also JavaScript's HTTP funcitonality.
+JQuery gave us convenient abstractions for working with JavaScript's native DOM manipulation methods and also JavaScript's HTTP functionality.
 Frameworks attempt to give us useful abstractions for structuring the code that is necessary to support the optimization and organization of our codebase.
 
 .footnote[Terminology: State, Abstraction]
@@ -223,13 +223,14 @@ MVC is an acronym for **"Model", "View", "Controller"**. It's meant to be a help
 
 'Model' loosely refers to the data in your application.
 <br>
-A 'Model' that is commomn to a wide range of applications is the User model.
+A 'Model' that is common to a wide range of applications is the User model.
 <br>
 A User Model is a named collection of properties and methods that relate to individual Users inside your application. for example, a User Model might have name, age, and email properties, and *methods* for changing those values.
 <br>
 Models also allow us to apply *rules for modifying data related to itself*.
 <br>
 These elements together provide us with a basic understanding of what we mean when talking about Models: **the 'M' in MVC.**
+
 ---
 
 #"V" -> View
@@ -242,17 +243,17 @@ For example, For our User Model, we have have a number of associated Views:
 - The user settings view
 <br>
 <br>
-Views are usually composable! Made up of views and sub-views!
+Views are usually *composable!* Made up of views and sub-views!
 
 ---
 
 #"C" - > Controller
 
-'Controller' refers to a specific area in your application, where you;re meant to write code to coordinate the values stored in your Model, with the View that is meant to display them.
+'Controller' refers to a specific area in your application, where you're meant to write code to coordinate the values stored in your Model, with the View that is meant to display them.
 <br>
-Controllers have a number of other charateristics, and the definition if fairly malleable, but for our purposes, it will serve us if we think about controllers as always being **directly associated with a View**.
+Controllers have a number of other characteristics, and the definition if fairly malleable, but for our purposes, it will serve us if we think about controllers as always being **directly associated with a View**.
 <br>
-For example you would define a controller to manage the User settings View. The code in this Controller would be related to managing updating the basic user settings, and it would be named accordingly, eg the User Settings Controller.
+For example you would define a controller to manage the User settings View. The code in this Controller would be related to managing updating the basic user settings, and it would be named accordingly, e.g. the User Settings Controller.
 
 ---
 
@@ -276,7 +277,7 @@ https://en.wikipedia.org/wiki/Comparison_of_JavaScript_frameworks
 
 Visit each of the frameworks mentioned in the previous slide. Browse through the documentation and try to discover the tools that are provided for creating Models, Views and Controllers, and how they are meant to be used together.
 <br>
-You're not expected to produce details or correct analysis, it's more of a discovery, but try to be as thourough as possible, and provide an explaination, in your own words, for each.
+You're not expected to produce details or correct analysis, it's more of a discovery, but try to be as thorough as possible, and provide an explanation, in your own words, for each.
 
 ---
 
@@ -285,17 +286,14 @@ class: center, middle
 http://www.allenpike.com/2015/javascript-framework-fatigue/
 
 ---
+class: center, middle
 
 #Opinionated
 
-
-
 ---
+class: center, middle
 
-#Converntion
-
----
-
+#Conventional
 
 ---
 
