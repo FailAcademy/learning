@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 3 - Instagrid
-due: Monday, October 19th (beginning of class)
+due: Wednesday, October 14th (beginning of class)
 ---
 
 For Project 3, you're going to create a one-page, responsive website that allows a user to search for a hashtag via the Instagram API.

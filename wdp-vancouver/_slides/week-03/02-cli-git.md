@@ -160,6 +160,24 @@ class: center, middle
 ]
 
 ---
+
+#Exercise 1
+Folders are people too.
+<br>
+Write the appropriate command line commands for these written instructions:
+
+- Create 2 folders, one named `Folder1` and one named `Folder2`, in your home directory
+- Inside `Folder1` create 2 files with the extension `.txt`
+- Copy the two files from `Folder1` into `Folder2`
+- Delete one of the files in `Folder1`
+- Delete `Folder2`
+- Rename `Folder1` to `SuperFolder1`
+
+<br>
+
+When we're done, we'll do a group challenge to make sure we have an understanding of these commands.
+
+---
 template: inverse
 
 # Now Let's Demystify Version Control
@@ -505,6 +523,12 @@ Let's push our code to Github!
 - The difference between Git and GitHub
 - How to push code to Github
 - How to manage workflows with branching and merging
+
+---
+
+#Exercise 2
+Visit the learn git branching site and complete as many of the tutorials as possible!
+- [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)
 
 ---
 template: inverse
