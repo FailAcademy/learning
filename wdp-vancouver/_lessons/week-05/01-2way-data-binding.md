@@ -1,8 +1,10 @@
 ---
+
 layout: lesson
 title: 2 Way Data-Binding & Forms
 slides: ['_slides/week-05/01-2way-data-binding.md']
 date: 2015-10-20
+
 ---
 
 ## Pre-Work
