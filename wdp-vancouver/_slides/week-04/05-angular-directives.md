@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Slideshow Title
+# Directives
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -19,9 +19,13 @@ layout: false
 
 # Agenda
 
-1. Introduction
-2. Deep-dive
-3. ...
+1. Daily JS Exercise
+
+---
+
+#Daily JS
+
+
 
 ---
 
