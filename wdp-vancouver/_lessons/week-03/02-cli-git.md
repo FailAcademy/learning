@@ -57,7 +57,7 @@ As well as Git, you'll need to make sure you've installed NodeJS on your system.
 
 ---
 
-#Exercise 1
+## Exercise 1
 
 Write the appropriate command line commands for these written instructions:
 
@@ -68,11 +68,14 @@ Write the appropriate command line commands for these written instructions:
 - Delete `Folder2`
 - Rename `Folder1` to `SuperFolder1`
 
+When we're done, we'll do a group challenge to make sure we have an understanding of these commands.
+
 ---
 
-#Exercise 2
+## Exercise 2
 
-Complete as many exercises as possible here: 
+Complete as many exercises as possible here:
+
 - [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)
 
 ---
