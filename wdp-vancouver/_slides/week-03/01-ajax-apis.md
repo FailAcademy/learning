@@ -229,7 +229,9 @@ Because the JSON data is passed in as object, we are able to access it's propert
 
 # Exercise 1
 
+In this exercise, we're going to make a request to the GitHub API using some of jQuery's Ajax methods.
 
+[See the lesson page](/lesson/ajax-json-and-apis/) for further instructions.
 
 ---
 template: inverse
@@ -307,7 +309,9 @@ $('button').on('click', function() {
 
 # Exercise 2
 
+Let's try chaining another Ajax method to our previous example to ensure we take care of error handling.
 
+[See the lesson page](/lesson/ajax-json-and-apis/) for further instructions.
 
 ---
 template: inverse

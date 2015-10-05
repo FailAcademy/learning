@@ -161,21 +161,11 @@ class: center, middle
 
 ---
 
-#Exercise 1
-Folders are people too.
-<br>
-Write the appropriate command line commands for these written instructions:
+# Exercise 1
 
-- Create 2 folders, one named `Folder1` and one named `Folder2`, in your home directory
-- Inside `Folder1` create 2 files with the extension `.txt`
-- Copy the two files from `Folder1` into `Folder2`
-- Delete one of the files in `Folder1`
-- Delete `Folder2`
-- Rename `Folder1` to `SuperFolder1`
+Let's take the command line for a spin.
 
-<br>
-
-When we're done, we'll do a group challenge to make sure we have an understanding of these commands.
+[See the lesson page](/the-command-line-and-version-control-slides/) for further instructions.
 
 ---
 template: inverse
@@ -526,8 +516,10 @@ Let's push our code to Github!
 
 ---
 
-#Exercise 2
+# Exercise 2
+
 Visit the learn git branching site and complete as many of the tutorials as possible!
+
 - [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)
 
 ---

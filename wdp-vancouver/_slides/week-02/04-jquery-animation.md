@@ -362,7 +362,7 @@ $('#hamburger').on('change', function() {
 
 In this exercise, you're going to use jQuery to create an accordian-style show/hide effect for a basic FAQ list.
 
-[See the lesson page](/lesson/jquery-animation/) for further instructions.
+[See the lesson page](/lesson/animation-with-jquery/) for further instructions.
 
 ---
 template: inverse
@@ -389,7 +389,7 @@ Plugins allow you to create re-usable components for your webpages, and makes it
 
 Your task is to find an example of an interesting **jQuery plugin** and create a demo for your classmates showing how to use it.
 
-[See the lesson page](/lesson/jquery-animation/) for further instructions.
+[See the lesson page](/lesson/animation-with-jquery/) for further instructions.
 
 ---
 
