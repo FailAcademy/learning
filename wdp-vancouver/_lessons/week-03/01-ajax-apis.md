@@ -35,13 +35,13 @@ Read this primer on APIs:
 
 In this exercise, we're going to make a request to the GitHub API using some of jQuery's Ajax methods.
 
-Additionally, we're going to up our jQuery skills by trying out its `$.each()` method. You can find the docs for that method here: http://api.jquery.com/jquery.each/
+Additionally, we're going to up our jQuery skills by trying out its `$.each()` method. You can find the docs for that method here: **http://api.jquery.com/jquery.each/**
 
-First, you're going to add an event handler to the button. This click event will make a call to the GitHub API endpoint that fetches all of your repos: https://api.github.com/users/[YOUR USERNAME]/repos
+First, you're going to add an event handler to the button. This click event will make a call to the GitHub API endpoint that fetches all of Octocat's repos: **https://api.github.com/users/octocat/repos**
 
 You'll likely want to use the `.ajax()` method with a GET request for this, or the `.getJSON()` method.
 
-Next, you're going to use jQuery's `.done()` method with `$.each()` inside of it to loop through each of your repos and append them as list elements to the the <ul> element that already exists in the HTML.
+Next, you're going to use jQuery's `.done()` method with `$.each()` inside of it to loop through each of your repos and append them as list elements to the `<ul>` element that already exists in the HTML.
 
 This is a tricky exercise, but stick with it because it's very cool to see the results!
 
@@ -80,7 +80,7 @@ To do this, you'll need to add `<p class="loading">Loading...</p>` before the `<
 
 The Instagram API requires that we register a "Client" and get a **client_id** to access many of it's API endpoints.
 
-(Some API requests require actual authentication with an **access_token**, but we won't be needing those for Project 2.)
+(Some API requests require actual user-specific authentication with an **access_token**, but we won't be needing those for Project 2.)
 
 Let's create a Client for our Instagram project right now...
 

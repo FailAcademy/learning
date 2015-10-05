@@ -48,7 +48,7 @@ class: center, middle
 
 ### What is it for?
 
-Ajax is often used when submitting web forms and fetching data data from a server, including via third-party APIs.
+Ajax is often used when submitting web forms and fetching data from a server, including via third-party APIs.
 
 ---
 class: center, middle
@@ -354,7 +354,7 @@ class: center, middle
 
 The Instagram API requires that we register a "Client" and get a **client_id** to access many of it's API endpoints.
 
-(Some API requests require actual authentication with an **access_token**, but we won't be needing those for Project 2.)
+(Some API requests require actual user-specific authentication with an **access_token**, but we won't be needing those for Project 2.)
 
 Let's create a Client for our Instagram project right now...
 
