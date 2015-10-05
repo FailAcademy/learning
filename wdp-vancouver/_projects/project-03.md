@@ -26,6 +26,7 @@ To receive a "Pass" grade for this project, your submission will need to satisfy
 Your project must:
 
 - Dynamically fetch photos and populate them in a webpage via the Instagram API based a text string input into a search field
+- Link each returned image to its URL on Instagram (unless undertaking lightbox stretch goal)
 
 **General requirements:**
 
@@ -42,7 +43,7 @@ Your project must:
 
 Your project must:
 
-- Use the HTML5 doctype and semantic HTML5 mark-up
+- Uses the HTML5 doctype and semantic, syntactically-correct HTML5
 - Include all essential elements covered in class (e.g. `<meta charset="utf-8">`)
 
 **CSS/Sass requirements:**
@@ -53,31 +54,33 @@ Your project must:
 - Use a CSS reset
 - Use Sass as a preprocessor, with CSS properly compiled and minified
 - Use the `background` property where appropriate
-- Implement a mobile-first responsive layout using Flexbox
+- Implement a mobile-first responsive layout using Flexbox (no floats)
 - Demonstrate effective use of box model properties
 - Demonstrate effective use of CSS properties for altering the visual display of text (e.g. `font-family`, `font-style`, `text-transform`, etc.)
 - Incorporate custom fonts using `@font-face`
 - Use an icon font
-
-**RWD requirements:**
-
-Your project must:
-
-- Be optimized for 3 screen sizes: mobile, `min-width: 600px`, and `min-width: 1000px`
 
 **JS requirements:**
 
 Your project must:
 
 - Use Ajax to fetch data from an Instagram API endpoint
-- Transition users between UI states, starting where no photos have been returned, and then subsequently transitioning where photos populate the grid
+- Transition users between UI states, starting where no photos have been returned, and then subsequently transitioning where photos populate the grid (incorporating a loading gif)
+
+**RWD requirements:**
+
+Your project must:
+
+- Be responsively designed using a mobile-first approach
+- Be optimized for 3 screen sizes: mobile, `min-width: 600px`, and `min-width: 1000px`
 
 **Stretch goals:**
 
 Want to challenge yourself? Your project could also:
 
 - Incorporate pagination and fetch additional photos via the Instagram API when the "Load More" button is clicked
+- Incorporate a lightbox plugin to display images in their largest format if a user clicks on them
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a link to your github repository containing your project** to [mackenzie@redacademy.com](mailto:mackenzie@redacademy.com).
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to [mandi@redacademy.com](mailto:mandi@redacademy.com).

@@ -91,15 +91,12 @@ We're going to learn all about PHP later in the course, so I'll stop there :)
 ---
 
 Let's get a feeling for client-server communication.
-We'll need voulenteers:
-- PHP enabled server
-- Database
-- Client
-- User
-- Web request
-- Web response
-- Mr. Data
 
+.inline-images[![client-server](/public/img/slide-assets/client-server.jpg)]
+
+We'll need voulenteers.
+
+.footnote[image credit: ng-book]
 ---
 #Who is PHP?
 
@@ -256,6 +253,10 @@ Views are usually *composable!* Made up of views and sub-views!
 Controllers have a number of other characteristics, and the definition if fairly malleable, but for our purposes, it will serve us if we think about controllers as always being **directly associated with a View**.
 <br>
 For example you would define a controller to manage the User settings View. The code in this Controller would be related to managing updating the basic user settings, and it would be named accordingly, e.g. the User Settings Controller.
+
+---
+
+Using this pattern, we shave a way of separating presentation from the underlying data, so we know where to code, when we want to modify one or the other. Want to change the behavior of an image slider, you'll look in the View layer, if we want to change how our user data is organized, we check the Model. Once we're satisifed we pass the data to the Controller, which acts as a go-between from the View and the Model!
 
 ---
 
