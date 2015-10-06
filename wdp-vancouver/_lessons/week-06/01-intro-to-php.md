@@ -29,6 +29,7 @@ Work through the following sections of the [Codeacademy PHP tutorial](https://ww
 - Install PHP and configure a development environment.
 - Use functions to create reusable blocks of DRY code.
 - Distinguish the difference between indexed and associative arrays.
+- Dynamically generate a webpage using `include()` or `require()`.
 
 ---
 
@@ -71,7 +72,11 @@ When you have that working, modify your program to `echo` **FizzBuzz**, for numb
 
 ## Exercise 3
 
-*Exercise TBA...*
+Let's create a function in PHP that allows us to `print_r` our arrays automatically wrapped in `<pre>` tags.
+
+Refer back to the earlier example of how to do this without a function, and think about what you'll need to pass in as a parameter.
+
+Once you build you function, try it out on the `$months` array.
 
 ---
 
