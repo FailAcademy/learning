@@ -165,7 +165,7 @@ class: center, middle
 
 Let's take the command line for a spin.
 
-[See the lesson page](/the-command-line-and-version-control-slides/) for further instructions.
+[See the lesson page](/lesson/the-command-line-interface-and-version-control/) for further instructions.
 
 ---
 template: inverse
@@ -279,7 +279,7 @@ Be sure to leave a message about what you're committing, so others will know wha
 Run the following command:
 
 .medium[
-   `git commit -m "Initialize new repository!"`
+   `git commit -m "Initialize new repository."`
 ]
 
 ---
@@ -487,7 +487,7 @@ We'll want to remove our new branch, since we're done with it.
 Run the following command to do this:
 
 ```bash
-git checkout -d [new_branch_name]
+git branch -d [new_branch_name]
 ```
 
 This step is optional, but we'll want to keep our **repository** free from unused / finished branches as a matter of organization.
@@ -505,6 +505,14 @@ Let's push our code to Github!
 
 ---
 
+# Exercise 2
+
+Visit the learn git branching site and complete as many of the tutorials as possible!
+
+- [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)
+
+---
+
 # What We've Learned
 
 - What the command line is
@@ -514,13 +522,6 @@ Let's push our code to Github!
 - How to push code to Github
 - How to manage workflows with branching and merging
 
----
-
-# Exercise 2
-
-Visit the learn git branching site and complete as many of the tutorials as possible!
-
-- [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)
 
 ---
 template: inverse

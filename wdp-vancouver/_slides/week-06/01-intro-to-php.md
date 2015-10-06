@@ -23,9 +23,9 @@ layout: false
 2. Running PHP locally
 3. Expressions, variables, and comments
 4. Operators and conditionals
-5. Arrays
-6. Loops
-7. Functions
+5. Arrays and arrays
+6. Functions
+7. Including and requiring files
 
 ---
 
@@ -151,7 +151,7 @@ Time to try out some PHP:
 
 We want to make sure errors are displayed in case we make a goof in our syntax (will give us a hint about the mistake and the line number).
 
-In you `php.ini` file, you want to:
+In you `php.ini` file (we'll have to check `phpInfo` to find it), you want to:
 
 - set `error_reporting = E_ALL`
 - set `display_errors = On`
@@ -194,6 +194,8 @@ $question = 'What\'s your name?';
 ```
 
 Strings must be wrapped in quotes (single or double), and quotes within a string must be "escaped" with a backslash.
+
+On style...PHP also tends to favour underscores in variable names, as opposed to camelCase in JS.
 
 ---
 
@@ -331,6 +333,8 @@ We can also compare values and evaluate their result:
 - `0` is a falsey value, but a negative integer isn't
 - `==` tests value only, `===` tests strict equality
 
+[More on truthy and falsey values in the PHP docs...](http://php.net/manual/en/types.comparisons.php)
+
 ---
 
 # Conditional Statements
@@ -381,7 +385,175 @@ template: inverse
 
 ---
 
+# Creating Arrays
 
+Just like JS, PHP has arrays that allow us to store multiple values in a variable.
+
+But the basic syntax for arrays in PHP is a bit different:
+
+```php
+$months = array( 'January', 'February', 'March', 'April' );
+```
+
+However, in PHP 5.4+ you can use JS-style syntax for arrays:
+
+```php
+$months = ['January', 'February', 'March', 'April'];
+```
+
+---
+
+# Working with Arrays
+
+Arrays in PHP are **zero-indexed** just like JS.
+
+The syntax to get a specific item in an array should be familiar:
+
+```php
+$months = ['January', 'February', 'March', 'April'];
+
+$single_month = $months[1];
+```
+
+What will the value of `$single_month` be?
+
+---
+
+# Working with Arrays
+
+We can print out the content of an array in PHP using the following functions:
+
+```php
+echo '<pre>';
+var_dump($months);
+echo '</pre>';
+
+echo '<pre>';
+print_r($months);
+echo '</pre>';
+```
+
+Note that you'll probably want to wrap the output of `var_dump` or `print_r` in `<pre>` tags before you echo it out in your browser.
+
+---
+class: center, middle
+
+.large[
+  Jargon alert!
+]
+
+---
+
+# Modifying Arrays
+
+Just like JS, we can easily modify arrays after we create them.
+
+```php
+$months = array( 'January', 'February', 'March', 'April' );
+```
+
+To **add** a new month to the **end** of the array:
+
+```php
+array_push( $months, 'May' );
+
+// or...
+
+$months[] = 'May';
+```
+
+---
+
+# Modifying Arrays
+
+To **remove** the last item from the **end**:
+
+```php
+array_pop( $months );
+```
+
+And if we store `array_pop()` in a variable, we can re-use the removed value later on if we need to:
+
+```php
+$removed_month = array_pop( $months );
+```
+
+---
+
+# Modifying Arrays
+
+To **remove** the **first item** from the array:
+
+```php
+$removed_month = array_shift( $months );
+```
+
+To **add** a new item **to the beginning** of the array:
+
+```php
+$removed_month = array_unshift( $months );
+```
+
+And to **remove** an item at a particular **index**:
+
+```php
+unset( $months[2] );
+```
+
+---
+class: center, middle
+
+.large[
+  There are DOZENS of functions related to arrays in PHP...you don't need to memorize them all.
+]
+
+---
+
+# Associative Arrays
+
+Associative arrays are *sort of* like objects in JS (not exactly though...).
+
+```php
+$person = array(
+  'gender' => 'female',
+  'name' => 'Mandi'
+);
+```
+
+Like objects in JS, we specify a **key** and a **value** when creating an associative array in PHP.
+
+---
+
+# JSON to Array
+
+PHP also allows us to take a JSON-formatted string and convert into an array:
+
+```js
+{
+  "gender": "female",
+  "name": "Mandi"
+}
+```
+
+```php
+
+$json = file_get_contents( 'my-data.json' );
+$person = json_decode( $json, true ); // true makes it an associative array
+```
+
+Magic!
+
+---
+
+# Mini-Exercise
+
+Let's get organized before we move on...
+
+Create a `sandbox` folder inside or your `htdocs` folder and move your `index.php` file in there.
+
+Now checkout http://localhost:8888/sandbox/ ... do you see your page there?
+
+Typically we'll want to keep each project that we run on MAMP inside of it's own folder.
 
 ---
 template: inverse
@@ -396,9 +568,9 @@ Just like JS, while loops are helpful when you don't know how many times it need
 
 ```php
 $i = 0;
-$months = array( 'January', 'February', 'March' );
+$months = array( 'January', 'February', 'March', 'April' );
 
-while ( $i < 5 ) {
+while ( $i < 4 ) {
    echo $months[$i];
    $i++;
 }
@@ -418,11 +590,11 @@ for ( $i = 0; $i < 10; $i++ ) {
 }
 ```
 
-Alternatively:
+Back to our months...
 
 ```php
-$months = array( 'January', 'February', 'March' );
-$total = count($months);
+$months = array( 'January', 'February', 'March', 'April' );
+$total = count( $months );
 
 for ( $i = 0; $i < $total; $i++ ) {
 	echo '<p>' . $months[$i] . '</p>';
@@ -438,7 +610,7 @@ for ( $i = 0; $i < $total; $i++ ) {
 Foreach loops provide a very easy way to iterate over all the items in an array:
 
 ```php
-$months = array( 'January', 'February', 'March' );
+$months = array( 'January', 'February', 'March', 'April' );
 
 foreach ( $months as $month ) {
    echo "<p>$month</p>";
@@ -461,6 +633,8 @@ foreach ( $teachers as $skill => $name ) {
 	echo '<p>' . $name . ' teaches ' . $skill . '</p>';
 }
 ```
+
+This is a very handy construct for dynamically generating the options and values in a `<select>` menu.
 
 ---
 
@@ -501,10 +675,190 @@ template: inverse
 
 ---
 
+# Functions
+
+- Remember that the easiest way to think of functions is that they are reusable chunks of code
+- A function should do one thing, it should not be 50 lines long (code smell!)
+
+---
+
+# Functions in PHP
+
+The syntax for functions in PHP is very similar to JS:
+
+```php
+function say_hello( $name ) {
+
+  // you code goes here...
+
+  // will probably return something here...
+  return "Hi there $name!";
+
+}
+
+$greeting = say_hello( 'Joe' );
+
+echo $greeting;
+```
+
+---
+class: center, middle
+
+.large[
+  Try adding that code to your `index.php` file...
+]
+
+---
+class: center, middle
+
+.large[
+  Now try running calling the function without an argument...
+]
+
+---
+
+# Functions in PHP
+
+PHP allows us to provide default values for our function parameters in case the user doesn't provide one:
+
+```php
+function say_hello( $name = 'Mandi'  ) {
+  return "Hi there $name!";
+}
+
+// Now try calling the function without the argument...
+
+say_hello();
+```
+
+---
+class: center, middle
+
+### Functions and Scope
+
+In PHP, every function has its own local scope.
+
+Variables defined outside of functions are **not** automatically accessible within them.
+
+---
+
+# Exercise 3
+
+Let's create a function in PHP that allows us to `print_r` our arrays automatically wrapped in `<pre>` tags.
+
+Refer back to the earlier example of how to do this without a function, and think about what you'll need to pass in as a parameter.
+
+Once you build you function, try it out on the `$months` array.
+
+---
+template: inverse
+
+# Includes & Requires
+
+---
+class: center, middle
+
+.large[
+  **Problem:** You're creating a multi-page website and you need to add new stylesheet, script file, etc. to every page...
+]
+
+---
+
+# Including & Requiring
+
+PHP allows us to break our web pages into fragments, and dynamically include these fragments in each page:
+
+```php
+// in your header.php file
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+  </head>
+```
+
+```php
+// in your index.php file
+
+include( 'header.php' );
+
+  <body>
+    <p>My content...</p>
+  </body>
+</html>
+```
+
+---
+
+# Including & Requiring
+
+Which enables...
+
+```php
+// in your index.php file
+
+include( 'header.php' );
+
+  <body>
+    <p>My content...</p>
+  </body>
+</html>
+```
+
+```php
+// in your about.php file
+
+include( 'header.php' );
+
+  <body>
+    <h1>My About Page</h1>
+    <p>The about content...</p>
+  </body>
+</html>
+```
+
+---
+class: center, middle
+
+.inline-images[
+  ![Mind blown](/public/img/slide-assets/mind-blown.gif)
+]
+
+---
+class: center, middle
+
+.large[
+  Much DRYer!
+]
+
+---
+class: center, middle
+
+.large[
+  Try it out!
+]
+
+---
+
+# Include vs. Requires
+
+We can also use `require()` ... but it the file is missing this will trigger a fatal error (i.e. white screen of death)
+
+And we also have:
+
+- `include_once()` (we can literally only include it once, so you won't be able to include the fragement twice on the same page)
+- `require_once()` (is more useful when you start dealing with classes in OOP...because you only want the file to be required one time for the lifecycle of this project)
+
+---
+
 # What We've Learned
 
-- Thing 1
-- Thing 2
+- What PHP is and how to run it locally
+- How PHP syntax compares to JS
+- How to create arrays, loops, and functions in PHP
+- How to use `include()` and `require()` and save yourself a lot of copying and pasting from now on...
 
 ---
 template: inverse

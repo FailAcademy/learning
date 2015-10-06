@@ -17,10 +17,10 @@ Work through the following sections of the [Codeacademy PHP tutorial](https://ww
 
 ## Learning Objectives
 
-- Dynamically generate a webpage using `include` or `require`.
 - Build and interact with multi-dimensional arrays.
-- Explore PHP built-in functions such as `rand`, `range`, and `date`.
+- Explore PHP functions such as `rand`, `range`, and `date`.
 - Implement advanced techniques for dealing with arrays of data.
+- Explore alternative syntax for conditional statements and loops.
 
 ---
 
@@ -34,19 +34,13 @@ Work through the following sections of the [Codeacademy PHP tutorial](https://ww
 
 ## Exercise 1
 
-*Exercise TBA...*
+Let's use the PHP `date()` function to convert the dates as they appear in the JSON file to be be formatted as pictured in the design comp on our blog.
 
 ---
 
 ## Exercise 2
 
-*Exercise TBA...*
-
----
-
-## Exercise 3
-
-*Exercise TBA...*
+Go to the [Array Functions](http://php.net/manual/en/ref.array.php) page in the PHP docs and investigate one of the many available array methods to report back to the class...
 
 ---
 
