@@ -151,7 +151,7 @@ Time to try out some PHP:
 
 We want to make sure errors are displayed in case we make a goof in our syntax (will give us a hint about the mistake and the line number).
 
-In you `php.ini` file (we'll have to check `phpInfo` to find it), you want to:
+In you `php.ini` file (we'll check `phpInfo` to find it):
 
 - set `error_reporting = E_ALL`
 - set `display_errors = On`
@@ -524,6 +524,27 @@ Like objects in JS, we specify a **key** and a **value** when creating an associ
 
 ---
 
+# Arrays in Arrays!
+
+PHP also lets us create arrays within our arrays.
+
+These are know as **multi-dimensional** arrays:
+
+```php
+$people = array(
+  array(
+    'gender' => 'female',
+    'name' => 'Mandi'
+  ),
+  array(
+    'gender' => 'male',
+    'name' => 'Mackenzie'
+  )
+);
+```
+
+---
+
 # JSON to Array
 
 PHP also allows us to take a JSON-formatted string and convert into an array:
@@ -536,12 +557,16 @@ PHP also allows us to take a JSON-formatted string and convert into an array:
 ```
 
 ```php
-
 $json = file_get_contents( 'my-data.json' );
-$person = json_decode( $json, true ); // true makes it an associative array
+
+// "true" makes it an associative array
+$person = json_decode( $json, true );
+
+print_r( $person );
+// output: Array ( [gender] => female [name] => Mandi )
 ```
 
-Magic!
+*Magic!*
 
 ---
 
@@ -722,7 +747,7 @@ class: center, middle
 PHP allows us to provide default values for our function parameters in case the user doesn't provide one:
 
 ```php
-function say_hello( $name = 'Mandi'  ) {
+function say_hello( $name = 'Mandi' ) {
   return "Hi there $name!";
 }
 
@@ -759,7 +784,7 @@ template: inverse
 class: center, middle
 
 .large[
-  **Problem:** You're creating a multi-page website and you need to add new stylesheet, script file, etc. to every page...
+  **Problem:** You're creating a multi-page website and you need to add a new stylesheet, script file, etc. to every page...
 ]
 
 ---

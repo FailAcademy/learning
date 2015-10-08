@@ -46,7 +46,9 @@ Go to the [Array Functions](http://php.net/manual/en/ref.array.php) page in the 
 
 ## Lab Activity
 
-*Lab activity TBA...*
+Today we'll use our lab time to wrap building our Borrowed Borowitz site.
+
+Incorporate some of what you learned in class today about PHP's **built-in functions**, **alternative syntax**, and **handling arrays** when putting the finishing touches on the blog.
 
 ---
 
