@@ -82,7 +82,32 @@ Once you build you function, try it out on the `$months` array.
 
 ## Lab Activity
 
-*Lab activity TBA...*
+For the next two days, we'll spend lab time building a pseudo-blog in PHP called "Borrowed Borowitz" (the sample content for this project was "borrowed" from the Borowitz Report so it's probably **not** a good idea to push this copyrighted material to GitHub when you're done!).
+
+We're calling this a "pseudo-blog" because you won't actually be creating a database or a UI for adding new content to the site (phew!). You will instead parse some provided post-like JSON-formatted data in PHP to create a site that looks like a blog.
+
+To get started, **[download the lab files](/public/files/labs/php-lab.zip)**.
+
+Inside the lab folder, you'll find comps illustrating what the home page and about page should look like, and a zip file containing a boilerplate file structure to help get you started.
+
+The only file in the boilerplate that contains an code is the `posts.json` file&mdash;this is the file from which you will be dynamically displaying your "blog" content.
+
+What you need to do to complete this lab:
+
+- Create a blog index page to display all the posts (by parsing the JSON data in PHP)
+- Create an About page for the blog
+- Dynamically include a `header.php`, `sidebar.php`, and `footer.php` file in each of the site's pages (instead of including this mark-up statically on each page)
+- Format the post data as per the design comp (e.g. posts will be displayed in reverse chronological order, categories name will be capitalized, and dates will be converted from Unix time to human-readble time)
+- Abstract the functions you create into a `functions.php` file, and `require` it where needed (views are dumb...we don't want any logic in our views!)
+- Adequately reflect the designer's vision for this site
+
+**Hint!** You can include the Roboto font on your site by adding this snippet to the `<head>` element:
+
+```html
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic">
+```
+
+**Extra hint!** The content area is `1000px` wide.
 
 ---
 

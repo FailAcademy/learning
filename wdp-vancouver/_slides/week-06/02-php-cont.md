@@ -68,6 +68,27 @@ range('a', 'f'); // array( 'a', 'b', 'c', 'd', 'e', 'f' );
 ```
 
 ---
+
+# Your PHP Toolbox
+
+PHP is also a champ when it comes to formatting text for us.
+
+You can convert a string of text to all lower case letters:
+
+```php
+$my_string = 'Hello There!';
+echo strtolower( $my_string ); // output: hello there!
+```
+
+Or convert the first letter of every word in a string to uppercase:
+
+```php
+$my_string = 'hello there!';
+echo ucwords( $my_string ); // output: Hello There!
+
+```
+
+---
 class: center, middle
 
 .large[
@@ -114,7 +135,7 @@ template: inverse
 
 # Check Truthy/Falsey
 
-PHP also makes it easy for us to check for truthy and falsey.
+PHP also makes it easy to check for truthiness and falsiness.
 
 We can use `isset()` to check if a variable has a value including (`false`, `0`, or an empty string), not `NULL`:
 
@@ -134,7 +155,7 @@ It will return `true` if the variable exists, and `false` otherwise.
 
 # Check Truthy/Falsey
 
-The `empty()` function checks if the variable has an empty value empty string, `0`, `NULL`, or `false`.
+The `empty()` function checks if the variable is an empty string, `0`, `NULL`, or `false`.
 
 ```php
 $my_var = false;
@@ -206,20 +227,26 @@ template: inverse
 
 # Ternary Operators
 
-Ternary operators are like shorthand for `if/else`:
+Ternary operators are like shorthand for `if/else`.
+
+So this:
 
 ```php
 $username = 'mandi';
 
-// This...
+$message = isset( $username ) ? 'Hello ' . $username : 'Hello guest';
+```
+
+Is the same as this:
+
+```php
+$username = 'mandi';
+
 if ( isset( $username ) ) {
   $message = 'Hello ' . $username;
 } else {
   $message = 'Hello guest';
 }
-
-// Is the same as this...
-$message = isset( $username ) ? 'Hello ' . $username : 'Hello guest';
 ```
 
 ---
@@ -230,23 +257,25 @@ $message = isset( $username ) ? 'Hello ' . $username : 'Hello guest';
 
 - Makes coding simple if/else logic quicker
 - Makes code shorter (less typing)
-- So job security...?
+- So...job security!?
 
 **Downsides?**
 
 - Less readable
-- Can be a bit confusing when the get complext
+- Can be a bit confusing when they get complex
 
 ---
 template: inverse
 
-# Handling Arrays Like a Boss
+# Handling Arrays in PHP Like a Boss
 
 ---
 
 # Arrays &harr; String
 
-PHP provides us with some functions for converting arrays to strings and vice versa:
+PHP provides us with some functions for converting arrays to strings and vice versa.
+
+And these functions happen to have awesome names...
 
 - `implode()`
 - `explode()`
@@ -261,7 +290,7 @@ To convert array items into a comma-separated string, use the `implode()` functi
 $skills = array( 'html', 'css', 'js', 'php' );
 $comma_separated = implode(',', $array);
 
-echo $comma_separated; // html,css,js,php
+echo $comma_separated; // output: html,css,js,php
 ```
 
 Check out the [implode docs](http://php.net/manual/en/function.implode.php).
@@ -286,17 +315,15 @@ Check out the [explode docs](http://php.net/manual/en/function.explode.php).
 
 # Sorting by a Key's Value
 
-This is getting really fancy...but you'll need for your lab assignment...
+This is getting really fancy, but you'll need for your lab activity...
 
-To sort an associative array based on the value of particular key:
+To sort a multi-dimensional array based on the value of particular key, you can use `usort` with an anonymous callback function (in PHP 5.3+):
 
 ```php
 usort($blog_posts, function($a, $b) {
   return $a['date'] - $b['date'];
 });
 ```
-
-http://stackoverflow.com/questions/2699086/sort-multi-dimensional-array-by-value
 
 ---
 
