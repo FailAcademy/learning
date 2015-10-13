@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Sass (CSS pre-processors)
+title: Sass / CSS Pre-processors
 slides: ['_slides/week-03/04-sass.md']
 date: 2015-10-08
 ---
