@@ -102,10 +102,26 @@ template: inverse
 # WordPress Tour
 
 ---
+class: center, middle
 
-# Components of WP
+.large[
+   **WP Components**
+]
+<br /><br />
+.inline-images[
+   ![WP Database and Core](/public/img/slide-assets/wp-db-core-concept.svg)
+]
 
-Diagram that conceptualizes a WP install...(core files, database, back end, front end).
+---
+class: center, middle
+
+.large[
+   **WP Components**
+]
+<br /><br />
+.inline-images[
+   ![WP Front and Back Ends](/public/img/slide-assets/wp-front-back-concept.svg)
+]
 
 ---
 
@@ -137,9 +153,25 @@ This is where you'll keep all of the code and content that's specific to your si
 # WordPress Dashboard
 
 - Settings
-- Users
+   - General, Reading, Discussion, and Permalinks
+- Users ([Roles and Capabilities](https://codex.wordpress.org/Roles_and_Capabilities))
 - Appearance
+   - Themes, Customize, Widgets, and Menus
 - Plugins
+
+---
+class: center, middle
+
+.large[
+   Don't edit your theme or plugin files with the built-in Editor...
+]
+
+---
+class: center, middle
+
+.large[
+   And don't let other people do that either!!!
+]
 
 ---
 
@@ -150,13 +182,6 @@ This is where you'll keep all of the code and content that's specific to your si
 - Comments
 - Pages
 - Media
-
----
-class: center, middle
-
-.large[
-   Permalinks?
-]
 
 ---
 class: center, middle
@@ -223,15 +248,29 @@ class: center, middle
 class: center, middle
 
 .large[
+   Child vs. Parent Themes?
+]
+
+---
+class: center, middle
+
+.large[
    Themes vs. Theme Frameworks?
 ]
 
 ---
 class: center, middle
 
-### A Word on Themes & Plugins
+### Themes & Plugins PSA
 
 Quality matters! Poorly-written code in plugins and themes in one of the biggest ways WP gets hacked
+
+---
+class: center, middle
+
+.inline-images[
+   ![WordPress security](/public/img/slide-assets/wp-secure.jpg)
+]
 
 ---
 
@@ -256,30 +295,101 @@ The rest is up to you!
 
 ---
 
-# Beyond the Basics
+# Theme Description
 
-- `bloginfo()`
-- `functions.php`
-- `screenshot.png`
+At the top of your `style.css` file:
+
+```css
+/*
+Theme Name: RED Starter Theme
+Theme URI: http://underscores.me/
+Author: RED Academy
+Author URI: http://www.redacademy.com/
+Description: A WordPress start theme for RED Academy students.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+```
 
 ---
 
 # The WordPress Loop
 
+A basic implementation of the famous **WordPress loop**:
+
 ```php
-// The Loop
-if (have_posts()) : while (have_posts()) : the_post();
-...
-endwhile; else:
-...
-endif;
+<?php if ( have_posts() ) : ?>
+
+   <?php while ( have_posts() ) : the_post(); ?>
+
+      <h2><?php the_title(); ?></h2>
+      <?php the_content(); ?>
+
+   <?php endwhile; ?>
+
+   <?php the_posts_navigation(); ?>
+
+<?php else : ?>
+
+   <h2>Nothing found!</h2>
+
+<?php endif; ?>
 ```
+
+You will likely (and should!) see something very similar to this in any theme's `index.php` file.
 
 ---
 
 # In Plain English
 
-Adapted from Digging into WordPress (p. 68)...
+*What's happening in the loop...*
+
+- First we check to makes sure we have posts
+- Then we begin the loop (it will cycle however many times we've set in **Settings > Reading**)
+- We'll show the title of the post and it's full content
+- Now we'll end the loop
+- If more posts are available we'll show pagination links
+- If no posts were found we'll tell people and wrap it up
+
+---
+
+# Things To Do in the Loop
+
+- `the_title()` displays the title of each post
+- `the_permalink()` displays the permalink URL for each post
+- `the_ID()` displays the ID of each post
+- `the_author()` displays the author name for each post
+
+*These are examples of template tags in WordPress.*
+
+---
+
+# Template Tags!
+
+A template tag instructs WP to **do** or **get** something.
+
+In your `header.php` files, you may see something like this:
+
+```php
+<h1><?php bloginfo('name'); ?></h1>
+```
+
+The `bloginfo()` tag retrieves data you saved on in the WP admin area.
+
+In the example here, the word `name` inside of the single quotes instructs the tag to **get the blog's site name**. This is called a parameter.
+
+---
+
+# Template Tags!
+
+As it turns out, the `bloginfo()` template tag is very handy for retrieving information about our WP sites:
+
+https://codex.wordpress.org/Function_Reference/bloginfo
+
+More on template tags here:
+
+https://codex.wordpress.org/Template_Tags
 
 ---
 
@@ -289,9 +399,9 @@ Let's create our very first (and a very basic) WordPress theme.
 
 Create a new directory in `wp-content/themes/` and in it save an appropriately formatted `style.css` file, and an `index.php` file.
 
-Take the provided HTML template and place its content in `index.php`. Replace the site title, description, and charset with WP template tags so this information is dynamically gathered from your site's database.
+Take the **[provided HTML template](/public/files/exercises/wp-first-theme.zip)** and place its HTML content in `index.php`. Replace the site title, description, and charset with WP template tags so this information is dynamically gathered from your site's database.
 
-Lastly, enqueue you your stylesheet in your `functions.php` file.
+But whoops! How can we link up the `style.css` file now that it's path is broken? Try adding the loop too!
 
 ---
 
