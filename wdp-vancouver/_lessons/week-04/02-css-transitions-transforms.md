@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: CSS3 Transitions / Transformations
-slides: ['_slides/week-04/03-css-transitions-transforms.md']
+slides: ['_slides/week-04/02-css-transitions-transforms.md']
 date: 2015-10-14
 ---
 
