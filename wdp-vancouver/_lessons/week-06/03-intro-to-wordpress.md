@@ -35,7 +35,7 @@ date: 2015-10-28
 
 Let's install Wordpress locally:
 
-1. [Download Wordpress](https://wordpress.org/download/)
+1. [Download WordPress](https://wordpress.org/download/)
 2. Unzip your download and move it to your `htdocs` folder (rename the unzipped folder if you like)
 3. Go to phpMyAdmin (via MAMP) and create a new database
 4. Rename `wp-config-sample.php` to `wp-config.php` and fill in your database name and MAMP credentials
@@ -59,15 +59,29 @@ Let's create our very first (and a very basic) WordPress theme.
 
 Create a new directory in `wp-content/themes/` and in it save an appropriately formatted `style.css` file, and an `index.php` file.
 
-Take the provided HTML template and place its content in `index.php`. Replace the site title, description, and charset with WP template tags so this information is dynamically gathered from your site's database.
+Take the **[provided HTML template](/public/files/exercises/wp-first-theme.zip)** and place its HTML content in `index.php`. Replace the site title, description, and charset with WP template tags so this information is dynamically gathered from your site's database.
 
-Lastly, enqueue you your stylesheet in your `functions.php` file.
+But whoops! How can we link up the `style.css` file now that it's path is broken? Try adding the loop too!
 
 ---
 
 ## Lab Activity
 
-*Lab activity TBA...*
+Today's lab is dedicated to getting comfortable with the WordPress admin area and WP-style PHP before we jump into custom theming tomorrow.
+
+First, if you're not familiar with the ins and outs of the WP admin area yet, you'll want to work through this Pluralsight course:
+
+- [Your First Day with WordPress CMS](http://www.pluralsight.com/courses/your-first-day-wordpress-cms-1832)
+
+Next, start wrapping your head around how WordPress uses PHP with this video:
+
+- [Zac Gordon: PHP for WordPress](http://wordpress.tv/2015/09/20/zac-gordon-php-for-wordpress/)
+
+Finally, if you're a rockstar and blast through the first two tasks, check out this video on the Underscores starter theme (as we'll be using a "fork" of Underscores to build out Project 5):
+
+- [Morten Rand-Hendriksen: Building Themes From Scratch Using Underscores (_S)](http://wordpress.tv/2015/06/09/morten-rand-hendriksen-building-themes-from-scratch-using-underscores-_s/)
+
+Be sure to spend some time with the WordPress admin area adding content, installing plugins, and generally familiarizing yourself with what's there!
 
 ---
 
