@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Two-way Databinding and Forms
+title: Two-way Data-binding and Forms
 ---
 
 {% highlight html %}

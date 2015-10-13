@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Angular $http Service and AJAX Slides
+title: Angular $http Service and Ajax Slides
 ---
 
 {% highlight html %}

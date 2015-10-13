@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Angular's $http Service & AJAX
+title: Angular's $http Service & Ajax
 slides: ['_slides/week-05/05-http-ajax.md']
 date: 2015-10-23
 ---
@@ -43,7 +43,7 @@ date: 2015-10-23
 
 ## Lab Activity
 
-*Lab activity TBA...*
+Today's lab will be dedicated to finishing up Project 4.
 
 ---
 
