@@ -19,16 +19,394 @@ layout: false
 
 # Agenda
 
-1. Introduction
-2. Deep-dive
-3. ...
+1. Hooks (aka actions and filters)
+2. Your theme's `functions.php` file
+3. Using a functionality plugin
+4. Debugging tips
+5. WP + Git
+
+---
+template: inverse
+
+# Hooks: Actions & Filters
+
+---
+class: center, middle
+
+.large[
+   First, some vocabulary words...
+]
+
+---
+class: center, middle
+
+### The WordPress Page Lifecycle
+
+A page life cycle is nothing more than a combination of the events that take place from when a browser requests a page to when the server returns the page to the browser.
+
+---
+class: center, middle
+
+.large[
+   **[This diagram.](/public/img/slide-assets/wp-core-load-lifecycle.png)**
+]
+
+---
+class: center, middle
+
+### Hooks
+
+Hooks enable us to literally **hook into parts of the WordPress page lifecycle** to retrieve, insert, or modify data, or they allow us to take certain actions behind the scenes.
+
+There are **two types of hooks** in WP...
+
+---
+class: center, middle
+
+### Actions
+
+Actions are **events in the WordPress page lifecycle** when certain things have occurred,certain resources are loaded, certain facilities are available, and, depending on how early the action has occurred, some things have yet to load.
+
+---
+class: center, middle
+
+### Filters
+
+Filters are functions that WordPress **passes data through during certain points of the page lifecycle**.
+
+They are primarily responsible for intercepting, managing, and returning data before rendering it to the browser or saving data from the browser to the database.
+
+---
+class: center, middle
+
+.large[  
+   **Huh?**
+]
+
+---
+
+# What's the Difference?
+
+Actions                                      | Filters*
+-------------------------------------------- | ------------------------------------
+Uses when something has to be **added/done** | Used when something has to be **changed**
+Declared with `do_action()`                  | Declared with `apply_filters()`
+Used with `add_action()`                     | Used with `add_filter()`
+
+.footnote[.red[* ] A function that grabs onto a filter must `return` something!]
+
+---
+
+# Difference = Use Cases
+
+**Filters:**
+
+- change something you're pulling out of WP (e.g. the content)
+- Change something you're putting in the WP database
+
+**Actions:**
+
+- Tying into existing WP processes, like saving a post or change a post status
+- Add an action to your plugin/theme to allow other devs to manipulate it without hacking
+
+---
+
+# Why Do We Need Them?
+
+Without actions and filters, we would need to hack themes, plugins, and the WordPress core to change the way things are displayed or add/remove functionality from our WP sites.
+
+.inline-images[
+   ![Don't hack core](/public/img/slide-assets/wp-hack-core.jpg)
+]
+
+---
+class: center, middle
+
+### Basic Hook Anatomy<br /><br />
+
+.inline-images[
+   ![Hook anatomy](/public/img/slide-assets/wp-hook-anatomy.svg)
+]
+
+---
+
+# An Example
+
+What if we wanted to remove the "Editor" links from the Appearance and Plugins sub-menus so no internal end user can mess around with them?
+
+```php
+// Remove "Editor" links from sub-menus
+
+function leredbread_remove_submenus() {
+	remove_submenu_page( 'themes.php', 'theme-editor.php' );
+	remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
+}
+add_action( 'admin_init', 'leredbread_remove_submenus', 102 );
+```
+
+The the number is the **priority** number. The priority is an optional integer value based on a scale of `1` to `999` that determines the priority of order for functions tied to that specific hook.
+
+---
+
+# Exercise 1
+
+Time to learn more about WP actions and filters!
+
+You'll be assigned one of the following hooks to investigate... see the [lesson page](/lesson/wordpress-functions-hooks-debugging/) for more details.
+
+Specifically, figure out if your assigned hooks is an action or filter? What does it do? When does it fire or what does it modify? What is it good for?
+
+Provide an example of it's usage too!
+
+---
+class: center, middle
+
+.large[
+   How and where do we use these things?
+]
+
+---
+template: inverse
+
+# functions.php
+
+---
+class: center, middle
+
+### Theme Functions
+
+The `functions.php` file is like a little WordPress plugin inside your theme (and specifically for your theme).
+
+---
+
+# What's It For?
+
+- You can use it to call WordPress functions
+- You can define your own functions in there too
+- You can include other PHP files using `include()` or `require()` in it
+
+---
+class: center, middle
+
+functions.php                                              | Separate Plugin
+---------------------------------------------------------- | -------------------------------------------------
+requires no unique header text                             | requires specific, unique header text
+stored in **wp-content/themes** in a theme's sub-directory | stored in **wp-content/plugins** in a sub-directory
+executes only when in the active theme's sub-directory     | only executes on page load when activated
+applies only to that theme                                 | applies to all themes
+can have many blocks of code used for different purposes   | should have a single purpose (e.g SEO)
+
+---
+
+# What Goes In There?
+
+If you need to use a hook to modify some behaviour in your theme, it needs to go in `functions.php` (although we're going to qualify that in a bit...).
+
+Anything you need to help bootstrap your theme and its features into existence should go in there.
+
+For example, from the `redstarter` theme:
+
+```php
+function red_starter_scripts() {
+	wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
+}
+add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
+```
+
+---
+
+# Prefixing Functions
+
+**Play it safe, prefix all the things!**
+
+Anything youcreate in the global namespace has the potential to conflict with a theme, another plugin, and WordPress core itself.
+
+```php
+// This:
+function red_starter_scripts() {
+	wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
+}
+
+// Is better than this:
+function scripts() {
+	wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
+}
+```
+
+---
+class: center, middle
+
+.large[
+   **PSA!**
+]
+
+---
+class: center, middle
+
+.large[
+   &#8220;Just paste it into your functions.php file...&#8221;
+]
+
+---
+class: center, middle
+
+.large[
+   Wrong! Sooo wrong.
+]
+
+---
+class: center, middle
+
+### Keeping It Organized
+
+This is largely a matter of personal preference, but let's do ourselves a favour and plan to keep our code organized right from the get-go...
+
+---
+
+# File Organization
+
+You'll see in `redstarter` that basic theme bootstrapping functions are in `functions.php` (e.g. adding theme support for menus, enqueuing stylesheets and scripts, etc.).
+
+BUT all other functions are abstracted into their own PHP files, then required at the bottom of `functions.php`...
+
+```php
+// All of the functions.php stuff above...
+
+// Custom template tags for this theme.
+require get_template_directory() . '/inc/template-tags.php';
+
+// Custom functions that act independently of the theme templates.
+require get_template_directory() . '/inc/extras.php';
+```
+
+---
+
+# Exercise 2
+
+Let's head over the `/inc/extras.php` file in our starter theme and add two functions (with the appropriate hooks) to do the following:
+
+1. Change the logo on the WP login screen to be Le Red Bread's logo
+2. Update the URL that the logo points to be the site's homepage URL (instead of wordpress.org).
+
+---
+template: inverse
+
+# Using a Functionality Plugin
+
+---
+class: center, middle
+
+### What's functionality plugin?
+
+A functionality plugin is just a plugin like any other plugin, but the main difference is that it's not publicly distributed. It's one custom plugin that encompasses all your site's custom functionality.
+
+---
+class: center, middle
+
+.large[
+   Why do we care about this?
+]
+
+---
+
+# What Goes In It?
+
+- Code that creates your custom post types
+- Code that creates your custom taxonomies
+- Code that creates your custom meta boxes
+- Code that adds/adjusts user roles
+- ...anything that should continue to exist on your site regardless of what theme is activated
+
+*We'll create our own functionality plugin for our projects next class we talk about custom post types, etc...*
+
+---
+template: inverse
+
+# Debugging WordPress
+
+---
+
+# Debugging Tips
+
+1. Make sure `WP_DEBUG` is set to `TRUE` in `wp-config.php` (in your dev environment only though!)
+2. Install the [Debug Bar](https://wordpress.org/plugins/debug-bar/)
+3. Install [Query Monitor](https://wordpress.org/plugins/query-monitor/)
+4. Install the [Theme Check Plugin](https://wordpress.org/plugins/theme-check/) and run it before you submit your project!
+
+Also, generally make sure that you're adhering to WordPress' [PHP Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/).
+
+---
+template: inverse
+
+# WordPress & Git
+
+---
+class: center, middle
+
+.large[
+   Many schools of thoughts...
+]
+
+---
+
+# My Approach
+
+1. Initialize a git repo at the root of your WP installation
+2. **Ignore everything**...then **selectively unignore** what you want in your repository (e.g. your specific custom theme, a functionality plugin, other bespoke plugins)
+3. ...?
+4. Profit!
+
+---
+class: center, middle
+
+.large[
+   Why do it this way?
+]
+
+---
+
+# .gitignore
+
+```bash
+# ...ignore all the usual stuff above first
+
+# Ignore everything in the root except the "wp-content" directory.
+/*
+!.gitignore
+!wp-content/
+!README.md
+
+# Ignore everything in "wp-content" except the "plugins" and "themes".
+wp-content/*
+!wp-content/plugins/
+!wp-content/themes/
+
+# Ignore everything in "plugins" except certain plugins.
+wp-content/plugins/*
+!wp-content/plugins/core-functionality/
+
+# Ignore everything in "themes" except the active theme.
+wp-content/themes/*
+!wp-content/themes/leredbread/
+```
+
+---
+
+# Exercise 3
+
+Time to add some version control to your project.
+
+Initialize a git repository in the root of your project's WP installation in MAMP, at the `.gitignore` file as recommended, stage your files, make your commit, add a remote from GitHub, and push your code!
 
 ---
 
 # What We've Learned
 
-- Thing 1
-- Thing 2
+- What hooks are and the two different types in WP
+- How to (sanely) use and manage a `functions.php` file
+- When and how to use a functionality plugin
+- How to debug WordPress
+- How to version control our WP projects
 
 ---
 template: inverse

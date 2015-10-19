@@ -28,6 +28,8 @@ Some pre-reading on adding CSS and JS files to a Wordpress theme:
 
 ## Keywords
 
+- WordPress page lifecycle
+- Hooks
 - [Action](http://codex.wordpress.org/Plugin_API/Action_Reference)
 - [Filter](http://codex.wordpress.org/Plugin_API/Filter_Reference)
 
@@ -35,25 +37,52 @@ Some pre-reading on adding CSS and JS files to a Wordpress theme:
 
 ## Exercise 1
 
-*Exercise TBA...*
+Time to learn more about WP actions and filters!
+
+You'll be assigned one of the following hooks to investigate:
+
+- `after_setup_theme`
+- `after_switch_theme`
+- `body_class`
+- `excerpt_length`
+- `init` / `admin_init`
+- `login_head` / `login_headerurl`
+- `next_posts_link_attributes` / `previous_posts_link_attributes`
+- `pre_get_posts`
+- `post_updated_messages`
+- `save_post`
+- `template_redirect`
+- `tiny_mce_before_init` / `mce_buttons`
+- `transition_post_status`
+- `wp_enqueue_scripts`
+- `wp_head` / `wp_footer`
+
+Specifically, figure out if your assigned hooks is an action or filter? What does it do? When does it fire or what does it modify? What is it good for?
+
+Provide an example of it's usage too!
 
 ---
 
 ## Exercise 2
 
-*Exercise TBA...*
+Let's head over the `/inc/extras.php` file in our starter theme and add two functions (with the appropriate hooks) to do the following:
+
+1. Change the logo on the WP login screen to be Le Red Bread's logo
+2. Update the URL that the logo points to be the site's homepage URL (instead of wordpress.org).
 
 ---
 
 ## Exercise 3
 
-*Exercise TBA...*
+Time to add some version control to your project.
+
+Initialize a git repository in the root of your project's WP installation in MAMP, at the `.gitignore` file as recommended, stage your files, make your commit, add a remote from GitHub, and push your code!
 
 ---
 
 ## Lab Activity
 
-*Lab activity TBA...*
+Today's lab activity time will be dedicated to continuing to work on Project 5.
 
 ---
 

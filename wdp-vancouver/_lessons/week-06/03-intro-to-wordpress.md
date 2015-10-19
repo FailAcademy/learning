@@ -93,3 +93,7 @@ Bookmark these WP resources!
 - [Code Reference](https://developer.wordpress.org/reference/)
 - [Getting Started with WordPress](https://codex.wordpress.org/Getting_Started_with_WordPress)
 - [WordPress.tv](http://wordpress.tv/)
+
+A brief history of some of WordPress' major milestones since 2003:
+
+- [History - WordPress Codex](https://codex.wordpress.org/History)

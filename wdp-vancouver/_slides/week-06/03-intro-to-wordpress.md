@@ -129,14 +129,13 @@ class: center, middle
 
 Inside your WP installation directory...
 
-Don't touch these core files:
-
-- `wp-admin`
-- `wp-includes`
-
-This folder holds our themes, plugins, and media uploads:
-
-- `wp-content`
+- `wp-admin/`
+- `wp-content/`
+   - `plugins` - each plugin usually has its own directory
+   - `themes` - each theme as its own directory
+   - `uploads` - created on first uploads
+- `wp-includes/`
+- `wp-config.php`
 
 ---
 
@@ -247,20 +246,6 @@ class: center, middle
 ---
 class: center, middle
 
-.large[
-   Child vs. Parent Themes?
-]
-
----
-class: center, middle
-
-.large[
-   Themes vs. Theme Frameworks?
-]
-
----
-class: center, middle
-
 ### Themes & Plugins PSA
 
 Quality matters! Poorly-written code in plugins and themes in one of the biggest ways WP gets hacked
@@ -360,6 +345,7 @@ You will likely (and should!) see something very similar to this in any theme's 
 - `the_permalink()` displays the permalink URL for each post
 - `the_ID()` displays the ID of each post
 - `the_author()` displays the author name for each post
+- `the_content()` display the content of the post
 
 *These are examples of template tags in WordPress.*
 
@@ -390,6 +376,45 @@ https://codex.wordpress.org/Function_Reference/bloginfo
 More on template tags here:
 
 https://codex.wordpress.org/Template_Tags
+
+*Note: Many template tags only work in the loop, while some are global and can be used anywhere on your site.*
+
+---
+
+# A Dynamic Metadata
+
+Template tags are great for dynamically adding metadata and other information to our WordPress sites:
+
+```html
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+	<head>
+      <meta charset="<?php bloginfo( 'charset' ); ?>">
+	</head>
+   <body>
+      <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+      <p class="description"><?php bloginfo( 'description' ); ?></p>
+```
+
+The `bloginfo()` template tag will pull this data out of the `wp_options` table in the database (which would have been saved in your Settings via the WordPress admin area).
+
+---
+
+# Subtle Difference
+
+Some template tags are prefixed with `get_`, e.g.:
+
+```php
+the_permalink();
+
+// vs.
+
+get_permalink();
+```
+
+`the_permalink()` echos out the permalink.
+
+`get_permalink()` returns the permalink, but does not echo it out in the template.
 
 ---
 
