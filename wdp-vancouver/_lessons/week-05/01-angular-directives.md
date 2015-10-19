@@ -7,19 +7,39 @@ date: 2015-10-19
 
 ## Pre-Work
 
-*Pre-work TBA...*
+*None*
 
 ---
 
 ## Learning Objectives
 
-- *Learning objectives TBA...*
+Discover an and become familiar with Angular's built in directives.
+Create a basic directive.
 
 ---
 
 ## Keywords
 
-- *Keywords TBA...*
+Attribute directives 
+
+- ng-href
+- ng-src
+- ng-class
+- ng-disabled
+- ng-checked
+- ng-selected
+
+Scope directives:
+
+- ng-app
+- ng-controller
+- ng-include
+- ng-if
+- ng-show/hide
+- ng-switch
+- ng-change
+- ng-click
+- ng-repeat
 
 ---
 
