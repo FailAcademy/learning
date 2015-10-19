@@ -43,13 +43,14 @@ Your project must:
 	- Service
 	- Factory
 	- Controller
+	- Directive
 
 **CSS requirements:**
 
 Your project must:
 
 - Use a CSS reset
-- Implement a mobile-first responsive layout using Flexbox
+- Implement a mobile-first responsive layout using Flexbox (Mobile only)
 
 **Additional requirements:**
 
@@ -62,6 +63,8 @@ Your project must:
 	- Fetch a list of recent encounters
 	- Remove a colonist from the colony
 	- Determine if a colonist has already registered
+	- Create a new ailen type
+	- Create a new encounter
 
 **Stretch goals:**
 
