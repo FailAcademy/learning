@@ -53,7 +53,7 @@ Angular comes with a set of these directives built-in, like ngBind, ngModel, and
 
 Angular "compiles" your HTML. When it sees a directive, it attaches the behavior you've defined to it!
 
-Best Practice: Prefer using the dash-delimited format (e.g. ng-bind for ngBind). If you want to use an HTML validating tool, you can instead use the data-prefixed version (e.g. **data-ng-bind** for ngBind). 
+Best Practice: Prefer using the dash-delimited format (e.g. ng-bind for ngBind). If you want to use an HTML validating tool, you can instead use the data-prefixed version (e.g. **data-ng-bind** for ngBind).
 
 .footnote[source: Angular docs]
 
@@ -70,10 +70,11 @@ Attribute directives
 
 ```html
 <h1>Wrong Way</h1>
-<img src="{{imgSrc}}" />
+<img src="{% raw %}{{imgSrc}}{% endraw %}" />
 <h1>Right way</h1>
-<img ng-src="{{imgSrc}}" />
+<img ng-src="{% raw %}{{imgSrc}}{% endraw %}" />
 ```
+
 Angular blocks the browser from loading the image until your HTML has been compiled.
 
 .footnote[timeout network tab demonstration]
@@ -84,9 +85,9 @@ Angular blocks the browser from loading the image until your HTML has been compi
 
 ```html
 <!-- Always use ng-href when href includes an {{ expression }} -->
-<a ng-href="{{myHref}}">I'm feeling lucky, when I load</a>
+<a ng-href="{% raw %}{{myHref}}{% endraw %}">I'm feeling lucky, when I load</a>
 <!-- href may not load before user clicks -->
-<a href="{{myHref}}">I'm feeling 404</a>
+<a href="{% raw %}{{myHref}}{% endraw %}">I'm feeling 404</a>
 
 ```
 Angular ensures that your expression has been evaluated before the user clicks.
@@ -98,7 +99,7 @@ Angular ensures that your expression has been evaluated before the user clicks.
 ```html
 
 <div ng-controller="LotteryController">
-  <div ng-class="{red: x > 5}" ng-if="x > 5">
+  <div ng-class="{% raw %}{red: x > 5}{% endraw %}" ng-if="x > 5">
   You won!
   </div>
   <button ng-click="x = generateNumber()" ng-init="x = 0">
@@ -119,7 +120,6 @@ Dynamically set the class of an element depending on a scope value.
 ```
 
 ```js
-
 angular.module('myApp', [])
   .run(function($rootScope, $timeout) {
       $rootScope.isDisabled = true;
@@ -199,7 +199,7 @@ Angular controllers **provide a child scopes** for the directives that are neste
 "A child $scope is simply a JavaScript object that prototypically inherits methods and properties from
 its parent $scope(s), including the application's $rootScope."
 
-Some things to keep in mind: 
+Some things to keep in mind:
 
 - It’s important to not to set a primitive value (string, boolean, or number) directly on the
 $scope of a controller. Data in the DOM should always be attached to an object
@@ -209,7 +209,7 @@ $scope of a controller. Data in the DOM should always be attached to an object
 
 #ng-include
 Use ng-include to **fetch, compile, and include** an external HTML fragment into your current
-application. 
+application.
 
 ```html
 <div ng-include="views/myTemplate.html"
@@ -233,7 +233,7 @@ Some things to consider:
 </div>
 ```
 
-Some things to consider: 
+Some things to consider:
 - The $scope for elements that are hidden with ng-if is completely destroyed (unlike show/hide)
 - The element itself is reset on every show hide (so it will loose any external modifications, like from jQuery)
 
@@ -267,7 +267,7 @@ Behind the scenes, Angular uses a special css class to set `display:none;` on hi
 <input type="text" ng-model="person.name" />
 <div ng-switch on="person.name"></div>
 <p ng-switch-default>And the winner is</p>
-<h1 ng-switch-when="Mandi">{{ person.name }}</h1>
+<h1 ng-switch-when="Mandi">{% raw %}{{ person.name }}{% endraw %}</h1>
 ```
 https://docs.angularjs.org/api/ng/directive/ngSwitch
 
@@ -280,7 +280,7 @@ https://docs.angularjs.org/api/ng/directive/ngSwitch
   <input type="text"
          ng-model="person.name"
          ng-change="change()" />
-  <p>{{ person.nameGreeting }}</p>
+  <p>{% raw %}{{ person.nameGreeting }}{% endraw %}</p>
 </div>
 ```
 
@@ -308,7 +308,7 @@ This directive evaluates the given expression when the input changes and has to 
   Increment
 </button>
 <span>
-  count: {{count}}
+  count: {% raw %}{{count}}{% endraw %}
 </span>
 ```
 
@@ -353,26 +353,26 @@ Iterating over Objects
 ```html
   <div ng-repeat="(key, value) in myObj"> ... </div>
 ```
-*JS Gotcha: 
-Various browsers implement Object property sorting in different ways. The order of object properties isn't guaranteed when iterating!
+*JS Gotcha:
+Various browsers implement Object property sorting in different ways. The order of object properties isn't guaranteed when iterating!*
 
 ---
 
 #ng-repeat cont...
 
-"By default, ngRepeat does not allow duplicate items in arrays. 
+"By default, ngRepeat does not allow duplicate items in arrays.
 If you do need to repeat duplicate items, you can substitute the default tracking behavior with your own using the track by expression.
 
 ```html
 <div ng-repeat="num in [42, 42, 43, 43] track by $index">
-  {{n}}
+  {% raw %}{{n}}{% endraw %}
 </div>
 ```
 or more commonly:
 
 ```html
 <div ng-repeat="model in collection track by model.id">
-  {{model.name}}
+  {% raw %}{{model.name}}{% endraw %}
 </div>
 ```
 
@@ -386,13 +386,13 @@ or more commonly:
 
 ```html
 <header ng-repeat-start="item in items">
-  Header {{ item }}
+  Header {% raw %}{{ item }}{% endraw %}
 </header>
 <div class="body">
-  Body {{ item }}
+  Body {% raw %}{{ item }}{% endraw %}
 </div>
 <footer ng-repeat-end>
-  Footer {{ item }}
+  Footer {% raw %}{{ item }}{% endraw %}
 </footer>
 ```
 
