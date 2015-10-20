@@ -33,7 +33,7 @@ date: 2015-10-28
 
 ## Exercise 1
 
-Let's install Wordpress locally:
+Let's install WordPress locally:
 
 1. [Download WordPress](https://wordpress.org/download/)
 2. Unzip your download and move it to your `htdocs` folder (rename the unzipped folder if you like)

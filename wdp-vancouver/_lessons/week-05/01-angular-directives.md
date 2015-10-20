@@ -7,7 +7,8 @@ date: 2015-10-19
 
 ## Pre-Work
 
-*None*
+Explore this pluralsight course on directive fundamentals:
+http://www.pluralsight.com/courses/angularjs-directive-fundamentals
 
 ---
 
@@ -94,4 +95,5 @@ Take care to make all the variables used in the function local to the function b
 
 ## Additional Resources
 
-*Resources TBA...*
+Pluralsight tutorial:
+http://www.pluralsight.com/courses/angularjs-directive-fundamentals
