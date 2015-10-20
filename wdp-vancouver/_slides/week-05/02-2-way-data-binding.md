@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# 2-way Data binding and forms
+# Forms & Binding
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -54,18 +54,10 @@ https://docs.angularjs.org/api/ng/directive/form
 #Exercise
 
 Create and style a voter registration form!
-Using what you know about Angular and CSS, create a form with the following fields:
+Using what you know about Angular and CSS. (See lesson page).
 
-- First name (max-length 140)
-- Last name (max-length 140)
-- Age (must be number)
-- Gender (radio buttons)
-- House # (must be number)
-- Street address
-- Province (select menu)
-- Accept voter responsibility (checkbox)
 
-All of the fields should be required, and the form should indicate to the user if they try to submit the form with empty fields.
+All of the fields are required, and the form should indicate to the user if they try to submit the form with empty fields.
 
 ---
 

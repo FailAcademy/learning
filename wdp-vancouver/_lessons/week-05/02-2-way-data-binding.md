@@ -37,7 +37,7 @@ Using what you know about Angular and CSS, create a form with the following fiel
 - Province (select menu)
 - Accept voter responsibility (checkbox)
 
-All of the fields should be required, and the form should indicate to the user if they try to submit the form with empty fields.
+All of the fields are required, and the form should indicate to the user if they try to submit the form with empty fields.
 
 ---
 
