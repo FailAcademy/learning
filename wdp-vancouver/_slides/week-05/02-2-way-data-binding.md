@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Slideshow Title
+# 2-way Data binding and forms
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
