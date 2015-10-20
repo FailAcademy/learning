@@ -19,69 +19,56 @@ layout: false
 
 # Agenda
 
-1. Introduction
-2. Deep-dive
-3. ...
+1. What is 2-way data-binding?
+2. Forms in Angular (ngForm)
+3. Form validation techniques in Angular (FormController)
 
 ---
 
-.left-column[
-  ## Column Layout
-]
+template: inverse
 
-.right-column[
-You can make two-column layouts as well.red[*] in a slideshow!
-
-A sample unordered list:
-
-- List item 1
-- List item 2
-- List item 3
-
-.footnote[.red[*] And add footnotes too]
-]
+#2-Way Data Binding
 
 ---
 
-# Syntax Highlighting
+class: center-middle
 
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
+In Angular, 2-way data binding refers to the ability to change the value of $scope properties from angular code or, in the 'other direction' via logic in our DOM.
 
 ---
 
-.left-column[
-  ## Remark How-tos
-]
+template: inverse
 
-.right-column[
-   This slideshow is based on [remark.js](https://github.com/gnab/remark).
-
-   To learn more about building a slideshow with remark, check out:
-
-   - [The remark formatting guide](https://github.com/gnab/remark/wiki/Formatting)
-   - [The remark Markdown guide](https://github.com/gnab/remark/wiki/Markdown)
-]
+#Forms
 
 ---
 
-# What We've Learned
+class: center, middle
 
-- Thing 1
-- Thing 2
+Angular gives front end developers powrful tools for working with forms in HTML.
+
+https://docs.angularjs.org/api/ng/directive/form
 
 ---
+
+#Exercise
+
+Create and style a voter registration form!
+Using what you know about Angular and CSS, create a form with the following fields:
+
+- First name (max-length 140)
+- Last name (max-length 140)
+- Age (must be number)
+- Gender (radio buttons)
+- House # (must be number)
+- Street address
+- Province (select menu)
+- Accept voter responsibility (checkbox)
+
+All of the fields should be required, and the form should indicate to the user if they try to submit the form with empty fields.
+
+---
+
 template: inverse
 
 # Questions?

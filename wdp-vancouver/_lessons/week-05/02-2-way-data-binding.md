@@ -5,39 +5,39 @@ slides: ['_slides/week-05/02-2-way-data-binding.md']
 date: 2015-10-20
 ---
 
-## Pre-Work
-
-*Pre-work TBA...*
-
----
-
 ## Learning Objectives
 
-- *Learning objectives TBA...*
+- Learn how to work with forms in Angular.
+- Create good UX by indicating invalid iform input.
+- Discover the powr of 2-way data binding.
 
 ---
 
 ## Keywords
 
-- *Keywords TBA...*
+- Data binding
+- Required field
+- Validation
+- ngForm
+- FormController
 
 ---
 
-## Exercise 1
+## Exercise
 
-*Exercise TBA...*
+Create and style a voter registration form!
+Using what you know about Angular and CSS, create a form with the following fields:
 
----
+- First name (max-length 140)
+- Last name (max-length 140)
+- Age (must be number)
+- Gender (radio buttons)
+- House # (must be number)
+- Street address
+- Province (select menu)
+- Accept voter responsibility (checkbox)
 
-## Exercise 2
-
-*Exercise TBA...*
-
----
-
-## Exercise 3
-
-*Exercise TBA...*
+All of the fields should be required, and the form should indicate to the user if they try to submit the form with empty fields.
 
 ---
 
@@ -80,4 +80,6 @@ It might also be worthwhile to use a different default step, namely, -1, when th
 
 ## Additional Resources
 
-*Resources TBA...*
+Angular documentation:
+https://docs.angularjs.org/api/ng/directive/form
+https://docs.angularjs.org/api/ng/type/form.FormController
