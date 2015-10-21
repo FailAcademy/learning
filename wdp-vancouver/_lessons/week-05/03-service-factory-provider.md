@@ -40,7 +40,7 @@ Today we'll Learn how to use Angular-UI's router module to navigate between the 
 Before we begin, we'll need to make sure we have completed the 2 basic forms in our application.
 We'll take the form code that we wrote in yesterday's exercises and adapt it to our project's requirements.
 
-Step 1: Modify the for code written yesterday so to mathc your project requirements. <br>
+Step 1: Modify the for code written yesterday so to match your project requirements. <br>
 Step 2: Copy and paste the code into your project's html pages. <br>
 Step 3: Copy the controller code into a new controller on your application module. <br>
 
