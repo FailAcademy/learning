@@ -7,8 +7,6 @@ date: 2015-10-22
 
 ## Pre-Work
 
-## Pre-Work
-
 Install the ngAnimate module in your application:
 - https://docs.angularjs.org/api/ngAnimate
 
