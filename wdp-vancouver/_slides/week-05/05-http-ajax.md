@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Slideshow Title
+# $http and AJAX in angular
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -19,67 +19,9 @@ layout: false
 
 # Agenda
 
-1. Introduction
-2. Deep-dive
-3. ...
-
----
-
-.left-column[
-  ## Column Layout
-]
-
-.right-column[
-You can make two-column layouts as well.red[*] in a slideshow!
-
-A sample unordered list:
-
-- List item 1
-- List item 2
-- List item 3
-
-.footnote[.red[*] And add footnotes too]
-]
-
----
-
-# Syntax Highlighting
-
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
-
----
-
-.left-column[
-  ## Remark How-tos
-]
-
-.right-column[
-   This slideshow is based on [remark.js](https://github.com/gnab/remark).
-
-   To learn more about building a slideshow with remark, check out:
-
-   - [The remark formatting guide](https://github.com/gnab/remark/wiki/Formatting)
-   - [The remark Markdown guide](https://github.com/gnab/remark/wiki/Markdown)
-]
-
----
-
-# What We've Learned
-
-- Thing 1
-- Thing 2
+Today we'll use Angular's `$http` service to fetch and save real data in our application! <br>
+We'll also explore Angular's **Service**, **Factory** and **Provider** modules and use them to create an API service we can use in our newly created view controllers. <br>
+The application will use a custom API created by RED specifically for this project. You can explore the API documentation here: (url pending)
 
 ---
 template: inverse
