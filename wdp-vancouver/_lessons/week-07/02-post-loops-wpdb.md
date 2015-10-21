@@ -21,7 +21,7 @@ Some pre-reading on the WordPress database:
 
 ## Learning Objectives
 
-- Distinguish between the four different methods for getting posts in WordPress&mdash;the default loop, `query_posts`, WP Query, and `get_posts`.
+- Distinguish between the four different methods for getting posts in WordPress&mdash;the default loop, `query_posts`, `WP_Query`, and `get_posts`.
 - Identify additional development concerns related to custom loops, including setting up and resetting post data, and pagination quirks.
 - Navigate the WordPress database with confidence and understand how certain actions in WordPress add, update, and delete this data.
 
@@ -29,32 +29,38 @@ Some pre-reading on the WordPress database:
 
 ## Keywords
 
-- [WP Query](https://codex.wordpress.org/Class_Reference/WP_Query)
+- [WP_Query](https://codex.wordpress.org/Class_Reference/WP_Query)
 - Relational database
 
 ---
 
 ## Exercise 1
 
-*Exercise TBA...*
+Let's try building a custom post loop for Project 5 by building the news feed on the homepage.
+
+You'll need to decide whether to use `WP_Query` or `get_posts` first, then you need to create and pass in an array of the appropriate arguments, and finally figure out how to display the returned data on your homepage.
+
+Don't worry about styling yet, just grab the data!
 
 ---
 
 ## Exercise 2
 
-*Exercise TBA...*
+Let's explore WP's ten databases in greater depth.
 
----
+You'll be assigned a table, and it's your job to figure out:
 
-## Exercise 3
+- what it's for
+- what data is stored in there (the columns!)
+- what other tables it's linked to
 
-*Exercise TBA...*
+After you're done researching your table, we'll share our findings as a group.
 
 ---
 
 ## Lab Activity
 
-*Lab activity TBA...*
+Today's lab time will be spent working on Project 5. Based on what you learned today, you can create and finish styling the custom post loop to show the latest posts on the homepage (and the latest Testimonials if you're going for the stretch goal).
 
 ---
 
@@ -68,3 +74,7 @@ Easily manage your MySQL databases using a GUI-based app:
 A tool to help you generate the required code for creating custom loop queries:
 
 - [GenerateWP: WP_Query Generator](https://generatewp.com/wp_query/)
+
+More info on the WP database:
+
+- [Understanding and Working with Data in WordPress](https://code.tutsplus.com/series/understanding-and-working-with-data-in-wordpress--cms-670)
