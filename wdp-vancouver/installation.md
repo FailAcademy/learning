@@ -164,7 +164,7 @@ Add the Heroku remote to your local repo:
 
 The email you use to authorize with github must be added to the Heroku application. This can be done via the "Access" tab in the Heroku dashboard. 
 
-Once this is complete, log in to Herok from the command line:
+Once this is complete, log in to Heroku from the command line:
 ```bash
   heroku login
 ```
