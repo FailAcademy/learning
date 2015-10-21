@@ -147,7 +147,7 @@ git push origin production
 git checkout master
 ```
 
-If something weird happens the first time you try to deploy changes, follow these steps then re-add `jekyll-auth` and all of the necessary deployment files:
+If something weird happens the first time you try to t changes, follow these steps then re-add `jekyll-auth` and all of the necessary deployment files:
 
 http://superuser.com/questions/716818/git-overwrite-branch-with-master
 
@@ -155,4 +155,17 @@ http://superuser.com/questions/716818/git-overwrite-branch-with-master
 
 ## Configuring Multiple Heroku Committers for a Site
 
-*Coming soon!*
+You'll need to have [Heroku Toolbelt](https://toolbelt.heroku.com/) installed to log into Heroku and deploy the production-ready site.
+
+Add the Heroku remote to your local repo:
+```bash
+  git remote add heroku git@heroku.com:red-wdp.git
+```
+
+The email you use to authorize with github must be added to the Heroku application. This can be done via the "Access" tab in the Heroku dashboard. 
+
+Once this is complete, log in to Heroku from the command line:
+```bash
+  heroku login
+```
+Once logged in, follow the steps above for comitting and pushing code to Heroku!
