@@ -6,7 +6,7 @@ due: Monday, October 5th (beginning of class)
 
 For Project 2, you're going to create a one-page, responsive website for your client 100 Mile Resto Bar.
 
-You can [download the project files here](/public/files/projects/project-02.zip).
+You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-02.zip).
 
 ## Design Specifications:
 

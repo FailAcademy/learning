@@ -6,7 +6,7 @@ due: Monday, September 28th (beginning of class)
 
 For Project 1, you're going to create a one-page website that will serve as an online resume for your client Laura Ipsum.
 
-You can [download the project files here](/public/files/projects/project-01.zip).
+You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-01.zip).
 
 ## Design Specifications
 

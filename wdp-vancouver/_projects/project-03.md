@@ -6,7 +6,7 @@ due: Wednesday, October 14th (beginning of class)
 
 For Project 3, you're going to create a one-page, responsive website that allows a user to search for a hashtag via the Instagram API.
 
-You can [download the project files here](/public/files/projects/project-03.zip).
+You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-03.zip).
 
 ## Design Specifications:
 
