@@ -6,7 +6,7 @@ due: Monday, November 9th (beginning of class)
 
 For Project 5, you will create a multi-page website with a blog for a bakery using WordPress as a CMS.
 
-You can [download the project files here](/public/files/projects/project-05.zip).
+You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-05.zip).
 
 ## Design Specifications:
 
