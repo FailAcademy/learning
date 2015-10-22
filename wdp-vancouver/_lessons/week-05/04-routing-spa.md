@@ -1,43 +1,42 @@
 ---
 layout: lesson
-title: Single Page Applications & Routing
+title: Routing and Templates cont...
 slides: ['_slides/week-05/04-routing-spa.md']
 date: 2015-10-22
 ---
 
 ## Pre-Work
 
-## Pre-Work
+Install the ngAnimate module in your application:
+- https://docs.angularjs.org/api/ngAnimate
 
-*Pre-work TBA...*
+Review the angular documentation for ngAnimate:
+- https://docs.angularjs.org/api/ngAnimate
+- https://docs.angularjs.org/guide/animations
+
+Review this exellent article on animations in Angular:
+- https://css-tricks.com/animations-the-angular-way/
 
 ---
 
 ## Learning Objectives
 
-- *Learning objectives TBA...*
+Today we'll finish adding routes to our application and begin to add animations on page transitions using `ng-view` and  CSS `@keyframes`!
+Animations will be achieved via SCSS and Angular's ngAnimate module, which we'll install in our application.
+(We will not be covering JavaScript based animations).
 
 ---
 
 ## Keywords
 
-- *Keywords TBA...*
+- `ng-view`
+- `ng-enter`
+- `ng-leave`
+- `@keyframes`
 
 ---
 
 ## Exercise 1
-
-*Exercise TBA...*
-
----
-
-## Exercise 2
-
-*Exercise TBA...*
-
----
-
-## Exercise 3
 
 *Exercise TBA...*
 
@@ -71,7 +70,7 @@ function average(array) {
 
 **Hints:**
 
-The essence of this example lies in grouping the elements of a collection by some aspect of theirs—splitting the array of ancestors into smaller arrays with the ancestors for each century.
+The essence of this example lies in grouping the elements of a collection by some aspect of splitting the array of ancestors into smaller arrays with the ancestors for each century.
 
 During the grouping process, keep an object that associates century names (numbers) with arrays of either person objects or ages. Since we do not know in advance what categories we will find, we’ll have to create them on the fly. For each person, after computing their century, we test whether that century was already known. If not, add an array for it. Then add the person (or age) to the array for the proper century.
 
@@ -83,4 +82,5 @@ For bonus points, write a function groupBy that abstracts the grouping operation
 
 ## Additional Resources
 
-*Resources TBA...*
+Check out this CSS generator built to create CSS animations for use in your angular projects:
+- http://www.nganimate.org/pell
