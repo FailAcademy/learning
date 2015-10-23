@@ -31,36 +31,33 @@ Some pre-reading on creating WordPress widget plugins:
 
 - Object-oriented programming
 - Class
-- Objectives
-- Parent
+- Object
+- Parent / Base Class
+- Child / Sub-class
 - Constructor
 - Property
 - Method
+- Extend
+- Scope
 - Widget API
 
 ---
 
 ## Exercise 1
 
-*Exercise TBA...*
+Let's build a widget together!
 
----
+To do this, you'll need to download and unzip a copy of the **[RED Widget Boilerplate](https://github.com/redacademy/red-widget-boilerplate/archive/master.zip)**.
 
-## Exercise 2
+Once you've downloaded and unzipped it, move the directory to `wp-content/plugins/` and rename both the directory and the main plugin file `business-hours-widget`.
 
-*Exercise TBA...*
-
----
-
-## Exercise 3
-
-*Exercise TBA...*
+The rest of the exercise will be a code-along...
 
 ---
 
 ## Lab Activity
 
-*Lab activity TBA...*
+Today's lab time will be spent working on Project 5. Tie up the loose ends for on your custom business hours widget, and keep plugging away at the rest of the project!
 
 ---
 
@@ -73,3 +70,7 @@ WP Codex entry for the Widgets API:
 An in-depth intro on OOP in PHP:
 
 - [Object-Oriented PHP for Beginners](https://code.tutsplus.com/tutorials/object-oriented-php-for-beginners--net-12762)
+
+Wondering what all the comments are about in the widget boilerplate repo? Read more about WP's take on PHP documentation:
+
+- [PHP Documentation Standards](https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/php/)
