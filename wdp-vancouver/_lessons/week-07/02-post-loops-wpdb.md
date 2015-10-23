@@ -78,3 +78,7 @@ A tool to help you generate the required code for creating custom loop queries:
 More info on the WP database:
 
 - [Understanding and Working with Data in WordPress](https://code.tutsplus.com/series/understanding-and-working-with-data-in-wordpress--cms-670)
+
+Everything you wanted to know about `WP_Query` and didn't know to ask:
+
+- [Mastering WP_Query](https://code.tutsplus.com/series/mastering-wp_query--cms-818)
