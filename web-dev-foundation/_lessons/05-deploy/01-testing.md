@@ -76,7 +76,7 @@ A great reference for assessing the accessibility of a site:
 
 A Chrome extension for running accessibility audits:
 
-- [Accessibility Developer Tools](https://chrome.google.com/webstore/detail/accessibility-developer-t/)
+- [Accessibility Developer Tools](https://github.com/GoogleChrome/accessibility-developer-tools-extension)
 
 A great presentation by Stephanie Hobson on website accessibility:
 
