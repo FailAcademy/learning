@@ -307,7 +307,9 @@ WordPress knows what to load/display based on:
 
 # Exercise 1
 
-Something with the template hierarchy...
+Let's demystify the [WordPress Template Hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/) together.
+
+Based on the questions posed, determine what will be the correct template file to select.
 
 ---
 template: inverse

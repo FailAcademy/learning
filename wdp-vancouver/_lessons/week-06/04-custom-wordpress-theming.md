@@ -38,7 +38,9 @@ Prior to jumping into theming class, you'll want to make sure you've wrapped you
 
 ## Exercise 1
 
-*Exercise TBA...*
+Let's demystify the [WordPress Template Hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/) together. 
+
+Based on the questions posed, determine what will be the correct template file to select.
 
 ---
 
@@ -56,9 +58,11 @@ In today's lab, we're going to dive into Project 5 and use what we learned about
 
 Copy the starter theme into the WP installation on your computer where you are going to build out your project, and **rename** the folder something a bit more descriptive (e.g. `leredbread`).
 
-Next, to get your project set-up, you'll want to:
+Next, to get your project set-up, you'll want to run `npm install` in the root of the theme directory so you can get Gulp up and running.
 
-- Run `npm install` in the root of the theme directory so you can get Gulp up and running
+In the [project folder](https://s3-us-west-2.amazonaws.com/red-wdp/project-05.zip) you'll also find all of the content for the site. You'll need to add the content to your site via the WP admin area. **Start with posts!** You will find the featured image for each post in `_assets/images/blog-photos/`.
+
+We'll learn about how to create a custom post type for the product content next week.
 
 ---
 
