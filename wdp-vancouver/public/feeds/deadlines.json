@@ -30,13 +30,19 @@
       "url": "/project/project-5-custom-wordpress-theme/"
    },
    {
-      "title": "Portfolio Due",
+      "title": "Project 6 Due",
       "allDay": true,
-      "start": "2015-11-27",
-      "url": "/project/project-6-portfolio/"
+      "start": "2015-11-16",
+      "url": "/project/project-6-wp-api-angularjs-wordpress-theme/"
    },
    {
-      "title": "Client Project Due",
+      "title": "GitHub Portfolio Due",
+      "allDay": true,
+      "start": "2015-11-24",
+      "url": "/project/project-7-github-portfolio/"
+   },
+   {
+      "title": "UX Client Project Due",
       "allDay": true,
       "start": "2015-12-11",
       "url": "/project/project-7-client-project/"

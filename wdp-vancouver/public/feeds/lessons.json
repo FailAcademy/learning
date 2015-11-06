@@ -36,20 +36,20 @@
       "start": "2015-11-10"
    },
    {
-      "title": "Review/Work Day",
+      "title": "Angular/WP Wrap-up",
       "allDay": true,
       "start": "2015-11-13"
    },
    {
-      "title": "Portfolio Development",
+      "title": "GitHub Portfolio Development",
       "allDay": true,
       "start": "2015-11-16",
-      "end": "2015-11-27"
+      "end": "2015-11-24"
    },
    {
-      "title": "Client Project Work",
+      "title": "UX Client Project Work",
       "allDay": true,
-      "start": "2015-11-30",
+      "start": "2015-11-24",
       "end": "2015-12-11"
    }
 ]
