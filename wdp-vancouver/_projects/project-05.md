@@ -96,4 +96,16 @@ Want to challenge yourself? Your project could also:
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to [mandi@redacademy.com](mailto:mandi@redacademy.com).
+**How to export your database:**
+
+Once you have finished working on your site, please export your database by following these instructions:
+
+1. Add me as an Administrator to your site (username: mandi / password: mandi / email: mandi@redacademy.com)
+2. Install the WP Migrate DB plugin
+3. Go to Tools > Migrate DB in the WordPress admin area
+4. Change the "Replace" fields so that the first field contains `//localhost/student` and the second contains `/Applications/MAMP/htdocs/student`
+5. Click the Migrate button to export your DB
+
+**Submitting your project:**
+
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** with your **database file attached** to [mandi@redacademy.com](mailto:mandi@redacademy.com).
