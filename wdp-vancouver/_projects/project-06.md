@@ -8,6 +8,22 @@ For Project 6, you will combine your AngularJS and WordPress skills together to 
 
 You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-06.zip).
 
+## Installation Instructions
+
+1. Download and install WP locally:
+	- [Download WordPress](https://wordpress.org/download/)
+	- Unzip your download and move it to your `htdocs` folder (rename the unzipped `wordpress` folder to `quotesondev`)
+	- Go to phpMyAdmin (via MAMP) and create a new database called `quotes_on_dev`
+	- Rename wp-config-sample.php to wp-config.php and fill in your database name and MAMP credentials (also set `WP_DEBUG` to `true`)
+	- Go to http://localhost/quotesondev/wp-admin/install.php and complete your install
+2. Download the [project files](https://s3-us-west-2.amazonaws.com/red-wdp/project-06.zip)
+3. Copy the `quotesondev` theme directory and move it into `wp-content/themes/`
+4. Activate the Quotes on Dev theme
+5. Run `npm install` in your theme directory to get Gulp up and running
+6. Go to **Tools > Import** and install the WordPress importer plugin
+7. Import the provided XML file
+8. Install and activate the Debug Bar and WP REST API plugins
+
 ## Requirements:
 
 To receive a "Pass" grade for this project, your submission will need to satisfy the following criteria:
