@@ -1,7 +1,6 @@
 ---
 layout: lesson
 title: AngularJS & WordPress
-slides: ['_slides/week-08/04-angular-wp.md']
 date: 2015-11-12
 ---
 
@@ -14,8 +13,7 @@ date: 2015-11-12
 ## Learning Objectives
 
 - Distinguish between two possible uses for AngularJS and Wordpress&mdash;using AngularJS to augment a WordPress theme, or using AngularJS entirely as a front-end with with WordPress plus the WP API plugin as the backend.
-- Incorporate a filter search in a WordPress theme using AngulaJS.
-- Build a standalone AngularJS app to interact with WordPress using WP API.
+- Use AngularJS in a WordPress theme to fetch post data and submit new posts using a basic form from the front-end of a site.
 
 ---
 
@@ -25,32 +23,14 @@ date: 2015-11-12
 
 ---
 
-## Exercise 1
-
-*Exercise TBA...*
-
----
-
-## Exercise 2
-
-*Exercise TBA...*
-
----
-
-## Exercise 3
-
-*Exercise TBA...*
-
----
-
 ## Lab Activity
 
-*Lab activity TBA...*
+In today's lab, we'll work on refactoring the jQuery for the Quotes on Dev site so that it uses AngularJS entirely instead.
 
 ---
 
 ## Additional Resources
 
-This line describes the resource:
+A detailed blog post series on using AngularJS in a WP theme:
 
-- [Code Academy](http://www.codecademy.com/learn)
+- [Using AngularJS and JSON API in Your WordPress Theme](https://1fix.io/blog/2014/11/05/angularjs-json-api-wp-theme/)
