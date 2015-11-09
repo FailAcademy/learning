@@ -457,7 +457,7 @@ When you build a WP theme, you want to make sure you include the following right
 
 ```html
    <!-- ...all of the <head> stuff above -->
-   wp_head();
+   <?php wp_head(); ?>
 </head>
 ```
 
@@ -465,7 +465,7 @@ And this right before the closing body tag:
 
 ```html
    <!-- ...all of the <body> stuff above -->
-   wp_footer();
+   <?php wp_footer(); ?>
 </body>
 ```
 

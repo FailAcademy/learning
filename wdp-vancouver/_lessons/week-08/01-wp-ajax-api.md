@@ -27,27 +27,13 @@ date: 2015-11-09
 
 ---
 
-## Exercise 1
-
-*Exercise TBA...*
-
----
-
-## Exercise 2
-
-*Exercise TBA...*
-
----
-
-## Exercise 3
-
-*Exercise TBA...*
-
----
-
 ## Lab Activity
 
-*Lab activity TBA...*
+In today's lab, we'll work together to build out the jQuery required to add the required WP API-related functionality for the Quotes on Dev site.
+
+Specifically, we'll fetch data from WP using the REST API plugin and dynamically populate it in the site, and we'll create a basic form to accept front-end post submissions via the API too.
+
+More details on this mini-project and its supporting files can be found [here](/project/project-6-wp-api-angularjs-wordpress-theme/).
 
 ---
 
@@ -56,3 +42,7 @@ date: 2015-11-09
 From the codex, all about nonces in WordPress:
 
 - [WordPress Nonces](https://codex.wordpress.org/WordPress_Nonces)
+
+Documentation for WP API v2:
+
+- [WP REST API](http://v2.wp-api.org/)
