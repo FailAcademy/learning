@@ -36,6 +36,7 @@ To receive a "Pass" grade for this project, you will need to revisit your Projec
 
 **Git/GitHub:**
 
+- Ensure all projects should have a Git repo initialized in them and be pushed to GitHub (that means P1 and P2 too!)
 - Make sure commit messages are meaningful (they should describe the changes that you are committing to your project)
 
 **Design fidelity:**

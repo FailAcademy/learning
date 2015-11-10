@@ -20,9 +20,19 @@
       "allDay": true,
       "start": "2015-09-23"
    },
-      {
+   {
       "title": "Meteor @ RED",
       "allDay": true,
       "start": "2015-10-05"
+   },
+   {
+      "title": "Professional Dev",
+      "allDay": true,
+      "start": "2015-11-16"
+   },
+   {
+      "title": "Professional Dev",
+      "allDay": true,
+      "start": "2015-11-17"
    }
 ]
