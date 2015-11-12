@@ -38,15 +38,18 @@ To receive a "Pass" grade for this project, you will need to revisit your Projec
 
 - Ensure all projects should have a Git repo initialized in them and be pushed to GitHub (that means P1 and P2 too!)
 - Make sure commit messages are meaningful (they should describe the changes that you are committing to your project)
+- Add `README.md` files to all of your project repositories with content that meaningfully describes the project
+- Ensure `.gitignore` files exclude all unnecessary files (e.g. all Node modules, etc.)
 
 **Design fidelity:**
 
 - Projects must look as close to the design as possible (i.e. they should look exactly like the demo sites)
+- CSS/Sass should be organized and written as efficiently as possible to execute the design
 
 **Functional requirements:**
 
-- Projects must function as indicated in the "Functional requirements" section of each project page (i.e. they should function exactly like the demo sites)
-- Be sure to **test** your project completely in **all major browsers** when you think you're finished
+- Projects must function as indicated in the "functional requirements" section of each project page (i.e. they should function exactly like the demo sites do)
+- Be sure to **test** your project completely in **all major browsers** (Chrome, Firefox, Safari, Opera, IE10/11) when you think you're finished
 
 ## Submission Instructions
 
