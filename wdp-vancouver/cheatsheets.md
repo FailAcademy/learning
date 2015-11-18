@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Cheatsheets
+title: Cheatsheets & Resources
 ---
 
 ### GitHub
@@ -34,9 +34,17 @@ Pick and copy colours directly out of a web page:
 
 - [ColorZilla](https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp)
 
-Debug Angular with this extention for your dev tools:
+Debug Angular with this extension for your dev tools:
 
 - [Batarang](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk)
+
+Understand how the box model works on a site by actually drawing boxes around those elements:
+
+- [Pesticide for Chrome](https://chrome.google.com/webstore/detail/pesticide-for-chrome/bblbgcheenepgnnajgfpiicnbbdmmooh)
+
+An interface for organizing and sharing your GitHub Gists:
+
+- [GistBox](https://chrome.google.com/webstore/detail/gistbox/caoihfibgoiiakncomhccbflmlgjaohf)
 
 ---
 
