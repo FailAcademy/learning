@@ -21,8 +21,12 @@ title: Bonus Lessons
 
 ### Thursday, November 19th:
 
-Intro to Analytics (guest lecture by Katie Jeans)
+[Intro to Analytics](/public/files/intro-to-analytics.pdf) (guest lecture by Katie Jeans)
 
 ### Friday, November 20th:
 
-Intro to SEO (guest lecture by Holly Lawton)
+[Intro to SEO](/public/files/intro-to-seo.pdf) (guest lecture by Holly Lawton)
+
+### Monday, November 30 / Thursday, December 3:
+
+Presentation Skills (guest lecture by Robert Mackie)
