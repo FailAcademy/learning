@@ -31,9 +31,87 @@ template: inverse
 ---
 class: center, middle
 
+.large[
+   PHP is **not** secure by design (but it's easy to learn...).
+]
+
+---
+class: center, middle
+
+.large[
+   Security is your responsibility!
+]
+
+---
+
+# What to Worry About
+
+- Sanitizing data (cleaning up user input)
+- Validating data (verifying user input)
+- Escaping data (securing output)
+
+---
+class: center, middle
+
 ### Escaping Data
 
-All things...
+Escaping changes **possibly evil** content into **safe content**.
+
+---
+
+# How and Why?
+
+- Escaping converts characters or strings to be interpreted literally so that those characters can't be interpreted as code
+- One of the biggest concerns is around the `<script>` tag
+- Very dangerous to output a malicious `<script>` tag when the page loads!
+- Escaping the tag would turn it into `&lt;script&gt;` when the page renders
+
+---
+class: center, middle
+
+### Escaping in WP
+
+WordPress offers us [many functions](http://codex.wordpress.org/Data_Validation) that help us escape our data as it goes into and comes out of the database.
+
+---
+
+# esc_html()
+
+**Used for:** Output that should have absolutely no HTML in the output.
+
+**What it does:** Converts HTML special characters (such as <, >, &) into their "escaped" entity (`&lt;`, `&gt;`, `&amp;`).
+
+**[esc_html() in the Codex.](http://codex.wordpress.org/Function_Reference/esc_html)**
+
+---
+
+# esc_attr()
+
+**Used for:** Output being used in the context of an HTML attribute (think `title`, `data-` fields, `alt` text).
+
+**What it does:** The exact same thing as esc_html. The only difference is that different WordPress filters are applied to each function.
+
+**[esc_attr() in the Codex.](http://codex.wordpress.org/Function_Reference/esc_attr)**
+
+---
+
+# esc_url()
+
+**Used for:** Output that is necessarily a URL. Examples would be image `src` attributes and `href` values.
+
+**What it does:** A more thorough, specific escaping than the esc_attr & esc_html functions, which removes or converts any characters not allowed in URLs into their URL-safe format.
+
+**[esc_url() in the Codex.](http://codex.wordpress.org/Function_Reference/esc_url)**
+
+---
+
+# wp_kses()
+
+**Used for:** Output that needs to allow some HTML, but not all tags or attributes.
+
+**What it does:** Strips the content of any tags or attributes that don't match the list of rules passed in.
+
+**[wp_kses() in the Codex.](http://codex.wordpress.org/Function_Reference/wp_kses)**
 
 ---
 class: center, middle
@@ -115,7 +193,7 @@ Hover has a simple user interface and they don't try to up-sell you with extra s
 
 To purchase a domain, follow these simple steps:
 
-1. Go to www.hover.com
+1. Go to [www.hover.com](http://www.hover.com)
 2. Type in your desired domain name
 3. Add the domains you want to your cart
 4. Register for the service and pay (keep this user and password handy)
@@ -238,7 +316,7 @@ class: center, middle
 
 ### Rule No. 1 of WP Hosting
 
-No one-click installs through cPanel or Plesk in shared hosting environments!
+**DO NOT TRUST** one-click installs through cPanel or Plesk in shared hosting environments!
 
 ---
 
@@ -284,26 +362,48 @@ Manually FTPing files into our hosting environment after we change them locally 
 Instead, we can use Git to manage our initial and ongoing deployments of our site files.
 
 ---
+class: center, middle
+
+### First, What's SSH?
+
+It's a network protocol that allows you to securely send data from one computer to another.
+
+---
 
 # Option 1: All Git
 
-Initialize bare repo:
+If your web host support Git, you can up a remote repo on that server to manage your deploys.
+
+First, you'll need to initialize **bare** repository:
 
 ```bash
 ssh username@123.456.789
+# enter your password if prompted...
 mkdir mandiwise.git
 cd mandiwise.git
 git init --bare
 ```
 
-Set-up a Git hook to allow deployment from local to production:
+A [bare repo](http://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/) is simply a repo with no working tree.
+
+---
+
+# Option 1: All Git
+
+Next, you'll set-up a [Git hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) to allow deployment from local to production.
+
+Do do that, `cd` a level down in your repo's `hooks` sub-directory, and open the `post-receive` hook file using `nano`:
 
 ```bash
 cd hooks
 nano post-receive
 ```
 
-Insert the following lines and save:
+---
+
+# Option 1: All Git
+
+Once the nano editor has opened, (customize and) insert the following lines:
 
 ```bash
 #!/bin/bash
@@ -312,26 +412,40 @@ do
     if [[ $ref =~ .*/master$ ]];
     then
         echo "Master ref received. Deploying master branch to production..."
-        git --work-tree=/var/www --git-dir=/home/jame4906/mandiwise.git checkout -f
+        git --work-tree=/var/www --git-dir=/home/username/mandiwise.git checkout -f
     else
         echo "Ref $ref successfully received.  Doing nothing: only the master branch may be deployed on this server."
     fi
 done
 ```
 
-And then make post-receive executable:
+---
+
+# Option 1: All Git
+
+Once you've inserted those lines, press `CTRL + O` and press `ENTER` to save, then `CRTL + X` to exit the file.
+
+Next, you'll need make to make the `post-receive` hook executable by running the following command:
 
 ```bash
 chmod +x post-receive
 ```
 
-In your user directory on the server:
+---
+
+# Option 1: All Git
+
+Lastly, go back to your local version of the repo, and add your new remote to it.
 
 ```bash
-# git remote add production ssh://username@123.456.789/mandiwise.git
+git remote add production ssh://username@123.456.789/mandiwise.git
 ```
 
+You should now be able to push changes to your remote using:
 
+```bash
+git push production master
+```
 
 ---
 
@@ -340,6 +454,55 @@ In your user directory on the server:
 - Occasionally you may run into a web host that doesn't support Git
 - [DPLOY](https://leanmeanfightingmachine.github.io/dploy/) is a Node package that allows you to manage deploys based on your Git commits, but deploy the added/changed files to your web host's server using SFTP/FTP
 - [Dandelion](https://github.com/scttnlsn/dandelion) is the Ruby version
+
+---
+
+# Setting Up DPLOY
+
+DPLOY just takes a few steps to set up:
+
+```bash
+# Globally install DPLOY
+npm install dploy -g
+
+# Install DPLOY in the same directory where your Git repo lives
+cd ProjectName/
+dploy install
+```
+
+---
+
+# Setting up DPLOY
+
+Installing DPLOY will create a `dploy.yaml` file that you will need to configure with your info:
+
+```bash
+prod:
+    scheme: sftp
+    host: mywebsite.com
+    port: 22
+    user: username
+    pass: password
+    branch: master
+    check: true
+    path:
+        remote: public_html/
+    exclude: ["README.md", ".gitignore"]
+```
+
+See DPLOY's GitHub repo for [more config options](https://github.com/LeanMeanFightingMachine/dploy).
+
+---
+
+# Using DPLOY
+
+Now whenever you want to deploy changes to your site, all you have to do is run this command when in your local website folder:
+
+```bash
+dploy prod
+```
+
+DPLOY keeps track of the last time you deployed based your Git commits, and only deploys the files that changed since then.
 
 ---
 
