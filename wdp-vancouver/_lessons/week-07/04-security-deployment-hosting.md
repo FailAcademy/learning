@@ -31,31 +31,9 @@ Some pre-reading on WordPress security:
 - [Domain name](https://developer.mozilla.org/en-US/docs/Glossary/Domain_name)
 - [DNS](http://searchnetworking.techtarget.com/definition/domain-name-system)
 - Escaping
+- Validating
+- Sanitizing
 - Brute force attack
-
----
-
-## Exercise 1
-
-*Exercise TBA...*
-
----
-
-## Exercise 2
-
-*Exercise TBA...*
-
----
-
-## Exercise 3
-
-*Exercise TBA...*
-
----
-
-## Lab Activity
-
-*Lab activity TBA...*
 
 ---
 
@@ -73,3 +51,10 @@ A few back-up plugins:
 More on WordPress security best practices:
 
 - [WordPress Security: The Ultimate Guide](http://premium.wpmudev.org/blog/keeping-wordpress-secure-the-ultimate-guide/)
+- [The Importance of Escaping the Things](https://vip.wordpress.com/2014/06/20/the-importance-of-escaping-all-the-things/)
+- [Sanitizing, Escaping and Validating Data in WordPress](http://www.sitepoint.com/sanitizing-escaping-validating-data-in-wordpress/)
+
+More about SSH:
+
+- [How SSH Works](https://www.youtube.com/watch?v=zlv9dI-9g1U)
+- [SSH Essentials: Working with SSH Servers, Clients, and Keys](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys)
