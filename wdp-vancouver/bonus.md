@@ -29,4 +29,4 @@ title: Bonus Lessons
 
 ### Monday, November 30 / Thursday, December 3:
 
-Presentation Skills (guest lecture by Robert Mackie)
+[Presentation Skills](/public/files/presentation-skills-1.pdf) (guest lecture by Robert Mackie)
