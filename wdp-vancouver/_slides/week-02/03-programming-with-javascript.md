@@ -138,13 +138,26 @@ Comments are always hidden from execution in the script, and do not affect the o
 
 #What is Syntax?
 
-In JavaScript we can describe our code using specifi adjectives.
+When we talk about programming, we will use specific adjectives to describe the syntax we are talking about.
 
 - Statement
 - Expression
 - Value
+- Declaration
 - Assignment
 - Conditional
+- Object
+- Function
+- Method
+
+---
+
+#The importance of Style!
+
+Javascript is a flexible language, and  the concept of *coding style* is important. Coding with a conventional style will help other programmers understand your code.
+
+In this course we'll be sticking as closely as possible to AirBnB's style guide, lets take a look now:
+[AirBnB Style Guide](https://github.com/airbnb/javascript/tree/master/es5)
 
 ---
 
@@ -167,10 +180,15 @@ var result = amount * 10;
 We can **declare** variables, without assinging a value. Unassigned variables automatically get the JavaScript value `undefined`.
 
 ```javascript
+
 var a;
 var b;
 var c;
+
+console.log(a); // logs undefined
+
 ```
+
 ---
 
 # Variable Pro Tips
@@ -187,6 +205,7 @@ var c;
 Who can name what the **statements** and **variables** are in the following script?
 
 ```js
+
 var today = new Date;
 var dayOfWeek = today.getDay();
 var greeting;
@@ -198,27 +217,14 @@ if ( dayOfWeek == 2 ) {
 }
 
 alert(greeting);
+
 ```
-
-Bonus points if you know what the `new Date`, `getDay()` and `alert()` are.
-
----
-
-# Objects Have Methods
-
-Methods perform certain tasks for the objects:
-
-- The `alert()` method will open an alert box in front of the window
-- The `document.write()` method will add content to page wherever the script is executed
-- `prompt()` is another handy method
-
-*Let's try these out in a console...*
 
 ---
 
 # Logging Values to the Browser Console
 
-You can also use the `console.log()` method to simply print out and test values in the browser's console from your code, instead of writing them to your document.
+You can also use the `console.log()` method to simply print out and test values in the browser's console from your code.
 
 ```javascript
 var greeting = "Hi there!"
@@ -344,7 +350,7 @@ var score = 0;
 
 while (i < 5) {
   score = i;
-  document.write("Your score : " + score + "<br />");
+  console.log("Your score : " + score);
   i++;
 }
 ```
@@ -363,7 +369,7 @@ var score = 0;
 
 do {
   score = i;
-  document.write("Your score : " + score + "<br />");
+  console.log("Your score : " + score);
   i++;
 } while (i < 1);
 ```
@@ -381,7 +387,7 @@ var count = 0;
 
 for (var i = 1; i < 5; i++) {
   count = i;
-  document.write('Current count: ' + count + '<br />');
+  console.log("Current count: " + count);
 }
 ```
 
@@ -446,7 +452,7 @@ function add(a, b) {
 
 The `a` and `b` in parentheses are called **parameters**. They allow us to pass different values into the function whenever we use it.
 
-Note that not all functions have parameters.
+Parameters are optional.
 
 ---
 
@@ -454,7 +460,7 @@ Note that not all functions have parameters.
 
 But simply writing a function doesn't do much.
 
-We need to **call** it for it to do any work for us:
+We need to **call**, or **invoke** (we can use either of these terms) it for it to do any work for us:
 
 ```javascript
 // This is called "declaring" the function:
@@ -463,7 +469,7 @@ function add(a, b) {
    return a + b;
 }
 
-// This is called "calling" the function:
+// This is called "calling", or "invoking" the function:
 
 add(2, 2);
 ```
@@ -474,16 +480,18 @@ add(2, 2);
 
 The output of function is called it's **return value**. Our previous example returned the integer 4.
 
-Let's store the return value in a variable now, and write it out to the document:
+Let's store the return value in a variable now, and write it out to the console:
 
 ```javascript
+
 function add(a, b) {
    return a + b;
 }
 
 var twoPlusTwo = add(2, 2);
 
-document.write(twoPlusTwo);
+console.log(twoPlusTwo);
+
 ```
 
 ---
@@ -495,7 +503,7 @@ Notice that we don't explicitly "return" anything from this function, we just wr
 ```javascript
 function fullName() {
    var yourName = prompt('What\'s your name?')
-   document.write('<h1>' + yourName + '</h1>');
+   console.log(yourName);
 }
 
 fullName();
@@ -505,21 +513,24 @@ Keep in mind that JS functions always return something, even when you don't tell
 
 ---
 
-# Functions in HTML
+# Functions
 
-We can call functions from within an HTML file as well:
+This is an example of a JavaScript function in action
 
 ```javascript
 function fullName() {
-   var yourName = prompt('What\'s your name?')
-   document.write('<h1>' + yourName + '</h1>');
+  var yourName = prompt('What\'s your name?')
+  console.log(yourName);
 }
 ```
 
-The function is called using the `onclick` attribute:
+The function is called later on in our code.
 
-```html
-<button onclick="fullName();">Click here!</button>
+```javascript
+
+// name will have the value that the user entered!
+var name = fullName();
+
 ```
 
 ---
@@ -545,7 +556,7 @@ These functions can be called before they are even declared in your code (due to
 ```javascript
 var size = volume(3, 4, 5);
 
-document.write(size);
+console.log(size);
 
 function volume(width, height, depth) {
    return width * height * depth;
@@ -567,7 +578,7 @@ var volume = function(width, height, depth) {
 
 var size = volume(3, 4, 5);
 
-document.write(size);
+console.log(size);
 ```
 
 Unlike function declarations, this function won't be available to use until the interpreter reaches that point in the code.
@@ -634,25 +645,6 @@ There are pros and cons to each type of variable scope:
 
 ---
 
-# Exercise 1
-
-Create an `index.html` file with and externally linked JS file included in it. Load that file in your browser window.
-
-In your JS file, declare a function called `min` that compares to two numbers and logs out the lower number to the console:
-
-```js
-// Inside your JS file, first create your function declaration...
-
-// Then run:
-
-console.log(min(0, 10));
-// should log out 0 in the console
-
-console.log(min(0, -10));
-// should log out -10 in the console
-```
-
----
 template: inverse
 
 # Objects
@@ -671,25 +663,6 @@ Objects are like containers that hold groups of related variables and functions 
 - Like functions, objects help us **better organize our code** and make it more reusable
 - When we define a variable in an object, we call it a **property**
 - When we create a function in an object, we call it a **method**
-
----
-
-# You've Used Methods
-
-You've already made use of handful of objects and their methods. Remember that in JS we have `window` and `document` objects?
-
-```javascript
-// These are methods of the window object:
-
-alert(); // this is the same as writing window.alert();
-prompt(); // this is the same as writing window.prompt();
-```
-
-```javascript
-// This is method of the document object:
-
-document.write();
-```
 
 ---
 
@@ -956,7 +929,7 @@ for (var prop in bob) {
 
 ---
 
-# Exercise 2
+# Exercise 4
 
 In this exercise, you're going to build a JS object of your own to represent a **hotel**.
 
