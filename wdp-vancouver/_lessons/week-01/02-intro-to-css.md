@@ -27,7 +27,7 @@ Readings from *Learn to Code HTML & CSS*:
 - Use CSS positioning and float to layout elements on a webpage.
 - Use hexadecimal and RGBa to set the colours of HTML elements.
 - Use CSS background properties to set background colors or images.
-- Define what a CSS "reset" is, why it's needed, and demostrate how to use one.
+- Define what a CSS "reset" is, why it's needed, and demonstrate how to use one.
 - Use code validators and browser developer tools to assist with debugging.
 
 ---
@@ -56,12 +56,13 @@ Next, just like in the last example, add a `<link>` tag to the `<head>` of your 
 
 Let's start styling our project website using what we just learned about CSS text properties and the box model.
 
-Your goal is to add CSS for the `<header>` element that will:
+If you haven't done so already, wrap hero image banner area in a `<section>` element. Your goal is to then write CSS that will:
 
-- **center** the text and logo graphic
+- **center** the text
 - adjust the **size of the text**
-- add the **border** below Laura's name
 - add adequate **margin** above and below it
+
+Don't worry about the background image yet, we'll get to that.
 
 ---
 
@@ -71,7 +72,7 @@ Let's get the width of our website under control.
 
 One common way to do that is to create a `container` class and strategically apply to that to various elements to keep their widths in check.
 
-We want our `container` class to keep everything inside of it at a width of `840px`. Create that class in your CSS and begin apply it where you think it's needed.
+We want our `container` class to keep everything inside of it at a width of `1240px`. Create that class in your CSS and begin apply it where you think it's needed.
 
 Is there anywhere that you may need to create an extra wrapping `<div>` around some of your content to contain it without conflicting with the background treatment later?
 
@@ -85,7 +86,7 @@ Team up with a partner and go through the comp to figure out where you'll need t
 
 Work together to rough out the CSS that will float these elements. We'll reconvene as a class and share our solutions.
 
-And don't forget to add a clearfix!
+And don't forget to add a clearfix class!
 
 ---
 
@@ -93,11 +94,11 @@ And don't forget to add a clearfix!
 
 There are two components to this exercise&mdash;adding some colour, and beginning to add background images.
 
-Change the colour of the links and the orange headings to `#feaa3a` (and for future reference, the grey borders are `#333`).
+Change the colour of the links and the orange headings to `#e2574c`.
 
-Also add the bird background image to the `<header>`.
+Also add the floral background image to the banner area.
 
-Challenge! How could we get the partially transparent background for the intro section to sit on top of this image?
+Challenge! How could we get the partially transparent background layer and the photo of the girl to sit on top of this image (also as backgrounds)?
 
 ---
 

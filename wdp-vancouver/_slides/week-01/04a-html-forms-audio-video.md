@@ -22,6 +22,7 @@ layout: false
 1. Creating forms
 2. Common form elements
 3. Working with forms in CSS
+4. Using the `<audio>` and `<video>` HTML elements
 
 ---
 template: inverse
@@ -408,7 +409,7 @@ Always consider if hosting your own audio and video files is the right choice fo
 - How to create a form in an HTML document
 - What special HTML elements we can use to create form elements
 - How to work with form elements in CSS
-- How to use HTML5 `audio` and `video` elements
+- How to use HTML5 `<audio>` and `<video>` elements
 
 ---
 template: inverse
