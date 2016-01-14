@@ -26,6 +26,8 @@ A good read to brush up your JS skills before class:
 
 - Statement
 - Variable
+- Declaration
+- Assignment
 - Boolean
 - Loop
 - Conditional

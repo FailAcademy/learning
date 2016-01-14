@@ -15,6 +15,35 @@ template: inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
+.left-column[
+  ## The Window Object
+]
+
+.right-column[
+   The "window object" is the browser's representation of each window or tab.
+
+   .inline-images[
+      ![Window Object](../../public/img/slide-assets/window-object.svg)
+   ]
+]
+
+---
+
+.left-column[
+  ## The Document Object
+]
+
+.right-column[
+   The document object is the model of the web page inside of the window/tab. It represents the HTML page:
+
+   .inline-images[
+      ![Document Object](../../public/img/slide-assets/document-object.svg)
+   ]
+]
+
+---
+
 class: center, middle
 
 ### Time for things to get real!

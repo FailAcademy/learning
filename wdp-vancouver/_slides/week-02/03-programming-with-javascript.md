@@ -20,12 +20,12 @@ layout: false
 # Agenda
 
 1. What is JavaScript?
-2. Statements, variables, and comments
-4. Arithmetic and comparison operators
+2. Javscript Syntax
+4. Operators
 5. Loops
-6. How we create functions in JS, and how they impact "scope"
-7. What are objects? How do we make them?
-8. Arrays (and how to "loop" over them)
+6. Functions
+7. Objects
+8. Arrays
 
 ---
 template: inverse
@@ -92,6 +92,42 @@ You can also use the console to identify bugs in your JS code.
 
 ---
 
+# Values (Javascript Primitives)
+
+In JavaScript, all programs are made up of the following **primitive values**.
+
+```javascript
+
+String
+Number
+Boolean
+null
+undefined
+
+```
+
+---
+
+# Comments
+
+We can add comments to our JS too:
+
+```javascript
+
+   // Add a single line comment with 2 forward slashes
+
+   /*
+      Add a multi-line comment like this
+   */
+
+```
+
+Comments are a powerful tool for helping you organize and understand your programs.
+Good developers add descriptive comments to their programs as they code them.
+Comments are always hidden from execution in the script, and do not affect the output of the program.
+
+---
+
 # What Is Syntax?
 
 - Syntax is the set of rules or "grammar" of a particular programming language
@@ -99,100 +135,47 @@ You can also use the console to identify bugs in your JS code.
 - A text-based language's syntax will permit specific combinations of letter, numbers, and symbols
 
 ---
-class: center, middle
 
-.large[
-   What's a statement?
-]
+#What is Syntax?
 
----
-class: center, middle
+In JavaScript we can describe our code using specifi adjectives.
 
-.large[
-   `alert()`
-]
-
----
-class: center, middle
-
-.large[
-   What's a conditional statement?
-]
-
----
-class: center, middle
-
-.large[
-   `if ( something ) { }`
-]
-
----
-class: center, middle
-
-.large[
-   What's a variable?
-]
-
----
-class: center, middle
-
-.large[
-   `var color = 'red';`
-]
+- Statement
+- Expression
+- Value
+- Assignment
+- Conditional
 
 ---
 
 # Variables
 
-In JS, we use the **var** keyword to define our variables.
-
-We can define variables as strings (with HTML tags):
+In JS, we use the **var** keyword to define our variables, here is what a **variable declaration** looks like, in JavaScript!
 
 ```javascript
 var color = 'red';
-var heading = '<h1>Page Heading</h1>';
-var numberString = '10';
+var amount = 100;
+var list = ['first', 'second', 'third'];
+var result = amount * 10;
 
-var question = 'What\'s your name?';
 ```
-
-Strings must be wrapped in quotes, and quotes within a string must be "escaped" with a backslash.
 
 ---
 
-# Variables
+# Uninitialized Variables
 
-Variables can be integers or booleans:
-
-```javascript
-var height = 7;
-var width = 5;
-
-var aliveAndWell = true;
-```
-
-Integers and booleans do not need to be wrapped in quotes.
-
----
-
-# Variables
-
-And we can "concatenate" different pieces together:
+We can **declare** variables, without assinging a value. Unassigned variables automatically get the JavaScript value `undefined`.
 
 ```javascript
-var salutation = 'Ms.';
-
-var addressee = 'Dear ' + salutation + ' Sunshine:';
+var a;
+var b;
+var c;
 ```
-
-The variable `addressee` will now return "Dear Ms. Sunshine:".
-
-Notice the use of the `+` sign to join variable and strings.
-
 ---
 
 # Variable Pro Tips
 
+- Variables can hold *any* JavaScript value!
 - Make sure your variable names are descriptive (i.e. not `var a = 'First'`)
 - Use camelCase for defining JS variables
 - You can only use the dollar sign and underscore special characters in variable names
@@ -218,54 +201,6 @@ alert(greeting);
 ```
 
 Bonus points if you know what the `new Date`, `getDay()` and `alert()` are.
-
----
-
-# Comments
-
-We can add comments to our JS too:
-
-```javascript
-   var foo = "Hello World;"
-
-   // Add a single line comment with 2 forward slashes
-
-   /*
-      Add a multi-line comment like this
-   */
-
-   document.write(foo);
-```
-
-Comments are always hidden from execution in the script.
-
----
-
-.left-column[
-  ## The Window Object
-]
-
-.right-column[
-   The "window object" is the browser's representation of each window or tab.
-
-   .inline-images[
-      ![Window Object](../../public/img/slide-assets/window-object.svg)
-   ]
-]
-
----
-
-.left-column[
-  ## The Document Object
-]
-
-.right-column[
-   The document object is the model of the web page inside of the window/tab. It represents the HTML page:
-
-   .inline-images[
-      ![Document Object](../../public/img/slide-assets/document-object.svg)
-   ]
-]
 
 ---
 
@@ -299,7 +234,6 @@ Open a new browser tab and open the console, and type in each line one at a time
 ```js
 alert('Hello World!');
 prompt('What\'s your name?');
-document.write('<h1>Hi There!</h1>');
 ```
 
 If we wanted to store the value inputted into the `prompt` and print it out in an `alert` afterward, how might we do that?
@@ -320,6 +254,8 @@ Operators allow us to create a single value from multiple values. We can use `+`
 ```javascript
 var quantity = 3 + 2;
 var total = (4 - 1) * 3;
+var totalAndOne = total ++
+var totalMinusOne = total --
 ```
 
 *What will the above variables return?*
