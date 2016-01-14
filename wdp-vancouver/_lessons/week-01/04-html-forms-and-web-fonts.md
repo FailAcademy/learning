@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: HTML Forms and Web Fonts
-slides: ['_slides/week-01/04a-html-forms.md', '_slides/week-01/04b-web-fonts.md']
-date: 2015-09-24
+title: HTML Forms, Audio/Video, and Web Fonts
+slides: ['_slides/week-01/04a-html-forms-audio-video.md', '_slides/week-01/04b-web-fonts.md']
+date: 2016-01-21
 ---
 
 ## Pre-Work
@@ -19,7 +19,8 @@ Readings from *Learn to Code HTML & CSS*:
 - Understand how HTML forms work.
 - Build a functional HTML form with a variety of inputs.
 - Target form elements using CSS.
-- Explore `@font-face` to incorporate custom typefaces into a web page.
+- Explore the `audio` and `video` elements in HTML5.
+- Use `@font-face` to incorporate custom typefaces into a web page.
 - Explore third-party services that incorporate custom typefaces on a web page.
 - Discover how to combine typefaces together in effective combinations.
 - Learn how to implement icon fonts on a website using Font Awesome.
@@ -34,6 +35,8 @@ Readings from *Learn to Code HTML & CSS*:
 - [Textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
 - [Label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label)
 - [Button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
+- [audio](https://developer.mozilla.org/en/docs/Web/HTML/Element/audio)
+- [video](https://developer.mozilla.org/en/docs/Web/HTML/Element/video)
 - [@font-face](https://developer.mozilla.org/en/docs/Web/CSS/@font-face)
 - Icon font
 - SVG

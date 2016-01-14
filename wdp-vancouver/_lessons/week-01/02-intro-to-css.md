@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: CSS
+title: Intro to CSS
 slides: ['_slides/week-01/02-intro-to-css.md']
-date: 2015-09-22
+date: 2016-01-19
 ---
 
 ## Pre-Work

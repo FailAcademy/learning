@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: HTML Forms Slides
+title: HTML Forms, Audio & Video Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# HTML Forms
+# HTML Forms, Audio & Video
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -296,12 +296,119 @@ Build this form!
 ]
 
 ---
+template: inverse
+
+# Audio & Video
+
+---
+class: center, middle
+
+### More from HTML5...
+
+The HTML5 specification gives us two new elements to add media to our websites: `audio` and `video`
+
+---
+
+# Adding Audio
+
+The audio tag should look familiar. It has a `src` attribute just like an `img` tag:
+
+```html
+<audio src="macerena.ogg"></audio>
+```
+
+If we wanted to set the audio file to autoplay and give the user controls to manage playback, we can add these attributes:
+
+```html
+<audio src="macarena.ogg" autoplay="autoplay" controls="controls"></audio>
+
+<!-- This syntax is also valid: -->
+<audio src="macarena.ogg" autoplay controls></audio>
+```
+
+---
+class: center, middle
+
+.large[
+   But there's a catch!
+]
+
+---
+
+# Fallback Formats
+
+The `audio` tag isn't a self-closing tag for reason...not all browsers support the same audio file formats, so we have to provide fallback formats.
+
+To do this, we take the `src` attribute out of the audio element tag, and nest all of our file formats inside some child `source` tags like this:
+
+```html
+<audio autoplay loop controls>
+   <source src="macarena.ogg" type="audio/ogg">
+   <source src="macarena.mp3" type="audio/mpeg">
+   <source src="macarena.wav" type="audio/wav">
+</audio>
+```
+
+---
+
+# Adding Video
+
+Similar to the audio element, we can add video like this:
+
+```html
+<video src="my-video.mp4" controls poster="video-thumb.jpg"></video>
+```
+
+The video element gives us `poster` attribute to specify a custom image that should be shown before the video plays.
+
+---
+
+# Fallback Formats
+
+But of course, not all browsers support the same video formats.
+
+We need to provide fallback formats, just like with `audio`:
+
+```html
+<video controls poster="video-thumb.jpg">
+   <source src="my-video.ogv" type="video/ogg">
+   <source src="my-video.mp4" type="video/mp4">
+</video>
+```
+
+Note that the `.mp4` format with (H.264 encoding) is almost ubiquitously supported now, but you'll likely want to provide at least one fallback in `.ogv`/`.ogg` or `.webm` formats.
+
+---
+
+# Encoding Media
+
+Wondering how you create all of these different versions of your video files?
+
+You'll need an app for that:
+
+- [Miro Video Converter](http://www.mirovideoconverter.com/)
+- [EasyHTML5Video](http://easyhtml5video.com/)
+
+And if you need to convert audio files check out [media.io](http://media.io/).
+
+---
+
+# Other Concerns
+
+Always consider if hosting your own audio and video files is the right choice for a given website:
+
+- Do (or your client) you have the **administrative capacity** to juggle all those formats?
+- Does your web host provide the necessary **bandwidth** to deliver those files to users?
+- Would a **third-party** service like Soundcloud, YouTube, or Vimeo be a better choice?
+
+---
 
 # What We've Learned
 
 - How to create a form in an HTML document
 - What special HTML elements we can use to create form elements
 - How to work with form elements in CSS
+- How to use HTML5 `audio` and `video` elements
 
 ---
 template: inverse
