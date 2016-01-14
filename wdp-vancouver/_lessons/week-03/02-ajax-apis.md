@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Ajax, JSON, and APIs
-slides: ['_slides/week-03/01-ajax-apis.md']
+slides: ['_slides/week-03/02-ajax-apis.md']
 date: 2015-10-05
 ---
 
@@ -58,7 +58,7 @@ $('button').on('click', function() {
     $.each(data, function( key, value ){
       /* Append your list items here */
     });
-  });  
+  });
 });
 ```
 

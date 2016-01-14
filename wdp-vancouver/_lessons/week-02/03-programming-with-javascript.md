@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: JavaScript Basics
-slides: ['_slides/week-02/01-intro-to-js.md']
-date: 2015-09-28
+title: Programming with Javascript
+slides: ['_slides/week-02/03-programming-with-javascript.md']
+date:  2016-01-27
 ---
 
 ## Pre-Work
@@ -17,14 +17,13 @@ A good read to brush up your JS skills before class:
 
 - Define basic programming concepts such as statements, booleans, conditionals, loops, and variables (in relation to JavaScript).
 - Distinguish how JavaScript differs from other "server-side" programming languages.
-- Use the browser’s developer tools to debug JavaScript errors.
+- Become familiar with the tools used for developing and debugging javascript code.
+- Create and use basic JavaScript functions.
+- Build basic JavaScript objects and manipulate their properties and methods.
+- Create JavaScript arrays and iterate over them.
 
 ---
 
-## Keywords
-
-- [Document](https://developer.mozilla.org/en-US/docs/Web/API/document)
-- [Window](https://developer.mozilla.org/en-US/docs/Web/API/Window)
 - Statement
 - Variable
 - Boolean
@@ -32,6 +31,13 @@ A good read to brush up your JS skills before class:
 - Conditional
 - Operator
 - Concatenate
+- [Function](https://developer.mozilla.org/en-US/docs/Glossary/Function)
+- [Return](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return)
+- [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object)
+- Method
+- Property
+- [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/array)
+- [Scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope)
 
 ---
 
@@ -71,11 +77,38 @@ We won't be adding any other JS to this file today, but will be later in the wee
 
 ---
 
+## Exercise 4
+
+Create an `index.html` file with and externally linked JS file included in it. Load that file in your browser window.
+
+In your JS file, declare a function called `min` that compares to two numbers and logs out the lower number to the console:
+
+```js
+// Inside your JS file, first create your function declaration...
+
+// Then run:
+
+console.log(min(0, 10));
+// should log out 0 in the console
+
+console.log(min(0, -10));
+// should log out -10 in the console
+```
+
+---
+
+## Exercise 5
+
+In this exercise, you're going to build a JS object of your own to represent a **hotel**.
+
+Properties of the hotel object should include the **name** of the hotel (The Quay), the **total number of rooms** (40), the current number of **rooms booked** (25), an array of the **types of rooms** (twin, double, suite), and function to **check the availability**.
+
+One you've created your object, **create a loop** to log to the console all of the room types one-by-one. Then, **update the booked rooms** to 30, check the new availability, and display that in an **alert box**.
+
+---
+
 ## Lab Activity
 
-Today's lab time will be dedicated to Project 2.
-
-Your task today is to begin roughing out your project in HTML and CSS based on the provided design comps. We'll have more time to work on this tomorrow, and we'll start adding interactive components on Wednesday.
 
 ---
 
