@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Introduction to Flexbox
-slides: ['_slides/week-03/05-flexbox.md']
-date: 2015-10-09
+slides: ['_slides/week-02/01-flexbox.md']
+date: 2016-01-23
 ---
 
 ## Pre-Work
