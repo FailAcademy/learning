@@ -202,6 +202,8 @@ class: center, middle
 
 jQuery is library of code that makes it much easier to perform many essential tasks in JavaScript.
 
+jQuery is just JavaScript, here is the [source code of the original jQuery release](http://genius.it/ejohn.org/files/jquery-original.html);
+
 ---
 
 # What Is jQuery for?

@@ -96,9 +96,7 @@ You can also use the console to identify bugs in your JS code.
 
 REPL is an acronym that stands for **"Read Evaluate Print Loop"**. Most programming languages have a REPL program that you can use to run code in that language, from the command line. Node.js provides a *JavaScript runtime environment* for your operating system.
 
-This means you can write JavaScript code in a file, and evaluate it from the command line!
-
-To evaluate a file, cd into the directory where you've created your program, and run the command `node` followed by the name of the file you've created. For example, if your program is written in a file names `main.js` you can run the code in that file by typing `node main` from the command line.
+To run a JavaScript program, `cd` to the directory where you've created your program, and run the command `node` followed by the name of the file you've created. For example, if your program is written in a file named `main.js` you can run the code in that file by typing `node main` from the command line.
 
 ---
 
@@ -133,7 +131,7 @@ We can add comments to our JS too:
 ```
 
 Comments are a powerful tool for helping you organize and understand your programs.
-Good developers add descriptive comments to their programs as they code them.
+**Good developers add descriptive comments to their programs as they code them.**
 Comments are always hidden from execution in the script, and do not affect the output of the program.
 
 ---
@@ -148,23 +146,16 @@ Comments are always hidden from execution in the script, and do not affect the o
 
 #What is Syntax?
 
-When we talk about programming, we will use specific adjectives to describe the syntax we are talking about.
+When we talk about programming, we will use specific adjectives to describe the programs we are talking about.
+Here are a few examples:
 
-- Statement
-- Expression
-- Value
-- Declaration
-- Assignment
-- Conditional
-- Object
-- Function
-- Method
+**Statement, Expression, Value, Declaration, Assignment, Conditional, Object, Function, Method**
 
 ---
 
 #The importance of Style!
 
-Javascript is a flexible language, and  the concept of *coding style* is important. Coding with a conventional style will help other programmers understand your code.
+JavaScript is a *flexible* language, and  the concept of *coding style* is important. Coding with a conventional style will help other programmers understand your code.
 
 In this course we'll be sticking as closely as possible to AirBnB's style guide, lets take a look now:
 [AirBnB Style Guide](https://github.com/airbnb/javascript/tree/master/es5)
