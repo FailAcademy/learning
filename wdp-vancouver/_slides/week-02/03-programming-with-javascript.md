@@ -92,6 +92,16 @@ You can also use the console to identify bugs in your JS code.
 
 ---
 
+# The Node.js REPL
+
+REPL is an acronym that stands for **"Read Evaluate Print Loop"**. Most programming languages have a REPL program that you can use to run code in that language, from the command line. Node.js provides a *JavaScript runtime environment* for your operating system.
+
+This means you can write JavaScript code in a file, and evaluate it from the command line!
+
+To evaluate a file, cd into the directory where you've created your program, and run the command `node` followed by the name of the file you've created. For example, if your program is written in a file names `main.js` you can run the code in that file by typing `node main` from the command line.
+
+---
+
 # Values (Javascript Primitives)
 
 In JavaScript, all programs are made up of the following **primitive values**.
