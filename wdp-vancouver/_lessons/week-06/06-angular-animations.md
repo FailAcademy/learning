@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: Routing and Templates cont...
-slides: ['_slides/week-05/04-routing-spa.md']
-date: 2015-10-22
+title: UI Animations in Angular
+slides: ['_slides/week-06/04b-angular-animations.md']
+date: 2016-02-25
 ---
 
 ## Pre-Work
@@ -24,7 +24,6 @@ Review this exellent article on animations in Angular:
 Today we'll finish adding routes to our application and begin to add animations on page transitions using `ng-view` and  CSS `@keyframes`!
 Animations will be achieved via SCSS and Angular's ngAnimate module, which we'll install in our application.
 (We will not be covering JavaScript based animations).
-
 ---
 
 ## Keywords

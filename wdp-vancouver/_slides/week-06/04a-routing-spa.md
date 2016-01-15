@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Refactoring ES5 to ES2015 Slides
+title: Single Page Applications & Routing Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Refactoring ES5 to ES2015
+# Single Page Applications & Routing in Angular
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 

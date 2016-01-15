@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Intro to AngularJS
-slides: ['_slides/week-06/01-intro-to-angular.md']
+slides: ['_slides/week-06/01a-intro-to-angular.md']
 date: 2016-02-22
 ---
 
@@ -57,7 +57,7 @@ Codeacademy also as Angular tutorial to work through:
 
 - [Learn AngularJS](https://www.codecademy.com/en/courses/learn-angularjs)
 
-Once you've completed these tutorials, start thinking about how these concepts will apply to Project 4.
+Once you've completed these tutorials, start thinking about how these concepts will apply to Project 5.
 
 ---
 

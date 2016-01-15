@@ -19,13 +19,8 @@ layout: false
 
 # Agenda
 
-1. Daily JS Exercise
 2. Review Angular's built-in directives
 3. Create our first directive.
-
----
-
-#Daily JS
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: URL Routing in React Slides
+title: Single Page Applications and Routing in React
 ---
 
 {% highlight html %}
@@ -10,7 +10,9 @@ class: center, middle, inverse
 
 ---
 
-# URL Routing in React
+# Single Page Applications and Routing in React
+
+.title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
 

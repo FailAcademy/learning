@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Refactoring ES5 to ES2015 Slides
+title: Intro to MVC in Angular Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Refactoring ES5 to ES2015
+# Intro to MVC in Angular
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 

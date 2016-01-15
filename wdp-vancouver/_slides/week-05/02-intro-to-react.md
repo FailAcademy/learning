@@ -12,6 +12,8 @@ class: center, middle, inverse
 
 # Introduction to React
 
+.title-logo[![Red logo](/public/img/red-logo-white.svg)]
+
 ---
 
 template: inverse

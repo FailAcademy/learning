@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to ECMAScript 2015 Slides
+title: Intro to ES2015 Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,9 @@ class: center, middle, inverse
 
 ---
 
-# Intro to ECMAScript 2015 
+# Intro to ES2015
+
+.title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
 

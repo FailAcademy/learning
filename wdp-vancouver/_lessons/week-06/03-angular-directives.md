@@ -1,15 +1,8 @@
 ---
 layout: lesson
 title: AngularJS Directives
-slides: ['_slides/week-05/01-angular-directives.md']
-date: 2015-10-19
----
-
-## Pre-Work
-
-Explore this pluralsight course on directive fundamentals:
-http://www.pluralsight.com/courses/angularjs-directive-fundamentals
-
+slides: ['_slides/week-06/02-angular-directives.md']
+date: 2016-02-23
 ---
 
 ## Learning Objectives
@@ -21,7 +14,7 @@ Create a basic directive.
 
 ## Keywords
 
-Attribute directives 
+Attribute directives
 
 - ng-href
 - ng-src

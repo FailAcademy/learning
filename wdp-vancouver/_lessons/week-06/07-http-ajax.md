@@ -1,19 +1,14 @@
 ---
 layout: lesson
 title: Angular's $http Service & Ajax
-slides: ['_slides/week-05/05-http-ajax.md']
-date: 2015-10-23
+slides: ['_slides/week-06/05-http-ajax.md']
+date: 2016-02-26
 ---
 
 ## Pre-Work
 
 Review the angular documentation for $http:
 - https://docs.angularjs.org/api/ng/service/$http
-
-Visit and watch the following Pluralsight course:
-- http://www.pluralsight.com/courses/angularjs-get-started
-	- controllers: Calling HTTP
-	- controllers: Using $http
 
 ---
 

@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Forms & Binding
+# 2-Way Data-Binding & Forms
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 

@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Single Page Applications and Routing Slides
+title: UI Animations in Angular Slides
 ---
 
 {% highlight html %}
@@ -10,12 +10,11 @@ class: center, middle, inverse
 
 ---
 
-# Routing cont...
+# UI Animations in Angular
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
-layout: false
 
 # Agenda
 

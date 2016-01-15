@@ -12,6 +12,8 @@ class: center, middle, inverse
 
 # Refactoring React to use ES2015
 
+.title-logo[![Red logo](/public/img/red-logo-white.svg)]
+
 ---
 
 template: inverse

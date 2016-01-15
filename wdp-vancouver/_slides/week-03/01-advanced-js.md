@@ -10,7 +10,9 @@ class: center, middle, inverse
 
 ---
 
-# Developing with ES2015 & Webpack 
+# Advanced JS Exercises
+
+.title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
 
