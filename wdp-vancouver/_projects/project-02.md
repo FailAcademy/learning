@@ -10,7 +10,7 @@ For Project 2, you're going to create a one-page, responsive website that allows
 
 ## Design Specifications:
 
-*Design specifications TBA.*
+*Updated design specifications TBA.*
 
 <!-- - The base font size is `12px` and its HEX code is `#2e2e2e`
 - The body font family is Open Sans Light
@@ -37,7 +37,7 @@ Your project must:
 - Contain a single `.html` file and an external `.css` file (a CSS reset may be included separately)
 - Adequately reflect the designer's vision for the website when built out using HTML & CSS
 - Demonstrate effective organization of the project's root directory
-- Have a Git repository initialized in its root directory
+- Have a Git repository initialized in its root directory with an appropriately customized `.gitignore` file
 - Be pushed to GitHub (with all of your commits synced to it)
 - Use Gulp for running build tasks, such as minification and error checking
 
@@ -56,7 +56,7 @@ Your project must:
 - Use a CSS reset
 - Use Sass as a preprocessor, with CSS properly compiled and minified
 - Use the `background` property where appropriate
-- Implement a mobile-first responsive layout using Flexbox (no floats)
+- Implement a mobile-first responsive layout using flexbox (no floats)
 - Demonstrate effective use of box model properties
 - Demonstrate effective use of CSS properties for altering the visual display of text (e.g. `font-family`, `font-style`, `text-transform`, etc.)
 - Incorporate custom fonts using `@font-face`
