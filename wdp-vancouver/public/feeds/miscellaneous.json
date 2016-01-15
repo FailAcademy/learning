@@ -2,37 +2,22 @@
    {
       "title": "Pre-Work",
       "allDay": true,
-      "start": "2015-09-14",
-      "end": "2015-09-19"
+      "start": "2016-01-11",
+      "end": "2016-01-16"
    },
    {
-      "title": "Thanksgiving",
+      "title": "Family Day",
       "allDay": true,
-      "start": "2015-10-12"
+      "start": "2016-02-08"
    },
    {
-      "title": "Remembrance Day",
+      "title": "Good Friday",
       "allDay": true,
-      "start": "2015-11-11"
+      "start": "2015-03-25"
    },
    {
-      "title": "AngularJS @ RED",
+      "title": "Easter Monday",
       "allDay": true,
-      "start": "2015-09-23"
-   },
-   {
-      "title": "Meteor @ RED",
-      "allDay": true,
-      "start": "2015-10-05"
-   },
-   {
-      "title": "Professional Dev",
-      "allDay": true,
-      "start": "2015-11-16"
-   },
-   {
-      "title": "Professional Dev",
-      "allDay": true,
-      "start": "2015-11-17"
+      "start": "2015-03-28"
    }
 ]

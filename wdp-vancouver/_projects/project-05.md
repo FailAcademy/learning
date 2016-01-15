@@ -1,12 +1,12 @@
 ---
 layout: project
-title: Project 5 - Custom WordPress Theme
-due: Monday, November 9th (beginning of class)
+title: Project 5 - Le Red Bread Site
+due: Monday, March 14th (beginning of class)
 ---
 
 For Project 5, you will create a multi-page website with a blog for a bakery using WordPress as a CMS.
 
-You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-05.zip).
+You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-05.zip).
 
 ## Design Specifications:
 
@@ -79,7 +79,7 @@ Your project must:
 - Use a CSS reset (normalize.css is included with the `restarter` theme)
 - Use Sass as a preprocessor, with CSS properly compiled and minified
 - Use the `background` property where appropriate
-- Implement a layout using Flexbox (no floats)
+- Implement a layout using flexbox (no floats)
 - Demonstrate effective use of box model properties
 - Demonstrate effective use of CSS properties for altering the visual display of text (e.g. `font-family`, `font-style`, `text-transform`, etc.)
 - Incorporate custom fonts using `@font-face`
@@ -90,7 +90,7 @@ Your project must:
 Want to challenge yourself? Your project could also:
 
 - Create an additional custom post type for "Testimonials" inside of your functionality plugin (rather than statically coding them into the `front-page.php` template file)
-- Redirect single Testimonial pages to the Testiomonials archive page (because the client doesn't want to show individual testimonials)
+- Redirect single Testimonial pages to the Testimonials archive page (because the client doesn't want to show individual testimonials)
 - Add appropriate dashicons to customize the CPT menu items in the WP admin menu
 - Include a custom screenshot for your theme
 
@@ -100,7 +100,7 @@ Want to challenge yourself? Your project could also:
 
 Once you have finished working on your site, please export your database by following these instructions:
 
-1. Add me as an Administrator to your site (username: mandi / password: mandi / email: mandi@redacademy.com)
+1. Add Mandi as an Administrator to your site (username: mandi / password: mandi / email: mandi@redacademy.com)
 2. Install the WP Migrate DB plugin
 3. Go to Tools > Migrate DB in the WordPress admin area
 4. Change the "Replace" fields so that the first field contains `//localhost/student` and the second contains `/Applications/MAMP/htdocs/student`

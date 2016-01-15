@@ -1,50 +1,50 @@
 [
    {
-      "title": "Project 1 Due",
+      "title": "Project 1 (Part 1) Due",
       "allDay": true,
-      "start": "2015-09-28",
-      "url": "/project/project-1-resume/"
+      "start": "2016-01-25",
+      "url": "/project/project-1-part-1-aloha-homepage/"
+   },
+   {
+      "title": "Project 1 (Part 2) Due",
+      "allDay": true,
+      "start": "2016-02-01",
+      "url": "/project/project-1-part-2-aloha-homepage/"
    },
    {
       "title": "Project 2 Due",
       "allDay": true,
-      "start": "2015-10-05",
-      "url": "/project/project-2-restaurant-homepage/"
+      "start": "2016-02-10",
+      "url": "/project/project-2-instagrid/"
    },
    {
       "title": "Project 3 Due",
       "allDay": true,
-      "start": "2015-10-14",
-      "url": "/project/project-3-instagrid/"
+      "start": "2016-02-22",
+      "url": "/project/project-3-react-app-tba/"
    },
    {
       "title": "Project 4 Due",
       "allDay": true,
-      "start": "2015-10-26",
+      "start": "2016-02-29",
       "url": "/project/project-4-mars-colony-hybrid-app/"
    },
    {
       "title": "Project 5 Due",
       "allDay": true,
-      "start": "2015-11-09",
-      "url": "/project/project-5-custom-wordpress-theme/"
-   },
-   {
-      "title": "Project 6 Due",
-      "allDay": true,
-      "start": "2015-11-16",
-      "url": "/project/project-6-wp-api-angularjs-wordpress-theme/"
+      "start": "2016-03-14",
+      "url": "/project/project-5-le-red-bread-site/"
    },
    {
       "title": "GitHub Portfolio Due",
       "allDay": true,
-      "start": "2015-11-24",
-      "url": "/project/project-7-github-portfolio/"
+      "start": "2016-03-21",
+      "url": "/project/project-6-github-portfolio/"
    },
    {
-      "title": "UX Client Project Due",
+      "title": "Community Project Due",
       "allDay": true,
-      "start": "2015-12-11",
-      "url": "/project/project-7-client-project/"
+      "start": "2016-04-01",
+      "url": "/project/project-7-community-project/"
    }
 ]

@@ -1,10 +1,10 @@
 ---
 layout: project
-title: Project 1 - Resume
-due: Monday, September 28th (beginning of class)
+title: Project 1 / Part 1 - Aloha Homepage
+due: Monday, January 25th (beginning of class)
 ---
 
-For Project 1, you're going to create a one-page website that will serve as an online resume for your client Laura Ipsum.
+<!-- For Project 1, you're going to create a one-page website that will serve as an online resume for your client Laura Ipsum.
 
 You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-01.zip).
 
@@ -61,4 +61,4 @@ Want to challenge yourself? Your project could also:
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a zip file containing your project assets** to [mandi@redacademy.com](mailto:mandi@redacademy.com).
+When you're ready to submit your project, **please email a zip file containing your project assets** to [mandi@redacademy.com](mailto:mandi@redacademy.com). -->
