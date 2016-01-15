@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Web Applications & Javascript Frameworks
+# Web Applications & JavaScript Frameworks
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 

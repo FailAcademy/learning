@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Programming with Javascript Slides
+title: Programming with JavaScript Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Programming with Javascript
+# Programming with JavaScript
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -100,7 +100,7 @@ To run a JavaScript program, `cd` to the directory where you've created your pro
 
 ---
 
-# Values (Javascript Primitives)
+# Values (JavaScript Primitives)
 
 In JavaScript, all programs are made up of the following **primitive values**.
 
