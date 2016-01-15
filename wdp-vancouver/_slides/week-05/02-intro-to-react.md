@@ -16,6 +16,24 @@ class: center, middle, inverse
 
 ---
 
+# Why React exists
+
+- Fast DOM Updates 
+
+---
+
+# Web Components
+
+---
+
+# JSX	
+
+---
+
+# React Native
+
+---
+
 template: inverse
 
 # Questions?

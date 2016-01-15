@@ -188,11 +188,9 @@ el.className = 'red'; // adds class name of "red" to the element
 
 # Exercise 1
 
-Let's add an external JS file to our Project 2 directory, and include it in our `index.html` file for the project.
+Let's add an external JS file to our Project 1 directory, and include it in our `index.html` file for the project.
 
 To make sure you've done it correctly, `console.log()` any string in the JS file, and make sure that it shows up in the console when you open the HTML file in your browser window.
-
-We won't be adding any other JS to this file today, but will be later in the week when we learn about jQuery.
 
 ---
 

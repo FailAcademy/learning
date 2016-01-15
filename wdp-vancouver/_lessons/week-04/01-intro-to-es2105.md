@@ -36,8 +36,9 @@ Read this [exellent overview](https://github.com/bevacqua/es6) of ES2015 on gith
 - Promises
 
 ---
+
 ## Exercise 1
-Install Webpack and the Babel-loader.
+Install the gulp-babel plugin. [https://www.npmjs.com/package/gulp-babel](https://www.npmjs.com/package/gulp-babel) 
 
 ---
 
