@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: jQuery Basics
-slides: ['_slides/week-02/04-intro-to-jquery.md']
-date:  2016-01-28
+slides: ['_slides/week-02/04a-intro-to-jquery.md']
+date: 2016-01-28
 ---
 
 ## Pre-Work
