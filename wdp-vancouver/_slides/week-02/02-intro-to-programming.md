@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Introduction to Programming Slides
+title: Intro to Programming Slides
 ---
 
 {% highlight html %}
@@ -9,7 +9,7 @@ layout: true
 class: center, middle, inverse
 
 ---
-# Introduction to Programming
+# Intro to Programming
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 

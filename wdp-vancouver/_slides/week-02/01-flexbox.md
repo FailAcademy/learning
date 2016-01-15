@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Introduction to Flexbox Slides
+title: Flexbox Slides
 ---
 
 {% highlight html %}

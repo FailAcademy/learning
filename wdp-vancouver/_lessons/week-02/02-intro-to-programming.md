@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Introduction to Programming
+title: Intro to Programming
 slides: ['_slides/week-02/02-intro-to-programming.md']
 date: 2016-01-26
 ---
