@@ -69,11 +69,7 @@ But whoops! How can we link up the `style.css` file now that it's path is broken
 
 Today's lab is dedicated to getting comfortable with the WordPress admin area and WP-style PHP before we jump into custom theming tomorrow.
 
-First, if you're not familiar with the ins and outs of the WP admin area yet, you'll want to work through this Pluralsight course:
-
-- [Your First Day with WordPress CMS](http://www.pluralsight.com/courses/your-first-day-wordpress-cms-1832)
-
-Next, start wrapping your head around how WordPress uses PHP with this video:
+Start wrapping your head around how WordPress uses PHP with this video:
 
 - [Zac Gordon: PHP for WordPress](http://wordpress.tv/2015/09/20/zac-gordon-php-for-wordpress/)
 

@@ -84,9 +84,3 @@ A loop in your function will have to look at every character in the string by ru
 
 Take care to make all the variables used in the function local to the function by using the `var` keyword.
 
----
-
-## Additional Resources
-
-Pluralsight tutorial:
-http://www.pluralsight.com/courses/angularjs-directive-fundamentals
