@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Advanced JS Slides
+title: Refactoring ES5 to ES2015 Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Developing with ES2015 & Webpack 
+# Refactoring ES5 to ES2015
 
 ---
 

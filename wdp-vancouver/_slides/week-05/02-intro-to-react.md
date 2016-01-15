@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Advanced JS Slides
+title: Introduction to React Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Developing with ES2015 & Webpack 
+# Introduction to React
 
 ---
 

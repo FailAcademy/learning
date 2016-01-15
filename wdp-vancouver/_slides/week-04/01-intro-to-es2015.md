@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Advanced JS Slides
+title: Intro to ECMAScript 2015 Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Developing with ES2015 & Webpack 
+# Intro to ECMAScript 2015 
 
 ---
 

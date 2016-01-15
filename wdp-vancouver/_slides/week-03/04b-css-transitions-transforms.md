@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: CSS3 Transitions & Transforms
+title: CSS3 Transitions & Transforms Slides
 ---
 
 {% highlight html %}

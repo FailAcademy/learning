@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Advanced JS Slides
+title: Developing with ES2015 & Webpack Slides
 ---
 
 {% highlight html %}

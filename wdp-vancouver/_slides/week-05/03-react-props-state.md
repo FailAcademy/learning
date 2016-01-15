@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to ECMAScript 2015
+title: Understanding 'props' & 'state' Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Intro to ECMAScript 2015 
+# Understanding 'props' & 'state' in React
 
 ---
 
