@@ -238,8 +238,11 @@ console.log(greeting);
 Open a new browser tab and open the console, and type in each line one at a time:
 
 ```js
+
 alert('Hello World!');
-prompt('What\'s your name?');
+var yourName = prompt('What\'s your name?');
+console.log(yourName);
+
 ```
 
 If we wanted to store the value inputted into the `prompt` and print it out in an `alert` afterward, how might we do that?
@@ -929,7 +932,7 @@ for (var prop in bob) {
 
 ---
 
-# Exercise 4
+# Exercise 3
 
 In this exercise, you're going to build a JS object of your own to represent a **hotel**.
 

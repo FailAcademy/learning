@@ -24,33 +24,16 @@ A good read to brush up your JS skills before class:
 
 ---
 
-- Statement
-- Variable
-- Declaration
-- Assignment
-- Boolean
-- Loop
-- Conditional
-- Operator
-- Concatenate
-- [Function](https://developer.mozilla.org/en-US/docs/Glossary/Function)
-- [Return](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return)
-- [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object)
-- Method
-- Property
-- [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/array)
-- [Scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope)
-
----
-
 ## Exercise 1
 
 Open a new browser tab and open the console, and type in each line one at a time:
 
 ```js
+
 alert('Hello World!');
-prompt('What\'s your name?');
-document.write('<h1>Hi There!</h1>');
+var yourName = prompt('What\'s your name?');
+console.log(yourName)
+
 ```
 
 If we wanted to store the value inputted into the `prompt` and print it out in an `alert` afterward, how might we do that?
@@ -71,46 +54,13 @@ When you have that working, modify your program to print **FizzBuzz**, for numbe
 
 ## Exercise 3
 
-Let's add an external JS file to our Project 2 directory, and include it in our `index.html` file for the project.
-
-To make sure you've done it correctly, `console.log()` any string in the JS file, and make sure that it shows up in the console when you open the HTML file in your browser window.
-
-We won't be adding any other JS to this file today, but will be later in the week when we learn about jQuery.
-
----
-
-## Exercise 4
-
-Create an `index.html` file with and externally linked JS file included in it. Load that file in your browser window.
-
-In your JS file, declare a function called `min` that compares to two numbers and logs out the lower number to the console:
-
-```js
-// Inside your JS file, first create your function declaration...
-
-// Then run:
-
-console.log(min(0, 10));
-// should log out 0 in the console
-
-console.log(min(0, -10));
-// should log out -10 in the console
-```
-
----
-
-## Exercise 5
-
 In this exercise, you're going to build a JS object of your own to represent a **hotel**.
 
 Properties of the hotel object should include the **name** of the hotel (The Quay), the **total number of rooms** (40), the current number of **rooms booked** (25), an array of the **types of rooms** (twin, double, suite), and function to **check the availability**.
 
 One you've created your object, **create a loop** to log to the console all of the room types one-by-one. Then, **update the booked rooms** to 30, check the new availability, and display that in an **alert box**.
 
----
-
-## Lab Activity
-
+```
 
 ---
 
@@ -118,7 +68,7 @@ One you've created your object, **create a loop** to log to the console all of t
 
 More resources and online tutorials for learning JavaScript:
 
-- [JavaScript.com - Free Resources](https://www.javascript.com/resources)
+- [Free Code Camp](http://www.freecodecamp.com/map)
 
 Free JS-related books online:
 
@@ -128,6 +78,3 @@ A tool for helping you detect errors or other problems in your JavaScript:
 
 - [JSHint](http://jshint.com/)
 
-Some "reserved words" that should not be used for variable or function names in JS:
-
-- [Keywords and reserved words in JavaScript](http://javascriptbook.com/extras/keywords-and-reserved-words/)
