@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Custom WordPress Theming
-slides: ['_slides/week-06/04-custom-wordpress-theming.md']
-date: 2015-10-29
+slides: ['_slides/week-07/04-custom-wordpress-theming.md']
+date: 2016-03-03
 ---
 
 ## Pre-Work
@@ -38,7 +38,7 @@ Prior to jumping into theming class, you'll want to make sure you've wrapped you
 
 ## Exercise 1
 
-Let's demystify the [WordPress Template Hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/) together. 
+Let's demystify the [WordPress Template Hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/) together.
 
 Based on the questions posed, determine what will be the correct template file to select.
 

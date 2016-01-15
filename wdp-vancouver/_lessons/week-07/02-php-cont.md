@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: More on PHP
-slides: ['_slides/week-06/02-php-cont.md']
-date: 2015-10-27
+slides: ['_slides/week-07/02-php-cont.md']
+date: 2016-03-01
 ---
 
 ## Pre-Work
