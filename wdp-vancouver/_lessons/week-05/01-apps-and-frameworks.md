@@ -5,12 +5,6 @@ slides: ['_slides/week-05/01-apps-and-frameworks.md']
 date: 2016-02-15
 ---
 
-## Pre-Work
-
-*There is no pre-work for this lesson.*
-
----
-
 ## Learning Objectives
 
 - Distinguish what the functional differences are between *websites* and *web applications*.
