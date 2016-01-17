@@ -3,7 +3,7 @@ layout: page
 title: Bonus Lessons
 ---
 
-Friday, January 22nd:
+### Friday, January 22nd:
 
 [CSS Best Practices](/slides/bonus-css-best-practices-slides/)
 

@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# The Command Line and Development Environments
+# The Command Line and Your Development Environment
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -20,7 +20,7 @@ layout: false
 # Agenda
 
 1. Using the command line interface (CLI)
-2. Setting up a development environments with Vagrant
+2. Setting up a development environment with Vagrant
 
 ---
 template: inverse
@@ -110,6 +110,10 @@ You can also copy and move files within the file system:
 - `cp <file> <location>` to copy a file
 - `mv <file> <location>` to move a file
 
+You can also rename a file using the `mv` command:
+
+- `mv <old-file-name> <new-file-name>`
+
 ---
 
 # Work with Folders
@@ -148,13 +152,6 @@ class: center, middle
 Never run `rm -rf /` or `rm -rf *` unless you want to delete everything on your computer!
 
 ---
-class: center, middle
-
-.large[
-   Files are people too...
-]
-
----
 
 # Exercise 1
 
@@ -164,10 +161,135 @@ Let's take the command line for a spin.
 
 ---
 
+# Exercise 2
+
+Now let's visualize what we just did on the CLI using humans and Fatboys...
+
+---
+template: inverse
+
+# Setting Up Your Dev Environment with Vagrant
+
+---
+class: center, middle
+
+.large[
+   Vagrant vs. MAMP/XAMPP?
+]
+
+---
+
+# What is Vagrant?
+
+- Software to set-up sandboxed dev environments
+- Allows you to install a lot of dev-related software **without interfering with your native OS**
+- Can help you better match your dev environment to your production environment
+- Bonus! Learning Vagrant will give you more confidence navigation around real servers
+
+---
+class: center, middle
+
+.large[
+   It's like running a computer inside of your computer.
+]
+
+---
+class: center, middle
+
+.large[
+   ![Windows VM](../../public/img/slide-assets/windows-vm.png)
+]
+
+---
+class: center, middle
+
+.large[
+   Vagrant is a little different because it has no GUI...
+]
+
+---
+
+# Vagrant Commands
+
+Start or resume your server: `vagrant up`
+
+Pause without shutting down your server: `vagrant suspend`
+
+Shutdown your server: `vagrant halt`
+
+Delete your server and everything on it: `vagrant destroy`
+
+SSH into your server: `vagrant ssh`
+
+*More commands can be found [here](https://docs.vagrantup.com/v2/cli/index.html).*
+
+---
+class: center, middle
+
+### WTF SSH?
+
+It's a network protocol that allows you to securely send data from one computer to another.
+
+Vagrant allows us to SSH into the server in our virtual machine and run commands on it from our host computer.
+
+---
+
+# Pieces of the Puzzle
+
+**VirtualBox**
+
+A virtual machine *provider* (i.e. allows you to create VMs).
+
+**Vagrant**
+
+A program that allows you to combine the power of a *provisioner* with VirtualBox to create your desired dev environment inside of a VM.
+
+**A Vagrant Box**
+
+A template for creating a development environment with a pre-defined array of base software.
+
+---
+
+# Exercise 3
+
+Let's get ready to install our first Vagrant box:
+
+- Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+- Install [Vagrant](https://www.vagrantup.com/downloads.html)
+
+Once Vagrant is installed, run `vagrant -v` to make sure it was installed correctly. (If it was, you'll see the Vagrant version number you're running.)
+
+---
+class: center, middle
+
+.large[
+   Then what?
+]
+
+---
+
+# First Vagrant Box
+
+We'll need to actually set up a Vagrant box to do anything interesting with it.
+
+**[Scotch Box](https://box.scotch.io/)** is a Vagrant LAMP stack that contains all the features we'll need for the next few weeks, such as Node, npm, git, and PHP.
+
+---
+
+# Homework
+
+We've already completed Steps 1-2 in the **Getting Started** section of the **[Scotch Box website](https://box.scotch.io/)**.
+
+Your assignment this weekend is to complete **Steps 3-5** to get your first Vagrant Box up and running.
+
+---
+
 # What We've Learned
 
 - What the command line is
 - How to navigate the file system from the CLI
+- Why developer benefit from setting up pro dev environments
+- How to install VirtualBox and Vagrant
 
 ---
 template: inverse
