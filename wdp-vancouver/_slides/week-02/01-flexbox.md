@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Introduction to Flexbox
+# Flexbox
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -25,22 +25,15 @@ layout: false
 
 ---
 
-.left-column[
-  ## Why Flexbox?
-]
+# Why Flexbox?
 
-.right-column[
-
-Makes common web-page layout requirements easy to code:
+Flexbox Makes common web-page layout requirements easy to code:
 
 - Equal height columns
-- Equally distributed containers
+- Evenly spaced containers
 - Vertical centering
-- "Sticky" footer
-- Input "add-ons"
-- and more ...
-
-]
+- Sticky footers
+- ...and more!
 
 ---
 class: center, middle
@@ -52,13 +45,13 @@ class: center, middle
 ---
 class: center, middle
 
-### Before we continue:
+### Bookmark this resource right now:
 
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+[CSS Tricks - A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-http://learnlayout.com/flexbox.html
+---
 
-http://www.sketchingwithcss.com/samplechapter/cheatsheet.html
+
 
 ---
 
@@ -200,14 +193,6 @@ Applied on the **flex container**, This property determines how **flex-items** a
 
 ---
 
-# Exercise 1
-
-In this exercise, you're going to use what you've learned about flexbox to recreate the vertical centering layout found here:
-
-**[Solved by Flexbox - Vertical Centering](https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/)**
-
----
-
 # `align-content`
 
 ```css
@@ -257,23 +242,6 @@ Applied on the **flex item**, This property overrides the **flex container**'s `
 ```
 
 Applied on the **flex item**, This property sets a proportion of the **flex-item** in relation to the other **flex-items**.
-
----
-
-# Exercise 2
-
-Create the “Holy Grail Layout” layout from the Solved by Flexbox site:
-
-**[Solved by Flexbox - Holy Grail Layout ](https://philipwalton.github.io/solved-by-flexbox/demos/holy-grail/)**
-
-
----
-
-# Exercise 3
-
-See if you can recreate the rest of the demos on the Solved by Flexbox site!
-
-**[Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/)**
 
 ---
 template: inverse
