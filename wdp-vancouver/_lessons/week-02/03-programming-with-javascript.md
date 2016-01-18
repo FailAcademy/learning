@@ -60,8 +60,6 @@ Properties of the hotel object should include the **name** of the hotel (The Qua
 
 One you've created your object, **create a loop** to log to the console all of the room types one-by-one. Then, **update the booked rooms** to 30, check the new availability, and display that in an **alert box**.
 
-```
-
 ---
 
 ## Additional Resources
