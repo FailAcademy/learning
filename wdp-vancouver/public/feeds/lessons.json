@@ -11,55 +11,72 @@
       "url": {{lesson.url | jsonify}}
    },{% endfor %}
    {
-      "title": "Review/Work Day",
+      "title": "UX Guest Lecture",
       "allDay": true,
-      "start": "2015-09-25"
+      "start": "2016-01-29"
    },
    {
       "title": "Review/Work Day",
       "allDay": true,
-      "start": "2015-10-02"
+      "start": "2016-01-29"
    },
    {
       "title": "Review/Work Day",
       "allDay": true,
-      "start": "2015-10-13"
+      "start": "2016-02-09"
    },
    {
       "title": "Review/Work Day",
       "allDay": true,
-      "start": "2015-11-06"
+      "start": "2016-02-19"
    },
    {
-      "title": "Cross-Program Day",
+      "title": "IA Guest Lecture",
       "allDay": true,
-      "start": "2015-11-10"
+      "start": "2016-03-04"
    },
    {
-      "title": "Angular/WP Wrap-up",
+      "title": "Review/Work Day",
       "allDay": true,
-      "start": "2015-11-13"
+      "start": "2016-03-11"
    },
    {
-      "title": "Analytics Lesson",
+      "title": "Presentation Skills I",
       "allDay": true,
-      "start": "2015-11-19"
+      "start": "2016-03-15"
    },
    {
-      "title": "SEO Lesson",
+      "title": "Analytics Guest Lecture",
       "allDay": true,
-      "start": "2015-11-20"
+      "start": "2016-03-16"
+   },
+   {
+      "title": "Presentation Skills I",
+      "allDay": true,
+      "start": "2016-03-17"
+   },
+
+   {
+      "title": "SEO Guest Lecture",
+      "allDay": true,
+      "start": "2016-03-18"
    },
    {
       "title": "GitHub Portfolio Development",
       "allDay": true,
-      "start": "2015-11-16",
-      "end": "2015-11-24"
+      "start": "2016-03-14",
+      "end": "2016-03-19"
    },
    {
-      "title": "UX Client Project Work",
+      "title": "Community Project Work",
       "allDay": true,
-      "start": "2015-11-24",
-      "end": "2015-12-11"
+      "start": "2016-03-21",
+      "end": "2016-04-01"
+   },
+   {
+      "title": "Professional Development Week",
+      "allDay": true,
+      "start": "2016-04-04",
+      "end": "2016-04-09"
    }
 ]

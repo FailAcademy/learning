@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: HTML Forms and Web Fonts
-slides: ['_slides/week-01/04a-html-forms.md', '_slides/week-01/04b-web-fonts.md']
-date: 2015-09-24
+title: HTML Forms, Audio/Video, and Web Fonts
+slides: ['_slides/week-01/04a-html-forms-audio-video.md', '_slides/week-01/04b-web-fonts.md']
+date: 2016-01-21
 ---
 
 ## Pre-Work
@@ -19,7 +19,8 @@ Readings from *Learn to Code HTML & CSS*:
 - Understand how HTML forms work.
 - Build a functional HTML form with a variety of inputs.
 - Target form elements using CSS.
-- Explore `@font-face` to incorporate custom typefaces into a web page.
+- Explore the `<audio>` and `<video>` elements in HTML5.
+- Use `@font-face` to incorporate custom typefaces into a web page.
 - Explore third-party services that incorporate custom typefaces on a web page.
 - Discover how to combine typefaces together in effective combinations.
 - Learn how to implement icon fonts on a website using Font Awesome.
@@ -34,6 +35,8 @@ Readings from *Learn to Code HTML & CSS*:
 - [Textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
 - [Label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label)
 - [Button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
+- [audio](https://developer.mozilla.org/en/docs/Web/HTML/Element/audio)
+- [video](https://developer.mozilla.org/en/docs/Web/HTML/Element/video)
 - [@font-face](https://developer.mozilla.org/en/docs/Web/CSS/@font-face)
 - Icon font
 - SVG
@@ -56,9 +59,9 @@ Your cheatsheet:
 
 ## Web Fonts: Exercise 1
 
-Go to **Font Squirrel** and download the Webfont Kit for **[Open San](http://www.fontsquirrel.com/fonts/open-sans)**, the custom font that we'll be using for Project 1.
+Go to **Font Squirrel** and download the Webfont Kit for the custom typefaces that we'll be using for Project 1: **[Playfair Display](http://www.fontsquirrel.com/fonts/playfair-display)** (Regular and Bold) and **[Raleway](http://www.fontsquirrel.com/fonts/raleway)** (Light and Medium).
 
-Project 1 uses two different weights of Open Sans&mdash;**Normal** and **Bold**. You'll need to download both of those weights, and their italic versions too. Use the contents of your downloaded font package to add the required font files and CSS to your project.
+You'll need to download both of the weights and their italic versions too for each typeface. Add the contents of your generated web font packages to your project.
 
 You’ll also want to read up on how to **[avoid faux italics and bolding](http://stackoverflow.com/questions/2436749/how-to-add-multiple-font-files-for-the-same-font)** with your `@font-face` typefaces, and adjust your CSS accordingly.
 

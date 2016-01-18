@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 4 - Mars Colony Hybrid App
-due: Monday, October 26th (beginning of class)
+due: Monday, February 29th (beginning of class)
 ---
 
 For Project 4, you're going to create a web-based app for Earth colonists exploring Mars using AngularJS.
@@ -27,19 +27,19 @@ Your project must:
 
 - Implement HTML push-state navigation.
 
-- Implement the ui-router plugin.
+- Implement the `ui-router` plugin.
 	- Define a route for each view in the specification.
 	- Restrict access to the 'Registration' route when the user has already registered.
 
 - Implement the following Angular directives:
-	- ng-repeat
-	- ng-click
-	- ng-class
-	- ng-show
-	- ng-hide
-	- ng-if
+	- `ng-repeat`
+	- `ng-click`
+	- `ng-class`
+	- `ng-show`
+	- `ng-hide`
+	- `ng-if`
 
-- Implement the following AngluarJS Modules:
+- Implement the following AngluarJS modules:
 	- Service
 	- Factory
 	- Controller
@@ -50,26 +50,25 @@ Your project must:
 Your project must:
 
 - Use a CSS reset
-- Implement a mobile-first responsive layout using Flexbox (Mobile only)
+- Implement a mobile-first responsive layout using flexbox
 
 **Additional requirements:**
 
 Your project must:
 
-- Implement at least one unit-test or e2e test
-- Implement basic ajax GET and POST requests using Angular's $http service to:
+- Implement basic ajax `GET` and `POST` requests using Angular's $http service to:
 	- Save a new colonists information
 	- Save a new alien encounter
 	- Fetch a list of recent encounters
 	- Remove a colonist from the colony
 	- Determine if a colonist has already registered
-	- Create a new ailen type
+	- Create a new alien type
 	- Create a new encounter
 
 **Stretch goals:**
 
-- Use Angular's ng-touch directive to implement swipe-left and swipe-right navigation.
-- Use Angular's ng-animate module to implement animated page transitions.
+- Use Angular's `ng-touch` directive to implement swipe-left and swipe-right navigation
+- Use Angular's `ng-animate` module to implement animated page transitions
 
 ## Submission Instructions
 

@@ -19,12 +19,26 @@ layout: false
 
 # Agenda
 
+1. Introduce NPM
 1. Introduce and install Gulp
 2. Set up Gulp in your project
 3. Create named tasks
 4. More Gulp tasks in our project!
 
 ---
+
+#Introducing NPM
+
+---
+
+#Installing dependencies
+
+---
+
+# Maintaining a package.json file
+
+---
+
 template: inverse
 
 # Installing Gulp

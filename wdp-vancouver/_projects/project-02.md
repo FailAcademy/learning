@@ -1,26 +1,34 @@
 ---
 layout: project
-title: Project 2 - Restaurant Homepage
-due: Monday, October 5th (beginning of class)
+title: Project 2 - Instagrid
+due: Wednesday, February 10th (beginning of class)
 ---
 
-For Project 2, you're going to create a one-page, responsive website for your client 100 Mile Resto Bar.
+For Project 2, you're going to create a one-page, responsive website that allows a user to search for a hashtag via the Instagram API.
 
-You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-02.zip).
+<!-- You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-02.zip). -->
 
 ## Design Specifications:
 
-- The base font size is `18px` and its HEX code is `#292929`
-- The body font family is Merriweather
-- The headings font family is Open Sans (Regular and Extrabold)
-- The HEX code for the body background color is `#f3f3f3`
-- The HEX code for the orange brand colour is `#f89603`
-- The HEX code for the brown brand colour is `#483118`
-- The HEX code for the light tan brand colour is `#e7e3c5`
+*Updated design specifications TBA.*
+
+<!-- - The base font size is `12px` and its HEX code is `#2e2e2e`
+- The body font family is Open Sans Light
+- The font family for the usernames is Open Sans Bold
+- The HEX code for the button colour is `#e24420`
+- The HEX code for the border around the grid is `#c2c2c2`
+- The HEX code for the border around the images and the text inside the search box is `#dbdbdb` -->
 
 ## Requirements
 
 To receive a "Pass" grade for this project, your submission will need to satisfy the following criteria:
+
+**Functional requirements:**
+
+Your project must:
+
+- Dynamically fetch photos and populate them in a webpage via the Instagram API based a text string input into a search field
+- Link each returned image to its URL on Instagram (unless undertaking lightbox stretch goal)
 
 **General requirements:**
 
@@ -29,51 +37,52 @@ Your project must:
 - Contain a single `.html` file and an external `.css` file (a CSS reset may be included separately)
 - Adequately reflect the designer's vision for the website when built out using HTML & CSS
 - Demonstrate effective organization of the project's root directory
+- Have a Git repository initialized in its root directory with an appropriately customized `.gitignore` file
+- Be pushed to GitHub (with all of your commits synced to it)
+- Use Gulp for running build tasks, such as minification and error checking
 
 **HTML requirements:**
 
 Your project must:
 
-- Use the HTML5 doctype and semantic HTML5 mark-up
+- Uses the HTML5 doctype and semantic, syntactically-correct HTML5
 - Include all essential elements covered in class (e.g. `<meta charset="utf-8">`)
-- Make appropriate use of paragraph, heading, and list elements
 
-**CSS requirements:**
+**CSS/Sass requirements:**
 
 Your project must:
 
 - Make appropriate use of classes and IDs as selectors
 - Use a CSS reset
+- Use Sass as a preprocessor, with CSS properly compiled and minified
 - Use the `background` property where appropriate
-- Use the `float` property effectively
+- Implement a mobile-first responsive layout using flexbox (no floats)
 - Demonstrate effective use of box model properties
 - Demonstrate effective use of CSS properties for altering the visual display of text (e.g. `font-family`, `font-style`, `text-transform`, etc.)
 - Incorporate custom fonts using `@font-face`
 - Use an icon font
-- Use CSS3 properties where appropriate (e.g. `opacity` or `rgba` colour)
-- Use a pseudo-element to incorporate hover states for the links
 
 **JS requirements:**
 
 Your project must:
 
-- Dynamically display whether the restaurant is open or not (based on the day of the week&mdash;the restaurant is closed on Saturday and Sunday)
-- Incorporate "smooth scrolling" into the menu that navigates to specific points in the page
-- Incorporate an image slider using a jQuery plugin ([bxSlider](http://bxslider.com/) is a good choice)
+- Use Ajax to fetch data from an Instagram API endpoint
+- Transition users between UI states, starting where no photos have been returned, and then subsequently transitioning where photos populate the grid (incorporating a loading gif)
 
 **RWD requirements:**
 
 Your project must:
 
 - Be responsively designed using a mobile-first approach
-- Be optimized for 3 screen sizes: mobile, `min-width: 768px`, and `min-width: 1280px`
+- Be optimized for 3 screen sizes: mobile, `min-width: 600px`, and `min-width: 1000px`
 
 **Stretch goals:**
 
 Want to challenge yourself? Your project could also:
 
-- Add a datepicker to the date form field and timepicker to the time field (and style it according to the client's brand)
+- Incorporate pagination and fetch additional photos via the Instagram API when the "Load More" button is clicked
+- Incorporate a lightbox plugin to display images in their largest format if a user clicks on them
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a zip file containing your project assets** to [mandi@redacademy.com](mailto:mandi@redacademy.com).
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to [mandi@redacademy.com](mailto:mandi@redacademy.com).

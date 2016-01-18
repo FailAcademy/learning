@@ -3,9 +3,11 @@ layout: page
 title: Bonus Lessons
 ---
 
-### Friday, September 25th:
+### Friday, January 22nd:
 
 [CSS Best Practices](/slides/bonus-css-best-practices-slides/)
+
+<!--
 
 ### Monday, September 28th:
 
@@ -34,3 +36,4 @@ title: Bonus Lessons
 [10 Powerful Body Language Tips for Your Next Presentation](/public/files/10-body-language-tips-every-speaker-must-know.jpg)
 
 [10 Worst Body Language Presentation Mistakes](/public/files/10-worst-body-language-presentation-mistakes.pdf)
+-->
