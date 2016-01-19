@@ -20,9 +20,6 @@ Today we'll use Angular's `$http` service to fetch and save real data in our app
 
 ## Keywords
 
-- Service
-- Factory
-- Provider
 - `$http`
 - GET`
 - POST

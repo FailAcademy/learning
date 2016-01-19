@@ -16,9 +16,7 @@ date: 2016-02-15
 
 - Single-Page Application (SPA)
 - Framework
-- Model
-- View
-- Controller
+- Library
 
 ---
 

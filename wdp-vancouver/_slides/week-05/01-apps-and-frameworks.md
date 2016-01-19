@@ -24,7 +24,6 @@ layout: false
 3. Enter JavaScript
 4. What is a framework?
 5. Single Page Applications (SPA)
-6. Framework sleuth
 
 ---
 template: inverse

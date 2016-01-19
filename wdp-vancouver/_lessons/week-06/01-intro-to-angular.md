@@ -22,13 +22,13 @@ We'll use this simple document to experiment with the code in this lesson.
 
 ## Keywords
 
-- [Template](https://docs.angularjs.org/guide/concepts#template)
-- [Directives](https://docs.angularjs.org/guide/concepts#directive)
+<!-- - [Template](https://docs.angularjs.org/guide/concepts#template) -->
+<!-- - [Directives](https://docs.angularjs.org/guide/concepts#directive) -->
 - [Model](https://docs.angularjs.org/guide/concepts#model)
 - [Scope](https://docs.angularjs.org/guide/concepts#scope)
-- [Expressions](https://docs.angularjs.org/guide/concepts#expression)
-- [Compiler](https://docs.angularjs.org/guide/concepts#compiler)
-- [Filter](https://docs.angularjs.org/guide/concepts#filter)
+<!-- - [Expressions](https://docs.angularjs.org/guide/concepts#expression) -->
+<!-- - [Compiler](https://docs.angularjs.org/guide/concepts#compiler) -->
+<!-- - [Filter](https://docs.angularjs.org/guide/concepts#filter) -->
 - [View](https://docs.angularjs.org/guide/concepts#view)
 - [Data Binding](https://docs.angularjs.org/guide/concepts#databinding)
 - [Controller](https://docs.angularjs.org/guide/concepts#controller)
@@ -40,6 +40,29 @@ We'll use this simple document to experiment with the code in this lesson.
 ---
 
 ## Exercise 1
+
+Create a simple Angular application that manipulates some `ng-model` value, and display's the updated value to the user in an HTML document.
+
+You've seen how this works using a simple text input. 
+
+Use the Angular documentation, and add update your view using: a **checkbox**, a **select menu** & **radio buttons** .
+
+Use your imagination when creating your application, and don't be afraid to add a little css personlaity. Bonus points will be given for creativity!
+
+---
+
+## Exercise 2
+
+Create an Angular application that uses code from another Angular module (via *dependency injection*) to manipulate some `$scope` value and display's the updated value to the user in an HTML document. Hint: You'll use an Angular `controller`, and a `factory`.
+
+Remember the best practice we mentioned: Don;t assign primitive values directly to your controller's `$scope`. 
+Instead use somehting like `$scope.values = { name: "Mackenzie" /* ...etc  */ }`
+
+Again, add some css, bonus points for creativity!
+
+---
+
+## Lab Activity
 
 Spend your time familiarizing yourself with some basic Angular concepts to prepare for this weeks assignments.
 
@@ -53,10 +76,6 @@ Second, start working the following free tutorial on Code School:
 
 - [Shaping up with Angular.js](https://www.codeschool.com/courses/shaping-up-with-angular-js)
 
----
-
-## Lab Activity
-
 Finish working through the Angular module on Code School (but you did that already, right? ;).
 
 After that, it's time for more practice!
@@ -64,8 +83,6 @@ After that, it's time for more practice!
 Codeacademy also as Angular tutorial to work through:
 
 - [Learn AngularJS](https://www.codecademy.com/en/courses/learn-angularjs)
-
-Once you've completed these tutorials, start thinking about how these concepts will apply to Project 5.
 
 ---
 
