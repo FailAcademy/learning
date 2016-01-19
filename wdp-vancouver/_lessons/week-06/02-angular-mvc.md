@@ -25,3 +25,8 @@ There is no pre-work for this lesson.
 - [Controller](https://docs.angularjs.org/guide/concepts#controller)
 
 ---
+
+## Additional Resources
+
+Angular documentation:
+[https://docs.angularjs.org](https://docs.angularjs.org)

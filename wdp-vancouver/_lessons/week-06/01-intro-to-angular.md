@@ -22,13 +22,8 @@ We'll use this simple document to experiment with the code in this lesson.
 
 ## Keywords
 
-<!-- - [Template](https://docs.angularjs.org/guide/concepts#template) -->
-<!-- - [Directives](https://docs.angularjs.org/guide/concepts#directive) -->
 - [Model](https://docs.angularjs.org/guide/concepts#model)
 - [Scope](https://docs.angularjs.org/guide/concepts#scope)
-<!-- - [Expressions](https://docs.angularjs.org/guide/concepts#expression) -->
-<!-- - [Compiler](https://docs.angularjs.org/guide/concepts#compiler) -->
-<!-- - [Filter](https://docs.angularjs.org/guide/concepts#filter) -->
 - [View](https://docs.angularjs.org/guide/concepts#view)
 - [Data Binding](https://docs.angularjs.org/guide/concepts#databinding)
 - [Controller](https://docs.angularjs.org/guide/concepts#controller)

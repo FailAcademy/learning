@@ -82,5 +82,5 @@ It might also be worthwhile to use a different default step, namely, -1, when th
 ## Additional Resources
 
 Angular documentation:
-https://docs.angularjs.org/api/ng/directive/form
-https://docs.angularjs.org/api/ng/type/form.FormController
+[https://docs.angularjs.org/api/ng/directive/form](https://docs.angularjs.org/api/ng/directive/form)
+[https://docs.angularjs.org/api/ng/type/form.FormController](https://docs.angularjs.org/api/ng/type/form.FormController)
