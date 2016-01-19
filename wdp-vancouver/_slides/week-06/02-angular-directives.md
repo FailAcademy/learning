@@ -100,7 +100,7 @@ Angular ensures that your expression has been evaluated before the user clicks.
   <button ng-click="x = generateNumber()" ng-init="x = 0">
     Draw Number
   </button>
-  <p>Number is: {{ x }}</p>
+  <p>Number is: {% raw %}{{ x }}{% endraw %}</p>
 </div>
 
 ```
@@ -119,13 +119,13 @@ angular.module('myApp', [])
   .run(function($rootScope, $timeout) {
       $rootScope.isDisabled = true;
       $timeout(function() {
-      $rootScope.isDisabled = false;
-  }, 5000);
+          $rootScope.isDisabled = false;
+      }, 5000);
 });
 
 ```
 
-Disable input elements based on a true/false value for a $scope property.
+Disable input elements based on a true/false value for a `$scope` property.
 
 
 ---
@@ -133,7 +133,7 @@ Disable input elements based on a true/false value for a $scope property.
 #ng-checked
 
 ```html
-<label>someProperty = {{someProperty}}</label>
+<label>someProperty = {% raw %}{{someProperty}}{% endraw %}</label>
 <input type="checkbox"
        ng-checked="someProperty"
        ng-init="someProperty = true"
@@ -171,7 +171,7 @@ non-attribute directives
 ```html
 <html ng-app="myApp">
   <body>
-  {{ someProperty }}
+  {% raw %}{{ someProperty }}{% endraw %}
   <button ng-click="someAction()"></button>
   </body>
 </html>
@@ -182,27 +182,23 @@ angular.module('myApp', [])
   .run(function($rootScope) {
     $rootScope.someProperty = 'hello computer';
     $rootScope.someAction = function() {
-    $rootScope.someProperty = 'hello human';
-  };
+      $rootScope.someProperty = 'hello human';
+    };
 });
 ```
 
 ---
 
 #ng-controller
+
 Angular controllers **provide a child scopes** for the directives that are nested inside.
 "A child $scope is simply a JavaScript object that prototypically inherits methods and properties from
 its parent $scope(s), including the application's $rootScope."
 
-Some things to keep in mind:
-
-- It’s important to not to set a primitive value (string, boolean, or number) directly on the
-$scope of a controller. Data in the DOM should always be attached to an object
-`(eg. props.name )`.
-
 ---
 
 #ng-include
+
 Use ng-include to **fetch, compile, and include** an external HTML fragment into your current
 application.
 
@@ -264,7 +260,7 @@ Behind the scenes, Angular uses a special css class to set `display:none;` on hi
 <p ng-switch-default>And the winner is</p>
 <h1 ng-switch-when="Mandi">{% raw %}{{ person.name }}{% endraw %}</h1>
 ```
-https://docs.angularjs.org/api/ng/directive/ngSwitch
+[https://docs.angularjs.org/api/ng/directive/ngSwitch](https://docs.angularjs.org/api/ng/directive/ngSwitch)
 
 ---
 
@@ -345,9 +341,11 @@ Iterating over Arrays
 <br>
 
 Iterating over Objects
+
 ```html
   <div ng-repeat="(key, value) in myObj"> ... </div>
 ```
+
 *JS Gotcha:
 Various browsers implement Object property sorting in different ways. The order of object properties isn't guaranteed when iterating!*
 

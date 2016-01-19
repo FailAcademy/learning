@@ -7,7 +7,9 @@ date: 2016-02-22
 
 ## Pre-Work
 
-Provided you watched the assigned video and worked through Code School's Angular module yesterday, there is no pre-work for this lesson.
+Create a folder called *intro-to-angular* in your project directory.
+Inside create 2 scratch files, one `index.html` and one `script.js`, and link the javascript file to the html file. 
+We'll use this simple document to experiment with the code in this lesson.
 
 ---
 
@@ -39,17 +41,23 @@ Provided you watched the assigned video and worked through Code School's Angular
 
 ## Exercise 1
 
-Visit: https://docs.angularjs.org/guide/concepts
+Spend your time familiarizing yourself with some basic Angular concepts to prepare for this weeks assignments.
 
-In groups, research 7 of the 14 concepts presented there. You'll be expected to present the concept as well as an explanation of where the concepts fits in with the rest of concepts you've chosen.
+First up, watch this video:
 
-You're not expected to be experts, but similar to the frameworks exercise, do you best to be as thorough as possible.
+- [AngularJS Fundamentals In 60-ish Minutes](https://www.youtube.com/watch?v=i9MHigUZKEM)
+
+Be sure to watch it right to the end, because it offers a very coherent explanation of the concepts we'll be covering over the next week.
+
+Second, start working the following free tutorial on Code School:
+
+- [Shaping up with Angular.js](https://www.codeschool.com/courses/shaping-up-with-angular-js)
 
 ---
 
 ## Lab Activity
 
-With today's lab time, you can finish working through the Angular module on Code School (but you did that already, right? ;).
+Finish working through the Angular module on Code School (but you did that already, right? ;).
 
 After that, it's time for more practice!
 
