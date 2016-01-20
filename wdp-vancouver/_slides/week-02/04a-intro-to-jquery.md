@@ -198,9 +198,10 @@ class: center, middle
 
 ### What is a jQuery?
 
-jQuery is library of code that makes it much easier to perform many essential tasks in JavaScript.
+jQuery is library of code that makes it much easier to perform many essential tasks in JavaScript. 
 
-jQuery is just JavaScript, here is the [source code of the original jQuery release](http://genius.it/ejohn.org/files/jquery-original.html);
+jQuery is just JavaScript, here is the <br>
+[source code of the original jQuery release](http://genius.it/ejohn.org/files/jquery-original.html);
 
 ---
 
@@ -211,6 +212,10 @@ jQuery is just JavaScript, here is the [source code of the original jQuery relea
 - Add animations to elements
 - Watch what a user does and react to what they do
 - Fetch new content
+
+---
+
+
 
 ---
 

@@ -7,6 +7,7 @@ date: 2016-01-26
 
 ## Learning Objectives
 
+- Learn specific ways to 'think like a programmer'.
 - Learn basic programming concepts such as statements, booleans, conditions, loops and variables
 - Use Scratch to build a basic program using graphical “pseudo code”
 

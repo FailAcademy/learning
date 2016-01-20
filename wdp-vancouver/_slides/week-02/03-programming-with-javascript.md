@@ -100,6 +100,30 @@ To run a JavaScript program, `cd` to the directory where you've created your pro
 
 ---
 
+## Debugging using `console.log()`
+
+In JavaScript, we can use `console.log()` to print values into the *browser console* to help us understand what particuar values may be at specific points in your programs execution flow.
+
+```js
+
+function addNumbers(num1, num2) {
+      // we can print the value of num1 and num2 
+      // to the debugging console in your browser
+      // whenever your program executes this function!
+      console.log(num1, num2);
+      console.log(num1 + num2);
+      return num1 + num2;
+}
+
+```
+
+.footnote.right[
+   *Source: [How To Be A Programmer](https://github.com/braydie/HowToBeAProgrammer/blob/master/1-Beginner/Personal-Skills/04-How%20to%20Debug%20Using%20a%20Log.md)*
+ ]
+
+---
+
+
 # Values (JavaScript Primitives)
 
 In JavaScript, all programs are made up of the following **primitive values**.
