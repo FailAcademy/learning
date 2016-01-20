@@ -5,6 +5,12 @@ slides: ['_slides/week-05/02-intro-to-react.md']
 date: 2016-02-15
 ---
 
+## Pre-Work
+
+Please install the [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) extension for Google Chrome.
+
+---
+
 ## Learning Objectives
 
 - Review Javascript Array Methods `.map()` and `.filter()`
