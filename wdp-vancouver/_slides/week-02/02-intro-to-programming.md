@@ -42,6 +42,11 @@ When we **program** we are simply writing a list of **instructions** a our compu
 ---
 class: center, middle
 
+<iframe width="100%" height="400px" src="https://www.youtube.com/embed/QaTx1J7ZeLY" frameborder="0" allowfullscreen></iframe>
+
+---
+class: center, middle
+
 ### What is a programming language?
 
 It's an agreed-upon way to create instructions that a computer or other machine can understand.
@@ -213,6 +218,13 @@ This may seem obvious. More specifically, you should aim to gain some level of a
 - If you're working on a team, you'll also me typing a lot of emails, chat messages, project briefs and so on. Communication gets easier when you have mastered the tools you use to conduct it.
 
 ---
+# Exercise 2
+
+### How fast can you type?
+Lets get a sense of how fast you can type!
+We're all going to visit [10 Fast Fingers](http://10fastfingers.com/typing-test/english), create an account and take the typing test and share your WPM!
+
+---
 template: inverse
 
 # Take Shortcuts
@@ -307,6 +319,56 @@ class: center, middle
 # Take a break when you're stumped!
 
 ---
+template: inverse
+
+# Designing a Program
+
+---
+### Designing a Program
+
+"When you're just starting to program, design is a real challenge. Knowing how to think about programming is one piece, but the other piece is knowing how to put programs together in a way that makes it easy to modify them later..."
+
+
+Properly thinking through the design of your programs, "...is all about making things easier for your future self--sort of like eating your vegetables. Bad designs make your program inflexible to future changes, or impossible to understand after you've written..."
+
+.footnote.right[
+   *Source: [Alex Allain](http://www.cprogramming.com/beginner_programming_mistakes.html)*
+ ]
+
+---
+template: inverse
+
+#Commenting Your Code
+
+---
+### Commenting Your Code
+
+"Comments are little signposts in your code explaining it to future archaeologists that desperately need to understand how 21st century man sorted lists of purchase orders."
+
+Commenting your code will help you and others understand your programs, and is especially helpful when taking in complex bits. It's also good practice to leave yourself notes, as you programing, like `// TODO: implement feature here`, and so on.
+
+.footnote.right[
+   *Source: [http://improvingsoftware.com/](http://improvingsoftware.com/2011/06/27/5-best-practices-for-commenting-your-code/)*
+ ]
+
+---
+### Commenting Your Code
+
+Here are some simple rules to follow when adding comments: 
+1. Comments are not *'subtitles'*. Well written code is <br> **'self-documenting'**.
+2. Don't use comments to 'save' dead code for later. Usually, you'll forget to remove this stuff and it will clutter your programs. Only commit the code that is being used by your programs.
+
+---
+### How to Improve Your Coding Chops
+
+1. Look at other peoples code.
+2. Run other people's code.
+3. Write more code!
+4. Learn to love your IDE / Debugger
+
+There is always more than one way to solve a programming task. Programming is a challenging creative activity, and looking at how others have solved problems will help you improve your own repertoire!
+
+---
 template: inverse 
 
 # Us and Them
@@ -316,6 +378,7 @@ template: inverse
 ### Us and Them
 
 "Engineers and programmers in particular are generally recognized by popular culture as being different from other people. This implies that other people are different from us. This is worth bearing in mind when communicating with non-engineers; you should always understand the audience."
+
 
 .footnote.right[
    *Source: [How To Be A Programmer](https://github.com/braydie/HowToBeAProgrammer/blob/master/2-Intermediate/Judgment/08-How%20to%20Talk%20to%20Non-Engineers.md)*
@@ -371,7 +434,7 @@ https://scratch.mit.edu/projects/232913/#player
 
 ---
 
-# Exercise 2
+# Exercise 3
 
 Your turn...**[create a Scratch account](https://scratch.mit.edu/)** and give it a whirl.
 

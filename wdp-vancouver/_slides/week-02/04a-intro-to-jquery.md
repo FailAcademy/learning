@@ -215,7 +215,9 @@ jQuery is just JavaScript, here is the <br>
 
 ---
 
+# jQuery's claim to fame
 
+jQuery's main claim to fame, and it's original purpose, was to make selecting and manipulating DOM elements much simpler, by wrapping JavaScript's *native* DOM manipulation methods in an easy to use *API* (no more long method names like `getElementByClassName`), and to provide convenience methods for parsing and updating HTML.
 
 ---
 
