@@ -15,7 +15,7 @@ Please install the [React Developer Tools](https://chrome.google.com/webstore/de
 
 - Review Javascript Array Methods `.map()` and `.filter()`
 - Review scope of `this` and the `.bind()` method
-- Introduce the notion of 'components'
+- Introduce the notion of 'components' and 'state'
 - Introduce React, and become conversational regarding it's popularity
 
 ---
@@ -50,7 +50,20 @@ Examine websites and try to identify which parts are or could be components.
 
 ---
 
+## Lab Activity
+
+In today's lab we'll intriduce the final project, and start coding our first React mini-project. A Snazzy todo list!
+
+---
+
 ## Additional Resources
+
+### React
+Here is a great boilerplate for getting started with React Apps:
+[https://github.com/coryhouse/react-slingshot](https://github.com/coryhouse/react-slingshot)
+
+
+### JavaScript
 
 [Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) - MDN Page <br>
 [Array.prototype.filter()](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) - MDN Page <br>
