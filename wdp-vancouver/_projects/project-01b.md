@@ -6,11 +6,11 @@ due: Monday, February 1st (beginning of class)
 
 For the second part of Project 1, you're going to level-up the Aloha Apparel Co. website by adding interactivity with JS.
 
-You'll also add a navigation menu to the header and a new section to the page that showcases the different types of apparel products Aloha sells.
+You'll also add a navigation menu to the header and a new section to the page that showcases the different types of apparel products that Aloha sells.
 
-If you didn't complete the responsive stretch goal last week, you'll also need to optimize the website for the three required screen sizes.
+And if you didn't complete the responsive stretch goal last week, you'll also need to optimize the website for the three required screen sizes.
 
-<!-- You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-01b.zip). -->
+You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-01b.zip).
 
 ## Design Specifications:
 
@@ -30,35 +30,38 @@ Your project must:
 
 **CSS requirements:**
 
-- Be refactored to use a mobile-first responsive layout using flexbox (no floats)
+- Be refactored to use a mobile-first responsive layout using flexbox (no floats!)
 
 **RWD requirements:**
 
 Your project must:
 
 - Be responsively designed using a mobile-first approach
-- Be optimized for 3 screen sizes: mobile, `min-width: 768px`, and `min-width: 1280px`
+- Be optimized for 3 screen sizes: mobile, `min-width: 600px` and `min-width: 1240px`
 
 **JS requirements:**
 
 Your project must:
 
 - Incorporate "smooth scrolling" into the menu that navigates to specific points in the page
-- Incorporate an image slider using a jQuery plugin ([bxSlider](http://bxslider.com/) is a good choice)
-- Display an alert box that says "Thanks for subscribing!" whenever a user successfully submits the newsletter form with valid email address, otherwise they should be alerted to add a valid email address
+- Incorporate an image slider using a jQuery plugin for the featured product area ([bxSlider](http://bxslider.com/) is a good choice)
+- Display an alert box that says "Thanks for subscribing!" whenever a user successfully submits the newsletter form with valid email address, otherwise they should see a message in the alert box that asks them to add a valid email address
 
 **Additional requirements:**
 
 Your project must:
 
 - Take into account all feedback you received in the evaluation form for the first part of this project
+- Include the four additional products to be added to the featured product area
+- Include the new product categories grid
 - Be sure to **test** your project completely in **all major browsers** (Chrome, Firefox, Safari, Opera, IE11) when you think you're finished
 
 **Stretch goals:**
 
 Want to challenge yourself? Your project could also:
 
-- Update the the cart icon in the top-right corner of the header every time the user clicks the "Add to Cart" button for a product
+- Update the the cart icon in the top-right corner of the header every time the user clicks the "Add to Cart" button for a product (see the additional stretch goal design comp in the project assets folder)
+- Incorporate a fixed header at the top of the page (so that the navigation menu is always visible when the user scrolls down)
 
 ## Submission Instructions
 
