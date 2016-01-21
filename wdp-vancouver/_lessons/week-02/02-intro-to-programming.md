@@ -7,6 +7,7 @@ date: 2016-01-26
 
 ## Learning Objectives
 
+- Learn specific ways to 'think like a programmer'.
 - Learn basic programming concepts such as statements, booleans, conditions, loops and variables
 - Use Scratch to build a basic program using graphical “pseudo code”
 
@@ -32,6 +33,12 @@ Some things to consider while writing your algorithm:
 - How long each step should take place. Is it something that happens only once, or does it need to happen repeatedly?
 
 ## Exercise 2
+
+How fast can you type?
+- Lets get a sense of how fast you can type! We're all going to visit **[10 Fast Fingers](http://10fastfingers.com/typing-test/english)**, create an account and take the typing test and share your WPM!
+
+
+## Exercise 3
 
 Your turn...**[create a Scratch account](https://scratch.mit.edu/)** and give it a whirl.
 

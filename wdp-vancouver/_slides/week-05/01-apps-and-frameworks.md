@@ -24,7 +24,6 @@ layout: false
 3. Enter JavaScript
 4. What is a framework?
 5. Single Page Applications (SPA)
-6. Framework sleuth
 
 ---
 template: inverse
@@ -306,7 +305,7 @@ You'll soon learn that there are dozens of JS Frameworks out there, and that the
 
 - **Google** has built a framework: [AngularJS](https://angularjs.org/)
 - **Facebook** has created a framework: [ReactJS](https://facebook.github.io/react/)
-- **Ruby on Rails** core have one too: [EmberJS](http://emberjs.com/)
+- **Ruby on Rails** core team have one too: [EmberJS](http://emberjs.com/)
 - "Everyone Knows Backbone": [BackboneJS](http://backbonejs.org/)
 - [...and so on](https://en.wikipedia.org/wiki/Comparison_of_JavaScript_frameworks)
 
@@ -316,7 +315,7 @@ You'll soon learn that there are dozens of JS Frameworks out there, and that the
 
 Visit each of the frameworks mentioned in the previous slide.
 
-Browse through the documentation and try to discover the tools that are provided for creating **models**, **views** and **controllers**, and how they are meant to be used together.
+Browse through the documentation and try to discover the tools that are provided for creating **models**, **views**and **controllers**, and how they are meant to be used together.
 
 You're not expected to produce in depth technical details, just describe things as you see them in your own words and try to be as thorough as possible.
 

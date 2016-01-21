@@ -37,24 +37,6 @@ Scope directives:
 
 ---
 
-## Exercise 1
-
-*Exercise TBA...*
-
----
-
-## Exercise 2
-
-*Exercise TBA...*
-
----
-
-## Exercise 3
-
-*Exercise TBA...*
-
----
-
 ## Lab Activity
 
 During week 5, in addition to spending lab time working on Project 4, we'll also be doing some practice drills to beef up our JS skills...
@@ -83,4 +65,11 @@ console.log(countChar("kakkerlak", "k"));
 A loop in your function will have to look at every character in the string by running an index from zero to one below its length (`< string.length`). If the character at the current position is the same as the one the function is looking for, it adds 1 to a counter variable. Once the loop has finished, the counter can be returned.
 
 Take care to make all the variables used in the function local to the function by using the `var` keyword.
+
+---
+
+## Additional Resources
+
+Angular documentation:
+[https://docs.angularjs.org/api/ng/directive](https://docs.angularjs.org/api/ng/directive)
 

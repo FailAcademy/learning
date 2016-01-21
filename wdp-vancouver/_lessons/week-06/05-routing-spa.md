@@ -112,3 +112,15 @@ Step 6: We're ready to create our routes! Add the following route definition to 
 <br>
 
 Once you're here, we'll add the rest of the routes manually, as a class! Good luck!
+
+---
+
+## Additional Resources
+
+Angular documentation:
+[https://docs.angularjs.org](https://docs.angularjs.org)
+
+ui-router github page (Documentation): 
+[https://github.com/angular-ui/ui-router](https://github.com/angular-ui/ui-router)
+
+

@@ -65,7 +65,7 @@ class: center, middle
 
 The **impedance mismatch** between dynamic applications and static documents is often solved with:
 
-- **Library** &ndash; a collection of functions which are useful when writing web apps. Your code is in charge and it calls into the library when it sees fit. (e.g., jQuery)
+- **Library** &ndash; a collection of functions which are useful when writing web apps. Your code is in charge and it calls into the library when it sees fit. (e.g., jQuery, React)
 - **Framework** &ndash; a particular implementation of a web application, where your code fills in the details. The framework is in charge and it calls into your code when it needs something app specific. (e.g., Backbone, Ember, etc.)
 
 ---
@@ -90,8 +90,9 @@ Most importantly, all of the logic for manipulating the DOM, showing, hiding, ap
 
 ```js
 $('button').on('click', function(e) {
-  var input = $('input').val();
-  $('section').append('<li>The value is'+ input +'</li>');
+  var inputValue = $('input').val();
+  // Using jQuery, we update our DOM inside a javascript file ...
+  $('h1').text('The value form the input is'+ inputValue +');
 });
 ```
 
@@ -109,9 +110,9 @@ $('button').on('click', function(e) {
    </head>
    <body>
        <!-- Add the ng-model directive to our element -->
-       <input ng-model="name" type="text" placeholder="Your name">
+       <input ng-model="inputValue" type="text">
        <!-- include the value of name in our page using {% raw %}{{ }}{% endraw %} -->
-       <h1>Hello {% raw %}{{ name }}{% endraw %}</h1>
+       <h1>The value form the input is: {% raw %}{{ inputValue }}{% endraw %}</h1>
    </body>
 </html>
 ```
@@ -146,24 +147,77 @@ class: center, middle
 *Where else could our data come from?*
 
 ---
+template: inverse
 
-# The Controller
+# Patience
 
-Declaring a controller on an element tells Angular that all of the elements inside belong to the controller you declare.
+---
 
-Now, we'll be able to add data-bindings for these elements somewhere in our code...in the controller!
+# Exercise 1
 
-```html
-<!-- Add the ng-controller attribute for great good -->
-<div ng-controller='NameController'>
-  <input ng-model="name" type="text" placeholder="Your name">
-  <h1>Hey, {% raw %}{{ name }}{% endraw %}</h1>
-</div>
+Create a simple Angular application that manipulates some `ng-model` value, and display's the updated value to the user in an HTML document.
+
+You've seen how this works using a simple text input. 
+
+Use the Angular documentation, and add update your view using: a **checkbox**, a **select menu** & **radio buttons** .
+
+Use your imagination when creating your application, and don't be afraid to add a little css personlaity. Bonus points will be given for creativity!
+
+---
+class: center, middle
+# Angular Controllers
+
+*Controllers* in Angular are the means angular gives us for manipulating *Views* in our JavaScript applications.
+
+---
+
+### Angular Controllers 
+
+The following is an example of a simple controller, with some data bound to the magical `$scope` object!
+Any data assigned to a property of the `$scope` object will be available in our HTML document, provided we link the controller to the DOM.
+
+```js
+// script.js
+var app = angular.module("SimpleApp", []);
+
+app.controller('ExampleController', ['$scope', function($scope){
+  
+   $scope.name = "Mackenzie";
+
+}]);
 ```
 
 ---
 
-Extended example:
+### Angular Controllers 
+
+When we change the value of any properties assigned to the `$scope` object from our controller, the html will automagically change to reflect that change! This is called **2-way data-binding** and is one of ANgular's most important features. You'll use this pattern over and over again.
+
+```js
+// script.js
+var app = angular.module("SimpleApp", []);
+
+app.controller('ExampleController', ['$scope', function($scope){
+  
+   $scope.name = "Mackenzie";
+
+}]);
+```
+
+---
+
+Complete example:
+
+```js
+// script.js
+var app = angular.module("helloName", []);
+
+app.controller('NameController', ['$scope', function($scope){
+
+   $scope.name = "Mackenzie";
+
+}]);
+```
 
 ```html
 <!DOCTYPE html>
@@ -182,40 +236,139 @@ Extended example:
 </html>
 ```
 
+---
+
+### Best practice:
+
+- It’s a best practice to not to set a primitive value (string, boolean, or number) directly on the
+$scope of a controller. Data in the DOM should always be attached to an object
+ `$scope.values = { name: "Mackenzie" /* ...etc  */ }`.
+
+---
+
+template: inverse
+
+# First steps to creating an Angular app
+
+---
+
+### First steps to creating an Angular app
+
 ```js
-// script.js
-var app = angular.module("helloName", []);
+var app = angular.module('MyNewApp', []);
+```
 
-app.controller('NameController', ['$scope', function($scope){
+The **module declaration** above has a very specific *signature*. It takes 2 *arguments*:
+- The first is a *String* which will be the name of your application. It can be anything you like, but it should be something descriptive.
+- The second argument is an empty *array*. This is required, and as we add other peoples modules to our application to augment functionality, we add them to this *array*.
 
-   $scope.name = "Mackenzie";
+---
 
-}]);
+### Modules all the way down
+
+In Angular, it's good practice to separate your code into modules.
+You can combine modules to add functionality to your application.
+
+There are 3 important software development concepts at play here:
+*Encapsulation*, *dependency injection*, and *separation of concerns*.
+
+```js
+// An application that encpsulates some utility functions
+var utils = angular.module('AppUtils', []);
+
+// We can include it in our main application:
+var app = angular.module('MyNewApp', ['AppUtils']);
+
 ```
 
 ---
 template: inverse
 
-# Conceptual Overview
+# Exposing functionality from Angular Modules
 
 ---
 
-# Exercise 1
+### Exposing functionality form Angular Modules
 
-Visit: https://docs.angularjs.org/guide/concepts
+Let's expose some functionality form one module to another using Angular's simplest method: the **Factory**.
 
-In groups, research 7 of the 14 concepts presented there. You'll be expected to present the concept as well as an explanation of where the concepts fits in with the rest of concepts you've chosen.
+```js
 
-You're not expected to be experts, but similar to the frameworks exercise, do you best to be as thorough as possible.
+var utils = angular.module('AppUtils', []);
+
+app.factory('Baconator', [function(){
+    // we'll return a simple object with some methods
+    return {
+      // some silly method about bacon
+      addBacon: function(sentence){
+        return sentence+' All the better with Bacon!'
+      }
+      // ...
+    }
+}]);
+
+```
 
 ---
+
+### Use our new module!
+
+```js
+
+// Create another module and inject our AppUtils module by name!
+var app = angular.module('BaconSpeak', ['AppUtils']);
+
+// Take note of Angular's unique Dependency injection syntax...
+// $scope must always be injected! 
+// -------------------------------------------
+// Because we injected AppUtils into our app, we have access to the 
+// 'Baconator factory' we created inside that module!
+// -------------------------------------------
+app.controller('BaconCtrl', ['$scope', 'Baconator', 
+    // put the function argument on a new line for neatness
+    function($scope, Baconator){
+    
+    var words = "Hello, the weather is very cold."
+
+    // We can use the addBacon method we created!
+    $scope.sentence = Baconator.addBacon(words);
+    
+}]);
+
+
+```
+
+---
+template: inverse
+
+# Questions?
+
+---
+template: inverse
+
+# Putting it all together
+
+---
+
+# Exercise 2
+
+Create an Angular application that uses code from another Angular module (via *dependency injection*) to manipulate some `$scope` value and display's the updated value to the user in an HTML document. Hint: You'll use an Angular `controller`, and a `factory`.
+
+Remember the best practice we mentioned: Don;t assign primitive values directly to your controller's `$scope`. 
+Instead use somehting like `$scope.values = { name: "Mackenzie" /* ...etc  */ }`
+
+Again, add some css, bonus points for creativity!
+
+---
+
+
 template: inverse
 
 # Project 4: <br />Mars Colony App
 
 ---
 
-# What We've Learned
+### What We've Learned
 
 - What AngularJS is and how to add it to our web app
 - How data-binding works (at high level)

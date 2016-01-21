@@ -14,17 +14,23 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+layout: false
 
 # Agenda
 
 1. What is programming?
-2. Pseudocode
-3. Basic programming concepts with Scratch
+2. How to think like a programmer
+3. Pseudocode
+4. Basic programming concepts with Scratch
 
 ---
 template: inverse
 
 # What is Programming?
+
+---
+class: center, middle 
+![](http://cdn.meme.am/instances/500x/21186129.jpg)
 
 ---
 class: center, middle
@@ -36,6 +42,11 @@ When we **program** we are simply writing a list of **instructions** a our compu
 ---
 class: center, middle
 
+<iframe width="100%" height="400px" src="https://www.youtube.com/embed/QaTx1J7ZeLY" frameborder="0" allowfullscreen></iframe>
+
+---
+class: center, middle
+
 ### What is a programming language?
 
 It's an agreed-upon way to create instructions that a computer or other machine can understand.
@@ -43,9 +54,30 @@ It's an agreed-upon way to create instructions that a computer or other machine 
 ---
 template: inverse
 
-# Pseudocode
+# Algorithms
 
 ---
+class: center, middle
+
+### Fancy Word, Simple Meaning
+
+An algorithm is a **self-contained set of instructions** to be followed in order to complete a task.
+Much of programming is writing very simple algorithms.
+
+---
+class: center, middle
+
+# What's an algorithm and why should I care?
+
+[https://www.youtube.com/watch?v=CvSOaYi89B4](https://www.youtube.com/watch?v=CvSOaYi89B4)
+
+---
+template: inverse
+
+# Psuedocode
+
+---
+
 class: center, middle
 
 .large[
@@ -55,26 +87,11 @@ class: center, middle
 ![Human to machine](/public/img/human-to-machine.png)
 
 ---
-
 # Pseudocode
 
 Pseudocode is code that's meant for human reading, not machine reading.
 
 Pseudocode simply writing out an algorithm in human-readable words, instead of computer code.
-
----
-class: center, middle
-
-.large[
-   Wait, what's an algorithm?
-]
-
----
-class: center, middle
-
-### Fancy Word, Simple Meaning
-
-An algorithm is a **self-contained set of instructions** to be followed in order to complete a task.
 
 ---
 
@@ -152,6 +169,238 @@ Some things to consider while writing your algorithm:
 
 ---
 template: inverse
+# Being a Programmer
+
+---
+class: center, middle
+
+<img src="http://images-cdn.9gag.com/photo/aPD96bQ_700b.jpg" height="600">
+
+---
+template: inverse
+
+# Computer Science
+
+---
+
+ ![](https://upload.wikimedia.org/wikipedia/commons/2/20/IBM_Electronic_Data_Processing_Machine_-_GPN-2000-001881.jpg)
+
+---
+
+### Using "High-Technology"
+
+"There is a body of knowledge about algorithms, data structures, mathematics, and other gee-whiz stuff that most programmers know about but rarely use. In practice, this wonderful stuff is too complicated and generally unnecessary."
+
+**What are some scenarios where knowledge of the inner workings of computers would be helpful, as a web developer??**
+
+.footnote.right[
+   *Source: [How To Be A Programmer](https://github.com/braydie/HowToBeAProgrammer/blob/master/2-Intermediate/Judgment/07-How%20to%20Know%20When%20to%20Apply%20Fancy%20Computer%20Science.md)*
+]
+
+---
+
+template: inverse
+
+# Learn to Type
+
+---
+class: center, middle
+
+![](http://atinybird.com/nest/1285558323532.gif)
+
+---
+### Learn to Type
+
+This may seem obvious. More specifically, you should aim to gain some level of ability to *touch-type*, which means typing without looking at the keyboard. 
+
+- Being a fast typer is not a requirement for being a good programmer, but it certainly will help you save time.
+
+- If you're working on a team, you'll also me typing a lot of emails, chat messages, project briefs and so on. Communication gets easier when you have mastered the tools you use to conduct it.
+
+---
+# Exercise 2
+
+### How fast can you type?
+Lets get a sense of how fast you can type!
+We're all going to visit [10 Fast Fingers](http://10fastfingers.com/typing-test/english), create an account and take the typing test and share your WPM!
+
+---
+template: inverse
+
+# Take Shortcuts
+
+---
+### Your Code Editor is Your Best Friend
+
+Your code editor has a wealth of functionality designed to save you time.
+Take advantage of these facilities and spend a little time configuring things for maximum productivity:
+
+- Your color scheme can help you read code faster.
+- Code snippets are a great way to write *boilerplate* code quickly. ([Sublime code snippet tutorial](http://www.hongkiat.com/blog/sublime-code-snippets/))
+- Editor plugins like [**Emmet**](http://docs.emmet.io/) provide dozens of keyboard shortcuts that can help you write repetitive code faster.
+
+---
+class: center, middle
+
+### Preserve code you find yourself repeating. Keep this code organized for easy access.
+
+We'll be using a tool called [Gistbox](http://www.gistboxapp.com/) in class to do just that.
+
+---
+template: inverse
+
+# Optimise Your Develpoment Environment
+
+---
+template: inverse
+
+# Stay Organised
+
+---
+
+template: inverse
+
+# Debugging
+
+---
+
+### Debugging
+
+"Debugging is the cornerstone of being a programmer. The first meaning of the verb "debug" is to remove errors, but the meaning that really matters is to see into the execution of a program by examining it. A programmer that cannot debug effectively is blind."
+
+.footnote.right[
+   *Source: [How To Be A Programmer](https://github.com/braydie/HowToBeAProgrammer/blob/master/1-Beginner/Personal-Skills/01-Learn%20To%20Debug.md)*
+ ]
+
+---
+
+# Debugging using a log
+
+ "Absolute beginners must understand and use logs because their knowledge of the programming is limited".
+
+In JavaScript, we can use `console.log()` to print values into the *browser console*.
+```js
+
+function addNumbers(num1, num2) {
+      // we can print the value of num1 and num2 
+      // to the debugging console in your browser
+      // whenever your program executes this function!
+      console.log(num1, num2);
+      console.log(num1 + num2);
+      return num1 + num2;
+}
+
+```
+
+.footnote.right[
+   *Source: [How To Be A Programmer](https://github.com/braydie/HowToBeAProgrammer/blob/master/1-Beginner/Personal-Skills/04-How%20to%20Debug%20Using%20a%20Log.md)*
+ ]
+
+---
+
+# Debugging in your **IDE**
+
+![](https://developer.chrome.com/devtools/docs/javascript-debugging/multiple-breakpoints-region.jpg)
+
+---
+
+# Debugging is fun!
+
+Debugging begins wth a mystery, and finding solutions to bugs will often lead you to a better understanding of the program you're writing, and the language you are using. 
+
+Embrace the process. As a programmer 50% or more of your time will be spent debugging. More so in different circumstances, like working with older codebases, or code you don't initially understand, but you've been tasked to improve.
+
+There are all scenarios you'll encounter if you're destined to work as a full time programmer.
+
+---
+
+class: center, middle
+
+# Take a break when you're stumped!
+
+---
+template: inverse
+
+# Designing a Program
+
+---
+### Designing a Program
+
+"When you're just starting to program, design is a real challenge. Knowing how to think about programming is one piece, but the other piece is knowing how to put programs together in a way that makes it easy to modify them later..."
+
+
+Properly thinking through the design of your programs, "...is all about making things easier for your future self--sort of like eating your vegetables. Bad designs make your program inflexible to future changes, or impossible to understand after you've written..."
+
+.footnote.right[
+   *Source: [Alex Allain](http://www.cprogramming.com/beginner_programming_mistakes.html)*
+ ]
+
+---
+template: inverse
+
+#Commenting Your Code
+
+---
+### Commenting Your Code
+
+"Comments are little signposts in your code explaining it to future archaeologists that desperately need to understand how 21st century man sorted lists of purchase orders."
+
+Commenting your code will help you and others understand your programs, and is especially helpful when taking in complex bits. It's also good practice to leave yourself notes, as you programing, like `// TODO: implement feature here`, and so on.
+
+.footnote.right[
+   *Source: [http://improvingsoftware.com/](http://improvingsoftware.com/2011/06/27/5-best-practices-for-commenting-your-code/)*
+ ]
+
+---
+### Commenting Your Code
+
+Here are some simple rules to follow when adding comments: 
+1. Comments are not *'subtitles'*. Well written code is <br> **'self-documenting'**.
+2. Don't use comments to 'save' dead code for later. Usually, you'll forget to remove this stuff and it will clutter your programs. Only commit the code that is being used by your programs.
+
+---
+### How to Improve Your Coding Chops
+
+1. Look at other peoples code.
+2. Run other people's code.
+3. Write more code!
+4. Learn to love your IDE / Debugger
+
+There is always more than one way to solve a programming task. Programming is a challenging creative activity, and looking at how others have solved problems will help you improve your own repertoire!
+
+---
+template: inverse 
+
+# Us and Them
+
+---
+
+### Us and Them
+
+"Engineers and programmers in particular are generally recognized by popular culture as being different from other people. This implies that other people are different from us. This is worth bearing in mind when communicating with non-engineers; you should always understand the audience."
+
+
+.footnote.right[
+   *Source: [How To Be A Programmer](https://github.com/braydie/HowToBeAProgrammer/blob/master/2-Intermediate/Judgment/08-How%20to%20Talk%20to%20Non-Engineers.md)*
+ ]
+
+---
+template: inverse
+
+# Love to Learn
+
+---
+class: center, middle
+
+Learning is both rewarding and challenging.
+
+The love of learning, and making a conscious effort to improve how you learn is an essential skill of any successful programmer.
+
+(This is my favourite part of the job).
+
+---
+
+template: inverse
 
 # Getting Started with Scratch
 
@@ -185,7 +434,7 @@ https://scratch.mit.edu/projects/232913/#player
 
 ---
 
-# Exercise 2
+# Exercise 3
 
 Your turn...**[create a Scratch account](https://scratch.mit.edu/)** and give it a whirl.
 

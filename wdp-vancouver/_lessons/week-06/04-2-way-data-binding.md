@@ -43,8 +43,9 @@ All of the fields are required, and the form should indicate to the user if they
 
 ## Lab Activity
 
-In today's lab we'll continue working on Project 4 and complete this exercise:
+In today's lab we'll continue working on Project 4!
 
+<!-- 
 ### JS Exercise
 
 #### Sum of a Range
@@ -74,12 +75,12 @@ To check whether the optional step argument was given, either check `arguments.l
 
 Having range understand negative step values is probably best done by writing two separate loops—one for counting up and one for counting down—because the comparison that checks whether the loop is finished needs to be `>=` rather than `<=` when counting downward.
 
-It might also be worthwhile to use a different default step, namely, -1, when the end of the range is smaller than the start. That way, `range(5, 2)` returns something meaningful, rather than getting stuck in an infinite loop.
+It might also be worthwhile to use a different default step, namely, -1, when the end of the range is smaller than the start. That way, `range(5, 2)` returns something meaningful, rather than getting stuck in an infinite loop. -->
 
 ---
 
 ## Additional Resources
 
 Angular documentation:
-https://docs.angularjs.org/api/ng/directive/form
-https://docs.angularjs.org/api/ng/type/form.FormController
+[https://docs.angularjs.org/api/ng/directive/form](https://docs.angularjs.org/api/ng/directive/form)
+[https://docs.angularjs.org/api/ng/type/form.FormController](https://docs.angularjs.org/api/ng/type/form.FormController)
