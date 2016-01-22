@@ -25,6 +25,7 @@ layout: false
 2. Angular vs. jQuery
 3. Conceptual overview
 4. Project 4 overview
+5. Set up a dev env using Gulp
 
 ---
 template: inverse

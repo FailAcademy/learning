@@ -76,7 +76,7 @@ Because JS is "client-side" you can see it in your browser:
 
 ---
 
-# The Console
+### The Console
 
 You can write it right in your browser too using the **console**:
 
@@ -92,7 +92,7 @@ You can also use the console to identify bugs in your JS code.
 
 ---
 
-# The Node.js REPL
+### The Node.js REPL
 
 REPL is an acronym that stands for **"Read Evaluate Print Loop"**. Most programming languages have a REPL program that you can use to run code in that language, from the command line. Node.js provides a *JavaScript runtime environment* for your operating system.
 
@@ -100,7 +100,7 @@ To run a JavaScript program, `cd` to the directory where you've created your pro
 
 ---
 
-## Debugging using `console.log()`
+### Debugging using `console.log()`
 
 In JavaScript, we can use `console.log()` to print values into the *browser console* to help us understand what particuar values may be at specific points in your programs execution flow.
 
@@ -123,23 +123,6 @@ function addNumbers(num1, num2) {
 
 ---
 
-
-# Values (JavaScript Primitives)
-
-In JavaScript, all programs are made up of the following **primitive values**.
-
-```javascript
-
-String
-Number
-Boolean
-null
-undefined
-
-```
-
----
-
 # Comments
 
 We can add comments to our JS too:
@@ -149,13 +132,13 @@ We can add comments to our JS too:
    // Add a single line comment with 2 forward slashes
 
    /*
-      Add a multi-line comment like this
+      Add a multi-line comment like this...
+      Commenting rules!
    */
 
 ```
 
-Comments are a powerful tool for helping you organize and understand your programs.
-**Good developers add descriptive comments to their programs as they code them.**
+Review: Comments are a powerful tool for helping you organize and understand your programs.
 Comments are always hidden from execution in the script, and do not affect the output of the program.
 
 ---
@@ -177,12 +160,33 @@ Here are a few examples:
 
 ---
 
-#The importance of Style!
+### Statements
 
-JavaScript is a *flexible* language, and  the concept of *coding style* is important. Coding with a conventional style will help other programmers understand your code.
+In a computer language, a group of words, numbers, and operators that performs a specific task is a **statement**. In JavaScript, a statement might look as follows: `a = b * 2;`
 
-In this course we'll be sticking as closely as possible to AirBnB's style guide, lets take a look now:
-[AirBnB Style Guide](https://github.com/airbnb/javascript/tree/master/es5)
+The characters `a` and `b` are called **variables**.
+
+By contrast, the `2` is just a **value** itself, called a **literal value**, because it stands alone without being stored in a variable.
+
+The `=` and `*` characters are **operators** -- they perform actions with the values and variables such as assignment and mathematic multiplication.
+
+
+---
+
+### Statements
+
+Most statements in JavaScript conclude with a semicolon `;` at the end.
+
+The statement `a = b * 2;` tells the computer, roughly, to get the current value stored in the variable `b`, multiply that value by `2`, then store the result back into another variable we call `a`.
+
+Programs are just collections of many such statements, which together describe all the steps that it takes to perform your program's purpose.
+
+---
+
+# Expressions
+
+Statements are made up of one or more **expressions**. An expression is any reference to a variable or value, or a set of **variable**(s) and **value**(s) combined with operators.
+
 
 ---
 
@@ -191,6 +195,7 @@ In this course we'll be sticking as closely as possible to AirBnB's style guide,
 In JS, we use the **var** keyword to define our variables, here is what a **variable declaration** looks like, in JavaScript!
 
 ```javascript
+
 var color = 'red';
 var amount = 100;
 var list = ['first', 'second', 'third'];
@@ -247,17 +252,6 @@ alert(greeting);
 
 ---
 
-# Logging Values to the Browser Console
-
-You can also use the `console.log()` method to simply print out and test values in the browser's console from your code.
-
-```javascript
-var greeting = "Hi there!"
-console.log(greeting);
-```
-
----
-
 # Exercise 1
 
 Open a new browser tab and open the console, and type in each line one at a time:
@@ -273,6 +267,89 @@ console.log(yourName);
 If we wanted to store the value inputted into the `prompt` and print it out in an `alert` afterward, how might we do that?
 
 And what would we do if wanted to output the value that was entered in the `prompt` with the string `Hello, ` in front of it in the subsequent `alert`?
+
+---
+template: inverse
+
+# Values & Types
+
+
+---
+### Values & Types - Primitives
+
+When working with operators, we'll have to ensure that the values we are using in our expressions are apropriate.
+That means, numbers for math, strings for creating text and so on.
+
+Primitive values:
+
+`"I'm a String";`<br>
+`'I'm another sring`;<br>
+`42;`<br>
+`true;`<br>
+`false`;<br>
+
+---
+
+### Values &  Types - Type Coercion
+
+In JavaScript, certain **operations** can change the value of primitives.
+Getting used to how JavaScript handles primitives is an important part of using the language, and also the cause of many bugs and frustrations for beginners.
+
+
+Try this:
+```js
+
+var a = "42";
+var b = Number( a );
+
+console.log( a );   // "42"
+console.log( b );   // 42
+
+```
+
+---
+template: inverse
+
+# When is a number not a number?
+(When it's a string)
+
+---
+
+# Coercion + Overloading
+
+JavaScript is weird.
+
+**More Type Coercion**
+```js
+"2" === 2 // false
+"2" == 2 // true, wtf?
+```
+
+**Operator Overloading**
+```js
+"42" + 5; // "425" ok that maskes sense
+```
+
+Because of this unique behavior, it's a best practice to **always use `===` (triple equals)** when doing value comparisons in JavaScript.
+
+
+---
+template: inverse
+
+# Truthy and Falsy values
+
+---
+### JavaScript Truth Table
+
+The Following values are always `false`:
+
+- `false`
+- `undefined`
+- `""` (an empty string)
+- `null`
+- `0`
+- `NaN` (a special Number value meaning Not-a-Number!)
+
 
 ---
 template: inverse
@@ -804,7 +881,7 @@ var fullName = person.getName(); // will return "Silent Bob"
 
 ---
 
-# What Is "This"?
+# What Is `this` ?
 
 In JS, `this` is a special word and it always refers to one object (which object it refers to will depend on the context).
 
@@ -964,6 +1041,15 @@ In this exercise, you're going to build a JS object of your own to represent a *
 Properties of the hotel object should include the **name** of the hotel (The Quay), the **total number of rooms** (40), the current number of **rooms booked** (25), an array of the **types of rooms** (twin, double, suite), and function to **check the availability**.
 
 One you've created your object, **create a loop** to log to the console all of the room types one-by-one. Then, **update the booked rooms** to 30, check the new availability, and display that in an **alert box**.
+
+---
+
+#The importance of Style!
+
+JavaScript is a *flexible* language, and  the concept of *coding style* is important. Coding with a conventional style will help other programmers understand your code.
+
+In this course we'll be sticking as closely as possible to AirBnB's style guide, lets take a look now:
+[AirBnB Style Guide](https://github.com/airbnb/javascript/tree/master/es5)
 
 ---
 

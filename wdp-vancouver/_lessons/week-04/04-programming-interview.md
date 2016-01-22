@@ -49,7 +49,7 @@ What does this mean? For example, if given a list of stock prices per day: [45, 
 Why? For this particular list, if you had bought stock at 24 and sold it at 40, a profit of 16 was made. For this list, 16 is the largest profit you could have made buy buying and selling on specifi days. If no profit could have been made, your program should console.log "All is lost!".
 
 Use this list to start: 
-**[47, 50, 22, 11, 15, 90, 88]**
+`[47, 50, 22, 11, 15, 90, 88]`
 
 ---
 ## Challenge 3

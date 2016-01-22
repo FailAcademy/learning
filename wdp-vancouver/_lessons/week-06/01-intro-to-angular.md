@@ -57,6 +57,10 @@ Again, add some css, bonus points for creativity!
 
 ---
 
+## Exercise 3
+
+---
+
 ## Lab Activity
 
 Spend your time familiarizing yourself with some basic Angular concepts to prepare for this weeks assignments.
