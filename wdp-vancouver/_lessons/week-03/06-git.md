@@ -49,7 +49,8 @@ Complete the following online Git tutorial before class:
 
 ## Exercise 2
 
-
+**The Interactive Rebase**
+Let's reorder some commits and clean up our commit history!
 
 ---
 

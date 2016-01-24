@@ -19,9 +19,8 @@ layout: false
 # Agenda
 
 1. What is programming?
-2. How to think like a programmer
-3. Pseudocode
-4. Basic programming concepts with Scratch
+2. Being a programmer?
+3. Basic programming concepts with Scratch
 
 ---
 template: inverse
@@ -170,6 +169,7 @@ Some things to consider while writing your algorithm:
 ---
 template: inverse
 # Being a Programmer
+(Becoming a master of words and languages)
 
 ---
 class: center, middle
@@ -179,7 +179,8 @@ class: center, middle
 ---
 template: inverse
 
-# Computer Science
+# But hey, Computer Science?
+(The Answer is yes)
 
 ---
 
@@ -202,6 +203,7 @@ template: inverse
 template: inverse
 
 # Learn to Type
+(It's about culture)
 
 ---
 class: center, middle
@@ -209,13 +211,50 @@ class: center, middle
 ![](http://atinybird.com/nest/1285558323532.gif)
 
 ---
+
+![](http://wordpress.syllogic.in/wp-content/uploads/sites/2/2014/06/Wordpress-Code-is-Poetry-1024x770-1413543579.png)
+
+---
+
+![](https://hugobaeta.files.wordpress.com/2011/03/codeispoetry.jpg)
+
+---
+template: inverse
+
+# Culture
+(could you be that guy?)
+
+---
+
+# Could You Be That Guy?
+
+Programming, as an occupation, has a very young culture.
+It's not what you think it is, it's changing rapidly.
+Stereotypes are being broken down as more people learn how to do it, and as the tools programmers use to write software improve.
+
+**All good software goes through iterations.**
+
+---
+class: center, middle
+
+## Open Source FTW
+
+### So go to: [https://github.com/Instagram/python-instagram/pulls](https://github.com/Instagram/python-instagram/pulls) and file a pull request that (if merged) changes how 2bn people interact with the world!
+
+---
+template: inverse
+
+# First Learn to Type
+
+---
+
 ### Learn to Type
 
 This may seem obvious. More specifically, you should aim to gain some level of ability to *touch-type*, which means typing without looking at the keyboard. 
 
-- Being a fast typer is not a requirement for being a good programmer, but it certainly will help you save time.
+- Being a fast typer is not a requirement for being a good programmer, but it will save you time.
 
-- If you're working on a team, you'll also me typing a lot of emails, chat messages, project briefs and so on. Communication gets easier when you have mastered the tools you use to conduct it.
+- If you're working on a team, you'll also me typing a lot of emails, chat messages, project briefs and so on. Communication gets easier when you have mastered the tools you'll use for it.
 
 ---
 # Exercise 2
