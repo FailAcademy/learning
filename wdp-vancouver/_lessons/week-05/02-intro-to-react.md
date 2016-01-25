@@ -44,15 +44,13 @@ Let's review the `switch` statement and it's specifi syntax: Use the examples fr
 
 ---
 
-## Exercise 5
-
-Examine websites and try to identify which parts are or could be components.
-
----
-
 ## Lab Activity
 
-In today's lab we'll intriduce the final project, and start coding our first React mini-project. A Snazzy todo list!
+In today's lab we'll intriduce the final project, and start coding our first React mini-project. **A Snazzy todo list!**
+
+#### Mini-Project Stretch Goals
+- Add the ability to change the name of a todo, once it's need added.
+- Add the ability to filter: Show only completed todos; show only incomplete todos
 
 ---
 

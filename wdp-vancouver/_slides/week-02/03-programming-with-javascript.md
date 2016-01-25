@@ -20,7 +20,7 @@ layout: false
 # Agenda
 
 1. What is JavaScript?
-2. Javscript Syntax
+2. JavaScript Syntax
 4. Operators
 5. Loops
 6. Functions
@@ -607,7 +607,7 @@ Notice that we don't explicitly "return" anything from this function, we just wr
 
 ```javascript
 function fullName() {
-   var yourName = prompt('What\'s your name?')
+   var yourName = prompt('What\'s your name?');
    console.log(yourName);
 }
 
@@ -741,11 +741,81 @@ function france() {
 
 ---
 
+# What Kind of Scope?
+
+Global variables can be reassigned within functions to have local-only values too:
+
+```javascript
+var faveColour = 'blue';
+
+function sayColour() {
+   alert(faveColour);
+   faveColour = 'red'; // the "var" keyword is omitted!
+   alert(faveColour);
+}
+sayColour();
+```
+
+If you use the `var` keyword inside the function, you will get an unexpected result. Try this out in CodePen...
+
+---
+
+# Why Does This Happen?
+
+This quirky behaviour happens because of **hoisting**.
+
+Hoisiting will result in the first `alert` returning "undefined":
+
+```javascript
+var faveColour = 'blue';
+
+function sayColour() {
+   console.log(faveColour); // faveColour is undefined here
+   var faveColour = 'red'; // faveColour now equals 'red'
+   console.log(faveColour);
+}
+sayColour();
+```
+
+Let's see why this happens...
+
+---
+
+# Why Does This Happen?
+
+Whenever our JavaScript parser evaluates a script, it actually **makes two passes over it**.
+
+First, it re-sorts your code and moves all of your declared variable names (aka your not-yet-filled buckets) to the top and waits for your code to fill them with something.
+
+Only then does your browser make a second pass over your script to execute it.
+
+---
+
+# Why Does This Happen?
+
+So in reality, the code your browser sees actually looks like this at the time it's executed:
+
+```javascript
+var faveColour; // bucket waiting to be filled
+faveColour = 'blue'; // now it's filled with blue
+var faveColour; // now it's redeclared and empty again
+
+function sayColour() {
+   console.log(faveColour); // our bucket was empty so it's undefined here
+   faveColour = 'red'; // but now we filled the bucket with red
+   console.log(faveColour); // so we alert 'red' now
+}
+sayColour();
+```
+
+---
+
+
 # Global vs. Local Scope
 
 There are pros and cons to each type of variable scope:
 
-- **Global variables** can be **reused** throughout your code, but they **use more memory** and you may run into **naming collisions** with other scripts
+- **Global variables** can be **reused** throughout your code, but they **use more memory** and you may run into **naming collisions** with other scripts. (Don't use global scope!)
 - **Local variables** are more efficient because they **use less memory** and their **names are protected** within the function that they are defined, but they **can't be re-used** elsewhere in your code
 
 ---
@@ -1061,8 +1131,6 @@ In this course we'll be sticking as closely as possible to AirBnB's style guide,
 - How to create arrays and loop over them
 
 ---
-
-
 
 template: inverse
 

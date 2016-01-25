@@ -22,7 +22,7 @@ layout: false
 # Agenda
 
 1. What is Angular?
-2. Angular vs. jQuery
+2. Angular vs. React vs. jQuery
 3. Conceptual overview
 4. Project 4 overview
 5. Set up a dev env using Gulp
