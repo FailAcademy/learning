@@ -246,7 +246,7 @@ if ( dayOfWeek == 2 ) {
    greeting = 'Nope, not Tuesday!';
 }
 
-alert(greeting);
+console.log(greeting);
 
 ```
 
@@ -258,15 +258,15 @@ Open a new browser tab and open the console, and type in each line one at a time
 
 ```js
 
-alert('Hello World!');
+console.log('Hello World!');
 var yourName = prompt('What\'s your name?');
 console.log(yourName);
 
 ```
 
-If we wanted to store the value inputted into the `prompt` and print it out in an `alert` afterward, how might we do that?
+If we wanted to store the value inputted into the `prompt` and print it out in an `console.log` afterward, how might we do that?
 
-And what would we do if wanted to output the value that was entered in the `prompt` with the string `Hello, ` in front of it in the subsequent `alert`?
+And what would we do if wanted to output the value that was entered in the `prompt` with the string `Hello, ` in front of it in the subsequent `console.log`?
 
 ---
 template: inverse
@@ -430,9 +430,9 @@ Comparison operators are helpful when paired with conditional statements:
 var score = prompt('What\'s your score?');
 
 if ( score >= 50 ) {
-   alert('You passed!');
+   console.log('You passed!');
 } else {
-   alert('Keep trying...');
+   console.log('Keep trying...');
 }
 ```
 
@@ -749,9 +749,9 @@ Global variables can be reassigned within functions to have local-only values to
 var faveColour = 'blue';
 
 function sayColour() {
-   alert(faveColour);
+   console.log(faveColour);
    faveColour = 'red'; // the "var" keyword is omitted!
-   alert(faveColour);
+   console.log(faveColour);
 }
 sayColour();
 ```
@@ -764,7 +764,7 @@ If you use the `var` keyword inside the function, you will get an unexpected res
 
 This quirky behaviour happens because of **hoisting**.
 
-Hoisiting will result in the first `alert` returning "undefined":
+Hoisiting will result in the first `console.log` returning "undefined":
 
 ```javascript
 var faveColour = 'blue';
@@ -803,7 +803,7 @@ var faveColour; // now it's redeclared and empty again
 function sayColour() {
    console.log(faveColour); // our bucket was empty so it's undefined here
    faveColour = 'red'; // but now we filled the bucket with red
-   console.log(faveColour); // so we alert 'red' now
+   console.log(faveColour); // so we log 'red' now
 }
 sayColour();
 ```
@@ -1110,7 +1110,7 @@ In this exercise, you're going to build a JS object of your own to represent a *
 
 Properties of the hotel object should include the **name** of the hotel (The Quay), the **total number of rooms** (40), the current number of **rooms booked** (25), an array of the **types of rooms** (twin, double, suite), and function to **check the availability**.
 
-One you've created your object, **create a loop** to log to the console all of the room types one-by-one. Then, **update the booked rooms** to 30, check the new availability, and display that in an **alert box**.
+One you've created your object, **create a loop** to log to the console all of the room types one-by-one. Then, **update the booked rooms** to 30, check the new availability, and output that using `console.log`
 
 ---
 
