@@ -51,6 +51,7 @@ class: center, middle
 .large[
    They are functionally different from *web applications*, <br />e.g. Slack, Trello.
 ]
+
 ---
 class: center, middle
 
@@ -64,10 +65,35 @@ template: inverse
 # A Brief History of Websites
 
 ---
+template: inverse
+
+# Static Sites
+
+---
+#Static Sites
+
+In the parlance of web development, sites with so 'server-side' dependency are called 'static' sites, because their content does not change, unless changed by the web developer.
+
+'Static' sites are composed of static assets.
+
+---
+template: inverse
+
+# Dynamic sites
+
+---
+
+#Dynamic sites
+
+The term 'dynamic site' encompasses a wide variety of applications. The main characteristic of a dynamic site is that content on them changes based on user interaction.
+
+This is made possible by separate programs running in tandem on the client's computer, and on the server computer that is delivering the website, and will normally always involve a database.
+
+---
 
 # Enter PHP
 
-For our purposes, it serves to start our tour at **PHP**.
+For our purposes, it serves to start our tour of the dynamic web at **PHP**.
 
 Although there were other languages that could be used to create websites before PHP, such as Perl (Facebook was originally written using Perl), ASP, CGI, etc., the introduction of PHP had a revolutionary effect on the course of the Internet.
 
@@ -77,9 +103,7 @@ Although there were other languages that could be used to create websites before
 
 **PHP is a 'server-side' scripting language** that works alongside these other technologies.
 
-It enables developers to create 'dynamic' web pages by enabling developers to generate content based on, for example, data in their databases.
-
-.footnote[**Terminology:** Dynamic, Static, Server-side]
+It enables developers to **generate** content based on data in their databases.
 
 ---
 
@@ -102,7 +126,7 @@ This is different from anything we've seen up until now, and it's key to underst
 
 ---
 
-# Client & Server Sides
+# Client & Server
 
 Let's get a feeling for client-server communication.
 
@@ -144,6 +168,12 @@ A number of other factors influenced the popularity of PHP:
 - It's easy to learn, **dynamic** language, lets you prototype ideas quickly without worrying about correctness, which is a feature of **static** programming languages.
 
 .footnote[**Terminology:** Static language]
+
+---
+
+### Websites as Software Applications
+
+The power of generative content, powered by server-side languages, especially php, gave us the internet as we know it: A place not just for consuming content, but for **interacting** with content, **creating and publishing content ourselves**, and conducting and orchestrating business.
 
 ---
 template: inverse
@@ -237,9 +267,9 @@ Frameworks attempt to give us useful abstractions for structuring the code that 
 .footnote[**Terminology:** State, Abstraction]
 
 ---
-class: center, middle
+### A Popular Class of Frameworks
 
-### Generally, the frameworks we're going to look are called "MVC Frameworks"
+Many web frameworks are designed around the MVC pattern. That is to say, you'll be writing code in a repetitive way. This is done to imporve the learning curve, and allow new developers to ramp-up quickly.
 
 MVC is an acronym for **"Model", "View", "Controller"**.
 
@@ -272,14 +302,13 @@ For example, For our User Model, we may have a number of associated views:
 - The user profile view
 - The edit profile view
 - The user settings view
-
-Views are usually **composable** (i.e. they are made up of views and sub-views).
+- ...etc
 
 ---
 
 # C -> Controller
 
-**Controller** refers to a specific area in your application where you write code to coordinate the values stored in your model with the view that is meant to display them.
+**Controller** refers to a specific area in your application where you write code to coordinate your application/widget's data with the view that is showing it to the user.
 
 Controllers have a number of other characteristics, and the definition if fairly malleable, but for our purposes, it will serve us if we think about controllers as always being **directly associated with a view**.
 
@@ -289,13 +318,54 @@ For example you would define a controller to manage the User settings view. The 
 
 # Altogether Now...
 
-Using this pattern, we shave a way of separating presentation from the underlying data, so we know where to code, when we want to modify one or the other.
+Using this pattern, we have a way of separating presentation from the underlying data, so we know where to code, when we want to modify one or the other.
 
-If you want to change the behavior of an image slider, you'll look in the **view** layer...
+If you want to change the animation timing of an image slider, you'll look in the **view** layer...
 
 If we want to change how our user data is organized, we check the **model**.
 
 Once we're satisfied we pass the data to the **controller**, which acts as a go-between from the view and the model!
+
+---
+
+### Exercise 1
+
+Examine a complex web application (eg, Slack or Invision), and try to identify which parts are or could be components.
+
+Also, consider the MVC pattern and identify where developers might have added a controller, and what the applications various data-models might look like.
+
+---
+template: inverse
+
+#Beyond MVC
+
+---
+
+# Beyond MVC
+
+Recently, with smaller *libraries* like **React** gaining wide spread adoption, the web development community has been moving away from strict MVC patterns.
+
+Why? Not every application needs the restrictive structure of MVC.
+
+Client-side web developers are looking for a way to create efficient user interfaces, and they're not as concerned as they once thought they ought to be with managing the 'model layer' or creating large 'monolithic' applications.
+
+
+---
+
+#Against the Monolith
+
+When using a framework to write a JavaScript applications, you'll make some tradeoffs.
+The most conspicuous being that frameworks can't usually be mixed!
+
+You would never add Angular to your Ember or Backbone application. This simply does not make sense since each framework provides roughly the same functionality.
+
+Also, frameworks tend to be 'heavy' in terms of the number of lines of code you'll have to download and run to use them in your web page. For smaller applications, this may be unnecessary and inefficient.
+
+---
+
+### Views / Widgets / Components
+
+Another notion that is slowly replacing.
 
 ---
 
@@ -304,25 +374,15 @@ Once we're satisfied we pass the data to the **controller**, which acts as a go-
 You'll soon learn that there are dozens of JS Frameworks out there, and that there is a culture of hype that surrounds them. These are the heavyweights:
 
 - **Google** has built a framework: [AngularJS](https://angularjs.org/)
-- **Facebook** has created a framework: [ReactJS](https://facebook.github.io/react/)
+- **Facebook** has created a framework (actually just a library): [ReactJS](https://facebook.github.io/react/)
 - **Ruby on Rails** core team have one too: [EmberJS](http://emberjs.com/)
 - "Everyone Knows Backbone": [BackboneJS](http://backbonejs.org/)
 - [...and so on](https://en.wikipedia.org/wiki/Comparison_of_JavaScript_frameworks)
 
 ---
-
-# Exercise 1
-
-Visit each of the frameworks mentioned in the previous slide.
-
-Browse through the documentation and try to discover the tools that are provided for creating **models**, **views**and **controllers**, and how they are meant to be used together.
-
-You're not expected to produce in depth technical details, just describe things as you see them in your own words and try to be as thorough as possible.
-
----
 class: center, middle
 
-### Framework Fatigue:
+## Framework Fatigue:
 
 [A JS framework on every table](http://www.allenpike.com/2015/javascript-framework-fatigue/)
 

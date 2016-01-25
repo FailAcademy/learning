@@ -16,8 +16,7 @@ Read this [exellent overview](https://github.com/bevacqua/es6) of ES2015 on gith
 ## Learning Objectives
 
 - Learn the major diffrences between ECMAScript 5 and ECMAScript 6.
-- Learn how to build JavaScript applications using ES2015 & [Webpack](https://webpack.github.io/).
-- Learn how React uses ES2105 and .jsx to build components.
+- Learn the basics of how to build JavaScript applications using ES2015 & Gulp.
 
 ---
 
@@ -38,7 +37,10 @@ Read this [exellent overview](https://github.com/bevacqua/es6) of ES2015 on gith
 ---
 
 ## Exercise 1
-Install the gulp-babel plugin. [https://www.npmjs.com/package/gulp-babel](https://www.npmjs.com/package/gulp-babel) 
+
+Set up an ES2015 development environment using Gulp.
+- Install the gulp-babel plugin. [https://www.npmjs.com/package/gulp-babel](https://www.npmjs.com/package/gulp-babel)
+- Install the browserify plugin. [https://www.npmjs.com/package/gulp-browserify](https://www.npmjs.com/package/gulp-browserify)
 
 ---
 
@@ -48,7 +50,7 @@ Create an external module use the import statement to import some code!
 
 ---
 ## Exercise 3
-Create a Class that tells a story using template strings. <br>
+Create a Class that takes some user input and tells a story. Use template strings. <br>
 *Constructor(default props), Template strings*
 
 ---

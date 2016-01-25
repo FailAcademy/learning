@@ -20,7 +20,7 @@ layout: false
 # Agenda
 
 1. What is JavaScript?
-2. Javscript Syntax
+2. JavaScript Syntax
 4. Operators
 5. Loops
 6. Functions
@@ -76,7 +76,7 @@ Because JS is "client-side" you can see it in your browser:
 
 ---
 
-# The Console
+### The Console
 
 You can write it right in your browser too using the **console**:
 
@@ -92,7 +92,7 @@ You can also use the console to identify bugs in your JS code.
 
 ---
 
-# The Node.js REPL
+### The Node.js REPL
 
 REPL is an acronym that stands for **"Read Evaluate Print Loop"**. Most programming languages have a REPL program that you can use to run code in that language, from the command line. Node.js provides a *JavaScript runtime environment* for your operating system.
 
@@ -100,7 +100,7 @@ To run a JavaScript program, `cd` to the directory where you've created your pro
 
 ---
 
-## Debugging using `console.log()`
+### Debugging using `console.log()`
 
 In JavaScript, we can use `console.log()` to print values into the *browser console* to help us understand what particuar values may be at specific points in your programs execution flow.
 
@@ -123,23 +123,6 @@ function addNumbers(num1, num2) {
 
 ---
 
-
-# Values (JavaScript Primitives)
-
-In JavaScript, all programs are made up of the following **primitive values**.
-
-```javascript
-
-String
-Number
-Boolean
-null
-undefined
-
-```
-
----
-
 # Comments
 
 We can add comments to our JS too:
@@ -149,13 +132,13 @@ We can add comments to our JS too:
    // Add a single line comment with 2 forward slashes
 
    /*
-      Add a multi-line comment like this
+      Add a multi-line comment like this...
+      Commenting rules!
    */
 
 ```
 
-Comments are a powerful tool for helping you organize and understand your programs.
-**Good developers add descriptive comments to their programs as they code them.**
+Review: Comments are a powerful tool for helping you organize and understand your programs.
 Comments are always hidden from execution in the script, and do not affect the output of the program.
 
 ---
@@ -177,12 +160,33 @@ Here are a few examples:
 
 ---
 
-#The importance of Style!
+### Statements
 
-JavaScript is a *flexible* language, and  the concept of *coding style* is important. Coding with a conventional style will help other programmers understand your code.
+In a computer language, a group of words, numbers, and operators that performs a specific task is a **statement**. In JavaScript, a statement might look as follows: `a = b * 2;`
 
-In this course we'll be sticking as closely as possible to AirBnB's style guide, lets take a look now:
-[AirBnB Style Guide](https://github.com/airbnb/javascript/tree/master/es5)
+The characters `a` and `b` are called **variables**.
+
+By contrast, the `2` is just a **value** itself, called a **literal value**, because it stands alone without being stored in a variable.
+
+The `=` and `*` characters are **operators** -- they perform actions with the values and variables such as assignment and mathematic multiplication.
+
+
+---
+
+### Statements
+
+Most statements in JavaScript conclude with a semicolon `;` at the end.
+
+The statement `a = b * 2;` tells the computer, roughly, to get the current value stored in the variable `b`, multiply that value by `2`, then store the result back into another variable we call `a`.
+
+Programs are just collections of many such statements, which together describe all the steps that it takes to perform your program's purpose.
+
+---
+
+# Expressions
+
+Statements are made up of one or more **expressions**. An expression is any reference to a variable or value, or a set of **variable**(s) and **value**(s) combined with operators.
+
 
 ---
 
@@ -191,6 +195,7 @@ In this course we'll be sticking as closely as possible to AirBnB's style guide,
 In JS, we use the **var** keyword to define our variables, here is what a **variable declaration** looks like, in JavaScript!
 
 ```javascript
+
 var color = 'red';
 var amount = 100;
 var list = ['first', 'second', 'third'];
@@ -241,19 +246,8 @@ if ( dayOfWeek == 2 ) {
    greeting = 'Nope, not Tuesday!';
 }
 
-alert(greeting);
-
-```
-
----
-
-# Logging Values to the Browser Console
-
-You can also use the `console.log()` method to simply print out and test values in the browser's console from your code.
-
-```javascript
-var greeting = "Hi there!"
 console.log(greeting);
+
 ```
 
 ---
@@ -264,15 +258,98 @@ Open a new browser tab and open the console, and type in each line one at a time
 
 ```js
 
-alert('Hello World!');
+console.log('Hello World!');
 var yourName = prompt('What\'s your name?');
 console.log(yourName);
 
 ```
 
-If we wanted to store the value inputted into the `prompt` and print it out in an `alert` afterward, how might we do that?
+If we wanted to store the value inputted into the `prompt` and print it out in an `console.log` afterward, how might we do that?
 
-And what would we do if wanted to output the value that was entered in the `prompt` with the string `Hello, ` in front of it in the subsequent `alert`?
+And what would we do if wanted to output the value that was entered in the `prompt` with the string `Hello, ` in front of it in the subsequent `console.log`?
+
+---
+template: inverse
+
+# Values & Types
+
+
+---
+### Values & Types - Primitives
+
+When working with operators, we'll have to ensure that the values we are using in our expressions are apropriate.
+That means, numbers for math, strings for creating text and so on.
+
+Primitive values:
+
+`"I'm a String";`<br>
+`'I'm another sring`;<br>
+`42;`<br>
+`true;`<br>
+`false`;<br>
+
+---
+
+### Values &  Types - Type Coercion
+
+In JavaScript, certain **operations** can change the value of primitives.
+Getting used to how JavaScript handles primitives is an important part of using the language, and also the cause of many bugs and frustrations for beginners.
+
+
+Try this:
+```js
+
+var a = "42";
+var b = Number( a );
+
+console.log( a );   // "42"
+console.log( b );   // 42
+
+```
+
+---
+template: inverse
+
+# When is a number not a number?
+(When it's a string)
+
+---
+
+# Coercion + Overloading
+
+JavaScript is weird.
+
+**More Type Coercion**
+```js
+"2" === 2 // false
+"2" == 2 // true, wtf?
+```
+
+**Operator Overloading**
+```js
+"42" + 5; // "425" ok that maskes sense
+```
+
+Because of this unique behavior, it's a best practice to **always use `===` (triple equals)** when doing value comparisons in JavaScript.
+
+
+---
+template: inverse
+
+# Truthy and Falsy values
+
+---
+### JavaScript Truth Table
+
+The Following values are always `false`:
+
+- `false`
+- `undefined`
+- `""` (an empty string)
+- `null`
+- `0`
+- `NaN` (a special Number value meaning Not-a-Number!)
+
 
 ---
 template: inverse
@@ -353,9 +430,9 @@ Comparison operators are helpful when paired with conditional statements:
 var score = prompt('What\'s your score?');
 
 if ( score >= 50 ) {
-   alert('You passed!');
+   console.log('You passed!');
 } else {
-   alert('Keep trying...');
+   console.log('Keep trying...');
 }
 ```
 
@@ -530,7 +607,7 @@ Notice that we don't explicitly "return" anything from this function, we just wr
 
 ```javascript
 function fullName() {
-   var yourName = prompt('What\'s your name?')
+   var yourName = prompt('What\'s your name?');
    console.log(yourName);
 }
 
@@ -664,11 +741,81 @@ function france() {
 
 ---
 
+# What Kind of Scope?
+
+Global variables can be reassigned within functions to have local-only values too:
+
+```javascript
+var faveColour = 'blue';
+
+function sayColour() {
+   console.log(faveColour);
+   faveColour = 'red'; // the "var" keyword is omitted!
+   console.log(faveColour);
+}
+sayColour();
+```
+
+If you use the `var` keyword inside the function, you will get an unexpected result. Try this out in CodePen...
+
+---
+
+# Why Does This Happen?
+
+This quirky behaviour happens because of **hoisting**.
+
+Hoisiting will result in the first `console.log` returning "undefined":
+
+```javascript
+var faveColour = 'blue';
+
+function sayColour() {
+   console.log(faveColour); // faveColour is undefined here
+   var faveColour = 'red'; // faveColour now equals 'red'
+   console.log(faveColour);
+}
+sayColour();
+```
+
+Let's see why this happens...
+
+---
+
+# Why Does This Happen?
+
+Whenever our JavaScript parser evaluates a script, it actually **makes two passes over it**.
+
+First, it re-sorts your code and moves all of your declared variable names (aka your not-yet-filled buckets) to the top and waits for your code to fill them with something.
+
+Only then does your browser make a second pass over your script to execute it.
+
+---
+
+# Why Does This Happen?
+
+So in reality, the code your browser sees actually looks like this at the time it's executed:
+
+```javascript
+var faveColour; // bucket waiting to be filled
+faveColour = 'blue'; // now it's filled with blue
+var faveColour; // now it's redeclared and empty again
+
+function sayColour() {
+   console.log(faveColour); // our bucket was empty so it's undefined here
+   faveColour = 'red'; // but now we filled the bucket with red
+   console.log(faveColour); // so we log 'red' now
+}
+sayColour();
+```
+
+---
+
+
 # Global vs. Local Scope
 
 There are pros and cons to each type of variable scope:
 
-- **Global variables** can be **reused** throughout your code, but they **use more memory** and you may run into **naming collisions** with other scripts
+- **Global variables** can be **reused** throughout your code, but they **use more memory** and you may run into **naming collisions** with other scripts. (Don't use global scope!)
 - **Local variables** are more efficient because they **use less memory** and their **names are protected** within the function that they are defined, but they **can't be re-used** elsewhere in your code
 
 ---
@@ -804,7 +951,7 @@ var fullName = person.getName(); // will return "Silent Bob"
 
 ---
 
-# What Is "This"?
+# What Is `this` ?
 
 In JS, `this` is a special word and it always refers to one object (which object it refers to will depend on the context).
 
@@ -963,7 +1110,16 @@ In this exercise, you're going to build a JS object of your own to represent a *
 
 Properties of the hotel object should include the **name** of the hotel (The Quay), the **total number of rooms** (40), the current number of **rooms booked** (25), an array of the **types of rooms** (twin, double, suite), and function to **check the availability**.
 
-One you've created your object, **create a loop** to log to the console all of the room types one-by-one. Then, **update the booked rooms** to 30, check the new availability, and display that in an **alert box**.
+One you've created your object, **create a loop** to log to the console all of the room types one-by-one. Then, **update the booked rooms** to 30, check the new availability, and output that using `console.log`
+
+---
+
+#The importance of Style!
+
+JavaScript is a *flexible* language, and  the concept of *coding style* is important. Coding with a conventional style will help other programmers understand your code.
+
+In this course we'll be sticking as closely as possible to AirBnB's style guide, lets take a look now:
+[AirBnB Style Guide](https://github.com/airbnb/javascript/tree/master/es5)
 
 ---
 
@@ -975,8 +1131,6 @@ One you've created your object, **create a loop** to log to the console all of t
 - How to create arrays and loop over them
 
 ---
-
-
 
 template: inverse
 

@@ -17,8 +17,25 @@ date: 2016-02-15
 - Single-Page Application (SPA)
 - Framework
 - Library
+- Component
 
 ---
+
+## Exercise 1
+
+Examine a complex web application (eg, slack or invision), and try to identify which parts are or could be components.
+
+Also, consider the MVC pattern and identify where developers might have added a controller, and what the applications various data-models might look like. We'll be discussing your choices with everyone in the class.
+
+---
+
+## Lab Activity
+
+Set up your development environment and start configuring your build-chain for **Project 4** 
+You can choose either **Gulp** or **Webpack** to get the job done.
+
+---
+
 
 ## Additional Resources
 
