@@ -363,8 +363,9 @@ Also, frameworks tend to be 'heavy' in terms of the number of lines of code you'
 
 ---
 
-#Views as Components
+### Views / Widgets / Components
 
+Another notion that is slowly replacing.
 
 ---
 

@@ -10,6 +10,14 @@ class: center, middle, inverse
 
 ---
 
+# The Bad Parts
+
+---
+
+
+
+---
+
 # Advanced JS Exercises
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
