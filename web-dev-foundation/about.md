@@ -17,16 +17,16 @@ Prior to beginning the course, students are strongly encouraged to try out [Code
 
 ### Part-time
 
-The evening program classes run from 6:00 to 9:00 p.m. on Monday and Wednesday nights. The weekend program classes run from 10:00 a.m. to 5:00 p.m. on Saturdays. Students are required to complete lab assignments as homework in between classes.
+The evening program classes run from 6:00 to 9:00 p.m. on Monday and Wednesday nights. Students are required to complete lab assignments as homework in between classes.
 
 ## Schedule
 
 The following schedules are currently available:
 
-- [Fall 2015 - Part-time Evenings](/wdf-evenings-fall-2015/)
+- [Winter 2016 - Part-time Evenings](/wdf-evenings-winter-2016/)
 
 ## Instructor
 
-The lead instructor for the Web Developer Foundation course is Airrick Dunfield.
+The lead instructor for the Web Developer Foundation course is **Doug Gough**.
 
-Students project links will be submitted to: airrick@redacademy.com
+Students project links will be submitted to: [douglas@redacademy.com](mailto:airrick@redacademy.com)

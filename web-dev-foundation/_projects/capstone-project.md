@@ -45,7 +45,8 @@ Your project must:
 
 - Use a CSS reset
 - Use the `background-image` property at least once
-- Use the `position` and `float` properties
+- Use the `position` and `float` properties where appropriate
+- Use flexbox properties where appropriate
 - Demonstrate effective use of box model properties
 - Demonstrate effective use of CSS properties for altering the display of text (e.g. `font-family`, `font-style`, `text-transform`, etc.)
 - Incorporate a custom font using `@font-face`
@@ -58,7 +59,7 @@ Your project must:
 Your project must:
 
 - Be responsively designed using a mobile-first approach
-- Be optimized for 3 breakpoints: `480px`, `720px`, `1024px`
+- Be optimized for screen widths: mobile, `600px`, `1240px` (or any three widths that make the most sense for your project)
 
 **JavaScript/jQuery requirements:**
 
@@ -80,4 +81,4 @@ Your project must:
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a link** to your GitHub Page (the page URL, not the repository) or custom domain name to [airrick@redacademy.com](mailto:airrick@redacademy.com).
+When you're ready to submit your project, **please email a link** to your GitHub Page (the page URL, not the repository) or custom domain name to [douglas@redacademy.com](mailto:airrick@redacademy.com).

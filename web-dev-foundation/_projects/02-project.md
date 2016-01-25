@@ -36,7 +36,7 @@ Your project must:
 Your project must:
 
 - Be responsively designed using a mobile-first approach
-- Be optimized for 3 breakpoints: `480px`, `720px`, `1024px`
+- Be optimized for screen widths: mobile, `600px`, `1240px` (or any three widths that make the most sense for your project)
 
 **Additional requirements:**
 
@@ -47,4 +47,4 @@ Your project must:
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a link** to your GitHub Page (the page URL, not the repository) to [airrick@redacademy.com](mailto:airrick@redacademy.com).
+When you're ready to submit your project, **please email a link** to your GitHub Page (the page URL, not the repository) to [douglas@redacademy.com](mailto:airrick@redacademy.com).

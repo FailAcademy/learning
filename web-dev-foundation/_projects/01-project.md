@@ -27,8 +27,6 @@ Your project must:
 
 - Contain a single `.html` file and an external `.css` file
 - Incorporate at least two images that have been optimized for the web, and they must be properly organized and named in sub-folder
-- Have a Git repository initialized in its root directory
-- Be pushed to GitHub (with all of your commits synced to it)
 
 **HTML requirements:**
 
@@ -46,7 +44,8 @@ Your project must:
 - Make appropriate use of classes and IDs as selectors
 - Use a CSS reset
 - Use the `background-image` property at least once
-- Use the `position` and `float` properties
+- Use the `position` and `float` properties where appropriate
+- Use flexbox properties where appropriate
 - Demonstrate effective use of box model properties
 - Demonstrate effective use of CSS properties for altering the visual display of text (e.g. `font-family`, `font-style`, `text-transform`, etc.)
 
@@ -59,4 +58,4 @@ Your project must:
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a link** to your GitHub repository to [airrick@redacademy.com](mailto:airrick@redacademy.com).
+When you're ready to submit your project, **please email a zipped folder** containing your project files to [douglas@redacademy.com](mailto:airrick@redacademy.com).
