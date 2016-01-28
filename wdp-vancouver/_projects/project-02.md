@@ -28,7 +28,8 @@ To receive a "Pass" grade for this project, your submission will need to satisfy
 Your project must:
 
 - Dynamically fetch photos and populate them in a webpage via the Instagram API based a text string input into a search field
-- Link each returned image to its URL on Instagram (unless undertaking lightbox stretch goal)
+- Resize the header area (i.e. logo plus search input) so that it transitions from occupying `100vh` on page load to only `auto` height after the search form is submitted
+- Link each returned image to its URL on Instagram
 
 **General requirements:**
 
@@ -81,7 +82,7 @@ Your project must:
 Want to challenge yourself? Your project could also:
 
 - Incorporate pagination and fetch additional photos via the Instagram API when the "Load More" button is clicked
-- Incorporate a lightbox plugin to display images in their largest format if a user clicks on them
+- Incorporate a combination of jQuery and CSS-based animation to animate the movement of the header on search submit
 
 ## Submission Instructions
 

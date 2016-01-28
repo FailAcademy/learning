@@ -169,7 +169,7 @@ jQuery has some special features that make it much easier to work with and enhan
 
 # Form Element Selectors
 
-jQuery has special selectors that allow you to easily grab onto form elements, some of which include*:
+jQuery has special selectors that allow you to easily grab onto form elements, some of which include:
 
 - `:checkbox`
 - `:input`

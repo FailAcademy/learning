@@ -193,15 +193,18 @@ Let's add an external JS file to our Project 1 directory, and include it in our 
 To make sure you've done it correctly, `console.log()` any string in the JS file, and make sure that it shows up in the console when you open the HTML file in your browser window.
 
 ---
+template: inverse
 
+# What is jQuery?
+
+---
 class: center, middle
 
-### What is a jQuery?
+### jQuery is just JavaScript!
 
-jQuery is library of code that makes it much easier to perform many essential tasks in JavaScript. 
+jQuery is library of code that makes it much easier to perform many essential tasks in JavaScript.
 
-jQuery is just JavaScript, here is the <br>
-[source code of the original jQuery release](http://genius.it/ejohn.org/files/jquery-original.html);
+Check out the [source code of the original jQuery release](http://genius.it/ejohn.org/files/jquery-original.html).
 
 ---
 
@@ -215,9 +218,11 @@ jQuery is just JavaScript, here is the <br>
 
 ---
 
-# jQuery's claim to fame
+# jQuery's Claim to Fame
 
-jQuery's main claim to fame, and it's original purpose, was to make selecting and manipulating DOM elements much simpler, by wrapping JavaScript's *native* DOM manipulation methods in an easy to use *API* (no more long method names like `getElementByClassName`), and to provide convenience methods for parsing and updating HTML.
+jQuery's main claim to fame&mdash;and it's original purpose&mdash;was to make selecting and manipulating DOM elements simpler.
+
+It does this by wrapping JavaScript's *native* DOM manipulation methods in an easy to use *API* (i.e. no more long method names like `getElementByClassName()`), and to provide **convenience methods** for parsing and updating HTML.
 
 ---
 
@@ -231,7 +236,7 @@ To use jQuery you must include a link to its script file in your HTML document, 
    <p class="intro">Welcome to my page!<p>
    <p>Thanks for stopping by.</p>
    <!-- The rest of the page content... -->
-   <script src="js/jquery-1.11.3.js"></script>
+   <script src="js/jquery-2.2.0.js"></script>
    <script src="js/my-script-file.js"></script>
 </body>
 ```
@@ -327,18 +332,18 @@ Let's get to the fun stuff and look at a basic example. Take our previous code s
    <p class="intro">Welcome to my page!</p>
    <p>Thanks for stopping by.</p>
    <!-- The rest of the page content... -->
-   <script src="js/jquery-1.11.3.js"></script>
+   <script src="js/jquery-2.2.0.js"></script>
    <script src="js/my-script-file.js"></script>
 </body>
 ```
 
-Let's see how we can use jQuery to change the colour of the text in the paragraph with class of `intro`.
+Let's see how we can use jQuery to **change the colour of the text** in the paragraph with class of `intro`.
 
 ---
 
 # How Does It Work?
 
-To use jQuery to find the element with a class of `.intro`, we must use the `jQuery()` method and pass the CSS selector as a parameter:
+To use jQuery to find the element with a class of `.intro`, we must use the `jQuery()` function and pass the CSS selector as an argument:
 
 ```javascript
 jQuery('.intro')
@@ -367,14 +372,28 @@ document.getElementByClassName('intro')
 
 // or...
 
-document.querySelector('intro')
+document.querySelector('.intro')
 ```
 
 It's easy to see why using jQuery is so appealing!
 
 ---
+class: center, middle
 
-# How Does It Work?
+### But what does that actually do?
+
+By writing `$('.intro')` in our code, we run a function that **returns** a **jQuery object** wrapping any elements that have the `intro` set as a class.
+
+---
+class: center, middle
+
+### And why do we care?
+
+Now that our `.intro` elements are "wrapped" in a jQuery object, all of jQuery's methods are available for us to use on those elements. Let's see how that works...
+
+---
+
+# So What Next?
 
 Now let's actually change the colour of the text using jQuery:
 
@@ -426,7 +445,7 @@ $(function() {
 
 ---
 
-# jQuery Has Methods Too
+# More jQuery Methods
 
 We just used the `.css()` and `.ready()` methods, but jQuery has many more.
 
@@ -491,7 +510,7 @@ template: inverse
 We've already seen a preview of how jQuery helps you manipulate the DOM, but let's dive a little deeper:
 
 - the `.html()` method will get the HTML inside the first element of the matched set (and its descendents)
-- the `.text()` method will just get the text from inside first element of the matched set (and its descendents)
+- the `.text()` method will just get the text from inside the first element of the matched set (and its descendents)
 
 ---
 
@@ -582,7 +601,7 @@ $('p').css({'font-size': '18px', 'font-weight': 'bold'});
 
 Using what you just learned about traversing the DOM and jQuery methods, come up with at least three unique solutions for changing the color of the text in the second `<p>` inside the `<article>` red using jQuery only (no CSS!).
 
-[See the lesson page](/lesson/jquery-basics/) for further instructions.
+[See the lesson page](/lesson/intro-to-jquery/) for further instructions.
 
 ---
 template: inverse
@@ -664,9 +683,9 @@ Bonus! Using the event delegation approach can also be beneficial for code perfo
 
 # The Event Object
 
-Every event handling function receives and event object, and this object has methods and properties of its own.
+Every event handling callback function receives an **[event object](https://learn.jquery.com/events/introduction-to-events/)**, and this object has methods and properties of its own.
 
-To access these methods and properties, we must pass in the event object as a parameter for our function:
+To access these methods and properties, we must pass in the event object as an argument for our function:
 
 ```javascript
 $('div').on('click', 'button', function(event) {
@@ -678,11 +697,21 @@ $('div').on('click', 'button', function(event) {
 
 # The Event Object
 
+*In plain English please?*
+
+In all DOM event callbacks, jQuery passes an event object argument which contains information about the event, such as precisely when and where it occurred, what type of event it was, which element the event occurred on, etc.
+
+We can use this to our advantage!
+
+---
+
+# The Event Object
+
 *And why exactly is this useful?*
 
 Sometimes we want attach events to HTML elements that have default behaviours that we need to override.
 
-For instance, you may want to attach a special click handler to an `a href` that performs a different action than click through to wherever that link points.
+For instance, you may want to attach a special click handler to an `<a>` that performs a different action than click through to wherever that link points.
 
 ---
 
@@ -706,7 +735,7 @@ $('div').on('click', 'button', function(event) {
 
 In this exercise, you're going create two click events&mdash;one that **adds another list item** to the list below, and one that **crosses off an item** in the list when its "done" link is clicked.
 
-[See the lesson page](/lesson/jquery-basics/) for further instructions.
+[See the lesson page](/lesson/intro-to-jquery/) for further instructions.
 
 ---
 
