@@ -7,7 +7,7 @@ date: 2016-01-28
 
 ## Pre-Work
 
-Provided you finished the readings and Code School tutorial from yesterday, there is no pre-work for this class.
+Provided you finished the readings and Code School tutorial assigned in the previous lesson, there is no pre-work for this lesson.
 
 ---
 
