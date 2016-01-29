@@ -6,18 +6,17 @@ due: Wednesday, February 10th (beginning of class)
 
 For Project 2, you're going to create a one-page, responsive website that allows a user to search for a hashtag via the Instagram API.
 
-<!-- You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-02.zip). -->
+You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-02.zip).
 
 ## Design Specifications:
 
 *Updated design specifications TBA.*
 
-<!-- - The base font size is `12px` and its HEX code is `#2e2e2e`
+- The base font size is `16px` and it HEX code is `#ffffff`
 - The body font family is Open Sans Light
-- The font family for the usernames is Open Sans Bold
-- The HEX code for the button colour is `#e24420`
-- The HEX code for the border around the grid is `#c2c2c2`
-- The HEX code for the border around the images and the text inside the search box is `#dbdbdb` -->
+- The HEX code for the button colour is `#e2231a`
+- The light grey border color is `#dbdbdb`
+- The medium grey color of the text in the footer is `#c2c2c2`
 
 ## Requirements
 
@@ -28,19 +27,19 @@ To receive a "Pass" grade for this project, your submission will need to satisfy
 Your project must:
 
 - Dynamically fetch photos and populate them in a webpage via the Instagram API based a text string input into a search field
-- Resize the header area (i.e. logo plus search input) so that it transitions from occupying `100vh` on page load to only `auto` height after the search form is submitted
+- Resize the header area (i.e. logo plus search input) so that it transitions from occupying `100vh` on page load to only `auto` height after the search form is submitted (you will need jQuery for this)
 - Link each returned image to its URL on Instagram
 
 **General requirements:**
 
 Your project must:
 
-- Contain a single `.html` file and an external `.css` file (a CSS reset may be included separately)
+- Contain a single `.html` file and an external, minified `.css` file (a CSS reset may be included separately)
 - Adequately reflect the designer's vision for the website when built out using HTML & CSS
 - Demonstrate effective organization of the project's root directory
 - Have a Git repository initialized in its root directory with an appropriately customized `.gitignore` file
 - Be pushed to GitHub (with all of your commits synced to it)
-- Use Gulp for running build tasks, such as minification and error checking
+- Use Gulp for running build tasks, such as minification, and error checking
 
 **HTML requirements:**
 
@@ -68,7 +67,7 @@ Your project must:
 Your project must:
 
 - Use Ajax to fetch data from an Instagram API endpoint
-- Transition users between UI states, starting where no photos have been returned, and then subsequently transitioning where photos populate the grid (incorporating a loading gif)
+- Transition users between UI states, starting where no photos have been returned, and then subsequently transitioning where photos populate the grid (by incorporating a loading gif)
 
 **RWD requirements:**
 
@@ -82,7 +81,7 @@ Your project must:
 Want to challenge yourself? Your project could also:
 
 - Incorporate pagination and fetch additional photos via the Instagram API when the "Load More" button is clicked
-- Incorporate a combination of jQuery and CSS-based animation to animate the movement of the header on search submit
+- Incorporate a combination of jQuery and CSS3-based animation to animate the movement of the header on search submit
 
 ## Submission Instructions
 
