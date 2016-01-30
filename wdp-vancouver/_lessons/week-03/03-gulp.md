@@ -7,14 +7,11 @@ date: 2016-02-03
 
 ## Pre-Work
 
-Download and install Node (with npm) before class:
+Visit [this site](https://github.com/osscafe/gulp-cheatsheet) and have a look at the **'English JavaScript'** cheatsheets, to get a feeling for what Gulp does, and for the code we'll be writing in todays lesson.
 
-- [nodejs.org](https://nodejs.org/en/)
-
-*We need Node and npm installed to use Gulp, so you want to be ready for this!*
+Feel free to save these cheatsheets for your own reference!
 
 ---
-
 ## Learning Objectives
 
 - Explain the benefits of automation in web projects.
@@ -54,9 +51,17 @@ http://www.browsersync.io/docs/gulp/
 
 ## Exercise 3
 
-Look for two interesting Gulp tasks in the Gulp plugin registry, and implement them in your project.
+We'll implement all of the plugins we'll need to build out second project!
 
-Visit [Gulp Recipes](https://github.com/gulpjs/gulp/tree/master/docs/recipes) for inspiration.
+- `plumber`
+- `notify`
+- `sass`
+- `autoprefixer`
+- `rename`
+- `minifyCSS`
+- `jscs`
+- `jshint`
+- `browserSync`
 
 ---
 
