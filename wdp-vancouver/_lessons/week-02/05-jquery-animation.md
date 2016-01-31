@@ -74,7 +74,7 @@ Your task is to find an example of an interesting jQuery plugin and create a dem
 
 ## Lab Activity
 
-We’ll continue to work on Project 2 in today’s lab.
+We’ll continue to work on the second part of Project 1 in today’s lab.
 
 You goal for today is to finalize the implementation of the website's interactive features that require jQuery.
 
