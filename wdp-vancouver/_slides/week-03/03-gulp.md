@@ -26,19 +26,53 @@ layout: false
 4. More Gulp tasks in our project!
 
 ---
+template: inverse
 
-#Introducing NPM
-
----
-
-#Installing dependencies
+# Dependencies
 
 ---
+### Dependencies
 
+The term *'dependencies'* is generally used to refer to any code your project *depends* on in order to work.
+We'll use the **Node Package Manager** to install 3rd party dependencies (other peoples code designed to be *modular*), into our project, automatically.
+
+---
+template: inverse
+#NPM (Node Package Manager)
+
+---
+### NPM
+
+Node Package Manager is a tool that was built to help Node.js developers distribute and use modules of code in the Node.js environment.
+
+Initially NPM was only useful to developers working in Node.js (ie. not in the browser, like us) environments. However, since it's release, NPM has become widely used to distribute modules for all JavaScript environments, thanks to tools like browserify and webpack (more on that later).
+
+---
+class: center, middle
+#Using NPM
+
+run `npm init` from your project directory to start using NPM.
+
+---
+template: inverse
+#Installing NPM modules
+
+---
+class: center, middle
+#Installing NPM modules
+
+the command `npm install` will automatically install plugins from the NPM plugin repository.
+
+---
+template: inverse
 # Maintaining a package.json file
 
 ---
+## Maintaining a package.json file
 
+Your **package.json** file is a list of all of the 3rd party modules your project needs to run. It;s important that you keep this file up to date. NPM does most of this manually, but there may be time when you need to manually edit your `package.json` file to accurately reflect the dependencies for your project.
+
+---
 template: inverse
 
 # Installing Gulp
@@ -176,31 +210,6 @@ class: center, middle
 Wouldn't it be nice if we could automatically run Gulp tasks when files in your project change?
 
 ---
-
-# `gulp watch`
-
-To initiate the `watch` task, run `gulp watch` from the CLI. Modify some files in the folder you specified and *watch* what happens!
-
-```js
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-
-gulp.task('scripts', function(){
-	gulp.src('js/*.js')
-	.pipe(uglify())
-	.pipe(gulp.dest('build'))
-});
-
-gulp.task('watch', function(){
-	// Watch the folder specified in our 'scripts' task
-	gulp.watch('js/*.js', ['scripts'])
-});
-
-// Compile our scripts, and start the watcher!
-gulp.task('default', ['scripts', 'watch']);
-```
-
----
 class: center, middle
 
 .large[
@@ -235,11 +244,18 @@ class: center, middle
 
 ---
 
-# Exercise 3
+## Exercise 3
 
-Look for two interesting Gulp tasks in the Gulp plugin registry, and implement them in your project.
+We'll implement the rest of the plugins we'll need to build out second project!
 
-Visit [Gulp Recipes](https://github.com/gulpjs/gulp/tree/master/docs/recipes) for inspiration.
+- `plumber`
+- `notify`
+- `sass`
+- `autoprefixer`
+- `rename`
+- `minifyCSS`
+- `jscs`
+- `jshint`
 
 ---
 

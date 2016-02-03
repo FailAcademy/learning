@@ -96,7 +96,6 @@ $('button').on('click', function(e) {
   $('h1').text('The value form the input is'+ inputValue +');
 });
 ```
-
 ---
 
 # Look Ma, No JavaScript!
@@ -158,7 +157,7 @@ template: inverse
 
 Create a simple Angular application that manipulates some `ng-model` value, and display's the updated value to the user in an HTML document.
 
-You've seen how this works using a simple text input. 
+You've seen how this works using a simple text input.
 
 Use the Angular documentation, and add update your view using: a **checkbox**, a **select menu** & **radio buttons** .
 
@@ -172,7 +171,7 @@ class: center, middle
 
 ---
 
-### Angular Controllers 
+### Angular Controllers
 
 The following is an example of a simple controller, with some data bound to the magical `$scope` object!
 Any data assigned to a property of the `$scope` object will be available in our HTML document, provided we link the controller to the DOM.
@@ -182,7 +181,7 @@ Any data assigned to a property of the `$scope` object will be available in our 
 var app = angular.module("SimpleApp", []);
 
 app.controller('ExampleController', ['$scope', function($scope){
-  
+
    $scope.name = "Mackenzie";
 
 }]);
@@ -190,7 +189,7 @@ app.controller('ExampleController', ['$scope', function($scope){
 
 ---
 
-### Angular Controllers 
+### Angular Controllers
 
 When we change the value of any properties assigned to the `$scope` object from our controller, the html will automagically change to reflect that change! This is called **2-way data-binding** and is one of ANgular's most important features. You'll use this pattern over and over again.
 
@@ -199,7 +198,7 @@ When we change the value of any properties assigned to the `$scope` object from 
 var app = angular.module("SimpleApp", []);
 
 app.controller('ExampleController', ['$scope', function($scope){
-  
+
    $scope.name = "Mackenzie";
 
 }]);
@@ -320,20 +319,20 @@ app.factory('Baconator', [function(){
 var app = angular.module('BaconSpeak', ['AppUtils']);
 
 // Take note of Angular's unique Dependency injection syntax...
-// $scope must always be injected! 
+// $scope must always be injected!
 // -------------------------------------------
-// Because we injected AppUtils into our app, we have access to the 
+// Because we injected AppUtils into our app, we have access to the
 // 'Baconator factory' we created inside that module!
 // -------------------------------------------
-app.controller('BaconCtrl', ['$scope', 'Baconator', 
+app.controller('BaconCtrl', ['$scope', 'Baconator',
     // put the function argument on a new line for neatness
     function($scope, Baconator){
-    
+
     var words = "Hello, the weather is very cold."
 
     // We can use the addBacon method we created!
     $scope.sentence = Baconator.addBacon(words);
-    
+
 }]);
 
 
@@ -355,7 +354,7 @@ template: inverse
 
 Create an Angular application that uses code from another Angular module (via *dependency injection*) to manipulate some `$scope` value and display's the updated value to the user in an HTML document. Hint: You'll use an Angular `controller`, and a `factory`.
 
-Remember the best practice we mentioned: Don;t assign primitive values directly to your controller's `$scope`. 
+Remember the best practice we mentioned: Don;t assign primitive values directly to your controller's `$scope`.
 Instead use somehting like `$scope.values = { name: "Mackenzie" /* ...etc  */ }`
 
 Again, add some css, bonus points for creativity!
