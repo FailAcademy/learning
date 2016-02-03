@@ -53,9 +53,9 @@ http://www.browsersync.io/docs/gulp/
 
 We'll implement all of the plugins we'll need to build out second project!
 
-- `plumber`
-- `notify`
-- `rename`
+- `gulp-plumber`
+- `gulp-notify`
+- `gulp-rename`
 - `jscs`
 - `jshint`
 
