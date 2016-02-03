@@ -11,11 +11,6 @@
       "url": {{lesson.url | jsonify}}
    },{% endfor %}
    {
-      "title": "UX Guest Lecture",
-      "allDay": true,
-      "start": "2016-01-29"
-   },
-   {
       "title": "PPD Lesson",
       "allDay": true,
       "start": "2016-01-29"
@@ -31,6 +26,11 @@
       "start": "2016-02-09"
    },
    {
+      "title": "UX Guest Lecture",
+      "allDay": true,
+      "start": "2016-02-10"
+   },
+   {
       "title": "Review/Work Day",
       "allDay": true,
       "start": "2016-02-19"
@@ -38,7 +38,7 @@
    {
       "title": "IA Guest Lecture",
       "allDay": true,
-      "start": "2016-03-04"
+      "start": "2016-03-07gi"
    },
    {
       "title": "Review/Work Day",

@@ -87,6 +87,7 @@ Sass has some cool features compared to plain vanilla CSS:
 
 - Nested rules
 - Variables
+- JS-style comments
 - Mixins
 - Operations
 - Functions
@@ -97,7 +98,7 @@ Sass has some cool features compared to plain vanilla CSS:
 
 One of the handiest features of Sass is the ability to nest your CSS selectors. For instance, instead of writing this:
 
-```css
+```sass
 .main-navigation {
    margin-left: 0;
 }
@@ -113,7 +114,7 @@ One of the handiest features of Sass is the ability to nest your CSS selectors. 
 
 You can write the same code this way with Sass:
 
-```css
+```sass
 .main-navigation {
    margin-left: 0;
 
@@ -129,7 +130,7 @@ You can write the same code this way with Sass:
 
 You can nest pseudo-classes too using an ampersand:
 
-```css
+```sass
 a {
    color: blue;
 
@@ -141,7 +142,7 @@ a {
 
 Or add a parent selector from inside of child:
 
-```css
+```sass
 h3 {
    font-size: 1.5em;
 
@@ -157,9 +158,9 @@ h3 {
 
 Sass also allows you to define variables (much like in JS!), which can help you standardize properties and save time if you ever need to update a property globally.
 
-In Less you define variables as follows:
+In Sass you define variables as follows:
 
-```css
+```sass
 $brand-red: #ed4343;
 
 a {
@@ -171,11 +172,27 @@ You'll want to make sure you choose intuitive, semantic variables names.
 
 ---
 
+# Comments
+
+Sass allows you to use both block-style and inline comments:
+
+```sass
+/* A big, fat block-style comment! */
+$var: red;
+
+// Get in line!
+$var: white;
+```
+
+Note that when you compile Sass, the inline comments will not be included in the final output CSS file.
+
+---
+
 # Operations
 
 With Sass, you can do math right in your CSS! For example:
 
-```css
+```sass
 $base-margin: 1.5em;
 
 select {
@@ -183,7 +200,7 @@ select {
 }
 ```
 
-When this Less is compiled, the resulting margin will be `3em`.
+When this Sass is compiled, the resulting margin will be `3em`.
 
 ---
 
@@ -191,7 +208,7 @@ When this Less is compiled, the resulting margin will be `3em`.
 
 Keep in mind that order of operations apply!
 
-```css
+```sass
 $base-margin: 1.5em;
 
 select {
@@ -204,13 +221,35 @@ select {
 ```
 ---
 
-# `@function`
+# Functions
 
-Sass has a number of built-in functions that assist with doing math, manipulating colours, and more.
+Sass has a number of built-in functions that assist with doing math, manipulating colours, and more:
 
-You can also write your own functions:
+```sass
+$link-colour: #800800;
 
-```css
+a {
+   color: $link-colour;
+
+   // Darken a colour
+   &:hover {
+      color: darken($link-colour, 20%);
+   }
+
+   // Mix two colours together
+   &:visited {
+      color: mix($link-colour, #000, 50%);
+   }
+}
+```
+
+---
+
+# @function
+
+You can also write your own Sass functions:
+
+```sass
 $grid-width: 40px;
 $gutter-width: 10px;
 
@@ -221,37 +260,15 @@ $gutter-width: 10px;
 #sidebar { width: grid-width(5); }
 ```
 
-You can check-out the full [Sass function reference here](http://sass-lang.com/documentation/file.Sass_REFERENCE.html#function_directives).
+You can check-out the full **[Sass function reference here](http://sass-lang.com/documentation/Sass/Script/Functions.html)**.
 
 ---
 
-# `@mixin`
+# @extend
 
-Mixins little bundles that allow you to group properties together and apply them to a selector:
+Using `@extend` lets you share a set of CSS properties from one selector to another:
 
-```css
-@function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return $remSize * 1rem;
-}
-
-@mixin font-size($size) {
-  font-size: $size;
-  font-size: calculateRem($size);
-}
-
-p {
-  @include font-size(14px);
-}
-```
-
----
-
-# `@extend`
-
-You can 'extend' functionality of your CSS classes like so:
-
-```css
+```sass
 .message {
   border: 1px solid #ccc;
   padding: 10px;
@@ -271,44 +288,126 @@ You can 'extend' functionality of your CSS classes like so:
 
 ---
 
-# `@content`
+# @extend
 
- This Sass directive allows us to pass a content block into a mixin.
+We can also use a **placeholder** selector with `@extend`:
 
-```css
-@mixin apply-to-ie6-only {
-  * html {
-    @content
-  }
+```sass
+%base-border {
+   border: 1px solid #ccc;
+   padding: 10px;
+   color: #333;
 }
 
-@include apply-to-ie6-only {
-  #logo {
-    background-image: url(/logo.gif);
-  }
+.message {
+   @extend %base-border;
+}
+
+.success {
+   @extend %base-border;
+   border-color: green;
+}
+
+.error {
+   @extend %base-border;
+   border-color: red;
 }
 ```
+
+---
+
+# @mixin
+
+Mixins are little bundles that allow you to group properties together and apply them to a selector:
+
+```sass
+// EXAMPLE 1:
+@mixin primary-links {
+   color: blue;
+   text-decoration: none;
+}
+
+a { @include primary-links; } // use @include to call the mixin
+
+// EXAMPLE 2:
+@mixin secondary-links {
+   a {
+      color: red;
+      text-decoration: none;
+   }
+}
+
+@include secondary-links;
+```
+
+---
+
+# @mixin
+
+Where mixins really shine is their ability to have **parameters**:
+
+```sass
+// EXAMPLE 1:
+$base-color: pink;
+
+@mixin headline($color, $size) {
+  color: $color;
+  font-size: $size;
+}
+
+h1 {
+   @include headline($base-color, 12px);
+}
+
+// EXAMPLE 2:
+@mixin dashed-border($width, $color) {
+   border: $width $color dashed;
+}
+
+p { @include dashed-border(1px, #000); }
+```
+
+---
+class: center, middle
+
+### When to use @extend or @mixin?
+
+Use `@extend` for static blocks of shared properties.
+
+use `@mixin` when you want the output CSS to change depending on how you call it (i.e. by passing arguments or using an `@content` block...).
+
 ---
 
 # Smarter Media Queries
 
-Media query example using `@content`:
+The `@content` directive allows us to pass a content block into a mixin:
 
-```css
-@mixin media($width) {
-  @media only screen and (min-width: $width) {
+```sass
+$desktop-width: 1000px;
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
     @content;
   }
 }
 
-body {
-   background-color: blue;
+li {
+   flex: 0 1 100%;
 
-   @include media(320px) {
-     background-color: red;
+   @include desktop {
+      flex: 0 1 50%;
    }
 }
 ```
+
+---
+class: center, middle
+
+### Why does this work?
+
+`@media` directives in Sass work just as they do in plain CSS, with one extra capability: **they can be nested in CSS rules**.
+
+If a `@media` directive appears within a CSS rule, it will be bubbled up to the top level of the stylesheet, putting all the selectors on the way inside the rule.
 
 ---
 class: center, middle
@@ -366,6 +465,7 @@ CSS from the imported files is added in place, so the order of your imports matt
 # Organizing SCSS Files
 
 When creating partials, name your partial files beginning with an underscore:
+
 e.g. `_typography.scss`
 
 Using an underscore tells the Sass compiler that the file is a partial.
@@ -384,24 +484,27 @@ When you compile code, you convert it from one form (that you have written) to a
 
 ---
 
-# How to Compile Less
+# How to Compile Sass
 
-Let's create a Gulp task to compile Sass for our project.
-
-Here is an example of a basic gulp task for compiling Sass:
+Let's create a Gulp task to compile Sass for our project. Here's an example of a basic gulp task for compiling Sass:
 
 ```js
-// ...
+var sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    minifyCSS = require('gulp-minify-css'),
+    rename = require('gulp-rename');
 
-var sass = require('gulp-sass');
-
-gulp.task('sass', function () {
-  gulp.src('./sass/**/*.scss')
-    .pipe(sass.sync().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
+gulp.task('sass', function() {
+   gulp.src('./sass/style.scss')
+      .pipe(sass())
+      .pipe(autoprefixer({
+         browsers: ['last 2 versions']
+      }))
+      .pipe(gulp.dest('./build/css'))
+      .pipe(minifyCSS())
+      .pipe(rename('style.min.css'))
+      .pipe(gulp.dest('./build/css'));
 });
-
-// ...
 ```
 
 ---
@@ -411,26 +514,12 @@ gulp.task('sass', function () {
 In this exercise we’ll create media query helpers inside your project using Sass mixins and the `@content` directive, for common breakpoints. We’ll then discuss, how this techniques saves time when developing responsive websites.
 
 ---
-template: inverse
-
-# BONUS ROUND
-
----
-class: center, middle
-
-Implement Sass sourcemaps using Google Chrome:
-
-https://github.com/dlmanning/gulp-sass
-https://github.com/floridoo/gulp-sourcemaps
-
----
 
 # What We've Learned
 
 - What a preprocessor is and how to use one
 - How to use Sass to turbo-charge (and organize!) your CSS development
 - How to compile Sass
-- How to use Sass sourcemaps for debugging
 
 ---
 template: inverse
