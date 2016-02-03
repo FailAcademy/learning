@@ -148,7 +148,7 @@ Make sure your applying your transitions to properties that are actually animata
 ---
 template: inverse
 
-#CSS Transforms
+# CSS Transforms
 
 ---
 class: center, middle
@@ -223,7 +223,7 @@ The 3D functions are more complex require values for 3 dimensions:
 
 ---
 
-# Get 3D with It
+# Get 3D With It!
 
 To activate 3D space, an element needs perspective. This can be applied in two ways&mdash;using the `transform` property, with the perspective as a functional notation.
 

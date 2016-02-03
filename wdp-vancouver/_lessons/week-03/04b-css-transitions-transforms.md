@@ -54,7 +54,7 @@ Create a small demo in Codepen and be prepared share it with the class.
 
 ## Additional Resources
 
-A list of all transitionable CSS properties:
+A list of all transition-able CSS properties:
 
 - [Animatable Properties](http://www.w3.org/TR/css3-transitions/#animatable-properties-)
 
