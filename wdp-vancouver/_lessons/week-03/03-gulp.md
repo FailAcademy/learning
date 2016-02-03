@@ -55,13 +55,9 @@ We'll implement all of the plugins we'll need to build out second project!
 
 - `plumber`
 - `notify`
-- `sass`
-- `autoprefixer`
 - `rename`
-- `minifyCSS`
 - `jscs`
 - `jshint`
-- `browserSync`
 
 ---
 
