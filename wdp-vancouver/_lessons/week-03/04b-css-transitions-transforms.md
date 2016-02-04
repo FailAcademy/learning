@@ -62,6 +62,7 @@ Some excellent tutorials and demos for learning about CSS transitions and transf
 
 - [CSS3 = Awesome](http://css3.bradshawenterprises.com/)
 - [3D Transforms](https://desandro.github.io/3dtransforms/)
+- [Keyframe Animation Syntax](https://css-tricks.com/snippets/css/keyframe-animation-syntax/)
 
 A primer on using CSS transitions:
 
