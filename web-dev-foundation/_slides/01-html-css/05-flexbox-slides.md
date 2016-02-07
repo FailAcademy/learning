@@ -127,7 +127,9 @@ class: center, middle
 
 ### Code-along time!
 
-Open this CodePen and code along with me: **[codepen.io/redacademy/pen/eJyXPy](http://codepen.io/redacademy/pen/eJyXPy?editors=1100)**
+Open this CodePen and code along with me: **[codepen.io/redacademy/pen/GoYLaG](http://codepen.io/redacademy/pen/GoYLaG?editors=1100)**
+
+We will also use this Codepen for all three of today's exercises.
 
 ---
 template: inverse
@@ -253,12 +255,6 @@ The default value is `stretch` (so that items take up remaining space along the 
 .footnote[.red[* ] You must have multiple rows of content (`flex-wrap: wrap`) for this to work!]
 
 ---
-
-# Exercise 1
-
-*Exercise details TBA.*
-
----
 template: inverse
 
 # Flex Items Properties
@@ -356,9 +352,14 @@ The values for `align-self` behave as they do for the `align-items`.
 
 ---
 
-# Exercise 2
+# Exercise 1
 
-*Exercise details TBA.*
+In your [exercise Codepen](http://codepen.io/redacademy/pen/GoYLaG?editors=1100), try to reproduce this layout using what you just learned about flex container and item properties:
+
+.inline-images[
+   ![Flexbox E1 screencap](/public/files/exercises/flexbox-e1.png)
+]
+
 
 ---
 template: inverse
@@ -371,6 +372,14 @@ class: center, middle
 .large[
    You can nest `display: flex` elements inside of one another.
 ]
+
+---
+
+# Exercise 2
+
+Go back to your [Codepen flexbox demo](http://codepen.io/redacademy/pen/GoYLaG?editors=1100) and see if you can get the text (e.g. Item 1, etc.) centered **vertically and horizontally** inside of the coloured boxes.
+
+Think about whether you need to make any adjustments to the mark-up to make this happen...
 
 ---
 class: center, middle
@@ -447,11 +456,11 @@ class: center, middle
 
 # Exercise 3
 
-Go back to your [Codepen flexbox demo](http://codepen.io/redacademy/pen/eJyXPy?editors=1100) and see if you can get the text (e.g. Item 1, etc.) centered vertically and horizontally inside of the coloured boxes.
+Can you figure out how to use nested `display: flex` parent/child elements to lock each colored box in a corner of the browser window?
 
-Think about whether you need to make any adjustments to the mark-up to make this happen...
-
-**Bonus challenge!** Can you figure out how to use nested `display: flex` parent/child elements to lock each colored box in a corner of the browser window?
+.inline-images[
+   ![Flexbox E3 screencap](/public/files/exercises/flexbox-e3.png)
+]
 
 ---
 

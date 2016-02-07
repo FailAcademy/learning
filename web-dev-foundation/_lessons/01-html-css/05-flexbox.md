@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Flexbox
-slides: ['_slides/02-rwd/05-flexbox-slides.md']
+slides: ['_slides/01-html-css/05-flexbox-slides.md']
 ---
 
 ## Recommended Reading
@@ -45,23 +45,36 @@ Get a sense of why flexbox is a substantial improvement over traditional CSS for
 
 ## Exercise 1
 
-*Exercise details TBA.*
+In your [exercise Codepen](http://codepen.io/redacademy/pen/GoYLaG?editors=1100), try to reproduce this layout using what you just learned about flex container and item properties:
+
+![Flexbox E1 screencap](/public/files/exercises/flexbox-e1.png)
+
+
+View the [solution](http://codepen.io/redacademy/pen/vLVMwd).
 
 ---
 
 ## Exercise 2
 
-*Exercise details TBA.*
+Go back to your [Codepen flexbox demo](http://codepen.io/redacademy/pen/GoYLaG?editors=1100) and see if you can get the text (e.g. Item 1, etc.) centered **vertically and horizontally** inside of the coloured boxes.
+
+Think about whether you need to make any adjustments to the mark-up to make this happen...
+
+View the [solution](http://codepen.io/redacademy/pen/XXxwmN).
 
 ---
 
 ## Exercise 3
 
-Go back to your [Codepen flexbox demo](http://codepen.io/redacademy/pen/eJyXPy?editors=1100) and see if you can get the text (e.g. Item 1, etc.) centered vertically and horizontally inside of the coloured boxes.
+This is a tough one!
 
-Think about whether you need to make any adjustments to the mark-up to make this happen...
+Can you figure out how to use nested `display: flex` parent/child elements to lock each colored box in a corner of the browser window?
 
-**Bonus challenge!** Can you figure out how to use nested `display: flex` parent/child elements to lock each colored box in a corner of the browser window?
+You may want to start with a fresh copy of the [exercise Codepen](Codepen flexbox demo](http://codepen.io/redacademy/pen/GoYLaG?editors=1100)).
+
+![Flexbox E3 screencap](/public/files/exercises/flexbox-e3.png)
+
+View the [solution](http://codepen.io/redacademy/pen/JGmqGy).
 
 ---
 
