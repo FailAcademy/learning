@@ -7,6 +7,6 @@ date: 2016-02-18
 
 # Agenda
 
-Today we'll begin to refactor our React mini-projects to use ES2015.
+Today we'll begin to refactor our React mini-projects to use ES2015!
 
 ---
