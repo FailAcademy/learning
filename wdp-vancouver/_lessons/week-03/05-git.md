@@ -72,6 +72,10 @@ A free ebook on Git:
 
 - [Pro Git ebook](http://git-scm.com/book/en/v2)
 
+Tips for writing great Git commit messages:
+
+- [The Art of the Commit](http://alistapart.com/article/the-art-of-the-commit)
+
 Helpful tutorials for learning git branching:
 
 - [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)
