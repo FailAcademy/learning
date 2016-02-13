@@ -16,13 +16,11 @@ class: center, middle, inverse
 
 ---
 
-# React is the new jQuery
+# React is the new jQuery?
 
 ---
 
 # Why React exists
-
-- Fast DOM Updates 
 
 ---
 
@@ -30,7 +28,7 @@ class: center, middle, inverse
 
 ---
 
-# JSX	
+# JSX
 
 ---
 

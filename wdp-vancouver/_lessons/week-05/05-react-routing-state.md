@@ -1,13 +1,20 @@
 ---
 layout: lesson
 title: Single Page Applications and Routing in React
-slides: ['_slides/week-05/04a-react-routing.md']
 date: 2016-02-17
 ---
 
-# Agenda
+## Pre-Work
 
-Today we'll discuss routing in React, buy completing a new mini-project.
+Check out the React Router github project [here!](https://github.com/reactjs/react-router)
+
+---
+
+## Learning Objectives
+
+Today we'll discuss URL routing in single-page applications, and we'll create a typical SPA in React, buy completing a new mini-project.
+
+We'll also introduce the final project for React week!
 
 ---
 
@@ -20,7 +27,7 @@ Once we've set everything up, we'll observe how our JavaScript downloads as we n
 
 ## Lab Activity
 
-We're going to build a functional email inbox that uses the **react-router** project to help us display components assicoated with a URL.
+We're going to build a functional email inbox that uses the **react-router** project to help us display components associated with a URL.
 
 #### Mini-Project Stretch Goals
 - Add the ability to undo the 'Trashing of an item'.
