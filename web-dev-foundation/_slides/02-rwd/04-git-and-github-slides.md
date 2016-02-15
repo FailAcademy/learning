@@ -12,7 +12,7 @@ class: center, middle, inverse
 
 # Git & GitHub
 
-.title-logo[![Red logo](../../public/img/red-logo-white.svg)]
+.title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
 layout: false
@@ -62,6 +62,17 @@ Version control is a system that records changes to a file or set of files over 
 
 ---
 
+# Other Key Terms
+
+- Working directory
+- Repository
+- Commit
+- Branch
+- Push/Pull
+- Remote
+
+---
+
 # Git vs. GitHub
 
 - Git is the **version control system**
@@ -69,8 +80,8 @@ Version control is a system that records changes to a file or set of files over 
 - This website is an example of a private GitHub repository
 
 .inline-images[
-   ![Git logo](../../public/img/slide-assets/git-logo.png)
-   ![GitHub logo](../../public/img/slide-assets/octocat-logo.png)
+   ![Git logo](/public/img/slide-assets/git-logo.png)
+   ![GitHub logo](/public/img/slide-assets/octocat-logo.png)
 ]
 
 ---
@@ -92,34 +103,101 @@ class: center, middle
 
 We can use the CLI to run Git commands or a GUI-based app.
 
-We'll use the GitHub Desktop GUI app for our version control work in this class.
+We'll use the **[GitHub Desktop](https://desktop.github.com/)** GUI app for our version control work in this class.
 
 ---
-# Using a GUI for Git
 
-You can easily add a local repository to your online GitHub account using **[GitHub Desktop](https://desktop.github.com/)**:
+# Add a Repository:
 
-.inline-images-border[
-   ![Add repo with GitHub app](https://help.github.com/assets/images/help/desktop/add-repository-mac.png)
+.inline-images[
+   ![Add a repo](/public/img/slide-assets/gh-01-add-repo.png)
 ]
 
 ---
 
-# Using a GUI for Git
+# Repo Created!
 
-Once you have added your local repository, you can click the **Publish** button to send your files to GitHub.
+.inline-images[
+   ![Repo created](/public/img/slide-assets/gh-02-created-not-commited.png)
+]
+
+---
+
+# Make the Commit:
+
+.inline-images[
+   ![Write commit message](/public/img/slide-assets/gh-03-write-commit-message.png)
+]
+
+---
+
+# Commit Made:
+
+.inline-images[
+   ![Make the commit](/public/img/slide-assets/gh-04-make-commmit.png)
+]
+
+---
+
+# Put Repo on GitHub
+
+Once you have added your local repository, you can click the **Publish** button to send your files to GitHub:
+
+.inline-images-border[
+   ![Publish button](/public/img/slide-assets/gh-05a-push-to-gh.png)
+]
+
+---
+
+# Prepare to Publish:
+
+.inline-images[
+   ![Push to GitHub](/public/img/slide-assets/gh-05b-push-to-gh.png)
+]
+
+---
+
+# Push to GitHub:
+
+.inline-images[
+   ![Push to GitHub](/public/img/slide-assets/gh-05c-pushed.png)
+]
+
+---
+
+# Check It Out!
 
 If you go to your GitHub account in a web browser now, you should be able to see your project listed as one of your **respositories**.
 
+Now that you've made your first commit, you can make additional commits following the same steps as you make new changes to your project.
+
 ---
 
-# Using a GUI for Git
+# Prepare New Commit:
 
-Similarly, if you are collaborating on a project with others, you can click the **Sync** button to pull in their changes from GitHub.
+.inline-images[
+   ![Add repo with GitHub app](/public/img/slide-assets/gh-06-prepare-new-commit.png)
+]
+
+---
+
+# Make the New Commit:
+
+.inline-images[
+   ![Add repo with GitHub app](/public/img/slide-assets/gh-07-make-commit-and-sync.png)
+]
+
+---
+
+# Sync with GitHub
+
+To **push** your new changes to your repo on GitHub, you need to sync your changes by clicking the **Sync** button.
 
 .inline-images-border[
-   ![Commit changes GitHub app](https://help.github.com/assets/images/help/desktop/sync-button-mac.png)
+   ![Sync button](/public/img/slide-assets/gh-sync-button.png)
 ]
+
+And if you are collaborating on a project with others, you can click the **Sync** button to **pull** in their changes from GitHub.
 
 ---
 
@@ -141,49 +219,24 @@ class: center, middle
 
 ### Turning back time...
 
-We can **revert** an individual commit or **rollback** to a specific commit in GitHub Desktop.
+We can **revert** an individual commit using GitHub Desktop.
 
 ---
 class: center, middle
 
-.large[
-   Reverting...
+**How to revert:**
+
+.inline-images-border[
+   ![Revert a commit in GitHub for Mac](/public/img/slide-assets/gh-revert.png)
 ]
 
 ---
 class: center, middle
+
+**Reverts make new commits...so the are revertable too!**
 
 .inline-images[
-   ![Revert a commit in GitHub for Mac](/public/img/slide-assets/gh-mac-revert.png)
-]
-
----
-class: center, middle
-
-.inline-images[
-   ![Reverts result in new commits](/public/img/slide-assets/gh-mac-revert-commit.png)
-]
-
----
-class: center, middle
-
-.large[
-   Rolling back...
-]
-
----
-class: center, middle
-
-.inline-images[
-   ![Roll back to a commit in GitHub for Mac](/public/img/slide-assets/gh-mac-roll-back.png)
-]
-
-
----
-class: center, middle
-
-.inline-images[
-   ![Rollbacks result in new commits](/public/img/slide-assets/gh-mac-roll-back-commit.png)
+   ![Reverts result in new commits](/public/img/slide-assets/gh-revert-commit.png)
 ]
 
 ---
@@ -237,7 +290,7 @@ It's an easy way to get our projects online (for free!) right now, and a great w
 GitHub Page takes care of hosting your website files and gives a domain name so people can find your website.
 
 .inline-images[
-   ![GitHub logo](../../public/img/slide-assets/octocat-logo.png)
+   ![GitHub logo](/public/img/slide-assets/octocat-logo.png)
 ]
 
 ---
@@ -281,58 +334,31 @@ We'll need to use a branch to deploy our site as a GitHub Page.
 
 To begin creating your project site, we'll start by creating and checking out a new branch in an existing repo that we have on GitHub.
 
-This branch must be called `gh-pages`.
+**Important:** This branch must be called `gh-pages`.
 
 ---
 class: center, middle
 
 ### Using a GUI
 
-We can set up and maintain a GitHub Pages website using GitHub Desktop...
+We can easily set up and maintain a GitHub Pages website using GitHub Desktop...
 
 ---
 class: center, middle
 
-Step 1: Add and create your repo
+**Step 1: Create a `gh-pages` branch in your repo**
 
 .inline-images[
-   ![Add and create your repo](/public/img/slide-assets/gh-pages-01.png)
+   ![Create a gh-pages branch](/public/img/slide-assets/gh-pages-branch.png)
 ]
 
 ---
 class: center, middle
 
-Step 2: Make the initial commit
+**Step 2: Publish your `gh-pages` branch**
 
 .inline-images[
-   ![Make the initial commit](/public/img/slide-assets/gh-pages-02.png)
-]
-
----
-class: center, middle
-
-Step 3: Push the repo to GitHub
-
-.inline-images[
-   ![Push the repo to GitHub](/public/img/slide-assets/gh-pages-03.png)
-]
-
----
-class: center, middle
-
-Step 4: Create a `gh-pages` branch
-
-.inline-images[
-   ![Create a gh-pages branch](/public/img/slide-assets/gh-pages-04.png)
-]
-
----
-class: center, middle
-
-Step 5: Publish your `gh-pages` branch
-
-.inline-images[
-   ![Publish your gh-pages branch](/public/img/slide-assets/gh-pages-05.png)
+   ![Publish your gh-pages branch](/public/img/slide-assets/gh-pages-publish.png)
 ]
 
 ---
@@ -366,46 +392,46 @@ In doing so, we'll be **deploying** our new code live on the web.
 ---
 class: center, middle
 
-Step 1: Make updates on your `master` branch
+**Step 1: Make updates on your `master` branch**
 
 .inline-images[
-   ![Make updates on your master branch](/public/img/slide-assets/gh-pages-06.png)
+   ![Make updates on your master branch](/public/img/slide-assets/gh-pages-update-master.png)
 ]
 
 ---
 class: center, middle
 
-Step 2: Take a look at your branches...
+**Step 2: Switch to `gh-pages` branch to merge changes**
 
 .inline-images[
-   ![Take a look at your branches](/public/img/slide-assets/gh-pages-07.png)
+   ![Take a look at your branches](/public/img/slide-assets/gh-pages-check-branches.png)
 ]
 
 ---
 class: center, middle
 
-Step 3: Merge `master` into the `gh-pages` branch
+**Step 3: Merge `master` into the `gh-pages` branch**
 
 .inline-images[
-   ![Merge master into the gh-pages branch](/public/img/slide-assets/gh-pages-08.png)
+   ![Merge master into the gh-pages branch](/public/img/slide-assets/gh-pages-merge.png)
 ]
 
 ---
 class: center, middle
 
-Step 4: Check out your new merge commit
+**Step 4: Check out your new merge commit**
 
 .inline-images[
-   ![Check out your new merge commit](/public/img/slide-assets/gh-pages-09.png)
+   ![Check out your new merge commit](/public/img/slide-assets/gh-pages-commit-update.png)
 ]
 
 ---
 class: center, middle
 
-Step 5: Sync new commits to `gh-pages`
+**Step 5: Sync new commits to `gh-pages` branch**
 
 .inline-images[
-   ![Sync new commit to gh-pages](/public/img/slide-assets/gh-pages-10.png)
+   ![Sync new commit to gh-pages](/public/img/slide-assets/gh-pages-sync-update.png)
 ]
 
 ---
