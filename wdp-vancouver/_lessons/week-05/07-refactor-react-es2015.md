@@ -1,12 +1,22 @@
 ---
 layout: lesson
 title: Refactoring React to use ES2015
-slides: ['_slides/week-05/05-refactor-react-es2015.md']
 date: 2016-02-18
----
-
-# Agenda
-
-Today we'll begin to refactor our React mini-projects to use ES2015!
 
 ---
+
+## Pre-Work
+
+*There is no pre-work for this lesson*
+
+---
+
+## Learning Objectives
+
+- Learn the ES2015 syntax for creating React applications.
+
+---
+
+## Lab Activity
+
+Today we'll gain experience with ES2015 and React by refactoring our React mini-projects, code-along style, to use ES2015!
