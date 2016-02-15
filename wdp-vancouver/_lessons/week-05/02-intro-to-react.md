@@ -34,19 +34,19 @@ Use the example from [here](https://developer.mozilla.org/en-US/docs/Web/JavaScr
 
 ---
 
-## Exercise 3 
+## Exercise 3
 Let's come to grips with the `.bind()` method: Use the examples from [here](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_objects/Function/bind), and run the code in your Node REPL
 
 ---
 
 ## Exercise 4
-Let's review the `switch` statement and it's specifi syntax: Use the examples from [here](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/switch), and run the code in your Node REPL
+Let's review the `switch` statement and it's specifixc syntax: Use the examples from [here](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/switch), and run the code in your Node REPL
 
 ---
 
 ## Lab Activity
 
-In today's lab we'll intriduce the final project, and start coding our first React mini-project. **A Snazzy todo list!**
+In today's lab we'll start coding our first React mini-project. **A Snazzy todo list!**
 
 #### Mini-Project Stretch Goals
 - Add the ability to change the name of a todo, once it's need added.
