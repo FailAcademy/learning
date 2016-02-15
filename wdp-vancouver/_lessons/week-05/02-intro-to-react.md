@@ -23,30 +23,30 @@ Please install the [React Developer Tools](https://chrome.google.com/webstore/de
 ## Exercise 1
 
 Modify an existing array using the `.map()` method
-(Use the example from [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), and run the code in your Node REPL)
+(Use the example from [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
 ---
 
 ## Exercise 2
 
 Search for and eliminate elements from an existing array using the `.filter()` method:
-Use the example from [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), and run the code in your Node REPL
+Use the example from [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
 ---
 
-## Exercise 3 
-Let's come to grips with the `.bind()` method: Use the examples from [here](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_objects/Function/bind), and run the code in your Node REPL
+## Exercise 3
+Let's come to grips with the `.bind()` method: Use the examples from [here](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
 
 ---
 
 ## Exercise 4
-Let's review the `switch` statement and it's specifi syntax: Use the examples from [here](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/switch), and run the code in your Node REPL
+Let's review the `switch` statement and it's specific syntax: Use the examples from [here](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/switch)
 
 ---
 
 ## Lab Activity
 
-In today's lab we'll intriduce the final project, and start coding our first React mini-project. **A Snazzy todo list!**
+In today's lab we'll start coding our first React mini-project. **A Snazzy todo list!**
 
 #### Mini-Project Stretch Goals
 - Add the ability to change the name of a todo, once it's need added.
