@@ -26,7 +26,7 @@ Your project must:
 Your project must:
 
 - Contain a single `.html` file and an external, minified `.css` file (a CSS reset may be included separately)
-- Adequately reflect the designer's vision for the website when built out using HTML & CSS
+- **Adequately reflect the designer's vision for the website when built out using HTML & CSS**
 - Demonstrate effective organization of the project's root directory
 - Have a Git repository initialized in its root directory with an appropriately customized `.gitignore` file
 - Be pushed to GitHub (with all of your commits synced to it)
@@ -52,6 +52,8 @@ Your project must:
 - Use a `linear-gradient` background
 - Create a 3D effect on the Rocket icon using the `text-shadow` property
 - Create a glowing effect on the counter using the `text-shadow` property
+- Apply the `rotate` transform to the sidebar text so it displays at 90deg
+- Apply the `letter-spacing` property to the sidebar text
 - The project should contain at least 20% original CSS, not specified by the project example.
 (The look ad feel is up to you!)
 
