@@ -23,13 +23,13 @@ Wednesday, February 10     | [Responsive Web Design](/lesson/responsive-web-desi
 
 Week 4                     | Topics
 -------------------------- | --------------------------
-Monday, February 15        | [Design Toolbox](/lesson/design-toolbox/) <br /> [Wireframing](/lesson/wireframing/)
-Wednesday, February 17     | [Git and GitHub](/lesson/git-and-github/) <br /> [Custom Web Fonts](/lesson/custom-web-fonts/)
+Monday, February 15        | [Git and GitHub](/lesson/git-and-github/) <br /> [Custom Web Fonts](/lesson/custom-web-fonts/)
+Wednesday, February 17     | [CSS Best Practices](/lesson/css-best-practices/) <br /> [Icon Fonts](/lesson/icon-fonts/)
 
 Week 5                     | Topics
 -------------------------- | --------------------------
-Monday, February 22        | [CSS Best Practices](/lesson/css-best-practices/) <br /> [Icon Fonts](/lesson/icon-fonts/)
-Wednesday, February 24     | [CSS3 Properties](/lesson/css3-properties/)
+Monday, February 22        | [CSS3 Properties](/lesson/css3-properties/)
+Wednesday, February 24     | [Design Toolbox](/lesson/design-toolbox/) <br /> [Wireframing](/lesson/wireframing/)
 
 Week 6                     | Topics
 -------------------------- | --------------------------
