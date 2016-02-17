@@ -32,7 +32,7 @@ class: center, middle
 
 ### What is a jQuery?
 
-jQuery is library of code that makes it much easier to perform many essential tasks in JavaScript.
+jQuery is **library of code** that makes it much easier to perform many essential tasks in JavaScript.
 
 ---
 
@@ -56,7 +56,7 @@ To use jQuery you must include a link to its script file in your HTML document, 
    <p class="intro">Welcome to my page!<p>
    <p>Thanks for stopping by.</p>
    <!-- The rest of the page content... -->
-   <script src="js/jquery-1.11.3.js"></script>
+   <script src="js/jquery-2.2.0.js"></script>
    <script src="js/my-script-file.js"></script>
 </body>
 ```
@@ -115,7 +115,7 @@ For example, take a typical HTML document:
 The a visual representation of the DOM for this page would look something like this:
 
 .inline-images[
-   ![DOM diagram](../../public/img/slide-assets/dom-diagram.svg)
+   ![DOM diagram](/public/img/slide-assets/dom-diagram.svg)
 ]
 
 ---
@@ -152,7 +152,7 @@ Let's get to the fun stuff and look at a basic example. Take our previous code s
    <p class="intro">Welcome to my page!</p>
    <p>Thanks for stopping by.</p>
    <!-- The rest of the page content... -->
-   <script src="js/jquery-1.11.3.js"></script>
+   <script src="js/jquery-2.2.0.js"></script>
    <script src="js/my-script-file.js"></script>
 </body>
 ```
@@ -299,10 +299,10 @@ Chaining allows you to place several methods on the same selector at once, which
 
 ```javascript
 // Chained:
-$('#menu').addClass('.active').css('margin-right', '10px');
+$('#menu').addClass('active').css('margin-right', '10px');
 
 // Unchained:
-$('#menu').addClass('.active');
+$('#menu').addClass('active');
 $('#menu').css('margin-right', '10px');
 ```
 
@@ -453,9 +453,16 @@ $('form').append('<button>My Button</button>');
 
 # Mini-Exercise
 
-Quick! Look up another example of an event that you can pass in as a parameter to the `.on()` method.
+Quick! Look up another example of an event that you can pass in as a parameter to the `.on()` method (see options on the following slide).
 
 Share the method name and what it can be used for with the class.
+
+---
+class: middle
+
+.large[
+   focus, blur, change, input, keydown, keyup, keypress, click, dblclick, mouseup, mousedown, mouseover, mousemove, mouseout, hover, submit, select, ready, load, unload, error, resize, scroll
+]
 
 ---
 
@@ -477,15 +484,17 @@ Can you spot the difference in this approach?
 
 # Event Delegation
 
-Bonus! Using the event delegation approach can also be beneficial for code performance when you can attach an event to a single parent element instead of many lower-level ones.
+Bonus! Using the event delegation approach can also be **beneficial for code performance** when you can attach an event to a single parent element instead of many lower-level ones.
+
+**Example:** Think about listening for an event on an entire table, as opposed to each of the hundreds of cells within that table.
 
 ---
 
 # The Event Object
 
-Every event handling function receives and event object, and this object has methods and properties of its own.
+Every event handling callback function receives an **[event object](https://learn.jquery.com/events/introduction-to-events/)**, and this object has methods and properties of its own.
 
-To access these methods and properties, we must pass in the event object as a parameter for our function:
+To access these methods and properties, we must pass in the event object as an argument for our function:
 
 ```javascript
 $('div').on('click', 'button', function(event) {
@@ -497,11 +506,21 @@ $('div').on('click', 'button', function(event) {
 
 # The Event Object
 
+*In plain English please?*
+
+In all DOM event callbacks, jQuery passes an event object argument which contains information about the event, such as precisely when and where it occurred, what type of event it was, which element the event occurred on, etc.
+
+We can use this to our advantage!
+
+---
+
+# The Event Object
+
 *And why exactly is this useful?*
 
 Sometimes we want attach events to HTML elements that have default behaviours that we need to override.
 
-For instance, you may want to attach a special click handler to an `a href` that performs a different action than click through to wherever that link points.
+For instance, you may want to attach a special click handler to an `<a>` that performs a different action than click through to wherever that link points.
 
 ---
 

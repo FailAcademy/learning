@@ -196,12 +196,12 @@ Integers and booleans do not need to be wrapped in quotes.
 
 # Variables
 
-And we can "concatenate" different pieces together:
+And we can **concatenate** different pieces together:
 
 ```javascript
 var salutation = 'Ms.';
 
-var addressee = 'Dear ' + salutation +  ' Sunshine:'
+var addressee = 'Dear ' + salutation +  ' Sunshine:';
 ```
 
 The variable `addressee` will now return "Dear Ms. Sunshine:".
@@ -220,21 +220,28 @@ Notice the use of the `+` sign to join variable and strings.
 
 # Comments
 
-We can add "comments" to our code too:
+We can add **comments** to our code too:
 
 ```javascript
-   var foo = "Hello World;"
+var foo = "Hello World";
 
-   // Add a single line comment with 2 forward slashes
+// Add a single line comment with 2 forward slashes
 
-   /*
-      Add a multi-line comment like this
-   */
+/*
+   Add a multi-line comment like this
+*/
 
-   document.write(foo);
+document.write(foo);
 ```
 
 Comments are always hidden from execution in the script.
+
+---
+class: center, middle
+
+.large[
+   Two important JS concepts...
+]
 
 ---
 
@@ -287,7 +294,7 @@ Methods perform certain tasks for the objects:
 ---
 class: center, middle
 
-# Try Them Out!
+### Try Them Out!
 
 Open a new browser tab and open the console, and type in each line one at a time:
 
@@ -409,8 +416,8 @@ i < 5;
 Update:
 
 ```javascript
-i++ // remember that ++ add 1 to an integer
-i-- // and you can decrement too
+i++; // remember that ++ add 1 to an integer
+i--; // and you can decrement too
 ```
 
 ---
@@ -554,7 +561,7 @@ document.write('Welcome to Spot\'s!');
 ---
 class: center, middle
 
-# Accessing Elements
+### Accessing Elements
 
 You're likely to find that `document.write()` has some serious limitations. So how we can get more specific about the elements we target on a real webpage?
 
@@ -620,7 +627,7 @@ el.className = 'red'; // adds class name of "red" to the element
 You can also use `console.log()` to simply print out and test values in the browser's console from your code, instead of writing them to your document.
 
 ```javascript
-var greeting = "Hi there!"
+var greeting = "Hi there!";
 console.log(greeting);
 ```
 

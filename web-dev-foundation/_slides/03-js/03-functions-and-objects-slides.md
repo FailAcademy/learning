@@ -43,6 +43,13 @@ class: center, middle
 ]
 
 ---
+class: center, middle
+
+.large[
+   Algorithms!
+]
+
+---
 
 # How Do Functions Help?
 
@@ -79,7 +86,7 @@ function add(a, b) {
 
 The `a` and `b` in parentheses are called **parameters**. They allow us to pass different values into the function whenever we use it.
 
-Note that not all functions have parameters.
+*Note that not all functions have parameters.*
 
 ---
 
@@ -123,7 +130,7 @@ document.write(twoPlusTwo);
 
 # Another Example
 
-Notice that we don't explicitly "return" anything from this function, we just write out the result:
+Notice that we don't explicitly **return** anything from this function, we just write out the result:
 
 ```javascript
 function fullName() {
@@ -134,7 +141,9 @@ function fullName() {
 fullName();
 ```
 
-Keep in mind that JS functions always return something, even when you don't tell them to. If you `console.log()` the output of this function, it would return `undefined`.
+Keep in mind that JS functions always return something, even when you don't tell them to.
+
+If you `console.log()` the output of this function, it would return `undefined`.
 
 ---
 
@@ -321,7 +330,7 @@ We define objects in JS just like we define any other variables, but they are wr
 ```javascript
 var person  = {
    // your properties and methods will go here...
-}
+};
 ```
 
 ---
