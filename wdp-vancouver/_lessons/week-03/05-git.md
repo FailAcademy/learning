@@ -76,6 +76,11 @@ Tips for writing great Git commit messages:
 
 - [The Art of the Commit](http://alistapart.com/article/the-art-of-the-commit)
 
+Make your command prompt Git-aware:
+
+- [Git Aware Prompt](https://github.com/jimeh/git-aware-prompt)
+- [Snippet for customizing your bash profile](https://gist.github.com/mandiwise/8112fb0668f4801cc3f9)
+
 Helpful tutorials for learning git branching:
 
 - [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)
