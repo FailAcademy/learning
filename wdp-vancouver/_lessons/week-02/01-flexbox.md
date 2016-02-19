@@ -100,6 +100,10 @@ Another great flexbox reference page:
 
 - [The Ultimate Flexbox Cheat Sheet](http://www.sketchingwithcss.com/samplechapter/cheatsheet.html)
 
+Try out flexbox properties using this point-and-click interface:
+
+- [Flexbox playground](http://codepen.io/enxaneta/full/adLPwv/)
+
 How to add flexbox support to really old versions of IE:
 
 - [Flexibility](https://github.com/10up/flexibility)
