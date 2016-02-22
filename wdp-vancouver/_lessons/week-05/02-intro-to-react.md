@@ -1,7 +1,6 @@
 ---
 layout: lesson
 title: Intro to React
-slides: ['_slides/week-05/02-intro-to-react.md']
 date: 2016-02-15
 ---
 
@@ -40,7 +39,7 @@ Let's come to grips with the `.bind()` method: Use the examples from [here](http
 ---
 
 ## Exercise 4
-Let's review the `switch` statement and it's specific syntax: Use the examples from [here](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/switch)
+Let's review the `switch` statement and it's specifikylc syntax: Use the examples from [here](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/switch)
 
 ---
 

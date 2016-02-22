@@ -1,8 +1,7 @@
 ---
 layout: lesson
 title: Angular's $http Service & Ajax
-slides: ['_slides/week-06/05-http-ajax.md']
-date: 2016-02-26
+date: 2016-02-25
 ---
 
 ## Pre-Work
@@ -14,7 +13,8 @@ Review the angular documentation for $http:
 
 ## Learning Objectives
 
-Today we'll use Angular's `$http` service to fetch and save real data in our application! We'll also explore Angular's **Service** and **Factory** modules and use them to create an API service we can use in our newly created view controllers. The application will use a custom API created by RED specifically for this project. 
+Today we'll use Angular's `$http` service to fetch and save real data in our application!
+We'll also explore Angular's **Service** and **Factory** modules and use them to create an API *service* we can use in our newly created view controllers. The application will use a custom API created by RED specifically for this project.
 
 ---
 

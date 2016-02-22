@@ -8,7 +8,7 @@ date: 2016-02-22
 ## Pre-Work
 
 Create a folder called *intro-to-angular* in your project directory.
-Inside create 2 scratch files, one `index.html` and one `script.js`, and link the javascript file to the html file. 
+Inside create 2 scratch files, one `index.html` and one `script.js`, and link the javascript file to the html file.
 We'll use this simple document to experiment with the code in this lesson.
 
 ---
@@ -16,7 +16,7 @@ We'll use this simple document to experiment with the code in this lesson.
 ## Learning Objectives
 
 - Define what AngularJS is, and what role it plays in facilitating JS web app development.
-- Define (at a high-level) a variety of essential Angular-related concepts.
+- Define (at a high-level) a variety of essential Angular-related concepts, including the following keywords.
 
 ---
 
@@ -38,7 +38,7 @@ We'll use this simple document to experiment with the code in this lesson.
 
 Create a simple Angular application that manipulates some `ng-model` value, and display's the updated value to the user in an HTML document.
 
-You've seen how this works using a simple text input. 
+You've seen how this works using a simple text input.
 
 Use the Angular documentation, and add update your view using: a **checkbox**, a **select menu** & **radio buttons** .
 
@@ -50,7 +50,7 @@ Use your imagination when creating your application, and don't be afraid to add 
 
 Create an Angular application that uses code from another Angular module (via *dependency injection*) to manipulate some `$scope` value and display's the updated value to the user in an HTML document. Hint: You'll use an Angular `controller`, and a `factory`.
 
-Remember the best practice we mentioned: Don;t assign primitive values directly to your controller's `$scope`. 
+Remember the best practice we mentioned: Don;t assign primitive values directly to your controller's `$scope`.
 Instead use somehting like `$scope.values = { name: "Mackenzie" /* ...etc  */ }`
 
 Again, add some css, bonus points for creativity!
@@ -65,13 +65,8 @@ Again, add some css, bonus points for creativity!
 
 Spend your time familiarizing yourself with some basic Angular concepts to prepare for this weeks assignments.
 
-First up, watch this video:
 
-- [AngularJS Fundamentals In 60-ish Minutes](https://www.youtube.com/watch?v=i9MHigUZKEM)
-
-Be sure to watch it right to the end, because it offers a very coherent explanation of the concepts we'll be covering over the next week.
-
-Second, start working the following free tutorial on Code School:
+Start working the following free tutorial on Code School:
 
 - [Shaping up with Angular.js](https://www.codeschool.com/courses/shaping-up-with-angular-js)
 

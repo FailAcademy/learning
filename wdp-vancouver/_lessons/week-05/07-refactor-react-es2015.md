@@ -13,7 +13,7 @@ date: 2016-02-18
 
 ## Learning Objectives
 
-- Learn the ES2015 syntax for creating React applications.
+- Learn to use the ES2015 syntax for creating React applications.
 
 ---
 
