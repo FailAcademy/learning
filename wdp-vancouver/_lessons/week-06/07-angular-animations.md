@@ -1,8 +1,7 @@
 ---
 layout: lesson
 title: UI Animations in Angular
-slides: ['_slides/week-06/04b-angular-animations.md']
-date: 2016-02-25
+date: 2016-02-26
 ---
 
 ## Pre-Work

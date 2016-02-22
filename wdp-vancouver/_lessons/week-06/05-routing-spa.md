@@ -1,8 +1,7 @@
 ---
 layout: lesson
 title: Single Page Applications and Routing in Angular
-slides: ['_slides/week-06/04a-routing-spa.md']
-date: 2016-02-25
+date: 2016-02-24
 ---
 
 ## Learning Objectives
@@ -120,7 +119,5 @@ Once you're here, we'll add the rest of the routes manually, as a class! Good lu
 Angular documentation:
 [https://docs.angularjs.org](https://docs.angularjs.org)
 
-ui-router github page (Documentation): 
+ui-router github page (Documentation):
 [https://github.com/angular-ui/ui-router](https://github.com/angular-ui/ui-router)
-
-

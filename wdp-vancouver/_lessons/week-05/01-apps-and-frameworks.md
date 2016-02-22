@@ -31,8 +31,8 @@ Also, consider the MVC pattern and identify where developers might have added a 
 
 ## Lab Activity
 
-Set up your development environment and start configuring your build-chain for **Project 4** 
-You can choose either **Gulp** or **Webpack** to get the job done.
+Set up your development environment and start configuring your build-chain for **Project 4**
+Be sure to use **Webpack** to compile your `.jsx` files.
 
 ---
 

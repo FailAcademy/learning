@@ -126,16 +126,6 @@ This is different from anything we've seen up until now, and it's key to underst
 
 ---
 
-# Client & Server
-
-Let's get a feeling for client-server communication.
-
-.inline-images[![client-server](/public/img/slide-assets/client-server.jpg)]
-
-.footnote[Image Credit: [ng-book](https://www.ng-book.com/)]
-
----
-
 # Who Is PHP?
 
 **Facebook is powered by PHP**
