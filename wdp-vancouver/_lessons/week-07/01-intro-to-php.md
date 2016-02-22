@@ -7,9 +7,11 @@ date: 2016-02-29
 
 ## Pre-Work
 
-Install MAMP (Mac or Windows version) on your computer:
+Ensure you have VirtualBox, Vagrant, and Scotch Box up and running:
 
-- [MAMP](https://www.mamp.info/en/downloads/)
+- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+- [Vagrant](https://www.vagrantup.com/downloads.html)
+- [Scotch Box](https://box.scotch.io/)
 
 Work through the following sections of the [Codeacademy PHP tutorial](https://www.codecademy.com/en/tracks/php):
 
@@ -51,10 +53,11 @@ Work through the following sections of the [Codeacademy PHP tutorial](https://ww
 
 Time to try out some PHP:
 
-- Create an `index.php` file in your `htdocs` directory (or `www` dir if using WAMP)
-- In that file write `<?php  ?>` so Apache knows it needs to parse it
-- Between your opening and closing PHP tags write `echo "Hello world!";`
-- Go to http://localhost:8888 and check it out
+- Create an `index.php` file in a sub-dir of `public`
+- In that file type `<?php  ?>`
+- Between your opening and closing PHP tags type `echo "Hello, world!";`
+- Go to http://192.168.33.10/SUB_DIR_NAME/ to see what shows up there
+- Also try running `php index.php` in your CLI...
 
 ---
 
@@ -116,6 +119,11 @@ What you need to do to complete this lab:
 PHP is a well-documented language and you can find its docs here:
 
 - [Documentation](http://php.net/docs.php)
+
+An awesome, well-written PHP resource:
+
+- [PHP the Right Way](http://www.phptherightway.com/)
+- At the very least, [read this chapter](http://www.phptherightway.com/pages/The-Basics.html)
 
 This online book is a bit dated, but the following chapter is still relevant and very explanatory:
 

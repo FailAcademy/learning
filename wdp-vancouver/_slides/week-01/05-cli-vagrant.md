@@ -197,7 +197,7 @@ class: center, middle
 class: center, middle
 
 .large[
-   ![Windows VM](../../public/img/slide-assets/windows-vm.png)
+   ![Windows VM](/public/img/slide-assets/windows-vm.png)
 ]
 
 ---

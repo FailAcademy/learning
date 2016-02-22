@@ -87,13 +87,13 @@ You're going to do the following using the CLI only:
 
 ---
 
-# Exercise 2
+## Exercise 2
 
 Now let's visualize what we just did on the CLI using humans and Fatboys...
 
 ---
 
-# Exercise 3
+## Exercise 3
 
 Let's get ready to install our first Vagrant box:
 

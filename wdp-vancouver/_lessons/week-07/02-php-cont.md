@@ -54,4 +54,6 @@ Incorporate some of what you learned in class today about PHP's **built-in funct
 
 ## Additional Resources
 
-*Resources coming soon!*
+A short screencast series on what's new in PHP7:
+
+- [PHP7 Up and Running](https://laracasts.com/series/php7-up-and-running)

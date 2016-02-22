@@ -20,7 +20,7 @@ layout: false
 # Agenda
 
 1. What is PHP?
-2. Running PHP locally
+2. Running PHP locally with a Vagrant box
 3. Expressions, variables, and comments
 4. Operators and conditionals
 5. Arrays and arrays
@@ -42,6 +42,15 @@ class: center, middle
 ]
 
 ---
+
+# PHP vs. HTML
+
+- HTML is static, PHP is dynamic
+- HTML is a mark-up language, PHP is a programming language
+- PHP never displays in your browser dev tools
+- PHP needs a server to run (you can't open PHP files directly in a browser)
+
+---
 class: center, middle
 
 ![HTTP request diagram](/public/img/slide-assets/http-request-diagram.svg)
@@ -54,7 +63,7 @@ class: center, middle
 - It powers a large portion of the web
 - Used in many popular CMSes like WordPress :)
 - It can be mixed with HTML
-- Still under active development (PHP7 is slated to be released in November 2015)
+- Still under active development (PHP7 was released in November 2015 with big performance improvements)
 
 ---
 template: inverse
@@ -68,13 +77,23 @@ template: inverse
 - PHP comes pre-installed on Macs (run `php -v` to see)
 - But we're also going to need **MySQL** and **Apache** too...
 - [MAMP](https://www.mamp.info/en/), [WAMP](http://www.wampserver.com/en/), or [XAMPP](https://www.apachefriends.org/index.html) makes it easy to get up and running with all three
+- But we're going to be using a Vagrant box with a **LAMP/LEMP stack** installed instead...
 
 ---
 class: center, middle
 
-### Apache?
+### Linux?
+
+Linux is a free and open-source Unix-like operating system that powers everything from personal computers to servers to super-computers.
+
+---
+class: center, middle
+
+### Apache? nginx?
 
 Apache is the **web server**. It's responsible for parsing the PHP that we write and rendering in the web browser as HTML.
+
+The Apache HTTP Server is the most popular web server on the public internet currently, but another web server called **nginx** may be used to power WordPress-based sites too.
 
 ---
 class: center, middle
@@ -84,38 +103,61 @@ class: center, middle
 We use MySQL **databases** to store data that can be queried in order to dynamically generate content on our websites.
 
 ---
+
 class: center, middle
 
 .large[
-   MAMP installed?
+   Vagrant & Scotch Box ready?
 ]
 
 ---
-class: center, middle
 
-.inline-images[
-   ![MAMP app](/public/img/slide-assets/mamp-app.png)
-]
+# Review: What's What?
+
+**VirtualBox**
+
+A virtual machine *provider* (i.e. allows you to create VMs).
+
+**Vagrant**
+
+A program that allows you to combine the power of a *provisioner* with VirtualBox to create your desired dev environment inside of a VM.
+
+**A Vagrant Box (Scotch Box or VVV)**
+
+A template for creating a development environment with a pre-defined array of base software.
+
+
+---
+
+# Why We Like Vagrant
+
+- Software to set-up sandboxed dev environments
+- Allows you to install a lot of dev-related software **without interfering with your native OS**
+- Can help you better match your dev environment to your production environment
+- Bonus! Learning Vagrant will give you more confidence navigation around real servers
+
+---
+
+# Review: Vagrant Commands
+
+Start or resume your server: `vagrant up`
+
+Pause without shutting down your server: `vagrant suspend`
+
+Shutdown your server: `vagrant halt`
+
+Delete your server and everything on it: `vagrant destroy`
+
+SSH into your server: `vagrant ssh`
+
+*More commands can be found [here](https://docs.vagrantup.com/v2/cli/index.html).*
 
 ---
 class: center, middle
 
 .large[
-   Let's open the start page...
-]
-
----
-class: center, middle
-
-.inline-images[
-   ![htdocs folder](/public/img/slide-assets/mamp-htdocs.png)
-]
-
----
-class: center, middle
-
-.large[
-   Let's try out PHP...
+   Let's try out PHP... <br />
+   fire up your Vagrant box and SSH into your VM.
 ]
 
 ---
@@ -124,10 +166,11 @@ class: center, middle
 
 Time to try out some PHP:
 
-- Create an `index.php` file in your `htdocs` directory (or `www` dir if using WAMP)
-- In that file write `<?php  ?>` so Apache knows it needs to parse it
-- Between your opening and closing PHP tags write `echo "Hello world!";`
-- Go to http://localhost:8888 and check it out
+- Create an `index.php` file in a sub-directory of the `public` folder in your Scotch Box installation (e.g. `sandbox`, etc.)
+- In that file type `<?php  ?>`
+- Between your opening and closing PHP tags type `echo "Hello, world!";`
+- Go to http://192.168.33.10/SUB_DIR_NAME/ to see what shows up there
+- Also try running `php index.php` in your CLI...
 
 ---
 
@@ -145,7 +188,7 @@ Time to try out some PHP:
 - Simply typing out **Hello World!** in our mark-up would obviously have the same effect...
 - Why would we do it this way?
 
----
+<!-- ---
 
 # Errors
 
@@ -156,7 +199,33 @@ In you `php.ini` file (we'll check `phpInfo` to find it):
 - set `error_reporting = E_ALL`
 - set `display_errors = On`
 
-Restart Apache in MAMP for the changes to take effect. Now you will be able to see fatal errors and notices when you make a mistake in your code.
+Restart Apache in MAMP for the changes to take effect. Now you will be able to see fatal errors and notices when you make a mistake in your code. -->
+
+---
+
+# White Screen of Death
+
+- Try intentionally adding some syntax errors in between the opening and closing PHP tags in your `index.php` file and see what happens...
+- *This is why we never cowboy code on production servers!*
+- The errors appear on the screen because error reporting is turned on in the server's PHP configuration file(s)
+- We wouldn't want to display errors in a production environment though...
+
+---
+
+# Where's the config file?
+
+To learn more about the PHP installation on our server (and where the PHP config file is), let's create an `info.php` file in the root of our `public` dir and add this code:
+
+```php
+<?php
+
+// Show all information, defaults to INFO_ALL
+phpinfo();
+```
+
+Now navigate to http://192.168.33.10/info.php to find out where the **Loaded Configuration File** and other `.ini` files are on our VM server.
+
+<!-- Config file should be `/etc/php5/apache2/conf.d/user.ini` -->
 
 ---
 template: inverse
@@ -174,6 +243,13 @@ Statements are commands, expressions are requests (i.e. anything that has a valu
 class: center, middle
 
 .large[
+   `echo 'Hello, World!';`
+]
+
+---
+class: center, middle
+
+.large[
    `$a = 1;`
 ]
 
@@ -183,7 +259,7 @@ class: center, middle
 
 In PHP, unlike JS, we use `$` to define our variables.
 
-We can define variables as strings (with HTML tags):
+We can define variables as strings (including HTML tags):
 
 ```php
 $color = 'red';
@@ -199,6 +275,41 @@ On style...PHP also tends to favour underscores in variable names, as opposed to
 
 ---
 
+# Single or Double?
+
+You can wrap your string variables in single or double quotes in PHP, but there is a subtle difference between using one type of quote over the other.
+
+Strings wrapped in **single quotes are literal string**. These strings do not parse any variables or special characters contained within.
+
+Strings wrapped in **double quotes will be parsed**, so they can contain variables, array values, and object variables.
+
+Read about **[variable parsing](http://php.net/manual/en/language.types.string.php#language.types.string.parsing)** in the PHP docs for more info.
+
+---
+
+# Variables
+
+In PHP we can also **concatenate** string together, but with a `.` instead of a `+`:
+
+```php
+$salutation = 'Ms.';
+$addressee = 'Dear ' . salutation . ' Sunshine:'
+```
+
+Again, if we use double-quotes to wrap a string variable, we can embed another variable directly in it:
+
+```php
+$salutation_1 = "Ms.";
+$addressee_1 = "Dear $salutation Sunshine:";
+
+$salutation_2 = "Mr";
+$addressee_2 = "Dear {$salutation}. Sunshine";
+```
+
+The second approach is called **interpolation**.
+
+---
+
 # Variables
 
 Like JS, variables can also be integers or booleans too:
@@ -211,26 +322,6 @@ $alive_and_well = true;
 ```
 
 Again, integers and booleans do not need to be wrapped in quotes, only strings do.
-
----
-
-# Variables
-
-In PHP we can also concatenate string together, but with a `.` instead of a `+`:
-
-```php
-$salutation = 'Ms.';
-$addressee = 'Dear ' . salutation . ' Sunshine:'
-```
-
-Alternatively, if we use double-quotes to wrap a string variable, we can embed another variable directly in it:
-
-```php
-$salutation = "Ms.";
-$addressee = "Dear $salutation Sunshine:";
-```
-
-The second approach is called **interpolation**.
 
 ---
 
@@ -569,18 +660,6 @@ print_r( $person );
 *Magic!*
 
 ---
-
-# Mini-Exercise
-
-Let's get organized before we move on...
-
-Create a `sandbox` folder inside or your `htdocs` folder and move your `index.php` file in there.
-
-Now checkout http://localhost:8888/sandbox/ ... do you see your page there?
-
-Typically we'll want to keep each project that we run on MAMP inside of it's own folder.
-
----
 template: inverse
 
 # Loops
@@ -670,8 +749,9 @@ The JS proxies for PHP loops:
 JS                          | PHP
 --------------------------- | ------------------------------------
 for (var i = 0; i < 5; i++) | for ($i = 0; $i < 5; $i++)
-for (var prop in obj)       | foreach ( $array as $key => $value )
-while ( i < 10 )            | while ( $i < 10 )
+for (var prop in obj)       | foreach ($array as $key => $value)
+while (i < 10)              | while ($i < 10)
+array.forEach(callback)     | array_walk($array, $callback)
 
 ---
 
@@ -702,8 +782,8 @@ template: inverse
 
 # Functions
 
-- Remember that the easiest way to think of functions is that they are reusable chunks of code
-- A function should do one thing, it should not be 50 lines long (code smell!)
+- Remember that the easiest way to think of functions is that they are **reusable chunks of code**
+- A function **should do one thing**, i.e. it should not be 50+ lines long (code smell!)
 
 ---
 
@@ -764,6 +844,93 @@ class: center, middle
 In PHP, every function has its own local scope.
 
 Variables defined outside of functions are **not** automatically accessible within them.
+
+---
+
+# Variable Scope
+
+For example, the `$global_var` is not automatically available inside `my_function()` (as it would be in JS):
+
+```php
+$global_var = "a global variable";
+
+function my_function() {
+   echo ucwords($global_var;)
+}
+
+my_function(); // will cause an error notice
+```
+
+The code above will result in an "Undefined variable" notice where you would expect the variable to echo out.
+
+---
+
+# Variable Scope
+
+We can address this issue in few different ways. One way is to pass the global variable into the function as an argument when it is called:
+
+```php
+$global_var = "a global variable";
+
+function my_function($var) {
+   $var = ucwords($var);
+   echo $var;
+}
+
+my_function($global_var); // will work and echo "A Global Variable"
+echo $global_var; // will still echo "a global variable"
+```
+
+Note that the variable passed as an argument is **passed by value** here. This means that you can modify it within the local scope of the function **without changing its global value**.
+
+---
+
+# Variable Scope
+
+If we need to change the value of the variable in the global space too, we must **pass it by reference** by prepending and ampersand to the function parameter:
+
+```php
+$global_var = "a global variable";
+
+function my_function(&$var) {
+   $var = ucwords($var);
+   echo $var;
+}
+
+my_function($global_var); // will echo "A Global Variable"
+echo $global_var; // will also echo "A Global Variable" now
+```
+
+---
+
+# Variable Scope
+
+Another approach to accessing global variables in functions is to use the `global` keyword or `$GLOBALS` [superglobal](http://php.net/manual/en/language.variables.superglobals.php).
+
+
+```php
+$global_var = "a global variable";
+
+function my_function() {
+   global $global_var;
+   $global_var = ucwords($global_var);
+
+   // or $GLOBALS['global_var'] = ucwords($GLOBALS['global_var']);
+}
+
+echo $global_var; // will echo "A Global Variable"
+```
+
+Using `global`/`$GLOBALS` to modify the value of the variable within the local scope of the function will change the value of the original variable without any function arguments.
+
+---
+class: center, middle
+
+## Danger Will Robinson!
+
+Modifying global variables can have intended consequences, especially as your codebase grows!
+
+WordPress has global variables to access all kinds of data, but it's important to remember to access them only for display purposes, and not to modify their values.
 
 ---
 
