@@ -128,3 +128,7 @@ An awesome, well-written PHP resource:
 This online book is a bit dated, but the following chapter is still relevant and very explanatory:
 
 - [Hacking with PHP - How PHP is Written](http://www.hackingwithphp.com/2/6/0/how-php-is-written)
+
+Another PHP resource, written with WP devs in mind:
+
+- [WordPress Development for Beginners: Learning PHP](http://premium.wpmudev.org/blog/wordpress-development-beginners-php/)
