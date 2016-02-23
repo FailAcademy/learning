@@ -53,7 +53,7 @@ Work through the following sections of the [Codeacademy PHP tutorial](https://ww
 
 Time to try out some PHP:
 
-- Create an `index.php` file in a sub-dir of `public`
+- Create an `index.php` file in a sub-directory of the `public` folder in your Scotch Box installation (e.g. `sandbox`, etc.)
 - In that file type `<?php  ?>`
 - Between your opening and closing PHP tags type `echo "Hello, world!";`
 - Go to http://192.168.33.10/SUB_DIR_NAME/ to see what shows up there
