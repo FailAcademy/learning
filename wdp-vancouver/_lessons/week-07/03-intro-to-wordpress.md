@@ -9,7 +9,11 @@ date: 2016-03-02
 
 Prior to this lesson, you'll need to set up a new WordPress-friendly Vagrant box based on the [Varying Vagrant Vagrants (VVV)](https://github.com/Varying-Vagrant-Vagrants/VVV) configuration.
 
-You already have VirtualBox and Vagrant installed, so you can start with Step 4 in the **[VVV First Vagrant Up instructions](https://github.com/Varying-Vagrant-Vagrants/VVV#the-first-vagrant-up)**.
+**New VM Set-up:**
+
+You already have VirtualBox and Vagrant installed, so you can start with **Step 4** in the **[VVV First Vagrant Up instructions](https://github.com/Varying-Vagrant-Vagrants/VVV#the-first-vagrant-up)**.
+
+**WP Site Wizard:**
 
 Lastly, you need to set-up [Variable VVV (VV)](https://github.com/bradp/vv), which is the site creation wizard we'll use to rapidly set-up WP dev sites locally. The **[VV installation instructions](https://github.com/bradp/vv#installation)** will help you with this.
 
@@ -99,3 +103,8 @@ Bookmark these WP resources!
 A brief history of some of WordPress' major milestones since 2003:
 
 - [History - WordPress Codex](https://codex.wordpress.org/History)
+
+A how-to article on getting WP up-and-running locally with Vagrant:
+
+- [
+Getting started with Vagrant & VVV for local development](https://webdevstudios.com/2015/01/14/getting-started-vagrant-vvv-local-development/)
