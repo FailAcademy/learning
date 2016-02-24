@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Project 3 - React App (TBA)
+title: Project 3 - React App
 due: Monday, February 22nd (beginning of class)
 ---
 
@@ -67,11 +67,12 @@ Your project must:
 
 *Components* (React requirements)
 - All components must correctly implement interactivity using `state` and `props`
-- Quiz page: There should be a page-level component, containing the other components in the application
+- Quiz page: There should be a page-level component, containing the other components on the page.
 - Counter: The counter should visually count down, in minutes, from a number specified on the counter component instance via `props`, e.g. `<Counter countdownMinutes={2} />`
 - Quiz Form: This component should capture user input, check some criteria for correctness of the input and display feedback to the user, once the user *submits* the form. This should be done by modifying the state of the parent component from the child (Quiz Form) component.
 - If the user does not submit a correct answer before the countdown timer has reached 0:00, then the application should remove the form and show some feedback indicating that the user has failed.
-- Once the user has failed or answered correctly, they should not be able to reset the quiz.
+- Once the user has answered correctly, they should not be able to reset the quiz.
+- If the user fails, the quiz should reset.
 
 ## Submission Instructions
 
