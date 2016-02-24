@@ -7,7 +7,15 @@ date: 2016-03-02
 
 ## Pre-Work
 
-*There is no pre-work for this lesson.*
+Prior to this lesson, you'll need to set up a new WordPress-friendly Vagrant box based on the [Varying Vagrant Vagrants (VVV)](https://github.com/Varying-Vagrant-Vagrants/VVV) configuration.
+
+**New VM Set-up:**
+
+You already have VirtualBox and Vagrant installed, so you can start with **Step 4** in the **[VVV First Vagrant Up instructions](https://github.com/Varying-Vagrant-Vagrants/VVV#the-first-vagrant-up)**.
+
+**WP Site Wizard:**
+
+Lastly, you need to set-up [Variable VVV (VV)](https://github.com/bradp/vv), which is the site creation wizard we'll use to rapidly set-up WP dev sites locally. The **[VV installation instructions](https://github.com/bradp/vv#installation)** will help you with this.
 
 ---
 
@@ -33,13 +41,15 @@ date: 2016-03-02
 
 ## Exercise 1
 
-Let's install WordPress locally:
+Let's set up a fresh WP installation using Variable VVV (VV). Run the following command:
 
-1. [Download WordPress](https://wordpress.org/download/)
-2. Unzip your download and move it to your `htdocs` folder (rename the unzipped folder if you like)
-3. Go to phpMyAdmin (via MAMP) and create a new database
-4. Rename `wp-config-sample.php` to `wp-config.php` and fill in your database name and MAMP credentials
-5. Go to http://localhost:8888/YOUR-FOLDER/wp-admin/install.php and complete your install
+```bash
+vv create --name demo_wp --username your_name --password your_password --email email@email.com
+```
+
+Check out your new WP site at http://demo_wp.dev when VV is done doing its thing.
+
+You can log into the back-end of your WP new site at http://demo_wp.dev/wp-admin with the credentials that you set running the above command.
 
 ---
 
@@ -93,3 +103,8 @@ Bookmark these WP resources!
 A brief history of some of WordPress' major milestones since 2003:
 
 - [History - WordPress Codex](https://codex.wordpress.org/History)
+
+A how-to article on getting WP up-and-running locally with Vagrant:
+
+- [
+Getting started with Vagrant & VVV for local development](https://webdevstudios.com/2015/01/14/getting-started-vagrant-vvv-local-development/)

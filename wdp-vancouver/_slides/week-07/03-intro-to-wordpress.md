@@ -73,28 +73,58 @@ template: inverse
 # Running WP Locally
 
 - Running a WP site locally on your computer is a bit different from a static HTML site
-- We need to use a local server environment to do that (MAMP!)
-- MAMP must be running for us to see our site
+- We need to use a local server environment to do that (Vagrant and VVV!)
+- We must run `vagrant up` in order to see our site
 
 ---
 
-# What Is It All For?
+# Why VVV Now?
 
-- The **MySQL database** contains all of the data (content and saved settings) for your site
-- The **PHP** files generate your site on the server so it can be rendered as HTML in the browser
-- You can use PHP to get data our your database and populate your website with it&mdash;this is the difference between **dynamic sites** and static sites
+- We're going to use VVV instead of Scotch Box for our WP dev work because VVV is a Vagrant box that was designed with WordPress in mind
+- The Variable VVV (VV) site creation wizard you installed also makes it very easy to set-up new WP sites on the fly in your dev environment from the command line (esp. when contrasted with a MAMP-based approach)
+- VV also makes deployments easier using [Vagrant Push](https://github.com/bradp/vv#deployments)
+
+---
+
+# What VVV Gives Us
+
+With VVV installed, you already have multiple versions of WP ready for you on your VM:
+
+- http://local.wordpress.dev/ (stable release)
+- http://local.wordpress-trunk.dev/ (latest dev version)
+- http://src.wordpress-develop.dev/ (for contributing to Core)
+- http://build.wordpress-develop.dev/ (as above, but with Grunt build files)
+
+We'll use the **stable** version of WP for our plugin/theme dev.
+
+---
+class: center, middle
+
+.large[
+   Let's leave the default installation alone, and create a new one using the Variable VVV site creation wizard...
+]
 
 ---
 
 # Exercise 1
 
-Let's install Wordpress locally:
+Let's set up a fresh WP installation using Variable VVV (VV). Run the following command:
 
-1. [Download Wordpress](https://wordpress.org/download/)
-2. Unzip your download and move it to your `htdocs` folder (rename the unzipped folder if you like)
-3. Go to phpMyAdmin (via MAMP) and create a new database
-4. Rename `wp-config-sample.php` to `wp-config.php` and fill in your database name and MAMP credentials
-5. Go to http://localhost:8888/YOUR-FOLDER-NAME/wp-admin/install.php and complete your install
+```bash
+vv create --name demo_wp --username your_name --password your_password --email email@email.com
+```
+
+Configure the options as desired when prompted. Check out your new WP site at **http://demo_wp.dev** when VV is done doing its thing.
+
+You can log into the back-end of your WP new site at **http://demo_wp.dev/wp-admin** with the credentials that you set running the above command.
+
+---
+class: center, middle
+
+.large[
+   Demo time! <br />
+   Let's walk through a MAMP-based WP set-up so we can appreciate how much easier that was with VV.
+]
 
 ---
 template: inverse
@@ -102,21 +132,11 @@ template: inverse
 # WordPress Tour
 
 ---
+
 class: center, middle
 
 .large[
-   **WP Components**
-]
-<br /><br />
-.inline-images[
-   ![WP Database and Core](/public/img/slide-assets/wp-db-core-concept.svg)
-]
-
----
-class: center, middle
-
-.large[
-   **WP Components**
+   **WP UI Components**
 ]
 <br /><br />
 .inline-images[
@@ -124,8 +144,39 @@ class: center, middle
 ]
 
 ---
+class: center, middle
 
-# What's Inside?
+.large[
+   **WP Internal Components**
+]
+<br /><br />
+.inline-images[
+   ![WP Database and Core](/public/img/slide-assets/wp-db-core-concept.svg)
+]
+
+---
+
+# What Is It All For?
+
+- The **MySQL database** contains all of the data (content and saved settings) for your WP site
+- The **PHP** files generate your site on the server (with the help of the **nginx** web server in a VVV box) so it can be rendered as HTML in the browser
+- You can use PHP to get data our your database and populate your website with it&mdash;this is the difference between **dynamic sites** and static sites
+
+---
+
+# Exploring the Database
+
+Let's take a look at the WordPress database files we just generated when we ran our `vv create` command.
+
+To do that, go to **[vvv.dev](http://vvv.dev)** and click on the **phpMyAdmin** link.
+
+phpMyAdmin is a free tool (written in PHP) that can be used to manage MySQL databases via a web browser. We can also use a desktop-based app like Sequel Pro for that too.
+
+You can use the username `external` and password `external` to log into the phpMyAdmin interface.
+
+---
+
+# Exploring the Core Files
 
 Inside your WP installation directory...
 
@@ -151,12 +202,12 @@ This is where you'll keep all of the code and content that's specific to your si
 
 # WordPress Dashboard
 
-- Settings
+- **Settings**
    - General, Reading, Discussion, and Permalinks
-- Users ([Roles and Capabilities](https://codex.wordpress.org/Roles_and_Capabilities))
-- Appearance
+- **Users** ([Roles and Capabilities](https://codex.wordpress.org/Roles_and_Capabilities))
+- **Appearance**
    - Themes, Customize, Widgets, and Menus
-- Plugins
+- **Plugins**
 
 ---
 class: center, middle
@@ -193,7 +244,9 @@ class: center, middle
 
 # Mini-Exercise
 
-Try creating and new post and page of your own. Create some categories and tags too, and apply them to your new post.
+Log into the WordPress site you just created (if you haven't already) and try creating a **new post and page** of your own.
+
+Create some **categories and tags** too, and apply them to your new post.
 
 Now check out the front end of your site...do you see your new content?
 
@@ -377,7 +430,7 @@ More on template tags here:
 
 https://codex.wordpress.org/Template_Tags
 
-*Note: Many template tags only work in the loop, while some are global and can be used anywhere on your site.*
+**Note:** Many template tags only work in the loop, while some are global and can be used anywhere on your site.
 
 ---
 
@@ -396,7 +449,7 @@ Template tags are great for dynamically adding metadata and other information to
       <p class="description"><?php bloginfo( 'description' ); ?></p>
 ```
 
-The `bloginfo()` template tag will pull this data out of the `wp_options` table in the database (which would have been saved in your Settings via the WordPress admin area).
+The `bloginfo()` template tag will pull this data out of the `wp_options` table in the database (which would have been saved in your **Settings** via the WordPress admin area).
 
 ---
 
@@ -412,7 +465,7 @@ the_permalink();
 get_permalink();
 ```
 
-`the_permalink()` echos out the permalink.
+`the_permalink()` echoes out the permalink.
 
 `get_permalink()` returns the permalink, but does not echo it out in the template.
 
