@@ -244,7 +244,9 @@ class: center, middle
 
 # Mini-Exercise
 
-Log into the WordPress site you just created (if you haven't already) and try creating and new post and page of your own. Create some categories and tags too, and apply them to your new post.
+Log into the WordPress site you just created (if you haven't already) and try creating a **new post and page** of your own.
+
+Create some **categories and tags** too, and apply them to your new post.
 
 Now check out the front end of your site...do you see your new content?
 
