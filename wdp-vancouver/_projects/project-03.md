@@ -66,6 +66,7 @@ Your project must:
 - Components must be written in separate files, and bundled together into a single file. This should be accomplished using the `require` or `import` statement, and the `webpack-stream` module bundler gulp plugin.
 
 *Components* (React requirements)
+
 - All components must correctly implement interactivity using `state` and `props`
 - Quiz page: There should be a page-level component, containing the other components on the page.
 - Counter: The counter should visually count down, in minutes, from a number specified on the counter component instance via `props`, e.g. `<Counter countdownMinutes={2} />`
