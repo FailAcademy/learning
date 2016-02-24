@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<div class="page">
+  <h1 class="page-title">{{ page.title }}</h1>
+
+  {% if page.due %}
+   <p><strong>Due Date:</strong> {{ page.due }}</p>
+  {% endif %}
+
+  {{ content }}
+</div>
