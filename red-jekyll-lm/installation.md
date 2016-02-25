@@ -76,6 +76,16 @@ Make sure you're checked out on the new `production` orphan branch (although kee
 
 **Finally, follow [steps 1-3](https://github.com/benbalter/jekyll-auth#add-jekyll-auth-to-your-site) to install Jekyll Auth for this site.**
 
+You will also need to add a few additional gems to your Gemfile before running `bundler install`. Ensure your Gemfile looks like this before attempting to deploy to Heroku:
+
+```ruby
+source "https://rubygems.org"
+
+gem 'jekyll-auth'
+gem 'jekyll-paginate'
+gem 'redcarpet'
+```
+
 ### Step 4: Heroku Set-up
 
 Next, we're going to manually configure our `production` branch for deployment and finally deploy our Heroku site (note: do not use the "auto configure" command that Jekyll Auth provides).
