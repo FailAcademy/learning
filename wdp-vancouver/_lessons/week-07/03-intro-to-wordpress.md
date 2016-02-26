@@ -77,17 +77,42 @@ But whoops! How can we link up the `style.css` file now that it's path is broken
 
 ## Lab Activity
 
-Today's lab is dedicated to getting comfortable with the WordPress admin area and WP-style PHP before we jump into custom theming tomorrow.
+**Task 1:**
 
-Start wrapping your head around how WordPress uses PHP with this video:
+Today's lab is dedicated to getting comfortable with the WordPress admin area and WP-style PHP before we jump into the project tomorrow.
+
+To start, watch this video to further clarify how WordPress uses PHP with this video:
 
 - [Zac Gordon: PHP for WordPress](http://wordpress.tv/2015/09/20/zac-gordon-php-for-wordpress/)
+
+**Task 2:**
+
+Next, apply some of the skills you learned earlier today by styling up a slightly more (Medium-inspired) complex theme than what we built in Exercise 3.
+
+To start, you can **[download the lab files here](/public/files/labs/wp-theme-lab.zip)**.
+
+Next, using either the WP installation you set up earlier today or a fresh one that you create with VV, move the `median` directory into the `wp-content/themes` directory for that site.
+
+From there, your task is to style the theme as per the included design comps. Here are some design specs to help you out:
+
+- The width of the content area is `700px`
+- The `body` font family is **Merriweather**
+- The headings font family is **Lato**
+- The font family used for the buttons, post metadata, and footer text is **Helvetica Neue** (or Arial)
+- The HEX code of the links is `#00ab6b` and the hover state colour is `#1c9963`
+- The RGBa values of the medium grey-coloured text is `rgba(0, 0, 0, .5)`
+
+**Note:** The custom fonts (Merriweather and Lato) have already been imported into your stylesheet as Google Fonts, so you don't need to worry about generating web font kits. Font Awesome has already been imported too.
+
+**Also note:** Feel free to use the included `hello-world.jpg` image as a featured image to test with one of your posts, or use an image of your own.
+
+**Task 3:**
 
 Finally, if you're a rockstar and blast through the first two tasks, check out this video on the Underscores starter theme (as we'll be using a "fork" of Underscores to build out Project 5):
 
 - [Morten Rand-Hendriksen: Building Themes From Scratch Using Underscores (_S)](http://wordpress.tv/2015/06/09/morten-rand-hendriksen-building-themes-from-scratch-using-underscores-_s/)
 
-Be sure to spend some time with the WordPress admin area adding content, installing plugins, and generally familiarizing yourself with what's there!
+Lastly, be sure to spend some time with the WordPress admin area adding content, installing plugins, and generally familiarizing yourself with what's there!
 
 ---
 
