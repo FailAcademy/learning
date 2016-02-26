@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Developing with ES2015 & Webpack
-date: 2016-02-11
+lesson_date: 2016-02-11
 ---
 
 ## Pre-Work

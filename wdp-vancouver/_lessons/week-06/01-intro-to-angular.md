@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to AngularJS
 slides: ['_slides/week-06/01a-intro-to-angular.md']
-date: 2016-02-22
+lesson_date: 2016-02-22
 ---
 
 ## Pre-Work

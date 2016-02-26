@@ -3,7 +3,7 @@
 
 {% assign lesson_events = site.lessons %}
 [{% for lesson in lesson_events %}
-   {% if lesson.date != null %}{% assign start = lesson.date %}{% else %}{% assign start = '1970-01-01' %}{% endif %}
+   {% if lesson.lesson_date != null %}{% assign start = lesson.lesson_date %}{% else %}{% assign start = '1970-01-01' %}{% endif %}
    {
       "title": {{lesson.title | jsonify}},
       "allDay": true,

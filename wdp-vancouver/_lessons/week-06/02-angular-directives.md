@@ -2,7 +2,7 @@
 layout: lesson
 title: AngularJS Directives
 slides: ['_slides/week-06/02-angular-directives.md']
-date: 2016-02-23
+lesson_date: 2016-02-23
 ---
 
 ## Learning Objectives
@@ -41,4 +41,3 @@ Scope directives:
 
 Angular documentation:
 [https://docs.angularjs.org/api/ng/directive](https://docs.angularjs.org/api/ng/directive)
-

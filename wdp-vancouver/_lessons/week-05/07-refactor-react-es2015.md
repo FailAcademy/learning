@@ -1,8 +1,7 @@
 ---
 layout: lesson
 title: Refactoring React to use ES2015
-date: 2016-02-18
-
+lesson_date: 2016-02-18
 ---
 
 ## Pre-Work

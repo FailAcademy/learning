@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Angular's $http Service & Ajax
-date: 2016-02-25
+lesson_date: 2016-02-25
 ---
 
 ## Pre-Work
