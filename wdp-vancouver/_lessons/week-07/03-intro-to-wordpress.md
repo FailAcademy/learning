@@ -77,7 +77,7 @@ But whoops! How can we link up the `style.css` file now that it's path is broken
 
 ## Lab Activity
 
-**Task 1:**
+### Task 1:
 
 Today's lab is dedicated to getting comfortable with the WordPress admin area and WP-style PHP before we jump into the project tomorrow.
 
@@ -85,7 +85,7 @@ To start, watch this video to further clarify how WordPress uses PHP with this v
 
 - [Zac Gordon: PHP for WordPress](http://wordpress.tv/2015/09/20/zac-gordon-php-for-wordpress/)
 
-**Task 2:**
+### Task 2:
 
 Next, apply some of the skills you learned earlier today by styling up a slightly more (Medium-inspired) complex theme than what we built in Exercise 3.
 
@@ -106,7 +106,7 @@ From there, your task is to style the theme as per the included design comps. He
 
 **Also note:** Feel free to use the included `hello-world.jpg` image as a featured image to test with one of your posts, or use an image of your own.
 
-**Task 3:**
+### Task 3:
 
 Finally, if you're a rockstar and blast through the first two tasks, check out this video on the Underscores starter theme (as we'll be using a "fork" of Underscores to build out Project 5):
 
