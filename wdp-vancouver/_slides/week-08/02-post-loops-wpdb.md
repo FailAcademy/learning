@@ -84,7 +84,7 @@ The default loop:
 - `query_posts` allows us to alter our **main query**
 - It's inefficient and often produces unexpected results
 - **NEVER USE THIS!**
-- If you need to mess with the main loop use `pre_get_posts()` (and use sufficient conditionals)
+- If you need to mess with the main loop use `pre_get_posts` (and use sufficient conditionals)
 
 ---
 
@@ -342,6 +342,7 @@ class: center, middle
 - `wp_postmeta`
 - `wp_commentmeta`
 - `wp_usermeta`
+- `wp_termmeta` (new as of WP 4.4!)
 
 ---
 
