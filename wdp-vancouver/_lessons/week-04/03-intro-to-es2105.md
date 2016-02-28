@@ -2,14 +2,14 @@
 layout: lesson
 title: Intro to ECMAScript 2015
 slides: ['_slides/week-04/01-intro-to-es2015.md']
-date: 2016-02-10
+lesson_date: 2016-02-10
 ---
 
 ## Pre-Work
 
 Visit the [Learn ES2105](https://babeljs.io/docs/learn-es2015/) page and review the list of new features of javascript that are a part of ECMAScript 6!
 
-Read this [exellent overview](https://github.com/bevacqua/es6) of ES2015 on github.
+Read this [excellent overview](https://github.com/bevacqua/es6) of ES2015 on github.
 
 ---
 

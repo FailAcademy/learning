@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Single Page Applications and Routing in React
-date: 2016-02-17
+lesson_date: 2016-02-17
 ---
 
 ## Pre-Work

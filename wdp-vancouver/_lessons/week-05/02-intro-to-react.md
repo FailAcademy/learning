@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Intro to React
-date: 2016-02-15
+lesson_date: 2016-02-15
 ---
 
 ## Pre-Work

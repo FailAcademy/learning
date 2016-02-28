@@ -2,7 +2,7 @@
 layout: lesson
 title: Programming with JavaScript
 slides: ['_slides/week-02/03-programming-with-javascript.md']
-date: 2016-01-27
+lesson_date: 2016-01-27
 ---
 
 ## Pre-Work
@@ -75,4 +75,3 @@ Free JS-related books online:
 A tool for helping you detect errors or other problems in your JavaScript:
 
 - [JSHint](http://jshint.com/)
-

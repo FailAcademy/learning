@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: Intro HTML
+title: Intro to HTML
 slides: ['_slides/week-01/01-intro-to-html.md']
-date: 2016-01-18
+lesson_date: 2016-01-18
 ---
 
 ## Pre-Work
