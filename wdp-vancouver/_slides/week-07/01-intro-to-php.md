@@ -293,7 +293,7 @@ In PHP we can also **concatenate** string together, but with a `.` instead of a 
 
 ```php
 $salutation = 'Ms.';
-$addressee = 'Dear ' . salutation . ' Sunshine:'
+$addressee = 'Dear ' . salutation . ' Sunshine:';
 ```
 
 Again, if we use double-quotes to wrap a string variable, we can embed another variable directly in it:
@@ -433,7 +433,7 @@ We can also compare values and evaluate their result:
 Conditional statements in PHP look exactly as they do in JS:
 
 ```php
-var $score = 51;
+$score = 51;
 
 if ( $score > 50 ) {
    echo 'You passed!';
