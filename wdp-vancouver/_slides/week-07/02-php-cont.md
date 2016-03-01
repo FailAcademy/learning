@@ -145,7 +145,7 @@ $my_var = false;
 if ( isset( $my_var ) ) {
   echo "It's set!";
 } else {
-  echo "It's not set."
+  echo "It's not set.";
 }
 ```
 
@@ -161,9 +161,9 @@ The `empty()` function checks if the variable is an empty string, `0`, `NULL`, o
 $my_var = false;
 
 if ( empty( $my_var ) ) {
-  echo "It's set!";
+  echo "It's empty!";
 } else {
-  echo "It's not set."
+  echo "It's not empty.";
 }
 ```
 

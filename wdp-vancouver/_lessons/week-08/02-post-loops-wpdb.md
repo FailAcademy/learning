@@ -82,3 +82,7 @@ More info on the WP database:
 Everything you wanted to know about `WP_Query` and didn't know to ask:
 
 - [Mastering WP_Query](https://code.tutsplus.com/series/mastering-wp_query--cms-818)
+
+More on the new `wp_termmeta` database table:
+
+- [Introducing Term Meta Data In WordPress And How To Use Them](https://www.smashingmagazine.com/2015/12/how-to-use-term-meta-data-in-wordpress/)

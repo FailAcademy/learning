@@ -93,3 +93,8 @@ Some WordPress plugins that are helpful for debugging:
 - [Debug Bar](https://wordpress.org/plugins/debug-bar/)
 - [Query Monitor](https://wordpress.org/plugins/query-monitor/)
 - [Theme Check](https://wordpress.org/plugins/theme-check/)
+
+Two very readable articles on WP's event-driven architecture:
+
+- [Using WordPress for Web Application Development: The Conceptual Model](https://code.tutsplus.com/articles/using-wordpress-for-web-application-development-the-conceptual-model--wp-34095)
+- [Using WordPress for Web Application Development: Understanding Events, Actions, and Filters](https://code.tutsplus.com/tutorials/using-wordpress-for-web-application-development-understanding-events-actions-and-filters--wp-34113)

@@ -156,13 +156,6 @@ template: inverse
 ---
 class: center, middle
 
-.large[
-   A WP theme is so **not** MVC...
-]
-
----
-class: center, middle
-
 .inline-images[
    ![Vintage anatomy](/public/img/slide-assets/anatomy.jpg)
 ]
