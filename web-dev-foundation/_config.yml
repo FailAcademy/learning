@@ -2,7 +2,6 @@
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           pretty
-relative_permalinks: true
 
 # Setup
 title:               Web Developer Foundation
@@ -46,6 +45,9 @@ markdown: redcarpet
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
 redcarpet:
   extensions: ['smart', 'tables', 'autolink']
+
+# Plugins
+gems: ['jekyll-paginate', 'redcarpet']
 
 # Exclusions
 exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'README.md', 'LICENSE.md', 'CONTRIBUTING.md', 'installation.md']
