@@ -124,11 +124,11 @@ You can log into the back-end of your WP new site at **http://demo_wp.dev/wp-adm
 
 We can also install WP locally using MAMP:
 
- 1. [Download WordPress](https://wordpress.org/download/)
- 2. Unzip your download and move it to your `htdocs` folder (rename the unzipped folder if you like)
- 3. Go to phpMyAdmin (via MAMP) and create a new database
- 4. Rename `wp-config-sample.php` to `wp-config.php` and fill in your database name and MAMP credentials
- 5. Go to http://localhost:8888/YOUR-FOLDER/wp-admin/install.php and complete your install
+1. [Download WordPress](https://wordpress.org/download/)
+2. Unzip your download and move it to your `htdocs` folder (rename the unzipped folder if you like)
+3. Go to phpMyAdmin (via MAMP) and create a new database
+4. Rename `wp-config-sample.php` to `wp-config.php` and fill in your database name and MAMP credentials
+5. Go to http://localhost:8888/YOUR-FOLDER/wp-admin/install.php and complete your install
 
 ---
 template: inverse
