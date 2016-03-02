@@ -167,17 +167,27 @@
       width: 30%;
       height: 92%;
       float: left;
-
-      // h2:last-of-type,
-      // h3:last-child {
-      //    color: #000;
-      // }
    }
 
    .right-column {
       width: 65%;
       float: right;
       padding-top: 1em;
+   }
+
+   // Half-columns layout
+
+   .half-left-column,
+   .half-right-column {
+      width: 48%;
+   }
+
+   .half-left-column {
+      float: left;
+   }
+
+   .half-right-column {
+      float: right;
    }
 }
 

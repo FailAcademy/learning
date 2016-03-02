@@ -40,22 +40,14 @@ class: center, middle
 
 ### Classes, in Plain English
 
-A class is a **blue print** for creating an object.<br />(And your computer is the construction crew.)
+A class is a **blueprint** for creating an object.<br />(And your computer is the construction crew.)
 
 ---
 class: center, middle
 
 ### Objects, in Plain English
 
-A **general model** for something we see in the world, but using code constructs.
-
----
-
-# Objects Actually in Relation to English
-
-- An object is the noun
-- A property is an adjective
-- A method is a verb
+A **general model** for something we see in the world,<br />but using code constructs.
 
 ---
 class: center, middle
@@ -65,7 +57,91 @@ class: center, middle
 ]
 ---
 
-# Class Example
+
+# Objects, Actually in Relation to English
+
+- An object is the noun
+- A property is an adjective
+- A method is a verb
+
+---
+
+.half-left-column[
+### A Class in PHP
+
+Classes are the blueprints...
+
+```php
+class Dog {
+   public $name;
+   public $breed;
+   public $colour;
+
+   public function bark() {
+     return 'Woof!';
+   }
+
+   public function walk() {
+      return 'Happy dog :)';
+   }
+}
+```
+]
+
+.half-right-column[
+<br /><br />
+![Dog class](/public/img/slide-assets/oop-dog-class.svg)
+]
+
+---
+
+.half-left-column[
+### An Object in PHP
+
+We can create an object from a class...
+
+```php
+$dog_1 = new Dog();
+
+$dog_1->name = 'Gomez';
+$dog_1->breed = 'Mixed';
+$dog_1->colour = 'white';
+
+echo $dog_1->bark();
+```
+]
+
+.half-right-column[
+<br /><br />
+![Gomez object](/public/img/slide-assets/oop-object-gomez.jpg)
+]
+
+---
+
+.half-left-column[
+### Another Object
+
+We can create more than one object from a class too!
+
+```php
+$dog_2 = new Dog();
+
+$dog_2->name = 'Dexter';
+$dog_2->breed = 'Boston Terrier';
+$dog_2->colour = 'tuxedo';
+
+echo $dog_2->walk();
+```
+]
+
+.half-right-column[
+<br /><br />
+![Dexter object](/public/img/slide-assets/oop-object-dexter.jpg)
+]
+
+---
+
+# A More Salient Example
 
 An example of a simple (non-WP) blog post class:
 
@@ -91,7 +167,7 @@ class Blog_Post {
 
 ---
 
-# Object Example
+# Creating the Objects
 
 The act of creating a new objects is known as **instantiation**.
 
