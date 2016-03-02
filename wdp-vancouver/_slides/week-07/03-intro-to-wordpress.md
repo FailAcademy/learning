@@ -119,12 +119,16 @@ Configure the options as desired when prompted. Check out your new WP site at **
 You can log into the back-end of your WP new site at **http://demo_wp.dev/wp-admin** with the credentials that you set running the above command.
 
 ---
-class: center, middle
 
-.large[
-   Demo time! <br />
-   Let's walk through a MAMP-based WP set-up so we can appreciate how much easier that was with VV.
-]
+# Exercise 1 (Alt)
+
+We can also install WP locally using MAMP:
+
+ 1. [Download WordPress](https://wordpress.org/download/)
+ 2. Unzip your download and move it to your `htdocs` folder (rename the unzipped folder if you like)
+ 3. Go to phpMyAdmin (via MAMP) and create a new database
+ 4. Rename `wp-config-sample.php` to `wp-config.php` and fill in your database name and MAMP credentials
+ 5. Go to http://localhost:8888/YOUR-FOLDER/wp-admin/install.php and complete your install
 
 ---
 template: inverse
