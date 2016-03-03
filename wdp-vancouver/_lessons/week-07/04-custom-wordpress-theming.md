@@ -40,7 +40,7 @@ Prior to jumping into theming class, you'll want to make sure you've wrapped you
 
 Let's demystify the [WordPress Template Hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/) together.
 
-Based on the questions posed, determine what will be the correct template file to select.
+Based on the questions posed, determine what will be the correct template file to select...
 
 ---
 
