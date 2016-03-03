@@ -302,7 +302,77 @@ WordPress knows what to load/display based on:
 
 Let's demystify the [WordPress Template Hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/) together.
 
-Based on the questions posed, determine what will be the correct template file to select.
+Based on the questions posed, determine what will be the correct template file to select...
+
+---
+class: center, middle
+
+### Question #1:
+
+What template file is used to customize search results?
+
+---
+class: center, middle
+
+### Question #2:
+
+If you want to create a template for the single posts of a custom post type called *Products*, what will the template file name be?
+
+---
+class: center, middle
+
+### Question #3:
+
+What template file can we use for a static home page?
+
+---
+class: center, middle
+
+### Question #4:
+
+ What template files can be used for displaying blog posts on the home page?
+
+---
+class: center, middle
+
+### Question #5:
+
+What template file can we customize to show users when the URL they entered cannot be found?
+
+---
+class: center, middle
+
+### Question #6:
+
+If we don't provide a template file for `single.php` (single blog posts) or `page.php` (single pages), what new-ish template file can we use as a fallback for both?
+
+---
+class: center, middle
+
+### Question #7:
+
+What new template can we work with as of WP v4.4? What does it do for us?
+
+---
+class: center, middle
+
+### Question #8:
+
+How could we create a custom archive template for our *Product Type* taxonomy?
+
+---
+class: center, middle
+
+### Question #9:
+
+What two options do we have in the template hierarchy for creating a custom layout for a specific WP page?
+
+---
+class: center, middle
+
+### Question #10:
+
+What template file can we use to display single attachment pages for attachments that are images?
 
 ---
 template: inverse
