@@ -564,7 +564,7 @@ var shoppingList  = ['coffee', 'peppers', 'apple juice'];
 
 var totalItems = shoppingList.length;
 
-for (i = 0; i < totalItems; i++) {
+for (var i = 0; i < totalItems; i++) {
    document.write( shoppingList[i] + '<br />' );
 }
 ```
