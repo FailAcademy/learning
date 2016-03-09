@@ -39,6 +39,10 @@ Some pre-reading on WordPress security:
 
 ## Additional Resources
 
+Tips on how to choose a web:
+
+- [The (Seriously) Comprehensive Guide to Choosing a Web Host](https://webdesign.tutsplus.com/tutorials/the-seriously-comprehensive-guide-to-choosing-a-web-host--cms-25430)
+
 A handy plugin for migrating WordPress databases:
 
 - [WP Migrate DB](https://wordpress.org/plugins/wp-migrate-db/)

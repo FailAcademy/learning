@@ -19,21 +19,14 @@ layout: false
 
 # Agenda
 
-1. PHP OOP Basics
-2. Widget API 101
+1. Classes and Objects
+2. Scope (public, private, protected)
+3. Widget API 101 (and inheritance in OOP)
 
 ---
 template: inverse
 
-# PHP OOP Basics
-
----
-
-# Essential OOP
-
-- Classes and Objects
-- Scope (public, private, protected)
-- Inheritance
+# Classes and Objects
 
 ---
 class: center, middle
@@ -50,13 +43,6 @@ class: center, middle
 A **general model** for something we see in the world,<br />but using code constructs.
 
 ---
-class: center, middle
-
-.large[
-   Insight: Objects are created from classes!
-]
----
-
 
 # Objects, Actually in Relation to English
 
@@ -140,6 +126,13 @@ echo $dog_2->walk();
 ]
 
 ---
+class: center, middle
+
+.large[
+   Insight: Objects are created from classes!
+]
+
+---
 
 # A More Salient Example
 
@@ -148,11 +141,11 @@ An example of a simple (non-WP) blog post class:
 ```php
 class Blog_Post {
 
-   private $author;
+   public $author;
 
-   private $publish_date;
+   public $publish_date;
 
-   private $is_published;
+   public $is_published;
 
    public function publish() {
       // Publish the article here
@@ -187,14 +180,21 @@ When you have a class, you can have **multiple instances** of objects based on i
 class: center, middle
 
 .large[
-   What objects do we know and love in WP?
+   What objects do we already know and love in WP?
 ]
 
 ---
 class: center, middle
 
 .large[
-   **[Check out the class!](https://github.com/WordPress/WordPress/blob/master/wp-includes/class-wp-post.php)**
+   **[Check out the class!](https://github.com/WordPress/WordPress/blob/master/wp-includes/query.php#L835)**
+]
+
+---
+class: center, middle
+
+.large[
+   **[See it in action...](https://github.com/WordPress/WordPress/blob/master/wp-includes/post.php#L1711)**
 ]
 
 ---
@@ -203,7 +203,7 @@ class: center, middle
 
 - Properties exist at the **class level**
 - They can be used in any of the functions defined in the class (and don't have to be passed as parameters)
-- How they are set is done in a special function known as a **constructor**
+- We can set our property values on the **class definition** or in a special function known as a **constructor**
 
 ---
 
@@ -214,19 +214,18 @@ In PHP classes, the constructor function is always named `__construct`:
 ```php
 class Blog_Post {
 
-   private $author;
+   public $author;
 
-   private $publish_date;
+   public $publish_date;
 
-   private $is_published;
+   public $is_published = false;
 
    function __construct() {
       $this->author = '';
       $this->publish_date = null;
-      $this->is_published = false;
    }
 
-   // Class methods here...
+   // Other class methods here...
 }
 ```
 
@@ -239,13 +238,19 @@ Using the `$this` keyword is what differentiates properties from other variables
 Just like in JS, `$this` is a **reference to the current object**.
 
 ---
+template: inverse
+
+# Scope
+
+---
 class: center, middle
 
 ### Scope
 
-Scope refers to how variables and functions can be access from third-party objects or child objects within the program.
+Scope refers to how properties and methods can be accessed from third-party objects or child classes within our PHP code.
 
-We can deliberately set the scope of properties and methods in our classes.
+We can deliberately set the scope of properties and methods in our classes using **visibility markers**.
+
 
 ---
 
@@ -253,22 +258,35 @@ We can deliberately set the scope of properties and methods in our classes.
 
 We can have `public`, `protected`, or `private` scope:
 
-- `public` properties and methods are available to every type of object that's attempting to access the variable or the function
-- `protected` properties and methods are available within the context of the class in which they are defined, but not for third-party objects (i.e. can't be used by other objects of classes, but they can be used by sub-classes)
-- `private` properties and methods are locked into the class in which they're defined (can't even be used by sub-classes)
+`public`                      | `private`                        | `protected`
+----------------------------- | ---------------------------------|---------------------------------
+Visible to the outside world  | Not visible to the outside world | Not visible to the outside world
+Available to child classes    | Not accessible to child classes  | Accessible to child classes
+
+**Note:** If you leave off the visibility marker for a property or method it will be `public`.
+
+---
+
+# Why Limit Visibility?
+
+Why would you want to hide properties and methods from the outside world (i.e. objects instantiated from from the class)?
+
+- To **encapsulate the data handling** within your objects
+- An **object should be a black box** where you feed arguments into your object and you get a response in return
+- This pattern makes your object **more independent** from the rest of your application, so you can change all of the internals of the object and it won't break your application
 
 ---
 
 # In Action
 
-Let's take a look at an `Author` class that could go with our `Blog_Post` class and see how scope is being leveraged:
+Let's take a look at an `User` class that could go with our `Blog_Post` class and see how scope is being leveraged:
 
 ```php
-class Author {
+class User {
 
-   protected $first_name;
+   private $first_name = 'John';
 
-   protected $last_name;
+   private $last_name = 'Smith';
 
    public function get_first_name() {
       return $this->first_name;
@@ -285,7 +303,7 @@ class Author {
 
 # Properties & Scope
 
-You're not likely to see many attributes marked `public`.
+We can see why marking all properties as `public` may not be ideal here.
 
 You are likely to see them marked `protected` so they may also be used by subclasses, or `private` so that they may only be accessed internally.
 
@@ -293,7 +311,7 @@ You are likely to see them marked `protected` so they may also be used by subcla
 
 ---
 
-# In a Nutshell
+# Recapping...
 
 Classes should organize information so that:
 
@@ -361,13 +379,33 @@ class: center, middle
 ---
 class: center, middle
 
-### Another OOP Concept: Inheritance
+### Another Key OOP Concept: Inheritance
 
 *When one class acts as parent for another child class.*
 
-The parent provide properties and methods, but the child has the ability to introduce its own too.
-
 Like people, children inherit from their parents, but parents do not inherit from their children!
+
+---
+
+# About Inheritance
+
+- When you create a child class from parent class, the child class inherits all the properties and methods of the parent class
+- Child classes cannot access `private` properties or methods of the parent
+- When we use the `protected` keyword that means that the given property or method is not available to the outside world, but it is available to its child classes
+
+---
+
+# Why Do We Bother?
+
+*Why bother extending a class in the first place?*
+
+Creating a child class allows us to **extend** the properties and methods of the parent class.
+
+The parent provides properties and methods, but the child has the ability to introduce its own too.
+
+Properties and methods in child classes can even **override** those in the parent class too.
+
+And we will do exactly that with the **[WP_Widget class](https://github.com/WordPress/WordPress/blob/master/wp-includes/class-wp-widget.php).**
 
 ---
 
@@ -435,7 +473,9 @@ Also notice that the second argument is now **an array**, not just a function na
 add_action( 'admin_init', array( $this, 'remove_submenus' ) );
 ```
 
-WP has to know where to call the `remove_submenus` method. Since it lives within our class, we have to tell WordPress to call the method on an instance of our class.
+WP has to know where to call the `remove_submenus` method.
+
+Since it lives within our class, we have to tell WordPress to call the method on an instance of our class.
 
 ---
 
