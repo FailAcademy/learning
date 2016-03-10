@@ -79,7 +79,7 @@ WordPress offers us [many functions](http://codex.wordpress.org/Data_Validation)
 
 **Used for:** Output that should have absolutely no HTML in the output.
 
-**What it does:** Converts HTML special characters (such as <, >, &) into their "escaped" entity (`&lt;`, `&gt;`, `&amp;`).
+**What it does:** Converts HTML special characters (such as `<`, `>`, `&`) into their "escaped" entity (`&lt;`, `&gt;`, `&amp;`).
 
 **[esc_html() in the Codex.](http://codex.wordpress.org/Function_Reference/esc_html)**
 
@@ -89,7 +89,7 @@ WordPress offers us [many functions](http://codex.wordpress.org/Data_Validation)
 
 **Used for:** Output being used in the context of an HTML attribute (think `title`, `data-` fields, `alt` text).
 
-**What it does:** The exact same thing as esc_html. The only difference is that different WordPress filters are applied to each function.
+**What it does:** The exact same thing as `esc_html`. The only difference is that different WordPress filters are applied to each function.
 
 **[esc_attr() in the Codex.](http://codex.wordpress.org/Function_Reference/esc_attr)**
 
@@ -99,7 +99,7 @@ WordPress offers us [many functions](http://codex.wordpress.org/Data_Validation)
 
 **Used for:** Output that is necessarily a URL. Examples would be image `src` attributes and `href` values.
 
-**What it does:** A more thorough, specific escaping than the esc_attr & esc_html functions, which removes or converts any characters not allowed in URLs into their URL-safe format.
+**What it does:** A more thorough, specific escaping than the `esc_attr` & `esc_html` functions, which removes or converts any characters not allowed in URLs into their URL-safe format.
 
 **[esc_url() in the Codex.](http://codex.wordpress.org/Function_Reference/esc_url)**
 
@@ -253,16 +253,6 @@ The key is to do your homework! Whichever option you choose, you want to make su
 - Consistent up-time
 - 24/7 support
 - Track record of good customer service
-
----
-class: center, middle
-
-.large[
-   [Green Geeks](https://www.greengeeks.com/track/redacademy/cp-default/lp-1)
-
-   20% Off Discount Code:
-   **TAKE20OFF**
-]
 
 ---
 class: center, middle
