@@ -29,19 +29,20 @@ lesson_date: 2016-03-10
 
 ## Lab Activity
 
-In today's lab, we'll work together to build out the jQuery required to add the required WP API-related functionality for the Quotes on Dev site.
+<!-- In today's lab, we'll work together to build out the jQuery required to add the required WP API-related functionality for the Quotes on Dev site.
 
 Specifically, we'll fetch data from WP using the REST API plugin and dynamically populate it in the site, and we'll create a basic form to accept front-end post submissions via the API too.
 
-More details on this mini-project and its supporting files can be found [here](/project/project-6-wp-api-angularjs-wordpress-theme/).
+More details on this mini-project and its supporting files can be found [here](/project/project-6-wp-api-angularjs-wordpress-theme/). -->
 
 ---
 
 ## Additional Resources
 
-From the codex, all about nonces in WordPress:
+All about using nonces in WordPress:
 
 - [WordPress Nonces](https://codex.wordpress.org/WordPress_Nonces)
+- [An Introduction to WordPress Nonces with Examples](https://www.elegantthemes.com/blog/tips-tricks/an-introduction-to-wordpress-nonces-with-examples)
 
 Documentation for WP API v2:
 

@@ -37,7 +37,7 @@ Ajax requests in WP traditionally involved quite a bit of PHP:
 
 1. Make the Ajax call in JS
 2. Create a PHP function, which will handle the action
-3. Make sure the request should happing (security!)
+3. Make sure the request should happening (security!)
 4. Add the function to the `wp_ajax_` hook (and the `wp_ajax_nopriv_` for logged out users)
 5. Create success handlers as needed
 
@@ -100,16 +100,16 @@ Use `wp_localize_script()` to pass data from PHP to JS:
 ```php
 // In your functions.php file
 
-function qod_scripts() {
-   wp_enqueue_script( 'qod_api', get_template_directory_uri() . '/build/js/api.min.js', array( 'jquery' ), false, true );
+function red_scripts() {
+   wp_enqueue_script( 'red_api', get_template_directory_uri() . '/build/js/api.min.js', array( 'jquery' ), false, true );
 
- 	wp_localize_script( 'qod_api', 'api_vars', array(
+ 	wp_localize_script( 'red_api', 'api_vars', array(
       'nonce' => wp_create_nonce( 'wp_rest' ),
       'success' => 'Thanks, your quote submission was received!',
       'failure' => 'Your submission could not be processed.',
  	) );
 }
-add_action( 'wp_enqueue_scripts', 'qod_scripts' );
+add_action( 'wp_enqueue_scripts', 'red_scripts' );
 ```
 
 ```js
@@ -225,7 +225,7 @@ function red_comment_ajax() {
    exit;
 }
 add_action( 'wp_ajax_red_comment_ajax', 'red_comment_ajax' );
-add_action( 'wp_ajax_nopriv_red_comment_ajax', 'red_comment_ajax' );
+// add_action( 'wp_ajax_nopriv_red_comment_ajax', 'red_comment_ajax' );
 ```
 
 ---
@@ -258,7 +258,7 @@ That's where the [WP REST API](http://v2.wp-api.org/) comes in!
 
 # A REST API?
 
-- REST stands for Representational State Transfer
+- REST stands for REpresentational State Transfer
 - Uses HTTP methods explicitly (e.g. GET, POST, PUT, DELETE)
 - Is stateless (the client includes any state information needed in the request to the server and vice versa)
 - Transfers XML or JSON
