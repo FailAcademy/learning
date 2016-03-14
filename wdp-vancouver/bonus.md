@@ -7,15 +7,15 @@ title: Bonus Lessons
 
 [CSS Best Practices](/slides/bonus-css-best-practices-slides/)
 
+### Monday, March 7th:
+
+[Intro to IA](/public/files/intro-to-ia.pdf) (guest lecture by Robert Mackie)
+
 <!--
 
 ### Monday, September 28th:
 
 [Intro to UX Design](/public/files/intro-to-ux.pdf) (guest lecture by Robert Mackie)
-
-### Tuesday, November 3rd:
-
-[Intro to IA](/public/files/intro-to-ia.pdf) (guest lecture by Robert Mackie)
 
 ### Wednesday, November 18th:
 
