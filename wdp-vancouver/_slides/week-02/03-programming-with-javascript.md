@@ -66,6 +66,19 @@ class: center, middle
 
 ---
 
+# About programming
+
+## Most programming languages share similar concepts. <br/>
+
+Most will have:
+- Variables
+- Expressions (math / truth checking)
+- Functions
+- Objects
+- Loops
+
+---
+
 # The Console
 
 Because JS is "client-side" you can see it in your browser:
@@ -73,6 +86,12 @@ Because JS is "client-side" you can see it in your browser:
 .border[
    ![Scripts in page source](../../public/img/slide-assets/elements-screenshot.png)
 ]
+
+---
+class: center, middle
+
+### Open your browser console
+# ⌘ + shift + i
 
 ---
 
@@ -92,28 +111,13 @@ You can also use the console to identify bugs in your JS code.
 
 ---
 
-### The Node.js REPL
-
-REPL is an acronym that stands for **"Read Evaluate Print Loop"**. Most programming languages have a REPL program that you can use to run code in that language, from the command line. Node.js provides a *JavaScript runtime environment* for your operating system.
-
-To run a JavaScript program, `cd` to the directory where you've created your program, and run the command `node` followed by the name of the file you've created. For example, if your program is written in a file named `main.js` you can run the code in that file by typing `node main` from the command line.
-
----
-
 ### Debugging using `console.log()`
 
 In JavaScript, we can use `console.log()` to print values into the *browser console* to help us understand what particuar values may be at specific points in your programs execution flow.
 
 ```js
 
-function addNumbers(num1, num2) {
-      // we can print the value of num1 and num2 
-      // to the debugging console in your browser
-      // whenever your program executes this function!
-      console.log(num1, num2);
-      console.log(num1 + num2);
-      return num1 + num2;
-}
+console.log('hello!');
 
 ```
 
@@ -160,39 +164,39 @@ Here are a few examples:
 
 ---
 
-### Statements
+# Statements
 
-In a computer language, a group of words, numbers, and operators that performs a specific task is a **statement**. In JavaScript, a statement might look as follows: `a = b * 2;`
+Statements in JavaScript end with a `;`
 
-The characters `a` and `b` are called **variables**.
+Here is an example of a statement:
+```javascript
+a = b * 2;
+```
 
-By contrast, the `2` is just a **value** itself, called a **literal value**, because it stands alone without being stored in a variable.
-
-The `=` and `*` characters are **operators** -- they perform actions with the values and variables such as assignment and mathematic multiplication.
-
-
----
-
-### Statements
-
-Most statements in JavaScript conclude with a semicolon `;` at the end.
-
-The statement `a = b * 2;` tells the computer, roughly, to get the current value stored in the variable `b`, multiply that value by `2`, then store the result back into another variable we call `a`.
-
-Programs are just collections of many such statements, which together describe all the steps that it takes to perform your program's purpose.
+Statements are any combination of **variables**, **values**, and **operators**
 
 ---
 
 # Expressions
 
-Statements are made up of one or more **expressions**. An expression is any reference to a variable or value, or a set of **variable**(s) and **value**(s) combined with operators.
+A Statement is made up of one or more **expressions**. <br>
 
+An expression is any reference to a **variable** or **value**, or a set of **variable**(s) and **value**(s) combined with **operators**.
+
+Here is an example of an **if statement**:
+
+```javascript
+if(a > 21 || (a * 4) === 32 ) {
+  console.log('Got result!');
+}
+
+```
 
 ---
 
 # Variables
 
-In JS, we use the **var** keyword to define our variables, here is what a **variable declaration** looks like, in JavaScript!
+The **var** keyword defines a variable. here is what a **variable declaration** looks like, in JavaScript!
 
 ```javascript
 
@@ -240,7 +244,7 @@ var today = new Date;
 var dayOfWeek = today.getDay();
 var greeting;
 
-if ( dayOfWeek == 2 ) {
+if ( dayOfWeek === 2 ) {
    greeting = 'Today is Tuesday';
 } else {
    greeting = 'Nope, not Tuesday!';
@@ -254,7 +258,7 @@ console.log(greeting);
 
 # Exercise 1
 
-Open a new browser tab and open the console, and type in each line one at a time:
+Open a new browser tab and open the console, and copy and paste this code there:
 
 ```js
 
@@ -273,7 +277,6 @@ template: inverse
 
 # Values & Types
 
-
 ---
 ### Values & Types - Primitives
 
@@ -283,73 +286,10 @@ That means, numbers for math, strings for creating text and so on.
 Primitive values:
 
 `"I'm a String";`<br>
-`'I'm another sring`;<br>
+`'I'm another sring;`<br>
 `42;`<br>
 `true;`<br>
-`false`;<br>
-
----
-
-### Values &  Types - Type Coercion
-
-In JavaScript, certain **operations** can change the value of primitives.
-Getting used to how JavaScript handles primitives is an important part of using the language, and also the cause of many bugs and frustrations for beginners.
-
-
-Try this:
-```js
-
-var a = "42";
-var b = Number( a );
-
-console.log( a );   // "42"
-console.log( b );   // 42
-
-```
-
----
-template: inverse
-
-# When is a number not a number?
-(When it's a string)
-
----
-
-# Coercion + Overloading
-
-JavaScript is weird.
-
-**More Type Coercion**
-```js
-"2" === 2 // false
-"2" == 2 // true, wtf?
-```
-
-**Operator Overloading**
-```js
-"42" + 5; // "425" ok that maskes sense
-```
-
-Because of this unique behavior, it's a best practice to **always use `===` (triple equals)** when doing value comparisons in JavaScript.
-
-
----
-template: inverse
-
-# Truthy and Falsy values
-
----
-### JavaScript Truth Table
-
-The Following values are always `false`:
-
-- `false`
-- `undefined`
-- `""` (an empty string)
-- `null`
-- `0`
-- `NaN` (a special Number value meaning Not-a-Number!)
-
+`false;`<br>
 
 ---
 template: inverse
@@ -360,13 +300,15 @@ template: inverse
 
 # Arithmetic Operators
 
-Operators allow us to create a single value from multiple values. We can use `+`, `-`, `/`, and `*` to calculate values and store them in variables:
+Here are JavaScript's basic arithmmatic operators: <br>
+
+`+`, `-`, `/`, `%` and `*` !
 
 ```javascript
 var quantity = 3 + 2;
 var total = (4 - 1) * 3;
-var totalAndOne = total ++
-var totalMinusOne = total --
+var totalAndOne = total ++;
+var totalMinusOne = total --;
 ```
 
 *What will the above variables return?*
@@ -403,26 +345,26 @@ var remainderTwo = 6 % 2;
 We can also compare values and evaluate their result:
 
 ```javascript
-3 > 2
+3 > 2;
 
-3 >= 2
+3 >= 2;
 
-3 < 2
+3 < 2;
 
-3 == 2
+3 == 2;
 
-3 === '3'
+3 === '3';
 
-3 != '3'
+3 != '3';
 
-3 !== 2
+3 !== 2;
 ```
 
 *What will the above expressions return?*
 
 ---
 
-# Comparison Operators and Conditions
+# Comparison Operators and Conditionals
 
 Comparison operators are helpful when paired with conditional statements:
 
@@ -437,6 +379,110 @@ if ( score >= 50 ) {
 ```
 
 *What will happen when this script runs?*
+
+---
+
+### Values &  Types - Type Coercion
+
+In JavaScript, certain **operations** can change the value of primitives.
+Getting used to how JavaScript handles primitives is an important part of using the language, and also the cause of many bugs and frustrations for beginners.
+
+
+Try this:
+```js
+
+var a = "42";
+var b = Number( a );
+
+console.log( a );   // "42"
+console.log( b );   // 42
+
+```
+
+---
+
+template: inverse
+
+# When is a number not a number?
+(When it's a string)
+
+---
+
+# Coercion + Overloading
+
+JavaScript is weird.
+
+**More Type Coercion**
+```js
+"2" === 2 // false
+"2" == 2 // true, wtf?
+```
+
+**Operator Overloading**
+```js
+"42" + 5; // "425" ok that maskes sense
+```
+
+Because of this unique behavior, it's a best practice to **always use `===` (triple equals)** when doing value comparisons in JavaScript.
+
+---
+
+template: inverse
+
+# Truthy and Falsy values
+
+---
+
+### JavaScript Truth Table
+
+The Following values are always `false`:
+
+- `false`
+- `undefined`
+- `""` (an empty string)
+- `null`
+- `0`
+- `NaN` (a special Number value meaning Not-a-Number!)
+
+---
+
+# And (&&) and Or (||)
+
+In JavaScript we can check for **Truthy** and **Falsy** values.
+
+For example, we can write an *if statement* like this:
+
+```javascript
+if(a < b || b > c) {
+  console.log('got result');
+}
+
+```
+
+---
+
+#Short Circuits
+
+We can use **comparison operators** and **assignment** to get a value depending on some condition:
+
+```javascript
+
+// The value of a will either be true or false depending on the truthyness of b & c ...
+var a = b && c;
+
+```
+
+---
+
+# The Ternary Operator
+
+We can reduce the number of line in simple **conditionals** by using the ternary operator.
+
+```javascript
+var a = b < 21 ? b : c;
+```
+
+This statement reads: "If `b` is less than `21`, then the value of `a` will be `b`, otherwise `a` will have the value of `c` ... "
 
 ---
 template: inverse
