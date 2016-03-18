@@ -68,9 +68,8 @@ class: center, middle
 
 # About programming
 
-## Most programming languages share similar concepts. <br/>
+**Most programming languages share similar concepts.** <br/>
 
-Most will have:
 - Variables
 - Expressions (math / truth checking)
 - Functions
@@ -155,6 +154,8 @@ Comments are always hidden from execution in the script, and do not affect the o
 
 ---
 
+class: center, middle
+
 #What is Syntax?
 
 When we talk about programming, we will use specific adjectives to describe the programs we are talking about.
@@ -228,8 +229,8 @@ console.log(a); // logs undefined
 # Variable Pro Tips
 
 - Variables can hold *any* JavaScript value!
-- Make sure your variable names are descriptive (i.e. not `var a = 'First'`)
-- Use camelCase for defining JS variables
+- Make sure your variable names are descriptive
+- Use `camelCase` for defining JS variables
 - You can only use the dollar sign and underscore special characters in variable names
 
 ---
@@ -258,7 +259,7 @@ console.log(greeting);
 
 # Exercise 1
 
-Open a new browser tab and open the console, and copy and paste this code there:
+Copy and paste this code into the browser console:
 
 ```js
 
@@ -873,9 +874,14 @@ template: inverse
 ---
 class: center, middle
 
-### What are objects?
+**Objects** are like containers that hold groups of related variables and functions to create an organized **model** of something in your code.
 
-Objects are like containers that hold groups of related variables and functions to create an organized model of something in your code.
+```javascript
+
+var myObject = {};
+
+// Object literal!
+```
 
 ---
 
@@ -901,7 +907,7 @@ var person  = {
 
 # The Syntax of Objects
 
-Properties and methods are defined for the object using **key/value pairs**.
+**Properties** and **methods** are defined for the object using **key/value pairs**.
 
 This simply means that instead of writing `var firstName =` we write `firstName:` and separate multiple properties with commas instead of semi-colons.
 
