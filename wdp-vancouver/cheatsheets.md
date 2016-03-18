@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Cheatsheets & Resources
+title: Additional Resources
 ---
 
 ### GitHub
@@ -10,9 +10,15 @@ title: Cheatsheets & Resources
 
 ---
 
-### npm
+### NPM
 
 - [What is npm?](https://docs.npmjs.com/getting-started/what-is-npm)
+
+---
+
+### Gulp
+
+- [Gulp for Beginners](https://css-tricks.com/gulp-for-beginners/)
 
 ---
 
@@ -39,6 +45,10 @@ Debug Angular with this extension for your dev tools:
 
 - [Batarang](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk)
 
+Debug React with this extension for your dev tools
+
+- [React Dev Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+
 Understand how the box model works on a site by actually drawing boxes around those elements:
 
 - [Pesticide for Chrome](https://chrome.google.com/webstore/detail/pesticide-for-chrome/bblbgcheenepgnnajgfpiicnbbdmmooh)
@@ -46,6 +56,20 @@ Understand how the box model works on a site by actually drawing boxes around th
 An interface for organizing and sharing your GitHub Gists:
 
 - [GistBox](https://chrome.google.com/webstore/detail/gistbox/caoihfibgoiiakncomhccbflmlgjaohf)
+
+
+---
+
+### React
+
+- [React Fundamentals Course](http://courses.reactjsprogram.com/courses/reactjsfundamentals)
+- [Learn React Router](http://courses.reactjsprogram.com/courses/reactjsfundamentals)
+
+---
+
+### Angular
+
+- [Animating Angular Applications](https://scotch.io/tutorials/animating-angularjs-apps-ngview)
 
 ---
 
