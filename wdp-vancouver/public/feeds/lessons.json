@@ -11,111 +11,35 @@
       "url": {{lesson.url | jsonify}}
    },{% endfor %}
    {
-      "title": "PPD Lesson",
+      "title": "Project Work Day",
       "allDay": true,
-      "start": "2016-01-29"
-   },
-   {
-      "title": "Review/Work Day",
-      "allDay": true,
-      "start": "2016-01-29"
-   },
-   {
-      "title": "Review/Work Day",
-      "allDay": true,
-      "start": "2016-02-09"
+      "start": "2016-05-02"
    },
    {
       "title": "UX Guest Lecture",
       "allDay": true,
-      "start": "2016-02-10"
+      "start": "2016-05-03"
    },
    {
-      "title": "PPD Lesson",
+      "title": "Project Work Day",
       "allDay": true,
-      "start": "2016-02-12"
+      "start": "2016-05-13"
    },
    {
-      "title": "Review/Work Day",
+      "title": "Project Work Day",
       "allDay": true,
-      "start": "2016-02-19"
-   },
-   {
-      "title": "PPD Lesson",
-      "allDay": true,
-      "start": "2016-02-26"
-   },
-   {
-      "title": "IA Guest Lecture",
-      "allDay": true,
-      "start": "2016-03-07"
-   },
-   {
-      "title": "PPD Lesson",
-      "allDay": true,
-      "start": "2016-03-10"
-   },
-   {
-      "title": "Review/Work Day",
-      "allDay": true,
-      "start": "2016-03-11"
-   },
-   {
-      "title": "Presentation Skills I",
-      "allDay": true,
-      "start": "2016-03-15"
-   },
-   {
-      "title": "Group Dynamics Lesson",
-      "allDay": true,
-      "start": "2016-03-15"
-   },
-   {
-      "title": "Analytics Guest Lecture",
-      "allDay": true,
-      "start": "2016-03-16"
-   },
-   {
-      "title": "Presentation Skills I",
-      "allDay": true,
-      "start": "2016-03-17"
-   },
-   {
-      "title": "InVision Lesson",
-      "allDay": true,
-      "start": "2016-03-17"
-   },
-   {
-      "title": "SEO Guest Lecture",
-      "allDay": true,
-      "start": "2016-03-18"
-   },
-   {
-      "title": "PPD Lesson",
-      "allDay": true,
-      "start": "2016-03-18"
+      "start": "2016-06-03"
    },
    {
       "title": "GitHub Portfolio Development",
       "allDay": true,
-      "start": "2016-03-14",
-      "end": "2016-03-19"
-   },
-   {
-      "title": "PPD Lesson",
-      "allDay": true,
-      "start": "2016-03-30"
+      "start": "2016-06-06",
+      "end": "2016-06-11"
    },
    {
       "title": "Community Project Work",
       "allDay": true,
-      "start": "2016-03-21",
-      "end": "2016-04-01"
-   },
-   {
-      "title": "Professional Development Week",
-      "allDay": true,
-      "start": "2016-04-04",
-      "end": "2016-04-09"
+      "start": "2016-06-13",
+      "end": "2016-06-30"
    }
 ]

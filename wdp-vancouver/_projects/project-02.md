@@ -1,10 +1,10 @@
 ---
 layout: project
-title: Project 2 - Instagrid
-due: Wednesday, February 10th (beginning of class)
+title: Project 2 - Instanews
+due: Tuesday, May 3 (beginning of class)
 ---
 
-For Project 2, you're going to create a one-page, responsive website that allows a user to search for a hashtag via the Instagram API.
+For Project 2, you're going to create a one-page, responsive website that allows a user to search news story categories via the New York Times API.
 
 You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-02.zip).
 

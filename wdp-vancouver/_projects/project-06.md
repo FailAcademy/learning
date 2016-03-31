@@ -1,12 +1,12 @@
 ---
 layout: project
 title: Project 6 - GitHub Portfolio
-due: Monday, March 21st (beginning of class)
+due: Monday, June 13th (beginning of class)
 ---
 
 For Project 6, you'll be getting your GitHub portfolio into tip-top shape.
 
-This work is one of the most important components of this course because you'll want to be sure you're showcasing your best work to the RED Talent Manager and our hiring partners!
+This work is one of the most important components of this course because you'll want to be sure you're showcasing your best work to your future employers!
 
 ## Requirements:
 

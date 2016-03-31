@@ -1,7 +1,7 @@
 ---
 layout: project
-title: Project 3 - React App
-due: Monday, February 22nd (beginning of class)
+title: Project 3 - Mars Quiz App
+due: Monday, May 16th (beginning of class)
 ---
 
 ## Design Specifications:
