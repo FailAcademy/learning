@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: UI Animations in React
-lesson_date: 2016-02-17
+lesson_date: 2016-05-11
 ---
 
 ## Pre-Work

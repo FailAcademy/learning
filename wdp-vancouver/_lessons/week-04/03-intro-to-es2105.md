@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to ECMAScript 2015
 slides: ['_slides/week-04/01-intro-to-es2015.md']
-lesson_date: 2016-02-10
+lesson_date: 2016-05-04
 ---
 
 ## Pre-Work

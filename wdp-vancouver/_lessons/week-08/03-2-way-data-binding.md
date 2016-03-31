@@ -2,7 +2,7 @@
 layout: lesson
 title: Two-way Data-Binding & Forms
 slides: ['_slides/week-06/03-2-way-data-binding.md']
-lesson_date: 2016-02-24
+lesson_date: 2016-05-31
 ---
 
 ## Learning Objectives

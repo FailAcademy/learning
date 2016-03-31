@@ -2,49 +2,49 @@
    {
       "title": "Project 1 (Part 1) Due",
       "allDay": true,
-      "start": "2016-01-25",
+      "start": "2016-04-18",
       "url": "/project/project-1-part-1-aloha-homepage/"
    },
    {
       "title": "Project 1 (Part 2) Due",
       "allDay": true,
-      "start": "2016-02-01",
+      "start": "2016-04-25",
       "url": "/project/project-1-part-2-aloha-homepage/"
    },
    {
       "title": "Project 2 Due",
       "allDay": true,
-      "start": "2016-02-10",
+      "start": "2016-05-03",
       "url": "/project/project-2-instagrid/"
    },
    {
       "title": "Project 3 Due",
       "allDay": true,
-      "start": "2016-02-22",
+      "start": "2016-05-16",
       "url": "/project/project-3-react-app-tba/"
    },
    {
       "title": "Project 4 Due",
       "allDay": true,
-      "start": "2016-02-29",
-      "url": "/project/project-4-mars-colony-hybrid-app/"
+      "start": "2016-05-30",
+      "url": "/project/project-5-le-red-bread-site/"
    },
    {
       "title": "Project 5 Due",
       "allDay": true,
-      "start": "2016-03-14",
-      "url": "/project/project-5-le-red-bread-site/"
+      "start": "2016-06-06",
+      "url": "/project/project-4-mars-colony-hybrid-app/"
    },
    {
       "title": "GitHub Portfolio Due",
       "allDay": true,
-      "start": "2016-03-21",
+      "start": "2016-06-13",
       "url": "/project/project-6-github-portfolio/"
    },
    {
       "title": "Community Project Due",
       "allDay": true,
-      "start": "2016-04-05",
+      "start": "2016-06-30",
       "url": "/project/project-7-community-project/"
    }
 ]

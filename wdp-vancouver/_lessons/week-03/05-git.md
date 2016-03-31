@@ -2,7 +2,7 @@
 layout: lesson
 title: Version Control with Git
 slides: ['_slides/week-03/05-git.md']
-lesson_date: 2016-02-05
+lesson_date: 2016-04-29
 ---
 
 ## Pre-Work
