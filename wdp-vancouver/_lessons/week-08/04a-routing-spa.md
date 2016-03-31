@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Single Page Applications and Routing in Angular
-lesson_date: 2016-02-24
+lesson_date: 2016-06-01
 ---
 
 ## Learning Objectives

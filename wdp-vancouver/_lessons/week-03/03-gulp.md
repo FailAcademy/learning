@@ -2,7 +2,7 @@
 layout: lesson
 title: Gulp
 slides: ['_slides/week-03/03-gulp.md']
-lesson_date: 2016-02-03
+lesson_date: 2016-04-27
 ---
 
 ## Pre-Work

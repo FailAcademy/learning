@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: Understanding 'props' and 'state' in React
-lesson_date: 2016-02-16
+title: Props and State in React
+lesson_date: 2016-05-10
 ---
 
 ## Pre-Work
