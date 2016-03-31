@@ -15,8 +15,7 @@ Complete the following online Git tutorial before class:
 
 ## Learning Objectives
 
-- Learn about Git and why it is an indispensable tool for software development.
-- Learn to use the Git CLI to perform common Git tasks.
+- Use the Git CLI to perform common Git tasks.
 - Explore GitHub and the Git workflows we'll be using for the remainder of the course.
 - Create a Git repo locally, commit code, and push the code to remote repo on GitHub.
 - Deploy a project website on GitHub Pages using either a command line or a GUI.

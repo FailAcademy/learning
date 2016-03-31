@@ -13,20 +13,17 @@ Check out [this code](https://twitter.com/dan_abramov/status/622878422059089920)
 ---
 ## Learning Objectives
 
-Today, we'll learn the difference between `props` and `state` in React and demonstrate patterns for using these concepts.
-
-We'll also discuss a popular solution for managing `state` in our React applications called **Redux**, and learn how to apply the concepts, namely *flux architecture*, that the library is built to express.
+- Explain the difference between `props` and `state` in React.
+- Demonstrate patterns for using these concepts.
 
 ---
 
 ## Keywords
 
+- `Component`
+- `attribute`
 - `props`
 - `state`
-- `Action`
-- `Store`
-- `Reducer`
-- 'flux architecture'
 
 ---
 

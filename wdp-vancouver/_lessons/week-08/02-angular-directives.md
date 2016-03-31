@@ -7,8 +7,8 @@ lesson_date: 2016-05-31
 
 ## Learning Objectives
 
-Discover an and become familiar with Angular's built in directives.
-Create a basic directive.
+- Discover and become familiar with Angular's built in directives.
+- Create a basic directive.
 
 ---
 

@@ -19,7 +19,7 @@ Get extra practice with jQuery basics by completing this free Code School course
 
 ## Learning Objectives
 
-- Learn how to use JavaScript on the Web.
+- Use JavaScript on the Web (in the web browser).
 - Distinguish what jQuery is in relation to JavaScript.
 - Define what the browser’s Document Object Model (DOM) is, and traverse it using jQuery methods.
 - Manipulate the appearance of DOM elements using jQuery.

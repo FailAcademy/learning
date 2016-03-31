@@ -12,10 +12,9 @@ Please install the [React Developer Tools](https://chrome.google.com/webstore/de
 
 ## Learning Objectives
 
-- Review Javascript Array Methods `.map()` and `.filter()`
+- Demonstrate uses of the Javascript Array Methods `.map()` and `.filter()`
 - Review scope of `this` and the `.bind()` method
-- Introduce the notion of 'components' and 'state'
-- Introduce React, and become conversational regarding it's popularity
+- Explain the notion of 'components' and 'state'
 
 ---
 

@@ -27,7 +27,7 @@ Provided you finished the readings and Code School tutorial assigned in the prev
 
 ## Exercise 1
 
-In this exercise, you're going to use jQuery to create an accordian-style show/hide effect for a basic FAQ list.
+In this exercise, you're going to use jQuery to create an accordion-style show/hide effect for a basic FAQ list.
 
 You're welcome to use either **Codepen** or a **code editor** to complete this exercise.
 

@@ -12,9 +12,7 @@ Check out the React Router github project [here!](https://github.com/reactjs/rea
 
 ## Learning Objectives
 
-Today we'll discuss URL routing in single-page applications, and we'll create a typical SPA in React, buy completing a new mini-project.
-
-We'll also introduce the final project for React week!
+- Create a typical SPA in React, buy completing a new mini-project.
 
 ---
 

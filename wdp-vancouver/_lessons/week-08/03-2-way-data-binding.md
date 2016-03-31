@@ -7,9 +7,9 @@ lesson_date: 2016-05-31
 
 ## Learning Objectives
 
-- Learn how to work with forms in Angular.
+- Work with forms in Angular.
 - Create good UX by indicating invalid form input.
-- Discover the powr of 2-way data binding.
+- Discover the power of 2-way data binding.
 
 ---
 
