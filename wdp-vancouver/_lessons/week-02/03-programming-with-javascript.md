@@ -71,7 +71,3 @@ More resources and online tutorials for learning JavaScript:
 Free JS-related books online:
 
 - [JSbooks](http://jsbooks.revolunet.com/)
-
-A tool for helping you detect errors or other problems in your JavaScript:
-
-- [JSHint](http://jshint.com/)

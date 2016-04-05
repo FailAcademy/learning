@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Understanding 'props' & 'state' Slides
+title: Introduction to React
 ---
 
 {% highlight html %}
@@ -10,9 +10,13 @@ class: center, middle, inverse
 
 ---
 
-# Understanding 'props' & 'state' in React
+# Introduction to React
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
+
+---
+
+![React core concepts - One Way Data Flow](/public/img/slide-assets/react-concepts-1way.png)
 
 ---
 
