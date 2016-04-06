@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Intro to React
+title: Intro to React 2
 slides: ['_slides/week-05/03-intro-to-react-2.md']
 lesson_date: 2016-05-09
 ---
