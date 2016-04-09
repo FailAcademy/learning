@@ -1,9 +1,14 @@
 ---
 layout: project
-title: Project 4 - Le Red Bread Site
+title: Project 4 - WordPress Site
 due: Monday, May 30th (beginning of class)
 ---
 
+For Project 4, you will create a multi-page website with a blog using WordPress as a content management system.
+
+*More details to follow.*
+
+{% comment %}
 For Project 4, you will create a multi-page website with a blog for a bakery using WordPress as a CMS.
 
 You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-05.zip).
@@ -93,6 +98,7 @@ Want to challenge yourself? Your project could also:
 - Redirect single Testimonial pages to the Testimonials archive page (because the client doesn't want to show individual testimonials)
 - Add appropriate dashicons to customize the CPT menu items in the WP admin menu
 - Include a custom screenshot for your theme
+{% endcomment %} 
 
 ## Submission Instructions
 
