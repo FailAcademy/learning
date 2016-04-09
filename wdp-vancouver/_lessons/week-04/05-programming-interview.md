@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: The Programming Interview
-lesson_date: 2016-02-12
+lesson_date: 2016-05-06
 ---
 
 ## Pre-Work
@@ -10,7 +10,7 @@ There is no pre-work for this lesson.
 
 ---
 
-## Learning Objectives
+## Lab Activity
 
 In todays lesson, you'll be presented with typical programming challenges which you might encounter if you were applying for a job at a company like Facebook, Google, Amazon or Microsoft.
 

@@ -1,12 +1,12 @@
 ---
 layout: lesson
 title: Single Page Applications and Routing in Angular
-lesson_date: 2016-02-24
+lesson_date: 2016-06-01
 ---
 
 ## Learning Objectives
 
-Today we'll Learn how to use Angular-UI's router module to navigate between the paes of our application, and load the appropriate Templates and Controllers for each page.
+- Use Angular-UI's **router** module to navigate between the pages of our application, and load the appropriate Templates and Controllers for each page.
 
 ---
 

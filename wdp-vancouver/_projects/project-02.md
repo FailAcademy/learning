@@ -1,21 +1,17 @@
 ---
 layout: project
-title: Project 2 - Instagrid
-due: Wednesday, February 10th (beginning of class)
+title: Project 2 - Instanews
+due: Tuesday, May 3 (beginning of class)
 ---
 
-For Project 2, you're going to create a one-page, responsive website that allows a user to search for a hashtag via the Instagram API.
+For Project 2, you're going to create a one-page, responsive website that allows a user to filter top news story categories via the [New York Times API](http://developer.nytimes.com/docs/top_stories_api/).
 
 You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-02.zip).
 
 ## Design Specifications:
 
-*Updated design specifications TBA.*
-
 - The base font size is `16px` and it HEX code is `#ffffff`
 - The body font family is Open Sans Light
-- The HEX code for the button colour is `#e2231a`
-- The light grey border color is `#dbdbdb`
 - The medium grey color of the text in the footer is `#c2c2c2`
 
 ## Requirements
@@ -26,9 +22,9 @@ To receive a "Pass" grade for this project, your submission will need to satisfy
 
 Your project must:
 
-- Dynamically fetch photos and populate them in a webpage via the Instagram API based a text string input into a search field
+- Dynamically fetch story data and populate it in a webpage via the Top Stories API based a user's selection from a `select` field
 - Resize the header area (i.e. logo plus search input) so that it transitions from occupying `100vh` on page load to only `auto` height after the search form is submitted (you will need jQuery for this)
-- Link each returned image to its URL on Instagram
+- Link each returned image to its URL on the NYT website
 
 **General requirements:**
 
@@ -66,8 +62,9 @@ Your project must:
 
 Your project must:
 
-- Use Ajax to fetch data from an Instagram API endpoint
-- Transition users between UI states, starting where no photos have been returned, and then subsequently transitioning where photos populate the grid (by incorporating a loading gif)
+- Use Ajax to fetch data from the NYT Top Stories endpoint
+- Only display a maximum of 12 stories in the grid, and only display a story if it has a photo associated with it
+- Transition users between UI states, starting where no stories have been returned, and then subsequently transitioning where stories populate the grid (by incorporating a loading gif)
 
 **RWD requirements:**
 
@@ -80,8 +77,9 @@ Your project must:
 
 Want to challenge yourself? Your project could also:
 
-- Incorporate pagination and fetch additional photos via the Instagram API when the "Load More" button is clicked
+- Incorporate a `select` field with custom styles applied (you will need a jQuery plugin for this such as [Heapbox](http://www.bartos.me/heapbox/))
 - Incorporate a combination of jQuery and CSS3-based animation to animate the movement of the header on search submit
+- Incorporate CSS3 transitions to show and hide the article abstract on hover
 
 ## Submission Instructions
 

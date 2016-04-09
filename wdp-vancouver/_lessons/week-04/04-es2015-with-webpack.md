@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Developing with ES2015 & Webpack
-lesson_date: 2016-02-11
+lesson_date: 2016-05-05
 ---
 
 ## Pre-Work
@@ -18,9 +18,9 @@ Today we'll briefly discuss developing ES2015 applications using the Webpack bui
 
 ## Learning Objectives
 
-- Learn how to install the Webpack compiler as a Gulp task.
-- Learn how and why separating your code into modules is a good proctice.
-- Gain experience refactoring a non-trivial application from ES5 to ES2015
+- Install the Webpack compiler as a Gulp task.
+- Separate code into modules, and explain why this is important.
+- Refactor a non-trivial application from ES5 to ES2015
 
 ---
 

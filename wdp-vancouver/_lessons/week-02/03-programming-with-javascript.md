@@ -2,7 +2,7 @@
 layout: lesson
 title: Programming with JavaScript
 slides: ['_slides/week-02/03-programming-with-javascript.md']
-lesson_date: 2016-01-27
+lesson_date: 2016-04-20
 ---
 
 ## Pre-Work
@@ -71,7 +71,3 @@ More resources and online tutorials for learning JavaScript:
 Free JS-related books online:
 
 - [JSbooks](http://jsbooks.revolunet.com/)
-
-A tool for helping you detect errors or other problems in your JavaScript:
-
-- [JSHint](http://jshint.com/)

@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to ECMAScript 2015
 slides: ['_slides/week-04/01-intro-to-es2015.md']
-lesson_date: 2016-02-10
+lesson_date: 2016-05-04
 ---
 
 ## Pre-Work
@@ -15,8 +15,8 @@ Read this [excellent overview](https://github.com/bevacqua/es6) of ES2015 on git
 
 ## Learning Objectives
 
-- Learn the major differences between ECMAScript 5 and ECMAScript 6.
-- Learn the basics of how to build JavaScript applications using ES2015 & Gulp.
+- Illustrate the major differences between ECMAScript 5 and ECMAScript 6.
+- Build a basic JavaScript application using ES2015 & Gulp.
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: UI Animations in React
-lesson_date: 2016-02-17
+lesson_date: 2016-05-11
 ---
 
 ## Pre-Work
@@ -12,7 +12,7 @@ Check out React's [animation API](https://facebook.github.io/react/docs/animatio
 
 ## Learning Objectives
 
-- Learn how to create performant CSS / JavaScript animations using React's animation API.
+- Create performant CSS / JavaScript animations using React's animation API.
 
 ---
 

@@ -2,7 +2,7 @@
 layout: lesson
 title: Flexbox
 slides: ['_slides/week-02/01-flexbox.md']
-lesson_date: 2016-01-25
+lesson_date: 2016-04-18
 ---
 
 ## Pre-Work

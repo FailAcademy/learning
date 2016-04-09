@@ -2,7 +2,7 @@
 layout: lesson
 title: Gulp
 slides: ['_slides/week-03/03-gulp.md']
-lesson_date: 2016-02-03
+lesson_date: 2016-04-27
 ---
 
 ## Pre-Work
@@ -15,7 +15,7 @@ Feel free to save these cheatsheets for your own reference!
 ## Learning Objectives
 
 - Explain the benefits of automation in web projects.
-- Learn how to implement the following automation tasks: `uglification`, `watch`, `browser-sync`
+- Implement the following automation tasks: `uglification`, `watch`, `browser-sync`
 - Install Gulp globally and as a project dependency.
 - Install Gulp plugins via the command line, then build a `gulpfile.js` file, and run related tasks.
 - Distinguish between Gulp and other solutions for managing build/other automation tasks.

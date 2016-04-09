@@ -2,13 +2,13 @@
 layout: lesson
 title: Intro to Programming
 slides: ['_slides/week-02/02-intro-to-programming.md']
-lesson_date: 2016-01-26
+lesson_date: 2016-04-19
 ---
 
 ## Learning Objectives
 
-- Learn specific ways to 'think like a programmer'.
-- Learn basic programming concepts such as statements, booleans, conditions, loops and variables
+- Think like a programmer
+- Illustrate concepts such as statements, booleans, conditions, loops and variables
 - Use Scratch to build a basic program using graphical “pseudo code”
 
 ## Keywords

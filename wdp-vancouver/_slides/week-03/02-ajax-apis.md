@@ -352,11 +352,9 @@ class: center, middle
 
 # Exercise 3
 
-The Instagram API requires that we register a "Client" and get a **client_id** to access many of it's API endpoints.
+The NYT API requires that obtain an API key to access its various APIs' endpoints.
 
-(Some API requests require actual user-specific authentication with an **access_token**, but we won't be needing those for Project 2.)
-
-Let's create a Client for our Instagram project right now...
+Let's create an account on the NYT website so we can obtain a key to use on our projects right now...
 
 ---
 

@@ -2,7 +2,7 @@
 layout: lesson
 title: WP Security, Deployment & Hosting
 slides: ['_slides/week-09/01-security-deployment-hosting.md']
-lesson_date: 2016-03-14
+lesson_date: 2016-06-06
 ---
 
 ## Pre-Work
@@ -62,3 +62,7 @@ More about SSH:
 
 - [How SSH Works](https://www.youtube.com/watch?v=zlv9dI-9g1U)
 - [SSH Essentials: Working with SSH Servers, Clients, and Keys](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys)
+
+A clear visual explanation of how CSRF attacks work:
+
+- [Cross-Site Request Forgery Visually Explained](https://blog.barricade.io/cross-site-request-forgery-visually-explained/)

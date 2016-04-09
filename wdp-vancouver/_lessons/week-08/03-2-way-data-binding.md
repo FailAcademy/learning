@@ -2,14 +2,14 @@
 layout: lesson
 title: Two-way Data-Binding & Forms
 slides: ['_slides/week-06/03-2-way-data-binding.md']
-lesson_date: 2016-02-24
+lesson_date: 2016-05-31
 ---
 
 ## Learning Objectives
 
-- Learn how to work with forms in Angular.
+- Work with forms in Angular.
 - Create good UX by indicating invalid form input.
-- Discover the powr of 2-way data binding.
+- Discover the power of 2-way data binding.
 
 ---
 
