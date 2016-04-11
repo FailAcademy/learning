@@ -3,6 +3,9 @@ layout: page
 title: Bonus Lessons
 ---
 
+*Come back for bonus lessons soon!*
+
+{% comment %}
 ### Friday, January 22nd:
 
 [CSS Best Practices](/slides/bonus-css-best-practices-slides/)
@@ -33,7 +36,6 @@ title: Bonus Lessons
 
 [Intro to SEO](/public/files/intro-to-seo.pdf) (guest lecture by Holly Lawton)
 
-<!--
 
 ### Monday, September 28th:
 
@@ -42,5 +44,4 @@ title: Bonus Lessons
 ### Wednesday, November 18th:
 
 [GitHub Pages (Plus More on Git)](/slides/github-pages-slides/)
-
--->
+{% endcomment %}
