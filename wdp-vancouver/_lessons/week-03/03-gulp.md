@@ -12,6 +12,7 @@ Visit [this site](https://github.com/osscafe/gulp-cheatsheet) and have a look at
 Feel free to save these cheatsheets for your own reference!
 
 ---
+
 ## Learning Objectives
 
 - Explain the benefits of automation in web projects.
