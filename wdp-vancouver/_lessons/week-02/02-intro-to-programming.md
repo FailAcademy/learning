@@ -11,6 +11,8 @@ lesson_date: 2016-04-19
 - Illustrate concepts such as statements, booleans, conditions, loops and variables
 - Use Scratch to build a basic program using graphical “pseudo code”
 
+---
+
 ## Keywords
 
 - Algorithm
@@ -22,6 +24,8 @@ lesson_date: 2016-04-19
 - Operator
 - Function
 
+---
+
 ## Exercise 1
 
 Time to write some pseudocode of your own! You're going to use pseudocode to write an algorithm for washing a car.
@@ -32,11 +36,14 @@ Some things to consider while writing your algorithm:
 - Each individual step involved in washing the car. Remember that machines can only do exactly what we tell them to do.
 - How long each step should take place. Is it something that happens only once, or does it need to happen repeatedly?
 
+---
+
 ## Exercise 2
 
 How fast can you type?
 - Lets get a sense of how fast you can type! We're all going to visit **[10 Fast Fingers](http://10fastfingers.com/typing-test/english)**, create an account and take the typing test and share your WPM!
 
+---
 
 ## Exercise 3
 
@@ -46,6 +53,8 @@ For this exercise, your first task is to create a basic program using one of the
 
 Your second task is to make sure you have fun with this :)
 
+---
+
 ## Lab Activity
 
 This lesson's lab is a choose-your-own-adventure activity. You can create anything you want using Scratch (a game, an animated story, etc.) as long as it meets the following criteria:
@@ -53,6 +62,8 @@ This lesson's lab is a choose-your-own-adventure activity. You can create anythi
 - You must use at least two sprites, at least one of which must resemble something other than a cat
 - You must use at least three functions total (i.e., not necessarily three per sprite)
 - You must use at least one condition, one loop, and one variable
+
+---
 
 ## Additional Resources
 

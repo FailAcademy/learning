@@ -287,7 +287,7 @@ That means, numbers for math, strings for creating text and so on.
 Primitive values:
 
 `"I'm a String";`<br>
-`'I'm another sring;`<br>
+`'I'm another sring';`<br>
 `42;`<br>
 `true;`<br>
 `false;`<br>
