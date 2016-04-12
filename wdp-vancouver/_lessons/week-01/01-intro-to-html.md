@@ -95,3 +95,7 @@ Some background information, for some context (and for fun):
 A free online version of Jeremy Keith's "HTML5 for Web Designers" book:
 
 - [HTML5 for Web Designers - Semantics](http://html5forwebdesigners.com/semantics/)
+
+All about HTML5, in relatively plain English:
+
+- [What Is HTML5?](https://code.tutsplus.com/tutorials/what-is-html5--cms-25803)
