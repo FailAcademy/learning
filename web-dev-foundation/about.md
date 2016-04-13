@@ -7,7 +7,7 @@ title: About
 
 This course is an introduction to web development. In the first half of this course, you'll gain introductory skills in HTML, CSS, and responsive web design. In the second half of this course, you will learn fundamental programming concepts through JavaScript, and learn how to use the jQuery library to add dynamic features to a website.
 
-Students who successfully complete the Web Developer Foundation course will be eligible to enroll in RED Academy's Front-End Web Developer professional program.
+Students who successfully complete the Web Developer Foundation course will be eligible to enroll in RED Academy's Web Developer Professional program.
 
 ## Pre-course Work
 
@@ -23,10 +23,12 @@ The evening program classes run from 6:00 to 9:00 p.m. on Monday and Wednesday n
 
 The following schedules are currently available:
 
-- [Winter 2016 - Part-time Evenings](/wdf-evenings-winter-2016/)
+- [Spring 2016 - Part-time Evenings](/wdf-evenings-spring-2016/)
 
 ## Instructor
 
-The lead instructor for the Web Developer Foundation course is **Doug Gough**.
+The lead instructor for the Web Developer Foundation course is **Johnny Ji**.
 
-Students project links will be submitted to: [douglas@redacademy.com](mailto:airrick@redacademy.com)
+Students project links will be submitted to: **[johnny@johnnyji.com](mailto:johnny@johnnyji.com)**
+
+Note that **Elgin-Skye McLaren** will teach the first four classes during Spring 2016.
