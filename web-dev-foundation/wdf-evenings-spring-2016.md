@@ -43,15 +43,15 @@ Wednesday, June 1          | [Intro to jQuery](/lesson/intro-to-jquery/)
 
 Week 8                     | Topics
 -------------------------- | --------------------------
-Monday, August 31          | [HTML Forms](/lesson/html-forms/) <br /> [Working with Animation and Forms in jQuery](/lesson/working-with-animation-and-forms-in-jquery/)
-Wednesday, September 2     | [Ajax and APIs](/lesson/intro-to-ajax-and-apis/) <br /> [Front-end Testing](/lesson/front-end-testing/)
+Monday, June 6             | [HTML Forms](/lesson/html-forms/) <br /> [Working with Animation and Forms in jQuery](/lesson/working-with-animation-and-forms-in-jquery/)
+Wednesday, June 8          | [Ajax and APIs](/lesson/intro-to-ajax-and-apis/) <br /> [Front-end Testing](/lesson/front-end-testing/)
 
 Week 9                     | Topics
 -------------------------- | --------------------------
-Monday, June 6             | [Hosting a Website](/lesson/hosting-a-website/)
-Wednesday, June 8          | [Hacker Edition - Intro to LESS](/lesson/hacker-edition-intro-to-less/)
+Monday, June 13            | [Hosting a Website](/lesson/hosting-a-website/)
+Wednesday, June 15         | [Hacker Edition - Intro to LESS](/lesson/hacker-edition-intro-to-less/)
 
 Week 10                    | Topics
 -------------------------- | --------------------------
-Monday, June 13            | In-class support for Capstone Project
-Wednesday, June 15         | __Captsone Project due__ (in-class presentations)
+Monday, June 20            | In-class support for Capstone Project
+Wednesday, June 22         | __Captsone Project due__ (in-class presentations)

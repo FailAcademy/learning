@@ -81,4 +81,4 @@ Your project must:
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a link** to your GitHub Page (the page URL, not the repository) or custom domain name to [douglas@redacademy.com](mailto:airrick@redacademy.com).
+When you're ready to submit your project, **please email a link** to your GitHub Page (the page URL, not the repository) or custom domain name to [johnny@johnnyji.com](mailto:johnny@johnnyji.com).
