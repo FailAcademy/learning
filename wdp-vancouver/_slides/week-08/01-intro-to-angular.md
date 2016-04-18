@@ -12,8 +12,6 @@ class: center, middle, inverse
 
 # Intro to Angular
 
-.inline-images[![Angular](http://angularconnect.com/perch/resources/angular.png)]
-
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
