@@ -28,8 +28,11 @@ template: inverse
 # What is Programming?
 
 ---
-class: center, middle 
-![](http://cdn.meme.am/instances/500x/21186129.jpg)
+class: center, middle
+
+.inline-images[
+   ![Programming like a boss](http://cdn.meme.am/instances/500x/21186129.jpg)
+]
 
 ---
 class: center, middle
@@ -61,6 +64,7 @@ class: center, middle
 ### Fancy Word, Simple Meaning
 
 An algorithm is a **self-contained set of instructions** to be followed in order to complete a task.
+
 Much of programming is writing very simple algorithms.
 
 ---
@@ -250,7 +254,7 @@ template: inverse
 
 ### Learn to Type
 
-This may seem obvious. More specifically, you should aim to gain some level of ability to *touch-type*, which means typing without looking at the keyboard. 
+This may seem obvious. More specifically, you should aim to gain some level of ability to *touch-type*, which means typing without looking at the keyboard.
 
 - Being a fast typer is not a requirement for being a good programmer, but it will save you time.
 
@@ -321,7 +325,7 @@ In JavaScript, we can use `console.log()` to print values into the *browser cons
 ```js
 
 function addNumbers(num1, num2) {
-      // we can print the value of num1 and num2 
+      // we can print the value of num1 and num2
       // to the debugging console in your browser
       // whenever your program executes this function!
       console.log(num1, num2);
@@ -345,7 +349,7 @@ function addNumbers(num1, num2) {
 
 # Debugging is fun!
 
-Debugging begins wth a mystery, and finding solutions to bugs will often lead you to a better understanding of the program you're writing, and the language you are using. 
+Debugging begins wth a mystery, and finding solutions to bugs will often lead you to a better understanding of the program you're writing, and the language you are using.
 
 Embrace the process. As a programmer 50% or more of your time will be spent debugging. More so in different circumstances, like working with older codebases, or code you don't initially understand, but you've been tasked to improve.
 
@@ -393,7 +397,7 @@ Commenting your code will help you and others understand your programs, and is e
 ---
 ### Commenting Your Code
 
-Here are some simple rules to follow when adding comments: 
+Here are some simple rules to follow when adding comments:
 1. Comments are not *'subtitles'*. Well written code is <br> **'self-documenting'**.
 2. Don't use comments to 'save' dead code for later. Usually, you'll forget to remove this stuff and it will clutter your programs. Only commit the code that is being used by your programs.
 
@@ -408,7 +412,7 @@ Here are some simple rules to follow when adding comments:
 There is always more than one way to solve a programming task. Programming is a challenging creative activity, and looking at how others have solved problems will help you improve your own repertoire!
 
 ---
-template: inverse 
+template: inverse
 
 # Us and Them
 

@@ -52,6 +52,10 @@ A few back-up plugins:
 - [BackWPup](https://wordpress.org/plugins/backwpup/)
 - [BackUpWordPress](https://wordpress.org/plugins/backupwordpress/)
 
+A WordCamp talk on managing WP environments and deployments:
+
+- [Tom McFarlin: The Truth About the Environment (A Primer For Professional WordPress Development Practices)](http://wordpress.tv/2016/04/06/tom-mcfarlin-the-truth-about-the-environment-a-primer-for-professional-wordpress-development-practices/)
+
 More on WordPress security best practices:
 
 - [WordPress Security: The Ultimate Guide](http://premium.wpmudev.org/blog/keeping-wordpress-secure-the-ultimate-guide/)
