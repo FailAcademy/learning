@@ -19,7 +19,7 @@ layout: false
 
 ####Exercise 1 - Type coercion
 
-Explanation: <br/>
+**Explanation**: <br/>
 - The if **block** (#1), compares the **number** 5 with the **string** '5' with double equals (`==`). JavaScript does **coercion** when comparing "things" using `==` and due to this **coercion**, the `console.log` within the **if block** gets executed. 
 - Coercion does not happen for **variables** within the **switch statement**. **Switch statements** use strict type checking (`===`).
 
