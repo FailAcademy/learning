@@ -7,7 +7,7 @@ lesson_date: 2016-04-27
 
 ## Pre-Work
 
-Visit [this site](https://github.com/osscafe/gulp-cheatsheet) and have a look at the **'English JavaScript'** cheatsheets, to get a feeling for what Gulp does, and for the code we'll be writing in todays lesson.
+Visit [this site](https://github.com/osscafe/gulp-cheatsheet) and have a look at the **English JavaScript** cheatsheets, to get a feeling for what Gulp does, and for the code we'll be writing in todays lesson.
 
 Feel free to save these cheatsheets for your own reference!
 
@@ -54,11 +54,10 @@ http://www.browsersync.io/docs/gulp/
 
 We'll implement all of the plugins we'll need to build out second project!
 
-- `gulp-plumber`
-- `gulp-notify`
-- `gulp-rename`
-- `jscs`
-- `jshint`
+- `plumber`
+- `notify`
+- `sass` / `autoprefixer` / `rename` / `cssnano`
+- `jscs` / `jshint`
 
 ---
 

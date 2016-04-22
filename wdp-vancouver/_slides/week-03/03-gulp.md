@@ -19,7 +19,7 @@ layout: false
 
 # Agenda
 
-1. Introduce NPM
+1. Introduce npm
 1. Introduce and install Gulp
 2. Set up Gulp in your project
 3. Create named tasks
@@ -31,46 +31,59 @@ template: inverse
 # Dependencies
 
 ---
-### Dependencies
 
-The term *'dependencies'* is generally used to refer to any code your project *depends* on in order to work.
-We'll use the **Node Package Manager** to install 3rd party dependencies (other peoples code designed to be *modular*), into our project, automatically.
+# Dependencies
+
+The term **dependencies** is generally used to refer to any code your project **depends** on in order to work.
+
+We'll use the **Node Package Manager** to install 3rd party dependencies (other people's code designed to be **modular**), into our project, automatically.
 
 ---
 template: inverse
-#NPM (Node Package Manager)
+
+# Node Package Manager (npm)
 
 ---
-### NPM
 
-Node Package Manager is a tool that was built to help Node.js developers distribute and use modules of code in the Node.js environment.
+# npm
 
-Initially NPM was only useful to developers working in Node.js (ie. not in the browser, like us) environments. However, since it's release, NPM has become widely used to distribute modules for all JavaScript environments, thanks to tools like browserify and webpack (more on that later).
+Node Package Manager (npm) is a tool that was built to help Node.js developers distribute and use modules of code in the Node.js environment.
+
+Initially npm was only useful to developers working in Node.js (ie. not in the browser, like us) environments.
+
+However, since it's release, NPM has become widely used to distribute modules for all JavaScript environments, thanks to tools like browserify and webpack (more on that later).
 
 ---
 class: center, middle
-#Using NPM
 
-run `npm init` from your project directory to start using NPM.
+### Using npm
+
+Run `npm init` from your project directory to start using it.
 
 ---
 template: inverse
-#Installing NPM modules
+
+# Installing npm Modules
 
 ---
 class: center, middle
-#Installing NPM modules
 
-the command `npm install` will automatically install plugins from the NPM plugin repository.
+### Installing npm Modules
+
+The command `npm install` will automatically install plugins from the npm plugin repository.
 
 ---
 template: inverse
-# Maintaining a package.json file
+
+# Maintaining a package.json File
 
 ---
-## Maintaining a package.json file
 
-Your **package.json** file is a list of all of the 3rd party modules your project needs to run. It;s important that you keep this file up to date. NPM does most of this manually, but there may be time when you need to manually edit your `package.json` file to accurately reflect the dependencies for your project.
+# The package.json File
+
+Your **package.json** file is a list of all of the 3rd party modules your project needs to run.
+
+It's important that you keep this file up to date. NPM does most of this manually, but there may be time when you need to manually edit your `package.json` file to accurately reflect the dependencies for your project.
 
 ---
 template: inverse
@@ -81,7 +94,7 @@ template: inverse
 
 class: center, middle
 
-### Install Gulp in your Project 3 directory
+### Install Gulp in your Project 2 directory:
 
 Visit [Gulp's Getting Started page](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) and follow the instructions.
 
@@ -202,7 +215,6 @@ template: inverse
 # More Gulp Tasks
 
 ---
-
 class: center, middle
 
 ### Have our computers do the work...
@@ -244,18 +256,14 @@ class: center, middle
 
 ---
 
-## Exercise 3
+# Exercise 3
 
 We'll implement the rest of the plugins we'll need to build out second project!
 
 - `plumber`
 - `notify`
-- `sass`
-- `autoprefixer`
-- `rename`
-- `minifyCSS`
-- `jscs`
-- `jshint`
+- `sass` / `autoprefixer` / `rename` / `cssnano`
+- `jscs` / `jshint`
 
 ---
 
