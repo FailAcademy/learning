@@ -29,3 +29,8 @@ Today we'll briefly discuss developing ES2015 applications using the Webpack bui
 We'll install Webpack in our 2nd project and spend our time in class today refactoring to use some of the new features of ES2015!
 
 Use git to create and name a new branch in your project, so you don't overwrite your original solution!
+
+## Additional Resources
+
+- [Webpack homepage](https://webpack.github.io/)
+- [Webpack Howto](https://github.com/petehunt/webpack-howto)

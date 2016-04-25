@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to ES2015 Slides
+title: Developing with ES2015 & Webpack Slides
 ---
 
 {% highlight html %}
@@ -10,11 +10,13 @@ class: center, middle, inverse
 
 ---
 
-# Intro to ES2015
+# Developing with ES2015 & Webpack
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
+template: inverse
 
 # Questions?
 
