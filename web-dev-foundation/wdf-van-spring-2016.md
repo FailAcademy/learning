@@ -1,9 +1,10 @@
 ---
 layout: page
-title: Schedule - Spring 2016 / Evenings
+title: Schedule - Vancouver
 class: schedule
 ---
 
+---
 ## Spring 2016
 
 Week 1                     | Topics
@@ -23,7 +24,7 @@ Wednesday, May 4           | [Responsive Web Design](/lesson/responsive-web-desi
 
 Week 4                     | Topics
 -------------------------- | --------------------------
-Monday, May 9              | [Flexbox](/lesson/version-control-with-git/)
+Monday, May 9              | [Flexbox](/lesson/flexbox/)
 Wednesday, May 11          | [Git and GitHub](/lesson/git-and-github/) <br /> [Custom Web Fonts](/lesson/custom-web-fonts/)
 
 Week 5                     | Topics
