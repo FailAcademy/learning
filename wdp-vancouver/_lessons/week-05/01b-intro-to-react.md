@@ -9,6 +9,8 @@ lesson_date: 2016-05-09
 
 - Please install the [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) extension for Google Chrome.
 - Review the `.bind()` method and the syntax for creating `switch` statements.
+- We'll be coding React in the browser, so please set up a new folder to contain the files for this lesson.
+This folder should be set up with git and a package.json file (npm init).
 
 ---
 
@@ -33,17 +35,26 @@ lesson_date: 2016-05-09
 
 ## Exercise 1
 
-- Create an Array of 5 Todo objects. The objects should have a `name` and `completed` property.
-- Set some of the Todos completed property to `true` and others to `false`.
-- Use the `.filter()` method to search for and eliminate all item with a completed status set to true.
-- Use the `.map()` method to change all of the Todos to completed. 
+1. Create an Array of 5 Todo objects. The objects should have a `name` and `completed` property.
+2. Set some of the Todos completed property to `true` and others to `false`.
+3. Use the `.filter()` method to search for and eliminate all item with a completed status set to true.
+4. Use the `.map()` method to change all of the Todos to completed.
+
+Use `console.log()` to print the resulting Arrays.
 
 ---
 
 ## Exercise 2
 
-We'll create our first React Component, and demonstrate how component state and the component's
-render method work together to update the component's UI.
+Take a close look at [this image](/public/img/slide-assets/airbnb-components.png) and
+create named React components for the UI elements. (Remember that components can be nested and have parent components).
+
+---
+
+## Exercise 3
+
+Create a complete page using the React components you created in **exercise 2**. Take all of the individual components and nest them where 
+where appropriate, creating parent components if necessary.
 
 ---
 
@@ -51,9 +62,17 @@ render method work together to update the component's UI.
 
 In today's lab we'll start coding our first React mini-project. **A Snazzy todo list!**
 
+What you need to create:
+- A component for the app, linked to the DOM.
+- A component for the Todo List.
+- A component for each individual todo
+
+The list of todos should be generated using the `.map()` method from an Array of Todo objects.
+You'll need to style the todo list and controls as well.
+
 #### Mini-Project Stretch Goals
 - Add the ability to change the name of a todo, once it's need added.
-- Add the ability to filter: Show only completed todos; show only incomplete todos
+- Add the ability to filter: Show only completed todos & show only incomplete todos
 
 ---
 
