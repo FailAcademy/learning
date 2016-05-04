@@ -12,7 +12,8 @@ Please explore the [Webpack documentation](https://webpack.github.io/docs/?utm_s
 
 ## Agenda
 
-Today we'll briefly discuss developing ES2015 applications using the Webpack build tool.
+Today we'll briefly discuss developing ES2015 applications using the Webpack build tool. We'll begin by examining a simple 
+Webpack setup using `gulp-webpack`, and then we'll remove gulp and use the `webpack-dev-server`.
 
 ---
 
