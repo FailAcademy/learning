@@ -23,7 +23,7 @@ To receive a "Pass" grade for this project, your submission will need to satisfy
 Your project must:
 
 - Dynamically fetch story data and populate it in a webpage via the Top Stories API based a user's selection from a `select` field
-- Resize the header area (i.e. logo plus search input) so that it transitions from occupying `100vh` on page load to only `auto` height after the search form is submitted (you will need jQuery for this)
+- Resize the header area (i.e. logo plus `<select>`) so that it transitions from occupying the entire screen on page load to only auto height after the select form is changed (you will need jQuery for this)
 - Link each returned image to its URL on the NYT website
 
 **General requirements:**
@@ -56,7 +56,6 @@ Your project must:
 - Demonstrate effective use of box model properties
 - Demonstrate effective use of CSS properties for altering the visual display of text (e.g. `font-family`, `font-style`, `text-transform`, etc.)
 - Incorporate custom fonts using `@font-face`
-- Use an icon font
 
 **JS requirements:**
 
@@ -78,8 +77,8 @@ Your project must:
 Want to challenge yourself? Your project could also:
 
 - Incorporate a `select` field with custom styles applied (you will need a jQuery plugin for this such as [Heapbox](http://www.bartos.me/heapbox/))
-- Incorporate a combination of jQuery and CSS3-based animation to animate the movement of the header on search submit
-- Incorporate CSS3 transitions to show and hide the article abstract on hover
+- Incorporate a combination of jQuery and CSS3-based animation to animate the movement of the header on the `<select>` change
+- Use CSS3 transitions to show and hide the article abstract on hover
 
 ## Submission Instructions
 

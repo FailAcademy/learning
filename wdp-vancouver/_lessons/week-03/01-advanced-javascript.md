@@ -16,13 +16,13 @@ We'll take a close look at the quirks and unusual bits of the *ES5 JavaScript sp
 
 ###Type coercion
 - Describe the circumstances where JavaScript will explicitly change they canonical type of a value
-- Describe the behavior of the loose comparasin operator, `==` vs `===`
+- Describe the behavior of the loose comparison operator, `==` vs `===`
 
 ###Function scope and hoisting
 - Define the purpose of an IIFE
 - Define function scope
 - Define hoisting
-- Defing scope chaining
+- Define scope chaining
 
 ###Functions inside conditionals
 - Describe the behavior of function expressions written inside conditional block
@@ -31,10 +31,10 @@ We'll take a close look at the quirks and unusual bits of the *ES5 JavaScript sp
 ###'Pass by Value' vs. 'Pass By Reference'
 - Describe what is meant by 'Pass by value'
 - Describe what is meant by 'Pass by reference'
- 
+
 ###Methods, Objects, `this` & `bind`
 - Describe why JavaScript provides a  `bind` method
-- Describe ways to influence the value of `this` when extracting methods from objects 
+- Describe ways to influence the value of `this` when extracting methods from objects
 
 ---
 
@@ -44,7 +44,7 @@ We'll take a close look at the quirks and unusual bits of the *ES5 JavaScript sp
 ```js
 function printHi() {
 
-    var myVar = 5; 
+    var myVar = 5;
 
     if(myVar == '5') {  // 1
         console.log("Hi, from if block")
@@ -56,7 +56,7 @@ function printHi() {
     }
 }
 
-printHi(); 
+printHi();
 ```
 
 ####What will the output be?
@@ -135,18 +135,18 @@ var name = "John";
 ```js
 var me = {                  // 1
     'partOf' : 'A Team'
-}; 
+};
 
 function myTeam(me) {       // 2
 
     me = {                  // 3
         'belongsTo' : 'A Group'
-    }; 
-} 
+    };
+}
 
 function myGroup(me) {      // 4
     me.partOf = 'A Group'; // 5
-} 
+}
 
 myTeam(me);     
 console.log(me);            // 6
@@ -176,7 +176,7 @@ var myself = {
 
 myself.printMyNickNames();
 ```
-    
+
 ---
 
 ## Lab Activity

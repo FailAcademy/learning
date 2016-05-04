@@ -16,6 +16,7 @@ _site
 .bundle
 .sass-cache
 .env
+.vscode
 Gemfile
 Gemfile.lock
 node_modules
@@ -23,3 +24,4 @@ package.json
 vendor
 config.ru
 Rakefile
+
