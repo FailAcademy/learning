@@ -19,17 +19,50 @@ Webpack setup using `gulp-webpack`, and then we'll remove gulp and use the `webp
 
 ## Learning Objectives
 
-- Install the Webpack compiler as a Gulp task.
-- Separate code into modules, and explain why this is important.
-- Refactor a non-trivial application from ES5 to ES2015
+- Install the Webpack compiler in an existing project.
+- Explore Webpack's CLI
+- Explore Webpack's 'loader' interface
+- Use Webpack to transform JavaScript code (ES5 -> ES2015)
+- Use Webpack to transform SCSS files
+- Use Webpack to set up source maps for compiled files (CSS / JavaScript)
+- Use Webpack's Development server to watch files and compile on save
+
+---
+
+## Exercise 1
+
+---
+
+## Exercise 2
+
+---
+
+## Exercise 3
+
+---
+
+## Exercise 4
+
+---
+
+## Exercise 5
+
+---
+
+## Exercise 6
+
+---
+
+## Exercise 7
 
 ---
 
 ## Lab Activity
 
-We'll install Webpack in our 2nd project and spend our time in class today refactoring to use some of the new features of ES2015!
+We'll install Webpack in our 2nd project and spend our time in class today removing gulp, and replacing all functionality
+with it's Webpack equivalent. 
 
-Use git to create and name a new branch in your project, so you don't overwrite your original solution!
+---
 
 ## Additional Resources
 
