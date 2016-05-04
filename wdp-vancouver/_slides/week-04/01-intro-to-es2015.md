@@ -157,7 +157,7 @@ export default function b() {}
 
 Clone the es2015 repo, and follow the README to get setup.
 
-`> git clone https://github.com/redacademy/es2015`
+`git clone https://github.com/redacademy/red-es2015`
 
 Follow the instructions in "import-export/src/index.js".
 

@@ -1,33 +1,38 @@
 ---
 layout: project
-title: Project 4 - WordPress Site
+title: Project 4 - Inhabitent Site
 due: Monday, May 30th (beginning of class)
 ---
 
-For Project 4, you will create a multi-page website with a blog using WordPress as a content management system.
+For Project 4, you will create a multi-page website with a blog for a camping supply company called Inhabitent using WordPress as a content management system.
 
-*More details to follow.*
-
-{% comment %}
-For Project 4, you will create a multi-page website with a blog for a bakery using WordPress as a CMS.
-
-You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-05.zip).
+You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-04.zip).
 
 ## Design Specifications:
 
-- This fixed width website is `1024px` wide
-- The base font size is `16px` and its HEX code is `#222222`
-- The accent font family is Overlock (for headings, etc.)
-- The main background colour is `#ffffff` and the HEX code for the secondary off-white background colour is `#fafafa`
-- The HEX code for the red brand colour is `#db272a`
-- The HEX code for the brown brand colour is `#400c0d`
-- The HEX code for the light grey brand colour is `#a1a1a1`
-- The HEX code for the medium grey brand colour is `#808080`
-- The HEX code for the dark grey brand colour is `#333333`
-- The HEX code for the near black brand colour is `#222222`
+### Structure:
+
+- This fixed width website is `1120px` wide
 - The base spacing unit is `1.5rem`
 - The solid border is `1px solid #e1e1e1`
-- The dashed border is `1px dashed #d2d2d2`
+- The dashed border is `1px dashed #c8c8c8`
+
+### Typography
+
+- The base font size is `16px` and its HEX code is `#404040`
+- The base line-height for the site is `1.75`
+- The main font family is Merriweather
+- The accent font family is Novovento Sans Web (for headings, etc.)
+
+### Colors:
+
+- The main background colour is `#ffffff`
+- The HEX code for the green brand colour is `#248A83`
+- The HEX code for the purple brand colour is `#2f1339`
+- The HEX code for the orange brand colour is `#d99054`
+- The HEX code for the yellow brand colour is `#f0e4d1`
+- The HEX code for the light grey brand colour is `#a1a1a1`
+- The HEX code for the medium grey brand colour is `#808080`
 
 ## Requirements
 
@@ -40,7 +45,7 @@ Your project must:
 - Be built using WordPress as CMS
 - Contain a custom static homepage About page, Contact page (with a functioning contact form)
 - Contain a blog post index page and a single view for blog posts
-- Contain a product index, a product type index page, and single view for products
+- Contain a product archive, a product type archive page, and single template for products
 - Contain a search results page and 404 page
 
 **General requirements:**
@@ -60,6 +65,7 @@ Your project must:
 - Use the `redstarter` WordPress theme as a base for building your project
 - Support default Posts, Pages, and Comments (one-level deep only)
 - Use a WordPress menu (configured through the admin interface) for the main site navigation
+- Use a custom page template for the "About" page
 - Include a custom post type for "Products" inside of a functionality plugin (not the theme files)
 - Include a custom taxonomy for "Product Type" inside of a functionality plugin (not the theme files)
 - Include applicable custom fields for additional metadata where required (using the Custom Field Suite plugin)
@@ -68,6 +74,7 @@ Your project must:
 - Properly enqueue CSS and JS files in the theme's `functions.php` file
 - Leverage the WP template hierarchy to generate required layouts for the website
 - Be validated with Theme Check
+
 
 **HTML requirements:**
 
@@ -90,15 +97,19 @@ Your project must:
 - Incorporate custom fonts using `@font-face`
 - Use an icon font
 
+**JS requirements:**
+
+- Add a toggle-able search form to the site header where the search input is automatically focused when the form is toggled open
+
 **Stretch goals:**
 
 Want to challenge yourself? Your project could also:
 
-- Create an additional custom post type for "Testimonials" inside of your functionality plugin (rather than statically coding them into the `front-page.php` template file)
-- Redirect single Testimonial pages to the Testimonials archive page (because the client doesn't want to show individual testimonials)
+- Create an additional custom post type for "Adventures" inside of your functionality plugin (rather than statically coding them into the `front-page.php` template file)
+- Build out an archive template for the adventures post type, as well as single template for individual adventures
 - Add appropriate dashicons to customize the CPT menu items in the WP admin menu
 - Include a custom screenshot for your theme
-{% endcomment %} 
+- Use jQuery to alter the style of the header to be absolutely positioned with a reverse colour scheme on pages with hero images at the top, and transition to the standard site header once the user has scrolled past the hero image to the rest of the page content
 
 ## Submission Instructions
 
