@@ -155,17 +155,29 @@ export default function b() {}
 
 # Challenge
 
-Clone the es2015 repo, and follow the README to get setup.
+Clone the ES2015 repo, and follow the README to get setup.
 
-`> git clone https://github.com/redacademy/es2015`
+`> git clone https://github.com/redacademy/red-es2015`
 
-Follow the instructions in "import-export/src/index.js".
+In the directory, run `> npm i` & `> gulp`
+
+---
+
+# Refactor
+
+Setup 'gulp-babel' in your project.
+
+# Challenge
+
+- Refactor out your API call into a separate function.
+- Use `import` & `export` to load this function from another file.
 
 ---
 class: center, middle
 # Declarations
 
 ### `let` & `const`
+
 
 ---
 
@@ -272,6 +284,14 @@ object['c'] = 3;
 ```
 
 ---
+
+# Refactor
+
+In your project code, use:
+- `let` twice
+- `const` twice
+
+---
 class: center, middle
 # Arrow Functions
 
@@ -369,6 +389,13 @@ function hasError() {
 
 ---
 
+# Refactor
+
+In your project code, use:
+- 3 or more arrow functions (`=>`)
+
+---
+
 template: inverse
 class: center, middle
 
@@ -421,6 +448,14 @@ let funkyArrows = `
 .link[
 	[Open in CodePen](http://codepen.io/redacademy/pen/PNBQvB)
 ]
+
+
+---
+
+# Refactor
+
+In your project code, use:
+- 2 or more template literals
 
 
 ---

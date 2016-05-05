@@ -49,6 +49,10 @@ Complete the following online Git tutorial before class:
 
 ---
 
+## Practice
+
+[Practice Visualization](https://onlywei.github.io/explain-git-with-d3/)
+
 ## Lab Activity
 
 Still not 100% comfortable git? Get more practice with git-based version control by completing Codeacademy's [Learn Git](https://www.codecademy.com/learn/learn-git).

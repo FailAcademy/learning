@@ -19,6 +19,7 @@ Read this [excellent overview](https://github.com/bevacqua/es6) of ES2015 on git
 
 - Illustrate the major differences between ES2015 over ES5
 - Build a basic JavaScript application using ES2015 & Gulp.
+- Refactor an ES5 app to use ES2015
 
 ---
 
@@ -119,13 +120,9 @@ If time, try writing an example using other ES2015 features.
 
 ## Exercise 7 - Classes
 
-Create a Class that takes some user input and tells a story, in the fashion of a Mad Lib!
+See 'Eloquent JavaScript' chapter 15.
 
-Use template strings, and provide default values for parts of the mad lib the user does not provide. <br>
-*Constructor(default props), Template strings*
-
-Take a look at this example, to get an idea of what you'll create!
-[http://www.wordblanks.com/mad-libs/misc/random-sentences](http://www.wordblanks.com/mad-libs/misc/random-sentences)
+Rewrite the examples using ES2015 classes.
 
 ---
 
