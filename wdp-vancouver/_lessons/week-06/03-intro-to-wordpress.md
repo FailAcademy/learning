@@ -77,11 +77,19 @@ But whoops! How can we link up the `style.css` file now that it's path is broken
 
 ## Lab Activity
 
+### Task 0:
+
+If you have never used a WordPress-powered website before and find the admin UI a bit daunting, take 25 minutes to watch this screencast tour of WordPress:
+
+- [Introduction to the WordPress Admin Panel](https://youtu.be/D4StcIB92oE)
+
+After (or while!) watching this video, be sure to explore all of these areas of the WordPress admin UI&mdash;try adding posts, categories, tags, and media of your own, adjust the various settings to see what happens, and try installing a few plugins.
+
 ### Task 1:
 
-Today's lab is dedicated to getting comfortable with the WordPress admin area and WP-style PHP before we jump into the project tomorrow.
+Today's lab is primarily dedicated to getting comfortable with the WordPress admin area and WP-style PHP before we jump into the project tomorrow.
 
-To start, watch this video to further clarify how WordPress uses PHP with this video:
+To begin, watch this video to further clarify how WordPress uses PHP with this video:
 
 - [Zac Gordon: PHP for WordPress](http://wordpress.tv/2015/09/20/zac-gordon-php-for-wordpress/)
 
