@@ -72,8 +72,8 @@ class: center, middle
 var gulp = require('gulp');
 var babel = require('gulp-babel');
 
-gulp.task('default', () => {
-	return gulp.src('src/app.js')
+gulp.task('babel', () => {
+	return gulp.src('src/**/*.js')
 		.pipe(babel({
 			presets: ['es2015']
 		}))
@@ -144,6 +144,7 @@ import {a} from 'module';
 import b from 'module'; // default
 import * as c from 'module'; // alias
 ```
+
 ### `export`
 
 ```js
