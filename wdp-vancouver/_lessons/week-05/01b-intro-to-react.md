@@ -47,7 +47,8 @@ Use `console.log()` to print the resulting Arrays.
 ## Exercise 2
 
 Take a close look at [this image](/public/img/slide-assets/airbnb-components.png) and
-create named React components for the UI elements. (Remember that components can be nested and have parent components).
+create named React components for the UI elements in it. (Remember that components can be nested and have parent components).
+How many components you create, and what you name them is up to you.
 
 ---
 
