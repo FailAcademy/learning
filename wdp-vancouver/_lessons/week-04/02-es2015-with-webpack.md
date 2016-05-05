@@ -12,9 +12,9 @@ Please explore the [Webpack documentation](https://webpack.github.io/docs/?utm_s
 
 ## Agenda
 
-Today we'll briefly discuss developing ES2015 applications using the Webpack build tool. We'll begin by examining a simple 
-Webpack setup using `gulp-webpack`, and then we'll remove gulp and use `webpack` and the `webpack-dev-server` to implement the 
-same functionality. 
+Today we'll briefly discuss developing ES2015 applications using the Webpack build tool. We'll begin by examining a simple
+Webpack setup using `gulp-webpack`, and then we'll remove gulp and use `webpack` and the `webpack-dev-server` to implement the
+same functionality.
 
 ---
 
@@ -25,7 +25,7 @@ same functionality.
 - Explore Webpack's 'loader' interface
 - Use Webpack to transform JavaScript code (ES5 -> ES2015)
 - Use Webpack to transform SCSS files
-- Use Webpack to set up source maps for compiled files (CSS / JavaScript) 
+- Use Webpack to set up source maps for compiled files (CSS / JavaScript)
 - Use Webpack's Development server to watch files and compile on save.
 - Use npm scripts to run the Webpack CLI commands
 
@@ -33,7 +33,7 @@ same functionality.
 
 ## Exercise 1
 
-Set up a new project with Webpack: 
+Set up a new project with Webpack:
 
 1. Create a new folder in your *virtual machine's public* directory
     - Remember to run `npm init` in your project's root directory.
@@ -41,19 +41,19 @@ Set up a new project with Webpack:
 2. Create folders in the root directory:
     - src
     - dist
-3. Create files: 
+3. Create files:
     - index.html (in project root)
     - main.scss (in src)
     - main.js (in src)
     - webpack.config.js (in project root)
-    
-In Webpack config add the following code: 
+
+In Webpack config add the following code:
 
 ```js
 module.exports = {
   entry: './src/main.js',
   output: {
-    filename: './build/bundle.js'       
+    filename: './build/bundle.js'
   }
 };
 ```
@@ -67,7 +67,7 @@ Once everything is set up we'll observe what happens when we run the following C
 - `webpack --watch` for continuous incremental build in development (fast!)
 - `webpack -d` to include source maps
 
-We'll experiment with the other CLI command options documented here: 
+We'll experiment with the other CLI command options documented here:
 https://webpack.github.io/docs/cli.html
 
 ---
@@ -78,17 +78,17 @@ Now that Webpack is creating a *JavaScript bundle*, let's add some configuration
 We'll do this using a **Webpack Loader**:
 
 1. Run (in your project's root directory):
-- `npm install --save-dev babel-core` 
-- `npm install --save-dev babel-loader` 
+- `npm install --save-dev babel-core`
+- `npm install --save-dev babel-loader`
 - `npm install --save-dev babel-preset-es2015`
 
-2. Update your webpack.config.js file: 
+2. Update your webpack.config.js file:
 
 ```js
 module.exports = {
   entry: './src/main.js',
   output: {
-    filename: './build/bundle.js'       
+    filename: './build/bundle.js'
   },
   module: {
       loaders: [
@@ -107,7 +107,7 @@ module.exports = {
 
 ## Exercise 3
 
-Webpack can be used to bundle almost every kind of asset for the web. It's very flexible in this regard. 
+Webpack can be used to bundle almost every kind of asset for the web. It's very flexible in this regard.
 Let's use Webpack to compile our `.scss` files:
 
 1. 1. Run (in your project's root directory):
@@ -116,7 +116,7 @@ Let's use Webpack to compile our `.scss` files:
 - `npm install --save-dev style-loader`
 - `npm install --save-dev node-sass`
 
-2. Add the following code to your webpack.config.js Inside the `loaders` Array, 
+2. Add the following code to your webpack.config.js Inside the `loaders` Array,
 after the JavaScript loader.
 
 ```js
@@ -124,7 +124,7 @@ after the JavaScript loader.
 module.exports = {
   entry: './src/main.js',
   output: {
-    filename: './build/bundle.js'       
+    filename: './build/bundle.js'
   },
   module: {
     loaders: [
@@ -150,14 +150,24 @@ module.exports = {
 Now that we're compiling our source files into a JavaScript bundle, we'll have to take some extra steps in order
 to debug our compiled and bundled code.
 
-Update your webpack.config.js file: 
+Update your webpack.config.js file:
 
 ```js
 module.exports = {
   entry: './src/main.js',
   devtool:'#inline-source-map',
   output: {
-    filename: './build/bundle.js'       
+    filename: './build/bundle.js'
+  },
+ devServer: {
+    watch:true,
+    inline: true,
+    host: '0.0.0.0',
+    port: '3000',
+    watchOptions: {
+      aggregateTimeout: 300,
+      poll: true
+    }
   },
   module: {
     loaders: [
@@ -165,7 +175,7 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         query: {
-            presets: ['es2015?sourceMap']
+            presets: ['es2015]
         }
     },
     {
@@ -176,40 +186,36 @@ module.exports = {
 };
 ```
 
-In order to generate and update our sourcemaps, we'll need to use the `webpack-dev-server` command.
-
-Run: `webpack-dev-server --hot --inline --port=3000` to view your site in the browser!
-
-- We're using Webpack's **hot module replacement** functionality to automatically reload the project when any of our modules change!!
+Run: `webpack-dev-server` to view your site in the browser @ **localhost:3000**!
 
 ---
 
 ## Exercise 5
 
-Now that Webpack is set up for development let's create a convenient command for running the developemt server
-in our project: 
+Now that Webpack is set up for development let's create a convenient command for running the developmet server
+in our project:
 
 Add the folloing to your `package.json`:
 
 ```js
 
  // ...
- 
+
 "scripts": {
-    "start": "webpack-dev-server --hot --inline --port=3000"
+    "start": "webpack-dev-server"
  }
-  
+
   // ... the rest
 ```
 
-To test this script, run: `npm run start`
+To test this script, run: `npm start` form the command line!
 
 ---
 
 ## Lab Activity
 
 We'll install Webpack in our 2nd project and spend our time in class today removing gulp, and replacing all functionality
-with it's Webpack equivalent! 
+with it's Webpack equivalent!
 
 ---
 
@@ -217,4 +223,4 @@ with it's Webpack equivalent!
 
 - [Webpack homepage](https://webpack.github.io/)
 - [Webpack How-to](https://github.com/petehunt/webpack-howto)
-- [Webpack Dev Server Documentation](https://webpack.github.io/docs/webpack-dev-server.html) 
+- [Webpack Dev Server Documentation](https://webpack.github.io/docs/webpack-dev-server.html)
