@@ -29,7 +29,7 @@ If you or your group comes up with a solution, we'll share it with the class, an
 3. Think about what variables / values you'll need
 4. Ask others for help if you're stuck!
 
-<small>*Note: These challenges were adapted form content made available on codebyte.com*</small>
+<small>*Note: These challenges were adapted form content made available on coderbyte.com*</small>
 
 ---
 ## Challenge 1
