@@ -15,7 +15,7 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
-layout: false 
+layout: false
 
 ####**Before we begin**
 Use **npm** to install these dependencies in your new project!
@@ -92,16 +92,16 @@ class AwesomeComponent extends React.Component {
 
 ```
 
-####All React components **must** define a render method! 
+####All React components **must** define a render method!
 
 
 ---
 
 #JSX
-So far we've used HTML to structure and style the content of web pages. When we're writing React, 
+So far we've used HTML to structure and style the content of web pages. When we're writing React,
 We'll be writing HTML inside of our JavaScript files (`.jsx` files), inside of our components!
 <br/>
-This approach is called co-location. It's convenient because all of the presentation (HTML structure) 
+This approach is called co-location. It's convenient because all of the presentation (HTML structure)
 is located in the same file as the JavaScript logic that controls it. (We have not written any logic yet).
 
 ---
@@ -125,8 +125,8 @@ class AwesomeComponent extends React.Component {
 ---
 ###Link a component to index.html
 
-So far we've written all of our HTML inside of a `.jsx` file. 
-To get the HTML to show up in your document, we must tell React where to load it: 
+So far we've written all of our HTML inside of a `.jsx` file.
+To get the HTML to show up in your document, we must tell React where to load it:
 
 ```js
 
@@ -146,8 +146,78 @@ ReactDOM.render(<AwesomeComponent/>, document.querySelector('#mount'));
 
 ---
 template: inverse
+class: center, middle
 
-![React core concepts - One Way Data Flow](/public/img/slide-assets/react-concepts-1way.png)
+#Awesome
+
+---
+
+# Discussion
+
+- ####JSX
+- ####Composing HTML
+- ####'Co-Location' of code
+- ####The Virtual DOM
+- ####React DEV Tools
+
+---
+template: inverse
+
+# Interactivity
+
+---
+template: inverse
+
+![](/public/img/slide-assets/react-concepts-1way.png)
+
+---
+
+#UI Updates in React
+
+In React, there is only one way (for our purposes) to update your component's user interface:
+Modifying the state property of your component using `this.setState()`
+
+---
+#What is state?
+
+![](http://www.animatedgif.net/furniture/jsflick_e0.gif)
+
+---
+###A Lightswitch Component
+
+```js
+class Lightswitch extends React.Component {
+
+    constructor(props){
+        super(props);
+        this.state = { on: false };
+    }
+
+    _switch(){
+        this.setState({ on: !this.state.on });
+    }
+
+    render(){
+        return (
+        <div>
+            <h1>The light is { this.state.on ? 'ON' : 'OFF' }</h1>
+            <button onClick={this._switch.bind(this)}>switch</button>
+        </div>
+        )
+    }
+}
+
+ReactDOM.render(<Lightswitch/>, document.getElementById('container'));
+
+```
+---
+
+# Discussion
+
+- ####`render()` must return a single HTML node
+- ####Use `.bind()` when the method has an internal refrence to `this`
+- ####`state` is a special object in React Components
+- ####What gets updated? (Dev tools)
 
 ---
 
@@ -155,4 +225,11 @@ template: inverse
 
 # Questions?
 
+---
+
+template: inverse
+
+##Let's Build a React Component!
+
+---
 {% endhighlight %}

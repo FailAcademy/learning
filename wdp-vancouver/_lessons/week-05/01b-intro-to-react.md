@@ -54,26 +54,15 @@ How many components you create, and what you name them is up to you.
 
 ## Exercise 3
 
-Create a complete page using the React components you created in **exercise 2**. Take all of the individual components and nest them where 
+Create a complete page using the React components you created in **exercise 2**. Take all of the individual components and nest them where
 where appropriate, creating parent components if necessary.
 
 ---
 
 ## Lab Activity
 
-In today's lab we'll start coding our first React mini-project. **A Snazzy todo list!**
-
-What you need to create:
-- A component for the app, linked to the DOM.
-- A component for the Todo List.
-- A component for each individual todo
-
-The list of todos should be generated using the `.map()` method from an Array of Todo objects.
-You'll need to style the todo list and controls as well.
-
-#### Mini-Project Stretch Goals
-- Add the ability to change the name of a todo, once it's need added.
-- Add the ability to filter: Show only completed todos & show only incomplete todos
+In today's lab we'll start coding our first React mini-project: A Tweet Box Component!
+We'll compare React and jQuery by coding the Component using each library simultaneously!
 
 ---
 
