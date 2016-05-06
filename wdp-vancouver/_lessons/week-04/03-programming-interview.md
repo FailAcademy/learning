@@ -20,13 +20,13 @@ You mission is to try to apply what you've learned, and attempt to come up with 
 
 You have the options to work as a group, or as part of more than one group to solve the challenges.
 
-If you or your group comes up with a solution, we'll share it with the class, and discuss your implementation, as well as dicsuss other potential solutions!
+If you or your group comes up with a solution, we'll share it with the class, and discuss your implementation, as well as discuss other potential solutions!
 
 #### Tips For Success
 
 1. Take your time
 2. Break down the problems into smallest possible steps
-3. Think about what variables / vallues you'll need
+3. Think about what variables / values you'll need
 4. Ask others for help if you're stuck!
 
 <small>*Note: These challenges were adapted form content made available on codebyte.com*</small>
