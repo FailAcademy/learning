@@ -65,7 +65,7 @@ Your project must:
 - Use the `redstarter` WordPress theme as a base for building your project
 - Support default Posts, Pages, and Comments (one-level deep only)
 - Use a WordPress menu (configured through the admin interface) for the main site navigation
-- Use a custom page template for the "About" page
+- Use a custom page template for the "About" page where a hero image can be dynamically added through a custom field
 - Include a custom post type for "Products" inside of a functionality plugin (not the theme files)
 - Include a custom taxonomy for "Product Type" inside of a functionality plugin (not the theme files)
 - Include applicable custom fields for additional metadata where required (using the Custom Field Suite plugin)
