@@ -394,7 +394,7 @@ class: center, middle
 
 # My Approach
 
-1. Initialize a git repo at the root of your WP installation
+1. Initialize a git repo at the root of your `wp-content` folder
 2. **Ignore everything**...then **selectively unignore** what you want in your repository (e.g. your specific custom theme, a functionality plugin, other bespoke plugins)
 3. ...?
 4. Profit!
@@ -408,29 +408,62 @@ class: center, middle
 
 ---
 
-# .gitignore
+# Advantages
+
+1. We typically don't need to version-control things at the WP core level (and working on a project version-controlled at this level with a team can be tricky...)
+2. We typically don't need to version-control third-party plugins and themes (someone else should be doing that!)
+3. It saves us from remembering to add new plugins or themes to our `.gitignore` as we install them
+4. VVV plays well with version-controlled `wp-content` folders
+
+---
+
+# WP .gitignore
 
 ```bash
-# ...ignore all the usual stuff above first
-
-# Ignore everything in the root except the "wp-content" directory.
+# Ignore everything in "wp-content" except these directories. #
 /*
 !.gitignore
-!wp-content/
+!plugins/
+!themes/
+!uploads/
 !README.md
 
-# Ignore everything in "wp-content" except the "plugins" and "themes".
-wp-content/*
-!wp-content/plugins/
-!wp-content/themes/
+# Ignore everything in "plugins" except certain plugins. #
+plugins/*
+!plugins/inhabitent-functionality/
+!plugins/business-hours-widget/
 
-# Ignore everything in "plugins" except certain plugins.
-wp-content/plugins/*
-!wp-content/plugins/core-functionality/
+# Ignore everything in "themes" except the active theme. #
+themes/*
+!themes/inhabitent/
 
-# Ignore everything in "themes" except the active theme.
-wp-content/themes/*
-!wp-content/themes/leredbread/
+# Ignore packages #
+themes/inhabitent/node_modules/
+```
+
+---
+
+# And the Usual Suspects
+
+Also ignore...
+
+```bash
+# Ignore OS files #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+*[Tt]humbs.db
+*.Trashes
+
+# Ignore logs and databases #
+*.log
+*.sql
+*.sqlite
+error_log
+access_log
 ```
 
 ---

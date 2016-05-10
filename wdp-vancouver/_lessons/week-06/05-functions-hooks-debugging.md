@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: WordPress Functions, Hooks & Debugging
-slides: ['_slides/week-07/05-functions-hooks-debugging.md']
+slides: ['_slides/week-06/05-functions-hooks-debugging.md']
 lesson_date: 2016-05-20
 ---
 
