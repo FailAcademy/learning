@@ -43,7 +43,7 @@ To receive a "Pass" grade for this project, your submission will need to satisfy
 Your project must:
 
 - Be built using WordPress as CMS
-- Contain a custom static homepage About page, Contact page (with a functioning contact form)
+- Contain a custom static homepage, About page, Contact page (with a functioning contact form)
 - Contain a blog post index page and a single view for blog posts
 - Contain a product archive, a product type archive page, and single template for products
 - Contain a search results page and 404 page
@@ -107,7 +107,7 @@ Want to challenge yourself? Your project could also:
 
 - Create an additional custom post type for "Adventures" inside of your functionality plugin (rather than statically coding them into the `front-page.php` template file)
 - Build out an archive template for the adventures post type, as well as single template for individual adventures
-- Add appropriate dashicons to customize the CPT menu items in the WP admin menu
+- Add dashicons to customize the CPT menu items in the WP admin menu
 - Include a custom screenshot for your theme
 - Use jQuery to alter the style of the header to be absolutely positioned with a reverse colour scheme on pages with hero images at the top, and transition to the standard site header once the user has scrolled past the hero image to the rest of the page content
 
