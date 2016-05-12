@@ -30,7 +30,7 @@ Your project must:
 - Demonstrate effective organization of the project's root directory
 - Have a Git repository initialized in its root directory with an appropriately customized `.gitignore` file
 - Be pushed to GitHub (with all of your commits synced to it)
-- Use Gulp for running build tasks, such as React transformation, and error checking
+- Use Webpack for running build tasks, such as React transformation, and error checking
 
 **HTML requirements:**
 
@@ -45,9 +45,8 @@ Your project must:
 
 - Make appropriate use of classes and IDs as selectors
 - Use a CSS reset
-- Use Sass as a preprocessor, with CSS properly compiled and minified
-- Implement a responsive layout using flexbox (no floats)
-- Demonstrate effective use of box model properties
+- Minify your css using Webpack
+- Demonstrate effective use of box model properties (Must use flexbox)
 - Use an icon font
 - Use a `linear-gradient` background
 - Create a 3D effect on the Rocket icon using the `text-shadow` property
@@ -61,9 +60,9 @@ Your project must:
 
 Your project must:
 
-- Implement React and the related gulp plugins for transforming React code into ES5 JavaScript
+- Implement React and the related Webpack loader plugins for transforming React code into ES5 JavaScript
 - Be composed of at least 3 React Components, other than the Parent Component.
-- Components must be written in separate files, and bundled together into a single file. This should be accomplished using the `require` or `import` statement, and the `webpack-stream` module bundler gulp plugin.
+- Components must be written in separate files, and bundled together into a single file. This should be accomplished using `require` or `import`.
 
 *Components* (React requirements)
 
