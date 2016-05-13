@@ -75,6 +75,20 @@ class: center, middle
 A structural framework for dynamic web apps.
 
 ---
+
+#Exercise 1
+
+- Create an Angular module, and link it to an HTML document using the `ng-app` directive.
+- Give the module a name. Include that name in the `ng-app` attribute.
+
+Use the files you created in the pre-work as the starting point for his exercise.
+
+This is an angular module definition. We'll need at least one to create our application:
+```js
+angular.module('super-app', []);
+```
+
+---
 template: inverse
 
 # Angular vs. jQuery
@@ -101,7 +115,7 @@ $('button').on('click', function(e) {
 ```html
 <!DOCTYPE html>
    <!-- Add the ng-app directive to our html -->
-   <html ng-app>
+   <html ng-app="super-app">
       <head>
       <title>Simple app</title>
       <script src="angular.js"></script>
@@ -145,13 +159,8 @@ class: center, middle
 *Where else could our data come from?*
 
 ---
-template: inverse
 
-# Patience
-
----
-
-# Exercise 1
+# Exercise 2
 
 Create a simple Angular application that manipulates some `ng-model` value, and display's the updated value to the user in an HTML document.
 
@@ -159,7 +168,7 @@ You've seen how this works using a simple text input.
 
 Use the Angular documentation, and add update your view using: a **checkbox**, a **select menu** & **radio buttons** .
 
-Use your imagination when creating your application, and don't be afraid to add a little css personlaity. Bonus points will be given for creativity!
+Use your imagination when creating your application, and don't be afraid to add a little CSS personality. Bonus points will be given for creativity!
 
 ---
 class: center, middle

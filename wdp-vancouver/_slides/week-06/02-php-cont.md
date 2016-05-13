@@ -329,7 +329,9 @@ usort($blog_posts, function($a, $b) {
 
 # Exercise 2
 
-Go to the [Array Functions](http://php.net/manual/en/ref.array.php) page in the PHP docs and investigate one of the many available array methods to report back to the class...
+Time for an array scavenger hunt!
+
+See the [lesson page](/lesson/more-on-php/) for more details.
 
 ---
 
