@@ -40,7 +40,50 @@ Let's use the PHP `date()` function to convert the dates as they appear in the J
 
 ## Exercise 2
 
-Go to the [Array Functions](http://php.net/manual/en/ref.array.php) page in the PHP docs and investigate one of the many available array methods to report back to the class...
+[Time for an array scavenger hunt!](/public/files/exercises/php-array-scavenger-hunt.pdf)
+
+Below we have two arrays containing similarly formatted data representing two movies.
+
+Your task is to search the [PHP documentation](http://php.net/manual/en/ref.array.php) for array functions and figure out what built-in function (or combination of functions) will return the data formatted as required in each of the challenges.
+
+Paste this code into an `index.php` file (between `<?php ?>` tags of course!) to get started...
+￼
+
+```php
+$movies_1 = array(
+   array(
+      'ID'    => 1,
+      'title' => 'Jurassic Park',
+      'genre' => 'Adventure',
+      'year'  => '1993',
+      'stars' => array( 'Sam Neill', 'Laura Dern', 'Jeff Goldblum' )
+   ),
+   array(
+      'ID'    => 2,
+      'title' => 'Back to the Future',
+      'genre' => 'Sci-fi',
+      'year'  => '1985',
+      'stars' => array( 'Michael J. Fox', 'Christopher Lloyd' )
+   )
+);
+
+$movies_2 = array(
+  array(
+       'ID'    => 3,
+       'title' => 'Die Hard',
+       'genre' => 'Action',
+       'year'  => '1988',
+       'stars' => array( 'Bruce Willis', 'Alan Rickman' )
+  ),
+  array(
+       'ID'    => 4,
+       'title' => 'The Breakfast Club',
+       'genre' => 'Drama',
+       'year'  => '1985',
+       'stars' => array( 'Emilio Estevez', 'Judd Nelson', 'Molly Ringwald' )
+  ),
+);
+```
 
 ---
 
