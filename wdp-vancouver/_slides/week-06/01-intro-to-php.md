@@ -914,12 +914,11 @@ $global_var = "a global variable";
 function my_function() {
    global $global_var;
    $global_var = ucwords($global_var);
-
    // or $GLOBALS['global_var'] = ucwords($GLOBALS['global_var']);
 }
 
 my_function();
-echo $global_var; // will echo "a global variable"
+echo $global_var; // will echo "a Global Variable"
 ```
 
 Using `global`/`$GLOBALS` to modify the value of the variable within the local scope of the function will change the value of the original variable without any function arguments.
