@@ -279,7 +279,7 @@ On style...PHP also tends to favour underscores in variable names, as opposed to
 
 You can wrap your string variables in single or double quotes in PHP, but there is a subtle difference between using one type of quote over the other.
 
-Strings wrapped in **single quotes are literal string**. These strings do not parse any variables or special characters contained within.
+Strings wrapped in **single quotes will not be parsed**. These strings do not parse any variables or special characters contained within.
 
 Strings wrapped in **double quotes will be parsed**, so they can contain variables, array values, and object variables.
 
@@ -855,7 +855,7 @@ For example, the `$global_var` is not automatically available inside `my_functio
 $global_var = "a global variable";
 
 function my_function() {
-   echo ucwords($global_var;)
+   echo ucwords($global_var);
 }
 
 my_function(); // will cause an error notice
@@ -918,7 +918,8 @@ function my_function() {
    // or $GLOBALS['global_var'] = ucwords($GLOBALS['global_var']);
 }
 
-echo $global_var; // will echo "A Global Variable"
+my_function();
+echo $global_var; // will echo "a global variable"
 ```
 
 Using `global`/`$GLOBALS` to modify the value of the variable within the local scope of the function will change the value of the original variable without any function arguments.
