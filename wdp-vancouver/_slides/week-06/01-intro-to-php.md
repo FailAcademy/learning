@@ -918,7 +918,7 @@ function my_function() {
 }
 
 my_function();
-echo $global_var; // will echo "a Global Variable"
+echo $global_var; // will echo "A Global Variable"
 ```
 
 Using `global`/`$GLOBALS` to modify the value of the variable within the local scope of the function will change the value of the original variable without any function arguments.

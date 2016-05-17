@@ -5,21 +5,9 @@ due: Monday, May 16th (beginning of class)
 ---
 
 ## Design Specifications:
-
-- The base font size is `16px` and it HEX code is `#ffffff`
 - The body font family is Open Sans Light
-- The HEX code for the button colour is `#e2231a`
-- The light grey border color is `#dbdbdb`
-- The medium grey color of the text in the footer is `#c2c2c2`
-
-## Requirements
 
 To receive a "Pass" grade for this project, your submission will need to satisfy the following criteria:
-
-**Functional requirements:**
-
-Your project must:
-
 
 **General requirements:**
 
