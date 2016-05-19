@@ -10,6 +10,7 @@ lesson_date: 2016-05-31
 - Work with forms in Angular.
 - Create good UX by indicating invalid form input.
 - Discover the power of 2-way data binding.
+- Use Angular's FromController object and built in form validation classes.
 
 ---
 
@@ -23,7 +24,13 @@ lesson_date: 2016-05-31
 
 ---
 
-## Exercise
+## Exercise 1
+
+
+
+---
+
+## Exercise 2
 
 Create and style a voter registration form!
 Using what you know about Angular and CSS, create a form with the following fields:
@@ -37,7 +44,7 @@ Using what you know about Angular and CSS, create a form with the following fiel
 - Province (select menu)
 - Accept voter responsibility (checkbox)
 
-All of the fields are required, and the form should indicate to the user if they try to submit the form with empty fields.
+All of the fields are required fields, and the form should indicate to the user if they try to submit the form with empty fields.
 
 ---
 

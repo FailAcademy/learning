@@ -38,7 +38,7 @@ Animations will be achieved via SCSS and Angular's ngAnimate module, which we'll
 
 ## Lab Activity
 
-In today's lab we'll continue working on Project 4 and complete this exercise:
+In today's lab we'll continue working on Project 4!
 
 ---
 
