@@ -13,9 +13,12 @@ Check out React's [animation API](https://facebook.github.io/react/docs/animatio
 ## Learning Objectives
 
 - Create performant CSS / JavaScript animations using React's animation API.
+- Use React's `CSSTransitionGroup` component to animate adding and removing items from a list.
+- Use React's `CSSTransitionGroup` component to animate between routes in your SPA.
+
 
 ---
 
 ## Lab Activity
 
-In today's lab, we'll add animations to our React mini-projects. For the inbox mini-project, you'll add all of the css, including animations!
+In today's Lab, you'll add the `ReactCSSTransitionGroup` component to your project, and animate route changes.
