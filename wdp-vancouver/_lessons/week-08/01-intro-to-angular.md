@@ -68,7 +68,6 @@ Add some CSS! Bonus points for creativity!
 ## Lab Activity
 
 Spend your time familiarizing yourself with some basic Angular concepts to prepare for this weeks assignments.
-
 Start working the following free tutorial on Code School:
 
 - [Shaping up with Angular.js](https://www.codeschool.com/courses/shaping-up-with-angular-js)
@@ -76,7 +75,6 @@ Start working the following free tutorial on Code School:
 Finish working through the Angular module on Code School (but you did that already, right?).
 
 After that, it's time for more practice!
-
 Code Academy also as Angular tutorial to work through:
 
 - [Learn AngularJS](https://www.codecademy.com/en/courses/learn-angularjs)
@@ -85,6 +83,6 @@ Code Academy also as Angular tutorial to work through:
 
 ## Additional Resources
 
-An essential edition to your browser's dev tools when building AngularJS apps:
+An essential addition to your browser's dev tools when building AngularJS apps:
 
 - [AngularJS Batarang](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en)
