@@ -57,7 +57,7 @@ The rest of the exercise will be a code-along...
 
 ## Lab Activity
 
-Today's lab time will be spent working on Project 5. Tie up the loose ends for on your custom business hours widget, and keep plugging away at the rest of the project!
+Today's lab time will be spent working on Project 4. Tie up the loose ends for on your custom business hours widget, and keep plugging away at the rest of the project!
 
 ---
 

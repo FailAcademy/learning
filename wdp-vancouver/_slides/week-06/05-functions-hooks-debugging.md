@@ -328,7 +328,7 @@ require get_template_directory() . '/inc/extras.php';
 
 Let's head over the `/inc/extras.php` file in our starter theme and add two functions (with the appropriate hooks) to do the following:
 
-1. Change the logo on the WP login screen to be Le Red Bread's logo
+1. Change the logo on the WP login screen to be Inhabitent's logo
 2. Update the URL that the logo points to be the site's homepage URL (instead of wordpress.org).
 
 ---
@@ -472,7 +472,7 @@ access_log
 
 Time to add some version control to your project.
 
-Initialize a git repository in the root of your project's WP installation in MAMP, at the `.gitignore` file as recommended, stage your files, make your commit, add a remote from GitHub, and push your code!
+Initialize a git repository in the root of your project's WP installation in VVV or MAMP, at the `.gitignore` file as recommended, stage your files, make your commit, add a remote from GitHub, and push your code!
 
 ---
 

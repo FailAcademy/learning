@@ -60,7 +60,7 @@ After you're done researching your table, we'll share our findings as a group.
 
 ## Lab Activity
 
-Today's lab time will be spent working on Project 5. Based on what you learned today, you can create and finish styling the custom post loop to show the latest posts on the homepage (and the latest Testimonials if you're going for the stretch goal).
+Today's lab time will be spent working on Project 4. Based on what you learned today, you can create and finish styling the custom post loop to show the latest posts on the homepage (and the latest Adventures if you're going for the stretch goal).
 
 ---
 

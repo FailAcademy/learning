@@ -67,7 +67,7 @@ Provide an example of it's usage too!
 
 Let's head over the `/inc/extras.php` file in our starter theme and add two functions (with the appropriate hooks) to do the following:
 
-1. Change the logo on the WP login screen to be Le Red Bread's logo
+1. Change the logo on the WP login screen to be Inhabitent's logo
 2. Update the URL that the logo points to be the site's homepage URL (instead of wordpress.org).
 
 ---
@@ -76,13 +76,13 @@ Let's head over the `/inc/extras.php` file in our starter theme and add two func
 
 Time to add some version control to your project.
 
-Initialize a git repository in the root of your project's WP installation in MAMP, at the `.gitignore` file as recommended, stage your files, make your commit, add a remote from GitHub, and push your code!
+Initialize a git repository in the root of your project's WP installation VVV or MAMP, at the `.gitignore` file as recommended, stage your files, make your commit, add a remote from GitHub, and push your code!
 
 ---
 
 ## Lab Activity
 
-Today's lab activity time will be dedicated to continuing to work on Project 5.
+Today's lab activity time will be dedicated to continuing to work on Project 4.
 
 ---
 
@@ -97,4 +97,8 @@ Some WordPress plugins that are helpful for debugging:
 Two very readable articles on WP's event-driven architecture:
 
 - [Using WordPress for Web Application Development: The Conceptual Model](https://code.tutsplus.com/articles/using-wordpress-for-web-application-development-the-conceptual-model--wp-34095)
+
+More on actions and filters:
+
+- [WordPress Actions and Filters: What's the Difference?](https://code.tutsplus.com/articles/wordpress-actions-and-filters-whats-the-difference--cms-25700)
 - [Using WordPress for Web Application Development: Understanding Events, Actions, and Filters](https://code.tutsplus.com/tutorials/using-wordpress-for-web-application-development-understanding-events-actions-and-filters--wp-34113)

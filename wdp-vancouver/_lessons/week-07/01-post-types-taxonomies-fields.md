@@ -100,7 +100,7 @@ Let's install the [Custom Field Suite](https://en-ca.wordpress.org/plugins/custo
 
 ## Lab Activity
 
-Today's lab time will be spent working on Project 5. Today would be a good day to try adding all of your custom post types, taxonomies, and fields to your project.
+Today's lab time will be spent working on Project 4. Today would be a good day to try adding all of your custom post types, taxonomies, and fields to your project.
 
 ---
 
