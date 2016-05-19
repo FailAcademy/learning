@@ -29,6 +29,8 @@ lesson_date: 2016-05-27
 
 ## Lab Activity
 
+Today's lab time will be spent working on Project 4. Your on the homestretch so be sure to make effective use of your in-class time!
+
 <!-- In today's lab, we'll work together to build out the jQuery required to add the required WP API-related functionality for the Quotes on Dev site.
 
 Specifically, we'll fetch data from WP using the REST API plugin and dynamically populate it in the site, and we'll create a basic form to accept front-end post submissions via the API too.

@@ -54,13 +54,13 @@ You can [download a copy here](https://github.com/redacademy/redstarter/archive/
 
 ## Lab Activity
 
-In today's lab, we're going to dive into Project 5 and use what we learned about custom WordPress theming to begin building out Le Red Bread's website.
+In today's lab, we're going to dive into Project 4 and use what we learned about custom WordPress theming to begin building out Inhabitent's website.
 
-Copy the starter theme into the WP installation on your computer where you are going to build out your project, and **rename** the folder something a bit more descriptive (e.g. `leredbread`).
+Copy the starter theme into the WP installation on your computer where you are going to build out your project, and **rename** the folder something a bit more descriptive (e.g. `inhabitent`).
 
 Next, to get your project set-up, you'll want to run `npm install` in the root of the theme directory so you can get Gulp up and running.
 
-In the [project folder](https://s3-us-west-2.amazonaws.com/red-wdp/project-05.zip) you'll also find all of the content for the site. You'll need to add the content to your site via the WP admin area. **Start with posts!** You will find the featured image for each post in `_assets/images/blog-photos/`.
+In the [project folder](https://s3-us-west-2.amazonaws.com/red-wdp/project-04.zip) you'll also find all of the content for the site. You'll need to add the content to your site via the WP admin area. **Start with posts!** You will find the featured image for each post in `_assets/images/blog-photos/`.
 
 We'll learn about how to create a custom post type for the product content next week.
 
