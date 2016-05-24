@@ -33,7 +33,7 @@ class: center, middle
 
 ### Programming, Demystified
 
-When we **program** we are simply writing a list of **instructions** a our computer to follow, in a language it will understand.
+When we **program** we are simply writing a list of **instructions** for our computer to follow, in a language it will understand.
 
 ---
 class: center, middle
@@ -62,7 +62,7 @@ class: center, middle
 
 Pseudocode is code that's meant for human reading, not machine reading.
 
-Pseudocode simply writing out an algorithm in human-readable words, instead of computer code.
+Pseudocode simply involves writing out an algorithm in human-readable words, instead of computer code.
 
 ---
 class: center, middle
@@ -125,7 +125,7 @@ while students are present
 
 # Pseudocode Example
 
-Remember **variables** from junior high alegbra? Back then, we used letter as variables to represent numbers.
+Remember **variables** from junior high algebra? Back then, we used letters as variables to represent numbers.
 
 In programming, we can use variables to represent a wider variety of things:
 
@@ -138,7 +138,7 @@ for each student that enter the class
 write attendance
 ```
 
-Note that the word **for** is another way to make a block of code will loop over and over again until it has a reason to stop.
+Note that the word **for** is another way to make a block of code that will loop over and over again until it has a reason to stop.
 
 ---
 
@@ -148,7 +148,7 @@ Time to write some pseudocode of your own! You're going to use pseudocode to wri
 
 Some things to consider while writing your algorithm:
 
-- The weather...you don't want to wash you car if it's raining.
+- The weather...you don't want to wash your car if it's raining.
 - Each individual step involved in washing the car. Remember that machines can only do exactly what we tell them to do.
 - How long each step should take place. Is it something that happens only once, or does it need to happen repeatedly?
 
@@ -260,7 +260,7 @@ In Scratch, the words **when** and **until** provide additional conditional cons
 
 Loops will execute a statement or block of statements over and over again until it has a reason to stop.
 
-In Scratch, the **forever** and **repeat** block allow us to create loops:
+In Scratch, the **forever** and **repeat** blocks allow us to create loops:
 
 .inline-images[
    ![Scratch forever loop](/public/img/slide-assets/scratch-forever.png)
