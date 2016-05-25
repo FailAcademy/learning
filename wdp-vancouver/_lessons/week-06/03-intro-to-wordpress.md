@@ -79,11 +79,12 @@ But whoops! How can we link up the `style.css` file now that it's path is broken
 
 ### Task 0:
 
-If you have never used a WordPress-powered website before and find the admin UI a bit daunting, take 25 minutes to watch this screencast tour of WordPress:
+If you have never used a WordPress-powered website before and find the admin UI a bit daunting, take 40 minutes to watch this screencast on how to add content to a WP site:
 
-- [Introduction to the WordPress Admin Panel](https://youtu.be/D4StcIB92oE)
+- [Create Content in WordPress With Posts and Pages
+](https://code.tutsplus.com/courses/create-content-in-wordpress-with-posts-and-pages)
 
-After (or while!) watching this video, be sure to explore all of these areas of the WordPress admin UI&mdash;try adding posts, categories, tags, and media of your own, adjust the various settings to see what happens, and try installing a few plugins.
+After (or while!) watching these videos, be sure to explore all of these areas of the WordPress admin UI&mdash;try adding posts, categories, tags, and media of your own, adjust the various settings to see what happens, create menus, add widgets, and try installing a few plugins.
 
 ### Task 1:
 
