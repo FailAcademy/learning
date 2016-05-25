@@ -19,18 +19,37 @@ Review the angular documentation for $http:
 The we'll build will use a custom API created by RED specifically for this project.
 
 ---
-
 ## Keywords
 
+- REST API
+- promise
 - `$http`
 - GET
 - POST
 
 ---
 
+## Exercise 1
+
+Set up Postman and make some mock requests!
+
+---
+
+## Exercise 2
+
+Promises and `.then`
+
+---
+
+## Exercise 3
+
+Preloading data using ui-router
+
+---
+
 ## Lab Activity
 
-Today's lab will be dedicated to finishing up Project 4.
+Today's lab is dedicated to finishing up Project 4!
 
 ---
 

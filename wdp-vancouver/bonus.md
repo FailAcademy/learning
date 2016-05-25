@@ -3,17 +3,15 @@ layout: page
 title: Bonus Lessons
 ---
 
-*Come back for bonus lessons soon!*
-
-{% comment %}
-### Friday, January 22nd:
+### Friday, April 15th:
 
 [CSS Best Practices](/slides/bonus-css-best-practices-slides/)
 
-### Monday, March 7th:
+### Tuesday, May 24th:
 
 [Intro to IA](/public/files/intro-to-ia.pdf) (guest lecture by Robert Mackie)
 
+{% comment %}
 ### Tuesday, March 15th:
 
 [Presentation Skills I](/public/files/presentation-skills-1.pdf) (guest lecture by Robert Mackie)

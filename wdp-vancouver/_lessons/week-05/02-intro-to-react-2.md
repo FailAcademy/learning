@@ -7,13 +7,13 @@ lesson_date: 2016-05-10
 
 ## Pre-Work
 
-Please install the [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) extension for Google Chrome.
+Please review the [React lifecycle methods](https://facebook.github.io/react/docs/component-specs.html) documentation.
 
 ---
 
 ## Learning Objectives
 
-- Use React's component lifecycle methods to manage updating a React Component's UI.
+- Use React's component life-cycle methods to manage updating a React Component's UI.
 - Create a complex React Application, composed of multiple components.
 - Use props and state to determine the UI of a React Application.
 
@@ -22,31 +22,11 @@ Please install the [React Developer Tools](https://chrome.google.com/webstore/de
 ## Keywords
 
 **Lifecycle Methods:**
+
 - `componentWillMount`
 - `componentWillUnmount`
 - `componentShouldUpdate`
 - `componentWillRecieveProps`
-
----
-
-## Exercise 1
-
----
-
-## Exercise 2
-
----
-
-## Exercise 3
-
----
-
-## Exercise 4
-
----
-
-## Exercise 5
-
 
 ---
 
@@ -55,7 +35,7 @@ Please install the [React Developer Tools](https://chrome.google.com/webstore/de
 In today's lab we'll write a complete application in React: **A snazzy todo app!**
 
 #### Mini-Project Stretch Goals
-- Add the ability to change the name of a todo, once it's need added.
-- Add the ability to filter: Show only completed todos; show only incomplete todos.
+- Add the ability to change the name of a todo, once it's been added.
+- Add the ability to filter: Show only completed todos and show only incomplete todos.
 
 ---

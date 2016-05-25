@@ -36,9 +36,27 @@ Animations will be achieved via SCSS and Angular's ngAnimate module, which we'll
 
 ---
 
+## Exercise 1
+
+Animations using css classes.
+
+---
+
+## Exercise 2
+
+Staggered animations.
+
+---
+
+## Exercise 3
+
+Animating route changes!
+
+---
+
 ## Lab Activity
 
-In today's lab we'll continue working on Project 4 and complete this exercise:
+In today's lab we'll continue working on Project 4. Add animations when you're transitioning between pages!
 
 ---
 

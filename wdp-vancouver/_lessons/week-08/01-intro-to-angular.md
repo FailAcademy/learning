@@ -7,84 +7,99 @@ lesson_date: 2016-05-30
 
 ## Pre-Work
 
-Create a folder called *intro-to-angular* in your project directory.
-Inside create 2 scratch files, one `index.html` and one `script.js`, and link the JavaScript file to the html file.
-We'll use this simple document to experiment with the code in this lesson.
+In today's class we'll code an Angular 2 application.
+To make things easier we'll use the Angular command-line interface.<br/>
+- Run `npm install -g angular-cli`
+
+We will also be using the TypeScript compiler to compile TypeScript code.<br/>
+- Run `npm install -g typescript`
+
+We will use a Yeoman TypeScript project generator to set up our exercises!<br/>
+- Run `npm install -g generator-node-typescript gulp-cli typings`
+
+Install the TypeScript syntax package for your editor.
+
+
+Finally, download the TypeScript boilerplate project [here](https://www.dropbox.com/sh/avta0n6bk8lcz4r/AAD_WP6LblPzYlFaZT7syhlna?dl=1).
+
+**Look over the [Learn TypeScript](https://www.typescriptlang.org/) page.** (Official docs)<br/>
+**Look over the code in [this example](http://todomvc.com/examples/typescript-angular/#/).** (Angular 2 TODO app!)
 
 ---
 
 ## Learning Objectives
 
 - Define what AngularJS is, and what role it plays in facilitating JS web app development.
-- Define (at a high-level) a variety of essential Angular-related concepts, including the following keywords.
-- Create an Angular module to contain our Angular application, and link it to an HTML page using the `ng-app` directive.
-- Use Angular's `ng-model` directive to display data in an HTML page.
-- Create an Angular `controller` and link it to an HTML page using the `ng-controller` directive.
-- Create a `factory` module with some functionality, and inject the  factory module into an Angular controller.
+- Define TypeScript and why it is a useful subset of JavaScript.
+- Use TypeScript annotations.
+- Define a TypeScript Class.
+- Implement a TypeScript Method Decorator.
+- Implement a TypeScript Class Decorator.
+- Implement a TypeScript Property Decorator.
+- Implement a TypeScript Interface.
+- Generate an ANgular 2 application using the `angular-cli` and describe the built-in functionality.
+- Create an Angular Component and display some data in an HTML template.
+- Use Angular's `ng-model` directive to update data in an HTML page.
 
 ---
 
 ## Keywords
 
-- [Model](https://docs.angularjs.org/guide/concepts#model)
-- [Scope](https://docs.angularjs.org/guide/concepts#scope)
-- [View](https://docs.angularjs.org/guide/concepts#view)
-- [Data Binding](https://docs.angularjs.org/guide/concepts#databinding)
-- [Controller](https://docs.angularjs.org/guide/concepts#controller)
-- [Dependency Injection](https://docs.angularjs.org/guide/concepts#di)
-- [Injector](https://docs.angularjs.org/guide/concepts#injector)
-- [Module](https://docs.angularjs.org/guide/concepts#module)
-- [Service](https://docs.angularjs.org/guide/concepts#service)
+- Type
+- Annotation
+- Interface
+- Decorator
+- Component
+- Data binding
 
 ---
 
-## Exercise 1
+## Exercise
 
-Create an Angular module, and link it to an HTML document using the `ng-app` directive.
-Use the files you created in the pre-work as the starting point for his exercise.
-
----
-
-## Exercise 2
-
-Create a simple Angular application that manipulates some `ng-model` value, and display's the updated value to the user in an HTML document.
-Use the Angular documentation, and add update your view using: a **checkbox**, a **select menu** & **radio buttons** .
-Use your imagination when creating your application, and don't be afraid to add a little CSS personality. Bonus points will be given for creativity!
+TypeScript Annotation
 
 ---
 
-## Exercise 3
+## Exercise
 
-Create an Angular application that uses code from another Angular module (via *dependency injection*) to manipulate some `$scope` value.
-Display the updated value to the user in an HTML document. Hint: You'll use an Angular `controller`, and a `factory`.
+TypeScript Classes
 
-Remember the best practice we mentioned: Don't assign primitive values directly to your controller's `$scope`.
-Instead use something like `$scope.values = { name: "Mackenzie" }`
+---
 
-Add some CSS! Bonus points for creativity!
+## Exercise
+
+TypeScript Interfaces
+
+---
+
+## Exercise
+
+TypeScript Decorators
+
+---
+
+## Exercise
+
+Angular App
+
+
+---
+
+## Exercise
+
+Custom Component
 
 ---
 
 ## Lab Activity
 
-Spend your time familiarizing yourself with some basic Angular concepts to prepare for this weeks assignments.
-
-Start working the following free tutorial on Code School:
-
-- [Shaping up with Angular.js](https://www.codeschool.com/courses/shaping-up-with-angular-js)
-
-Finish working through the Angular module on Code School (but you did that already, right?).
-
-After that, it's time for more practice!
-
-Code Academy also as Angular tutorial to work through:
-
-- [Learn AngularJS](https://www.codecademy.com/en/courses/learn-angularjs)
+Todo List!
 
 ---
 
 ## Additional Resources
 
-An essential edition to your browser's dev tools when building AngularJS apps:
-
-- [AngularJS Batarang](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en)
+Excellent [PluralSight course](https://www.pluralsight.com/courses/typescript) on TypeScript. <br/>
+[TypeScript Documentation](https://www.typescriptlang.org/). <br/>
+[Angular 2 QuickStart Documentation](https://angular.io/docs/ts/latest/tutorial/). <br/>
+[TODO MVC Angular 2](http://todomvc.com/examples/typescript-angular/#/). <br/>

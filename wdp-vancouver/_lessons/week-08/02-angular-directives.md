@@ -7,37 +7,23 @@ lesson_date: 2016-05-31
 
 ## Learning Objectives
 
-- Discover and become familiar with Angular's built in directives.
-- Create a basic directive.
+- Discover and become familiar with Angular's built-in directives.
+- Use Angular's built-in Attribute Directives to manipulate a user interface.
+- Create an Element Directive.
+- Demonstrate how Isolate Scope is used when creating directives.
 
 ---
 
 ## Keywords
 
-Attribute directives
-
-- ng-href
-- ng-src
-- ng-class
-- ng-disabled
-- ng-checked
-- ng-selected
-
-Scope directives:
-
-- ng-app
-- ng-controller
-- ng-include
-- ng-if
-- ng-show/hide
-- ng-switch
-- ng-change
-- ng-click
-- ng-repeat
+- Web Component
+- Attribute directive
+- Element Directive
+- Isolate Scope
 
 ---
 
 ## Additional Resources
 
-Angular documentation:
+Angular documentation for Directives.
 [https://docs.angularjs.org/api/ng/directive](https://docs.angularjs.org/api/ng/directive)
