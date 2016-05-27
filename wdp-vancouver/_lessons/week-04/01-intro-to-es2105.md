@@ -45,11 +45,6 @@ Read this [excellent overview](https://github.com/bevacqua/es6) of ES2015 on git
 - Describe and use 'destructuring'
 - Describe and use 'spread'
 
-### ES2015 Classes
-- Describe and use `class`
-- Describe and use the elements of a class: `constructor`, 'methods', and `static` properties
-- Describe and use `this` within a class
-
 ### * ES2015 Promises
 - Describe and use `Promise`
 - Describe and use `then`
@@ -68,9 +63,6 @@ Read this [excellent overview](https://github.com/bevacqua/es6) of ES2015 on git
 - Lexical scoping (`=>`)
 - Destructuring
 - Default parameters
-- `class`
-    - `constructor`
-    - `static`
 - `Promise`
 
 ---
@@ -88,7 +80,6 @@ Practice using `import` & `export`
 - `> git clone https://github.com/redacademy/red-es2015`
 - Follow the README in "import-export" to get setup.
 - Follow the instructions in "import-export/src/index.js".
-
 
 ---
 
@@ -117,16 +108,9 @@ Write an example using:
 
 If time, try writing an example using other ES2015 features.
 
-
-## Exercise 7 - Classes
-
-See 'Eloquent JavaScript' chapter 15.
-
-Rewrite the examples using ES2015 classes.
-
 ---
 
-## Exercise 8 - Promises
+## Exercise 7 - Promises
 Create a class that returns a promise, and take some action asynchronously!
 *Promise, Arrow-functions (setTimeout/this)*
 
