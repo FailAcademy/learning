@@ -280,7 +280,7 @@ array.push(4);
 ```
 
 ```js
-const object = {a: 1, b: 2};
+const object = {a: 1, b: 2};``
 object['c'] = 3;
 ```
 
