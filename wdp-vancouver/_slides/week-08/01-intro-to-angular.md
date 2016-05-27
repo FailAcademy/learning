@@ -121,7 +121,7 @@ class: center, middle
 
 ## Type Annotations
 
-It's been said that **All programming is just transforming data**. Does this ring true for you?
+It's been said that **all programming is just transforming data**. Does this ring true for you?
 Type annotations help us write safe code by telling the compiler what *type* of data we're expecting our program to act on.
 If you attempt to assign the incorrect type to the `const` in the previous example, your code editor should give you a warning!
 This is called **static analysis**. TypeScript helps catch errors in our code *before* execution!
@@ -153,16 +153,16 @@ let greeter = new Greeter("world");
 ```
 
 ---
-template: inverse
-
 # Exercise 2
+
+Implement a TypeScript Class to represent our class at RED.
+It should inherit from a Base Class Class.
+<br/>
+See the lesson page for more deatils!
 
 ---
 
 # TypeScript Interfaces
-
-TypeScript interfaces allow us to describe some data structure in out application. They are removed at runtime, and do not have any runtime performance costs.
-They are designed to improve static analysis and make your programs more understandable.
 
 ```js
 // Example interface
@@ -171,6 +171,9 @@ interface ICar {
     color: string;
 }
 ```
+
+TypeScript interfaces allow us to describe some data structure in out application. They are removed at runtime, and do not have any runtime performance costs.
+They are designed to improve static analysis and make your programs more understandable.
 
 ---
 
@@ -202,7 +205,7 @@ function greeter(person: Person) {
 	// TODO: finish in your editor to see static analysis in action!
 }
 
-const user = { firstname: "Mack", lastname: "Knife" }
+const user = { firstname: "Mack", lastname: "Knife" };
 
 greeter(user);
 ```
@@ -215,9 +218,42 @@ greeter function will know exactly what data it needs to run without errors!
 # Exercise 3
 
 Implement the necessary interface for the Class/Classes you created in Exercise 2.
-- If your class has methods, make sure you add them in your interface too.
+- If your Class has methods, make sure you add them in your interface too.
 - How do you *implement* a Class Interface?
 
+
+---
+template: inverse
+
+# Angular 2
+... is a development platform for building mobile and desktop web applications.
+
+---
+# The Angular CLI
+
+To generate our first Angular 2 application we'll use the Angular Command Line Interface (CLI).
+The CLI will allow us to quickly generate all of the files and folders we need to build the project, and it will
+ensure tha we are using best-practice conventions for our project structure.
+
+#### Let's generate a new Angular 2 project:
+If you have the CLI installed (see lesson pre-work), from your project directory run the following command: <br/>
+`ng create angular2-project`
+
+---
+template: inverse
+
+# What was created?
+(Hint: All the things)
+
+---
+
+###Single Page Applications (SPA)
+Angular is a tool best suited for building BIG SPA's. What is an SPA? For our purposes we'll need to think in terms of:
+
+- **Modules** - Files where our code is written.
+- **Components** - The basic building block of Angular 2 Applications.
+- **Routes** - Code that maps URLs to specific Angular Components.
+- **Services** - Code that performs some task not directly related to changing the user interface.
 
 ---
 

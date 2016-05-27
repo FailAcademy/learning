@@ -68,21 +68,27 @@ Document the data contracts. What data needs to be sent & in what format for eac
 
 ## Exercise 2
 
-Implement a TypeScript Class the does something interesting.
+Implement a TypeScript Class to represent our class at RED.
+It should inherit from a Base Class Class.
 
 - Your Class must have the appropriate Type Annotations.
 - Your Class should implement a public property.
 - Your Class should implement a public method.
 - Your Class must inherit from a base class.
 
-Some suggestions:
-	- Recreate the Hotel example from earlier in the course.
-	- A Car that drives and honks.
-	- An animal.
+Your class should:
+- Track if the course id active or not active.
+- Add students (if course is active)
+- Remove individual students
+- Find a student by ID
+- List all students
+- Update the attendance status of an individual student.
+
 
 Use the TypeScript compiler to compile and run your code!
 
 ---
+
 # Exercise 3
 
 Implement the necessary interface for the Class/Classes you created in Exercise 2.
@@ -105,7 +111,6 @@ Custom Component
 
 ## Lab Activity
 
-Todo List!
 
 ---
 
@@ -114,6 +119,7 @@ Todo List!
 **TypeScript**<br/>
 Excellent [PluralSight course](https://www.pluralsight.com/courses/typescript) on TypeScript. <br/>
 [TypeScript Documentation](https://www.typescriptlang.org/). <br/>
+[Typescript Examples Repo](https://github.com/Microsoft/TypeScriptSamples)<br/>
 
 **Angular 2** <br/>
 [Angular 2 Cheat-Sheet](https://angular.io/cheatsheet)
