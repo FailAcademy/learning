@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to AngularJS Slides
+title: Intro to Angular 2 Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Intro to Angular
+# Intro to Angular 2
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -19,367 +19,205 @@ layout: false
 
 # Agenda
 
-1. What is Angular?
-2. Angular vs. React vs. jQuery
-3. Conceptual overview
-4. Project 4 overview
-5. Set up a dev env using Gulp
+1. Introduce the Postman app, and the JOSN API we'll be using to populate and persist data in our app.
+
+2. Introduce TypeScript.
+
+4. Introduce to Angular 2.
+
+5. Begin to code our Angular 2 app!
+
+---
+
+# JSON API
+
+Install the Postman app if you have not already. Postman is a tool for making web requests (like a web browser).<br/>
+
+### **Terminology to know:** <br/>
+*JSON* <br/>
+*API*<br/>
+*Endpoint*<br/>
+*GET request* <br/>
+*POST request* <br/>
+
+---
+
+# Exercise 1
+
+Let's examine the API we'll be working with while building our Angular app.
+Download the API endpoints for use in Postman [here](https://www.getpostman.com/collections/ce21c4877ee4eac2d7e3).
+<br/>
+Document the data contracts. What data needs to be sent & in what format for each request? What are the responses?
 
 ---
 template: inverse
 
-# What is Angular?
+#TypeScript
 
 ---
 class: center, middle
 
-.inline-images[
-   ![Angles](http://www.mathsisfun.com/images/acuteangles.gif)
-]
-
----
-
-class: center, middle
-
-### What Angular Is...
-
-"AngularJS is a **structural framework** for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly.
-
-Angular's **data binding** and **dependency injection** eliminate much of the code you would otherwise have to write. And it all happens within the browser, making it an ideal partner with any server technology..."
-
-*&mdash;AngularJS official documentation*
+###TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 
 ---
 class: center, middle
 
-### How It Helps...
-
-"Angular is what HTML would have been, had it been designed for **applications**. HTML is a great declarative language for static documents. It does not contain much in the way of creating applications, and as a result building web applications is an exercise in **what do I have to do to trick the browser into doing what I want?**"
-
-*&mdash;AngularJS official documentation*
+![](/public/img/slide-assets/superset.jpg)
 
 ---
 
-# A Solution
+# Why TypeScript?
 
-The **impedance mismatch** between dynamic applications and static documents is often solved with:
+- It's JavaScript! (It's ES2015!), and backwards compatible with ES5.
+- Helps build LARGE applications by improving 'static verification', using Types and Interfaces.
+- All TypeScript functionality is optional!
+- Static verification means better developer tools that make writing code safer and easier.
 
-- **Library** &ndash; a collection of functions which are useful when writing web apps. Your code is in charge and it calls into the library when it sees fit. (e.g., jQuery, React)
-- **Framework** &ndash; a particular implementation of a web application, where your code fills in the details. The framework is in charge and it calls into your code when it needs something app specific. (e.g., Backbone, Ember, etc.)
+---
+
+
+# TypeScript Intro
+
+Let's Get familiar with TypeScript. We'll be using it a lot.
+Watch the first 15 minutes of [this video](https://www.typescriptlang.org/) from the TypeScript website.
+
+
+---
+
+# The TypeScript Compiler
+
+There is a command line compiler for TypeScript files.
+To use the command line compiler to compile your TypeScript files. (See the pre-work for this lesson if you don't have this installed).
+1. Your files must have the `.ts` extension (eg. hello.ts )
+2. in the same directory as your file run `tsc hello.ts`. This will output an `hello.js` file in ES5.
+
+---
+
+# Type Annotations
+
+Before:
+```js
+function greeter(person) {
+    return "Hello, " + person;
+}
+
+const user = "Claudine B";
+
+```
+
+After:
+```js
+function greeter(person: string) {
+    return "Hello, " + person;
+}
+
+const user = "Mikey C"
+```
+
+What if we assign an Array to user? What will happen?
 
 ---
 class: center, middle
 
-### What's an Angular App?
+## Type Annotations
 
-A structural framework for dynamic web apps.
+It's been said that **All programming is just transforming data**. Does this ring true for you?
+Type annotations help us write safe code by telling the compiler what *type* of data we're expecting our program to act on.
+If you attempt to assign the incorrect type to the `const` in the previous example, your code editor should give you a warning!
+This is called **static analysis**. TypeScript helps catch errors in our code *before* execution!
 
----
-
-#Exercise 1
-
-- Create an Angular module, and link it to an HTML document using the `ng-app` directive.
-- Give the module a name. Include that name in the `ng-app` attribute.
-
-Use the files you created in the pre-work as the starting point for his exercise.
-
-This is an angular module definition. We'll need at least one to create our application:
-```js
-angular.module('super-app', []);
-```
-
----
-template: inverse
-
-# Angular vs. jQuery
+(If you have not installed TypeScript in your editor, do it now - See the pre-work for this lesson).
 
 ---
 
-# Some jQuery
+# Classes in TypeScript
 
-In jQuery, we have to *capture* our DOM elements as jQuery objects first, in order to work with them. We call methods on these objects in order to get work done.
-
-Most importantly, all of the logic for manipulating the DOM, showing, hiding, appending, etc. must be done from inside our JavaScript files!
+Classes in TypeScript are identical to Classes in ES2015. Here is an example of a TypeScript class:
 
 ```js
-$('button').on('click', function(e) {
-  var inputValue = $('input').val();
-  // Using jQuery, we update our DOM inside a javascript file ...
-  $('h1').text('The value form the input is'+ inputValue +');
-});
-```
----
+class Greeter {
 
-# Look Ma, No JavaScript!
+	public greeting: string; // Public property
 
-```html
-<!DOCTYPE html>
-   <!-- Add the ng-app directive to our html -->
-   <html ng-app="super-app">
-      <head>
-      <title>Simple app</title>
-      <script src="angular.js"></script>
-   </head>
-   <body>
-       <!-- Add the ng-model directive to our element -->
-       <input ng-model="inputValue" type="text">
-       <!-- include the value of name in our page using {% raw %}{{ }}{% endraw %} -->
-       <h1>The value form the input is: {% raw %}{{ inputValue }}{% endraw %}</h1>
-   </body>
-</html>
-```
-
-Actually, there is JS at work here. Angular is watching our DOM for us, and applying the changes. Magic!!
-
----
-
-class: center, middle
-
-### What is this sorcery? Data-binding!
-
-Elements in our HTML are **bound** to data in our code, and those elements change *automagically* when the data that they are **bound** to change.
-
----
-class: center, middle
-
-.large[
-   Angular's internal code is **watching** for changes to our **model** and updating the value on the screen for us!
-]
-
----
-
-class: center, middle
-
-### How do we display data that does not come from a user input?
-
-.inline-images[
-   ![Einstein](/public/img/slide-assets/einstein.jpg)
-]
-
-*Where else could our data come from?*
-
----
-
-# Exercise 2
-
-Create a simple Angular application that manipulates some `ng-model` value, and display's the updated value to the user in an HTML document.
-
-You've seen how this works using a simple text input.
-
-Use the Angular documentation, and add update your view using: a **checkbox**, a **select menu** & **radio buttons** .
-
-Use your imagination when creating your application, and don't be afraid to add a little CSS personality. Bonus points will be given for creativity!
-
----
-class: center, middle
-# Angular Controllers
-
-*Controllers* in Angular are the means angular gives us for manipulating *Views* in our JavaScript applications.
-
----
-
-### Angular Controllers
-
-The following is an example of a simple controller, with some data bound to the magical `$scope` object!
-Any data assigned to a property of the `$scope` object will be available in our HTML document, provided we link the controller to the DOM.
-
-```js
-// script.js
-var app = angular.module("SimpleApp", []);
-
-app.controller('ExampleController', ['$scope', function($scope){
-
-   $scope.name = "Mackenzie";
-
-}]);
-```
-
----
-
-### Angular Controllers
-
-When we change the value of any properties assigned to the `$scope` object from our controller, the html will automagically change to reflect that change! This is called **2-way data-binding** and is one of ANgular's most important features. You'll use this pattern over and over again.
-
-```js
-// script.js
-var app = angular.module("SimpleApp", []);
-
-app.controller('ExampleController', ['$scope', function($scope){
-
-   $scope.name = "Mackenzie";
-
-}]);
-```
-
----
-
-Complete example:
-
-```js
-// script.js
-var app = angular.module("helloName", []);
-
-app.controller('NameController', ['$scope', function($scope){
-
-   $scope.name = "Mackenzie";
-
-}]);
-```
-
-```html
-<!DOCTYPE html>
-   <html ng-app="helloName">
-   <head>
-      <title>Simple App</title>
-      <script src="angular.js"></script>
-      <script src="script.js"></script>
-   </head>
-   <body ng-controller="NameController">
-      <!-- Add the ng-model directive to our element -->
-      <input ng-model="name" type="text" placeholder="Your name">
-      <!-- include the value of name in our page using {% raw %}{{ }}{% endraw %} -->
-      <h1>Hello {% raw %}{{ name }}{% endraw %}</h1>
-   </body>
-</html>
-```
-
----
-
-### Best practice:
-
-- It’s a best practice to not to set a primitive value (string, boolean, or number) directly on the
-$scope of a controller. Data in the DOM should always be attached to an object
- `$scope.values = { name: "Mackenzie" /* ...etc  */ }`.
-
----
-
-template: inverse
-
-# First steps to creating an Angular app
-
----
-
-### First steps to creating an Angular app
-
-```js
-var app = angular.module('MyNewApp', []);
-```
-
-The **module declaration** above has a very specific *signature*. It takes 2 *arguments*:
-- The first is a *String* which will be the name of your application. It can be anything you like, but it should be something descriptive.
-- The second argument is an empty *array*. This is required, and as we add other peoples modules to our application to augment functionality, we add them to this *array*.
-
----
-
-### Modules all the way down
-
-In Angular, it's good practice to separate your code into modules.
-You can combine modules to add functionality to your application.
-
-There are 3 important software development concepts at play here:
-*Encapsulation*, *dependency injection*, and *separation of concerns*.
-
-```js
-// An application that encpsulates some utility functions
-var utils = angular.module('AppUtils', []);
-
-// We can include it in our main application:
-var app = angular.module('MyNewApp', ['AppUtils']);
-
-```
-
----
-template: inverse
-
-# Exposing functionality from Angular Modules
-
----
-
-### Exposing functionality form Angular Modules
-
-Let's expose some functionality form one module to another using Angular's simplest method: the **Factory**.
-
-```js
-
-var utils = angular.module('AppUtils', []);
-
-app.factory('Baconator', [function(){
-    // we'll return a simple object with some methods
-    return {
-      // some silly method about bacon
-      addBacon: function(sentence){
-        return sentence+' All the better with Bacon!'
-      }
-      // ...
+    constructor(message: string) { 
+        this.greeting = message;
     }
-}]);
 
-```
+    public greet() { // Public method
+        return "Hello, " + this.greeting;
+    }
+}
 
----
-
-### Use our new module!
-
-```js
-
-// Create another module and inject our AppUtils module by name!
-var app = angular.module('BaconSpeak', ['AppUtils']);
-
-// Take note of Angular's unique Dependency injection syntax...
-// $scope must always be injected!
-// -------------------------------------------
-// Because we injected AppUtils into our app, we have access to the
-// 'Baconator factory' we created inside that module!
-// -------------------------------------------
-app.controller('BaconCtrl', ['$scope', 'Baconator',
-    // put the function argument on a new line for neatness
-    function($scope, Baconator){
-
-    var words = "Hello, the weather is very cold."
-
-    // We can use the addBacon method we created!
-    $scope.sentence = Baconator.addBacon(words);
-
-}]);
-
+let greeter = new Greeter("world");
 
 ```
 
 ---
 template: inverse
-
-# Questions?
-
----
-template: inverse
-
-# Putting it all together
-
----
 
 # Exercise 2
 
-Create an Angular application that uses code from another Angular module (via *dependency injection*) to manipulate some `$scope` value and display's the updated value to the user in an HTML document. Hint: You'll use an Angular `controller`, and a `factory`.
+---
 
-Remember the best practice we mentioned: Don;t assign primitive values directly to your controller's `$scope`.
-Instead use somehting like `$scope.values = { name: "Mackenzie" /* ...etc  */ }`
+# TypeScript Interfaces
 
-Again, add some css, bonus points for creativity!
+TypeScript interfaces allow us to describe some data structure in out application. They are removed at runtime, and do not have any runtime performance costs.
+They are designed to improve static analysis and make your programs more understandable.
+
+```js
+// Example interface
+interface ICar {
+    engine: string;
+    color: string;
+}
+```
 
 ---
 
+# TypeScript Interfaces
 
-template: inverse
+```js
+function greeter(person) {
+    return `Hello ${person.firstname} ${person.lastname}`;
+}
 
-# Project 4: <br />Mars Colony App
+const user = { firstname: "Mack", lastname: "Knife" }
+```
+
+Consider the following code. We can use an interface to ensure that anyone who calls our greeter function will pass in the correct parameter.
+In this case, for the function to work, it must be an Object with a `firstname` and `lastname` property. How is this done?
 
 ---
 
-### What We've Learned
+# TypeScript Interfaces
 
-- What AngularJS is and how to add it to our web app
-- How data-binding works (at high level)
-- Key Angular concepts
+```js
+
+interface Person {
+	firstname: string,
+	lastname: string
+}
+
+function greeter(person: Person) {
+	// TODO: finish in your editor to see static analysis in action!
+}
+
+const user = { firstname: "Mack", lastname: "Knife" }
+
+greeter(user);
+```
+
+Here is our greeter function implementing the Person interface. This ensures that anyone who uses your
+greeter function will know exactly what data it needs to run without errors!
+
+---
+
+# Exercise 3
+
+Implement the necessary interface for the Class/Classes you created in Exercise 2.
+- If your class has methods, make sure you add them in your interface too.
+- How do you *implement* a Class Interface?
+
 
 ---
 
