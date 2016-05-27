@@ -121,7 +121,7 @@ class: center, middle
 
 ## Type Annotations
 
-It's been said that **All programming is just transforming data**. Does this ring true for you?
+It's been said that **all programming is just transforming data**. Does this ring true for you?
 Type annotations help us write safe code by telling the compiler what *type* of data we're expecting our program to act on.
 If you attempt to assign the incorrect type to the `const` in the previous example, your code editor should give you a warning!
 This is called **static analysis**. TypeScript helps catch errors in our code *before* execution!
@@ -202,7 +202,7 @@ function greeter(person: Person) {
 	// TODO: finish in your editor to see static analysis in action!
 }
 
-const user = { firstname: "Mack", lastname: "Knife" }
+const user = { firstname: "Mack", lastname: "Knife" };
 
 greeter(user);
 ```
@@ -215,7 +215,7 @@ greeter function will know exactly what data it needs to run without errors!
 # Exercise 3
 
 Implement the necessary interface for the Class/Classes you created in Exercise 2.
-- If your class has methods, make sure you add them in your interface too.
+- If your Class has methods, make sure you add them in your interface too.
 - How do you *implement* a Class Interface?
 
 
