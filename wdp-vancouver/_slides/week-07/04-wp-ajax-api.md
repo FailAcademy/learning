@@ -60,6 +60,14 @@ A "number used once" (but not really...):
 
 ---
 
+# How Does WP Know?
+
+- Nonces aren't actually stored anywhere
+- You create a nonce using the `wp_create_nonce()` function, which will in turn call the `wp_hash()` function to hash together a custom string, the user_id, and the session token
+- The resulting hash is stored in `wp_usermeta` with the key `session_tokens`
+
+---
+
 # How to Use Nonces
 
 You generate them at the point of the action and then validate it at the target. Nonces can be placed in a link, hidden form field, or Ajax request.
@@ -105,7 +113,7 @@ function red_scripts() {
 
  	wp_localize_script( 'red_api', 'api_vars', array(
       'nonce' => wp_create_nonce( 'wp_rest' ),
-      'success' => 'Thanks, your quote submission was received!',
+      'success' => 'Thanks, your submission was received!',
       'failure' => 'Your submission could not be processed.',
  	) );
 }
@@ -317,7 +325,7 @@ function red_scripts() {
 
   wp_localize_script( 'red_comments', 'red_vars', array(
       'rest_url' => esc_url_raw( rest_url() ),
-      'comment_nonce' => wp_create_nonce( 'wp_rest' ),
+      'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
       'post_id' => get_the_ID()
   ) );
 }
@@ -341,7 +349,7 @@ $('#close-comments').on('click', function(event) {
          comment_status: 'closed'
       },
       beforeSend: function(xhr) {
-         xhr.setRequestHeader( 'X-WP-Nonce', red_vars.comment_nonce );
+         xhr.setRequestHeader( 'X-WP-Nonce', red_vars.wpapi_nonce );
       }
    }).done( function(response) {
       alert('Success! Comments are closed for this post.');
