@@ -119,6 +119,7 @@ Custom Component
 **TypeScript**<br/>
 Excellent [PluralSight course](https://www.pluralsight.com/courses/typescript) on TypeScript. <br/>
 [TypeScript Documentation](https://www.typescriptlang.org/). <br/>
+[Typescript Examples Repo](https://github.com/Microsoft/TypeScriptSamples)<br/>
 
 **Angular 2** <br/>
 [Angular 2 Cheat-Sheet](https://angular.io/cheatsheet)
