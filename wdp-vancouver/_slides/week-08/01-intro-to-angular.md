@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to AngularJS Slides
+title: Intro to Angular 2 Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Intro to Angular
+# Intro to Angular 2
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -19,367 +19,622 @@ layout: false
 
 # Agenda
 
-1. What is Angular?
-2. Angular vs. React vs. jQuery
-3. Conceptual overview
-4. Project 4 overview
-5. Set up a dev env using Gulp
+1. Introduce the Postman app, and the JOSN API we'll be using to populate and persist data in our app.
+
+2. Introduce TypeScript.
+
+4. Introduce to Angular 2.
+
+5. Begin to code our Angular 2 app!
+
+---
+
+# JSON API
+
+You'l be using a custom JSON Api to build aout parts of your project.
+Install the Postman app if you have not already. Postman is a tool for making web requests (like a web browser).<br/>
+
+### **Terminology to know:** <br/>
+*JSON* <br/>
+*API*<br/>
+*Endpoint*<br/>
+*GET request* <br/>
+*POST request* <br/>
+
+---
+
+# Exercise 1
+
+Let's examine the API we'll be working with while building our Angular app.
+Download the API endpoints for use in Postman [here](https://www.getpostman.com/collections/ce21c4877ee4eac2d7e3).
+<br/>
+- Document the data contracts.
+- What data needs to be sent & in what format for each request?
+- What are the responses?
 
 ---
 template: inverse
 
-# What is Angular?
+#TypeScript
 
 ---
 class: center, middle
 
-.inline-images[
-   ![Angles](http://www.mathsisfun.com/images/acuteangles.gif)
-]
-
----
-
-class: center, middle
-
-### What Angular Is...
-
-"AngularJS is a **structural framework** for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly.
-
-Angular's **data binding** and **dependency injection** eliminate much of the code you would otherwise have to write. And it all happens within the browser, making it an ideal partner with any server technology..."
-
-*&mdash;AngularJS official documentation*
+###TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 
 ---
 class: center, middle
 
-### How It Helps...
-
-"Angular is what HTML would have been, had it been designed for **applications**. HTML is a great declarative language for static documents. It does not contain much in the way of creating applications, and as a result building web applications is an exercise in **what do I have to do to trick the browser into doing what I want?**"
-
-*&mdash;AngularJS official documentation*
+![](/public/img/slide-assets/superset.jpg)
 
 ---
 
-# A Solution
+# Why TypeScript?
 
-The **impedance mismatch** between dynamic applications and static documents is often solved with:
+- It's JavaScript! (It's ES2015!), and backwards compatible with ES5.
+- Helps build LARGE applications by improving 'static verification', using Types and Interfaces.
+- All TypeScript functionality is optional!
+- Static verification means better developer tools that make writing code safer and easier.
 
-- **Library** &ndash; a collection of functions which are useful when writing web apps. Your code is in charge and it calls into the library when it sees fit. (e.g., jQuery, React)
-- **Framework** &ndash; a particular implementation of a web application, where your code fills in the details. The framework is in charge and it calls into your code when it needs something app specific. (e.g., Backbone, Ember, etc.)
+---
+
+
+# TypeScript Intro
+
+Let's Get familiar with TypeScript. We'll be using it a lot.
+Watch the first 15 minutes of [this video](https://www.typescriptlang.org/) from the TypeScript website.
+
+
+---
+
+# The TypeScript Compiler
+
+There is a command line compiler for TypeScript files.
+To use the command line compiler to compile your TypeScript files. (See the pre-work for this lesson if you don't have this installed).
+1. Your files must have the `.ts` extension (eg. hello.ts )
+2. in the same directory as your file run `tsc hello.ts`. This will output an `hello.js` file in ES5.
+
+---
+
+# Type Annotations
+
+Before:
+```js
+function greeter(person) {
+    return "Hello, " + person;
+}
+
+const user = "Claudine B";
+
+```
+
+After:
+```js
+function greeter(person: string) {
+    return "Hello, " + person;
+}
+
+const user = "Mikey C"
+```
+
+What if we assign an Array to user? What will happen?
 
 ---
 class: center, middle
 
-### What's an Angular App?
+## Type Annotations
 
-A structural framework for dynamic web apps.
+It's been said that **all programming is just transforming data**. 
+Type Annotations help us write safe code by informing our program about what *type* of data we're expecting it to act on.
+If you attempt to assign the incorrect type to the `const` in the previous example, your code editor should give you a warning!
+This is called **static analysis**. TypeScript helps catch errors in our code *before* execution!
 
----
-
-#Exercise 1
-
-- Create an Angular module, and link it to an HTML document using the `ng-app` directive.
-- Give the module a name. Include that name in the `ng-app` attribute.
-
-Use the files you created in the pre-work as the starting point for his exercise.
-
-This is an angular module definition. We'll need at least one to create our application:
-```js
-angular.module('super-app', []);
-```
-
----
-template: inverse
-
-# Angular vs. jQuery
+(If you have not installed TypeScript in your editor, do it now - See the pre-work for this lesson).
 
 ---
 
-# Some jQuery
+# Classes in TypeScript
 
-In jQuery, we have to *capture* our DOM elements as jQuery objects first, in order to work with them. We call methods on these objects in order to get work done.
-
-Most importantly, all of the logic for manipulating the DOM, showing, hiding, appending, etc. must be done from inside our JavaScript files!
+Classes in TypeScript are identical to Classes in ES2015. Here is an example of a TypeScript class:
 
 ```js
-$('button').on('click', function(e) {
-  var inputValue = $('input').val();
-  // Using jQuery, we update our DOM inside a javascript file ...
-  $('h1').text('The value form the input is'+ inputValue +');
-});
-```
----
+class Greeter {
 
-# Look Ma, No JavaScript!
+	public greeting: string; // Public property
 
-```html
-<!DOCTYPE html>
-   <!-- Add the ng-app directive to our html -->
-   <html ng-app="super-app">
-      <head>
-      <title>Simple app</title>
-      <script src="angular.js"></script>
-   </head>
-   <body>
-       <!-- Add the ng-model directive to our element -->
-       <input ng-model="inputValue" type="text">
-       <!-- include the value of name in our page using {% raw %}{{ }}{% endraw %} -->
-       <h1>The value form the input is: {% raw %}{{ inputValue }}{% endraw %}</h1>
-   </body>
-</html>
-```
-
-Actually, there is JS at work here. Angular is watching our DOM for us, and applying the changes. Magic!!
-
----
-
-class: center, middle
-
-### What is this sorcery? Data-binding!
-
-Elements in our HTML are **bound** to data in our code, and those elements change *automagically* when the data that they are **bound** to change.
-
----
-class: center, middle
-
-.large[
-   Angular's internal code is **watching** for changes to our **model** and updating the value on the screen for us!
-]
-
----
-
-class: center, middle
-
-### How do we display data that does not come from a user input?
-
-.inline-images[
-   ![Einstein](/public/img/slide-assets/einstein.jpg)
-]
-
-*Where else could our data come from?*
-
----
-
-# Exercise 2
-
-Create a simple Angular application that manipulates some `ng-model` value, and display's the updated value to the user in an HTML document.
-
-You've seen how this works using a simple text input.
-
-Use the Angular documentation, and add update your view using: a **checkbox**, a **select menu** & **radio buttons** .
-
-Use your imagination when creating your application, and don't be afraid to add a little CSS personality. Bonus points will be given for creativity!
-
----
-class: center, middle
-# Angular Controllers
-
-*Controllers* in Angular are the means angular gives us for manipulating *Views* in our JavaScript applications.
-
----
-
-### Angular Controllers
-
-The following is an example of a simple controller, with some data bound to the magical `$scope` object!
-Any data assigned to a property of the `$scope` object will be available in our HTML document, provided we link the controller to the DOM.
-
-```js
-// script.js
-var app = angular.module("SimpleApp", []);
-
-app.controller('ExampleController', ['$scope', function($scope){
-
-   $scope.name = "Mackenzie";
-
-}]);
-```
-
----
-
-### Angular Controllers
-
-When we change the value of any properties assigned to the `$scope` object from our controller, the html will automagically change to reflect that change! This is called **2-way data-binding** and is one of ANgular's most important features. You'll use this pattern over and over again.
-
-```js
-// script.js
-var app = angular.module("SimpleApp", []);
-
-app.controller('ExampleController', ['$scope', function($scope){
-
-   $scope.name = "Mackenzie";
-
-}]);
-```
-
----
-
-Complete example:
-
-```js
-// script.js
-var app = angular.module("helloName", []);
-
-app.controller('NameController', ['$scope', function($scope){
-
-   $scope.name = "Mackenzie";
-
-}]);
-```
-
-```html
-<!DOCTYPE html>
-   <html ng-app="helloName">
-   <head>
-      <title>Simple App</title>
-      <script src="angular.js"></script>
-      <script src="script.js"></script>
-   </head>
-   <body ng-controller="NameController">
-      <!-- Add the ng-model directive to our element -->
-      <input ng-model="name" type="text" placeholder="Your name">
-      <!-- include the value of name in our page using {% raw %}{{ }}{% endraw %} -->
-      <h1>Hello {% raw %}{{ name }}{% endraw %}</h1>
-   </body>
-</html>
-```
-
----
-
-### Best practice:
-
-- It’s a best practice to not to set a primitive value (string, boolean, or number) directly on the
-$scope of a controller. Data in the DOM should always be attached to an object
- `$scope.values = { name: "Mackenzie" /* ...etc  */ }`.
-
----
-
-template: inverse
-
-# First steps to creating an Angular app
-
----
-
-### First steps to creating an Angular app
-
-```js
-var app = angular.module('MyNewApp', []);
-```
-
-The **module declaration** above has a very specific *signature*. It takes 2 *arguments*:
-- The first is a *String* which will be the name of your application. It can be anything you like, but it should be something descriptive.
-- The second argument is an empty *array*. This is required, and as we add other peoples modules to our application to augment functionality, we add them to this *array*.
-
----
-
-### Modules all the way down
-
-In Angular, it's good practice to separate your code into modules.
-You can combine modules to add functionality to your application.
-
-There are 3 important software development concepts at play here:
-*Encapsulation*, *dependency injection*, and *separation of concerns*.
-
-```js
-// An application that encpsulates some utility functions
-var utils = angular.module('AppUtils', []);
-
-// We can include it in our main application:
-var app = angular.module('MyNewApp', ['AppUtils']);
-
-```
-
----
-template: inverse
-
-# Exposing functionality from Angular Modules
-
----
-
-### Exposing functionality form Angular Modules
-
-Let's expose some functionality form one module to another using Angular's simplest method: the **Factory**.
-
-```js
-
-var utils = angular.module('AppUtils', []);
-
-app.factory('Baconator', [function(){
-    // we'll return a simple object with some methods
-    return {
-      // some silly method about bacon
-      addBacon: function(sentence){
-        return sentence+' All the better with Bacon!'
-      }
-      // ...
+    constructor(message: string) { 
+        this.greeting = message;
     }
-}]);
+
+    public greet() { // Public method
+        return "Hello, " + this.greeting;
+    }
+}
+
+let greeter = new Greeter("world");
 
 ```
 
 ---
+# Exercise 2
 
-### Use our new module!
+Implement a TypeScript Class to represent our class at RED.
+It should inherit from a Base Class Class.
+<br/>
+See the lesson page for more deatils!
+
+---
+
+# TypeScript Interfaces
+
+```js
+// Example interface
+interface ICar {
+    engine: string;
+    color: string;
+}
+```
+
+TypeScript interfaces allow us to describe some data structure in out application. They are removed at runtime, and do not have any runtime performance costs.
+They are designed to improve static analysis and make your programs more understandable.
+
+---
+
+# TypeScript Interfaces
+
+```js
+function greeter(student) {
+    return `Hello ${person.firstname} ${person.lastname}`;
+}
+
+const student = { firstname: "Mack", lastname: "Knife" }
+```
+
+Consider the following code. We can use an interface to ensure that anyone who calls our greeter function will pass in the correct parameter.
+In this case, for the function to work, it must be an Object with a `firstname` and `lastname` property. How is this done?
+
+---
+
+# TypeScript Interfaces
 
 ```js
 
-// Create another module and inject our AppUtils module by name!
-var app = angular.module('BaconSpeak', ['AppUtils']);
+interface Student {
+	firstname: string,
+	lastname: string
+}
 
-// Take note of Angular's unique Dependency injection syntax...
-// $scope must always be injected!
-// -------------------------------------------
-// Because we injected AppUtils into our app, we have access to the
-// 'Baconator factory' we created inside that module!
-// -------------------------------------------
-app.controller('BaconCtrl', ['$scope', 'Baconator',
-    // put the function argument on a new line for neatness
-    function($scope, Baconator){
+function greeter(student: Student) {
+	// TODO: finish in your editor to see static analysis in action!
+}
 
-    var words = "Hello, the weather is very cold."
+const student = { firstname: "Mack", lastname: "Knife" };
 
-    // We can use the addBacon method we created!
-    $scope.sentence = Baconator.addBacon(words);
+greeter(student);
+```
 
-}]);
+Here is our `greeter` function implementing the Student Interface. This ensures that anyone who uses your
+greeter function will know exactly what data it needs to run without errors!
 
+---
+
+# Exercise 3
+
+Implement the necessary interface for the Class/Classes you created in Exercise 2.
+- If your Class has methods, make sure you add them in your interface too.
+- How do you *implement* a Class Interface?
+- What if you don't know the type of data assigned to a property?
+
+
+---
+template: inverse
+
+# Angular 2
+... is a development platform for building mobile and desktop web applications. You can write Angular apps in both
+TypeScript and JavaScript and allows the developer to choose.
+We'll be using TypeScript to code our Angular Application.
+
+---
+# The Angular CLI
+
+To generate our first Angular 2 application we'll use the Angular Command Line Interface (CLI).
+The CLI will allow us to quickly generate all of the files and folders we need to build the project, and it will
+ensure tha we are using best-practice conventions for our project structure.
+
+#### Generate a new Angular 2 project:
+If you have the CLI installed (see lesson pre-work), from your project directory run the following command: <br/>
+`ng create angular2-project`
+
+---
+template: inverse
+
+# What was created?
+(Hint: All the things)
+
+---
+
+###Single Page Applications (SPA)
+Angular is a tool best suited for building BIG SPA's. What is an SPA? For our purposes we'll need to think in terms of:
+
+- **Modules** - Files where our code is written.
+- **Components** - The basic building block of Angular 2 Applications.
+- **Routes** - Code that maps URLs to specific Angular Components.
+- **Services** - Code that performs some task not directly related to changing the user interface.
+
+---
+
+#Application Data
+
+If all programming is simply transforming data, then before we start writing our views (HTML / CSS), 
+the first thing we'll need to determine is the data (Data Model) our application will be working with.
+<br/>
+
+### What are the data models?
+
+---
+
+# Modelling Data
+
+Our application reads and writes data from a JSON API.
+This is the data we'll need to model in our code to complete the application. Some data will come directly from the API and we don't modify it.
+Other data will be created by us and sent to our API to be saved in the Database where our API's JSON data is stored.
+
+---
+
+# Modelling Data
+
+**We'll create these models from user input** 
+- A Colonist
+- An Encounter
+
+**We'll read these from the API** (We'll also be reading a list of Encounter object too, but we're already modelling these above)
+- An Alien
+- An Occupation
+
+---
+
+# Exercise 4
+
+We've determined the data our application will be working with. For each model, create either a
+TypeScript Class or a TypeScript Interface to represent each.
+
+Use Interfaces to represent read-only data. Use Classes to represent data that will be created via forms.
+Pay close attention to the data-contracts used by the API.
+
+Add a file for each Class/Interface into **src/app/shared**
+We'll use a specific naming convention when creating files in out application: eg. **occupation.model.ts**
+
+
+---
+template: inverse
+
+# Services
+
+---
+
+# Services
+
+Now that our application knows about the data it's using, and the models have been determined in code. We'll now write
+the code that will allow us to send and receive our models via the API.<br/>
+
+- What type of data will we be sending 'over the wire' to our API.
+- How do we describe the process by which data is sent and received?
+
+---
+# Services & REST
+
+REST is an acronym:<br/> 
+**Representational State Transfer**.
+<br/>
+<br/>
+For our purposes, we can think of REST as simply URLs the represent specific data / sets fo data that does not change.<br/>
+Additionally, the URLs we use mostly describe the data we expect.
+
+For example:<br/>
+A request to **api/mars/aliens** returns a list of Aliens. <br/>
+[Further reading ...](http://rest.elkstein.org/2008/02/what-is-rest.html)
+
+---
+
+# Services & REST
+
+In our Angular app we'll create a *service* (Class) for each API endpoint, with methods for sending and receiving data to and from
+the Webserver that accesses the stored data for our application.
+
+---
+
+# What's in a Service?
+
+- Our services will make web requests using HTTP
+- Since web requests could take an indefinite amount of time, they will be executed **asynchronously**. Meaning our application code
+will not have to wait for the web request to finish before performing other tasks, but when it is finished, we can take some action in our code.
+based on the result. To accomplish this we'll use something called a **Promise**.
+
+---
+
+# Exercise 5
+
+To gain a better understanding of promises, follow this [simple guide on implementing them](https://www.promisejs.org/implementing/).
+Knowing how promises work is essential for working with *Async* code like the services we'll create.
+
+---
+template: inverse
+
+# Our App's Services
+
+---
+This is our application's Alien Service:
+```js
+import { Injectable } from '@angular/core';
+import { IAlien } from '../models';
+import { Http, Headers } from '@angular/http';
+import 'rxjs/add/operator/toPromise';
+
+@Injectable()
+export class AlienService {
+
+	aliensUrl = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
+
+	constructor(private http: Http){}
+
+	getAliens(): Promise<IAlien[]> {
+
+		return this.http.get(this.aliensUrl)
+						.toPromise()
+						.then(response => response.json().aliens)
+						.catch(this.handleError);
+	}
+
+ 	private handleError(error: any) {
+		console.error('An error occurred', error);
+		return Promise.reject(error.message || error);
+	}
+}
+```
+---
+template: inverse
+
+# A Closer Look
+
+---
+# Imports
+
+Let's break our new Service down, line by line:
+```js
+import { Injectable } from '@angular/core';
+import { IAlien } from '../models';
+import { Http, Headers } from '@angular/http';
+import 'rxjs/add/operator/toPromise';
+```
+These are the modules we'll need to create the service.
+
+---
+# `@Injectable` Decorator
+
+```js
+import { Injectable } from '@angular/core';
+```
+Angular 2 uses a software development pattern called dependency injection. Dependency Injection allows the developer to explicitly define what other modules will
+be used when implementing Classes....<br/>
+If you want to use a Class that you've written inside an Angular component, you'll need to add the `@Injectable` 'Decorator'.
+
+**More on this later...**
+---
+# Our Data Model
+
+```js
+import { IAlien } from '../models';
+```
+
+Here we're importing the interface to our data. Since it is read-only, we're using an Interface instead of a Class. <br/>
+
+- **Why are Interfaces useful?**
+
+---
+
+# Angular's `HTTP` Class
+
+```js
+import { Http, Headers } from '@angular/http';
+```
+We'll be making an HTTP request to our API endpoint. Angular 2 comes with a library of code that will help
+us make these requests. (Similar to JQuery's `$.ajax` );
+
+---
+
+# `Promise` Utilities
+
+```js
+import 'rxjs/add/operator/toPromise';
+```
+
+This last line is required so we can transform our request into a Promise (Code that will run Asynchronously).
+---
+# Our Service Class
+
+```js
+@Injectable()
+export class AlienService {
+
+}
+```
+
+Our empty Class declaration will look like this. It's just a plain old Class that has been 'decorated' with the `@Injectable` Decorator.
+Our class must also be **exported** so we can use it in other modules in our code.
+---
+
+# Static Properties
+
+```js
+@Injectable()
+export class AlienService {
+	aliensUrl = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
+}
+```
+
+First, we'll add a static property to our class so we can store the URL we'll be using to make requests to out API endpoint.
+---
+
+# The Constructor
+
+```js
+@Injectable()
+export class AlienService {
+
+	aliensUrl = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
+
+	constructor(private http: Http){}
+
+}
+```
+Next, we'll add the Class Constructor function. Notice the parameter. What is happening here? <br/>
+- We are declaring the this class will have a private (meaning not visible to other Classes) property named `http`.
+- This property is and **instance** of Angular's `HTTP` Class. This is Dependency Injection at work.
+
+---
+# Dependency Injection
+
+####**We'll never write this:**
+
+```js
+private http:HTTP;
+
+constructor(){
+	this.http = new HTTP();
+}
+```
+
+Angular is **injecting** an instance of the `HTTP` Class an assigning it to a property on our Service for us!
+- We don't have to worry about passing the correct parameters to the `new` function, all is taken care of behind the scenes by Angular!
+
+---
+# `GET` Method
+
+```js
+getAliens(): Promise<IAlien[]> {
+	return this.http.get(this.aliensUrl)
+					.toPromise()
+					.then(response => response.json().aliens)
+					.catch(this.handleError);
+}
+
+```
+Finally, we define the Class method that makes HTTP requests to `GET` Aliens from our API!
+
+---
+
+# `GET` Method
+
+```js
+getAliens(): Promise<IAlien[]>
 
 ```
 
----
-template: inverse
-
-# Questions?
-
----
-template: inverse
-
-# Putting it all together
+This syntax may look unfamiliar. It's TypeScript in action and should be read like this:
+- The `getAliens` method will return a `Promise` which will eventually resolve (finish executing and then return)
+a list of objects that conform to our `IAlien` interface. (A bunch of Alien objects, in JSON with the properties
+we've specified in our `IAlien` Interface)!
 
 ---
 
-# Exercise 2
-
-Create an Angular application that uses code from another Angular module (via *dependency injection*) to manipulate some `$scope` value and display's the updated value to the user in an HTML document. Hint: You'll use an Angular `controller`, and a `factory`.
-
-Remember the best practice we mentioned: Don;t assign primitive values directly to your controller's `$scope`.
-Instead use somehting like `$scope.values = { name: "Mackenzie" /* ...etc  */ }`
-
-Again, add some css, bonus points for creativity!
-
----
-
-
-template: inverse
-
-# Project 4: <br />Mars Colony App
+# `GET` Method
+```js
+    return this.http.get(this.aliensUrl)
+                    .toPromise()
+                    .then(response => response.json().aliens)
+                    .catch(this.handleError);
+```
+Given the explanation on the previous slide (Our 'typed' function's signature), we can now make assumptions about what this code does.<br/>
+## ** What does this code do? **
 
 ---
+Make a `GET` request to the URL specified.
+```js
+this.http.get(this.aliensUrl)
+```
+Transform the result of calling this method into a `Promise`.
+```js
+ .toPromise()
+```
+If the `GET` request succeeds, the `Promise` created by `toPromise` is resolved, 'then' return the response data.
+```js
+.then(response => response.json().aliens)
+```
+If the `GET` request fails, the `Promise` created by `toPromise` is rejected, catch the error and call the error handler method we've defined!
+```js
+.catch(this.handleError);
+```
+---
+**Voila!**
+```js
+import { Injectable } from '@angular/core';
+import { IAlien } from '../models';
+import { Http, Headers } from '@angular/http';
+import 'rxjs/add/operator/toPromise';
 
-### What We've Learned
+@Injectable()
+export class AlienService {
 
-- What AngularJS is and how to add it to our web app
-- How data-binding works (at high level)
-- Key Angular concepts
+	aliensUrl = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
+
+	constructor(private http: Http){}
+
+	getAliens(): Promise<IAlien[]> {
+
+		return this.http.get(this.aliensUrl)
+						.toPromise()
+						.then(response => response.json().aliens)
+						.catch(this.handleError);
+	}
+
+ 	private handleError(error: any) {
+		console.error('An error occurred', error);
+		return Promise.reject(error.message || error);
+	}
+}
+```
+---
+class: center, middle
+# Service Pattern
+
+### All of the Services in our application will follow a similar pattern.
+
+---
+#`POST` Request
+
+In our application, we'll be performing `GET` and `POST` requests to our JSON API.
+A `POST` request method follows a similar pattern as a `GET` request, except it must
+include some data which we are sending to the server, and some description about that data
+so the server knows how to process it.
+
+---
+# `POST` Request
+
+Here is the method we'll define for creating (`POST`ing) a new Colonist. 
+As you can see it's similar, besides the additional information we're sending with the request:
+```js
+newColonist(colonist: Colonist): Promise<Colonist> {
+
+
+	let headers = new Headers({'Content-Type': 'application/json'});
+	let body = JSON.stringify({ colonist });
+
+	return this.http
+			   .post(this.colonistsUrl, body, { headers: headers })
+			   .toPromise()
+			   .then(response => response.json().colonist)
+			   .catch(this.handleError);
+}
+
+```
+---
+
+# Lab Activity
+
+Create all of the Service Classes and HTTP methods for our application.
+- Be sure to use the appropriate data models and type information!
+- All Services should be added to the **app/shared/services** folder.
+- Create a file for each Service following our naming conventions (eg. alien.service.ts)
 
 ---
 
