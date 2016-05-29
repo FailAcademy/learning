@@ -58,7 +58,7 @@ Download [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflin
 
 ---
 
-##Exercise 1
+## Exercise 1
 
 Let's examine the API we'll be working with while building our Angular app.
 Download the API endpoints for use in Postman (here)[https://www.getpostman.com/collections/ce21c4877ee4eac2d7e3]
@@ -89,7 +89,7 @@ Use the TypeScript compiler to compile and run your code!
 
 ---
 
-# Exercise 3
+## Exercise 3
 
 Implement the necessary interface for the Class/Classes you created in Exercise 2.
 If your class has methods, make sure you implement them in your interface too.
@@ -119,7 +119,50 @@ Knowing how promises work is essential for working with *Async* code like the se
 
 ## Lab Activity
 
-Visit the Angular 2 Website and attempt to complete the [Tour of Heroes](https://angular.io/docs/ts/latest/tutorial/) demo app!
+Create all of the Service Classes and HTTP methods for our application.
+- Be sure to use the appropriate data models and type information!
+- All Services should be added to the **app/shared/services** folder.
+- Create a file for each Service following our naming conventions (eg. alien.service.ts)
+
+To test your your Services import them into the main component that was generated when you created your Angular application. 
+For example:
+
+```js
+import { AlienService } from './shared/services/alien.service';
+import { ColonistService } from './shared/services/colonist.service';
+
+@Component({
+  moduleId: module.id,
+  selector: 'angular2-project-app',
+  templateUrl: 'angular2-project.component.html',
+  styleUrls: ['angular2-project.component.css'],
+  // Add Services to our Component!
+  providers: [AlienService, ColonistService]
+})
+
+// IMplements the OnInit Interface!
+export class Angular2ProjectAppComponent implements OnInit {
+
+  public title: string;
+
+  constructor(
+	  // Inject the Services into our Class!
+	  private alienService: AlienService
+	  private colonistService: ColonistService
+	  ){
+  }
+
+  ngOnInit(){
+	  // Call your Service methods here and console.log the result!
+	  // Using promises!
+	  alienService.getAliens().then( aliens => console.log(aliens))
+  }
+
+}
+
+
+
+```
 
 ---
 

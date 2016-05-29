@@ -213,7 +213,7 @@ const student = { firstname: "Mack", lastname: "Knife" };
 greeter(student);
 ```
 
-Here is our greeter function implementing the Student Interface. This ensures that anyone who uses your
+Here is our `greeter` function implementing the Student Interface. This ensures that anyone who uses your
 greeter function will know exactly what data it needs to run without errors!
 
 ---
@@ -223,6 +223,7 @@ greeter function will know exactly what data it needs to run without errors!
 Implement the necessary interface for the Class/Classes you created in Exercise 2.
 - If your Class has methods, make sure you add them in your interface too.
 - How do you *implement* a Class Interface?
+- What if you don't know the type of data assigned to a property?
 
 
 ---
@@ -390,6 +391,250 @@ export class AlienService {
 	}
 }
 ```
+---
+template: inverse
+
+# A Closer Look
+
+---
+# Imports
+
+Let's break our new Service down, line by line:
+```js
+import { Injectable } from '@angular/core';
+import { IAlien } from '../models';
+import { Http, Headers } from '@angular/http';
+import 'rxjs/add/operator/toPromise';
+```
+These are the modules we'll need to create the service.
+
+---
+# `@Injectable` Decorator
+
+```js
+import { Injectable } from '@angular/core';
+```
+Angular 2 uses a software development pattern called dependency injection. Dependency Injection allows the developer to explicitly define what other modules will
+be used when implementing Classes....<br/>
+If you want to use a Class that you've written inside an Angular component, you'll need to add the `@Injectable` 'Decorator'.
+
+**More on this later...**
+---
+# Our Data Model
+
+```js
+import { IAlien } from '../models';
+```
+
+Here we're importing the interface to our data. Since it is read-only, we're using an Interface instead of a Class. <br/>
+
+- **Why are Interfaces useful?**
+
+---
+
+# Angular's `HTTP` Class
+
+```js
+import { Http, Headers } from '@angular/http';
+```
+We'll be making an HTTP request to our API endpoint. Angular 2 comes with a library of code that will help
+us make these requests. (Similar to JQuery's `$.ajax` );
+
+---
+
+# `Promise` Utilities
+
+```js
+import 'rxjs/add/operator/toPromise';
+```
+
+This last line is required so we can transform our request into a Promise (Code that will run Asynchronously).
+---
+# Our Service Class
+
+```js
+@Injectable()
+export class AlienService {
+
+}
+```
+
+Our empty Class declaration will look like this. It's just a plain old Class that has been 'decorated' with the `@Injectable` Decorator.
+Our class must also be **exported** so we can use it in other modules in our code.
+---
+
+# Static Properties
+
+```js
+@Injectable()
+export class AlienService {
+	aliensUrl = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
+}
+```
+
+First, we'll add a static property to our class so we can store the URL we'll be using to make requests to out API endpoint.
+---
+
+# The Constructor
+
+```js
+@Injectable()
+export class AlienService {
+
+	aliensUrl = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
+
+	constructor(private http: Http){}
+
+}
+```
+Next, we'll add the Class Constructor function. Notice the parameter. What is happening here? <br/>
+- We are declaring the this class will have a private (meaning not visible to other Classes) property named `http`.
+- This property is and **instance** of Angular's `HTTP` Class. This is Dependency Injection at work.
+
+---
+# Dependency Injection
+
+####**We'll never write this:**
+
+```js
+private http:HTTP;
+
+constructor(){
+	this.http = new HTTP();
+}
+```
+
+Angular is **injecting** an instance of the `HTTP` Class an assigning it to a property on our Service for us!
+- We don't have to worry about passing the correct parameters to the `new` function, all is taken care of behind the scenes by Angular!
+
+---
+# `GET` Method
+
+```js
+getAliens(): Promise<IAlien[]> {
+	return this.http.get(this.aliensUrl)
+					.toPromise()
+					.then(response => response.json().aliens)
+					.catch(this.handleError);
+}
+
+```
+Finally, we define the Class method that makes HTTP requests to `GET` Aliens from our API!
+
+---
+
+# `GET` Method
+
+```js
+getAliens(): Promise<IAlien[]>
+
+```
+
+This syntax may look unfamiliar. It's TypeScript in action and should be read like this:
+- The `getAliens` method will return a `Promise` which will eventually resolve (finish executing and then return)
+a list of objects that conform to our `IAlien` interface. (A bunch of Alien objects, in JSON with the properties
+we've specified in our `IAlien` Interface)!
+
+---
+
+# `GET` Method
+```js
+    return this.http.get(this.aliensUrl)
+                    .toPromise()
+                    .then(response => response.json().aliens)
+                    .catch(this.handleError);
+```
+Given the explanation on the previous slide (Our 'typed' function's signature), we can now make assumptions about what this code does.<br/>
+## ** What does this code do? **
+
+---
+Make a `GET` request to the URL specified.
+```js
+this.http.get(this.aliensUrl)
+```
+Transform the result of calling this method into a `Promise`.
+```js
+ .toPromise()
+```
+If the `GET` request succeeds, the `Promise` created by `toPromise` is resolved, 'then' return the response data.
+```js
+.then(response => response.json().aliens)
+```
+If the `GET` request fails, the `Promise` created by `toPromise` is rejected, catch the error and call the error handler method we've defined!
+```js
+.catch(this.handleError);
+```
+---
+**Voila!**
+```js
+import { Injectable } from '@angular/core';
+import { IAlien } from '../models';
+import { Http, Headers } from '@angular/http';
+import 'rxjs/add/operator/toPromise';
+
+@Injectable()
+export class AlienService {
+
+	aliensUrl = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
+
+	constructor(private http: Http){}
+
+	getAliens(): Promise<IAlien[]> {
+
+		return this.http.get(this.aliensUrl)
+						.toPromise()
+						.then(response => response.json().aliens)
+						.catch(this.handleError);
+	}
+
+ 	private handleError(error: any) {
+		console.error('An error occurred', error);
+		return Promise.reject(error.message || error);
+	}
+}
+```
+---
+class: center, middle
+# Service Pattern
+
+### All of the Services in our application will follow a similar pattern.
+
+---
+#`POST` Request
+
+In our application, we'll be performing `GET` and `POST` requests to our JSON API.
+A `POST` request method follows a similar pattern as a `GET` request, except it must
+include some data which we are sending to the server, and some description about that data
+so the server knows how to process it.
+
+---
+# `POST` Request
+
+Here is the method we'll define for creating (`POST`ing) a new Colonist. 
+As you can see it's similar, besides the additional information we're sending with the request:
+```js
+newColonist(colonist: Colonist): Promise<Colonist> {
+
+
+	let headers = new Headers({'Content-Type': 'application/json'});
+	let body = JSON.stringify({ colonist });
+
+	return this.http
+			   .post(this.colonistsUrl, body, { headers: headers })
+			   .toPromise()
+			   .then(response => response.json().colonist)
+			   .catch(this.handleError);
+}
+
+```
+---
+
+# Lab Activity
+
+Create all of the Service Classes and HTTP methods for our application.
+- Be sure to use the appropriate data models and type information!
+- All Services should be added to the **app/shared/services** folder.
+- Create a file for each Service following our naming conventions (eg. alien.service.ts)
 
 ---
 
