@@ -52,7 +52,6 @@ Download [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflin
 - Interface
 - Decorator
 - Component
-- Route
 - Promise
 - Service
 
@@ -128,6 +127,9 @@ To test your your Services import them into the main component that was generate
 For example:
 
 ```js
+// Other imports here ...
+
+// Import Services
 import { AlienService } from './shared/services/alien.service';
 import { ColonistService } from './shared/services/colonist.service';
 
@@ -157,10 +159,7 @@ export class Angular2ProjectAppComponent implements OnInit {
 	  // Using promises!
 	  alienService.getAliens().then( aliens => console.log(aliens))
   }
-
 }
-
-
 
 ```
 
