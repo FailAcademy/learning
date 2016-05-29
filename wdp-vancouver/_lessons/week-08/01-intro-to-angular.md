@@ -53,8 +53,8 @@ Download [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflin
 - Decorator
 - Component
 - Route
+- Promise
 - Service
-- Data binding
 
 ---
 
@@ -96,21 +96,30 @@ If your class has methods, make sure you implement them in your interface too.
 
 ---
 
-## Exercise
+## Exercise 4
 
-Angular App
+We've determined the data our application will be working with. For each model, create either a 
+TypeScript Class or a TypeScript Interface to represent each.
+
+*Hint:*<br/>
+Use Interfaces to represent read-only data. Use Classes to represent data that will be saved via forms in our application.
+Pay close attention to the data-contracts our API uses.
+
+Add a file for each Class/Interface into **src/app/shared**
 
 
 ---
 
-## Exercise
+## Exercise 5
 
-Custom Component
+To gain a better understanding of promises, follow this [simple guide on implementing them](https://www.promisejs.org/implementing/).
+Knowing how promises work is essential for working with *Async* code like the services we'll create.
 
 ---
 
 ## Lab Activity
 
+Visit the Angular 2 Website and attempt to complete the [Tour of Heroes](https://angular.io/docs/ts/latest/tutorial/) demo app!
 
 ---
 
@@ -122,6 +131,6 @@ Excellent [PluralSight course](https://www.pluralsight.com/courses/typescript) o
 [Typescript Examples Repo](https://github.com/Microsoft/TypeScriptSamples)<br/>
 
 **Angular 2** <br/>
-[Angular 2 Cheat-Sheet](https://angular.io/cheatsheet)
+[Angular 2 Cheat-Sheet](https://angular.io/cheatsheet)<br/>
 [Angular 2 QuickStart Documentation](https://angular.io/docs/ts/latest/tutorial/). <br/>
 [TODO MVC Angular 2](http://todomvc.com/examples/typescript-angular/#/). <br/>

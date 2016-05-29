@@ -31,6 +31,7 @@ layout: false
 
 # JSON API
 
+You'l be using a custom JSON Api to build aout parts of your project.
 Install the Postman app if you have not already. Postman is a tool for making web requests (like a web browser).<br/>
 
 ### **Terminology to know:** <br/>
@@ -47,7 +48,9 @@ Install the Postman app if you have not already. Postman is a tool for making we
 Let's examine the API we'll be working with while building our Angular app.
 Download the API endpoints for use in Postman [here](https://www.getpostman.com/collections/ce21c4877ee4eac2d7e3).
 <br/>
-Document the data contracts. What data needs to be sent & in what format for each request? What are the responses?
+- Document the data contracts.
+- What data needs to be sent & in what format for each request?
+- What are the responses?
 
 ---
 template: inverse
@@ -121,8 +124,8 @@ class: center, middle
 
 ## Type Annotations
 
-It's been said that **all programming is just transforming data**. Does this ring true for you?
-Type annotations help us write safe code by telling the compiler what *type* of data we're expecting our program to act on.
+It's been said that **all programming is just transforming data**. 
+Type Annotations help us write safe code by informing our program about what *type* of data we're expecting it to act on.
 If you attempt to assign the incorrect type to the `const` in the previous example, your code editor should give you a warning!
 This is called **static analysis**. TypeScript helps catch errors in our code *before* execution!
 
@@ -180,11 +183,11 @@ They are designed to improve static analysis and make your programs more underst
 # TypeScript Interfaces
 
 ```js
-function greeter(person) {
+function greeter(student) {
     return `Hello ${person.firstname} ${person.lastname}`;
 }
 
-const user = { firstname: "Mack", lastname: "Knife" }
+const student = { firstname: "Mack", lastname: "Knife" }
 ```
 
 Consider the following code. We can use an interface to ensure that anyone who calls our greeter function will pass in the correct parameter.
@@ -196,21 +199,21 @@ In this case, for the function to work, it must be an Object with a `firstname` 
 
 ```js
 
-interface Person {
+interface Student {
 	firstname: string,
 	lastname: string
 }
 
-function greeter(person: Person) {
+function greeter(student: Student) {
 	// TODO: finish in your editor to see static analysis in action!
 }
 
-const user = { firstname: "Mack", lastname: "Knife" };
+const student = { firstname: "Mack", lastname: "Knife" };
 
-greeter(user);
+greeter(student);
 ```
 
-Here is our greeter function implementing the Person interface. This ensures that anyone who uses your
+Here is our greeter function implementing the Student Interface. This ensures that anyone who uses your
 greeter function will know exactly what data it needs to run without errors!
 
 ---
@@ -226,7 +229,9 @@ Implement the necessary interface for the Class/Classes you created in Exercise 
 template: inverse
 
 # Angular 2
-... is a development platform for building mobile and desktop web applications.
+... is a development platform for building mobile and desktop web applications. You can write Angular apps in both
+TypeScript and JavaScript and allows the developer to choose.
+We'll be using TypeScript to code our Angular Application.
 
 ---
 # The Angular CLI
@@ -235,7 +240,7 @@ To generate our first Angular 2 application we'll use the Angular Command Line I
 The CLI will allow us to quickly generate all of the files and folders we need to build the project, and it will
 ensure tha we are using best-practice conventions for our project structure.
 
-#### Let's generate a new Angular 2 project:
+#### Generate a new Angular 2 project:
 If you have the CLI installed (see lesson pre-work), from your project directory run the following command: <br/>
 `ng create angular2-project`
 
@@ -254,6 +259,137 @@ Angular is a tool best suited for building BIG SPA's. What is an SPA? For our pu
 - **Components** - The basic building block of Angular 2 Applications.
 - **Routes** - Code that maps URLs to specific Angular Components.
 - **Services** - Code that performs some task not directly related to changing the user interface.
+
+---
+
+#Application Data
+
+If all programming is simply transforming data, then before we start writing our views (HTML / CSS), 
+the first thing we'll need to determine is the data (Data Model) our application will be working with.
+<br/>
+
+### What are the data models?
+
+---
+
+# Modelling Data
+
+Our application reads and writes data from a JSON API.
+This is the data we'll need to model in our code to complete the application. Some data will come directly from the API and we don't modify it.
+Other data will be created by us and sent to our API to be saved in the Database where our API's JSON data is stored.
+
+---
+
+# Modelling Data
+
+**We'll create these models from user input** 
+- A Colonist
+- An Encounter
+
+**We'll read these from the API** (We'll also be reading a list of Encounter object too, but we're already modelling these above)
+- An Alien
+- An Occupation
+
+---
+
+# Exercise 4
+
+We've determined the data our application will be working with. For each model, create either a
+TypeScript Class or a TypeScript Interface to represent each.
+
+Use Interfaces to represent read-only data. Use Classes to represent data that will be created via forms.
+Pay close attention to the data-contracts used by the API.
+
+Add a file for each Class/Interface into **src/app/shared**
+We'll use a specific naming convention when creating files in out application: eg. **occupation.model.ts**
+
+
+---
+template: inverse
+
+# Services
+
+---
+
+# Services
+
+Now that our application knows about the data it's using, and the models have been determined in code. We'll now write
+the code that will allow us to send and receive our models via the API.<br/>
+
+- What type of data will we be sending 'over the wire' to our API.
+- How do we describe the process by which data is sent and received?
+
+---
+# Services & REST
+
+REST is an acronym:<br/> 
+**Representational State Transfer**.
+<br/>
+<br/>
+For our purposes, we can think of REST as simply URLs the represent specific data / sets fo data that does not change.<br/>
+Additionally, the URLs we use mostly describe the data we expect.
+
+For example:<br/>
+A request to **api/mars/aliens** returns a list of Aliens. <br/>
+[Further reading ...](http://rest.elkstein.org/2008/02/what-is-rest.html)
+
+---
+
+# Services & REST
+
+In our Angular app we'll create a *service* (Class) for each API endpoint, with methods for sending and receiving data to and from
+the Webserver that accesses the stored data for our application.
+
+---
+
+# What's in a Service?
+
+- Our services will make web requests using HTTP
+- Since web requests could take an indefinite amount of time, they will be executed **asynchronously**. Meaning our application code
+will not have to wait for the web request to finish before performing other tasks, but when it is finished, we can take some action in our code.
+based on the result. To accomplish this we'll use something called a **Promise**.
+
+---
+
+# Exercise 5
+
+To gain a better understanding of promises, follow this [simple guide on implementing them](https://www.promisejs.org/implementing/).
+Knowing how promises work is essential for working with *Async* code like the services we'll create.
+
+---
+template: inverse
+
+# Our App's Services
+
+---
+This is our application's Alien Service:
+```js
+import { Injectable } from '@angular/core';
+import { IAlien } from '../models';
+import { Http, Headers } from '@angular/http';
+import 'rxjs/add/operator/toPromise';
+
+@Injectable()
+export class AlienService {
+
+	aliensUrl = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
+
+	constructor(private http: Http){}
+
+	getAliens(): Promise<IAlien[]> {
+
+		return this.http.get(this.aliensUrl)
+						.toPromise()
+						.then(response => response.json().aliens)
+						.catch(this.handleError);
+	}
+
+ 	private handleError(error: any) {
+		console.error('An error occurred', error);
+		return Promise.reject(error.message || error);
+	}
+}
+```
 
 ---
 
