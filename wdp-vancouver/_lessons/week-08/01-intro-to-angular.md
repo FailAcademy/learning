@@ -111,8 +111,13 @@ Add a file for each Class/Interface into **src/app/shared**
 
 ## Exercise 5
 
-To gain a better understanding of promises, follow this [simple guide on implementing them](https://www.promisejs.org/implementing/).
-Knowing how promises work is essential for working with *Async* code like the services we'll create.
+
+To gain a better understanding of promises, code along these tutorial videos:
+- [Introduction to promises](https://s3-us-west-2.amazonaws.com/red-wdp/lms-assets/Pluralsight-Introduction-to-promises.wmv).
+- [Implementing promises in ES5](https://s3-us-west-2.amazonaws.com/red-wdp/lms-assets/Pluralsight-Implement-promises.wmv)
+
+Knowing how promises work is essential for working with [*Async*](http://rowanmanning.com/posts/javascript-for-beginners-async/) code like the services we'll create.
+
 
 ---
 
