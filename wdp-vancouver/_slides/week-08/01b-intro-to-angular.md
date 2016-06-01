@@ -262,6 +262,62 @@ Angular is a tool best suited for building BIG SPA's. What is an SPA? For our pu
 
 ---
 
+# The 'main' Module
+
+The `main.ts` file in root of the **src/** folder is the first file that is executed when you run your application, 
+and should contain the following code.<br/>
+
+```js
+import { bootstrap } from '@angular/platform-browser-dynamic';
+import { enableProdMode } from '@angular/core';
+
+/*
+   The name of main application component may be different depending
+   on the nae you provided when you ran the generator...
+*/
+import { Angular2ProjectAppComponent, environment } from './app/';
+
+if (environment.production) {
+  enableProdMode();
+}
+
+bootstrap(Angular2ProjectAppComponent);
+```
+
+---
+
+# The Browser Platform
+
+This import loads Angular's browser platform renderer. Angular 2 apps can be 'rendered' on a number
+of different platforms (including, for example, iOS). Because we're building our app for the browser, we'll be
+using Angular's browser platform renderer!
+```js
+import { bootstrap } from '@angular/platform-browser-dynamic';
+```
+When this method is called, Angular does what it needs to do to render your main application Component!
+
+```js
+bootstrap(Angular2ProjectAppComponent);
+```
+
+---
+# `index.html`
+
+Angular applications are composed of a *tree of Components*, with a single application Component
+as the top-most parent. <br/>
+The main application Component is 'rendered' into this element by the `bootstrap` method!
+```html
+ <angular2-project-app>Loading...</angular2-project-app>
+```
+The name of the element above is defined in the main application component in **src/app/[your component name].ts**
+inside the `@Component` decorator. See if you can find it!
+
+---
+template: inverse
+
+#Data First
+
+---
 #Application Data
 
 If all programming is simply transforming data, then before we start writing our views (HTML / CSS),
