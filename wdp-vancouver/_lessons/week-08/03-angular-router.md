@@ -30,7 +30,8 @@ router instance.
 ## Keywords
 
 - Dependency Injection
-- pushState
+- Lifecycle Hook
+- `pushState`
 - Route
 - Provider
 - Directive
@@ -40,7 +41,16 @@ router instance.
 
 ## Exercise 1
 
-Install the Angular Router.
+Prepare to use the Angular Router.
+
+1. Refactor your main application Component: add the `<router-outlet>` element. Remove all code and any visuals you've added since
+starting the project.
+
+2. Add the `ROUTER_DIRECTIVES` and `ROUTER_PROVIDERS` to your application's bootstrap method. THis will ensure you can
+use all of the router's functionality anywhere in your app.
+
+3. Add the Angular Component [lifecycle hook](https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html) `ngOnInit` to your main application Component. We'll use this method to trigger
+the rendering of the homepage Component when your application loads.
 
 ---
 
@@ -48,19 +58,33 @@ Install the Angular Router.
 
 Generate a route for the homepage and add the `router-outlet` Component.
 
+1. Run the `ng generate route` command for each of pages in our application, including the homepage.
+
+2. Inject the `Router` Class into your main application Component. Use the `ngOnInit` method we defined
+previously to trigger navigation to the first (homepage) route in your application.
+
+<br/>
+#### Note:<br/>
+The Angular CLI may generate unwanted files. Pay close attention to the files that are generated as some could cause unexpected errors.
+
 ---
 
 ## Lab Activity
 
-Now that we know how to create Routes. Use the angular-cli to generate all of the Route/Component pairs for the
+Now that we know how to create Routes. Use the Angular CLI to generate all of the Route/Component pairs for the
 views in our application. The CLI should add all of the necessary files and configuration for you!
 
-The command you will use is `ng generate route home` **(use a unique name for each route)**. Run this from your projects root directory.
+ **Use a unique name for each route**.
 
 - Add a temporary navigation element, that uses the `routerLink` directive, to the main application Component to help you navigate between pages as you develop.
 - Make sure you add all of the required form elements so that your app is ready for the next lesson in which you will
 wire up our Data Models to form inputs and Service methods!
 
+####Important:<br/>
+When you're done, and you're routes are configured and working, start adding the markup to you components.
+Be sure to complete all of the HTML. You won't be able to complete the next lesson without it!
+
+**If you decide to start writing CSS** make sure you look over the project requirements before starting!
 
 ---
 
