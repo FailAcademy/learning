@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Intro to Angular 2
-slides: ['_slides/week-08/01-intro-to-angular.md']
+slides: ['_slides/week-08/01b-intro-to-angular.md']
 lesson_date: 2016-05-30
 ---
 
@@ -76,7 +76,8 @@ It should inherit from a Base Class Class.
 - Your Class must inherit from a base class.
 
 Your class should:
-- Track if the course id active or not active.
+
+- Track if the course is active or not active.
 - Add students (if course is active)
 - Remove individual students
 - Find a student by ID
@@ -97,7 +98,7 @@ If your class has methods, make sure you implement them in your interface too.
 
 ## Exercise 4
 
-We've determined the data our application will be working with. For each model, create either a 
+We've determined the data our application will be working with. For each model, create either a
 TypeScript Class or a TypeScript Interface to represent each.
 
 *Hint:*<br/>
@@ -113,10 +114,12 @@ Add a file for each Class/Interface into **src/app/shared**
 
 
 To gain a better understanding of promises, code along these tutorial videos:
-- [Introduction to promises](https://s3-us-west-2.amazonaws.com/red-wdp/lms-assets/Pluralsight-Introduction-to-promises.wmv).
+
+- [Introduction to promises](https://s3-us-west-2.amazonaws.com/red-wdp/lms-assets/Pluralsight-Introduction-to-promises.wmv)
 - [Implementing promises in ES5](https://s3-us-west-2.amazonaws.com/red-wdp/lms-assets/Pluralsight-Implement-promises.wmv)
 
-Knowing how promises work is essential for working with [*Async*](http://rowanmanning.com/posts/javascript-for-beginners-async/) code like the services we'll create.
+Knowing how promises work is essential for working with [*Async*](http://rowanmanning.com/posts/javascript-for-beginners-async/) code, like the API requests
+we'll be making from inside our service classes.
 
 
 ---
@@ -128,7 +131,7 @@ Create all of the Service Classes and HTTP methods for our application.
 - All Services should be added to the **app/shared/services** folder.
 - Create a file for each Service following our naming conventions (eg. alien.service.ts)
 
-To test your your Services import them into the main component that was generated when you created your Angular application. 
+To test your your Services import them into the main component that was generated when you created your Angular application.
 For example:
 
 ```js
@@ -175,9 +178,9 @@ export class Angular2ProjectAppComponent implements OnInit {
 **TypeScript**<br/>
 Excellent [PluralSight course](https://www.pluralsight.com/courses/typescript) on TypeScript. <br/>
 [TypeScript Documentation](https://www.typescriptlang.org/). <br/>
-[Typescript Examples Repo](https://github.com/Microsoft/TypeScriptSamples)<br/>
+[Typescript Examples Repo](https://github.com/Microsoft/TypeScriptSamples).<br/>
 
 **Angular 2** <br/>
-[Angular 2 Cheat-Sheet](https://angular.io/cheatsheet)<br/>
+[Angular 2 Cheat-Sheet](https://angular.io/cheatsheet).<br/>
 [Angular 2 QuickStart Documentation](https://angular.io/docs/ts/latest/tutorial/). <br/>
 [TODO MVC Angular 2](http://todomvc.com/examples/typescript-angular/#/). <br/>

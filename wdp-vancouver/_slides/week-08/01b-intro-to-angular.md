@@ -19,7 +19,7 @@ layout: false
 
 # Agenda
 
-1. Introduce the Postman app, and the JOSN API we'll be using to populate and persist data in our app.
+1. Introduce the Postman app, and the JSON API we'll be using to populate and persist data in our app.
 
 2. Introduce TypeScript.
 
@@ -31,7 +31,7 @@ layout: false
 
 # JSON API
 
-You'l be using a custom JSON Api to build aout parts of your project.
+You'll be using a custom *JSON API* to build parts of your project.
 Install the Postman app if you have not already. Postman is a tool for making web requests (like a web browser).<br/>
 
 ### **Terminology to know:** <br/>
@@ -45,7 +45,7 @@ Install the Postman app if you have not already. Postman is a tool for making we
 
 # Exercise 1
 
-Let's examine the API we'll be working with while building our Angular app.
+Let's look ar the API we'll be working with while building our Angular app.
 Download the API endpoints for use in Postman [here](https://www.getpostman.com/collections/ce21c4877ee4eac2d7e3).
 <br/>
 - Document the data contracts.
@@ -72,7 +72,7 @@ class: center, middle
 # Why TypeScript?
 
 - It's JavaScript! (It's ES2015!), and backwards compatible with ES5.
-- Helps build LARGE applications by improving 'static verification', using Types and Interfaces.
+- Helps build LARGE applications by improving **static verification**, using Types and Interfaces.
 - All TypeScript functionality is optional!
 - Static verification means better developer tools that make writing code safer and easier.
 
@@ -127,7 +127,7 @@ class: center, middle
 It's been said that **all programming is just transforming data**. 
 Type Annotations help us write safe code by informing our program about what *type* of data we're expecting it to act on.
 If you attempt to assign the incorrect type to the `const` in the previous example, your code editor should give you a warning!
-This is called **static analysis**. TypeScript helps catch errors in our code *before* execution!
+This is **static analysis**. TypeScript helps catch errors in our code *before* execution!
 
 (If you have not installed TypeScript in your editor, do it now - See the pre-work for this lesson).
 
@@ -176,7 +176,7 @@ interface ICar {
 ```
 
 TypeScript interfaces allow us to describe some data structure in out application. They are removed at runtime, and do not have any runtime performance costs.
-They are designed to improve static analysis and make your programs more understandable.
+They enable static analysis and make your programs more understandable.
 
 ---
 
@@ -213,7 +213,7 @@ const student = { firstname: "Mack", lastname: "Knife" };
 greeter(student);
 ```
 
-Here is our `greeter` function implementing the Student Interface. This ensures that anyone who uses your
+Here is our `greeter` function implementing the Student Interface. This makes sure that anyone who uses your
 greeter function will know exactly what data it needs to run without errors!
 
 ---
@@ -231,15 +231,14 @@ template: inverse
 
 # Angular 2
 ... is a development platform for building mobile and desktop web applications. You can write Angular apps in both
-TypeScript and JavaScript and allows the developer to choose.
-We'll be using TypeScript to code our Angular Application.
+TypeScript, ES2015 or ES5! We'll be using TypeScript to code our Angular 2 Application.
 
 ---
 # The Angular CLI
 
 To generate our first Angular 2 application we'll use the Angular Command Line Interface (CLI).
-The CLI will allow us to quickly generate all of the files and folders we need to build the project, and it will
-ensure tha we are using best-practice conventions for our project structure.
+The CLI will allow us to quickly generate all the files and folders we need to build the project, and it will
+make sure that we are using **best-practice** conventions for our project's folder structure.
 
 #### Generate a new Angular 2 project:
 If you have the CLI installed (see lesson pre-work), from your project directory run the following command: <br/>
@@ -254,7 +253,7 @@ template: inverse
 ---
 
 ###Single Page Applications (SPA)
-Angular is a tool best suited for building BIG SPA's. What is an SPA? For our purposes we'll need to think in terms of:
+Angular is a tool best suited for building BIG SPA's. What is an SPA? For our purposes we'll need to think about:
 
 - **Modules** - Files where our code is written.
 - **Components** - The basic building block of Angular 2 Applications.
@@ -265,8 +264,8 @@ Angular is a tool best suited for building BIG SPA's. What is an SPA? For our pu
 
 #Application Data
 
-If all programming is simply transforming data, then before we start writing our views (HTML / CSS), 
-the first thing we'll need to determine is the data (Data Model) our application will be working with.
+If all programming is simply transforming data, then before we start writing our views (HTML / CSS),
+the first thing we'll need to define is the data (Data Model) our application will be working with.
 <br/>
 
 ### What are the data models?
@@ -283,11 +282,11 @@ Other data will be created by us and sent to our API to be saved in the Database
 
 # Modelling Data
 
-**We'll create these models from user input** 
+**We'll create these models from user input**
 - A Colonist
 - An Encounter
 
-**We'll read these from the API** (We'll also be reading a list of Encounter object too, but we're already modelling these above)
+**We'll read these from the API** (We'll also be reading a list of Encounters too, but we're already modelling these, above).
 - An Alien
 - An Occupation
 
@@ -298,7 +297,7 @@ Other data will be created by us and sent to our API to be saved in the Database
 We've determined the data our application will be working with. For each model, create either a
 TypeScript Class or a TypeScript Interface to represent each.
 
-Use Interfaces to represent read-only data. Use Classes to represent data that will be created via forms.
+Use Interfaces to represent read-only data. Use Classes to represent data that will be saved via user input (Hint: forms).
 Pay close attention to the data-contracts used by the API.
 
 Add a file for each Class/Interface into **src/app/shared**
@@ -323,15 +322,15 @@ the code that will allow us to send and receive our models via the API.<br/>
 ---
 # Services & REST
 
-REST is an acronym:<br/> 
-**Representational State Transfer**.
+REST is an acronym:<br/>
+**(RE)presentational (S)tate (T)ransfer**.
 <br/>
 <br/>
-For our purposes, we can think of REST as simply URLs the represent specific data / sets fo data that does not change.<br/>
+For our purposes, we can think of REST as: URLs which represent specific data / sets of data.<br/>
 Additionally, the URLs we use mostly describe the data we expect.
 
 For example:<br/>
-A request to **api/mars/aliens** returns a list of Aliens. <br/>
+A request to **http:// ... api/mars/aliens** returns a list of Aliens. <br/>
 [Further reading ...](http://rest.elkstein.org/2008/02/what-is-rest.html)
 
 ---
@@ -355,8 +354,8 @@ based on the result. To accomplish this we'll use something called a **Promise**
 # Exercise 5
 
 To gain a better understanding of promises, code along these tutorial videos:
-- [Introduction to promises](https://s3-us-west-2.amazonaws.com/red-wdp/lms-assets/Pluralsight-Introduction-to-promises.wmv).
-- [Implementing promises in ES5](https://s3-us-west-2.amazonaws.com/red-wdp/lms-assets/Pluralsight-Implement-promises.wmv)
+- [Introduction to promises](https://s3-us-west-2.amazonaws.com/red-wdp/lms-assets/Pluralsight-Introduction-to-promises.wmv).<br/>
+- [Implementing promises in ES5](https://s3-us-west-2.amazonaws.com/red-wdp/lms-assets/Pluralsight-Implement-promises.wmv).
 
 Knowing how promises work is essential for working with [*Async*](http://rowanmanning.com/posts/javascript-for-beginners-async/) code like the services we'll create.
 
@@ -492,7 +491,7 @@ export class AlienService {
 ```
 Next, we'll add the Class Constructor function. Notice the parameter. What is happening here? <br/>
 - We are declaring the this class will have a private (meaning not visible to other Classes) property named `http`.
-- This property is and **instance** of Angular's `HTTP` Class. This is Dependency Injection at work.
+- This property is and **instance** of Angular's `HTTP` Class. This is **Dependency Injection** at work.
 
 ---
 # Dependency Injection
@@ -507,7 +506,12 @@ constructor(){
 }
 ```
 
-Angular is **injecting** an instance of the `HTTP` Class an assigning it to a property on our Service for us!
+Instead: 
+```js
+constructor(private http: Http){}
+```
+
+Angular is **injecting** an instance of the `HTTP` Class and assigning it to a property on our Service for us!
 - We don't have to worry about passing the correct parameters to the `new` function, all is taken care of behind the scenes by Angular!
 
 ---

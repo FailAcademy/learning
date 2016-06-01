@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Intro to React 1
-slides: ['_slides/week-05/02-intro-to-react.md']
+slides: ['_slides/week-05/01-intro-to-react.md']
 lesson_date: 2016-05-09
 ---
 
