@@ -552,23 +552,15 @@ Next, we'll add the Class Constructor function. Notice the parameter. What is ha
 ---
 # Dependency Injection
 
-####**We'll never write this:**
-
-```js
-private http:HTTP;
-
-constructor(){
-	this.http = new HTTP();
-}
-```
-
-Instead: 
 ```js
 constructor(private http: Http){}
 ```
 
-Angular is **injecting** an instance of the `HTTP` Class and assigning it to a property on our Service for us!
-- We don't have to worry about passing the correct parameters to the `new` function, all is taken care of behind the scenes by Angular!
+When we add a service to our Classes inside the constructor like this,
+Angular will **inject** it. In this case, an instance of the `HTTP` Class is injected and assigned to a property on our Service Class for us!
+- We don't use constructors (the `new` function), all is taken care of behind the scenes by Angular!
+
+*More on this later...*
 
 ---
 # `GET` Method
