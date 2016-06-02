@@ -14,7 +14,6 @@ To receive a "Pass" grade for this project, your submission will need to satisfy
 
 Your project must:
 
-- Meet the design (look & feel) and interaction specifications as closely as possible.
 - Have a Git repository initialized in its root directory
 - Be pushed to GitHub (with all of your commits synced to it)
 
@@ -54,7 +53,7 @@ Your project must:
 - Use a CSS reset
 - Implement a mobile-first responsive layout using flexbox.
 - Incorporate styles elements (scss variables & mixins) into a _theme.scss file
-- Use Angular Component scope styling and the @import directive inside a component annotation.
+- Use Angular Component scope styling and the @import directive.
 
 
 
