@@ -12,13 +12,13 @@ There is no pre-work for this lesson.
 
 ## Lab Activity
 
-In todays lesson, you'll be presented with typical programming challenges which you might encounter if you were applying for a job at a company like Facebook, Google, Amazon or Microsoft.
+In todays lesson, you'll be presented with typical programming Exercises which you might encounter if you were applying for a job at a company like Facebook, Google, Amazon or Microsoft.
 
-The challenges today will be very difficult, but will not employ any special JavaScript techniques you have not learned, and you'll have the entire day to complete the challenges.
+The Exercises today will be very difficult, but will not employ any special JavaScript techniques you have not learned, and you'll have the entire day to complete the Exercises.
 
 You mission is to try to apply what you've learned, and attempt to come up with a solution to as many of the problems as you can.
 
-You have the options to work as a group, or as part of more than one group to solve the challenges.
+You have the options to work as a group, or as part of more than one group to solve the Exercises.
 
 If you or your group comes up with a solution, we'll share it with the class, and discuss your implementation, as well as discuss other potential solutions!
 
@@ -29,10 +29,10 @@ If you or your group comes up with a solution, we'll share it with the class, an
 3. Think about what variables / values you'll need
 4. Ask others for help if you're stuck!
 
-<small>*Note: These challenges were adapted form content made available on coderbyte.com*</small>
+<small>*Note: These exercises were adapted from content made available on coderbyte.com*</small>
 
 ---
-## Challenge 1
+## Exercise 1
 
 Given a number that represents the position of the minute hand on a clock (number of minutes from 0 - 60) write a program that console.log's the angle that is formed by the minute hand and 12!
 
@@ -41,7 +41,7 @@ If the user enters a number that is above 60, your program should fail, and log 
 (Hint: Create an HTML UI to capture input and display the result of running you algorithm)
 
 ---
-## Challenge 2
+## Exercise 2
 
 Given a list of stock prices for a number of days, your goal is to return the maximum profit that could have been made by buying a stock at one price and then selling the stock later on, (for the sale price on that day).
 
@@ -53,13 +53,13 @@ Use this list to start:
 `[47, 50, 22, 11, 15, 90, 88]`
 
 ---
-## Challenge 3
+## Exercise 3
 
 TBA
 
 
 ---
-## Challenge 4
+## Exercise 4
 
 TBA
 

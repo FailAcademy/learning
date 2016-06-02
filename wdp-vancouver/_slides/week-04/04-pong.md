@@ -37,7 +37,7 @@ Canvas is a web API that allows you to draw graphics, create animations, render 
 
 ---
 
-# Challenge
+# Exercise
 
 Plan out your project on paper with a partner.
 
@@ -175,7 +175,7 @@ gameLoop();
 
 ---
 
-## Challenge
+## Exercise
 
 Break your game into different modules.
 
@@ -249,6 +249,12 @@ class Game {
   }
 }
 ```
+
+---
+
+# Exercise
+
+* Change the paddles to a different color (*hint: `fillStyle = 'yellow';`*)
 
 ---
 
@@ -332,7 +338,7 @@ class KeyListener {
 
 ---
 
-## Challenge
+## Exercise
 
 Write a `KeyListener` method called `addKeyPressListener`. It should take a keyCode value and a function that is called when it is pressed.
 
@@ -346,6 +352,8 @@ class KeyListener {
   }
 }
 ```
+
+* Make a spacebar pause button using `addKeyPressListener`
 
 ---
 
@@ -363,6 +371,7 @@ Where should it go & why?
 # Moving Paddles
 
 ##### Paddle.js
+
 ```js
 export default class Paddle {
 	constructor(x, y, up, down) {
@@ -419,6 +428,7 @@ class Game {
 
 Call next paddle location on render.
 
+##### Game.js
 ```js
 class Game {
   render() {
@@ -431,7 +441,7 @@ class Game {
 
 ---
 
-## Challenge
+## Exercise
 
 Move all settings into a `settings.js` file and import them where needed.
 
@@ -455,6 +465,7 @@ Which **properties** and **methods** does a ball have?
 # Ball
 
 ##### Ball.js
+
 ```js
 const size = 5;
 
@@ -476,6 +487,8 @@ export default class Ball {
 
 Draw the ball as a square
 
+##### Ball.js
+
 ```js
 draw(p) {
   p.fillRect(this.x, this.y, this.width, this.height);
@@ -488,7 +501,7 @@ render() {
 
 ---
 
-## Challenge
+## Exercise
 
 * instantiate the ball on `Game` in the middle of the board (*hint: height/2, width/2*)
 * Call `ball.draw()` & `ball.render()` in game
@@ -510,9 +523,262 @@ Which object should the bounce attach to & why?
 
 ---
 
-## Challenge
+# Ball Wall Bounce
+
+Change direction on top/bottom or left/right hit.
+
+```js
+class Ball {
+  /* ... */
+  render(height, width) {
+    this.x += this.vx;
+    this.y += this.vy;
+
+    const hitLeft = this.x > width;
+    const hitRight =this.x + this.width < 0;
+    const hitTop = this.y + this.height < 0;
+    const hitBottom = this.y > height;
+
+    if (hitLeft || hitRight) {
+      this.vx = -this.vx; // change direction
+    } else if (hitTop || hitBottom) {
+      this.vy = -this.vy; // change direction
+    }
+  }
+}
+```
+
+---
+
+## Exercise
+
+* Render the ball bounce using the Game height & width
+* Make the ball vx flip when it hits a side wall
+* Make the ball vy flip when it hits a top or bottom wall
+
+
+---
+
+# Detect Paddle Collision
+
+The paddle collision will require:
+
+* player1 & player2 paddles
+* ball location and velocity
+
+
+Which object should the `collision` attach to & why?
+
+* A) Game
+* B) Paddle
+* C) Ball
+
+---
+
+# Render paddleCollision
+
+##### Game.js
+
+```js
+render() {
+ this.ball.render(this.height, this.width, this.player1, this.player2);
+}
+```
+
+##### Ball.js
+
+```js
+render(height, width, player1, player2) {
+  this.x += this.vx;
+  this.y += this.vy;
+
+  /* wall collision */
+
+  this.paddleCollision(player1, player2);
+}
+```
+
+---
+
+# Collision 1/2
+
+Feel free to copy this part
+
+##### Ball.js
+
+```js
+paddleCollision(player1, player2) {
+  if (this.vx > 0) {
+    const inRightEnd = player2.x <= this.x + this.width &&
+    player2.x > this.x - this.vx + this.width;
+    if (inRightEnd) {
+      const collisionDiff = this.x + this.width - player2.x;
+      const k = collisionDiff / this.vx;
+      const y = this.vy * k + (this.y - this.vy);
+      const hitRightPaddle = y >= player2.y && y + this.height <= player2.y + player2.height;
+      if (hitRightPaddle) {
+        this.x = player2.x - this.width;
+        this.y = Math.floor(this.y - this.vy + this.vy * k);
+        this.vx = -this.vx;
+      }
+    }
+  }
+  /* else more */
+}
+```
+
+---
+
+# Collision 2/2
+
+And this part...
+
+```js
+paddleCollision(player1, player2) {
+  /* if ... */
+ else {
+  const inLeftEnd = player1.x + player1.width >= this.x;
+  if (inLeftEnd) {
+    const collisionDiff = player1.x + player1.width - this.x;
+    const k = collisionDiff / -this.vx;
+    const y = this.vy * k + (this.y - this.vy);
+    const hitLeftPaddle = y >= player1.y && y + this.height <= player1.y + player1.height;
+    if (hitLeftPaddle) {
+      this.x = player1.x + player1.width;
+      this.y = Math.floor(this.y - this.vy + this.vy * k);
+      this.vx = -this.vx;
+    }
+  }
+}
+```
+
+---
+
+## Exercise
+
+* move `wallCollision` into a method
+* `console.log('goal')` when a goal is scored
+
+---
+
+# Goal
+
+Scoring goals will require:
+
+* player1 & player2 scores
+* ball location
+* window width
+
+
+Which object should the `goal` method attach to & why?
+
+* A) Game
+* B) Paddle
+* C) Ball
+
+---
+
+# Goooaalll
+
+Call `goal` on a goal.
+
+##### Ball.js
+
+```js
+goal() {
+  console.log('GOOOOOAAAALLL!!');
+}
+render(height, width, player1, player2) {
+  /* ... */
+  const goalRight = this.x >= width;
+  const goalLeft = this.x + this.width <= 0;
+  if (goalRight) {
+    this.goal();
+  } else if (goalLeft) {
+    this.goal();
+  }
+}
+```
+
+---
+
+# Reset Ball
+
+Reset the ball location on a goal
+
+##### Ball.js
+
+```js
+goal(player, width) {
+  this.x = width / 2;
+  this.y = player.y + player.height / 2;
+  this.vy = Math.floor(Math.random() * 12 - 6);
+  this.vx = 7 - Math.abs(this.vy);
+}
+render() {
+  /* ... */
+  if (goalRight) {
+    this.goal(player1, width);
+  } else if (goalLeft) {
+    this.goal(player2, width);
+  }
+}
+```
+
+---
+
+## Exercise
+
+- Increment player scores on a goal
+- Change ball direction after a goal (towards the opponent)
+
+---
+
+# ScoreBoard
+
+```js
+export default class ScoreBoard {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.score = 0;
+  }
+  draw(p) {
+    // fillText with a number
+    p.fillText(this.score, this.x, this.y);
+  }
+ }
+ ```
+
+---
+
+## Exercise
+
+* Instantiate the Scoreboard in Game.js
+* Call `ScoreBoard.draw(this.context)` when `Game.draw` is called
+* Render the score in game
+
+```js
+  this.scoreBoard1.score = this.player1.score;
+  this.scoreBoard2.score = this.player2.score;
+```
+
+* Change the ScoreBoard font
+
+```js
+this.context.font = "30px Helvetica";
+```
+
+---
+
+## Bonus Exercises
 
 - Trigger multiple balls
+- Play a sound on wall collision & paddle collision
+- Create special balls
+- Trigger speed increases or decreases of paddles
+- Create different colored balls with different speeds or actions
+
 
 {% endhighlight %}
 
