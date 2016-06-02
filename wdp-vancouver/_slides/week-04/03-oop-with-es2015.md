@@ -3,7 +3,10 @@ layout: slidedeck
 title: OOP with ES2015
 ---
 
-{% highlight html %} name: inverse layout: true class: center, middle, inverse
+{% highlight html %}
+name: inverse
+layout: true
+class: center, middle, inverse
 
 ---
 
@@ -17,13 +20,15 @@ layout: false
 
 # OOP
 
-**Object Oriented Programming** (OOP) is a common way of programming.
+**Object Oriented Programming** (OOP) is a common method of programming.
 
-OOP is about grouping code into similar, reusable objects.
+OOP is about grouping code into **encapsulated** & **reusable** objects.
 
 ---
 
-# Why Objects?
+# Encapsulation
+
+Encapsulation is about attaching similar code to the same object.
 
 ```js
 // without any object
@@ -49,13 +54,22 @@ A `class` is a special object with additional features.
 
 Think about grouping your code by *noun*'s. These will become your classes.
 
+```js
+class Person {}
+
+class Student {}
+
+class WebDevStudent {}
+```
+
 ---
 
-# Classes
+# ES5 Prototypal Classes
+
+Before ES6, we used *function*'s and *prototype* to simulate classes.
+Name classes with a **capital letter**.
 
 Keywords: `prototype`, instance
-
-## ES5
 
 ```js
 var Student = function(firstName, lastName) {
@@ -72,11 +86,11 @@ console.log(Joe.fullName());
 
 ---
 
-# Classes
+# ES2015 Classes
+
+ES2015 classes work the same as in ES5, but have a cleaner syntax.
 
 Keywords: `constructor`, `this`, method, instance
-
-## ES2015
 
 ```js
 class Student {
@@ -97,22 +111,23 @@ console.log(Joe.fullName());
 
 # Quiz
 
-* The `constructor` is a special method. Why?
-  - A) it is necessary to construct a `class`
-  - B) it runs first when a `class` is created
-  - C) it's not actually special
+The `constructor` is a special method. Why?
+- A) it is necessary to construct a `class`
+- B) it runs first when a `class` is created
+- C) it's not actually special
 
-* What does `this` refer to in the previous example?
-  - A) the *Student* `class`
-  - B) the instance of *Student* called *joe*
-  - C) the scope of the function outside of the `class`
-
+What does `this` refer to in the previous example?
+- A) the *Student* `class`
+- B) the instance of *Student* called *joe*
+- C) the scope of the function outside of the `class`
 
 ---
 
 # Instance
 
 Instances let you create **reusable** structured data.
+
+Keywords: `new`
 
 ```js
 let Joe = new Student('Joe', 'Schmo');
@@ -138,7 +153,7 @@ class Person {
 }
 ```
 
-*`firstName` is a property of Person.*
+*`firstName` is a property of `Person`.*
 
 ---
 
@@ -167,11 +182,13 @@ class Person {
 }
 ```
 
-*`greet` is a method of Person.*
+*`greet` is a method of `Person`.*
 
 ---
 
 # Inheritance
+
+A class can **inherit** properties and methods from another classes.
 
 ```js
 class Person {
@@ -181,16 +198,18 @@ class Person {
 }
 
 class Student extends Person {}
-
-*`Student` extends `Person`*
-*`Student` is a subclass of `Person`.*
-*`Student` inherits from `Person`*
-
 ```
+
+*`Student` extends `Person`.*<br />
+*`Student` is a subclass of `Person`.*<br />
+*`Student` inherits from `Person`.*
 
 ---
 
 # Extends
+
+Use `super` to specify which properties will be inherited.
+The *spread operator* (`...`), will collect all properties.
 
 Keywords: `extends`, `super`, subclass
 
@@ -215,30 +234,23 @@ Joe.greet(); // hello
 
 # Review
 
-1. What is a **constructor**? What does it do?
 1. What is a **method**? What is a **property**?
-1. What does **this** refer to?
 1. What is an **instance**? How do you make one?
-1. How two things do you need to do to **inherit** from another class?
-
----
-
-# Why Classes?
-
-- reusable instances
-- organized code
-- encapsulated
-- inheritance
+1. How 2 things do you need to do to **inherit** from another class?
 
 ---
 
 ## Exercise 1 - Classes
 
-Model the classroom using classes. Instantiate your classmates as `new WebDevStudent()`. Include at least three properties and 1 method on each class. Use the following classes:
+Model the classroom using classes. Include at least three properties and 1 method on each class. Use the following classes:
 
 - Clazz *(note: class is a keyword in JavaScript)*
 - Person
 - Student
 - WebDevStudent
+
+Instantiate your classmates using `new WebDevStudent()`.
+
+{% endhighlight %}
 
 ---
