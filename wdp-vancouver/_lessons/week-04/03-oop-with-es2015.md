@@ -1,13 +1,13 @@
 ---
 layout: lesson
 title: Object Oriented Programming in JS
-slides: ['_slides/week-04/03-oop-with-es2015.md']
+slides: ['_slides/week-04/03-oop-with-es2015.md', '_slides/week-04/04-pong.md']
 lesson_date: 2016-05-06
 ---
 
 ## Pre-Work
 
-
+- Read [An Introduction to ES6 Classes](https://strongloop.com/strongblog/an-introduction-to-javascript-es6-classes/)
 
 ---
 
@@ -17,7 +17,7 @@ lesson_date: 2016-05-06
 - Describe and instantiate using `class`
 - Describe and use the elements of a class: `constructor` and 'methods'
 - Describe and use `this` within classes
-- Describe and use `extends` for inheritance
+- Describe and use `extends` & `super` for inheritance
 
 ---
 
@@ -28,7 +28,7 @@ lesson_date: 2016-05-06
 - methods & properties
 - `this`
 - `new`
-- `extends`
+- `extends`, `super`
 
 ---
 
