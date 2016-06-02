@@ -93,7 +93,7 @@ This is made possible by separate programs running in tandem on the client's com
 
 # Enter PHP
 
-For our purposes, it serves to start our tour of the dynamic web at **PHP**.
+For our purposes, our tour of the dynamic web starts at **PHP**.
 
 Although there were other languages that could be used to create websites before PHP, such as Perl (Facebook was originally written using Perl), ASP, CGI, etc., the introduction of PHP had a revolutionary effect on the course of the Internet.
 
@@ -107,30 +107,11 @@ It enables developers to **generate** content based on data in their databases.
 
 ---
 
-# PHP in Action
-
-The code inside `<?php ?>` is actually executed by the **server** when the page is requested:
-
-```html
-<html>
-   <head>
-      <title>PHP Test</title>
-   </head>
-   <body>
-      <?php echo '<p>Hello World</p>'; ?>
-   </body>
-</html>
-```
-
-This is different from anything we've seen up until now, and it's key to understanding why PHP is important. We're going to learn all about PHP later in the course, so I'll stop there :)
-
----
-
 # Who Is PHP?
 
 **Facebook is powered by PHP**
 
-*Albeit their own sophisticated implementation...*
+*Their own custom version, which they developed...*
 
 **WordPress is powered by PHP**
 
@@ -224,11 +205,9 @@ With PHP, to update your user interface (the view layer) when **data** in your a
 
 # Ajax
 
-We've seen how the development of Ajax delivered a solution&mdash;we've seen how it can be used to fetch data and add it to our web page without reloading the page.
+We've seen how the development of Ajax delivered a solution&mdash;we've seen how it is used to fetch data and add it to our web page without reloading the page.
 
 **Problem solved...let's build web applications!?**
-
-.footnote[Whoa!]
 
 ---
 
@@ -257,21 +236,21 @@ Frameworks attempt to give us useful abstractions for structuring the code that 
 .footnote[**Terminology:** State, Abstraction]
 
 ---
+
 ### A Popular Class of Frameworks
 
-Many web frameworks are designed around the MVC pattern. That is to say, you'll be writing code in a repetitive way. This is done to imporve the learning curve, and allow new developers to ramp-up quickly.
-
+Many web frameworks are designed around the **MVC** pattern.<br/>
 MVC is an acronym for **"Model", "View", "Controller"**.
 
-It's meant to be a helpful mental-model for thinking about specific areas of functionality in our application code!
+It's a helpful mental-model for thinking about specific areas of functionality in our application code!
 
-*This definition is very nuanced, you'll learn...*
+*This definition is nuanced and never exact...*
 
 ---
 
 # M -> Model
 
-**Model** loosely refers to the data in your application.
+**Model** loosely refers to the *data* in your application.
 
 A common model for many apps is the **User Model**.
 
@@ -285,32 +264,34 @@ Models also allow us to apply *rules for modifying data related to itself*.
 
 # V -> View
 
-**View** refers to specific user interface stets or elements.
+**View** refers to specific user interface (UI) elements.
 
-For example, For our User Model, we may have a number of associated views:
+For example, For our User Model, we may have a number of associated Views:
 
 - The user profile view
 - The edit profile view
 - The user settings view
 - ...etc
 
+In a web application, Views are usually written in HTML.
+
 ---
 
 # C -> Controller
 
-**Controller** refers to a specific area in your application where you write code to coordinate your application/widget's data with the view that is showing it to the user.
+**Controller** refers to a specific area in your application where you write code to coordinate your application/widget's data model with the view that is showing it to the end user.
 
-Controllers have a number of other characteristics, and the definition if fairly malleable, but for our purposes, it will serve us if we think about controllers as always being **directly associated with a view**.
+Controllers have a number of other characteristics, and the definition if fairly malleable, but for our purposes, we will think about controllers as always being **directly associated with a view**.
 
-For example you would define a controller to manage the User settings view. The code in this controller would be related to managing updating the basic user settings, and it would be named accordingly.
+For example you would define a controller to manage the User settings view. The code in this controller would be related to managing updating the basic user settings.
 
 ---
 
 # Altogether Now...
 
-Using this pattern, we have a way of separating presentation from the underlying data, so we know where to code, when we want to modify one or the other.
+Using this pattern, we have a way of separating presentation from the underlying data; we know where to code when we want to modify one or the other.
 
-If you want to change the animation timing of an image slider, you'll look in the **view** layer...
+For example: if you want to change the animation timing of an image slider, you'll look in the **view** layer...
 
 If we want to change how our user data is organized, we check the **model**.
 
@@ -333,40 +314,33 @@ template: inverse
 
 # Beyond MVC
 
-Recently, with smaller *libraries* like **React** gaining wide spread adoption, the web development community has been moving away from strict MVC patterns.
-
-Why? Not every application needs the restrictive structure of MVC.
+Not every application needs the restrictive structure of MVC.
 
 Client-side web developers are looking for a way to create efficient user interfaces, and they're not as concerned as they once thought they ought to be with managing the 'model layer' or creating large 'monolithic' applications.
 
 
 ---
 
-#Against the Monolith
+#Tradeoffs
 
 When using a framework to write a JavaScript applications, you'll make some tradeoffs.
-The most conspicuous being that frameworks can't usually be mixed!
 
 You would never add Angular to your Ember or Backbone application. This simply does not make sense since each framework provides roughly the same functionality.
 
-Also, frameworks tend to be 'heavy' in terms of the number of lines of code you'll have to download and run to use them in your web page. For smaller applications, this may be unnecessary and inefficient.
-
----
-
-### Views / Widgets / Components
-
-Another notion that is slowly replacing.
 
 ---
 
 # Framework of Choice
 
-You'll soon learn that there are dozens of JS Frameworks out there, and that there is a culture of hype that surrounds them. These are the heavyweights:
+You'll soon learn that there are dozens of JS Frameworks out there that are designed to facilitate creating software applications with JavaScript in the browser, 
+and that there is a culture of hype that surrounds them. 
 
-- **Google** has built a framework: [AngularJS](https://angularjs.org/)
-- **Facebook** has created a framework (actually just a library): [ReactJS](https://facebook.github.io/react/)
-- **Ruby on Rails** core team have one too: [EmberJS](http://emberjs.com/)
-- "Everyone Knows Backbone": [BackboneJS](http://backbonejs.org/)
+These are the heavyweights:
+
+- **Google** has built a framework: [Angular](https://angularjs.org/)
+- **Facebook** has created a framework (actually just a library): [React](https://facebook.github.io/react/)
+- **Ruby on Rails** core team have one too: [Ember](http://emberjs.com/)
+- "Everyone Knows Backbone": [Backbone](http://backbonejs.org/)
 - [...and so on](https://en.wikipedia.org/wiki/Comparison_of_JavaScript_frameworks)
 
 ---
@@ -377,18 +351,14 @@ class: center, middle
 [A JS framework on every table](http://www.allenpike.com/2015/javascript-framework-fatigue/)
 
 ---
-class: center, middle
+#Conclusion
 
-.large[
-   Opinionated.
-]
-
----
-class: center, middle
-
-.large[
-   Conventional.
-]
+- There is a lot of terminology to learn, in software development, especially in web development.
+- We can build application-like experiences using the technologies that power the web (JS/CSS/HTML).
+- There are may ways to go about doing this. Most projects will be based on one of the frameworks mentioned in these slides.
+- Developers should be aware of why they are using the tools they are using, and what the specific advantages / tradeoffs might be
+between one tool / framework and another.
+- The most popular tool, is not always the best choice.
 
 ---
 

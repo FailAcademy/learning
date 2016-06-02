@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Web Apps and JS Frameworks
-slides: ['_slides/week-05/01-apps-and-frameworks.md']
-lesson_date: 2016-05-09
+slides: ['_slides/week-05/01a-apps-and-frameworks.md']
+lesson_date: 2016-05-30
 ---
 
 ## Learning Objectives
