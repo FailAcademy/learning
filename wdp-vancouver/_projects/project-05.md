@@ -55,7 +55,18 @@ Your project must:
 - Incorporate styles elements (scss variables & mixins) into a _theme.scss file
 - Use Angular Component scope styling and the @import directive.
 
+**Stretch goals**
 
+1. Save the Colonist Object.
+- When the use completes the registration form, the API will return a colonist object in the response to the POST request.
+- See if you can save the colonist using `localStorage`, and retrieve it later in the Encounter's component. You'll need to send a colonist ID when POST-ing an encounter.
+
+2. WordPress Integration
+- Create a blog Component/Route and display posts from by Mars Colonists in your App!
+- Here is the Blog URL: http://fourth.academy.red/
+- Here is the Endpoint for GET-in the posts: http://fourth.academy.red/wp-json/wp/v2/posts
+
+**Good Luck!**
 
 ## Submission Instructions
 
