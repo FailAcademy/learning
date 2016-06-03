@@ -14,10 +14,10 @@ To receive a "Pass" grade for this project, your submission will need to satisfy
 
 Your project must:
 
-- Have a Git repository initialized in its root directory
-- Be pushed to GitHub (with all of your commits synced to it)
+- Have a Git repository initialized in its root directory.
+- Be pushed to GitHub (with all of your commits synced to it).
 
-- Implement basic ajax `GET` and `POST` requests using Angular's HTTP service to:
+- Implement `GET` and `POST` HTTP requests using Angular's HTTP service:
 	- Save a new Colonist's information
 	- Save a new Alien encounter
 	- Fetch a list of recent Alien encounters
@@ -31,14 +31,15 @@ Your project must:
 - Implement the [Angular 2 Router](https://angular.io/docs/ts/latest/guide/router.html).
 - Contain pages and routes for all of the views in the specification.
 - Implement ngForm and validate user input; prevent forms from sending invalid API requests.
-- Implement the appropriate feedback when components and data are loading. (ie. loading indicator)
+- Implement the appropriate user feedback when components and data are loading. (For example, a loading indicator, or text indicating  that data is being loaded, which is removed when loading is finished...)
 - Implement the following Angular built-in directives:
 	- ngFor
 	- ngIf
 	- ngClass
 	- ngModel
-Implement the following Class interfaces
-	- OnInit
+
+- Implement the following Class interfaces:
+	- `OnInit`
 
 - Implement the following Angular features:
 	- Class (to represent form data).
@@ -52,18 +53,18 @@ Your project must:
 
 - Use a CSS reset
 - Implement a mobile-first responsive layout using flexbox.
-- Incorporate styles elements (scss variables & mixins) into a _theme.scss file
+- Incorporate styles elements (scss variables & mixins) into a _theme.scss file.
 - Use Angular Component scope styling and the @import directive.
 
-**Stretch goals**
+**Stretch goals:**
 
-1. Save the Colonist Object in Local Storage
+**Goal 1:** Save the Colonist Object in Local Storage
 
 - When the user submits the registration form, the API will return a Colonist object in the response to the POST request.
 - You'll need to save this new Colonist object using `localStorage`, and retrieve it later in the Encounter's Component.
 You'll need to send a colonist ID when POST-ing an encounter.
 
-2. WordPress (WP API) Integration
+**Goal 2:** WordPress (WP API) Integration
 
 - Create a blog Component/Route and display posts from by Mars Colonists in your App!
 - Here is the Blog URL: http://fourth.academy.red/

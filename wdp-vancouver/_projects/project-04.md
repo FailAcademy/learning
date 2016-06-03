@@ -17,7 +17,7 @@ You can [download the project files here](https://s3-us-west-2.amazonaws.com/red
 - The solid border is `1px solid #e1e1e1`
 - The dashed border is `1px dashed #c8c8c8`
 
-### Typography
+### Typography:
 
 - The base font size is `16px` and its HEX code is `#404040`
 - The base line-height for the site is `1.75`
