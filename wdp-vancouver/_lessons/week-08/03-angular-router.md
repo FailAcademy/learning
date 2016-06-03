@@ -43,20 +43,14 @@ router instance.
 
 Prepare to use the Angular Router.
 
-1. Refactor your main application Component: add the `<router-outlet>` element. Remove all code and any visuals you've added since
-starting the project.
+1. Add the `ROUTER_DIRECTIVES` and `ROUTER_PROVIDERS` to your application's bootstrap method.
 
-2. Add the `ROUTER_DIRECTIVES` and `ROUTER_PROVIDERS` to your application's bootstrap method. THis will ensure you can
-use all of the router's functionality anywhere in your app.
-
-3. Add the Angular Component [lifecycle hook](https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html) `ngOnInit` to your main application Component. We'll use this method to trigger
-the rendering of the homepage Component when your application loads.
+2. Add the Angular Component [lifecycle hook](https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html) `ngOnInit` to your main application Component. 
+We'll use this method to trigger rendering of the homepage Component when your application loads.
 
 ---
 
 ## Exercise 2
-
-Generate a route for the homepage and add the `router-outlet` Component.
 
 1. Run the `ng generate route` command for each of pages in our application, including the homepage.
 
