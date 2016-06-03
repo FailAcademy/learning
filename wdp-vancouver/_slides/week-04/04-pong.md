@@ -20,16 +20,17 @@ layout: false
 
 # Goals
 
-* create a "Pong" game using [HTML5 Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
 * practice OOP programming
+* create a "Pong" game using [HTML5 Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
+
 
 ---
 
 # HTML5 Canvas
 
-Canvas is a web API that allows you to draw graphics, create animations, render video and 3d accelerated WebGL graphics.
+Canvas is a web API that allows you to draw graphics, create animations, as well as render video and 3d accelerated WebGL graphics.
 
-## Examples
+### Canvas Examples
 
 - [cube](http://codepen.io/yoksel/pen/nxgrp)
 - [animated logo](http://meru.ca/)
@@ -37,13 +38,23 @@ Canvas is a web API that allows you to draw graphics, create animations, render 
 
 ---
 
-# Exercise
+## Exercise
 
 Plan out your project on paper with a partner.
 
-1. Which **classes** will we need to create our Pong game? (_hint: think in nouns_)
+1. Which **classes** will we need to create our Pong game?<br />
+(_hint: think in nouns_)
 
 2. Which **properties** and **methods** will these classes have?
+
+##### Example
+
+```
+class Ball
+- location
+- wallBounce
+- etc.
+```
 
 ---
 
@@ -65,7 +76,7 @@ Add a background
 
 Create a Game class
 
-```javascript
+```js
 class Game {
  constructor() {
    const canvas = document.getElementById('game');
@@ -77,11 +88,11 @@ class Game {
 
 # Dimensions
 
-- note the canvas dimensions
-- set the context to 2D
-- set the fill to white
+Note the canvas dimensions.<br />
+Set the context to 2D.<br />
+Set the fill to white.
 
-```javascript
+```js
 class Game {
     constructor() {
       const canvas = document.getElementById('game');
@@ -95,11 +106,11 @@ class Game {
 
 ---
 
-# Drawing Shapes
+# Canvas: Drawing Shapes
 
-[Canvas Shapes API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
+See the [Canvas Shapes API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) for more.
 
-```javascript
+```js
 // rectangle
 canvas.fillRect(x, y, width, height)
 
@@ -120,7 +131,10 @@ canvas.fill();
 
 # Draw
 
-```javascript
+Draw your first shapes on the canvas.<br />
+(_note: `this.context = canvas`_)
+
+```js
 class Game {
   ...
   draw() {
@@ -130,16 +144,16 @@ class Game {
  }
 ```
 
-* what is the `clearRect`?
-* what is the `fillRect`?
+* what does the `clearRect` create?
+* what does the `fillRect` for create?
 
 ---
 
 # Render
 
-- display changes (when a ball or paddle moves)
+Render changes (when something moves).
 
-```javascript
+```js
 class Game {
   constructor() {
       ...
@@ -156,9 +170,9 @@ class Game {
 
 # Game Loop
 
-- Render at 30 frames per second using `setTimeout`
+Render at 30 frames per second using `setTimeout(fn, timeout)`.
 
-```javascript
+```js
 // game instance
 var game = new Game();
 
@@ -177,7 +191,7 @@ gameLoop();
 
 ## Exercise
 
-Break your game into different modules.
+Break your game into different modules. Use `default` import & exports.
 
 ```
 src
@@ -185,17 +199,16 @@ src
   |- Game.js    (Game class)
 ```
 
-Use `default` exports.
-
 ---
 
 # Players
 
-- create a Paddle class
-- add a `draw` method
+Create a Paddle class.<br />
+Add a `draw` method.
 
 ##### Paddle.js
-```javascript
+
+```js
 export default class Paddle {
    constructor(x, y) {
      this.x = x;
@@ -218,7 +231,7 @@ export default class Paddle {
 
 ##### Game.js
 
-```javascript
+```js
 import Paddle from './Paddle';
 const gap = 10;
 
@@ -241,7 +254,7 @@ class Game {
 
 Draw both paddles whenever `draw()` is called
 
-```javascript
+```js
 class Game {
   draw() {
     this.player1.draw(this.context);
@@ -254,13 +267,15 @@ class Game {
 
 # Exercise
 
-* Change the paddles to a different color (*hint: `fillStyle = 'yellow';`*)
+* Change the paddle sizes to fit the screen better.
+* Change the paddles to a different color<br />
+(*hint: use `fillStyle`*).
 
 ---
 
 # Key Event Listeners
 
-Paste the following snippet in your console. Click on the body and type.
+Get the following code to run in a browser console.
 
 ```js
 var listener = document.body.addEventListener('keypress', (event) => {
@@ -297,7 +312,9 @@ export default class KeyListener {
 
 ---
 
-# Instantiate KeyListener
+# KeyListener
+
+Instantiate the KeyListener as `this.keys`.
 
 ##### Game.js
 ```js
@@ -315,7 +332,8 @@ export default class Game {
 
 # Record Key Presses
 
-Record an object of `this.pressedKeys`.
+Record keys pressed as an object called `this.pressedKeys`.
+We can use these keys to trigger changes each time the app is rendered.
 
 ##### KeyListener.js
 
@@ -678,7 +696,7 @@ Which object should the `goal` method attach to & why?
 
 ---
 
-# Goooaalll
+# GOOOOOAAAALLL!!
 
 Call `goal` on a goal.
 
