@@ -20,9 +20,7 @@ layout: false
 
 # OOP
 
-**Object Oriented Programming** (OOP) is a common method of programming.
-
-OOP is about grouping code into **encapsulated** & **reusable** objects.
+**Object Oriented Programming** (OOP) is a style of programming where you group code into **encapsulated** & **reusable** objects.
 
 ---
 
@@ -50,7 +48,7 @@ let Person = {
 
 # Class
 
-A `class` is a special object with additional features.
+A `class` is an object with special features (*more on this later*)
 
 Think about grouping your code by *noun*'s. These will become your classes.
 
@@ -66,8 +64,8 @@ class WebDevStudent {}
 
 # ES5 Prototypal Classes
 
-Before ES6, we used *function*'s and *prototype* to simulate classes.
-Name classes with a **capital letter**.
+In ES5, we use *Function.prototype* to simulate classes.
+Name classes with a **Capital Letter**.
 
 Keywords: `prototype`, instance
 
@@ -114,18 +112,18 @@ console.log(Joe.fullName());
 The `constructor` is a special method. Why?
 - A) it is necessary to construct a `class`
 - B) it runs first when a `class` is created
-- C) it's not actually special
+- C) it's not actually special, but I am
 
 What does `this` refer to in the previous example?
 - A) the *Student* `class`
 - B) the instance of *Student* called *joe*
-- C) the scope of the function outside of the `class`
+- C) `that`
 
 ---
 
 # Instance
 
-Instances let you create **reusable** structured data.
+Instances let you create **reusable** structured data. Think of a `class` like a factory that creates instances with the word `new`.
 
 Keywords: `new`
 
@@ -223,6 +221,7 @@ class Person {
 class Student extends Person {
   constructor(...props) {
     super(props);
+    this.hasPencil = true;
   }
 }
 
