@@ -57,14 +57,17 @@ Your project must:
 
 **Stretch goals**
 
-1. Save the Colonist Object.
-- When the use completes the registration form, the API will return a colonist object in the response to the POST request.
-- See if you can save the colonist using `localStorage`, and retrieve it later in the Encounter's component. You'll need to send a colonist ID when POST-ing an encounter.
+1. Save the Colonist Object in Local Storage
 
-2. WordPress Integration
+- When the user submits the registration form, the API will return a Colonist object in the response to the POST request.
+- You'll need to save this new Colonist object using `localStorage`, and retrieve it later in the Encounter's Component.
+You'll need to send a colonist ID when POST-ing an encounter.
+
+2. WordPress (WP API) Integration
+
 - Create a blog Component/Route and display posts from by Mars Colonists in your App!
 - Here is the Blog URL: http://fourth.academy.red/
-- Here is the Endpoint for GET-in the posts: http://fourth.academy.red/wp-json/wp/v2/posts
+- Here is the JSON Endpoint: http://fourth.academy.red/wp-json/wp/v2/posts
 
 **Good Luck!**
 
