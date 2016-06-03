@@ -188,11 +188,11 @@ $('.intro')
 With using regular JavaScript:
 
 ```javascript
-document.getElementByClassName('intro')
+document.getElementsByClassName('intro')
 
 // or...
 
-document.querySelector('intro')
+document.querySelectorAll('.intro')
 ```
 
 It's easy to see why using jQuery is so appealing!
