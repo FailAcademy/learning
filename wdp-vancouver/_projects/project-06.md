@@ -19,13 +19,13 @@ To receive a "Pass" grade for this project, you will need to revisit your Projec
 
 **Code clean-up:**
 
-- Ensure all you code is indented properly and free of unnecessary whitespace
+- Ensure your code is indented properly and free of extra whitespace
 - Ensure code is appropriately commented
 - Use proper naming conventions:
    - semantic (meaningful) class and ID names in CSS, as well as JS and PHP variables and function names
    - lowercase letters for CSS ID and class names (dashed or underscores for whitespace)
    - camel case for JS variables and function names
-   - lowercase letters and underscores for PHP variables and function names
+   - lowercase letters and underscores for PHP variable and function names
 - Follow all best practices discussed in class
 
 **Incorporating feedback:**
