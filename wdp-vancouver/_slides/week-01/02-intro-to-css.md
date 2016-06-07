@@ -20,7 +20,7 @@ layout: false
 # Agenda
 
 1. What CSS is and how to use it
-2. The box model and block vs. inline
+2. The box model and block vs. inline elements
 3. Classes and IDs
 4. Position and float
 5. Color and backgrounds
@@ -40,6 +40,8 @@ class: center, middle
 CSS stands for **Cascading Style Sheets**.
 
 CSS describes how an HTML element will be rendered on a screen. In other words, it allows us to add **styles** to our HTML.
+
+(But it's a not a programming language...)
 
 ---
 
@@ -75,12 +77,12 @@ class: center, middle
 class: center, middle
 
 .inline-images[
-   ![CSS declaration](/public/img/slide-assets/css-declaration-diagram.svg)
+   ![CSS selector and declaration](/public/img/slide-assets/css-declaration-diagram.svg)
 ]
 
 ---
 
-# A CSS Declaration
+# A CSS Ruleset
 
 But you can do a lot more than just change the background colour behind some paragraph text.
 
@@ -95,7 +97,7 @@ p {
 /* Comments in CSS also look a little different from HTML */
 ```
 
-We can also use CSS to font size, background colours, the position of elements in the browser window, and much more.
+We can also use CSS to change everything from **font size** to the **position** of elements in the browser window, and even **animate** our HTML elements too.
 
 ---
 
@@ -127,11 +129,11 @@ template: inverse
 
 # Including CSS
 
-We have a few different options for how we include CSS in a website. We can:
+We have a few different options for how we include CSS on a website. We can:
 
 1. Use **inline** CSS
-2. Use **internal** CSS
-3. Use **external** CSS (usually preferable!)
+2. Use an **internal** stylesheet
+3. Use an **external** stylesheet (usually preferable!)
 
 ---
 
@@ -143,13 +145,13 @@ When we use inline CSS, we apply our styles as an **attribute** directly inside 
 <p style="font-size: 16px; font-style: italic;">Hello, world!</p>
 ```
 
-However, this method is usually not preferred because it's very difficult to override these styles later on.
+However, this method is usually not preferred because it's very difficult to override these styles (more on **specificity** later...).
 
 And it's really not much different from the 1990s way of applying inline styles, which makes it difficult to maintain!
 
 ---
 
-# Internal CSS
+# Internal Stylesheet
 
 Using internal CSS means that you include your CSS inside `<style>` tags in the head of your HTML file. For example:
 
@@ -174,13 +176,13 @@ Using internal CSS means that you include your CSS inside `<style>` tags in the 
 ---
 class: center, middle
 
-### Internal vs. External CSS
+### Internal vs. External Stylesheets
 
 Using internal CSS is better than using inline CSS, but what would happen if your website has multiple pages?
 
 ---
 
-# External CSS
+# External Stylesheet
 
 With external CSS, you put all of your CSS in a separate `.css` file, and link to it inside the `<head>` of your document:
 
@@ -229,6 +231,8 @@ Let's add a CSS file to your Project 1 webpage now.
 To do that, create a `style.css` file in the root folder of your website.
 
 Next, just like in the last example, add a `<link>` tag to the `<head>` of your HTML file so it knows to apply the styles that we add to this file to your webpage.
+
+Now try adding a style declaration for the `p` selector (e.g. change the `font-size`), and see if it works.
 
 ---
 template: inverse
@@ -340,7 +344,7 @@ Some inline elements include `<img>`, `<a>`, and `<strong>`.
 
 # Changing Display
 
-We can override an element default display behaviour using the `display` property in our CSS.
+We can override an element's default display behaviour using the `display` property in our CSS.
 
 For example:
 
@@ -410,9 +414,9 @@ How specificity applies to the cascade:
 
 Inheritance is another important concept in CSS.
 
-This means exactly what it suggests&mdash;**child elements in your HTML will inherit styles from an parent elements** in which they are nested.
+This means exactly what it suggests&mdash;**child elements in your HTML will inherit styles from the parent elements** in which they are nested.
 
-This saves from having to specify the same styles for every element used.
+This saves us from having to specify the same styles for every element used in our mark-up.
 
 ---
 
@@ -426,7 +430,7 @@ header {
 }
 ```
 
-What elements inside the `<header>` by styled in Helvetica:
+What elements in the `<header>` will be styled in Helvetica?
 
 ```html
 <header>
@@ -458,13 +462,15 @@ header {
 </header>
 ```
 
+Also note the use of a **[descendant selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_selectors)** above!
+
 ---
 
 # Exercise 2
 
 Let's start styling our project website using what we just learned about CSS text properties and the box model.
 
-If you haven't done so already, wrap hero image banner area in a `<section>` element. Your goal is to then write CSS that will:
+If you haven't done so already, wrap the hero image banner area in a `<section>` element. Your goal is to then write CSS that will:
 
 - **center** the text
 - adjust the **size of the text**
@@ -495,7 +501,9 @@ Classes and IDs make it much easier to target specific CSS (and JavaScript) to e
 
 Think about an actual school...a student can be in multiple classes, but each student will have a unique name.
 
-Similarly, if an HTML element has an ID, that ID must be unique to the element. But a class can be applied to as many elements as you like.
+Similarly, if an HTML element has an ID, that **ID must be unique to the element**.
+
+But a class can be applied to as many elements as you like.
 
 ---
 
@@ -505,7 +513,7 @@ Similarly, if an HTML element has an ID, that ID must be unique to the element. 
 <h1 class="site-title" id="masthead">My Awesome Website</h1>
 ```
 
-To target a class, use a dot plus the class name:
+To target a class, use a **dot** plus the class name:
 
 ```css
 .site-title {
@@ -513,7 +521,7 @@ To target a class, use a dot plus the class name:
 }
 ```
 
-To target an ID, use a pound sign plus the ID name:
+To target an ID, use a **pound sign** plus the ID name:
 
 ```css
 #masthead {
@@ -525,7 +533,7 @@ To target an ID, use a pound sign plus the ID name:
 
 # Multiple Classes/IDs
 
-You can specify multiple classes for an element by separating them with a space:
+You can specify **multiple classes** for an element by separating them with a space:
 
 ```html
 <h1 class="site-title home-title" id="masthead">My Awesome Website</h1>
@@ -570,7 +578,7 @@ class: center, middle
 
 # Pseudo-classes
 
-**Pseudo-classes** are special built-in keywords you can add to elements to describe some dynamic state of the element:
+**[Pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)** are special built-in keywords you can add to elements to describe some dynamic state of the element:
 
 ```css
 a {
@@ -617,11 +625,11 @@ li:last-child {
 
 Let's get the width of our website under control.
 
-One common way to do that is to create a `container` class and strategically apply to that to various elements to keep their widths in check.
+One common way to do that is to create a `container` class and strategically apply that to various elements to keep their widths in check.
 
-We want our `container` class to keep everything inside of it at a width of `1240px`. Create that class in your CSS and begin apply it where you think it's needed.
+We want our `container` class to keep everything inside of it at a width of `1240px`. Create that class in your CSS and apply it where you think it's needed.
 
-Is there anywhere that you may need to create an extra wrapping `<div>` around some of your content to contain it without conflicting with the background treatment later?
+Is there anywhere that you may need to create an extra wrapping `<div>` around some of your content to contain it without conflicting with a full-width background treatment?
 
 ---
 template: inverse
@@ -660,13 +668,13 @@ header h1 {
 }
 ```
 
-To adjust an element's position relatively, we can either specify `top` or `bottom`, and `left` or `right` in pixel, percentage, or em units.
+To adjust an element's position relatively, we can either specify `top` or `bottom`, and `left` or `right` in `px`, `%`, `em`, or `rem` units.
 
 ---
 
 # Absolute Positioning
 
-This is where things can get really interesting. Setting `position` to `absolute` takes it out of the normal flow.
+This is where things get really interesting. Setting `position` to `absolute` takes an element out of the normal flow.
 
 With absolute positioning, it's like the other elements on the page suddenly forget that it's there.
 
@@ -683,7 +691,7 @@ header h1 {
 
 # Absolute + Relative
 
-An element will be absolutely positioned to the HTML document unless you set `position: relative` on one of its parent elements.
+An element will be absolutely positioned to the **HTML document** unless you set `position: relative` on one of its parent elements.
 
 ```css
 .page-wrapper {
@@ -702,7 +710,7 @@ header h1 {
 
 # Fixed Positioning
 
-Fixed positioning is like absolute positioning, but it positions the element in relation to the browser window instead of the HTML document.
+Fixed positioning is like absolute positioning, but it positions the element in relation to the **browser window** instead of the HTML document.
 
 This means that the element will stay put in one place on the screen as you scroll:
 
@@ -722,7 +730,7 @@ header h1 {
 
 With elements that have `relative`, `absolute`, or `fixed` position set, we can apply another property called `z-index`.
 
-The z-index property let's us specify the stacking order of non-static, overlapping elements.
+The z-index property let's us specify the **stacking order** of non-static, overlapping elements.
 
 Elements with a higher z-index will appear on top:
 
@@ -748,7 +756,7 @@ template: inverse
 
 Floats are another handy layout tool in CSS.
 
-They also take elements **out of the normal flow** and place to the **far left** or **far right** side of their container element.
+They also take elements **out of the normal flow** and place them to the **far left** or **far right** side of their *container element*.
 
 Text and other inline elements will then **wrap around** the floated element.
 
@@ -774,11 +782,14 @@ class: center, middle
 ]
 
 ---
-class: center, middle
+class: middle, center
 
 .large[
-	Floats are the key to creating multi-column layouts.
+	Floats are the key* to creating multi-column layouts.
 ]
+<br />
+
+.small[&#42; Unless we use Flexbox...more on that next week.]
 
 ---
 class: center, middle
@@ -892,9 +903,14 @@ We can also abstract our float-clearning behaviour into a special class so it ca
 
 # Mini-Exercise
 
-There are two other methods we can use to clear floats.
+There are two other methods we can use to clear floats:
 
-With the class split into two groups, you'll be assigned a hint for investigating one of these methods, then put together a working demo to explain this method to the class.
+1. using `overflow: auto` or `overflow: hidden`
+2. using the **clearfix** hack with a pseudo-element
+
+With the class split into groups, your group will be assigned one of these methods to investigate and you will put together a **working demo** to explain your method to the class.
+
+Also determine the key way these methods differ from the initial float-clearing approach we explored, and why this is a more future-friendly way to clear floats.
 
 ---
 
@@ -902,7 +918,7 @@ With the class split into two groups, you'll be assigned a hint for investigatin
 
 Time to start floating some content!
 
-Team up with a partner and go through the comp to figure out where you'll need to apply floats to execute the design.
+Team up with a partner and go through the design comp to figure out where you'll need to apply floats to execute the design.
 
 Work together to rough out the CSS that will float these elements. We'll reconvene as a class and share our solutions.
 
@@ -940,7 +956,7 @@ a {
 }
 ```
 
-Check out [this list](http://en.wikipedia.org/wiki/Web_colors) for all of the names of the predefined colours.
+Check out **[this list](http://en.wikipedia.org/wiki/Web_colors)** for all of the names of the predefined colours.
 
 ---
 
@@ -986,7 +1002,7 @@ The equivalent of this RGB colour in HEX would be `#ed4343`.
 
 # RGB/RGBa Colours
 
-Or RGBa values to also specify the opacity of the colour:
+RGBa values allow us to also specify the **opacity** of the colour:
 
 ```css
 header {
@@ -996,15 +1012,13 @@ header {
 
 The `a` that represents opacity is written as a decimal, with a range of `0` (fully transparent) to `1` (solid).
 
-*Note that RGBa isn't supported by older browsers like IE8.*
-
 ---
 
 # HSL/HSLa Colours
 
 Specifying colour using HSLa is similar to using RGBa.
 
-However, instead of giving coordinates for the amount of red, blue, or green to mix in the colour, we specify **hue**, **saturation**, and **lightness**.
+However, instead of giving coordinates for the amount of red, blue, or green to mix in the colour, we specify values for **hue**, **saturation**, and **lightness**.
 
 ```css
 header {
@@ -1099,7 +1113,7 @@ template: inverse
 
 # Background Properties
 
-CSS gives us a number of tools for controlling the look of the backgrounds of our HTML elements.
+CSS gives us a number of tools for controlling the backgrounds of our HTML elements.
 
 We can specify:
 
@@ -1128,7 +1142,7 @@ body {
 }
 ```
 
-If you don't require all of the properties, you can leave them out:
+If you don't need to change all of the properties from their defaults, you can leave them out:
 
 ```css
 body {
@@ -1140,7 +1154,7 @@ body {
 
 # Background Size
 
-In newer browsers, we can use `background-size`:
+We can also use the `background-size` property to control the size of our background images:
 
 ```css
 body {
@@ -1150,8 +1164,6 @@ body {
 ```
 
 We can also set `background-size` to `contain` (always show the whole image) or `cover` (always fill the screen with the image).
-
-Note that `background-size` isn't supported in IE8!
 
 ---
 
@@ -1168,7 +1180,7 @@ header {
 }
 ```
 
-Declaring multiple background is just like declaring a single background, but you comma separate you're multiple background values (with the first on top, etc.).
+Declaring multiple background is just like declaring a single background, but you comma separate your multiple background values (with the first on top, etc.).
 
 ---
 
@@ -1180,7 +1192,7 @@ Change the colour of the links and the orange headings to `#e2574c`.
 
 Also add the floral background image to the banner area.
 
-Challenge! How could we get the partially transparent background layer and the photo of the girl to sit on top of this image (also as backgrounds)?
+**Challenge!** How could we get the partially transparent background layer and the photo of the girl to sit on top of this image (also as a background)?
 
 ---
 template: inverse

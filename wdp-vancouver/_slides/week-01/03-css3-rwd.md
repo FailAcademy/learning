@@ -33,14 +33,14 @@ template: inverse
 class: center, middle
 
 .inline-images-border[
-   ![RED desktop view](/public/img/slide-assets/red-screenshot-desktop.png)
+   ![RED desktop view](/public/img/slide-assets/red-screenshot-desktop.jpg)
 ]
 
 ---
 class: center, middle
 
 .inline-images-border[
-   ![RED mobile view](/public/img/slide-assets/red-screenshot-phone.png)
+   ![RED mobile view](/public/img/slide-assets/red-screenshot-phone.jpg)
 ]
 
 ---
@@ -75,7 +75,7 @@ template: inverse
 
 ---
 
-# Flex It!
+# Be Flexible!
 
 What needs to be done to make this layout flexible?
 
@@ -118,7 +118,9 @@ class: center, middle
 - `em` units change the size relative to the **parent element**
 - `rem` units are always relative to the `font-size` set on the `<html>` element
 
-Using `rem` units can make proportionally scaling font sizes a little more manageable, but it's not supported by IE8.
+Using `rem` units can make proportionally scaling font sizes a little much more manageable.
+
+*Let see a quick demo of how this works...*
 
 ---
 template: inverse
@@ -151,7 +153,7 @@ img, video {
 }
 ```
 
-Setting the `max-width: 100%` property will ensure that the element is never larger than it's container.
+Setting the `max-width: 100%` property/value will ensure that the element is never larger than it's container.
 
 ---
 
@@ -220,6 +222,8 @@ We can target entire stylesheets or just parts of them at particular screen size
    /* Targeted CSS goes here... */
 }
 ```
+
+Using `@media` in a stylesheet is typically the preferred method&mdash;and it's what we'll use in our projects.
 
 ---
 
@@ -340,11 +344,11 @@ Screenshots of what the website should look like at mobile, tablet, and desktop 
 
 # Exercise 3
 
-Now that we've had a chance to brush up our RWD skills, let's strategize how we'll apply this to our Week 1 projects.
+Now that we've had a chance to brush up our RWD skills, let's strategize how we'll apply this to our Project 1.
 
-Take a few moments to review the two new design comps and think about what areas of the site will specifically be affected by the changes that are happening at each breakpoint.
+Take a few moments to review the two narrower design comps and think about what areas of the site will specifically be affected by the changes that are happening at each breakpoint.
 
-Jot some idea out on your own, then you'll team up to discuss with a partner. We'll then reconvene to discuss each other strategies, as well as any questions or concerns before starting with the lab work.
+Jot some idea out on your own, then you'll team up to discuss this with a partner. We'll then reconvene to discuss each other's findings, as well as any questions or concerns before starting with the lab work.
 
 ---
 template: inverse
@@ -382,7 +386,7 @@ Also take a look at Project 1, and see if you can recommend where it this proper
 - The 3 components of RWD
 - How to write mobile-first media queries
 - Other mobile-first considerations
-- How to use `border-radius`, `box-shadow`, `opacity`, and graidents
+- How to use `border-radius`, `box-shadow`, `opacity`, and gradients
 
 ---
 template: inverse

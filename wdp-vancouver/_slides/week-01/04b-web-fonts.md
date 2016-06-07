@@ -35,7 +35,9 @@ class: center, middle
 
 ### A bit of history...
 
-We used to be limited to using **web-safe fonts** on our websites, in other words, fonts that you could be reasonably sure would already be installed on a user's computer system.
+We used to be limited to using **web-safe fonts**.
+
+In other words, fonts that you could be reasonably sure would already be installed on a user's computer system.
 
 ---
 
@@ -71,11 +73,11 @@ template: inverse
 
 The `@font-face` property in CSS allows us to embed custom fonts directly in our website.
 
-That means we don't have to depend on a user having that font already installed on their computer.
+That means we don't have to depend on users having that font already installed on their computer.
 
 ```css
 @font-face {
-    font-family: 'robotoregular';
+    font-family: 'Roboto Regular Web';
     src: url('Roboto-Regular-webfont.eot');
 }
 ```
@@ -88,15 +90,15 @@ Once you've included an `@font-face` declaration at the top of your stylesheet, 
 
 ```css
 body {
-   font-family: 'robotoregular', Arial, sans-serif;
+   font-family: 'Roboto Regular Web', Arial, sans-serif;
 }
 ```
 
 ---
 
-# There's a Catch
+# There's a Catch (Again)
 
-Unfortunately, different browsers support different font formats, so when we use `@font-face` we need to make sure we include multiple versions of the same font:
+Unfortunately, different browsers support different font file formats, so when we use `@font-face` we need to make sure we include multiple versions of the same font:
 
 - **EOT** - IE only.
 - **WOFF** - Compressed, emerging standard.
@@ -111,7 +113,7 @@ A full example:
 
 ```css
 @font-face {
-    font-family: 'robotoregular';
+    font-family: 'Roboto Regular Web';
     src: url('Roboto-webfont.eot');
     src: url('Roboto-webfont.eot?#iefix') format('embedded-opentype'),
          url('Roboto-webfont.woff') format('woff'),
@@ -149,7 +151,7 @@ Go to **Font Squirrel** and download the Webfont Kit for the custom typefaces th
 
 You'll need to download both of the weights and their italic versions too for each typeface. Add the contents of your generated web font packages to your project.
 
-You’ll also want to read up on how to **[avoid faux italics and bolding](http://stackoverflow.com/questions/2436749/how-to-add-multiple-font-files-for-the-same-font)** with your `@font-face` typefaces, and adjust your CSS accordingly.
+You’ll also want to read up on how to **[avoid faux italics and bolding](http://www.metaltoad.com/blog/how-use-font-face-avoid-faux-italic-and-bold-browser-styles)** with your `@font-face` typefaces, and adjust your CSS accordingly.
 
 ---
 template: inverse
@@ -162,7 +164,7 @@ template: inverse
 
 One popular alternative to directly embedding fonts in your website with `@font-face` is to use [Google Fonts](https://www.google.com/fonts).
 
-To use Google Fonts, simple select the font you want to use, and embed the link in the head of your website:
+To use Google Fonts, simply select the font you want to use, and embed the link in the `<head>` of your website:
 
 ```html
 <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
@@ -203,53 +205,6 @@ Some of these services include:
 - [Hoefler & Co.](http://www.typography.com/cloud/welcome/)
 - [Webtype](http://www.webtype.com/)
 - [Fontdeck](http://fontdeck.com/)
-
----
-template: inverse
-
-# Choosing and Pairing Fonts
-
----
-class: center, middle
-
-.large[
-   With great power...
-]
-
----
-class: center, middle
-
-### Contrast
-
-When pairing typefaces, make sure they are discernibly different from one another.
-
----
-class: center, middle
-
-### Serif + Sans-serif
-
-When pairing serif with sans-serif, look for typefaces based on the same geometric principles.
-
----
-class: center, middle
-
-### Dial Down the Fancy
-
-If you're using display or script typefaces, stick to just one.
-
----
-class: center, middle
-
-### Leverage CSS
-
-Take advantage of the many CSS properties that can help adjust text display.
-
----
-class: center, middle
-
-### Consider the Message
-
-When choosing a typeface, consider its personality and if it complements the message being communicated.
 
 ---
 template: inverse
@@ -300,28 +255,21 @@ There are a few ready-made icon fonts out there that you can use on your website
 - [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 - [IcoMoon](https://icomoon.io/)
 
-We're going to take a look at Font Awesome...
-
----
-class: center, middle
-
-.inline-images[
-   ![Font Awesome logo](/public/img/slide-assets/font-awesome-logo.jpg)
-]
+We're going to use Font Awesome for Project 1...
 
 ---
 
 # Using Font Awesome
 
-To use Font Awesome, you can either externally link to it on Content Delivery Network (CDN), or you can download and include the entire package directly on your website.
+To use Font Awesome, you can either externally link to it on a Content Delivery Network (CDN), or you can download and include the entire package directly on your website.
 
 You would include this code in the `<head>` tag of your website:
 
 ```html
-<!-- Option 1: CDN -->
+<!-- Option 1: CDN Link -->
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-<!-- Option 2: Font Awesome -->
+<!-- Option 2: Direct Include -->
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 ```
 
@@ -386,7 +334,7 @@ You can find all of Font Awesome's [icons referenced here](http://fortawesome.gi
 
 # Using Font Awesome
 
-Every Font Awesome icon also has a [Unicode value](http://fortawesome.github.io/Font-Awesome/cheatsheet/). Using those values, we can use Font Awesome directly in our CSS too:
+Every Font Awesome icon also has a [Unicode value](http://fortawesome.github.io/Font-Awesome/cheatsheet/). Using those values, we can use Font Awesome directly in our CSS too as a value in the `content` property:
 
 ```html
 <button class="menu-toggle"><span>Menu</span></button>
@@ -408,7 +356,9 @@ Every Font Awesome icon also has a [Unicode value](http://fortawesome.github.io/
 
 We're going to use Font Awesome to add the social media icons in the footer of the Project 1 website.
 
-Download Font Awesome and add the font files and minified CSS file to your project. Be sure to hook up the stylesheet in the `<head>` of your website too!
+Download Font Awesome and add the font files and minified CSS file to your project (unless you choose to link to the CDN resource).
+
+Be sure to hook up the stylesheet in the `<head>` of your website too!
 
 To add the social media icons, check out Font Awesome's [Brand Icons](https://fortawesome.github.io/Font-Awesome/icons/#brand).
 

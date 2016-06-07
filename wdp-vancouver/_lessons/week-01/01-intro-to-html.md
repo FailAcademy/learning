@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to HTML
 slides: ['_slides/week-01/01-intro-to-html.md']
-lesson_date: 2016-04-11
+lesson_date: 2016-07-04
 ---
 
 ## Pre-Work
@@ -13,13 +13,15 @@ Readings from *Learn to Code HTML & CSS*:
 - [Getting to Know HTML](http://learn.shayhowe.com/html-css/getting-to-know-html/)
 - [Creating Lists](http://learn.shayhowe.com/html-css/creating-lists/) (HTML section only)
 
+Before the first class, also be sure to work through all of the free modules in Codeacademy's [HTML & CSS](https://www.codecademy.com/learn/web) tutorial.
+
 ---
 
 ## Learning Objectives
 
 - Define what a mark-up language is and the function of HTML on the web.
-- Write well-structured HTML, properly nesting elements and applying appropriate attributes.
-- Use basic HTML tags including headings, paragraphs, links, and lists.
+- Write well-structured HTML by properly nesting elements and applying appropriate attributes to them.
+- Use basic HTML elements including headings, paragraphs, links, and lists.
 - Use the HTML5 doctype and elements to semantically structure a web page.
 
 ---
@@ -37,11 +39,11 @@ Readings from *Learn to Code HTML & CSS*:
 
 Your turn! Time to create your first webpage.
 
-First things first...you need to pick a code editor to download and install it (if you haven't done so already).
+First things first...you need to pick a code editor to download and install (if you haven't done so already.
 
-Next create a root folder somewhere on our computer and save a new file called `index.html`.
+Next create a new folder somewhere on your computer and save a new file called `index.html`.
 
-Then open that folder and create a simple webpage containing `<html>`, `<head>`, `<title>`, and `<body>` tags, then add a few paragraphs of text.
+Then open that folder and create a simple webpage containing `<html>`, `<head>`, `<title>`, and `<body>` elements, then add a few paragraphs of text.
 
 Lastly, save and view your new website in a browser.
 
@@ -63,7 +65,7 @@ In teams of two, research your assigned element and report back to the class:
 
 Let's dive right in and start thinking about how we might tackle the first project's design comp to convert it into semantically-appropriate HTML elements.
 
-Jot some idea out on your own, then you'll team up to discuss your approach with a partner. Based on this discussion, is there anything you'd revise in your approach?
+Jot some idea out on your own, then you'll pair up to discuss your approach with a partner. Based on this discussion, is there anything you'd revise in your approach?
 
 Finally, you and your partner will share your insights with the class.
 
@@ -78,7 +80,7 @@ Before you get started, you should watch these videos to reinforce the concepts 
 - [HTML - Hamburger Mark-up Language](http://www.dontfeartheinternet.com/02-html/)
 - [Don't Fear Starting from Scratch - Part 1: HTML](http://www.dontfeartheinternet.com/04-from-scratch/)
 
-You're goal for the end of the first day is to have the different sections of the website roughed-out in HTML.
+You're goal for the end of the first day is to have the different sections of the Project 1 website roughed-out in HTML.
 
 ---
 

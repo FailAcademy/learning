@@ -2,7 +2,7 @@
 layout: lesson
 title: CSS3 & Responsive Web Design
 slides: ['_slides/week-01/03-css3-rwd.md']
-lesson_date: 2016-04-13
+lesson_date: 2016-07-06
 ---
 
 ## Pre-Work
@@ -11,7 +11,7 @@ Readings from *Learn to Code Advanced HTML & CSS*:
 
 - [Responsive Web Design](http://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
 
-This article by Ethan Marcotte on A List Apart, which is widely credited with kicking off the responsive web design movement:
+Also read through this article by Ethan Marcotte, which is widely credited with kicking off the responsive web design movement:
 
 - [Responsive Web Design](http://alistapart.com/article/responsive-web-design/)
 
@@ -19,8 +19,8 @@ This article by Ethan Marcotte on A List Apart, which is widely credited with ki
 
 ## Learning Objectives
 
-- Distinguish the difference between CSS2 and CSS3.
-- Explore other CSS3 features such as border radius, box shadow, gradients, opacity, and multiple backgrounds.
+- Distinguish the differences between CSS2 and CSS3.
+- Explore other CSS3 features such as `border-radius`, `box-shadow`, gradients, and `opacity`.
 - Define "responsive web design" and its three components.
 - Distinguish between fixed, fluid, adaptive, responsive, and mobile-only websites.
 - Convert a fixed-width, desktop-sized website to be responsive (optimized for multiple breakpoints) using a mobile-first approach.
@@ -29,12 +29,13 @@ This article by Ethan Marcotte on A List Apart, which is widely credited with ki
 
 ## Keywords
 
-- [Border radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
-- [Box shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
-- [Opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
+- [`border-radius`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
+- [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
+- [`opacity`](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
+- [Gradients](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
 - [Responsive web design](http://blog.teamtreehouse.com/modern-field-guide-responsive-web-design)
 - [Media queries](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries)
-- [@media](https://developer.mozilla.org/en-US/docs/Web/CSS/@media)
+- [`@media`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media)
 - [Mobile first](http://bradfrost.com/blog/web/mobile-first-responsive-web-design/)
 
 ---
@@ -66,11 +67,11 @@ Screenshots of what the website should look like at mobile, tablet, and desktop 
 
 ## Exercise 3
 
-Now that we've had a chance to brush up our RWD skills, let's strategize how we'll apply this to our Week 1 projects.
+Now that we've had a chance to brush up our RWD skills, let's strategize how we'll apply this to our Project 1.
 
-Take a few moments to review the two new design comps and think about what areas of the site will specifically be affected by the changes that are happening at each breakpoint.
+Take a few moments to review the two narrower design comps and think about what areas of the site will specifically be affected by the changes that are happening at each breakpoint.
 
-Jot some idea out on your own, then you'll team up to discuss with a partner. We'll then reconvene to discuss each other strategies, as well as any questions or concerns before starting with the lab work.
+Jot some idea out on your own, then you'll team up to discuss this with a partner. We'll then reconvene to discuss each other's findings, as well as any questions or concerns before starting with the lab work.
 
 ---
 
@@ -88,7 +89,9 @@ Also take a look at Project 1, and see if you can recommend where it this proper
 
 We'll continue to work on Project 1 in today's lab.
 
-You goal for today is to "refactor" your CSS into mobile-first media queries based on the provided design comps.
+Your goal for today is to "refactor" your CSS into mobile-first media queries based on the provided design comps.
+
+(Remember that this is a stretch goal for Part 1 of Project 1, but it's a requirement for Part 2. You'll thank yourself next week if you begin working on this now!)
 
 ---
 

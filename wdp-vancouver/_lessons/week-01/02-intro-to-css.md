@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to CSS
 slides: ['_slides/week-01/02-intro-to-css.md']
-lesson_date: 2016-04-12
+lesson_date: 2016-07-05
 ---
 
 ## Pre-Work
@@ -16,17 +16,19 @@ Readings from *Learn to Code HTML & CSS*:
 - [Setting Backgrounds and Gradients](http://learn.shayhowe.com/html-css/setting-backgrounds-and-gradients/)
 - [Creating Lists](http://learn.shayhowe.com/html-css/creating-lists/) (the CSS section now)
 
+Also ensure that you have completed yesterday's lab activity before class&mdash;you will need the draft mark-up for your project to work on today's exercises.
+
 ---
 
 ## Learning Objectives
 
-- Distinguish what CSS is in relation to HTML.
+- Define what CSS is in relation to HTML.
 - Demonstrate competency with CSS layout principles and box model properties.
 - Adjust the default appearance of HTML elements using a variety of selectors, including classes, IDs, pseudo-elements, and pseudo-classes.
 - Leverage how inheritance and specificity function in CSS.
-- Use CSS positioning and float to layout elements on a webpage.
-- Use hexadecimal and RGBa to set the colours of HTML elements.
-- Use CSS background properties to set background colors or images.
+- Use CSS positioning and floats to layout elements on a webpage.
+- Use hexadecimal and RGBa to change the colours of HTML elements.
+- Use CSS background properties to set background colors and images.
 - Define what a CSS "reset" is, why it's needed, and demonstrate how to use one.
 - Use code validators and browser developer tools to assist with debugging.
 
@@ -35,9 +37,11 @@ Readings from *Learn to Code HTML & CSS*:
 ## Keywords
 
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- [Class](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class)
-- [ID](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)
 - [Box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box_model)
+- [`class`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class)
+- [`id`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)
+- [`float`](https://developer.mozilla.org/en/docs/Web/CSS/float)
+- [`position`](https://developer.mozilla.org/en/docs/Web/CSS/position)
 - [Web/Page Inspector](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector)
 
 ---
@@ -50,13 +54,15 @@ To do that, create a `style.css` file in the root folder of your website.
 
 Next, just like in the last example, add a `<link>` tag to the `<head>` of your HTML file so it knows to apply the styles that we add to this file to your webpage.
 
+Now try adding a style declaration for the `p` selector (e.g. change the `font-size`), and see if it works.
+
 ---
 
 ## Exercise 2
 
 Let's start styling our project website using what we just learned about CSS text properties and the box model.
 
-If you haven't done so already, wrap hero image banner area in a `<section>` element. Your goal is to then write CSS that will:
+If you haven't done so already, wrap the hero image banner area in a `<section>` element. Your goal is to then write CSS that will:
 
 - **center** the text
 - adjust the **size of the text**
@@ -70,19 +76,19 @@ Don't worry about the background image yet, we'll get to that.
 
 Let's get the width of our website under control.
 
-One common way to do that is to create a `container` class and strategically apply to that to various elements to keep their widths in check.
+One common way to do that is to create a `container` class and strategically apply that to various elements to keep their widths in check.
 
-We want our `container` class to keep everything inside of it at a width of `1240px`. Create that class in your CSS and begin apply it where you think it's needed.
+We want our `container` class to keep everything inside of it at a width of `1240px`. Create that class in your CSS and apply it where you think it's needed.
 
-Is there anywhere that you may need to create an extra wrapping `<div>` around some of your content to contain it without conflicting with the background treatment later?
+Is there anywhere that you may need to create an extra wrapping `<div>` around some of your content to contain it without conflicting with a full-width background treatment?
 
 ---
 
-# Exercise 4
+## Exercise 4
 
 Time to start floating some content!
 
-Team up with a partner and go through the comp to figure out where you'll need to apply floats to execute the design.
+Team up with a partner and go through the design comp to figure out where you'll need to apply floats to execute the design.
 
 Work together to rough out the CSS that will float these elements. We'll reconvene as a class and share our solutions.
 
@@ -90,7 +96,7 @@ And don't forget to add a clearfix class!
 
 ---
 
-# Exercise 5
+## Exercise 5
 
 There are two components to this exercise&mdash;adding some colour, and beginning to add background images.
 
@@ -98,7 +104,7 @@ Change the colour of the links and the orange headings to `#e2574c`.
 
 Also add the floral background image to the banner area.
 
-Challenge! How could we get the partially transparent background layer and the photo of the girl to sit on top of this image (also as backgrounds)?
+**Challenge!** How could we get the partially transparent background layer and the photo of the girl to sit on top of this image (also as a background)?
 
 ---
 
@@ -112,7 +118,7 @@ Before you get started, you should watch these videos to reinforce the concepts 
 - [Don't Fear Starting from Scratch - Part 2: CSS](http://www.dontfeartheinternet.com/05-from-scratch/)
 - [Don't Fear Layout](http://www.dontfeartheinternet.com/08-layout/)
 
-By the end of the second day you'll should have a enough CSS written to begin approximating the rough layout of the website.
+By the end of the second day you'll should have a enough CSS written to begin approximating the rough layout of your Project 1 website.
 
 ---
 
@@ -134,7 +140,8 @@ Master your browser's dev tools:
 
 - [discover-devtools.codeschool.com](http://discover-devtools.codeschool.com/)
 
-Tools to help you validate and optimize your code:
+Tools to help you validate your code:
 
 - [W3C Mark-up Validation Service](https://validator.w3.org/)
 - [W3C Mark-up CSS Service](https://jigsaw.w3.org/css-validator/)
+- [Validity Chrome Extension](https://chrome.google.com/webstore/detail/validity/bbicmjjbohdfglopkidebfccilipgeif)

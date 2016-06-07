@@ -46,7 +46,7 @@ class: center, middle
 
 ### How often do you use a search engine?
 
-Forms like Google's search input allow us to **GET** information from a large database.
+Google's search input allows us to **GET** info from a server.
 
 ---
 class: center, middle
@@ -54,6 +54,13 @@ class: center, middle
 ### How often do you shop online?
 
 When you fill out a form to make a purchase online, the **POST** method is used to send your payment information and allow a vendor to process your order with the data they receive.
+
+---
+class: center, middle
+
+.large[
+   If you think about it, most websites today would be pretty boring if they didn't have forms!
+]
 
 ---
 template: inverse
@@ -89,7 +96,7 @@ We can use the `<input>` element inside a form to create a variety of different 
 </form>
 ```
 
-By specifying the `type` attribute, the browser will know what kind of input to display.
+By specifying the `type` attribute, the browser will know **what kind of input to display**.
 
 Common input types include `text`, `checkbox`, `radio`, and `submit`. HTML5 introduced a number of [more specific form input types](http://html5doctor.com/html5-forms-input-types/) as well.
 
@@ -106,7 +113,9 @@ To create radio inputs, we simply create multiple `<input>` elements with a type
 </form>
 ```
 
-Radio buttons that have the same value for the `name` attribute are in the same "radio button group"; only one radio button in a group can be selected at one time.
+Radio buttons that have the same value for the `name` attribute are in the same **radio button group**.
+
+Only one radio button in a group can be selected at a time.
 
 ---
 
@@ -118,9 +127,9 @@ The `password` input type will obfuscate the characters that a user types into i
 <input type="password" name="password" size="8" minlength="6" maxlength="8" />
 ```
 
-Note that while the characters are hidden this doesn't mean that the entered data is secure.
+Note that while the characters are hidden this doesn't mean that the entered data is secure when sent to the server!
 
-Best to use Secure Sockets Layer (SSL) on the server for full security.
+It's best to use [SSL/TLS certificates](https://letsencrypt.org/) to send requests securely.
 
 ---
 
@@ -130,7 +139,9 @@ A `<textarea>` element will create a multi-line text input:
 
 ```html
 <form action="submit.php" method="post">
-   <textarea name="message" cols="10" rows="4">Enter your message...</textarea>
+   <textarea name="message" cols="10" rows="4">
+      Enter your message...
+   </textarea>
 </form>
 ```
 
@@ -140,7 +151,7 @@ Using the `cols` and `rows` attributes you can specify the size of the `<textare
 
 # Select Element
 
-The `<select>` tag is a special form element that will create a drop-down menu based on the `<option>` tags nested inside:
+The `<select>` element is a special form element that will create a drop-down menu based on the `<option>` elements nested inside:
 
 ```html
 <form action="submit.php" method="get">
@@ -159,7 +170,7 @@ The `selected` attribute will set a option to be selected by default.
 
 The `<label>` tag is used to describe what an input is for, and helps with accessibility for vision-impaired users.
 
-It can be used by wrapping an `<input>` element, or by giving it a `for` attribute that matches the `id` of the input it's labeling:
+It can be used by either wrapping the `<input>` element it pertains to, or by giving it a `for` attribute that matches the `id` of the input it's labeling:
 
 ```html
 <label>
@@ -174,9 +185,9 @@ It can be used by wrapping an `<input>` element, or by giving it a `for` attribu
 
 # Button Element
 
-Last but not least, you're probably going to want some way for the user to submit the form data.
+Last but not least, you're probably going to want some way for the user to submit the data in your form.
 
-For that, we have the `<button>` element
+For that, we have the `<button>` element:
 
 ```html
 <button type="submit">Submit Form</button>
@@ -219,7 +230,7 @@ For example:
 
 # Form Style Tips
 
-We can always target form inputs by their `id` or `class`, but we can also target entire types of form elements using the attribute selector in our CSS:
+We can always target form inputs by their `id` or `class`, but we can also target entire types of form elements using the [attribute selector](https://developer.mozilla.org/en/docs/Web/CSS/Attribute_selectors) in our CSS:
 
 ```css
 input {
@@ -318,7 +329,7 @@ The audio tag should look familiar. It has a `src` attribute just like an `img` 
 <audio src="macerena.ogg"></audio>
 ```
 
-If we wanted to set the audio file to autoplay and give the user controls to manage playback, we can add these attributes:
+If we want to set the audio file to `autoplay` and give the user `controls` to manage playback, we can add these attributes:
 
 ```html
 <audio src="macarena.ogg" autoplay="autoplay" controls="controls"></audio>
@@ -383,7 +394,7 @@ Note that the `.mp4` format with (H.264 encoding) is almost ubiquitously support
 
 # Encoding Media
 
-Wondering how you create all of these different versions of your video files?
+Wondering how you create all of these different formats of a video file?
 
 You'll need an app for that:
 
@@ -398,7 +409,7 @@ And if you need to convert audio files check out [media.io](http://media.io/).
 
 Always consider if hosting your own audio and video files is the right choice for a given website:
 
-- Do (or your client) you have the **administrative capacity** to juggle all those formats?
+- Do you (or your client) have the **administrative capacity** to juggle all those formats?
 - Does your web host provide the necessary **bandwidth** to deliver those files to users?
 - Would a **third-party** service like Soundcloud, YouTube, or Vimeo be a better choice?
 

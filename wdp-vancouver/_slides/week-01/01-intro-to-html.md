@@ -20,11 +20,11 @@ layout: false
 # Agenda
 
 1. What is HTML?
-2. Elements & Attributes
-3. Creating a Webpage
-4. Doctypes, Meta Tags and Comments
-5. Structuring our Webpages
-5. Other Essential Elements
+2. Elements and attributes
+3. Creating a webpage
+4. Doctypes, meta tags and comments
+5. Structuring a webpage
+5. Other essential elements
 
 ---
 template: inverse
@@ -115,15 +115,16 @@ HTML offers many different attributes. Some can be used **globally** on any elem
 
 # Nesting Elements
 
-We can also **nest** our tags in HTML. For example, to add emphasis to our paragraph text we can use the `<em>` tags.
+We can also **nest** elements in HTML. For example, to add emphasis to our paragraph text we can use the `<em>` element.
 
 ```html
 <p>
    <em>The quick brown fox jumps over the lazy dog.</em>
 </p>
 ```
+Open up a [CodePen](https://codepen.io/pen/) and try this for yourself.
 
-Think of nested tags like Russian *Matryoshka* dolls.
+**Tip:** Think of nested elements like Russian *Matryoshka* dolls.
 
 ---
 template: inverse
@@ -153,11 +154,11 @@ Any program that edits plain text files can be used as a code editor (e.g. Notep
 
 But programs that are specially designed for editing code offer extra features like **syntax highlighting**.
 
-Some good (free) code editor options include:
+Some good (free) code editors for Mac and Windows include:
 
-- **[Sublime Text](http://www.sublimetext.com/)** or **[Atom](https://atom.io/)** (Mac or Windows)
-- **[Text Wrangler](http://www.barebones.com/products/textwrangler/)** (Mac)
-- **[Notepad++](https://notepad-plus-plus.org/)** (Windows)
+- **[Atom](https://atom.io/)**
+- **[Sublime Text](http://www.sublimetext.com/)**
+- **[Visual Studio Code](https://code.visualstudio.com/)**
 
 ---
 
@@ -175,8 +176,6 @@ Virtually all websites share the same basic structure. They contain a `<head>` a
    </body>
 </html>
 ```
-
-Let's copy that HTML into a code editor, save the file as `index.html`, and open it in a web browser.
 
 ---
 class: center, middle
@@ -209,11 +208,11 @@ class: center, middle
 
 Your turn! Time to create your first webpage.
 
-First things first...you need to pick a code editor to download and install it (if you haven't done so already).
+First things first...you need to pick a code editor to download and install (if you haven't done so already.
 
-Next create a root folder somewhere on our computer and save a new file called `index.html`.
+Next create a new folder somewhere on your computer and save a new file called `index.html`.
 
-Then open that folder and create a simple webpage containing `<html>`, `<head>`, `<title>`, and `<body>` tags, then add a few paragraphs of text.
+Then open that folder and create a simple webpage containing `<html>`, `<head>`, `<title>`, and `<body>` elements, then add a few paragraphs of text.
 
 Lastly, save and view your new website in a browser.
 
@@ -405,7 +404,7 @@ Before HTML5, our websites often relied heavily on `<div>` elements:
 
 # HTML5 Goodness
 
-An HTML5 webpage might look a little something like this:
+An HTML5 webpage would look something more like this:
 
 ```html
 <header>
@@ -452,7 +451,7 @@ template: inverse
 
 # Strong & Emphasis
 
-The `<strong>` tag indicates that the text contained within is of strong importance:
+The `<strong>` element indicates that the text contained within is of strong importance:
 
 ```html
 <p><strong>Warning!</strong> This is extremely dangerous.</p>
@@ -516,7 +515,7 @@ When a user click this link, it will open their default email application with t
 And of course, images!
 
 ```html
-<img src="images/grump-cat.jpg" alt="Grumpy Cat scowls furiously" />
+<img src="images/grumpy-cat.jpg" alt="Grumpy Cat scowls furiously" />
 ```
 
 An `<img>` element has two important attributes:
@@ -531,10 +530,10 @@ An `<img>` element has two important attributes:
 We can also specify `title`, `width`, and `height` attributes:
 
 ```html
-<img src="images/grump-cat.jpg" alt="Grumpy Cat scowls furiously again" title="The Grumpiest Cat on the Web" width="480" height="320" />
+<img src="images/grumpy-cat.jpg" alt="Grumpy Cat scowls furiously" title="The Grumpiest Cat on the Web" width="480" height="320" />
 ```
 
-The `title` of the image will appear as a tooltip in most browsers when you hover over it.
+The `title` of the image will appear as a **tooltip** in most browsers when you hover over it.
 
 ---
 
@@ -554,14 +553,14 @@ Today, images for the web are saved in the following formats:
 - Use **PNG-8** over **GIF** for graphics with simple colors
 - Use **PNG-24** over **JPEG** when using alpha transparency
 - Use **JPEG** over **PNG** for photographic images
-- Use **GIF** for animated graphics
+- Use **GIF** for simple animated graphics
 - Use **SVG** for icons and logos that need to scale
 
 ---
 
 # Formatting Pro Tips
 
-- **Scale down images** to the appropriate size for your webpage
+- **Scale down images** to the appropriate size for your webpage (or use responsive images to deliver different image sizes to different screen sizes)
 - **Choose the correct** image format
 - **Optimize images** to be the best possible quality at the smallest possible size
 - **Save** image names with relevant names (that will help with SEO later)
@@ -573,7 +572,7 @@ Today, images for the web are saved in the following formats:
 
 Let's dive right in and start thinking about how we might tackle the first project's design comp to convert it into semantic HTML elements.
 
-Jot some idea out on your own, then you'll team up to discuss your approach with a partner. Based on this discussion, is there anything you'd revise in your approach?
+Jot some idea out on your own, then you'll pair up to discuss your approach with a partner. Based on this discussion, is there anything you'd revise in your approach?
 
 Finally, you and your partner will share your insights with the class.
 

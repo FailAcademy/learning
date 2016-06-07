@@ -2,7 +2,7 @@
 layout: lesson
 title: The Command Line Interface and Development Environments
 slides: ['_slides/week-01/05-cli-vagrant.md']
-lesson_date: 2016-04-15
+lesson_date: 2016-07-08
 ---
 
 ## Pre-Work
