@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# GitHub Pages<br />(Plus More on Git)
+# GitHub Pages
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -261,42 +261,11 @@ class: center, middle
 Rebasing can be dangerous if you don't know what you're doing, and you never want to rebase commits on a branch that has been pushed to public, shared repository.
 
 ---
-template: inverse
-
-# Merge Conflicts!!!
-
----
-
-# Resolving Conflicts
-
-If you attempt a merge and are told you have a conflict...
-
-1. **Don't panic!**
-2. Open the files that have conflicts
-3. Edit the files and save your changes
-4. Proceed with your merge in CLI or the GitHub GUI
-
-**Tip:** You can back out of the merge (before completing it) by running `git merge --abort` from the command line.
-
----
-template: inverse
-
-# Undoing Commits
-
----
-class: center, middle
-
-### If I Could Turn Back Time...
-
-Check out (and bookmark!) **[this resource](https://github.com/blog/2019-how-to-undo-almost-anything-with-git)** for undoing changes in various way in your Git repositories.
-
----
 
 # What We've Learned
 
 - How to create a `gh-pages` branch and keep it updated
 - How to deal with merge conflicts
-- How to revert commits in our repositories
 
 ---
 template: inverse
