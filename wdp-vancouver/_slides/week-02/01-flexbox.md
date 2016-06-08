@@ -84,7 +84,7 @@ class: center, middle
 
 # Flexbox Syntax
 
-Here is how we create a vertically-centered element using flexbox:
+Here is how we create a horizontally/vertically-centered element using flexbox:
 
 ```css
 .container {
@@ -115,8 +115,8 @@ class: center, middle
 
 When creating flexbox-based layouts, you need to keep a few things in mind:
 
-1. The parent element that you use as the **flex container**
-2. The children elements that are affected as the **flex items**
+1. The parent element that you use is the **flex container**
+2. The children elements that are affected is the **flex items**
 3. The flex items follow each other along the **main axis**
 4. The **cross axis** is perpendicular to the main axis
 
@@ -169,8 +169,8 @@ The `flex-direction` property determines the **main axis**:
 
 How it works:
 
-- `row` (default) / `row-reverse` make the main axis horizontal
-- `column` / `column-reverse` make the main axis vertically
+- `row` (default) / `row-reverse` makes the main axis horizontal
+- `column` / `column-reverse` makes the main axis vertical
 
 ---
 
@@ -256,9 +256,9 @@ The default value is `stretch` (so that items take up remaining space along the 
 
 # Exercise 1
 
-Let's apply these flexbox concepts to our project.
+Let's apply these flexbox concepts to Project 1.
 
-We'll start by refactoring the floats in the footer into flexbox properties following these steps:
+We'll start by refactoring the floats in the site `<footer>` into flexbox properties following these steps:
 
 1. Remove your floats
 2. Apply `display: flex` to the appropriate element
@@ -303,7 +303,7 @@ If a child is set to `flex-grow: 2` it will try to occupy double the space of th
 
 # flex-shrink
 
-Opposite to `flex-shrink`, determines the ability for an item to shrink proportionally:
+Opposite to `flex-grow`, `flex-shrink` determines the ability for an item to shrink proportionally:
 
 ```css
 .child {
@@ -319,7 +319,9 @@ Negative numbers are not valid.
 
 # flex-basis
 
-This defines the default size of an element before the remaining space is distributed. It can be a length (i.e. an absolute unit such as px, mm or pt, or a percentage ) or a keyword:
+This defines the default size of an element before the remaining space is distributed.
+
+It can be a length (i.e. an absolute unit such as `px`, `mm` or `pt`, or a percentage ) or a keyword:
 
 ```css
 .child {
@@ -364,9 +366,9 @@ The values for `align-self` behave as they do for the `align-items`.
 
 # Exercise 2
 
-Let's try out some of the flex item-related properties in project within the site `header` now following these steps:
+Let's try out some of the flex item-related properties in project within the site `<header>` now following these steps:
 
-1. Remove all floats from your `header` elements
+1. Remove all floats from your `<header>` elements
 2. Apply `display: flex` to the appropriate container
 3. Use a combination of flex item properties to set the logo back to the left edge and the cart icon set to right edge of the page (and make sure they are the right size!)
 
@@ -386,7 +388,7 @@ class: center, middle
 class: center, middle
 
 .large[
-   Flexbox works well in modern browsers, but you make require **vendor prefixes** to support older browsers.
+   Flexbox works well in modern browsers, but you may require **vendor prefixes** to support older browsers.
 ]
 
 ---
@@ -461,7 +463,7 @@ Go back to your [Codepen flexbox demo](http://codepen.io/redacademy/pen/eJyXPy?e
 
 Think about whether you need to make any adjustments to the mark-up to make this happen...
 
-**Bonus challenge!** Can you figure out how to use nested `display: flex` parent/child elements to lock each colored box in a corner of the browser window?
+**Bonus challenge!** Can you figure out how to use nested `display: flex` parent/child elements to lock each coloured box in a corner of the browser window?
 
 ---
 

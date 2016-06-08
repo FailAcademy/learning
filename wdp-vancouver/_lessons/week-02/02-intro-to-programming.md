@@ -2,14 +2,21 @@
 layout: lesson
 title: Intro to Programming
 slides: ['_slides/week-02/02-intro-to-programming.md']
-lesson_date: 2016-04-19
+lesson_date: 2016-07-12
+---
+
+## Pre-work
+
+*There is no pre-work for this lesson.*
+
 ---
 
 ## Learning Objectives
 
-- Think like a programmer
-- Illustrate concepts such as statements, booleans, conditions, loops and variables
-- Use Scratch to build a basic program using graphical “pseudo code”
+- Define what "programming" is, as well as the essential mind set characteristics, tools, and skills of a professional programmer.
+- Explore basic programming concepts such as statements, booleans, conditions, loops and variables in pseudocode.
+- Define what an algorithm is.
+- Use Scratch to build a basic program using graphical pseudocode.
 
 ---
 
@@ -40,8 +47,11 @@ Some things to consider while writing your algorithm:
 
 ## Exercise 2
 
-How fast can you type?
-- Lets get a sense of how fast you can type! We're all going to visit **[10 Fast Fingers](http://10fastfingers.com/typing-test/english)**, create an account and take the typing test and share your WPM!
+**How fast can you type?**
+
+Lets get a sense of how fast you can type!
+
+Let's visit [10 Fast Fingers](http://10fastfingers.com/typing-test/english), create an account and take the typing test and share your WPM!
 
 ---
 
@@ -66,6 +76,10 @@ This lesson's lab is a choose-your-own-adventure activity. You can create anythi
 ---
 
 ## Additional Resources
+
+A ebook exploring what it means to be programmer:
+
+- [How to be a Programmer: Community Version](https://github.com/braydie/HowToBeAProgrammer/)
 
 A quick-start guide for Scratch:
 

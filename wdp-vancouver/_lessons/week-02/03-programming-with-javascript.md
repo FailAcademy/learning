@@ -2,12 +2,14 @@
 layout: lesson
 title: Programming with JavaScript
 slides: ['_slides/week-02/03-programming-with-javascript.md']
-lesson_date: 2016-04-20
+lesson_date: 2016-07-13
 ---
 
 ## Pre-Work
 
-A good read to brush up your JS skills before class:
+Before the first JS class, be sure to work through all of the free modules in Codeacademy's [JavaScript](https://www.codecademy.com/learn/javascript) tutorial.
+
+Also read through the following page to reinforce some JS programming concepts before class:
 
 - [JavaScript for Cats](http://jsforcats.com/)
 
@@ -17,10 +19,27 @@ A good read to brush up your JS skills before class:
 
 - Define basic programming concepts such as statements, booleans, conditionals, loops, and variables (in relation to JavaScript).
 - Distinguish how JavaScript differs from other "server-side" programming languages.
-- Become familiar with the tools used for developing and debugging javascript code.
+- Use the development tools essential for writing and debugging JavaScript code.
 - Create and use basic JavaScript functions.
 - Build basic JavaScript objects and manipulate their properties and methods.
 - Create JavaScript arrays and iterate over them.
+
+---
+
+## Keywords
+
+- Syntax
+- Variable
+- Concatenation
+- Comments
+- [`document`](https://developer.mozilla.org/en-US/docs/Web/API/document)
+- [`window`](https://developer.mozilla.org/en-US/docs/Web/API/Window)
+- [`alert`](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert)
+- [`prompt`](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt)
+- Operators
+- Conditionals
+- Loops
+- [`console`](https://developer.mozilla.org/en-US/docs/Tools/Web_Console)
 
 ---
 
@@ -62,12 +81,18 @@ One you've created your object, **create a loop** to log to the console all of t
 
 ---
 
+## Lab Activity
+
+With any remaining time after the lesson today, spend some time working through the "Basic JavaScript" tutorials on [Free Code Camp](http://www.freecodecamp.com/map).
+
+---
+
 ## Additional Resources
-
-More resources and online tutorials for learning JavaScript:
-
-- [Free Code Camp](http://www.freecodecamp.com/map)
 
 Free JS-related books online:
 
 - [JSbooks](http://jsbooks.revolunet.com/)
+
+A popular JS styleguide:
+
+- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript/tree/master/es5)

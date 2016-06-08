@@ -19,7 +19,7 @@ layout: false
 
 # Agenda
 
-1. JavaScript and the Web
+1. JavaScript and the web
 1. What is jQuery? What is it for?
 2. The "Document Object Model" (DOM)
 3. jQuery basics (traversing and chaining)
@@ -93,7 +93,7 @@ You can wrap your JavaScript in `script` tags directly in the HTML document:
 
 # As a Separate ".js" File
 
-Usually, you'll want to link to a separate `.js` file:
+But usually, you'll want to link to a separate `.js` file:
 
 ```html
 <!DOCTYPE html>
@@ -116,10 +116,10 @@ document.write('Welcome to Spot\'s!');
 
 ---
 
-# Include in the head tag or bottom of the page?
+# Include in the `<head>` or bottom of the page?
 
-- You can include a `<script>` in the `<head>` tag or anywhere inside the `<body>`
-- The best practice is to put scripts in the footer to prevent them from blocking the page load
+- You can include a `<script>` element in the `<head>` or anywhere inside the `<body>`
+- The best practice is to put scripts right before the closing `<body>` tag to prevent them from blocking the rest of the page load
 - But some scripts must go in the `<head>`...
 
 ---
@@ -162,7 +162,7 @@ Let's say we want to update the message paragraph below:
 </body>
 ```
 
-We can use the `getElementById` method to target that `p`, and update it's content using the `innerHTML` property:
+We can use the `getElementById` method to target that `<p>`, and update it's content using the `innerHTML` property:
 
 ```javascript
 // js/sayhello.js
@@ -174,7 +174,7 @@ document.getElementById('message').innerHTML = 'We love dogs!';
 
 # Accessing Elements
 
-We can also store the results of `getElementById` in a variable to make it faster and easier to re-use for other purposes later:
+We can also store the results of `getElementById` in a variable to make it faster and easier to re-use it for other purposes later:
 
 ```javascript
 // js/sayhello.js
@@ -222,7 +222,7 @@ Check out the [source code of the original jQuery release](http://genius.it/ejoh
 
 jQuery's main claim to fame&mdash;and it's original purpose&mdash;was to make selecting and manipulating DOM elements simpler.
 
-It does this by wrapping JavaScript's *native* DOM manipulation methods in an easy to use *API* (i.e. no more long method names like `getElementByClassName()`), and to provide **convenience methods** for parsing and updating HTML.
+It does this by wrapping JavaScript's *native* DOM manipulation methods in an easy to use **API** (i.e. no more long method names like `getElementByClassName()`), and to provide **convenience methods** for parsing and updating HTML.
 
 ---
 
@@ -302,7 +302,7 @@ The a visual representation of the DOM for this page would look something like t
 
 # What Is the DOM?
 
-- DOM nodes can be seen as being parents, children, and/or siblings to one another
+- DOM nodes can be seen as being **parents**, **children**, and/or **siblings** to one another
 - This is very important to keep in mind when we begin **traversing** the DOM (i.e. moving up and down through DOM nodes) using jQuery
 
 ---
@@ -382,14 +382,14 @@ class: center, middle
 
 ### But what does that actually do?
 
-By writing `$('.intro')` in our code, we run a function that **returns** a **jQuery object** wrapping any elements that have the `intro` set as a class.
+By writing `$('.intro')` in our code, we run a function that **returns** a **jQuery object** wrapping any elements that have `intro` set as their class.
 
 ---
 class: center, middle
 
 ### And why do we care?
 
-Now that our `.intro` elements are "wrapped" in a jQuery object, all of jQuery's methods are available for us to use on those elements. Let's see how that works...
+Now that our `.intro` elements are "wrapped" in a jQuery object, all of **jQuery's methods are available** for us to use on those elements. Let's see how that works...
 
 ---
 
@@ -401,7 +401,9 @@ Now let's actually change the colour of the text using jQuery:
 $('.intro').css('color', 'red');
 ```
 
-It's that easy using the `.css()` method in jQuery! We can also store our jQuery selection in a variable for re-use later:
+It's that easy using the `.css()` method in jQuery!
+
+We can also store our jQuery selection in a variable for re-use later:
 
 ```javascript
 var $intro = $('.intro');
@@ -449,7 +451,7 @@ $(function() {
 
 We just used the `.css()` and `.ready()` methods, but jQuery has many more.
 
-For instance we can use jQuery methods to traverse the DOM:
+For instance we can use jQuery methods to **traverse** the DOM:
 
 - `.children()`
 - `.parents()`
@@ -599,7 +601,7 @@ $('p').css({'font-size': '18px', 'font-weight': 'bold'});
 
 # Exercise 3
 
-Using what you just learned about traversing the DOM and jQuery methods, come up with at least three unique solutions for changing the color of the text in the second `<p>` inside the `<article>` red using jQuery only (no CSS!).
+Using what you just learned about traversing the DOM and jQuery methods, come up with at least three unique solutions for changing the color of the text to red in the second `<p>` inside the `<article>` using jQuery only (no CSS!).
 
 [See the lesson page](/lesson/intro-to-jquery/) for further instructions.
 
@@ -654,7 +656,7 @@ $('button').on('click', function() {
    alert('You clicked the button');
 });
 
-$('form').append('<button>My Button</button>');
+$('div').append('<button>My Button</button>');
 ```
 
 ---
@@ -677,7 +679,7 @@ Can you spot the difference in this approach?
 
 # Event Delegation
 
-Bonus! Using the event delegation approach can also be beneficial for code performance when you can attach an event to a single parent element instead of many lower-level ones.
+Bonus! Using the event delegation approach can also be beneficial for code performance as it allows you to attach an event to a single parent element instead of many lower-level ones.
 
 ---
 
@@ -689,7 +691,10 @@ To access these methods and properties, we must pass in the event object as an a
 
 ```javascript
 $('div').on('click', 'button', function(event) {
-   // Code to run when button is clicked
+   // Code to run when button is clicked...
+
+   // Log the event object to the console if you're curious
+   console.log(event);
 });
 ```
 
@@ -709,9 +714,9 @@ We can use this to our advantage!
 
 *And why exactly is this useful?*
 
-Sometimes we want attach events to HTML elements that have default behaviours that we need to override.
+Sometimes we want attach events to HTML elements that already have default behaviours that we need to override.
 
-For instance, you may want to attach a special click handler to an `<a>` that performs a different action than click through to wherever that link points.
+For instance, you may want to attach a special click handler to an `<a>` that performs a different action than clicking through to a link (e.g. revealing a hidden `<div>`).
 
 ---
 

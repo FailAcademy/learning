@@ -21,7 +21,7 @@ layout: false
 
 1. What is JavaScript?
 2. JavaScript Syntax
-4. Operators
+4. Values, Type and Operators
 5. Loops
 6. Functions
 7. Objects
@@ -89,12 +89,15 @@ Because JS is "client-side" you can see it in your browser:
 ---
 class: center, middle
 
-### Open your browser console
-# ⌘ + shift + i
+### Open your browser console:
+
+.large[
+   <strong>⌥ + ⌘ + i</strong>
+]
 
 ---
 
-### The Console
+# The Console
 
 You can write it right in your browser too using the **console**:
 
@@ -110,17 +113,15 @@ You can also use the console to identify bugs in your JS code.
 
 ---
 
-# Using `console.log()`
+# Using console.log()
 
-In JavaScript, we can use `console.log()` to print values into the **browser console** to help us understand what particular values may be at specific points in your programs execution flow.
+In JavaScript, we can use `console.log()` to print values into the **browser console**.
+
+This helps us understand what particular values may be at specific points in your programs execution flow:
 
 ```js
 console.log('hello!');
 ```
-
-.footnote.right[
-   Source: [How To Be A Programmer](https://github.com/braydie/HowToBeAProgrammer/blob/master/1-Beginner/Personal-Skills/04-How%20to%20Debug%20Using%20a%20Log.md)
- ]
 
 ---
 
@@ -150,11 +151,10 @@ Comments are always hidden from execution in the script, and do not affect the o
 - A text-based language's syntax will permit specific combinations of letter, numbers, and symbols
 
 ---
-class: center, middle
 
-### What is Syntax?
+# What is Syntax?
 
-When we talk about programming, we will use specific adjectives to describe the programs we are talking about.
+When we talk about programming, we will use specific words to describe the programs we are talking about.
 
 Here are a few examples:
 
@@ -164,7 +164,7 @@ Here are a few examples:
 
 # Statements
 
-Statements in JavaScript end with a `;`
+Statements in JavaScript end with a `;`.
 
 Here is an example of a statement:
 
@@ -172,21 +172,21 @@ Here is an example of a statement:
 a = b * 2;
 ```
 
-Statements are any combination of **variables**, **values**, and **operators**
+Statements are any combination of **variables**, **values**, and **operators**.
 
 ---
 
 # Expressions
 
-A Statement is made up of one or more **expressions**. <br>
+A statement is made up of one or more **expressions**.
 
-An expression is any reference to a **variable** or **value**, or a set of **variable**(s) and **value**(s) combined with **operators**.
+An expression is any reference to a **variable** or **value**, (or a set of **variables** and **values**) combined with **operators**.
 
 Here is an example of an **if statement**:
 
 ```js
-if (a > 21 || (a * 4) === 32 ) {
-  console.log('Got result!');
+if ( a > 21 || (a * 4) === 32 ) {
+  console.log('Got a result!');
 }
 ```
 
@@ -194,7 +194,9 @@ if (a > 21 || (a * 4) === 32 ) {
 
 # Variables
 
-The **var** keyword defines a variable. here is what a **variable declaration** looks like, in JavaScript!
+The **var** keyword defines a variable in JavaScript.
+
+This is what a **variable declaration** looks like:
 
 ```js
 var color = 'red';
@@ -216,7 +218,7 @@ var a;
 var b;
 var c;
 
-console.log(a); // logs undefined
+console.log(a); // logs "undefined"
 ```
 
 ---
@@ -267,36 +269,37 @@ And what would we do if wanted to output the value that was entered in the `prom
 ---
 template: inverse
 
-# Values & Types
+# Values, Types & Operators
 
 ---
 
-### Values & Types: Primitives
+# Primitives
 
-When working with operators, we'll have to ensure that the values we are using in our expressions are appropriate.
+When working with operators (as we'll see in a moment), we'll have to ensure that the values we are using in our expressions are appropriate.
 
-That means, numbers for math, strings for creating text and so on.
+That means numbers for math, strings for creating text, etc.
 
 Primitive values include:
 
-`"I'm a String";`<br>
-`'I'm another string';`<br>
-`42;`<br>
-`true;`<br>
-`false;`<br>
+```js
+"I am a String"; // string
+'I am another string'; // string
+42; // number
+true; // boolean
+false; // boolean
+```
 
----
-template: inverse
-
-# Arithmetic & Comparison Operators
+There are two other primitives in ES5: `undefined` and `null`
 
 ---
 
 # Arithmetic Operators
 
-Here are JavaScript's basic arithmmatic operators: <br>
+JavaScript has basic arithmetic operators:
 
-`+`, `-`, `/`, `%` and `*` !
+`+`, `-`, `/`, `%` and `*`
+
+In use:
 
 ```js
 var quantity = 3 + 2;
@@ -311,7 +314,7 @@ var totalMinusOne = total --;
 
 # Arithmetic Operators
 
-There are also special operators that allow us to increment or decrement a value:
+There are also special operators that allow us to **increment** or **decrement** a value:
 
 ```js
 var i = 5;
@@ -376,7 +379,7 @@ if ( score >= 50 ) {
 
 ---
 
-### Values & Types: Type Coercion
+# Type Coercion
 
 In JavaScript, certain **operations** can change the value of primitives.
 
@@ -405,17 +408,17 @@ class: center, middle
 
 JavaScript is weird.
 
-**More Type Coercion**
+**More Type Coercion:**
 
 ```js
 "2" === 2 // false
 "2" == 2 // true, wtf?
 ```
 
-**Operator Overloading**
+**Operator Overloading:**
 
 ```js
-"42" + 5; // "425" ... ok that makes sense
+"42" + 5; // "425" ... ok that makes sense?!
 ```
 
 Because of this unique behavior, it's a best practice to **always use `===` (triple equals)** when doing value comparisons in JavaScript.
@@ -430,7 +433,7 @@ template: inverse
 
 # JavaScript Truth Table
 
-The Following values are always `false`:
+The following values are always `false`:
 
 - `false`
 - `undefined`
@@ -441,15 +444,15 @@ The Following values are always `false`:
 
 ---
 
-# And (`&&`) and Or (`||`)
+# And (&&) and Or (||)
 
-In JavaScript we can check for **Truthy** and **Falsy** values.
+In JavaScript we can check for **truthy** and **falsy** values.
 
 For example, we can write an **if statement** like this:
 
 ```js
 if (a < b || b > c) {
-  console.log('got result');
+  console.log('Got a result');
 }
 ```
 
@@ -567,7 +570,7 @@ Functions are specific chunks code that you can use to **repeat a set of instruc
 - Functions help us better organize our code
 - Functions allow us to group together statements
 - Functions allow us to only run certain steps in code when they are needed
-- Function can perform very complex work for us and provide us with a single or multiple values afterword
+- Functions can perform very complex work for us and provide us with a single value or multiple values afterword
 
 ---
 class: center, middle
@@ -590,7 +593,7 @@ function add(a, b) {
 
 The `a` and `b` in parentheses are called **parameters**. They allow us to pass different values into the function whenever we use it.
 
-Parameters are optional.
+Parameters are not required to create a function.
 
 ---
 
@@ -616,7 +619,7 @@ add(2, 2);
 
 # How to Use a Function
 
-The output of function is called it's **return value**. Our previous example returned the integer 4.
+The output of function is called it's **return value**. Our previous example returned the integer `4`.
 
 Let's store the return value in a variable now, and write it out to the console:
 
@@ -663,10 +666,8 @@ function fullName() {
 The function is called later on in our code.
 
 ```js
-
-// name will have the value that the user entered!
+// name will have the value that the user entered..
 var name = fullName();
-
 ```
 
 ---
@@ -717,7 +718,7 @@ var size = volume(3, 4, 5);
 console.log(size);
 ```
 
-Unlike function declarations, this function won't be available to use until the interpreter reaches that point in the code.
+Unlike function declarations, this function **won't be available to use** until the interpreter reaches that point in the code.
 
 ---
 
@@ -795,7 +796,7 @@ If you use the `var` keyword inside the function, you will get an unexpected res
 
 This quirky behaviour happens because of **hoisting**.
 
-Hoisting will result in the first `console.log` returning **undefined**:
+Hoisting will result in the first `console.log()` returning **undefined**:
 
 ```js
 var faveColour = 'blue';
@@ -1139,6 +1140,14 @@ for (var prop in bob) {
 
 ---
 
+# Final Note on Style
+
+JavaScript is a *flexible* language, and the concept of *coding style* is important. Coding with a conventional style will help other programmers understand your code.
+
+In this course we'll be sticking as closely as possible to AirBnB's style guide, lets take a look now: **[AirBnB Style Guide](https://github.com/airbnb/javascript/tree/master/es5)**
+
+---
+
 # Exercise 3
 
 In this exercise, you're going to build a JS object of your own to represent a **hotel**.
@@ -1146,15 +1155,6 @@ In this exercise, you're going to build a JS object of your own to represent a *
 Properties of the hotel object should include the **name** of the hotel (The Quay), the **total number of rooms** (40), the current number of **rooms booked** (25), an array of the **types of rooms** (twin, double, suite), and function to **check the availability**.
 
 One you've created your object, **create a loop** to log to the console all of the room types one-by-one. Then, **update the booked rooms** to 30, check the new availability, and output that using `console.log`
-
----
-
-# The Importance of Style!
-
-JavaScript is a *flexible* language, and  the concept of *coding style* is important. Coding with a conventional style will help other programmers understand your code.
-
-In this course we'll be sticking as closely as possible to AirBnB's style guide, lets take a look now:
-[AirBnB Style Guide](https://github.com/airbnb/javascript/tree/master/es5)
 
 ---
 

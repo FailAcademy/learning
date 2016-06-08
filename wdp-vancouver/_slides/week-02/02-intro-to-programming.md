@@ -19,8 +19,9 @@ layout: false
 # Agenda
 
 1. What is programming?
-2. Being a programmer?
-3. Basic programming concepts with Scratch
+2. Using pseudocode
+3. Thinking like a programmer
+4. Basic programming concepts with Scratch
 
 ---
 template: inverse
@@ -39,12 +40,12 @@ class: center, middle
 
 ### Programming, Demystified
 
-When we **program** we are simply writing a list of **instructions** a our computer to follow, in a language it will understand.
+When we **program** we are simply writing a list of **instructions** for our computer to follow, in a language it will understand.
 
 ---
 class: center, middle
 
-<iframe width="100%" height="400px" src="https://www.youtube.com/embed/QaTx1J7ZeLY" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/QaTx1J7ZeLY" frameborder="0" allowfullscreen></iframe>
 
 ---
 class: center, middle
@@ -54,9 +55,11 @@ class: center, middle
 It's an agreed-upon way to create instructions that a computer or other machine can understand.
 
 ---
-template: inverse
+class: center, middle
 
-# Algorithms
+.large[
+   What's an **algorithm**?
+]
 
 ---
 class: center, middle
@@ -70,14 +73,12 @@ Much of programming is writing very simple algorithms.
 ---
 class: center, middle
 
-# What's an algorithm and why should I care?
-
-[https://www.youtube.com/watch?v=CvSOaYi89B4](https://www.youtube.com/watch?v=CvSOaYi89B4)
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/CvSOaYi89B4" frameborder="0" allowfullscreen></iframe>
 
 ---
 template: inverse
 
-# Psuedocode
+# Using Psuedocode
 
 ---
 
@@ -90,6 +91,7 @@ class: center, middle
 ![Human to machine](/public/img/human-to-machine.png)
 
 ---
+
 # Pseudocode
 
 Pseudocode is code that's meant for human reading, not machine reading.
@@ -143,7 +145,7 @@ while students are present
 
 # Pseudocode Example
 
-Remember **variables** from junior high alegbra? Back then, we used letter as variables to represent numbers.
+Remember **variables** from junior high algebra? Back then, we used letter as variables to represent numbers.
 
 In programming, we can use variables to represent a wider variety of things:
 
@@ -172,68 +174,69 @@ Some things to consider while writing your algorithm:
 
 ---
 template: inverse
-# Being a Programmer
-(Becoming a master of words and languages)
+
+# Thinking Like a Programmer
 
 ---
 class: center, middle
 
-<img src="http://images-cdn.9gag.com/photo/aPD96bQ_700b.jpg" height="600">
+.inline-images[
+   ![Guide to software developer job advertisements](/public/img/slide-assets/dev-job-ads.jpg)
+]
 
 ---
-template: inverse
+class: center, middle
 
-# But hey, Computer Science?
-(The Answer is yes)
+### But hey, computer science?
 
----
-
- ![](https://upload.wikimedia.org/wikipedia/commons/2/20/IBM_Electronic_Data_Processing_Machine_-_GPN-2000-001881.jpg)
+(The answer is yes.)
 
 ---
+class: center, middle
 
-### Using "High-Technology"
-
-"There is a body of knowledge about algorithms, data structures, mathematics, and other gee-whiz stuff that most programmers know about but rarely use. In practice, this wonderful stuff is too complicated and generally unnecessary."
-
-**What are some scenarios where knowledge of the inner workings of computers would be helpful, as a web developer??**
-
-.footnote.right[
-   *Source: [How To Be A Programmer](https://github.com/braydie/HowToBeAProgrammer/blob/master/2-Intermediate/Judgment/07-How%20to%20Know%20When%20to%20Apply%20Fancy%20Computer%20Science.md)*
+.inline-images[
+   ![Mid-century IBM Computer](/public/img/slide-assets/ibm-old-comp.jpg)
 ]
 
 ---
 
-template: inverse
+# Using "High-Technology"
 
-# Learn to Type
-(It's about culture)
+"There is a body of knowledge about algorithms, data structures, mathematics, and other gee-whiz stuff that most programmers know about but rarely use. In practice, this wonderful stuff is too complicated and generally unnecessary."
+
+**What are some scenarios where knowledge of the inner workings of computers would be helpful, as a web developer?**
+
+.footnote[.red[* ]Source: [How To Be A Programmer](https://github.com/braydie/HowToBeAProgrammer/)]
 
 ---
 class: center, middle
 
-![](http://atinybird.com/nest/1285558323532.gif)
+.inline-images[
+   ![WordPress - Code is Poetry](/public/img/slide-assets/code-is-poetry.svg)
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![Code is Poetry tattoo](/public/img/slide-assets/code-is-poetry-tattoo.jpg)
+]
+
+---
+class: center, middle
+
+### Culture:
+
+Could you be that guy or girl?
 
 ---
 
-![](http://wordpress.syllogic.in/wp-content/uploads/sites/2/2014/06/Wordpress-Code-is-Poetry-1024x770-1413543579.png)
-
----
-
-![](https://hugobaeta.files.wordpress.com/2011/03/codeispoetry.jpg)
-
----
-template: inverse
-
-# Culture
-(could you be that guy?)
-
----
-
-# Could You Be That Guy?
+# Are You That Guy/Girl?
 
 Programming, as an occupation, has a very young culture.
+
 It's not what you think it is, it's changing rapidly.
+
 Stereotypes are being broken down as more people learn how to do it, and as the tools programmers use to write software improve.
 
 **All good software goes through iterations.**
@@ -241,89 +244,101 @@ Stereotypes are being broken down as more people learn how to do it, and as the 
 ---
 class: center, middle
 
-## Open Source FTW
+### Open Source FTW!
 
-### So go to: [https://github.com/Instagram/python-instagram/pulls](https://github.com/Instagram/python-instagram/pulls) and file a pull request that (if merged) changes how 2bn people interact with the world!
+Check out the [WordPress Trac](https://core.trac.wordpress.org/tickets/latest) to see how people around the world are contributing to this piece of software right now.
 
----
-template: inverse
-
-# First Learn to Type
-
----
-
-### Learn to Type
-
-This may seem obvious. More specifically, you should aim to gain some level of ability to *touch-type*, which means typing without looking at the keyboard.
-
-- Being a fast typer is not a requirement for being a good programmer, but it will save you time.
-
-- If you're working on a team, you'll also me typing a lot of emails, chat messages, project briefs and so on. Communication gets easier when you have mastered the tools you'll use for it.
-
----
-# Exercise 2
-
-### How fast can you type?
-Lets get a sense of how fast you can type!
-We're all going to visit [10 Fast Fingers](http://10fastfingers.com/typing-test/english), create an account and take the typing test and share your WPM!
-
----
-template: inverse
-
-# Take Shortcuts
-
----
-### Your Code Editor is Your Best Friend
-
-Your code editor has a wealth of functionality designed to save you time.
-Take advantage of these facilities and spend a little time configuring things for maximum productivity:
-
-- Your color scheme can help you read code faster.
-- Code snippets are a great way to write *boilerplate* code quickly. ([Sublime code snippet tutorial](http://www.hongkiat.com/blog/sublime-code-snippets/))
-- Editor plugins like [**Emmet**](http://docs.emmet.io/) provide dozens of keyboard shortcuts that can help you write repetitive code faster.
+Their contributions (and potentially yours one day!) will impact how over 25% of of the top 10 million sites on the web run.
 
 ---
 class: center, middle
 
-### Preserve code you find yourself repeating. Keep this code organized for easy access.
+### Pre-requisite:
 
-We'll be using a tool called [Gistbox](http://www.gistboxapp.com/) in class to do just that.
-
----
-template: inverse
-
-# Optimise Your Develpoment Environment
+Learn to type.
 
 ---
-template: inverse
+class: center, middle
 
-# Stay Organised
+.inline-images[
+   ![Typing like a boss](/public/img/slide-assets/typing.gif)
+]
 
 ---
 
-template: inverse
+# Learn to Type
+
+This may seem obvious. More specifically, you should aim to gain some level of ability to **touch-type**, which means typing without looking at the keyboard.
+
+Being a fast typer is not a requirement for being a good programmer, but it will save you time.
+
+If you're working on a team, you'll also me typing a lot of emails, chat messages, project briefs and so on. Communication gets easier when you have mastered the tools you'll use for it.
+
+---
+
+# Exercise 2
+
+**How fast can you type?**
+
+Lets get a sense of how fast you can type!
+
+Let's visit [10 Fast Fingers](http://10fastfingers.com/typing-test/english), create an account and take the typing test and share your WPM!
+
+---
+class: center, middle
+
+.large[
+   Now take some shortcuts...
+]
+
+---
+
+# Your Code Editor is Your New Best Friend
+
+Your code editor has a wealth of functionality designed to save you time. Take advantage of these facilities and spend a little time configuring things for maximum productivity:
+
+- Your color scheme can help you read code faster
+- Snippets are a great way to write **boilerplate** code quickly
+- Editor plugins like [**Emmet**](http://docs.emmet.io/) provide dozens of keyboard shortcuts that can help you write repetitive code faster
+
+---
+class: center, middle
+
+.large[
+   Optimize your development environment.
+]
+
+---
+class: center, middle
+
+.large[
+   Stay organized.
+]
+
+---
+class: center, middle
+
+> "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it."
+
+&mdash;Brian W. Kernighan
+
+---
 
 # Debugging
 
----
-
-### Debugging
-
 "Debugging is the cornerstone of being a programmer. The first meaning of the verb "debug" is to remove errors, but the meaning that really matters is to see into the execution of a program by examining it. A programmer that cannot debug effectively is blind."
 
-.footnote.right[
-   *Source: [How To Be A Programmer](https://github.com/braydie/HowToBeAProgrammer/blob/master/1-Beginner/Personal-Skills/01-Learn%20To%20Debug.md)*
- ]
+.footnote[.red[* ]Source: [How To Be A Programmer](https://github.com/braydie/HowToBeAProgrammer/)]
 
 ---
 
-# Debugging using a log
+# Debugging Using a Log
 
- "Absolute beginners must understand and use logs because their knowledge of the programming is limited".
+Logs help us understand what's happening with our code.
 
-In JavaScript, we can use `console.log()` to print values into the *browser console*.
+In JavaScript, we can use `console.log()` to print values into the *browser console*:
+
 ```js
-
 function addNumbers(num1, num2) {
       // we can print the value of num1 and num2
       // to the debugging console in your browser
@@ -332,60 +347,54 @@ function addNumbers(num1, num2) {
       console.log(num1 + num2);
       return num1 + num2;
 }
-
 ```
 
-.footnote.right[
-   *Source: [How To Be A Programmer](https://github.com/braydie/HowToBeAProgrammer/blob/master/1-Beginner/Personal-Skills/04-How%20to%20Debug%20Using%20a%20Log.md)*
- ]
-
 ---
 
-# Debugging in your **IDE**
+# Debugging Is Fun!
 
-![](https://developer.chrome.com/devtools/docs/javascript-debugging/multiple-breakpoints-region.jpg)
-
----
-
-# Debugging is fun!
-
-Debugging begins wth a mystery, and finding solutions to bugs will often lead you to a better understanding of the program you're writing, and the language you are using.
+Debugging begins with a mystery, and finding solutions to bugs will often lead you to a better understanding of the program you're writing, and the language you are using.
 
 Embrace the process. As a programmer 50% or more of your time will be spent debugging. More so in different circumstances, like working with older codebases, or code you don't initially understand, but you've been tasked to improve.
 
-There are all scenarios you'll encounter if you're destined to work as a full time programmer.
+There are all scenarios you'll encounter if you're destined to work as a full-time programmer.
 
 ---
-
 class: center, middle
 
-# Take a break when you're stumped!
+.large[
+   Take a break when you're stumped!
+]
 
 ---
 
-### How to Improve Your Coding Chops
+# Up Your Coding Game
 
-1. Look at other peoples code.
-2. Run other people's code.
+How to improve your coding chops:
+
+1. Look at other peoples code
+2. Run other people's code
 3. Write more code!
-4. Learn to love your IDE / Debugger
+4. Learn to love your IDE/debugger
 
-There is always more than one way to solve a programming task. Programming is a challenging creative activity, and looking at how others have solved problems will help you improve your own repertoire!
-
----
-
-template: inverse
-
-# Love to Learn
+Programming is a challenging creative activity, and looking at how others have solved problems will help you improve your own repertoire.
 
 ---
 class: center, middle
+
+.large[
+   Last but not least,<br />you need to love to learn.
+]
+
+---
+
+# Always Be Learning
 
 Learning is both rewarding and challenging.
 
 The love of learning, and making a conscious effort to improve how you learn is an essential skill of any successful programmer.
 
-(This is my favourite part of the job).
+(This is my favourite part of the job.)
 
 ---
 
@@ -420,16 +429,6 @@ We'll need a some volunteers now...
 https://scratch.mit.edu/projects/12352154/#player
 
 https://scratch.mit.edu/projects/232913/#player
-
----
-
-# Exercise 3
-
-Your turn...**[create a Scratch account](https://scratch.mit.edu/)** and give it a whirl.
-
-For this exercise, your **first task** is to create a basic program using one of the Scratch sprites (or more than one if you're feeling ambitious).
-
-Your **second task** is to make sure you have fun with this :)
 
 ---
 
@@ -527,6 +526,16 @@ We can also create custom blocks to encapsulate special chunks of code that we w
 ]
 
 In programming, these custom blocks are often referred to as **functions** or **methods**.
+
+---
+
+# Exercise 3
+
+Your turn...**[create a Scratch account](https://scratch.mit.edu/)** and give it a whirl.
+
+For this exercise, your **first task** is to create a basic program using one of the Scratch sprites (or more than one if you're feeling ambitious).
+
+Your **second task** is to make sure you have fun with this :)
 
 ---
 

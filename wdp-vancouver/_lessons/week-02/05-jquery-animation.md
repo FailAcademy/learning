@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Animation with jQuery
-slides: ['_slides/week-02/04b-jquery-animation.md']
-lesson_date: 2016-04-22
+slides: ['_slides/week-02/05-jquery-animation.md']
+lesson_date: 2016-07-15
 ---
 
 ## Pre-Work
@@ -14,6 +14,7 @@ Provided you finished the readings and Code School tutorial assigned in the prev
 ## Learning Objectives
 
 - Use jQuery animation methods to add dynamic behaviours to a webpage.
+- Identify what jQuery plugins are for, and add one to a webpage.
 
 ---
 
@@ -53,7 +54,7 @@ Using the mark-up below, write a jQuery script to selectively show or hide a par
 Try executing this effect in **two different ways**:
 
 1. The user must click the question to show the answer, and manually click it again to hide the answer (so multiple answers can be viewed at once)
-2. When the user clicks on a particular question to reveal the answer, all of the other questions' answers will automatically be re-hidden.
+2. When the user clicks on a particular question to reveal the answer, all of the other questions' answers will be automatically re-hidden.
 
 **Hint:** You'll want to use CSS to initially hide all of the answers.
 
@@ -61,7 +62,9 @@ Try executing this effect in **two different ways**:
 
 ## Exercise 2
 
-Your second exercise is to research **jQuery plugins**. jQuery plugins are script files containing jQuery that other people have written and that you can include in your website to add extra functionality without having to write all of the code yourself first. For example:
+Your second exercise is to research **jQuery plugins**. jQuery plugins are script files containing jQuery that other people have written and that you can include in your website to add extra functionality without having to write all of the code yourself.
+
+For example:
 
 - An image slider
 - A media lightbox

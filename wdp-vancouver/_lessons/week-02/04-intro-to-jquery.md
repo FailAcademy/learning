@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to jQuery
 slides: ['_slides/week-02/04a-intro-to-jquery.md']
-lesson_date: 2016-04-21
+lesson_date: 2016-07-14
 ---
 
 ## Pre-Work
@@ -11,15 +11,13 @@ Readings from *Learn to Code Advanced HTML & CSS*:
 
 - [jQuery](http://learn.shayhowe.com/advanced-html-css/jquery/)
 
-Get extra practice with jQuery basics by completing this free Code School course:
-
-- [Try jQuery](http://try.jquery.com/)
+Also before class, familiarize yourself with jQuery by completing the free **[Try jQuery](http://try.jquery.com/)** course on Code School.
 
 ---
 
 ## Learning Objectives
 
-- Use JavaScript on the Web (in the web browser).
+- Write JavaScript in a `.js` file and add it to a webpage.
 - Distinguish what jQuery is in relation to JavaScript.
 - Define what the browser’s Document Object Model (DOM) is, and traverse it using jQuery methods.
 - Manipulate the appearance of DOM elements using jQuery.
@@ -56,7 +54,7 @@ Be as detailed as you possibly can. When you’re done, pair up with a classmate
 
 ## Exercise 3
 
-Using what you just learned about traversing the DOM and jQuery methods, come up with at least three unique solutions for changing the color of the text in the second `<p>` inside the `<article>` red using jQuery only (no CSS!).
+Using what you just learned about traversing the DOM and jQuery methods, come up with at least three unique solutions for changing the color of the text to red in the second `<p>` inside the `<article>` using jQuery only (no CSS!).
 
 ```html
 <article>
@@ -86,7 +84,7 @@ In this exercise, you're going create two click events&mdash;one that **adds ano
 </div>
 ```
 
-You'll need to think about traversing the DOM, and which of jQuery's methods you'll need to make to update the `<ul>` element's content.
+You'll need to think about traversing the DOM, and which of jQuery's methods you'll need to update the `<ul>` element's content.
 
 You can complete this activity in a basic HTML file in a text editor of your choice (don't forget to include the jQuery library in the footer of your file), or in Codepen (be sure to go into the Settings for your pen and check off the box to add the jQuery library).
 

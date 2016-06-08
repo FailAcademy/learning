@@ -100,15 +100,13 @@ template: inverse
 
 # Animation with jQuery
 
-jQuery makes it easy to bring a webpage to life with animation. It offers many animation methods out of the box, including*:
+jQuery makes it easy to bring a webpage to life with animation. It offers many animation methods out of the box, including:
 
 - `.show()`
 - `.hide()`
 - `.fadeIn()`
 - `.fadeOut()`
 - ...and many more!
-
-.footnote[.red[ * ] You can find a complete list of these methods on page 332 of your text book.]
 
 ---
 
@@ -128,7 +126,7 @@ $('a').on('click', function(event) {
 });
 ```
 
-We can pass in `fast`, `slow`, or a speed in milliseconds as parameter for this method.
+We can pass in `fast`, `slow`, or a speed in milliseconds an argument for this method.
 
 ---
 
@@ -212,7 +210,7 @@ if ( $('input:checkbox').is(':checked') ) {
 
 # Forms and Events
 
-We can also use jQuery's `.on()` method to handle a variety of HTML form-related events:
+We can also use jQuery's `.on()` method to handle a variety of other HTML form-related events:
 
 - `blur`
 - `change`
@@ -294,7 +292,7 @@ However, using `submit` with the `.on()` method permits the use of event delegat
 ---
 # The .change() Method
 
-Similarly, we can also detect when a user chooses an option in a select menu using the change event:
+Similarly, we can also detect when a user chooses an `<option>` in a `<select>` menu using the change event:
 
 ```html
 <select id="my-select-menu">
@@ -342,7 +340,7 @@ You can hide inputs by setting them to `display: none`:
 
 # Animating Forms
 
-And then conditionally show those elements when the user completes another form field:
+And then conditionally show those elements when the user changes another form field:
 
 ```javascript
 $('#hamburger').on('change', function() {
@@ -374,14 +372,16 @@ class: center, middle
 
 ### What's a plugin?
 
-Plugins allow us to extend jQuery to add additional functionality to suit needs of our websites (i.e. add more cool stuff to our websites...).
+Plugins allow us to extend jQuery to add additional functionality to suit needs of our websites.
+
+In other words, they allow us to easily do more cool stuff on our sites with jQuery, and with minimal effort on our parts!
 
 ---
 class: center, middle
 
 ### Why create a plugin?
 
-Plugins allow you to create re-usable components for your webpages, and makes it easier to share that code with other developers too.
+Plugins allow you to create re-usable components for your webpages, and makes it easier to share that code with other developers too. Open source FTW, right?
 
 ---
 
