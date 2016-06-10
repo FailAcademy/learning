@@ -2,33 +2,34 @@
 layout: lesson
 title: Gulp
 slides: ['_slides/week-03/03-gulp.md']
-lesson_date: 2016-04-27
+lesson_date: 2016-07-20
 ---
 
 ## Pre-Work
 
-Visit [this site](https://github.com/osscafe/gulp-cheatsheet) and have a look at the **English JavaScript** cheatsheets, to get a feeling for what Gulp does, and for the code we'll be writing in todays lesson.
+Visit **[this GitHub repo](https://github.com/osscafe/gulp-cheatsheet)** and have a look at the **English JavaScript** cheatsheets to get a feeling for what Gulp does, and for the code we'll be writing in today's lesson.
 
-Feel free to save these cheatsheets for your own reference!
+You are encouraged to save these cheatsheets for your own reference.
 
 ---
 
 ## Learning Objectives
 
 - Explain the benefits of automation in web projects.
-- Implement the following automation tasks: `uglification`, `watch`, `browser-sync`
-- Install Gulp globally and as a project dependency.
-- Install Gulp plugins via the command line, then build a `gulpfile.js` file, and run related tasks.
+- Implement the following automation tasks: `uglification`, `watch`, and `browser-sync`.
+- Install Gulp globally and as a project development dependency.
+- Install Gulp plugins via the command line, build a `gulpfile.js` file, and run related tasks.
 - Distinguish between Gulp and other solutions for managing build/other automation tasks.
 
 ---
 
 ## Keywords
 
+- npm (Node Package Manager)
+- Dependencies
 - Automation
-- Pre-processor
 - Build task
-- File Watcher
+- File watcher
 
 ---
 
@@ -46,32 +47,28 @@ Let's try implementing the BrowserSync plugin in our projects with Gulp.
 
 Learn how to do that here:
 
-http://www.browsersync.io/docs/gulp/
-
----
-
-## Exercise 3
-
-We'll implement all of the plugins we'll need to build out second project!
-
-- `plumber`
-- `notify`
-- `sass` / `autoprefixer` / `rename` / `cssnano`
-- `jscs` / `jshint`
+**[www.browsersync.io/docs/gulp/](http://www.browsersync.io/docs/gulp/)**
 
 ---
 
 ## Lab Activity
 
-In addition to working on Project 3 today, you'll also want to implement the following additional Gulp tasks in your project:
+In addition to working on Project 2 today, you'll also want to implement the following additional Gulp plugins in your project:
 
+- `gulp-plumber`
 - `gulp-jscs`
 - `gulp-jshint`
 
-You'll also need to create two files, `.jshintrc` and `.jscsrc`, and use the following for the content of these configuration files:
+The first plugin will prevent pipe breaking when Gulp encounters an error in your code (e.g. when there's a syntax error in your JS while trying to uglify it). You'll want to incorporate this in your `scripts` task, and the `sass` task that we'll create tomorrow.
 
-- https://github.com/airbnb/javascript/blob/master/linters/jshintrc
+The second plugin will allow you to check your JS code style against a styleguide (such as the Airbnb styleguide). You'll want to create a new `jscs` task to implement this plugin.
+
+The third plugin will help you identify potential problems in your JS, and help you maintain certain conventions in your code. You'll want to create a new `jshint` task to implement this plugin.
+
+You'll also need to create two additional files in the root directory for your project that correspond to your new tasks, `.jshintrc` and `.jscsrc`, and use the following for the content of these configuration files:
+
 - https://github.com/jscs-dev/node-jscs/blob/master/presets/airbnb.json
+- https://github.com/airbnb/javascript/blob/master/linters/jshintrc
 
 ---
 
@@ -82,6 +79,7 @@ Links to Gulp specific pages for reference:
 - [Gulp homepage](http://gulpjs.com/)
 - [Gulp plugins directory](http://gulpjs.com/plugins/)
 - [Gulp API documentation](https://github.com/gulpjs/gulp/blob/master/docs/API.md)
+- [Browsersync + Gulp.js](https://www.browsersync.io/docs/gulp/)
 
 Get to know other popular JavaScript task runners:
 

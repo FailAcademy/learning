@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Sass / CSS Pre-processors Slides
+title: Sass / CSS Preprocessors Slides
 ---
 
 {% highlight html %}
@@ -35,17 +35,17 @@ class: center, middle
 
 ### What is a preprocessor?
 
-A preprocessor is a program that takes one type of data and coverts it into a another type of data.
+A preprocessor is a program that takes one type of data and converts it into a another type of data.
 
 ---
 
 # CSS Preprocessors
 
-CSS preprocessors allow you to write CSS in a unconventional (but usually more intuitive) way in order to speed up your front-end development.
+CSS preprocessors allow you to write CSS in a unconventional (but usually more intuitive) way in order to speed up your dev.
 
 Today, there are a few CSS preprocessors in popular use:
 
-- [Sass](http://sass-lang.com/)
+- [Sass / SCSS](http://sass-lang.com/)
 - [Less](http://lesscss.org/)
 - [Stylus](https://learnboost.github.io/stylus/)
 - [Myth](http://www.myth.io/)
@@ -54,7 +54,7 @@ Today, there are a few CSS preprocessors in popular use:
 
 # Less vs. Sass vs. etc.
 
-Sass and Less are the most widely used of the preprocessor options today.
+Sass (or in our case, SCSS) and Less are the most widely used of the preprocessor options today.
 
 The main differences between these two preprocessor options are their **installation processes** and the **syntax** you use to write your code.
 
@@ -71,7 +71,7 @@ It depends...sometimes it's a matter of taste, other times it's what your team i
 class: center, middle
 
 .inline-images[
-   ![Sass logo](http://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png)
+   ![Sass logo](/public/img/slide-assets/sass-lang.png)
 ]
 
 ---
@@ -407,7 +407,37 @@ class: center, middle
 
 `@media` directives in Sass work just as they do in plain CSS, with one extra capability: **they can be nested in CSS rules**.
 
-If a `@media` directive appears within a CSS rule, it will be bubbled up to the top level of the stylesheet, putting all the selectors on the way inside the rule.
+If an `@media` directive appears within a CSS rule, it will be bubbled up to the top level of the stylesheet, putting all the selectors along the way inside the rule.
+
+---
+
+# Smarter Media Queries
+
+```sass
+/* So this SCSS... */
+
+li {
+   flex: 0 1 100%;
+
+   @include desktop {
+      flex: 0 1 50%;
+   }
+}
+```
+
+```css
+/* Compiles to this CSS... */
+
+li {
+  flex: 0 1 100%;
+}
+
+@media (min-width: 1000px) {
+  li {
+    flex: 0 1 50%;
+  }
+}
+```
 
 ---
 class: center, middle
@@ -458,17 +488,23 @@ Note that you can add of leave off the `.scss` extension the file names, and als
 // and so on...
 ```
 
-CSS from the imported files is added in place, so the order of your imports matters.
+CSS from the imported files is **added in place**, so the order of your imports matters.
 
 ---
 
 # Organizing SCSS Files
 
-When creating partials, name your partial files beginning with an underscore:
+When creating **partials**, name your partial files beginning with an underscore. For example:
 
-e.g. `_typography.scss`
+```sass
+// In a style.scss file, we can import _typography.scss...
 
-Using an underscore tells the Sass compiler that the file is a partial.
+@import 'typography';
+```
+
+Using an underscore tells the Sass compiler that the file is a partial, and should be compiled into `style.css`.
+
+Without the underscore, Sass would compile that file into a stand-alone `typography.css` file, rather than importing it into the compiled `style.css` file.
 
 ---
 template: inverse
@@ -486,12 +522,12 @@ When you compile code, you convert it from one form (that you have written) to a
 
 # How to Compile Sass
 
-Let's create a Gulp task to compile Sass for our project. Here's an example of a basic gulp task for compiling Sass:
+Let's create a Gulp task to compile Sass for our project. Here's an example of a basic Gulp task for compiling Sass:
 
 ```js
 var sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    minifyCSS = require('gulp-minify-css'),
+    cssnano = require('gulp-cssnano'),
     rename = require('gulp-rename');
 
 gulp.task('sass', function() {
@@ -501,7 +537,7 @@ gulp.task('sass', function() {
          browsers: ['last 2 versions']
       }))
       .pipe(gulp.dest('./build/css'))
-      .pipe(minifyCSS())
+      .pipe(cssnano())
       .pipe(rename('style.min.css'))
       .pipe(gulp.dest('./build/css'));
 });
@@ -519,7 +555,7 @@ In this exercise we’ll create media query helpers inside your project using Sa
 
 - What a preprocessor is and how to use one
 - How to use Sass to turbo-charge (and organize!) your CSS development
-- How to compile Sass
+- How to compile Sass with Gulp
 
 ---
 template: inverse

@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# CSS Transition & Transforms
+# CSS Transitions & Transforms
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -19,76 +19,90 @@ layout: false
 
 # Agenda
 
-1. CSS Transitions
-2. CSS Transforms
-3. CSS Animations
-4. Use Sass to go fast!
+1. Transitions
+2. Transforms
+3. Keyframe animation
 
 ---
 template: inverse
 
-# CSS Transitions
+# Transitions
 
 ---
 class: center, middle
 
-### Browser support for CSS Transitions
+### Transitions Defined:
 
-![CSS browser support](/public/img/slide-assets/browser-support-transitions.png) (Watch out for IE!)
+CSS transitions cause **changes to a property** (or multiple properties) and take place **over a ￼period of time**.
 
 ---
 
 # An Example
 
-On the element you want to animate, add the following CSS:
+On the element you want to transition, you could add the following CSS:
 
 ```css
 .my-awesome-div {
-   -webkit-transition: all 1s ease-in-out 1.5s;
-   -moz-transition: all 1s ease-in-out 1.5s;
-   -o-transition: all 1s ease-in-out 1.5s;
    transition: all 1s ease-in-out 1.5s;
 }
 ```
+
+This is the CSS **shorthand** for apply transitions to selectors.
 
 ---
 
 # The Syntax
 
-**CSS Transition syntax consist of the following properties:**
+Let's unpack what each of those values are for:
 
-- `all` : The property you want to animate <br>
-- `1s` : The duration of your animation <br>
-- `ease-in-out` : The 'timing function' of your animation <br>
+```css
+.my-awesome-div {
+   transition: all 1s ease-in-out 1.5s;
+}
+```
+
+- `all` : The property you want to animate
+- `1s` : The duration of your animation
+- `ease-in-out` : The "timing function" of your animation
 - `1.5s` : Delay time, before the animation starts
 
 ---
 
 # The Syntax
 
-Each of these properties can be added individually:
+Each of these properties can be added individually too:
 
 ```css
 .my-awesome-div {
-    transition: all;
+    transition-property: all;
     transition-duration: 1s;
     transition-timing-function: 'ease-in-out';
     transition-delay: 1.5s
 }
 ```
-.footnote[.red[* ] Vendor prefixes left out for brevity!]
 
 ---
 
 # The Syntax
 
-This allows us to create interesting animations of multiple properties:
+We can also transition multiple specific properties for a selector at the same time:
 
 ```css
-.super-div {
+/* longhand syntax */
+
+.super-div{
   transition-property: top, left, border-radius, background-color;
   transition-duration: 2s, 1s, 0.5s, 0.5s;
-  transition-delay: 0s, 0.5s, 1s, 1.5s;
+}
+
+/* shorthand syntax */
+
+.super-div {
+   transition:
+      top 2s,
+      left 1s,
+      border-radius 0.5s,
+      background-color 0.5s;
 }
 ```
 
@@ -96,7 +110,7 @@ This allows us to create interesting animations of multiple properties:
 
 # The Syntax
 
-To save space, we can write all of those transition properties in a shorthand format:
+To save space, we typically use the shorthand format:
 
 ```css
 a {
@@ -112,7 +126,7 @@ The transition values must be listed in the order of property, duration, timing 
 
 # The Syntax
 
-We can also use the `all` value to transition all of the animatable properties in the same way at once:
+We use the `all` value to transition all of the animatable properties in the same way at once:
 
 ```css
 a {
@@ -127,6 +141,8 @@ a:hover {
    font-size: 16px;
 }
 ```
+
+Use `all` with care as it may have unintended consequences and performance drawbacks.
 
 ---
 class: center, middle
@@ -148,7 +164,14 @@ Make sure your applying your transitions to properties that are actually animata
 ---
 template: inverse
 
-# CSS Transforms
+# Transforms
+
+---
+class: center, middle
+
+### Transforms Defined
+
+CSS transforms let you modify elements in their coordinate space. They can be rotated, **translated**, **scaled**, and **skewed**.
 
 ---
 class: center, middle
@@ -159,19 +182,9 @@ class: center, middle
 
 ---
 
-# Browser support
-
-**2D Transforms:**
-![2D transform support](/public/img/slide-assets/browser-support-2d-transforms.png)
-
-**3D Transforms:**
-![3D transform support](/public/img/slide-assets/browser-support-3d-transforms.png)
-
----
-
 # Transform Values
 
-The CSS transform property has special values you can apply to it. These are just a few:
+The CSS `transform` property has special values you can apply to it. These are just a few:
 
 - `translate(12px, 50%)`
 - `scale(2, 0.5)`
@@ -233,9 +246,7 @@ To activate 3D space, an element needs perspective. This can be applied in two w
 
 `perspective: 600px;`
 
-The perspective property should apply to the parent element. All Children will share the same 3D space.
-
-.footnote[.red[* ] Vendor prefixes left out for brevity!]
+The perspective property should apply to the parent element. All children will share the same 3D space.
 
 ---
 class: center, middle
@@ -245,20 +256,26 @@ class: center, middle
 The perspective property effects how the 3D transform will look. A larger perspective value will produce a less dramatic result. A smaller value produces a more dramatic 3D effect.
 
 ---
+
+# Let's Play!
+
+<iframe height='431' scrolling='no' src='//codepen.io/redacademy/embed/vKLzZX/?height=431&theme-id=0&default-tab=css,result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'></iframe>
+
+---
 template: inverse
 
-#CSS Animations
+# Keyframe Animations
 
 ---
 class: center, middle
 
-###Browser support
+### What are they for?
 
-![CSS browser support](/public/img/slide-assets/browser-support-css-animations.png)
+The `@keyframes` CSS at-rule permits fine-grained control over a CSS animation sequence.
 
 ---
 
-# Try It!
+# The Syntax
 
 ```css
 @keyframes resize {
@@ -267,22 +284,54 @@ class: center, middle
    }
    50% {
       padding: 0 20px;
-      background-color:rgba(255,0,0,0.2);
+      background-color: rgba(255,0,0,0.2);
    }
    100% {
       padding: 0 100px;
-      background-color:rgba(255,0,0,0.9);
+      background-color: rgba(255,0,0,0.9);
    }
 }
 
 .box {
    animation-name: resize;
    animation-duration: 1s;
-   animation-iteration-count: 4;
+   animation-iteration-count: infinite;
    animation-direction: alternate;
    animation-timing-function: ease-in-out;
 }
 ```
+
+---
+
+# The Syntax
+
+We can also use shorthand when applying animation:
+
+```css
+.box {
+   animation: resize 1s infinite alternate ease-in-out;
+}
+```
+
+---
+
+# Transform Origin
+
+And we can specific a `transform-origin` to control how our animation is applied to an element (very helpful when pared with certain CSS transform properties):
+
+```css
+￼@keyframes swing {
+   0% { transform: rotate(0deg); }
+   100% { transform: rotate(-10deg); }
+}
+
+#left-arm {
+   transform-origin: top center;
+   animation: swing 2s infinite;
+}
+```
+
+The default `transform-origin` is `50% 50% 0` (i.e. `center center 0`).
 
 ---
 class: center, middle
@@ -295,11 +344,9 @@ class: center, middle
 
 # Exercise 2
 
-**Create and demo Part 2...**
-
 Now try experimenting with CSS transforms and keyframe animations.
 
-Create a small demo in Codepen and be prepared share it with the class.
+See the [lesson page](/lesson/css3-transitions-transforms/) for more details.
 
 ---
 
@@ -307,7 +354,7 @@ Create a small demo in Codepen and be prepared share it with the class.
 
 - How to use CSS transitions
 - How CSS transforms work (both 2D and 3D)
-- How CSS keyframe animation works
+- How CSS keyframe animations works
 
 ---
 template: inverse

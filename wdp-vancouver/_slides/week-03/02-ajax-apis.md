@@ -48,14 +48,14 @@ class: center, middle
 
 ### What is it for?
 
-Ajax is often used when submitting web forms and fetching data from a server, including via third-party APIs.
+Ajax is often used when submitting web forms and fetching data from a server, including from third-party APIs.
 
 ---
 class: center, middle
 
 ![HTTP request diagram](../../public/img/slide-assets/http-request-diagram.svg)
 
-It's just like any request a browser makes to a server, but it loads the returned data in the page without affecting the rest of the page. In other words, no reloading!
+It's just like any request a browser makes to a server, but it loads the returned data in the page without affecting the rest of the page. In other words, no reloading! Magic.
 
 ---
 
@@ -92,7 +92,7 @@ Methods for dealing with Ajax responses:
 
 # A Basic Ajax Request
 
-This code makes a request to GitHub API when the button is clicked, then appends the user's username to a `p` element:
+This code makes a request to GitHub API when the button is clicked, then appends the user's username to a `<p>` element:
 
 ```html
 <button>Get Login Name</button>
@@ -111,7 +111,7 @@ $('button').on('click', function() {
 });
 ```
 
-This may a look at little intense at first, so let's break it down...
+*This may a look at little intense at first, so let's break it down...*
 
 ---
 
@@ -242,7 +242,7 @@ template: inverse
 
 # When a Response Fails
 
-Providing useful feedback to users when a response fails is important.
+Providing useful feedback to users when a response fails is important for UX.
 
 For that we can chain on the `.fail()` method:
 

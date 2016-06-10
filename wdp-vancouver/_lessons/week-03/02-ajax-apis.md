@@ -2,12 +2,12 @@
 layout: lesson
 title: Ajax, JSON, and APIs
 slides: ['_slides/week-03/02-ajax-apis.md']
-lesson_date: 2016-04-26
+lesson_date: 2016-07-19
 ---
 
 ## Pre-Work
 
-Read this primer on APIs:
+Read this primer on APIs before class:
 
 - [What APIs Are And Why They're Important](http://readwrite.com/2013/09/19/api-defined)
 
@@ -37,7 +37,9 @@ In this exercise, we're going to make a request to the GitHub API using some of 
 
 Additionally, we're going to up our jQuery skills by trying out its `$.each()` method. You can find the docs for that method here: **http://api.jquery.com/jquery.each/**
 
-First, you're going to add an event handler to the button. This click event will make a call to the GitHub API endpoint that fetches all of Octocat's repos: **https://api.github.com/users/octocat/repos**
+First, you're going to add an event handler to the button. This click event will make a call to the GitHub API endpoint that fetches all of Octocat's repos:
+
+<span style="word-wrap: break-word;">**https://api.github.com/users/octocat/repos?client_id=a37c6077034750f953fc&client_secret=8ff75658b21aa8c5830b7efeae85f559b4d36a02**</span>
 
 You'll likely want to use the `.ajax()` method with a GET request for this, or the `.getJSON()` method.
 
@@ -96,8 +98,7 @@ Build a simple form that fetches data from the OpenWeatherMap API to populate a 
 
 You'll be using a **GET** method to fetch data via Ajax from the following endpoint:
 
-http://api.openweathermap.org/data/2.5/weather?q=Vancouver,ca
-<!-- &appid=4a48e1e1428fd83889074671fbf259d9 -->
+**http://api.openweathermap.org/data/2.5/weather?q=Vancouver,ca&appid=4a48e1e1428fd83889074671fbf259d9**
 
 You'll use the `$.ajax()` method just as you did the GitHub API example, but append the required data (the main type of weather, the description, and the icon) when the button is clicked.
 
@@ -121,13 +122,13 @@ Build a simple form that fetches album data for a given artist using the iTunes 
 
 You'll be using a **GET** method to fetch data via Ajax from the following endpoint:
 
-https://itunes.apple.com/search?entity=album&limit=6&term=PLUS+THE+ARTIST+NAME
+**https://itunes.apple.com/search?entity=album&limit=6&term=PLUS+THE+ARTIST+NAME**
 
 You'll use the `$.ajax()` method just as you did the GitHub API example, but append the required data (the thumbnail album artwork plus the album names) when a user searches for an artist name.
 
 **Additional hints:**
 
-- The iTunes API requires that you use `+` signs and not spaces to occupy whitespace in the artist name...investigate a jQuery method called `.replace()` to figure out how to format the text entered into the `input`
+- The iTunes API requires that you use `+` signs and not spaces to occupy whitespace in the artist name...investigate a jQuery method called `.replace()` to figure out how to format the text entered into the `<input>`
 - You'll likely need to set the `dataType` property to `jsonp` when using the `$.ajax()` method to get this to work
 - You can find additional info about the [iTunes API here](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
 
@@ -145,7 +146,7 @@ This is all the mark-up you will need to complete this assignment:
 </div>
 ```
 
-Writing the CSS and jQuery is up to you. Good luck!
+Again, writing the CSS and jQuery is up to you. Good luck!
 
 ---
 
@@ -158,3 +159,8 @@ An older article, but still good background reading on APIs:
 A handy tool for making a JSON string more readable by adding whitespace back into it if it has been removed:
 
 - [JSON Pretty Print](http://jsonprettyprint.com/)
+
+And some Chrome extensions that will automatically do the same thing when viewing JSON in the browser:
+
+- [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)
+- [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc)

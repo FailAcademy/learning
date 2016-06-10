@@ -1,23 +1,15 @@
 ---
 layout: lesson
-title: Sass / CSS Pre-processors
+title: Sass / CSS Preprocessors
 slides: ['_slides/week-03/04a-sass.md']
-lesson_date: 2016-04-28
+lesson_date: 2016-07-21
 ---
 
 ## Pre-Work
 
-Be sure to [follow these directions to install Sass](http://sass-lang.com/install) before class.
-
-Then visit the Sass homepage and take a look around!
+Visit the Sass homepage and take a look around:
 
 - [Sass Homepage](http://sass-lang.com/guide)
-
-### Challenge Yourself:
-
-Visit this site and review the tutorial. The code and concepts should seem unfamiliar. As a challenge to yourself, see if you can determine what the code is doing, and describe it to yourself, in your own words. This is an advanced example, but it uses all of the features of Sass we'll be covering in this session:
-
-- [Fun with Sass and Icon Fonts - By Jayden Seric](http://jaydenseric.com/blog/fun-with-sass-and-font-icons)
 
 ---
 
@@ -29,7 +21,7 @@ Visit this site and review the tutorial. The code and concepts should seem unfam
 - Apply Sass language skills to writing Sass for responsive websites.
 - Install Sass locally and compile it into plain vanilla CSS.
 - Create and use source maps to assist with Sass debugging.
-- Distinguish between different CSS preprocessor such as Sass, SCSS, and LESS.
+- Distinguish between different CSS preprocessors such as Sass, SCSS, and Less.
 
 ---
 
@@ -78,12 +70,12 @@ We'll then discuss, how this techniques saves time when developing responsive we
 
 ## Lab Activity
 
-We’ll implement the following Sass enhancements in your second projects:
+This afternoon, we’ll implement the following Sass enhancements in your Project 2 websites:
 
 - Media query helpers
-- Basic themeability, using Sass variables
+- Basic theme-ability, using Sass variables
 - Separating your styles into Sass partials
-- Sass compilation using Gulp
+- Sass compilation, minification, and auto-prefixing using Gulp
 
 ---
 
@@ -97,3 +89,7 @@ More advanced use-cases and techniques using Sass:
 Get to know the other major CSS pre-processor, LESS:
 
 - [LESS (CSS preprocessor)](http://lesscss.org/)
+
+Challenge yourself with this Sass tutorial:
+
+- [Fun with Sass and Icon Fonts](http://jaydenseric.com/blog/fun-with-sass-and-font-icons)
