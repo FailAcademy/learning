@@ -150,18 +150,7 @@ directives: [ROUTER_DIRECTIVES]
 Now that we know how to create Routes. Use the Angular CLI to generate all the Route/Component pairs for the
 views in our application. The CLI should add all the necessary files and configuration for you!
 
-1. Add a temporary navigation element, that uses the `routerLink` directive, to the main application Component to help you navigate between pages as you develop.
-
-2. Make sure you add all the required form elements so that your app is ready for the next lesson in which you will
-wire up our Data Models to form inputs and Service methods!
-
-####Important:<br/>
-1.  **Use a unique name for each route** when using the Angular CLI.
-
-2. When you're done, and you're routes are configured and working, start adding the markup to you components.
-Be sure to complete all the HTML. You won't be able to complete the next lesson without it!
-
-3. **If you decide to start writing CSS** make sure you look over the project requirements before starting!
+If you decide to start writing CSS** make sure you look over the project requirements before starting!
 
 ---
 

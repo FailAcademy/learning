@@ -76,7 +76,7 @@ wire up our Data Models to form inputs and Service methods!
 ####Important:<br/>
 1.  **Use a unique name for each route** when using the Angular CLI.
 
-2. When you're done, and you're routes are configured and working, start adding the markup to you components.
+2. When you're done, and your routes are configured and working, start adding the markup to you components.
 Be sure to complete all the HTML. You won't be able to complete the next lesson without it!
 
 3. **If you decide to start writing CSS** make sure you look over the project requirements before starting!
