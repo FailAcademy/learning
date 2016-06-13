@@ -79,7 +79,7 @@ wire up our Data Models to form inputs and Service methods!
 2. When you're done, and your routes are configured and working, start adding the markup to you components.
 Be sure to complete all the HTML. You won't be able to complete the next lesson without it!
 
-3. **If you decide to start writing CSS** make sure you look over the project requirements before starting!
+3. **Start writing CSS**. Make sure you look over the project requirements before starting!
 
 ---
 

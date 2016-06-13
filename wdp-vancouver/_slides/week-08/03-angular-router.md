@@ -150,7 +150,7 @@ directives: [ROUTER_DIRECTIVES]
 Now that we know how to create Routes. Use the Angular CLI to generate all the Route/Component pairs for the
 views in our application. The CLI should add all the necessary files and configuration for you!
 
-**If you decide to start writing CSS** make sure you look over the project requirements before starting!
+**Start writing CSS**. Make sure to look over the project requirements before starting!
 
 ---
 

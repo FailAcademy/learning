@@ -20,24 +20,24 @@ layout: false
 ####Exercise 1 - Type coercion
 
 **Explanation**: <br/>
-- The if **block** (#1), compares the **number** 5 with the **string** '5' with double equals (`==`). JavaScript does **coercion** when comparing "things" using `==` and due to this **coercion**, the `console.log` within the **if block** gets executed. 
+- The if **block** (#1), compares the **number** 5 with the **string** '5' with double equals (`==`). JavaScript does **coercion** when comparing "things" using `==` and due to this **coercion**, the `console.log` within the **if block** gets executed.
 - Coercion does not happen for **variables** within the **switch statement**. **Switch statements** use strict type checking (`===`).
 
 ---
 
-####Exercise 2 - Function scope and hoisting 
+####Exercise 2 - Function scope and hoisting
 
 **Explanation**: <br/>
 - **Hoisting** : Hoisting takes place during the parsing phase of executing a JS code. In this phase, all **variable declarations** are taken and a default value of `undefined` is assigned to them. Note that the code is not run in this phase, so any **assignment** of a **value** to a **variable** will not be executed.
 - **Function Scope** :  Every **variable** in JS is scoped at a function level, means **variables** which are declared inside a function is not accessible outside the function in which it is declared.
- 
+
  .footnote[more on next slide ...]
 ---
 
-####Exercise 2 - Function scope and hoisting 
+####Exercise 2 - Function scope and hoisting
 
 **Explanation**: <br/>
-- **Scope chaining** : When a **variable** is not found in a **function scope**, the execution environment traverses to an outer **scope** to look for it. 
+- **Scope chaining** : When a **variable** is not found in a **function scope**, the execution environment traverses to an outer **scope** to look for it.
 - So in the code example, the **statement** `var name = "Jane"` declares a **variable** "name" which is local to the **function scope**. The outer **variable** which has the same **variable** name is ignored, and the **variable** in current **scope** is used. Hence the second **statement** `console.log("The name is : " + name);` logs a value "Jane".
 
 ---
