@@ -24,7 +24,7 @@ layout: false
 
 2. Enhance the form using Angular. (2-way data-binding and directives).
 
-3. Implement a select menu input using `ngFor`.
+3. Implement a select menu input using `ngFor` & computed properties.
 
 4. Add validation and data-binding to all the forms in our project.
 
@@ -60,7 +60,7 @@ In your sign-in / register component add the following import statement:
 ```js
 import { NgForm } from '@angular/common'
 ```
-That's it! Angular creates and attaches an NgForm directive to the `<form>` tag automatically.
+That's it! Angular creates and attached the NgForm directive to the `<form>` tag automatically.
 ---
 # Controlling Forms
 
@@ -89,6 +89,7 @@ of the available `Occupations` in the select menu, for the new colonist to choos
 
 **The Colonist** <br/>
 To create a new Colonist in our application's database we'll POST some JSON in the following format:
+
 ```json
 {
     "colonist" : {
@@ -106,7 +107,7 @@ This is (loosely) what is meant by 'Data Contract'.
 
 # Putting It All Together
 
-Add model data to our component Class. Create 2 public properties to hold the data. Use the Data models we created
+Add model data to our Component Class. Create 2 public properties to hold the data. Use the Data models we created
 to add type information.
 
 ```js
@@ -128,6 +129,7 @@ public colonist: Colonist;
 Now that we have declared our model data, we'll need to assign values.
 
 Modify the component's constructor function to look like this:
+
 ```js
 constructor(private router: Router) {
     this.colonist = new Colonist('','', this.NO_OCCUPATION_SELECTED);
@@ -162,8 +164,8 @@ this.colonist = new Colonist('','', this.NO_OCCUPATION_SELECTED);
 ```
 
 2-Way data-binding is Angular's secret sauce. We'll be *binding* the values of our
-Colonist Class attributes (name, age, occupation) to our form inputs. Initially we want the
-inputs to be blank so the user can provide values. This is why we initialize the Colonist Model with
+Colonist Class attributes (name, age, occupation) to our form inputs. Initially the
+inputs are blank. The user will provide values. This is why we initialize the Colonist Model with
 empty fields.
 
 ---
@@ -192,7 +194,7 @@ constructor(
 
 # Putting It All Together
 
-Now that we have set up our component's data models, and we're storing the relavent information
+Now that we have set up our component's data models, and we're storing the relevent information
 on properties of our Component Class, it's finally time to link the data to the HTML template!
 
 ---
@@ -221,7 +223,7 @@ we'll need to modify the form with the following *attribute directives*:
 #Template Variables
 
 This first line assigns a Template Variable (A variable that contains a value the
-we can refrence from inside the template.)
+we can reference from inside the template.)
 
 ```html
 <form #arrivalForm="ngForm">
@@ -229,6 +231,7 @@ we can refrence from inside the template.)
 
 The "ngForm" value magically links this form to the `NgForm` Class we imported earlier.
 This is the first step in linking the form template with our Component Class!
+
 ---
 
 #Input Controls
@@ -240,6 +243,7 @@ This is the first step in linking the form template with our Component Class!
 ```html
 <input ngControl="age" type="number" required>
 ```
+
 These input controls tell Angular which inputs in the markup it should pay attention to.
 the attribute values we assign ( `="name"`, `="age"`) will become properties on the `#arrivalForm` object.
 These properties are objects, and they contain information about the state of the input.
@@ -284,8 +288,7 @@ add `{% raw %}{{ colonist.name }}{% endraw %}` ...etc to your template. You shou
 
 #Select Menus
 
-Select menus require some special considerations. There is more than one way to manipulate
-the value of a select menu in Angular. We'll use the [simplest method](https://egghead.io/lessons/angular-2-build-a-select-dropdown-with-ngfor-in-angular-2).
+There is more than one way to manipulate the value of a select menu in Angular. We'll use the [simplest method](https://egghead.io/lessons/angular-2-build-a-select-dropdown-with-ngfor-in-angular-2).
 
 
 First add the model binding:
@@ -327,8 +330,8 @@ Finally, create an option element for each job, using the data we retrieved from
 </select>
 ```
 
-The value attribute of the option in the select menu is what is bund to the model value.
-Here, we're iterating over the list of occupations we retrieved from the API, assigning the id
+The value attribute of the option in the select menu is what is bound to the model value.
+Here, we're iterating over the list of occupations we retrieved from the API using `*ngFor`, and assigning the id
 to the value attribute! We'll display the occupation name as the option text using template strings.
 
 
@@ -342,11 +345,11 @@ to the value attribute! We'll display the occupation name as the option text usi
 </button>
 ```
 
-Our form should not let the user submit unless all of the information has been entered.
-For our text inputs this is done simply by adding th `required` attribute, and we'll manually
+Our form should not let the user submit unless all of the information is entered.
+For our text inputs this is done by adding the `required` attribute. We'll manually
 check the value of `colonist.job_id` to determine if a job is selected.
 
-If all the inputs are valid, the user should be able to submit the form. We'll control
+If all the inputs are valid, the user will be able to submit the form. We'll control
 this by disabling the button in the case of invalid inputs!
 
 ---
@@ -413,7 +416,7 @@ This method will use a service to POST the form data to the API, and save our ne
 
 #Submitting the Form
 
-Here is the fully implemented onSubmit method!
+Here is the fully implemented `onSubmit` method!
 
 ```js
  onSubmit(){
@@ -440,7 +443,7 @@ API's data-contract and submits information to an API using services that we cre
 We've also seen how Angular adds information to our template, in the form of `class`es and
 also to a special Template Variable!
 
-How can we use what we've learned to further enhance the UX I(User Experience) of this form? What is missing?
+How can we use what we've learned to further enhance the UX (User Experience) of this form? What is missing?
 
 ---
 

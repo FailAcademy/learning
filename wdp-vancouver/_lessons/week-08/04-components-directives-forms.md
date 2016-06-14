@@ -23,6 +23,7 @@ lesson_date: 2016-06-02
 
 - 2-way data binding
 - Template variable
+- Computed Property
 - Data Contract
 - `[(ngModel)]`
 - `ngControl`
