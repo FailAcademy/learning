@@ -139,6 +139,7 @@ Some CSS FAQs:
 Master your browser's dev tools:
 
 - [discover-devtools.codeschool.com](http://discover-devtools.codeschool.com/)
+- [](https://developers.google.com/web/updates/2016/06/devtools-digest)
 
 Tools to help you validate your code:
 

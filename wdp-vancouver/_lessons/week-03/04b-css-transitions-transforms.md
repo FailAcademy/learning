@@ -103,11 +103,12 @@ A list of all transition-able CSS properties:
 
 - [Animatable Properties](http://www.w3.org/TR/css3-transitions/#animatable-properties-)
 
-Some excellent tutorials and demos for learning about CSS transitions and transforms:
+Some excellent tutorials and demos for learning about CSS transitions, transforms, animations:
 
 - [CSS3 = Awesome](http://css3.bradshawenterprises.com/)
 - [3D Transforms](https://desandro.github.io/3dtransforms/)
 - [Keyframe Animation Syntax](https://css-tricks.com/snippets/css/keyframe-animation-syntax/)
+- [Up and Running With CSS Keyframe Animations](https://webdesign.tutsplus.com/courses/up-and-running-with-css-keyframe-animations)
 
 A primer on using CSS transitions:
 
