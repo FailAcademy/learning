@@ -2,8 +2,23 @@
    {
       "title": "Pre-Work",
       "allDay": true,
-      "start": "2016-04-04",
-      "end": "2016-04-10"
+      "start": "2016-06-27",
+      "end": "2016-07-02"
+   },
+   {
+      "title": "BC Family Day",
+      "allDay": true,
+      "start": "2016-02-08"
+   },
+   {
+      "title": "Good Friday",
+      "allDay": true,
+      "start": "2016-03-25"
+   },
+   {
+      "title": "Easter Monday",
+      "allDay": true,
+      "start": "2016-03-28"
    },
    {
       "title": "Victoria Day",
