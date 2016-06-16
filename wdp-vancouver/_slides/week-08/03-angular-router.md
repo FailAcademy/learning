@@ -98,7 +98,7 @@ When an end-user visits the /home url, Angular will render the HomeComponent's t
 
 Prepare to use the Angular Router.
 
-1. Add the `ROUTER_DIRECTIVES` and `ROUTER_PROVIDERS` to your application's bootstrap method.
+1. Add the `ROUTER_PROVIDERS` to your application's bootstrap method.
 [Look here for instructions](https://angular.io/docs/ts/latest/guide/router.html).
 
 2. Add the Angular Component [lifecycle hook](https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html) `ngOnInit` to your main application Component. 
@@ -116,14 +116,41 @@ template: inverse
 Once the router has been added, we need a way to navigate around our application without triggering a request to the server.
 We can still use the `<a>` tag to do this, but we must redefine it's behavior using an Angular directive. <br/>
 
-In the main application Component's template
+In the main application Component's template add links to your component pages
+using the `routerLink` directive:
 ```html
+<!-- For example -->
+<a [routerLink]="['/register']">link to register page</a>
 
 ```
+*Note how quotation marks are used
 
 ---
+#Router Directives
 
-template: inverse
+The `routerLink` directive will not work unless you add the `ROUTER_DIRECTIVES` bundle
+to the component in where the template contains this directive.
+
+This is how *all* directives work in Angular 2.
+
+```js
+import { ROUTER_DIRECTIVES } from '@angular/router'
+
+@Component({
+//  ... component definition
+
+directives: [ROUTER_DIRECTIVES]
+
+// ...
+
+```
+---
+#Lab Activity
+
+Now that we know how to create Routes. Use the Angular CLI to generate all the Route/Component pairs for the
+views in our application. The CLI should add all the necessary files and configuration for you!
+
+**Start writing CSS**. Make sure to look over the project requirements before starting!
 
 ---
 

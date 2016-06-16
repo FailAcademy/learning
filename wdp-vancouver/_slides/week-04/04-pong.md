@@ -63,7 +63,7 @@ class Ball
 Target the canvas
 
 ```html
-  <canvas id="game" width="1024" height="512"></canvas>
+  <canvas id="game"></canvas>
 ```
 
 Add a background
@@ -71,17 +71,40 @@ Add a background
 ```css
 #game {
     background-color: #353535;
+    height: 256px;
+    width: 512px;
 }
 ```
 
 Create a Game class
 
 ```js
+import './game.css';
+
 class Game {
  constructor() {
    const canvas = document.getElementById('game');
  }
 }
+```
+
+---
+
+# Game Loop
+
+Render at 30 frames per second using `setTimeout(fn, timeout)`.
+
+```js
+// game instance
+var game = new Game();
+
+const fps = 30;
+
+function gameLoop() {
+  setTimeout(gameLoop, fps);
+}
+
+gameLoop();
 ```
 
 ---
@@ -137,54 +160,38 @@ Draw your first shapes on the canvas.<br />
 ```js
 class Game {
   ...
-  draw() {
-    this.context.clearRect(0, 0, this.width, this.height);
-    this.context.fillRect(this.width/2, 0, 2, this.height);
-  }
+  drawLine() {
+    this.context.setLineDash([10, 10]);
+		this.context.beginPath();
+		this.context.moveTo(this.width / 2, 0);
+		this.context.lineTo(this.width / 2, this.height);
+		this.context.strokeStyle = "white";
+		this.context.stroke();
+	}
  }
-```
 
-* what does the `clearRect` create?
-* what does the `fillRect` for create?
+function gameLoop() {
+  game.drawLine();
+}
+```
 
 ---
 
 # Render
 
-Render changes (when something moves).
+Render all changes in a method.
 
 ```js
 class Game {
-  constructor() {
-      ...
-      this.paused = false;
-    }
   ...
   render() {
-   if (this.paused) { return; }
+    this.drawLine()
   }
 }
-```
-
----
-
-# Game Loop
-
-Render at 30 frames per second using `setTimeout(fn, timeout)`.
-
-```js
-// game instance
-var game = new Game();
-
-const fps = 30;
 
 function gameLoop() {
   game.render();
-  game.draw();
-  setTimeout(gameLoop, fps);
 }
-
-gameLoop();
 ```
 
 ---
@@ -197,6 +204,7 @@ Break your game into different modules. Use `default` import & exports.
 src
   |- index.js   (game loop)
   |- Game.js    (Game class)
+  |- Board.js   (Game board)
 ```
 
 ---
@@ -204,24 +212,24 @@ src
 # Players
 
 Create a Paddle class.<br />
-Add a `draw` method.
+Add a `render` method.
 
 ##### Paddle.js
 
 ```js
 export default class Paddle {
-   constructor(x, y) {
-     this.x = x;
-     this.y = y;
-     this.width = 5;
-     this.height = 50;
-   }
-   draw(player) {
-     player.fillRect(
-       this.x, this.y,
-       this.width, this.height
-    );
-  }
+	constructor(height, x) {
+		this.width = 5;
+		this.height = 60;
+		this.x = x;
+		this.y = (height / 2) - (this.height / 2);
+	}
+	render(ctx) {
+		ctx.fillRect(
+			this.x, this.y,
+			this.width, this.height
+		);
+	}
 }
 ```
 
@@ -238,12 +246,10 @@ const gap = 10;
 class Game {
   constructor() {
     ...
-    this.player1 = new Paddle(gap, 0);
-    this.player1.y = (this.height / 2) - (this.player1.height / 2);
+    this.player1 = new Paddle(this.height, gap);
+    this.player2 = new Paddle(this.height, this.width - 4 - gap);
 
-    this.player2 = new Paddle(this.width - 4 - gap, 0);
-    this.player2.y = (this.height / 2) - (this.player2.height / 2);
-
+    // check your console for paddles
     console.log(this.player1, this.player2);
   }
 ```
@@ -252,17 +258,18 @@ class Game {
 
 # Draw Paddles
 
-Draw both paddles whenever `draw()` is called
+Draw both paddles whenever `render()` is called
 
+##### Game.js
 ```js
 class Game {
-  draw() {
-    this.player1.draw(this.context);
-    this.player2.draw(this.context);
+  render() {
+    this.board.render(this.context);
+    this.player1.render(this.context);
+    this.player2.render(this.context);
   }
 }
 ```
-
 ---
 
 # Exercise
@@ -278,13 +285,13 @@ class Game {
 Get the following code to run in a browser console.
 
 ```js
-var listener = document.body.addEventListener('keypress', (event) => {
-  console.log(event);
+var listener = document.body.addEventListener('keydown', (event) => {
+  console.log(event.keyCode);
 });
 ```
 * What does a **key event** look like?
 * Write down the **keyCode**'s for 'a', 'z', '↑', '↓'
-* Try replacing `keypress` with `keydown` or `keyup`.
+* Try replacing `keydown` with `keyup`.
 
 ---
 
@@ -292,170 +299,62 @@ var listener = document.body.addEventListener('keypress', (event) => {
 
 Make a listener to handle key events.
 
-##### KeyListener.js
+##### Paddle.js
 
 ```js
-export default class KeyListener {
-  constructor() {
-    this.pressedKeys = [];
-    document.addEventListener('keydown', this.keydown.bind(this));
-    document.addEventListener('keyup', this.keyup.bind(this));
-  }
-  keydown(event) {
-   console.log('keydown', event);
-  }
-  keyup(event) {
-    console.log('keyup', event);
-  }
- }
+export default class Paddle{
+	constructor() {
+		...
+		document.addEventListener('keypress', event => console.log(event.keyCode));
+	}
+}
  ```
 
 ---
 
-# KeyListener
+# Up & Down
 
-Instantiate the KeyListener as `this.keys`.
+##### Paddle.js
 
-##### Game.js
 ```js
-import KeyListener from './KeyListener';
-
-export default class Game {
-  constructor() {
-    ...
-    this.keys = new KeyListener();
-  }
+constructor(height, x, up, down) {
+		...
+  document.addEventListener('keydown', event => {
+		switch (event.keyCode) {
+			case up:
+				console.log('up');
+        break;
+			case down:
+				console.log('down');
+        break;
+	});
 }
 ```
 
 ---
 
-# Record Key Presses
-
-Record keys pressed as an object called `this.pressedKeys`.
-We can use these keys to trigger changes each time the app is rendered.
-
-##### KeyListener.js
+# Record key values in a constant
 
 ```js
-class KeyListener {
-  ...
-  keydown(event) {
-    this.pressedKeys[event.keyCode] = true;
-  }
-  keyup(event) {
-    this.pressedKeys[event.keyCode] = false;
-  }
-  isPressed(key) {
-    return !!this.pressedKeys[key]; // true or false
-  }
-}
+const keys = {
+	a: 65,
+	z: 90,
+	up: 38,
+	down: 40,
+};
 ```
-
-* What does the `isPressed` method do?
 
 ---
 
 ## Exercise
 
-Write a `KeyListener` method called `addKeyPressListener`. It should take a keyCode value and a function that is called when it is pressed.
-
-##### KeyListener.js
-
-```js
-class KeyListener {
-  ...
-  addKeyPressListener(key, callback) {
-    // key is pressed -> call callback(event)
-  }
-}
-```
-
+* Instantiate paddles with their up/down keys
+* Set a paddle property `this.speed` to 5
+* Set a paddle property `this.maxHeight` to help
+* Write Paddle methods that moves the paddle **up** and **down**.
+* Use `Math.max` and `Math.min` to prevent moving too high
+* Re-render the board to prevent paddle movement bleeding
 * Make a spacebar pause button using `addKeyPressListener`
-
----
-
-# Moving Paddles
-
-Create a `movePaddle` method.
-
-Where should it go & why?
-
-* A) Game
-* B) Paddle
-
----
-
-# Moving Paddles
-
-##### Paddle.js
-
-```js
-export default class Paddle {
-	constructor(x, y, up, down) {
-	  ...
-		this.keyUp = up;
-		this.keyDown = down;
-		this.speed = 5; // allows variable player speed
-	}
-	movePaddle(height, keys) {
-	   if (keys.isPressed(this.keyDown)) {
-        this.y = Math.min(
-          height - this.height,
-          this.y + this.speed
-        );
-		} else if (keys.isPressed(this.keyUp)) {
-			this.y = Math.max(0, this.y - this.speed);
-		}
-	}
-}
-```
-
----
-
-# Instantiating Paddles
-
-Create paddles with their keys.
-
-```js
-const keys = {
-  up: 38,
-  down: 40,
-  a: 68,
-  z: 90
-};
-
-class Game {
-  constructor() {
-    this.player1 = new Paddle(
-      p1.name, paddle.gap, 0,
-      keys.a, keys.z
-    );
-
-    this.player2 = new Paddle(
-      p2.name, this.width - paddle.gap - paddle.width, 0,
-      keys.up, keys.down
-    );
-  }
-}
-```
-
----
-
-# Render Moving Paddles
-
-Call next paddle location on render.
-
-##### Game.js
-```js
-class Game {
-  render() {
-    /* ... */
-    this.player1.movePaddle(this.height, this.keys);
-    this.player2.movePaddle(this.height, this.keys);
-  }
-}
-```
 
 ---
 
@@ -488,42 +387,24 @@ Which **properties** and **methods** does a ball have?
 const size = 5;
 
 export default class Ball {
-  constructor(x, y, vx, vy) {
-    this.x = x;
-    this.y = y;
-    this.vy = vy || Math.floor(Math.random()*12 - 6); // vertical direction
-    this.vx = vx || 7 - Math.abs(this.vy); // horizontal direction
-    this.width = size;
-    this.height = size;
+  constructor() {
+    this.x = 50; // random x
+		this.y = 50; // random y
+		this.vy = Math.floor(Math.random() * 12 - 6);
+		this.vx = (7 - Math.abs(this.vy));
+		this.size = size;
   }
 }
  ```
 
 ---
 
-# Ball Draw & Render
-
-Draw the ball as a square
-
-##### Ball.js
-
-```js
-draw(p) {
-  p.fillRect(this.x, this.y, this.width, this.height);
-}
-render() {
-  this.x += this.vx;
-  this.y += this.vy;
-}
-```
-
----
-
 ## Exercise
 
+* render the ball as a circle
+* Call `ball.render()` in Game
 * instantiate the ball on `Game` in the middle of the board (*hint: height/2, width/2*)
-* Call `ball.draw()` & `ball.render()` in game
-* Draw the ball as a circle
+* color the ball white
 
 ---
 
@@ -541,9 +422,7 @@ Which object should the bounce attach to & why?
 
 ---
 
-# Ball Wall Bounce
-
-Change direction on top/bottom or left/right hit.
+# Move Ball
 
 ```js
 class Ball {
@@ -551,17 +430,52 @@ class Ball {
   render(height, width) {
     this.x += this.vx;
     this.y += this.vy;
+    /* ... */
+  }
+}
+```
 
-    const hitLeft = this.x > width;
-    const hitRight =this.x + this.width < 0;
-    const hitTop = this.y + this.height < 0;
-    const hitBottom = this.y > height;
+---
 
-    if (hitLeft || hitRight) {
-      this.vx = -this.vx; // change direction
-    } else if (hitTop || hitBottom) {
-      this.vy = -this.vy; // change direction
-    }
+# Pass Game into Ball
+
+##### Ball.js
+
+```js
+  render(ctx, game) {
+		this.x += this.vx;
+		this.y += this.vy;
+
+    console.log(game);
+    /* ... */
+  }
+```
+
+##### Game.js
+```js
+this.ball.render(this.context, this);
+```
+
+---
+
+# Ball Wall Bounce
+
+Detect when the ball hits the sides
+
+```js
+class Ball {
+  constructor(width, height) {
+		this.width = width;
+		this.height = height;
+  }
+  /* ... */
+  render(height, width) {
+    /* ... */
+    const hitLeft = this.x >= this.width;
+		const hitRight = this.x + this.size <= 0;
+		const hitTop = this.y + this.size <= 0;
+		const hitBottom = this.y >= this.height;
+    /* ... */
   }
 }
 ```
@@ -570,9 +484,8 @@ class Ball {
 
 ## Exercise
 
-* Render the ball bounce using the Game height & width
-* Make the ball vx flip when it hits a side wall
-* Make the ball vy flip when it hits a top or bottom wall
+* Make the ball `vx` flip to `-vx` when it hits a side wall
+* Make the ball `vy` flip to `-vy` when it hits a top or bottom wall
 
 
 ---
@@ -599,19 +512,15 @@ Which object should the `collision` attach to & why?
 
 ```js
 render() {
- this.ball.render(this.height, this.width, this.player1, this.player2);
+ this.ball.render(this.context, this.player1, this.player2);
 }
 ```
 
 ##### Ball.js
 
 ```js
-render(height, width, player1, player2) {
-  this.x += this.vx;
-  this.y += this.vy;
-
-  /* wall collision */
-
+render(ctx, player1, player2) {
+  /* ... */
   this.paddleCollision(player1, player2);
 }
 ```
@@ -674,8 +583,9 @@ paddleCollision(player1, player2) {
 
 ## Exercise
 
-* move `wallCollision` into a method
-* `console.log('goal')` when a goal is scored
+* make a method called `wallCollision` and move its code there
+* make a method called `drawBall` and move its code there
+* if time, break `paddleCollision` into smaller more readable methods
 
 ---
 
@@ -696,59 +606,12 @@ Which object should the `goal` method attach to & why?
 
 ---
 
-# GOOOOOAAAALLL!!
-
-Call `goal` on a goal.
-
-##### Ball.js
-
-```js
-goal() {
-  console.log('GOOOOOAAAALLL!!');
-}
-render(height, width, player1, player2) {
-  /* ... */
-  const goalRight = this.x >= width;
-  const goalLeft = this.x + this.width <= 0;
-  if (goalRight) {
-    this.goal();
-  } else if (goalLeft) {
-    this.goal();
-  }
-}
-```
-
----
-
-# Reset Ball
-
-Reset the ball location on a goal
-
-##### Ball.js
-
-```js
-goal(player, width) {
-  this.x = width / 2;
-  this.y = player.y + player.height / 2;
-  this.vy = Math.floor(Math.random() * 12 - 6);
-  this.vx = 7 - Math.abs(this.vy);
-}
-render() {
-  /* ... */
-  if (goalRight) {
-    this.goal(player1, width);
-  } else if (goalLeft) {
-    this.goal(player2, width);
-  }
-}
-```
-
----
-
 ## Exercise
 
-- Increment player scores on a goal
-- Change ball direction after a goal (towards the opponent)
+* write a method `goal` and call it when the ball goes too far on the left or right side
+* reset the ball location to the middle after a goal
+* increment player scores on a goal
+* change the ball direction after a goal on one side
 
 ---
 
@@ -761,9 +624,9 @@ export default class ScoreBoard {
     this.y = y;
     this.score = 0;
   }
-  draw(p) {
-    // fillText with a number
-    p.fillText(this.score, this.x, this.y);
+  draw(ctx) {
+    ctx.font = "30px Helvetica";
+    ctx.fillText(this.score, this.x, this.y);
   }
  }
  ```
@@ -772,31 +635,24 @@ export default class ScoreBoard {
 
 ## Exercise
 
-* Instantiate the Scoreboard in Game.js
-* Call `ScoreBoard.draw(this.context)` when `Game.draw` is called
-* Render the score in game
+* Instantiate & render the ScoreBoard in Game.js
+* Render player scores in the game
 
 ```js
   this.scoreBoard1.score = this.player1.score;
   this.scoreBoard2.score = this.player2.score;
 ```
 
-* Change the ScoreBoard font
-
-```js
-this.context.font = "30px Helvetica";
-```
-
 ---
 
 ## Bonus Exercises
 
+- Make it prettier
+- Adjust sizes
 - Trigger multiple balls
 - Play a sound on wall collision & paddle collision
-- Create special balls
+- Create balls with special effects (different speeds, actions)
 - Trigger speed increases or decreases of paddles
-- Create different colored balls with different speeds or actions
-
 
 {% endhighlight %}
 
