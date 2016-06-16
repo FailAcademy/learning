@@ -71,7 +71,7 @@ range('a', 'f'); // array( 'a', 'b', 'c', 'd', 'e', 'f' );
 
 # Your PHP Toolbox
 
-PHP is also a champ when it comes to formatting text for us.
+PHP is also a champ when it comes to formatting text.
 
 You can convert a string of text to all lower case letters:
 
@@ -118,13 +118,13 @@ $halloween = date('F j, Y', 1446249600);
 
 You can format times with this function too!
 
-Find out more on the [allowed format date/time parameters](http://php.net/manual/en/function.date.php).
+Find out more about [allowed format date/time parameters](http://php.net/manual/en/function.date.php).
 
 ---
 
 # Exercise 1
 
-Let's use the PHP `date()` function to convert the dates as they appear in the JSON file to be be formatted as pictured in the design comp on our blog.
+Let's use the PHP `date()` function to convert the dates as they appear in the JSON file to be formatted as pictured in the design comp on our blog.
 
 ---
 template: inverse
@@ -137,7 +137,7 @@ template: inverse
 
 PHP also makes it easy to check for truthiness and falsiness.
 
-We can use `isset()` to check if a variable has a value including (`false`, `0`, or an empty string), not `NULL`:
+We can use `isset()` to check if a variable has a value including (`false`, `0`, or an empty string) that's not `NULL`:
 
 ```php
 $my_var = false;
@@ -257,7 +257,6 @@ if ( isset( $username ) ) {
 
 - Makes coding simple if/else logic quicker
 - Makes code shorter (less typing)
-- So...job security!?
 
 **Downsides?**
 

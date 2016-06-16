@@ -48,7 +48,7 @@ class: center, middle
 
 # What Themes Do
 
-Themes can/will affect:
+**Themes can/will affect:**
 
 - what/how content from your database is displayed
 - the visual design of your site (branding!)
@@ -105,6 +105,7 @@ class: center, middle
 - The wordpress.org [Theme Directory](https://wordpress.org/themes/)
 - GitHub (to a lesser extent...)
 - "Premium" theme markets and shops (e.g. Woo Themes, The Theme Foundry, ThemeForest &#9785; )
+- ...or build a custom theme!
 
 ---
 class: center, middle
@@ -164,14 +165,6 @@ Image credit: [Double-M](https://www.flickr.com/photos/49879584@N00/4495939267/)
 
 ---
 
-# Skin
-
-- CSS (or Sass/Less/etc. compiled to CSS...)
-- Images
-- Fonts
-
----
-
 # Bones
 
 The `index.php` file is only the beginning...
@@ -181,6 +174,14 @@ Just like our pseudo-blog, we **chunk up** our HTML into template files so they 
 - `header.php`
 - `sidebar.php`
 - `footer.php`
+
+---
+
+# Skin
+
+- CSS (or Sass/Less/etc. compiled to CSS...)
+- Images
+- Fonts
 
 ---
 class: center, middle
@@ -385,7 +386,7 @@ template: inverse
 
 WordPress started out as blogging platform, so comments are a pretty big deal.
 
-They also take a bit of effort to customize...
+*They also take a bit of effort to customize...*
 
 The `comments.php` file is the template file that contains all the logic for displaying the comments and the comment form.
 
@@ -430,7 +431,7 @@ A sidebar in WP is an **widgetized** area of your theme.
 
 # Sidebars
 
-To create a **widgetized** area in a WordPress theme, in your `functions.php` file:
+To create a **widgetized** area in a WordPress theme, in your `functions.php` file you will need to add:
 
 ```php
 function my_widgets_init() {

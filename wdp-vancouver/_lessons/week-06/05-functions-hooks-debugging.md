@@ -2,12 +2,12 @@
 layout: lesson
 title: WordPress Functions, Hooks & Debugging
 slides: ['_slides/week-06/05-functions-hooks-debugging.md']
-lesson_date: 2016-05-20
+lesson_date: 2016-08-12
 ---
 
 ## Pre-Work
 
-Some pre-reading on using "hooks" in Wordpress:
+Some pre-reading on using "hooks" in WordPress:
 
 - [WordPress Hooks: Actions, Filters, and Examples](http://blog.teamtreehouse.com/hooks-wordpress-actions-filters-examples)
 
@@ -57,7 +57,7 @@ You'll be assigned one of the following hooks to investigate:
 - `wp_enqueue_scripts`
 - `wp_head` / `wp_footer`
 
-Specifically, figure out if your assigned hooks is an action or filter? What does it do? When does it fire or what does it modify? What is it good for?
+Specifically, figure out if your assigned hooks is an action or filter. What does it do? When does it fire or what does it modify? What is it good for?
 
 Provide an example of it's usage too!
 
@@ -76,13 +76,13 @@ Let's head over the `/inc/extras.php` file in our starter theme and add two func
 
 Time to add some version control to your project.
 
-Initialize a git repository in the root of your project's WP installation VVV or MAMP, at the `.gitignore` file as recommended, stage your files, make your commit, add a remote from GitHub, and push your code!
+Initialize a Git repository in your project's `wp-content` directory in MAMP, add the `.gitignore` file as recommended, stage your files, make your commit, add a remote from GitHub, and push your code!
 
 ---
 
 ## Lab Activity
 
-Today's lab activity time will be dedicated to continuing to work on Project 4.
+Today's lab activity time will be dedicated to working on Project 4.
 
 ---
 

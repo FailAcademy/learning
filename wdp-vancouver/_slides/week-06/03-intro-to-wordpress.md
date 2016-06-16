@@ -73,54 +73,12 @@ template: inverse
 # Running WP Locally
 
 - Running a WP site locally on your computer is a bit different from a static HTML site
-- We need to use a local server environment to do that (Vagrant and VVV!)
-- We must run `vagrant up` in order to see our site
-
----
-
-# Why VVV Now?
-
-- We're going to use VVV instead of Scotch Box for our WP dev work because VVV is a Vagrant box that was designed with WordPress in mind
-- The Variable VVV (VV) site creation wizard you installed also makes it very easy to set-up new WP sites on the fly in your dev environment from the command line (esp. when contrasted with a MAMP-based approach)
-- VV also makes deployments easier using [Vagrant Push](https://github.com/bradp/vv#deployments)
-
----
-
-# What VVV Gives Us
-
-With VVV installed, you already have multiple versions of WP ready for you on your VM:
-
-- http://local.wordpress.dev/ (stable release)
-- http://local.wordpress-trunk.dev/ (latest dev version)
-- http://src.wordpress-develop.dev/ (for contributing to Core)
-- http://build.wordpress-develop.dev/ (as above, but with Grunt build files)
-
-We'll use the **stable** version of WP for our plugin/theme dev.
-
----
-class: center, middle
-
-.large[
-   Let's leave the default installation alone, and create a new one using the Variable VVV site creation wizard...
-]
+- We need to use a local server environment to do that (MAMP!)
+- We must start MAMP's servers in order to see our site
 
 ---
 
 # Exercise 1
-
-Let's set up a fresh WP installation using Variable VVV (VV). Run the following command:
-
-```bash
-vv create --name demo_wp --username your_name --password your_password --email email@email.com
-```
-
-Configure the options as desired when prompted. Check out your new WP site at **http://demo_wp.dev** when VV is done doing its thing.
-
-You can log into the back-end of your WP new site at **http://demo_wp.dev/wp-admin** with the credentials that you set running the above command.
-
----
-
-# Exercise 1 (Alt)
 
 We can also install WP locally using MAMP:
 
@@ -163,20 +121,20 @@ class: center, middle
 # What Is It All For?
 
 - The **MySQL database** contains all of the data (content and saved settings) for your WP site
-- The **PHP** files generate your site on the server (with the help of the **nginx** web server in a VVV box) so it can be rendered as HTML in the browser
+- The **PHP** files generate your site on the server (with the help of the **Apache** web server) so it can be rendered as HTML in the browser
 - You can use PHP to get data our your database and populate your website with it&mdash;this is the difference between **dynamic sites** and static sites
 
 ---
 
 # Exploring the Database
 
-Let's take a look at the WordPress database files we just generated when we ran our `vv create` command.
+Let's take a look at the WordPress database files we just created when we installed WordPress.
 
-To do that, go to **[vvv.dev](http://vvv.dev)** and click on the **phpMyAdmin** link.
+To do that, go to the MAMP WebStart page and click on the **Tools > phpMyAdmin** in the menu.
 
 phpMyAdmin is a free tool (written in PHP) that can be used to manage MySQL databases via a web browser. We can also use a desktop-based app like Sequel Pro for that too.
 
-You can use the username `external` and password `external` to log into the phpMyAdmin interface.
+You can use the username `root` and password `root` to log into the phpMyAdmin interface.
 
 ---
 
@@ -188,7 +146,7 @@ Inside your WP installation directory...
 - `wp-content/`
    - `plugins` - each plugin usually has its own directory
    - `themes` - each theme as its own directory
-   - `uploads` - created on first uploads
+   - `uploads` - created on first media file upload
 - `wp-includes/`
 - `wp-config.php`
 
@@ -290,7 +248,7 @@ class: center, middle
 # Themes
 
 - A theme controls the way your website looks
-- Themes enable you to use certain features in Wordpress such as widgets and menus
+- Themes enable you to use certain features in WordPress such as sidebar widgets and navigation menus
 - There's also a [theme repository](https://wordpress.org/themes/) on wordpress.org
 
 ---
@@ -330,7 +288,7 @@ Also try browsing for a new theme to install on your site and activate it. Take 
 
 Every theme has two required components:
 
-- a `style.css` file with a some special info in a comment at the top
+- a `style.css` file with some special info in a comment at the top
 - an `index.php` file
 
 The rest is up to you!

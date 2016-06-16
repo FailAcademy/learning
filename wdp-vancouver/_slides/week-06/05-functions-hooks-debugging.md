@@ -85,7 +85,7 @@ When a page is loaded on a WP site, many thing happen during the page lifecycle:
 - The active theme is initialized
 - WP figures out if a user is authenticated
 - Data is queried from the database and rendered
-- And so on...
+- *And so on...*
 
 ---
 class: center, middle
@@ -99,7 +99,9 @@ class: center, middle
 
 ### Hooks
 
-Hooks enable us to literally **hook into parts of the WordPress page lifecycle** to retrieve, insert, or modify data, or they allow us to take certain actions behind the scenes.
+Hooks enable us to literally **hook into parts of the WordPress page lifecycle** to retrieve, insert, or modify data.
+
+They allow us to take certain actions behind the scenes.
 
 There are **two types of hooks** in WP...
 
@@ -108,7 +110,7 @@ class: center, middle
 
 ### Actions
 
-Actions are **events in the WordPress page lifecycle** when certain things have occurred,certain resources are loaded, certain facilities are available, and, depending on how early the action has occurred, some things have yet to load.
+Actions are **events in the WordPress page lifecycle** when certain things have occurred, certain resources are loaded (or before they are loaded), and certain facilities are available.
 
 ---
 class: center, middle
@@ -128,7 +130,21 @@ class: center, middle
 
 ---
 
-# What's the Difference?
+# Difference = Use Cases
+
+**Filters:**
+
+- Change something you're pulling out of WP (e.g. the content)
+- Change something you're putting in the WP database
+
+**Actions:**
+
+- Tying into existing WP processes, like saving a post or change a post status
+- Add an action to your plugin/theme to allow other devs to manipulate it without hacking
+
+---
+
+# Actions vs. Filters
 
 Actions                                      | Filters*
 -------------------------------------------- | ------------------------------------
@@ -136,21 +152,7 @@ Used when something has to be **added/done** | Used when something has to be **c
 Declared with `do_action()`                  | Declared with `apply_filters()`
 Used with `add_action()`                     | Used with `add_filter()`
 
-.footnote[.red[* ] A function that grabs onto a filter must `return` something!]
-
----
-
-# Difference = Use Cases
-
-**Filters:**
-
-- change something you're pulling out of WP (e.g. the content)
-- Change something you're putting in the WP database
-
-**Actions:**
-
-- Tying into existing WP processes, like saving a post or change a post status
-- Add an action to your plugin/theme to allow other devs to manipulate it without hacking
+.footnote[.red[* ] A function that grabs onto a filter must explicity `return` something!]
 
 ---
 
@@ -175,19 +177,19 @@ class: center, middle
 
 # An Example
 
-What if we wanted to remove the "Editor" links from the Appearance and Plugins sub-menus so no internal end user can mess around with them?
+What if we wanted to **remove the Editor links** from the Appearance/Plugins sub-menus so no internal end user can mess with code from inside WP?
 
 ```php
 // Remove "Editor" links from sub-menus
 
-function leredbread_remove_submenus() {
+function inhabitent_remove_submenus() {
 	remove_submenu_page( 'themes.php', 'theme-editor.php' );
 	remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
 }
-add_action( 'admin_init', 'leredbread_remove_submenus', 102 );
+add_action( 'admin_menu', 'inhabitent_remove_submenus', 110 );
 ```
 
-The the number is the **priority** number. The priority is an optional integer value based on a scale of `1` to `999` that determines the priority of order for functions tied to that specific hook.
+The **priority number** is an optional integer value on a scale of `1` to `999` that determines the priority of order for functions tied to that specific hook.
 
 ---
 
@@ -197,7 +199,7 @@ Time to learn more about WP actions and filters!
 
 You'll be assigned one of the following hooks to investigate... see the [lesson page](/lesson/wordpress-functions-hooks-debugging/) for more details.
 
-Specifically, figure out if your assigned hooks is an action or filter? What does it do? When does it fire or what does it modify? What is it good for?
+Specifically, figure out if your assigned hooks is an action or filter. What does it do? When does it fire or what does it modify? What is it good for?
 
 Provide an example of it's usage too!
 
@@ -205,7 +207,7 @@ Provide an example of it's usage too!
 class: center, middle
 
 .large[
-   How and where do we use these things?
+   So how and where do we use these actions and filters?
 ]
 
 ---
@@ -262,7 +264,7 @@ add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
 
 **Play it safe, prefix all the things!**
 
-Anything youcreate in the global namespace has the potential to conflict with a theme, another plugin, and WordPress core itself.
+Anything you create in the global namespace has the potential to conflict with a theme, another plugin, and the WordPress core itself.
 
 ```php
 // This:
@@ -341,7 +343,7 @@ class: center, middle
 
 ### What's functionality plugin?
 
-A functionality plugin is just a plugin like any other plugin, but the main difference is that it's not publicly distributed. It's one custom plugin that encompasses all your site's custom functionality.
+A functionality plugin is just a plugin like any other plugin, but the main difference is that it's **not publicly distributed** and it's meant to be one custom plugin to **encompass all of the custom functionality** for your site.
 
 ---
 class: center, middle
@@ -394,7 +396,7 @@ class: center, middle
 
 # My Approach
 
-1. Initialize a git repo at the root of your `wp-content` folder
+1. Initialize a Git repo at the root of your `wp-content` folder
 2. **Ignore everything**...then **selectively unignore** what you want in your repository (e.g. your specific custom theme, a functionality plugin, other bespoke plugins)
 3. ...?
 4. Profit!
@@ -412,8 +414,7 @@ class: center, middle
 
 1. We typically don't need to version-control things at the WP core level (and working on a project version-controlled at this level with a team can be tricky...)
 2. We typically don't need to version-control third-party plugins and themes (someone else should be doing that!)
-3. It saves us from remembering to add new plugins or themes to our `.gitignore` as we install them
-4. VVV plays well with version-controlled `wp-content` folders
+3. It saves us from remembering to add new plugins or themes that we don't want to track to our `.gitignore` as we install them (they will be ignored by default)
 
 ---
 
@@ -472,7 +473,7 @@ access_log
 
 Time to add some version control to your project.
 
-Initialize a git repository in the root of your project's WP installation in VVV or MAMP, at the `.gitignore` file as recommended, stage your files, make your commit, add a remote from GitHub, and push your code!
+Initialize a Git repository in your project's `wp-content` directory in MAMP, add the `.gitignore` file as recommended, stage your files, make your commit, add a remote from GitHub, and push your code!
 
 ---
 

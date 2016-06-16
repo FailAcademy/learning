@@ -2,7 +2,7 @@
 layout: lesson
 title: More on PHP
 slides: ['_slides/week-06/02-php-cont.md']
-lesson_date: 2016-05-17
+lesson_date: 2016-08-09
 ---
 
 ## Pre-Work
@@ -18,7 +18,7 @@ Work through the following sections of the [Codeacademy PHP tutorial](https://ww
 ## Learning Objectives
 
 - Build and interact with multi-dimensional arrays.
-- Explore PHP functions such as `rand`, `range`, and `date`.
+- Explore PHP functions such as `rand()`, `range()`, and `date()`.
 - Implement advanced techniques for dealing with arrays of data.
 - Explore alternative syntax for conditional statements and loops.
 
@@ -34,7 +34,7 @@ Work through the following sections of the [Codeacademy PHP tutorial](https://ww
 
 ## Exercise 1
 
-Let's use the PHP `date()` function to convert the dates as they appear in the JSON file to be be formatted as pictured in the design comp on our blog.
+Let's use the PHP `date()` function to convert the dates as they appear in the JSON file to be formatted as pictured in the design comp on our blog.
 
 ---
 
@@ -44,7 +44,7 @@ Let's use the PHP `date()` function to convert the dates as they appear in the J
 
 Below we have two arrays containing similarly formatted data representing two movies.
 
-Your task is to search the [PHP documentation](http://php.net/manual/en/ref.array.php) for array functions and figure out what built-in function (or combination of functions) will return the data formatted as required in each of the challenges.
+Your task is to search the [PHP documentation](http://php.net/manual/en/ref.array.php) for array functions and figure out what built-in function (or combination of functions) will return the data formatted as required by each of the challenges.
 
 Paste this code into an `index.php` file (between `<?php ?>` tags of course!) to get started...
 ￼
@@ -89,9 +89,9 @@ $movies_2 = array(
 
 ## Lab Activity
 
-Today we'll use our lab time to wrap building our Borrowed Borowitz site.
+Today we'll use our lab time to wrap up building our Borrowed Borowitz sites.
 
-Incorporate some of what you learned in class today about PHP's **built-in functions**, **alternative syntax**, and **handling arrays** when putting the finishing touches on the blog.
+Incorporate some of what you learned in class today about PHP's **built-in functions**, **alternative syntax**, and **built-in array functions** when putting the finishing touches on the blog.
 
 ---
 

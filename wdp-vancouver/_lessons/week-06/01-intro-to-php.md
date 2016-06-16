@@ -2,16 +2,14 @@
 layout: lesson
 title: Intro to PHP
 slides: ['_slides/week-06/01-intro-to-php.md']
-lesson_date: 2016-05-16
+lesson_date: 2016-08-08
 ---
 
 ## Pre-Work
 
-Ensure you have VirtualBox, Vagrant, and Scotch Box up and running:
+Ensure you have MAMP successfully installed on your computer:
 
-- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-- [Vagrant](https://www.vagrantup.com/downloads.html)
-- [Scotch Box](https://box.scotch.io/)
+- [MAMP](https://www.mamp.info/en/)
 
 Work through the following sections of the [Codeacademy PHP tutorial](https://www.codecademy.com/en/tracks/php):
 
@@ -28,7 +26,6 @@ Work through the following sections of the [Codeacademy PHP tutorial](https://ww
 - Distinguish the difference between a server-side and client-side programming language.
 - Identify the fundamental components of PHP syntax.
 - Use statements, variables, loops, operators, conditionals, and arrays in PHP.
-- Install PHP and configure a development environment.
 - Use functions to create reusable blocks of DRY code.
 - Distinguish the difference between indexed and associative arrays.
 - Dynamically generate a webpage using `include()` or `require()`.
@@ -44,6 +41,7 @@ Work through the following sections of the [Codeacademy PHP tutorial](https://ww
 - Conditional
 - Operator
 - Concatenate
+- Array
 - Function
 - localhost
 
@@ -53,10 +51,10 @@ Work through the following sections of the [Codeacademy PHP tutorial](https://ww
 
 Time to try out some PHP:
 
-- Create an `index.php` file in a sub-directory of the `public` folder in your Scotch Box installation (e.g. `sandbox`, etc.)
+- Create an `index.php` file in a sub-directory of the `htdocs` folder in your MAMP installation (e.g. `sandbox`, etc.)
 - In that file type `<?php  ?>`
 - Between your opening and closing PHP tags type `echo "Hello, world!";`
-- Go to http://192.168.33.10/SUB_DIR_NAME/ to see what shows up there
+- Go to http://locahost:8888/[SUB_DIR_NAME]/ (or if you're on port 80, http://locahost/[SUB_DIR_NAME]/)
 - Also try running `php index.php` in your CLI...
 
 ---
@@ -77,7 +75,7 @@ When you have that working, modify your program to `echo` **FizzBuzz**, for numb
 
 Let's create a function in PHP that allows us to `print_r` our arrays automatically wrapped in `<pre>` tags.
 
-Refer back to the earlier example of how to do this without a function, and think about what you'll need to pass in as a parameter.
+Refer back to the earlier example of how to do this without a function, and think about what you'll need to pass in as a parameter for this function.
 
 Once you build you function, try it out on the `$months` array.
 
@@ -93,7 +91,7 @@ To get started, **[download the lab files](/public/files/labs/php-lab.zip)**.
 
 Inside the lab folder, you'll find comps illustrating what the home page and about page should look like, and a zip file containing a boilerplate file structure to help get you started.
 
-The only file in the boilerplate that contains an code is the `posts.json` file&mdash;this is the file from which you will be dynamically displaying your "blog" content.
+The only file in the boilerplate that contains any code is the `posts.json` file&mdash;this is the file from which you will be dynamically displaying your "blog" content.
 
 What you need to do to complete this lab:
 

@@ -2,20 +2,16 @@
 layout: lesson
 title: Intro to WordPress
 slides: ['_slides/week-06/03-intro-to-wordpress.md']
-lesson_date: 2016-05-18
+lesson_date: 2016-08-10
 ---
 
 ## Pre-Work
 
-Prior to this lesson, you'll need to set up a new WordPress-friendly Vagrant box based on the [Varying Vagrant Vagrants (VVV)](https://github.com/Varying-Vagrant-Vagrants/VVV) configuration.
+If you've never seen the WordPress admin interface before, watch this series of videos on Level Up Tutorials to familiarize yourself with its features before class:
 
-**New VM Set-up:**
-
-You already have VirtualBox and Vagrant installed, so you can start with **Step 4** in the **[VVV First Vagrant Up instructions](https://github.com/Varying-Vagrant-Vagrants/VVV#the-first-vagrant-up)**.
-
-**WP Site Wizard:**
-
-Lastly, you need to set-up [Variable VVV (VV)](https://github.com/bradp/vv), which is the site creation wizard we'll use to rapidly set-up WP dev sites locally. The **[VV installation instructions](https://github.com/bradp/vv#installation)** will help you with this.
+- [WordPress Basics](https://leveluptutorials.com/tutorials/wordpress-basics/series-introduction)
+- [Create Content in WordPress With Posts and Pages
+](https://code.tutsplus.com/courses/create-content-in-wordpress-with-posts-and-pages)
 
 ---
 
@@ -41,15 +37,13 @@ Lastly, you need to set-up [Variable VVV (VV)](https://github.com/bradp/vv), whi
 
 ## Exercise 1
 
-Let's set up a fresh WP installation using Variable VVV (VV). Run the following command:
+We can also install WP locally using MAMP:
 
-```bash
-vv create --name demo_wp --username your_name --password your_password --email email@email.com
-```
-
-Check out your new WP site at http://demo_wp.dev when VV is done doing its thing.
-
-You can log into the back-end of your WP new site at http://demo_wp.dev/wp-admin with the credentials that you set running the above command.
+1. [Download WordPress](https://wordpress.org/download/)
+2. Unzip your download and move it to your `htdocs` folder (rename the unzipped folder if you like)
+3. Go to phpMyAdmin (via MAMP) and create a new database
+4. Rename `wp-config-sample.php` to `wp-config.php` and fill in your database name and MAMP credentials
+5. Go to http://localhost:8888/YOUR-FOLDER/wp-admin/install.php and complete your install
 
 ---
 
@@ -77,15 +71,6 @@ But whoops! How can we link up the `style.css` file now that it's path is broken
 
 ## Lab Activity
 
-### Task 0:
-
-If you have never used a WordPress-powered website before and find the admin UI a bit daunting, take 40 minutes to watch this screencast on how to add content to a WP site:
-
-- [Create Content in WordPress With Posts and Pages
-](https://code.tutsplus.com/courses/create-content-in-wordpress-with-posts-and-pages)
-
-After (or while!) watching these videos, be sure to explore all of these areas of the WordPress admin UI&mdash;try adding posts, categories, tags, and media of your own, adjust the various settings to see what happens, create menus, add widgets, and try installing a few plugins.
-
 ### Task 1:
 
 Today's lab is primarily dedicated to getting comfortable with the WordPress admin area and WP-style PHP before we jump into the project tomorrow.
@@ -96,7 +81,7 @@ To begin, watch this video to further clarify how WordPress uses PHP with this v
 
 ### Task 2:
 
-Next, apply some of the skills you learned earlier today by styling up a slightly more (Medium-inspired) complex theme than what we built in Exercise 3.
+Next, apply some of the skills you learned earlier today by styling up a slightly more (Medium-inspired!) complex theme than what we built in Exercise 3.
 
 To start, you can **[download the lab files here](/public/files/labs/wp-theme-lab.zip)**.
 
@@ -117,7 +102,7 @@ From there, your task is to style the theme as per the included design comps. He
 
 ### Task 3:
 
-Finally, if you're a rockstar and blast through the first two tasks, check out this video on the Underscores starter theme (as we'll be using a "fork" of Underscores to build out Project 5):
+Finally, if you're a rockstar and blast through the first two tasks, check out this video on the Underscores starter theme (as we'll be using a "fork" of Underscores to build out Project 4):
 
 - [Morten Rand-Hendriksen: Building Themes From Scratch Using Underscores (_S)](http://wordpress.tv/2015/06/09/morten-rand-hendriksen-building-themes-from-scratch-using-underscores-_s/)
 
@@ -137,8 +122,3 @@ Bookmark these WP resources!
 A brief history of some of WordPress' major milestones since 2003:
 
 - [History - WordPress Codex](https://codex.wordpress.org/History)
-
-A how-to article on getting WP up-and-running locally with Vagrant:
-
-- [
-Getting started with Vagrant & VVV for local development](https://webdevstudios.com/2015/01/14/getting-started-vagrant-vvv-local-development/)

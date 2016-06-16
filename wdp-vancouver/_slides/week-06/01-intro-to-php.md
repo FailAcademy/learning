@@ -20,10 +20,10 @@ layout: false
 # Agenda
 
 1. What is PHP?
-2. Running PHP locally with a Vagrant box
+2. Running PHP locally with MAMP
 3. Expressions, variables, and comments
 4. Operators and conditionals
-5. Arrays and arrays
+5. Arrays
 6. Functions
 7. Including and requiring files
 
@@ -77,7 +77,7 @@ template: inverse
 - PHP comes pre-installed on Macs (run `php -v` to see)
 - But we're also going to need **MySQL** and **Apache** too...
 - [MAMP](https://www.mamp.info/en/), [WAMP](http://www.wampserver.com/en/), or [XAMPP](https://www.apachefriends.org/index.html) makes it easy to get up and running with all three
-- But we're going to be using a Vagrant box with a **LAMP/LEMP stack** installed instead...
+- This is known as a **LAMP stack** (we can also run WordPress on a LEMP stack which uses *nginx* instead of Apache as a web server)
 
 ---
 class: center, middle
@@ -107,57 +107,8 @@ We use MySQL **databases** to store data that can be queried in order to dynamic
 class: center, middle
 
 .large[
-   Vagrant & Scotch Box ready?
-]
-
----
-
-# Review: What's What?
-
-**VirtualBox**
-
-A virtual machine *provider* (i.e. allows you to create VMs).
-
-**Vagrant**
-
-A program that allows you to combine the power of a *provisioner* with VirtualBox to create your desired dev environment inside of a VM.
-
-**A Vagrant Box (Scotch Box or VVV)**
-
-A template for creating a development environment with a pre-defined array of base software.
-
-
----
-
-# Why We Like Vagrant
-
-- Software to set-up sandboxed dev environments
-- Allows you to install a lot of dev-related software **without interfering with your native OS**
-- Can help you better match your dev environment to your production environment
-- Bonus! Learning Vagrant will give you more confidence navigation around real servers
-
----
-
-# Review: Vagrant Commands
-
-Start or resume your server: `vagrant up`
-
-Pause without shutting down your server: `vagrant suspend`
-
-Shutdown your server: `vagrant halt`
-
-Delete your server and everything on it: `vagrant destroy`
-
-SSH into your server: `vagrant ssh`
-
-*More commands can be found [here](https://docs.vagrantup.com/v2/cli/index.html).*
-
----
-class: center, middle
-
-.large[
    Let's try out PHP... <br />
-   fire up your Vagrant box and SSH into your VM.
+   start your MAMP servers.
 ]
 
 ---
@@ -166,10 +117,10 @@ class: center, middle
 
 Time to try out some PHP:
 
-- Create an `index.php` file in a sub-directory of the `public` folder in your Scotch Box installation (e.g. `sandbox`, etc.)
+- Create an `index.php` file in a sub-directory of the `htdocs` folder in your MAMP installation (e.g. `sandbox`, etc.)
 - In that file type `<?php  ?>`
 - Between your opening and closing PHP tags type `echo "Hello, world!";`
-- Go to http://192.168.33.10/SUB_DIR_NAME/ to see what shows up there
+- Go to http://locahost:8888/[SUB_DIR_NAME]/ (or if you're on port 80, http://locahost/[SUB_DIR_NAME]/)
 - Also try running `php index.php` in your CLI...
 
 ---
@@ -188,7 +139,7 @@ Time to try out some PHP:
 - Simply typing out **Hello World!** in our mark-up would obviously have the same effect...
 - Why would we do it this way?
 
-<!-- ---
+---
 
 # Errors
 
@@ -199,7 +150,7 @@ In you `php.ini` file (we'll check `phpInfo` to find it):
 - set `error_reporting = E_ALL`
 - set `display_errors = On`
 
-Restart Apache in MAMP for the changes to take effect. Now you will be able to see fatal errors and notices when you make a mistake in your code. -->
+Restart Apache in MAMP for the changes to take effect. Now you will be able to see fatal errors and notices when you make a mistake in your code.
 
 ---
 
@@ -209,23 +160,6 @@ Restart Apache in MAMP for the changes to take effect. Now you will be able to s
 - *This is why we never cowboy code on production servers!*
 - The errors appear on the screen because error reporting is turned on in the server's PHP configuration file(s)
 - We wouldn't want to display errors in a production environment though...
-
----
-
-# Where's the config file?
-
-To learn more about the PHP installation on our server (and where the PHP config file is), let's create an `info.php` file in the root of our `public` dir and add this code:
-
-```php
-<?php
-
-// Show all information, defaults to INFO_ALL
-phpinfo();
-```
-
-Now navigate to http://192.168.33.10/info.php to find out where the **Loaded Configuration File** and other `.ini` files are on our VM server.
-
-<!-- Config file should be `/etc/php5/apache2/conf.d/user.ini` -->
 
 ---
 template: inverse
@@ -271,7 +205,7 @@ $question = 'What\'s your name?';
 
 Strings must be wrapped in quotes (single or double), and quotes within a string must be "escaped" with a backslash.
 
-On style...PHP also tends to favour underscores in variable names, as opposed to camelCase in JS.
+On style...WP coding standards advise **underscores** in variable names, as opposed to the camelCase we use in JS.
 
 ---
 
@@ -289,14 +223,14 @@ Read about **[variable parsing](http://php.net/manual/en/language.types.string.p
 
 # Variables
 
-In PHP we can also **concatenate** string together, but with a `.` instead of a `+`:
+In PHP we can also **concatenate** strings together, but with a `.` instead of a `+`:
 
 ```php
 $salutation = 'Ms.';
 $addressee = 'Dear ' . salutation . ' Sunshine:';
 ```
 
-Again, if we use double-quotes to wrap a string variable, we can embed another variable directly in it:
+Again, if we use double quotes to wrap a string variable, we can embed another variable directly in it:
 
 ```php
 $salutation_1 = "Ms.";
@@ -330,7 +264,7 @@ Again, integers and booleans do not need to be wrapped in quotes, only strings d
 Try out a variable in your PHP file:
 
 - Define a string variable called `$name` and set the value to your own name
-- Remove the word "World", and concatenate or interpolate the string to show your name instead when displayed in the browser.
+- Remove the word "World", and concatenate or interpolate the string to show your name instead when displayed in the browser
 
 ---
 
@@ -361,20 +295,22 @@ template: inverse
 
 # Arithmetic Operators
 
-Remember from JS that operators allow us to create a single value from multiple values. We can use `+`, `-`, `/`, and `*` to calculate values and store them in variables:
+Remember from JS that operators allow us to create a single value from multiple values.
+
+We can use `+`, `-`, `/`, and `*` to calculate values and store them in variables:
 
 ```php
 $quantity = 7 + 8;
 $total = (8 - 2) * 3;
 ```
 
-*What will the above variables return?*
+*What will the above variables equal?*
 
 ---
 
 # Arithmetic Operators
 
-We can also increment and decrement values just like JS:
+We can also **increment** and **decrement** values just like JS:
 
 ```php
 $i = 5;
@@ -391,7 +327,7 @@ $remainder_1 = 15 % 4;
 $remainder_2 = 9 % 3;
 ```
 
-*What will the above variables return?*
+*What will the above variables equal?*
 
 ---
 
@@ -524,14 +460,7 @@ print_r($months);
 echo '</pre>';
 ```
 
-Note that you'll probably want to wrap the output of `var_dump` or `print_r` in `<pre>` tags before you echo it out in your browser.
-
----
-class: center, middle
-
-.large[
-  Jargon alert!
-]
+Note that you'll probably want to wrap the output of `var_dump()` or `print_r()` in `<pre>` tags before you echo it out in your browser.
 
 ---
 
@@ -602,7 +531,9 @@ class: center, middle
 
 # Associative Arrays
 
-Associative arrays are *sort of* like objects in JS (not exactly though...).
+Associative arrays in PHP are *sort of* like objects in JS (not exactly though...).
+
+In fact, arrays in PHP are really **ordered maps**, so they're more closely aligned with the new Map type in ES2015.
 
 ```php
 $person = array(
@@ -611,7 +542,7 @@ $person = array(
 );
 ```
 
-Like objects in JS, we specify a **key** and a **value** when creating an associative array in PHP.
+Like objects/Maps in JS, we must specify a **key** and a **value** when creating an associative array in PHP.
 
 ---
 
@@ -744,12 +675,13 @@ This is a very handy construct for dynamically generating the options and values
 
 # Almost Like JS
 
-The JS proxies for PHP loops:
+The closest JS proxies for PHP loops:
 
 JS                          | PHP
 --------------------------- | ------------------------------------
-for (var i = 0; i < 5; i++) | for ($i = 0; $i < 5; $i++)
-for (var prop in obj)       | foreach ($array as $key => $value)
+for (let i = 0; i < 5; i++) | for ($i = 0; $i < 5; $i++)
+for (let prop of iterable)  | foreach ($array as $value)
+for (let prop in obj)       | foreach ($array as $key => $value)
 while (i < 10)              | while ($i < 10)
 array.forEach(callback)     | array_walk($array, $callback)
 
@@ -824,7 +756,7 @@ class: center, middle
 
 # Functions in PHP
 
-PHP allows us to provide default values for our function parameters in case the user doesn't provide one:
+PHP allows us to provide default values for our function parameters in case the user doesn't provide one (just like ES2015 syntax):
 
 ```php
 function say_hello( $name = 'Mandi' ) {
@@ -855,10 +787,10 @@ For example, the `$global_var` is not automatically available inside `my_functio
 $global_var = "a global variable";
 
 function my_function() {
-   echo ucwords($global_var);
+   return ucwords($global_var);
 }
 
-my_function(); // will cause an error notice
+echo my_function(); // will cause an error notice
 ```
 
 The code above will result in an "Undefined variable" notice where you would expect the variable to echo out.
@@ -874,10 +806,10 @@ $global_var = "a global variable";
 
 function my_function($var) {
    $var = ucwords($var);
-   echo $var;
+   return $var;
 }
 
-my_function($global_var); // will work and echo "A Global Variable"
+echo my_function($global_var); // will echo "A Global Variable"
 echo $global_var; // will still echo "a global variable"
 ```
 
@@ -894,10 +826,10 @@ $global_var = "a global variable";
 
 function my_function(&$var) {
    $var = ucwords($var);
-   echo $var;
+   return $var;
 }
 
-my_function($global_var); // will echo "A Global Variable"
+echo my_function($global_var); // will echo "A Global Variable"
 echo $global_var; // will also echo "A Global Variable" now
 ```
 
@@ -915,9 +847,10 @@ function my_function() {
    global $global_var;
    $global_var = ucwords($global_var);
    // or $GLOBALS['global_var'] = ucwords($GLOBALS['global_var']);
+   return $global_var;
 }
 
-my_function();
+echo my_function();
 echo $global_var; // will echo "A Global Variable"
 ```
 
@@ -930,7 +863,7 @@ class: center, middle
 
 Modifying global variables can have intended consequences, especially as your codebase grows!
 
-WordPress has global variables to access all kinds of data, but it's important to remember to access them only for display purposes, and not to modify their values.
+[WordPress has global variables](https://codex.wordpress.org/Global_Variables) to access all kinds of data, but it's important to remember to access them only for display purposes, and not to modify their values.
 
 ---
 
@@ -938,7 +871,7 @@ WordPress has global variables to access all kinds of data, but it's important t
 
 Let's create a function in PHP that allows us to `print_r` our arrays automatically wrapped in `<pre>` tags.
 
-Refer back to the earlier example of how to do this without a function, and think about what you'll need to pass in as a parameter.
+Refer back to the earlier example of how to do this without a function, and think about what you'll need to pass in as a parameter for this function.
 
 Once you build you function, try it out on the `$months` array.
 
@@ -1036,12 +969,12 @@ class: center, middle
 
 # Include vs. Requires
 
-We can also use `require()` ... but it the file is missing this will trigger a fatal error (i.e. white screen of death)
+We can also use `require()` ... but if the file is missing this will trigger a fatal error (i.e. white screen of death)
 
 And we also have:
 
 - `include_once()` (we can literally only include it once, so you won't be able to include the fragement twice on the same page)
-- `require_once()` (is more useful when you start dealing with classes in OOP...because you only want the file to be required one time for the lifecycle of this project)
+- `require_once()` (is more useful when you start dealing with classes in OOP...because you only want the file to be required one time for the lifecycle of the project)
 
 ---
 
