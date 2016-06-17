@@ -1,0 +1,23 @@
+// Variables
+//
+// Site-wide variables
+
+// Colour palette
+
+$brand-red: rgb(226, 35, 26);
+$dark-red: darken( $brand-red, 20% );
+$dark-grey: #646464;
+
+// Typography
+
+$base-font-color: #636363;
+$base-font-size: 16; // px or /10 rem;
+
+// Borders
+
+$base-border: 1px solid #e2e2e2;
+$med-grey-border: 1px solid #c8c8c8;
+$dark-grey-border: 1px solid #646464;
+
+$red-border: 1px solid $brand-red;
+$dark-red-border: 1px solid $dark-red;
