@@ -1,0 +1,36 @@
+---
+---
+
+{% assign lesson_events = site.lessons %}
+[{% for lesson in lesson_events %}
+   {% if lesson.lesson_date != null %}{% assign start = lesson.lesson_date %}{% else %}{% assign start = '1970-01-01' %}{% endif %}
+   {
+      "title": {{lesson.title | jsonify}},
+      "allDay": true,
+      "start": {{start | jsonify}},
+      "url": {{lesson.url | jsonify}}
+   },{% endfor %}
+   {
+      "title": "Project Work Day",
+      "allDay": true,
+      "start": "2016-09-30"
+   },
+   {
+      "title": "Portfolio Development",
+      "allDay": true,
+      "start": "2016-11-28",
+      "end": "2016-12-03"
+   },
+   {
+      "title": "Community Project Work",
+      "allDay": true,
+      "start": "2016-12-05",
+      "end": "2016-12-16"
+   },
+   {
+      "title": "PPD Lesson",
+      "allDay": false,
+      "start": "2016-09-29T13:00:00+00:00",
+      "end": "2016-09-29T15:00:00+00:00"
+   }
+]
