@@ -2,7 +2,7 @@
 layout: lesson
 title: Custom Post Types, Taxonomies & Fields
 slides: ['_slides/week-07/01-post-types-taxonomies-fields.md']
-lesson_date: 2016-05-24
+lesson_date: 2016-08-15
 ---
 
 ## Pre-Work
@@ -18,7 +18,7 @@ Pre-reading on custom post types, taxonomies, and fields:
 
 - Distinguish the difference between custom post types, custom taxonomies, and custom fields, as well as the particular use cases for each.
 - Create custom post types and taxonomies using WordPress functions.
-- Create theme files specific for displaying custom post type posts and custom taxonomy archives.
+- Create theme files specific for displaying custom post type posts and archives, and custom taxonomy archives.
 - Create custom fields using a plugin, and display their data in theme files.
 
 ---
@@ -100,13 +100,13 @@ Let's install the [Custom Field Suite](https://en-ca.wordpress.org/plugins/custo
 
 ## Lab Activity
 
-Today's lab time will be spent working on Project 4. Today would be a good day to try adding all of your custom post types, taxonomies, and fields to your project.
+Today's lab time will be spent working on Project 4. Today would be a good day to try adding all of your custom post types, taxonomies, and fields to your project, as well as their corresponding template files.
 
 ---
 
 ## Additional Resources
 
-The related function references for adding custom post types and taxonomies:
+Codex function references for adding custom post types and taxonomies:
 
 - [`register_post_type`](https://codex.wordpress.org/Function_Reference/register_post_type)
 - [`register_taxonomy`](https://codex.wordpress.org/Function_Reference/register_taxonomy)
@@ -125,3 +125,7 @@ WordPress plugins that facilitate the addition of custom post types, taxonomies,
 A more "hands-on" approach to adding custom fields to the WordPress admin area:
 
 - [CMB2](https://github.com/WebDevStudios/cmb2)
+
+A great talk from Karen McGrane on the imperative to build out content and metadata in a modular way in CMSes:
+
+- [Adapting Ourselves to Adaptive Content](https://karenmcgrane.com/2012/09/04/adapting-ourselves-to-adaptive-content-video-slides-and-transcript-oh-my/)

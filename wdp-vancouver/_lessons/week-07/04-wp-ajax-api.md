@@ -1,13 +1,15 @@
 ---
 layout: lesson
-title: Ajax in WordPress & WP API
+title: Ajax in WordPress & WP REST API
 slides: ['_slides/week-07/04-wp-ajax-api.md']
-lesson_date: 2016-05-27
+lesson_date: 2016-08-18
 ---
 
 ## Pre-Work
 
-*There is no pre-work for this lesson.*
+Read through the following article to familiarize yourself with the WP REST API and how we'll be retrieving data from it before class:
+
+- [WP REST API: Retrieving Data](https://code.tutsplus.com/tutorials/wp-rest-api-retrieving-data--cms-24694)
 
 ---
 
@@ -15,8 +17,8 @@ lesson_date: 2016-05-27
 
 - Create Ajax requests using Ajax-specific functions in WordPress.
 - Use "nonces" to securely make Ajax requests in WordPress.
-- Use the `wp_localize_script` function to pass data via PHP to make it available to JS scripts.
-- Identify the purpose of the WP API plugin, install it, and use it to randomly populate post data from the front-end of website via an Ajax request.
+- Use the `wp_localize_script()` function to pass data from the server side to the client side by making it available in JS variables.
+- Identify the core use cases for the WP REST API plugin, install the plugin, and use it to update post data from the front-end of a website via an Ajax request.
 
 ---
 
@@ -29,13 +31,7 @@ lesson_date: 2016-05-27
 
 ## Lab Activity
 
-Today's lab time will be spent working on Project 4. Your on the homestretch so be sure to make effective use of your in-class time!
-
-<!-- In today's lab, we'll work together to build out the jQuery required to add the required WP API-related functionality for the Quotes on Dev site.
-
-Specifically, we'll fetch data from WP using the REST API plugin and dynamically populate it in the site, and we'll create a basic form to accept front-end post submissions via the API too.
-
-More details on this mini-project and its supporting files can be found [here](/project/project-6-wp-api-angularjs-wordpress-theme/). -->
+Today's lab time will be spent working on Project 4. You're on the homestretch so be sure to make effective use of your in-class time!
 
 ---
 
@@ -46,6 +42,14 @@ All about using nonces in WordPress:
 - [WordPress Nonces](https://codex.wordpress.org/WordPress_Nonces)
 - [An Introduction to WordPress Nonces with Examples](https://www.elegantthemes.com/blog/tips-tricks/an-introduction-to-wordpress-nonces-with-examples)
 
-Documentation for WP API v2:
+Documentation for WP REST API v2:
 
 - [WP REST API](http://v2.wp-api.org/)
+
+A post series on Tuts+ cover the WP REST API:
+
+- [Introducing the WP REST API](https://code.tutsplus.com/series/introducing-the-wp-rest-api--cms-896)
+
+Recent WordCamp talks on the REST API:
+
+- [WordPress.tv](http://wordpress.tv/?s=rest+api)

@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Ajax in WordPress & WP API Slides
+title: Ajax in WordPress & WP REST API Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Ajax in WordPress <br />& WP API
+# Ajax in WordPress <br />& WP REST API
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -50,7 +50,7 @@ class: center, middle
 
 ---
 
-# Nonces
+# Nonces in WP
 
 A "number used once" (but not really...):
 
@@ -62,7 +62,7 @@ A "number used once" (but not really...):
 
 # How Does WP Know?
 
-- Nonces aren't actually stored anywhere
+- Nonces themselves aren't actually stored anywhere
 - You create a nonce using the `wp_create_nonce()` function, which will in turn call the `wp_hash()` function to hash together a custom string, the user_id, and the session token
 - The resulting hash is stored in `wp_usermeta` with the key `session_tokens`
 
@@ -70,7 +70,7 @@ A "number used once" (but not really...):
 
 # How to Use Nonces
 
-You generate them at the point of the action and then validate it at the target. Nonces can be placed in a link, hidden form field, or Ajax request.
+You **generate them at the point of the action** and then **validate it at the target**. Nonces can be placed in a link, hidden form field, or Ajax request.
 
 To create a nonce to use in an Ajax request, you use the following function:
 
@@ -97,7 +97,7 @@ class: center, middle
 
 ### What does localizing mean?
 
-Localizing a script allows you to take data from PHP and make it available in your JS. Very handy!
+Localizing a script allows you to take data typically only accessible on the server side on your site and make it available for use in your JS. Very handy!
 
 ---
 
@@ -152,20 +152,19 @@ Let's imagine we want to add a button to our blog posts on the front-end of the 
 
 # The Setup
 
-First we'll write our mark-up:
+First we'll add a bit mark-up to `single.php`:
 
 ```html
-<form action="" method="post">
-   <?php wp_nonce_field( 'comment_nonce' ); ?>
-   <button type="button" id="close-comments">Close Comments</button>
-</form>
+<button type="button" id="close-comments">Close Comments</button>
 ```
+
+We'll eventually trigger our Ajax request with a click event attached to this button.
 
 ---
 
 # Enqueue & Localize
 
-First, let's enqueue and localize our scripts:
+Next, let's enqueue and localize our script:
 
 ```php
 function red_scripts() {
@@ -268,7 +267,7 @@ That's where the [WP REST API](http://v2.wp-api.org/) comes in!
 
 - REST stands for REpresentational State Transfer
 - Uses HTTP methods explicitly (e.g. GET, POST, PUT, DELETE)
-- Is stateless (the client includes any state information needed in the request to the server and vice versa)
+- Is stateless (the client includes any state information needed in the request sent to the server and vice versa)
 - Transfers XML or JSON
 
 ---
@@ -286,6 +285,66 @@ class: center, middle
 ]
 
 ---
+
+# A Basic Request
+
+```bash
+GET http://fourth.academy.red/wp-json/wp/v2/posts
+```
+
+`http://fourth.academy.red/`: the URL of the WP installion
+
+`/wp-json`: the endpoint prefix
+
+`/wp`: the namespace of the WP REST API plugin
+
+`/v2`: the version of the WP REST API plugin
+
+`/posts`: the resource you want to get from the server
+
+---
+
+# Working With Resources
+
+A **resource** is a discrete entity within WordPress (e.g. post, page, comment, user, term).
+
+`GET /wp-json/wp/v2/posts` to get a collection of posts
+
+`GET /wp-json/wp/v2/posts/42` to get a post with ID 42
+
+`POST /wp-json/wp/v2/posts` to create a new post
+
+`POST /wp-json/wp/v2/posts/42` to update post with ID 42
+
+`DELETE /wp-json/wp/v2/posts/42` to delete post with ID 42
+
+---
+
+# More Vocabulary
+
+- **Endpoints** are functions available through the API (e.g. updating post meta or deleting a taxonomy term)
+- A **route** is the “name” you use to access endpoints&mdash;so a route may have multiple endpoints depending on what you can do with it!
+- A **schema** is a representation of the format for the API's response data ([detailed resource here](http://v2.wp-api.org/reference/))
+
+---
+
+# Filter Syntax
+
+We can filter the results we get back in our response using the `WP_Query()` variables the WP REST API exposes for us using the `filter[]` syntax. For example...
+
+Get 3 posts per pages (instead of the default 10):
+
+```bash
+GET /wp/v2/posts?filter[posts_per_page]=3
+```
+
+Get all posts published on August 17, 2016:
+
+```bash
+GET /wp/v2/posts?filter[year]=2016&filter[monthnum]=08&filter[day]=17
+```
+
+---
 template: inverse
 
 # Ajax in WordPress<br /> (the New Way)
@@ -294,9 +353,9 @@ template: inverse
 
 # Ajax with WP API
 
-WP API isn't just a cool way to interact with our data in and outside of WordPress.
+WP API isn't just a cool way to interact with our data outside of WordPress.
 
-It also makes it a lot easier to (securely) deal with Ajax requests that makes updates to the WP database.
+It also makes it a lot easier to (securely) deal with internal Ajax requests that make updates to the WP database.
 
 *Let's revisit our comment closing example...*
 
@@ -304,7 +363,7 @@ It also makes it a lot easier to (securely) deal with Ajax requests that makes u
 
 # The Setup
 
-With WP API, we don't need to worry about adding the hidden nonce field in our form, so we really just need the button:
+We'll still use the same button in `single.php`:
 
 ```html
 <button type="button" id="close-comments">Close Comments</button>
@@ -314,7 +373,7 @@ With WP API, we don't need to worry about adding the hidden nonce field in our f
 
 # Enqueue & Localize
 
-We'll still enqueue and localize our scripts, but also pass in the REST URL instead of the admin Ajax URL:
+We'll still enqueue and localize our scripts, but we'll localize the **REST URL** instead of the admin Ajax URL, and we'll use the special **REST API nonce** instead of a custom one:
 
 ```php
 function red_scripts() {

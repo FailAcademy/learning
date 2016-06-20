@@ -2,7 +2,7 @@
 layout: lesson
 title: OOP, Plugin Dev & Widget API
 slides: ['_slides/week-07/03-oop-plugins-widgets.md']
-lesson_date: 2016-05-26
+lesson_date: 2016-08-17
 ---
 
 ## Pre-Work
@@ -21,7 +21,7 @@ Some pre-reading on creating WordPress widget plugins:
 ## Learning Objectives
 
 - Explain what object-oriented programming is in the PHP context and use it create classes.
-- Distinguish the difference between public, private, and protected properties and methods.
+- Distinguish the difference between public, private, and protected visibility markers and how they apply to properties and methods.
 - Identify use cases for developing WordPress plugins, as well as their basic architecture.
 - Build a custom WordPress widget plugin using the Widget API and OOP coding practices.
 
@@ -57,7 +57,7 @@ The rest of the exercise will be a code-along...
 
 ## Lab Activity
 
-Today's lab time will be spent working on Project 4. Tie up the loose ends for on your custom business hours widget, and keep plugging away at the rest of the project!
+Today's lab time will be spent working on Project 4. Tie up the loose ends on your custom business hours widget, and keep plugging away at the rest of the project!
 
 ---
 

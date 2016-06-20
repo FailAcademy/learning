@@ -33,11 +33,11 @@ template: inverse
 
 # What Is It?
 
-We discussed last week that we don't want to include any functionality that should be **theme-independent** in our themes.
+We discussed last week that we don't want to include any functionality that should remain **theme-independent** in our theme files.
 
 To avoid that, we create a **functionality plugin** for our site.
 
-In doing, we can keep our custom post types, taxonomies, and fields separate from our theme.
+In doing, we can easily keep our custom post types, taxonomies, and fields separate from our theme.
 
 ---
 
@@ -45,13 +45,13 @@ In doing, we can keep our custom post types, taxonomies, and fields separate fro
 
 - Code that creates your custom post types
 - Code that creates your custom taxonomies
-- Code that creates your custom meta boxes
+- Code that creates your custom meta boxes/fields
 - Code that adds/adjusts user roles
 - ...anything that should continue to exist on your site regardless of what theme is activated
 
 ---
 
-# How Do I Use One
+# How Do I Use One?
 
 You'll have to create a custom plugin to contain all of the code that needs to be theme independently.
 
@@ -77,11 +77,11 @@ class: center, middle
 
 WP comes with 5 default post types:
 
-- **Post** (Post Type: 'post')
-- **Page** (Post Type: 'page')
-- **Attachment** (Post Type: 'attachment')
-- **Revision** (Post Type: 'revision')
-- **Navigation menu** (Post Type: 'nav_menu_item')
+- **Post** (Post Type: `post`)
+- **Page** (Post Type: `page`)
+- **Attachment** (Post Type: `attachment`)
+- **Revision** (Post Type: `revision`)
+- **Navigation menu** (Post Type: `nav_menu_item`)
 
 ---
 class: center, middle
@@ -89,6 +89,8 @@ class: center, middle
 .large[
    Lightbulb moment:<br />Everything in WP is a post!
 ]
+
+(well, almost everything...)
 
 ---
 class: center, middle
@@ -114,14 +116,14 @@ UX deliverables will help you make decisions about this.
 
 # How Do We Make One?
 
-The ability to create new custom post types is **not** native to the WP admin area.
+The ability to create new custom post types is **not** native to the WP admin UI.
 
 Knowing that, you have two ways to create a CPT:
 
-- With code! (using the `register_post_type` function)
-- Using a plugin (like [Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/))
+- With code! (using the `register_post_type()` function)
+- Using a plugin (like [Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/)) that adds a UI for this to the WP admin area
 
-We're going to learn how to do it the code way...
+We're going to learn how to do it the **code** way...
 
 ---
 
@@ -130,11 +132,11 @@ We're going to learn how to do it the code way...
 The code for registering a CPT is quite simple on the surface:
 
 ```php
-function leredbred_cpt_product() {
+function inhabitent_cpt_product() {
    $args = array();
    register_post_type( 'product', $args );
 }
-add_action( 'init', 'leredbred_cpt_product' );
+add_action( 'init', 'inhabitent_cpt_product' );
 ```
 
 But this won't actually add the CPT to your WP admin area...you need some `$args` for that!
@@ -172,7 +174,9 @@ class: center, middle
 
 ### Taxonomies == Metadata
 
-Metadata is content about your content. Taxonomies are classification schemes that you can apply to your content.
+Metadata is *content about your content*.
+
+Taxonomies are a type of metadata that are specific **classification schemes** that you can apply to your content.
 
 ---
 
@@ -203,9 +207,9 @@ Let's try classifying some data into taxonomies that we design.
 
 WordPress has three taxonomies built-in by default:
 
-- **Category** (Taxonomy: 'category')
-- **Tags** (Taxonomy: 'post_tag')
-- **Post Formats** (Taxonomy: 'post_format')
+- **Category** (Taxonomy: `category`)
+- **Tags** (Taxonomy: `post_tag`)
+- **Post Formats** (Taxonomy: `post_format`)
 
 ---
 class: center, middle
@@ -222,7 +226,7 @@ Meatier                                | Grainier
 
 - Whenever you need a special way to classify your content
 - Again, UX deliverables will help you make decisions
-- And again, we can create custom taxonomies using our own code, or by using a plugin (but we'll use code)
+- And again, we can create custom taxonomies using our own code, or by using a plugin (but we'll use code of course!)
 
 ---
 
@@ -231,11 +235,11 @@ Meatier                                | Grainier
 The code for registering a CPT is quite simple on the surface:
 
 ```php
-function leredbred_tax_product_type() {
+function inhabitent_tax_product_type() {
    $args = array();
    register_taxonomy( 'product_type', array( 'product' ), $args );
 }
-add_action( 'init', 'leredbred_tax_product_type' );
+add_action( 'init', 'inhabitent_tax_product_type' );
 ```
 
 Again, we're going to need some `$args` for the taxonomy to actually do something.
@@ -276,7 +280,7 @@ The second are known as **custom fields/metaboxes**.
 
 Custom taxonomies are meant for creating **classification schemes** for our content. They will be **term-based**, and they have **implications for the WordPress Template Hierarchy**.
 
-Custom fields are meant for more **arbitrary pieces of metadata**. The are a bit **more open-ended** (can take the form of text inputs, radio buttons, select menus, etc.), and they **don't have special templates** associated with them.
+Custom fields are meant for more **arbitrary pieces of metadata**. They are a bit **more open-ended** (can take the form of text inputs, radio buttons, select menus, etc.), and they **don't have special templates** associated with them.
 
 ---
 
@@ -322,6 +326,15 @@ class: center, middle
 .large[
    Blobs vs. Chunks
 ]
+
+---
+class: center, middle
+
+**Worth an hour of your time to watch!**
+
+<iframe src="https://player.vimeo.com/video/45965788" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+See also: [Adapting Ourselves to Adaptive Content](https://karenmcgrane.com/2012/09/04/adapting-ourselves-to-adaptive-content-video-slides-and-transcript-oh-my/)
 
 ---
 

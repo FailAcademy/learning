@@ -2,7 +2,7 @@
 layout: lesson
 title: Custom Post Loops & the WP Database
 slides: ['_slides/week-07/02-post-loops-wpdb.md']
-lesson_date: 2016-05-25
+lesson_date: 2016-08-16
 ---
 
 ## Pre-Work
@@ -12,7 +12,7 @@ Some pre-reading on creating customized post loops in WordPress:
 - [4 Ways to Loop with WordPress](https://digwp.com/2011/05/loops/)
 - [Mastering WP Query](http://code.tutsplus.com/series/mastering-wp_query--cms-818)
 
-Some pre-reading on the WordPress database:
+More pre-reading on the WordPress database:
 
 - [Tour of the WordPress Database](https://deliciousbrains.com/tour-wordpress-database/)
 - [Beginner’s Guide to WordPress Database Management with phpMyAdmin](http://www.wpbeginner.com/beginners-guide/beginners-guide-to-wordpress-database-management-with-phpmyadmin/)
@@ -36,7 +36,7 @@ Some pre-reading on the WordPress database:
 
 ## Exercise 1
 
-Let's try building a custom post loop for Project 5 by building the news feed on the homepage.
+Let's try building a custom post loop for Project 4 by building the news feed on the homepage.
 
 You'll need to decide whether to use `WP_Query` or `get_posts` first, then you need to create and pass in an array of the appropriate arguments, and finally figure out how to display the returned data on your homepage.
 
@@ -46,15 +46,15 @@ Don't worry about styling yet, just grab the data!
 
 ## Exercise 2
 
-Let's explore WP's ten databases in greater depth.
-
-You'll be assigned a table, and it's your job to figure out:
+Let's explore WP's database tables in greater depth. You'll be assigned a table, and it's your job to figure out:
 
 - what it's for
 - what data is stored in there (the columns!)
 - what other tables it's linked to
 
-After you're done researching your table, we'll share our findings as a group.
+You will **create a poster** to illustrate what you've discovered.
+
+After you're done researching your table and creating your visual explanation of it, we'll share our findings as a group.
 
 ---
 

@@ -173,7 +173,7 @@ $second_post = new Blog_Post();
 $first_post->publish();
 ```
 
-When you have a class, you can have **multiple instances** of objects based on it, and the new objects will have the class properties and methods available to it.
+When you have a class, you can have **multiple instances** of objects based on it, and the new objects will have the publicly-available class properties and methods available to it.
 
 
 ---
@@ -202,7 +202,7 @@ class: center, middle
 # Properties in Classes
 
 - Properties exist at the **class level**
-- They can be used in any of the functions defined in the class (and don't have to be passed as parameters)
+- They can be used in any of the functions defined in the class (and don't have to be passed as arguments)
 - We can set our property values on the **class definition** or in a special function known as a **constructor**
 
 ---
@@ -279,7 +279,7 @@ Why would you want to hide properties and methods from the outside world (i.e. o
 
 # In Action
 
-Let's take a look at an `User` class that could go with our `Blog_Post` class and see how scope is being leveraged:
+Let's take a look at a `User` class that could go with our `Blog_Post` class and see how scope is being leveraged:
 
 ```php
 class User {
@@ -317,7 +317,7 @@ Classes should organize information so that:
 
 - information that should only be accessible and relevant to it should remain `private`
 - information that should be accessible by itself and its subclasses should be `protected`
-- information that should be accessible by third-party objects should be `public`
+- information that should be accessible by third-party objects and subclasses should be `public`
 
 ---
 template: inverse
@@ -329,7 +329,7 @@ template: inverse
 # Plugin Refresher
 
 - A theme controls the **presentation** of content
-- A plugin is used to control the **behavior and features** of your WordPress site
+- A plugin is used to control the **behaviour and features** of your WordPress site
 - Themes should not add critical functionality to your site
 
 ---
@@ -383,7 +383,7 @@ class: center, middle
 
 *When one class acts as parent for another child class.*
 
-Like people, children inherit from their parents, but parents do not inherit from their children!
+In OOP, as with people, children inherit from their parents, but parents do not inherit traits back from their children!
 
 ---
 
@@ -391,7 +391,7 @@ Like people, children inherit from their parents, but parents do not inherit fro
 
 - When you create a child class from parent class, the child class inherits all the properties and methods of the parent class
 - Child classes cannot access `private` properties or methods of the parent
-- When we use the `protected` keyword that means that the given property or method is not available to the outside world, but it is available to its child classes
+- When we use the `protected` keyword that means that the given property or method is not available to the outside world, but it is available to child classes
 
 ---
 
@@ -440,14 +440,14 @@ class My_Widget extends WP_Widget {
 
 # Using Hooks with OOP
 
-Important note&mdash;when you use OOP in WP, we need to call our actions or filters a bit differently:
+Important note&mdash;when you use OOP with WP hooks, we need to call our actions or filters a bit differently:
 
 ```php
-class RF_General {
+class My_Plugin {
 
    public function __construct() {
       // Admin bar and menus customization
-      add_action( 'admin_init', array( $this, 'remove_submenus' ) );
+      add_action( 'admin_menu', array($this, 'remove_submenus'), 110 );
    }
 
    // Remove unnecessary sub-menu links from admin area
@@ -465,17 +465,55 @@ class RF_General {
 
 # Using Hooks with OOP
 
-First, we **call actions and filters in the constructor function** for the class.
+First, we often see **actions and filters called in the constructor function** for a class.
 
 Also notice that the second argument is now **an array**, not just a function name:
 
 ```php
-add_action( 'admin_init', array( $this, 'remove_submenus' ) );
+add_action( 'admin_menu', array($this, 'remove_submenus'), 110 );
 ```
 
 WP has to know where to call the `remove_submenus` method.
 
-Since it lives within our class, we have to tell WordPress to call the method on an instance of our class.
+Since it lives within our class, we have to tell WordPress to **call the method on the particular instantiated object** with which we are concerned.
+
+---
+
+# Sidebar: Best Practice
+
+Calling hooks in your constructor isn't ideal&mdash;it leads to **tight coupling** between WordPress and the code in your class.
+
+Placing hooks in a class constructor means that you can't create an instance of your class without loading WordPress (makes unit testing messy, if not impossible).
+
+The `__construct` method should only be in charge of setting the internal state of a new object and **WP hooks don't have anything to do with setting up a new object's internal state**.
+
+---
+
+# Sidebar: Best Practice
+
+That's better!
+
+```php
+class My_Plugin {
+
+   public function init() {
+      add_action( 'wp_loaded', array($this, 'on_loaded') );
+   }
+
+   public function on_loaded() {
+      add_action( 'admin_menu', array($this, 'remove_submenus'), 110 );
+   }
+
+   public function remove_submenus() {
+      remove_submenu_page( 'themes.php', 'theme-editor.php' );
+      remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
+   }
+
+}
+
+$my_plugin = new My_Plugin();
+$my_plugin->init();
+```
 
 ---
 
