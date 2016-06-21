@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Object Oriented Programming in JS
-slides: ['_slides/week-04/03-oop-with-es2015.md', '_slides/week-04/04-pong.md']
-lesson_date: 2016-05-06
+slides: ['_slides/week-05/03-oop-with-es2015.md', '_slides/week-05/04-pong.md']
+lesson_date: 2016-08-04
 ---
 
 ## Pre-Work
