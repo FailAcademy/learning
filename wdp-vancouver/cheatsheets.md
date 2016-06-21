@@ -22,6 +22,43 @@ title: Additional Resources
 
 ---
 
+### ES2015
+
+- [Best things about ES2015!](https://kadira.io/blog/other/top-es2015-features-in-15-minutes)
+- [Interactive Practice](http://learnharmony.org/)
+- [Babel homepage](https://babeljs.io/docs/learn-es2015/)
+- [List of ES6 Resources](https://github.com/ericdouglas/ES6-Learning)
+- [The official ES2015 Specification!](http://www.ecma-international.org/ecma-262/6.0/)
+
+---
+
+### Webpack
+
+- [Webpack homepage](https://webpack.github.io/)
+- [Webpack How-to](https://github.com/petehunt/webpack-howto)
+- [Webpack Dev Server Documentation](https://webpack.github.io/docs/webpack-dev-server.html)
+
+---
+
+### TypeScript
+
+- Excellent [PluralSight course](https://www.pluralsight.com/courses/typescript) on TypeScript
+- [TypeScript Documentation](https://www.typescriptlang.org/)
+- [Typescript Examples Repo](https://github.com/Microsoft/TypeScriptSamples)
+
+---
+
+### Angular 2
+
+- [Journey Through The JavaScript MVC Jungle](http://www.smashingmagazine.com/2012/07/journey-through-the-javascript-mvc-jungle/)
+- [Excellent blog post](http://blog.thoughtram.io/angular/2015/05/18/dependency-injection-in-angular-2.html) all about Dependency Injection
+- Learn about [all of the ways to style Angular 2 Components](https://scotch.io/tutorials/all-the-ways-to-add-css-to-angular-2-components)
+- [Angular 2 Cheat-Sheet](https://angular.io/cheatsheet)
+- [Angular 2 QuickStart Documentation](https://angular.io/docs/ts/latest/tutorial/)
+- [TODO MVC Angular 2](http://todomvc.com/examples/typescript-angular/#/)
+
+---
+
 ### Chrome Extensions:
 
 Adds indentation and whitespace to JSON-formattted data:
@@ -56,20 +93,6 @@ Understand how the box model works on a site by actually drawing boxes around th
 An interface for organizing and sharing your GitHub Gists:
 
 - [GistBox](https://chrome.google.com/webstore/detail/gistbox/caoihfibgoiiakncomhccbflmlgjaohf)
-
-
----
-
-### React
-
-- [React Fundamentals Course](http://courses.reactjsprogram.com/courses/reactjsfundamentals)
-- [Learn React Router](http://courses.reactjsprogram.com/courses/reactjsfundamentals)
-
----
-
-### Angular
-
-- [Animating Angular Applications](https://scotch.io/tutorials/animating-angularjs-apps-ngview)
 
 ---
 
