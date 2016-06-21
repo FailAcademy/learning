@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: The Programming Interview
+title: The Programming Interview Slides
 ---
 
 {% highlight html %}
