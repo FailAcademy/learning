@@ -336,12 +336,12 @@ There are also special operators that allow us to increment or decrement a value
 
 ```javascript
 var i = 5;
-i++; // returns 6
+i++; // adds 1 to i
 ```
 
 ```javascript
 var i = 5;
-i--; // returns 4
+i--; // subtracts 1 from i
 ```
 
 Or find the remainder of an expression:
