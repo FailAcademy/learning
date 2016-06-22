@@ -200,7 +200,7 @@ function volume(width, height, depth) {
 
 Function expressions usually don't have a name. Functions without names are known as an **anonymous functions**.
 
-This function expression is stored in a variable called `area`:
+This function expression is stored in a variable called `volume`:
 
 ```javascript
 var volume = function(width, height, depth) {
