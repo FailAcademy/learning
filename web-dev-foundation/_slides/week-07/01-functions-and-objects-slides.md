@@ -200,7 +200,7 @@ function volume(width, height, depth) {
 
 Function expressions usually don't have a name. Functions without names are known as an **anonymous functions**.
 
-This function expression is stored in a variable called `volume`:
+This function expression is stored in a variable called `area`:
 
 ```javascript
 var volume = function(width, height, depth) {
@@ -433,7 +433,7 @@ var fullName = person.getName(); // will return "Silent Bob"
 
 ---
 
-# What is "this"?
+# What Is "This"?
 
 In JS, `this` is a special word and it always refers to one object (which object it refers to will depend on the context).
 
