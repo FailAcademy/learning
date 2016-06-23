@@ -11,11 +11,11 @@ Please explore the [Webpack documentation](https://webpack.github.io/docs/?utm_s
 
 ---
 
-## Agenda
+## Keywords
 
-Today we'll briefly discuss developing ES2015 applications using the Webpack build tool. We'll begin by examining a simple
-Webpack setup using `gulp-webpack`, and then we'll remove gulp and use `webpack` and the `webpack-dev-server` to implement the
-same functionality.
+- Module bundler
+- Module loader
+- Source map
 
 ---
 
@@ -25,7 +25,7 @@ same functionality.
 - Explore Webpack's CLI
 - Explore Webpack's 'loader' interface
 - Use Webpack to transform JavaScript code (ES5 -> ES2015)
-- Use Webpack to transform SCSS files
+- Use Webpack to transform and bundle SCSS files
 - Use Webpack to set up source maps for compiled files (CSS / JavaScript)
 - Use Webpack's Development server to watch files and compile on save.
 - Use npm scripts to run the Webpack CLI commands
@@ -36,19 +36,19 @@ same functionality.
 
 Set up a new project with Webpack:
 
-1. Create a new folder in your *virtual machine's public* directory
+1. Create a new folder for your project:
     - Remember to run `npm init` in your project's root directory.
     - Remember to create a `.gitignore` file and add 'node_modules' at the top
-2. Create folders in the root directory:
+2. Create the following folders within:
     - src
     - dist
-3. Create files:
+3. Create the following files:
     - index.html (in project root)
     - main.scss (in src)
     - main.js (in src)
     - webpack.config.js (in project root)
 
-In Webpack config add the following code:
+In `webpack.config.js` add the following code:
 
 ```js
 module.exports = {
@@ -196,7 +196,7 @@ Run: `webpack-dev-server` to view your site in the browser @ **localhost:3000**!
 Now that Webpack is set up for development let's create a convenient command for running the developmet server
 in our project:
 
-Add the folloing to your `package.json`:
+Add the follwoing to your `package.json`:
 
 ```js
 
