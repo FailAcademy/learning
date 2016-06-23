@@ -15,7 +15,6 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
-
 layout: false
 
 # OOP

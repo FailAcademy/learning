@@ -7,7 +7,10 @@ lesson_date: 2016-08-04
 
 ## Pre-Work
 
-- Read [An Introduction to ES6 Classes](https://strongloop.com/strongblog/an-introduction-to-javascript-es6-classes/)
+Complete the following readings before class:
+
+- [An Introduction to ES6 Classes](https://strongloop.com/strongblog/an-introduction-to-javascript-es6-classes/)
+- [Learn ES2015: Classes](https://babeljs.io/docs/learn-es2015/#classes)
 
 ---
 

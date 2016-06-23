@@ -7,63 +7,73 @@ lesson_date: 2016-08-02
 
 ## Pre-Work
 
-Visit the [Learn ES2105](https://babeljs.io/docs/learn-es2015/) page and review the list of new features of javascript that are a part of ECMAScript 6!
+Visit the **[Learn ES2015](https://babeljs.io/docs/learn-es2015/)** page and review the list of new features of JavaScript that are a part of ES2015. Pay attention to these sections in particular:
 
-See [ES2015](http://kangax.github.io/compat-table/es6/) support differences in browsers.
+- [Arrows and Lexical This](https://babeljs.io/docs/learn-es2015/#arrows-and-lexical-this)
+- [Enhanced Object Literals](https://babeljs.io/docs/learn-es2015/#enhanced-object-literals)
+- [Template Strings](https://babeljs.io/docs/learn-es2015/#template-strings)
+- [Destructuring](https://babeljs.io/docs/learn-es2015/#destructuring)
+- [Default + Rest + Spread](https://babeljs.io/docs/learn-es2015/#default--rest--spread)
+- [Let + Const](https://babeljs.io/docs/learn-es2015/#let--const)
+- [Iterators + For..Of](https://babeljs.io/docs/learn-es2015/#iterators--forof)
 
-Read this [excellent overview](https://github.com/bevacqua/es6) of ES2015 on github.
+While reviewing each section, open the the [Babel online REPL](http://babeljs.io/repl/) and try pasting each ES2015 code example into it to see how it would be implemented in ES5 syntax.
+
+Also read through this excellent summary of the new ES2015 features before class:
+
+- [ES6 Overview in 350 Bullet Points](https://github.com/bevacqua/es6)
 
 ---
 
 ## Learning Objectives
 
-- Illustrate the major differences between ES2015 over ES5
-- Build a basic JavaScript application using ES2015 & Gulp.
-- Refactor an ES5 app to use ES2015
-
----
-
-## Learning Objectives
-
-### JavaScript is Changing
-- Demonstrate that JavaScript is changing and evolving
-- Understand the meaning of `'use strict';`
-- Define compilation and compilation options such as Babel & TypeScript
-
-### Setting up ES2015
-- Set up an environment to target ES2015 -> ES5 using Gulp
-
-### ES2015 Improvements
-- Describe and use modules using `import` and `export`
-- Describe when to use `let` or `const` to declare variables
-- Describe and use the `=>` as opposed to a function
-
-### ES2015 Shorthands
-- Describe and use 'template strings'
-- Describe and use 'object literals'
-- Describe and use 'default parameters'
-- Describe and use 'destructuring'
-- Describe and use 'spread'
-
-### * ES2015 Promises
-- Describe and use `Promise`
-- Describe and use `then`
-- Describe and use `resolve` & `reject` to return a promise
+- Distinguish the major differences between ES2015 (ES6) and ES5 syntax.
+- Distinguish the difference between compiling and transpiling code, and identify how use tools such as Babel and TypeScript enable more effective, modern JavaScript code.
+- Set up a basic development environment for an ES2015 application using Gulp.
+- Use the block-scoped binding constructs `let` and `const` in lieu of `var` to define variables where appropriate.
+- Use arrow syntax to write functions that share the same lexical `this` as their surrounding code.
+- Use template strings, enhanced object literals, default parameters, destructuring, rest parameters, and spread operators as shorthand for writing less redundant code.
+- Use `for...of` to loop over iterable objects.
+- Create JavaScript modules using the `import` and `export` keywords to write more modular code without polluting the global namespace.
+- Write async code using the Promise constructor with the `resolve` and `reject` handlers, as well as `then` and `catch` methods to read the results from a Promise once it's resolved or rejected.
 
 ---
 
 ## Keywords
 
-- `import`
-- `export`
-- `let`
-- `const`
-- template strings '`'
-- Object literal
-- Lexical scoping (`=>`)
-- Destructuring
-- Default parameters
-- `Promise`
+- [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+- [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
+- [Template strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+- [Object literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Object_literals)
+- [Lexical scoping](https://developer.mozilla.org/en/docs/Web/JavaScript/Closures)
+- [Arrow Functions](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [Destructuring](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [Default parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- [Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+- [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
+- [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
+---
+
+## Exercise 1
+
+Refactor the previous [Codepen](http://codepen.io/redacademy/pen/pyZpqV) example with `let` to fix the issue previously cause by `var`.
+
+---
+
+## Exercise 2
+
+Use arrow functions to fix [this CodePen](http://codepen.io/redacademy/pen/mPjXVW).
+
+---
+
+## Exercise 3
+
+
+
+
+
 
 ---
 
@@ -118,10 +128,16 @@ Create a class that returns a promise, and take some action asynchronously!
 
 ## Additional Resources
 
-This line describes the resource:
+See ES2015 support differences in browsers:
 
-- [Best things about ES2015!](https://kadira.io/blog/other/top-es2015-features-in-15-minutes)
-- [Interactive Practice](http://learnharmony.org/)
-- [Babel homepage](https://babeljs.io/docs/learn-es2015/)
-- [List of ES6 Resources](https://github.com/ericdouglas/ES6-Learning)
-- [The official ES2015 Specification!](http://www.ecma-international.org/ecma-262/6.0/)
+- [ECMAScript 6 compatibility table](http://kangax.github.io/compat-table/es6/)
+
+The official ES2015 Specification:
+
+- [ECMAScript® 2015 Language Specification](http://www.ecma-international.org/ecma-262/6.0/)
+
+Extra reading on ES2015 basics:
+
+- [Top ES2015 Features in 15 Minutes](https://kadira.io/blog/other/top-es2015-features-in-15-minutes)
+- [Learn ES2015 (ES6/Harmony) Now!](http://learnharmony.org/)
+- [ECMAScript 6 Learning](https://github.com/ericdouglas/ES6-Learning)
