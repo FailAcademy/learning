@@ -32,10 +32,9 @@ Also read through this excellent summary of the new ES2015 features before class
 - Set up a basic development environment for an ES2015 application using Gulp.
 - Use the block-scoped binding constructs `let` and `const` in lieu of `var` to define variables where appropriate.
 - Use arrow syntax to write functions that share the same lexical `this` as their surrounding code.
-- Use template strings, enhanced object literals, default parameters, destructuring, rest parameters, and spread operators as shorthand for writing less redundant code.
+- Use template literals, enhanced object literals, default parameters, destructuring, rest parameters, and spread operators as shorthand for writing less redundant code.
 - Use `for...of` to loop over iterable objects.
 - Create JavaScript modules using the `import` and `export` keywords to write more modular code without polluting the global namespace.
-- Write async code using the Promise constructor with the `resolve` and `reject` handlers, as well as `then` and `catch` methods to read the results from a Promise once it's resolved or rejected.
 
 ---
 
@@ -43,22 +42,23 @@ Also read through this excellent summary of the new ES2015 features before class
 
 - [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
 - [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
-- [Template strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+- [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 - [Object literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Object_literals)
 - [Lexical scoping](https://developer.mozilla.org/en/docs/Web/JavaScript/Closures)
 - [Arrow Functions](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 - [Destructuring](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 - [Default parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
 - [Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- [Spread operator](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+- [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 - [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 - [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
-- [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 ---
 
 ## Exercise 1
 
-Refactor the previous [Codepen](http://codepen.io/redacademy/pen/pyZpqV) example with `let` to fix the issue previously cause by `var`.
+[Refactor the previous Codepen example](http://codepen.io/redacademy/pen/pyZpqV) with `let` to fix the issue previously cause by `var`.
 
 ---
 
@@ -70,59 +70,31 @@ Use arrow functions to fix [this CodePen](http://codepen.io/redacademy/pen/mPjXV
 
 ## Exercise 3
 
-
-
-
-
+Use a template literal to refactor [this CodePen](http://codepen.io/redacademy/pen/mPjXVW).
 
 ---
 
-## Exercise 1 - Dev Environment Setup
+## Exercise 4
 
-Set up an ES2015 development environment using Gulp.
+Create a simple function called `groceryList` that uses a `for...in` loop to `console.log()` a list of grocery items individually.
 
-- Install the gulp-babel plugin. [https://www.npmjs.com/package/gulp-babel](https://www.npmjs.com/package/gulp-babel)
-- See an [example gulp-babel setup](https://github.com/redacademy/red-gulp-babel)
----
-
-## Exercise 2 - Modules
-Practice using `import` & `export`
-- `> git clone https://github.com/redacademy/red-es2015`
-- Follow the README in "import-export" to get setup.
-- Follow the instructions in "import-export/src/index.js".
+Because the grocery list may vary in length, you'll want to set up your function to accept as many (or as few) grocery items as need to be passed in.
 
 ---
 
-## Exercise 3 - Declarations: Let & Const
-- Fix the hoisting problem in [this CodePen](http://codepen.io/redacademy/pen/pyZpqV).
-- Make the variable unable to be redeclared in [this CodePen](http://codepen.io/redacademy/pen/jqpYoz).
+## Lab Activity
 
----
+In today's lab, you're going to refactor your Instanews project to use ES2015 syntax.
 
-## Exercise 4 - Arrow Function
-- Use arrow functions to fix [this CodePen](http://codepen.io/redacademy/pen/mPjXVW).
+To do this, start by creating a new branch on your project's repo called `es2015` and complete the lab tasks entirely on the new branch.
 
----
+Specifically, you will need to:
 
-## Exercise 5 - Template Literals
-- Change [this CodePen](http://codepen.io/redacademy/pen/PNBQvB) to use template literals.
-
----
-
-## Exercise 6 - Object Literals, Default Parameters & Destructuring
-Write an example using:
- - object literal
- - default parameter
- - destructuring an objects
- - destructuring an array
-
-If time, try writing an example using other ES2015 features.
-
----
-
-## Exercise 7 - Promises
-Create a class that returns a promise, and take some action asynchronously!
-*Promise, Arrow-functions (setTimeout/this)*
+- Add a Gulp Babel to your project so you can transpile your JS to ES5
+- Replace all instances of `var` with `let` or `const` where appropriate
+- Use a template literal to replace any string concatenation
+- Remove the `<script>` element from your project's `index.html` file that loads jQuery, install jQuery from npm as a project dependency (but **not** a development dependency this time!), and `import` jQuery in your main project JS file instead
+- Refactor out your API call into a separate function and use `import` and `export` to load this function from another file
 
 ---
 
@@ -141,3 +113,4 @@ Extra reading on ES2015 basics:
 - [Top ES2015 Features in 15 Minutes](https://kadira.io/blog/other/top-es2015-features-in-15-minutes)
 - [Learn ES2015 (ES6/Harmony) Now!](http://learnharmony.org/)
 - [ECMAScript 6 Learning](https://github.com/ericdouglas/ES6-Learning)
+- [ECMAScript 2015: Let's talk about ES6](https://medium.com/ecmascript-2015)

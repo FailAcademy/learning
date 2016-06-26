@@ -22,6 +22,9 @@ layout: false
 1. ES5 vs. ES2015 (plus dev environment set-up)
 2. `let` and `const`
 3. Arrow functions
+4. ES2015 shorthand
+5. `for...of` loops
+6. ES2015 modules
 
 ---
 
@@ -155,7 +158,7 @@ Conversely, `var` defines a variable globally, or locally to an entire function 
 
 # Exercise 1
 
-Refactor the previous [Codepen](http://codepen.io/redacademy/pen/pyZpqV) example with `let` to fix the issue previously cause by `var`.
+[Refactor the previous Codepen example](http://codepen.io/redacademy/pen/pyZpqV) with `let` to fix the issue previously cause by `var`.
 
 ---
 
@@ -224,7 +227,7 @@ object['c'] = 3;
 
 # let vs. const
 
-Both behave similarly in that they allow block-scoped declarations, so consider semantics when choosing one over the other:
+Both behave similarly in that they allow block-scoped declarations, so consider your intention for the variable when choosing one over the other:
 
 - Use `let` when you want to allow your variables to be potentially reassigned to new values
 - Use `const` when you don't want them to change
@@ -367,130 +370,44 @@ Use arrow functions to fix [this CodePen](http://codepen.io/redacademy/pen/mPjXV
 
 ---
 template: inverse
-class: center, middle
 
-# ES2015 Improvements
-
----
-class: center, middle
-
-# Modules
-
-### `import` & `export`
-
----
-
-# Modules
-
-### Why modules?
-
-For the same reason an author divides a books into chapters & pages.
-
----
-
-# ES5 Modules
-
-No Native or agreed upon solution.
-
-- CommonJS
-- SystemJS
-- RequireJS (AMD)
-- more!
-
----
-
-# ES2015 Modules
-
-ES2015 standardizes modules.
-
-### `import`
-
-```js
-import {a} from 'module';
-import b from 'module'; // default
-import * as c from 'module'; // alias
-```
-
-### `export`
-
-```js
-export function a() {}
-export default function b() {}
-```
-
----
-
-# Challenge
-
-Clone the ES2015 repo, and follow the README to get setup.
-
-`> git clone https://github.com/redacademy/red-es2015`
-
-In the directory, run `> npm i` & `> gulp`
-
----
-
-# Refactor
-
-Setup 'gulp-babel' in your project.
-
-# Challenge
-
-- Refactor out your API call into a separate function.
-- Use `import` & `export` to load this function from another file.
-
-
-
----
-
-# Refactor
-
-In your project code, use:
-- 3 or more arrow functions (`=>`)
-
----
-
-template: inverse
-class: center, middle
-
-# ES2015 ShortHands
-
----
-class: center, middle
-# Template Literals
-
-### <code>{% raw %}\`string\`{% endraw %}</code> (backtick)
-### <code>{% raw %}\`${variable}\`{% endraw %}</code>
+# ES2015 Shorthand
 
 ---
 
 # Template Literals
 
-### ES5
+Template literals (or template strings) are string literals that allow **string interpolation**.
+
+**ES5:**
+
 ```js
-	var name = 'name';
-	var city = 'Vancouver';
-	var description = name + ' lives in ' + city;
+var name = 'Bob';
+var city = 'Vancouver';
+var description = name + ' lives in ' + city;
 ```
 
-### ES2015
+**ES2015:**
 
 ```js
 let description = `${name} lives in ${city}`;
 ```
 
+Note that the template literal is surrounded by **back-ticks** (not single quotes).
+
 ---
 
 # Multiline Strings
 
-Template literals preserve white space.
+Template literals also preserve white space:
 
-### ES5
+**ES5:**
+
 ```js
 var funkyArrows = '\n-->\n    -->\n        ->\n';
 ```
 
-### ES2015
+**ES2015:**
 
 ```js
 let funkyArrows = `
@@ -499,59 +416,94 @@ let funkyArrows = `
 		->
 `;
 ```
-.link[
-	[Open in CodePen](http://codepen.io/redacademy/pen/PNBQvB)
-]
+
+---
+
+# Exercise 3
+
+Use a template literal to refactor [this CodePen](http://codepen.io/redacademy/pen/mPjXVW).
 
 
 ---
 
-# Refactor
+# Enhanced Object Literals
 
-In your project code, use:
-- 2 or more template literals
+**ES5:**
 
-
----
-
-# Object Literals
-
-### ES5
+With ES5, if we want to define object properties with names that match their corresponding values, we end up writing code that's not very succinct:
 
 ```js
-var name = 'Shawn';
-var city = 'Vancouver';
-{
-	name: name,
-	city: city,
+function makePerson(name, city) {
+	return {
+		name: name,
+		city: city
+	};
 }
-```
 
-### ES2015
-
-```js
-{
-	name,
-	city,
-}
+makePerson( 'Shawn', 'Vancouver' );
 ```
 
 ---
 
-# Default Params
+# Enhanced Object Literals
 
-### ES5
+The new property value shorthand allows us to abbreviate the initialization of a property within an object literal, provided that the property key matches an existing variable name.
+
+**ES2015:**
+
+```js
+function makePerson(name, city) {
+	return {
+		name,
+		city
+	};
+}
+
+makePerson( 'Shawn', 'Vancouver' );
+```
+
+---
+
+# Default Parameters
+
+With ES5, there's no way to set up default parameter values for a function, which makes our code more error-prone:
+
+```js
+function multiply(a, b) {
+	return a * b;
+}
+
+multiply(1);
+```
+
+*Try this out in Codepen...*
+
+---
+
+# Default Parameters
+
+Previously, we would work around this issue by testing parameter values in the body of the function and then assign a value if they were `undefined`.
+
+**ES5 Solution:**
 
 ```js
 function multiply(a, b) {
 	if (typeof b === 'undefined') {
 		b = 1;
 	}
-  return a * b;
+
+	return a * b;
 }
+multiply(1);
 ```
 
-### ES2015
+---
+
+# Default Parameters
+
+With ES20165, default function parameters allow us to initialize parameters with default values if no value or `undefined` is passed.
+
+**ES2015:**
 
 ```js
 function multiply(a, b = 1) {
@@ -559,11 +511,56 @@ function multiply(a, b = 1) {
 }
 ```
 
+*Less typing FTW!*
+
 ---
 
 # Destructuring Objects
 
-### ES5
+Assigning object properties to individual variables is a bit tedious with ES5:
+
+**ES5:**
+
+```js
+var point = {
+  x: 1,
+  y: 2
+};
+
+var a = point.x;
+var b = point.y;
+
+console.log(a); // 1
+console.log(b); // 2
+```
+
+---
+
+# Destructuring Objects
+
+Destructuring allows us to assign properties from objects to individual variables with the same name:
+
+**ES2015:**
+
+```js
+let point = {
+  x: 1,
+  y: 2
+};
+
+let { a, b } = point;
+
+console.log(a); // 1
+console.log(b); // 2
+```
+
+---
+
+# Destructuring Objects
+
+Another example using destructuring on an object:
+
+**ES5:**
 
 ```js
 var person = {
@@ -576,7 +573,7 @@ function getName(person) {
 }
 ```
 
-### ES2015
+**ES2015:**
 
 ```js
 function getName({name}) {
@@ -588,16 +585,18 @@ function getName({name}) {
 
 # Destructuring Arrays
 
-### ES5
+We can also use destructuring on items in an array:
+
+**ES5:**
 
 ```js
-var winners = ['Sarah', 'Holly', 'Andrew'];
+var winners = ['Bob', 'Alice', 'Jane'];
 var first = winners[0];
 var second = winners[1];
 var third = winners[2];
 ```
 
-### ES2015
+**ES2015:**
 
 ```js
 let [first, second, third] = winners;
@@ -605,118 +604,187 @@ let [first, second, third] = winners;
 
 ---
 
-# Much More
+# Rest Parameters
 
-- [Spread Operator](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Spread_operator)
-
-```js
-myFunction(...iterableObj);
-```
-
-- [Rest Parameter](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+The rest parameter syntax allows us to represent an **indefinite number of arguments** as an array:
 
 ```js
-function(a, b, ...theArgs) {
-  // ...
+function sum(...numbers) {
+	var result = 0;
+	numbers.forEach(function (number) {
+		result += number;
+	});
+
+	return result;
 }
+console.log( sum(1) ); // 1
+console.log( sum(1, 2, 3, 4, 5) ); // 15
 ```
-* `for..of`
-* iterators & generators
 
----
-template: inverse
-class: center, middle
-
-# Class
+**Note:** No other named parameters can follow the spread parameter in the function declaration.
 
 ---
 
-# ES5
+# Spread Operators
+
+Spread operators allow us to pass array arguments separately into a function:
 
 ```js
-function Animal(name) {
-  this.name = name;
+function sum(a, b, c) {
+  return a + b + c;
 }
 
-Hello.prototype.speak = function speak() {
-  console.log(this.name + ' makes a noise.');
-};
-```
+var args = [1, 2, 3];
+var moreArgs = [4, 5];
 
-# ES2015
-
-```js
-class Animal {
-  constructor(name) {
-    this.name = name;
-  }
-  speak() {
-    console.log(this.name + ' makes a noise.');
-  }
-}
-```
-
----
-
-# ES2015
-
-### What is the purpose of ...
-- the `constructor`
-- `this`
-- methods
-
-```js
-class Animal {
-	// constructor runs first
-  constructor(name) {
-    this.name = name;
-  }
-	// methods
-  speak() {
-    console.log(this.name + ' makes a noise.');
-  }
-}
-```
-
----
-
-# `extends`
-
-```js
-class Animal {
-  constructor(name) {
-    this.name = name;
-  }  
-  speak() {
-    console.log(this.name + ' makes a noise.');
-  }
-}
-
-class Dog extends Animal {
-	speak() {
-    super.speak();
-    console.log(this.name + ' barks.');
-  }
-}
-
-let Scruffy = new Dog();
+console.log( sum(...args) ); // 6
+console.log( sum(...moreArgs, 6) ); // 15
 ```
 
 ---
 template: inverse
+
+# for...of Loops
+
+---
 class: center, middle
 
-# Promises
+.large[
+	What kinds of loops have we used in JS so far?
+]
 
 ---
 
-# Promise
+# for...of Loops
 
-1. **Asynchronous** vs. **Blocking**
+The `for...of` is a better way to loop over arrays and other iterable objects:
 
-2. [Promises Explained](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+```js
+function groceryList(...items) {
+  for ( let i in items) {
+    console.log(items[i]);
+  }
+}
+
+groceryList('apples', 'oranges');
+```
 
 ---
+
+# Exercise 4
+
+Create a simple function called `cashRegister` that uses `for...in` loop to calculate the total cost of any number of items a person wishes to purchase.
+
+Because the number of purchased items may vary, you'll want to set up your function to accept as many (or as few) grocery items as need to be passed in.
+
+The function also needs to accept an argument for the tax rate (with it's default set to 5%).
+
+The tax amount will needed to be added to the subtotal of the summed item prices, with the total cost logged to the console.
+
+---
+template: inverse
+
+# ES2015 Modules
+
+---
+class: center, middle
+
+### Why Modules?
+
+For the same reason an author divides a books into chapters. (Helps us keep things organized!)
+
+---
+
+# Problem: Global Vars
+
+Modularizing code in ES5 often meant polluting the global namespace. For example, here the jQuery library is added to the global namespace:
+
+```html
+<!DOCTYPE html>
+<body>
+	<p>Hello, world!</p>
+	<script src="./jquery.js"></script>
+	<script src="./my-script.js"></script>
+</body>
+```
+
+`$` is now a global variable, which can cause naming conflicts:
+
+```js
+// in my-script.js...
+
+let hello = $('p').css('color', 'red');
+```
+
+---
+
+# Modules in ES5
+
+No native or agreed upon solution in ES5:
+
+- CommonJS
+- SystemJS
+- RequireJS (AMD)
+- ...and more!
+
+---
+
+# ES2015 Modules
+
+ES2015 standardizes modules!
+
+Run: `npm install --save jquery`
+
+```html
+<!DOCTYPE html>
+<body>
+	<p>Hello, world!</p>
+	<script src="./my-script.js"></script>
+</body>
+```
+
+```js
+// in my-script.js...
+import $ from 'jquery';
+
+let hello = $('p').css('color', 'red');
+```
+
+All the code in the jQuery package is completely trapped inside of this module and does not pollute the global namespace.
+
+---
+
+# ES2015 Modules
+
+Using modules requires using `import`/`export` keywords:
+
+`import`
+
+```js
+import {a} from 'module';
+import b from 'module'; // default
+import * as c from 'module'; // alias
+```
+
+`export`
+
+```js
+export function a() {}
+export default function b() {}
+```
+
+---
+
+# What We've Learned
+
+- Syntactical differences between ES5 and ES2015
+- How and where to replace `var` with `let` or `const`
+- How to use arrow functions
+- How to write more efficient JS with template literals, enhanced object literals, rest parameters, spread operators, and default parameters
+- How to use `import` and `export` with ES2015 modules
+
+---
+template: inverse
 
 # Questions?
 

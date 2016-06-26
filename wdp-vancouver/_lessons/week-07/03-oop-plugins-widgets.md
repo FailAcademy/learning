@@ -20,8 +20,9 @@ Some pre-reading on creating WordPress widget plugins:
 
 ## Learning Objectives
 
-- Explain what object-oriented programming is in the PHP context and use it create classes.
+- Explain what object-oriented programming is in the PHP context and use it to create classes.
 - Distinguish the difference between public, private, and protected visibility markers and how they apply to properties and methods.
+- Describe how inheritance works between parent classes and subclasses.
 - Identify use cases for developing WordPress plugins, as well as their basic architecture.
 - Build a custom WordPress widget plugin using the Widget API and OOP coding practices.
 

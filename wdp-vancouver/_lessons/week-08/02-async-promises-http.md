@@ -15,6 +15,7 @@ lesson_date: 2016-05-31
 - Introduce REST application architechture
 - Implement Promise based HTTP Requests using Angular's HTTP module
 - Display JSON data in Component Templates
+- Write async code using the Promise constructor with the `resolve` and `reject` handlers, as well as `then` and `catch` methods to read the results from a Promise once it's resolved or rejected.
 
 ---
 
@@ -26,6 +27,7 @@ lesson_date: 2016-05-31
 - Service
 - GET
 - POST
+- [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 ---
 

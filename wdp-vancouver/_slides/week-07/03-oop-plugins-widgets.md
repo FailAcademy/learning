@@ -19,36 +19,28 @@ layout: false
 
 # Agenda
 
-1. Classes and Objects
+1. Objects and classes
 2. Scope (public, private, protected)
 3. Widget API 101 (and inheritance in OOP)
 
 ---
 template: inverse
 
-# Classes and Objects
+# Objects and Classes
 
 ---
 class: center, middle
 
-### Classes, in Plain English
-
-A class is a **blueprint** for creating an object.<br />(And your computer is the construction crew.)
-
----
-class: center, middle
-
-### Objects, in Plain English
+### OOP Vocabulary Refresher: Objects
 
 A **general model** for something we see in the world,<br />but using code constructs.
 
 ---
+class: center, middle
 
-# Objects, Actually in Relation to English
+### OOP Vocabulary Refresher: Classes
 
-- An object is the noun
-- A property is an adjective
-- A method is a verb
+A class is a **blueprint** for creating an object.<br />(And your computer is the construction crew.)
 
 ---
 
@@ -123,13 +115,6 @@ echo $dog_2->walk();
 .half-right-column[
 <br /><br />
 ![Dexter object](/public/img/slide-assets/oop-object-dexter.jpg)
-]
-
----
-class: center, middle
-
-.large[
-   Insight: Objects are created from classes!
 ]
 
 ---

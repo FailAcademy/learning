@@ -117,6 +117,13 @@ will not have to wait for the web request to finish before performing other task
 based on the result. To do this we'll use something called a **Promise**.
 
 ---
+class: center, middle
+
+### Promises, in plain English
+
+Promises are a first class representation of a value that may be made available in the future.
+
+---
 
 # Exercise 2
 
