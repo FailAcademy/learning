@@ -87,8 +87,6 @@ Add a background in a SCSS file:
 Create a `Game` class in a `game.js` file:
 
 ```js
-import './game.js';
-
 class Game {
    constructor() {
       const canvas = document.getElementById('game');
@@ -114,6 +112,9 @@ function gameLoop() {
 
 gameLoop();
 ```
+
+**Pro Tip**: For performant animations, use [requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame). eg:
+`setTimeout(window.requestAnimationFrame(gameloop))`
 
 ---
 
@@ -186,7 +187,8 @@ function gameLoop() {
 
 # Render
 
-Render all changes in a method:
+Let's create a new class method that will 'render' all of the shapes
+in our game.  Render all changes in a class method, and move the call to `drawLine` we created earlier:
 
 ```js
 class Game {
@@ -213,7 +215,7 @@ Use `default` import and exports.
 src
   |- index.js   (Game loop)
   |- Game.js    (Game class)
-  |- Board.js   (Game board)
+  |- Board.js   (Game board class)
 ```
 
 ---
@@ -237,7 +239,7 @@ export default class Paddle {
       this.x = x;
       this.y = (height / 2) - (this.height / 2);
    }
-   render(ctx) {
+   render(ctx) { // What is ctx? Where does it come from?
       ctx.fillRect(
          this.x, this.y,
          this.width, this.height
@@ -282,7 +284,7 @@ Draw both paddles whenever `render()` is called
 
 class Game {
    //...
-   render() {
+   render() { // We found it! here is our ctx!
       this.board.render(this.context);
       this.player1.render(this.context);
       this.player2.render(this.context);
@@ -324,7 +326,7 @@ Make a listener to handle key events:
 // In Paddle.js...
 
 export default class Paddle{
-	constructor() {
+	constructor(height, x) {
 		//...
 		document.addEventListener('keydown', event =>
          console.log(event.keyCode)
@@ -342,14 +344,14 @@ Let's expand our listener with a `switch` statement to `console.log()` different
 ```js
 // In Paddle.js...
 
-constructor(height, x, up, down) {
+constructor(height, x) {
    //...
    document.addEventListener('keydown', event => {
       switch (event.keyCode) {
-         case up:
+         case keys.up:
             console.log('up');
             break;
-         case down:
+         case keys.down:
             console.log('down');
             break;
    });
@@ -710,5 +712,12 @@ Complete the following requirements for this challenge:
 - Play a sound on wall collision and paddle collision
 - Create balls with special effects (different speeds, actions)
 - Trigger speed increases or decreases of paddles
+
+
+---
+
+template: inverse
+
+#Questions?
 
 {% endhighlight %}
