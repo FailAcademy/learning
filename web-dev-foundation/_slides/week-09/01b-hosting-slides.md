@@ -229,6 +229,7 @@ Once you're in, you can start transferring files:
    ![FTP UI screenshot](../../public/img/slide-assets/ftp-ui.png)
 ]
 
+<!--
 ---
 
 # Exercise 2
@@ -236,7 +237,7 @@ Once you're in, you can start transferring files:
 In this exercise, you're going to practice FTPing a file.
 
 Download an FTP client and use the credentials provided to FTP a file from your computer onto the server.
-
+-->
 ---
 template: inverse
 

@@ -31,11 +31,13 @@ From the HTML & CSS textbook:
 
 In this exercise, you're going to purchase a domain name, and configure it's A record to point to your final project website.
 
+{% comment %}
 ## Exercise 2
 
 In this exercise, you're going to practice FTPing a file.
 
 Download an FTP client and use the credentials provided to FTP a file from your computer onto the server.
+{% endcomment %}
 
 ## Lab Activity
 
