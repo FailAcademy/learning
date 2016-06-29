@@ -22,10 +22,10 @@ We'll be using HTML Canvas to build the Pong game in Project 3, so you'll want t
 
 - Explain what object-oriented programming is in the JavaScript context.
 - Describe and instantiate objects using the new `class` syntax.
-- Describe and use the elements of a class, including a `constructor` and methods.
+- Describe and use the elements of a `class`, including the `constructor` and 'methods'.
 - Describe how `this` functions within classes.
 - Describe and use `extends` and `super` for inheritance purposes.
-- Import and export ES2015 classes as modules (as `default` and named exports).
+- `import` and `export` ES2015 classes as modules (as `default` or named exports).
 
 ---
 
@@ -37,7 +37,7 @@ We'll be using HTML Canvas to build the Pong game in Project 3, so you'll want t
 - [`new`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)
 - [`extends`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends)
 - [`super`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super)
-[HTML5 Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
+- [HTML5 Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
 
 ---
 
@@ -63,12 +63,14 @@ Ensure that you set all the appropriate **properties** in the `constructor` and 
 
 Now model our own classroom using the following classes. Note that `WebDevStudent` should be a subclass of `Student` and `Student` should be a subclass of `Person`. Create at least **three properties** and **one method** on each class.
 
-- Clazz *(note: class is a keyword in JavaScript)*
+- Clazz *
 - Person
 - Student
 - WebDevStudent
 
-**Instantiate your classmates** using `new WebDevStudent()`.
+*(note: class is a keyword in JavaScript, and thus cannot be a valid name)*<br />
+
+*Instantiate your classmates using* `new WebDevStudent()`.
 
 ---
 

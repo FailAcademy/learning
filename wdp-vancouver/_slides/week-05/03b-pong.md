@@ -34,7 +34,7 @@ template: inverse
 
 Canvas is a web API that allows you to draw graphics, create animations, as well as render video and 3d accelerated WebGL graphics.
 
-**Canvas some examples:**
+**Some Canvas examples:**
 
 - [cube](http://codepen.io/yoksel/pen/nxgrp)
 - [animated logo](http://meru.ca/)
@@ -56,7 +56,7 @@ Plan out your project on paper with a partner.
 
 Set up a new project directory on your computer with Webpack (as per the [ES2015/Webpack lesson](/lesson/developing-with-es2015-webpack/)).
 
-Set your project up with Babel transpiling, Sass compilation, and a development server.
+Set your project up to transpile Babel, compile Sass, and run a development server.
 
 Ensure your Webpack dev environment is functioning properly before proceeding.
 
@@ -702,16 +702,21 @@ Complete the following requirements for this challenge:
 * Instantiate and render the `ScoreBoard` in `Game.js`
 * Render player scores in the game
 
+# Challenge 11
+
+* Play a sound on wall collision and paddle collision
+
 ---
 
 # Stretch Goals:
 
 - Make it prettier
-- Adjust sizes
+- Adjust sizes paddle & ball sizes and colors
 - Trigger multiple balls
-- Play a sound on wall collision and paddle collision
-- Create balls with special effects (different speeds, actions)
-- Trigger speed increases or decreases of paddles
+- Create balls with special effects (different speeds, sizes, effects, etc.)
+- Trigger speed changes or size changes of paddles
+- Fire a shot from a paddle on key press
+- Declare a winner at a final score
 
 
 ---
