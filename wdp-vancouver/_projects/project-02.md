@@ -1,18 +1,16 @@
 ---
 layout: project
-title: Project 2 - Instanews
+title: Project 2 - Pong
 due: Tuesday, May 3 (beginning of class)
 ---
 
-For Project 2, you're going to create a one-page, responsive website that allows a user to filter top news story categories via the [New York Times API](http://developer.nytimes.com/docs/top_stories_api/).
+For Project 2, you're going to create a pong game.
 
-You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-02.zip).
+You can [clone the project starter repo here](https://github.com/redacademy/pong-starter).
 
 ## Design Specifications:
 
-- The base font size is `16px` and it HEX code is `#ffffff`
-- The body font family is Open Sans Light
-- The medium grey color of the text in the footer is `#c2c2c2`
+- A working pong game with moving paddles and score keeping
 
 ## Requirements
 
@@ -40,17 +38,9 @@ Your project must:
 - an HTML5 Canvas board containing the pong game
 - HTML5 Audio sounds triggered on ball bounces
 
-
 **HTML requirements:**
 
-Your project must:
-
-- Uses the HTML5 doctype and semantic, syntactically-correct HTML5
-- Include all essential elements covered in class (e.g. `<meta charset="utf-8">`)
-
-**CSS/Sass requirements:**
-
-Your project must:
+Your project must contain:
 
 - an HTML5 Canvas containing:
   - an initialized board with a background
@@ -71,9 +61,9 @@ Your project must:
 Want to challenge yourself? Your project could also:
 
 - trigger additional balls on a keypress
+- create additional balls with special properties (different speeds, sizes, etc.)
 - trigger speed changes or size changes of paddles
 - fire a shot from a paddle on key press
-- create additional balls with special properties (different speeds, sizes, etc.)
 
 ## Submission Instructions
 
