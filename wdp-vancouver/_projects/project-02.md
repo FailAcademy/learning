@@ -1,18 +1,16 @@
 ---
 layout: project
-title: Project 2 - Instanews
+title: Project 2 - Pong
 due: Tuesday, May 3 (beginning of class)
 ---
 
-For Project 2, you're going to create a one-page, responsive website that allows a user to filter top news story categories via the [New York Times API](http://developer.nytimes.com/docs/top_stories_api/).
+For Project 2, you're going to create a pong game.
 
-You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-02.zip).
+You can [clone the project starter repo here](https://github.com/redacademy/pong-starter).
 
 ## Design Specifications:
 
-- The base font size is `16px` and it HEX code is `#ffffff`
-- The body font family is Open Sans Light
-- The medium grey color of the text in the footer is `#c2c2c2`
+- A working pong game with moving paddles and score keeping
 
 ## Requirements
 
@@ -22,63 +20,49 @@ To receive a "Pass" grade for this project, your submission will need to satisfy
 
 Your project must:
 
-- Dynamically fetch story data and populate it in a webpage via the Top Stories API based a user's selection from a `select` field
-- Resize the header area (i.e. logo plus `<select>`) so that it transitions from occupying the entire screen on page load to only auto height after the select form is changed (you will need jQuery for this)
-- Link each returned image to its URL on the NYT website
+- move paddles on up/down, a/z keypress for two different players
+- initialize a moving ball in the middle of the board at start and after a goal
+- the ball should reverse directions when it bounces off of walls and paddles
+- track and display user score as goals against opponent
+- trigger audio on ball bounces
 
 **General requirements:**
 
 Your project must:
 
-- Contain a single `.html` file and an external, minified `.css` file (a CSS reset may be included separately)
-- Adequately reflect the designer's vision for the website when built out using HTML & CSS
-- Demonstrate effective organization of the project's root directory
-- Have a Git repository initialized in its root directory with an appropriately customized `.gitignore` file
-- Be pushed to GitHub (with all of your commits synced to it)
-- Use Gulp for running build tasks, such as minification, and error checking
+- be loaded using Webpack
+- a "build" directory for ES6 compiled and output as ES5
+- a package.json file
+- an appropriate .gitignore file
+- a README describing your project
+- an HTML5 Canvas board
+- HTML5 Audio sounds
 
 **HTML requirements:**
 
-Your project must:
+Your project must contain:
 
-- Uses the HTML5 doctype and semantic, syntactically-correct HTML5
-- Include all essential elements covered in class (e.g. `<meta charset="utf-8">`)
-
-**CSS/Sass requirements:**
-
-Your project must:
-
-- Make appropriate use of classes and IDs as selectors
-- Use a CSS reset
-- Use Sass as a preprocessor, with CSS properly compiled and minified
-- Use the `background` property where appropriate
-- Implement a mobile-first responsive layout using flexbox (no floats)
-- Demonstrate effective use of box model properties
-- Demonstrate effective use of CSS properties for altering the visual display of text (e.g. `font-family`, `font-style`, `text-transform`, etc.)
-- Incorporate custom fonts using `@font-face`
+- an initialized board with a background
+- colored paddles and ball
 
 **JS requirements:**
 
 Your project must:
 
-- Use Ajax to fetch data from the NYT Top Stories endpoint
-- Only display a maximum of 12 stories in the grid, and only display a story if it has a photo associated with it
-- Transition users between UI states, starting where no stories have been returned, and then subsequently transitioning where stories populate the grid (by incorporating a loading gif)
-
-**RWD requirements:**
-
-Your project must:
-
-- Be responsively designed using a mobile-first approach
-- Be optimized for 3 screen sizes: mobile, `min-width: 600px`, and `min-width: 1000px`
+- use default `import`'s and `export`'s
+- use ES6 class `constructor`'s and `method`'s
+- instantiate new objects using `new`
+- be written in an Object Oriented style using classes
 
 **Stretch goals:**
 
 Want to challenge yourself? Your project could also:
 
-- Incorporate a `select` field with custom styles applied (you will need a jQuery plugin for this such as [Heapbox](http://www.bartos.me/heapbox/))
-- Incorporate a combination of jQuery and CSS3-based animation to animate the movement of the header on the `<select>` change
-- Use CSS3 transitions to show and hide the article abstract on hover
+- trigger additional balls on a keypress
+- trigger speed increases or decreases of paddles
+- fire a shot from a paddle on key press
+- create additional special balls
+
 
 ## Submission Instructions
 
