@@ -22,7 +22,7 @@ Your project must:
 
 - move paddles on up/down, a/z keypress for two different players
 - initialize a moving ball in the middle of the board at start and after a goal
-- the ball should reverse directions when it bounces off of walls and paddles
+- the ball should reverse directions when it reaches walls or paddles
 - track and display user score as goals against opponent
 - trigger audio on ball bounces
 
@@ -31,19 +31,20 @@ Your project must:
 Your project must:
 
 - be loaded using Webpack
-- a "build" directory for ES6 compiled and output as ES5
-- a package.json file
+- contain a "build" directory for ES6 compiled into ES5 using Babel
+- an appropriate package.json file
 - an appropriate .gitignore file
 - a README describing your project
-- an HTML5 Canvas board
-- HTML5 Audio sounds
+- an HTML5 Canvas board containing the pong game
+- HTML5 Audio sounds triggered on ball bounces
 
 **HTML requirements:**
 
 Your project must contain:
 
-- an initialized board with a background
-- colored paddles and ball
+- an HTML5 Canvas containing:
+  - an initialized board with a background
+  - colored paddles and ball
 
 **JS requirements:**
 
@@ -52,6 +53,7 @@ Your project must:
 - use default `import`'s and `export`'s
 - use ES6 class `constructor`'s and `method`'s
 - instantiate new objects using `new`
+- appropriate use of `this` within classes
 - be written in an Object Oriented style using classes
 
 **Stretch goals:**
@@ -59,9 +61,9 @@ Your project must:
 Want to challenge yourself? Your project could also:
 
 - trigger additional balls on a keypress
-- trigger speed increases or decreases of paddles
+- trigger speed changes or size changes of paddles
 - fire a shot from a paddle on key press
-- create additional special balls
+- create additional balls with special properties (different speeds, sizes, etc.)
 
 
 ## Submission Instructions
