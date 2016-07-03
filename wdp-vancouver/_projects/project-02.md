@@ -1,16 +1,18 @@
 ---
 layout: project
-title: Project 2 - Pong
-due: Tuesday, May 3 (beginning of class)
+title: Project 2 - Instanews App
+due: Tuesday, July 26th (beginning of class)
 ---
 
-For Project 2, you're going to create a pong game.
+For Project 2, you're going to create a one-page, responsive website that allows a user to filter top news story categories via the [New York Times API](http://developer.nytimes.com/docs/top_stories_api/).
 
-You can [clone the project starter repo here](https://github.com/redacademy/pong-starter).
+You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-02.zip).
 
-## Design Specifications:
+## Design Specifications
 
-- A working pong game with moving paddles and score keeping
+- The base font size is `16px` and it HEX code is `#ffffff`
+- The body font family is Open Sans Light
+- The medium grey color of the text in the footer is `#c2c2c2`
 
 ## Requirements
 
@@ -20,50 +22,64 @@ To receive a "Pass" grade for this project, your submission will need to satisfy
 
 Your project must:
 
-- move paddles on up/down, a/z keypress for two different players
-- initialize a moving ball in the middle of the board at start and after a goal
-- the ball should reverse directions when it reaches walls or paddles
-- track and display user score as goals against opponent
-- trigger audio on ball bounces
+- Dynamically fetch story data and populate it in a webpage via the Top Stories API based a user's selection from a `select` field
+- Resize the header area (i.e. logo plus `<select>`) so that it transitions from occupying the entire screen on page load to only auto height after the select form is changed (you will need jQuery for this)
+- Link each returned image to its URL on the NYT website
 
 **General requirements:**
 
 Your project must:
 
-- be loaded using Webpack
-- contain a "build" directory for ES6 compiled into ES5 using Babel
-- an appropriate package.json file
-- an appropriate .gitignore file
-- a README describing your project
-- an HTML5 Canvas board containing the pong game
-- HTML5 Audio sounds triggered on ball bounces
+- Contain a single `.html` file and an external, minified `.css` file (a CSS reset may be included separately)
+- Adequately reflect the designer's vision for the website
+- Demonstrate effective organization of the project's root directory
+- Have a Git repository initialized in its root directory with an appropriately customized `.gitignore` file
+- Be pushed to GitHub (with all of your commits synced to it)
+- Contain a `REAMDE.md` file describing the project (e.g. technologies used, personal learnings, etc.)
+- Use Gulp for running build tasks, such as minification, and error checking
 
 **HTML requirements:**
 
-Your project must contain:
+Your project must:
 
-- an HTML5 Canvas containing:
-  - an initialized board with a background
-  - colored paddles and ball
+- Uses the HTML5 doctype and semantic, syntactically-correct HTML5
+- Include all essential elements covered in class (e.g. `<meta charset="utf-8">`)
+
+**CSS/Sass requirements:**
+
+Your project must:
+
+- Make appropriate use of classes and IDs as selectors
+- Use a CSS reset
+- Use Sass as a preprocessor, with CSS properly compiled and minified
+- Use the `background` property where appropriate
+- Implement a mobile-first responsive layout using flexbox (no floats)
+- Demonstrate effective use of box model properties
+- Demonstrate effective use of CSS properties for altering the visual display of text (e.g. `font-family`, `font-style`, `text-transform`, etc.)
+- Incorporate custom fonts using `@font-face`
 
 **JS requirements:**
 
 Your project must:
 
-- use default `import`'s and `export`'s
-- use ES6 class `constructor`'s and `method`'s
-- instantiate new objects using `new`
-- appropriate use of `this` within classes
-- be written in an Object Oriented style using classes
+- Use Ajax to fetch data from the NYT Top Stories endpoint
+- Only display a maximum of 12 stories in the grid, and only display a story if it has a photo associated with it
+- Transition users between UI states, starting where no stories have been returned, and then subsequently transitioning where stories populate the grid (by incorporating a loading gif)
+
+**RWD requirements:**
+
+Your project must:
+
+- Be responsively designed using a mobile-first approach
+- Be optimized for 3 screen sizes: mobile, `min-width: 600px`, and `min-width: 1000px`
 
 **Stretch goals:**
 
 Want to challenge yourself? Your project could also:
 
-- trigger additional balls on a keypress
-- create additional balls with special properties (different speeds, sizes, etc.)
-- trigger speed changes or size changes of paddles
-- fire a shot from a paddle on key press
+- Incorporate a `select` field with custom styles applied (you will need a jQuery plugin for this such as [Heapbox](http://www.bartos.me/heapbox/))
+- Incorporate a combination of jQuery and CSS3-based animation to animate the movement of the header on the `<select>` change
+- Use CSS3 transitions to show and hide the article abstract on hover
 
 ## Submission Instructions
 

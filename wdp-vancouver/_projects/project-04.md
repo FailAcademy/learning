@@ -1,14 +1,14 @@
 ---
 layout: project
 title: Project 4 - Inhabitent Site
-due: Monday, May 30th (beginning of class)
+due: Monday, August 22nd (beginning of class)
 ---
 
 For Project 4, you will create a multi-page website with a blog for a camping supply company called Inhabitent using WordPress as a content management system.
 
 You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-04.zip).
 
-## Design Specifications:
+## Design Specifications
 
 ### Structure:
 
@@ -52,10 +52,11 @@ Your project must:
 
 Your project must:
 
-- Adequately reflect the designer's vision for the website when built out using HTML & CSS
-- Demonstrate effective organization of the project's root directory
-- Have a Git repository initialized in it
-- Be pushed to GitHub (with all of your commits synced to it and ONLY necessary files pushed)
+- Adequately reflect the designer's vision for the website
+- Demonstrate effective organization of the project's custom theme and plugin directories
+- Have a Git repository initialized in its root directory with an appropriately customized `.gitignore` file
+- Be pushed to GitHub (with all of your commits synced to it)
+- Contain a `REAMDE.md` file describing the project (e.g. technologies used, personal learnings, etc.)
 - Use Gulp for running build tasks, such as minification and error checking
 
 **WordPress requirements:**

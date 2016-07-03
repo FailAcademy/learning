@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 5 - Mars Colony App
-due: Monday, June 6 (beginning of class)
+due: Monday, August 29th (beginning of class)
 ---
 
 For Project 5, you're going to create a web-based app for Earth colonists exploring Mars using Angular 2.
@@ -24,8 +24,9 @@ Your project must:
 
 - Create aesthetically-relevant styles to build out a "Mars" theme for the app (have fun with this!)
 - Demonstrate effective organization of the project’s root directory
-- Have a Git repository initialized in it
-- Be pushed to GitHub (with all of your commits synced to it and ONLY necessary files pushed)
+- Have a Git repository initialized in its root directory with an appropriately customized `.gitignore` file
+- Be pushed to GitHub (with all of your commits synced to it)
+- Contain a `REAMDE.md` file describing the project (e.g. technologies used, personal learnings, etc.)
 
 **Angular 2 requirements:**
 
