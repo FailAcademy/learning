@@ -3,9 +3,9 @@ layout: page
 title: Bonus Lessons
 ---
 
-### Friday, April 15th:
+*Bonus content coming soon!*
 
-[CSS Best Practices](/slides/bonus-css-best-practices-slides/)
+{% comment %}
 
 ### Tuesday, May 24th:
 
@@ -17,7 +17,6 @@ title: Bonus Lessons
 
 [Intro to Analytics](/public/files/intro-to-analytics.pdf) (guest lecture by Lisa McCann)
 
-{% comment %}
 ### OLD CONTENT:
 
 [Intro to SEO](/public/files/intro-to-seo.pdf) (guest lecture by Holly Lawton)

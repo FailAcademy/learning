@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Bonus - CSS Best Practices Slides
+title: CSS Best Practices Slides
 ---
 
 {% highlight html %}
@@ -83,7 +83,7 @@ header h1 {
 }
 ```
 
-The color of the `h1` text will be red in this case.
+*What colour will the text be in this example?*
 
 ---
 
@@ -107,7 +107,7 @@ header h1 {
 }
 ```
 
-The color of the `h1` text will be black in this case.
+*What colour will the text be in this example?*
 
 ---
 class: center, middle
@@ -163,11 +163,10 @@ Here are a few strategies to help avoid painting yourself into a corner with CSS
 - Use classes, and create re-usable classes wherever possible
 
 ---
-class: center, middle
 
-.large[
-   [Specificity showdown!](http://codepen.io/redacademy/pen/VvmwoQ?editors=110)
-]
+# Exercise 1
+
+Time for a [specificity showdown!](http://codepen.io/redacademy/pen/VvmwoQ?editors=110).
 
 ---
 template: inverse
@@ -243,7 +242,7 @@ Is more helpful than this:
 
 # Modularity
 
-Modular code is reusable code. For example, abstracting re-used styles into a class like this:
+Modular code is reusable code. For example, abstract re-used styles into a class like this:
 
 ```css
 .brand-color {
@@ -262,6 +261,14 @@ aside h3 {
    color: red;
 }
 ```
+
+---
+
+# What We've Learned
+
+- How to tame the specificity beast by keeping selector specificity under control
+- Why scalability, maintainability, and modularity matter in our project stylesheets
+- How to write CSS in a future-friendly way
 
 ---
 template: inverse
