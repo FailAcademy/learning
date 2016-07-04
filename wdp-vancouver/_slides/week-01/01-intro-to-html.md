@@ -78,18 +78,6 @@ Notice that the text is wrapped in `<p>` tags, and the closing tag contains a `/
 
 # A Basic Element
 
-If we wanted to markup a paragraph in HTML, our code would look like this:
-
-```html
-<p>The quick brown fox jumps over the lazy dog.</p>
-```
-
-Notice that the text is wrapped in `<p>` tags, and the closing tag contains a `/` after the opening angle bracket.
-
----
-
-# A Basic Element
-
 And if we want to add a second paragraph, we'll enclose its text inside of its own set of `p` tags:
 
 ```html
