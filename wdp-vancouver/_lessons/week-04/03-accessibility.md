@@ -7,11 +7,13 @@ lesson_date: 2016-07-27
 
 ## Pre-Work
 
-Prior to class, watch this video for a primer on accessibility and why it's important:
+Prior to class, watch these videos for a primer on accessibility and why it's important:
 
 - [Derek Featherstone: The Fine Art of Accessibility](https://vimeo.com/72175436)
+- [Stephanie Hobson: Accessibility With CSS – Making Websites Better for Everyone
+](http://wordpress.tv/2014/09/02/stephanie-hobson-accessibility-with-css-making-websites-better-for-everyone/)
 
-Also, be sure to **bring headphones** to class today as we will be using screenreader software in class.
+Also, be sure to **bring headphones** to class today as we will be using screen reader software in class.
 
 ---
 
@@ -29,12 +31,12 @@ Also, be sure to **bring headphones** to class today as we will be using screenr
 
 ## Keywords
 
-- Accessibility
+- [Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 - [Web Accessibility Initiative (W3C-WAI)](https://www.w3.org/WAI/)
 - [Web Content Accessibility Guidelines (WCAG 2.0)](https://www.w3.org/WAI/intro/wcag)
 - [Accessible Rich Internet Applications (WAI-ARIA)](https://www.w3.org/TR/wai-aria-1.1/)
 - Assistive technology
-- [tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex)
+- [`tabindex`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex)
 
 ---
 
@@ -44,7 +46,7 @@ The W3C-WAI provides an **[extensive reference guide](https://www.w3.org/WAI/WCA
 
 WebAIM has also summarized these guidelines in a **[checklist](http://webaim.org/standards/wcag/checklist)**.
 
-Working in small groups, you will be assigned one of the principles and put together a short presentation explaining the principle's related guidelines to the class.
+Working in small groups, you will be assigned one of the principles and will put together a short presentation explaining the principle's related guidelines to the class.
 
 Be creative with this! Feel free to use visuals, demos, or other teaching aids for your mini-lesson.
 
@@ -64,13 +66,79 @@ After running your initial audits, try using **VoiceOver or ChromeVox** to exper
 
 ## Exercise 3
 
-Exercise details TBA.
+In a Codepen, refactor this snippet of code to be more semantic, accessible HTML:
+
+```html
+<div>
+  <div><strong>All About Kittens</strong></div>
+  <img src="http://placekitten.com/300/200" alt="kitten" />
+  <div>Learn all you ever wanted to know about kittens and more! <span onclick="location.href='all-about-kittens.html';" style="cursor: pointer; color: blue; text-decoration: underline;">Continue reading &rarr;</span></div>
+</div>
+```
+
+---
+
+## Exercise 4
+
+Now we're going to **implement a skip link** on our Aloha projects.
+
+Implement a skip link as previously instructed, test it, and add a bit of extra CSS to style the link so that it visually matches the site branding when revealed to sighted users.
+
+---
+
+## Exercise 5
+
+You will be assigned an ARIA role to investigate. Refer to the W3C's documentation (linked on the previous slide) on ARIA roles to determine:
+
+- What your element is for
+- How it can and cannot be used
+
+You will then share your findings with the class.
+
+---
+
+## Exercise 6
+
+Refactor the following code to use the appropriate ARIA role for the tooltip text and appropriate ARIA property to relate that tooltip text to its sibling `<input>`.
+
+```html
+<form action="">
+   <div>
+      <label for="username">Your username</label>
+      <input type="text" id="username" required />
+      <div id="username-tip">Your username is your email address</div>
+   </div>
+   <div>
+      <label for="password">Your password</label>
+      <input type="text" id="password" required />
+      <div id="password-tip">If you forgot your password, you may reset it</div>
+   </div>
+</form>
+```
 
 ---
 
 ## Lab Activity
 
-Lab details TBA.
+**Task 1:**
+
+In today's lab, you will trade Aloha websites with a classmate and evaluate their project using the [WebAIM's WCAG 2.0 Checklist](http://webaim.org/standards/wcag/checklist) ([PDF version](http://webaim.org/standards/wcag/WCAG2Checklist.pdf)).
+
+To complete this evaluation, you will need to use a combination of:
+
+- Chrome's accessibility developer tools
+- The pa11y JS plugin
+- VoiceOver, NVDA, or the ChromeVox Chrome extension
+- Color Oracle or the No Coffee Chrome extension
+- The High Contrast Chrome extension
+
+In addition to evaluating their project, you will also need to provide **at least three individual recommendations** (in the form of pull requests) to address accessibility issues. To do this, you will need to fork their repo, make adjusts to the code, and submit pull requests based on your individual commits.
+
+**Task 2:**
+
+Once you finish the first task, use you the WebAIM checklist and the evaluation tools to perform an accessibility audit of one of your favourite websites. Write up a set of recommendations for what the owner of the website could do to improve overall accessibility.
+
+Have your evaluations prepared for tomorrow morning, and we'll review a selection of the audits and recommendations together.
 
 ---
 
@@ -99,10 +167,15 @@ Tools and tips to assist with colour-related accessibility testing:
 - [Color Oracle](http://colororacle.org/)
 - [Color Oracle - Design Tips](http://colororacle.org/design.html)
 - [High Contrast](https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph)
+- [No Coffee](https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl)
 
 From Udacity, an incredibly thorough (free!) course on web accessibility:
 
 - [Web Accessibility - Developing with Empathy](https://www.udacity.com/course/web-accessibility--ud891)
+
+A community-driven effort to make web accessibility easier:
+
+- [The A11Y Project](http://a11yproject.com/)
 
 More on ARIA:
 

@@ -196,7 +196,7 @@ class: center, middle
 
 Your turn! Time to create your first webpage.
 
-First things first...you need to pick a code editor to download and install (if you haven't done so already.
+First things first...you need to pick a code editor to download and install (if you haven't done so already).
 
 Next create a new folder somewhere on your computer and save a new file called `index.html`.
 
