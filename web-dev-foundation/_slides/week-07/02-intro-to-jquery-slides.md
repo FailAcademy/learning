@@ -376,7 +376,7 @@ $('ul').removeClass('menu');
 We can also target other element attributes using the `.attr()` and `.prop()` methods:
 
 ```javascript
-$('li').attr('id', 'active');
+$('li').attr('class', 'active');
 $('input').prop('disabled', true)
 ```
 
