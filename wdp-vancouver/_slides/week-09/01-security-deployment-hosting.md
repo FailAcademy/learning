@@ -32,7 +32,7 @@ template: inverse
 class: center, middle
 
 .large[
-   PHP is **not** secure by design (but it's easy to learn...).
+   PHP is relatively easy to learn, but it's not secure by design.
 ]
 
 ---
@@ -97,7 +97,7 @@ WordPress offers us [many functions](http://codex.wordpress.org/Data_Validation)
 
 # esc_url()
 
-**Used for:** Output that is necessarily a URL. Examples would be image `src` attributes and `href` values.
+**Used for:** Output that is necessarily a URL. Examples would be image `src` and `href` values.
 
 **What it does:** A more thorough, specific escaping than the `esc_attr` & `esc_html` functions, which removes or converts any characters not allowed in URLs into their URL-safe format.
 
@@ -112,6 +112,8 @@ WordPress offers us [many functions](http://codex.wordpress.org/Data_Validation)
 **What it does:** Strips the content of any tags or attributes that don't match the list of rules passed in.
 
 **[wp_kses() in the Codex.](http://codex.wordpress.org/Function_Reference/wp_kses)**
+
+*We can see an example of this in action in the `comments.php` template of the RED Start Theme.*
 
 ---
 class: center, middle
@@ -236,7 +238,7 @@ An example of a managed web host is [WP Engine](http://wpengine.com/).
 
 Dedicated web hosting means just that—your website **lives on server by itself** and you control what's installed on it.
 
-VPS hosting is like a **hybrid** of shared hosting and dedicated hosting. Your website will live on server with other websites, but you control what's installed on the server.
+VPS hosting is like a **hybrid** of shared hosting and dedicated hosting. Your website will live on server with other websites, but you control what's installed on your piece of the server.
 
 Your VPS host will also provide a **minimum allocation of resources** for your site 24/7.
 
@@ -272,15 +274,15 @@ class: center, middle
 
 # Nameservers
 
-Once you have a domain name and hosting plan, you'll need to set your domain to point to your web host's public name servers. They will look something like this:
+Once you have a domain name and hosting plan, you'll need to set your domain to point to your web host's public nameservers. They will look something like this:
 
 .center[
-   `ns1.greegeeks.com`
+   `ns1.greengeeks.com`
 
    `ns2.greengeeks.com`
 ]
 
-Every web host will have unique name servers, and will likely email them to you when you sign-up.
+Every web host will have unique nameservers, and will likely email them to you when you sign-up.
 
 ---
 class: center, middle
@@ -312,7 +314,7 @@ class: center, middle
 
 # Setting Up WP
 
-1. Create your database in phpMyAdmin (you may want to create a special database user too)
+1. Create your database in phpMyAdmin (you may need/want to create a special database user too)
 2. Download WP and FTP the core files into the appropriate directory in your hosting environment
 3. Create your `wp-config.php` and add the appropriate info (`WP_DEBUG` should be `false` salts and db prefix too!)
 4. Complete the install as you usually do
@@ -362,7 +364,7 @@ It's a network protocol that allows you to securely send data from one computer 
 
 # Option 1: All Git
 
-If your web host support Git, you can up a remote repo on that server to manage your deploys.
+If your web host supports Git, you can set up a remote repo on that server to help manage your deploys.
 
 First, you'll need to initialize **bare** repository:
 
@@ -382,7 +384,7 @@ A [bare repo](http://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/) is
 
 Next, you'll set-up a [Git hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) to allow deployment from local to production.
 
-Do do that, `cd` a level down in your repo's `hooks` sub-directory, and open the `post-receive` hook file using `nano`:
+To do that, `cd` a level down in your repo's `hooks` sub-directory, and open the `post-receive` hook file using `nano`:
 
 ```bash
 cd hooks
@@ -393,7 +395,7 @@ nano post-receive
 
 # Option 1: All Git
 
-Once the nano editor has opened, (customize and) insert the following lines:
+Once the nano editor has opened, insert the following lines (customized with your specific info):
 
 ```bash
 #!/bin/bash
@@ -439,10 +441,10 @@ git push production master
 
 ---
 
-# Option 2: Git-driven Deployment Tool
+# Option 2: Git-driven FTP Deployment Tool
 
 - Occasionally you may run into a web host that doesn't support Git
-- [DPLOY](https://leanmeanfightingmachine.github.io/dploy/) is a Node package that allows you to manage deploys based on your Git commits, but deploy the added/changed files to your web host's server using SFTP/FTP
+- [DPLOY](https://leanmeanfightingmachine.github.io/dploy/) is a Node package that allows you to manage deploys based on your Git commits, but deploys the added/changed files to your web host's server using SFTP/FTP
 - [Dandelion](https://github.com/scttnlsn/dandelion) is the Ruby version
 
 ---
