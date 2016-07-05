@@ -39,7 +39,7 @@ Some pre-reading on WordPress security:
 
 ## Additional Resources
 
-Tips on how to choose a web:
+Tips on how to choose a web host:
 
 - [The (Seriously) Comprehensive Guide to Choosing a Web Host](https://webdesign.tutsplus.com/tutorials/the-seriously-comprehensive-guide-to-choosing-a-web-host--cms-25430)
 
@@ -62,7 +62,7 @@ More on WordPress security best practices:
 - [The Importance of Escaping the Things](https://vip.wordpress.com/2014/06/20/the-importance-of-escaping-all-the-things/)
 - [Sanitizing, Escaping and Validating Data in WordPress](http://www.sitepoint.com/sanitizing-escaping-validating-data-in-wordpress/)
 
-More about SSH:
+All about SSH:
 
 - [How SSH Works](https://www.youtube.com/watch?v=zlv9dI-9g1U)
 - [SSH Essentials: Working with SSH Servers, Clients, and Keys](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys)
