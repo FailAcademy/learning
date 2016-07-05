@@ -98,7 +98,7 @@ class Game {
 
 # Game Loop
 
-Render at 30 frames per second using `setTimeout(fn, timeout)`.
+Render at 30 frames per second using `setTimeout(fn, timeout)`:
 
 ```js
 // game instance
@@ -113,8 +113,7 @@ function gameLoop() {
 gameLoop();
 ```
 
-**Pro Tip**: For performant animations, use [requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame). eg:
-`setTimeout(window.requestAnimationFrame(gameloop))`
+**Tip**: Use [requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) for performant animation: `setTimeout(window.requestAnimationFrame(gameloop))`
 
 ---
 

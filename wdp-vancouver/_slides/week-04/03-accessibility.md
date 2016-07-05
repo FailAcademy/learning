@@ -522,21 +522,41 @@ To implement a skip link, we'll use what we learned about using a class to hide 
 ```html
 <a class="screen-reader-text" href="#main">Skip to content</a>
 
-<main id="main" class="site-main" role="main" tabindex="-1">
+<main id="main" class="site-main" tabindex="-1">
    <p>Hello, world!</p>
 </main>
 ```
 
 ```css
 /* Prevent the default blue outline... */
-/* ID selector forces high specificity */
+/* ID selector forces high specificity! */
 
-#main {
+#main[tabindex="-1"]:focus {
    outline: 0;
 }
 ```
 
 **Question:** Why do we use a `tabindex` of `-1`?
+
+---
+
+# Skip Link Bug Fix
+
+A pure HTML/CSS skip link implementation may be buggy in some browsers (i.e. the browser will not properly focus the target area when the skip link is selected).
+
+To fix properly apply focus to the target content area, we can use this simple jQuery patch:
+
+```js
+// Fix "Skip Link" Focus in Webkit
+
+$(function() {
+   $("a[href^='#']").not("a[href='#']").click(function() {
+      $("#"+$(this).attr("href").slice(1)+"").focus();
+   });
+});
+```
+
+A more robust, [non-jQuery solution may be found here](https://github.com/Automattic/_s/blob/master/js/skip-link-focus-fix.js).
 
 ---
 
