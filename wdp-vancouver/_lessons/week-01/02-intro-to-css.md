@@ -118,7 +118,7 @@ Before you get started, you should watch these videos to reinforce the concepts 
 - [Don't Fear Starting from Scratch - Part 2: CSS](http://www.dontfeartheinternet.com/05-from-scratch/)
 - [Don't Fear Layout](http://www.dontfeartheinternet.com/08-layout/)
 
-By the end of the second day you'll should have a enough CSS written to begin approximating the rough layout of your Project 1 website.
+By the end of the second day you should have a enough CSS written to begin approximating the rough layout of your Project 1 website.
 
 ---
 
@@ -136,10 +136,15 @@ Some CSS FAQs:
 
 - [Common CSS questions](https://developer.mozilla.org/en-US/docs/Web/CSS/Common_CSS_Questions)
 
+An article unpacking the nuances of the "clearfix" hack:
+
+- [Understanding the Humble Clearfix](http://fuseinteractive.ca/blog/understanding-humble-clearfix#.V3wi6ZMrKCQ)
+
 Master your browser's dev tools:
 
 - [discover-devtools.codeschool.com](http://discover-devtools.codeschool.com/)
-- [](https://developers.google.com/web/updates/2016/06/devtools-digest)
+- [DevTools Digest: DevTools in 2016 and Beyond
+](https://developers.google.com/web/updates/2016/06/devtools-digest)
 
 Tools to help you validate your code:
 

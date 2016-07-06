@@ -1,67 +1,67 @@
 ---
 layout: project
-title: Project 3 - Mars Quiz App
-due: Monday, May 16th (beginning of class)
+title: Project 3 - Pong Game
+due: Monday, August 8th (beginning of class)
 ---
 
-## Design Specifications:
-- The body font family is Open Sans Light.
+For Project 2, you're going to create a pong game.
+
+You can [clone the project starter repo here](https://github.com/redacademy/pong-starter).
+
+## Requirements
 
 To receive a "Pass" grade for this project, your submission will need to satisfy the following criteria:
+
+**Functional requirements:**
+
+Your project must:
+
+- Move paddles on up/down, a/z keypress for two different players
+- Initialize a moving ball in the middle of the board at start and after a goal
+- Reverse the ball directions when it reaches a wall or touches a paddle
+- Track and display user score as goals against opponent
+- Trigger audio on ball bounces
 
 **General requirements:**
 
 Your project must:
 
-- Contain a single `.html` file and an external, minified `.css` file (a CSS reset may be included separately).
-- **Adequately reflect the designer's vision for the website when built out using HTML & CSS**.
-- Demonstrate effective organization of the project's root directory.
-- Have a Git repository initialized in its root directory with an appropriately customized `.gitignore` file.
-- Be pushed to GitHub (with all of your commits synced to it).
-- Use Webpack for running build tasks, such as React transformation, and error checking.
+- Be loaded using Webpack
+- Contain a `build` directory for ES6 compiled into ES5 using Babel
+- Contain an appropriate `package.json` file
+- Demonstrate effective organization of the project’s root directory
+- Have a Git repository initialized in its root directory with an appropriately customized `.gitignore` file
+- Be pushed to GitHub (with all of your commits synced to it)
+- Contain a `REAMDE.md` file describing the project (e.g. technologies used, personal learnings, etc.)
 
 **HTML requirements:**
 
-Your project must:
+Your project must contain:
 
-- Uses the HTML5 doctype and semantic, *syntactically-correct HTML5*.
-- Include all essential elements covered in class<br/> (e.g. `<meta charset="utf-8">`).
-
-**CSS/Sass requirements:**
-
-Your project must:
-
-- Make appropriate use of classes and IDs as selectors.
-- Use a CSS reset.
-- Minify your css using Webpack.
-- Demonstrate effective use of box model properties (Must use flexbox).
-- Use an icon font.
-- Use a `linear-gradient` background.
-- Create a 3D effect on the Rocket icon using the `text-shadow` property.
-- Create a glowing effect on the counter using the `text-shadow` property.
-- Apply the `rotate` transform to the sidebar text so it displays at 90deg.
-- Apply the `letter-spacing` property to the sidebar text.
-- The project should contain at least 20% original CSS, not specified by the project example.
-(The look ad feel is up to you!)
+- Use HTML5 Audio sounds triggered on ball bounces
+- AUse an HTML5 Canvas board to contain the pong game with:
+  - an initialized board with a background
+  - coloured paddles and ball
 
 **JS requirements:**
 
 Your project must:
 
-- Implement React and the related Webpack loader plugins for transforming React code into ES5 JavaScript.
-- Be composed of at least 3 React Components, other than the Parent Component.
-- Components must be written in separate files, and bundled together into a single file. This should be accomplished using `require` or `import`.
+- Use default `import` and `export`
+- Use ES6 class `constructor`'s and `method`'s
+- Instantiate new objects using `new`
+- Use of `this` appropriately within classes
+- Be written in an object-oriented style using classes
 
-React requirements:
+**Stretch goals:**
 
-- All components must correctly implement interactivity using `state` and `props`
-- Quiz page: There should be a page-level component, containing the other components on the page.
-- Counter: The counter should visually count down, in minutes, from a number specified on the counter component instance via `props`, e.g. `<Counter countdownMinutes={2} />`
-- Quiz Form: This component should capture user input, check some criteria for correctness of the input and display feedback to the user, once the user *submits* the form. This should be done by modifying the state of the parent component from the child (Quiz Form) component.
-- If the user does not submit a correct answer before the countdown timer has reached 0:00, then the application should remove the form and show some feedback indicating that the user has failed.
-- Once the user has answered correctly, they should not be able to reset the quiz.
-- If the user fails, the quiz should reset.
+Want to challenge yourself? Your project could also:
+
+- Trigger additional balls on a keypress
+- Create additional balls with special properties (different speeds, sizes, etc.)
+- Trigger speed changes or size changes of paddles
+- Fire a shot from a paddle on key press
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to [mackenzie@redacademy.com](mailto:mackenzie@redacademy.com).
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to [mandi@redacademy.com](mailto:mandi@redacademy.com).

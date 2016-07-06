@@ -25,54 +25,46 @@ layout: false
 
 ---
 
-.left-column[
-  ## Column Layout
-]
 
-.right-column[
-You can make two-column layouts as well.red[*] in a slideshow!
+<!--
+Table 3-1. Image format overview
+Format	Best For	Optimization Options
+JPEG	Photos, images with many colors	Decrease quality, export as progressive, reduce noise
+GIF	Animations	Decrease dithering, decrease number of colors, increase horizontal patterns, reduce vertical noise
+PNG-8	Images with few colors	Decrease dithering, decrease number of colors, increase horizontal and vertical patterns
+PNG-24	Partial transparency	Reduce noise, reduce number of colors
 
-A sample unordered list:
 
-- List item 1
-- List item 2
-- List item 3
-
-.footnote[.red[*] And add footnotes too]
-]
 
 ---
 
-# Syntax Highlighting
 
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
+https://css-tricks.com/the-difference-between-minification-and-gzipping/
 
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
+Minification does things like removing whitespace, removing comments, removing non-required semicolons, reducing hex code lengths...
+
+
+Gzipping finds all repetitive strings and replaces them with pointers to the first instance of that string.
+
+
+https://css-tricks.com/snippets/htaccess/active-gzip-compression/
+
+Gzipping is far more effective. Doing both is ideal.
+
+http://httpd.apache.org/docs/current/mod/mod_deflate.html
+http://nginx.org/en/docs/http/ngx_http_gzip_module.html
+
+http://gzipwtf.com/
 
 ---
 
-.left-column[
-  ## Remark How-tos
-]
+# Caching
 
-.right-column[
-   This slideshow is based on [remark.js](https://github.com/gnab/remark).
+http://httpd.apache.org/docs/2.2/caching.html
 
-   To learn more about building a slideshow with remark, check out:
+https://www.nginx.com/resources/admin-guide/caching/
 
-   - [The remark formatting guide](https://github.com/gnab/remark/wiki/Formatting)
-   - [The remark Markdown guide](https://github.com/gnab/remark/wiki/Markdown)
-]
+-->
 
 ---
 

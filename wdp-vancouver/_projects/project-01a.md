@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 1 / Part 1 - Aloha Homepage
-due: Monday, April 18th (beginning of class)
+due: Monday, July 11th (beginning of class)
 ---
 
 For the Project 1, you're going to create a homepage for your client the Aloha Apparel Co. The first part of this project will focus on building out the HTML and CSS components of this responsive website.
@@ -42,8 +42,11 @@ To receive a "Pass" grade for this project, your submission will need to satisfy
 Your project must:
 
 - Contain a single `.html` file and an external `.css` file (a CSS reset may be included separately)
-- Adequately reflect the designer's vision for the website when built out using HTML & CSS
+- Adequately reflect the designer's vision for the website
 - Demonstrate effective organization of the project's root directory
+- Have a Git repository initialized in its root directory with an appropriately customized `.gitignore` file
+- Be pushed to GitHub (with all of your commits synced to it)
+- Contain a `REAMDE.md` file describing the project (e.g. technologies used, personal learnings, etc.)
 
 **HTML requirements:**
 
@@ -76,4 +79,4 @@ Want to challenge yourself? Your project could also:
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a zip file containing your project assets** to [mandi@redacademy.com](mailto:mandi@redacademy.com).
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to [mandi@redacademy.com](mailto:mandi@redacademy.com).

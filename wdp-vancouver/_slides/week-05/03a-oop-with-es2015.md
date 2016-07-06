@@ -307,7 +307,7 @@ What does `this` refer to in the previous example?
 
 # Exercise 2
 
-Pick one of the classes your group modeled in the previous soccer game exercise, and use that to **write your first ES2015 class**.
+Pick one of the classes your group modelled in the previous soccer game exercise, and use that to **write your first ES2015 class**.
 
 Ensure that you set all the appropriate **properties** in the `constructor` and create all the required **methods** for your class.
 
@@ -379,7 +379,7 @@ Joe.greet(); // hello
 
 Now model our own classroom using the following classes. Note that `WebDevStudent` should be a subclass of `Student` and `Student` should be a subclass of `Person`. Create at least **three properties** and **one method** on each class.
 
-- Clazz *(note: class is a keyword in JavaScript)*
+- Clazz (`class` is a reserved keyword in JS)
 - Person
 - Student
 - WebDevStudent

@@ -1,14 +1,14 @@
 ---
 layout: project
-title: Project 2 - Pong
-due: Tuesday, May 3 (beginning of class)
+title: Project 2 - Instanews App
+due: Tuesday, July 26th (beginning of class)
 ---
 
 For Project 2, you're going to create a pong game.
 
 You can [clone the project starter repo here](https://github.com/redacademy/pong-starter).
 
-## Design Specifications:
+## Design Specifications
 
 - A working pong game with moving paddles and score keeping
 
@@ -30,13 +30,13 @@ Your project must:
 
 Your project must:
 
-- be loaded using Webpack
-- contain a "build" directory for ES6 compiled into ES5 using Babel
-- an appropriate package.json file
-- an appropriate .gitignore file
-- a README describing your project
-- an HTML5 Canvas board containing the pong game
-- HTML5 Audio sounds triggered on ball bounces
+- Contain a single `.html` file and an external, minified `.css` file (a CSS reset may be included separately)
+- Adequately reflect the designer's vision for the website
+- Demonstrate effective organization of the project's root directory
+- Have a Git repository initialized in its root directory with an appropriately customized `.gitignore` file
+- Be pushed to GitHub (with all of your commits synced to it)
+- Contain a `REAMDE.md` file describing the project (e.g. technologies used, personal learnings, etc.)
+- Use Gulp for running build tasks, such as minification, and error checking
 
 **HTML requirements:**
 

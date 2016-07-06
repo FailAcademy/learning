@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 1 / Part 2 - Aloha Homepage
-due: Monday, April 25th (beginning of class)
+due: Monday, July 18th (beginning of class)
 ---
 
 For the second part of Project 1, you're going to level-up the Aloha Apparel Co. website by adding interactivity with JS.
@@ -65,4 +65,4 @@ Want to challenge yourself? Your project could also:
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a zip file containing your project assets** to [mandi@redacademy.com](mailto:mandi@redacademy.com).
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to [mandi@redacademy.com](mailto:mandi@redacademy.com).

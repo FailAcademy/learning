@@ -8,39 +8,41 @@ lesson_date: 2016-07-18
 
 ## Agenda
 
-We'll take a close look at the quirks and unusual bits of the *ES5 JavaScript specification*. We'll discuss some puzzling and irritating language features, and how to avoid the common pitfalls associated with them when programming in JavaScript.
+We'll take a close look at the quirks and unusual bits of the **ES5 JavaScript specification**.
+
+We'll discuss some puzzling and irritating language features, and how to avoid the common pitfalls associated with them when programming in JavaScript.
 
 ---
 
 ## Learning Objectives
 
-###Type coercion
-- Describe the circumstances where JavaScript will explicitly change they canonical type of a value
-- Describe the behavior of the loose comparison operator, `==` vs `===`
-
-###Function scope and hoisting
-- Define the purpose of an IIFE
-- Define function scope
-- Define hoisting
-- Define scope chaining
-
-###Functions inside conditionals
-- Describe the behavior of function expressions written inside conditional block
-- Describe the behavior of function declarations written inside conditional blocks
-
-###'Pass by Value' vs. 'Pass By Reference'
-- Describe what is meant by 'Pass by value'
-- Describe what is meant by 'Pass by reference'
-
-###Methods, Objects, `this` & `bind`
-- Describe why JavaScript provides a  `bind` method
-- Describe ways to influence the value of `this` when extracting methods from objects
+- Describe the circumstances where JavaScript will explicitly change they canonical type of a value.
+- Describe the behaviour of the loose (`==`) versus strict (`===`) comparison operators.
+- Define the purpose of an immediately-invoked function expression (IIFE).
+- Explain how function scope works in JavaScript, as well as hoisting and scope chaining.
+- Describe the behaviour of function expressions versus function declarations written inside conditional blocks.
+- Describe what is meant by the difference between "passing by value" and "passing by reference".
+- Explain why JavaScript provides a `bind` method.
+- Describe ways to influence the value of `this` when extracting methods from objects.
 
 ---
 
-##Exercise 1 - Type Coercion
+## Keywords
 
-####What will the output be?
+- [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
+- [Immediately-invoked function expression (IIFE)](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
+- Hoisting
+- [`this`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/this)
+- [`bind`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
+
+---
+
+## Exercise 1
+
+### Type Coercion
+
+**What will the output be?**
+
 ```js
 function printHi() {
 
@@ -59,13 +61,14 @@ function printHi() {
 printHi();
 ```
 
-####What will the output be?
+**What will the output be?**
+
 ```js
 (function () {
-    falseString = "false";      // 1
+    falseString = "false";                      // 1
     if(true) {              
-        var falseString;        // 2
-        if(falseString) {       // 3
+        var falseString;                        // 2
+        if(falseString) {                       // 3
             console.log(falseString == true);   // 4
             console.log(falseString == false);  // 5
         }
@@ -75,9 +78,12 @@ printHi();
 
 ---
 
-##Exercise 2 - Function scope and hoisting (Review)
+## Exercise 2
 
-####What will the output be?
+### Function Scope and Hoisting
+
+**What will the output be?**
+
 ```js
 var name = "John";
 
@@ -92,9 +98,12 @@ var name = "John";
 
 ---
 
-##Exercise 3 - Functions inside conditionals
+## Exercise 3
 
-####What will the output be?
+### Functions Inside Conditionals
+
+**What will the output be?**
+
 ```js
 (function(){
 
@@ -126,12 +135,14 @@ var name = "John";
 })();
 ```
 
-
 ---
 
-##Exercise 4 - 'Pass by Value' vs. 'Pass by Reference'
+## Exercise 4
 
-####What will the output be?
+### Passing by Value versus Reference
+
+**What will the output be?**
+
 ```js
 var me = {                  // 1
     'partOf' : 'A Team'
@@ -145,7 +156,7 @@ function myTeam(me) {       // 2
 }
 
 function myGroup(me) {      // 4
-    me.partOf = 'A Group'; // 5
+    me.partOf = 'A Group';  // 5
 }
 
 myTeam(me);     
@@ -157,9 +168,12 @@ console.log(me);            // 7
 
 ---
 
-##Exercise 5 - Methods, Objects, `this` & `bind`
+## Exercise 5
 
-####What will the output be?
+### Methods, Objects, `this` & `bind`
+
+**What will the output be?**
+
 ```js
 var myself = {
     myName: 'Tom',
@@ -167,7 +181,7 @@ var myself = {
     printMyNickNames: function () {
     'use strict';
         this.myNickNames.forEach(
-            function (nickName) {  // 1
+            function (nickName) {                                // 1
                 console.log(this.myName +', nick: '+ nickName);  // 2
             }
         );
@@ -181,11 +195,16 @@ myself.printMyNickNames();
 
 ## Lab Activity
 
-Complete as many exercises as you can on the Free Code Camp JavaScript track here: [http://www.freecodecamp.com/map](http://www.freecodecamp.com/map).
-Find the  **Basic JavaScript (10 hours)** track.
-You'll be expected to get at least half way through the exercises by the end of the class.
-Remember to **use your classmates** as a resource when trying to solve difficult exercises.
+Today you'll practice what you've learned using a fantastic free online resource called [Free Code Camp](http://www.freecodecamp.com/ma).
 
-## There will be a prize for those folks who complete the most exercises correctly!
+Go to the Free Code Camp website, find the **Basic JavaScript (10 hours)** section, and complete as many of these exercises as you can today.
+
+Remember to use your instructors and your fellow students as a resource if you're stuck.
 
 ---
+
+## Additional Resources
+
+A book series exploring the core mechanisms of the JS language:
+
+- [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)

@@ -1,72 +1,64 @@
 ---
 layout: lesson
 title: Performance and Optimization
-slides: ['_slides/_template/week-04/04-performance.md']
+slides: ['_slides/week-04/04-performance.md']
+lesson_date: 2016-07-28
 ---
 
 ## Pre-Work
 
-From the HTML & CSS textbook:
-
-- A Closer Look at Tags (pp. 23-24)
+*There is no pre-work for this lesson.*
 
 ---
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+- Describe what website performance is and why it matters.
+- Use an array of online tools and browser extensions to test a website's performance.
 
 ---
 
 ## Keywords
 
-- [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- Performance
+- Optimization
+- Page speed
+- Page weight
+- Network requests
+- Critical rendering path
 
 ---
 
 ## Exercise 1
 
-Do this activity!
-
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+Exercise details TBA.
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+Exercise details TBA.
 
-```html
+---
 
-<!-- A bit of sample HTML with syntax highlighting-->
+## Exercise 3
 
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+Exercise details TBA.
 
 ---
 
 ## Lab Activity
 
-This is a link to the lab activity...
+Lab details TBA.
 
 ---
 
 ## Additional Resources
 
-This line describes the resource:
+A free online screencast series about website performance tips:
 
-- [Code Academy](http://www.codecademy.com/learn)
+- [LevelUpTuts - Website Performance Tutorials](https://www.youtube.com/playlist?list=PLLnpHn493BHGpGXukqYsxwQw3ziW3uti6)
+
+A free online book on website performance:
+
+- [Designing for Performance](http://designingforperformance.com/)

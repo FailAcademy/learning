@@ -25,7 +25,7 @@ We'll be using HTML Canvas to build the Pong game in Project 3, so you'll want t
 - Describe and use the elements of a `class`, including the `constructor` and 'methods'.
 - Describe how `this` functions within classes.
 - Describe and use `extends` and `super` for inheritance purposes.
-- `import` and `export` ES2015 classes as modules (as `default` or named exports).
+- Use `import` and `export` to import and export ES2015 classes to modules (as `default` or named exports).
 
 ---
 
@@ -53,7 +53,7 @@ Work in groups to create a **poster-based representation** your object-oriented 
 
 ## Exercise 2
 
-Pick one of the classes your group modeled in the previous soccer game exercise, and use that to **write your first ES2015 class**.
+Pick one of the classes your group modelled in the previous soccer game exercise, and use that to **write your first ES2015 class**.
 
 Ensure that you set all the appropriate **properties** in the `constructor` and create all the required **methods** for your class.
 
@@ -77,6 +77,8 @@ Now model our own classroom using the following classes. Note that `WebDevStuden
 ## Lab Activity
 
 In today's lab, you'll commence work on Project 3 using what you've now learned about ES2015 syntactical features and Webpack to build a Pong game.
+
+Refer to the [project requirements page](/project/project-3-pong-game/) and the [building a Pong game slidedeck](/slides/building-a-pong-game/) for further instructions.
 
 ---
 

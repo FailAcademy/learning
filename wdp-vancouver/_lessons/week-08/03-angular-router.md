@@ -2,7 +2,7 @@
 layout: lesson
 title: Using the Angular 2 Router
 slides: ['_slides/week-08/03-angular-router.md']
-lesson_date: 2016-06-01
+lesson_date: 2016-08-24
 ---
 
 ## Pre-Work
@@ -45,7 +45,7 @@ Prepare to use the Angular Router.
 
 1. Add the `ROUTER_PROVIDERS` to your application's bootstrap method.
 
-2. Add the Angular Component [lifecycle hook](https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html) `ngOnInit` to your main application Component. 
+2. Add the Angular Component [lifecycle hook](https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html) `ngOnInit` to your main application Component.
 We'll use this method to trigger rendering of the homepage Component when your application loads.
 
 ---
