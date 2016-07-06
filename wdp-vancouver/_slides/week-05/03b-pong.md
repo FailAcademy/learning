@@ -469,33 +469,33 @@ Add a `render` method to the `Ball` class:
 class Ball {
    // In Ball.js...
 
-   render(height, width) {
-      this.x += this.vx;
-      this.y += this.vy;
-      //...
+   render(ctx) {
+     this.x += this.vx;
+     this.y += this.vy;
+     this.draw(ctx);
    }
+    /* ... */
 }
 ```
 
 ---
 
-# Pass Game into Ball
+# Draw the Ball
+
+Create a `draw` function called by the `render` function.
 
 ```js
-// In Ball.js...
+class Ball {
+   // In Ball.js...
 
-render(ctx, game) {
-   this.x += this.vx;
-   this.y += this.vy;
-
-   console.log(game);
-   //...
+  draw(ctx) {
+    ctx.fillStyle = 'white';
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.closePath();
+  }
 }
-```
-
-```js
-// In Game.js...
-this.ball.render(this.context, this);
 ```
 
 ---
@@ -506,12 +506,8 @@ Detect when the ball hits the sides:
 
 ```js
 class Ball {
-   constructor(width, height) {
-      this.width = width;
-      this.height = height;
-   }
    //...
-   render(height, width) {
+   render(ctx) {
       //...
       const hitLeft = this.x >= this.width;
       const hitRight = this.x + this.size <= 0;
