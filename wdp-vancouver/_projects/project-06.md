@@ -6,7 +6,7 @@ due: Tuesday, September 6th (beginning of class)
 
 For Project 6, you'll be getting your GitHub portfolio into tip-top shape.
 
-This work is one of the most important components of this course because you'll want to be sure you're showcasing your best work to your future employers!
+This work is **one of the most important components of this course** because you'll want to be sure you're showcasing your best work to your future employers!
 
 ## Requirements
 
@@ -30,13 +30,13 @@ To receive a "Pass" grade for this project, you will need to revisit your Projec
 
 **Incorporating feedback:**
 
-- Fix all project requirements that were noted as "not complete" on your project evaluation forms
+- Fix all project requirements that were noted as incomplete on your project evaluation forms
 - Fix any other noted issues in the the "Comments" section of your project evaluation forms
 - Fix outstanding issues posted by your instructors on your GitHub repos (close the issue once you have done this satisfactorily)
 
 **Git/GitHub:**
 
-- Ensure all projects should have a Git repo initialized in them and be pushed to GitHub (that means P1 and P2 too!)
+- Ensure all projects should have a Git repo initialized in them and be pushed to GitHub
 - Make sure commit messages are meaningful (they should describe the changes that you are committing to your project)
 - Ensure there are `README.md` files in all of your project repositories with content that meaningfully describes the project
 - Ensure `.gitignore` files exclude all unnecessary files (e.g. all Node modules, etc.)

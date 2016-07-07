@@ -63,12 +63,14 @@ Ensure that you set all the appropriate **properties** in the `constructor` and 
 
 Now model our own classroom using the following classes. Note that `WebDevStudent` should be a subclass of `Student` and `Student` should be a subclass of `Person`. Create at least **three properties** and **one method** on each class.
 
-- Clazz (`class` is a reserved keyword in JS)
+- Clazz *
 - Person
 - Student
 - WebDevStudent
 
-**Instantiate your classmates** using `new WebDevStudent()`.
+*(note: class is a keyword in JavaScript, and thus cannot be a valid name)*<br />
+
+*Instantiate your classmates using* `new WebDevStudent()`.
 
 ---
 

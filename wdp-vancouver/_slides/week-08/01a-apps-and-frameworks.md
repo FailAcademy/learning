@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Web Applications & JavaScript Frameworks
+# Web Applications <br />& JS Frameworks
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -34,22 +34,24 @@ template: inverse
 
 # What Makes a Website
 
-Strictly speaking, a website is a collection of web pages (HTML, CSS, and JavaScript files), that are accessible over the Internet, via HTTP at a given URL.
+Strictly speaking, a website is a collection of webpages (HTML, CSS, and JavaScript files), that are accessible over the Internet, via HTTP at a given URL.
 
-But this is not a very useful description. The term 'website' has a more subtle meaning to web developers, which we'll discover today.
+But this is not a very useful description!
+
+The term *website* has a more subtle meaning to web developers, which we'll discover today.
 
 ---
 class: center, middle
 
 .large[
-   All of the projects we've built so far in class are good examples of traditional *websites*, in that they're main use case is **presentational**.
+   All of the projects we've built so far in class are good examples of traditional **websites**, in that they're main use case is **presentational**.
 ]
 
 ---
 class: center, middle
 
 .large[
-   They are functionally different from *web applications*, <br />e.g. Slack, Trello.
+   They are functionally different from **web applications**, like Slack or Trello.
 ]
 
 ---
@@ -57,7 +59,7 @@ class: center, middle
 
 ### So, what is a web application?
 
-Hint: It's just a website with benefits.
+**Hint:** It's just a website with benefits.
 
 ---
 template: inverse
@@ -65,29 +67,19 @@ template: inverse
 # A Brief History of Websites
 
 ---
-template: inverse
-
 # Static Sites
 
----
-#Static Sites
+In the parlance of web development, sites with no **server-side** dependency are called **static** sites, because their content does not change, unless changed by the web developer.
 
-In the parlance of web development, sites with so 'server-side' dependency are called 'static' sites, because their content does not change, unless changed by the web developer.
-
-'Static' sites are composed of static assets.
-
----
-template: inverse
-
-# Dynamic sites
+Static sites are composed of static assets.
 
 ---
 
 #Dynamic sites
 
-The term 'dynamic site' encompasses a wide variety of applications. The main characteristic of a dynamic site is that content on them changes based on user interaction.
+The term **dynamic site** encompasses a wide variety of applications. The main characteristic of a dynamic site is that content on it **changes based on user interaction**.
 
-This is made possible by separate programs running in tandem on the client's computer, and on the server computer that is delivering the website, and will normally always involve a database.
+This is made possible by separate programs running in tandem on the client's computer and on the server computer that is delivering the website, and will normally always involve a database.
 
 ---
 
@@ -101,7 +93,7 @@ Although there were other languages that could be used to create websites before
 
 # What About HTML, CSS and JS?
 
-**PHP is a 'server-side' scripting language** that works alongside these other technologies.
+We know that **PHP is a server-side scripting language** that works alongside these other technologies.
 
 It enables developers to **generate** content based on data in their databases.
 
@@ -125,7 +117,7 @@ It enables developers to **generate** content based on data in their databases.
 
 PHP ushered in the **dynamic web**.
 
-Suddenly, web pages could do all sorts of interesting things because of this tight integration between the user-interface (web pages in the browser) and the server-side code and hardware.
+Suddenly, webpages could do all sorts of interesting things because of this tight integration between the user-interface (web pages in the browser) and the server-side code and hardware.
 
 ---
 
@@ -133,18 +125,20 @@ Suddenly, web pages could do all sorts of interesting things because of this tig
 
 A number of other factors influenced the popularity of PHP:
 
-- **e-commerce** and the need to collect CC info with web forms
+- **E-commerce** and the need to collect CC info with web forms
 - It's free and easy to install and run (you don't need complicated compilers or proprietary software)
 - It's easy to connect to a database (SQL is built in)
-- It's easy to learn, **dynamic** language, lets you prototype ideas quickly without worrying about correctness, which is a feature of **static** programming languages.
+- It's easy to learn, it's a **dynamic** language, and it lets you prototype ideas quickly without worrying about correctness (which is a feature of **static** programming languages)
 
 .footnote[**Terminology:** Static language]
 
 ---
 
-### Websites as Software Applications
+# Websites as Software Applications
 
-The power of generative content, powered by server-side languages, especially php, gave us the internet as we know it: A place not just for consuming content, but for **interacting** with content, **creating and publishing content ourselves**, and conducting and orchestrating business.
+The power of generative content, powered by server-side languages, especially php, gave us the internet as we know it...
+
+A place not just for consuming content, but for **interacting** with content, **creating and publishing content ourselves**, and conducting and orchestrating business.
 
 ---
 template: inverse
@@ -171,7 +165,7 @@ PHP worked great for creating web content that was dynamic, and enabled revoluti
 
 As websites became more capable in their functionality, so too did the scope of what had to be done in their user interfaces!
 
-The best sites were by their nature highly interactive, and this posed a problem for interface-designers.
+The best sites were by their nature are highly interactive, and this posed a problem for interface designers.
 
 ---
 
@@ -179,7 +173,7 @@ The best sites were by their nature highly interactive, and this posed a problem
 
 The technology for creating user-interfaces on the web is cumbersome, as we've experienced with HTML and CSS.
 
-Advancements in CSS, animations, transitions and 3D have made it possible to do some interactivity, but ultimately, JavaScript must be used to fill in the blanks.
+Advancements in CSS, animations, transitions, and 3D have made it possible to do some interactivity, but ultimately, JavaScript must be used to fill in the blanks.
 
 ---
 
@@ -237,7 +231,7 @@ Frameworks attempt to give us useful abstractions for structuring the code that 
 
 ---
 
-### A Popular Class of Frameworks
+# A Popular Class of Frameworks
 
 Many web frameworks are designed around the **MVC** pattern.<br/>
 MVC is an acronym for **"Model", "View", "Controller"**.
@@ -250,7 +244,7 @@ It's a helpful mental-model for thinking about specific areas of functionality i
 
 # M -> Model
 
-**Model** loosely refers to the *data* in your application.
+**Model** loosely refers to the **data** in your application.
 
 A common model for many apps is the **User Model**.
 
@@ -264,22 +258,22 @@ Models also allow us to apply *rules for modifying data related to itself*.
 
 # V -> View
 
-**View** refers to specific user interface (UI) elements.
+**View** refers to specific **user interface (UI)** elements.
 
-For example, For our User Model, we may have a number of associated Views:
+For example, For our User Model, we may have a number of associated views:
 
 - The user profile view
 - The edit profile view
 - The user settings view
 - ...etc
 
-In a web application, Views are usually written in HTML.
+In a web application, views are usually written in HTML.
 
 ---
 
 # C -> Controller
 
-**Controller** refers to a specific area in your application where you write code to coordinate your application/widget's data model with the view that is showing it to the end user.
+**Controller** refers to a specific area in your application where you write code to coordinate your application/widget data model with the view that is showing it to the end user.
 
 Controllers have a number of other characteristics, and the definition if fairly malleable, but for our purposes, we will think about controllers as always being **directly associated with a view**.
 
@@ -299,16 +293,18 @@ Once we're satisfied we pass the data to the **controller**, which acts as a go-
 
 ---
 
-### Exercise 1
+# Exercise 1
 
-Examine a complex web application (eg, Slack or Invision), and try to identify which parts are or could be components.
+Examine a complex web application (e.g. Slack or Trello), and try to identify which parts are or could be components.
 
 Also, consider the MVC pattern and identify where developers might have added a controller, and what the applications various data-models might look like.
+
+We will discuss your choices with everyone in the class.
 
 ---
 template: inverse
 
-#Beyond MVC
+# Beyond MVC
 
 ---
 
@@ -316,12 +312,12 @@ template: inverse
 
 Not every application needs the restrictive structure of MVC.
 
-Client-side web developers are looking for a way to create efficient user interfaces, and they're not as concerned as they once thought they ought to be with managing the 'model layer' or creating large 'monolithic' applications.
+Client-side web developers are looking for a way to create efficient user interfaces, and they're not as concerned as they once thought they ought to be with managing the *model layer* or creating large *monolithic* applications.
 
 
 ---
 
-#Tradeoffs
+# Tradeoffs
 
 When using a framework to write a JavaScript applications, you'll make some tradeoffs.
 
@@ -332,14 +328,11 @@ You would never add Angular to your Ember or Backbone application. This simply d
 
 # Framework of Choice
 
-You'll soon learn that there are dozens of JS Frameworks out there that are designed to facilitate creating software applications with JavaScript in the browser, 
-and that there is a culture of hype that surrounds them. 
-
-These are the heavyweights:
+There are dozens of frameworks out there that are designed to facilitate creating software applications with JS in the browser, and that there is a culture of hype that surrounds them:
 
 - **Google** has built a framework: [Angular](https://angularjs.org/)
 - **Facebook** has created a framework (actually just a library): [React](https://facebook.github.io/react/)
-- **Ruby on Rails** core team have one too: [Ember](http://emberjs.com/)
+- The **Ruby on Rails** core team has one too: [Ember](http://emberjs.com/)
 - "Everyone Knows Backbone": [Backbone](http://backbonejs.org/)
 - [...and so on](https://en.wikipedia.org/wiki/Comparison_of_JavaScript_frameworks)
 
@@ -351,17 +344,24 @@ class: center, middle
 [A JS framework on every table](http://www.allenpike.com/2015/javascript-framework-fatigue/)
 
 ---
-#Conclusion
+# Conclusion
 
 - There is a lot of terminology to learn, in software development, especially in web development.
 - We can build application-like experiences using the technologies that power the web (JS/CSS/HTML).
-- There are may ways to go about doing this. Most projects will be based on one of the frameworks mentioned in these slides.
-- Developers should be aware of why they are using the tools they are using, and what the specific advantages / tradeoffs might be
-between one tool / framework and another.
+- There are may ways to go about doing this. Most projects will be based on one of the frameworks we have discussed.
+- Developers should be aware of why they are using certain tools, and what the specific advantages/tradeoffs are.
 - The most popular tool, is not always the best choice.
 
 ---
 
+# What We've Learned
+
+- The difference between a website and web application
+- How the evolution of the web has necessitated the emergence of JS frameworks, libraries, etc.
+- What a single-page application is
+- How the MVC pattern works
+
+---
 template: inverse
 
 # Questions?

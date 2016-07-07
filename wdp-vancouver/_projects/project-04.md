@@ -4,7 +4,7 @@ title: Project 4 - Inhabitent Site
 due: Monday, August 22nd (beginning of class)
 ---
 
-For Project 4, you will create a multi-page website with a blog for a camping supply company called Inhabitent using WordPress as a content management system.
+For Project 4, you will create a multi-page website with a blog for a camping supply company called Inhabitent Camping Supply Co. using WordPress as a content management system.
 
 You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-04.zip).
 
@@ -82,14 +82,14 @@ Your project must:
 Your project must:
 
 - Use the HTML5 doctype and semantic, syntactically-correct HTML5
-- Include all essential elements covered in class (e.g. `<meta charset="utf-8">`)
+- Include all essential elements covered in class (e.g. `<meta charset="utf-8">`), and be dynamically populated with WordPress template tags where appropriate
 
 **CSS/Sass requirements:**
 
 Your project must:
 
 - Make appropriate use of classes and IDs as selectors
-- Use a CSS reset (normalize.css is included with the `restarter` theme)
+- Use a CSS reset (normalize.css is included with the `redstarter` theme)
 - Use Sass as a preprocessor, with CSS properly compiled and minified
 - Use the `background` property where appropriate
 - Implement a layout using flexbox (no floats)
@@ -101,6 +101,10 @@ Your project must:
 **JS requirements:**
 
 - Add a toggle-able search form to the site header where the search input is automatically focused when the form is toggled open
+
+**Additional requirements:**
+
+- Be sure to **test** your project completely in **all major browsers** (Chrome, Firefox, Safari, Opera, IE11) when you think you're finished
 
 **Stretch goals:**
 

@@ -6,7 +6,7 @@ due: Friday, September 23rd (beginning of class)
 
 For your final project, you will work in groups to build a live, functioning version of a RED Community Partner Project that has previously been through a UX process.
 
-You will have to synthesize everything you have learned throughout the semester to best decide how to tackle your assigned project. It must incorporate all of the best practices we have learned about HTML, CSS, and JS/PHP. You must also use Git for version control, Gulp for task-running, and Sass as a pre-processor.
+You will have to synthesize everything you have learned throughout the semester to best decide how to tackle your assigned project. It must incorporate all of the best practices we have learned about HTML, CSS, JS/jQuery, PHP, and even AngularJS. You must also use Git for version control, Gulp for task-running, and Sass as a pre-processor.
 
 Your course instructors will be available in-class while you work on your project to provide assistance where required.
 

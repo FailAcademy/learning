@@ -1,8 +1,16 @@
 ---
 layout: lesson
 title: Web Apps and JS Frameworks
-slides: ['_slides/week-05/01a-apps-and-frameworks.md']
+slides: ['_slides/week-08/01a-apps-and-frameworks.md']
 lesson_date: 2016-08-22
+---
+
+## Pre-work
+
+Prior to class, read the following article introducing the MVC pattern and various JS frameworks:
+
+- [Journey Through The JavaScript MVC Jungle](http://www.smashingmagazine.com/2012/07/journey-through-the-javascript-mvc-jungle/)
+
 ---
 
 ## Learning Objectives
@@ -15,6 +23,7 @@ lesson_date: 2016-08-22
 ## Keywords
 
 - Single-Page Application (SPA)
+- Platform
 - Framework
 - Library
 - Component
@@ -23,22 +32,23 @@ lesson_date: 2016-08-22
 
 ## Exercise 1
 
-Examine a complex web application (eg, slack or invision), and try to identify which parts are or could be components.
+Examine a complex web application (e.g. Slack or Trello), and try to identify which parts are or could be components.
+
 Also, consider the MVC pattern and identify where developers might have added a controller, and what the applications various data-models might look like.
-We'll be discussing your choices with everyone in the class.
+
+We will discuss your choices with everyone in the class.
 
 ---
 
 ## Lab Activity
 
-Set up your development environment and start configuring your build-chain for **Project 4**
-Be sure to use **Webpack** to compile your `.jsx` files.
+Please see the [Intro to Angular 2 lesson page](/lesson/intro-to-angular-2/) for details on today's lab activity.
 
 ---
 
 
 ## Additional Resources
 
-A great article on JS frameworks and the MVC pattern:
+A breakdown of popular JS frameworks, etc.:
 
-- [Journey Through The JavaScript MVC Jungle](http://www.smashingmagazine.com/2012/07/journey-through-the-javascript-mvc-jungle/)
+- [Top JavaScript Frameworks, Libraries and Tools and When to Use Them](https://www.sitepoint.com/top-javascript-frameworks-libraries-tools-use/)

@@ -8,11 +8,11 @@ For Project 2, you're going to create a one-page, responsive website that allows
 
 You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-02.zip).
 
-## Design Specifications
+## Design Specifications:
 
 - The base font size is `16px` and it HEX code is `#ffffff`
 - The body font family is Open Sans Light
-- The medium grey color of the text in the footer is `#c2c2c2`
+- The medium grey colour of the text in the footer is `#c2c2c2`
 
 ## Requirements
 
@@ -22,8 +22,8 @@ To receive a "Pass" grade for this project, your submission will need to satisfy
 
 Your project must:
 
-- Dynamically fetch story data and populate it in a webpage via the Top Stories API based a user's selection from a `select` field
-- Resize the header area (i.e. logo plus `<select>`) so that it transitions from occupying the entire screen on page load to only auto height after the select form is changed (you will need jQuery for this)
+- Dynamically fetch story data and populate it in a webpage via the Top Stories API based a user's selection from a `<select>` field
+- Resize the header area (i.e. logo plus `<select>`) so that it transitions from occupying the entire screen on page load to only `auto` height after the `<select>` field is changed (you will need jQuery for this)
 - Link each returned image to its URL on the NYT website
 
 **General requirements:**
@@ -31,12 +31,11 @@ Your project must:
 Your project must:
 
 - Contain a single `.html` file and an external, minified `.css` file (a CSS reset may be included separately)
-- Adequately reflect the designer's vision for the website
+- Adequately reflect the designer's vision for the website when built out using HTML & CSS
 - Demonstrate effective organization of the project's root directory
 - Have a Git repository initialized in its root directory with an appropriately customized `.gitignore` file
 - Be pushed to GitHub (with all of your commits synced to it)
-- Contain a `REAMDE.md` file describing the project (e.g. technologies used, personal learnings, etc.)
-- Use Gulp for running build tasks, such as minification, and error checking
+- Use Gulp for running build tasks, such as minification, Sass compilation, and error checking
 
 **HTML requirements:**
 
@@ -73,11 +72,15 @@ Your project must:
 - Be responsively designed using a mobile-first approach
 - Be optimized for 3 screen sizes: mobile, `min-width: 600px`, and `min-width: 1000px`
 
+**Additional requirements:**
+
+- Be sure to **test** your project completely in **all major browsers** (Chrome, Firefox, Safari, Opera, IE11) when you think you're finished
+
 **Stretch goals:**
 
 Want to challenge yourself? Your project could also:
 
-- Incorporate a `select` field with custom styles applied (you will need a jQuery plugin for this such as [Heapbox](http://www.bartos.me/heapbox/))
+- Incorporate a `<select>` field with custom styles applied (you will need a jQuery plugin for this such as [Heapbox](http://www.bartos.me/heapbox/))
 - Incorporate a combination of jQuery and CSS3-based animation to animate the movement of the header on the `<select>` change
 - Use CSS3 transitions to show and hide the article abstract on hover
 
