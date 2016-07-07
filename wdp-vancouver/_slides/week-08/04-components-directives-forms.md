@@ -101,6 +101,52 @@ This is (loosely) what is meant by 'Data Contract'.
 
 ---
 
+### TypeScript Classes
+
+The first thing We'll need to do is set up our component Classes to work with our
+data models. Here is the simple pattern we'll follow when adding data to our component Classes:
+
+Step 1:
+```js
+// Declare a property and assign a type.
+class MyClass {
+	someProperty: any
+}
+```
+
+This declaration is similar to writing: <br/> `const someProperty = undefined;`
+
+---
+
+### TypeScript Classes
+
+Step 2:
+```js
+// Import some data, create a constructor function,
+// and assign your data!
+
+import { myData } from '/models'
+
+class MyClass {
+	someProperty: any
+
+	constructor(){
+		this.someProperty = myData
+	}
+}
+
+```
+Assigning t a value in the constructor creates an instance property.
+
+---
+
+# Exercise 1
+
+Set up your component Class by importing the required models/interfaces, and creating the necessary properties.
+Instantiate a new *empty* Colonist model in the constructor function and assign it to the property you defined.
+
+---
+
 # Putting It All Together
 
 Add model data to our Component Class. Create 2 public properties to hold the data. Use the Data models we created
@@ -275,7 +321,7 @@ some input, the model property will update with that value! 2-Way data-binding a
 
 ---
 
-#Try It
+# Exercise 2
 
 Bind the other inputs in the form. To see the model properties as they are updated,
 add `{% raw %}{{ colonist.name }}{% endraw %}` ...etc to your template. You should see the values update as you type!

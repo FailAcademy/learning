@@ -33,6 +33,20 @@ Prior to class, please read through the Angular documentation on forms:
 
 ---
 
+## Exercise 1
+
+Set up your component Class by importing the required models/interfaces, and creating the necessary properties.
+Instantiate a new *empty* Colonist model in the constructor function and assign it to the property you defined.
+
+---
+
+## Exercise 2
+
+Bind the other inputs in the form. To see the model properties as they are updated,
+add `{% raw %}{{ colonist.name }}{% endraw %}` ...etc to your template. You should see the values update as you type!
+
+---
+
 ## Lab Activity
 
 Now that we know how to create a basic form using Angular 2. We'll spend the rest of the class adding the required functionality to the rest of the forms in our project!
