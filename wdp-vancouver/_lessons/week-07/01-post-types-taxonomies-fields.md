@@ -38,6 +38,8 @@ Pre-reading on custom post types, taxonomies, and fields:
 
 Time to create a custom post type for our projects...let's build the **Product** custom post type together, and add it to our functionality plugin.
 
+Once we have created our Product custom post type, how we will add its archive page as the "Shop" menu item in the navigation menu?
+
 ---
 
 ## Exercise 2

@@ -236,7 +236,7 @@ To use jQuery you must include a link to its script file in your HTML document, 
    <p class="intro">Welcome to my page!<p>
    <p>Thanks for stopping by.</p>
    <!-- The rest of the page content... -->
-   <script src="js/jquery-2.2.0.js"></script>
+   <script src="js/jquery-3.0.0.js"></script>
    <script src="js/my-script-file.js"></script>
 </body>
 ```
@@ -332,7 +332,7 @@ Let's get to the fun stuff and look at a basic example. Take our previous code s
    <p class="intro">Welcome to my page!</p>
    <p>Thanks for stopping by.</p>
    <!-- The rest of the page content... -->
-   <script src="js/jquery-2.2.0.js"></script>
+   <script src="js/jquery-3.0.0.js"></script>
    <script src="js/my-script-file.js"></script>
 </body>
 ```
