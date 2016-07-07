@@ -58,4 +58,4 @@ Your project must:
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a zipped folder** containing your project files to [johnny@johnnyji.com](mailto:johnny@johnnyji.com).
+When you're ready to submit your project, **please email a zipped folder** containing your project files to your instructor.

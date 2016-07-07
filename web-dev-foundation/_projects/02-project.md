@@ -47,4 +47,4 @@ Your project must:
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a link** to your GitHub Page (the page URL, not the repository) to [johnny@johnnyji.com](mailto:johnny@johnnyji.com).
+When you're ready to submit your project, **please email a link** to your GitHub repository and GitHub Page to your instructor.

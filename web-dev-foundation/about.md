@@ -5,7 +5,7 @@ title: About
 
 ## Course Overview:
 
-This course is an introduction to web development. In the first half of this course, you'll gain introductory skills in HTML, CSS, and responsive web design. In the second half of this course, you will learn fundamental programming concepts through JavaScript, and learn how to use the jQuery library to add dynamic features to a website.
+This program is an introduction to web development. Students will gain fundamental skills in HTML, CSS, and JavaScript. From there, they will learn the essentials of responsive website design. In the second half of the course, students will explore important programming concepts through the use of JavaScript libraries (jQuery) to add dynamic features to their websites.
 
 Students who successfully complete the Web Developer Foundation course will be eligible to enroll in RED Academy's Web Developer Professional program.
 
@@ -29,7 +29,7 @@ The evening program classes run from 6:00 to 9:00 p.m. on Monday and Wednesday n
 
 The following schedules are currently available:
 
-- [Vancouver - Spring 2016](/wdf-van-spring-2016/)
+- [Vancouver - Summer 2016](/wdf-van-summer-2016/)
 - [Toronto - Spring 2016](/wdf-to-spring-2016/)
 
 ---
@@ -38,11 +38,13 @@ The following schedules are currently available:
 
 ### Vancouver
 
-The instructor for the Web Developer Foundation course in Vancouver is **Johnny Ji**.
+The instructor for the **first half** of Web Developer Foundation course in Vancouver is **Christoffer Johansen**.
 
-Students project links will be submitted to: **[johnny@johnnyji.com](mailto:johnny@johnnyji.com)**
+Students project links for this half of the course will be submitted to: **[christoffer.jjohansen@gmail.com](mailto:christoffer.jjohansen@gmail.com)**
 
-Note that **Elgin-Skye McLaren** will teach the first four classes during Spring 2016.
+The instructor for the **second half** of Web Developer Foundation course in Vancouver is **Johnny Ji**.
+
+Students project links for this half of the course will be submitted to: **[johnny@johnnyji.com](mailto:johnny@johnnyji.com)**
 
 ### Toronto
 
