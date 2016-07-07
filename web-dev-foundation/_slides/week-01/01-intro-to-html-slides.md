@@ -180,7 +180,7 @@ background-image: url(/public/img/slide-assets/russian-nesting-dolls.jpg)
 
 # Escape Characters
 
-Some characters are reserved for HTML so we need to use **special codes** to represent the in our document.
+Some characters are reserved for HTML so we need to use **special codes** to represent them in our document.
 
 For example, if we want to use curly double quotes around text, we would use these codes:
 
@@ -290,7 +290,7 @@ You'll also want to create a new `root folder` for each *different* website that
 Use these sanity-saving tips to name your folders and files:
 
 - Stick to lowercase consistently
-- Don't use space in your file names, instead use hyphens or underscores to separate words
+- Don't use spaces in your file names, instead use hyphens or underscores to separate words
 - Don't use special characters in your file names
 - Choose logical and descriptive names for files and folders
 
@@ -302,7 +302,7 @@ Your turn! Time to create your first webpage.
 
 First things first...you need to pick a code editor to download and install it (if you haven't done so already).
 
-Next create a root folder somewhere on our computer and save a new file called `index.html`.
+Next create a root folder somewhere on your computer and save a new file called `index.html`.
 
 Then open that folder and create a simple webpage containing `<html>`, `<head>`, `<title>`, and `<body>` tags, then add a few paragraphs of text.
 
@@ -359,7 +359,7 @@ Doctype declarations go at the top of your `.html` files:
 
 # Meta Tags
 
-In addition to adding a doctype, there's other information we can add to the `<head>` of our document to help with rendering and describing our webpage using `meta` tags:
+In addition to adding a doctype, there's other information we can add to the `<head>` of our document using `meta` tags to help with rendering and describing our webpage:
 
 ```html
 <!DOCTYPE html>
@@ -455,7 +455,7 @@ Or horizontal rules:
 <p>This paragraph shifts to a different topic.</p>
 ```
 
-Notice something special about these elements? They don't contain an text, an are represented by a single, self-closing tag. These are called **empty elements**.
+Notice something special about these elements? They don't contain any text, and are represented by a single, self-closing tag. These are called **empty elements**.
 
 ---
 
@@ -469,7 +469,7 @@ You'll likely also run into a structural element called a `<div>`:
 </div>
 ```
 
-A `<div>` element is mostly used for flowing content, but with HTML5 we know have more semantic structural elements...
+A `<div>` element is mostly used for flowing content, but with HTML5 we now have more semantic structural elements...
 
 ---
 class: center, middle

@@ -109,13 +109,13 @@ p {
 /* Comments in CSS also look a little different from HTML */
 ```
 
-We can also use CSS to font size, background colours, the position of elements in the browser window, and much more.
+We can also use CSS to change font sizes, background colours, the position of elements in the browser window, and much more.
 
 ---
 
 # A CSS Declaration
 
-We can also be more specific about targeting those styles to only affect `<p>` tags that are inside a particular element:
+We can also be more specific when targeting HTML elements. For example, if we want our styling to only affect `<p>` tags that are inside of the `<header>`:
 
 ```css
 header p {
@@ -170,7 +170,7 @@ class: center, middle
 
 # The Box Model
 
-The box model gives additional properties that we can adjust for each HTML too. These properties include:
+The box model gives additional properties that we can adjust for each HTML element too. These properties include:
 
 - `margin`
 - `border`
@@ -186,6 +186,14 @@ class: center, middle
 ]
 
 ---
+class: center, middle
+
+.inline-images[
+   ![CSS Box Model](/public/img/slide-assets/css-box-model-example.svg)
+]
+
+---
+
 
 # Box Model Properties
 
