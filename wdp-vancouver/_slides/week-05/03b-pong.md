@@ -696,9 +696,6 @@ Complete the following requirements for this challenge:
 
 * Instantiate and render the `ScoreBoard` in `Game.js`
 * Render player scores in the game
-
-# Challenge 11
-
 * Play a sound on wall collision and paddle collision
 
 ---
@@ -706,13 +703,12 @@ Complete the following requirements for this challenge:
 # Stretch Goals:
 
 - Make it prettier
-- Adjust sizes paddle & ball sizes and colors
+- Adjust sizes paddle & ball sizes and colours
 - Trigger multiple balls
 - Create balls with special effects (different speeds, sizes, effects, etc.)
 - Trigger speed changes or size changes of paddles
 - Fire a shot from a paddle on key press
 - Declare a winner at a final score
-
 
 ---
 

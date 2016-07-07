@@ -43,16 +43,16 @@ Your project must:
 
 Your project must:
 
-- Incorporate "smooth scrolling" into the menu that navigates to specific points in the page
+- Incorporate "smooth scrolling" into the menu that navigates to specific headings in the page
 - Incorporate an image slider using a jQuery plugin for the featured product area ([bxSlider](http://bxslider.com/) is a good choice)
-- Display an alert box that says "Thanks for subscribing!" whenever a user successfully submits the newsletter form with valid email address, otherwise they should see a message in the alert box that asks them to add a valid email address
+- Display an alert box that says "Thanks for subscribing!" whenever a user successfully submits the newsletter form with valid email address, otherwise they should see a message in the alert box that asks them to enter a valid email address
 
 **Additional requirements:**
 
 Your project must:
 
 - Take into account all feedback you received in the evaluation form for the first part of this project
-- Include the four additional products to be added to the featured product area
+- Include the four additional products to be added to the featured product slider
 - Include the new product categories grid
 - Be sure to **test** your project completely in **all major browsers** (Chrome, Firefox, Safari, Opera, IE11) when you think you're finished
 

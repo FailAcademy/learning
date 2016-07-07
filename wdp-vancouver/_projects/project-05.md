@@ -4,7 +4,7 @@ title: Project 5 - Mars Colony App
 due: Monday, August 29th (beginning of class)
 ---
 
-For Project 5, you're going to create a web-based app for Earth colonists exploring Mars using Angular 2.
+For Project 5, you're going to create a web-based application for Earth colonists exploring Mars using Angular 2.
 
 ## Requirements
 
@@ -35,7 +35,7 @@ Your project must:
 - Implement the [Angular 2 Router](https://angular.io/docs/ts/latest/guide/router.html)
 - Contain pages and routes for all of the views in the specification
 - Implement `ngForm` and validate user input, and prevent forms from sending invalid API requests
-- Implement the appropriate user feedback when components and data are loading (for example, a loading indicator, or text indicating that data is being loaded that is removed when loading is finished)
+- Implement the appropriate user feedback when components and data are loading (for example, a loading/text indicator showing that data is being loaded and that disappears when loading is finished)
 - Implement the following Angular built-in directives: `ngFor`, `ngIf`, `ngClass`, and `ngModel`
 - Implement the `OnInit` Class interface
 - Implement the following additional Angular features:
@@ -54,12 +54,16 @@ Your project must:
 - Incorporate styles elements (including SCSS variables and mixins) into a `_theme.scss` file
 - Use Angular Component scope styling and the `@import` directive
 
+**Additional requirements:**
+
+- Be sure to **test** your project completely in **all major browsers** (Chrome, Firefox, Safari, Opera, IE11) when you think you're finished
+
 **Stretch goals:**
 
 - Save the Colonist object in local storage:
-	- When the user submits the registration form, the API will return a Colonist object in the response to the POST request
+	- When the user submits the registration form, the API will return a Colonist object in the response to the `POST` request
 	- You'll need to save this new Colonist object using `localStorage`, and retrieve it later in the Encounters Component
-	- You'll also need to send a colonist ID when POST-ing an encounter
+	- You'll also need to send a colonist ID when `POST`-ing an encounter
 
 - WordPress integration with the WP REST API (v2):
 	- Create a blog Component/Route and display posts from by Mars Colonists in your app
