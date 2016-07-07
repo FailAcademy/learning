@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Using the Angular 2 Router Slides
+title: Angular 2 Router Slides
 ---
 
 {% highlight html %}
@@ -21,13 +21,9 @@ layout: false
 # Agenda
 
 1. Introduce the Angular Router
-
 2. Add Routes to our app using the Angular CLI
 
-3. Begin to write the CSS and HTML for our Application.
-
 ---
-
 template: inverse
 
 # Adding Routes
@@ -44,15 +40,17 @@ To create an application that has more than one page (URL) of content, we'll nee
 
 # Adding Routes
 
-##Note:<br/>
+**Note!**
+
 We're building an SPA (Single Page Application). Our application uses a single static HTML file to display all of it's content.
-When routes in our application change **no request to the server is made!** Instead, Angular is dynamically rendering content,
-and changing the URL.<br/>
+
+When routes in our application change **no request to the server is made!** Instead, Angular is dynamically rendering content, and changing the URL.
 
 ---
+
 # Generate a Route
 
-To generate a route using the Angular CLI issue this command:
+To generate a route using the Angular CLI, run this command:
 
 `ng generate route [route name]`<br/>
 
@@ -76,62 +74,67 @@ import { /*router imports */ } from '@angular/router';
 // ... Component Class ...
 ```
 
-The generator has also created a folder called (In the case where we generated a route called home) **/+home**
-With an empty Component, template and css files! (the '+' indicates the Component's code will be **lazy loaded**!)
+The generator has also created a folder called (in the case where we generated a route called home) `/+home` with an empty Component, template and css files. The '+' indicates the Component's code will be **lazy loaded**.
 
 ---
 
 #What Was Generated?
 
-Inside your main application Component's template, the router outlet component has been added!
+Inside your main application Component's template, the router outlet component has been added.
+
 ```html
-	<router-outlet>
+<router-outlet>
 
-		<!-- Angular renders Component templates into this element! -->
+	<!-- Angular renders Component templates into this element! -->
 
-	</router-outlet>
+</router-outlet>
 ```
-When an end-user visits the /home url, Angular will render the HomeComponent's template into this element!
+
+When an end-user visits the /home url, Angular will render the HomeComponent's template into this element.
 
 ---
+
 # Exercise 1
 
-Prepare to use the Angular Router.
+Prepare to use the Angular Router:
 
 1. Add the `ROUTER_PROVIDERS` to your application's bootstrap method.
-[Look here for instructions](https://angular.io/docs/ts/latest/guide/router.html).
+2. Add the Angular Component [lifecycle hook](https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html) `ngOnInit` to your main application Component.
 
-2. Add the Angular Component [lifecycle hook](https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html) `ngOnInit` to your main application Component. 
 We'll use this method to trigger rendering of the homepage Component when your application loads.
 
 ---
-
 template: inverse
 
 # Router Directives
 
 ---
-#Router Directives
 
-Once the router has been added, we need a way to navigate around our application without triggering a request to the server.
-We can still use the `<a>` tag to do this, but we must redefine it's behavior using an Angular directive. <br/>
+# Router Directives
+
+Once the router has been added, we need a way to navigate around our app without triggering a request to the server.
+
+We can still use the `<a>` tag to do this, but we must redefine it's behaviour using an Angular directive.
 
 In the main application Component's template add links to your component pages
 using the `routerLink` directive:
+
 ```html
 <!-- For example -->
 <a [routerLink]="['/register']">link to register page</a>
 
 ```
-*Note how quotation marks are used
+
+*Note how quotation marks are used.*
 
 ---
-#Router Directives
+
+# Router Directives
 
 The `routerLink` directive will not work unless you add the `ROUTER_DIRECTIVES` bundle
 to the component in where the template contains this directive.
 
-This is how *all* directives work in Angular 2.
+This is how **all** directives work in Angular 2.
 
 ```js
 import { ROUTER_DIRECTIVES } from '@angular/router'
@@ -144,13 +147,13 @@ directives: [ROUTER_DIRECTIVES]
 // ...
 
 ```
+
 ---
-#Lab Activity
 
-Now that we know how to create Routes. Use the Angular CLI to generate all the Route/Component pairs for the
-views in our application. The CLI should add all the necessary files and configuration for you!
+# What We've Learned
 
-**Start writing CSS**. Make sure to look over the project requirements before starting!
+- How routes work in an Angular app
+- How to add routes using the Angular CLI
 
 ---
 

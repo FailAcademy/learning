@@ -7,15 +7,22 @@ lesson_date: 2016-08-23
 
 ## Pre-Work
 
+Please complete the following readings before class:
+
+- [ES6 — promises](https://medium.com/ecmascript-2015/es6-promises-9ca8d8b4aca6#.hhgv28aep)
+- [JavaScript Promises ... In Wicked Detail](http://www.mattgreer.org/articles/promises-in-wicked-detail/)
+
+(And you will probably want to read them in that order!)
+
 ---
 
 ## Learning Objectives
 
-- Describe the CRUD pattern
-- Introduce REST application architechture
-- Implement Promise based HTTP Requests using Angular's HTTP module
-- Display JSON data in Component Templates
-- Write async code using the Promise constructor with the `resolve` and `reject` handlers, as well as `then` and `catch` methods to read the results from a Promise once it's resolved or rejected.
+- Describe what the CRUD pattern is.
+- Explain what is means to use a REST application architecture.
+- Implement Promise-based HTTP Requests using Angular's HTTP module.
+- Display JSON data in component templates.
+- Write async code using the Promise constructor with the `resolve` and `reject` handlers, as well as `then` and `catch` methods to read the results from a Promise once it is resolved or rejected.
 
 ---
 
@@ -23,7 +30,6 @@ lesson_date: 2016-08-23
 
 - REST
 - CRUD
-- Promise
 - Service
 - GET
 - POST
@@ -31,10 +37,11 @@ lesson_date: 2016-08-23
 
 ---
 
-##Exercise 1
+## Exercise 1
 
 Navigate to some websites with the network inspector open. Observe the HTTP requests and responses.
-Take 30 minutes to answer the following:<br/>
+
+Take 15 minutes to answer the following:
 
 - How can we observe information about HTTP activity?
 - What HTTP verbs are commonly used?
@@ -47,26 +54,25 @@ Take 30 minutes to answer the following:<br/>
 
 ## Exercise 2
 
-
 To gain a better understanding of promises, code along these tutorial videos:
 
 - [Introduction to promises](https://s3-us-west-2.amazonaws.com/red-wdp/lms-assets/Pluralsight-Introduction-to-promises.wmv)
 - [Implementing promises in ES5](https://s3-us-west-2.amazonaws.com/red-wdp/lms-assets/Pluralsight-Implement-promises.wmv)
 
-Knowing how promises work is essential for working with [*Async*](http://rowanmanning.com/posts/javascript-for-beginners-async/) code, like the API requests
-we'll be making from inside our service classes.
-
+Knowing how promises work is essential for working with [async](http://rowanmanning.com/posts/javascript-for-beginners-async/) code, like the API requests we'll be making from inside our service classes.
 
 ---
 
 ## Lab Activity
 
-Create all of the Service Classes and HTTP methods for our application.
-- Be sure to use the appropriate data models and type information!
-- All Services should be added to the **app/shared/services** folder.
-- Create a file for each Service following our naming conventions (eg. alien.service.ts)
+In today's lab, you will create all of the Service Classes and HTTP methods for our application:
 
-To test your your Services import them into the main component that was generated when you created your Angular application.
+- Be sure to use the appropriate data models and type information.
+- All Services should be added to the `app/shared/services` folder.
+- Create a file for each Service following our naming conventions (e.g. `alien.service.ts`)
+
+To test your your Services, import them into the main component that was generated when you created your Angular application.
+
 For example:
 
 ```js
@@ -81,11 +87,11 @@ import { ColonistService } from './shared/services/colonist.service';
   selector: 'angular2-project-app',
   templateUrl: 'angular2-project.component.html',
   styleUrls: ['angular2-project.component.css'],
-  // Add Services to our Component!
+  // add Services to our Component
   providers: [AlienService, ColonistService]
 })
 
-// IMplements the OnInit Interface!
+// Implements the OnInit Interface
 export class Angular2ProjectAppComponent implements OnInit {
 
   public title: string;
@@ -109,3 +115,11 @@ export class Angular2ProjectAppComponent implements OnInit {
 ---
 
 ## Additional Resources
+
+From the official Angular docs:
+
+- [HTTP](https://angular.io/docs/ts/latest/tutorial/toh-pt6.html)
+
+More on promises in JS:
+
+- [You're Missing the Point of Promises](https://gist.github.com/domenic/3889970)

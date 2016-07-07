@@ -15,25 +15,21 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
-
 layout: false
 
 # Agenda
 
 1. Code a simple HTML form
-
-2. Enhance the form using Angular. (2-way data-binding and directives).
-
-3. Implement a select menu input using `ngFor` & computed properties.
-
-4. Add validation and data-binding to all the forms in our project.
-
+2. Enhance the form using Angular (using 2-way data-binding and directives)
+3. Implement a select menu input using `ngFor` and computed properties
+4. Add validation and data-binding to all the forms in our project
 
 ---
 
 # The Markup
 
-To begin we'll start with a simple HTML form. (This is the sign-in form for your project).
+To begin we'll start with a simple HTML form. This is the sign-in form for your project.
+
 ```html
 <form>
 	<fieldset>
@@ -396,7 +392,7 @@ The button should now be disabled, until the user fills in the form.
 
 We can now add the computed property to the conditional statement that is disabling our submit
 button. Notice that although we defined a method, we can access the value without invoking the method ( no `()` ).
-This is how a Computed property works. When the property is accessed (read by another part of your program), 
+This is how a Computed property works. When the property is accessed (read by another part of your program),
 the method is invoked automatically, and the computed value is returned!
 
 ---
