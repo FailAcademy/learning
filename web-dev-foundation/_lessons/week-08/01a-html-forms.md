@@ -10,11 +10,15 @@ From the HTML & CSS textbook:
 
 - Forms (p. 147-163)
 
+---
+
 ## Learning Objectives
 
 - Understand how HTML forms work.
 - Build a functional HTML form with a variety of inputs.
 - Target form elements using CSS.
+
+---
 
 ## Keywords
 
@@ -25,6 +29,8 @@ From the HTML & CSS textbook:
 - [Label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label)
 - [Button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
 
+---
+
 ## Exercise 1
 
 Try creating a basic contact form:
@@ -33,6 +39,8 @@ Try creating a basic contact form:
 </iframe>
 
 View the [solution](http://codepen.io/redacademy/pen/VLWmxm)
+
+---
 
 ## Exercise 2
 
@@ -43,9 +51,13 @@ Now try styling up the contact form you previously created:
 
 View the [solution](http://codepen.io/redacademy/pen/RPgKbj)
 
-## Lab Activity
+---
 
-Please see the [Working with Animation and Forms in jQuery](/lesson/working-with-animation-and-forms-in-jquery/) for lab activity details.
+## Homework
+
+Please see the [Working with Animation and Forms in jQuery](/lesson/working-with-animation-and-forms-in-jquery/) for homework details.
+
+---
 
 ## Additional Resources
 

@@ -11,16 +11,22 @@ Some tips on writing good CSS (and HTML too):
 - [Lesson 1: Performance & Organization](http://learn.shayhowe.com/advanced-html-css/performance-organization/)
 - [Lesson 12: Writing Your Best Code](http://learn.shayhowe.com/html-css/writing-your-best-code/)
 
+---
+
 ## Learning Objectives
 
-- Apply the rules of CSS specificity in an informated, strategic way in a stylesheet.
+- Apply the rules of CSS specificity in an informed, strategic way in a stylesheet.
 - Implement CSS rules in a way that allow them to scale easily.
 - Understand CSS best practices related to an object-oriented CSS approach.
+
+---
 
 ## Keywords
 
 - Specificity
 - Object-oriented CSS
+
+---
 
 ## Exercise 1
 
@@ -28,6 +34,8 @@ Let's experiment with CSS rule specificity:
 
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/XbpXdG/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/XbpXdG/'>XbpXdG</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
+
+---
 
 ## Exercise 2
 
@@ -38,7 +46,9 @@ Let's clean up some code with the best practices we just learned:
 
 View the [solution](http://codepen.io/redacademy/pen/KpaVJJ).
 
-## Lab Activity
+---
+
+## Homework
 
 Time for a little code refactoring!
 
@@ -56,6 +66,8 @@ Specifically, you want to:
 - Use CSS shorthand wherever possible
 - Abstract repeated styles into a helper class, and apply the class where required in the HTML
 - Add some comments to further organize your CSS, and for future reference
+
+---
 
 ## Additional Resources
 

@@ -8,12 +8,16 @@ slides: ['_slides/week-09/02-intro-to-less-slides.md']
 
 *There is no pre-reading for this lesson.*
 
+---
+
 ## Learning Objectives
 
 - Understand what a CSS preprocessor is, and how it can help speed up development.
 - Understand how to structure Less files and import them.
 - Implement basic Less techniques like nesting, variables, mixins, and operations.
 - Learn about the different options for compiling Less into CSS.
+
+---
 
 ## Keywords
 
@@ -24,6 +28,8 @@ slides: ['_slides/week-09/02-intro-to-less-slides.md']
 - Nesting
 - Compiler
 
+---
+
 ## Exercise 1
 
 Let's refactor some plain vanilla CSS in to Less:
@@ -32,6 +38,8 @@ Let's refactor some plain vanilla CSS in to Less:
 </iframe>
 
 View the [solution](http://codepen.io/redacademy/pen/WvROjx).
+
+---
 
 ## Exercise 2
 
@@ -44,9 +52,13 @@ To do that, you'll need:
 3. Extract the zip file and set-up a new project in Prepos with the resulting folder
 4. Compile away!
 
-## Lab Activity
+---
 
-Lab activity time will be dedicated to working on the [Capstone Project](/project/capstone-project/).
+## Homework
+
+Finish up your [Capstone Project](/project/capstone-project/)!
+
+---
 
 ## Additional Resources
 

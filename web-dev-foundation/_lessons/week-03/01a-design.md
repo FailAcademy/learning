@@ -10,11 +10,15 @@ From the HTML & CSS textbook:
 
 - Getting Your Message Across Using Design (pp. 465-474)
 
+---
+
 ## Learning Objectives
 
 - Employ basic design concepts to assist in laying out a website.
 - Create an aesthetically pleasing colour palette for a website using basic colour theory.
 - Experiment with online design tools such colour palette generators and Subtle Patterns.
+
+---
 
 ## Keywords
 
@@ -24,6 +28,8 @@ From the HTML & CSS textbook:
 - Whitespace
 - Unity, variety, dominance, balance, scale, and space
 
+---
+
 ## Exercise 1
 
 Let's try creating colour palettes based on the colour harmony rules we just learned.
@@ -31,6 +37,8 @@ Let's try creating colour palettes based on the colour harmony rules we just lea
 If you haven't done so already, create an **[Adobe Color CC](https://color.adobe.com/)** account and create at least five different colour palettes each based on a different colour harmony rule.
 
 Don't limit yourself based on the built-in colour rules in the web app&mdash;be sure to try out some of the others you just learned too.
+
+---
 
 ## Exercise 2
 
@@ -40,9 +48,13 @@ Jot down some notes about how it uses the elements and principles of design in t
 
 After a few minutes evaluating your chosen website, team up with another class member and exchange your observations.
 
-## Lab Activity
+---
 
-Please see the [Wireframing lesson](/lesson/wireframing/) for lab activity details.
+## Homework
+
+Please see the [Wireframing lesson](/lesson/wireframing/) for homework details.
+
+---
 
 ## Additional Resources
 

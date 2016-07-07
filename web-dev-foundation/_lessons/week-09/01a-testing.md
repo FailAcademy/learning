@@ -8,12 +8,16 @@ slides: ['_slides/week-09/01a-testing-slides.md']
 
 *There is no pre-reading for this lesson.*
 
+---
+
 ## Learning Objectives
 
 - Demonstrate understanding of basic front-end quality assurance concerns.
 - Understand why cross-browser testing is needed, and what tools are available to assist with this process.
 - Use readily available tools to assess webpage speed and performance.
 - Learn how to assess a website's accessibility.
+
+---
 
 ## Keywords
 
@@ -22,15 +26,21 @@ slides: ['_slides/week-09/01a-testing-slides.md']
 - Performance
 - Accessibility
 
+---
+
 ## Exercise 1
 
 Time to put your own project under the microscope!
 
 Take some of the recommended testing tools (code validators, performance testers, etc.) for spin with your own project.
 
-## Lab Activity
+---
 
-Please see the [Intro to Ajax and APIs](/lesson/intro-to-ajax-and-apis/) for lab activity details.
+## Homework
+
+Please see the [Intro to Ajax and APIs](/lesson/intro-to-ajax-and-apis/) for homework details.
+
+---
 
 ## Additional Resources
 

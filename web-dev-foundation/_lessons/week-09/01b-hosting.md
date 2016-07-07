@@ -13,11 +13,15 @@ From the HTML & CSS textbook:
 
 *Prior to class you'll want to have a domain picked out for your final project website.*
 
+---
+
 ## Learning Objectives
 
 - Learn how to upload files via FTP to a typical web host.
 - Learn how to purchase a domain name and set name servers.
 - Understand the difference between various kinds of web hosting options (shared, VPS, etc).
+
+---
 
 ## Keywords
 
@@ -26,6 +30,8 @@ From the HTML & CSS textbook:
 - [Web Host](http://en.wikipedia.org/wiki/Web_hosting_service)
 - [Domain name](https://developer.mozilla.org/en-US/docs/Glossary/Domain_name)
 - [DNS](http://searchnetworking.techtarget.com/definition/domain-name-system)
+
+---
 
 ## Exercise 1
 
@@ -39,9 +45,13 @@ In this exercise, you're going to practice FTPing a file.
 Download an FTP client and use the credentials provided to FTP a file from your computer onto the server.
 {% endcomment %}
 
-## Lab Activity
+---
 
-*Lab activity details forthcoming.*
+## Homework
+
+*Homework details forthcoming.*
+
+---
 
 ## Additional Resources
 

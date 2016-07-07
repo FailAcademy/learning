@@ -12,15 +12,21 @@ From the JavaScript & jQuery textbook:
 - jQuery Animation (pp. 334-335)
 - jQuery Forms (pp. 342-345)
 
+---
+
 ## Learning Objectives
 
 - Combine jQuery animation effects with click events for an HTML form
+
+---
 
 ## Keywords
 
 - Effect methods
 - Form methods
 - Select Menu
+
+---
 
 ## Exercise 1
 
@@ -31,9 +37,11 @@ Now let's try putting jQuery effects together with form inputs:
 
 View the [solution](http://codepen.io/redacademy/pen/YXWKdz).
 
-## Lab Activity
+---
 
-In this activity, you're going to use what you just learned about HTML forms and jQuery animation to try to recreate this form:
+## Homework
+
+For homework, you're going to use what you just learned about HTML forms and jQuery animation to try to recreate this form:
 
 ![Form prototype](/public/files/labs/jquery-form-lab.gif)
 
@@ -59,6 +67,8 @@ Lastly, the typeface used in the form is called **Open Sans**. You can include f
 ```
 
 Good luck!
+
+---
 
 ## Additional Resources
 

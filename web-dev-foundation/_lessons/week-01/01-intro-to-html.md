@@ -14,6 +14,8 @@ From the HTML & CSS textbook:
 - Images (pp. 99-100)
 - New HTML5 Layout Elements (p. 432)
 
+---
+
 ## Learning Objectives
 
 - Define what a mark-up language is and the function of HTML on the web.
@@ -21,12 +23,16 @@ From the HTML & CSS textbook:
 - Use basic HTML tags including headings, paragraphs, links, and lists.
 - Recognize key differences between XHTML and HTML5.
 
+---
+
 ## Keywords
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [Doctype](http://www.sitepoint.com/web-foundations/doctypes/)
 - [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
 - [Attribute](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
+
+---
 
 ## Exercise 1
 
@@ -40,6 +46,8 @@ Then open that folder and create a simple webpage containing `<html>`, `<head>`,
 
 Lastly, save and view your new website in a browser.
 
+---
+
 ## Exercise 2
 
 Try marking up this block text as instructed. If you haven't created a Codepen account yet, do that right now and complete this exercise by clicking "Edit on Codepen", and create a "Fork" of the pen to save your answer to your account.
@@ -48,6 +56,8 @@ Try marking up this block text as instructed. If you haven't created a Codepen a
 </iframe>
 
 View the [solution](http://codepen.io/redacademy/pen/YXEVKR).
+
+---
 
 ## Exercise 3
 
@@ -58,7 +68,9 @@ Now try using an assortment of structural and semantic tags:
 
 View the [solution](http://codepen.io/redacademy/pen/ZGaKOy).
 
-## Lab Activity
+---
+
+## Homework
 
 For this activity, you're going to **turn your resume into an HTML document**.
 
@@ -74,6 +86,8 @@ From there, **mark up the content in your resume** using the following HTML elem
 - strong and emphasis
 
 Be careful when you're nesting your tags, and don't forget to save your resume file as `index.html` inside of your root project folder.
+
+---
 
 ## Additional Resources
 

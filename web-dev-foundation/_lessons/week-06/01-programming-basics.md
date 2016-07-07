@@ -10,10 +10,14 @@ From the JavaScript & jQuery textbook:
 
 - Chapter 1/a (pp. 13-24)
 
+---
+
 ## Learning Objectives
 
 - Learn basic programming concepts such as statements, booleans, conditions, loops and variables
 - Use Scratch to build a basic program using graphical “pseudo code”
+
+---
 
 ## Keywords
 
@@ -26,6 +30,8 @@ From the JavaScript & jQuery textbook:
 - Operator
 - Function
 
+---
+
 ## Exercise 1
 
 Time to write some pseudocode of your own! You're going to use pseudocode to write an algorithm for washing a car.
@@ -36,6 +42,8 @@ Some things to consider while writing your algorithm:
 - Each individual step involved in washing the car. Remember that machines can only do exactly what we tell them to do.
 - How long each step should take place. Is it something that happens only once, or does it need to happen repeatedly?
 
+---
+
 ## Exercise 2
 
 Your turn...**[create a Scratch account](https://scratch.mit.edu/)** and give it a whirl.
@@ -44,13 +52,17 @@ For this exercise, your first task is to create a basic program using one of the
 
 Your second task is to make sure you have fun with this :)
 
-## Lab Activity
+---
 
-This lesson's lab is a choose-your-own-adventure activity. You can create anything you want using Scratch (a game, an animated story, etc.) as long as it meets the following criteria:
+## Homework
+
+This lesson's homework is a choose-your-own-adventure activity. You can create anything you want using Scratch (a game, an animated story, etc.) as long as it meets the following criteria:
 
 - You must use at least two sprites, at least one of which must resemble something other than a cat
 - You must use at least three functions total (i.e., not necessarily three per sprite)
 - You must use at least one condition, one loop, and one variable
+
+---
 
 ## Additional Resources
 

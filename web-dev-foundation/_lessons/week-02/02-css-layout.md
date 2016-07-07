@@ -13,6 +13,8 @@ From the HTML & CSS textbook:
 - Background color (p. 250)
 - Background images (pp. 413-416)
 
+---
+
 ## Learning Objectives
 
 - Use HTML5 elements to structure the mark-up on a webpage.
@@ -21,6 +23,8 @@ From the HTML & CSS textbook:
 - Use CSS background properties to set background colors or images.
 - Understand what CSS resets are and why they are needed.
 
+---
+
 ## Keywords
 
 - [Position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
@@ -28,6 +32,8 @@ From the HTML & CSS textbook:
 - [Float](https://developer.mozilla.org/en-US/docs/Web/CSS/float)
 - [Background](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
 - CSS Reset
+
+---
 
 ## Exercise 1
 
@@ -38,6 +44,8 @@ Cure this website of its div-itis using HTML5 elements:
 
 View the [solution](http://codepen.io/redacademy/pen/OVoxvm).
 
+---
+
 ## Exercise 2
 
 Let's try out different kinds of positioning in CSS:
@@ -46,6 +54,8 @@ Let's try out different kinds of positioning in CSS:
 </iframe>
 
 View the [solution](http://codepen.io/redacademy/pen/waegmZ)
+
+---
 
 ## Exercise 3
 
@@ -56,6 +66,8 @@ Time to try using CSS floats to lay out a webpage:
 
 View the [solution](http://codepen.io/redacademy/pen/xGrgmP)
 
+---
+
 ## Exercise 4
 
 Try implementing CSS backgrounds in three different ways:
@@ -65,7 +77,9 @@ Try implementing CSS backgrounds in three different ways:
 
 View the [solution](http://codepen.io/redacademy/pen/doZKrB)
 
-## Lab Activity
+---
+
+## Homework
 
 Back to our resumes again! This time we're going **enhance the layout** of our resume using CSS.
 
@@ -79,6 +93,8 @@ Specifically, you want to:
 Finally, you need to **add a CSS reset** to your resume webpage. Does the reset affect any of your existing styles? Re-adjust your CSS properties where required.
 
 Need help finding a repeating background image for your resume? Try [Subtle Patterns](http://subtlepatterns.com/) for some CC-licensed pattern images.
+
+---
 
 ## Additional Resources
 

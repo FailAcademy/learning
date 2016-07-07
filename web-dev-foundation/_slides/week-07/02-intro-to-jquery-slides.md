@@ -56,7 +56,7 @@ To use jQuery you must include a link to its script file in your HTML document, 
    <p class="intro">Welcome to my page!<p>
    <p>Thanks for stopping by.</p>
    <!-- The rest of the page content... -->
-   <script src="js/jquery-2.2.0.js"></script>
+   <script src="js/jquery-3.0.0.js"></script>
    <script src="js/my-script-file.js"></script>
 </body>
 ```
@@ -69,8 +69,6 @@ The best practice is to add it near the closing body tag, but it has be included
 
 You can find different versions of jQuery from [jquery.com](http://jquery.com/download/):
 
-- jQuery 1.x will work with IE 6, 7, and 8
-- jQuery 2.x will **not** work with IE 6, 7, and 8
 - The compressed **production** version of jQuery has been "minified" and has all of the whitespace removed
 - The uncompressed **development** version of jQuery still has its whitespace and is easier to read if you want to explore the library's internals
 
@@ -152,7 +150,7 @@ Let's get to the fun stuff and look at a basic example. Take our previous code s
    <p class="intro">Welcome to my page!</p>
    <p>Thanks for stopping by.</p>
    <!-- The rest of the page content... -->
-   <script src="js/jquery-2.2.0.js"></script>
+   <script src="js/jquery-3.0.0.js"></script>
    <script src="js/my-script-file.js"></script>
 </body>
 ```

@@ -11,11 +11,15 @@ From the JavaScript & jQuery textbook:
 - Document Object Model (pp. 184-187)
 - jQuery (pp. 296-331)
 
+---
+
 ## Learning Objectives
 
 - Understand what jQuery is in relation to JavaScript, and how to implement it on a website
 - Learn what the browser’s Document Object Model (DOM) is, and how to traverse it using jQuery
 - Use basic jQuery methods to manipulate the appearance of elements on a website
+
+---
 
 ## Keywords
 
@@ -25,13 +29,17 @@ From the JavaScript & jQuery textbook:
 - Chaining
 - Event handling
 
-# Exercise 1
+---
+
+## Exercise 1
 
 Let's map the DOM for the homepage of our project sites...
 
 Take a piece of paper and map out in a tree-structure what the DOM looks like for your project site.
 
 Be as detailed as you possibly can. When you're done, pair up with a classmate and explain the design of your DOM diagram to them.
+
+---
 
 ## Exercise 2
 
@@ -42,6 +50,8 @@ Let's try traversing the DOM to make some change to an HTML document:
 
 View the [solution](http://codepen.io/redacademy/pen/VLazKX).
 
+---
+
 ## Exercise 3
 
 Try creating a function that listens for an click event on a link:
@@ -51,11 +61,13 @@ Try creating a function that listens for an click event on a link:
 
 View the [solution](http://codepen.io/redacademy/pen/RPaZgY).
 
-## Lab Activity
+---
+
+## Homework
 
 ### Part 1
 
-jQuery challenge time! In this lab activity, you're going create two click events&mdash;one that **adds another list item** to the list below, and one that **takes away the last item** in the list:
+jQuery challenge time! For this homework activity, you're going create two click events&mdash;one that **adds another list item** to the list below, and one that **takes away the last item** in the list:
 
 ```html
 <div class="list-editor">
@@ -83,6 +95,8 @@ You second task is to research **jQuery plugins**. jQuery plugins are script fil
 - Interactive navigation behaviour
 
 Your task is to find an example of an interesting jQuery plugin and bring a demo for your classmates showing how to use it.
+
+---
 
 ## Additional Resources
 

@@ -11,11 +11,15 @@ From the JavaScript & jQuery textbook:
 - Arrays (pp. 70-73)
 - Functions, Methods & Objects (pp. 88-144)
 
+---
+
 ## Learning Objectives
 
 - Create and use basic JavaScript functions
 - Build basic JavaScript objects and manipulate their properties and methods
 - Create JavaScript arrays and iterate over them
+
+---
 
 ## Keywords
 
@@ -26,6 +30,8 @@ From the JavaScript & jQuery textbook:
 - [Scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope)
 - [Hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting)
 
+---
+
 ## Exercise 1
 
 Time to write a function of your own!
@@ -34,6 +40,8 @@ Time to write a function of your own!
 </iframe>
 
 View the [solution](http://codepen.io/redacademy/pen/doMzLQ)
+
+---
 
 ## Exercise 2
 
@@ -44,6 +52,8 @@ Let's try creating an object that has properties and methods:
 
 View the [solution](http://codepen.io/redacademy/pen/oXxGXJ).
 
+---
+
 ## Exercise 3
 
 Time to ramp up your JS skills by looping through an array and adding the items in that array to a list:
@@ -53,9 +63,11 @@ Time to ramp up your JS skills by looping through an array and adding the items 
 
 View the [solution](http://codepen.io/redacademy/pen/NqNayj).
 
-## Lab Activity
+---
 
-For today's lab we're going to continue practicing our JS skills by completing more modules on [Code Academy's JavaScript track](https://www.codecademy.com/tracks/javascript/).
+## Homework
+
+For today's homework we're going to continue practicing our JS skills by completing more modules on [Code Academy's JavaScript track](https://www.codecademy.com/tracks/javascript/).
 
 First, because functions are such an important part of JS, you'll need to work through these two modules:
 
@@ -68,6 +80,8 @@ Next, continue practicing using arrays and objects by completing these modules:
 - **Contact List**
 
 The above to exercise will introduce you to concepts that we did not cover in class, such as **multi-dimensional** arrays, the difference between **object literal notation** and **object constructors**, and how to loop over objects using a **for/in loop**.
+
+---
 
 ## Additional Resources
 

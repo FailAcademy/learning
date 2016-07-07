@@ -12,6 +12,8 @@ From the HTML & CSS textbook:
 - Color (pp. 247-260)
 - Flash, Video & Audio (pp. 200-225)
 
+---
+
 ## Learning Objectives
 
 - Understand web-friendly image formats (JPG, PNG, GIF, and SVG).
@@ -23,6 +25,8 @@ From the HTML & CSS textbook:
 - Discuss basic copyright concerns, the public domain, and Creative Commons.
 - Use hexadecimal and RGBa to set the colours of HTML elements.
 - Explore the `audio` and `video` elements in HTML5.
+
+---
 
 ## Keywords
 
@@ -36,6 +40,8 @@ From the HTML & CSS textbook:
 - Creative Commons
 - Public domain
 
+---
+
 ## Exercise 1
 
 If you haven't done so already, download and install an image editing application such as Adobe Photoshop or Gimp.
@@ -48,6 +54,8 @@ Next, download **[this image](https://www.flickr.com/photos/jdhancock/1270871204
 
 If you have additional time, explore other tools inside the image editor, like the rotate tool or text tool.
 
+---
+
 ## Exercise 2
 
 Try out some of the different web colour modes below:
@@ -56,6 +64,8 @@ Try out some of the different web colour modes below:
 </iframe>
 
 View the [solution](http://codepen.io/redacademy/pen/VLWReW)
+
+---
 
 ## Exercise 3
 
@@ -66,6 +76,8 @@ Now try using CSS to style these images:
 
 View the [solution](http://codepen.io/redacademy/pen/LVOLNY)
 
+---
+
 ## Exercise 4
 
 Try out the `audio` and `video` elements for yourself:
@@ -75,9 +87,11 @@ Try out the `audio` and `video` elements for yourself:
 
 View the [solution](http://codepen.io/redacademy/pen/zGLpoR).
 
-## Lab Activity
+---
 
-In this lab activity, you're going to **practice you image-optimizing skills**.
+## Homework
+
+For today's homework, you're going to **practice you image-optimizing skills**.
 
 You can either use images/graphics that you own, or you can explore sources for Creative Commons-licensed and public domain images/graphics.
 
@@ -86,6 +100,8 @@ You can either use images/graphics that you own, or you can explore sources for 
 Next, **add your newly web-optimized images to a webpage**. You can add them to your resume HTML file, you can create a new webpage if you like.
 
 Finally, in an externally linked stylesheet, **practice using CSS to alter the display** of the image. Focus particularly on using box model properties to adjust its display, and be sure to **try out some HEX, RGBa, and HSLa colours** in your CSS as well.
+
+---
 
 ## Additional Resources
 

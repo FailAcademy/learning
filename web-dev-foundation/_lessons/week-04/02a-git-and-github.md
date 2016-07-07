@@ -14,12 +14,16 @@ Browse through this interactive step-by-step guide to to familiarize yourself wi
 
 - [A guide to using GitHub pages](https://www.thinkful.com/learn/a-guide-to-using-github-pages/)
 
+---
+
 ## Learning Objectives
 
 - Understand what version control is and why it’s important
 - Create a Git repo locally, commit code, and push the code to remote repo on GitHub
 - Level-up in Git by creating and merging branches
 - Deploy a project website on GitHub Pages using either a command line or a GUI.
+
+---
 
 ## Keywords
 
@@ -33,6 +37,8 @@ Browse through this interactive step-by-step guide to to familiarize yourself wi
 - Project vs. user page
 - Merge conflict
 - Revert
+
+---
 
 ## Exercise 1
 
@@ -71,6 +77,8 @@ The **Git Shell** is what we will use to practice our CLI-based Git skills, so k
    - Enter you GitHub username and password to log in
    - The GitHub app should automatically populate your full name and email address, but if it doesn't, add them manually and click "Continue"
 
+---
+
 ## Exercise 2
 
 Let's put some real code up on GitHub using the skills we just learned.
@@ -79,13 +87,19 @@ You're going to turn your Week 1 Project into a Git repo, and push it to GitHub.
 
 You can use a GUI-based app to accomplish this, or if you're brave, try doing it entirely from the command line.
 
+---
+
 ## Exercise 3
 
 Your turn! Take GitHub Pages for a spin by deploying the source files for your Project 1 on a `gh-pages` branch.
 
+---
+
 ## Lab Activity
 
 Please see the [Custom Web Fonts lesson](/lesson/custom-web-fonts/) for lab activity details.
+
+---
 
 ## Additional Resources
 

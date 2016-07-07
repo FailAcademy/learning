@@ -18,6 +18,8 @@ This article by Ethan Marcotte on A List Apart, which is widely credited with ki
 
 - [Responsive Web Design](http://alistapart.com/article/responsive-web-design/)
 
+---
+
 ## Learning Objectives
 
 - Explore what responsive web design (RWD) is, and how it differs from creating a “mobile-only” website
@@ -25,12 +27,16 @@ This article by Ethan Marcotte on A List Apart, which is widely credited with ki
 - Understand how to use a “mobile-first” approach to web development
 - Use media queries to manipulate website styles at various "breakpoints"
 
+---
+
 ## Keywords
 
 - [Responsive web design](http://blog.teamtreehouse.com/modern-field-guide-responsive-web-design)
 - [Media queries](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries)
 - [@media](https://developer.mozilla.org/en-US/docs/Web/CSS/@media)
 - [Mobile first](http://bradfrost.com/blog/web/mobile-first-responsive-web-design/)
+
+---
 
 ## Exercise 1
 
@@ -41,6 +47,8 @@ Try converting a fixed layout to flexible layout:
 
 View the [solution](http://codepen.io/redacademy/pen/QbGmrM).
 
+---
+
 ## Exercise 2
 
 Write your first media query:
@@ -49,6 +57,8 @@ Write your first media query:
 </iframe>
 
 View the [solution](http://codepen.io/redacademy/pen/VLXjPR).
+
+---
 
 ## Exercise 3
 
@@ -59,9 +69,11 @@ Time to try out creating mobile-first media queries for yourself:
 
 View the [solution](http://codepen.io/redacademy/pen/LVbdXw).
 
-## Lab Activity
+---
 
-In this lab activity, you're **refactor the CSS** code for a more complex fixed-width website and turn it into a responsive website **using mobile-first media queries**.
+## Homework
+
+For homework, you're **refactor the CSS** code for a more complex fixed-width website and turn it into a responsive website **using mobile-first media queries**.
 
 You can download the [website's source code here](/public/files/labs/rwd-lab.zip)
 
@@ -86,6 +98,8 @@ The breakpoints you want to optimize for are: `720px` and `1200px`.
 - The website should look exactly as it did in the fixed-width version (do you need to reset any elements' CSS properties that you shrunk down to work with the narrower breakpoints?)
 
 Don't forget to **change static units** `px` units into relative units like `em/rem` and `%`!
+
+---
 
 ## Additional Resources
 

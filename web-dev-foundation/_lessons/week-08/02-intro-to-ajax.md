@@ -19,16 +19,22 @@ A primer on APIs:
 
 - [What APIs Are And Why They're Important](http://readwrite.com/2013/09/19/api-defined)
 
+---
+
 ## Learning Objectives
 
 - Learn what Ajax is (in relation to jQuery)
 - How to use it make a simple get request from a popular third-party API
+
+---
 
 ## Keywords
 
 - Ajax
 - JavaScript Object Notation (JSON)
 - Application Programming Interface (API)
+
+---
 
 ## Exercise 1
 
@@ -39,9 +45,11 @@ Your turn! Pull some data of your own from the GitHub API:
 
 View the [solution](http://codepen.io/redacademy/pen/NqrmWL).
 
-## Lab Activity
+---
 
-In this activity, you're going to build a simple form that fetches data from the OpenWeatherMap API to populate a webpage with the current Vancouver forecast as pictured:
+## Homework
+
+You're going to build a simple form that fetches data from the OpenWeatherMap API to populate a webpage with the current Vancouver forecast as pictured:
 
 ![Weather widget prototype](/public/files/labs/ajax-lab.gif)
 
@@ -64,6 +72,8 @@ This is all the mark-up you will need to complete this assignment:
 ```
 
 Writing the CSS and jQuery is up to you. Good luck!
+
+---
 
 ## Additional Resources
 

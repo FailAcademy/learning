@@ -10,15 +10,21 @@ A quick primer on using icon fonts:
 
 - [An Introduction to Icon Fonts with Font Awesome and IcoMoon](http://www.sitepoint.com/introduction-icon-fonts-font-awesome-icomoon/)
 
+---
+
 ## Learning Objectives
 
 - Learn how to implement icon fonts on a website using Font Awesome.
+
+---
 
 ## Keywords
 
 - [@font-face](https://developer.mozilla.org/en/docs/Web/CSS/@font-face)
 - Icon font
 - SVG
+
+---
 
 ## Exercise 1
 
@@ -29,9 +35,13 @@ Let's try out Font Awesome:
 
 View the [solution](http://codepen.io/redacademy/pen/rVYrXB).
 
-## Lab Activity
+---
 
-Please see the [CSS Best Practices lesson](/lesson/css-best-practices/) for lab activity details.
+## Homework
+
+Please see the [CSS Best Practices lesson](/lesson/css-best-practices/) for homework details.
+
+---
 
 ## Additional Resources
 

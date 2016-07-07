@@ -11,6 +11,8 @@ Some introductory reading on CSS transitions and transforms:
 - [Lesson 7: Transforms](http://learn.shayhowe.com/advanced-html-css/css-transforms/)
 - [Lesson 8: Transitions & Animations](http://learn.shayhowe.com/advanced-html-css/transitions-animations/)
 
+---
+
 ## Learning Objectives
 
 - Distinguish the difference between CSS2 and CSS3.
@@ -19,6 +21,8 @@ Some introductory reading on CSS transitions and transforms:
 - Use CSS transforms to change the position of elements.
 - Learn what properties are animatable using CSS3.
 - Explore other CSS3 features such as border radius, box shadow, gradients, opacity, and multiple backgrounds.
+
+---
 
 ## Keywords
 
@@ -29,6 +33,8 @@ Some introductory reading on CSS transitions and transforms:
 - [Transition](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
 - Vendor prefix
 
+---
+
 ## Exercise 1
 
 Try styling a basic buttons using CSS3 properties:
@@ -37,6 +43,8 @@ Try styling a basic buttons using CSS3 properties:
 </iframe>
 
 View the [solution](http://codepen.io/redacademy/pen/vOWzYJ).
+
+---
 
 ## Exercise 2
 
@@ -47,6 +55,8 @@ Take CSS transitions for a spin:
 
 View the [solution](http://codepen.io/redacademy/pen/yNjZdN).
 
+---
+
 ## Exercise 3
 
 Experiment with CSS3 transforms and transitions together:
@@ -56,9 +66,13 @@ Experiment with CSS3 transforms and transitions together:
 
 View the [solution](http://codepen.io/redacademy/pen/JdvxQJ).
 
-## Lab Activity
+---
 
-Lab activity time will be dedicated to working on [Project 2](/project/project-2/).
+## Homework
+
+Be sure to finish up your [Project 2](/project/project-2/) for homework.
+
+---
 
 ## Additional Resources
 

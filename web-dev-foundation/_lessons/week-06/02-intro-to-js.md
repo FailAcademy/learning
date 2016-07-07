@@ -24,11 +24,15 @@ From the JavaScript & jQuery textbook:
 - Loops (For, While, Do While) (pp. 170-177)
 - Accessing Elements (pp. 192-203)
 
+---
+
 ## Learning Objectives
 
 - Understand what a programming language is and how JavaScript differs from other "server-side" programming languages.
 - Apply basic programming concepts to JavaScript to create and run basic scripts in a browser.
 - Use the browser’s developer tools to debug JavaScript errors.
+
+---
 
 ## Keywords
 
@@ -45,12 +49,16 @@ From the JavaScript & jQuery textbook:
 - Loops
 - [Console](https://developer.mozilla.org/en-US/docs/Tools/Web_Console)
 
+---
+
 ## Exercise 1
 
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/RProXV/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/RProXV/'>RProXV</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
 View the [solution](http://codepen.io/redacademy/pen/gpPgOG).
+
+---
 
 ## Exercise 2
 
@@ -59,6 +67,8 @@ View the [solution](http://codepen.io/redacademy/pen/gpPgOG).
 
 View the [solution](http://codepen.io/redacademy/pen/zGrmzM).
 
+---
+
 ## Exercise 3
 
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/XbXxey/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/XbXxey/'>XbXxey</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
@@ -66,11 +76,13 @@ View the [solution](http://codepen.io/redacademy/pen/zGrmzM).
 
 View the [solution](http://codepen.io/redacademy/pen/jPWQVQ).
 
-## Lab Activity
+---
+
+## Homework
 
 Learning how to program with JavaScript can be tricky, but the key is to keep practicing!
 
-For today's lab, you're going to reinforce what was covered in the readings and in-class exercises by completing the two introductory JS modules on **[Code Academy](https://www.codecademy.com/tracks/javascript)**.
+For today's homework, you're going to reinforce what was covered in the readings and in-class exercises by completing the two introductory JS modules on **[Code Academy](https://www.codecademy.com/tracks/javascript)**.
 
 - **Getting Started with Programming**
 - **Choose Your Own Adventure!**
@@ -92,6 +104,8 @@ Feeling like a JS rockstar now? Then really challenge yourself with these additi
 - **Dragon Slayer!**
 
 After completing these six modules, you'll have an even better grasp of how to use conditional statements, loops, and different kinds of variables in JS, which will be very important when we learn about functions, arrays, and objects in the next class.
+
+---
 
 ## Additional Resources
 

@@ -11,16 +11,22 @@ From the HTML & CSS textbook:
 - More Font Choice (p. 277)
 - Understanding Font Formats (p. 278)
 
+---
+
 ## Learning Objectives
 
 - Explore `@font-face` to incorporate custom typefaces into a web page.
 - Use Google Fonts as an option for using custom typefaces on a web page.
 - Discover how to combine typefaces together in effective combinations.
 
+---
+
 ## Keywords
 
 - [@font-face](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face)
 - [Google Fonts](https://developers.google.com/fonts/docs/getting_started)
+
+---
 
 ## Exercise 1
 
@@ -34,6 +40,8 @@ Now add some copy to your webpage and load it in a browser.
 
 Hint: Link to your external stylesheet in the `<head>`!
 
+---
+
 ## Exercise 2
 
 Now try adding custom web fonts using Google Fonts:
@@ -42,6 +50,8 @@ Now try adding custom web fonts using Google Fonts:
 </iframe>
 
 View the [solution](http://codepen.io/redacademy/pen/GJOBYv).
+
+---
 
 ## Lab Activity
 
@@ -54,6 +64,8 @@ Once you've completed the level, return to Font Squirrel and **download a custom
 You'll also want to read up on how to **[avoid faux italics and bolding](http://stackoverflow.com/questions/2436749/how-to-add-multiple-font-files-for-the-same-font)** with your `@font-face` typefaces, and adjust your CSS accordingly.
 
 You may select more than one font to include using `@font-face` for Project 2, but you are encouraged to pair your typefaces thoughtfully if you do!
+
+---
 
 ## Additional Resources
 

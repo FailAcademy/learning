@@ -13,6 +13,8 @@ From the HTML & CSS textbook:
 - Responding to Users (p. 291)
 - Boxes (pp. 300-318)
 
+---
+
 ## Learning Objectives
 
 - Understand what CSS is in relation to HTML.
@@ -22,6 +24,8 @@ From the HTML & CSS textbook:
 - Manipulate styles of basic HTML elements using selectors, including classes, pseudo-classes, and IDs.
 - Use browser development tools to view and change styles on webpage.
 
+---
+
 ## Keywords
 
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -29,6 +33,8 @@ From the HTML & CSS textbook:
 - [ID](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)
 - [Box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box_model)
 - [Web/Page Inspector](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector)
+
+---
 
 ## Exercise 1
 
@@ -39,6 +45,8 @@ Try adding margin, borders, and padding to some HTML elements as instructed belo
 
 View the [solution](http://codepen.io/redacademy/pen/XbgoLP).
 
+---
+
 ## Exercise 2
 
 Now let's try using CSS class and IDs to style some text elements:
@@ -47,6 +55,8 @@ Now let's try using CSS class and IDs to style some text elements:
 </iframe>
 
 View the [solution](http://codepen.io/redacademy/pen/EjXryM).
+
+---
 
 ## Exercise 3
 
@@ -58,9 +68,11 @@ Also try "forcing element states", editing the content of some of the HTML eleme
 
 *Remember that you will lose all of the changes you've made inside the web inspector as soon as you refresh the page.*
 
-## Lab Activity
+---
 
-Time to add a bit of style to your resume from the previous lab activity...
+## Homework
+
+Time to add a bit of style to your resume from the previous homework...
 
 You're going to add an **external stylesheet** to your root folder, and link it up in the `head` of your HTML file.
 
@@ -78,6 +90,8 @@ And be sure to try applying the styles using the different types of **selectors*
 - Type selectors (e.g. `p`, `h1`)
 - Descendant selectors (e.g. `article p`)
 - Class and ID selectors (e.g. `.title`, `#masthead`)
+
+---
 
 ## Additional Resources
 
