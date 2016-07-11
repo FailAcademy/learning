@@ -50,6 +50,7 @@ We'll start by refactoring the floats in the site `<footer>` into flexbox proper
 1. Remove your floats
 2. Apply `display: flex` to the appropriate element
 3. Figure out how to get the address and the social links aligned to the left and right sides as they were with your floats (for screen widths `600px` and up only, of course!)
+
 ---
 
 ## Exercise 2
