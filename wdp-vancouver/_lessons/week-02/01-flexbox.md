@@ -55,7 +55,7 @@ We'll start by refactoring the floats in the site `<footer>` into flexbox proper
 
 ## Exercise 2
 
-Let's try out some of the flex item-related properties in project within the site `<header>` now following these steps:
+Let's use some of the flex-item related properties in our project, within the site `<header>`. Follow these steps:
 
 1. Remove all floats from your `<header>` elements
 2. Apply `display: flex` to the appropriate container
@@ -81,7 +81,7 @@ First, code along with the videos in the **[What the Flexbox?!](http://flexbox.i
 
 Once you finish those, take what you've learned about flexbox and apply it to solving the 24 challenges in **[Flexbox Froggy](http://flexboxfroggy.com/)**.
 
-Finally, spend any remaining time today removing all of the floats and replacing them with flexbox properties to achieve the same layout in Project 1.
+Finally, spend any remaining time today removing all floats from your project and replace them with flexbox properties.
 
 ---
 
