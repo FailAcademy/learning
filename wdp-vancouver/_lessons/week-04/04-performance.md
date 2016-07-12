@@ -62,3 +62,10 @@ A free online screencast series about website performance tips:
 A free online book on website performance:
 
 - [Designing for Performance](http://designingforperformance.com/)
+
+A great CSS Tricks article explaining the difference between how minification and gzipping work:s
+
+- [The Difference Between Minification and Gzipping](https://css-tricks.com/the-difference-between-minification-and-gzipping/)
+
+
+- [What Every Frontend Developer Should Know About Webpage Rendering](http://frontendbabel.info/articles/webpage-rendering-101/)

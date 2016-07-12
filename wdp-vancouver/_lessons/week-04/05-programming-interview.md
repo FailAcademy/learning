@@ -12,7 +12,7 @@ Well-rounded front-end developers will be able to write great code while also ju
 
 To put these myriad job responsibilities (and others!) into perspective, please read this article prior to class:
 
-- [Front End Development is Development](https://css-tricks.com/front-end-development-is-development/)
+- [A Front End Developer is Aware](https://css-tricks.com/front-end-developer-aware/)
 
 Come prepared with your thoughts and reflections on this article (especially in relation to your journey so far over the first month of the course). We will discuss it as a class, and then jump into our programming interview questions.
 

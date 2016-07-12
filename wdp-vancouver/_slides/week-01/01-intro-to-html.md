@@ -538,7 +538,7 @@ Today, images for the web are saved in the following formats:
 
 # Format Cheatsheet
 
-- Use **PNG-8** over **GIF** for graphics with simple colors
+- Use **PNG-8** over **GIF** for graphics with simple colours
 - Use **PNG-24** over **JPEG** when using alpha transparency
 - Use **JPEG** over **PNG** for photographic images
 - Use **GIF** for simple animated graphics

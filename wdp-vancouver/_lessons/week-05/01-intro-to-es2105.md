@@ -114,3 +114,4 @@ Extra reading on ES2015 basics:
 - [Learn ES2015 (ES6/Harmony) Now!](http://learnharmony.org/)
 - [ECMAScript 6 Learning](https://github.com/ericdouglas/ES6-Learning)
 - [ECMAScript 2015: Let's talk about ES6](https://medium.com/ecmascript-2015)
+- [ES6 for Humans](https://github.com/metagrover/ES6-for-humans)

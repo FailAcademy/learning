@@ -94,6 +94,12 @@ We'll see that our `node_modules` directory can get quite large, and there's als
 With an up-to-date `package.json` file, amother dev can simply download our project files, run `npm install`, and automatically install all of the project dependencies from the npm plugin repository. Magic!
 
 ---
+class: center, middle
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">If at first you don&#39;t succeed, try `rm -rf node_modules &amp;&amp; npm install`</p>&mdash; I Am Devloper (@iamdevloper) <a href="https://twitter.com/iamdevloper/status/733581051440697344">May 20, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+---
 
 class: center, middle
 
