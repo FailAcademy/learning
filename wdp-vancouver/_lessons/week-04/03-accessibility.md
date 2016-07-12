@@ -194,3 +194,7 @@ Information on Canadian laws regarding web accessibility:
 
 - [About accessibility laws | Ontario](https://www.ontario.ca/page/about-accessibility-laws)
 - [Accessible Internet - Province of British Columbia](http://www2.gov.bc.ca/gov/content/governments/about-the-bc-government/accessibility/accessibility-2024/building-blocks/accessible-internet)
+
+An article more on "compatibility" than "accessibility" but still a good, relevant read:
+
+- [Make the Web Work For Everyone](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/)

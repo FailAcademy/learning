@@ -162,7 +162,7 @@ Never run `rm -rf /` or `rm -rf *` unless you want to delete everything on your 
 
 Let's take the command line for a spin.
 
-[See the lesson page](/lesson/the-command-line-interface-and-version-control/) for further instructions.
+[See the lesson page](/lesson/the-command-line-interface-and-git/) for further instructions.
 
 ---
 
@@ -402,7 +402,7 @@ class: center, middle
 Fear not, we can undo our local (uncommitted) changes using the following command:
 
 ```bash
-`git reset --hard HEAD`
+git reset --hard HEAD
 ```
 
 This will return our **working directory** to the state it was in at the time of our last commit, and remove all the local changes we made.

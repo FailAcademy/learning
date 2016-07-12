@@ -140,7 +140,12 @@ git checkout production
 ```bash
 git merge master
 ```
-- Push the changes to the Heroku App master branch and the GitHub production branch, and then return to the master branch:
+- **Heroku Deploy Option 1:** Set-up [automatic GitHub-based deploys](https://devcenter.heroku.com/articles/github-integration) in Heroku (based on the production branch only!), push the GitHub production branch, and then return to the master branch:
+```bash
+git push origin production # this push will auto-deploy to Heroku
+git checkout master
+```
+- **Heroku Deploy Option 2:** Manually push the changes to the Heroku App master branch and the GitHub production branch, and then return to the master branch:
 ```bash
 git push heroku production:master
 git push origin production
@@ -162,7 +167,7 @@ Add the Heroku remote to your local repo:
   git remote add heroku git@heroku.com:red-wdp.git
 ```
 
-The email you use to authorize with github must be added to the Heroku application. This can be done via the "Access" tab in the Heroku dashboard. 
+The email you use to authorize with github must be added to the Heroku application. This can be done via the "Access" tab in the Heroku dashboard.
 
 Once this is complete, log in to Heroku from the command line:
 ```bash
