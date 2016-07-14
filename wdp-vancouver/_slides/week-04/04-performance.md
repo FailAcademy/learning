@@ -66,7 +66,7 @@ The other 80% is dependent on what happens in the front-end **after the HTML doc
 ---
 class: center, middle
 
-### Perceived Performance
+### Perceived Performance?
 
 Perceive performance is how fast a user *thinks* a site loads.
 
@@ -86,26 +86,22 @@ According to [Jakob Nielsen](https://www.nngroup.com/articles/response-times-3-i
 
 # Critical Rendering Path
 
-Optimizing the critical rendering path refers to prioritizing the display of content that relates to the current user action.
+Optimizing the **critical rendering path** pertains to prioritizing the display of content that relates to the current user action:
+
+.inline-images[
+   ![Progressive rendering](/public/img/slide-assets/progressive-rendering.png)
+]
+
+.footnote[Image credit: [Google](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en)]
 
 ---
 
-# Time to Interactivity
+# How a Page Loads
 
-- Asynchronously load content
-- Prioritize "above the fold" requests
-- Follow best practices for loading CSS and JS assets
-- Cache assets for returning users
-- Optimize images
-- Ensure that primary actions for the pages are ready as soon as possible.
-
----
-
-# Jank
-
-**Jank** is stuttering or skipping as you scroll down the page. It happens when the browser's rendering slows down below 60fps.
-
-**Cause of jankiness:** Changing visual properties or the visibility of elements trigger a **repaint** and/or **reflow** in the browser&mdash;these are expensive operations!
+1. The browser **fetches the HTML document** from the server and constructs the DOM
+2. As the browser reads the HTML it retrieves the linked stylesheets&mdash;the browser **pauses everything to fetch the stylesheets** and then constructs the CSSOM
+3. The browser uses the DOM and CSSOM create the **render tree** (computes the size and position of all visible elements)
+4. The browser **paints** the final render tree and renders the pixels on the screen
 
 ---
 class: center, middle
@@ -113,33 +109,95 @@ class: center, middle
 <iframe width="640" height="480" src="https://www.youtube.com/embed/ZTnIxIA5KGw" frameborder="0" allowfullscreen></iframe>
 
 ---
+
+# Optimizing CRP
+
+To optimize the critical rendering path we must ensure that **primary actions are ready as soon as possible**, but this will require some planning:
+
+- Prioritize "above the fold" requests
+- Follow best practices for loading CSS and JS assets
+- Cache assets for returning users
+- Optimize images and other assets
+
+*More on this to come...*
+
+---
+
+# Jank
+
+**Jank** is stuttering or skipping as you scroll down the page.
+
+It happens when the browser's rendering slows **below 60fps**.
+
+**Cause of jankiness:** Changing visual properties or the visibility of elements trigger a **repaint** and/or **reflow** in the browser&mdash;these are expensive operations!
+
+Jank is ultimately the result of the browser taking too long to make the frames (due to inefficient animations, too many repaints, etc.).
+
+---
+class: center, middle
+
+.large[
+   Resource: **[Jank Free](http://jankfree.org/)**
+]
+
+---
 template: inverse
 
 # Page Speed
 
 ---
+class: center, middle
 
-# How to Optimize Page Speed
+.large[
+   What do we mean by<br />**page speed**?
+]
 
-- Number of requested resources
-- Files sizes (of images and code files)
+---
+
+# Loading Pages Faster
+
+Improving the speed with which a page loads boils down to two (seemingly) simple tasks:
+
+- Reducing the number of requested resources and optimizing how they are loaded
+- Reducing file sizes (of files containing code, images, etc.)
 
 ---
 
 # Other Factors that Impact Page Speed
 
-- Geography (consider using a CDN)
-- Network (mobile, rural areas)
+- Geography (but CDNs can help)
+- Network (mobile, rural areas, etc.)
 - Browsers ([not everyone](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/) is using the latest version of Chrome)
 
 ---
 
-# How to Test Page Speed
+# Testing Page Speed
+
+- [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
+- [WebPageTest](http://www.webpagetest.org/)
+- [YSlow](http://yslow.org/) browser extension
+- Your Chrome dev tools! (use the Network and Timeline tabs)
+
+---
+class: center, middle
+
+.inline-images[
+   ![Network tab in Chrome dev tools](/public/img/slide-assets/chrome-dev-tools-network.png)
+]
+
+---
+class: center, middle
 
 
+.inline-images[
+   ![Timeline tab in Chrome dev tools](/public/img/slide-assets/chrome-dev-tools-timeline.png)
+]
 
+---
 
+# Exercise 1
 
+Exercise details TBA.
 
 ---
 template: inverse
@@ -147,13 +205,43 @@ template: inverse
 # Optimizing Images
 
 ---
+class: center, middle
 
-Format | Best For	Optimization Options
---------------------------------------
+### Impact of Images
+
+Images account for **most of page weight**, <br />so big performance gains can be made easily here!
+
+---
+
+# How to Optimize Images
+
+- Use SVGs (can be embedded directly in HTML)
+- Use icon fonts (customize with only the icons you need)
+- Create image sprites ([with SVGs](https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/))
+- Use CSS3 properties where you can
+- "Save for Web/Devices" using Photoshop, Gimp, or [Photopea](https://www.photopea.com/)
+- Compress/minify your images with [imagemin](https://github.com/sindresorhus/gulp-imagemin) in your build tooling or the [ImageOptim](https://imageoptim.com/mac) app
+- Choose the right image format for the job...
+
+---
+class: center, middle
+
+Format | Best For
+-------|---------------------------------
 JPEG   | Photos, images with many colours
-GIF    | Animations vertical noise
+GIF    | Animations, simple graphics
 PNG-24 | Partial transparency
 SVG    | Graphics that need to scale
+
+---
+
+# Image Optimization Checklist
+
+1. Have I picked the right image format?
+2. Have I run all of my images through a compression tool?
+3. Can I (reasonably) use CSS or an SVG for this?
+
+**Note:** that image optimization isn't something you only do before you launch a website...there needs to be a long-term strategy in place for site editors!
 
 ---
 template: inverse
@@ -161,36 +249,117 @@ template: inverse
 # Optimizing Code
 
 ---
+class: center, middle
 
-Start with valid code
+### Rule No. 1 of Optimizing Code:
 
----
-
-Simplify your CSS selectors...good for performance and maintainability
-Don't go crazy on media queries
+**Start with valid, error-free code!**
 
 ---
 
-Add styles to the head and scripts before the closing body tag
+# Optimizing HTML
+
+Optimizing your mark-up is as simple as following the basic best practices we already know:
+
+- Don't use inline styles on your elements
+- Avoid div-itis (important for a11y too)
+- Remove commented-out code in production environments
+
+---
+class: center, middle
+
+.large[
+   **Rules to live by:**<br />
+   Load CSS in the `<head>`<br />
+   Load JS right before `</body>`
+]
+
+---
+class: center, middle
+
+.large[
+   Why do we do this?
+]
 
 ---
 
-# Minification vs. Gzipping
+# Optimizing CSS
 
-Minification does things like removing whitespace, removing comments, removing non-required semicolons, reducing hex code lengths...
+CSS **performance** and **maintainability** are two peas in a pod:
 
+- Make as few requests to stylesheets as possible, but consider using page-specific styles for larger sites
+- Keep selector specificity under control
+- Clean up unused styles
+- Remove redundancies (modular classes FTW!)
+- Ask yourself if you really need Bootstrap, etc.
+- Be smart about how you write you media queries
 
-Gzipping finds all repetitive strings and replaces them with pointers to the first instance of that string.
+---
 
+# Optimizing JS
 
-https://css-tricks.com/snippets/htaccess/active-gzip-compression/
+JS resources can significantly impact the CRP because they block DOM construction.
 
-Gzipping is far more effective. Doing both is ideal.
+We can add the `async` or `defer` attributes on individual `<script>` elements to selectively prevent blocking:
 
-http://httpd.apache.org/docs/current/mod/mod_deflate.html
-http://nginx.org/en/docs/http/ngx_http_gzip_module.html
+```html
+<body>
+   <h1>Hello, world!</h1>
+   <script defer src="firstScript.js"></script>
+   <script async src="secondScript.js"></script>
+</body>
+```
 
-http://gzipwtf.com/
+**Note:** Any JS that loads late and affects page layout can cause the content to shift though!
+
+---
+class: center, middle
+
+&nbsp;                 | `async`                                 | `defer`
+-----------------------|-----------------------------------------|-------------------------------------------------
+**Executes when?**     | At the first available opportunity      | In the order it occurs in the document
+**Before what event?** | Before the `window`'s `load` event      | Before the `document`’s `DOMContentLoaded` event
+**When to use it?**    | When it doesn't rely on other scripts   | When it relies on or is relied upon by other scripts
+
+---
+
+# Optimizing Fonts
+
+Modern browsers are smart about only loading the font files they need, but we still need to think about optimizing them:
+
+- Add only the fonts you truly need to a website
+- Only add the weights and subsets that you need (easily customized with Google Fonts)
+- Make sure your fonts are cached (they rarely change!)
+- Use the [Font Loading API](https://drafts.csswg.org/css-font-loading/) to optimize text rendering in the CRP (fonts are lazyloaded by default, so the browser won't paint text pixels until the required fonts are available)
+
+---
+
+# Third-Party Content
+
+Third-party content/scripts such as ad servers or social buttons can be performance liabilities on your site because:
+
+- They will require additional DNS look-ups
+- They will have page weight implications for your website
+
+*Be smart about how you load third-party content!*
+
+Would click rates improve if you allow ads, etc. to block rendering (so they are visible when the content loads), or defer loading of ads so the user sees the content sooner?
+
+---
+
+# Minification & Gzipping
+
+Minification does things like removing whitespace, comments, and non-required semicolons, and reducing hex code lengths. We already do this to our CSS and JS with Gulp!
+
+Gzipping finds all repetitive strings and replaces them with pointers to the first instance of that string. It must be done at the server level (and how you do will depend on what kind of web server you're using).
+
+Gzipping is far more effective for improving performance. **Doing both is ideal.**
+
+---
+
+# Exercise 2
+
+Exercise details TBA.
 
 ---
 template: inverse
@@ -198,9 +367,152 @@ template: inverse
 # Mobile-first Performance
 
 ---
+class: center, middle
+
+.large[
+   Mobile first is about more than how you write media queries.
+]
+
+---
+
+# Thinking Mobile-first
+
+Thinking mobile-first requires asking some key questions:
+
+- *What is the main purpose of this page?*
+- *What's the most important functionality or content?*
+- *How do we optimize this for slower or less capable devices?*
+
+Don't assume that users need to see fewer things because they are on mobile devices.
+
+If you find yourself making judgements like this, then you should be asking why that content is there at all.
+
+---
+class: center, middle
+
+### Optimized Image Loading FTW
+
+We already know that we can make big performance gains by optimizing our images, but **how we load them** in our HTML and CSS for different screen sizes/types can do even more to improve site performance on mobile devices.
+
+**TL;DR:** Load appropriately sized images for a given context.
+
+---
+
+# Background Images
+
+**Pro-tip:** If you have a large background image you need to hide in your CSS, you must set `display: none` on the parent to prevent the browser from downloading the image anyway:
+
+```html
+<div class="parent">
+    <div class="child"></div>
+</div>
+```
+
+```css
+.child {
+   background-image: url('images/cat.png');
+}
+
+@media all and (max-width: 600px) {
+   .parent {
+      display: none;
+   }
+}
+```
+
+---
+
+# Background Images
+
+**Pro-tip:** Remember that you can write resolution-dependent media queries to selectively load high resolution images:
+
+```css
+.hero {
+   background-image: url('images/hero.png');
+   width: 1600px;
+   height: 300px;
+}
+
+/* loads for HiDPI screens only */
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+   .hero {
+      background-image: url('images/hero-hires.png');
+      width: 1600px;
+      height: 300px;
+   }
+}
+```
+
+---
+
+# Using srcset
+
+We can also use the `srcset` attribute on an `<img>` element, which takes a comma-separated list of image URLs. Using the `x` descriptor allows you to load different versions of the same image for high-density displays:
+
+```html
+<img src="puppy.jpg"
+   srcset="puppy.jpg 1x, puppy-large.jpg 2x"
+   alt="An adorable puppy"/>
+```
+
+Using the `sizes` attribute with the `w` descriptor allow you to customize the size of the image based on the viewport:
+
+```html
+<img src="puppy.jpg" sizes="(max-width: 40em) 100vw, 50vw"
+   srcset="puppy.jpg 200w, puppy-large.jpg 400w, puppy-hd.jpg 600w"
+   alt="An adorable puppy"/>
+```
+
+---
+
+# Picture Elements
+
+Where more **art direction** is needed (i.e. we want to load completely different images depending on the screen context), we can use the `<picture>` and `<source>` elements with `srcset`:
+
+```html
+<picture>
+   <source media="(max-width: 20em)" srcset="puppy-portrait.jpg 1x,
+   puppy-portrait-large.jpg 2x, puppy-portrait-hd.jpg 3x" />
+
+   <source media="(max-width: 40em)" srcset="puppy-landscape.jpg 1x,
+   puppy-landscape-large.jpg 2x, puppy-landscape.jpg-hd.jpg 3x" />
+
+   <img src="puppy.jpg" alt="An adorable puppy" />
+</picture>
+```
+
+---
+
+# Exercise 3
+
+Exercise details TBA.
+
+---
 template: inverse
 
 # Performance Budgets
+
+---
+
+# Aesthetics versus Performance
+
+Modern HTML/CSS/JS and web browsers are very powerful, but we must always be sure to ask **what impact a give choice** has on page weight, additional HTTP requests, and perceived performance.
+
+For example, what is the performance cost of adding a hero image, a hi-res video, another font file, an image slider, etc.?
+
+*We must find a happy medium balancing aesthetics with performance and make decisions that best support the brand!*
+
+---
+
+# Creating a Performance Budget
+
+---
+
+# Exercise 4
+
+Exercise details TBA.
 
 ---
 template: inverse
@@ -209,24 +521,20 @@ template: inverse
 
 ---
 
-<!--
+# Exercise 5
 
----
-
-# Caching
-
-http://httpd.apache.org/docs/2.2/caching.html
-
-https://www.nginx.com/resources/admin-guide/caching/
-
--->
+Exercise details TBA.
 
 ---
 
 # What We've Learned
 
-- Thing 1
-- Thing 2
+- What it means for a website to be performant
+- How to test page speed
+- How to optimize images and code
+- How to think about performance in a "mobile-first" way
+- What a performance budget is
+- How to use service workers for caching
 
 ---
 template: inverse
