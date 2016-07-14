@@ -14,7 +14,12 @@ lesson_date: 2016-07-28
 ## Learning Objectives
 
 - Describe what website performance is and why it matters.
-- Use an array of online tools and browser extensions to test a website's performance.
+- Define what the "critical rendering path" is, and describe how to best load website resources within it to optimize perceived performance.
+- Use an array of online tools and browser extensions to test page speed.
+- Describe methods for compressing image files and how to choose the best image format for a particular use case.
+- Describe what performance consideration must be made when building "mobile-first" websites.
+- Create a performance budget for a website.
+- Use the service worker API to reduce network requests for certain assets.
 
 ---
 
@@ -25,7 +30,17 @@ lesson_date: 2016-07-28
 - Page speed
 - Page weight
 - Network requests
-- Critical rendering path
+- [Critical rendering path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en)
+- Jank
+- `async`
+- `defer`
+- Font loading API
+- Minification
+- gzipping
+- `srcset`
+- [`<picture>`](https://developer.mozilla.org/en/docs/Web/HTML/Element/picture)
+- Performance budget
+- Service worker API
 
 ---
 
@@ -75,11 +90,6 @@ A free online book on website performance:
 
 - [Designing for Performance](http://designingforperformance.com/)
 
-Resources From Google WebFundamentals:
-
-- [Critical rendering path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en)
-- [Web font optimization](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization?hl=en)
-
 A deep dive into how webpages are rendered by browsers:
 
 - [What Every Frontend Developer Should Know About Webpage Rendering](http://frontendbabel.info/articles/webpage-rendering-101/)
@@ -100,7 +110,7 @@ Gzipping resources:
 
 - [gzipWTF](http://gzipwtf.com/)
 - [Apache Module mod_deflate](http://httpd.apache.org/docs/current/mod/mod_deflate.html)
-- [Module ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html)
+- [Module ngx\_http\_gzip\_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html)
 
 Some case studies and articles on RWD and performance:
 
@@ -109,7 +119,7 @@ Some case studies and articles on RWD and performance:
 
 More on implementing responsive images:
 
-- [Responsive Images Done Right: A Guide To <picture> And srcset](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/)
+- [Responsive Images Done Right: A Guide To &lt;picture&gt; And srcset](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/)
 - [How to Build Responsive Images with srcset](https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/)
 
 Caching for different types of web servers:
