@@ -7,7 +7,11 @@ lesson_date: 2016-08-18
 
 ## Pre-Work
 
-Read through the following article to familiarize yourself with the WP REST API and how we'll be retrieving data from it before class:
+To understand the history of the WP REST API and its relevance, watch the following video prior to class:
+
+- [Introduction to the WordPress REST API - Ryan McCue](https://youtu.be/tV4IuS_KnvU)
+
+Also read through the following article to familiarize yourself with the WP REST API and how we'll be retrieving data from it during the lesson:
 
 - [WP REST API: Retrieving Data](https://code.tutsplus.com/tutorials/wp-rest-api-retrieving-data--cms-24694)
 
