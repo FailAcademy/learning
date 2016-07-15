@@ -51,7 +51,8 @@ Some things to consider while writing your algorithm:
 
 Lets get a sense of how fast you can type!
 
-Let's visit [10 Fast Fingers](http://10fastfingers.com/typing-test/english), create an account and take the typing test and share your WPM!
+Let's visit [10 Fast Fingers](http://10fastfingers.com/typing-test/english), create an account and take the typing test and share your WPM! <br/>
+Once you've completed the english typing test. Let's see how fast you can type code! Visit [Typing.io](https://typing.io/) and sign in. Select the JavaScript test and start typing!
 
 ---
 

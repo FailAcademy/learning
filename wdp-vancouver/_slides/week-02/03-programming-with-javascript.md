@@ -551,6 +551,297 @@ For numbers divisible by 3, print **Fizz** instead of the number, and for number
 
 When you have that working, modify your program to print **FizzBuzz**, for numbers that are divisible by both 3 and 5 (and still print **Fizz** or **Buzz** for numbers divisible by only one of those).
 
+
+---
+template: inverse
+
+# Arrays
+
+---
+class: center, middle
+
+### What are arrays?
+
+Arrays are special object in JavaScript that store a list of values, but the key for each value is an **index number**.
+
+
+---
+
+# Index Numbers?
+
+- Index numbers in an array are like the property key names in regular objects
+- But instead of choosing the names, they are always set to numbers in ascending order
+- **Weirdness alert!** In JavaScript, counting always starts at 0
+- Index numbers allow us to assign and access values in arrays
+
+---
+
+# The Syntax of Arrays
+
+Like normal objects, there's a special way to define arrays as variables.
+
+For arrays, we use square brackets (instead of curly braces):
+
+```js
+var shoppingList  = [
+   // your array items will go here...
+];
+```
+
+---
+
+# Using Arrays
+
+Add values to an array by separating them with commas:
+
+```js
+var shoppingList = ['coffee', 'peppers', 'apple juice'];
+```
+
+Access them by their index number:
+
+```js
+// Item 2 is available at index number 1:
+var itemTwo = shoppingList[1]; // will equal "peppers"
+```
+
+And even add new values to the end of the array:
+
+```js
+shoppingList.push('oranges');
+```
+
+*How do we find out how many items are in the above array?*
+
+---
+
+class: center, middle
+
+.large[
+   And lastly, back to loops...
+]
+
+---
+
+class: center, middle
+
+.large[
+   What kinds of loops can we create in JS?
+]
+
+---
+
+# Arrays and Loops
+
+Let's take our shopping list array and print it out in a list:
+
+```js
+var shoppingList  = ['coffee', 'peppers', 'apple juice'];
+
+// Remember how we manually set the max. number of loops before?
+// We can use the array "length" to get the number automatically:
+
+var totalItems = shoppingList.length;
+
+for (var i = 0; i < totalItems; i++) {
+   console.log( shoppingList[i] );
+}
+```
+
+---
+
+# Arrays in Objects
+
+We can also store arrays as properties in objects:
+
+```js
+var errands = {
+   date: new Date(),
+   complete: false,
+   locations: ['Post Office', 'Grocery Store', 'Hardware Store']
+};
+
+var firstStop = errands.locations[0]; // will equal "Post Office"
+```
+
+---
+
+template: inverse
+
+# Objects
+
+---
+
+# What Are Objects?
+
+**Objects** are like containers that hold groups of related variables and functions to create an organized **model** of something in your code.
+
+```js
+var myObject = {};
+
+// An object literal!
+```
+
+---
+
+# How Objects Help
+
+- Like functions, objects help us **better organize our code** and make it more reusable
+- When we define a variable in an object, we call it a **property**
+- When we create a function in an object, we call it a **method**
+
+---
+
+# The Syntax of Objects
+
+We define objects in JS just like we define any other variables, but they are wrapped in curly braces:
+
+```js
+var person  = {
+   // your properties and methods will go here...
+};
+```
+
+---
+
+# The Syntax of Objects
+
+**Properties** and **methods** are defined for the object using **key/value pairs**.
+
+This simply means that instead of writing `var firstName =` we write `firstName:` and separate multiple properties with commas instead of semi-colons.
+
+```js
+var person  = {
+   firstName: 'Silent',
+   lastName: 'Bob',
+   height: 1.75,
+   beard: true
+};
+```
+
+---
+
+# The Syntax of Objects
+
+And the same goes for creating methods.
+
+For object methods, we write `getName: function() {...}` instead of `function getName() {...}`:
+
+```js
+var person  = {
+   firstName: 'Silent',
+   lastName: 'Bob',
+   height: 1.75,
+   beard: true,
+   getName: function() {
+      return this.firstName + ' ' + this.lastName;
+   }
+};
+```
+
+---
+
+# Using Object Properties
+
+To access one of the object's properties or methods, we can use **dot notation**:
+
+```js
+var person = {
+   // ...
+   beard: true,
+   //...
+};
+
+var hasBeard = person.beard; // will equal true
+```
+
+Or use square brackets with the property key in quotes:
+
+```js
+var hasBeard = person['beard']; // will equal true
+```
+
+---
+
+# Using Object Properties
+
+And just like variables, we can update object property values after they've been initially defined:
+
+```js
+var person = {
+   // ...
+   beard: true,
+   //...
+};
+
+person.beard = false;
+```
+
+Or even add new ones:
+
+```js
+person.justShaved = true;
+```
+
+---
+
+# Using Object Methods
+
+We can also use dot notation to access object methods:
+
+```js
+var person = {
+   // ...
+   getName: function() {
+      return this.firstName + ' ' + this.lastName;
+   }
+};
+
+var fullName = person.getName(); // will return "Silent Bob"
+```
+
+---
+
+# What Is `this` ?
+
+In JS, `this` is a special word and it always refers to one object (which object it refers to will depend on the context).
+
+Inside of an object's method, it refers to the object itself:
+
+```js
+var person = {
+   firstName: 'Silent',
+   lastName: 'Bob',
+   // ...
+   getName: function() {
+
+      // use "this" to get properties of the object inside of a method
+
+      return this.firstName + ' ' + this.lastName;
+   }
+};
+```
+---
+
+# Objects and Loops
+
+We use slightly different syntax to loop through properties in an object:
+
+```js
+var bob = {
+    firstName: 'Bob',
+    lastName: 'Smith',
+    phoneNumber: '604-604-6040',
+    email: 'bob@redacademy.com'
+};
+
+for (var prop in bob) {
+  console.log(bob[prop]);
+}
+```
+
+*Any guesses as to what the following loop will output?*
+
 ---
 template: inverse
 
@@ -848,295 +1139,6 @@ There are pros and cons to each type of variable scope:
 
 - **Global variables** can be **reused** throughout your code, but they **use more memory** and you may run into **naming collisions** with other scripts. (Don't use global scope!)
 - **Local variables** are more efficient because they **use less memory** and their **names are protected** within the function that they are defined, but they **can't be re-used** elsewhere in your code
-
----
-
-template: inverse
-
-# Objects
-
----
-
-# What Are Objects?
-
-**Objects** are like containers that hold groups of related variables and functions to create an organized **model** of something in your code.
-
-```js
-var myObject = {};
-
-// An object literal!
-```
-
----
-
-# How Objects Help
-
-- Like functions, objects help us **better organize our code** and make it more reusable
-- When we define a variable in an object, we call it a **property**
-- When we create a function in an object, we call it a **method**
-
----
-
-# The Syntax of Objects
-
-We define objects in JS just like we define any other variables, but they are wrapped in curly braces:
-
-```js
-var person  = {
-   // your properties and methods will go here...
-};
-```
-
----
-
-# The Syntax of Objects
-
-**Properties** and **methods** are defined for the object using **key/value pairs**.
-
-This simply means that instead of writing `var firstName =` we write `firstName:` and separate multiple properties with commas instead of semi-colons.
-
-```js
-var person  = {
-   firstName: 'Silent',
-   lastName: 'Bob',
-   height: 1.75,
-   beard: true
-};
-```
-
----
-
-# The Syntax of Objects
-
-And the same goes for creating methods.
-
-For object methods, we write `getName: function() {...}` instead of `function getName() {...}`:
-
-```js
-var person  = {
-   firstName: 'Silent',
-   lastName: 'Bob',
-   height: 1.75,
-   beard: true,
-   getName: function() {
-      return this.firstName + ' ' + this.lastName;
-   }
-};
-```
-
----
-
-# Using Object Properties
-
-To access one of the object's properties or methods, we can use **dot notation**:
-
-```js
-var person = {
-   // ...
-   beard: true,
-   //...
-};
-
-var hasBeard = person.beard; // will equal true
-```
-
-Or use square brackets with the property key in quotes:
-
-```js
-var hasBeard = person['beard']; // will equal true
-```
-
----
-
-# Using Object Properties
-
-And just like variables, we can update object property values after they've been initially defined:
-
-```js
-var person = {
-   // ...
-   beard: true,
-   //...
-};
-
-person.beard = false;
-```
-
-Or even add new ones:
-
-```js
-person.justShaved = true;
-```
-
----
-
-# Using Object Methods
-
-We can also use dot notation to access object methods:
-
-```js
-var person = {
-   // ...
-   getName: function() {
-      return this.firstName + ' ' + this.lastName;
-   }
-};
-
-var fullName = person.getName(); // will return "Silent Bob"
-```
-
----
-
-# What Is `this` ?
-
-In JS, `this` is a special word and it always refers to one object (which object it refers to will depend on the context).
-
-Inside of an object's method, it refers to the object itself:
-
-```js
-var person = {
-   firstName: 'Silent',
-   lastName: 'Bob',
-   // ...
-   getName: function() {
-
-      // use "this" to get properties of the object inside of a method
-
-      return this.firstName + ' ' + this.lastName;
-   }
-};
-```
-
----
-template: inverse
-
-# Arrays
-
----
-class: center, middle
-
-### What are arrays?
-
-Arrays are special object in JavaScript that store a list of values, but the key for each value is an **index number**.
-
-
----
-
-# Index Numbers?
-
-- Index numbers in an array are like the property key names in regular objects
-- But instead of choosing the names, they are always set to numbers in ascending order
-- **Weirdness alert!** In JavaScript, counting always starts at 0
-- Index numbers allow us to assign and access values in arrays
-
----
-
-# The Syntax of Arrays
-
-Like normal objects, there's a special way to define arrays as variables.
-
-For arrays, we use square brackets (instead of curly braces):
-
-```js
-var shoppingList  = [
-   // your array items will go here...
-];
-```
-
----
-
-# Using Arrays
-
-Add values to an array by separating them with commas:
-
-```js
-var shoppingList = ['coffee', 'peppers', 'apple juice'];
-```
-
-Access them by their index number:
-
-```js
-// Item 2 is available at index number 1:
-var itemTwo = shoppingList[1]; // will equal "peppers"
-```
-
-And even add new values to the end of the array:
-
-```js
-shoppingList.push('oranges');
-```
-
-*How do we find out how many items are in the above array?*
-
----
-
-# Arrays in Objects
-
-We can also store arrays as properties in objects:
-
-```js
-var errands = {
-   date: new Date(),
-   complete: false,
-   locations: ['Post Office', 'Grocery Store', 'Hardware Store']
-};
-
-var firstStop = errands.locations[0]; // will equal "Post Office"
-```
-
----
-class: center, middle
-
-.large[
-   And lastly, back to loops...
-]
-
----
-class: center, middle
-
-.large[
-   What kinds of loops can we create in JS?
-]
-
----
-
-# Arrays and Loops
-
-Let's take our shopping list array and print it out in a list:
-
-```js
-var shoppingList  = ['coffee', 'peppers', 'apple juice'];
-
-// Remember how we manually set the max. number of loops before?
-// We can use the array "length" to get the number automatically:
-
-var totalItems = shoppingList.length;
-
-for (var i = 0; i < totalItems; i++) {
-   console.log( shoppingList[i] );
-}
-```
-
----
-
-# Objects and Loops
-
-We use slightly different syntax to loop through properties in an object:
-
-```js
-var bob = {
-    firstName: 'Bob',
-    lastName: 'Smith',
-    phoneNumber: '604-604-6040',
-    email: 'bob@redacademy.com'
-};
-
-for (var prop in bob) {
-  console.log(bob[prop]);
-}
-```
-
-*Any guesses as to what the following loop will output?*
 
 ---
 
