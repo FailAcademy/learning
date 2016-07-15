@@ -83,7 +83,7 @@ You can either use images/graphics that you own, or you can explore sources for 
 
 **Choose at least three images/graphics** and experiment with the different editing tools you just learned. You are encouraged to explore a different file format for each.
 
-Next, **add your newly web-optimized images to a webpage**. You can add them to your resume HTML file, you can create a new webpage if you like.
+Next, **add your newly web-optimized images to a webpage**. You can add them to your resume HTML file, or you can create a new webpage if you like.
 
 Finally, in an externally linked stylesheet, **practice using CSS to alter the display** of the image. Focus particularly on using box model properties to adjust its display, and be sure to **try out some HEX, RGBa, and HSLa colours** in your CSS as well.
 

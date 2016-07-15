@@ -154,7 +154,7 @@ With HTML5 we can replace a lot of those `<div>` elements with more semantically
 
 # HTML5 Structure
 
-With HTML5, we can now mark-up our website content a bit more descriptive structural elements:
+With HTML5, we can now mark-up our website content with more descriptive structural elements:
 
 ```html
 <header>
@@ -185,7 +185,7 @@ The `<header>` element is used to identify the top of a page, article, section, 
 
 **But watch out!**
 
-This element is not to be confused with the `<head>` element (for containing page metadata, etc.) or and of the `<h1>` through `<h6>` elements (for containing actual heading text)!
+This element is not to be confused with the `<head>` element (for containing page metadata, etc.) or with the `<h1>` through `<h6>` elements (for containing actual heading text)!
 
 ---
 
@@ -197,7 +197,7 @@ This element is not to be confused with the `<head>` element (for containing pag
 
 The `<nav>` element is for wrapping major navigational elements, such as the main website navigation menu, or previous/next links within blog posts.
 
-One-off links shouldn't be wrapped in `<nav>` tags, but should simply be wrapped in `<a>` tags as they always have.
+One-off links shouldn't be wrapped in `<nav>` tags, they should simply be wrapped in `<a>` tags as they always have.
 
 ---
 
@@ -207,9 +207,9 @@ One-off links shouldn't be wrapped in `<nav>` tags, but should simply be wrapped
 <article>...</article>
 ```
 
-The `<article>` element is used to identify a single, **self-contained** chunk of content such as a blog post, news article, or perhaps even and entire online book.
+The `<article>` element is used to identify a single, **self-contained** chunk of content such as a blog post, news article, or perhaps even an entire online book.
 
-The key to knowing whether to use an `<article>` element is to ask yourself "if I cut this content out and pasted somewhere else, would that content make sense on its own?"
+The key to knowing whether to use an `<article>` element is to ask yourself "if I cut this content out and pasted it somewhere else, would that content make sense on its own?"
 
 ---
 
@@ -233,7 +233,7 @@ And similarly, they differ from the `<article>` element because those must be se
 <aside>...</aside>
 ```
 
-The `<aside>` elements is used for tangentially related content (e.g. an author bio).
+The `<aside>` element is used for tangentially related content (e.g. an author bio).
 
 However, just because something appears to the right or left of the main content area does not necessarily make it suitable for an `<aside>`.
 
@@ -406,7 +406,7 @@ header h1 {
 
 With elements that have `relative`, `absolute`, or `fixed` position set, we can apply another property called `z-index`.
 
-The z-index property let's us specify the stacking order of non-static, overlapping elements.
+The z-index property lets us specify the stacking order of non-static, overlapping elements.
 
 Elements with a higher z-index will appear on top:
 
@@ -635,7 +635,7 @@ template: inverse
 
 # Creating Nav Menus
 
-Many of the navigation menus you see on websites today structured as **unordered lists**.
+Many of the navigation menus you see on websites today are structured as **unordered lists**.
 
 We can then **take advantage of floats** and other CSS properties to make lists look more like navigation menus.
 
@@ -656,7 +656,7 @@ For example, the HTML for a typical menu may look like this:
 </nav>  
 ```
 
-But we don't want it to look like unordered list on our website, so we can use CSS to fix that.
+But we don't want it to look like an unordered list on our website, so we can use CSS to fix that.
 
 ---
 
@@ -721,7 +721,7 @@ CSS gives us a number of tools for controlling the look of the backgrounds of ou
 We can specify:
 
 - `background-color`: an RGBa, HSLa, hexadecimal, or named color code
-- `background-image`: an URL of a background image (in parantheses)
+- `background-image`: a URL of a background image (in parentheses)
 
 ---
 
@@ -779,11 +779,11 @@ template: inverse
 
 # What's a CSS Reset?
 
-The goal of a **CSS reset** is to **inconsistencies amongst browsers** in things like default line heights, margins, and font sizes of headings.
+The goal of a **CSS reset** is to reduce **inconsistencies amongst browsers** in things like default line heights, margins, and font sizes of headings.
 
 Reset styles are **intentionally very generic**. They are just meant to standardize how browsers display HTML elements before your start applying your custom styles.
 
-Think of reset as *leveling the playing field*.
+Think of the reset as *leveling the playing field*.
 
 ---
 
