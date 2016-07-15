@@ -505,7 +505,7 @@ And if you need to convert audio files check out [media.io](http://media.io/).
 
 Always consider if hosting your own audio and video files is the right choice for a given website:
 
-- Do you (or your client) you have the **administrative capacity** to juggle all those formats?
+- Do you (or your client) have the **administrative capacity** to juggle all those formats?
 - Does your web host provide the necessary **bandwidth** to deliver those files to users?
 - Would a **third-party** service like Soundcloud, YouTube, or Vimeo be a better choice?
 
