@@ -44,7 +44,7 @@ Your project must:
 Your project must:
 
 - Incorporate "smooth scrolling" into the menu that navigates to specific headings in the page
-- Incorporate an image slider using a jQuery plugin for the featured product area ([bxSlider](http://bxslider.com/) is a good choice)
+- Incorporate an image slider using a jQuery plugin for the featured product area ([Flickity](http://flickity.metafizzy.co/) is a good choice)
 - Display an alert box that says "Thanks for subscribing!" whenever a user successfully submits the newsletter form with valid email address, otherwise they should see a message in the alert box that asks them to enter a valid email address
 
 **Additional requirements:**
