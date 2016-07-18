@@ -10,7 +10,7 @@ Read up on the basics of GitHub Desktop before the lesson:
 
 - [Contributing to Projects with GitHub Desktop](https://help.github.com/desktop/guides/contributing/)
 
-Browse through this interactive step-by-step guide to to familiarize yourself with how GitHub pages works:
+Browse through this interactive step-by-step guide to familiarize yourself with how GitHub pages works:
 
 - [A guide to using GitHub pages](https://www.thinkful.com/learn/a-guide-to-using-github-pages/)
 
@@ -50,7 +50,7 @@ Let's install Git, GitHub Desktop, and Git Shell (Windows only) so we can use th
 2. Double-click the **GitHubSetup** installer you just downloaded and follow the steps to install the application (this will also install the latest version of Git on your system)
 3. Once installed, click on the **GitHub** shortcut icon to open the application
 4. Once open, walk through the configuration steps:
-	- Enter you GitHub username and password to log in
+	- Enter your GitHub username and password to log in
 	- The GitHub app should automatically populate your full name and email address, but if it doesn't, add them manually and click "Continue"
 	- Go to the Dashboard when prompted and wait for the command line tools to be extracted
 
@@ -63,7 +63,7 @@ The **Git Shell** is what we will use to practice our CLI-based Git skills, so k
    - If you get a notice saying that the package is from and "unidentified developer", close out this warning message and instead right-click on the `.pkg` file and choose "Open", then choose "Open" again in the dialogue box that pops up to install Git
 3. Open your Terminal application and type `git --version` and press return. If you see a prompt that says *The 'git' command requires command line developer tools. Would you like to install the tools?*, then you have **two options**:
    - Click "Install" if you would like to install Apple's command line developer tools (it will take up ~150MB of hard drive space)
-   - If you prefer not to install command line developer tools, you can "trick" you computer into running Git commands without the command line developer tools installed by doing the following:
+   - If you prefer not to install command line developer tools, you can "trick" your computer into running Git commands without the command line developer tools installed by doing the following:
       1. Open your Terminal application and type: `nano ~/.bash_profile` then press return
       2. You have just opened a text file inside of a command line-based text editor known as **nano**. Now you must edit your `.bash_profile` file so it includes an alias for your Git commands.
       3. Add this line to the open file: `alias git="/usr/local/git/bin/git"`
@@ -74,7 +74,7 @@ The **Git Shell** is what we will use to practice our CLI-based Git skills, so k
 4. Download and install [GitHub Desktop for Mac](https://desktop.github.com/)
 5. Double-click on the downloaded file to begin installation. When prompted, choose **Move to Application Folder**.
 6. Once the application is installed, walk through the configuration steps:
-   - Enter you GitHub username and password to log in
+   - Enter your GitHub username and password to log in
    - The GitHub app should automatically populate your full name and email address, but if it doesn't, add them manually and click "Continue"
 
 ---

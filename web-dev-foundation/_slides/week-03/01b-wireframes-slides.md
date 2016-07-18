@@ -106,9 +106,9 @@ class: center, middle
 
 # What to include?
 
-Element commonly found in wireframes include:
+Elements commonly found in wireframes include:
 
-- Header (logo), headings, and sub-heading
+- Header (logo), headings, and sub-headings
 - Navigation menus
 - Search field
 - Body content
@@ -132,7 +132,7 @@ Using some of the provided wireframe sketch paper, sketch what you think a wiref
 
 If you have time, try sketching out wireframes for its mobile phone and tablet widths too.
 
-Tip: Choose an website with some interesting layout features!
+Tip: Choose a website with some interesting layout features!
 
 ---
 template: inverse

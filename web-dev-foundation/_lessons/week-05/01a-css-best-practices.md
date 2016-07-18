@@ -16,7 +16,7 @@ Some tips on writing good CSS (and HTML too):
 ## Learning Objectives
 
 - Apply the rules of CSS specificity in an informed, strategic way in a stylesheet.
-- Implement CSS rules in a way that allow them to scale easily.
+- Implement CSS rules in a way that allows them to scale easily.
 - Understand CSS best practices related to an object-oriented CSS approach.
 
 ---

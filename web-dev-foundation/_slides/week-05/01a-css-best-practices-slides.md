@@ -416,7 +416,7 @@ Let's clean up some code with the best practices we just learned:
 # What We've learned
 
 - How to leverage (and tame) specificity in our CSS
-- How to write write CSS that's future-friendly and easier to maintainable
+- How to write CSS that's future-friendly and easier to maintain
 - What Semantic-UI, BEM, and OOCSS are
 
 ---

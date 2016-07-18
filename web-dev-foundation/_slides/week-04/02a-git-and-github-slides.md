@@ -167,9 +167,9 @@ Once you have added your local repository, you can click the **Publish** button 
 
 # Check It Out!
 
-If you go to your GitHub account in a web browser now, you should be able to see your project listed as one of your **respositories**.
+If you go to your GitHub account in a web browser now, you should be able to see your project listed as one of your **repositories**.
 
-Now that you've made your first commit, you can make additional commits following the same steps as you make new changes to your project.
+Now that you've made your first commit, you can make additional commits as you make changes to your project by following the same steps.
 
 ---
 
@@ -233,7 +233,7 @@ class: center, middle
 ---
 class: center, middle
 
-**Reverts make new commits...so the are revertable too!**
+**Reverts make new commits...so they are revertable too!**
 
 .inline-images[
    ![Reverts result in new commits](/public/img/slide-assets/gh-revert-commit.png)
@@ -248,7 +248,7 @@ template: inverse
 
 # Getting Your Website on the Web
 
-So far we have built and viewed our websites locally on own computers, but eventually you're probably going to want to share what you've built with a bigger audience.
+So far we have built and viewed our websites locally on our own computers, but eventually you're probably going to want to share what you've built with a bigger audience.
 
 To do that, you need to **host** your website on a web server.
 
@@ -287,7 +287,7 @@ template: inverse
 
 It's an easy way to get our projects online (for free!) right now, and a great way to practice our Git skills too.
 
-GitHub Page takes care of hosting your website files and gives a domain name so people can find your website.
+GitHub Pages takes care of hosting your website files and gives a domain name so people can find your website.
 
 .inline-images[
    ![GitHub logo](/public/img/slide-assets/octocat-logo.png)

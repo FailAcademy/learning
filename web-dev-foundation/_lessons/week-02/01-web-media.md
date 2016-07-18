@@ -85,19 +85,19 @@ Try out the `audio` and `video` elements for yourself:
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/QbBaGE/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/QbBaGE/'>QbBaGE</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-View the [solution](http://codepen.io/redacademy/pen/zGLpoR).
+View the [solution](http://codepen.io/redacademy/pen/zGLpoR)
 
 ---
 
 ## Homework
 
-For today's homework, you're going to **practice you image-optimizing skills**.
+For today's homework, you're going to **practice your image-optimizing skills**.
 
 You can either use images/graphics that you own, or you can explore sources for Creative Commons-licensed and public domain images/graphics.
 
 **Choose at least three images/graphics** and experiment with the different editing tools you just learned. You are encouraged to explore a different file format for each.
 
-Next, **add your newly web-optimized images to a webpage**. You can add them to your resume HTML file, you can create a new webpage if you like.
+Next, **add your newly web-optimized images to a webpage**. You can add them to your resume HTML file, or you can create a new webpage if you like.
 
 Finally, in an externally linked stylesheet, **practice using CSS to alter the display** of the image. Focus particularly on using box model properties to adjust its display, and be sure to **try out some HEX, RGBa, and HSLa colours** in your CSS as well.
 

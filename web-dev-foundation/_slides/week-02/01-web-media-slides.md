@@ -164,7 +164,7 @@ PNG-24 may support greater transparency, fading, and gradients when saving photo
 
 # SVG
 
-The SVG format is newer on the scene, but offer a lot of flexibility.
+The SVG format is newer on the scene, but offers a lot of flexibility.
 
 The image data is rendered as XML and can **scale down or up** without any loss of quality, just like a vector-based image in Illustrator.
 
@@ -176,7 +176,7 @@ When using SVGs, it important to **provide a fallback** image format if you need
 
 # Format Cheatsheet
 
-- Use **PNG-8** over **GIF** for graphics with simple colors
+- Use **PNG-8** over **GIF** for graphics with simple colours
 - Use **PNG-24** over **JPEG** when using alpha transparency
 - Use **JPEG** over **PNG** for photographic images
 - Use **GIF** for animated graphics
@@ -213,7 +213,7 @@ template: inverse
 
 ---
 
-# Using Color
+# Using Colour
 
 On the web, we have four options for specifying the colours of our HTML elements:
 
@@ -445,7 +445,7 @@ class: center, middle
 
 # Fallback Formats
 
-The `audio` tag isn't a self-closing tag for reason...not all browsers support the same audio file formats, so we have to provide fallback formats.
+The `audio` tag isn't a self-closing tag for a reason...not all browsers support the same audio file formats, so we have to provide fallback formats.
 
 To do this, we take the `src` attribute out of the audio element tag, and nest all of our file formats inside some child `source` tags like this:
 
@@ -505,7 +505,7 @@ And if you need to convert audio files check out [media.io](http://media.io/).
 
 Always consider if hosting your own audio and video files is the right choice for a given website:
 
-- Do (or your client) you have the **administrative capacity** to juggle all those formats?
+- Do you (or your client) have the **administrative capacity** to juggle all those formats?
 - Does your web host provide the necessary **bandwidth** to deliver those files to users?
 - Would a **third-party** service like Soundcloud, YouTube, or Vimeo be a better choice?
 

@@ -82,7 +82,7 @@ Other qualities of a line that affect its character:
 
 - Classical (vertical and horizontal) lines are stable
 - Flowing horizontal lines are peaceful
-- Zigzigs are exciting
+- Zigzags are exciting
 - Spiral suggests infinity
 - Swirling linear lines remind us of nature
 
@@ -338,7 +338,7 @@ class: center, middle
 
 # The Colour Wheel
 
-The Prang color wheel is a mechanical arrangement that has 12 basic hues:
+The Prang colour wheel is a mechanical arrangement that has 12 basic hues:
 
 - Start with **primaries** (red, blue, yellow)
 - Mix those to create **secondaries** (orange, purple, green)
@@ -522,7 +522,7 @@ class: center, middle
 # Unity
 
 - All elements working together to support the design as a cohesive whole
-- Related to repetitions&mdash;which occurs when repeating line, shape, colour, patterns, etc.
+- Related to repetitions&mdash;which occur when repeating lines, shapes, colours, patterns, etc.
 - Unity is related to Gestalt theory of perception
 - "The whole is greater than the sum of its parts."
 
@@ -603,7 +603,7 @@ class: center, middle
 
 # Space
 
-- In two-dimentional design (like on the web), space creates the illusion of a third dimension
+- In two-dimensional design (like on the web), space creates the illusion of a third dimension
 - As shapes move back in space they appear to get smaller
 - Overlap creates the illusion of space
 - Aerial perspective (the misty horizon effect)

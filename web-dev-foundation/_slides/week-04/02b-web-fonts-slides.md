@@ -208,7 +208,6 @@ Some of these services include:
 - [Typekit](https://typekit.com/)
 - [Hoefler & Co.](http://www.typography.com/cloud/welcome/)
 - [Webtype](http://www.webtype.com/)
-- [Fontdeck](http://fontdeck.com/)
 
 ---
 template: inverse

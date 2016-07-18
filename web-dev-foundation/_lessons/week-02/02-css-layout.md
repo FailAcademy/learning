@@ -81,7 +81,7 @@ View the [solution](http://codepen.io/redacademy/pen/doZKrB)
 
 ## Homework
 
-Back to our resumes again! This time we're going **enhance the layout** of our resume using CSS.
+Back to our resumes again! This time we're going to **enhance the layout** of our resume using CSS.
 
 Specifically, you want to:
 
@@ -98,7 +98,7 @@ Need help finding a repeating background image for your resume? Try [Subtle Patt
 
 ## Additional Resources
 
-A some great CSS Tricks resources to further explain layout concepts:
+Some great CSS Tricks resources to further explain layout concepts:
 
 - [All About Floats](https://css-tricks.com/all-about-floats/)
 - [Quick Overview of CSS Position Values](https://css-tricks.com/video-screencasts/110-quick-overview-of-css-position-values/)

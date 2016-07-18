@@ -89,7 +89,6 @@ Subscription-based web font services:
 - [Typekit](https://typekit.com/)
 - [Hoefler & Co.](http://www.typography.com/cloud/welcome/)
 - [Webtype](http://www.webtype.com/)
-- [Fontdeck](http://fontdeck.com/)
 
 An article series on web typography basics:
 

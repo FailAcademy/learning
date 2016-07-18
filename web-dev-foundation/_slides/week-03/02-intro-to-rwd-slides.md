@@ -108,7 +108,7 @@ class: center, middle
 # vs. Mobile-Only
 
 - Mobile-only websites are designed specifically to be viewed on mobile devices
-- They are not the same the website as the desktop version
+- They are not the same website as the desktop version
 - Usually require "browser sniffing" (not foolproof)
 - You often find them on "m." sub-domains
 - Check out: https://m.facebook.com/
@@ -539,7 +539,7 @@ This means more than simply starting with your smallest breakpoint and building 
 
 You also need to consider:
 
-- Delivery of appropriately optimized images for a particular screen sizes and resolutions
+- Delivery of appropriately optimized images for particular screen sizes and resolutions
 - Minimizing HTTP requests and page weight to improve page load speed
 - What people actually need to see and do with your website on mobile devices!
 

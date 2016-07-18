@@ -45,7 +45,6 @@ Your project must:
 - Use a CSS reset
 - Use the `background-image` property at least once
 - Use the `position` and `float` properties where appropriate
-- Use flexbox properties where appropriate
 - Demonstrate effective use of box model properties
 - Demonstrate effective use of CSS properties for altering the visual display of text (e.g. `font-family`, `font-style`, `text-transform`, etc.)
 

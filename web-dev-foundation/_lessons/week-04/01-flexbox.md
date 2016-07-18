@@ -70,7 +70,7 @@ This is a tough one!
 
 Can you figure out how to use nested `display: flex` parent/child elements to lock each colored box in a corner of the browser window?
 
-You may want to start with a fresh copy of the [exercise Codepen](Codepen flexbox demo](http://codepen.io/redacademy/pen/GoYLaG?editors=1100)).
+You may want to start with a fresh copy of the [exercise Codepen](http://codepen.io/redacademy/pen/GoYLaG?editors=1100)).
 
 ![Flexbox E3 screencap](/public/files/exercises/flexbox-e3.png)
 
