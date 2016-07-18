@@ -40,6 +40,6 @@ Free icon fonts to use on your websites:
 - [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 - [Icomoon](https://icomoon.io/)
 
-Feeling ambitous? You can create your own icons fonts too:
+Feeling ambitious? You can create your own icons fonts too:
 
 - [Creating and Using a Custom Icon Font - CSS Tricks Video](https://css-tricks.com/video-screencasts/113-creating-and-using-a-custom-icon-font/)

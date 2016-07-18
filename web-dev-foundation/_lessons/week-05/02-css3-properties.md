@@ -15,7 +15,7 @@ Some introductory reading on CSS transitions and transforms:
 
 - Distinguish the difference between CSS2 and CSS3.
 - Understand what vendor prefixes are and where they are needed.
-- Use CSS transitions to add simple animation to elements.
+- Use CSS transitions to add simple animations to elements.
 - Use CSS transforms to change the position of elements.
 - Learn what properties are animatable using CSS3.
 - Explore other CSS3 features such as border radius, box shadow, gradients, opacity, and multiple backgrounds.
@@ -31,7 +31,7 @@ Some introductory reading on CSS transitions and transforms:
 
 ## Exercise 1
 
-Try styling a basic buttons using CSS3 properties:
+Try styling a basic button using CSS3 properties:
 
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/aOVabd/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/aOVabd/'>aOVabd</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>

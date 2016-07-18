@@ -6,7 +6,7 @@ due: Day 11 (beginning of class)
 
 For your second project, you're going to build on Project 1 and turn it into a **responsively designed website** with additional pages. You'll also deploy it live on the web using **GitHub Pages**.
 
-You are also encouraged to **refine the design** of your website based what you learned in the [Design Toolbox](/lesson/design-toolbox/) lesson.
+You are also encouraged to **refine the design** of your website based on what you learned in the [Design Toolbox](/lesson/design-toolbox/) lesson.
 
 **[Download the Assessment Guide for Project 2 &rarr;](/public/files/wdf-project2-assessment.pdf)**
 
