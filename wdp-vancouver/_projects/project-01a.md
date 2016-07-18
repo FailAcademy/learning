@@ -46,7 +46,7 @@ Your project must:
 - Demonstrate effective organization of the project's root directory
 - Have a Git repository initialized in its root directory with an appropriately customized `.gitignore` file
 - Be pushed to GitHub (with all of your commits synced to it)
-- Contain a `REAMDE.md` file describing the project (e.g. technologies used, personal learnings, etc.)
+- Contain a `README.md` file describing the project (e.g. technologies used, personal learnings, etc.)
 
 **HTML requirements:**
 
