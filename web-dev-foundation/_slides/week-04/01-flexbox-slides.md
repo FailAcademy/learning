@@ -140,7 +140,7 @@ template: inverse
 
 # flex
 
-Creating a flex container is accomplished simply using the `display` property in our CSS:
+Creating a flex container is accomplished simply by using the `display` property in our CSS:
 
 ```html
 <ul class="parent">
@@ -385,7 +385,7 @@ Think about whether you need to make any adjustments to the mark-up to make this
 class: center, middle
 
 .large[
-   Flexbox works well in modern browsers, but you make require **vendor prefixes** to support older browsers.
+   Flexbox works well in modern browsers, but you may require **vendor prefixes** to support older browsers.
 ]
 
 ---
