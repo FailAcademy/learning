@@ -4,7 +4,7 @@ title: Project 3 - Pong Game
 due: Monday, August 8th (beginning of class)
 ---
 
-For Project 2, you're going to create a pong game. You can [clone the project starter repo here](https://github.com/redacademy/pong-starter).
+For Project 3, you're going to create a pong game. You can [clone the project starter repo here](https://github.com/redacademy/pong-starter).
 
 ## Requirements
 
@@ -37,9 +37,7 @@ Your project must:
 Your project must contain:
 
 - Use HTML5 Audio sounds triggered on ball bounces
-- Use an HTML5 Canvas board to contain the pong game with:
-  - an initialized board with a background
-  - coloured paddles and ball
+- Use an HTML5 Canvas board to contain the pong game with an initialized board with a background and coloured paddles and ball.
 
 **JS requirements:**
 
@@ -50,10 +48,6 @@ Your project must:
 - Instantiate new objects using `new`
 - Use of `this` appropriately within classes
 - Be written in an object-oriented style using classes
-
-**Additional requirements:**
-
-- Be sure to **test** your project completely in **all major browsers** (Chrome, Firefox, Safari, Opera, IE11) when you think you're finished
 
 **Stretch goals:**
 
