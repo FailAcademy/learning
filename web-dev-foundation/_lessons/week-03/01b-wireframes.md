@@ -15,7 +15,7 @@ An introductory tutorial on wireframing:
 
 ## Learning Objectives
 
-- Use a wireframing tool to construct the a website layout.
+- Use a wireframing tool to construct a website layout.
 - Learn about different layout considerations for smartphones, tablets and desktop.
 - Explore wireframing tools such Balsamiq, Mockingbird, and wireframe.cc.
 
@@ -31,7 +31,7 @@ Using some of the provided wireframe sketch paper, sketch what you think a wiref
 
 If you have time, try sketching out wireframes for its mobile phone and tablet widths too.
 
-Tip: Choose an website with some interesting layout features!
+Tip: Choose a website with some interesting layout features!
 
 ## Exercise 2
 
@@ -43,7 +43,7 @@ Lab activity time will be dedicated to producing a set of **wireframes for Proje
 
 Start by **sketching out wireframes on paper** for each of the three required breakpoints (for at least one page).
 
-Once you've completed paper sketches, select one of the recommended wireframing tools and **produce digital version of your wireframes** for each breakpoint.
+Once you've completed paper sketches, select one of the recommended wireframing tools and **produce a digital version of your wireframes** for each breakpoint.
 
 You are encouraged to **seek out some inspiration** from other well-designed responsive websites on how to re-layout the elements on your pages at the different breakpoints. Check out [Media Queries](http://mediaqueri.es/) and [Unmatched Style](http://unmatchedstyle.com/tag/responsive) for galleries of RWD case studies.
 

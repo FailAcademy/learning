@@ -61,7 +61,7 @@ View the [solution](http://codepen.io/redacademy/pen/LVbdXw).
 
 ## Lab Activity
 
-In this lab activity, you're **refactor the CSS** code for a more complex fixed-width website and turn it into a responsive website **using mobile-first media queries**.
+In this lab activity, **refactor the CSS** code for a more complex fixed-width website and turn it into a responsive website **using mobile-first media queries**.
 
 You can download the [website's source code here](/public/files/labs/rwd-lab.zip)
 
