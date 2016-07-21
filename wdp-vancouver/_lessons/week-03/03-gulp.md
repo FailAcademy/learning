@@ -56,19 +56,13 @@ Learn how to do that here:
 In addition to working on Project 2 today, you'll also want to implement the following additional Gulp plugins in your project:
 
 - `gulp-plumber`
-- `gulp-jscs`
-- `gulp-jshint`
+- `gulp-eslint`
 
 The first plugin will prevent pipe breaking when Gulp encounters an error in your code (e.g. when there's a syntax error in your JS while trying to uglify it). You'll want to incorporate this in your `scripts` task, and the `sass` task that we'll create tomorrow.
 
-The second plugin will allow you to check your JS code style against a styleguide (such as the Airbnb styleguide). You'll want to create a new `jscs` task to implement this plugin.
+The second plugin will allow you to check your JS code style against a styleguide (such as the Airbnb styleguide). You'll want to create a new `eslint` task to implement this plugin.
 
-The third plugin will help you identify potential problems in your JS, and help you maintain certain conventions in your code. You'll want to create a new `jshint` task to implement this plugin.
-
-You'll also need to create two additional files in the root directory for your project that correspond to your new tasks, `.jshintrc` and `.jscsrc`, and use the following for the content of these configuration files:
-
-- https://github.com/jscs-dev/node-jscs/blob/master/presets/airbnb.json
-- https://github.com/airbnb/javascript/blob/master/linters/jshintrc
+- https://github.com/adametry/gulp-eslint
 
 ---
 
