@@ -11,6 +11,12 @@ Visit the Sass homepage and take a look around:
 
 - [Sass Homepage](http://sass-lang.com/guide)
 
+Check out these online tutorials:
+
+- [SASS Tutorial pt. 1](https://www.codeschool.com/courses/assembling-sass)
+- [SASS Tutorial pt. 2](https://www.codeschool.com/courses/assembling-sass-part-2)
+
+
 ---
 
 ## Learning Objectives
@@ -81,10 +87,9 @@ This afternoon, we’ll implement the following Sass enhancements in your Projec
 
 ## Additional Resources
 
-More advanced use-cases and techniques using Sass:
+Excellent online SASS Tutorials:
 
-- [The Sass way](http://thesassway.com/)
-- [Level up tutorials (Sass)](http://leveluptuts.com/tutorials/sass-tutorials)
+- [The SASS way](http://thesassway.com/)
 
 Get to know the other major CSS pre-processor, LESS:
 
