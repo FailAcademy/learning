@@ -294,7 +294,7 @@ CSS3 lets you set multiple background images for an element:
 }
 ```
 
-Declaring multiple background is just like declaring a single background, but you comma separate you're multiple background values (with the first on top, etc.).
+Declaring multiple backgrounds is just like declaring a single background, but you comma separate your multiple background values (with the first on top, etc.).
 
 ---
 
@@ -517,72 +517,6 @@ Another example using `translate`:
    transform: translate(100%, 25%) scale(0.5);
 }
 ```
-
----
-template: inverse
-
-# Vendor Prefixes
-
----
-class: center, middle
-
-.large[
-   Gotcha alert! You didn't think using all these shiny new tools would be that easy, did you?
-]
-
----
-
-# What's a Vendor Prefix?
-
-**Vendor prefixes** are characters that are placed in front of CSS3 properties that are considered **experimental** in any particular version of a browser.
-
-One of two things makes a property experimental:
-
-1. The property belongs to a module in the CSS3 specification that hasn't been finalized yet
-2. A browser vendor wants to create their own experimental properties that aren't included in any proposed standard
-
----
-
-# What's a Vendor Prefix?
-
-Different browsers have their own unique vendor prefixes:
-
-- Webkit: `-webkit-`
-- Firefox: `-moz-`
-- Opera: `-o-`
-- IE: `-ms-`
-
----
-
-# Using Vendor Prefixes
-
-To use vendor prefixes, you simply put each required prefix in front of the experimental property in question:
-
-```css
-.example {
-  -webkit-transform: rotate(30deg); /* Ch <36, Saf 5.1+ */
-      -ms-transform: rotate(30deg); /* IE 9 */
-          transform: rotate(30deg); /* W3C, IE 10, Fx 16+, Op 12.1+ */
-}
-```
-
----
-class: center, middle
-
-.large[
-   But how do you know what needs to be prefixed?
-]
-
----
-
-# Vendor Prefix Tools
-
-**[Autoprefixer](https://github.com/postcss/autoprefixer) to the rescue!**
-
-- Go the easy route...[Codekit](https://incident57.com/codekit/)
-- Use a [text editor plugin](https://github.com/postcss/autoprefixer#text-editors-and-ide)
-- Use a CSS preprocessor like [Less](http://lesscss.org/) or [Sass](http://sass-lang.com/)
-- Learn a JS taskrunner like [Gulp](http://gulpjs.com/) or [Grunt](http://gruntjs.com/)
 
 ---
 

@@ -29,7 +29,7 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-In this exercise, you're going to purchase a domain name, and configure it's A record to point to your final project website.
+In this exercise, you're going to purchase a domain name, and configure its A record to point to your final project website.
 
 {% comment %}
 ## Exercise 2
@@ -52,10 +52,6 @@ This video provides a helpful overview of different kinds of hosting plans:
 A good domain name registrar:
 
 - [Hover](https://www.hover.com/)
-
-More info on setting domain name servers:
-
-- [Tutorial: Pointing Domain Name Servers with Hover](https://help.hover.com/entries/21235888-How-to-Point-your-domain-at-your-web-host-using-Hover-DNS)
 
 Some shared web hosting options include:
 

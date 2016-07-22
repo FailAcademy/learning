@@ -40,7 +40,7 @@ jQuery makes it easy to bring a webpage to life with animation. It offers many a
 - `.fadeOut()`
 - ...and many more!
 
-.footnote[.red[ * ] You can find a complete list of these methods on page 332 of your text book.]
+.footnote[.red[ * ] You can find a complete list of these methods on page 332 of the textbook.]
 
 ---
 
@@ -60,7 +60,7 @@ $('a').on('click', function(event) {
 });
 ```
 
-We can pass in `fast`, `slow`, or a speed in milliseconds as parameter for this method.
+We can pass in `fast`, `slow`, or a speed in milliseconds as a parameter for this method.
 
 ---
 
@@ -103,7 +103,7 @@ What actually happens when you submit a form on the web?
 
 We already learned that JavaScript is a programming language for writing client-side scripts.
 
-In most cases, when a user submits a form on a web page we want to send that data to server, and likely save it in a database there too.
+In most cases, when a user submits a form on a web page we want to send that data to a server, and likely save it in a database there too.
 
 We can use HTML forms as tools to collect information from users on the **client-side** (their browser) and submit that data to the **server side** (our web server) using the **HTTP protocol**.
 
@@ -139,13 +139,13 @@ jQuery has special selectors that allow you to easily grab onto form elements, s
 - `:selected`
 - `:submit`
 
-.footnote[.red[ * ] You can find a complete list of these selectors on page 342 of your text book.]
+.footnote[.red[ * ] You can find a complete list of these selectors on page 342 of the textbook.]
 
 ---
 
 # The .val() Method
 
-The `.val()` method allows you get or set the value entered into a form element:
+The `.val()` method allows you to get or set the value entered into a form element:
 
 ```javascript
 // Get the text string currently entered into the input:

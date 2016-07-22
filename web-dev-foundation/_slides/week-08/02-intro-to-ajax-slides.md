@@ -55,7 +55,7 @@ class: center, middle
 
 ### What is it for?
 
-Ajax is often used when submitting web forms and fetching data data from a server, including via third-party APIs.
+Ajax is often used when submitting web forms and fetching data from a server, including via third-party APIs.
 
 ---
 class: center, middle
@@ -141,7 +141,7 @@ $.ajax({
 })
 ```
 
-We're setting the method to `GET` (because we're making get request) and setting the URL to the GitHub API **endpoint** where this data lives (more on endpoints in a minute...).
+We're setting the method to `GET` (because we're making a get request) and setting the URL to the GitHub API **endpoint** where this data lives (more on endpoints in a minute...).
 
 ---
 
@@ -230,7 +230,7 @@ That entire response was passed in as the `data` object parameter in the `.done(
 });
 ```
 
-Because the JSON data is passed in as object, we are able to access it's properties (such as the `login`) using the JavaScript dot notation we're already familiar with.
+Because the JSON data is passed in as an object, we are able to access its properties (such as the `login`) using the JavaScript dot notation we're already familiar with.
 
 ---
 template: inverse
@@ -269,7 +269,7 @@ class: center, middle
 
 ### APIs in the Wild
 
-Have you ever used a smart phone app that integrates a Google or Apple Maps in some way?
+Have you ever used a smartphone app that integrates a Google or Apple Maps in some way?
 
 ---
 class: center, middle
@@ -306,7 +306,7 @@ Your turn! Pull some data of your own from the GitHub API:
 
 # What We've Learned
 
-- What Ajax and what it's for
+- What Ajax is and what it's for
 - How to format data with JSON
 - What an API is and how to interact with someone else's on the front-end of a website
 

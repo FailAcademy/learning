@@ -49,7 +49,7 @@ You're welcome to use either **Codepen** or a **code editor** to complete this a
 
 You'll be using a **GET** method to fetch data via Ajax from the following endpoint:
 
-http://api.openweathermap.org/data/2.5/weather?q=Vancouver,ca
+http://api.openweathermap.org/data/2.5/weather?q=Vancouver,ca?q=Vancouver,ca&appid=4a48e1e1428fd83889074671fbf259d9
 
 You'll use the `$.ajax()` method just as you did the GitHub API example, but append the required data (the main type of weather, the description, and the icon) when the button is clicked.
 

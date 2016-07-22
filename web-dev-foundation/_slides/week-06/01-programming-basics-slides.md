@@ -179,7 +179,7 @@ https://scratch.mit.edu/projects/72835184/#player
 
 # Let's Play!
 
-We'll need a some volunteers now...
+We'll need some volunteers now...
 
 https://scratch.mit.edu/projects/12352154/#player
 
@@ -223,7 +223,7 @@ Variables can be **strings** of text, **integers**, or **Boolean** values such a
 
 In addition to creating Boolean variables, we can create Boolean expressions.
 
-What that means is that when the expressions is evaluated, it will either be **true (1)** or **false (0)**:
+What that means is that when the expression is evaluated, it will either be **true (1)** or **false (0)**:
 
 .inline-images[
    ![Scratch Boolean expression](/public/img/slide-assets/scratch-boolean-01.png)

@@ -26,7 +26,7 @@ slides: ['_slides/week-09/01a-testing-slides.md']
 
 Time to put your own project under the microscope!
 
-Take some of the recommended testing tools (code validators, performance testers, etc.) for spin with your own project.
+Take some of the recommended testing tools (code validators, performance testers, etc.) for a spin with your own project.
 
 ## Lab Activity
 
