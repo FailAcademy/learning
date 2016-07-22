@@ -16,12 +16,17 @@ lesson_date: 2016-10-04
 
 ## Pre-Work
 
-Read the [Redux Introduction](http://redux.js.org/docs/introduction/index.html)
+Read the [Redux Introduction](http://redux.js.org/docs/introduction/index.html).
 
 ## Keywords
 
-- Flux, Redux
-- store, dispatch, reducer, action, action-creator, action-type
+- [Flux](http://redux.js.org/index.html)
+- [Redux](http://redux.js.org/index.html)
+- [store](http://redux.js.org/docs/basics/Store.html)
+- [dispatch](http://redux.js.org/docs/api/Store.html#dispatch)
+- [reducer](http://redux.js.org/docs/basics/Reducers.html)
+- [action](http://redux.js.org/docs/basics/Actions.html)
+
 
 ## Active Learning
 - creating a Redux demo
