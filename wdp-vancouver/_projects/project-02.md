@@ -81,7 +81,7 @@ Your project must:
 
 Want to challenge yourself? Your project could also:
 
-- Incorporate a `<select>` field with custom styles applied (you will need a jQuery plugin for this such as [Heapbox](http://www.bartos.me/heapbox/))
+- Incorporate a `<select>` field with custom styles applied (you will need a jQuery plugin for this such as [Heapbox](https://github.com/FilipBartos/heapbox))
 - Incorporate a combination of jQuery and CSS3-based animation to animate the movement of the header on the `<select>` change
 - Use CSS3 transitions to show and hide the article abstract on hover
 

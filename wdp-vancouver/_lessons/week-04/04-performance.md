@@ -7,7 +7,7 @@ lesson_date: 2016-07-28
 
 ## Pre-Work
 
-*There is no pre-work for this lesson.*
+Before today's class, ensure that you have deployed your Project 1B (Aloha homepage) as a GitHub page.
 
 ---
 
@@ -19,7 +19,6 @@ lesson_date: 2016-07-28
 - Describe methods for compressing image files and how to choose the best image format for a particular use case.
 - Describe what performance consideration must be made when building "mobile-first" websites.
 - Create a performance budget for a website.
-- Use the service worker API to reduce network requests for certain assets.
 
 ---
 
@@ -40,25 +39,38 @@ lesson_date: 2016-07-28
 - `srcset`
 - [`<picture>`](https://developer.mozilla.org/en/docs/Web/HTML/Element/picture)
 - Performance budget
-- Service worker API
 
 ---
 
 ## Exercise 1
 
-Exercise details TBA.
+Go to one of your favourite websites and do the following:
+
+- Use the Network tab in your dev tools to determine how many requests are made, its page weight, how long it takes to load, and whether its CRP appears to be optimized.
+- Use the Timeline tab in your dev tools to identify possible source of jank on the page.
+- Run its URL through Google PageSpeed Insights and see what recommendations for desktop and mobile.
+
+Be prepared to share your insights with the class!
 
 ---
 
 ## Exercise 2
 
-Exercise details TBA.
+Go to [Unsplash](https://unsplash.com/) and pick a photo that you like. Using an image optimizing tool (or tools) of your choice, optimize the image for display on a website with a maximum width of `800px`.
+
+See how many KBs you can strip out of the image while still maintaining an acceptable level of image fidelity.
+
+Try doing a side-by-side comparison in a browser window of the original image (scaled down with code) and the optimized image (optimized to fit). Can you tell the difference?
 
 ---
 
 ## Exercise 3
 
-Exercise details TBA.
+Let's better optimize the CSS and JS on our Aloha websites.
+
+First, analyze the current state of your CSS. Run your CSS code through the **[CSS Stats](http://cssstats.com/stats?link=http%3A%2F%2Fredacademy.github.io%2Faloha-apparel-pt2%2Fcss%2Fstyle-stretch.css)** and **[CSS Specificity Graph Generator](https://jonassebastianohlsson.com/specificity-graph/)** tools. Can you now see any obvious places where you could improve your CSS performance?
+
+Next, adjust your `<script>` tags so they can no longer block content rendering on the page.
 
 ---
 
@@ -70,7 +82,11 @@ Exercise details TBA.
 
 ## Exercise 5
 
-Exercise details TBA.
+Run the deployed version of your Aloha site through [WebPageTest](http://www.webpagetest.org/) and determine the current **Start Render**, **Document Complete**, and **Fully Loaded** times for your site. Also look in the Network tab of your dev tools and get the **page weight** and **number of requests** for your site.
+
+Compare these numbers with two of your classmates. Pick the top speeds and lowest page weight and number requests in your group, and then **subtract 20%**. This will be your target performance budget for your site.
+
+Based on what you've learned so far, what optimizations could you make to load the site and its assets within this budget?
 
 ---
 
@@ -98,9 +114,26 @@ A collection of resources to help you solve various "jank" issues:
 
 - [Jank Free](http://jankfree.org/)
 
+A detailed explanation on how to interpret Google PageInsights recommendations:
+
+- [
+PageSpeed Insights Rules](https://developers.google.com/speed/docs/insights/rules)
+
+A cool Gulp plugin for measuring and visualizing site performance metrics:
+
+- [PerfTool](http://performance-tool.devbridge.com/)
+
+A tool to help you load CSS asynchronously:
+
+- [filamentgroup/loadCSS](https://github.com/filamentgroup/loadCSS)
+
 A nice visual guide to understanding how `async` vs. `defer` work:
 
 - [async vs defer attributes](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
+
+More on strategic web font loading:
+
+- [A Comprehensive Guide to Font Loading Strategies](https://www.zachleat.com/web/comprehensive-webfonts/)
 
 A great CSS Tricks article explaining the difference between how minification and gzipping work:s
 

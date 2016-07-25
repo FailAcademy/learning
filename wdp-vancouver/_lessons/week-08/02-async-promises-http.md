@@ -122,4 +122,5 @@ From the official Angular docs:
 
 More on promises in JS:
 
+- [JavaScript Promises 101](https://bitsofco.de/javascript-promises-101/)
 - [You're Missing the Point of Promises](https://gist.github.com/domenic/3889970)

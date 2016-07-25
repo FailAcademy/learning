@@ -25,7 +25,6 @@ layout: false
 4. Optimizing code
 5. Mobile-first performance
 6. Setting performance budgets
-7. Caching with service workers
 
 ---
 template: inverse
@@ -197,7 +196,13 @@ class: center, middle
 
 # Exercise 1
 
-Exercise details TBA.
+Go to one of your favourite websites and do the following:
+
+- Use the Network tab in your dev tools to determine how many requests are made, its page weight, how long it takes to load, and whether its CRP appears to be optimized.
+- Use the Timeline tab in your dev tools to identify possible source of jank on the page.
+- Run its URL through Google PageSpeed Insights and see what recommendations for desktop and mobile.
+
+Be prepared to share your insights with the class!
 
 ---
 template: inverse
@@ -220,7 +225,7 @@ Images account for **most of page weight**, <br />so big performance gains can b
 - Create image sprites ([with SVGs](https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/))
 - Use CSS3 properties where you can
 - "Save for Web/Devices" using Photoshop, Gimp, or [Photopea](https://www.photopea.com/)
-- Compress/minify your images with [imagemin](https://github.com/sindresorhus/gulp-imagemin) in your build tooling or the [ImageOptim](https://imageoptim.com/mac) app
+- Compress/minify your images with [imagemin](https://github.com/sindresorhus/gulp-imagemin), [Compressor.io](https://compressor.io/compress) in your build tooling or the [ImageOptim](https://imageoptim.com/mac) app
 - Choose the right image format for the job...
 
 ---
@@ -241,7 +246,17 @@ SVG    | Graphics that need to scale
 2. Have I run all of my images through a compression tool?
 3. Can I (reasonably) use CSS or an SVG for this?
 
-**Note:** that image optimization isn't something you only do before you launch a website...there needs to be a long-term strategy in place for site editors!
+**Note:** Image optimization isn't something you only do before you launch a website...there needs to be a long-term strategy in place for site editors!
+
+---
+
+# Exercise 2
+
+Go to [Unsplash](https://unsplash.com/) and pick a photo that you like. Using an image optimizing tool (or tools) of your choice, optimize the image for display on a website with a maximum width of `800px`.
+
+See how many KBs you can strip out of the image while still maintaining an acceptable level of image fidelity.
+
+Try doing a side-by-side comparison in a browser window of the original image (scaled down with code) and the optimized image (optimized to fit). Can you tell the difference?
 
 ---
 template: inverse
@@ -273,12 +288,15 @@ class: center, middle
    Load CSS in the `<head>`<br />
    Load JS right before `</body>`
 ]
+<br />
+(Except when we shouldn't...)
 
 ---
 class: center, middle
 
 .large[
-   Why do we do this?
+   Why do we do this?<br />
+   When do we not do this?
 ]
 
 ---
@@ -305,6 +323,7 @@ We can add the `async` or `defer` attributes on individual `<script>` elements t
 ```html
 <body>
    <h1>Hello, world!</h1>
+   <!-- All the site content... -->
    <script defer src="firstScript.js"></script>
    <script async src="secondScript.js"></script>
 </body>
@@ -328,7 +347,7 @@ class: center, middle
 Modern browsers are smart about only loading the font files they need, but we still need to think about optimizing them:
 
 - Add only the fonts you truly need to a website
-- Only add the weights and subsets that you need (easily customized with Google Fonts)
+- Only add the weights and subsets that you need (easily customized with Google Fonts or Font Squirrel)
 - Make sure your fonts are cached (they rarely change!)
 - Use the [Font Loading API](https://drafts.csswg.org/css-font-loading/) to optimize text rendering in the CRP (fonts are lazyloaded by default, so the browser won't paint text pixels until the required fonts are available)
 
@@ -357,9 +376,13 @@ Gzipping is far more effective for improving performance. **Doing both is ideal.
 
 ---
 
-# Exercise 2
+# Exercise 3
 
-Exercise details TBA.
+Let's better optimize the CSS and JS on our Aloha websites.
+
+First, analyze the current state of your CSS. Run your CSS code through the **[CSS Stats](http://cssstats.com/stats?link=http%3A%2F%2Fredacademy.github.io%2Faloha-apparel-pt2%2Fcss%2Fstyle-stretch.css)** and **[CSS Specificity Graph Generator](https://jonassebastianohlsson.com/specificity-graph/)** tools. Can you now see any obvious places where you could improve your CSS performance?
+
+Next, adjust your `<script>` tags so they can no longer block content rendering on the page.
 
 ---
 template: inverse
@@ -370,7 +393,7 @@ template: inverse
 class: center, middle
 
 .large[
-   Mobile first is about more than how you write media queries.
+   Mobile-first is about more than how you write media queries.
 ]
 
 ---
@@ -383,9 +406,9 @@ Thinking mobile-first requires asking some key questions:
 - *What's the most important functionality or content?*
 - *How do we optimize this for slower or less capable devices?*
 
-Don't assume that users need to see fewer things because they are on mobile devices.
+**Don't assume that users need to see fewer things because they are on mobile devices.**
 
-If you find yourself making judgements like this, then you should be asking why that content is there at all.
+If you find yourself making judgements like this, then you should be asking why that content is there at all!
 
 ---
 class: center, middle
@@ -485,7 +508,7 @@ Where more **art direction** is needed (i.e. we want to load completely differen
 
 ---
 
-# Exercise 3
+# Exercise 4
 
 Exercise details TBA.
 
@@ -502,28 +525,25 @@ Modern HTML/CSS/JS and web browsers are very powerful, but we must always be sur
 
 For example, what is the performance cost of adding a hero image, a hi-res video, another font file, an image slider, etc.?
 
-*We must find a happy medium balancing aesthetics with performance and make decisions that best support the brand!*
+**We must find a happy medium balancing aesthetics with performance and make decisions that support the brand!**
 
 ---
 
-# Creating a Performance Budget
+# Creating and Using a Performance Budget
 
----
-
-# Exercise 4
-
-Exercise details TBA.
-
----
-template: inverse
-
-# Caching with Service Workers
+- A performance budget is a set of targets related to site performance that you do not want to exceed (e.g. page weight, total number of requests, load times)
+- It should be set early on in a project, and as a project evolves can help you make decisions around what you do or do not add to a page
+- How you set your targets will depend on your project... benchmarking "competitors" can be a good place to start
 
 ---
 
 # Exercise 5
 
-Exercise details TBA.
+Run the deployed version of your Aloha site through [WebPageTest](http://www.webpagetest.org/) and determine the current **Start Render**, **Document Complete**, and **Fully Loaded** times for your site. Also look in the Network tab of your dev tools and get the **page weight** and **number of requests** for your site.
+
+Compare these numbers with two of your classmates. Pick the top speeds and lowest page weight and number requests in your group, and then **subtract 20%**. This will be your target performance budget for your site.
+
+Based on what you've learned so far, what optimizations could you make to load the site and its assets within this budget?
 
 ---
 
@@ -534,7 +554,6 @@ Exercise details TBA.
 - How to optimize images and code
 - How to think about performance in a "mobile-first" way
 - What a performance budget is
-- How to use service workers for caching
 
 ---
 template: inverse
