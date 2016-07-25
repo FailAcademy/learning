@@ -70,12 +70,14 @@ Target the canvas in an `index.html` file:
 <canvas id="game"></canvas>
 ```
 
-Add a background in a SCSS file:
+Add a background in the `game.css` file:
 
 ```css
 #game {
-   background-color: #353535;
+   background-color: #353535; /* add this! */
+   display: block;
    height: 256px;
+   margin: 20px auto;
    width: 512px;
 }
 ```

@@ -661,8 +661,8 @@ The `for...of` is a better way to loop over arrays and other iterable objects:
 
 ```js
 function groceryList(...items) {
-  for ( let i in items) {
-    console.log(items[i]);
+  for ( let i of items) {
+    console.log(i);
   }
 }
 
