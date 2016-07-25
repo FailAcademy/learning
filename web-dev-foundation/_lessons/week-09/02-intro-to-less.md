@@ -32,7 +32,7 @@ slides: ['_slides/week-09/02-intro-to-less-slides.md']
 
 ## Exercise 1
 
-Let's refactor some plain vanilla CSS in to Less:
+Let's refactor some plain vanilla CSS into Less:
 
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/NqdjQP/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/NqdjQP/'>NqdjQP</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
@@ -45,7 +45,7 @@ View the [solution](http://codepen.io/redacademy/pen/WvROjx).
 
 Let's take the Less that you wrote in Exercise 1 and practice compiling it using Prepos.
 
-To do that, you'll need:
+To do that, you'll need to:
 
 1. Download and install [Prepos](https://prepros.io/)
 2. Download the zip file of your solution on Codepen for Exercise 1, or download the zip of the provided solution

@@ -35,13 +35,13 @@ class: center, middle
 
 ### What is a preprocessor?
 
-A preprocessor is a program that takes one type of data and coverts it into a another type of data.
+A preprocessor is a program that takes one type of data and coverts it into another type of data.
 
 ---
 
 # CSS Preprocessors
 
-CSS preprocessors allow you to write CSS in a unconventional (but usually more intuitive) way in order to speed up your front-end development.
+CSS preprocessors allow you to write CSS in an unconventional (but usually more intuitive) way in order to speed up your front-end development.
 
 Today, there are a few CSS preprocessors in popular use:
 
@@ -140,7 +140,7 @@ a {
 }
 ```
 
-Or add a parent selector from inside of child:
+Or add a parent selector from inside of a child:
 
 ```less
 h3 {
@@ -174,7 +174,7 @@ You'll want to make sure you choose intuitive, semantic variables names.
 
 # Mixins
 
-Mixins little bundles that allow you to group properties together and apply them to a selector:
+Mixins are little bundles that allow you to group properties together and apply them to a selector:
 
 ```less
 .bordered {
@@ -261,7 +261,7 @@ a {
 }
 ```
 
-You can check-out the full [Less function reference here](http://lesscss.org/functions/).
+You can check out the full [Less function reference here](http://lesscss.org/functions/).
 
 ---
 
@@ -322,7 +322,7 @@ On a live website, you'll want to compile your Less code and include it as actua
 
 You'll likely find many projects that use Less organize their code into many specific **partials** and import them into a `style.less` file.
 
-For example, for a project with a `less` sub-folder and `style.less` file at the root, you would like find a list of `@import` statements inside `style.less` file:
+For example, for a project with a `less` sub-folder and `style.less` file at the root, you would likely find a list of `@import` statements inside the `style.less` file:
 
 ```less
 @import 'less/variables';
@@ -336,7 +336,7 @@ For example, for a project with a `less` sub-folder and `style.less` file at the
 
 # Organizing Less Files
 
-Note that you can add of leave off the `.less` extension the file names, and also import CSS files as-is too:
+Note that you can add or leave off the `.less` extension in the file names, and also import CSS files as-is too:
 
 ```less
 @import 'foo';      // foo.less is imported
@@ -371,7 +371,7 @@ After you write your Less code, you need to convert that code into regular CSS f
 
 You have two different options for compiling Less:
 
-1. Install [Node.js](https://nodejs.org/), [npm](https://www.npmjs.com/), an use [the command line](http://lesscss.org/#using-less-installation) to install and compile your code
+1. Install [Node.js](https://nodejs.org/), [npm](https://www.npmjs.com/), and use [the command line](http://lesscss.org/#using-less-installation) to install and compile your code
 2. Use a GUI such as [Prepos](https://prepros.io/) to compile your code
 
 ---
@@ -419,7 +419,7 @@ class: center, middle
 
 Let's take the Less that you wrote in Exercise 1 and practice compiling it using Prepos.
 
-To do that, you'll need:
+To do that, you'll need to:
 
 1. Download and install [Prepos](https://prepros.io/)
 2. Download the zip file of your solution on Codepen for Exercise 1, or download the zip of the provided solution

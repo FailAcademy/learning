@@ -87,7 +87,7 @@ You can complete this activity in a basic HTML file in a text editor of your cho
 
 ### Part 2
 
-You second task is to research **jQuery plugins**. jQuery plugins are script files containing jQuery that other people have written and that you can include in your website to add extra functionality without having to write all of the code yourself first. For example:
+Your second task is to research **jQuery plugins**. jQuery plugins are script files containing jQuery that other people have written and that you can include on your website to add extra functionality without having to write all of the code yourself first. For example:
 
 - An image slider
 - An accordion to dynamically show or hide content

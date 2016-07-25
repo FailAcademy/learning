@@ -73,7 +73,7 @@ To purchase a domain, follow these simple steps:
 1. Go to [www.hover.com](https://www.hover.com/)
 2. Type in your desired domain name
 3. Add the domains you want to your cart
-4. Register for the service and pay (keep this user and password handy)
+4. Register for the service and pay (keep this username and password handy)
 
 ---
 template: inverse
@@ -106,7 +106,7 @@ Some shared web hosting options include: [GreenGeeks](http://greengeeks.com/), [
 
 Managed hosting is **more hands-on** than a typical shared hosting plan.
 
-A managed hosting option will **provide software and security updates** for you, and variety of other potential services such as spam filtering and caching.
+A managed hosting option will **provide software and security updates** for you, and a variety of other potential services such as spam filtering and caching.
 
 Managed hosting is usually **more expensive** than shared hosting plans.
 
@@ -116,9 +116,9 @@ An example of a managed web host is [WP Engine](http://wpengine.com/).
 
 # Dedicated/VPS Hosting
 
-Dedicated web hosting means just that&mdash;your website **lives on server by itself** and you control what's installed on it.
+Dedicated web hosting means just that&mdash;your website **lives on a server by itself** and you control what's installed on it.
 
-VPS hosting is like a **hybrid** of shared hosting and dedicated hosting. Your website will live on server with other websites, but you control what's installed on the server.
+VPS hosting is like a **hybrid** of shared hosting and dedicated hosting. Your website will live on a server with other websites, but you control what's installed on the server.
 
 Your VPS host will also provide a **minimum allocation of resources** for your site 24/7.
 
@@ -132,7 +132,7 @@ What hosting option you pick will depend on your needs and the type of website y
 
 The key is to do your homework! Whichever option you choose, you want to make sure your host has:
 
-- Consistent up-time
+- Consistent uptime
 - 24/7 support
 - Track record of good customer service
 
@@ -177,7 +177,7 @@ class: center, middle
 
 ### Domains with GitHub Pages
 
-You can a custom domain for your GitHub pages too by following [these instructions to configure your DNS](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/).
+You can have a custom domain for your GitHub pages too by following [these instructions to configure your DNS](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/).
 
 ---
 

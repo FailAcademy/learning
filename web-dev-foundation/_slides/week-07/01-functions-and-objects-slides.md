@@ -112,7 +112,7 @@ add(2, 2);
 
 # How to Use a Function
 
-The output of function is called it's **return value**. Our previous example returned the integer 4.
+The output of a function is called its **return value**. Our previous example returned the integer 4.
 
 Let's store the return value in a variable now, and write it out to the document:
 
@@ -198,7 +198,7 @@ function volume(width, height, depth) {
 
 # Function Expressions
 
-Function expressions usually don't have a name. Functions without names are known as an **anonymous functions**.
+Function expressions usually don't have a name. Functions without names are known as **anonymous functions**.
 
 This function expression is stored in a variable called `volume`:
 
@@ -236,7 +236,7 @@ function myFunction() {
 
 # What Kind of Scope?
 
-Let’s look at some variables and figure out if they will have local or global scope...
+Let’s look at some variables and figure out if they will have a local or global scope...
 
 ```javascript
 var fille = “Monique”;
@@ -306,7 +306,7 @@ Objects are like containers that hold groups of related variables and functions 
 
 # Learn (to Love) Objects
 
-You've already made use of handful of objects and their methods. Remember that in JS we have `window` and `document` objects?
+You've already made use of a handful of objects and their methods. Remember that in JS we have `window` and `document` objects?
 
 ```javascript
 // These are methods of the window object:
@@ -472,7 +472,7 @@ class: center, middle
 
 ### What are arrays?
 
-Arrays are special object in JavaScript that store a list of values, but the key for each value is an **index number**.
+Arrays are a special object in JavaScript that store a list of values, but the key for each value is an **index number**.
 
 ---
 
@@ -585,7 +585,7 @@ Time to ramp up your JS skills by looping through an array and adding the items 
 # What We've Learned
 
 - How to create function in JS
-- How variable scope works with function in JS
+- How variable scope works with functions in JS
 - How to create objects that contain properties and methods
 - How to create arrays and loop over them
 

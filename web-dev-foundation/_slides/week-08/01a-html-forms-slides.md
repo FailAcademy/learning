@@ -31,7 +31,7 @@ template: inverse
 ---
 class: center, middle
 
-### Forms om the Web
+### Forms on the Web
 
 The concept of a **form** on the web is borrowed from print, but today they provide an important way for users to **interact** with a website and **send/receive information** from a server.
 
@@ -71,7 +71,7 @@ All forms on the web use the `<form>` element:
 </form>
 ```
 
-The `action` attribute defines the location (an URL) where the form's collected data should be sent.
+The `action` attribute defines the location (a URL) where the form's collected data should be sent.
 
 The `method` attribute defines which HTTP method to use to send the data (can be `get` or `post`).
 
@@ -150,7 +150,7 @@ The `<select>` tag is a special form element that will create a drop-down menu b
 </form>
 ```
 
-The `selected` attribute will set a option to be selected by default.
+The `selected` attribute will set an option to be selected by default.
 
 ---
 
@@ -279,7 +279,7 @@ button:active {
 
 # Form Style Tips
 
-We can also get creative spiffying up our buttons use CSS3:
+We can also get creative spiffing up our buttons use CSS3:
 
 ```css
 button {

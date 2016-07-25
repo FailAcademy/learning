@@ -94,7 +94,7 @@ After you have completed the introductory modules, work through these two module
 - **Introduction to 'For' Loops in JS**
 - **Introduction to 'While' Loops in JS**
 
-Note that the **For Loops** module will require that you work with something known as an **array**. We'll cover arrays in greater depth in the next class, so this will be an great warm-up for you.
+Note that the **For Loops** module will require that you work with something known as an **array**. We'll cover arrays in greater depth in the next class, so this will be a great warm-up for you.
 
 Similarly, you'll get a sneak peek of what a **function** looks like in the **While Loops** module. No worries, just follow the instructions and there will be more on those in the next class!
 

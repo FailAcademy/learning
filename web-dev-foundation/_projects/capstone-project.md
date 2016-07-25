@@ -6,7 +6,7 @@ due: Day 20 (beginning of class)
 
 For the capstone project, you will either continue working on your Project 1/2 website, or build a new **responsively designed** website with at least three pages.
 
-As with Project 1/2, you have creative control over the topic of your website, but please avoid fan sites topics.
+As with Project 1/2, you have creative control over the topic of your website, but please avoid fan site topics.
 
 And like with Project 2, you'll also deploy your website using **GitHub Pages**. If you would prefer to purchase a custom domain name and website hosting plan to host your Capstone Project instead of using GitHub Pages, please make arrangements with your instructor in advance.
 

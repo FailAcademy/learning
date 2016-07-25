@@ -42,7 +42,7 @@ class: center, middle
 
 ### Why We Test
 
-...and to ensure that the users who need to access our website can do that in a browser and on a device of their choosing.
+...and to ensure that the users who need to access our website can do so in a browser and on a device of their choosing.
 
 ---
 
@@ -58,7 +58,7 @@ When we test a website, we want to make sure:
 ---
 class: center, middle
 
-### A Ongoing Process, Not a Checklist
+### An Ongoing Process, Not a Checklist
 
 Front-end testing isn't something to simply worry about before you launch a website. It's an ongoing process!
 

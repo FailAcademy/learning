@@ -32,7 +32,7 @@ class: center, middle
 
 ### What is a jQuery?
 
-jQuery is **library of code** that makes it much easier to perform many essential tasks in JavaScript.
+jQuery is a **library of code** that makes it much easier to perform many essential tasks in JavaScript.
 
 ---
 
@@ -110,7 +110,7 @@ For example, take a typical HTML document:
 
 # What Is the DOM?
 
-The a visual representation of the DOM for this page would look something like this:
+The visual representation of the DOM for this page would look something like this:
 
 .inline-images[
    ![DOM diagram](/public/img/slide-assets/dom-diagram.svg)
@@ -155,7 +155,7 @@ Let's get to the fun stuff and look at a basic example. Take our previous code s
 </body>
 ```
 
-Let's see how we can use jQuery to change the colour of the text in the paragraph with class of `intro`.
+Let's see how we can use jQuery to change the colour of the text in the paragraph with a class of `intro`.
 
 ---
 
@@ -259,7 +259,7 @@ For instance we can use jQuery methods to traverse the DOM:
 - `.parents()`
 - `.siblings()`
 
-.footnote[.red[ * ] Many of these methods are summarized on pages 304-305 of your text book.]
+.footnote[.red[ * ] Many of these methods are summarized on pages 304-305 of your textbook.]
 
 ---
 
@@ -315,8 +315,8 @@ template: inverse
 
 We've already seen a preview of how jQuery helps you manipulate the DOM, but let's dive a little deeper:
 
-- the `.html()` method will get the HTML inside the first element of the matched set (and its descendents)
-- the `.text()` method will just get the text from inside first element of the matched set (and its descendents)
+- the `.html()` method will get the HTML inside the first element of the matched set (and its descendants)
+- the `.text()` method will just get the text from inside the first element of the matched set (and its descendants)
 
 ---
 
@@ -384,7 +384,7 @@ Ostensibly, `.attr()` and `.prop()` do very similar things, but `.prop()` offers
 
 # Working with CSS
 
-As we saw in an earlier example, we can also use jQuery to get and update an elements styles:
+As we saw in an earlier example, we can also use jQuery to get and update an element's styles:
 
 ```javascript
 // Get the font size and log it:
@@ -516,7 +516,7 @@ We can use this to our advantage!
 
 *And why exactly is this useful?*
 
-Sometimes we want attach events to HTML elements that have default behaviours that we need to override.
+Sometimes we want to attach events to HTML elements that have default behaviours that we need to override.
 
 For instance, you may want to attach a special click handler to an `<a>` that performs a different action than click through to wherever that link points.
 

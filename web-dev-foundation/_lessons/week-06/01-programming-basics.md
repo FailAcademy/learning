@@ -38,7 +38,7 @@ Time to write some pseudocode of your own! You're going to use pseudocode to wri
 
 Some things to consider while writing your algorithm:
 
-- The weather...you don't want to wash you car if it's raining.
+- The weather...you don't want to wash your car if it's raining.
 - Each individual step involved in washing the car. Remember that machines can only do exactly what we tell them to do.
 - How long each step should take place. Is it something that happens only once, or does it need to happen repeatedly?
 

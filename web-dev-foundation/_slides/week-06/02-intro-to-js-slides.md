@@ -54,7 +54,7 @@ template: inverse
 ---
 class: center, middle
 
-> "There are two answers. The first is that you don't have a choice...The other answer is that, despite it's deficiencies, *JavaScript is really good*."
+> "There are two answers. The first is that you don't have a choice...The other answer is that, despite its deficiencies, *JavaScript is really good*."
 
 From "JavaScript: The Good Parts"
 
@@ -598,7 +598,7 @@ Let's say we want to update the message paragraph below:
 </body>
 ```
 
-We can use the `getElementById` method to target that `p`, and update it's content using the `innerHTML` property:
+We can use the `getElementById` method to target that `p`, and update its content using the `innerHTML` property:
 
 ```javascript
 // js/sayhello.js
