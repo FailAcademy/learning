@@ -76,7 +76,13 @@ Next, adjust your `<script>` tags so they can no longer block content rendering 
 
 ## Exercise 4
 
-Exercise details TBA.
+To get started, **[download the exercise files here](/public/files/exercises/picture-element.zip)**.
+
+The exercise files contain three different images with regular and hi-res versions of each (6 images total).
+
+Inside the `index.html` file, add a `<picture>` element that loads the `pug-portrait.jpg` for mobile, `pug-square.jpg` for `min-width: 420px`, and `pug-landscape.jpg` for `min-width: 1024px`.
+
+Be sure to include the hi-res versions in the `srcset` attributes for high-density pixel displays, and use `pug-square.jpg` as a fallback for browsers that don't support `<picture>`.
 
 ---
 
@@ -92,7 +98,27 @@ Based on what you've learned so far, what optimizations could you make to load t
 
 ## Lab Activity
 
-Lab details TBA.
+In today's lab, we'll be combining many of the techniques from the lesson to make a webpage as performant as possible
+
+**[Download the lab files here](/public/files/labs/performance-lab.zip).**
+
+*Be sure to run `npm install` after you download and extract the files!*
+
+Review the code in the downloaded files and determine how you can optimize for the fewest number of network requests, lightest page weight, and fastest load time.
+
+For example:
+
+- Is there anything you can minify?
+- Can you reduce the sizes of any of the images or load them more responsively?
+- Can you reduce the number of requests you make for various image assets?
+- Can you reduce CSS selector specificity or the number of media queries used?
+- Is there a better way to load the script files?
+- How can you better optimize the critical rendering path?
+- *...and so on!*
+
+The catch with this lab is that **there must be no discernible difference** between the original visual appearance of the page and optimized visual appearance of the page.
+
+The student who manages to reduce the network requests, page weight, and load time by the widest margin by the end of class will win a prize :)
 
 ---
 
