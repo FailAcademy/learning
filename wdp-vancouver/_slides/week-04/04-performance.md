@@ -502,7 +502,7 @@ Where more **art direction** is needed (i.e. we want to load completely differen
    <source media="(max-width: 40em)" srcset="puppy-landscape.jpg 1x,
    puppy-landscape-large.jpg 2x, puppy-landscape.jpg-hd.jpg 3x" />
 
-   <img src="puppy.jpg" alt="An adorable puppy" />
+   <img src="puppy-landscape.jpg" alt="An adorable puppy" />
 </picture>
 ```
 
@@ -510,7 +510,13 @@ Where more **art direction** is needed (i.e. we want to load completely differen
 
 # Exercise 4
 
-Exercise details TBA.
+To get started, **[download the exercise files here](/public/files/exercises/picture-element.zip)**.
+
+The exercise files contain three different images with regular and hi-res versions of each (6 images total).
+
+Inside the `index.html` file, add a `<picture>` element that loads the `pug-portrait.jpg` for mobile, `pug-square.jpg` for `min-width: 420px`, and `pug-landscape.jpg` for `min-width: 1024px`.
+
+Be sure to include the hi-res versions in the `srcset` attributes for high-density pixel displays, and use `pug-square.jpg` as a fallback for browsers that don't support `<picture>`.
 
 ---
 template: inverse
