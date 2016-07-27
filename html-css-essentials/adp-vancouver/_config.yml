@@ -52,23 +52,28 @@ gems: ['jekyll-paginate', 'redcarpet']
 # Exclusions
 exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'README.md', 'LICENSE.md', 'CONTRIBUTING.md', 'installation.md']
 
-current: "2016-fall"
-courses:
-  2016-fall:
-    Intro to Web Applications: '2016-09-26'
-    React Components, State & Events: '2016-09-27'
-    React Props: '2016-09-28'
-    React Lifecycle Methods: '2016-09-29'
-    React Inline Styles: '2016-09-29'
-    Redux: '2016-10-03'
-    Functional Programming: '2016-10-04'
-    Redux Middleware: '2016-10-05'
-    React and Redux: '2016-10-06'
-    Web Server: '2016-10-11'
-    Connecting Client & Server: '2016-10-11'
-    Async Javascript: '2016-10-12'
-    Intro to Databases with SQL: '2016-10-17'
-    Validating Data with Schema: '2016-10-18'
-    Forms: '2016-10-19'
-    Validating & Sanitizing Data: '2016-10-20'
-    User Sessions & Accounts: '2016-10-21'
+# current: '2016-fall'
+# courses:
+#   2016-fall:
+#     Intro to Web Applications: 2016-09-26
+#     React Components, State & Events: 2016-09-27
+#     React Props: 2016-09-28
+#     React Lifecycle Methods: 2016-09-29
+#     React Inline Styles: 2016-09-29
+#     Redux: 2016-10-03
+#     Functional Programming: 2016-10-04
+#     Redux Middleware: 2016-10-05
+#     React and Redux: 2016-10-06
+#     Web Server: 2016-10-11
+#     Connecting Client & Server: 2016-10-11
+#     Async Javascript: 2016-10-12
+#     Intro to Databases with SQL: 2016-10-17
+#     Validating Data with Schema: 2016-10-18
+#     Forms: 2016-10-19
+#     Validating & Sanitizing Data: 2016-10-20
+#     User Sessions & Accounts: 2016-10-21
+#     MongoDB: 2016-10-24
+#     Typescript: 2016-11-07
+#     Unit Testing: 2016-11-08
+    # Stubs, Spies & Mocks: 2016-11-09
+    # E2E Testing: 2016-11-10

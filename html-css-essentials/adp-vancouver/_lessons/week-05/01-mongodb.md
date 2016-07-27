@@ -1,13 +1,13 @@
 ---
 layout: lesson
-title: Intro to Databases with SQL
+title: MongoDB
 slides: []
-lesson_date: 2016-10-17
+lesson_date: 2016-10-24
 ---
 
 ## Objectives
 
-- write simple SQL queries
+- distinguish between SQL & NoSQL
 
 ## Pre-Work
 

@@ -2,7 +2,7 @@
 layout: lesson
 title: Forms
 slides: []
-lesson_date: '2016-10-19'
+lesson_date: 2016-10-19
 ---
 
 ## Objectives
