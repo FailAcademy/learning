@@ -56,7 +56,7 @@ M   ->   C    ->    V
 
 - Are there any drawbacks to this pattern?
 
-1.
+*( two way binding can be hard to debug )*
 
 ### Flux Overview (20)
 
@@ -102,7 +102,7 @@ b) all changes are pure functions
 6. Each group will choose a different app from [examples](http://redux.js.org/docs/introduction/Examples.html) and act out how Redux works as a play or dance. Verify student understanding. Prepare paper and pens for name cards.
 
 
-7. Review:
+### Review (5)
 
 Discuss strengths and weaknesses of each pattern (MVC, Flux, Redux) in relation to good design principles in step 1.
 
@@ -113,11 +113,18 @@ Students will code along to build a Redux "Worst Pokemon" voting up. Encourage s
 
 [ADP-Redux-Walkthrough](https://github.com/redacademy/adp-redux-walkthrough) - branch "a-redux"
 
-Follow git commit diffs. Tutorial walks through:
+Follow git commit diffs. Tutorial walks through. See the added talking points.
 
   1. state
+    - one source of truth
+    - `store.getState()` is read only
   2. action
+    - discuss how to name actions (REDUCER_VERB)
+    - action should pass on all data reducers require
   3. reducer
+    - pure functions
+    - return a new state, not mutating state
+    - cannot run `store.dispatch` from a reducer. Why?
   4. multiple reducers
 
 ### Review (10)
