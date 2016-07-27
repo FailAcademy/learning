@@ -1,45 +1,68 @@
-## Lesson: Redux Middleware
+## Lesson: Redux Middleware (3 hrs)
 
-##### Discussion
+### Discussion (5)
 
-1. What is the role of middleware?
+What is the role of middleware?
 
-##### Practice
+*( triggers an action when a change occurs )*
+
+Think of a real world example of middleware:
+
+Every time I do **A**, **B** happens first.
+
+*( every time I eat lunch, I take a photo of it first. I have photo taking middleware. )*
+
+### Coding (30)
+
+[ADP-Redux-Walkthrough](https://github.com/redacademy/adp-redux-walkthrough) - branch "b-middleware"
 
 1. Setup Redux Logger together. (https://github.com/evgenyrodionov/redux-logger)
 
+2. Setup Redux Thunk together.
+(https://github.com/gaearon/redux-thunk)
 
-##### Group Work
+
+### Group Work (30)
+
 Each group must setup a different middleware, and explain how it works to the class. Choose one of the following:
 
   A) [Redux LocalStorage](https://github.com/elgerlambert/redux-localstorage)
-  B) [Redux-DevTools](https://github.com/gaearon/redux-devtools)
-      - Set up a visual demonstration
-  C) [Redux Thunk](https://github.com/gaearon/redux-thunk) for async/multiple dispatches
-    - Explain how and why we use Redux-Thunk
-  D) [Toast Error Messages](See the bottom of https://www.codementor.io/reactjs/tutorial/beginner-s-guide-to-redux-middleware)
-  E) Redux-Debounce / Redux-Throttle
-  F) Redux-Authentication (https://github.com/Jackong/redux-authentication)
+  B) [Toast Error Messages](See the bottom of https://www.codementor.io/reactjs/tutorial/beginner-s-guide-to-redux-middleware)
+  C) Redux-Debounce / Redux-Throttle
+  D) Redux-Authentication (https://github.com/Jackong/redux-authentication)
 
 Group presentations. Students should follow along and ask questions.
 
 
-##### Self Code
+## Curry (25)
 
-Compose middleware together (http://redux.js.org/docs/api/compose.html)
+- Read and discuss [Curry](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch4.md)
 
-1. Groupwork - explain curry and compose.
+## Compose (25)
 
-##### FP
+- Read and discuss [Compose](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch5.md)
 
-- [Curry](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch4.md)
-- [Compose](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch5.md)
+## How Redux Middleware Works (20)
 
-2. Dissect how curry and compose are used in Redux Middleware.
+- Read and discuss [Understanding Redux Middleware](https://medium.com/@meagle/understanding-87566abcfb7a#.5hyd3zale)
+
+Dissect how curry and compose are used in Redux Middleware.
+
+## Immutable Data (25)
+
+- Read and discuss [Why immutable?](https://auth0.com/blog/2016/03/23/intro-to-immutable-js/)
+
+Discuss the benefits and uses of Immutable data structures.
+
+Options: Immutable.js, seamless-immutable
+
+What are some drawbacks to using immutable data structures?
+
+*( code becomes bound to immutable library )*
 
 ## If Time
 
-##### Discussion
+### Challenge
 
-1. Redux Saga
-2. Immutable Data Structures (Immutable.js, seamless-immutable)
+1. Implement immutable data in your app
+2. Discuss other patterns such as Redux Saga

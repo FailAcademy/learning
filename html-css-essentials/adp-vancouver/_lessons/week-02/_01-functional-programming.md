@@ -1,14 +1,8 @@
-# Lesson: Functional Programming
-
-## Topics
-
-- pure & impure
-- higher order functions
-
+# Lesson: Functional Programming (3hrs)
 
 ## Pure or Impure
 
-##### Discussion
+### Discussion (10)
 
 Discussion: What is a pure or impure function?
 
@@ -19,7 +13,7 @@ b) human(toast) { return _____; } // ex: run, jump, talk = impure
 
 Write: Pure functions are ______. // predictable, encapsulated, free of side effects
 
-##### Game
+### Game (15)
 
 Pure or Impure game. Write a function and ask students to discuss if it is "Pure" or "Impure".
 
@@ -29,7 +23,8 @@ function addOne(x) {
   return x + 1;
 }
 ```
-// pure
+
+*( pure )*
 
 b)
 ```js
@@ -37,7 +32,8 @@ function addOne(x) {
   console.log(x + 1);
 }
 ```
-// impure, side effects
+
+*( impure, side effects )*
 
 c)
 ```js
@@ -47,7 +43,8 @@ function addOne(x) {
   return x;
 }
 ```
-// impure, side effects, not encapsulated
+
+*( impure, side effects, not encapsulated )*
 
 d)
 ```js
@@ -58,25 +55,45 @@ const addOne = (function() {
   }
 })();
 ```
-// pure, encapsulated
-// wrapping an impure function in a pure function creates a pure function
+
+*( pure, encapsulated )*
+*( note: wrapping an impure function in a pure function creates a pure function )*
 
 
-##### Check
+### Review (5)
 
 Why prefer pure functions? Ask students to fill in the blank.
 
-Write: _________ability
-// ex: reusability, predictability, testability, readability
+Write: "_________ability"
 
+*( ex: reusability, predictability, testability, readability )*
+
+### Intro (5)
+
+There are two pillars of programming in Javascript:
+
+- Functional
+- Object Oriented
+
+Any idea of the difference between the two?
+
+Can anyone name a functional programming language?
+
+In some languages you can only write pure functions. JavaScript is a flexible programming language, meaning that we have to try hard to write functional code.
 
 ## Higher Order Functions
 
-##### Lesson
+### Types of Functions (20)
 
-Functions have inputs and outputs. Ask students: can a function be:
+Pure functions have three parts. Can you guess what they are?
+
+*( inputs -> transformation -> output )*
+
+Ask students: in JS, can a function be:
 
 a. an input be another function?
+
+Ask students to write an example to demonstrate a function that takes a function.
 
 ```js
 function addOneToFunction(fn) {
@@ -87,24 +104,26 @@ addOneToFunction(getOne);
 ```
 
 b. Can a function output be another function?
-// thunk, more on this later
+
+Ask students to write an example to demonstrate a function that outputs a function.
+
+Explain this is called a "thunk", more on this later in the week.
 
 c. Can a function input & output be the function itself?
-// recursion, a function that calls itself
+
+Ask students to write an example that doesn't crash.
+
+Explain this is called "recursion", a function that calls itself.
 
 ## Array Methods
 
-##### Lesson
+### Filter (20)
 
-In a console, type `Array.prototype`2
-
-Array Methods - functions that take a function
-
+```js
 let list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+```
 
-##### Filter
-
-a. write a function called "filter" that takes a list of integers and returns only the even numbers.
+Write a function called "filter" that takes a list of integers and returns only the even numbers.
 
 // example
 ```js
@@ -127,18 +146,27 @@ list.filter(x => x % 2);
 // same as filter(function(x) { return x % 2; })
 ```
 
+### Lesson (5-10)
+
 In a console, type "Array.prototype." and see what autocomplete options come up. Which "array methods" do you see? What do you think they do?
 
 // example: sort, filter, concat, push, every, some, find, forEach, map, reduce, includes, reverse, etc.
 
-b. Using Array methods, make the list look like this: [9, 8, 7, 6, 5, 4, 3, 2, 1]
+Ask students if "prototype" relates to "Functional" or "OOP".
 
-// list.reverse()
+Also checkout "String.prototype", "Boolean.prototype", etc.
 
+### Reverse (5)
 
-c. Make the list look like this: [8, 6, 4, 2];
+Using Array methods, make the list look like this: [9, 8, 7, 6, 5, 4, 3, 2, 1]
 
-// list.filter(x => x % 2).reverse();
+Answer: `list.reverse()`
+
+### Chaining (5-10)
+
+Make the list look like this: [8, 6, 4, 2];
+
+Answer: `list.filter(x => x % 2).reverse();`
 
 This is called chaining.
 
@@ -149,8 +177,9 @@ list.filter(x => x % 2)
     .reverse();
 ```
 
+### Sort (5)
 
-d. What happens when we add `sort()` on the end?
+What happens when we add `sort()` on the end?
 
 ```js
 list.filter(x => x % 2)
@@ -159,7 +188,10 @@ list.filter(x => x % 2)
 // [2, 4, 6, 8]
 ```
 
-##### Other Functions
+Note add "10" to your list. What happens when you sort it now? Why?
+
+
+##### Other Functions (20)
 
 With a partner, compare and categorize the following array methods. Experiment and test with them.
 
@@ -204,7 +236,7 @@ filter([1, 2, 3], function(x) { return x  % 2; });
 // result: [2]
 ```
 
-// answer
+Answer:
 
 ```js
 function filter(array, condition) {
@@ -218,9 +250,12 @@ function filter(array, condition) {
 }
 ````
 
-The filter function cannot be created with map. Why?
-// map returns the same number of items that go in
+Can we write a filter function using map?
 
+*( No. map returns the same number of items that go in. )*
+
+
+Check that students understand the difference between concat and push.
 
 ```js
 let a = [1, 2];
@@ -232,11 +267,18 @@ console.log(a); // [1, 2] // Why?
 a = a.concat(3);
 ```
 
+### Practice (25)
+
+[Netflix Functional Tutorial](http://reactivex.io/learnrx/)
+
+
+## Spread, Object.assign, Reduce (30)
+
 ##### Group Work
 
 Each group will get a topic. You have 30 minutes to understand the concept and teach it to the class using examples.
 
 - Spread (...)
-- Object.Assign
+- Object.assign
 - Reduce
-- ?
+- Destructuring
