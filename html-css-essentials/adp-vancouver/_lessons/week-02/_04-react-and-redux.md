@@ -73,7 +73,7 @@ Let students code for a bit on their projects before introducing new concepts.
 
 ---
 
-## Afternoon Additions
+## Afternoon Additions (1hr)
 
 ### Router with Redux (20)
 

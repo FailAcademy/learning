@@ -1,5 +1,22 @@
 # Lesson: Functional Programming (3hrs)
 
+## Intro (5)
+
+There are two pillars of programming in Javascript:
+
+- Functional
+- Object Oriented
+
+Any idea of the difference between the two?
+
+*( OOP: inheritance, Functional: pure functions )*
+
+Can anyone name a functional programming language?
+
+*( Elm, Elixir, Scala, etc. )*
+
+In some languages you can only write pure functions, but JavaScript is a flexible programming language. In Javascript we have to try harder to write functional code.
+
 ## Pure or Impure
 
 ### Discussion (10)
@@ -68,18 +85,6 @@ Write: "_________ability"
 
 *( ex: reusability, predictability, testability, readability )*
 
-### Intro (5)
-
-There are two pillars of programming in Javascript:
-
-- Functional
-- Object Oriented
-
-Any idea of the difference between the two?
-
-Can anyone name a functional programming language?
-
-In some languages you can only write pure functions. JavaScript is a flexible programming language, meaning that we have to try hard to write functional code.
 
 ## Higher Order Functions
 
