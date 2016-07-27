@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Functional Programming
-slides: ['_slides/week-02/01-functional-programing.md']
+slides: ['_slides/week-02/02-functional-programing.md']
 lesson_date: 2016-10-03
 ---
 
@@ -26,10 +26,18 @@ lesson_date: 2016-10-03
 
 ## Active Learning
 
-- Netflix Tutorial
-- Professor Frisby exercises chapter 3 & 4
-- writing reselect selectors
+1. Pure or Impure Game.
+
+2. Practice with Array methods. Try the [Netflix Functional Tutorial](http://reactivex.io/learnrx/)
+
+3. Each group will get a topic. You have 30 minutes to understand the concept and teach it to the class using examples.
+
+  a. Spread (...)
+  b. Object.assign
+  c. Reduce
+  d. Destructuring
+
 
 ## Resources
-- [Netflix Functional Tutorial](http://reactivex.io/learnrx/)
+
 - [Professor Frisby's Functional Guide](https://github.com/MostlyAdequate/mostly-adequate-guide)
