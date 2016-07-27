@@ -253,7 +253,7 @@ function filter(array, condition) {
   });
   return result;
 }
-````
+```
 
 Can we write a filter function using map?
 
