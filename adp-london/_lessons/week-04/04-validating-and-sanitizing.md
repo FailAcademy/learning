@@ -2,7 +2,7 @@
 layout: lesson
 title: Validating & Sanitizing Data
 slides: []
-lesson_date: '2016-10-20'
+lesson_date: 2016-10-20
 ---
 
 ## Objectives
