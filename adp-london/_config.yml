@@ -67,3 +67,8 @@ courses:
     Web Server: '2016-10-11'
     Connecting Client & Server: '2016-10-11'
     Async Javascript: '2016-10-12'
+    Intro to Databases with SQL: '2016-10-17'
+    Validating Data with Schema: '2016-10-18'
+    Forms: '2016-10-19'
+    Validating & Sanitizing Data: '2016-10-20'
+    User Sessions & Accounts: '2016-10-21'
