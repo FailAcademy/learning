@@ -12,3 +12,20 @@ lesson_date: 2016-10-06
 - Identify the difference between presentational and container components
 - Use React-Redux, with <Provider> and 'connect' to dispatch actions from container components
 - Use 'connect' to map state to props for connected components
+
+## Pre-Work
+
+- Read the [Redux docs on React](http://redux.js.org/docs/basics/UsageWithReact.html)
+
+## Keywords
+
+- connect
+- provider
+- mapStateToProps
+- mapDispatchToProps
+
+
+## Resources
+
+- [React-Redux Docs](https://github.com/reactjs/react-redux)
+- [Egghead.io React-Redux Tutorial](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)
