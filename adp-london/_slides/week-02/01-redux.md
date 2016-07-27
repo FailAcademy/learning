@@ -10,33 +10,53 @@ class: center, middle, inverse
 
 ---
 
-##### Good application design is ______________.
+# Redux
+
+.title-logo[![Red logo](/public/img/red-logo-white.svg)]
+
+---
+layout: false
+class: center, middle
+
+Fill in the blank.
+### Good application design is ______________.
 
 ---
 
-##### Give an example of each in an application:
+class: middle
 
-a. data
-b. view
-c. logic
-d. event
+# Give an example of each in an application:
 
----
-
-##### Which application design patterns are you familiar with?
+### a. data
+### b. view
+### c. logic
+### d. event
 
 ---
+
+class: center, middle
+
+# Which application design patterns are you familiar with?
+
+---
+name: inverse
+class: center, middle
 
 # MVC
 
 ---
+name: inverse
+class: center, middle
 
 # Flux
 
 ---
+name: inverse
+class: center, middle
 
 # Redux
 
 ---
+
 
 {% endhighlight %}
