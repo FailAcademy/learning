@@ -64,3 +64,6 @@ courses:
     Functional Programming: '2016-10-04'
     Redux Middleware: '2016-10-05'
     React and Redux: '2016-10-06'
+    Web Server: '2016-10-11'
+    Connecting Client & Server: '2016-10-11'
+    Async Javascript: '2016-10-12'
