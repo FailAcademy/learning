@@ -2,7 +2,7 @@
 layout: lesson
 title: User Sessions & Accounts
 slides: []
-lesson_date: '2016-10-21'
+lesson_date: 2016-10-21
 ---
 
 ## Objectives
