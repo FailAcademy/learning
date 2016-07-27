@@ -16,7 +16,7 @@ lesson_date: 2016-10-04
 
 ## Pre-Work
 
-Read the [Redux Introduction](http://redux.js.org/docs/introduction/index.html).
+- Read the [Redux Introduction](http://redux.js.org/docs/introduction/index.html)
 
 ## Keywords
 
@@ -33,7 +33,7 @@ Read the [Redux Introduction](http://redux.js.org/docs/introduction/index.html).
 
 ## Resources
 
-- [Redux docs](http://redux.js.org/docs/introduction/index.html)
-- [Egghead Tutorial](https://egghead.io/courses/getting-started-with-redux)
+- [Scotch.io: Getting Started with Redux](https://scotch.io/bar-talk/getting-started-with-redux-an-intro)
 - [Redux without Profanity](https://tonyhb.gitbooks.io/redux-without-profanity/content/index.html)
 - [Cartoon guide to Redux](https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6#.56hltw7kz)
+- [Egghead Tutorial](https://egghead.io/courses/getting-started-with-redux)
