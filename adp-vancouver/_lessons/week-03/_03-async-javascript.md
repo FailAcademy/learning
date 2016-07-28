@@ -504,6 +504,46 @@ do_letter('a')
   If the third request fails, it should return an error.
   If a request succeeds, it should log the data to the console.
 
+*( example solution:
+
+```js
+window.fetch = window.fetch ? window.fetch : function makeRequest(method, url) {
+  return new Promise(function (resolve, reject) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.onload = function () {
+      if (this.status >= 200 && this.status < 300) {
+        resolve(xhr.response);
+      } else {
+        reject({
+          status: this.status,
+          statusText: xhr.statusText
+        });
+      }
+    };
+    xhr.onerror = function () {
+      reject({
+        status: this.status,
+        statusText: xhr.statusText
+      });
+    };
+    xhr.send();
+  });
+}
+
+makeRequest('GET', 'http://example.com')
+.then(function (response) {
+  const result = JSON.parse(response);
+  console.log(result);
+})
+.catch(function (err) {
+  console.log(err);
+});
+```
+
+)*
+
+
 ### Pending (20)
 
 4. Pending
