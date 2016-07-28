@@ -66,7 +66,7 @@ King -> Servant "spread jam on the bread"
 King -> Servant "spread peanut butter on the bread"
 King -> Servant "bring me the sandwich"
 
-These tasks are added to "the queue" and put on "the stack". The stack is FIFO (First in, first out).
+These tasks are added to "the queue" and put on "the stack". The stack is FIFO (first in, first out).
 
 Tell a student to organize the stack as FIFO.
 
