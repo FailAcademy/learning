@@ -15,3 +15,4 @@ lesson_date: 2016-10-11
 ## Active Learning
 
 ## Resources
+- [Demo](https://github.com/aybmab/express-redux-sample)
