@@ -2,7 +2,7 @@
 layout: lesson
 title: Async Javascript
 slides: []
-lesson_date: 2016-10-12
+lesson_date: 2016-10-13
 ---
 
 ## Objectives
