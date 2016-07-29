@@ -2,7 +2,7 @@
 layout: lesson
 title: Connecting Client & Server
 slides: []
-lesson_date: 2016-10-11
+lesson_date: 2016-10-12
 ---
 
 ## Objectives

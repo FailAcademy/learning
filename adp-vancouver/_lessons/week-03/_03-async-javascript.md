@@ -199,9 +199,20 @@ How does `fs.readFile` become asynchronous?
 
 *( fs opens a separate process on a different thread. `readFile` doesn't wait for it to finish, while `readFileSync` waits )*
 
-How long does it take your computer to create a new process?
+### What is Concurrency (5)
 
-*( about 22ms )*
+I want to buy a fast computer, what should I look for?
+
+*( GHz, Cores )*
+
+**Cores** refer to the amount of processes or **threads** you can run at one time. Ghz refers to the number of operations per second.
+
+Which of these two make Javascript faster?
+
+*( Ghz, only one thread )*
+
+If you want to learn more about multi-threading in Javascript, study "service workers".
+
 
 ### Review (3)
 
