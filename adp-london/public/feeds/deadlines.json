@@ -1,8 +1,28 @@
 [
-   {
-      "title": "React App",
-      "allDay": true,
-      "start": "2016-10-03",
-      "url": "/project/project-1-react-app"
+	{
+		"title": "P1: React & Redux",
+		"allDay": true,
+		"start": "2016-10-03",
+		"url": "/project/01-react-and-redux"
+   }, {
+		"title": "P2: Node & DB",
+		"allDay": true,
+		"start": "2016-10-24",
+		"url": "/project/02-node-and-db"
+   }, {
+		"title": "P3: Meteor",
+		"allDay": true,
+		"start": "2016-11-07",
+		"url": "/project/03-meteor"
+   }, {
+		"title": "P4: Resubmit",
+		"allDay": true,
+		"start": "2016-11-14",
+		"url": "/project/04-resubmit"
+   }, {
+		"title": "P5: Mobile",
+		"allDay": true,
+		"start": "2016-11-21",
+		"url": "/project/05-mobile"
    }
 ]
