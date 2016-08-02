@@ -30,7 +30,7 @@ The evening program classes run from 6:00 to 9:00 p.m. on Monday and Wednesday n
 The following schedules are currently available:
 
 - [Vancouver - Summer 2016](/wdf-van-summer-2016/)
-- [Toronto - Spring 2016](/wdf-to-spring-2016/)
+- [Toronto - Summer 2016](/wdf-to-summer-2016/)
 
 ---
 
