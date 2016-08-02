@@ -527,8 +527,8 @@ var point = {
   y: 2
 };
 
-var a = point.x;
-var b = point.y;
+var x = point.x;
+var y = point.y;
 
 console.log(a); // 1
 console.log(b); // 2
@@ -548,7 +548,7 @@ let point = {
   y: 2
 };
 
-let { a, b } = point;
+let { x, y } = point;
 
 console.log(a); // 1
 console.log(b); // 2
@@ -673,7 +673,7 @@ groceryList('apples', 'oranges');
 
 # Exercise 4
 
-Create a simple function called `cashRegister` that uses `for...in` loop to calculate the total cost of any number of items a person wishes to purchase.
+Create a simple function called `cashRegister` that uses `for...of` loop to calculate the total cost of any number of items a person wishes to purchase.
 
 Because the number of purchased items may vary, you'll want to set up your function to accept as many (or as few) grocery items as need to be passed in.
 
