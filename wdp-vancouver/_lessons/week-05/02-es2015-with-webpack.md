@@ -85,6 +85,33 @@ https://webpack.github.io/docs/cli.html
 
 ## Exercise 2
 
+Install ["webpack-validator"](https://github.com/js-dxtools/webpack-validator). This will help us find common typos and other errors in your webpack.config file.
+
+- `npm install -g webpack-validator`
+
+To run "webpack-validator", in a terminal run:
+
+`webpack-validator webpack.config.js`
+
+To test if "webpack-validator" is working, make a typo in your `webpack.config.js` file and run the above command again. Notice how it specifies the exact line number and position of the error.
+
+We may be calling this often, let's add it to our `package.json` file as an npm script. Add the following to your `package.json` under the key "scripts"
+
+```js
+{
+  /* ... */
+  "scripts": {
+    "validate": "webpack-validator webpack.config.js"
+  },
+}
+```
+
+You can now validate your Webpack by running `npm run validate`.
+
+---
+
+## Exercise 3
+
 Now that Webpack is creating a *JavaScript bundle*, let's add some configuration for compiling ES2015.
 
 We'll do this using a **Webpack loader**:
@@ -110,14 +137,14 @@ module: {
      }
    }
  ],
-}
+},
 
 // ...the rest
 ```
 
 ---
 
-## Exercise 3
+## Exercise 4
 
 Webpack can be used to bundle almost every kind of asset for the web. It's very flexible in this regard.
 
@@ -130,8 +157,7 @@ First, run the following commands (in your project's root directory):
 - `npm install --save-dev style-loader`
 - `npm install --save-dev node-sass`
 
-Next, add the following code to your webpack.config.js Inside the `loaders` Array,
-after the JavaScript loader.
+Next, add the following code to your webpack.config.js Inside the `loaders` Array, after the JavaScript loader.
 
 ```js
 // ...
@@ -139,10 +165,11 @@ after the JavaScript loader.
 module: {
    loaders: [
    // ...other loaders...
-   {
-      test: /\.scss$/,
-      loaders: ["style", "css", "sass"]
-   }]
+     {
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"]
+     },
+  ]
 }
 
 // ...the rest
@@ -150,7 +177,7 @@ module: {
 
 ---
 
-## Exercise 4
+## Exercise 5
 
 Now that we're compiling our source files into a JavaScript bundle, we'll have to take some extra steps in order to debug our compiled and bundled code.
 
@@ -160,7 +187,6 @@ First, add a dev server configuration to your webpack.config.js file inside of y
 //...
 
 devServer: {
-   watch:true,
    inline: true,
    host: '0.0.0.0',
    port: '3000',
@@ -173,7 +199,7 @@ devServer: {
 //...the rest
 ```
 
-And add source maps to make it easier to debug your code. This will replace your previous sass loader from Exercise 3.
+And add source maps to make it easier to debug your code. This will replace your previous sass loader from Exercise 4.
 
 ```js
 // ...
@@ -181,10 +207,11 @@ And add source maps to make it easier to debug your code. This will replace your
 module: {
    loaders: [
    // ...other loaders...
-   {
+    {
       test: /\.scss$/,
       loaders: ["style", "css?sourceMap", "sass?sourceMap"]
-   }]
+    }
+  ]
 }
 
 // ...the rest
@@ -194,7 +221,7 @@ Run: `webpack-dev-server` to view your site in the browser @ **localhost:3000**.
 
 ---
 
-## Exercise 5
+## Exercise 6
 
 Now that Webpack is set up for development let's create a convenient command for running the development server in our project:
 
