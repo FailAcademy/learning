@@ -206,6 +206,68 @@ function gameLoop() {
 
 ---
 
+# Board
+
+Create a Board class.
+
+```js
+class Board {
+	constructor(width, height) {
+		this.width = width;
+		this.height = height;
+	}
+}
+```
+
+---
+
+# Board
+
+Draw the Board.
+
+```js
+class Board {
+  ...
+  drawLine(ctx) {
+    ctx.setLineDash([10, 10]);
+    ctx.beginPath();
+    ctx.moveTo(this.width / 2, 0);
+    ctx.lineTo(this.width / 2, this.height);
+    ctx.strokeStyle = "white";
+    ctx.stroke();
+  }
+  render(ctx) {
+    ctx.clearRect(0, 0, this.width, this.height);
+		this.drawLine(ctx);
+	}
+ ...
+}
+```
+
+---
+
+# Render Board
+
+Render Board inside of your Game class.
+
+```js
+class Game {
+  constructor() {
+    ...
+    this.board = new Board(this.width, this.height);
+  }
+   //...
+   render() {
+      this.board.render(this.context);
+   }
+}
+```
+
+*Why do we need to render the board after each change?<br />
+Hint: think about what happens when objects move.*
+
+---
+
 # Challenge 2
 
 Break your game into different modules as illustrated.
