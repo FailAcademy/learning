@@ -49,7 +49,7 @@ Set up a **new project** with Webpack:
     - Remember to create a `.gitignore` file and add `node_modules` at the top
 2. Create the following folders within:
     - `src`
-    - `dist`
+    - `build`
 3. Create the following files:
     - `index.html` (in project root)
     - `main.scss` (in `src`)
@@ -63,9 +63,11 @@ module.exports = {
    entry: './src/main.js',
    output: {
       filename: './build/bundle.js'
-   }
+   },
 };
 ```
+
+Important: All of your `webpack.config.js` code will be inside of the above object separated by commas.
 
 Run `npm install --save-dev webpack webpack-dev-server`
 
@@ -93,7 +95,7 @@ First, run the following commands (in your project's root directory):
 - `npm install --save-dev babel-loader`
 - `npm install --save-dev babel-preset-es2015`
 
-Next, update your webpack.config.js file:
+Next, update your `webpack.config.js` file inside of the `module.exports` object:
 
 ```js
 // ...
@@ -107,7 +109,7 @@ module: {
        presets: ['es2015']
      }
    }
- ]
+ ],
 }
 
 // ...the rest
@@ -152,7 +154,7 @@ module: {
 
 Now that we're compiling our source files into a JavaScript bundle, we'll have to take some extra steps in order to debug our compiled and bundled code.
 
-First, add a dev server configuration to your webpack.config.js file:
+First, add a dev server configuration to your webpack.config.js file inside of your `module.exports` object.
 
 ```js
 //...
@@ -171,7 +173,7 @@ devServer: {
 //...the rest
 ```
 
-And add source maps to make it easier to debug your code:
+And add source maps to make it easier to debug your code. This will replace your previous sass loader from Exercise 3.
 
 ```js
 // ...
