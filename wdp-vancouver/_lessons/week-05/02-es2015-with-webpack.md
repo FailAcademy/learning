@@ -29,6 +29,7 @@ Also take some time before class to explore the [Webpack documentation](https://
 - Use Webpack to set up source maps for compiled files (both CSS and JS).
 - Use Webpack's development server to watch files and compile on save.
 - Use npm scripts to run the Webpack CLI commands.
+- Create JavaScript modules using the `import` and `export` keywords to write more modular code without polluting the global namespace.
 
 ---
 

@@ -34,7 +34,6 @@ Also read through this excellent summary of the new ES2015 features before class
 - Use arrow syntax to write functions that share the same lexical `this` as their surrounding code.
 - Use template literals, enhanced object literals, default parameters, destructuring, rest parameters, and spread operators as shorthand for writing less redundant code.
 - Use `for...of` to loop over iterable objects.
-- Create JavaScript modules using the `import` and `export` keywords to write more modular code without polluting the global namespace.
 
 ---
 
@@ -51,8 +50,6 @@ Also read through this excellent summary of the new ES2015 features before class
 - [Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 - [Spread operator](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Spread_operator)
 - [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-- [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
-- [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
 
 ---
 
@@ -98,7 +95,11 @@ Specifically, you will need to:
 - Replace all instances of `var` with `let` or `const` where appropriate
 - Use a template literal to replace any string concatenation
 - Remove the `<script>` element from your project's `index.html` file that loads jQuery, install jQuery from npm as a project dependency (but **not** a development dependency this time!), and `import` jQuery in your main project JS file instead
-- Refactor out your API call into a separate function and use `import` and `export` to load this function from another file
+
+#### Challenge yourself:
+
+- Refactor out your API call into a separate function and use `import` and `export` to load this function from another file.
+**Babel** alone does not compile modules into a format that your browser will recognise. Look at tomorrow's lesson for clues.
 
 ---
 

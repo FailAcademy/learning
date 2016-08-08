@@ -24,4 +24,4 @@ package.json
 vendor
 config.ru
 Rakefile
-
+.vscode
