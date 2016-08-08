@@ -24,7 +24,6 @@ layout: false
 3. Arrow functions
 4. ES2015 shorthand
 5. `for...of` loops
-6. ES2015 modules
 
 ---
 
@@ -689,7 +688,6 @@ The tax amount will needed to be added to the subtotal of the summed item prices
 - How and where to replace `var` with `let` or `const`
 - How to use arrow functions
 - How to write more efficient JS with template literals, enhanced object literals, rest parameters, spread operators, and default parameters
-- How to use `import` and `export` with ES2015 modules
 
 ---
 template: inverse

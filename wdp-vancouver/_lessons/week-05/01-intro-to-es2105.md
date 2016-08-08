@@ -94,12 +94,11 @@ Specifically, you will need to:
 - Add a Gulp Babel to your project so you can transpile your JS to ES5
 - Replace all instances of `var` with `let` or `const` where appropriate
 - Use a template literal to replace any string concatenation
-- Remove the `<script>` element from your project's `index.html` file that loads jQuery, install jQuery from npm as a project dependency (but **not** a development dependency this time!), and `import` jQuery in your main project JS file instead
 
 #### Challenge yourself:
 
-- Refactor out your API call into a separate function and use `import` and `export` to load this function from another file.
-**Babel** alone does not compile modules into a format that your browser will recognise. Look at tomorrow's lesson for clues.
+- Refactor out your API call into a separate function and use `import` and `export` to load this function from another file. **Babel** alone does not compile modules into a format that your browser will recognize. Look at tomorrow's lesson for clues.
+- If you figure this out, next try removing the `<script>` element from your project's `index.html` file that loads jQuery, install jQuery from npm as a project dependency (but **not** a development dependency this time!), and `import` jQuery in your main project JS file instead
 
 ---
 

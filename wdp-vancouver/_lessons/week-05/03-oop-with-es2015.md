@@ -80,7 +80,7 @@ In today's lab, you'll commence work on Project 3 using what you've now learned 
 
 Clone the "pong starter" to get started.
 
-```shell
+```bash
 git clone https://github.com/redacademy/pong-starter
 cd pong-starter
 npm install

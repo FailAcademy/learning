@@ -117,6 +117,11 @@ export default function b() {}
 ```
 
 ---
+template: inverse
+
+# Webpack
+
+---
 
 # What is Webpack?
 
@@ -150,6 +155,7 @@ Follow the exercise instructions found on the [lesson page](/lesson/developing-w
 
 # What We've Learned
 
+- How to use `import` and `export` with ES2015 modules
 - How to set-up Webpack in a project
 - How to bundle our JS and use Webpack with Babel
 - How to compile Sass with Webpack
