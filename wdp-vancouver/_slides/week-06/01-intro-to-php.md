@@ -120,7 +120,7 @@ Time to try out some PHP:
 - Create an `index.php` file in a sub-directory of the `htdocs` folder in your MAMP installation (e.g. `sandbox`, etc.)
 - In that file type `<?php  ?>`
 - Between your opening and closing PHP tags type `echo "Hello, world!";`
-- Go to http://locahost:8888/[SUB_DIR_NAME]/ (or if you're on port 80, http://locahost/[SUB_DIR_NAME]/)
+- Go to http://localhost:8888/[SUB_DIR_NAME]/ (or if you're on port 80, http://localhost/[SUB_DIR_NAME]/)
 - Also try running `php index.php` in your CLI...
 
 ---
@@ -227,7 +227,7 @@ In PHP we can also **concatenate** strings together, but with a `.` instead of a
 
 ```php
 $salutation = 'Ms.';
-$addressee = 'Dear ' . salutation . ' Sunshine:';
+$addressee = 'Dear ' . $salutation . ' Sunshine:';
 ```
 
 Again, if we use double quotes to wrap a string variable, we can embed another variable directly in it:
@@ -380,7 +380,7 @@ if ( $score > 50 ) {
 }
 ```
 
-**Note:** In PHP we can use `else if` of `elseif`.
+**Note:** In PHP we can use `else if` or `elseif`.
 
 ---
 

@@ -54,7 +54,7 @@ Time to try out some PHP:
 - Create an `index.php` file in a sub-directory of the `htdocs` folder in your MAMP installation (e.g. `sandbox`, etc.)
 - In that file type `<?php  ?>`
 - Between your opening and closing PHP tags type `echo "Hello, world!";`
-- Go to http://locahost:8888/[SUB_DIR_NAME]/ (or if you're on port 80, http://locahost/[SUB_DIR_NAME]/)
+- Go to http://localhost:8888/[SUB_DIR_NAME]/ (or if you're on port 80, http://localhost/[SUB_DIR_NAME]/)
 - Also try running `php index.php` in your CLI...
 
 ---
