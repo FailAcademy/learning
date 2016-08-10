@@ -47,8 +47,11 @@ Canvas is a web API that allows you to draw graphics, create animations, as well
 
 See the [Canvas Shapes API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) for more.
 
+Canvas is a lot like telling a computer how to paint. We use step by step, clear instructions.
+
 ```js
 // rectangle
+canvas.fillStyle = 'blue';
 canvas.fillRect(x1, y1, x2, y2);
 ```
 
@@ -56,7 +59,7 @@ canvas.fillRect(x1, y1, x2, y2);
 
 # Challenge 1
 
-Draw a Pong outline using Canvas.
+Draw a Pong game outline using Canvas.
 
 Use this [Starter](http://codepen.io/Sh_McK/pen/QEzGGx).
 
@@ -207,7 +210,7 @@ class Game {
 }());
 ```
 
-**Note:** `this.context = canvas`
+**Note:** `this.context is our 2D canvas`
 
 ---
 
@@ -275,7 +278,8 @@ class Board {
 
 # Render Board
 
-Render Board inside of your Game class.
+Render the Board inside of your Game class.
+Remove the "drawline" method, as it is now moved to Board.
 
 ```js
 class Game {
@@ -283,7 +287,7 @@ class Game {
     ...
     this.board = new Board(this.width, this.height);
   }
-   //...
+   //... remove the "drawline" method
    render() {
       this.board.render(this.context);
    }
@@ -295,7 +299,7 @@ Hint: think about what happens when objects move.*
 
 ---
 
-# Import & Export
+# ES6 Import & Export
 
 `import` & `export` let us share code across files.
 
@@ -323,13 +327,13 @@ import { b, c } from './namedExport'
 
 Break your game into different modules as illustrated.
 
-Use `default` import and exports.
+Use `default` import and exports with classes.
 
 ```
 src
   |- index.js   (Game loop)
   |- Game.js    (Game class)
-  |- Board.js   (Game board class)
+  |- Board.js   (Board class)
 ```
 
 ---

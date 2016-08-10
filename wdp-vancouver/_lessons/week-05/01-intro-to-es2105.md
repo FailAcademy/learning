@@ -55,7 +55,7 @@ Also read through this excellent summary of the new ES2015 features before class
 
 ## Exercise 1
 
-[Refactor the previous Codepen example](http://codepen.io/redacademy/pen/pyZpqV) with `let` to fix the issue previously cause by `var`.
+[Refactor the previous CodePen example](http://codepen.io/redacademy/pen/pyZpqV) with `let` to fix the issue previously cause by `var`.
 
 ---
 
@@ -80,6 +80,7 @@ Because the number of purchased items may vary, you'll want to set up your funct
 The function also needs to accept an argument for the tax rate (with it's default set to 5%).
 
 The tax amount will needed to be added to the subtotal of the summed item prices, with the total cost logged to the console.
+
 
 ---
 
