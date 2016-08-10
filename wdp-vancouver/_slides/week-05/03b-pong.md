@@ -20,6 +20,7 @@ layout: false
 # Agenda
 
 * Practice OOP programming
+* Practice Logic in JavaScript
 * Create a "Pong" game using HTML5 Canvas
 * Have some fun with this :)
 
@@ -42,13 +43,59 @@ Canvas is a web API that allows you to draw graphics, create animations, as well
 
 ---
 
+# Canvas: Drawing Shapes
+
+See the [Canvas Shapes API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) for more.
+
+```js
+// rectangle
+canvas.fillRect(x1, y1, x2, y2);
+```
+
+---
+
 # Challenge 1
+
+Draw a Pong outline using Canvas.
+
+Use this [Starter](http://codepen.io/Sh_McK/pen/QEzGGx).
+
+Your drawing should include:
+  - board
+  - 2 paddles
+  - a ball in the center of the board
+  - a dividing line down the middle of the board
+  - a scoreboard
+
+---
+
+# Movement
+
+How do we make the paddle and ball move?
+
+Can you make a movement demo using `setTimeout(fn, timeout)`?
+
+---
+
+# Colour Bleeding
+
+Movement of a ball may end up looking like a straight line, instead of a moving circle. This is because we are drawing over top of our original drawing repeatedly.
+
+Change the colour each time you draw the paddle you will see this re-draw effect.
+
+What might be quick and easy fix for colour bleeding?
+
+---
+
+# Challenge 2
 
 Plan out your project on paper with a partner.
 
-1. Which **classes** will we need to create our Pong game? (Hint: think in nouns.)
+1. Which **classes** will we need to create our Pong game? (Hint: think in nouns.) Draw a box for each class.
 
-2. Which **properties** and **methods** will these classes have? (e.g. a class representing the ball may need a `wallBounce` method, etc.)
+2. Which **properties** and **methods** will these classes have? (e.g. a class representing the ball may need a `wallBounce` method, etc.) Write these inside your class boxes.
+
+3. Compare your classes with another group.
 
 ---
 
@@ -108,11 +155,11 @@ var game = new Game();
 
 const fps = 30;
 
-function gameLoop() {
+// self invoking function
+(function gameLoop() {
    setTimeout(gameLoop, fps);
-}
+}());
 
-gameLoop();
 ```
 
 **Tip**: Use [requestAnimationFrame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) for performant animation: `setTimeout(window.requestAnimationFrame(gameloop))`
@@ -137,29 +184,6 @@ class Game {
 
 ---
 
-# Canvas: Drawing Shapes
-
-See the [Canvas Shapes API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) for more.
-
-```js
-// rectangle
-canvas.fillRect(x, y, width, height)
-
-// triangle
-canvas.beginPath();
-canvas.moveTo(corner1x, corner1y);
-canvas.lineTo(corner2x, corner2y);
-canvas.lineTo(corner3x, corner3y);
-canvas.fill();
-
-// circle
-canvas.beginPath();
-canvas.arc(x, y, radius, 0, Math.PI*2, true);
-canvas.fill();
-```
-
----
-
 # Draw
 
 Draw your first shapes on the canvas:
@@ -177,9 +201,10 @@ class Game {
    }
 }
 
-function gameLoop() {
+(function gameLoop() {
    game.drawLine();
-}
+   setTimeout(gameLoop, fps);
+}());
 ```
 
 **Note:** `this.context = canvas`
@@ -199,9 +224,10 @@ class Game {
    }
 }
 
-function gameLoop() {
+(function gameLoop() {
    game.render();
-}
+   setTimeout(gameLoop, fps);
+}());
 ```
 
 ---
@@ -244,6 +270,7 @@ class Board {
 }
 ```
 
+
 ---
 
 # Render Board
@@ -268,7 +295,31 @@ Hint: think about what happens when objects move.*
 
 ---
 
-# Challenge 2
+# Import & Export
+
+`import` & `export` let us share code across files.
+
+```js
+// defaultExport.js
+const a = 1;
+export default a;
+```
+
+```js
+// namedExport.js
+export const b = 2;
+export const c = 3;
+```
+
+```js
+// import.js
+import a from './defaultExport';
+import { b, c } from './namedExport'
+```
+
+---
+
+# Challenge 3
 
 Break your game into different modules as illustrated.
 
@@ -321,7 +372,7 @@ Now import paddles/players into your game:
 // In Game.js...
 
 import Paddle from './Paddle';
-const gap = 10;
+const gap = 10; // space between left/right edges and paddles
 
 class Game {
    constructor() {
@@ -356,7 +407,7 @@ class Game {
 ```
 ---
 
-# Challenge 3
+# Challenge 4
 
 In this challenge, you'll need to make two adjustments to your game:
 
@@ -367,7 +418,7 @@ In this challenge, you'll need to make two adjustments to your game:
 
 # Key Event Listeners
 
-Get the following code to run in a browser console:
+Get the following code to run in a **browser console**:
 
 ```js
 var listener = document.body.addEventListener('keydown', (event) => {
@@ -396,7 +447,7 @@ export default class Paddle{
       );
 	}
 }
- ```
+```
 
 ---
 
@@ -428,7 +479,7 @@ constructor(height, x) {
 Also record the key values in a constant:
 
 ```js
-// In Paddle.js...
+// At the top of Paddle.js...
 
 const keys = {
    a: 65,
@@ -440,20 +491,19 @@ const keys = {
 
 ---
 
-# Challenge 4
+# Challenge 5
 
 Complete the following requirements for this challenge:
 
 * Instantiate paddles with their up/down keys
 * Set paddle properties for `this.speed` equal to `5` and `this.maxHeight` equal to `height`
 * Write paddle methods that move the paddle **up** and **down**
-* Use `Math.max` and `Math.min` to prevent moving too high
+* Use `Math.max` and `Math.min` to prevent moving the paddle off the board
 * Re-render the board to prevent paddle movement bleeding
-* Make a spacebar pause button with `addKeyPressListener`
 
 ---
 
-# Challenge 5
+# Challenge 6
 
 Move all settings into a `settings.js` file and import them where needed.
 
@@ -489,8 +539,8 @@ export default class Ball {
    constructor() {
       this.x = 50; // random x
       this.y = 50; // random y
-      this.vy = Math.floor(Math.random() * 12 - 6);
-      this.vx = (7 - Math.abs(this.vy));
+      this.vy = Math.floor(Math.random() * 12 - 6); // y direction
+      this.vx = (7 - Math.abs(this.vy)); // x direction
       this.size = size;
    }
 }
@@ -498,7 +548,7 @@ export default class Ball {
 
 ---
 
-# Challenge 6
+# Challenge 7
 
 Complete the following requirements for this challenge:
 
@@ -584,7 +634,7 @@ class Ball {
 
 ---
 
-# Challenge 7
+# Challenge 8
 
 Complete the following requirements for this challenge:
 
@@ -689,7 +739,7 @@ paddleCollision(player1, player2) {
 
 ---
 
-# Challenge 8
+# Challenge 9
 
 Complete the following requirements for this challenge:
 
@@ -721,7 +771,7 @@ Scoring a goal will require:
 
 ---
 
-# Challenge 9
+# Challenge 10
 
 Complete the following requirements for this challenge:
 
@@ -754,7 +804,7 @@ export default class ScoreBoard {
 
 ---
 
-# Challenge 10
+# Challenge 11
 
 Complete the following requirements for this challenge:
 
