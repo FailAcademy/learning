@@ -24,7 +24,6 @@ layout: false
 3. Arrow functions
 4. ES2015 shorthand
 5. `for...of` loops
-6. ES2015 modules
 
 ---
 
@@ -527,8 +526,8 @@ var point = {
   y: 2
 };
 
-var a = point.x;
-var b = point.y;
+var x = point.x;
+var y = point.y;
 
 console.log(a); // 1
 console.log(b); // 2
@@ -548,7 +547,7 @@ let point = {
   y: 2
 };
 
-let { a, b } = point;
+let { x, y } = point;
 
 console.log(a); // 1
 console.log(b); // 2
@@ -673,105 +672,13 @@ groceryList('apples', 'oranges');
 
 # Exercise 4
 
-Create a simple function called `cashRegister` that uses `for...in` loop to calculate the total cost of any number of items a person wishes to purchase.
+Create a simple function called `cashRegister` that uses `for...of` loop to calculate the total cost of any number of items a person wishes to purchase.
 
 Because the number of purchased items may vary, you'll want to set up your function to accept as many (or as few) grocery items as need to be passed in.
 
 The function also needs to accept an argument for the tax rate (with it's default set to 5%).
 
 The tax amount will needed to be added to the subtotal of the summed item prices, with the total cost logged to the console.
-
----
-template: inverse
-
-# ES2015 Modules
-
----
-class: center, middle
-
-### Why Modules?
-
-For the same reason an author divides a books into chapters. (Helps us keep things organized!)
-
----
-
-# Problem: Global Vars
-
-Modularizing code in ES5 often meant polluting the global namespace. For example, here the jQuery library is added to the global namespace:
-
-```html
-<!DOCTYPE html>
-<body>
-	<p>Hello, world!</p>
-	<script src="./jquery.js"></script>
-	<script src="./my-script.js"></script>
-</body>
-```
-
-`$` is now a global variable, which can cause naming conflicts:
-
-```js
-// in my-script.js...
-
-let hello = $('p').css('color', 'red');
-```
-
----
-
-# Modules in ES5
-
-No native or agreed upon solution in ES5:
-
-- CommonJS
-- SystemJS
-- RequireJS (AMD)
-- ...and more!
-
----
-
-# ES2015 Modules
-
-ES2015 standardizes modules!
-
-Run: `npm install --save jquery`
-
-```html
-<!DOCTYPE html>
-<body>
-	<p>Hello, world!</p>
-	<script src="./my-script.js"></script>
-</body>
-```
-
-```js
-// in my-script.js...
-import $ from 'jquery';
-
-let hello = $('p').css('color', 'red');
-```
-
-All the code in the jQuery package is completely trapped inside of this module and does not pollute the global namespace.
-
----
-
-# ES2015 Modules
-
-Using modules requires using `import`/`export` keywords:
-
-`import`
-
-```js
-import {a} from 'module';
-import b from 'module'; // default
-import * as c from 'module'; // alias
-```
-
-`export`
-
-```js
-export function a() {}
-export default function b() {}
-```
 
 ---
 
@@ -781,7 +688,6 @@ export default function b() {}
 - How and where to replace `var` with `let` or `const`
 - How to use arrow functions
 - How to write more efficient JS with template literals, enhanced object literals, rest parameters, spread operators, and default parameters
-- How to use `import` and `export` with ES2015 modules
 
 ---
 template: inverse

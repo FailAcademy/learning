@@ -34,7 +34,6 @@ Also read through this excellent summary of the new ES2015 features before class
 - Use arrow syntax to write functions that share the same lexical `this` as their surrounding code.
 - Use template literals, enhanced object literals, default parameters, destructuring, rest parameters, and spread operators as shorthand for writing less redundant code.
 - Use `for...of` to loop over iterable objects.
-- Create JavaScript modules using the `import` and `export` keywords to write more modular code without polluting the global namespace.
 
 ---
 
@@ -51,14 +50,12 @@ Also read through this excellent summary of the new ES2015 features before class
 - [Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 - [Spread operator](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Spread_operator)
 - [`for...of`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-- [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
-- [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
 
 ---
 
 ## Exercise 1
 
-[Refactor the previous Codepen example](http://codepen.io/redacademy/pen/pyZpqV) with `let` to fix the issue previously cause by `var`.
+[Refactor the previous CodePen example](http://codepen.io/redacademy/pen/pyZpqV) with `let` to fix the issue previously cause by `var`.
 
 ---
 
@@ -76,9 +73,13 @@ Use a template literal to refactor [this CodePen](http://codepen.io/redacademy/p
 
 ## Exercise 4
 
-Create a simple function called `groceryList` that uses a `for...in` loop to `console.log()` a list of grocery items individually.
+Create a simple function called `cashRegister` that uses `for...of` loop to calculate the total cost of any number of items a person wishes to purchase.
 
-Because the grocery list may vary in length, you'll want to set up your function to accept as many (or as few) grocery items as need to be passed in.
+Because the number of purchased items may vary, you'll want to set up your function to accept as many (or as few) grocery items as need to be passed in.
+
+The function also needs to accept an argument for the tax rate (with it's default set to 5%).
+
+The tax amount will needed to be added to the subtotal of the summed item prices, with the total cost logged to the console.
 
 ---
 
@@ -93,8 +94,11 @@ Specifically, you will need to:
 - Add a Gulp Babel to your project so you can transpile your JS to ES5
 - Replace all instances of `var` with `let` or `const` where appropriate
 - Use a template literal to replace any string concatenation
-- Remove the `<script>` element from your project's `index.html` file that loads jQuery, install jQuery from npm as a project dependency (but **not** a development dependency this time!), and `import` jQuery in your main project JS file instead
-- Refactor out your API call into a separate function and use `import` and `export` to load this function from another file
+
+#### Challenge yourself:
+
+- Refactor out your API call into a separate function and use `import` and `export` to load this function from another file. **Babel** alone does not compile modules into a format that your browser will recognize. Look at tomorrow's lesson for clues.
+- If you figure this out, next try removing the `<script>` element from your project's `index.html` file that loads jQuery, install jQuery from npm as a project dependency (but **not** a development dependency this time!), and `import` jQuery in your main project JS file instead
 
 ---
 
