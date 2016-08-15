@@ -472,6 +472,7 @@ constructor(height, x) {
          case keys.down:
             console.log('down');
             break;
+      }
    });
 }
 ```

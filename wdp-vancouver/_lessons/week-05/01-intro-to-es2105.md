@@ -81,7 +81,6 @@ The function also needs to accept an argument for the tax rate (with it's defaul
 
 The tax amount will needed to be added to the subtotal of the summed item prices, with the total cost logged to the console.
 
-
 ---
 
 ## Lab Activity
