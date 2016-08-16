@@ -20,8 +20,9 @@ layout: false
 
 # Agenda
 
-1. Introduce the Angular Router
-2. Add Routes to our app using the Angular CLI
+1. Introduce the browser history API
+2. Introduce the Angular Router
+3. Add Routes to our app!
 
 ---
 template: inverse
@@ -48,65 +49,83 @@ When routes in our application change **no request to the server is made!** Inst
 
 ---
 
-# Generate a Route
+# How is this done?
 
-To generate a route using the Angular CLI, run this command:
+#### The Browser History API
+"The DOM window object provides access to the browser's history through the history object. It exposes useful methods and properties that let you move back and forth through the user's history, as well as -- starting with HTML5 -- manipulate the contents of the history stack."
 
-`ng generate route [route name]`<br/>
+-- MDN, [Browser History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API)
 
-Where `route name` is the name of the route we want to create.<br/>
-
----
-#What Was Generated?
-
-Inside of your main application Component, the generator has imported the necessary files,
-and added our first route!
-
-```js
-import { /*router imports */ } from '@angular/router';
-
-// ... @Component Decorator ...
-
-@Routes([
-  { path: '/home', component: HomeComponent}
-])
-
-// ... Component Class ...
-```
-
-The generator has also created a folder called (in the case where we generated a route called home) `/+home` with an empty Component, template and css files. The '+' indicates the Component's code will be **lazy loaded**.
-
----
-
-#What Was Generated?
-
-Inside your main application Component's template, the router outlet component has been added.
-
-```html
-<router-outlet>
-
-	<!-- Angular renders Component templates into this element! -->
-
-</router-outlet>
-```
-
-When an end-user visits the /home url, Angular will render the HomeComponent's template into this element.
 
 ---
 
 # Exercise 1
 
-Prepare to use the Angular Router:
+Create a demo application the manipulates the Browser's history. Your app should have 4 pages with a write up or description
+of each history method, and use JavaScript to navigate between pages.
 
-1. Add the `ROUTER_PROVIDERS` to your application's bootstrap method.
-2. Add the Angular Component [lifecycle hook](https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html) `ngOnInit` to your main application Component.
-
-We'll use this method to trigger rendering of the homepage Component when your application loads.
+Your mini app should use the following methods: `back`, `forward`, `go`, `pushState`, `replaceState`
 
 ---
 template: inverse
 
-# Router Directives
+# Angular Router
+
+---
+
+# Route Definition File
+
+```js
+// Routing modules
+import { Routes, RouterModule } from '@angular/router';
+
+// Components to render
+import { MyComponent }  from './crisis-list.component';
+import { MyOtherComponent }    from './hero-list.component';
+
+// Route definitions (The urls your app will use)
+const appRoutes: Routes = [
+  { path: 'MyComponent', component: MyComponent },
+  { path: 'MyOtherComponent', component: MyOtherComponent }
+];
+
+// User defined directives
+export const appRoutingProviders: any[] = [
+
+];
+
+// Export!
+export const routing = RouterModule.forRoot(appRoutes);
+```
+
+---
+
+# Exercise 2
+
+Create a Route Definition file for your Angular app. Place a file called `app.routes.ts` in the `/app` directory
+(The same directory as `app.component.ts`).
+
+**Question**: How is the main component (root url '/') defined in your Route Definition file?
+
+---
+
+# Main Application Module.
+
+Once your root definition file is finished we can add routes to our main application module.
+
+```js
+// ...
+ imports:      [
+    BrowserModule,
+    FormsModule,
+    routing
+  ],
+  providers:    [
+    HTTP_PROVIDERS,
+    appRoutingProviders,
+  ],
+// ...
+```
 
 ---
 
