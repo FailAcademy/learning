@@ -28,7 +28,6 @@ Prior to class, please read through the Angular documentation on forms:
 - Computed Property
 - Data Contract
 - `[(ngModel)]`
-- `ngControl`
 - `ngSubmit`
 
 ---
@@ -55,10 +54,6 @@ Now that we know how to create a basic form using Angular 2. We'll spend the res
 ---
 
 ## Additional Resources
-
-In-depth tutorial about how to use forms in Angular 2, covering things that will not be covered in class:
-
-- [NGBook Guide to forms](http://blog.ng-book.com/the-ultimate-guide-to-forms-in-angular-2/)
 
 Free video tutorial about how to use select menus with Angular 2:
 
