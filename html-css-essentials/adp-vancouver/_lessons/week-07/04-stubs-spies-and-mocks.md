@@ -16,6 +16,8 @@ lesson_date: 2016-11-08
 
 ## Pre-Work
 
+
 ## Active Learning
 
 ## Resources
+- [Sinon.js](http://sinonjs.org/)
