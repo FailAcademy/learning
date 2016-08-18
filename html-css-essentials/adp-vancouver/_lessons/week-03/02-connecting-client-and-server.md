@@ -43,5 +43,6 @@ There should be a 1000ms delay between receiving a message and emitting the next
 6.  What would be the best method to sync your server store with a database? In reducers? Using middleware? A plugin? Explain and justify your solution.
 
 ## Resources
-- [Demo](https://github.com/aybmab/express-redux-sample)
+- [FullStack Redux Tutorial](http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html)
+- [React Redux Fullstack Starter](https://github.com/michaelcheng429/react-redux-fullstack-starter)
 - [Universal Redux Demo](https://github.com/erikras/react-redux-universal-hot-example)
