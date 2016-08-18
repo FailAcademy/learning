@@ -7,7 +7,8 @@ lesson_date: 2016-11-11
 
 ## Objectives
 
-- document your components
+- write better documentation for your code
+- write documentation for your components
 
 ## Keywords
 
@@ -16,3 +17,4 @@ lesson_date: 2016-11-11
 ## Active Learning
 
 ## Resources
+-

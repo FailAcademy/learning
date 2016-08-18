@@ -163,3 +163,11 @@ test('adds one to the total', t => {
 ## TypeScript (10)
 
 [Ava & TypeScript](https://github.com/avajs/ava/blob/master/docs/recipes/typescript.md)
+
+## Practice (2hr)
+
+Good code is testable.
+
+Students practice writing unit tests. When they struggle, use their examples for the class. Strategies:
+
+- refactoring into pure functions
