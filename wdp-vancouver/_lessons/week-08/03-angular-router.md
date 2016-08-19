@@ -42,24 +42,17 @@ router instance.
 
 ## Exercise 1
 
-Prepare to use the Angular Router:
+Create a demo application the manipulates the Browser's history. Your app should have 4 pages with a write up or description of each history method, and use JavaScript to navigate between pages.
 
-1. Add the `ROUTER_PROVIDERS` to your application's bootstrap method.
-2. Add the Angular Component [lifecycle hook](https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html) `ngOnInit` to your main application Component.
-
-We'll use this method to trigger rendering of the homepage Component when your application loads.
+Your mini app should use the following methods: `back`, `forward`, `go`, `pushState`, `replaceState`
 
 ---
 
 ## Exercise 2
 
-Let's create the routes for our application:
+Create a Route Definition file for your Angular app. Place a file called app.routes.ts in the /app directory (The same directory as app.component.ts).
 
-1. Run the `ng generate route` command for each of the pages in our application, including the homepage.
-
-2. Inject the `Router` Class into your main application Component. Use the `ngOnInit` method we defined previously to trigger navigation to the first (homepage) route in your application.
-
-**Note:** The Angular CLI may generate unwanted files. Pay close attention to the files that are generated as some could cause unexpected errors.
+Question: How is the main component (root url '/') defined in your Route Definition file?
 
 ---
 

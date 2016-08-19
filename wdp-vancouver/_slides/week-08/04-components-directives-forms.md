@@ -56,23 +56,28 @@ To begin we'll start with a simple HTML form. This is the sign-in form for your 
 ---
 # Controlling Forms
 
-Angular's built-in form handling directives are magic. To kick off the goodness, in your sign-in/register component add the following import statement:
+Angular's built-in form handling directives are magic. To kick off the goodness, in your main application module, add the following import statement:
 
 ```js
-import { NgForm } from '@angular/common'
+import { FormsModule }   from '@angular/forms';
 ```
-
-That's it! Angular creates and attached the NgForm directive to the `<form>` tag automatically.
 
 ---
 # Controlling Forms
 
-**From the Angular Docs:**
+Once we've imported the `FormsModule` we must add it to our main application module's imports array:
 
-'The NgForm directive supplements the form element with additional features. It holds the controls (form inputs) we created for the elements with `ngControl` attributes and monitors their properties including their validity. It also has its own valid property which is true only if every contained control is valid.'
+```js
+// ...
+  imports: [
+    BrowserModule,
+    FormsModule
+  ],
+// ...
+```
 
-*We'll come back to this...*
 ---
+
 template: inverse
 
 # Forms and Data
@@ -260,11 +265,11 @@ we'll need to modify the form with the following **attribute directives**:
 ```
 
 ```html
-<input ngControl="name" type="text" required>
+<input name="name" type="text" required>
 ```
 
 ```html
-<input ngControl="age" type="number" required>
+<input name="age" type="number" required>
 ```
 
 **Note:** We'll manually validate the select input, so it is not necessary to add controls!
@@ -291,11 +296,11 @@ These input controls tell Angular which inputs in the markup it should pay atten
 The attribute values we assign ( `="name"`, `="age"`) will become properties on the `#arrivalForm` object:
 
 ```html
-<input ngControl="name" type="text" required>
+<input name="name" type="text" required>
 ```
 
 ```html
-<input ngControl="age" type="number" required>
+<input name="age" type="number" required>
 ```
 
 These properties are objects, and they contain information about the state of the input. This is how we'll check for the input's validity.
@@ -307,7 +312,7 @@ These properties are objects, and they contain information about the state of th
 Once we've told Angular which inputs to control, it will add and remove specific classes:
 
 ```html
-<input ngControl="name" type="text" required>
+<input name="name" type="text" required>
 ```
 
 In the case of our inputs, they are invalid if they are empty. Angular reads the `required` attribute and takes action.
@@ -323,7 +328,7 @@ In the case of our inputs, they are invalid if they are empty. Angular reads the
 We're now ready to (finally) bind the model data we assigned in our Component Class to the form we created. To do this we'll use another attribute directve: `[(ngModel)]`
 
 ```html
-<input [(ngModel)]="colonist.name" ngControl="name" ... >
+<input [(ngModel)]="colonist.name" name="name" ... >
 ```
 
 Here we **bind** the value of the input to our colonist model!! When the user enters some input, the model property will update with that value. Two-ay data-binding at work!
@@ -354,7 +359,7 @@ We know that the data contract requires that we send only the `id` of the job we
 Next, add an option to represent 'no occupation selected'. For this we'll use the **String Constant** we created earlier.
 
 ```html
-<select [(ngModel)]="colonist.job_id">
+<select [(ngModel)]="colonist.job_id" name="job_id">
 	<option value="NO_OCCUPATION_SELECTED"> ... </option>
 </select>
 ```
@@ -370,7 +375,7 @@ This is how we will validate this input.
 Finally, create an option element for each job, using the data we retrieved from the API:
 
 ```html
-<select [(ngModel)]="colonist.job_id">
+<select [(ngModel)]="colonist.job_id" name="job_id">
 	<option value="NO_OCCUPATION_SELECTED"> ... </option>
 	<option *ngFor="let o of occupations" [value]="o.id">
 		{% raw %}{{o.name}}{% endraw %}

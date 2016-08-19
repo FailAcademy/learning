@@ -3,8 +3,9 @@ layout: page
 title: Additional Resources
 ---
 
-### GitHub
+### Git/GitHub
 
+- [Git Cheat Sheet (PDF)](https://education.github.com/git-cheat-sheet-education.pdf)
 - [git - the simple guide](http://rogerdudler.github.io/git-guide/)
 - [How to undo (almost) anything with Git](https://github.com/blog/2019-how-to-undo-almost-anything-with-git)
 
