@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Functional Programming
-slides: ['_slides/week-02/02-functional-programing.md']
-lesson_date: 2016-10-03
+slides: ['_slides/week-02/02-functional-programming.md']
+lesson_date: 2016-10-04
 ---
 
 ## Objectives
@@ -28,9 +28,11 @@ lesson_date: 2016-10-03
 
 1. Pure or Impure Game.
 
-2. Practice with Array methods. Try the [Netflix Functional Tutorial](http://reactivex.io/learnrx/)
+2. Practice with Array methods.
 
-3. Each group will get a topic. You have 30 minutes to understand the concept and teach it to the class using examples.
+3. Try the [Netflix Functional Tutorial](http://reactivex.io/learnrx/)
+
+4. Each group will get a topic. You have 30 minutes to understand the concept and teach it to the class using examples.
 
   a. Spread (...)
   b. Object.assign
