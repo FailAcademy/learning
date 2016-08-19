@@ -36,9 +36,16 @@ lesson_date: 2016-10-04
 
 2. Download the [Redux DevTools Chrome extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en).
 
-3. Each group will choose a different Redux example app from [examples](http://redux.js.org/docs/introduction/Examples.html). Examine how data flows through your app works using Redux DevTools.
+3. Each group will choose a different app from [examples](http://redux.js.org/docs/introduction/Examples.html).
 
-Each group will create a short play displaying how their apps data flow. Feel free to use paper and markers.
+Prepare a play to demonstrate how your app works.
+
+Consider the different **roles** in your app.
+
+- action creator
+- reducer
+- store
+- view
 
 3. Create a Redux data layer for your "Worst Pokemon" voting app.
 
