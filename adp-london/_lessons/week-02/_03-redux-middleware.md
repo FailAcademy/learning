@@ -2,6 +2,13 @@
 
 ### Discussion (5)
 
+Where is the middleware?
+
+View -> Action -> Reducer -> Store -> View
+
+*(between Reducer and Store. You can see this when you run Redux middleware)*
+
+
 What is the role of middleware?
 
 *( triggers an action when a change occurs )*
@@ -11,6 +18,17 @@ Think of a real world example of middleware:
 Every time I do **A**, **B** happens first.
 
 *( every time I eat lunch, I take a photo of it first. I have photo taking middleware. )*
+
+What does middleware look like?
+
+```js
+// store has access to `getState` & `dispatch`
+const middleware = store => next => action => {
+  // do something here
+  next(action);
+};
+```
+
 
 ### Coding (30)
 
