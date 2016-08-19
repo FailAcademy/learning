@@ -114,7 +114,7 @@ What does `setTimeout(fn, 0)` do, and why might it be useful?
 
 ### Blocking & Non-Blocking (5)
 
-Now imagine the king suddenly has another task he has to handle.
+Now imagine the king suddenly has another emergency task he has to handle.
 
 King -> Servant "bring me some wine"
 
