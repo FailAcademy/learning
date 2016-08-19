@@ -2,7 +2,7 @@
 layout: lesson
 title: Redux
 slides: ['_slides/week-02/01-redux.md']
-lesson_date: 2016-10-04
+lesson_date: 2016-10-03
 ---
 
 ## Objectives
@@ -48,6 +48,12 @@ Consider the different **roles** in your app.
 - view
 
 3. Create a Redux data layer for your "Worst Pokemon" voting app.
+
+```shell
+git clone https://github.com/redacademy/adp-redux-walkthrough.git
+cd adp-redux-walkthrough
+git reset --hard e823513
+```
 
 4. Setup Redux for your Project #1.
 
