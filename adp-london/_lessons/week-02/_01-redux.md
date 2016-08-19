@@ -49,14 +49,18 @@ M   ->   C    ->    V
     <-        <-
 ```
 
+- Examples
+
+1. AngularJS
+2. BackboneJS
+3. Ember.js
+4. Knockout.js
+
 - Why do people like this pattern?
 
 1. separation of concerns
 2. easy to change view
 
-- Are there any drawbacks to this pattern?
-
-*( two way binding can be hard to debug )*
 
 ### Flux Overview (20)
 
@@ -64,7 +68,7 @@ Give students 10 minutes to read and discuss Flux in groups. Tell them to create
 
 |:  M  :|:       C    :|:  V  :|
 |-------|--------------|------ |
-| store | dispatcher   | view  |
+| store | dispatcher   |   X   |
 |       | actions      |       |
 
 ```
@@ -77,20 +81,21 @@ View  -> Action -> Dispatcher -> Store     ->     View
 
 Give students 10 minutes to read and discuss Redux in groups. Tell them to create a diagram or chart, and you will select your favourite to present.
 
-|:  M  :|:     C      :|:  V  :|
-|-------|--------------|------ |
-| store | reducers     | view  |
-|       | actions      |       |
+|:  M  :|:    C    :|:  V  :|
+|-------|-----------|------ |
+| store | reducers  |   X   |
+|       | actions   |       |
 
 ```
-View -> Action -> Reducer -> Store -> View
-       - event   - logic    - data
+View -> Action -> Reducer -> (Middleware) -> Store -> View
+       - event   - logic                    - data
 ```
 
 How is Redux different from Flux?
 
 a) a single source of truth for all state
 b) all changes are pure functions
+c) middleware
 
 
 5. Use the redux devtools extension to show how Redux works in a todo app.
