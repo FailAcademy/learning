@@ -5,15 +5,13 @@ title: Bonus Lessons
 
 *Bonus content coming soon!*
 
-{% comment %}
-
-### Tuesday, May 24th:
+### Monday, August 15th
 
 [Intro to IA](/public/files/intro-to-ia.pdf) (guest lecture by Robert Mackie)
 
-### Monday, June 6th
+{% comment %}
 
-[GitHub Pages](/slides/github-pages-slides/)
+### Monday, June 6th
 
 [Intro to Analytics](/public/files/intro-to-analytics.pdf) (guest lecture by Lisa McCann)
 
