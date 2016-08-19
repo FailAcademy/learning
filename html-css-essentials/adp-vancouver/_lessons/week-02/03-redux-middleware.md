@@ -30,12 +30,12 @@ lesson_date: 2016-10-05
 
 2. Use [redux-thunk](https://github.com/gaearon/redux-thunk) in your "Worst Pokemon" app.
 
-3. As a group, choose an additional middleware to implement in your "Worst Pokemon" app. Some suggestions:
+3. With a partner, choose an additional middleware to implement in your "Worst Pokemon" app. Some suggestions:
 
-  A) [Redux LocalStorage](https://github.com/elgerlambert/redux-localstorage)
-  B) [Toast Error Messages](See the bottom of https://www.codementor.io/reactjs/tutorial/beginner-s-guide-to-redux-middleware)
-  C) Redux-Debounce / Redux-Throttle
-  D) Redux-Authentication (https://github.com/Jackong/redux-authentication)
+- [Redux LocalStorage](https://github.com/elgerlambert/redux-localstorage)
+- [Toast Error Messages](See the bottom of https://www.codementor.io/reactjs/tutorial/beginner-s-guide-to-redux-middleware)
+- Redux-Debounce / Redux-Throttle
+- Redux-Authentication (https://github.com/Jackong/redux-authentication)
 
 [Other suggestions found here](https://github.com/xgrommx/awesome-redux#react---a-javascript-library-for-building-user-interfaces)
 
