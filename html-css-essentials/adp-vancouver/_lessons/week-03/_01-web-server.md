@@ -1,6 +1,6 @@
-#Z WebServer
+# WebServer
 
-##What is a web server
+## What is a web server
 
 1. Server: A person or thing that provides a service or commodity, in particular.
 2. Web: a network of fine threads constructed by a spider from fluid secreted by its spinnerets, used to catch its prey.
@@ -19,9 +19,3 @@ Get the class to build out a server from one of the 5
 1. express
 2. Sail.js
 3. Koa(Best group)
-
-
-
-
-
-
