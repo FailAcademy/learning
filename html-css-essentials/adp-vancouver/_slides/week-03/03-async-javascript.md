@@ -190,6 +190,11 @@ function run() {
 ```
 
 ---
+template: inverse
+
+# Concurrency
+
+---
 
 # Concurrency: File System
 
@@ -254,6 +259,12 @@ Which **two numbers** should you consider if you want to buy a fast computer?
 Read [this](http://www.quickanddirtytips.com/tech/computers/how-to-compare-computer-processors-cpus?page=1) for help.
 
 ---
+template: inverse
+
+# Callbacks
+
+
+---
 
 # Callbacks
 
@@ -294,6 +305,11 @@ Use the previous example, and write five consecutive callbacks logging "a", "b",
 
 What does your code look like now?
 
+
+---
+template: inverse
+
+# Promises
 
 ---
 
