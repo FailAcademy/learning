@@ -56,14 +56,13 @@ An example:
 
 3. Use `mapDispatchToProps` second parameter to connect dispatched events.
 
-### Group Discussion (15)
+### Group Discussion (10)
 
 In a group, write some guidelines for connecting React & Redux.
 
-Think about:
-- mapStateToProps: which components?
-- mapDispatchToProps: which components?
+Read [React with Redux](http://redux.js.org/docs/basics/UsageWithReact.html).
 
+How can we tell which components should be "presentational" or "container" components?
 
 ---
 
