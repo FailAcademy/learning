@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Unit Testing
+title: Stubs, Spies & Mocks
 slides: []
 lesson_date: 2016-11-08
 ---
@@ -28,3 +28,4 @@ lesson_date: 2016-11-08
 ## Resources
 - [Sinon.js](http://sinonjs.org/)
 - [Code Coverage with Ava & NYC](https://github.com/avajs/ava/blob/master/docs/recipes/code-coverage.md)
+- [Setting up Code Coverage](https://blog.engineyard.com/2015/measuring-clientside-javascript-test-coverage-with-istanbul)
