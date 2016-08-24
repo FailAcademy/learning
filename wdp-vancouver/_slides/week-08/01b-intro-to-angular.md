@@ -263,7 +263,7 @@ The CLI will allow us to quickly generate all the files and folders we need to b
 
 If you have the CLI installed (see lesson pre-work), from your project directory run the following command:
 
-`ng create angular2-project`
+`ng new angular2-project`
 
 ---
 class: center, middle

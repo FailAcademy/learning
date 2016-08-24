@@ -30,7 +30,7 @@ template: inverse
 
 # CRUD and REST
 
-----
+---
 
 # Next Steps
 
