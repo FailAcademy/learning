@@ -80,14 +80,16 @@ template: inverse
 import { Routes, RouterModule } from '@angular/router';
 
 // Components to render
-import { MyComponent }  from './crisis-list.component';
-import { MyOtherComponent }    from './hero-list.component';
+import { HomeComponent }  from './home';
+import { ReportComponent }    from './report';
 
 // Route definitions (The urls your app will use)
 const appRoutes: Routes = [
-  { path: 'MyComponent', component: MyComponent },
-  { path: 'MyOtherComponent', component: MyOtherComponent }
+  { path: 'home', component: HomeComponent },
+  { path: 'report', component: ReportComponent }
+  // ...etc
 ];
+
 
 // User defined directives
 export const appRoutingProviders: any[] = [
