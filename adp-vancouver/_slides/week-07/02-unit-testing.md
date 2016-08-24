@@ -1,10 +1,29 @@
-# Unit Testing (4hrs)
+---
+layout: slidedeck
+title: Unit Testing
+---
 
-[Visual](https://quickleft.com/wp-content/uploads/PM_Build_Swing1.gif)
+{% highlight html %}
+name: inverse
+layout: true
+class: center, middle, inverse
 
-## Why Test
+---
 
-Have a conversation about the following quote. Share your thoughts and opinions with others.
+# Unit Testing
+
+.title-logo[![Red logo](/public/img/red-logo-white.svg)]
+
+---
+layout: false
+class: center, middle
+
+# Why Test
+
+Have a conversation about the following quotes. Share your thoughts and opinions with others.
+
+---
+class: middle
 
  > If you don’t like testing your product, most likely your customers won’t like to test it either. (Anonymous)
 
@@ -12,45 +31,71 @@ Have a conversation about the following quote. Share your thoughts and opinions 
 
 > A good programmer is someone who always looks both ways before crossing a one-way street. (Doug Linder)
 
+---
+class: middle
+
 > Why do we never have time to do it right, but always have time to do it over? (Murphy’s Law)
 
-> Engineers call them edge cases. I call them: what our users do.
+> Engineers call them edge cases. I call them: what our users do. (Anonymous)
 
-> if you're not testing code that people are paying you money to write you deserve to be fired. (Rob Conery)
+> If you're not testing code that people are paying you money to write you deserve to be fired. (Rob Conery)
 
+---
+class: middle center
 
-## Unit Testing Basics (5)
+# Testing Basics
 
 > Reminds me of the awesome bug report I saw once: ‘Everything is broken. Steps to reproduce: do anything. Expected result: it should work’. (Felipe Knorr Kuhn)
+
+### What are the four parts every test needs?
+
+---
+
+# Testing Basics
 
 1. Setup
 2. Expected
 3. Result
+4. Assert Expected === Result
 
-Example:
+---
+
+### Test Example
+
+Fill in the blanks.
 
 1. Put toast in the toaster. Pressed the button.
-2. Expected: ___
-3. Result: ___
+2. Expected: (    )
+3. Result: (    )
 
-Example:
+4. FAIL: Expected (    ), but got (   ).
+
+---
+
+### Test Example
+
+Fill in the blanks.
 
 1. Studied programming every day for 2 years.
-2. Expected: ___
-3. Result: ___
+2. Expected: (   )
+3. Result: (   )
 
-Run tests:
+4. FAIL: Expected (   ), but got (   ).
 
-PASS or FAIL, expected "expected", but got "result"
+---
 
-## Types of Testing
+# Types of Testing
+
+There are many different types of testing. We will primarily look at two.
 
 - Unit - test individual parts
-- E2E (Integration) - test complete application
+- E2E - "end to end", test complete application
 
 [See More](http://www.softwaretestinghelp.com/types-of-software-testing/)
 
-## Unit Test
+---
+
+# Unit Test
 
 A basic unit test.
 
@@ -59,12 +104,16 @@ function addOne(x) {
   return x + 1;
 }
 
+
+// Test: check the console
 const result = addOne(1);
 const expected = 2;
 console.log('Test Passes?', result === expected);
 ```
 
-## JS Test Frameworks
+---
+
+# JS Test Frameworks
 
 Testing frameworks may writing and organizing tests easy.
 
@@ -73,24 +122,28 @@ Testing frameworks may writing and organizing tests easy.
 - [QUnit](https://qunitjs.com/ja)
 - [Ava](https://github.com/avajs/ava)
 
-## Ava
+---
+
+![Ava](https://github.com/avajs/ava/raw/master/media/header.png)
 
 Why Choose Ava?
 
-- ES2015
-- concurrent tests
-- easiest syntax
-- CLI
+ES2015, concurrent tests, easiest syntax, CLI
 
-### Ava Setup (5)
+---
+class: middle
+
+# Ava Setup
 
 1. `npm install -g ava`
 2. new directory, run `npm init`
 3. run `ava --init`
 
-## First Test
+---
 
-create a "test" directory, and make a "logic.js" file inside
+# First Test
+
+Create the following file and test.
 
 /test/logic.js
 
@@ -107,10 +160,11 @@ test(t => {
 });
 ```
 
+---
 
-### TDD: Testing Code (15)
+# TDD
 
-Write a test.
+Write the following test.
 
 /test/logic.js
 
@@ -126,27 +180,30 @@ test(t => {
 });
 ```
 
-## Run Test: Fail
+---
+class: middle
 
-1. Run the test: `ava`. FAIL.
+# "Red/Green" Testing
 
-## Run Test: Pass
+1. **FAIL** *(red)*: run the test: `ava`.
 
-1. Make the test pass.
+2. **PASS** *(green)*: write working code.
 
-/src/index.js
+Why is important to write failing tests first?
 
-```js
-export const add = (x, y) => x + y;
-```
+---
+class: middle
 
-## watch (10)
+# Watch Tests
 
-Setup Ava with [watch mode](https://github.com/avajs/ava/blob/master/docs/recipes/watch-mode.md)
+Setup Ava with [watch mode](https://github.com/avajs/ava/blob/master/docs/recipes/watch-mode.md).
 
-2. Run the test: `ava`. PASS.
+---
+class: middle
 
-## Second Test
+# Second Test
+
+Write a second test. Make it pass.
 
 ```js
 test(t => {
@@ -156,7 +213,12 @@ test(t => {
 });
 ```
 
-## Third Test
+---
+class: middle
+
+# Third Test
+
+Write a third test. Make it pass.
 
 ```js
 test(t => {
@@ -166,7 +228,14 @@ test(t => {
 });
 ```
 
-## TDD (5)
+---
+template: inverse
+
+# TDD
+
+---
+
+# TDD
 
 This process of writing tests first is called **Test Driven Development**.
 
@@ -176,15 +245,18 @@ This process of writing tests first is called **Test Driven Development**.
 4. run tests, see them pass
 5. refactor code
 
-## Red / Green Testing
+---
+template: inverse
 
-What do you think Red/Green testing means?
+# BDD
 
-*( Must fail first, before passing - or it is not a useful test )*
+---
 
-## BDD (5)
+# BDD
 
-BDD is a variant of TDD, **Behavior Driven Development**. Like TDD, but for humans.
+**Behavior Driven Development** is like TDD, but for humans.
+
+Tests have descriptive failure messages.
 
 /test/logic.js
 
@@ -196,23 +268,30 @@ test('add should sum two numbers', t => {
 });
 ```
 
+---
+class: middle
+
 ## Challenge
 
 1. Give proper test descriptions to each of your tests.
 
-## Discussion: Test Descriptions
+---
+class: middle
 
-1. Discussion: what makes a good test description?
+### What makes a good test description?
 
-- short
-- present tense
-- "should"
-- descriptive
-- tests one thing
+---
+template: inverse
 
-### is vs. deepEqual (10)
+# Testing Gotchas
 
-Add the following test to "test/index.js". Make it PASS.
+---
+# Test Challenge #1
+
+Add the following test to "test/index.js".<br />
+Make it PASS.
+
+/src/index.js
 
 ```js
 test('should add an item to the array', t => {
@@ -221,14 +300,12 @@ test('should add an item to the array', t => {
   // test equality
 });
 ```
+---
 
-Solution: use `deepEqual` for non-primitive matching.
+# Test Challenge #2
 
-```js
-t.deepEqual(result, expected);
-```
-
-### async tests (10)
+Add the following test to "test/index.js".<br />
+Make it PASS.
 
 /src/index.js
 
@@ -239,18 +316,15 @@ test('function returns 42 after 1 second', t => {
   t.is(expected, result);
 });
 ```
+---
+class: middle
 
-Solution: use `async` and `await`
+# Untestable Code
 
-```js
-test(async t => {
-  const expected = 42;
-  const result = wait waitOneSecondAndReturn42();
-  t.is(expected, result);
-});
-```
+What can make code "untestable"?
 
-## Untestable Code
+---
+# Untestable Code
 
 Why is `redirectTo` untestable?
 
@@ -264,7 +338,9 @@ function redirectTo(url) {
 }
 ```
 
-## Testable code
+---
+
+# Testable code
 
 Why is `getRedirectPart` testable?
 
@@ -282,20 +358,25 @@ function redirectTo(url) {
 }
 ```
 
-> If you can't test it, it's not good code. So fix it. (Shawn McKay)
+---
+class: middle
 
-## TypeScript (10)
+# TypeScript
 
 To test TypeScript, we must first compile our code to JS.
 
-[Ava & TypeScript](https://github.com/avajs/ava/blob/master/docs/recipes/typescript.md)
+Setup [Ava & TypeScript](https://github.com/avajs/ava/blob/master/docs/recipes/typescript.md)
 
+---
+class: middle
 
-## Practice (30)
+## Challenge
 
-Write a tests for some of your previous code.
+1. Write a tests for some of your previous code.
 
-## Testing Redux (30)
+---
+
+# Testing Redux
 
 1. Write the following reducer.
 
@@ -323,32 +404,19 @@ test('reducer adds one to the total', t => {
 });
 ```
 
-Solution:
+---
 
-```js
-const reducer = (state = 0, action) => {
-  switch (action.type) {
-    case 'ADD_ONE':
-      return state + 1;
-    default:
-      return state;
-  }
-}
-```
+# Limitations of Testing
 
-2. Write tests for one your reducers.
-
-
-## Limitations of Testing
-
-Do unit tests prove your code works?
+Discuss with a partner what you think the following quote means.
 
 > Program testing can be a very effective way to show the presence of bugs, but is hopelessly inadequate for showing their absence. (Edsger Dijkstra)
 
-## Practice (2hr)
+---
+class: middle
 
-Good code is testable.
+## Challenge
 
-Students practice writing unit tests. When they struggle, use their examples for the class. Strategies:
+1. Write tests for your reducers.
 
-- refactoring into pure functions
+{% endhighlight %}
