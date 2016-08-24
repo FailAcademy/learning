@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Unit Testing
-slides: []
+slides: ['_slides/week-07/02-unit-testing.md']
 lesson_date: 2016-11-08
 ---
 
@@ -21,7 +21,7 @@ lesson_date: 2016-11-08
 - BDD
 
 ## Pre-Work
-- Read [What Every Unit Test Needs](https://medium.com/javascript-scene/what-every-unit-test-needs-f6cd34d9836d#.ybcv2ume7)
+- Read [I pity the fool who doesn't write unit tests](https://blog.codinghorror.com/i-pity-the-fool-who-doesnt-write-unit-tests/) and be prepared to explain why writing unit tests .
 
 ## Active Learning
 
