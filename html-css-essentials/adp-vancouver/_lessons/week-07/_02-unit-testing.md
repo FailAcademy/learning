@@ -338,6 +338,16 @@ const reducer = (state = 0, action) => {
 
 2. Write tests for one your reducers.
 
+## Unit Testing Components
+
+What three things can we test about a user component?
+
+Hint (think of what inputs can go into a component)
+
+*( props, user input, data )*
+
+
+
 
 ## Limitations of Testing
 

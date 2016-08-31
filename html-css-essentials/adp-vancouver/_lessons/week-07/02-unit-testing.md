@@ -9,10 +9,9 @@ lesson_date: 2016-11-08
 
 - explain the importance of writing unit tests
 - setup a unit testing framework
-- write unit tests using Ava
+- write unit tests using [Ava](https://github.com/avajs/ava)
 - write test running NPM scripts
-- set up Webpack to run unit tests
-- determine code coverage with NYC
+- set up a test runner watcher
 
 ## Keywords
 - unit test
@@ -27,8 +26,9 @@ lesson_date: 2016-11-08
 
 1. TDD walkthrough and practice.
 
-2. Writing unit tests for existing code.
+2. Writing unit tests for existing logic. Consider using [redux-ava](https://github.com/sotojuan/redux-ava).
 
 ## Resources
-- [Ava](https://github.com/avajs/ava)
 - [Ava & TypeScript](https://github.com/avajs/ava/blob/master/docs/recipes/typescript.md)
+- [Testing Redux](http://redux.js.org/docs/recipes/WritingTests.html)
+- [Redux Unit Testing](https://www.codementor.io/reactjs/tutorial/redux-unit-test-mocha-mocking)

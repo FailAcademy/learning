@@ -20,7 +20,7 @@ Your project must include the following:
 - [ ] project pushed to Github
 - [ ] contains "README.md" with project summary and setup
 - [ ] contains [valid "package.json"](https://browsenpm.org/package.json) fields filled out
-- [ ] contains ".gitignore" file including "node_modules"
+- [ ] contains ".gitignore" file ignoring "node_modules"
 - [ ] contains this self-evaluated spec checklist renamed "specs.md"
 - [ ] [descriptive Git commits](http://chris.beams.io/posts/git-commit/)
 - [ ] small, single purpose Git commits

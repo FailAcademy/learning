@@ -7,8 +7,8 @@ lesson_date: 2016-11-10
 
 ## Objectives
 
-- write E2E tests using Protractor.js
-- use Page Objects to target DOM Elements in tests
+- write E2E tests using [NightWatch.js](http://nightwatchjs.org/)
+- use Page Objects to target DOM Elements in E2E tests
 - setup Webpack to run E2E tests
 
 ## Keywords

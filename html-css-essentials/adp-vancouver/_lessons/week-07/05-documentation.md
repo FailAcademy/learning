@@ -2,7 +2,7 @@
 layout: lesson
 title: Documentation
 slides: []
-lesson_date: 2016-11-11
+lesson_date: 2016-11-10
 ---
 
 ## Objectives
