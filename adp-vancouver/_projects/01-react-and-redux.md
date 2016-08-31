@@ -26,18 +26,18 @@ Your project must include the following:
 - [ ] project pushed to Github
 - [ ] contains "README.md" with project summary and setup
 - [ ] contains [valid "package.json"](http://browsenpm.org/package.json) fields filled out
-- [ ] contains ".gitignore" file including "node_modules"
+- [ ] contains ".gitignore" file ignoring "node_modules"
 - [ ] contains this self-evaluated spec checklist renamed "specs.md"
 - [ ] [descriptive Git commits](http://chris.beams.io/posts/git-commit/)
 - [ ] small, single purpose Git commits
 - [X] setup ESLint using the [AirBnB style-guide](https://github.com/airbnb/javascript)
 - [X] project runs with `npm start`
-- [X] files compiled into a hidden ".build" directory
+- [X] files compiled into a "build" directory
 
 ### Development
 - [ ] components built using valid JSX
 - [ ] use ES2015 `import` and `export`
-- [ ] components only created using `const`, `function` or `React.Component`
+- [ ] components only created using `React.Component`, `const`, or `function`
 - [ ] chain transformations with array methods (`.map`, `.filter`, etc.)
 - [ ] use [CSS modules](https://github.com/css-modules/css-modules) for inline styles
 - [ ] use [React LifeCycle methods](https://facebook.github.io/react/docs/component-specs.html#lifecycle-methods) where appropriate

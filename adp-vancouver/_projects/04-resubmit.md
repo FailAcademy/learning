@@ -24,7 +24,7 @@ Your project must include the following:
 - [ ] contains this self-evaluated spec checklist renamed "specs.md"
 
 ## Quality
-- [ ] TSLint: configured with all JSX options turned on
+- [ ] TSLint: configured with JSX options turned on
 - [ ] TSLint: few warnings
 - [ ] TS: interfaces for data structures
 - [ ] TS: load type definition libraries
