@@ -4,13 +4,12 @@ title: Resubmit
 due: Week 8 (beginning of class)
 ---
 
-
 Refactor an earlier project and resubmit it using unit and E2E tests.
 
 Your project must include the following:
-* Type-Checking ( *Typescript* )
-* Unit Tests ( *Mocha & Chai, or Ava* )
-* E2E Tests ( *Protractor* )
+* Type-Checking ( *TypeScript* )
+* Unit Tests ( *Ava, Sinon, Enzyme, JSDOM, NYC* )
+* E2E Tests ( *NightWatch* )
 
 ## Requirements
 
@@ -23,19 +22,33 @@ Your project must include the following:
 - [ ] contains ".gitignore" file including "node_modules"
 - [ ] contains this self-evaluated spec checklist renamed "specs.md"
 
+## Development
+- [ ] Files renamed as ".ts" or ".tsx"
+- [ ] TypeScript setup with *React* & *Webpack*
+- [ ] NPM scripts: include shortcut for test watcher and code coverage
+- [ ] NPM scripts: include shortcut to run E2E tests
+
 ## Quality
 - [ ] TSLint: configured with JSX options turned on
-- [ ] TSLint: few warnings
+- [ ] TSLint: under 5 warnings
+- [ ] TS: types specified
 - [ ] TS: interfaces for data structures
 - [ ] TS: load type definition libraries
-- [ ] TS: specify types
 - [ ] TS: few compiler warnings
-- [ ] unit: tests for 3 or more components
+- [ ] unit: tests for Redux reducers
+- [ ] unit: tests include a stub (*Sinon*)
+- [ ] unit: tests prop rendering of components (*Enzyme*)
+- [ ] unit: tests 3 or more DOM interactions (*JSDOM*)
 - [ ] unit: over 50% unit test coverage
-- [ ] e2e: test 3 or more user scenarios
+- [ ] E2E: test a simple page load scenario
+- [ ] E2E: test page routing
+- [ ] E2E: test form fill in and submit
+- [ ] docs: code commented for easy readability
+- [ ] docs: React Cards or 1 or more components
 
 ## Stretch Goals
 - [ ] TSLint: no warnings
 - [ ] TS: no compiler warnings
-- [ ] unit: 100%
-- [ ] e2e: test all user scenarios
+- [ ] unit: 90% unit test coverage
+- [ ] E2E: test 6 or more user scenarios
+- [ ] docs: React Cards for 3 or more components
