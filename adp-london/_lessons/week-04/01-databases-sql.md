@@ -10,6 +10,10 @@ lesson_date: 2016-10-17
 - write simple SQL queries
 
 ## Pre-Work
+You need to download PostgreSQL in order to work through today's lessons. Please follow this link https://www.postgresql.org/download/ and download.
+
+- Read http://www.sqlcourse.com/intro.html
+- Don't like ready. Here is a video https://www.youtube.com/watch?v=FR4QIeZaPeM
 
 ## Active Learning
 - https://academy.vertabelo.com/
