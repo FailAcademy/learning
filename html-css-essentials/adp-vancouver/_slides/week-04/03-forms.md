@@ -1,6 +1,31 @@
-# Forms
+---
+layout: slidedeck
+title: Forms in React
 
-## Setup
+---
+
+{% highlight html %}
+name: inverse
+layout: true
+class: center, middle, inverse
+
+---
+# Forms in React
+
+.title-logo[![Red logo](/public/img/red-logo-white.svg)]
+
+---
+layout: false
+
+# Agenda
+
+1.
+
+---
+
+# Setup
+
+Install a repo of React-Form demos.
 
 ```shell
 git clone https://github.com/ShMcK/adp-react-form-demos.git
@@ -8,6 +33,10 @@ cd adp-react-form-demos
 npm install
 npm start
 ```
+
+---
+
+# React Forms
 
 Forms in React are not as intuitive as you might expect.
 
@@ -20,63 +49,59 @@ Try the following input.
   />
 ```
 
--- Why does the value not update?
+What happens? Why?
 
-*( There are no events attached to change the value. The value is static. )*
+---
 
--- How can we make the input react to changes?
-
-Change value to `defaultValue`.
-
-```html
-  <input
-    type="text"
-    defaultValue="expected"
-  />
-```
-
-## Controlled & Uncontrolled
+# Controlled & Uncontrolled
 
 In React, form elements are considered "controlled" or "uncontrolled".
 Read [React Forms](https://facebook.github.io/react/docs/forms.html).
 
--- With a partner, compare the "controlled" and "uncontrolled" input.
--- Act out the differences, with one is a "controlled" input with a component parent, and the other "uncontrolled" with a parent.
+- With a partner, compare the "controlled" and "uncontrolled" input.
+- Act out the differences, with one is a "controlled" input with a component parent, and the other "uncontrolled" with a parent.
 
-See the example for help.
+---
 
-Controlled inputs hold state within the component, while uncontrolled inputs hold their own state. Controlled inputs give us more "control", hence the name.
-
-
-## React Form Events
+# React Form Events
 
 React has two major form events you should know:
 
 - `onChange`
 - `onSubmit`
 
-### onChange
+---
+
+# onChange
+
+`onChange` is attached to an input and called every time an inputs value changes.
 
 ```html
 <input onChange={(value) => console.log(value)} />
 ```
 
-`onChange` is attached to an input and called every time an inputs value changes.
+- What might we use `onChange` for?
 
--- In controlled components, what do we use `onChange` for?
+---
 
-Updating the state of the component with the new input values.
+# Controlled
 
-### Form Values
+A controlled components handles it's own component state.
 
-Form values are collected inside of an object. The keys pair up with the "name" given to the inputs.
+1. `onChange` calls `handleChange` method
+2. `handleChange` updates component `state`
+3. `state` change updates component view
+
+---
+
+# Form Values
+
+Form values create an object with keys matching the "name" given to the inputs.
 
 ```html
 <input name="title" defaultValue="React Forms"/>
 <input name="description" defaultValue="Some practice"/>
 ```
-
-These inputs will result in the following **values**:
 
 ```js
 {
@@ -85,7 +110,9 @@ These inputs will result in the following **values**:
 }
 ```
 
-### onSubmit
+---
+
+# onSubmit
 
 `onSubmit` is attached to a form, and called every time a "submit" event is triggered.
 
@@ -95,7 +122,11 @@ These inputs will result in the following **values**:
 </form>
 ```
 
--- How can we trigger an `onSubmit` event?
+- How can we trigger an `onSubmit` event?
+
+---
+
+# onSubmit
 
 We can trigger an `onSubmit` event by setting the type of a button or input to "submit".
 
@@ -106,18 +137,11 @@ We can trigger an `onSubmit` event by setting the type of a button or input to "
 </form>
 ```
 
-## Controlled vs. Uncontrolled
+---
 
-A quick review.
+# A Common Issue
 
-| Controlled               | Uncontrolled             |
-|--------------------------|--------------------------|
-| onSubmit -> get state    | onSubmit -> get refs     |
-| onChange -> update state | nothing                  |
-
-### Bind
-
--- The following code will throw an error on submit. Why?
+The following code will throw an error on submit. Why?
 
 ```js
 constructor(props) {
@@ -134,29 +158,27 @@ render() {
 }
 ```
 
-`onSubmit` does not have the correct `this` context, so it can't find `this.setState`.
+---
+template: inverse
+# Redux form
 
--- How can we fix this?
+---
 
-```html
-<form onSubmit={this.onSubmit.bind(this)}></form>
-```
-
-Now onSubmit passes the correct context. Also not that we don't have to pass the `values` param on, as it is automatically called with the param.
-
-## Redux-Form
+# Redux Form
 
 Redux form is a popular library for... well... using forms with Redux.
-
-[Redux-Form](http://redux-form.com/6.0.1/).
 
 - form state props (valid)
 - saves state to Redux store
 - validation helpers (error messages)
 
-### Setup
+[Docs: Redux-Form](http://redux-form.com/6.0.1/).
 
-[Docs: Getting Started](http://redux-form.com/6.0.2/docs/GettingStarted.md/)
+---
+
+# Setup
+
+Add a formReducer for Redux form.
 
 ```js
 import { createStore, combineReducers } from 'redux'
@@ -170,7 +192,13 @@ const reducer = combineReducers(reducers)
 const store = createStore(reducer)
 ```
 
-### reduxForm
+[Docs: Getting Started](http://redux-form.com/6.0.2/docs/GettingStarted.md/)
+
+---
+
+# reduxForm
+
+Connect a component to reduxForm. Add a unique form name.
 
 ```js
 class FormComponent extends React.Component {/* ... */}
@@ -180,11 +208,13 @@ FormComponent = reduxForm({
 })(FormComponent);
 ```
 
-[Docs:reduxForm](http://redux-form.com/6.0.2/docs/api/ReduxForm.md/)
+[Docs: reduxForm](http://redux-form.com/6.0.2/docs/api/ReduxForm.md/)
 
-### State
+---
 
-The form name corresponds to the key in your redux store.
+# State
+
+The **form name** corresponds to the **key** in your redux store.
 
 ```js
 console.log(store.getState());
@@ -200,9 +230,11 @@ console.log(store.getState());
 */
 ```
 
-### Props
+---
 
-Which props are added by `reduxForm`.
+# Props
+
+A component connected with `reduxForm` passes in several props.
 
 ```js
 class FormComponent extends React.Component {
@@ -213,20 +245,25 @@ class FormComponent extends React.Component {
 }
 ```
 
-### Props
+---
+
+# Props
 
 What might we use these props for?
 
-* pristine / dirty
-* valid / invalid
-* submitting
-* error
+- dispatch
+- pristine / dirty
+- valid / invalid
+- submitting
+- error
 
-[Docs:Props](http://redux-form.com/6.0.2/docs/api/Props.md)
+[Docs: Props](http://redux-form.com/6.0.2/docs/api/Props.md)
 
-### Field
+---
 
-Field's require a **name** and **component**.
+# Field
+
+Field's are input components used with "redux-form".
 
 ```html
 <Field
@@ -235,11 +272,15 @@ Field's require a **name** and **component**.
 />
 ```
 
-See other optional properties: [Docs:Field](http://redux-form.com/6.0.2/docs/api/Field.md/)
+Field's require a **name** and **component**.
 
-### Creating a Field
+See other optional properties: [Docs: Field](http://redux-form.com/6.0.2/docs/api/Field.md/)
 
-Create your own custom `<Field />` components.
+---
+
+# Custom Field's
+
+You can create your own custom `<Field />` components.
 
 ```js
 // outside your render() method
@@ -254,11 +295,11 @@ const myCustomField = (field) => (
 );
 ```
 
-### handleSubmit
+---
+
+# handleSubmit
 
 Redux-Form adds a `handleSubmit` prop, which can be added to your form.
-
-`handleSubmit`, as the name implies, calls a function when data is submitted.
 
 ```html
 
@@ -267,18 +308,24 @@ Redux-Form adds a `handleSubmit` prop, which can be added to your form.
 }>
 ```
 
-### connect
+`handleSubmit`, as the name implies, calls a function when data is submitted.
+
+---
+
+# connect
 
 "react-redux" can be called after "redux-form" is applied.
-
-This allows us to connect our redux **state** and **dispatch** to the component.
 
 ```js
 FormComponent = reduxForm({ form: 'form1' })(FormComponent);
 FormComponent = connect(mapStateToProps, mapDispatchToProps)(FormComponent);
 ```
 
-### submit
+`connect` connects the redux **state** and **dispatch** to the component.
+
+---
+
+# Submit Function
 
 We can pass a submit function to our `handleSubmit`.
 
@@ -289,10 +336,13 @@ import submit from './submit';
 <form onSubmit={handleSubmit(submit)}>
 ```
 
-[Docs:Submit](http://redux-form.com/6.0.2/examples/submitValidation/)
+[Docs: Submit](http://redux-form.com/6.0.2/examples/submitValidation/)
 
+---
 
-### Submit Function
+# Submit Function
+
+The submit function can be used to update the state.
 
 ```js
 import store from '../store';
@@ -304,32 +354,33 @@ function submit(values) {
 export default submit;
 ```
 
-### Validation Error
+---
+
+# Validation Errors
 
 Validation errors can be handled with `SubmissionError`.
 
 ```js
 import { SubmissionError } from 'redux-form';
-import store from '../store';
 
 function submit(values) {
-    // no name is added
    if (!values.length) {
      throw new SubmissionError({
        name: 'Name does not exist',
        _error: 'Must include a name'
      });
    } else {
-     // save!
      store.dispatch(saveForm(values));
    }
 }
 export default submit;
 ```
 
-[Docs:SubmissionError](http://redux-form.com/6.0.2/docs/api/SubmissionError.md/)
+[Docs: SubmissionError](http://redux-form.com/6.0.2/docs/api/SubmissionError.md/)
 
-### Displaying errors
+---
+
+# Displaying Errors
 
 `touched` & `error` are both props passed in by "redux-form".
 
@@ -347,11 +398,20 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => (
 )
 ```
 
-### Disabled Button
+---
 
-How can we disable the submit button when the form is invalid or is submitting?
+# Disabled Button
 
-### Using Meta Props
+How can we **disable** the submit button when the form is invalid or is submitting?
+
+```html
+<button type="submit" disabled={true}>Submit</button>
+```
+
+---
+
+
+# Using Meta Props
 
 We can use the "meta" props:
 
@@ -365,7 +425,9 @@ We can use the "meta" props:
 >Submit</button>
 ```
 
-### Performance Experiment
+---
+
+# Performance Experiment
 
 Add the following code to the top of your form.
 
@@ -377,7 +439,9 @@ render() {
 }
 ```
 
-### Material-UI
+---
+
+# Material-UI
 
 We can use "material-ui" form components easily by using [redux-form-material-ui](http://erikras.github.io/redux-form-material-ui/).
 
@@ -392,24 +456,23 @@ We can use "material-ui" form components easily by using [redux-form-material-ui
 
 [Docs: MaterialUi](http://redux-form.com/6.0.2/examples/material-ui/)
 
-### Custom Components
+---
+
+# Custom Components
 
 Material-UI components are created with a simple [wrapper component](https://github.com/erikras/redux-form-material-ui/blob/master/src/createComponent.js).
 
-```js
-export default function createComponent(MaterialUIComponent, mapProps) {
-  class InputComponent extends Component {
-    getRenderedComponent() {
-      return this.refs.component;
-    }
-    render() {
-      return createElement(MaterialUIComponent, {
-        ...mapProps(this.props),
-        ref: 'component'
-      })
-    }
-  }
-  InputComponent.displayName = `ReduxFormMaterialUI${MaterialUIComponent.name}`
-  return InputComponent
-}
-```
+Feel free to create your own wrapper for any other UI library.
+
+---
+
+## Challenge
+
+Create a form in your "RED it" project. Include:
+  - saving data to the Redux store
+  - validation of fields
+  - styled components
+  - error feedback
+  - a disabled submit button when the form is invalid
+
+{% endhighlight %}
