@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Forms
-slides: []
+slides: ['_slides/week-04/03-forms.md']
 lesson_date: 2016-10-19
 ---
 
