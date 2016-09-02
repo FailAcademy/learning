@@ -17,9 +17,28 @@ lesson_date: 2016-10-11
 - Use REST methods to communicate (GET, POST, PUT, DELETE)
 
 ## Pre-Work
--Install Node.js -- follow this link and the intructions on the site. https://nodejs.org/en/download/
+- Read this https://spring.io/understanding/REST
+- Also have some fun here. http://stackoverflow.com/questions/1101888/is-there-any-reason-not-to-use-http-put-and-delete-in-a-web-application
+- Finally http://blog.smartbear.com/devops/picking-the-right-web-server-for-the-right-job/
 
-## Active Learning
+## Keywords
+- [web server](http://whatis.techtarget.com/definition/Web-server)
+- [client](https://en.wikipedia.org/wiki/Client-side)
+- [business Layer/business Logic](https://en.wikipedia.org/wiki/Business_logic)
+- [Data Layer](http://tealium.com/what-is-a-data-layer/)
+- [HAPI](http://hapijs.com/)
+- [KOA](http://koajs.com/)
+- [SAIL.js](http://sailsjs.org/)
+- [Express](https://expressjs.com/)
+- [REST](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
+- [PUT](http://www.tutorialspoint.com/http/http_methods.htm)
+- [POST](http://www.tutorialspoint.com/http/http_methods.htm)
+- [GET](http://www.tutorialspoint.com/http/http_methods.htm)
+- [DELETE](http://www.tutorialspoint.com/http/http_methods.htm)
+
+
+
+
 
 ## Resources
 - What is a web server you ask? https://developer.mozilla.org/en-US/Learn/Common_questions/What_is_a_web_server3

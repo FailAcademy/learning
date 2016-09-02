@@ -64,7 +64,7 @@ template: inverse
 #Why do I need a Web Server?
 
 ---
-#Exercise 1 
+##Exercise 1 
 
 [Click on this link and read this article](https://webhostinggeeks.com/blog/what-are-web-servers-and-why-are-they-needed/)
 
@@ -73,7 +73,7 @@ After you are done find a partner and discuss why we use these things called ser
 Bonus: What are some commonly used servers?
 
 ---
-#Exercise 2
+##Exercise 2
 
 Go to Github: https://github.com/BFriz/nodeServer
 
@@ -82,28 +82,22 @@ Clone down the repo and get it up and running.
 Now open up the Question.md file and answer each of them.
 
 ---
-#Exercise 3
+##Exercise 3
 
-Time for you to build your own web server. 
-
-In groups of two explore(build) the framework that you are provided. 
-
-( Sinatra took the opposite approach of Rails in that it only has the basics of what you need for a web application. No magic, no unicorns)
+Time for you to build your own web server. In groups of two explore(build) the framework that you are provided. Sinatra took the opposite approach of Rails in that it only has the basics of what you need for a web application. No magic, no unicorns
 
 1. Hapi (Sinatra-like)
-2. Koa(Best group) (Sinatra-like)
+2. Koa (Sinatra-like)
 3. Sail.js (rails-like)
 4. Express (Sinatra-like)
-
  
-We will discuss the differences
 
 ---
 #Reading time
 
 https://www.airpair.com/node.js/posts/nodejs-framework-comparison-express-koa-hapi
 
-What do you think?
+I actually want to hear your opinion now.
 
 ---
 #Download Express
@@ -115,86 +109,93 @@ Group number 4 (Express) will teach the rest of the class how to install and set
 ---
 #Routing
 Run:
-
+```
 npm init -y
 npm i -S express
 touch index.js
-
+```
 Paste in index.js:
-
+```
 var express = require('express');
 var app = express()
 
 app.get('/', function (req, res) {
   res.send("hello, world!")
 })
-
+```
+```
 var server = app.listen(3000, function() {
   console.log("server running at http://localhost:" + server.address().port)
 })
-
+```
 
 ---
 #update package.json
+```
 "start": "node index.js"
-
-
+```
 ---
 #nodemon
 Annoying when you have to stop the server whenever we make a change so...
-
+```
 npm i -D nodemon
-
+```
 Will automatically restart the server when changes are made
 
 Create a dev script in your package.json "dev": "nodemon index.js"
+```
 npm run dev
-
-
+```
 ---
-#Exercise 4
+##Exercise 4
 We will be adding the below to our index.js
-
+```
 var fs = require('fs');
 var _ = require('lodash');
 !(have to install lodash)
 var users = [];
-
+```
 Research why we are adding these and we will talk about it in class. 
 
 
 ---
 
-##User model
-
+#User model
+```
 fs.readFile('users.json', {encoding: 'utf8'}, function (err, data) {
   if (err) throw err
-
+```
+```
   JSON.parse(data).forEach(function (user) {
     user.name.full = _.startCase(user.name.first + ' ' + user.name.last)
     users.push(user)
   })
 })
-
+```
 
 ---
 #JSON
 Go to github
 
+Link to be decided. 
+
 ---
 #app.get
-
+```
 app.get('/', function (req, res) {
-
+```
+```
   var buffer = ''
 
   users.forEach(function (user) {
-    buffer += '<a href="/' + user.username + '">' + user.name.full + '</a><br>'
+    buffer += '<a href="/' + user.username + '">' + user.name.full + 
+    '</a><br>'
   })
-
+```
+```
   res.send(buffer)
 })
-
+```
 
 What happens when you click on the link now?
 (Cannot GET)
@@ -203,12 +204,12 @@ What happens when you click on the link now?
 #Dynamic
 
 we need to dynamically load the url based on the username. We can do that by user  : and params.
-
+```
 app.get('/:username', function (req, res) {
   var username = req.params.username
   res.send(username)
 })
-
+```
 ---
 #HTTP Verbs
 
@@ -218,13 +219,13 @@ need body.parser (does exactly what it sounds like - it allows you to parse the 
 
 ---
 #Put or Edit
-
+```
 app.put
-
+```
 
 ---
 #Delete
-
+```
 app.delete
-
+```
 {% endhighlight %}
