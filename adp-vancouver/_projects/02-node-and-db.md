@@ -37,6 +37,8 @@ Your project must include the following:
 - [ ] post: optional url linking to content
 - [ ] post: select a category
 - [ ] data: new posts and votes persist after page reload
+- [ ] form: provides error feedback on invalid input
+- [ ] form: disabled submit button when form is invalid
 
 ### Development
 - [ ] client: form validation
