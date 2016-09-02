@@ -190,7 +190,7 @@ CREATE TABLE people
 * date - http://www.postgresql.org/docs/9.1/static/datatype-datetime.html#DATATYPE-DATETIME-DATE-TABLE
 
 ---
-#What continued
+#What continued...
 * int2 (or smallint) - integer between -32768 and 32767 inclusive. (http://www.postgresql.org/docs/9.2/static/datatype-numeric.html)
 
 Datatypes limit the kind of info that can be stored in a table, but only very broadly.  For example, a column containing product prices should only have positive values, but there is no datatype for numbers greater than 0. _Constraints_ allow us to limit the data a table will accept and raise an error if a user tries to input invalid data.
