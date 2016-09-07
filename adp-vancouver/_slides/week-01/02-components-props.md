@@ -462,30 +462,128 @@ class App extends Component {
 
 # Exercise 5
 
-fix with props
+Based on what you just learned about props, fix the reference error in the `ToDo` component.
+
+Specifically, think about how you will pass the `todo` item from the the `App` component to the `ToDo` component as a prop called `item`.
+
+Try using the **destructuring approach** when accessing the `item` prop into the `ToDo` component.
+
+While you're at it, add `<h1>So Much To Do</h1>` to the top of your to-do list to give it a title.
 
 ---
 
 # Exercise 6
 
-rough out some more components
+Our to-do items will need to be a bit more complex than they are. Rather being derived from a simple array of string values, they will need to be derived from an **array of objects** where each object has an `id`, `title`, and `complete` property.
+
+```js
+render() {
+   // const todos = ['Learn React']; REMOVE THIS!
+   const todos = [
+      { id: 0, title: 'Learn React', complete: false }
+   ];
+   // ...
+}
+```
+
+Make this change. Your app will be broken again...what needs to be updated in your `ToDo` component now?
+
+---
+
+# Exercise 7
+
+Our app needs a couple more props. First, create a `ToDoCount` component with a `number` prop to display the number of to-dos in the list **with** the word "todo" or "todos" displayed depending on how many items are present.
+
+Next, create a `ClearButton` component with `removeCompleted` prop. This component's prop will be set to function that will fire on the button's `onClick` event.
+
+Once you've created your new components, add them to your `App` inside of a `<div>` with a class of `todo-admin`. You can pass any integer for the `number` prop and an empty string for the `removeCompleted` prop for now.
 
 ---
 
 # Proptypes
 
+Proptypes are a feature of React that allow us validate whether props were set on a component as expected, e.g. if a prop:
+
+- is required
+- contains a primitive type
+- is an array containing only items of a specified type
+- is an object with a specific shape
+- satisfies a condition set out in a custom validator
+- **[...etc.](https://facebook.github.io/react/docs/reusable-components.html#prop-validation)**
+
 ---
 
-# Default props
+# Using Proptypes
+
+To use proptypes, you'll also want to import `Proptypes` from `React` in your `App.js` file:
+
+```js
+import React, { Component, PropTypes } from 'react';
+
+class HelloWorld extends Component {
+   // the component's code...
+}
+
+HelloWorld.propTypes = {
+   greeting: PropTypes.string.isRequired
+};
+```
+
+What do you think this proptype necessitates when using the component?
+
+---
+
+# Exercise 8
+
+Add proptypes for the `ToDo`, `ToDoCount`, and `ClearButton` components.
+
+We need our `todo` prop to be an object with a specific set of properties, so you will need to use `PropTypes.shape()` for that. Use the React doc's reference on **[Prop Validation](https://facebook.github.io/react/docs/reusable-components.html#prop-validation)** to find out how to do this.
+
+Make all of the props for all components **required**.
+
+**Note:** You will end up with a warning in your console for one of your props if you successfully completed the exercise. Why does this happen?
+
+---
+
+# Looking Ahead
+
+Preparing for tomorrow's exercises, our `ToDo` component will need to be more than a simple list item&mdash;it will need to include a checkbox input as well. Make the following adjustment to the mark-up rendered by the `ToDo` component:
+
+```js
+const ToDo = ({item}) => (
+   <li>{item.title}
+      <input
+         type="checkbox"
+         id={item.id}
+         checked={item.complete} />
+      <label htmlFor={item.id}></label>
+      <button>
+         <i className="fa fa-trash"></i>
+      </button>
+   </li>
+);
+```
+
+---
+
+# To-Do App To-Dos
+
+Tomorrow we will need to:
+
+- Create an input for adding new to-do items
+- Add functions to add and remove to-do items
+- Add a function for marking a to-do as complete
+- Add a function to clear all of the completed to-dos from the list at once
 
 ---
 
 # What We've Learned
 
-- Describe the difference between one-way data flow in React versus the two-way data binding approach of frameworks such as AngularJS.
-- Describe the role of the props object in React, and pass arguments into React components using props like HTML attributes.
-- Write `Proptype` declarations to catch invalid props.
-- Use React inline style syntax to create encapsulated components inside of a single nested object.
+- What React is
+- How to use it in a project and how to use the "Create React App" tool
+- What JSX and the Virtual DOM are
+- How to create React components
+- How to add props to React components
 
 ---
 template: inverse
