@@ -1,5 +1,7 @@
 #### Meteor App Order of Operations
 
+- Checkout commits 'Day 1 Complete.', 'Day 2 Complete.' ... etc
+
 *DAY 1 (mack)*
 - Intro to Meteor / Rationalle / History / State of the union. (Watch video)
 	- What Meteor "Does for us"
