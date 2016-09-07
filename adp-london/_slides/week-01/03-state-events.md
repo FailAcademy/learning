@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: React Props Slides
+title: React State and Events Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Slideshow Title
+# React State and Events
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
