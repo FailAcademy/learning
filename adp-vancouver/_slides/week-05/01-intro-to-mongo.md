@@ -223,13 +223,53 @@ Update the information you just inserted into the unicorns collection.
 4. Sort by weight
 5. Sort by name then vampires
 
----
-#Sharding
 
 ---
 #Data Modeling
+MongoDB's collections do not force document structures and with great power comes great responisibility. 
 
-[click here](https://docs.mongodb.com/manual/core/data-modeling-introduction/)
+Key Decision in designing data models:
+-> Structure of documents
+->how the application reresents relationships between data
+
+There are two tools that help these relationships
+
+---
+#References
+(Normalized Data Models)
+ References store the relationships between data by including links or <strong>references</strong> from one document to another.
+
+ [Read](https://docs.mongodb.com/manual/reference/database-references/)
+
+---
+#Embedded documents
+(Denormalized data models)
+Embedded Data creates a relationship between data by storing related data in a single document structure
+
+[Read](http://openmymind.net/Multiple-Collections-Versus-Embedded-Documents/#1)
+
+So what does the mean to you?
+
+---
+#Sharding
+
+What the heck is Sharding?
+
+Shard: a piece of broken ceramic, metal, glass, or rock, typically having sharp edges.
+
+Think: rather than having one solid db you "shard" break one piece of data across multiple machines.
+
+---
+#Sharding continued...
+There are two systems for dealing with system growth.
+
+Vertical scaling: Making the single server more powerful. More RAM more storage space - limited to available technologies.
+
+Horizontal scaling: "Many hands make light work" - rather than overwhelm a single server you spread the work over. There is a trade off with complexity.
+
+MongoDB horizontal scaling is sharding.
+
+
 
 
 {% endhighlight %}
