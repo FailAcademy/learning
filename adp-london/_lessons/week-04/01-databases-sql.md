@@ -24,5 +24,5 @@ You need to download PostgreSQL in order to work through today's lessons. Please
 
 ## Resources
 - https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/
--https://medium.com/baqend-blog/nosql-databases-a-survey-and-decision-guidance-ea7823a822d#.db92brvvh
+- https://medium.com/baqend-blog/nosql-databases-a-survey-and-decision-guidance-ea7823a822d#.db92brvvh
 - http://www.sqlcourse.com/select.html
