@@ -257,7 +257,7 @@ What the heck is Sharding?
 
 Shard: a piece of broken ceramic, metal, glass, or rock, typically having sharp edges.
 
-Think: rather than having one solid db you "shard" break one piece of data across multiple machines.
+Think: rather than having one solid db you "shard" (break) pieces of data across multiple machines.
 
 ---
 #Sharding continued...
