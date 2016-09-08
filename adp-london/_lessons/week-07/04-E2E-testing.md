@@ -8,11 +8,12 @@ lesson_date: 2016-11-10
 ## Objectives
 
 - write E2E tests using [NightWatch.js](http://nightwatchjs.org/)
-- use Page Objects to target DOM Elements in E2E tests
-- setup Webpack to run E2E tests
+- setup snapshot testing on failures and different window sizes
+- setup E2E testing with multiple browsers
 
 ## Keywords
 - E2E
+- snapshot testing
 - [Shallow Rendering](http://airbnb.io/enzyme/docs/api/shallow.html)
 
 ## Pre-Work
