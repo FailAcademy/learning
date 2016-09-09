@@ -8,6 +8,7 @@
 ehthumbs.db
 *[Tt]humbs.db
 *.Trashes
+.vscode
 
 # Ignore files for local build #
 # ============================ #

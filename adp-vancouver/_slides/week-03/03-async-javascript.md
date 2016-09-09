@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Async JavaScript
+title: Async JavaScript Slides
 
 ---
 

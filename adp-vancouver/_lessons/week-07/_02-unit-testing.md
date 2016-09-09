@@ -1,4 +1,4 @@
-# Unit Testing (4hrs)
+# Unit Testing with Ava (4hrs)
 
 [Visual](https://quickleft.com/wp-content/uploads/PM_Build_Swing1.gif)
 
@@ -46,7 +46,7 @@ PASS or FAIL, expected "expected", but got "result"
 ## Types of Testing
 
 - Unit - test individual parts
-- E2E (Integration) - test complete application
+- End To End (E2E) - test complete application
 
 [See More](http://www.softwaretestinghelp.com/types-of-software-testing/)
 
@@ -71,7 +71,8 @@ Testing frameworks may writing and organizing tests easy.
 - [Mocha](http://mochajs.org/)
 - [Jasmine](http://jasmine.github.io/)
 - [QUnit](https://qunitjs.com/ja)
-- [Ava](https://github.com/avajs/ava)
+- [Ava](https://github.com/avajs/ava) *
+- [Jest](https://github.com/facebook/jest) *
 
 ## Ava
 
@@ -337,16 +338,6 @@ const reducer = (state = 0, action) => {
 ```
 
 2. Write tests for one your reducers.
-
-## Unit Testing Components
-
-What three things can we test about a user component?
-
-Hint (think of what inputs can go into a component)
-
-*( props, user input, data )*
-
-
 
 
 ## Limitations of Testing

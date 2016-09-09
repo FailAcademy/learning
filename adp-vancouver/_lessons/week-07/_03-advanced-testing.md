@@ -1,10 +1,17 @@
 # Stubs, Spies & Mocks
 
-## Intro
+## Intro (10)
 
-Puzzle, how to test.
+You may have noticed it was hard to write some tests.
 
-We want to test each piece of the puzzle in isolation.
+Take a five minutes and talk with a partner about how you might test your: 
+  - store
+  - middleware
+  - dom interactions (click events, etc.)
+
+
+We will look shortly at some new testing tools/techniques: stubs, spies & mocks.
+
 
 ## Spies
 
