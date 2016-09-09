@@ -17,7 +17,6 @@ lesson_date: 2016-11-10
 
 - E2E
 - snapshot testing
-- [Shallow Rendering](http://airbnb.io/enzyme/docs/api/shallow.html)
 
 ---
 
@@ -37,9 +36,10 @@ Setup E2E Testing with NightWatch.js in your Worst Pokemon app.
 ## Exercise 2
 
 Write E2E tests for the Worst Pokemon app, checking that:
-  - Loads the page with a title
-  - Loads list of pokemon
-  - Can vote item up once on click
+
+- Loads the page with a title
+- Loads list of pokemon
+- Can vote item up once on click
 
 ---
 
