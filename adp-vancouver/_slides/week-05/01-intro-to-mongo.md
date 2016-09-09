@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to Mongo
+title: Intro to Mongo Slides
 
 ---
 
@@ -10,7 +10,7 @@ layout: true
 class: center, middle, inverse
 
 ---
-#Intro to MongoDB
+# Intro to MongoDB
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -30,59 +30,88 @@ layout: false
 8. Sharding
 
 ---
-#What is your relation
+# What is your relation
 
-MySQL (relational database) try to position a one-size-fits-all solution
+**MySQL** (relational database) try to position a one-size-fits-all solution
 
-Examples include: Oracle, SQL Server, MySQL
+- **Examples**: Oracle, SQL Server, MySQL
 
-NoSQL is about being open and aware of alternative, exisiting and additional patterns and tools for managing your data.
+- **Customers**: Uber, Nasa, USNavy
 
-Examples include: CouchDB, Cassandra, MongoDB
+**NoSQL** is about being open and aware of alternative, exisiting and additional patterns and tools for managing your data
+
+- **Examples**: *CouchDB, Cassandra, MongoDB*
+
+- **Customers**: *Google, Facebook, Ebay*
 
 ---
-#True or False
+# True or False
 
-NoSQL is better that SQL
+NoSQL is better that SQL?
 ![think](/public/img/slide-assets/homer-thinking.png)
 
 ---
-#NoSQL vs SQL
+# NoSQL vs SQL
 
-FALSE!
+**FALSE!**
 
-Some projects are better suited to use a SQL db while others are better suited for NoSQL dbs.
+Some projects are better suited to use a SQL db while others are better suited for NoSQL dbs
 
-Like anything NoSQL has it's positives and negatives.
+Like anything NoSQL has it's **positives** and **negatives**
+
+Which projects should use what...?
+
+---
+# SQL
+
+Projects where SQL is ideal:
+
+- Data requirements which can be identified up-front
+- standards-based proven technology with good developer experience and support.
+
 
 ---
 #NoSQL
 
-So what is NoSQL?
+Projects where NoSQL is ideal:
 
-A NoSQL database is a mechanism for storage and retrieval of data which is different from reltional databases which use tabular relations.
+- You have lots of data that needs to be stored which is unstructured
+- Simpler or looser project objectives, able to start coding immediately
+- You generally don't need to define your schema up front, so if you have changing requirements this might be a good point
+- Scalability and speed needs
+
 
 ---
-#Metaphor
+# NoSQL
 
-A great example of the difference between SQL and NoSQL dbs is the difference between standard(NoSQL) and automatic cars(SQL).
+So what is NoSQL?
+
+A NoSQL database is a mechanism for storage and retrieval of data which is different from relational databases which use tabular relations.
+
+Not only SQL dbs exsisted since the late 1960s but didn't gain popularity until the demands of **Web 2.0**
+---
+# Metaphor
+
+A great example of the difference between **SQL** and **NoSQL** dbs is the difference between standard(NoSQL) and automatic cars(SQL).
 
 With standard cars you are responsible for a lot more work but you are also have more freedom and are able to get more performance out of your vehicle.
 
 But most cars simple sit in traffic and don't need that extra performance...
 
 ---
-#MongoDB
+# MongoDB
 
 We will be using MongoDB for our project and it is a Document-oriented database.
-
+![mongo](/public/img/slide-assets/mongo_logo.png)
 Viewed as an alternative to relational dbs and MongoDB is great for unstructured data, especially when you have a lot of it.
 
 Mongo's named is derived from humongus.
 
----
-#How do they look
 
+
+---
+# How do they look
+SQL TABLE
 ![SQL-Table](/public/img/slide-assets/MySQL.png)
 
 MongoDB
@@ -96,48 +125,56 @@ MongoDB
 ```
 
 ---
-#Vocabulary
+# Watch
 
-Mongo has collections vs. SQL's tables
+<iframe width="650" height="395" src="https://www.youtube.com/embed/b2F-DItXtZs" frameborder="0" allowfullscreen></iframe>
 
-Mongo's collections are made up of documents vs. SQL tables which are made up of rows
+---
+# Vocabulary
 
-Relational db's management systems save data in rows within tables. MongoDB save's data as documents within collections.
+Mongo has **collections** vs. SQL's **tables**
+
+Mongo's **collections** are made up of **documents** vs. SQL **tables** which are made up of **rows**
+
+Relational db's management systems save **data** in **rows** within **tables**. MongoDB save's **data** as **documents** within **collections**.
 
 ---
 
-#Documents
+# Documents
 
-Documents exist independently. 
+Documents exist independently. They can also have different fields
 
-They can also have different fields. 
+Dynamic Schema, allows documents to have different information but still be grouped together
 
-Dynamic Schema, allows documents to have different information but still be grouped together. 
+Document Field order is always persevered except in two cases
+1. The first field in the document is always the _id
+2. Updates may result in the reordering of fields in the document.
 
 ---
 
-#MongoDB
+# MongoDB
 So...
 
-MongoDB contains collections which are made up of documents which is made up of fields. 
+MongoDB contains **collections** which are made up of **documents** which is made up of **fields** 
 
-Collections can be index to improve lookup and sorting performance. 
+**Collections** can be **indexed** to improve lookup and sorting performance. 
 
-The cursor which is a pointer to the result set of a query. Clients can iterate through a cursor to retrieve results.
+The **cursor** which is a pointer to the result set of a query. Clients can iterate through a cursor to retrieve results.
 
 ---
-#Mongod
+# Mongod
 
-Straight from the Mongo docs:
-"mongod is the primary daemon process for the MongoDB system. It handles data requests, manages data access, and performs background management operations. This document provides a complete overview of all command line options for mongod."
+***Straight from the Mongo docs:***
 
-[LINK](https://docs.mongodb.com/manual/reference/program/mongod/)
+*"mongod is the primary daemon process for the MongoDB system. It handles data requests, manages data access, and performs background management operations. This document provides a complete overview of all command line options for mongod."*
+
+[Click this Link](https://docs.mongodb.com/manual/reference/program/mongod/)
 
 
 Mongo is the command-line shell that connects to a specific instance of mongod. Mongo is a Javascript shell.
 
 ---
-#Less Talking More Doing
+# Less Talking More Doing
 
 In your terminal type 
 ```
@@ -152,13 +189,21 @@ connecting to: test
 ```
 
 ---
-#Commands
+# Commands
 ```
-db.help()                         db.stats()
+db.help()
 
-use collection                    db.getCollectionNames()
+db.stats()
 
-db.collection.insert({field: value})          db.collection.find()
+db.getCollectionNames()
+
+use db_name
+
+db.collection.find()
+
+db.collection.insert({field: value})
+
+show dbs
 
 db.collection.remove({})
 
@@ -170,12 +215,10 @@ db.collection.update
 
 ```
 
-
-
 ---
-#Exercise 1
+# Exercise 1
 
-With the commands from the previous line perform teh following tasks. Make sure to replace collection with a name.
+With the commands from the previous slide perform the following tasks. Make sure to replace collection with a name.
 
 1. Can you insert multiple field and value entries into one collection
 2. change exsisting entries
@@ -183,37 +226,39 @@ With the commands from the previous line perform teh following tasks. Make sure 
 3. Can you find all the entries of a specific field
 
 ---
-#Query selector 
+# Query selector 
 
 The query selector (think the where clause in SQL) help with
 
-Finding
-Counting
-Updating
-Removing
+- Finding
+- Counting
+- Updating
+- Removing
 
-documents from collections.
-
----
-#Exercise 2
-
-Spend 15 minutes reading and implementing the different commands from [this link](https://docs.mongodb.com/manual/reference/operator/query/)
-
-Students will be picked at random to explain how and why they might use it.
+Documents from collections.
 
 ---
-#Exercise 3
+# Exercise 2
+
+Spend 15 minutes reading and implementing the different commands from 
+
+[this link](https://docs.mongodb.com/manual/reference/operator/query/)
+
+After you will be reponsible for teaching a Query operator
+
+---
+# Exercise 3
 
 [Click here](https://github.com/BFriz/mongodbData)
 
 Copy the text there and paste it into your terminal with mongo running.
 
 run the below to make sure it inserted correctly
-```
+```js
 db.unicorns.find()
 ```
 ---
-#Exercise 3 continued...
+# Exercise 3 continued...
 
 Update the information you just inserted into the unicorns collection. 
 
@@ -225,7 +270,7 @@ Update the information you just inserted into the unicorns collection.
 
 
 ---
-#Data Modeling
+# Data Modeling
 MongoDB's collections do not force document structures and with great power comes great responisibility. 
 
 Key Decision in designing data models:
@@ -235,23 +280,23 @@ Key Decision in designing data models:
 There are two tools that help these relationships
 
 ---
-#References
+# References
 (Normalized Data Models)
  References store the relationships between data by including links or <strong>references</strong> from one document to another.
 
  [Read](https://docs.mongodb.com/manual/reference/database-references/)
 
 ---
-#Embedded documents
+# Embedded documents
 (Denormalized data models)
 Embedded Data creates a relationship between data by storing related data in a single document structure
 
-[Read](http://openmymind.net/Multiple-Collections-Versus-Embedded-Documents/#1)
+[Read](http://openmymind.net/Multiple-Collections-Versus-Embedded-Documents/# 1)
 
 So what does the mean to you?
 
 ---
-#Sharding
+# Sharding
 
 What the heck is Sharding?
 
@@ -260,7 +305,7 @@ Shard: a piece of broken ceramic, metal, glass, or rock, typically having sharp 
 Think: rather than having one solid db you "shard" (break) pieces of data across multiple machines.
 
 ---
-#Sharding continued...
+# Sharding continued...
 There are two systems for dealing with system growth.
 
 Vertical scaling: Making the single server more powerful. More RAM more storage space - limited to available technologies.
