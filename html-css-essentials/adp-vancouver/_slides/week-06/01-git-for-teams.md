@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to Databases with SQL
+title: Git for Teams Slides
 
 ---
 
