@@ -47,7 +47,7 @@ layout: false
 ---
 # True or False
 
-NoSQL is better that SQL?
+NoSQL is better than SQL?
 ![think](/public/img/slide-assets/homer-thinking.png)
 
 ---
@@ -64,20 +64,20 @@ Which projects should use what...?
 ---
 # SQL
 
-Projects where SQL is ideal:
+Projects where you might use SQL:
 
 - Data requirements which can be identified up-front
-- standards-based proven technology with good developer experience and support.
+- Where you want standards-based proven technology with good developer experience and support.
 
 
 ---
 #NoSQL
 
-Projects where NoSQL is ideal:
+Projects where you might use NoSQL:
 
 - You have lots of data that needs to be stored which is unstructured
-- Simpler or looser project objectives, able to start coding immediately
-- You generally don't need to define your schema up front, so if you have changing requirements this might be a good point
+- Simpler/looser project objectives, able to start coding immediately
+- You generally don't need to define your schema up front
 - Scalability and speed needs
 
 
@@ -88,7 +88,7 @@ So what is NoSQL?
 
 A NoSQL database is a mechanism for storage and retrieval of data which is different from relational databases which use tabular relations.
 
-Not only SQL dbs exsisted since the late 1960s but didn't gain popularity until the demands of **Web 2.0**
+***"Not only have SQL"*** databases have exsisted since the late 1960s but didn't gain popularity until the demands of **Web 2.0**
 ---
 # Metaphor
 
@@ -103,11 +103,9 @@ But most cars simple sit in traffic and don't need that extra performance...
 
 We will be using MongoDB for our project and it is a Document-oriented database.
 ![mongo](/public/img/slide-assets/mongo_logo.png)
-Viewed as an alternative to relational dbs and MongoDB is great for unstructured data, especially when you have a lot of it.
+Mongo is viewed as an alternative to relational dbs and is great for unstructured data, especially when you have a lot of it.
 
 Mongo's named is derived from humongus.
-
-
 
 ---
 # How do they look
@@ -142,11 +140,11 @@ Relational db's management systems save **data** in **rows** within **tables**. 
 
 # Documents
 
-Documents exist independently. They can also have different fields
+**Documents** exist independently. They can also have different fields
 
-Dynamic Schema, allows documents to have different information but still be grouped together
+**Dynamic Schema**, allows documents to have different information but still be grouped together
 
-Document Field order is always persevered except in two cases
+**Document Field order** is always persevered except in two cases
 1. The first field in the document is always the _id
 2. Updates may result in the reordering of fields in the document.
 
@@ -177,6 +175,10 @@ Mongo is the command-line shell that connects to a specific instance of mongod. 
 # Less Talking More Doing
 
 In your terminal type 
+```
+mongod
+```
+In another terminal type
 ```
 mongo
 ```
@@ -220,10 +222,10 @@ db.collection.update
 
 With the commands from the previous slide perform the following tasks. Make sure to replace collection with a name.
 
-1. Can you insert multiple field and value entries into one collection
-2. change exsisting entries
+1. Can you insert multiple field and value entries into one collection?
+2. Change exsisting entries
 2. How do you remove specific field and values? 
-3. Can you find all the entries of a specific field
+3. Can you find all the entries of a specific field?
 
 ---
 # Query selector 
@@ -244,75 +246,87 @@ Spend 15 minutes reading and implementing the different commands from
 
 [this link](https://docs.mongodb.com/manual/reference/operator/query/)
 
-After you will be reponsible for teaching a Query operator
+After you will be reponsible for teaching a Query operator to the rest of the class
 
 ---
 # Exercise 3
 
-[Click here](https://github.com/BFriz/mongodbData)
+In this exercise you will be working through different query commands follow the link below. Copy the JSON from the data.json file
 
-Copy the text there and paste it into your terminal with mongo running.
+[Link below](https://github.com/redacademy/adp-mongo-exercise3/blob/master/data.json)
 
-run the below to make sure it inserted correctly
+Then paste the data into your terminal with mongo running
+
+Run the command below to make sure it inserted correctly and head to the next slide
 ```js
-db.unicorns.find()
+db.newts.find()
 ```
 ---
 # Exercise 3 continued...
 
-Update the information you just inserted into the unicorns collection. 
+Update the information you just inserted into the newts collection.
 
 1. Use the update and set parameters
 2. Increment a field by a certain amount
 3. Add a value via $push operator 
 4. Sort by weight
-5. Sort by name then vampires
+5. Sort by name then weight
 
 
 ---
 # Data Modeling
-MongoDB's collections do not force document structures and with great power comes great responisibility. 
+As mentioned before MongoDB's collections do not **force document structures** therefore some decisions need to be made. 
 
 Key Decision in designing data models:
--> Structure of documents
-->how the application reresents relationships between data
+
+- Structure of documents
+
+- How the application reresents relationships between data
 
 There are two tools that help these relationships
 
 ---
 # References
-(Normalized Data Models)
- References store the relationships between data by including links or <strong>references</strong> from one document to another.
 
- [Read](https://docs.mongodb.com/manual/reference/database-references/)
+**Normalized Data Models**
+
+ References store the relationships between data by including links or <strong>references</strong> from one document to another
+
+ [Click here](https://docs.mongodb.com/manual/reference/database-references/)
+
+  and read the documentation after we will have a discussion
 
 ---
 # Embedded documents
-(Denormalized data models)
+
+**Denormalized data models**
+
 Embedded Data creates a relationship between data by storing related data in a single document structure
 
-[Read](http://openmymind.net/Multiple-Collections-Versus-Embedded-Documents/# 1)
+[Click here](http://openmymind.net/Multiple-Collections-Versus-Embedded-Documents/# 1)
 
-So what does the mean to you?
+What does the mean for you?
 
 ---
 # Sharding
 
+Lastly Sharding...
+
 What the heck is Sharding?
 
-Shard: a piece of broken ceramic, metal, glass, or rock, typically having sharp edges.
+**Shard**: a piece of broken ceramic, metal, glass, or rock, typically having sharp edges
 
-Think: rather than having one solid db you "shard" (break) pieces of data across multiple machines.
+**Think**: rather than having one solid database you "shard" (break) pieces of data across multiple machines
 
 ---
 # Sharding continued...
-There are two systems for dealing with system growth.
+There are two systems for dealing with system growth
 
-Vertical scaling: Making the single server more powerful. More RAM more storage space - limited to available technologies.
+**Vertical scaling**: Making the single server more powerful. More RAM more storage space - limited to available technologies
 
-Horizontal scaling: "Many hands make light work" - rather than overwhelm a single server you spread the work over. There is a trade off with complexity.
+**Horizontal scaling**: "Many hands make light work" - rather than overwhelm a single server you spread the work over. There is a trade off with complexity
 
-MongoDB horizontal scaling is sharding.
+MongoDB horizontal scaling is **sharding**
 
 
 
