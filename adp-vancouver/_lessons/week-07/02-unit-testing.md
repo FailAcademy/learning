@@ -44,6 +44,12 @@ Walkthrough of snapshot testing React components.
 
 ---
 
+## Exercise 3
+
+Walkthrough of testing React components with [Enzyme](https://github.com/airbnb/enzyme)
+
+---
+
 ## Lab Activity
 
 1. Write unit tests for your reducers, actions, and other logic.

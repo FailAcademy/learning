@@ -24,6 +24,7 @@ lesson_date: 2016-11-09
 ## Pre-Work
 
 - Read about [Enzyme](http://airbnb.io/enzyme/). Write three unit tests for React components using Enzyme.
+- Read about [Sinon](http://sinonjs.org/). Be prepared to explain spies, stubs and mocks.
 
 ---
 
