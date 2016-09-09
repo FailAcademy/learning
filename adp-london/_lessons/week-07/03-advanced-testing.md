@@ -7,19 +7,18 @@ lesson_date: 2016-11-09
 
 ## Objectives
 
-- write unit tests for React components using Ava & [Enzyme](https://github.com/airbnb/enzyme)
-- test DOM interactions using [jsdom](https://github.com/tmpvar/jsdom)
 - write stubs & spies using [Sinon.js](http://sinonjs.org/)
-- setup code coverage using [NYC](https://github.com/istanbuljs/nyc) & Istanbul.js
+- setup code coverage in Jest
 
 ## Keywords
-- shallow rendering
-- code coverage
+- shallow & mount rendering
 - stub
 - spy
 - mock
+- code coverage
 
 ## Pre-Work
+- Read about [Enzyme](http://airbnb.io/enzyme/). Write three unit tests for React components using Enzyme.
 
 
 ## Active Learning
@@ -37,3 +36,5 @@ lesson_date: 2016-11-09
 - [Setting up Code Coverage](https://blog.engineyard.com/2015/measuring-clientside-javascript-test-coverage-with-istanbul)
 - [Sinon Tutorial](https://www.sitepoint.com/sinon-tutorial-javascript-testing-mocks-spies-stubs/)
 - [Unit Test Best Practices](https://gist.github.com/axyz/64c5087565b2c1907c0a8c4952cba27f)
+- [Enzyme](http://airbnb.io/enzyme/)
+- [React Testing with Enzyme](http://brewhouse.io/2016/03/18/accelerate-your-react-testing-with-enzyme.html)

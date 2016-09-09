@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to MongoDB
+title: Intro to MongoDB Slides
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Creating a Web Server
+title: Creating a Web Server Slides
 
 ---
 
