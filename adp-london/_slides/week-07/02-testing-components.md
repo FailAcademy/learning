@@ -28,9 +28,9 @@ Hint (think of what inputs go into a component)
 
 # Testing Components
 
-- [ ] props
-- [ ] data
-- [ ] user inputs
+- props
+- data
+- user inputs
 
 ---
 template: inverse
@@ -39,7 +39,7 @@ template: inverse
 
 ---
 
-# Compare
+# Compare Structure
 
 ### Ava
 
@@ -63,6 +63,8 @@ describe('topic', () => {
 
 ---
 
+# Compare Assertions
+
 ### Ava
 
 ```js
@@ -79,7 +81,7 @@ expect({ a: true }).toEqual({ a: true });
 
 ---
 
-### Differences
+### Jest Differences
 
 - Jest uses globals (**describe**, **it**, **expect**)
 - Jest uses chained assertions (`toBe`, `toEqual`)
@@ -172,6 +174,14 @@ it('renders a pokemon', () => {
 jest --watch
 ```
 
+/ package.json
+
+```json
+"scripts": {
+  "test": "jest --watch"
+}
+```
+
 ---
 
 # Snapshot Testing
@@ -227,9 +237,9 @@ const component = renderer.create(
 
 # Testing Components
 
-- [x] props
-- [ ] data
-- [ ] user inputs
+- [✓] props
+- [✗] data
+- [✗] user inputs
 
 ---
 
@@ -266,9 +276,9 @@ const component = renderer.create(
 
 # Testing Components
 
-- [x] props
-- [x] data
-- [ ] user inputs
+- [✓] props
+- [✓] data
+- [✗] user inputs
 
 ---
 
@@ -309,24 +319,85 @@ Take a minute and guess the differences between each type.
 
 ---
 
+# Common Issue
+
+Running Enzyme and React snapshot testing from the same file will not work.
+
+The issue is related to components rendering twice with the same name.
+
+---
+
 # Enzyme Test
+
+/client/components/PokemonList/Pokemon.events.test.js
 
 ```js
 import React from 'react';
+import ReactDOM from 'react-dom'; // needed
 import { shallow } from 'enzyme';
 
-it('the vote should call ADD_ONE on click', () => {
-  
-});
+it('triggers a vote action on click', () => {
+    let onVote = function() {};
+    const props = { monster, onVote };
+    const component = shallow(<Pokemon {...props} />);
+    component.find('.btn').simulate('click');
+
+    // check that onVote was Called
+
+  });
 ```
 
 ---
 
-# Testing Redux
+# Listening to a Function
 
-- [x] actions
-- [x] reducers
-- [x] store
-- [ ] middleware
+How can we check that the `onVote` was called?
+
+(without running the entire app)
+
+---
+
+# Spies
+
+Spies replace a function with a listener.
+
+```js
+// create a spy
+let onVote = jest.fn();
+// listen that the function was called
+expect(onVoteSpy).toBeCalled();
+// listen to what the function was called with
+expect(onVoteSpy).toBeCalledWith(2);
+```
+
+You can check if the function was called, or which params it was called with.
+
+---
+
+# Testing Components
+
+- [✓] props
+- [✓] data
+- [✓] user inputs
+
+---
+
+## Challenge
+
+Write unit tests to test your components. Include:
+  - props (snapshot testing)
+  - user input (with Enzyme and spies)
+
+---
+
+# Advanced Testing
+
+Next class we will look at more advanced testing tools, including:
+
+- more on spies
+- stubs
+- mocks
+- code coverage
+
 
 {% endhighlight %}
