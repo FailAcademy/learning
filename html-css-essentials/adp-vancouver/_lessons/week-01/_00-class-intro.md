@@ -1,13 +1,12 @@
 # Brief Intro (5-10)
 
-Sarcastic Intro
-
-Action Course Intro
+Overview of why the course was created, and where we hope students will be after the course.
 
 
 # Today's Objectives (2)
 
 - [ ] - Get to know each other
+- [ ] - ice breaker
 - [ ] - understand course objectives & expectations
 - [ ] - overview of curriculum
 - [ ] - class structure
@@ -32,6 +31,11 @@ Action Course Intro
 
 ### Name Cards
 
+
+# Ice Breaker
+
+- 20 straws, roll of scotch tape, a piece of paper, a small box of eggs
+- we will have one official egg drop from the roof
 
 # Student Expectations (10)
 
@@ -173,10 +177,64 @@ Ask students they think you made the following curriculum choices.
               - Fill out checklist (Journal)
 
 4:50 - 5:00   - Stand Up
-                - progress
+              - progress
               - class suggestions
               - study material review & suggestions
               - assign tomorrow's pre-work
 
 
-# Questions
+# Communication
+
+- Teacher contact info
+
+# Questions (?)
+
+Any questions?
+
+# Setup Dev Environment (60)
+
+Help each other to setup the following tools.
+After everyone is setup we will continue!
+
+### Communication
+- install Slack (desktop/mobile)
+- join our Slack Channel
+
+### Mac Only
+- [ ] install HomeBrew
+- [ ] install X-Code
+
+### Windows Only
+- [ ] install Git Bash (Windows only)
+
+### Editor
+- [ ] get an editor (Atom, Sublime, Visual Studio Code)
+- [ ] add language support for JavaScript & JSX
+- [ ] set your default editor in the command line
+- [ ] install editor plugins for linting & beautifying code
+- [ ] configure editor for tabs over spaces, with a tab-size of 2
+- [ ] you're going to be living in your editor, make it look nice
+
+### Command Line
+- [ ] configure editor to open with a command line command (atom, subl)
+- [ ] setup access to NPM so sudo is not necessary (Mac)
+- [ ] setup oh_my_zsh and setup .zshrc file (provided)
+
+### Github
+- [ ] setup a Github account and profile
+- [ ] setup Github with ssh password for easy pushing
+
+### JS
+- [ ] install Node 6
+- [ ] verify you have NPM > v3.0
+
+### Desktop
+- [ ] install Chrome
+- [ ] create a projects folder
+- [ ] create a practice folder
+
+### Hot Keys
+- [ ] split screen
+- [ ] open terminal
+- [ ] open browser
+- [ ] open editor

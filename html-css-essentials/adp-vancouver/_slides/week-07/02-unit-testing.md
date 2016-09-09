@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Unit Testing
+title: Unit Testing Slides
 ---
 
 {% highlight html %}
