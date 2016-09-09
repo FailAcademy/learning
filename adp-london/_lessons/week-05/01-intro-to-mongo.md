@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Intro to MongoDB
+title: Intro to Mongo
 slides: [_slides/week-05/01-intro-to-mongo.md]
 lesson_date: 2016-10-24
 ---
@@ -17,13 +17,7 @@ lesson_date: 2016-10-24
 
 ## Pre-Work
 
-Please follow this link. https://docs.mongodb.com/manual/installation/#tutorials and complete the necessary download of MongoDB.
-
-Also read
-1. https://docs.mongodb.com/manual/text-search/
-2 https://docs.mongodb.com/manual/core/data-modeling-introduction/
-3. https://docs.mongodb.com/manual/crud/
-4. https://docs.mongodb.com/manual/mongo/
+Please follow this link. https://docs.mongodb.com/manual/installation/#tutorials and complete the necessary steps to download MongoDB.
 
 ## Exercise 1
 
@@ -43,16 +37,16 @@ Students will be picked at random to explain how and why they might use it.
 ---
 ## Exercise 3
 
-[Click here](https://github.com/BFriz/mongodbData)
+[Click here](https://github.com/redacademy/adp-mongo-exercise3/blob/master/data.json)
 
 Copy the text there and paste it into your terminal with mongo running.
 
 run the below to make sure it inserted correctly
 ```
-db.unicorns.find()
+db.newts.find()
 ```
 
-Update the information you just inserted into the unicorns collection. 
+Update the information you just inserted into the newts collection. 
 
 1. Use the update and set parameters
 2. Increment a field by a certain amount
@@ -62,6 +56,11 @@ Update the information you just inserted into the unicorns collection.
 
 
 ---
+
+## Project
+
+We are going to use similar commands with a much larger data set. 
+
 
 
 ## Resources
