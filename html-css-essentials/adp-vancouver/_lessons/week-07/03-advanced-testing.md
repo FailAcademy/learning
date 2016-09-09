@@ -5,10 +5,12 @@ slides: []
 lesson_date: 2016-11-09
 ---
 
-## Objectives
+## Lesson Objectives
 
 - write stubs & spies using [Sinon.js](http://sinonjs.org/)
 - setup code coverage in Jest
+
+---
 
 ## Keywords
 - shallow & mount rendering
@@ -17,19 +19,31 @@ lesson_date: 2016-11-09
 - mock
 - code coverage
 
+---
+
 ## Pre-Work
+
 - Read about [Enzyme](http://airbnb.io/enzyme/). Write three unit tests for React components using Enzyme.
 
+---
 
-## Active Learning
+## Exercise 1
 
-1. Setup a test watcher with [code-coverage](https://github.com/avajs/ava/blob/master/docs/recipes/code-coverage.md) reporting.
+Setup a test watcher with code-coverage reporting.
 
-2. Write unit tests for React components in an example project.
+---
 
-3. Write unit tests to test your existing React components from an earlier project.
+## Exercise 2
 
+Write unit tests for React components in the Worst Pokemon project.
 
+---
+
+## Lab Activity
+
+Write unit tests to test your existing React components from an earlier project.
+
+---
 
 ## Resources
 - [Ava & React](https://github.com/avajs/ava/blob/master/docs/recipes/react.md)
