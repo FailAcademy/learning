@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Forms in React
+title: Forms in React Slides
 
 ---
 

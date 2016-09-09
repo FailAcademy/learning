@@ -18,15 +18,19 @@ lesson_date: 2016-11-10
 
 ## Pre-Work
 - Read about the following two tools. What are they used for?
-  - [Enzyme](http://airbnb.io/enzyme/).
   - [NightWatch](http://nightwatchjs.org/guide#guide).
 
 ## Active Learning
 
+1. Setup E2E Testing with NightWatch.js
 
+2. Write tests for the Worst Pokemon app, checking that:
+  - Loads the page with a title
+  - Loads list of pokemon
+  - Can vote item up once on click
+
+3. Setup Nightwatch.js & E2E testing scenarios for your apps
 
 ## Resources
-- [Enzyme](http://airbnb.io/enzyme/)
 - [NightWatch](http://nightwatchjs.org/guide#guide)
-- [React Testing with Enzyme](http://brewhouse.io/2016/03/18/accelerate-your-react-testing-with-enzyme.html)
 - [Testing React with NightWatch](https://www.syncano.io/blog/testing-syncano/)
