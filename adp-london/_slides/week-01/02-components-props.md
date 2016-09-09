@@ -201,9 +201,11 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 # JSX Gotchas
 
-- There must be exactly one outer-most tag returned with your JSX (so no sibling elements, unless they are wrapped by a parent element)
+- There must be exactly one outer-most tag returned with your JSX (so you can't return sibling elements)
 - If you need to add a `class` to an element, you must use `className`
-- If you need to add a `for` attribute to an element, you must use `htmlFor`
+- If you need to add a `for` attribute, you must use `htmlFor`
+- Self-closing tags must have a `/` before the `>`
+- Event listener names must be camel case (e.g. `onClick`)
 - JSX must be transformed into real JS to be parsed by ES5 JS engines (we'll use Babel for that)
 
 ---
@@ -466,7 +468,7 @@ Based on what you just learned about props, fix the reference error in the `ToDo
 
 Specifically, think about how you will pass the `todo` item from the the `App` component to the `ToDo` component as a prop called `item`.
 
-Try using the **destructuring approach** when accessing the `item` prop into the `ToDo` component.
+Try using the **destructuring approach** when accessing the `item` prop in the `ToDo` component.
 
 While you're at it, add `<h1>So Much To Do</h1>` to the top of your to-do list to give it a title.
 
@@ -497,6 +499,20 @@ Our app needs a couple more props. First, create a `ToDoCount` component with a 
 Next, create a `ClearButton` component with `removeCompleted` prop. This component's prop will be set to function that will fire on the button's `onClick` event.
 
 Once you've created your new components, add them to your `App` inside of a `<div>` with a class of `todo-admin`. You can pass any integer for the `number` prop and an empty string for the `removeCompleted` prop for now.
+
+---
+
+# this.props.children
+
+Every component's `props` object has a property named `children`.
+
+Why do we need this? It's because not all components use self-closing tags. For example:
+
+```html
+<HelloWorld>I am a child of HelloWorld.</HelloWorld>
+```
+
+In this example, `this.props.children` would equal "I am a child of HelloWorld."
 
 ---
 
