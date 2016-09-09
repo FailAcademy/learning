@@ -1,4 +1,4 @@
-# WebServer
+# Server
 
 ## What is a web server
 
