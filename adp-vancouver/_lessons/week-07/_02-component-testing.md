@@ -54,7 +54,7 @@ describe('topic', () => {
 npm install --save-dev react-test-renderer react-addons-test-utils jest enzyme
 ```
 
-/clinet/components/PokemonList/Pokemon.test.js
+/client/components/PokemonList/Pokemon.test.js
 
 ```js
 import React from 'react';
