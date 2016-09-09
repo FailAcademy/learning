@@ -5,7 +5,7 @@ slides: ['_slides/week-03/03-async-javascript.md']
 lesson_date: 2016-10-13
 ---
 
-## Objectives
+## Lesson Objectives
 
 - Explain the Javascript Event Loop, and how it handles async code
 - Distinguish between blocking and non-blocking code
@@ -13,6 +13,8 @@ lesson_date: 2016-10-13
 - Avoid writing code with nested callbacks
 - Use ES2015 promises to make asynchronous requests
 - Distinguish between "resolve", "reject" and "pending" promise states
+
+---
 
 ## Keywords
 
@@ -31,13 +33,17 @@ lesson_date: 2016-10-13
 - [then](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)
 - pending
 
+---
+
 ## Pre-Work
 - Read [The Evolution of Async Javascript](https://blog.risingstack.com/asynchronous-javascript/).
 - Understand [setTimeout](http://javascript.info/tutorial/settimeout-setinterval)
 
-## Active Learning
+---
 
-1. Model how the **stack** and **queue** work step by step within the Javascript event loop. Use post it notes for each step for the following code examples:
+## Exercise 1
+
+Model how the **stack** and **queue** work step by step within the Javascript event loop. Use post it notes for each step for the following code examples:
 
 For additional help, read [Event Loop](https://developer.mozilla.org/en/docs/Web/JavaScript/EventLoop) or [What is the Event Loop](http://altitudelabs.com/blog/what-is-the-javascript-event-loop/).
 
@@ -76,7 +82,11 @@ do_a();
 do_b();
 ```
 
-2. Compare blocking and non-blocking code with the built in Node module `fs`. The following resources will help:
+---
+
+## Exercise 2
+
+Compare blocking and non-blocking code with the built in Node module `fs`. The following resources will help:
 
 [docs](https://nodejs.org/api/fs.html)
 [src](https://github.com/nodejs/node/blob/master/doc/topics/blocking-vs-non-blocking.md)
@@ -89,23 +99,38 @@ do_b();
 
   d. create timers using "performance.now()" to determine how long the previous functions take to run.
 
-3. Rewrite example 2 using callbacks.
+---
 
-4. Use callbacks to write five consecutive calls logging "a", "b", "c", "d", "e" with 1 second intervals.
+## Exercise 3
 
-5. Use promises to rewrite the previous example.
+1. Rewrite example 2 using callbacks.
 
-6. Change the previous example to fail at the letter "d" and log an error to the console. Hint: use `reject`.
+2. Use callbacks to write five consecutive calls logging "a", "b", "c", "d", "e" with 1 second intervals.
 
-7. Change the previous example to not fail at "d", but instead handle the error and log "Error at 'd'" to the console. Hint: use `catch`.
+---
 
-8. Use a native JS Promise to load data from an api with the following guidelines. [API suggestions](https://github.com/toddmotto/public-apis)
+## Exercise 4
+
+1. Use promises to rewrite the previous example.
+
+2. Change the previous example to fail at the letter "d" and log an error to the console. Hint: use `reject`.
+
+3. Change the previous example to not fail at "d", but instead handle the error and log "Error at 'd'" to the console. Hint: use `catch`.
+
+4. Use a native JS Promise to load data from an api with the following guidelines. [API suggestions](https://github.com/toddmotto/public-apis)
 
   - If the first request fails, it should retry.
   - If the second request fails, it should retry again.
   - If the third request fails, it should return an error.
   - If a request succeeds, it should log the data to the console.
 
+---
+
+## Lab Activity
+
+1. Apply asynchronous javascript techniques in your project.
+
+---
 
 ## Resources
 - [What the heck is the Event Loop anyway?](http://2014.jsconf.eu/speakers/philip-roberts-what-the-heck-is-the-event-loop-anyway.html)
