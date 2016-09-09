@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Functional Programming
+title: Functional Programming Slides
 ---
 
 {% highlight html %}

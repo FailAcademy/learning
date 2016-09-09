@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Connecting Client And Server
+title: Connecting Client And Server Slides
 
 ---
 

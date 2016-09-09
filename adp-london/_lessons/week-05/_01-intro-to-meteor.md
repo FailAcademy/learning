@@ -15,6 +15,7 @@
 	- Authentication
 ----------------------------------------------------------
 [] Install Meteor and remove default files.
+[] Configure an iterm2 profile for remote development
 [] Set up folder structure (from meteor guide) incl. __tests__ & __stories__
 [] Install and configure Jest
 [] create .babelrc file

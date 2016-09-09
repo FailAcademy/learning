@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Redux Middleware
+title: Redux Middleware Slides
 ---
 
 {% highlight html %}
