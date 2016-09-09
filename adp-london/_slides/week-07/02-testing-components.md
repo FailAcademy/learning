@@ -329,5 +329,4 @@ it('the vote should call ADD_ONE on click', () => {
 - [x] store
 - [ ] middleware
 
----
-
+{% endhighlight %}

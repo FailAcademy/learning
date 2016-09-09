@@ -5,16 +5,24 @@ slides: []
 lesson_date: 2016-11-10
 ---
 
-## Objectives
+## Lesson Objectives
 
 - write better documentation for your code
 - write documentation for your components
 
+---
+
 ## Keywords
+
+---
 
 ## Pre-Work
 
-## Active Learning
+---
 
-## Resources
+## Exercise 1
+
+---
+
+## Additonal Resources
 -
