@@ -7,34 +7,36 @@ lesson_date: 2016-10-11
 
 ## Learning Objectives
 
-- How to write and run a simple 'hello world' HTTP Server in Node
-- Handle a request and response from an external 3rd party API
+- Write and run a simple 'hello world' HTTP Server in Node
 - Distinguish between Client and Server
-- Understand the differences between HTTP server in Node and Express
-- Install and setup an Express Server
 - Create a 'hello world' HTTP server using Express
-- Serve content at different urls in your application
-- Define REST
-- Use REST methods to communicate with your Express Server
+- Set up and deploy a Node Web Server using Express
+- Write HTTP request handling logic using Express
+- Make Web requests to 3rd party Web Servers using Express (APIs)
+- Understand the term 'REST-ful'
+- Use 'REST-ful' methods to communicate with your Express Server from a Web Browser
 
 ## Pre-Work
-*TBD*
+Knowing about HTTP is important but not part of this course.
+To know more about HTTP you can start by looking at the documentation for
+**http.request**  here: <br/><br/> *(Scroll down the page to find it)* <br/>
+[https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_http_methods](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_http_methods)
+
+You'll need to know what the **port** and **protocol** options are for.
+Check out the *sample code*. Run it and experiment with it.
 
 ## Keywords
-- [Server](http://whatis.techtarget.com/definition/Web-server)
-- [Client](https://en.wikipedia.org/wiki/Client-side)
+- Server
+- Client
 - API
-- [REST](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
-- [PUT](http://www.tutorialspoint.com/http/http_methods.htm)
-- [POST](http://www.tutorialspoint.com/http/http_methods.htm)
-- [GET](http://www.tutorialspoint.com/http/http_methods.htm)
-- [DELETE](http://www.tutorialspoint.com/http/http_methods.htm)
+- REST
 - HTTP
-- Node.js
+- Node
 - Express
 
 ## Resources
 Mozilla Article: [What is a Web Server?](https://developer.mozilla.org/en-US/Learn/Common_questions/What_is_a_web_server) <br/>
-REST (Representational State Transfer) : Roy Fielding's [doctoral dissertation](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
+REST (Representational State Transfer): Roy Fielding's [doctoral dissertation](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
 
-
+About Node.js: [https://nodejs.org/en/about/](https://nodejs.org/en/about/) <br/>
+Express: [Fast, unopinionated, minimalist web framework](https://expressjs.com/)
