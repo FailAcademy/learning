@@ -328,7 +328,12 @@ There are two systems for dealing with system growth
 
 MongoDB horizontal scaling is **sharding**
 
+---
+class: center, middle
+
+![sharding](/public/img/slide-assets/sharding.jpg)
 
 
+---
 
 {% endhighlight %}
