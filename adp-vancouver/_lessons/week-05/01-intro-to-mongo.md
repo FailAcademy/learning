@@ -59,7 +59,7 @@ Update the information you just inserted into the newts collection.
 
 ## Project
 
-We are going to use similar commands with a much larger data set. 
+We are going to use similar commands with a much larger data set. Head over to https://github.com/redacademy/adp-mongo-project and clone down the repo. From there answer each of the questions in the README.
 
 
 
