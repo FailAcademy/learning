@@ -16,7 +16,16 @@ class: center, middle, inverse
 
 ---
 layout: false
-class: center, middle
+
+# What is a Test
+
+- Think back to high school, why did you have quizzes?
+
+- Were some quizzes better than others? Why?
+
+- How are quizzes similar to **unit tests**?
+
+---
 
 # Why Test
 
@@ -60,9 +69,9 @@ class: middle center
 
 ---
 
-### Test Example
+### Test Example 1
 
-Fill in the blanks.
+Fill in the blanks with a partner.
 
 1. Put toast in the toaster. Pressed the button.
 2. Expected: (    )
@@ -72,9 +81,9 @@ Fill in the blanks.
 
 ---
 
-### Test Example
+### Test Example 2
 
-Fill in the blanks.
+Fill in the blanks with a partner.
 
 1. Studied programming every day for 2 years.
 2. Expected: (   )
@@ -121,6 +130,7 @@ Testing frameworks may writing and organizing tests easy.
 - [Jasmine](http://jasmine.github.io/)
 - [QUnit](https://qunitjs.com/ja)
 - [Ava](https://github.com/avajs/ava)
+- [Jest](https://facebook.github.io/jest/)
 
 ---
 
@@ -181,7 +191,6 @@ test(t => {
 ```
 
 ---
-class: middle
 
 # "Red/Green" Testing
 
@@ -192,14 +201,12 @@ class: middle
 Why is important to write failing tests first?
 
 ---
-class: middle
 
 # Watch Tests
 
 Setup Ava with [watch mode](https://github.com/avajs/ava/blob/master/docs/recipes/watch-mode.md).
 
 ---
-class: middle
 
 # Second Test
 
@@ -214,7 +221,6 @@ test(t => {
 ```
 
 ---
-class: middle
 
 # Third Test
 
@@ -317,16 +323,23 @@ test('function returns 42 after 1 second', t => {
 });
 ```
 ---
-class: middle
 
-# Untestable Code
+# Difficult to Test
 
-What can make code "untestable"?
+What can make code hard to test?
 
 ---
-# Untestable Code
 
-Why is `redirectTo` untestable?
+# Difficult to Test
+
+- many side effects
+- functions that do too much
+- globals
+
+---
+# Hard To Test
+
+Why is `redirectTo` hard to test?
 
 ```js
 function redirectTo(url) {
@@ -340,9 +353,9 @@ function redirectTo(url) {
 
 ---
 
-# Testable code
+# Easier to Test
 
-Why is `getRedirectPart` testable?
+Why is `getRedirectPart` easy to test?
 
 ```js
 function getRedirectPart(url) {
