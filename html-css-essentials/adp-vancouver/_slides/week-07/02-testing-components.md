@@ -103,6 +103,11 @@ npm install --save-dev jest react-test-renderer
 Take a few minutes to rewrite your tests using Jest.
 
 ---
+template: inverse
+
+# Snapshot Testing
+
+---
 
 # Testing Components
 
@@ -132,7 +137,7 @@ describe('Pokemon', () => {
 
 ---
 
-# Mock The Data
+# Mock Component Data
 
 /client/components/PokemonList/Pokemon.test.js
 
@@ -152,16 +157,18 @@ it('renders a pokemon', () => {
 
 # Setup a Snapshot Test
 
+Don't worry if you don't understand what is happening yet.
+We will look deeper soon.
+
 ```js
 it('renders a pokemon', () => {
   /* ... */
-  const component = renderer.create(
+  const tree = renderer.create(
     <Pokemon
       monster={monster}
       onVote={(x) => x + 1 }
     />
-  );
-  let tree = component.toJSON();
+  ).toJSON();
   expect(tree).toMatchSnapshot();
 });
 ```
@@ -192,9 +199,9 @@ Look at the generated file in your "__snapshots__" directory.
 
 ### Explain each step to a partner.
 
-1. `const component = renderer.create()`
-2. let tree = component.toJSON();
-3. expect(tree).toMatchSnapshot();
+1. `const tree = renderer.create()`
+2. `.toJSON()`
+3. `expect(tree).toMatchSnapshot();`
 
 ---
 
@@ -207,10 +214,9 @@ Write the following test and run it. Why does it fail?
 ```js
 describe('App', () => {
   it('renders the app', () => {
-    const component = renderer.create(
-        <App />
-    );
-    let tree = component.toJSON();
+    const tree = renderer.create(
+      <App />
+    ).JSON();
     expect(tree).toMatchSnapshot();
   });
 });
@@ -220,7 +226,7 @@ describe('App', () => {
 
 # Testing Connected Components
 
-We need to **connect** components with a **provider** first.
+We need to **connect** "react-redux" components with a **provider** first.
 
 ```js
 import { Provider } from 'react-redux';
@@ -284,11 +290,13 @@ const component = renderer.create(
 
 # Testing User Inputs
 
-Which use inputs do we want to test?
+Which user inputs can we test?
 
 ---
 
 # Testing User Inputs
+
+Which user inputs can we test?
 
 - click
 - input text
@@ -297,13 +305,28 @@ Which use inputs do we want to test?
 - etc.
 
 ---
+template: inverse
+
+# [Enzyme](http://airbnb.io/enzyme/)
+
+---
 
 # Enzyme
 
 Enzyme is a React testing tool from AirBnB. 
 
+Enzyme is to React Test Utils as JQuery is to the browser.
+
+Take a minute to compare the [React Test Utils](https://facebook.github.io/react/docs/test-utils.html) with [Enzyme](http://airbnb.io/enzyme/docs/api/).
+
+---
+
+# Setup Enzyme
+
+Install Enzyme in your project as a devDependency.
+
 ```shell
-npm install --save-dev enzyme react-addons-test-utils react-dom
+npm install --save-dev enzyme react-addons-test-utils
 ```
 
 ---
@@ -311,11 +334,54 @@ npm install --save-dev enzyme react-addons-test-utils react-dom
 # Rendering Options
 
 Read [Enzyme](http://airbnb.io/enzyme/).
-Take a minute and guess the differences between each type.
+
+Take a minute and explain the differences between each type.
 
 - shallow
 - fullDOM
 - static
+
+---
+
+# shallow
+
+Does not render child components.
+
+```js
+<div>
+  <Child className="child">
+</div>
+```
+
+This is the most common test rendering.
+
+---
+
+# fullDOM
+
+Renders out all child components.
+
+```js
+<div>
+  <div className="child">
+    <h1>Child</h1>
+  </div>
+</div>
+```
+
+---
+
+# static
+
+Renders to HTML.
+
+```js
+<div>
+  <div class="child">
+    <h1>Child</h1>
+  </div>
+</div>
+```
 
 ---
 
