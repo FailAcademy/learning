@@ -24,6 +24,7 @@ layout: false
 3. Creating a React app
 4. Working with components
 5. Adding props to components
+6. Using CSS modules for style
 
 ---
 template: inverse
@@ -332,7 +333,7 @@ Wondering what's up with the `key` attribute on the `<li>`?
 
 The `key` attribute helps React keep track of **dynamic children** (i.e. where child items may be added, removed, re-sorted, etc.).
 
-Even if you're children aren't going to change in any way, React will complain to your in the browser console if you don't add a unique `key` for each item.
+Even if your children aren't going to change in any way, React will complain to you in the browser console if you don't add a unique `key` for each item.
 
 Using the array index is sufficient, but other unique values can be used for keys too.
 
@@ -342,7 +343,7 @@ Using the array index is sufficient, but other unique values can be used for key
 
 Open `App.js` in your React app and delete the default content in the `render()`.
 
-In it's place, set up an array as a constant called `todos` and add 'Learn React' as the only item.
+In its place, set up an array as a constant called `todos` and add 'Learn React' as the only item.
 
 Next, use what you just learned about `.map()` and iterating over arrays in a component to list the to-do array item inside an unordered list element.
 
@@ -545,7 +546,7 @@ HelloWorld.propTypes = {
 };
 ```
 
-What do you think this proptype necessitates when using the component?
+What do you think this `propType` necessitates when using the component?
 
 ---
 
@@ -558,6 +559,51 @@ We need our `todo` prop to be an object with a specific set of properties, so yo
 Make all of the props for all components **required**.
 
 **Note:** You will end up with a warning in your console for one of your props if you successfully completed the exercise. Why does this happen?
+
+---
+
+# CSS Modules
+
+Note that our REDit app will make use of CSS modules. This is why we will see code like this at the top of the `App.js` file:
+
+```js
+import styles from './styles.css';
+```
+
+Importing our CSS into our JS file allows us to apply our styles like this:
+
+```js
+const App = (props) => (
+  <div>
+    <div className={styles['view-container']}>
+    {/* or... <div className={styles.viewContainer}> */}
+      {props.children}
+    </div>
+  </div>
+);
+```
+
+---
+
+# CSS Modules
+
+*Why would we do it this way?* Because it's easier for us to do conditionally render styles based on component props:
+
+```js
+const App = (props) => {
+   let className = props.loggedIn ? styles.user : styles.guest;
+
+   return (
+     <div>
+       <div className={className}>
+         {props.children}
+       </div>
+     </div>
+   );
+}
+```
+
+**Bonus!** With CSS modules, each file is compiled separately so generic class names won't pollute the global scope.
 
 ---
 
