@@ -1,9 +1,26 @@
-# Brief Intro (5-10)
+# Class Intro Lesson (3hrs+)
+
+
+### Materials
+  - intro
+    - sticker name tags
+    - pens
+  - egg drop
+    - bag of straws
+    - box of eggs
+    - rolls of tape for each 2-4 student group
+  - word map
+    - large piece of paper for each team of 2-4 students
+    - pens
+
+
+
+## Brief Intro (5-10)
 
 Overview of why the course was created, and where we hope students will be after the course.
 
 
-# Today's Objectives (2)
+## Today's Objectives (2)
 
 - [ ] - Get to know each other
 - [ ] - ice breaker
@@ -12,12 +29,17 @@ Overview of why the course was created, and where we hope students will be after
 - [ ] - class structure
 - [ ] - answer questions
 
-# Getting to Know Each Other (30)
+## Getting to Know Each Other (30)
 
-- Start with the instructors.
-- Try to find common gaps in students knowledge and make a note.
+Note: try to find common gaps in students knowledge and make a note.
+
+### Name Stickers
+
+Write your name on a tag and slap it on.
 
 ### Self Intro
+
+- Start with the instructors.
 
 ### How you started programming
 
@@ -29,36 +51,63 @@ Overview of why the course was created, and where we hope students will be after
 
 - time, energy, effort
 
-### Name Cards
 
+## Ice Breaker (60)
 
-# Ice Breaker
+In teams of 2-4, make a contraption that will spare an egg from breaking when dropped from the roof.
 
 - 20 straws, roll of scotch tape, a piece of paper, a small box of eggs
 - we will have one official egg drop from the roof
 
-# Student Expectations (10)
+Ask students to discuss how building an egg drop contraption is similar to building an app.
+
+Afterwards, discuss how building an app is a lot like dropping an egg.
+- different approaches, some better than others
+- different materials and restrictions (server, js, browser environments)
+- testing (small drops)
+- deployment (drop)
+
+Explain how these approaches are how we're going to build our apps so they don't break when we deploy.
+
+## Student Expectations (10)
 
 See RED guidelines.
 
 
-# Course Objectives (30)
+## Course Objectives (20)
 
 ### You Are In Charge Of Your Learning
 
 - Learning Journal
-  - questions, hurdles, mind dump
+
   - learning objectives
   - project checklists
-  - things you want to follow up more on
+
+  - questions / hurdles
+  - follow up (things you want to learn more about)
+
   - suggestions to make class better
-- Time Commitment
-- Homework & Projects
+  - mind dump
+
+
+- Time Commitment 
+  - hours per day
+  - weekends
+
+- Pre-work
+  - usually some general reading or exercises that will help you follow the next days lesson
+
+- Projects
+  - must complete to graduate
+
 - Beyond the Classroom
+  - don't limit yourself to things we learn or do in class
 
 ### How We Will Learn
 
 - Student Objectives
+  - things you should understand, keep notes on your progress
+  - if you struggle with an objective, please study it more in your free time
 
 - Visualization
   - draw it before you write it
@@ -69,8 +118,7 @@ See RED guidelines.
   - avoid dictating the solution
 
 - Classroom as a Company
-  - check-ins
-  - track progress
+  - keep us up-to-date with your progress
   - professionalism
     - effort
     - on time
@@ -78,7 +126,8 @@ See RED guidelines.
 
 - Learning Journal
   - track objectives
-  -
+  - track project progress
+  - brain dump your questions and hurdles
 
 - Power Distance
   - nobody is an expert in Everything
@@ -86,13 +135,13 @@ See RED guidelines.
   - treat us more as an experienced co-worker than a boss
 
 
-# Curriculum (30)
+## Curriculum (30)
 
 ### Word Map
 
 What do you need to know to make a fullstack app?
 
-Have students make a word map.
+Have students make a word map on a large piece of paper.
 
 ### Curriculum Choices
 
@@ -183,15 +232,15 @@ Ask students they think you made the following curriculum choices.
               - assign tomorrow's pre-work
 
 
-# Communication
+## Communication
 
 - Teacher contact info
 
-# Questions (?)
+## Questions (?)
 
 Any questions?
 
-# Setup Dev Environment (60)
+## Setup Dev Environment (60)
 
 Help each other to setup the following tools.
 After everyone is setup we will continue!

@@ -19,7 +19,6 @@ lesson_date: 2016-11-08
 ## Keywords
 
 - unit test
-- code coverage
 - TDD
 - BDD
 - snapshot testing
@@ -54,7 +53,7 @@ Walkthrough of testing React components with [Enzyme](https://github.com/airbnb/
 
 1. Write unit tests for your reducers, actions, and other logic.
 
-2. Write unit tests for your components.
+2. Write snapshot tests for your components.
 
 ---
 
@@ -62,3 +61,5 @@ Walkthrough of testing React components with [Enzyme](https://github.com/airbnb/
 - [Ava & TypeScript](https://github.com/avajs/ava/blob/master/docs/recipes/typescript.md)
 - [Testing Redux](http://redux.js.org/docs/recipes/WritingTests.html)
 - [Redux Unit Testing](https://www.codementor.io/reactjs/tutorial/redux-unit-test-mocha-mocking)
+- [Enzyme](http://airbnb.io/enzyme/)
+- [React Testing with Enzyme](http://brewhouse.io/2016/03/18/accelerate-your-react-testing-with-enzyme.html)

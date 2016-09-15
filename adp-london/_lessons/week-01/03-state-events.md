@@ -98,7 +98,24 @@ To do that, we'll need to use one of React's lifecycle methods. It's up to you t
 
 ## Lab Activity
 
-*Lab activity TBA...*
+Today's lab will be spent building out our stateful `PostList` component.
+
+There are two properties we'll want to keep track of in our app state:
+
+- `posts`: the list of posts (imported from `data.js`)
+- `orderBy`: whether they are sorted by date (`newest`, the default) or popularity (`popular`)
+
+The `PostList` component will also require three event handlers to pass as props to child components:
+
+- `sortPopular()` passed to a Material UI `FlatButton`
+- `sortNewest()` passed to another Material UI `FlatButton`
+- `updateVote()` passed to our `Post` component
+
+And one helper method to render the posts:
+
+- `renderPosts()` (conditionally sorting the posts based on the `orderBy` state property)
+
+First, we'll need to fully build out our `Post` component so we can render it as a child of the `PostList`, or course!
 
 ---
 
