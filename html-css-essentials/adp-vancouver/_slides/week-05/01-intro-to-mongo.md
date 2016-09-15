@@ -17,108 +17,75 @@ class: center, middle, inverse
 
 ---
 layout: false
-
 # Agenda
-
-1. NoSQL
-2. Distinguish between SQL & NoSQL 
+1. Define NoSQL
 2. What is MongoDB and why we use it
-3. Mongod & Mongo
+3. Know the purpose of Mongod & Mongo
 4. Define collections, documents and fields
-5. Use Query selector
-6. MongoDB and CRUD
-8. Sharding
+5. Use a Query selector
+6. Write commands in Mongo that CRUD
+7. Understand the purpose of Sharding
+8. Be able to debate the differences of NoSQL & SQL
 
 ---
-# What is your relation
+# SQL or NoSQL?
 
-**MySQL** (relational database) try to position a one-size-fits-all solution
+Tries to position a one-size-fits-all solution. 
 
-- **Examples**: Oracle, SQL Server, MySQL
+Think: **Excel**
 
-- **Customers**: Uber, Nasa, USNavy
+vs.
 
-**NoSQL** is about being open and aware of alternative, exisiting and additional patterns and tools for managing your data
+Open and aware of alternative, exisiting and additional patterns and tools for managing your data. 
 
+Think: **JSON**
+
+---
+
+## SQL
+
+Tries to position a one-size-fits-all solution. Think: **Excel**
+
+- **Examples**: Oracle, SQL Server, PostGres
+
+## NoSQL
+ 
+ Open and aware of alternative, exisiting and additional patterns and tools for managing your data. Think: **JSON**
 - **Examples**: *CouchDB, Cassandra, MongoDB*
 
-- **Customers**: *Google, Facebook, Ebay*
-
 ---
-# True or False
-
-NoSQL is better than SQL?
-![think](/public/img/slide-assets/homer-thinking.png)
-
----
-# NoSQL vs SQL
-
-**FALSE!**
-
-Some projects are better suited to use a SQL db while others are better suited for NoSQL dbs
-
-Like anything NoSQL has it's **positives** and **negatives**
-
-Which projects should use what...?
-
----
-# SQL
-
-Projects where you might use SQL:
-
-- Data requirements which can be identified up-front
-- Where you want standards-based proven technology with good developer experience and support.
-
-
----
-#NoSQL
-
-Projects where you might use NoSQL:
-
-- You have lots of data that needs to be stored which is unstructured
-- Simpler/looser project objectives, able to start coding immediately
-- You generally don't need to define your schema up front
-- Scalability and speed needs
-
-
----
-# NoSQL
-
-So what is NoSQL?
+# So what is NoSQL?
 
 A NoSQL database is a mechanism for storage and retrieval of data which is different from relational databases which use tabular relations.
 
-***"Not only have SQL"*** databases have exsisted since the late 1960s but didn't gain popularity until the demands of **Web 2.0**
+***"Not only SQL"*** databases have exsisted since the late 1960s but didn't gain popularity until the demands of **Web 2.0**
 ---
 # Metaphor
 
-A great example of the difference between **SQL** and **NoSQL** dbs is the difference between standard(NoSQL) and automatic cars(SQL).
-
-With standard cars you are responsible for a lot more work but you are also have more freedom and are able to get more performance out of your vehicle.
-
-But most cars simple sit in traffic and don't need that extra performance...
+https://kvaes.files.wordpress.com/2015/01/1401269083847.jpg?w=788
 
 ---
 # MongoDB
 
 We will be using MongoDB for our project and it is a Document-oriented database.
 ![mongo](/public/img/slide-assets/mongo_logo.png)
-Mongo is viewed as an alternative to relational dbs and is great for unstructured data, especially when you have a lot of it.
+Mongo is great for unstructured data, especially when you have a lot of it.
 
 Mongo's named is derived from humongus.
 
 ---
-# How do they look
+# Comparison
+
 SQL TABLE
 ![SQL-Table](/public/img/slide-assets/MySQL.png)
 
-MongoDB
+MongoDB Document
 ```
 {
-  ID: 1,
+  _id: 1,
   title: "JavaScript Ninja",
-  Experience: 0.1,
-  Industry: "Made-up",
+  experience: 0.1,
+  industry: "Made-up",
 }
 ```
 
@@ -126,50 +93,6 @@ MongoDB
 # Watch
 
 <iframe width="650" height="395" src="https://www.youtube.com/embed/b2F-DItXtZs" frameborder="0" allowfullscreen></iframe>
-
----
-# Vocabulary
-
-Mongo has **collections** vs. SQL's **tables**
-
-Mongo's **collections** are made up of **documents** vs. SQL **tables** which are made up of **rows**
-
-Relational db's management systems save **data** in **rows** within **tables**. MongoDB save's **data** as **documents** within **collections**.
-
----
-
-# Documents
-
-**Documents** exist independently. They can also have different fields
-
-**Dynamic Schema**, allows documents to have different information but still be grouped together
-
-**Document Field order** is always persevered except in two cases
-1. The first field in the document is always the _id
-2. Updates may result in the reordering of fields in the document.
-
----
-
-# MongoDB
-So...
-
-MongoDB contains **collections** which are made up of **documents** which is made up of **fields** 
-
-**Collections** can be **indexed** to improve lookup and sorting performance. 
-
-The **cursor** which is a pointer to the result set of a query. Clients can iterate through a cursor to retrieve results.
-
----
-# Mongod
-
-***Straight from the Mongo docs:***
-
-*"mongod is the primary daemon process for the MongoDB system. It handles data requests, manages data access, and performs background management operations. This document provides a complete overview of all command line options for mongod."*
-
-[Click this Link](https://docs.mongodb.com/manual/reference/program/mongod/)
-
-
-Mongo is the command-line shell that connects to a specific instance of mongod. Mongo is a Javascript shell.
 
 ---
 # Less Talking More Doing
@@ -191,7 +114,9 @@ connecting to: test
 ```
 
 ---
-# Commands
+
+# Exercise 1
+Partner up and understand what each of the commands do
 ```
 db.help()
 
@@ -218,60 +143,115 @@ db.collection.update
 ```
 
 ---
-# Exercise 1
+# Vocabulary
 
-With the commands from the previous slide perform the following tasks. Make sure to replace collection with a name.
+Mongo terminology compared to SQL
 
-1. Can you insert multiple field and value entries into one collection?
-2. Change exsisting entries
-2. How do you remove specific field and values? 
-3. Can you find all the entries of a specific field?
+| SQL         | MONGO |
+|-------------|-------|
+| table       |   ?   |
+| row         |   ?   |
+| column      |   ?   |
+| table joins |   ?   |
+| primary key |   ?   |
+
 
 ---
 # Query selector 
 
-The query selector (think the where clause in SQL) help with
+The query selector (think the **WHERE** clause in **SQL**) help with
 
-- Finding
-- Counting
-- Updating
-- Removing
+- find
+- count
+- update
+- remove
 
 Documents from collections.
 
 ---
 # Exercise 2
 
+[Click Here](https://raw.githubusercontent.com/redacademy/adp-mongo-exercise3/master/data.json?token=ALZHC1bq8DWbeqm4YPxcxDD2zuxv7an7ks5X5B_EwA%3D%3D#)
+and copy the information into a new dbs.
+
 Spend 15 minutes reading and implementing the different commands from 
 
-[this link](https://docs.mongodb.com/manual/reference/operator/query/)
+[This Link](https://docs.mongodb.com/manual/reference/operator/query/)
 
-After you will be reponsible for teaching a Query operator to the rest of the class
+After everyone will be reponsible for teaching a Query operator to the rest of the class
 
 ---
-# Exercise 3
+#Translator Game
 
-In this exercise you will be working through different query commands follow the link below. Copy the JSON from the data.json file
+You will be provided with SQL executables and statements.
 
-[Link below](https://github.com/redacademy/adp-mongo-exercise3/blob/master/data.json)
+You will have to **translate** the SQL into MongoDB commands.
 
-Then paste the data into your terminal with mongo running
+Write down your MongoDB commands. This is a competition each correct translation counts as 7 points.
 
-Run the command below to make sure it inserted correctly and head to the next slide
-```js
-db.newts.find()
+
+---
+class: middle
+# #1
+
+
 ```
+CREATE TABLE apple (
+    id MEDIUMINT NOT NULL
+        AUTO_INCREMENT,
+    user_id Varchar(30),
+    quantity Number,
+    quality char(1),
+    PRIMARY KEY (id)
+)
+```
+
 ---
-# Exercise 3 continued...
+class: middle
+# #2
 
-Update the information you just inserted into the newts collection.
+```
+ALTER TABLE apple
+ADD purchased_date DATETIME
+```
 
-1. Use the update and set parameters
-2. Increment a field by a certain amount
-3. Add a value via $push operator 
-4. Sort by weight
-5. Sort by name then weight
+---
+class: middle
+# #3
 
+```
+DROP TABLE apple
+```
+
+---
+class: middle
+# #4
+
+```
+SELECT *
+FROM apple
+```
+
+---
+class: middle
+# #5
+
+```
+SELECT *
+FROM apple
+WHERE quality != "A"
+```
+
+---
+class: middle
+# #6
+
+```
+SELECT *
+FROM apple
+WHERE quality = "A"
+ORDER BY user_id ASC
+```
 
 ---
 # Data Modeling
@@ -333,5 +313,56 @@ class: center, middle
 
 ![sharding](/public/img/slide-assets/sharding.jpg)
 
+---
+# True or False
+
+NoSQL is better than SQL?
+![think](/public/img/slide-assets/homer-thinking.png)
+
+---
+# NoSQL vs SQL
+
+**FALSE!**
+
+Some projects are better suited to use a SQL db while others are better suited for NoSQL dbs
+
+Like anything NoSQL has it's **positives** and **negatives**
+
+---
+#Which one should I use?
+ 
+For the next couple of slides pick whether you think a 
+
+**SQL** database would be better 
+
+or
+
+A **mongo** database would be better
+
+---
+class: center, middle
+
+#Craiglist
+
+---
+
+class: center, middle
+
+#Banking
+
+---
+class: center, middle
+
+#Yellow Pages
+
+---
+class: center, middle
+
+#Facebook
+
+---
+class: center, middle
+
+#Grocery Store
 
 {% endhighlight %}

@@ -44,4 +44,25 @@ Is where the sum of the parts is greater than the whole.
 
 ![Path](/public/img/slide-assets/paths.jpg)
 
+
+
+---
+#Advanced GIT MACK
+
+---
+#Stash
+
+---
+#Rebase - interactive
+
+---
+#Hooks
+ - pre commit
+
+---
+#Git cherry-pick
+
+---
+#permissions
+
 {% endhighlight %}
