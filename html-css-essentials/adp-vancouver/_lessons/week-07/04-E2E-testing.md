@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: E2E Testing
-slides: []
+slides: ['_slides/week-07/04-e2e-testing.md']
 lesson_date: 2016-11-10
 ---
 
@@ -15,8 +15,11 @@ lesson_date: 2016-11-10
 
 ## Keywords
 
-- E2E
-- snapshot testing
+- E2E tests
+- selenium
+- webdriver
+- page objects
+
 
 ---
 

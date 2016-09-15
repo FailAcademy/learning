@@ -1,14 +1,16 @@
 ---
 layout: lesson
 title: Advanced Testing
-slides: []
+slides: ['_slides/week-07/03-advanced-testing.md']
 lesson_date: 2016-11-09
 ---
 
 ## Lesson Objectives
 
-- write stubs & spies using [Sinon.js](http://sinonjs.org/)
+- write spies using Jest
+- write stubs and mocks using Jest
 - setup code coverage in Jest
+- setup Jest to pre-compile Typescript
 
 ---
 
@@ -24,32 +26,43 @@ lesson_date: 2016-11-09
 ## Pre-Work
 
 - Read about [Enzyme](http://airbnb.io/enzyme/). Write three unit tests for React components using Enzyme.
-- Read about [Sinon](http://sinonjs.org/). Be prepared to explain spies, stubs and mocks.
 
 ---
 
 ## Exercise 1
 
-Setup a test watcher with code-coverage reporting.
+Write unit tests for React components in the Worst Pokemon project.
 
 ---
 
 ## Exercise 2
 
-Write unit tests for React components in the Worst Pokemon project.
+Write unit tests for action creators and middleware in your Worst Pokemon project.
+
+These tests should use **spies** or **mocks**.
+
+---
+
+## Exercise 3
+
+Setup a test watcher with code-coverage reporting.
+
+---
+
+## Exercise 4
+
+Setup your Worst Pokemon project to use pre-compiled TypeScript tests.s
 
 ---
 
 ## Lab Activity
 
-Write unit tests to test your existing React components from an earlier project.
+Write unit tests to test your existing React components, middleware and action creators from an earlier project.
 
 ---
 
 ## Resources
 - [Ava & React](https://github.com/avajs/ava/blob/master/docs/recipes/react.md)
 - [Setting up Code Coverage](https://blog.engineyard.com/2015/measuring-clientside-javascript-test-coverage-with-istanbul)
-- [Sinon Tutorial](https://www.sitepoint.com/sinon-tutorial-javascript-testing-mocks-spies-stubs/)
 - [Unit Test Best Practices](https://gist.github.com/axyz/64c5087565b2c1907c0a8c4952cba27f)
-- [Enzyme](http://airbnb.io/enzyme/)
-- [React Testing with Enzyme](http://brewhouse.io/2016/03/18/accelerate-your-react-testing-with-enzyme.html)
+- [The Difference Between Mocks & Stubs](http://martinfowler.com/articles/mocksArentStubs.html#TheDifferenceBetweenMocksAndStubs)
