@@ -42,6 +42,16 @@ Compare [TypeScript](https://www.typescriptlang.org/play/) with [Babel](https://
 
 ---
 
+## Exercise 2
+
+Walk-through the different ways of writing types in TypeScript:
+- type inference
+- types
+- interfaces
+- generics
+
+---
+
 ## Lab Activity
 
 Setup a project to use Typescript. Include:
