@@ -25,6 +25,7 @@ Prior to class today, be sure to complete this Codeacademy course:
 - Dynamically create an array of components and their props using data stored in an array of objects along with the `.map()`, `.sort()`, and `.filter()` functions.
 - Explain why it is essential to supply a unique "key" for each item in an array containing dynamic child components.
 - Write `Proptype` declarations to catch invalid props.
+- Use CSS modules to apply styles to React components.
 
 ---
 
@@ -140,16 +141,72 @@ Make all of the props for all components **required**.
 
 ## Lab Activity
 
-*Lab activity TBA...*
+In today's lab we will begin working on the the REDit application.
+
+### Set-up
+
+REDit will require a more complicated set-up than what we get with Create React App, so you'll need to begin by downloading the **[RED React Seed](https://github.com/redacademy/red-react-seed)** instead. Follow the installation instructions in the README.
+
+Take a look at the directory structure inside RED React Seed&mdash;again, it's a bit more complex than what we've seen with the to-do app. Pay particular attention to how the sample components are organized into named sub-directories with `index.js` files. This is the pattern we will follow to build out all of the components the application, so be sure you thoroughly understand what's going on here.
+
+**Note:** RED React Seed has sub-directories for **components** and **containers**. Don't worry about how to differentiate between the two yet, just put everything into `/components` for now and we'll have a deeper discussion about this during the React Router lesson.
+
+### Styles
+
+We will primarily use **[Material UI](http://www.material-ui.com/#/)** to style our REDit app. Spend some time reviewing the Material UI docs site and jot down some notes about what components you think you'll need to use from this library in the REDit app.
+
+Material UI has already been added as project dependency in the RED React Seed, but you should also take some time to review **[its GitHub repo README](https://github.com/callemall/material-ui)**  too.
+
+We will still need to write some extra CSS for our app, and to do that we'll be using [CSS modules](https://github.com/css-modules/css-modules). For all additional component-specific CSS that you need to write for your app, you'll want to follow the example set out in the `App` component in the RED React Seed.
+
+### Code
+
+The remainder of today's lab will be spend roughing-out the component structure for the REDit app. Ultimately, we will need to create the following component structure for our app:
+
+```
+<Layout />
+|- <HeaderBar />
+|- <App />
+   |- <Categories />
+      |- <Week />
+   |- <Welcome />
+   |- <LoginForm />
+   |- <CreatePost />
+   |- <PostList />
+      |- <Post />
+```
+
+During Week 1, the only component that will use an ES2015 class will be the `PostList` component. The rest will all be **functional stateless components**.
+
+Knowing this, rough-out the directory/component structure for all of the required components for this app.
 
 ---
 
 ## Additional Resources
 
-Some helpful React resources:
+From Facebook's official React docs:
 
-- [Offical React Docs](https://facebook.github.io/react/docs/getting-started.html)
-- [React Patterns](http://reactpatterns.com/)
+- [Official React Docs](https://facebook.github.io/react/docs/getting-started.html)
 - [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html)
-- [React Enlightenment](http://www.reactenlightenment.com/)
+
+Patterns used in React development:
+
+- [React Patterns](http://reactpatterns.com/)
 - [React.js in patterns](http://krasimirtsonev.com/blog/article/react-js-in-design-patterns)
+
+Some other helpful React tutorials and ebooks:
+
+- [Plotly Academy](http://academy.plot.ly/)
+- [React Enlightenment](http://www.reactenlightenment.com/)
+
+Recorded talks from React.js Conf:
+
+- [React.js Conf 2016](https://www.youtube.com/playlist?list=PLb0IAmt7-GS0M8Q95RIc2lOM6nc77q1IY)
+
+More about CSS Modules:
+
+- [CSS Modules: Welcome to the Future](https://glenmaddern.com/articles/css-modules)
+
+Helpful resource for understanding the difference between `.map()`, `.filter()`, and `.reduce()`:
+
+- [Array Map, Filter and Reduce in JS](http://atendesigngroup.com/blog/array-map-filter-and-reduce-js)
