@@ -32,9 +32,9 @@ A database is an organized collection of data. The data is typically organized t
 ---
 #Why we use databases
 
-Think of how we get the information about the weather from the newspaper. Information can be printed but it cannot be continuously updated without printing a new paper. We call this static
+Think of how we get the information about the weather from the newspaper. Information can be printed but it cannot be continuously updated without printing a new paper. We call this **static**
 
-Websites can continuously update because it is pulling information from a database
+Websites can continuously update because it is pulling information from a database, a database that can be **dynamically** updated
 
 ---
 #Data storage
@@ -49,9 +49,8 @@ For example Facebook stores data on
 
 ---
 #Database and tables
-Data is organized and stored into tables, which hold the data so it is available to be retrieved. Each Database has a table.
+MySQL Data is organized and stored into tables, which hold the data so it is available to be retrieved. Each Database has a table. Each Table has cells or fields of data that is accessible.
 
-Each Table has cells or fields of data that is accessible.
 ![Table](/public/img/slide-assets/sql-table.png)
 
 A row represents an entire data record within each table.
@@ -63,10 +62,10 @@ Also tables often have a unique identifier (ID here) used to order the rows.
 
 To find information we search through columns first then by rows....Why?
 
-Example - students at red - store: 
+Example - students at red: 
 1. name 
 2. pass/fail 
-3. course  
+3. course
 
 Once built the columns for this database won’t increase but the rows will. Usually there are less columns than there are rows. Left to right top to bottom.
 
@@ -88,7 +87,7 @@ http://www.my-project-management-expert.com/different-types-of-databases.html
 ---
 #Database
 
-relational databases are one of the most common type
+Relational databases are one of the most common types
 
 A relational database is made up of several components, of which the table is most significant.  The table is where all the data in a database is stored, and without tables, there would not be much use for relational databases.
 
@@ -112,7 +111,7 @@ Structured Query Language - A query language that allows you to interact with th
 
 SQL allows you to
 1. Create Table
-2. Slect
+2. Select
 3. Insert into
 4. Update
 5. Delete
@@ -185,21 +184,21 @@ CREATE TABLE people
 
 ---
 #What?
-* bigserial (or serial8) - an integer that automatically increments from 1 to 9223372036854775807 with each new row 
-* varchar(n) - a string with n characters - called a varchar because its length is _variable_ (http://www.postgresql.org/docs/9.2/static/datatype-character.html)
-* date - http://www.postgresql.org/docs/9.1/static/datatype-datetime.html#DATATYPE-DATETIME-DATE-TABLE
+* **bigserial** (or serial8) - an integer that automatically increments from 1 to 9223372036854775807 with each new row 
+* **varchar**(n) - a string with n characters - called a varchar because its length is _variable_ (http://www.postgresql.org/docs/9.2/static/datatype-character.html)
+* **date** - http://www.postgresql.org/docs/9.1/static/datatype-datetime.html#DATATYPE-DATETIME-DATE-TABLE
 
 ---
 #What continued...
-* int2 (or smallint) - integer between -32768 and 32767 inclusive. (http://www.postgresql.org/docs/9.2/static/datatype-numeric.html)
+* **int2** (or smallint) - integer between -32768 and 32767 inclusive. (http://www.postgresql.org/docs/9.2/static/datatype-numeric.html)
 
 Datatypes limit the kind of info that can be stored in a table, but only very broadly.  For example, a column containing product prices should only have positive values, but there is no datatype for numbers greater than 0. _Constraints_ allow us to limit the data a table will accept and raise an error if a user tries to input invalid data.
 
 ---
 #Last what
-* PRIMARY KEY - data must be unique and not null (identical to "UNIQUE NOT NULL")
-* NOT NULL - unsurprisingly, data must not be null :)
-* CHECK - allows you to specify that the data satisfies a boolean expression
+* **PRIMARY KEY** - data must be unique and not null (identical to "UNIQUE NOT NULL")
+* **NOT NULL** - unsurprisingly, data must not be null :)
+* **CHECK** - allows you to specify that the data satisfies a boolean expression
 
 ---
 #Create a database
@@ -238,7 +237,7 @@ Do they all work?
 ---
 #Field's constraint
 
-No
+**No**
 
 ```
 INSERT INTO people (first, last, dob) VALUES ('jil', 'nance', '1/1/2003');

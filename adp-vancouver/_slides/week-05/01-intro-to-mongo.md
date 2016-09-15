@@ -334,6 +334,4 @@ class: center, middle
 ![sharding](/public/img/slide-assets/sharding.jpg)
 
 
----
-
 {% endhighlight %}
