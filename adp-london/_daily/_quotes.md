@@ -12,7 +12,7 @@ The greatest obstacle to discovery is not ignorance, but the illusion of knowled
 It is important that students bring a certain ragamuffin, barefoot irreverence to their studies; they are not here to worship what is known, but to question it.
 - J. Bronowski
 
-The sooner you start to code, the longer the program will take.
+"The sooner you start to code, the longer the program will take."
 - R. Carlson
 
 Computer Science is no more about computers than astronomy is about telescopes.
@@ -87,30 +87,30 @@ Genius is 1 percent inspiration and 99 percent perspiration. As a result, genius
 "All programmers are playwrights and all computers are lousy actors."
 - Anonymous
 
-If I had eight hours to chop down a tree, I would spend 6 hours sharpening an axe.
+"If I had eight hours to chop down a tree, I would spend 6 hours sharpening an axe."
 - Anonymous
 
-If you understand what you're doing, you're not learning anything.
+"If you understand what you're doing, you're not learning anything."
 - Anonymous
 
 
-Programming languages should be designed not by piling feature on top of feature, but by removing the weaknesses and restrictions that make additional features appear necessary.
+"Programming languages should be designed not by piling feature on top of feature, but by removing the weaknesses and restrictions that make additional features appear necessary."
 - Anonymous
 
-Programs for sale: Fast, Reliable, Cheap: choose two.
+"Programs for sale: Fast, Reliable, Cheap: choose two."
 - Anonymous
 
-Ready, fire, aim (the fast approach to software development).
-Ready, aim, aim, aim, aim ... (the slow approach to software development).
+"Ready, fire, aim (the fast approach to software development).
+Ready, aim, aim, aim, aim ... (the slow approach to software development)."
 - Anonymous
 
-The person who knows HOW will always have a job. The person who knows WHY will always be his/her boss.
+"The person who knows HOW will always have a job. The person who knows WHY will always be his/her boss."
 - Anonymous
 
-When a programming language is created that allows programmers to program in simple English, it will be discovered that programmers cannot speak English.
+"When a programming language is created that allows programmers to program in simple English, it will be discovered that programmers cannot speak English."
 - Anonymous
 
-Why do we never have time to do it right, but always have time to do it over?
+"Why do we never have time to do it right, but always have time to do it over?"
 - Anonymous
 
 Percy:  You know, they do say that the Infanta's eyes are more beautiful
@@ -136,5 +136,5 @@ I sometimes feel this way when trying to explain a new programming concept.
 
 - From the Queen of Spain's Beard episode of Blackadder.
 
-If you don't think carefully, you might believe that programming is just typing statements in a programming language.
+"If you don't think carefully, you might believe that programming is just typing statements in a programming language."
 - W. Cunningham
