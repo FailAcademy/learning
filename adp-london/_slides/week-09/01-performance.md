@@ -373,71 +373,88 @@ template: inverse
 
 ---
 
+# Content Efficiency
+
+Read [Content Efficiency](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/?hl=en).
+
+- What points can you take from this article?
+- How will you use this information to improve your app or site?
+
+---
+
+# Critical Rendering Path
+
+Read [CRP](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en)
+
+Make sure you get a solid understanding of **critical rendering path**, **render blocking** & **jank**.
+
+---
+
 # Critical Render Path (CRP)
 
+The CRP is the order of operations the browser takes to render a page.
+
+```
 DOM -> CSSOM -> Render Tree -> Layout -> Paint
   |                 ^
   |---> JS ---------|
-
----
-
-# 1. DOM
-
-HTML -> Tree of DOM Nodes
-
-
----
-
-# 2. CSSOM
-
-Like the DOM, but for CSS.
-
-CSS is render blocking.
-
----
-
-# Which is Faster?
-
-```css
-{
-  p {
-    color: red;
-  }
-}
 ```
 
-or
+Understanding CRP order is "critical" for finding performance improvements.
 
-```css
-{
-  div p {
-    color: red
-  }
-}
+---
+
+# Render-Blocking
+
+**Render Blocking** refers to time the user must wait while the browser does a blocking operation. 
+
+These can include:
+
+- waiting for the DOM to load
+- waiting for the CSS to load
+- waiting for scripts in the `<head>` to load
+
+How can we use our knowledge of render blocking to improve performance?
+
+---
+
+# Jank
+
+Jank
+
+---
+template: inverse
+
+# HTTP
+
+---
+
+# HTTP
+
+HTTP is a common format for communicating between the client & server.
+
+Your images, data, scripts, CSS & HTML are all loaded over HTTP.
+
+```
+SERVER <- HTTP -> CLIENT 
 ```
 
----
-
-# 3. Render Tree
-
-Combine DOM + CSSOM.
+How might you improve HTTP performance?
 
 ---
 
-# 4. Layout
+# HTTP Caching
 
-Tree is rendered inside of viewport based on width.
 
-body (100%)
-div (50%)
-p (100%)
-span (50%)    em (25%)
 
 ---
 
-# 5. Paint
+# HTTP/2
 
+Read [HTTP/2](https://blog.newrelic.com/2016/02/09/http2-best-practices-web-performance/).
 
+- What are the benefits of using HTTP/2 over HTTP/1.1?
+- Are there any downsides to using HTTP/2?
 
 ---
 

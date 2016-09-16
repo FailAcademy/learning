@@ -3,25 +3,25 @@
 “Computer science education cannot make anybody an expert programmer any more than studying brushes and pigment can make somebody an expert painter.”
 - Eric S. Raymond
 
-He who asks is a fool for five minutes; he who does not ask remains a fool forever.
+"He who asks is a fool for five minutes; he who does not ask remains a fool forever."
 - Anonymous Chinese Proverb
 
-The greatest obstacle to discovery is not ignorance, but the illusion of knowledge.
+"The greatest obstacle to discovery is not ignorance, but the illusion of knowledge."
 - D. Boorstin
 
-It is important that students bring a certain ragamuffin, barefoot irreverence to their studies; they are not here to worship what is known, but to question it.
+"It is important that students bring a certain ragamuffin, barefoot irreverence to their studies; they are not here to worship what is known, but to question it."
 - J. Bronowski
 
 "The sooner you start to code, the longer the program will take."
 - R. Carlson
 
-Computer Science is no more about computers than astronomy is about telescopes.
+"Computer Science is no more about computers than astronomy is about telescopes."
 - E. Dijkstra
 
-If we wish to count lines of code, we should not regard them as lines produced but as lines spent.
+"If we wish to count lines of code, we should not regard them as lines produced but as lines spent."
 - E. Dijkstra
 
-Genius is 1 percent inspiration and 99 percent perspiration. As a result, genius is often a talented person who has simply done all of his homework.
+"Genius is 1 percent inspiration and 99 percent perspiration. As a result, genius is often a talented person who has simply done all of his homework."
 - T. Edison
 
 "Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program."
@@ -92,7 +92,6 @@ Genius is 1 percent inspiration and 99 percent perspiration. As a result, genius
 
 "If you understand what you're doing, you're not learning anything."
 - Anonymous
-
 
 "Programming languages should be designed not by piling feature on top of feature, but by removing the weaknesses and restrictions that make additional features appear necessary."
 - Anonymous

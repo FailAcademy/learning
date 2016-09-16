@@ -9,7 +9,7 @@ lesson_date: 2016-10-06
 
 - Identify the roles of React and Redux when used together to display views and store state
 - Use Redux to write 'state' free code in React that relies largely on 'props'
-- Identify the difference between presentational and container components
+- Identify the difference between **presentational** and **container** components
 - Use "react-redux", with <Provider> and 'connect' to map state and dispatches to props
 - Use "reselect" to keep logic out of react
 - Use "react-redux-router" to preserves routes in state
@@ -24,6 +24,8 @@ lesson_date: 2016-10-06
 
 ## Keywords
 
+- presentational component
+- container component
 - connect
 - provider
 - mapStateToProps
@@ -117,3 +119,4 @@ Think about:
 
 - [React-Redux Docs](https://github.com/reactjs/react-redux)
 - [Egghead.io React-Redux Tutorial](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)
+- [Quick Guide to React & Redux](https://www.reax.io/blog/2016/07/07/quick-guide-to-react-and-redux/)
