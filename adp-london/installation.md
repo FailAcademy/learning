@@ -62,6 +62,10 @@ git remote add origin https://github.com/redacademy/<COURSE-NAME>.git
 git push -u origin master
 ```
 
+#### Auto-compiling Project pages
+
+- compile resources from lessons by running node _scripts/addResources.js
+
 ### Step 3: Jekyll Auth Configuration
 
 We're going to set up a special branch of this repo which we will use strictly for deployment purposes to Heroku.

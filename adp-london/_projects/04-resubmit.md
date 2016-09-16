@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Resubmit
+title: Project 4 - Resubmit with Testing
 due: Week 8 (beginning of class)
 ---
 
