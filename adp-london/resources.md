@@ -182,13 +182,12 @@ Express: [Fast, unopinionated, minimalist web framework](https://expressjs.com/)
 - http://www.querymongo.com/
 - http://openmymind.net/mongodb.pdf
 
-## PROJECT
-Head to this [link]( https://raw.githubusercontent.com/mongodb/docs-assets/primer-dataset/primer-dataset.json) and save the json with the filename primer-dataset.json
 
 
 ### Git for teams
 
-
+- http://gitforteams.com/
+- https://gitlab.com/gitforteams/gitforteams  
 - https://raw.githubusercontent.com/gitforteams/diagrams/master/flowcharts/rebase-or-merge.png
 - https://raw.githubusercontent.com/emmajane/gitforteams/master/resources/workflow-undoing-merge.png
 - https://raw.githubusercontent.com/emmajane/gitforteams/master/resources/workflow-undoing-changes.png
