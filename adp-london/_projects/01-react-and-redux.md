@@ -1,6 +1,6 @@
 ---
 layout: project
-title: RED it (1/2)
+title: Project 1 / Part 1 - REDit
 due: Week 3 (beginning of class)
 ---
 

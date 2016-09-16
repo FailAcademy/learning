@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to Applications Slides
+title: Software Applications Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Intro to Applications
+# Software Applications
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 

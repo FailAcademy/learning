@@ -1,10 +1,8 @@
 ---
 layout: project
-title: RED it (2/2)
+title: Project 1 / Part 2 - REDit
 due: Week 5 (beginning of class)
 ---
-
-# Project 2: RED it (2/2)
 
 Continue your Product Hunt / Reddit clone. Your project should have a user login, and allow users to create new posts.
 
