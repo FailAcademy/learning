@@ -5,7 +5,6 @@ title: Home
 
 <div class="page">
    <p>Welcome to RED Academy's App Developer Professional Program!</p>
-   <p>For detailed information about the course requirements, <a href="#">download the outline</a>.</p>
 
    <h2>Course Schedule</h2>
    <div id="calendar"></div>
@@ -17,8 +16,9 @@ title: Home
    <ul class="archive-list">
       {% for project in site.projects %}
          <li>
-            <a href="{{project.url}}">{{project.title}}</a>
-         </li>
+          <span class="project-name"><a href="{{project.url}}">{{project.title}}</a></span>
+          <span class="project-due"><strong>Due Date:</strong> {{ project.due }}</span>
+        </li>
       {% endfor %}
    </ul>
 

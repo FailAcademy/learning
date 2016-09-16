@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to Mongo Slides
+title: Introducing MongoDB Slides
 
 ---
 
@@ -10,7 +10,7 @@ layout: true
 class: center, middle, inverse
 
 ---
-# Intro to MongoDB
+# MongoDB
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
