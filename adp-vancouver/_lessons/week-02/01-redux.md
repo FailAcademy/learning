@@ -18,6 +18,10 @@ lesson_date: 2016-10-03
 
 ## Pre-Work
 
+- Do your own personal research and be prepared tomorrow to explain:
+  - the MVC pattern
+  - the Flux pattern
+  - the differences between MVC & Flux
 - Read the [Redux Introduction](http://redux.js.org/docs/introduction/index.html)
 
 ---

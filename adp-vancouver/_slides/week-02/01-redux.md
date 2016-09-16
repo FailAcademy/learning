@@ -123,13 +123,15 @@ Discuss:
 
 # Worst Pokemon: Setup
 
-Clone and install the starter for your App.
+Use "create-react-app" to create a new project.
 
 ```shell
-git clone https://github.com/redacademy/adp-redux-walkthrough.git
-cd adp-redux-walkthrough
-git reset --hard e823513
+npm install -g create-react-app
+
+create-react-app worst-pokemon
+cd worst-pokemon
 npm install
+npm start
 ```
 
 ---
