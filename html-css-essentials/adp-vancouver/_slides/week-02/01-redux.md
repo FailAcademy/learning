@@ -69,10 +69,10 @@ class: middle
 3. middleware
 
 ---
-
+class: center, middles
 # [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
 
-![Redux Devtools](https://camo.githubusercontent.com/a0d66cf145fe35cbe5fb341494b04f277d5d85dd/687474703a2f2f692e696d6775722e636f6d2f4a34476557304d2e676966)
+![Redux Devtools](/public/img/slide-assets/ReduxDevTools.gif)
 
 ---
 class: middle
@@ -82,19 +82,19 @@ class: middle
 Clone and install the TodoMVC demo.
 
 ```shell
-git clone https://github.com/reactjs/redux/tree/master/examples/todomvc
-cd todomvc
+git clone https://github.com/reactjs/redux
+cd redux/examples/todomvc
 npm install
 npm start
 ```
 
-Open up your Redux DevTools.
+[Install](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en) and Open up your Redux DevTools.
 
 ---
 
 # Redux: The Play
 
-Each group will choose a different app from [examples](http://redux.js.org/docs/introduction/Examples.html).
+Each group will choose a different app from the examples [here](http://redux.js.org/docs/introduction/Examples.html).
 
 Prepare a play to demonstrate how your app works.
 

@@ -28,36 +28,21 @@ Read and work through the below tutorials.
 
 ## Exercise 1
 
-Do this activity!
+Everyone is tasked with making a website for our class. This site must be about Git and the benefits of using it. Everyone must collaborate on it. 
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+The process will consist of 4 seperate 5 minute stages. 
+1. Everyone is working on creating the site separately.
+2. Everyone will zip their files over to an elected person. This person will work on merging all the files into one. The remaining people will continue on improving the site. 
+3. Rotate untill everyone has had a chance to merge.
+
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+How would you create verision control?
 
-```html
-
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+Spend a few minutes writing down all the features you would like your verison control to have. Specifically tailor it to a team environment. 
 
 ---
 
