@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: User Sessions & Accounts
+title: Authentication & Authorization
 slides: []
 lesson_date: 2016-10-21
 ---

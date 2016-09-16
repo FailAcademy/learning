@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Async JavaScript Slides
+title: Asynchronous JavaScript Slides
 
 ---
 
@@ -10,7 +10,7 @@ layout: true
 class: center, middle, inverse
 
 ---
-# Async JavaScript
+# Asynchronous JavaScript
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
