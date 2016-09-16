@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Git for teams
+title: Git for Teams
 slides: ['_slides/week-05/05-git-for-teams.md']
 lesson_date: 2016-10-27
 ---

@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: Building Web Servers With JavaScript
-slides: ['_slides/week-03/01-building-servers-with-js.md']
+title: Introducing Node
+slides: ['_slides/week-03/01-intro-to-node.md']
 lesson_date: 2016-10-11
 ---
 
