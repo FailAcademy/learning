@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Meteor
+title: Project 3 - VoteWise
 due: Week 7 (beginning of class)
 ---
 

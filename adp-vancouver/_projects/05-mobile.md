@@ -1,9 +1,8 @@
 ---
 layout: project
-title: Mobile
+title: Project 5 - Splashify
 due: Week 9 (beginning of class)
 ---
-
 
 Your project must include the following:
 * Mobile App (*React-Native*)

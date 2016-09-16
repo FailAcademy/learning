@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: React and Redux
+title: React & Redux
 slides: ['_slides/week-02/04-react-and-redux.md']
 lesson_date: 2016-10-06
 ---
