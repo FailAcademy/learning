@@ -55,7 +55,7 @@ function addOne(x) {
 c)
 ```js
 let x = 0
-function addOne(x) {
+function addOne() {
   x += 1;
   return x;
 }
