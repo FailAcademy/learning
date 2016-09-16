@@ -21,8 +21,22 @@ lesson_date: 2016-10-24
 
 Please follow this link. https://docs.mongodb.com/manual/installation/#tutorials and complete the necessary steps to download MongoDB.
 
+## Keywords
+
+- NoSQL
+- Mongo
+- Mongod
+- Collection
+- Document
+- Sharding
+- Query selector
+- Data Modeling
+- Normalized Data models
+- Denormalized Data models
+
 ## Exercise 1
 Partner up and understand what each of the commands do
+
 ```
 db.help()
 
@@ -47,6 +61,7 @@ db.collection.remove({field: value})
 db.collection.update
 
 ```
+
 ## Exercise 2
 
 [Click Here](https://raw.githubusercontent.com/redacademy/adp-mongo-exercise3/master/data.json?token=ALZHC1bq8DWbeqm4YPxcxDD2zuxv7an7ks5X5B_EwA%3D%3D#)
