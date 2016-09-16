@@ -49,7 +49,7 @@ For example Facebook stores data on
 
 ---
 #Database and tables
-MySQL Data is organized and stored into tables, which hold the data so it is available to be retrieved. Each Database has a table. Each Table has cells or fields of data that is accessible.
+SQL Data is organized and stored into tables, which hold the data so it is available to be retrieved. Each Database has a table. Each Table has cells or fields of data that is accessible.
 
 ![Table](/public/img/slide-assets/sql-table.png)
 
