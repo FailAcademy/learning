@@ -17,6 +17,16 @@ You need to download PostgreSQL in order to work through today's lessons. Please
 - Read http://www.sqlcourse.com/intro.html
 - Don't feel like reading. Here is a video https://www.youtube.com/watch?v=FR4QIeZaPeM
 
+## Keywords
+- Database
+- SQL
+- Table
+- Fields
+- Cells
+- Unique identifier
+- Relational Database
+- CRUD
+
 ## Active Learning
 - https://academy.vertabelo.com/
 - https://www.codecademy.com/learn/learn-sql
