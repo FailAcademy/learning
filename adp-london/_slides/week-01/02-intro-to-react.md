@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: React Components and Props Slides
+title: Introducing React Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# React Components and Props
+# React
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
