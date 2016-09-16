@@ -373,9 +373,72 @@ template: inverse
 
 ---
 
+# Critical Render Path (CRP)
+
+DOM -> CSSOM -> Render Tree -> Layout -> Paint
+  |                 ^
+  |---> JS ---------|
 
 ---
 
+# 1. DOM
 
+HTML -> Tree of DOM Nodes
+
+
+---
+
+# 2. CSSOM
+
+Like the DOM, but for CSS.
+
+CSS is render blocking.
+
+---
+
+# Which is Faster?
+
+```css
+{
+  p {
+    color: red;
+  }
+}
+```
+
+or
+
+```css
+{
+  div p {
+    color: red
+  }
+}
+```
+
+---
+
+# 3. Render Tree
+
+Combine DOM + CSSOM.
+
+---
+
+# 4. Layout
+
+Tree is rendered inside of viewport based on width.
+
+body (100%)
+div (50%)
+p (100%)
+span (50%)    em (25%)
+
+---
+
+# 5. Paint
+
+
+
+---
 
 {% endhighlight %}
