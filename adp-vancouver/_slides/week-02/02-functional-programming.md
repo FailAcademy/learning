@@ -67,7 +67,7 @@ class: middle
 # 5.
 ```js
 let x = 0
-function addOne(x) {
+function addOne() {
   x += 1;
   return x;
 }
@@ -139,25 +139,29 @@ name: inverse
 
 # Array Methods
 
-In your browser console, type `Array.prototype`.
+In your browser console, type `Array.prototype.`.
 
-What are array methods?
+![Array Method](/public/img/slide-assets/arrayMethod.png)
+
+What are array methods are autocompleted?
 
 ---
 class: middle
 
 # Filter
+![Array Filter](/public/img/slide-assets/array-filter.png)
+
+Write a function called "filter" that takes a list of integers and returns only the even numbers.
 
 ```js
 let list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 ```
 
-Write a function called "filter" that takes a list of integers and returns only the even numbers.
-
 ---
 class: middle
+**Current Array**: `let list = [1, 2, 3, 4, 5, 6, 7, 8, 9];`
 
-# Reverse
+# esreveR
 
 Using an array method, make the list look like this:
 
@@ -165,12 +169,14 @@ Using an array method, make the list look like this:
 
 ---
 class: middle
-
 # Chaining
+
+**Current Array**: `let list = [9, 8, 7, 6, 5, 4, 3, 2, 1]`
 
 In one line of code, make the list look like this:
 
 `[8, 6, 4, 2]`
+
 
 ---
 class: middle
