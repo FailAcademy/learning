@@ -99,6 +99,11 @@ Node is a bridge between your operating system and JavaScript! Operating system 
 of all the hardware that modern computers have to offer. Meaning developers who can write JavaScript can control everything (not just Web Pages)!
 
 ---
+class: center, middle
+
+<img src="/public/img/slide-assets/OS Diagram.svg">
+
+---
 
 # Why Node?
 
@@ -114,12 +119,24 @@ Node gives us access to our computer's Operating System via JavaScript. If we're
 # A JavaScript Web Server
 
 ```js
+#! /usr/bin/env node
+
+const http = require('http');
+const port = 3000;
+
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hello World\n');
-});
+}).listen(port);
+
+console.log("Server running @ localhost:3000 \nCTRL + C to shutdown");
+
 ```
+
+Copy this code into a file named `server.js` <br/>
+Run `chmod 777 server.js` <br/>
+Run this script using the command `./server.js` <br/>
 
 ---
 
