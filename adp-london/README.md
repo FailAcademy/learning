@@ -8,7 +8,6 @@ Every learning materials repo will have two branches, but only one is used for a
 
 - `master` for development. **All pull requests should be to submitted against `master`.**
 - `production` for the Heroku-hosted site. **This branch is for deployment purposes only.**
-- compile resources from lessons by running `node _scripts/addResources.js`
 
 ## Contributing
 
