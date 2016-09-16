@@ -19,8 +19,9 @@ Read and work through the below tutorials.
 
 ## Learning Objectives
 
-- Learn to use Git effectively in a team setting
-- 
+- Define what makes a good team?
+- How can Git be used to make your team more effiecient 
+- Understand common errors with Git Teams
 
 
 ---
@@ -67,7 +68,8 @@ This is a link to the lab activity...
 ---
 
 ## Additional Resources
-
+- http://gitforteams.com/
+- https://gitlab.com/gitforteams/gitforteams  
 - https://raw.githubusercontent.com/gitforteams/diagrams/master/flowcharts/rebase-or-merge.png
 - https://raw.githubusercontent.com/emmajane/gitforteams/master/resources/workflow-undoing-merge.png
 - https://raw.githubusercontent.com/emmajane/gitforteams/master/resources/workflow-undoing-changes.png
