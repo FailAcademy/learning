@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Intro to Applications
+title: Software Applications
 slides: ['_slides/week-01/01-intro-to-apps.md']
 lesson_date: 2016-09-26
 ---

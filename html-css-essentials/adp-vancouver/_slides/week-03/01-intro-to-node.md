@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Building Web Servers With JavaScript Slides
+title: Introducing Node Slides
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Intro to Mongo
+title: Introducing MongoDB
 slides: [_slides/week-05/01-intro-to-mongo.md]
 lesson_date: 2016-10-24
 ---

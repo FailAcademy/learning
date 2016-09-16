@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: React Components, State & Events
-slides: ['_slides/week-01/02-components-props.md']
+title: Introducing React
+slides: ['_slides/week-01/02-intro-to-react.md']
 lesson_date: 2016-09-27
 ---
 
