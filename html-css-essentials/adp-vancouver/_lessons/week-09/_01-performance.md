@@ -1,6 +1,10 @@
 
 # Performance Measuring Demo
 
+An example of a simple testing tool built with `performance.now()`. 
+
+This goes with the Performance slides.
+
 /index.html
 
 ```html
@@ -48,6 +52,8 @@ document.getElementById("run")
 ---
 
 # Median Perf
+
+The second testing tool which loops the test to grab the median.
 
 ```js
 let runs = [];

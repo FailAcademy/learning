@@ -64,13 +64,10 @@ After everyone will be reponsible for teaching a Query operator to the rest of t
 
 We are going to use similar commands with a much larger data set. Head over to https://github.com/redacademy/adp-mongo-project and clone down the repo. From there answer each of the questions in the README.
 
-
+Head to this [link]( https://raw.githubusercontent.com/mongodb/docs-assets/primer-dataset/primer-dataset.json) and save the json with the filename primer-dataset.json
 
 ## Resources
 - https://www.mongodb.com/nosql-explained
 - https://www.sitepoint.com/sql-vs-nosql-differences/
 - http://www.querymongo.com/
 - http://openmymind.net/mongodb.pdf
-
-## PROJECT
-Head to this [link]( https://raw.githubusercontent.com/mongodb/docs-assets/primer-dataset/primer-dataset.json) and save the json with the filename primer-dataset.json
