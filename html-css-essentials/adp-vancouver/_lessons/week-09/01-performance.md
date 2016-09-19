@@ -2,7 +2,7 @@
 layout: lesson
 title: Performance
 slides: []
-lesson_date: 2016-09-21
+lesson_date: 2016-11-21
 ---
 
 ## Pre-work

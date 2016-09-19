@@ -15,7 +15,6 @@ This goes with the Performance slides.
   <title>Perf</title>
 </head>
 <body>
-  
   <h3>Measuring Performance</h3>
   <button id="run">Run</button>
   <span id="perfTime"></span>
