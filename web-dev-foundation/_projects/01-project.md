@@ -1,41 +1,58 @@
 ---
 layout: project
-title: Project 1
-due: Day 6 (beginning of class)
+title: Project 1 - Perfect Paddles Homepage 
+due: Day 11 (beginning of class)
 ---
 
-For your first project, you'll be creating **a basic one-page website**. Some ideas for your website topic may include:
+For the Project 1, you’re going to create a homepage for your client Perfect Paddles Kayak Co. This project will focus specifically on building out the HTML and CSS components of this mobile-first, responsive website.
 
-- A simple website for a business or product
-- A homepage for a local charity
-- A website advertising an upcoming event
-- ...or pitch an idea to your instructor!
+You can [download the project assets here](/public/files/p1-assets.zip).
 
-In general, please avoid any "fan site" topics.
+## Design Specifications
 
-Be sure to **submit your website topic** idea to your instructor before the beginning of class on Day 3.
+**Typography:**
 
-**[Download the Assessment Guide for Project 1 &rarr;](/public/files/wdf-project1-assessment.pdf)**
+- The base font size is 16px for all screen sizes 
+- The main font family is Karla
+- The secondary font family is Pacifico
+
+**Colours:**
+
+- The HEX code for the body font colour is `#2d2d2d`
+- The HEX code for the medium grey headings is `#646464`
+- The HEX code for orange brand colour is `#e2574c` (used for links and buttons)
+- The HEX code for the darker orange colour is `#b64036` (used for the link and button hover state)
+- The HEX code for the table header background is `#e6e6e6`
+- The HEX code for the grey table borders `#c8c8c8`
+- The HEX code for the light yellow of the hovered table rows is `#fbf6d9`
+
+**Screen Sizes**
+
+- The breakpoint of the desktop-friendly content area is 1140px
+- The breakpoint of the tablet-friendly content area is 600px
 
 ## Requirements
 
 To receive a "Pass" grade for this project, your submission will need to satisfy the following criteria:
 
-**Functional requirements:**
+**General requirements:**
 
 Your project must:
 
-- Contain a single `.html` file and an external `.css` file
-- Incorporate at least two images that have been optimized for the web, and they must be properly organized and named in sub-folder
+- Contain a single `.html` file and an external `.css` file (a CSS reset may be included separately)
+- Adequately reflect the designer’s vision for the website
+- Demonstrate effective organization of the project’s root directory
+- Have a Git repository initialized in its root directory with an appropriately customized .gitignore file
+- Be pushed to GitHub (with all of your commits synced to it)
 
 **HTML requirements:**
 
 Your project must:
 
 - Use the HTML5 doctype and semantic HTML5 mark-up
-- Include at least two `img` elements with `alt` text
-- Include at least three `a` elements
+- Include all essential elements covered in class (e.g.`<meta charset="utf-8">`)
 - Make appropriate use of paragraph, heading, and list elements
+- Incorporate a list-based navigation menu
 
 **CSS requirements:**
 
@@ -43,18 +60,28 @@ Your project must:
 
 - Make appropriate use of classes and IDs as selectors
 - Use a CSS reset
-- Use the `background-image` property at least once
-- Use the `position` and `float` properties where appropriate
+- Use the `background` property appropriately
+- Use flexbox properties appropriately (avoid floats wherever possible)
 - Demonstrate effective use of box model properties
-- Demonstrate effective use of CSS properties for altering the visual display of text (e.g. `font-family`, `font-style`, `text-transform`, etc.)
+- Demonstrate effective use of CSS properties for altering the visual display of text (e.g. font-family, font-style, text-transform, etc.)
+- Incorporate custom fonts using `@font-face`
+- Use Font Awesome as an icon font
+- Use CSS3 properties where appropriate (e.g. `border-radius`, `box-shadow`, `text-shadow`, and `linear-gradient`)
 
-**Additional requirements:**
+**RWD requirements:**
 
 Your project must:
 
-- Be based on a unique idea (your code and design need to be your own!)
-- Respect copyright and other content licensing concerns
+- Be responsively designed using a mobile-first approach
+- Be optimized for 3 screen sizes: mobile, `min-width: 600px` and `min-width: 1140px`
+- Incorporate a responsive Google Map `<iframe>`
+
+**Stretch goals:**
+
+Want to challenge yourself? Your project could also:
+
+- Be deployed on the web as a GitHub Pages site
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a zipped folder** containing your project files to your instructor.
+When you're ready to submit your project, **please email a link to the GitHub repository** containing your project files to your instructor.
