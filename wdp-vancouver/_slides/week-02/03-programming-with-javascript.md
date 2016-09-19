@@ -1146,7 +1146,7 @@ There are pros and cons to each type of variable scope:
 
 JavaScript is a *flexible* language, and the concept of *coding style* is important. Coding with a conventional style will help other programmers understand your code.
 
-In this course we'll be sticking as closely as possible to AirBnB's style guide, lets take a look now: **[AirBnB Style Guide](https://github.com/airbnb/javascript/tree/master/es5)**
+In this course we'll be sticking as closely as possible to AirBnB's style guide, lets take a look now: **[AirBnB Style Guide](https://github.com/airbnb/javascript)**
 
 ---
 
