@@ -95,4 +95,4 @@ Free JS-related books online:
 
 A popular JS styleguide:
 
-- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript/tree/master/es5)
+- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
