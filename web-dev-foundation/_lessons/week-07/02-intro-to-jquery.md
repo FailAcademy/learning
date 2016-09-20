@@ -4,7 +4,7 @@ title: Intro to jQuery
 slides: ['_slides/week-07/02-intro-to-jquery-slides.md']
 ---
 
-## Recommended Reading
+## Pre-work
 
 From the JavaScript & jQuery textbook:
 

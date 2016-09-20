@@ -255,6 +255,18 @@ The default value is `stretch` (so that items take up remaining space along the 
 .footnote[.red[* ] You must have multiple rows of content (`flex-wrap: wrap`) for this to work!]
 
 ---
+
+# Exercise 1
+
+Let's apply these flexbox concepts to Project 1.
+
+We'll start by refactoring the floats in the site `<footer>` into flexbox properties following these steps:
+
+1. Remove your floats
+2. Apply `display: flex` to the appropriate element
+3. Figure out how to get the address and the social links aligned to the left and right sides as they were with your floats
+
+---
 template: inverse
 
 # Flex Items Properties
@@ -351,17 +363,6 @@ The `align-self` property allows you to override the default alignment for an in
 The values for `align-self` behave as they do for the `align-items`.
 
 ---
-
-# Exercise 1
-
-In your [exercise Codepen](http://codepen.io/redacademy/pen/GoYLaG?editors=1100), try to reproduce this layout using what you just learned about flex container and item properties:
-
-.inline-images[
-   ![Flexbox E1 screencap](/public/files/exercises/flexbox-e1.png)
-]
-
-
----
 template: inverse
 
 # A Few More Things...
@@ -377,9 +378,9 @@ class: center, middle
 
 # Exercise 2
 
-Go back to your [Codepen flexbox demo](http://codepen.io/redacademy/pen/GoYLaG?editors=1100) and see if you can get the text (e.g. Item 1, etc.) centered **vertically and horizontally** inside of the coloured boxes.
+Apply `display: flex` to your project's image gallery (in the About section). Make sure that the images are flexed so the left edge of the first image touches the left side of the container, and the right edge of the last image touches the right side of the container.
 
-Think about whether you need to make any adjustments to the mark-up to make this happen...
+Now figure out how to use the `flex` property shorthand on the individual images to ensure they only occupy `32%` of the screen's width each.
 
 ---
 class: center, middle

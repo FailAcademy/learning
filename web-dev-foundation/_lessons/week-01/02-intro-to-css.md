@@ -4,14 +4,14 @@ title: Intro to CSS
 slides: ['_slides/week-01/02-intro-to-css-slides.md']
 ---
 
-## Recommended Reading
+## Pre-work
 
-From the HTML & CSS textbook:
+Readings from *Learn to Code HTML & CSS*:
 
-- Introducing CSS (pp. 228-244)
-- Styling Links (p. 290)
-- Responding to Users (p. 291)
-- Boxes (pp. 300-318)
+- [Getting to Know CSS](http://learn.shayhowe.com/html-css/getting-to-know-css/)
+- [Opening the Box Model](http://learn.shayhowe.com/html-css/opening-the-box-model/)
+- [Working with Typography](http://learn.shayhowe.com/html-css/working-with-typography/)
+- [Creating Lists](http://learn.shayhowe.com/html-css/creating-lists/) (the CSS section now)
 
 ---
 
@@ -38,27 +38,43 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-Try adding margin, borders, and padding to some HTML elements as instructed below:
+Let's add a CSS file to your Project 1 webpage now.
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/GJEPPJ/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/GJEPPJ/'>GJEPPJ</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+To do that, create a `style.css` file in the root folder of your website.
 
-View the [solution](http://codepen.io/redacademy/pen/XbgoLP).
+Next, just like in the last example, add a `<link>` tag to the `<head>` of your HTML file so it knows to apply the styles that we add to this file to your webpage.
+
+Now try adding a style declaration for the `p` selector (e.g. change the `font-size`), and see if it works.
 
 ---
 
 ## Exercise 2
 
-Now let's try using CSS class and IDs to style some text elements:
+Let's start styling our project website using what we just learned about CSS text properties and the box model.
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/ZGywWj/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/ZGywWj/'>ZGywWj</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+If you haven't done so already, wrap the hero image banner area in a `<div>` element. Next, write CSS that will:
 
-View the [solution](http://codepen.io/redacademy/pen/EjXryM).
+- **center** the text
+- adjust the **size of the text**
+- add adequate **margin** above and below it
+
+Don't worry about the background image yet or the custom fonts, we'll get to that...
 
 ---
 
 ## Exercise 3
+
+Let's get the width of our website under control.
+
+One common way to do that is to create a `container` class and strategically apply that to various elements to keep their widths in check.
+
+We want our `container` class to keep everything inside of it at a width of `1140px`. Create that class in your CSS and apply it where you think it's needed.
+
+Is there anywhere that you may need to create an extra wrapping `<div>` around some of your content to contain it without conflicting with a full-width background treatment?
+
+---
+
+## Exercise 4
 
 Time to explore the developer tools built into your browser.
 
@@ -72,24 +88,29 @@ Also try "forcing element states", editing the content of some of the HTML eleme
 
 ## Homework
 
-Time to add a bit of style to your resume from the previous homework...
+For homework, continue working on Project 1.
 
-You're going to add an **external stylesheet** to your root folder, and link it up in the `head` of your HTML file.
+Before you get started, you should watch these videos to reinforce the concepts learned in class:
 
-From there, experiment with different CSS properties to override the default styles applied by the browser. For instance, you may try:
+- [Don't Fear the Browser](http://www.dontfeartheinternet.com/03-the-browser/)
+- [Don't Fear Starting from Scratch - Part 2: CSS](http://www.dontfeartheinternet.com/05-from-scratch/)
+
+After watching the videos, experiment with different CSS properties to override the default styles applied by the browser to your project site. For instance, you may try:
 
 - Changing the font size, font family, or colour of the text
 - Adjusting the line height
 - Changing the colour of links when they are hovered
 - Using box model properties to adjust the space between headings and paragraphs
 
-But don't stop there! **Have fun experimenting** with a variety of CSS properties.
+Be sure to keep your design comp for the desktop version of the project for reference, and try to approximate these styles as closely as possible. We'll learn more about adding background images and building layouts with CSS, but feel free to read ahead and try adding these styles to your project too!
 
-And be sure to try applying the styles using the different types of **selectors** we learned:
+Also be sure apply your styles using the appropriate type of **selector**:
 
 - Type selectors (e.g. `p`, `h1`)
 - Descendant selectors (e.g. `article p`)
 - Class and ID selectors (e.g. `.title`, `#masthead`)
+
+Good luck and have fun :)
 
 ---
 
@@ -106,3 +127,9 @@ A quick reference guide for understanding CSS:
 Some CSS FAQs:
 
 - [Common CSS questions](https://developer.mozilla.org/en-US/docs/Web/CSS/Common_CSS_Questions)
+
+Master your browser's dev tools:
+
+- [discover-devtools.codeschool.com](http://discover-devtools.codeschool.com/)
+- [DevTools Digest: DevTools in 2016 and Beyond
+](https://developers.google.com/web/updates/2016/06/devtools-digest)

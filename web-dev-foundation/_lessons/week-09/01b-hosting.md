@@ -4,7 +4,7 @@ title: Hosting a Website
 slides: ['_slides/week-09/01b-hosting-slides.md']
 ---
 
-## Recommended Reading
+## Pre-work
 
 From the HTML & CSS textbook:
 

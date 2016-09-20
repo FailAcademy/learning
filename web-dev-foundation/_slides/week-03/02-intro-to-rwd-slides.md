@@ -35,14 +35,14 @@ template: inverse
 class: center, middle
 
 .inline-images-border[
-   ![RED desktop view](../../public/img/slide-assets/red-screenshot-desktop.png)
+   ![RED desktop view](../../public/img/slide-assets/red-screenshot-desktop.jpg)
 ]
 
 ---
 class: center, middle
 
 .inline-images-border[
-   ![RED mobile view](../../public/img/slide-assets/red-screenshot-phone.png)
+   ![RED mobile view](../../public/img/slide-assets/red-screenshot-phone.jpg)
 ]
 
 ---
@@ -586,6 +586,16 @@ class: center, middle
 class: center, middle
 
 # [Smashing Magazine](http://www.smashingmagazine.com/)
+
+---
+
+# Exercise 4
+
+Now that we've had a chance to brush up our RWD skills, let's strategize how we'll apply this to our Project 1.
+
+Take a few moments to review the two narrower design comps and think about what areas of the site will specifically be affected by the changes that are happening at each breakpoint.
+
+Jot some idea out on your own, then you'll team up to discuss this with a partner. We'll then reconvene to discuss each other's findings, as well as any questions or concerns.
 
 ---
 

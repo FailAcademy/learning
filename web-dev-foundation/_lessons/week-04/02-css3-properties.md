@@ -1,10 +1,10 @@
 ---
 layout: lesson
 title: CSS3 Properties
-slides: ['_slides/week-05/02-css3-properties-slides.md']
+slides: ['_slides/week-04/02-css3-properties-slides.md']
 ---
 
-## Recommended Pre-Reading
+## Pre-work
 
 Some introductory reading on CSS transitions and transforms:
 
@@ -16,33 +16,39 @@ Some introductory reading on CSS transitions and transforms:
 ## Learning Objectives
 
 - Distinguish the difference between CSS2 and CSS3.
-- Understand what vendor prefixes are and where they are needed.
 - Use CSS transitions to add simple animations to elements.
 - Use CSS transforms to change the position of elements.
 - Learn what properties are animatable using CSS3.
 - Explore other CSS3 features such as border radius, box shadow, gradients, opacity, and multiple backgrounds.
+- Apply the rules of CSS specificity in an informed, strategic way in a stylesheet.
+- Implement CSS rules in a way that allow them to scale easily.
 
 ---
 
 ## Keywords
 
-- [Border radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
-- [Box shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
-- [Opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
-- [Transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
-- [Transition](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
-- Vendor prefix
+- [`border-radius`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
+- [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
+- [`opacity`](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
+- [`transform`](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
+- [`transition`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
+- [Specificity](https://developer.mozilla.org/en/docs/Web/CSS/Specificity)
+- [Inheritance](https://developer.mozilla.org/en/docs/Web/CSS/Inheritance)
+- Scalability
+- Maintainability
+- Modularity 
 
 ---
 
 ## Exercise 1
 
-Try styling a basic button using CSS3 properties:
+You may have noticed that there's a slight dark overlay over top of the banner hero image in the design comps for Project 1. We want to add this overlay to our site using code (i.e. we don't want to use an image editor to adjust the original image).
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/aOVabd/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/aOVabd/'>aOVabd</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+To do this we'll need to use a combination of CSS3 multiple backgrounds and a `linear-gradient` to enhance our banner's background image with the overlay.
 
-View the [solution](http://codepen.io/redacademy/pen/vOWzYJ).
+Try adding this to your project now. 
+
+*What other CSS3 properties will you need to use on your site?*
 
 ---
 
@@ -53,8 +59,6 @@ Take CSS transitions for a spin:
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/ZGaMWE/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/ZGaMWE/'>ZGaMWE</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-View the [solution](http://codepen.io/redacademy/pen/yNjZdN).
-
 ---
 
 ## Exercise 3
@@ -64,13 +68,17 @@ Experiment with CSS3 transforms and transitions together:
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/PqOgax/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/PqOgax/'>PqOgax</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-View the [solution](http://codepen.io/redacademy/pen/JdvxQJ).
+---
+
+## Exercise 4
+
+Time for a [specificity showdown!](http://codepen.io/redacademy/pen/VvmwoQ?editors=110).
 
 ---
 
 ## Homework
 
-Be sure to finish up your [Project 2](/project/project-2/) for homework.
+Continue working on your Project 1 for homework. Be sure to incorporate all of the required CSS3 properties now, and take a good look at your CSS to see you can clean it up based on what you've learned about CSS best practices.
 
 ---
 
@@ -99,10 +107,29 @@ A table outlining what CSS properties are animatable:
 
 - [CSS Animatable Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties)
 
-Some CSS transition inspiration:
+An online guide for writing scalable, maintainable, modular CSS:
 
-- [Animatable (by Lea Verou)](http://leaverou.github.io/animatable/)
+- [MaintainableCSS](http://maintainablecss.com/)
 
-A tool for parsing CSS and adding required vendor prefixes to CSS3 properties:
+Great CSS Tricks articles on CSS specificity:
 
-- [Autoprefixer](https://github.com/postcss/autoprefixer)
+- [Specifics on CSS Specificity](https://css-tricks.com/specifics-on-css-specificity/)
+- [A Specificity Battle!](https://css-tricks.com/a-specificity-battle/)
+
+A tool for evaluating the CSS on your websites:
+
+- [CSS Stats](http://www.cssstats.com/)
+
+And an interesting implementation of CSS Stats:
+
+- [CSS Purge](http://www.csspurge.com/)
+
+Some well-known CSS frameworks for helping you organize your CSS:
+
+- [Object-Oriented CSS (OOCSS)](http://oocss.org/)
+- [Block Element Modifier (BEM)](http://getbem.com/)
+- [Scalable and Modular Architecture for CSS (SMACSS)](https://smacss.com/)
+
+Do you really need that class? Some tips on using ARIA roles and element selectors to write more meaningful CSS:
+
+- [Meaningful CSS: Style Like You Mean It](http://alistapart.com/article/meaningful-css-style-like-you-mean-it)

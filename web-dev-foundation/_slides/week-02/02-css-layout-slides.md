@@ -23,7 +23,7 @@ layout: false
 2. Positioning elements with CSS
 3. Floating elements with CSS
 4. List-based navigation menus
-5. Styling the background
+
 6. Using CSS resets
 
 ---
@@ -257,55 +257,16 @@ class: center, middle
 ]
 
 ---
-class: center, middle
-
-.large[
-	But browser support!?!
-]
-
----
-class: center, middle
-
-.large[
-	**[caniuse.com](http://caniuse.com/)**
-]
-
----
-
-# Making IE Play Nice
-
-- [Modernizr](http://modernizr.com/) &ndash; a bit of beast
-- [HTML5 Shiv](https://github.com/afarkas/html5shiv) &ndash; works in a pinch
-
-Also related:
-
-- [Selectivizer](http://selectivizr.com/) &ndash; for CSS3 pseudo-class support
-
----
-
-# In Use
-
-If you want to use the HTML5 Shiv or Selectivizr, you can download their source files and include them conditionally in the `<head>` of your web page like so:
-
-```html
-<head>
-	<title>My Awesome Website</title>
-
-	<!--[if lt IE 9]>
-		<script src="js/selectivizr-min.js"></script>
-    	<script src="js/html5shiv.min.js"></script>
-	<![endif]-->
-</head>
-```
-
----
 
 # Exercise 1
 
-Cure this website of its div-itis using HTML5 elements:
+Let's cure our project sites of div-itis now...
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/doqVmo/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/doqVmo/'>doqVmo</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+Look at at your mark-up and decide which of the HTML5 elements should be used to replace the various `<div>` elements you have already added to your code.
+
+The tricky part will be deciding how (and if) you should use the `<section>` or `<article>` element.
+
+Remember that if you have added any classes to your existing `<div>` elements you will need to transfer those over or your CSS will break.
 
 ---
 template: inverse
@@ -428,6 +389,14 @@ Let's try out different kinds of positioning in CSS:
 
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/mJwRxG/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/mJwRxG/'>mJwRxG</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
+
+---
+
+# Mini-Exercise
+
+Now that you've tried out CSS positioning using `relative`, `absolute`, and `fixed`, determine what type of positioning you'll need to use on the Project 1 `header` element. 
+
+Implement it now!
 
 ---
 template: inverse
@@ -702,73 +671,11 @@ class: center, middle
 
 # Exercise 3
 
-Time to try using CSS floats to lay out a webpage:
+Time to add some floats to our project. First, work with a partner to determine where floats will need to be used in the project to build out the layout.
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/yNXgGO/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/yNXgGO/'>yNXgGO</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+Next, work together to figure out how to add those floats in your CSS.
 
----
-template: inverse
-
-# Backgrounds
-
----
-
-# Background Properties
-
-CSS gives us a number of tools for controlling the look of the backgrounds of our HTML elements.
-
-We can specify:
-
-- `background-color`: an RGBa, HSLa, hexadecimal, or named color code
-- `background-image`: a URL of a background image (in parentheses)
-
----
-
-# Background Properties
-
-And if we specify a `background-image` URL, we can also set these properties for it:
-
-- `background-repeat`: whether to repeat an image across the X or Y axis, or both
-- `background-attachment`: whether the image should **scroll** with the browser or remain **fixed** in place
-- `background-position`: for non-repeated images, specify if it should be anchored at the **left**, **center**, or **right**, and the **top**, **center**, or **bottom**
-
----
-
-# Background Shorthand
-
-To clean up our code a bit we can also use the `background` shorthand property to specify multiple properties at once:
-
-```css
-body {
-    background: #969696 url('images/bkgd.png') no-repeat center top;
-}
-```
-
-If you don't require all of the properties, you can leave them out:
-
-```css
-body {
-    background: url('images/bkgd-tile.png') fixed;
-}
-```
-
----
-
-# Background Size
-
-In newer browsers, we can use `background-size`:
-
-```css
-body {
-	background: #969696 url('images/bkgd.png') no-repeat center top;
-	background-size: 80% 80%; /* width, height */
-}
-```
-
-We can also set `background-size` to `contain` (always show the whole image) or `cover` (always fill the screen with the image).
-
-Note that `background-size` isn't supported in IE8!
+Don't forget to add a clearfix!
 
 ---
 template: inverse
@@ -806,10 +713,9 @@ The key is to pick a reset that makes the most sense for your website, and to on
 
 # Exercise 4
 
-Try implementing CSS backgrounds in three different ways:
+Add a CSS reset to your project (your best bet for Project 1 will be the Eric Meyer reset).
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/eNeKXr/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/eNeKXr/'>eNeKXr</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+You may need to adjust some of your existing CSS rules once you do this (esp. rules related to typography and box model properties).
 
 ---
 
@@ -819,7 +725,6 @@ Try implementing CSS backgrounds in three different ways:
 - More on HTML5 structural elements
 - Different ways to use the `position` property
 - How to `float` elements
-- How to use the `background` property in CSS
 - What a CSS reset is and how to use one
 
 ---

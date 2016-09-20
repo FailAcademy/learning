@@ -4,17 +4,13 @@ title: Responsive Web Design
 slides: ['_slides/week-03/02-intro-to-rwd-slides.md']
 ---
 
-## Recommended Reading
+## Pre-work
 
-From the HTML & CSS textbook:
+Readings from *Learn to Code Advanced HTML & CSS*:
 
-- **Chapter 15: Layout** (pp. 378-386)
+- [Responsive Web Design](http://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
 
-Some introductory reading on responsive web design:
-
-- [Lesson 4: Responsive Web Design](http://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
-
-This article by Ethan Marcotte on A List Apart, which is widely credited with kicking off the responsive web design movement:
+Also read through this article by Ethan Marcotte, which is widely credited with kicking off the responsive web design movement:
 
 - [Responsive Web Design](http://alistapart.com/article/responsive-web-design/)
 
@@ -22,10 +18,10 @@ This article by Ethan Marcotte on A List Apart, which is widely credited with ki
 
 ## Learning Objectives
 
-- Explore what responsive web design (RWD) is, and how it differs from creating a “mobile-only” website
-- Understand the difference between fixed, fluid, adaptive, and responsive websites
-- Understand how to use a “mobile-first” approach to web development
-- Use media queries to manipulate website styles at various "breakpoints"
+- Explore what responsive web design (RWD) is, and how it differs from creating a “mobile-only” website.
+- Understand the difference between fixed, fluid, adaptive, and responsive websites.
+- Understand how to use a “mobile-first” approach to web development.
+- Use media queries to manipulate website styles at various "breakpoints".
 
 ---
 
@@ -45,8 +41,6 @@ Try converting a fixed layout to flexible layout:
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvozXj/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvozXj/'>WvozXj</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-View the [solution](http://codepen.io/redacademy/pen/QbGmrM).
-
 ---
 
 ## Exercise 2
@@ -55,8 +49,6 @@ Write your first media query:
 
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/OVvXWV/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/OVvXWV/'>OVvXWV</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
-
-View the [solution](http://codepen.io/redacademy/pen/VLXjPR).
 
 ---
 
@@ -67,37 +59,27 @@ Time to try out creating mobile-first media queries for yourself:
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/qdqoKG/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/qdqoKG/'>qdqoKG</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-View the [solution](http://codepen.io/redacademy/pen/LVbdXw).
+---
+
+## Exercise 4
+
+Now that we've had a chance to learn some RWD skills, let's strategize how we'll apply this to our Project 1.
+
+Take a few moments to review the two narrower design comps and think about what areas of the site will specifically be affected by the changes that are happening at each breakpoint.
+
+Jot some idea out on your own, then you'll team up to discuss this with a partner. We'll then reconvene to discuss each other's findings, as well as any questions or concerns.
 
 ---
 
 ## Homework
 
-For homework, you're **refactor the CSS** code for a more complex fixed-width website and turn it into a responsive website **using mobile-first media queries**.
+For homework, you'll start to refactor your project to be a responsive, mobile-first website.
 
-You can download the [website's source code here](/public/files/labs/rwd-lab.zip)
+Review the project requirements to determine what breakpoints you'll need to optimize for.
 
-The breakpoints you want to optimize for are: `720px` and `1200px`.
+Refactoring your desktop-only, fixed width CSS will be tricky, but stick with it! When you're done, you'll definitely see the advantage of writing mobile-first media queries right from the start of a project. 
 
-**For our base CSS**:
-
-- The website content should occupy one column
-- The site title should be stacked over the navigation menu
-- Only two gallery images should appear in a row
-
-**At 720px**:
-
-- The site title and the navigation menu should float left and right respectively (do you need to adjust the padding around the menu items or the `h1` size at this breakpoint to make them fit better?)
-- The content area should break into two columns
-- The `article` element's column should occupy 2/3 of the space and the sidebar should occupy 1/3 (don't forget about the margin to the right of the `article`!)
-- Four gallery images should now appear in a row
-
-**At 1200px**:
-
-- The `article` element's column should occupy 3/4 of the space and the sidebar should occupy 1/4
-- The website should look exactly as it did in the fixed-width version (do you need to reset any elements' CSS properties that you shrunk down to work with the narrower breakpoints?)
-
-Don't forget to **change static units** `px` units into relative units like `em/rem` and `%`!
+And don't forget to **change static units** `px` units into relative units like `em/rem` and `%` wherever possible!
 
 ---
 

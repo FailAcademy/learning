@@ -214,9 +214,9 @@ But programs that are specially designed for editing code offer extra features l
 
 Some good (free) code editor options include:
 
-- **[Sublime Text](http://www.sublimetext.com/)** or **[Atom](https://atom.io/)** (Mac or Windows)
-- **[Text Wrangler](http://www.barebones.com/products/textwrangler/)** (Mac)
-- **[Notepad++](https://notepad-plus-plus.org/)** (Windows)
+- **[VS Code](https://www.visualstudio.com/en-us/products/code-vs.aspx)**
+- **[Atom](https://atom.io/)**
+- **[Sublime Text](http://www.sublimetext.com/)**
 
 ---
 
@@ -623,6 +623,16 @@ Now try using an assortment of structural and semantic tags:
 
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/VLbemJ/?height=268&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/VLbemJ/'>VLbemJ</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
+
+---
+
+# Exercise 4
+
+Let's dive right in and start thinking about how we might tackle the first project's design comp to convert it into semantically-appropriate HTML elements.
+
+Jot some idea out on your own, then you'll pair up to discuss your approach with a partner. Based on this discussion, is there anything you'd revise in your approach?
+
+Finally, you and your partner will share your insights with the class.
 
 ---
 

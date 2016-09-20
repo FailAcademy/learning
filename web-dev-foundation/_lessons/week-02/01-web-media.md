@@ -4,13 +4,16 @@ title: Using Media on the Web
 slides: ['_slides/week-02/01-web-media-slides.md']
 ---
 
-## Recommended Reading
+## Pre-work
 
-From the HTML & CSS textbook:
+Readings from *Learn to Code HTML & CSS*:
 
-- Images (pp. 95-123)
-- Color (pp. 247-260)
-- Flash, Video & Audio (pp. 200-225)
+- [Adding Media](http://learn.shayhowe.com/html-css/adding-media/)
+- [Setting Backgrounds and Gradients](http://learn.shayhowe.com/html-css/setting-backgrounds-and-gradients/)
+
+And from CSS Tricks:
+
+- [A Nerd’s Guide to Color on the Web](https://css-tricks.com/nerds-guide-color-web/)
 
 ---
 
@@ -19,11 +22,11 @@ From the HTML & CSS textbook:
 - Understand web-friendly image formats (JPG, PNG, GIF, and SVG).
 - Explore what tools are available for image editing (such as Photoshop or Gimp).
 - Learn how to load an image in an image editor, crop it, and size it.
-- Save images optimized for the web.
 - Explore the `img` element and its attributes in depth.
 - Explore free stock photography resources.
 - Discuss basic copyright concerns, the public domain, and Creative Commons.
-- Use hexadecimal and RGBa to set the colours of HTML elements.
+- Use hexadecimal and RGBa to set the colours and background colours of HTML elements.
+- Use CSS background properties to set background colors and images.
 - Explore the `audio` and `video` elements in HTML5.
 
 ---
@@ -34,9 +37,10 @@ From the HTML & CSS textbook:
 - Optimization
 - Hexadecimal
 - RGBa
+- HSLa
+- [Background](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
 - [audio](https://developer.mozilla.org/en/docs/Web/HTML/Element/audio)
 - [video](https://developer.mozilla.org/en/docs/Web/HTML/Element/video)
-- Copyright
 - Creative Commons
 - Public domain
 
@@ -58,23 +62,21 @@ If you have additional time, explore other tools inside the image editor, like t
 
 ## Exercise 2
 
-Try out some of the different web colour modes below:
+Try adding some color to your site. Referencing the design specification on the Project 1 page, change the colour of:
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvOmvY/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvOmvY/'>WvOmvY</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
-
-View the [solution](http://codepen.io/redacademy/pen/VLWReW)
+- The `body` font
+- The medium grey `headings`
+- The orange links (including the hover state)
+- The black header background and the white text inside it
+- The dark grey footer background and the white text inside it
 
 ---
 
 ## Exercise 3
 
-Now try using CSS to style these images:
+Add the hero image to your banner area using the `background` property shorthand.
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/mJqwVE/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/mJqwVE/'>mJqwVE</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
-
-View the [solution](http://codepen.io/redacademy/pen/LVOLNY)
+Note that your background should "cover" the available area, it should **not** repeat, and it should be fixed in place so that content below it scrolls over top of it.
 
 ---
 
@@ -97,9 +99,7 @@ You can either use images/graphics that you own, or you can explore sources for 
 
 **Choose at least three images/graphics** and experiment with the different editing tools you just learned. You are encouraged to explore a different file format for each.
 
-Next, **add your newly web-optimized images to a webpage**. You can add them to your resume HTML file, or you can create a new webpage if you like.
-
-Finally, in an externally linked stylesheet, **practice using CSS to alter the display** of the image. Focus particularly on using box model properties to adjust its display, and be sure to **try out some HEX, RGBa, and HSLa colours** in your CSS as well.
+**Note:** The assets you downloaded for Project 1 include already cropped/optimized images, so there's no need for further optimization here. **However,** do make sure you have added all of the images to the project before next class (including the SVG logo).
 
 ---
 

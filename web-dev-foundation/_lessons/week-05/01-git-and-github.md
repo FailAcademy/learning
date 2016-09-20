@@ -1,10 +1,10 @@
 ---
 layout: lesson
 title: Git and GitHub
-slides: ['_slides/week-04/02a-git-and-github-slides.md']
+slides: ['_slides/week-05/01-git-and-github-slides.md']
 ---
 
-## Recommended Reading
+## Pre-work
 
 Read up on the basics of GitHub Desktop before the lesson:
 
@@ -95,9 +95,9 @@ Your turn! Take GitHub Pages for a spin by deploying the source files for your P
 
 ---
 
-## Lab Activity
+## Homework
 
-Please see the [Custom Web Fonts lesson](/lesson/custom-web-fonts/) for lab activity details.
+Continue working on your Project 1 for homework. Be sure to keep pushing your commits to GitHub as you work, and merge your changes into your `gh-pages` branch to see the updates on your deployed site.
 
 ---
 

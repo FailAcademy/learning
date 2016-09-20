@@ -71,7 +71,116 @@ CSS allows us to abstract presentation details away from the content and structu
 
 That makes it much easier to globally add and change styles for our websites.
 
-*So let's take a look at how it works...*
+*So let's start by adding a stylesheet to our Project 1 sites...*
+
+---
+
+# Including CSS
+
+We have a few different options for how we include CSS in a website. We can:
+
+1. Use **inline** CSS
+2. Use **internal** CSS
+3. Use **external** CSS (usually preferable!)
+
+---
+
+# Inline CSS
+
+When we use inline CSS, we apply our styles as an **attribute** directly inside an HTML element:
+
+```html
+<p style="font-size: 16px; font-style: italic;">Hello, world!</p>
+```
+
+However, this method is usually not preferred because it's very difficult to override these styles later on.
+
+And it's really not much different from the 1990s way of applying inline styles, which makes it difficult to maintain!
+
+---
+
+# Internal CSS
+
+Using internal CSS means that you include your CSS inside `<style>` tags in the head of your HTML file. For example:
+
+```html
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>My Page</title>
+      <style type="text/css">
+         p {
+            font-size: 16px;
+            font-style: italic;
+         }
+      </style>
+   <head>
+   <body>
+      <p>Hello, world!</p>
+   </body>
+</html>
+```
+
+---
+class: center, middle
+
+### Internal vs. External CSS
+
+Using internal CSS is better than using inline CSS, but what would happen if your website has multiple pages?
+
+---
+
+# External CSS
+
+With external CSS, you put all of your CSS in a separate `.css` file, and link to it inside the `<head>` of your document:
+
+```html
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>My Page</title>
+      <link rel="stylesheet" href="style.css">
+   <head>
+   <body>
+      <p>Hello, world!</p>
+   </body>
+</html>
+```
+
+```css
+/* Inside your style.css file... */
+p {
+   font-size: 16px;
+   font-style: italic;
+}
+```
+
+---
+class: center, middle
+
+.inline-images[
+   ![Linking to an external stylesheet](/public/img/slide-assets/css-folder-structure.png)
+]
+
+---
+
+# External Advantages
+
+- It's easy to link the same stylesheet to multiple pages across your website
+- It's much easier to make global changes to your CSS that are immediately picked up throughout the website
+- Your website's content is clearly separated from your website's style
+
+---
+
+# Exercise 1
+
+Let's add a CSS file to your Project 1 webpage now.
+
+To do that, create a `style.css` file in the root folder of your website.
+
+Next, just like in the last example, add a `<link>` tag to the `<head>` of your HTML file so it knows to apply the styles that we add to this file to your webpage.
+
+Now try adding a style declaration for the `p` selector (e.g. change the `font-size`), and see if it works.
 
 ---
 template: inverse
@@ -82,7 +191,7 @@ template: inverse
 class: center, middle
 
 .large[
-   What does CSS look like?
+   Some vocabulary...
 ]
 
 ---
@@ -231,12 +340,17 @@ If you include **four properties**, they will be applied in the order **top**, *
 
 ---
 
-# Exercise 1
+# Exercise 2
 
-Try adding margin, borders, and padding to some HTML elements as instructed below:
+Let's start styling our project website using what we just learned about CSS text properties and the box model.
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/GJEPPJ/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/GJEPPJ/'>GJEPPJ</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+If you haven't done so already, wrap the hero image banner area in a `<div>` element. Next, write CSS that will:
+
+- **center** the text
+- adjust the **size of the text**
+- add adequate **margin** above and below it
+
+Don't worry about the background image yet or the custom fonts, we'll get to that...
 
 ---
 template: inverse
@@ -341,109 +455,6 @@ header h1 {
 ```
 
 The `<h1>` inside the header will be rendered in Georgia, and the style that **descends** from the parent `<header>` will be overwritten.
-
----
-
-template: inverse
-
-# Adding CSS to Your Website
-
----
-
-# Including CSS
-
-We have a few different options for how we include CSS in a website. We can:
-
-1. Use **inline** CSS
-2. Use **internal** CSS
-3. Use **external** CSS (usually preferable!)
-
----
-
-# Inline CSS
-
-When we use inline CSS, we apply our styles as an **attribute** directly inside an HTML element:
-
-```html
-<p style="font-size: 16px; font-style: italic;">Hello, world!</p>
-```
-
-However, this method is usually not preferred because it's very difficult to override these styles later on.
-
-And it's really not much different from the 1990s way of applying inline styles, which makes it difficult to maintain!
-
----
-
-# Internal CSS
-
-Using internal CSS means that you include your CSS inside `<style>` tags in the head of your HTML file. For example:
-
-```html
-<!DOCTYPE html>
-<html>
-   <head>
-      <title>My Page</title>
-      <style type="text/css">
-         p {
-            font-size: 16px;
-            font-style: italic;
-         }
-      </style>
-   <head>
-   <body>
-      <p>Hello, world!</p>
-   </body>
-</html>
-```
-
----
-class: center, middle
-
-### Internal vs. External CSS
-
-Using internal CSS is better than using inline CSS, but what would happen if your website has multiple pages?
-
----
-
-# External CSS
-
-With external CSS, you put all of your CSS in a separate `.css` file, and link to it inside the `<head>` of your document:
-
-```html
-<!DOCTYPE html>
-<html>
-   <head>
-      <title>My Page</title>
-      <link rel="stylesheet" href="style.css">
-   <head>
-   <body>
-      <p>Hello, world!</p>
-   </body>
-</html>
-```
-
-```css
-/* Inside your style.css file... */
-p {
-   font-size: 16px;
-   font-style: italic;
-}
-```
-
----
-class: center, middle
-
-.inline-images[
-   ![Linking to an external stylesheet](/public/img/slide-assets/css-folder-structure.png)
-]
-
----
-
-# External Advantages
-
-- It's easy to link the same stylesheet to multiple pages across your website
-- It's much easier to make global changes to your CSS that are immediately picked up throughout the website
-- Your website's content is clearly separated from your website's style
 
 ---
 template: inverse
@@ -600,12 +611,15 @@ li:last-child {
 
 ---
 
-# Exercise 2
+# Exercise 3
 
-Now let's try using CSS class and IDs to style some text elements:
+Let's get the width of our website under control.
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/ZGywWj/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/ZGywWj/'>ZGywWj</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+One common way to do that is to create a `container` class and strategically apply that to various elements to keep their widths in check.
+
+We want our `container` class to keep everything inside of it at a width of `1140px`. Create that class in your CSS and apply it where you think it's needed.
+
+Is there anywhere that you may need to create an extra wrapping `<div>` around some of your content to contain it without conflicting with a full-width background treatment?
 
 ---
 template: inverse
@@ -633,7 +647,7 @@ class: center, middle
 
 ---
 
-# Exercise 3
+# Exercise 4
 
 Time to explore the developer tools built into your browser.
 

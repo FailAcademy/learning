@@ -4,7 +4,7 @@ title: Working with Animation and Forms in jQuery
 slides: ['_slides/week-08/01b-jquery-animation-forms-slides.md']
 ---
 
-## Recommended Reading
+## Pre-work
 
 From the JavaScript & jQuery textbook:
 

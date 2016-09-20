@@ -23,7 +23,7 @@ layout: false
 2. Using CSS3 properties
 3. Transitions
 4. Transforms
-5. Vendor prefixes
+5. CSS best practices
 
 ---
 template: inverse
@@ -300,10 +300,13 @@ Declaring multiple backgrounds is just like declaring a single background, but y
 
 # Exercise 1
 
-Try styling a basic buttons using CSS3 properties:
+You may have noticed that there's a slight dark overlay over top of the banner hero image in the design comps for Project 1. We want to add this overlay to our site using code (i.e. we don't want to use an image editor to adjust the original image).
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/aOVabd/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/aOVabd/'>aOVabd</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+To do this we'll need to use a combination of CSS3 multiple backgrounds and a `linear-gradient` to enhance our banner's background image with the overlay.
+
+Try adding this to your project now. 
+
+*What other CSS3 properties will you need to use on your site?*
 
 ---
 template: inverse
@@ -528,13 +531,255 @@ Experiment with CSS3 transforms and transitions together:
 </iframe>
 
 ---
+template: inverse
+
+# CSS Best Practices: Specificity
+
+---
+class: center, middle
+
+### What We Mean by "Specificity"
+
+Specificity determines which CSS rules are applied to an element by the browser.
+
+---
+
+class: center, middle
+
+.large[
+   What makes a rule more specific?
+]
+
+---
+class: center, middle
+
+![Specificity hierarchy](../../public/img/slide-assets/specificity-hierarchy.svg)
+
+---
+class: center, middle
+
+.large[
+   So how does it work?
+]
+
+---
+class: center, middle
+
+.large[
+   Keep these 2 things in mind...
+]
+
+---
+
+# How Specificity Works
+
+**Where specificity is equal, the rules that comes last applies.**
+
+```html
+<header class="masthead">
+   <h1>My Awesome Site</h1>
+</header>
+```
+
+```css
+header h1 {
+   color: black;
+}
+
+header h1 {
+   color: red;
+}
+```
+
+*What colour will the text be in this example?*
+
+---
+
+# How Specificity Works
+
+**Where specificity is not equal, the more specific rule applies.**
+
+```html
+<header class="masthead">
+   <h1>My Awesome Site</h1>
+</header>
+```
+
+```css
+.masthead h1 {
+   color: black;
+}
+
+header h1 {
+   color: red;
+}
+```
+
+*What colour will the text be in this example?*
+
+---
+class: center, middle
+
+.large[
+   Gotcha alert!
+]
+
+---
+
+# Specificity Run Amok
+
+It doesn't take much for CSS specificity to spiral out of control:
+
+```html
+<nav id="social-nav">
+   <ul class="social-links">
+      <li><a href="#" class="social">Facebook</a></li>
+   </ul>
+</nav>
+```
+
+```css
+nav#social-nav ul.social-links li a.social:hover {
+   color: white;
+}
+```
+
+**Yikes!**
+
+---
+
+# Specificity Run Amok
+
+There's a good chance that CSS would be just as effective written as follows:
+
+```css
+.social:hover {
+   color: white;
+}
+```
+
+---
+
+# Taming the Beast
+
+Here are a few strategies to help avoid painting yourself into a corner with CSS specificity:
+
+- Almost never use `!important`
+- Don't use IDs as CSS selectors
+- Avoid nesting selectors unnecessarily
+- Don't over-qualify selectors
+- Use classes, and create re-usable classes wherever possible
+
+---
+
+# Exercise 4
+
+Time for a [specificity showdown!](http://codepen.io/redacademy/pen/VvmwoQ?editors=110).
+
+---
+template: inverse
+
+# CSS Best Pratices: Scalability & Maintainability
+
+---
+class: center, middle
+
+### Your CSS Should Scale Easily
+
+We may have good intentions when we start writing our CSS, but as a project grows over time we need to make sure we're writing CSS that's **maintainable** and that **scales**.
+
+---
+
+# CSS Pro Tips
+
+1. Keep your code organized
+2. Use semantic selector names
+3. Document your code with comments
+4. Make it modular
+
+---
+
+# Get Organized
+
+Well-organized code will save you headaches in the long run. Here are some organization tips:
+
+- Order things logically (it matters for specificity, but also for readability)
+- Put your properties in some kind of logical order
+- Use whitespace, line breaks, and indentation
+- Use shorthand wherever possible
+- Be consistent!
+
+---
+
+# Keep It Semantic
+
+The class and ID names you choose for your HTML elements should relate to the content itself, and not the styles applied to it. For example, this:
+
+```html
+<p class="alert">Error! Please try again.</p>
+```
+
+Is much more semantic and future-proof than this:
+
+```html
+<p class="red">Error! Please try again.</p>
+```
+
+---
+
+# Document It
+
+Adding comments to your code is an effective way to explain what your code does, both to other developers and to your future self. For example, this:
+
+```css
+/* Main navigation */
+.dropdown-nav { }
+
+/* Footer navigation */
+.inline-nav { }
+```
+
+Is more helpful than this:
+
+```css
+.dropdown-nav { }
+.inline-nav { }
+```
+
+---
+
+# Modularity
+
+Modular code is reusable code. For example, abstract re-used styles into a class like this:
+
+```css
+.brand-color {
+   color: red;
+}
+```
+
+Is better than this:
+
+```css
+article h3 {
+   color: red;
+}
+
+aside h3 {
+   color: red;
+}
+```
+
+---
 
 # What We've Learned
 
 - The difference between CSS2 and CSS3
 - How to use `border-radius`, `box-shadow`, `gradients`, `opacity`, and multiple backgrounds
 - How to use CSS transitions and transforms
-- What vendor prefixes are, how to use them, and when to use them
+- How to tame the specificity beast by keeping selector specificity under control
+- Why scalability, maintainability, and modularity matter in our project stylesheets
+- How to write CSS in a future-friendly way
 
 ---
 template: inverse

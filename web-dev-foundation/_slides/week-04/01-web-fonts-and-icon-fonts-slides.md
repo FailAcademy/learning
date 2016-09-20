@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Custom Web Fonts Slides
+title: Custom Web Fonts and Icon Fonts Slides
 ---
 
 {% highlight html %}
@@ -24,6 +24,7 @@ layout: false
 3. Using Google Fonts
 4. Web font services
 5. Choosing and pairing fonts
+6. What is an icon font (and how to use one)
 
 ---
 
@@ -146,15 +147,11 @@ Before you embed a font on your website using `@font-face` you need to be sure t
 
 # Exercise 1
 
-Go to **[Font Squirrel](http://www.fontsquirrel.com/)** and pick a font that you like that offers an @font-face kit. Download the font package.
+Go to **[Font Squirrel](http://www.fontsquirrel.com/)** and generate the Webfont Kits for the custom typefaces that we'll be using for Project 1: **Karla** (Regular and Bold) and **Pacifico** (Regular only).
 
-Set-up an `index.html` file in a root folder, and from the package you just downloaded copy in the `stylesheet.css` file and all of the different font formats to as well.
+You'll need to download both of the weights and their italic versions too for the Karla typeface. Add the contents of your generated web font packages to your project's CSS (but only the required files).
 
-In the `stylesheet.css` file, set the name of your new font as the `font-family` value for the body element.
-
-Now add some copy to your webpage and load it in a browser.
-
-Hint: Link to your external stylesheet in the `<head>`!
+You’ll also want to read up on how to **[avoid faux italics and bolding](http://www.metaltoad.com/blog/how-use-font-face-avoid-faux-italic-and-bold-browser-styles)** with your `@font-face` typefaces, and adjust your CSS accordingly.
 
 ---
 
@@ -257,13 +254,165 @@ class: center, middle
 When choosing a typeface, consider its personality and if it complements the message being communicated.
 
 ---
+template: inverse
+
+# What's an Icon Font?
+
+---
+class: center, middle
+
+### Icon fonts are just fonts.
+
+But instead of containing letters and numbers, they contain symbols (aka **glyphs**).
+
+---
+
+# Why Are They Awesome?
+
+- You can target CSS at them, just like a normal font
+- They're SVGs, so they scale without pixelating (so they're very responsive)
+- They're supported even as far back as IE6!
+- All of the icons supported by the font load with one HTTP request
+
+---
+class: center, middle
+
+.large[
+   The old way...
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![Image sprite example](../../public/img/slide-assets/image-sprite-example.png)
+]
+
+---
+template: inverse
+
+# Using an Icon Font
+
+---
+
+# Pick a Font
+
+There are a few ready-made icon fonts out there that you can use on your website for free:
+
+- [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+- [IcoMoon](https://icomoon.io/)
+
+We're going to take a look at Font Awesome...
+
+---
+class: center, middle
+
+.inline-images[
+   ![Font Awesome logo](../../public/img/slide-assets/font-awesome-logo.jpg)
+]
+
+---
+
+# Using Font Awesome
+
+To use Font Awesome, you can either externally link to it on Content Delivery Network (CDN), or you can download and include the entire package directly on your website.
+
+You would include this code in the `<head>` tag of your website:
+
+```html
+<!-- Option 1: CDN -->
+<script src="https://use.fontawesome.com/4fbf87bab3.js"></script>
+
+<!-- Option 2: Font Awesome -->
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+```
+
+---
+
+# Using Font Awesome
+
+Now for the fun part&mdash;you actually get to start using the icons.
+
+Let's say we want to include a [bicycle icon](http://fortawesome.github.io/Font-Awesome/icon/bicycle/) on our website.
+
+All we would need to do is include an `<i>` tag with some special classes applied:
+
+```html
+<i class="fa fa-bicycle"></i>
+```
+
+And the result will look like this:
+
+<i class="fa fa-bicycle"></i>
+
+---
+
+# Using Font Awesome
+
+We can adjust the size of the icons with extra classes:
+
+```html
+<i class="fa fa-bicycle fa-lg"></i> fa-lg
+<i class="fa fa-bicycle fa-2x"></i> fa-2x
+<i class="fa fa-bicycle fa-3x"></i> fa-3x
+<i class="fa fa-bicycle fa-4x"></i> fa-4x
+```
+
+<i class="fa fa-bicycle fa-lg"></i> fa-lg<br />
+<i class="fa fa-bicycle fa-2x"></i> fa-2x<br />
+<i class="fa fa-bicycle fa-3x"></i> fa-3x<br />
+<i class="fa fa-bicycle fa-4x"></i> fa-4x
+
+---
+
+# Using Font Awesome
+
+And animate the icons:
+
+```html
+<i class="fa fa-circle-o-notch fa-spin fa-3x"></i>
+<i class="fa fa-spinner fa-pulse fa-3x"></i>
+<i class="fa fa-bicycle fa-spin fa-3x"></i>
+```
+
+.inline-images[
+   <br /><i class="fa fa-circle-o-notch fa-spin fa-3x"></i>&nbsp;&nbsp;&nbsp;
+   <i class="fa fa-spinner fa-pulse fa-3x"></i>&nbsp;&nbsp;&nbsp;
+   <i class="fa fa-bicycle fa-spin fa-3x"></i>
+]
+<br />
+
+You can find all of Font Awesome's [icons referenced here](http://fortawesome.github.io/Font-Awesome/icons/) and [usage examples here](http://fortawesome.github.io/Font-Awesome/examples/).
+
+---
+
+# Using Font Awesome
+
+Every Font Awesome icon also has a [Unicode value](http://fortawesome.github.io/Font-Awesome/cheatsheet/). Using those values, we can use Font Awesome directly in our CSS too:
+
+```html
+<button class="menu-toggle"><span>Menu</span></button>
+```
+
+```css
+.menu-toggle {
+   display: none;
+}
+
+.menu-toggle:after {
+   content: "\f0c9";
+}
+```
+
+---
 
 # Exercise 2
 
-Now try adding custom web fonts using Google Fonts:
+Add Font Awesome to your Project 1 (using the CDN option).
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/vONZxd/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/vONZxd/'>vONZxd</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+Once you have successfully added it to your project, try adding the social media icons to your site's `footer`. 
+
+Now that you have the icons added, how will you get the social network names to appear and disappear at the various breakpoints?
 
 ---
 
@@ -272,6 +421,9 @@ Now try adding custom web fonts using Google Fonts:
 - How to use `@font-face`
 - How to use Google Fonts
 - What licensed font services are available
+- What an icon font is
+- The advantages of using an icon font
+- How to use Font Awesome
 
 ---
 

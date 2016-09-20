@@ -22,9 +22,10 @@ layout: false
 1. Image editing basics
 2. Web-friendly image formats
 3. Colour on the web
-4. Using the `img` element and its attributes
-5. HTML5 `audio` and `video` elements
-6. Copyright, the public domain, and Creative Commons
+4. Styling the background
+5. Using the `img` element and its attributes
+6. HTML5 `audio` and `video` elements
+7. Copyright, the public domain, and Creative Commons
 
 ---
 template: inverse
@@ -96,10 +97,9 @@ For photos, make sure you choose the **JPEG** option, find a happy medium betwee
 # Image Editing Software
 
 - [Adobe Photoshop](http://www.adobe.com/ca/products/photoshop.html) (Mac or PC)
-- [Adobe Illustrator](http://www.adobe.com/ca/products/illustrator.html) (Mac or PC)
 - [GIMP](http://www.gimp.org/) (Mac or PC)
 - [Pixelmator](http://www.pixelmator.com/) (Mac)
-- [ImageOptim](https://imageoptim.com/) (Mac)
+- [Photopea](https://www.photopea.com/) (Online)
 
 ---
 template: inverse
@@ -287,14 +287,12 @@ The equivalent of this RGB colour in HEX would be `#ed4343`.
 Or RGBa values to also specify the opacity of the colour:
 
 ```css
-header {
-   background-color: rgba(237,67,67,0.5);
+p {
+   color: rgba(237,67,67,0.5);
 }
 ```
 
 The `a` that represents opacity is written as a decimal, with a range of `0` (fully transparent) to `1` (solid).
-
-*Note that RGBa isn't supported by older browsers like IE8.*
 
 ---
 
@@ -305,7 +303,7 @@ Specifying colour using HSLa is similar to using RGBa.
 However, instead of giving coordinates for the amount of red, blue, or green to mix in the colour, we specify **hue**, **saturation**, and **lightness**.
 
 ```css
-header {
+p {
    background-color: hsla(360, 83%, 60%, 0.5);
 }
 ```
@@ -316,10 +314,82 @@ The relationship between hue, saturation, and lightness will become a bit cleare
 
 # Exercise 2
 
-Try out some of the different web colour modes below:
+Try adding some color to your site. Referencing the design specification on the Project 1 page, change the colour of:
 
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/WvOmvY/?height=268&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/WvOmvY/'>WvOmvY</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
+- The `body` font
+- The medium grey `headings`
+- The orange links (including the hover state)
+- The black header background and the white text inside it
+- The dark grey footer background and the white text inside it
+
+---
+template: inverse
+
+# Backgrounds
+
+---
+
+# Background Properties
+
+CSS gives us a number of tools for controlling the look of the backgrounds of our HTML elements.
+
+We can specify:
+
+- `background-color`: an RGBa, HSLa, hexadecimal, or named color code
+- `background-image`: a URL of a background image (in parentheses)
+
+---
+
+# Background Properties
+
+And if we specify a `background-image` URL, we can also set these properties for it:
+
+- `background-repeat`: whether to repeat an image across the X or Y axis, or both
+- `background-attachment`: whether the image should **scroll** with the browser or remain **fixed** in place
+- `background-position`: for non-repeated images, specify if it should be anchored at the **left**, **center**, or **right**, and the **top**, **center**, or **bottom**
+
+---
+
+# Background Shorthand
+
+To clean up our code a bit we can also use the `background` shorthand property to specify multiple properties at once:
+
+```css
+body {
+    background: #969696 url('images/bkgd.png') no-repeat center top;
+}
+```
+
+If you don't require all of the properties, you can leave them out:
+
+```css
+body {
+    background: url('images/bkgd-tile.png') fixed;
+}
+```
+
+---
+
+# Background Size
+
+We can also specify `background-size`:
+
+```css
+body {
+	background: #969696 url('images/bkgd.png') no-repeat center top;
+	background-size: 80% 80%; /* width, height */
+}
+```
+
+We can also set `background-size` to `contain` (always show the whole image) or `cover` (always fill the screen with the image).
+
+---
+
+# Exercise 3
+
+Add the hero image to your banner area using the `background` property shorthand.
+
+Note that your background should "cover" the available area, it should **not** repeat, and it should be fixed in place so that content below it scrolls over top of it. 
 
 ---
 
@@ -393,15 +463,6 @@ We can use CSS to manipulate our image elements as well:
    border: 1px solid #FF3300;
 }
 ```
-
----
-
-# Exercise 3
-
-Now try using CSS to style these images:
-
-<iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/mJqwVE/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/mJqwVE/'>mJqwVE</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
 
 ---
 template: inverse
@@ -584,6 +645,7 @@ A few good places to find royalty-free, CC-licensed images:
 - Different image formats that are Web-friendly
 - How to crop, scale, rotate, and optimize and image
 - How to use different colour formats on the web
+- How to use the `background` property in CSS
 - How to work with image elements in CSS
 - How to use HTML5 `audio` and `video` elements
 - Different types of image licensing

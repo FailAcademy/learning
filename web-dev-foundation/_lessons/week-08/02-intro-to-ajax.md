@@ -4,7 +4,7 @@ title: Intro to Ajax and APIs
 slides: ['_slides/week-08/02-intro-to-ajax-slides.md']
 ---
 
-## Recommended Reading
+## Pre-work
 
 From the JavaScript & jQuery textbook:
 

@@ -4,7 +4,7 @@ title: Hacker Edition - Intro to LESS
 slides: ['_slides/week-09/02-intro-to-less-slides.md']
 ---
 
-## Recommended Reading
+## Pre-work
 
 *There is no pre-reading for this lesson.*
 

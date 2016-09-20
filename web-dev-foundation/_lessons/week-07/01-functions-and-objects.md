@@ -4,7 +4,7 @@ title: JavaScript Functions, Objects and Arrays
 slides: ['_slides/week-07/01-functions-and-objects-slides.md']
 ---
 
-## Recommended Reading
+## Pre-work
 
 From the JavaScript & jQuery textbook:
 

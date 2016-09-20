@@ -4,7 +4,7 @@ title: Front-end Testing
 slides: ['_slides/week-09/01a-testing-slides.md']
 ---
 
-## Recommended Reading
+## Pre-work
 
 *There is no pre-reading for this lesson.*
 

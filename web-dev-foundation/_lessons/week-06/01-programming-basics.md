@@ -4,7 +4,7 @@ title: Programming Basics
 slides: ['_slides/week-06/01-programming-basics-slides.md']
 ---
 
-## Recommended Reading
+## Pre-work
 
 From the JavaScript & jQuery textbook:
 
