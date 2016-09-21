@@ -23,43 +23,96 @@ class: middle, center
 View -> Action -> Reducer -> Store -> View
 
 ---
-class: middle
 
 # Middleware
+
+Middleware in action.
+
+```js
+// store has access to `getState` & `dispatch`
+const middleware = store => next => action => next(action);
+```
+
+- Explain to a partner how you think middleware works.
+- Where does the magic happen?
+
+---
+
+# Middleware
+
+Middleware in action.
 
 ```js
 // store has access to `getState` & `dispatch`
 const middleware = store => next => action => {
-  // do something here
-  next(action);
+  
+  // magic is here
+
+  return next(action);
 };
+```
+
+---
+
+# Agenda
+
+Continue from your "Worst Pokemon" app earlier this week.
+
+1. `applyMiddleware`
+2. add "logger"
+3. add "thunk"
+4. add an optional middleware
+
+---
+
+# Apply Middleware
+
+Use Redux's `applyMiddleware` to add middleware to your store.
+
+```js
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+
+const store = createStore(
+  reducers,
+  applyMiddleware(/* middleware here*/)
+);
 ```
 
 ---
 class: middle
 
-# Setting up Redux Middleware
-
-```shell
-git clone https://github.com/redacademy/adp-redux-walkthrough
-cd adp-redux-walkthrough
-git checkout b-middleware
-npm install
-```
-
----
-class: center, middle
-
-# Redux Logger
+# Exercise 1
 
 Setup ["redux-logger"](https://github.com/evgenyrodionov/redux-logger) middleware in your "Worst Pokemon" app.
 
 ---
-class: center, middle
 
-# Redux Thunk
+# Redux-Logger Simplified
 
-Setup ["redux-thunk"](https://github.com/gaearon/redux-thunk) middleware in your "Worst Pokemon" app.
+A simplified version of "redux-logger".
+
+```js
+// store has access to `getState` & `dispatch`
+const middleware = store => next => action => {
+
+  console.log(
+    store.getState(),
+    action,
+    next(action).getState()
+  )
+  return next(action);
+};
+```
+
+---
+
+# Thunk
+
+Read [this Stack Overflow article](http://stackoverflow.com/questions/35411423/how-to-dispatch-a-redux-action-with-a-timeout/35415559#35415559) on using Redux-Thunk.
+
+- What is a "thunk"?
+- Why might you want to use "thunk"s in your project?
+
 ---
 
 # Redux-Thunk: Multiple Actions
@@ -90,6 +143,28 @@ const action = () => (dispatch, getState) => {
 
 Why is this important?
 
+---
+
+class: middle
+
+# Redux Thunk
+
+Setup ["redux-thunk"](https://github.com/gaearon/redux-thunk) middleware in your "Worst Pokemon" app.
+
+---
+
+# Redux-Thunk Simplified
+
+```js
+// store has access to `getState` & `dispatch`
+const middleware = store => next => action => {
+  if (typeof action === 'function') {
+    // pass in store to the action
+    return next(action)(store);
+  }
+  return next(action);
+};
+```
 
 ---
 
@@ -104,7 +179,175 @@ const store = createStore(
 );
 ```
 
-Why does this happen?
+- Why does this happen?
+- How can you fix it?
+
+---
+
+## Exercise 3
+
+Setup an "async action" that sorts pokemon by their number of votes.
+(highest to least). Call this action "SORT_BY_POPULARITY".
+
+The sorting action should be called every time you "VOTE_UP".
+
+
+---
+
+# SORT_BY_POPULARITY
+
+/src/pokemon.js
+
+```js
+const SORT_BY_POPULARITY = 'SORT_BY_POPULARITY';
+export const sortByPopularity = () => ({ type: SORT_BY_POPULARITY });
+```
+
+/src/index.js
+
+```js
+import {default as pokemon, voteUp, sortByPopularity} from './pokemon';
+
+store.dispatch(voteUp(2));
+store.dispatch(sortByPopularity());
+store.dispatch(voteUp(2));
+store.dispatch(sortByPopularity());
+```
+
+---
+
+# Async Dispatching
+
+We want to call "SORT_BY_POPULARITY" after each "VOTE_UP". 
+
+To do this, we can dispatch "SORT_BY_POPULARITY" inside of our "VOTE_UP" action creator.
+
+---
+
+# Async Dispatching
+
+We want to call "SORT_BY_POPULARITY" after each "VOTE_UP". 
+
+To do this, we can dispatch "SORT_BY_POPULARITY" inside of our "VOTE_UP" action creator.
+
+/src/pokemon.js
+
+```js
+export const voteUp = id => {
+  return (dispatch) => {
+    // first
+    dispatch({ type: VOTE_UP, payload: { id } });
+    // second
+    dispatch(sortByPopularity());
+  };
+};
+```
+
+---
+
+# Sorting
+
+Sort pokemon when "SORT_BY_POPULARITY" is called.
+
+/src/pokemon.js
+
+```js
+  case SORT_BY_POPULARITY:
+  return pokemon.sort();
+```
+
+Why doesn't this work?
+
+---
+
+# Sort By Votes
+
+Complicated sorting requires a sorting function. 
+
+/src/pokemon.js
+
+```js
+function sortByVotes(a, b) {
+  switch(true) {
+    case a.votes < b.votes:
+      return 1;
+    case a.votes > b.votes:
+      return -1;
+    default:
+      return 0;
+  }
+}
+
+/* in Reducer */
+case SORT_BY_POPULARITY:
+  return pokemon.sort(sortByVotes);
+```
+
+---
+
+# Flexible Sort by Votes
+
+Sorting by "key" makes a more reusable function.
+
+```js
+function sortByKey(key) {
+  return function(a, b) {
+    switch (true) {
+      case a[key] < b[key]:
+        return 1;
+      case a[key] > b[key]:
+        return -1;
+      default:
+        return 0;
+    }
+  }
+}
+
+/* in Reducer */
+case SORT_BY_POPULARITY:
+  return pokemon.sort(sortByKey('votes'));
+```
+---
+
+# Returning a Function
+
+What do we call a function that returns a function?
+
+```
+function sortByKey(key) {
+  return function(a, b) {
+    switch (true) {
+      case a[key] < b[key]:
+        return 1;
+      case a[key] > b[key]:
+        return -1;
+      default:
+        return 0;
+    }
+  }
+}
+```
+
+---
+
+# Thunk
+
+Understanding thunks is helpful beyond Redux.
+
+```
+function sortByKey(key) {
+  return function(a, b) {
+    switch (true) {
+      case a[key] < b[key]:
+        return 1;
+      case a[key] > b[key]:
+        return -1;
+      default:
+        return 0;
+    }
+  }
+}
+```
 
 ---
 
@@ -118,5 +361,6 @@ With a partner, choose an additional middleware to implement in your "Worst Poke
 - [Redux-Authentication](https://github.com/Jackong/redux-authentication)
 
 Other suggestions found [here](https://github.com/xgrommx/awesome-redux#react---a-javascript-library-for-building-user-interfaces).
+
 
 {% endhighlight %}
