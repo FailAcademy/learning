@@ -49,6 +49,7 @@ To do that, you'll need to:
 2. Download the zip file of your solution on Codepen for Exercise 1, or download the zip of the provided solution
 3. Extract the zip file and set-up a new project in Koala with the resulting folder
 4. Compile away!
+
 ---
 
 ## Homework
