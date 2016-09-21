@@ -19,7 +19,7 @@ layout: false
 
 # Agenda
 
-1. create a full-stack redux data layer
+1. full-stack Redux
 2. web sockets
 3. universal javascript
 4. optimistic ui
@@ -31,52 +31,57 @@ layout: false
 ```
  [ View ] <- [ Data ] <- -> [ Server ] <- -> [ Database ]
 
-( React )    ( Redux )       (Express)        (Postgres)
+( React )    ( Redux )       (Express)        (PostgreSQL)
 ```
 
-What have do we still have to do?
-Where is the "single source of truth"?
+- What do we still have to do?
+- Where is the "single source of truth"?
 
 ---
-class: middle, center
 
-# Planning
+## Exercise 1
 
-With a partner, outline a way to sync the client and server using Redux. A high level overview is sufficient, as in the previous slide.
+With a partner, outline a way to sync the client and server using Redux.
+
+A high level overview is sufficient, as in the previous slide.
 
 ---
 template: inverse
 
 # Fullstack Worst Pokemon
 
-Clone the project starter and install dependencies.
+Continue from your current "Worst Pokemon" app.
 
 ---
 
-# Step 1: Express Setup
+## Exercise 2
 
-1. create an Express server
+1. create an Express server to load your React app
 2. load webpack through `webpack-dev-middleware`
 
 ---
 
 # Communication
 
-How can a **server** and **client** communicate?
+- How can a **server** and **client** communicate?
+- What language *(protocol)* can they use?
+
 
 ---
 
 # Communication
 
+**HTTP** or **Web Sockets** are the most common protocols for communicating. 
+
 Explain the following analogies:
 
-1. **HTTP**, like a piece of mail.
+1. **HTTP**: like a piece of mail.
 
 2. **Web Sockets**: like a text message, or a phone call.
 
 ---
 
-# Step 2: Sockets
+## Exercise 3
 
 1. Setup a socket server on port 3030.
 2. Setup a socket client also on port 3030.
@@ -84,7 +89,7 @@ Explain the following analogies:
 
 ---
 
-# Step 3: Middleware
+# Exercise 4
 
 Create a basic middleware and call it on the client.
 
@@ -101,15 +106,19 @@ The middleware should emit an action through the socket.
 
 ---
 
-# Which Actions
+# Limiting Actions
+
+We need to make soe decisions about which information to share between the client & server.
 
 1. Will we want to send all actions to the server?
-2. Is there some data in the client that is only for the client?
-3. How can we sync only the actions we want with the server?
+2. Is there data in the client that is not needed by the server?
+3. How can we specify which actions we want to sync with the server?
 
 ---
 
-# Step 4: Server Store
+# Exercise 5
+
+Create and sync up a second "redux" state on the server.
 
 1. Create a `store` on the server. How will it be different from your client `store`?
 2. Update the server store whenever the server receives a new action
@@ -119,7 +128,11 @@ The middleware should emit an action through the socket.
 
 # Universal JavaScript
 
-Notice how our client and server code are both sharing the same reducers. This is called **universal javascript**.
+Notice how our client and server code are both sharing the same reducers.
+
+This is often called **universal javascript** or **isomorphic javascript**.
+
+- What are some benefits and draw backs of "universal javascript"?
 
 ---
 
@@ -127,11 +140,15 @@ Notice how our client and server code are both sharing the same reducers. This i
 
 Users can vote as many times as they want. Ideally, they should only be allowed to vote once per item.
 
-Discuss with a partner how we might "authenticate" the client.
+Discuss with a partner how you might prevent users from voting multiple times.
 
 ---
 
-# Step 5: Client ID
+# Exercise 6
+
+A `clientId` is a simple authentication solution (though not very safe).
+
+Once a user is identified, you can prevent that user from voting multiple times.
 
 1. Give the client an id using ["uuid"](https://github.com/defunctzombie/node-uuid)
 2. Store the `clientId` in the store
@@ -143,8 +160,32 @@ Discuss with a partner how we might "authenticate" the client.
 
 # Optimistic UI
 
-Notice how the votes are added, but then removed very quickly once the server state overrides the client state. This is called **optimistic UI**.
+Notice how the votes are added, but then removed very quickly once the server state overrides the client state.
 
-Explain to a partner how optimstic UI works.
+This is called **optimistic UI**.
+
+- Explain to a partner how optimistic UI works.
+- Describe a different scenario where optimistic UI might be helpful.
+
+---
+
+## Exercise 7
+
+What would be the best method to sync your server store with a database?
+
+- in reducers?
+- using middleware?
+- a plugin?
+
+Explain and justify your solution.
+
+---
+
+# Review
+
+1. full-stack Redux
+2. web sockets
+3. universal javascript
+4. optimistic ui
 
 {% endhighlight %}
