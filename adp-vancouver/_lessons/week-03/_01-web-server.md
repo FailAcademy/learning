@@ -18,4 +18,4 @@ Build out a Node.js Server
 Get the class to build out a server from one of the 5
 1. Express
 2. Sail.js
-3. Koa(Best group)
+3. Koa (Best group)
