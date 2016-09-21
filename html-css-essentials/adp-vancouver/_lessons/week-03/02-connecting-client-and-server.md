@@ -41,27 +41,69 @@ With a partner, outline a way to sync the client and server using Redux. Use a h
 
 ## Exercise 2
 
-Demonstrate client/server communication with a a "ping / pong" demo using web sockets.
+Create an Express server. Load webpack through `webpack-dev-middleware`.
 
-There should be a 1000ms delay between receiving a message and emitting the next message.
+- [webpack-dev-server docs](http://webpack.github.io/docs/webpack-dev-server.html)
 
 ---
 
 ## Exercise 3
 
-Create a full-stack redux demo.
+Demonstrate client/server communication with a a "ping / pong" demo using web sockets.
+
+Use a different port (eg. 3030) for your socket server.
+
+There should be a 1000ms delay between receiving a message and emitting the next message.
 
 ---
 
 ## Exercise 4
 
-Provide the client an id as an identifier. Use this id to prevent a client from voting more than once per item.
+Create a basic middleware and call it on the client.
+
+/client/socket/remoteMiddleware.js
+
+```js
+export default store => next => action => {
+  console.log('action', action);
+  return next(action);
+}
+```
+
+The middleware should emit an action through the socket.
 
 ---
 
 ## Exercise 5
 
-What would be the best method to sync your server store with a database? In reducers? Using middleware? A plugin? Explain and justify your solution.
+Create a `store` on the server. How will it be different from your client `store`?
+
+Update the server store whenever the server receives a new action
+
+Trigger a `SET_STATE` action on the client to update the client sate with the updated server state
+
+---
+
+## Exercise 6
+
+Give each client a `clientId` as an identifier.
+
+1. Give the client an id using ["uuid"](https://github.com/defunctzombie/node-uuid)
+2. Store the `clientId` in the store
+3. Pass the `clientId` with all middleware calls
+4. Store votes as an array of `clientId`'s
+5. Return votes as the size of the votes array
+
+
+## Exercise 7
+
+What would be the best method to sync your server store with a database?
+
+- in reducers?
+- using middleware?
+- a plugin?
+
+Explain and justify your solution.
 
 ---
 
