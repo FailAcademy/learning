@@ -81,13 +81,19 @@ In the example tree file structure below, which components should be "Presentati
 
 ## Exercise 4
 
+Convert your "Worst Pokemon" app to use React. 
+
+---
+
+## Exercise 5
+
 Use the `<Provider>` tag from ["react-redux"](https://github.com/reactjs/react-redux) to connect the redux store to the React app in your "Worst Pokemon" app.
 
 [Docs](https://github.com/reactjs/react-redux/blob/master/docs/api.md#provider-store)
 
 ---
 
-## Exercise 5
+## Exercise 6
 
 1. Write `mapStateToProps` to connect a "container" component using "react-redux" & `connect` in your "Worst Pokemon" app.
 
@@ -97,7 +103,7 @@ Use the `<Provider>` tag from ["react-redux"](https://github.com/reactjs/react-r
 
 ---
 
-## Exercise 6
+## Exercise 7
 
 In your group, write some guidelines for connecting React & Redux.
 
@@ -111,7 +117,7 @@ Think about:
 
 1. Setup "react-redux". Map out your components as "presentational" or "container" components.
 
-2. Write [reselect](https://github.com/reactjs/reselect) selectors for your app.
+2. Write selectors for your app. If necessary, use [reselect](https://github.com/reactjs/reselect).  
 
 ---
 
