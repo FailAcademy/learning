@@ -9,18 +9,15 @@ lesson_date: 2016-10-05
 
 - Apply Redux middleware, including "redux-logger" and "redux-thunk"
 - Use "redux-thunk" to dispatch multiple actions from an action creator
-- Get introduced to concepts of "curry" and "compose"
-- Distinguish the advantages of using "immutable" data structures
+- learn how to setup middleware in your project
 
 ---
 
 ## Keywords
 
 - middleware
+- logger
 - thunk
-- curry
-- compose
-- immutable
 
 ---
 
@@ -38,11 +35,22 @@ Setup [redux-logger](https://github.com/evgenyrodionov/redux-logger) middleware 
 
 ## Exercise 2
 
-Use [redux-thunk](https://github.com/gaearon/redux-thunk) in your "Worst Pokemon" app.
+Setup [redux-thunk](https://github.com/gaearon/redux-thunk) in your "Worst Pokemon" app.
 
 ---
 
-## Exercise 3
+# Exercise 3
+
+Setup an "async action" that sorts pokemon by their number of votes.
+(highest to least). Call this action "SORT_BY_POPULARITY".
+
+The sorting action should be called every time you dispatch "VOTE_UP".
+
+Hint: *use redux-thunk*.
+
+---
+
+## Exercise 4
 
 With a partner, choose an additional middleware to implement in your "Worst Pokemon" app.
 
@@ -52,11 +60,11 @@ Some middleware suggestions:
 - [Toast Error Messages](See the bottom of https://www.codementor.io/reactjs/tutorial/beginner-s-guide-to-redux-middleware)
 - Redux-Debounce / Redux-Throttle
 - Redux-Authentication (https://github.com/Jackong/redux-authentication)
-
-[Other suggestions found here](https://github.com/xgrommx/awesome-redux#react---a-javascript-library-for-building-user-interfaces)
+- [Other suggestions found here](https://github.com/xgrommx/awesome-redux#react---a-javascript-library-for-building-user-interfaces)
 
 ---
 
 ## Additional Resources
 
-- [egghead.io middleware chain](https://egghead.io/lessons/javascript-redux-the-middleware-chain?course=building-react-applications-with-idiomatic-redux)
+- [Egghead.io: Redux Middleware Chain](https://egghead.io/lessons/javascript-redux-the-middleware-chain?course=building-react-applications-with-idiomatic-redux)
+- [Stack Overflow: How to Dispatch Async Actions](http://stackoverflow.com/questions/35411423/how-to-dispatch-a-redux-action-with-a-timeout/35415559#35415559)

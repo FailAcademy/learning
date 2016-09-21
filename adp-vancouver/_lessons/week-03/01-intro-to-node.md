@@ -36,8 +36,9 @@ Check out the *sample code*. Run it and experiment with it.
 - Express
 
 ## Resources
-Mozilla Article: [What is a Web Server?](https://developer.mozilla.org/en-US/Learn/Common_questions/What_is_a_web_server) <br/>
-REST (Representational State Transfer): Roy Fielding's [doctoral dissertation](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
-
-About Node.js: [https://nodejs.org/en/about/](https://nodejs.org/en/about/) <br/>
-Express: [Fast, unopinionated, minimalist web framework](https://expressjs.com/)
+- Mozilla Article: [What is a Web Server?](https://developer.mozilla.org/en-US/Learn/Common_questions/What_is_a_web_server) <br/>
+- REST (Representational State Transfer): Roy Fielding's [doctoral dissertation](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
+- About [Node.js](https://nodejs.org/en/about/)
+- [Express](https://expressjs.com/): Fast, unopinionated, minimalist web framework
+- [Node Playbook](https://github.com/HiFaraz/node-playbook/blob/master/README.md)
+- [NodeSchool](http://nodeschool.io/)
