@@ -127,7 +127,7 @@ The visual representation of the DOM for this page would look something like thi
 
 # Exercise 1
 
-Let's map the DOM for the homepage of our project sites...
+Let's map the DOM for the homepage of our Project 1 sites...
 
 Take a piece of paper and map out in a tree-structure what the DOM looks like for your project site.
 

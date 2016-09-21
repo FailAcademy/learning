@@ -13,7 +13,7 @@ You have creative control over the topic of your website. Some ideas for your we
 - A website advertising an upcoming event
 - *...or pitch an idea to your instructor!*
 
-Be sure to submit your website topic idea to your instructor before the beginning of class on Day 11.
+Be sure to submit your website topic idea to your instructor **before the beginning of class on Day 11**.
 
 And like with Project 1, you'll also deploy your website using **GitHub Pages**. If you would prefer to purchase a custom domain name and website hosting plan to host your capstone project instead of using GitHub Pages, please make arrangements with your instructor in advance.
 

@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: Hacker Edition - Intro to LESS
-slides: ['_slides/week-09/02-intro-to-less-slides.md']
+title: Hacker Edition - Intro to Less
+slides: ['_slides/week-10/01-intro-to-less-slides.md']
 ---
 
 ## Pre-work
@@ -37,21 +37,18 @@ Let's refactor some plain vanilla CSS into Less:
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/NqdjQP/?height=268&theme-id=0&default-tab=css' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/NqdjQP/'>NqdjQP</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-View the [solution](http://codepen.io/redacademy/pen/WvROjx).
-
 ---
 
 ## Exercise 2
 
-Let's take the Less that you wrote in Exercise 1 and practice compiling it using Prepos.
+Let's take the Less that you wrote in Exercise 1 and practice compiling it.
 
 To do that, you'll need to:
 
-1. Download and install [Prepos](https://prepros.io/)
+1. Download and install [Koala](http://koala-app.com/) (or try the CLI!)
 2. Download the zip file of your solution on Codepen for Exercise 1, or download the zip of the provided solution
-3. Extract the zip file and set-up a new project in Prepos with the resulting folder
+3. Extract the zip file and set-up a new project in Koala with the resulting folder
 4. Compile away!
-
 ---
 
 ## Homework

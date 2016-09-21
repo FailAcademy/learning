@@ -6,10 +6,11 @@ slides: ['_slides/week-07/02-intro-to-jquery-slides.md']
 
 ## Pre-work
 
-From the JavaScript & jQuery textbook:
+Readings from *Learn to Code Advanced HTML & CSS*:
 
-- Document Object Model (pp. 184-187)
-- jQuery (pp. 296-331)
+- [jQuery](http://learn.shayhowe.com/advanced-html-css/jquery/)
+
+Also before class, familiarize yourself with jQuery by completing the free **[Try jQuery](http://try.jquery.com/)** course on Code School.
 
 ---
 
@@ -33,7 +34,7 @@ From the JavaScript & jQuery textbook:
 
 ## Exercise 1
 
-Let's map the DOM for the homepage of our project sites...
+Let's map the DOM for the homepage of our Project 1 sites...
 
 Take a piece of paper and map out in a tree-structure what the DOM looks like for your project site.
 
@@ -48,8 +49,6 @@ Let's try traversing the DOM to make some change to an HTML document:
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/OVNjLB/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/OVNjLB/'>OVNjLB</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
 
-View the [solution](http://codepen.io/redacademy/pen/VLazKX).
-
 ---
 
 ## Exercise 3
@@ -58,8 +57,6 @@ Try creating a function that listens for an click event on a link:
 
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/VLazbx/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/VLazbx/'>VLazbx</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
-
-View the [solution](http://codepen.io/redacademy/pen/RPaZgY).
 
 ---
 
@@ -99,10 +96,6 @@ Your task is to find an example of an interesting jQuery plugin and bring a demo
 ---
 
 ## Additional Resources
-
-Get extra practice with jQuery basics by completing this free Code School course:
-
-- [Try jQuery](http://try.jquery.com/)
 
 A bookmark-worthy jQuery cheatsheet:
 

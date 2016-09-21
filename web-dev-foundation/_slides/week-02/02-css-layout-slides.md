@@ -23,8 +23,8 @@ layout: false
 2. Positioning elements with CSS
 3. Floating elements with CSS
 4. List-based navigation menus
-
-6. Using CSS resets
+5. Using CSS resets
+6. Validating HTML and CSS code
 
 ---
 template: inverse
@@ -718,6 +718,32 @@ Add a CSS reset to your project (your best bet for Project 1 will be the Eric Me
 You may need to adjust some of your existing CSS rules once you do this (esp. rules related to typography and box model properties).
 
 ---
+template: inverse
+
+# Validating Your Code
+
+---
+
+# What is Validation?
+
+Validating your code simply means that you make sure it conforms to the norms and standards set forth by various organizations.
+
+Valid code will help ensure your website universally understood.
+
+---
+
+# Validation Tools
+
+There many are different validation tools available for validating your HTML and CSS:
+
+Some recommended tools include:
+
+- [W3C Mark-up Validation Service](https://validator.w3.org/)
+- [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/)
+
+*Also use the developer tools in your browser to ensure there are no obvious broken links to files or images.*
+
+---
 
 # What We've Learned
 
@@ -726,6 +752,7 @@ You may need to adjust some of your existing CSS rules once you do this (esp. ru
 - Different ways to use the `position` property
 - How to `float` elements
 - What a CSS reset is and how to use one
+- How we can validate our HTML and CSS
 
 ---
 template: inverse

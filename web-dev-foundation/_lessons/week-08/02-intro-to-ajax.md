@@ -6,16 +6,7 @@ slides: ['_slides/week-08/02-intro-to-ajax-slides.md']
 
 ## Pre-work
 
-From the JavaScript & jQuery textbook:
-
-- What is Ajax (p. 370)
-- Why Use Ajax (p. 371)
-- How Ajax Works (p. 372)
-- JSON: JavaScript Object Notation (p. 376)
-- Working with JSON Data (p. 377)
-- jQuery & Ajax (pp. 388-399)
-
-A primer on APIs:
+A primer on APIs to read before today's lesson:
 
 - [What APIs Are And Why They're Important](http://readwrite.com/2013/09/19/api-defined)
 
@@ -23,8 +14,11 @@ A primer on APIs:
 
 ## Learning Objectives
 
-- Learn what Ajax is (in relation to jQuery)
-- How to use it make a simple get request from a popular third-party API
+- Define what Ajax and JSON are, particularly in relation to jQuery.
+- Define what an API is and explore popular social media/network APIs.
+- Use jQuery Ajax methods to load content a webpage.
+- How to use Ajax make a simple get request from a popular third-party API.
+- Handle Ajax errors with jQuery and provide user feedback.
 
 ---
 
@@ -42,8 +36,6 @@ Your turn! Pull some data of your own from the GitHub API:
 
 <iframe height='268' scrolling='no' src='//codepen.io/redacademy/embed/yNJLgR/?height=268&theme-id=0&default-tab=js' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/redacademy/pen/yNJLgR/'>yNJLgR</a> by RED Academy (<a href='http://codepen.io/redacademy'>@redacademy</a>) on <a href='http://codepen.io'>CodePen</a>.
 </iframe>
-
-View the [solution](http://codepen.io/redacademy/pen/NqrmWL).
 
 ---
 
@@ -88,3 +80,8 @@ An older article, but still good background reading on APIs:
 A handy tool for making a JSON string more readable by adding whitespace back into it if it has been removed:
 
 - [JSON Pretty Print](http://jsonprettyprint.com/)
+
+And some Chrome extensions that will automatically do the same thing when viewing JSON in the browser:
+
+- [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)
+- [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc)

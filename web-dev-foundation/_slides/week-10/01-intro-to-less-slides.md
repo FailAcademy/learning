@@ -372,58 +372,19 @@ After you write your Less code, you need to convert that code into regular CSS f
 You have two different options for compiling Less:
 
 1. Install [Node.js](https://nodejs.org/), [npm](https://www.npmjs.com/), and use [the command line](http://lesscss.org/#using-less-installation) to install and compile your code
-2. Use a GUI such as [Prepos](https://prepros.io/) to compile your code
-
----
-class: center, middle
-
-.large[
-   Option 1: Install Node.js & npm, commence scowling
-]
-
-.inline-images[
-   ![Rob Swanson stare](../../public/img/slide-assets/ron-swanson-stare.gif)
-]
-
----
-class: center, middle
-
-.large[
-   Option 2: Use a GUI
-]
-
----
-class: center, middle
-
-.inline-images[
-   ![Prepos launch screenshot](../../public/img/slide-assets/prepos-launch-screenshot.png)
-]
-
----
-class: center, middle
-
-.inline-images[
-   ![Prepos options screenshot](../../public/img/slide-assets/prepos-options-screenshot.png)
-]
-
----
-class: center, middle
-
-.inline-images[
-   ![Prepos processed screenshot](../../public/img/slide-assets/prepos-processed-screenshot.png)
-]
+2. Use a GUI such as [Koala](http://koala-app.com/) to compile your code
 
 ---
 
 # Exercise 2
 
-Let's take the Less that you wrote in Exercise 1 and practice compiling it using Prepos.
+Let's take the Less that you wrote in Exercise 1 and practice compiling it.
 
 To do that, you'll need to:
 
-1. Download and install [Prepos](https://prepros.io/)
+1. Download and install [Koala](http://koala-app.com/) (or try the CLI!)
 2. Download the zip file of your solution on Codepen for Exercise 1, or download the zip of the provided solution
-3. Extract the zip file and set-up a new project in Prepos with the resulting folder
+3. Extract the zip file and set-up a new project in Koala with the resulting folder
 4. Compile away!
 
 ---

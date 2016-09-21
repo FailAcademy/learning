@@ -6,16 +6,16 @@ slides: ['_slides/week-06/01-programming-basics-slides.md']
 
 ## Pre-work
 
-From the JavaScript & jQuery textbook:
-
-- Chapter 1/a (pp. 13-24)
+Please be sure to submit your [Capstone Project](/project/capstone/) idea to your instructor by the beginning of class.
 
 ---
 
 ## Learning Objectives
 
-- Learn basic programming concepts such as statements, booleans, conditions, loops and variables
-- Use Scratch to build a basic program using graphical “pseudo code”
+- Define what "programming" is, as well as the essential mind set characteristics, tools, and skills of a professional programmer.
+- Explore basic programming concepts such as statements, booleans, conditions, loops and variables in pseudocode.
+- Define what an algorithm is.
+- Use Scratch to build a basic program using graphical pseudocode.
 
 ---
 

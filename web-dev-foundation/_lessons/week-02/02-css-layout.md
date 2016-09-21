@@ -22,6 +22,7 @@ An article unpacking the nuances of the "clearfix" hack:
 - Use CSS positioning (static, relative, absolute, and fixed) to move elements around a webpage.
 - Use CSS floats to manipulate elements, including list-based navigation menus.
 - Understand what CSS resets are and why they are needed.
+- Use online tools to validate HTML and CSS code.
 
 ---
 
@@ -81,13 +82,17 @@ We'll be doing more work on Project 1 for homework, but before you get started y
 
 - [Don't Fear Layout](http://www.dontfeartheinternet.com/08-layout/)
 
-Based on what you've learned in the last first four classes, you've covered most of what you need to know to rough-out the layout for the entire site. Be sure to work on getting the desktop layout as close as possible to the design comp before next class (when we'll tackle the reponsive component of the project).  
+Based on what you've learned in the last first four classes, you've covered most of what you need to know to rough-out the layout for the entire site. Be sure to work on getting the desktop layout as close as possible to the design comp before next class (when we'll tackle the reponsive component of the project). Be sure to check to make sure your HTML and CSS is valid!
 
 We still need to tackle the custom fonts, the social media icons, and a few CSS3 properties (such as `box-shadow`), but we'll get to those in the coming weeks.
 
 ---
 
 ## Additional Resources
+
+More on the new semantically-named structural elements in HTML5:
+
+- [HTML5 for Web Designers - Semantics](http://html5forwebdesigners.com/semantics/)
 
 Some great CSS Tricks resources to further explain layout concepts:
 
@@ -102,6 +107,10 @@ And some CSS reset resources:
 - [Box Model Reset](https://sunnyis.me/blog/box-model-reset)
 - [Pure CSS](http://purecss.io/)
 
-More on the new semantically-named structural elements in HTML5:
+A HTML validation tool:
 
-- [HTML5 for Web Designers - Semantics](http://html5forwebdesigners.com/semantics/)
+- [W3C Mark-up Validation Service](https://validator.w3.org/)
+
+A CSS validation tool:
+
+- [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/)
