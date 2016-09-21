@@ -10,6 +10,7 @@ layout: true
 class: center, middle, inverse
 
 ---
+
 # Building Web Servers With JavaScript
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
@@ -39,6 +40,7 @@ template: inverse
 2. **Web**: A network of fine threads constructed by a spider from fluid secreted by its spinnerets, used to catch its prey.
 
 ---
+
 # Vocabulary
 
 #### **Web Server** = **HTTP Server** = **Server**
@@ -47,8 +49,7 @@ template: inverse
 requests for information it has access to.
 
 - We'll use the term **Server** and **Web Server** interchangeably.
-- In general a *Web Server* will always use *HTTP* to deliver information to *Clients*.
-- In this course we'll also learn about the *Websocket Protocol*.
+- In general, a *Web Server* uses *HTTP* to deliver information to *Clients*.
 
 
 ---
@@ -62,9 +63,11 @@ template: inverse
 # Why do I need a Web Server?
 
 ---
+
 # Exercise 1
 
 Read [this Article](https://webhostinggeeks.com/blog/what-are-web-servers-and-why-are-they-needed/).
+
 When you're finished, try to answer the following questions with each other:
 - Where does your web application code run, in the diagram on the previous slide?
 - Does a Web Server need to run on it's own computer system? Or, Can a single system
@@ -91,12 +94,18 @@ We've already been using it to create our React application!
 It's the technology behind Webpack, and it can do so much more!
 
 ---
+
 # What is Node?
 
-"Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world."
+Node acts as a bridge between your operating system and JavaScript.
 
-Node is a bridge between your operating system and JavaScript! Operating system level programs can take advantage
-of all the hardware that modern computers have to offer. Meaning developers who can write JavaScript can control everything (not just Web Pages)!
+Features include:
+
+- event-driven
+- non-blocking
+- NPM package system
+
+In other words: JavaScript developers are no longer limited to the browser!
 
 ---
 class: center, middle
@@ -107,20 +116,19 @@ class: center, middle
 
 # Why Node?
 
-Node gives us access to our computer's Operating System via JavaScript. If we're going to create Web Servers, the programming language we'll need to use has to have access to our operating system.
+Node gives us access to our computer's Operating System via JavaScript.
 
-- What computer hardware will our JavaScript code utilize to create a Web Server?
-- What is a 'runtime' ?
-- How is this different from JavaScript code which is executed by a Web Browser?
-
+- What computer hardware will our JavaScript code use to create a Web Server?
+- What is a **runtime**?
+- How is JavaScript in Node different from in the Browser?
 
 ---
 
 # A JavaScript Web Server
 
-```js
-#! /usr/bin/env node
+Copy the following code into a file named "server.js":
 
+```js
 const http = require('http');
 const port = 3000;
 
@@ -134,9 +142,7 @@ console.log("Server running @ localhost:3000 \nCTRL + C to shutdown");
 
 ```
 
-Copy this code into a file named `server.js` <br/>
-Run `chmod 777 server.js` <br/>
-Run this script using the command `./server.js` <br/>
+Run this script using `node server.js`.
 
 ---
 
@@ -148,6 +154,7 @@ https://github.com/redacademy/adp-node-server-intro.git
 Open **Question.md** and answer each of them.
 
 ---
+
 # Exercise 3
 
 In groups of two, attempt to implement a Web Server using one of the following Node Web Server Frameworks:
@@ -164,6 +171,7 @@ template: inverse
 # Express
 
 ---
+
 # Start using Express
 
 Install and set up Express in a new Node project. The group who chose to explore Express in the previous exercise
@@ -176,65 +184,96 @@ template: inverse
 # Routing in Express
 
 ---
+
 # Routing
+
 Run:
-```
+
+```shell
 npm init -y
 npm i -S express
 touch index.js
 ```
+
 Paste in index.js:
+
 ```js
-var express = require('express');
-var app = express()
+const express = require('express');
+const app = express();
 
 app.get('/', function (req, res) {
-  res.send("hello, world!")
-})
-```
-```js
-var server = app.listen(3000, function() {
+  res.send("hello, world!");
+});
+
+const server = app.listen(3000, function() {
   console.log("server running at http://localhost:" + server.address().port)
-})
+});
 ```
 
 ---
-#update package.json
+
+# Update
+
+Create an NPM script for running your app.
+
+/ package.json
+
 ```js
-"start": "node index.js"
+"scripts": {
+  "start": "node index.js"
+}
 ```
+
+Call the script:
+
+```shell
+npm start
+```
+
 ---
+
 # nodemon
+
 Annoying when you have to stop the server whenever we make a change so...
-```
+
+```shell
 npm i -D nodemon
 ```
-Will automatically restart the server when changes are made
 
-Create a dev script in your package.json "dev": "nodemon index.js"
-```
+Will automatically restart the server when changes are made.
+
+Create a dev script in your package.json "dev": "nodemon index.js".
+
+```shell
 npm run dev
 ```
+
 ---
-##Exercise 4
+
+## Exercise 4
+
 We will be adding the below to our index.js
-```
+
+```js
 var fs = require('fs');
 var _ = require('lodash');
 !(have to install lodash)
 var users = [];
 ```
+
 Research why we are adding these and we will talk about it in class.
 
 
 ---
 
-#User model
-```
+# User model
+
+```js
 fs.readFile('users.json', {encoding: 'utf8'}, function (err, data) {
   if (err) throw err
 ```
-```
+
+```js
   JSON.parse(data).forEach(function (user) {
     user.name.full = _.startCase(user.name.first + ' ' + user.name.last)
     users.push(user)
@@ -243,17 +282,22 @@ fs.readFile('users.json', {encoding: 'utf8'}, function (err, data) {
 ```
 
 ---
-#JSON
+
+# JSON
+
 Go to github
 
 Link to be decided.
 
 ---
-#app.get
-```
+
+# app.get
+
+```js
 app.get('/', function (req, res) {
 ```
-```
+
+```js
   var buffer = ''
 
   users.forEach(function (user) {
@@ -270,7 +314,8 @@ What happens when you click on the link now?
 (Cannot GET)
 
 ---
-#Dynamic
+
+# Dynamic
 
 we need to dynamically load the url based on the username. We can do that by user  : and params.
 ```
@@ -280,6 +325,7 @@ app.get('/:username', function (req, res) {
 })
 ```
 ---
+
 # HTTP Verbs
 
 So far we have been using GET that will let you modify data.
@@ -287,14 +333,19 @@ So far we have been using GET that will let you modify data.
 need body.parser (does exactly what it sounds like - it allows you to parse the body of the request)
 
 ---
+
 # Put or Edit
-```
+
+```js
 app.put
 ```
 
 ---
+
 # Delete
-```
+
+```js
 app.delete
 ```
+
 {% endhighlight %}
