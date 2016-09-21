@@ -26,7 +26,7 @@ layout: false
 
 ---
 
-# JavaScript Puzzles
+## Exercise 1
 
 Read the following code examples, and predict the outcome.
 
@@ -120,7 +120,7 @@ The interpreter can only handle one thing at a time.
 
 Read [Event Loop](https://developer.mozilla.org/en/docs/Web/JavaScript/EventLoop) or [What is the Event Loop](http://altitudelabs.com/blog/what-is-the-javascript-event-loop/).
 
-Draw the image from the top of the "Event Loop" link on a piece of paper.
+Draw the image from the top of the "Event Loop" link on a piece of paper. It should be "page" sized.
 
 ```
 | s |
@@ -151,6 +151,42 @@ Using post-it-notes at your table, make a demo of how the browser handles the pr
 
 ---
 
+# Break Points
+
+Run the code in your editor with "break points" to verify this is how it works.
+
+"DevTools" => "Sources" -> "Snippets" -> "New Snippet".
+
+```js
+(function run() {
+  console.log('a'); // break
+  setTimeout(() => { // break
+    console.log('b'); // break
+  }, 100);  
+  setTimeout(() => { // break
+    console.log('c'); // break
+  }, 0);
+  console.log('d'); // break
+}());
+```
+
+---
+
+# Single Thread
+
+- How many threads can your computer handle?
+- Why do you think JavaScript is "single-threaded"?
+- Do you think a single thread makes coding easier or harder?
+
+---
+template: inverse
+
+# Blocking
+# &
+# Non-Blocking
+
+---
+
 # Blocking & Non-Blocking
 
 Now imagine the king suddenly has another emergency task he has to handle.
@@ -172,6 +208,8 @@ The King must wait for the Servant to finish making sandwiches before anything e
 **Servant** => wine => **King**
 
 The King is **blocked** by tasks in the stack.
+
+- Why can't the King get his wine first?
 
 
 ---
@@ -196,7 +234,17 @@ template: inverse
 
 ---
 
-# Concurrency: File System
+# Concurrency
+
+Concurrency refers to running multiple processes (threads) at the same time.
+
+This is possible nowadays with multi-core computers.
+
+Think of it like a king with several servants, most of whom are idle a lot of the time. 
+
+---
+
+## Exercise 2
 
 See the [fs docs](https://nodejs.org/api/fs.html) &
 [src](https://github.com/nodejs/node/blob/master/doc/topics/blocking-vs-non-blocking.md).
@@ -263,7 +311,6 @@ template: inverse
 
 # Callbacks
 
-
 ---
 
 # Callbacks
@@ -299,11 +346,11 @@ do_a(() => {
 
 ---
 
-# Nested Callbacks
+## Exercise 3
 
-Use the previous example, and write five consecutive callbacks logging "a", "b", "c", "d", "e" with 1 second intervals.
+1. Rewrite example 2 using callbacks.
 
-What does your code look like now?
+2. Use "nested" callbacks to write five consecutive calls logging "a", "b", "c", "d", "e" with 1 second intervals.
 
 
 ---
@@ -374,7 +421,7 @@ wait(0, 1000)
 
 ---
 
-## Challenges
+## Exercise 4
 
 1. Change the callback hell from example 2 (a, b, c, d, e) to use ES6 Promises instead.
 
@@ -384,7 +431,7 @@ wait(0, 1000)
 
 ---
 
-## Stretch Challenges
+## Exercise 5 (Stretch Goal)
 
 1. Use a native JS promise to load data from an api. [API suggestions](https://github.com/toddmotto/public-apis)
 
@@ -394,5 +441,14 @@ wait(0, 1000)
   If a request succeeds, it should log the data to the console.
 
 2. Write a demo to that demonstrates the difference between `Promise.all` and `Promise.race`.
+
+---
+
+# Review
+
+1. Event loop
+2. Blocking vs. non-blocking
+3. Callbacks
+4. ES6 Promises
 
 {% endhighlight %}
