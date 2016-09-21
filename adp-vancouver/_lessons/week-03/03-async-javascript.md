@@ -43,9 +43,9 @@ lesson_date: 2016-10-13
 
 ## Exercise 1
 
-Model how the **stack** and **queue** work step by step within the Javascript event loop. Use post it notes for each step for the following code examples:
+Read the following code examples, and predict the outcome.
 
-For additional help, read [Event Loop](https://developer.mozilla.org/en/docs/Web/JavaScript/EventLoop) or [What is the Event Loop](http://altitudelabs.com/blog/what-is-the-javascript-event-loop/).
+Do not copy and run the code yet.
 
 EXAMPLE 1
 
@@ -86,10 +86,7 @@ do_b();
 
 ## Exercise 2
 
-Compare blocking and non-blocking code with the built in Node module `fs`. The following resources will help:
-
-[docs](https://nodejs.org/api/fs.html)
-[src](https://github.com/nodejs/node/blob/master/doc/topics/blocking-vs-non-blocking.md)
+Compare blocking and non-blocking code with the built in Node module `fs`.
 
   a. create a demo file called "file.md" to read.
 
@@ -98,6 +95,11 @@ Compare blocking and non-blocking code with the built in Node module `fs`. The f
   c. Create a file called "async.js" that should read "file.md" using `fs.readFile`.
 
   d. create timers using "performance.now()" to determine how long the previous functions take to run.
+
+The following resources will help:
+
+- [docs](https://nodejs.org/api/fs.html)
+- [src](https://github.com/nodejs/node/blob/master/doc/topics/blocking-vs-non-blocking.md)
 
 ---
 
@@ -123,6 +125,19 @@ Compare blocking and non-blocking code with the built in Node module `fs`. The f
   - If the second request fails, it should retry again.
   - If the third request fails, it should return an error.
   - If a request succeeds, it should log the data to the console.
+
+---
+
+## Exercise 5
+
+1. Use a native JS promise to load data from an api. [API suggestions](https://github.com/toddmotto/public-apis)
+
+  If the first request fails, it should retry.
+  If the second request fails, it should retry again.
+  If the third request fails, it should return an error.
+  If a request succeeds, it should log the data to the console.
+
+2. Write a demo to that demonstrates the difference between `Promise.all` and `Promise.race`.
 
 ---
 
