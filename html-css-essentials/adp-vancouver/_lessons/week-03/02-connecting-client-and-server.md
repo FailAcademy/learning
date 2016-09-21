@@ -15,6 +15,7 @@ lesson_date: 2016-10-12
 ---
 
 ## Keywords
+
 - universal Javascript
 - optimistic UI
 - web sockets

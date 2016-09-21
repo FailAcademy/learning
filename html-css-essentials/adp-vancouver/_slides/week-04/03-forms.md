@@ -19,7 +19,11 @@ layout: false
 
 # Agenda
 
-1.
+1. Controlled vs. Uncontrolled components
+2. React form events
+3. Redux-Form
+4. Form validation
+5. Displaying errors
 
 ---
 
@@ -49,7 +53,7 @@ Try the following input.
   />
 ```
 
-What happens? Why?
+- What happens? Why?
 
 ---
 
@@ -59,7 +63,7 @@ In React, form elements are considered "controlled" or "uncontrolled".
 Read [React Forms](https://facebook.github.io/react/docs/forms.html).
 
 - With a partner, compare the "controlled" and "uncontrolled" input.
-- Act out the differences, with one is a "controlled" input with a component parent, and the other "uncontrolled" with a parent.
+- Act out the differences, one person is a "controlled" input with a component parent, and the other "uncontrolled" with a parent.
 
 ---
 
@@ -74,13 +78,27 @@ React has two major form events you should know:
 
 # onChange
 
-`onChange` is attached to an input and called every time an inputs value changes.
+`onChange` is attached to an input and called every time an input value changes.
 
 ```html
 <input onChange={(value) => console.log(value)} />
 ```
 
 - What might we use `onChange` for?
+
+---
+
+# onChange
+
+`onChange` is attached to an input and called every time an input value changes.
+
+```html
+<input onChange={(value) => console.log(value)} />
+```
+
+- What might we use `onChange` for?
+
+Updating an input's value every time the value changes.
 
 ---
 
@@ -102,6 +120,8 @@ Form values create an object with keys matching the "name" given to the inputs.
 <input name="title" defaultValue="React Forms"/>
 <input name="description" defaultValue="Some practice"/>
 ```
+
+Data:
 
 ```js
 {
@@ -160,7 +180,7 @@ render() {
 
 ---
 template: inverse
-# Redux form
+# Redux Form
 
 ---
 
@@ -214,7 +234,7 @@ FormComponent = reduxForm({
 
 # State
 
-The **form name** corresponds to the **key** in your redux store.
+The **form name** corresponds to a **key** in your redux store.
 
 ```js
 console.log(store.getState());
@@ -245,11 +265,13 @@ class FormComponent extends React.Component {
 }
 ```
 
+- Which props are added by Redux Form?
+
 ---
 
 # Props
 
-What might we use these props for?
+What might we use each of these props for?
 
 - dispatch
 - pristine / dirty
@@ -318,7 +340,10 @@ Redux-Form adds a `handleSubmit` prop, which can be added to your form.
 
 ```js
 FormComponent = reduxForm({ form: 'form1' })(FormComponent);
-FormComponent = connect(mapStateToProps, mapDispatchToProps)(FormComponent);
+FormComponent = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(FormComponent);
 ```
 
 `connect` connects the redux **state** and **dispatch** to the component.
@@ -402,21 +427,23 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => (
 
 # Disabled Button
 
-How can we **disable** the submit button when the form is invalid or is submitting?
+We know how to disable a button in HTML.
 
 ```html
 <button type="submit" disabled={true}>Submit</button>
 ```
+
+- How can we *disable* the submit button when the form is **invalid** or is **submitting**?
 
 ---
 
 
 # Using Meta Props
 
-We can use the "meta" props:
+We can use the "meta" props to specify our disable property.
 
-- invalid
-- submitting
+- invalid: true
+- submitting: true
 
 ```html
 <button
@@ -429,15 +456,21 @@ We can use the "meta" props:
 
 # Performance Experiment
 
-Add the following code to the top of your form.
+- How often do you think your form component is re-rendered?
 
-When is a form re-render triggered?
+---
+
+# Performance Experiment
+
+Add the following code to the top of your form.
 
 ```js
 render() {
   console.log('rendered');
 }
 ```
+- When is a form re-render triggered?
+
 
 ---
 
@@ -466,13 +499,24 @@ Feel free to create your own wrapper for any other UI library.
 
 ---
 
+# Review
+
+1. Controlled vs. Uncontrolled components
+2. React Form events
+3. Redux Form
+4. Form validation
+5. Displaying errors
+
+---
+
 ## Challenge
 
-Create a form in your "RED it" project. Include:
+Create a form in your "REDit" project. Include:
   - saving data to the Redux store
   - validation of fields
   - styled components
   - error feedback
   - a disabled submit button when the form is invalid
+
 
 {% endhighlight %}

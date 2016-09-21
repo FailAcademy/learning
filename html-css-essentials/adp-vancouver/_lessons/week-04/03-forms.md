@@ -6,6 +6,7 @@ lesson_date: 2016-10-19
 ---
 
 ## Lesson Objectives
+
 - create form elements for text fields, text areas, numbers, selects, etc.
 - compare and contrast controlled and uncontrolled components
 - use [redux-form](http://redux-form.com/) for handling form functionality
@@ -16,6 +17,7 @@ lesson_date: 2016-10-19
 ---
 
 ## Keywords
+
 - controlled vs. uncontrolled components
 - `onChange`
 - `onSubmit`
@@ -44,7 +46,7 @@ Setup the form demos project.
 
 ## Exercise 2
 
-Create a form in your "RED it" project. Include
+Create a form in your "REDit" project. Include:
   - saving data to the Redux store
   - validation of fields
   - styled components
