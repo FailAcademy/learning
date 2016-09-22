@@ -100,7 +100,8 @@ c) middleware
 
 5. Use the redux devtools extension to show how Redux works in a todo app.
 
-  - git clone https://github.com/reactjs/redux/tree/master/examples/todomvc
+  - git clone https://github.com/gaearon/redux-devtools
+  - go into devtools and install deps, run the app
   - download the "Redux Chrome extension".
   - click and view actions
 
