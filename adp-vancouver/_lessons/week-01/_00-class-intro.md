@@ -185,7 +185,8 @@ Ask students they think you made the following curriculum choices.
 
 ### Projects
 
-- RED it (4 weeks)
+- REDit 1/2 (2 weeks)
+- REDit 2/2 (2 weeks)
 - Realtime App (2 weeks)
 - Code Quality (1 week)
 - Mobile App (1 week)
