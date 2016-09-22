@@ -81,9 +81,13 @@ class: middle
 
 Clone and install the TodoMVC demo.
 
+You must install dependencies at both the root and example level.
+
 ```shell
-git clone https://github.com/reactjs/redux
-cd redux/examples/todomvc
+git clone https://github.com/gaearon/redux-devtools
+cd redux-devtools
+npm install
+cd examples/todomvc
 npm install
 npm start
 ```
