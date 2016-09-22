@@ -16,6 +16,8 @@ lesson_date: 2016-10-11
 - Understand the term 'REST-ful'
 - Use 'REST-ful' methods to communicate with your Express Server from a Web Browser
 
+---
+
 ## Pre-Work
 
 Knowing about HTTP is important but not part of this course.
@@ -25,6 +27,8 @@ To know more about HTTP you can start by looking at the documentation for
 *(Scroll down the page to find it)*<br /><br />
 You'll need to know what the **port** and **protocol** options are for.
 Check out the *sample code*. Run it and experiment with it.
+
+---
 
 ## Keywords
 
@@ -36,6 +40,55 @@ Check out the *sample code*. Run it and experiment with it.
 - HTTP
 - Node
 - Express
+
+---
+
+## Exercise 1
+
+Read [this Article](https://webhostinggeeks.com/blog/what-are-web-servers-and-why-are-they-needed/).
+
+When you're finished, try to answer the following questions with each other:
+- Where does your web application code run, in the diagram on the previous slide?
+- Does a Web Server need to run on it's own computer system? Or, Can a single system
+host multiple Web Servers?
+- How do servers communicate with clients & clients with servers?
+- What is HTTP?
+
+---
+
+## Exercise 2
+
+**Clone this repository**: <br/>
+https://github.com/redacademy/adp-node-server-intro.git
+
+Open **Question.md** and answer each of them.
+
+---
+
+## Exercise 3
+
+We will be adding the following to our index.js:
+
+```js
+var fs = require('fs');
+var _ = require('lodash');
+!(have to install lodash)
+var users = [];
+```
+
+Research why we are adding these and we will talk about it in class.
+
+---
+
+## Exercise 4
+
+In groups of two, attempt to implement a Web Server using one of the following Node Web Server Frameworks:
+
+1. [**Hapi**](http://hapijs.com/)
+2. [**Koa**](http://koajs.com/)
+3. [**Sails**](http://sailsjs.org/)
+
+---
 
 ## Resources
 

@@ -30,7 +30,7 @@ layout: false
 ---
 template: inverse
 
-#What is a Web Server?
+# What is a Web Server?
 
 ---
 
@@ -76,6 +76,20 @@ host multiple Web Servers?
 - What is HTTP?
 
 ---
+
+# Why do I need a web server?
+
+The browser cannot handle all our needs on its own:
+
+- browser cannot host your site
+- browser does not have access to files on your computer
+- browser cannot keep secrets
+- browser should not access a database directly
+
+Discuss with a partner why the browser is designed with these limitations.
+
+---
+
 template: inverse
 
 <img style="display:block; margin:0 auto;" src="https://nodejs.org/static/images/logo-header.png">
@@ -84,43 +98,16 @@ template: inverse
 
 # Node
 
-[https://nodejs.org/en/](https://nodejs.org/en/)
-
-We'll be working with a technology called **Node** throughout this course. We'll be using it to
-power our Web Servers and our local development environment, and we'll use powerful tools
-built by the open-source community using it.
-
-We've already been using it to create our React application!
-It's the technology behind Webpack, and it can do so much more!
-
----
-
-# What is Node?
-
 Node acts as a bridge between your operating system and JavaScript.
 
-Features include:
-
-- event-driven
-- non-blocking
-- NPM package system
-
 In other words: JavaScript developers are no longer limited to the browser!
+
+- How is Node different from JS in the browser?
 
 ---
 class: center, middle
 
 <img src="/public/img/slide-assets/OS Diagram.svg">
-
----
-
-# Why Node?
-
-Node gives us access to our computer's Operating System via JavaScript.
-
-- What computer hardware will our JavaScript code use to create a Web Server?
-- What is a **runtime**?
-- How is JavaScript in Node different from in the Browser?
 
 ---
 
@@ -138,8 +125,7 @@ const server = http.createServer((req, res) => {
   res.end('Hello World\n');
 }).listen(port);
 
-console.log("Server running @ localhost:3000 \nCTRL + C to shutdown");
-
+console.log(`Server running @ localhost:${port}`);
 ```
 
 Run this script using `node server.js`.
@@ -153,16 +139,6 @@ https://github.com/redacademy/adp-node-server-intro.git
 
 Open **Question.md** and answer each of them.
 
----
-
-# Exercise 3
-
-In groups of two, attempt to implement a Web Server using one of the following Node Web Server Frameworks:
-
-1. [**Hapi**](http://hapijs.com/)
-2. [**Koa**](http://koajs.com/)
-3. [**Sails**](http://sailsjs.org/)
-4. [**Express**](https://expressjs.com/)
 
 ---
 
@@ -176,6 +152,54 @@ template: inverse
 
 Install and set up Express in a new Node project. The group who chose to explore Express in the previous exercise
 will provide guidance to the rest of the class.
+
+---
+
+# Start
+
+Create an NPM script for running your app.
+
+/ package.json
+
+```js
+"scripts": {
+  "start": "node index.js"
+}
+```
+
+Call the script:
+
+```shell
+npm start
+```
+
+---
+
+# Restarting the Server
+
+It can get annoying when you have to restart the server on changes.
+
+- How might we restart the server on file changes?
+
+---
+
+# Nodemon
+
+Install "Nodemon".
+
+```shell
+npm install --save-dev nodemon
+```
+
+Nodemon will automatically restart the server when changes are made.
+
+Change your start script to use "nodemon" instead of "node".
+
+```js
+"scripts": {
+  "start": "nodemon index.js"
+}
+```
 
 ---
 
@@ -212,47 +236,24 @@ const server = app.listen(3000, function() {
 
 ---
 
-# Update
+# Routing
 
-Create an NPM script for running your app.
-
-/ package.json
+We added a route to the base location ("/").
 
 ```js
-"scripts": {
-  "start": "node index.js"
-}
+app.get('/', function (req, res) {
+  res.send("hello, world!");
+});
 ```
 
-Call the script:
-
-```shell
-npm start
-```
+Add two more routes to your Express app.
+Demonstrate that you can route between the pages in the browser.
 
 ---
 
-# nodemon
+## Exercise 3
 
-Annoying when you have to stop the server whenever we make a change so...
-
-```shell
-npm i -D nodemon
-```
-
-Will automatically restart the server when changes are made.
-
-Create a dev script in your package.json "dev": "nodemon index.js".
-
-```shell
-npm run dev
-```
-
----
-
-## Exercise 4
-
-We will be adding the below to our index.js
+We will be adding the following to our index.js:
 
 ```js
 var fs = require('fs');
@@ -347,5 +348,15 @@ app.put
 ```js
 app.delete
 ```
+---
+
+# Exercise 4
+
+In groups of two, attempt to implement a Web Server using one of the following Node Web Server Frameworks:
+
+1. [**Hapi**](http://hapijs.com/)
+2. [**Koa**](http://koajs.com/)
+3. [**Sails**](http://sailsjs.org/)
+
 
 {% endhighlight %}
