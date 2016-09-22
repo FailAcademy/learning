@@ -8,7 +8,7 @@ Refactor an earlier project and resubmit it using unit and E2E tests.
 
 Your project must include the following:
 * Type-Checking ( *TypeScript* )
-* Unit Tests ( *Ava, Sinon, Enzyme, JSDOM, NYC* )
+* Unit Tests ( *Jest, Enzyme* )
 * E2E Tests ( *NightWatch* )
 
 ## Requirements
@@ -30,25 +30,29 @@ Your project must include the following:
 
 ## Quality
 - [ ] TSLint: configured with JSX options turned on
-- [ ] TSLint: under 5 warnings
+- [ ] TSLint: under 10 warnings
 - [ ] TS: types specified
 - [ ] TS: interfaces for data structures
 - [ ] TS: load type definition libraries
-- [ ] TS: few compiler warnings
+- [ ] TS: under 15 compiler warnings
 - [ ] unit: tests for Redux reducers
-- [ ] unit: tests include a stub (*Sinon*)
-- [ ] unit: tests prop rendering of components (*Enzyme*)
-- [ ] unit: tests 3 or more DOM interactions (*JSDOM*)
-- [ ] unit: over 50% unit test coverage
+- [ ] unit: tests include a spy
+- [ ] unit: tests include a mock
+- [ ] unit: over 35% unit test coverage
+- [ ] component: 6 components snapshot tested (*Jest*)
+- [ ] component: tests prop rendering of components (*Enzyme*)
+- [ ] component: tests 3 or more DOM interactions (*Enzyme*)
 - [ ] E2E: test a simple page load scenario
 - [ ] E2E: test page routing
 - [ ] E2E: test form fill in and submit
+- [ ] E2E: take screenshots when tests fail
 - [ ] docs: code commented for easy readability
-- [ ] docs: React Cards or 1 or more components
 
 ## Stretch Goals
 - [ ] TSLint: no warnings
 - [ ] TS: no compiler warnings
-- [ ] unit: 90% unit test coverage
+- [ ] unit: over 75% unit test coverage
 - [ ] E2E: test 6 or more user scenarios
+- [ ] E2E: take photos of homepage at 5+ different sizes
+- [ ] E2E: run tests on multiple browsers
 - [ ] docs: React Cards for 3 or more components
