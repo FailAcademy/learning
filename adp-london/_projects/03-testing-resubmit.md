@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Project 4 - Resubmit with Testing
+title: Project 3 - Resubmit with Testing
 due: Monday, November 14th (beginning of class)
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Project 6 - Community Project
+title: Project 5 - Community Project
 due: Friday, December 16 (beginning of class)
 ---
 
