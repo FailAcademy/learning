@@ -1,0 +1,63 @@
+/*
+ * Typography
+ *
+ * Set typographic styles for the site.
+ */
+
+html {
+   font-family: "Roboto", Helvetica, Arial, sans-serif;
+   font-size: 16px;
+   font-weight: 100;
+
+   @media (min-width: 38em) {
+      font-size: 20px;
+   }
+}
+
+body,
+button,
+input,
+select,
+textarea {
+   color: $base-font-color;
+   @include font-size(1);
+   line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: "Roboto", Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   color: #313131;
+}
+
+h2, h3 {
+   margin: 2rem 0 1.5rem;
+}
+
+h3 {
+   color: #969696;
+}
+
+ol, ul {
+   margin-left: 1.5em;
+}
+
+li > ol {
+   list-style: lower-roman;
+}
+
+strong {
+   color: inherit;
+}
+
+th {
+   font-weight: 700;
+}
+
+td {
+   font-weight: 100;
+}
+
+hr {
+   border-top: 1px solid #e2e2e2;
+}
