@@ -26,7 +26,6 @@ lesson_date: 2016-09-26
 - Platform
 - Framework
 - Library
-- Component
 
 ---
 
