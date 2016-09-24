@@ -2,7 +2,7 @@
 layout: lesson
 title: HTML Forms, Audio/Video, and Web Fonts
 slides: ['_slides/week-01/04a-html-forms-audio-video.md', '_slides/week-01/04b-web-fonts.md']
-lesson_date: 2016-07-07
+lesson_date: 2016-09-29
 ---
 
 ## Pre-Work

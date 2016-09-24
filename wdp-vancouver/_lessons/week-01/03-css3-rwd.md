@@ -2,7 +2,7 @@
 layout: lesson
 title: CSS3 & Responsive Web Design
 slides: ['_slides/week-01/03-css3-rwd.md']
-lesson_date: 2016-07-06
+lesson_date: 2016-09-28
 ---
 
 ## Pre-Work

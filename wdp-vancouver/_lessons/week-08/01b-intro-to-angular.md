@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to Angular 2
 slides: ['_slides/week-08/01b-intro-to-angular.md']
-lesson_date: 2016-08-22
+lesson_date: 2016-11-15
 ---
 
 ## Pre-Work

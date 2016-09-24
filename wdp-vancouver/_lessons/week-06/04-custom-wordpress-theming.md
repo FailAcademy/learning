@@ -2,7 +2,7 @@
 layout: lesson
 title: Custom WordPress Theming
 slides: ['_slides/week-06/04-custom-wordpress-theming.md']
-lesson_date: 2016-08-11
+lesson_date: 2016-11-03
 ---
 
 ## Pre-Work

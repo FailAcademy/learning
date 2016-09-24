@@ -2,7 +2,7 @@
 layout: lesson
 title: Angular 2 Router
 slides: ['_slides/week-08/03-angular-router.md']
-lesson_date: 2016-08-24
+lesson_date: 2016-11-16
 ---
 
 ## Pre-Work
