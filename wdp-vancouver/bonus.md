@@ -5,11 +5,11 @@ title: Bonus Lessons
 
 *Bonus content coming soon!*
 
+{% comment %}
+
 ### Monday, August 15th
 
 [Intro to IA](/public/files/intro-to-ia.pdf) (guest lecture by Robert Mackie)
-
-{% comment %}
 
 ### Monday, June 6th
 

@@ -2,7 +2,7 @@
 layout: lesson
 title: Programming with JavaScript
 slides: ['_slides/week-02/03-programming-with-javascript.md']
-lesson_date: 2016-07-13
+lesson_date: 2016-10-05
 ---
 
 ## Pre-Work

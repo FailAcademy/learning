@@ -2,7 +2,7 @@
 layout: lesson
 title: Developing with ES2015 & Webpack
 slides: ['_slides/week-05/02-es2015-with-webpack.md']
-lesson_date: 2016-08-03
+lesson_date: 2016-10-26
 ---
 
 ## Pre-Work

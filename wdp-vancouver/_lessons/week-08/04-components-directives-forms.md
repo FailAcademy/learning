@@ -2,7 +2,7 @@
 layout: lesson
 title: Building Forms with Angular 2
 slides: ['_slides/week-08/04-components-directives-forms.md']
-lesson_date: 2016-08-25
+lesson_date: 2016-11-17
 ---
 
 ## Pre-Work
