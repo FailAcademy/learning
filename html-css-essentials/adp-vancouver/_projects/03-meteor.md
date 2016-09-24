@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 3 - Meteor Group Project
-due: Week 7 (beginning of class)
+due: Monday, November 7th (beginning of class)
 ---
 
 Create a real-time app of your own choosing with a group.
