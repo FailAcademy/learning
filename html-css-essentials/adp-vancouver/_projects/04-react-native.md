@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Project 5 - Splashify
+title: Project 4 - Splashify
 due: Monday, November 21st (beginning of class)
 ---
 

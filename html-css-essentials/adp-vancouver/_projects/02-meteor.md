@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Project 3 - Meteor Group Project
+title: Project 2 - Meteor Group Project
 due: Monday, November 7th (beginning of class)
 ---
 
