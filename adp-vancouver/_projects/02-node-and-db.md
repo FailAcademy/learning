@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 1 / Part 2 - REDit
-due: Week 5 (beginning of class)
+due: Monday, October 24th (beginning of class)
 ---
 
 Continue your Product Hunt / Reddit clone. Your project should have a user login, and allow users to create new posts.

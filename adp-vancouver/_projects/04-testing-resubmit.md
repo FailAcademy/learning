@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 4 - Resubmit with Testing
-due: Week 8 (beginning of class)
+due: Monday, November 14th (beginning of class)
 ---
 
 Refactor an earlier project and resubmit it using unit and E2E tests.

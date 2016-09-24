@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 5 - Splashify
-due: Week 9 (beginning of class)
+due: Monday, November 21st (beginning of class)
 ---
 
 Your project must include the following:

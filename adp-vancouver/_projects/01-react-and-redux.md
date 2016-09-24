@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 1 / Part 1 - REDit
-due: Week 3 (beginning of class)
+due: Tuesday, October 11th (beginning of class)
 ---
 
 Create a Product Hunt / Reddit clone that transforms existing data into a view using posts and categories.
