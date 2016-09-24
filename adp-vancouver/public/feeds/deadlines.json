@@ -1,28 +1,33 @@
 [
 	{
-		"title": "P1: React & Redux",
+		"title": "REDit (Part 1) Due",
 		"allDay": true,
-		"start": "2016-10-03",
+		"start": "2016-10-11",
 		"url": "/project/01-react-and-redux"
    }, {
-		"title": "P2: Node & DB",
+		"title": "REDit (Part 2) Due",
 		"allDay": true,
 		"start": "2016-10-24",
 		"url": "/project/02-node-and-db"
    }, {
-		"title": "P3: Meteor",
+		"title": "Meteor Project Due",
 		"allDay": true,
 		"start": "2016-11-07",
 		"url": "/project/03-meteor"
    }, {
-		"title": "P4: Resubmit",
+		"title": "REDit Testing Due",
 		"allDay": true,
 		"start": "2016-11-14",
 		"url": "/project/04-resubmit"
    }, {
-		"title": "P5: Mobile",
+		"title": "Splashify Due",
 		"allDay": true,
 		"start": "2016-11-21",
+		"url": "/project/05-mobile"
+   }, {
+		"title": "Community Project Due",
+		"allDay": true,
+		"start": "2016-12-16",
 		"url": "/project/05-mobile"
    }
 ]
