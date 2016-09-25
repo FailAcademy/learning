@@ -44,7 +44,7 @@ sass:
 markdown: RedcarpetExt
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
 redcarpet:
-  extensions: ['smart', 'tables', 'autolink']
+  extensions: ['smart', 'tables', 'autolink', 'fenced_code_blocks']
 
 # Plugins
 gems: ['jekyll-paginate', 'redcarpet']
