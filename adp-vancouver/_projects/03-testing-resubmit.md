@@ -7,7 +7,7 @@ class: gh-check
 
 You will refactor your REDit project and resubmit it using unit and E2E tests.
 
-Your project must include type-checking with TypeScript, unit tests with Jest and Enzyme, and E2E test with NightWatch.
+Your project must include type-checking with TypeScript, unit tests with Jest and Enzyme, and E2E testing with NightWatch.
 
 ## Requirements
 
