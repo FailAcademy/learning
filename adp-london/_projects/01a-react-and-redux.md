@@ -13,17 +13,6 @@ Your project must include imported data (from a JSON file), use React and the Ma
 
 To receive a “Pass” grade for this project, your submission will need to satisfy the following criteria:
 
-### Functional
-
-Your project must:
-
-- [ ] Load mock data as "posts" and "categories"
-- [ ] Display posts in a list
-- [ ] Allow post sorting (by "newest" or "popularity")
-- [ ] Allow post filtering (by category)
-- [ ] Allow users to up-vote posts
-- [ ] Use routing to change the URL when the user sorts or filters
-
 ### Common
 
 Your project must:
@@ -38,6 +27,17 @@ Your project must:
 - [X] Use ESLint with the [AirBnB style-guide](https://github.com/airbnb/javascript)
 - [X] Run without errors with `npm start`
 - [X] Have appropriate files compiled into a `build` directory
+
+### Functional
+
+Your project must:
+
+- [ ] Load mock data as "posts" and "categories"
+- [ ] Display posts in a list
+- [ ] Allow post sorting (by "newest" or "popularity")
+- [ ] Allow post filtering (by category)
+- [ ] Allow users to up-vote posts
+- [ ] Use routing to change the URL when the user sorts or filters
 
 ### Development
 
