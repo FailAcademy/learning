@@ -2,70 +2,87 @@
 layout: project
 title: Project 1 / Part 1 - REDit
 due: Tuesday, October 11th (beginning of class)
+class: gh-check
 ---
 
 Create a Product Hunt / Reddit clone that transforms existing data into a view using posts and categories.
 
-Your project must include the following:
-* Data ( *JSON* )
-* UI ( *React* )
-* Data Layer ( *Redux, React-Redux* )
-* Router ( *React-Router* )
+Your project must include imported data (from a JSON file), use React and the Material UI library to build out the application's UI, use Redux and `react-redux` to manage application state, and React Router for routing. 
 
 ## Requirements
 
+To receive a “Pass” grade for this project, your submission will need to satisfy the following criteria:
+
 ### Functional
-- [ ] loads mock data as "posts" and "categories"
-- [ ] post: display in a list
-- [ ] post: sort (by "newest", "popularity")
-- [ ] post: filter (by category)
-- [ ] post: vote up
-- [ ] routes: url changes with "sort" and "filter"
+
+Your project must:
+
+- [ ] Load mock data as "posts" and "categories"
+- [ ] Display posts in a list
+- [ ] Allow post sorting (by "newest" or "popularity")
+- [ ] Allow post filtering (by category)
+- [ ] Allow users to up-vote posts
+- [ ] Use routing to change the URL when the user sorts or filters
 
 ### Common
-- [ ] project pushed to Github
-- [ ] contains "README.md" with project summary and setup
-- [ ] contains [valid "package.json"](http://browsenpm.org/package.json) fields filled out
-- [ ] contains ".gitignore" file ignoring "node_modules"
-- [ ] contains this self-evaluated spec checklist renamed "specs.md"
-- [ ] [descriptive Git commits](http://chris.beams.io/posts/git-commit/)
-- [ ] small, single purpose Git commits
-- [X] setup ESLint using the [AirBnB style-guide](https://github.com/airbnb/javascript)
-- [X] project runs with `npm start`
-- [X] files compiled into a "build" directory
+
+Your project must:
+
+- [ ] Be pushed to Github 
+- [ ] Use [descriptive Git commits](http://chris.beams.io/posts/git-commit/)
+- [ ] Use small, single purpose Git commits
+- [ ] Contain `README.md` with project summary and setup
+- [ ] Contain a [valid "package.json"](http://browsenpm.org/package.json) file with all appropriate fields completed
+- [ ] Contain `.gitignore` file (ignoring `node_modules` and system files)
+- [ ] Contain this self-evaluated spec checklist renamed `specs.md`
+- [X] Use ESLint with the [AirBnB style-guide](https://github.com/airbnb/javascript)
+- [X] Run without errors with `npm start`
+- [X] Have appropriate files compiled into a `build` directory
 
 ### Development
-- [ ] components built using valid JSX
-- [ ] use ES2015 `import` and `export`
-- [ ] components only created using `React.Component`, `const`, or `function`
-- [ ] chain transformations with array methods (`.map`, `.filter`, etc.)
-- [ ] use [CSS modules](https://github.com/css-modules/css-modules) for inline styles
-- [ ] use [React LifeCycle methods](https://facebook.github.io/react/docs/component-specs.html#lifecycle-methods) where appropriate
-- [ ] implement ["react-router"](https://github.com/reactjs/react-router) including:
-  - a "layout" template
-  - an "indexRoute"
-  - wrap the "browserHistory" object
-  - 3+ routes
-  - pass params into routes for filter and sort
-- [ ] hook up ["react-router-redux"](https://github.com/reactjs/react-router-redux)
-- [ ] implement ["Redux"](https://github.com/reactjs/redux)
-- [ ] distinguish between ["presentational" and "container"](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.grh9dzoiy) components
-- [ ] use ["react-redux"](https://github.com/reactjs/react-redux) `connect` to map state to props
-- [ ] use `connect` to map dispatch to props
-- [ ] add ["redux-logger"](https://github.com/evgenyrodionov/redux-logger) middleware during "development" mode
+
+Your project must:
+
+- [ ] Contain components built using valid JSX
+- [ ] Use ES2015 `import` and `export`
+- [ ] Contain components created using `React.Component`, `const`, or `function` only
+- [ ] Chain transformations with array methods (`.map`, `.filter`, etc.)
+- [ ] Use CSS modules for inline styles
+- [ ] Use React Lifecycle method where appropriate
+- [ ] Implement React Router to:
+  - Use nested routes with a `Layout` component
+  - Implement a top-level `IndexRoute`
+  - Use three or more other routes
+  - Pass route params for filtering and sorting
+  - Wrap the `browserHistory` object
+- [ ] Implement Redux to manage application state
+- [ ] Hook up [`react-router-redux`](https://github.com/reactjs/react-router-redux) sync routing with Redux DevTools
+- [ ] Implement "presentational" and "container" components appropriately throughout the application
+- [ ] Use [`react-redux`](https://github.com/reactjs/react-redux) `connect` to map state to props
+- [ ] Use `connect` to map dispatch to props
+- [ ] Add [`redux-logger`](https://github.com/evgenyrodionov/redux-logger) middleware during "development" mode
+- [ ] Reflect the designer's vision for the application's UI
 
 ### Quality
-- [ ] organized file tree. See [an example](http://marmelab.com/blog/2015/12/17/react-directory-structure.html).
-- [ ] no lint errors from ESLint
-- [ ] one component, one file
-- [ ] unique `key` for all items in lists
-- [ ] [propType validations](https://facebook.github.io/react/docs/reusable-components.html#prop-validation) for components
-- [ ] no propType validation errors in console
-- [ ] no logging to the console in "development" mode
+
+Your project must:
+
+- [ ] Contain an organized file tree ([see an example](http://marmelab.com/blog/2015/12/17/react-directory-structure.html))
+- [ ] Use sub-directories to organize component files (on a per component basis)
+- [ ] Be free of lint errors from ESLint
+- [ ] Use a unique `key` for all items in lists
+- [ ] Use `propType` validations for all components
+- [ ] Be free of `propType` validation errors in console
 
 ### Stretch Goals
-- [ ] use only pure functions without side effects
-- [ ] arguments passed to components using "props" only, no use of `setState`
-- [ ] write actions using the [Flux Standard Action](https://github.com/acdlite/flux-standard-action) pattern
-- [ ] impressive styles
-- [ ] add and use ["redux-thunk"](https://github.com/gaearon/redux-thunk) middleware for async dispatches
+
+Want to challenge yourself? Your project could also:
+
+- [ ] Use pure functions only (without side effects)
+- [ ] Contain components with arguments passed using "props" only (i.e. no use of `setState`)
+- [ ] Write actions using the [Flux Standard Action](https://github.com/acdlite/flux-standard-action) pattern
+- [ ] Add and use [`redux-thunk`](https://github.com/gaearon/redux-thunk) middleware for async dispatches
+
+## Submission Instructions
+
+When you’re ready to submit your project, **please email a link to your GitHub repository containing your project** to mackenzie@redacademy.com.
