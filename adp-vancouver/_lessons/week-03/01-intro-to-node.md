@@ -5,36 +5,34 @@ slides: ['_slides/week-03/01-intro-to-node.md']
 lesson_date: 2016-10-11
 ---
 
-## Learning Objectives
+## Pre-Work
 
-- Write and run a simple 'hello world' HTTP Server in Node
-- Distinguish between Client and Server
-- Create a 'hello world' HTTP server using Express
-- Set up and deploy a Node Web Server using Express
-- Write HTTP request handling logic using Express
-- Make Web requests to 3rd party Web Servers using Express (APIs)
-- Understand the term 'REST-ful'
-- Use 'REST-ful' methods to communicate with your Express Server from a Web Browser
+Having a bit of background on HTTP will be helpful context for what we undertake in this lesson. Please review the following section of the Node.js docs before class:
+
+- [`http.request`](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_http_request_options_callback). 
+
+You'll need to know what the **port** and **protocol** options are for. Try running the Example code in this section of the docs, and see what happens.
 
 ---
 
-## Pre-Work
+## Learning Objectives
 
-Knowing about HTTP is important but not part of this course.
-To know more about HTTP you can start by looking at the documentation for
-**http.request** [here](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_http_methods). 
-
-*(Scroll down the page to find it)*<br /><br />
-You'll need to know what the **port** and **protocol** options are for.
-Check out the *sample code*. Run it and experiment with it.
+- Explain the differences between writing code for the client versus writing code for the server.
+- Write and run a simple "Hello, world!" HTTP Server with Node.
+- Create a "Hello, world!" HTTP server using Express.
+- Set up and deploy a Node web server using Express.
+- Write HTTP requests that handle logic using Express.
+- Make web requests to third-party web servers using Express.
+- Define what a "RESTful" architectural style is application development.
+- Use RESTful methods to communicate between an Express server and a web browser.
 
 ---
 
 ## Keywords
 
-- server
-- client
-- request
+- Server
+- Client
+- Request
 - API
 - REST
 - HTTP
@@ -45,9 +43,10 @@ Check out the *sample code*. Run it and experiment with it.
 
 ## Exercise 1
 
-Read [this Article](https://webhostinggeeks.com/blog/what-are-web-servers-and-why-are-they-needed/).
+Read through [this article](https://webhostinggeeks.com/blog/what-are-web-servers-and-why-are-they-needed/).
 
 When you're finished, try to answer the following questions with each other:
+
 - Where does your web application code run, in the diagram on the previous slide?
 - Does a Web Server need to run on it's own computer system? Or, Can a single system
 host multiple Web Servers?
@@ -58,16 +57,17 @@ host multiple Web Servers?
 
 ## Exercise 2
 
-**Clone this repository**: <br/>
-https://github.com/redacademy/adp-node-server-intro.git
+**Clone this repository**:
 
-Open **Question.md** and answer each of them.
+- https://github.com/redacademy/adp-node-server-intro.git
+
+Open `Question.md` and answer each of them.
 
 ---
 
 ## Exercise 3
 
-We will be adding the following to our index.js:
+Add the following to your `index.js` file:
 
 ```js
 var fs = require('fs');
@@ -76,13 +76,13 @@ var _ = require('lodash');
 var users = [];
 ```
 
-Research why we are adding these and we will talk about it in class.
+Investigate what `fs` and `lodash` are, determine why we would use them, and discuss with the class.
 
 ---
 
 ## Exercise 4
 
-In groups of two, attempt to implement a Web Server using one of the following Node Web Server Frameworks:
+In a small group, attempt to implement a web server using one of the following Node web server frameworks:
 
 1. [**Hapi**](http://hapijs.com/)
 2. [**Koa**](http://koajs.com/)
@@ -90,11 +90,11 @@ In groups of two, attempt to implement a Web Server using one of the following N
 
 ---
 
-## Resources
+## Additional Resources
 
-- Mozilla Article: [What is a Web Server?](https://developer.mozilla.org/en-US/Learn/Common_questions/What_is_a_web_server) <br/>
-- REST (Representational State Transfer): Roy Fielding's [doctoral dissertation](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
-- About [Node.js](https://nodejs.org/en/about/)
-- [Express](https://expressjs.com/): Fast, unopinionated, minimalist web framework
+- [What is a Web Server?](https://developer.mozilla.org/en-US/Learn/Common_questions/What_is_a_web_server) <br/>
+- REST (Representational State Transfer): [Roy Fielding's doctoral dissertation](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
+- [About Node.js](https://nodejs.org/en/about/)
+- [Express homepage](https://expressjs.com/)
 - [Node Playbook](https://github.com/HiFaraz/node-playbook/blob/master/README.md)
 - [NodeSchool](http://nodeschool.io/)
