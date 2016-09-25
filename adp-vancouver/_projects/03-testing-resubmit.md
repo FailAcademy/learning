@@ -2,57 +2,74 @@
 layout: project
 title: Project 3 - Resubmit with Testing
 due: Monday, November 14th (beginning of class)
+class: gh-check
 ---
 
-Refactor an earlier project and resubmit it using unit and E2E tests.
+You will refactor your REDit project and resubmit it using unit and E2E tests.
 
-Your project must include the following:
-* Type-Checking ( *TypeScript* )
-* Unit Tests ( *Jest, Enzyme* )
-* E2E Tests ( *NightWatch* )
+Your project must include type-checking with TypeScript, unit tests with Jest and Enzyme, and E2E test with NightWatch.
 
 ## Requirements
 
 ### Common
-- [ ] project pushed to Github
-- [ ] contains "README.md" with project summary and setup
-- [ ] contains [valid "package.json"](http://browsenpm.org/package.json) fields filled out
-- [ ] [descriptive Git commits](http://chris.beams.io/posts/git-commit/)
-- [ ] small, single purpose Git commits
-- [ ] contains ".gitignore" file including "node_modules"
-- [ ] contains this self-evaluated spec checklist renamed "specs.md"
 
-## Development
-- [ ] Files renamed as ".ts" or ".tsx"
-- [ ] TypeScript setup with *React* & *Webpack*
-- [ ] NPM scripts: include shortcut for test watcher and code coverage
-- [ ] NPM scripts: include shortcut to run E2E tests
+Your project must:
 
-## Quality
-- [ ] TSLint: configured with JSX options turned on
-- [ ] TSLint: under 10 warnings
-- [ ] TS: types specified
-- [ ] TS: interfaces for data structures
-- [ ] TS: load type definition libraries
-- [ ] TS: under 15 compiler warnings
-- [ ] unit: tests for Redux reducers
-- [ ] unit: tests include a spy
-- [ ] unit: tests include a mock
-- [ ] unit: over 35% unit test coverage
-- [ ] component: 6 components snapshot tested (*Jest*)
-- [ ] component: tests prop rendering of components (*Enzyme*)
-- [ ] component: tests 3 or more DOM interactions (*Enzyme*)
-- [ ] E2E: test a simple page load scenario
-- [ ] E2E: test page routing
-- [ ] E2E: test form fill in and submit
-- [ ] E2E: take screenshots when tests fail
-- [ ] docs: code commented for easy readability
+- [ ] Be pushed to Github 
+- [ ] Use [descriptive Git commits](http://chris.beams.io/posts/git-commit/)
+- [ ] Use small, single purpose Git commits
+- [ ] Contain `README.md` with project summary and setup
+- [ ] Contain a valid [`package.json`](http://browsenpm.org/package.json) file with all appropriate fields completed
+- [ ] Contain `.gitignore` file (ignoring `node_modules` and system files)
+- [ ] Contain this self-evaluated spec checklist renamed `specs.md`
+- [ ] Use ESLint with the [AirBnB style-guide](https://github.com/airbnb/javascript)
 
-## Stretch Goals
-- [ ] TSLint: no warnings
-- [ ] TS: no compiler warnings
-- [ ] unit: over 75% unit test coverage
-- [ ] E2E: test 6 or more user scenarios
-- [ ] E2E: take photos of homepage at 5+ different sizes
-- [ ] E2E: run tests on multiple browsers
-- [ ] docs: React Cards for 3 or more components
+### Development
+
+Your project must:
+
+- [ ] Contain files renamed as `.ts` or `.tsx`
+- [ ] Implement a TypeScript setup with React and Webpack
+- [ ] Include a shortcut for test watcher and code coverage as an NPM script
+- [ ] Include a shortcut to run E2E tests as an NPM script
+
+### Quality
+
+Your project must:
+
+- [ ] Configure TSLint with JSX options turned on
+- [ ] Generate under ten TSLint warnings
+- [ ] Specify types with TypeScript
+- [ ] Use TypeScript interfaces for data structures
+- [ ] Use TypeScript to load type definition libraries
+- [ ] Generate under fifteen TypeScript compiler warnings
+- [ ] Contain unit tests:
+   - For Redux reducers
+   - That include a spy
+   - That include a mock
+- [ ] Have over 35% unit test coverage
+- [ ] Snapshot-test six components (Jest)
+- [ ] Test prop rendering of components (Enzyme)
+- [ ] Test three or more DOM interactions (Enzyme)
+- [ ] Implement E2E tests that:
+   - Test a simple page load scenario
+   - Test page routing
+   - Test form fill in and submit
+   - Take screenshots when tests fail
+- [ ] Document code comments for easy readability
+
+### Stretch Goals
+
+Want to challenge yourself? Your project could also:
+
+- [ ] Generate zero TSLint warnings
+- [ ] Generate zero TypeScript compiler warnings
+- [ ] Have over 75% unit test coverage
+- [ ] E2E test six or more user scenarios
+- [ ] Use E2E testing to take photos of homepage at five or more different sizes
+- [ ] Use E2E testing to run tests on multiple browsers
+- [ ] Implement [React Cards](https://github.com/steos/reactcards) for three or more components
+
+## Submission Instructions
+
+When you’re ready to submit your project, **please email a link to your GitHub repository containing your project** to shawn@redacademy.com.
