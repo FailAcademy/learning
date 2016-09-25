@@ -2,39 +2,63 @@
 layout: project
 title: Project 2 - Meteor Group Project
 due: Monday, November 7th (beginning of class)
+class: gh-check
 ---
 
-Create a real-time app of your own choosing with a group.
+Create a real-time JavaScript web application of your own choosing with a group.
 
-Your project must include the following:
-* Meteor ( *MongoDB, React* )
+Your project must be built using Meteor as an application platform, with React as a rendering library and MongoDB as a database.
+
+Your group must submit your project proposal to your instructor **by the end Week 4**.
 
 ## Requirements
 
 ### Common
-- [ ] project pushed to Github
-- [ ] contains "README.md" with project summary and setup
-- [ ] contains [valid "package.json"](http://browsenpm.org/package.json) fields filled out
-- [ ] [descriptive Git commits](http://chris.beams.io/posts/git-commit/)
-- [ ] small, single purpose Git commits
-- [ ] contains ".gitignore" file including "node_modules"
-- [ ] contains this self-evaluated spec checklist renamed "specs.md"
-- [X] setup ESLint using the [AirBnB style-guide](https://github.com/airbnb/javascript)
 
-## Functional
-- [ ] should update data in real-time
-- [ ] should persist data across reloads
-- [ ] should route between 2 or more pages
+Your project must:
 
-## Development
-- [ ] validate database using schema
+- [ ] Be pushed to Github 
+- [ ] Use [descriptive Git commits](http://chris.beams.io/posts/git-commit/)
+- [ ] Use small, single purpose Git commits
+- [ ] Contain `README.md` with project summary and setup
+- [ ] Contain a valid [`package.json`](http://browsenpm.org/package.json) file with all appropriate fields completed
+- [ ] Contain `.gitignore` file (ignoring `node_modules` and system files)
+- [ ] Contain this self-evaluated spec checklist renamed `specs.md`
+- [ ] Use ESLint with the [AirBnB style-guide](https://github.com/airbnb/javascript)
 
-## Quality
-- [ ] organized file structure based on the [Meteor Guide](https://guide.meteor.com/structure.html)
-- [ ] no lint errors from ESLint
+### Functional
 
-## Deployment
-- [ ] should be deployed online
+Your project must:
 
-## Stretch Goals
-- [ ] generate a web app for IOS or Android using the Meteor CLI
+- [ ] Update application data in real-time
+- [ ] Persist data across reloads
+- [ ] Route between two or more pages
+
+### Development
+
+Your project must:
+
+- [ ] Validate database using schema
+
+### Quality
+
+Your project must:
+
+- [ ] Have its file/folder structure organized based on the [Meteor Guide](https://guide.meteor.com/structure.html)
+- [ ] Be free of lint errors from ESLint
+
+### Deployment
+
+Your project must:
+
+- [ ] Be deployed online
+
+### Stretch Goals
+
+Want to challenge yourself? Your project could also:
+
+- [ ] Generate a hybrid app for IOS or Android using the Meteor CLI
+
+## Submission Instructions
+
+When you’re ready to submit your project, **please email a link to your GitHub repository containing your project** to mackenzie@redacademy.com.

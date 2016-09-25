@@ -11,21 +11,6 @@ Your project must include a server (Node/Express), a connected database (Postgre
 
 ## Requirements
 
-### Functional
-
-Your project must:
-
-- [ ] Contain a login form allowing users to authenticate with email and password
-- [ ] Persist logged in state on page reload
-- [ ] Contain a functioning logout button
-- [ ] Allow logged-in users to create posts
-- [ ] Require that new posts contain both a title and a description
-- [ ] Allow users to optionally supply a URL linking to the content
-- [ ] Allow users to select a post category
-- [ ] Persist new posts and up-votes after page reload
-- [ ] Provide user feedback resulting from invalid input data
-- [ ] Disable the submit button when data in form fields are invalid
-
 ### Common
 
 Your project must:
@@ -40,6 +25,21 @@ Your project must:
 - [X] Use ESLint with the [AirBnB style-guide](https://github.com/airbnb/javascript)
 - [X] Run without errors with `npm start`
 - [X] Have appropriate files compiled into a `build` directory
+
+### Functional
+
+Your project must:
+
+- [ ] Contain a login form allowing users to authenticate with email and password
+- [ ] Persist logged in state on page reload
+- [ ] Contain a functioning logout button
+- [ ] Allow logged-in users to create posts
+- [ ] Require that new posts contain both a title and a description
+- [ ] Allow users to optionally supply a URL linking to the content
+- [ ] Allow users to select a post category
+- [ ] Persist new posts and up-votes after page reload
+- [ ] Provide user feedback resulting from invalid input data
+- [ ] Disable the submit button when data in form fields are invalid
 
 ### Development
 
