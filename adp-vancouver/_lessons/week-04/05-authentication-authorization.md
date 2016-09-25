@@ -5,40 +5,42 @@ slides: []
 lesson_date: 2016-10-21
 ---
 
-## Lesson Objectives
+## Pre-Work
 
-- explain a high level overview of how authentication can work
-- distinguish between sessions & cookies or tokens
-- demonstrate session state using json web tokens
-- use Express and Passport to save and authenticate user login and passwords
-- justify your choice of hashing function for storing passwords
-- use OAuth2 to handle user authentication with an external API service (such as Github, Facebook or Twitter)
+Prior to class, please read:
+
+- [Public Key Encryption Explained](https://www.youtube.com/watch?v=3QnD2c4Xovk)
+- [cookies vs. tokens](https://auth0.com/blog/cookies-vs-tokens-definitive-guide/)
+- [Passport.js docs](http://passportjs.org/docs)
+
+---
+
+## Learning Objectives
+
+- Explain a high level overview of how authentication can work.
+- Distinguish between sessions and cookies or tokens.
+- Demonstrate session state using JSON web tokens.
+- Use Express and Passport to save and authenticate user login and passwords.
+- Justify a particular type of hashing function for storing passwords.
+- Use OAuth2 to handle user authentication with an external API service (such as Github, Facebook or Twitter).
 
 ---
 
 ## Keywords
 
-- authentication
-- public key encryption
-- sessions
-- cookies
-- tokens
-- hashing algorithm
+- Authentication
+- Public key encryption
+- Sessions
+- Cookies
+- Tokens
+- Hashing algorithm
 - OAuth2
-
----
-
-## Pre-Work
-
-- [Public Key Encryption Explained](https://www.youtube.com/watch?v=3QnD2c4Xovk)
-- [cookies vs. tokens](https://auth0.com/blog/cookies-vs-tokens-definitive-guide/)
-- Read over [Passport.js docs](http://passportjs.org/docs)
 
 ---
 
 ## Exercise 1
 
-Group activity on public key encryption.
+*Exercise details TBA.*
 
 ---
 
@@ -56,32 +58,37 @@ Create a demo using [JSON Web Tokens](https://jwt.io/introduction/)'s to demonst
 
 ## Exercise 4
 
-Create a demo using [passportjs](http://passportjs.org) for login and password authentication.
+Create a demo using [Passport](http://passportjs.org) for login and password authentication.
 
 ---
 
 ## Exercise 5
 
-Think about storing passwords. Read: [Hashing Security](https://crackstation.net/hashing-security.htm). Which hashing algorithm should you use and why? Test your password hash at https://crackstation.net/.
+Think about storing passwords...
+
+First read through [Hashing Security](https://crackstation.net/hashing-security.htm). Which hashing algorithm should you use and why? Test your password hash at [CrackStation](https://crackstation.net/).
 
 ---
 
 ## Exercise 6
 
-Add OAuth2 authentication to your app with [Github](https://github.com/cfsghost/passport-github) and another [third party authentication service](http://passportjs.org/docs) of your choice.
+Add OAuth2 authentication to your app with [Github](https://github.com/cfsghost/passport-github) and another [third-party authentication service](http://passportjs.org/docs) of your choice.
 
 ---
 
-## Lab activity
+## Lab Activity
 
-1. Setup login and password authentication in your app.
-2. Setup JWT authentication in your app.
-3. Setup OAuth2 authentication in your app.
+In today's lab, please set up the following in your REDit app:
+
+1. Login and password authentication
+2. JWT authentication
+3. OAuth2 authentication
 
 ---
 
 ## Additional Resources
-- [Passport.js](http://passportjs.org/)
+
+- [Passport](http://passportjs.org/)
 - [Introduction to JSON Web Tokens](https://jwt.io/introduction/)
 - [Securing React-Redux Apps with JWT](https://medium.com/@rajaraodv/securing-react-redux-apps-with-jwt-tokens-fcfe81356ea0#.c0ausyxc9)
 - [Scotch.io: Node.js & JWT tutorial](https://scotch.io/tutorials/authenticate-a-node-js-api-with-json-web-tokens)
