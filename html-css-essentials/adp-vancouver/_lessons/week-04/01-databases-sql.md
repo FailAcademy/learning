@@ -5,36 +5,66 @@ slides: ['_slides/week-04/01-intro-database-sql.md']
 lesson_date: 2016-10-17
 ---
 
-## Objectives
-
-- Determine what a database is
-- Understand why databases are need
-- Write simple SQL queries
-
 ## Pre-Work
-You need to download PostgreSQL in order to work through today's lessons. Please follow this link https://www.postgresql.org/download/ and download.
 
-- Read http://www.sqlcourse.com/intro.html
-- Don't feel like reading. Here is a video https://www.youtube.com/watch?v=FR4QIeZaPeM
+You need to download and install PostgreSQL prior to today's lessons: 
+
+- [PostgreSQL - Downloads](https://www.postgresql.org/download/)
+
+Also, watch this video prior to class for some background on SQL databases:
+
+- [What is Database & SQL?](https://www.youtube.com/watch?v=FR4QIeZaPeM)
+
+---
+
+## Learning Objectives
+
+- Define what role a database plays in an application.
+- Explain how a relational database is structured.
+- Write basic SQL queries to perform CRUD operations on a database.
+
+---
 
 ## Keywords
-- Database
+
+- Relational database
 - SQL
 - Table
 - Fields
 - Cells
 - Unique identifier
-- Relational Database
 - CRUD
 
-## Active Learning
-- https://academy.vertabelo.com/
-- https://www.codecademy.com/learn/learn-sql
-- http://www.tutorialspoint.com/sql/
-- http://www.vertabelo.com/blog/notes-from-the-lab/18-best-online-resources-for-learning-sql-and-database
+---
 
+## Exercise 1
 
-## Resources
-- https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/
-- https://medium.com/baqend-blog/nosql-databases-a-survey-and-decision-guidance-ea7823a822d#.db92brvvh
-- http://www.sqlcourse.com/select.html
+*Exercise details TBA.*
+
+---
+
+## Exercise 2
+
+*Exercise details TBA.*
+
+---
+
+## Exercise 3
+
+*Exercise details TBA.*
+
+---
+
+## Lab Activity
+
+*Lab activity details TBA.*
+
+---
+
+## Additional Resources
+
+- [Vertabelo Academy](https://academy.vertabelo.com/)
+- [Learn SQL - Codeacademy](https://www.codecademy.com/learn/learn-sql)
+- [18+ Best Online Resources for Learning SQL and Database Concepts](http://www.vertabelo.com/blog/notes-from-the-lab/18-best-online-resources-for-learning-sql-and-database)
+- [A Visual Explanation of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
+- [NoSQL Databases: a Survey and Decision Guidance](https://medium.com/baqend-blog/nosql-databases-a-survey-and-decision-guidance-ea7823a822d#.db92brvvh)
