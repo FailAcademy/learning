@@ -1,43 +1,50 @@
 ---
 layout: lesson
 title: Introducing MongoDB
-slides: [_slides/week-05/01-intro-to-mongo.md]
+slides: [_slides/week-05/02-intro-to-mongo.md]
 lesson_date: 2016-10-25
 ---
 
-## Objectives
-
-1. Define NoSQL
-2. What is MongoDB and why we use it
-3. Know the purpose of Mongod & Mongo
-4. Define collections, documents and fields
-5. Use a Query selector
-6. Write commands in Mongo that CRUD
-7. Understand the purpose of Sharding
-8. Be able to debate the differences of NoSQL & SQL
-
-
 ## Pre-Work
 
-Please follow this link. https://docs.mongodb.com/manual/installation/#tutorials and complete the necessary steps to download MongoDB.
+Prior to class, please [download and install MongoDB](https://docs.mongodb.com/manual/installation/#tutorials).
+
+You may also wish to install a tool such as [Robomongo](https://robomongo.org/).
+
+---
+
+## Learning Objectives
+
+- Explain what a NoSQL database is, and describe the differences between NoSQL and SQL databases.
+- Explain the advantages of MongoDB as a choice for a NoSQL database.
+- Interact with a MongoDB database through the shell.
+- Explain the roles of collections, documents, and fields in relation to MongoDB.
+- Use query operators to match documents based on comparison of a particular value.
+- Write commands that create, read, update, and delete data from a MongoDB database.
+- Explain what sharding is, and how it can make it easier to manage a large database.
+
+---
 
 ## Keywords
 
 - NoSQL
-- Mongo
+- MongoDB
 - Mongod
 - Collection
 - Document
+- Query operator
+- Data modeling
+- Normalized data models
+- Denormalized data models
 - Sharding
-- Query selector
-- Data Modeling
-- Normalized Data models
-- Denormalized Data models
+
+---
 
 ## Exercise 1
+
 Partner up and understand what each of the commands do
 
-```
+```bash
 db.help()
 
 db.stats()
@@ -59,30 +66,32 @@ db.collection.find({field: value})
 db.collection.remove({field: value})
 
 db.collection.update
-
 ```
-
-## Exercise 2
-
-[Click Here](https://raw.githubusercontent.com/redacademy/adp-mongo-exercise3/master/data.json?token=ALZHC1bq8DWbeqm4YPxcxDD2zuxv7an7ks5X5B_EwA%3D%3D#)
-and copy the information into a new dbs.
-
-Spend 15 minutes reading and implementing the different commands from 
-
-[This Link](https://docs.mongodb.com/manual/reference/operator/query/)
-
-After everyone will be reponsible for teaching a Query operator to the rest of the class
 
 ---
 
-## Project
+## Exercise 2
 
-We are going to use similar commands with a much larger data set. Head over to https://github.com/redacademy/adp-mongo-project and clone down the repo. From there answer each of the questions in the README.
+Create a new database using [this data](https://github.com/redacademy/adp-mongo-exercises/blob/master/data.json).
 
-Head to this [link]( https://raw.githubusercontent.com/mongodb/docs-assets/primer-dataset/primer-dataset.json) and save the json with the filename primer-dataset.json
+Review the MongoDB docs on [Query and Projection Operators](https://docs.mongodb.com/manual/reference/operator/query/) and try implementing some of these commands on your new database.
 
-## Resources
-- https://www.mongodb.com/nosql-explained
-- https://www.sitepoint.com/sql-vs-nosql-differences/
-- http://www.querymongo.com/
-- http://openmymind.net/mongodb.pdf
+---
+
+## Lab Activity
+
+We're going to keep practicing our MongoDB skills, but with a much larger dataset. 
+
+Clone the following repo:
+
+- https://github.com/redacademy/adp-mongo-project
+
+Complete each of the challenges in `README.md` based on the dataset provided in `primer-dataset.json`. 
+
+---
+
+## Additional Resources
+
+- [NoSQL Databases Explained](https://www.mongodb.com/nosql-explained)
+- [SQL vs NoSQL: The Differences](https://www.sitepoint.com/sql-vs-nosql-differences/)
+- [Query Translator: Convert MySQL Queries to MongoDB Syntax](http://www.querymongo.com/)

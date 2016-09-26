@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Validating & Sanitizing Data
-slides: []
+slides: ['_slides/week-04/04-validating-and-sanitizing.md']
 lesson_date: 2016-10-20
 ---
 
