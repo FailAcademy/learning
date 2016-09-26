@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Authentication & Authorization
-slides: []
+slides: ['_slides/week-04/05-authentication-authorization.md']
 lesson_date: 2016-10-21
 ---
 

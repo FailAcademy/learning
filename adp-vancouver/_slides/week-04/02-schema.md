@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: The Slide Deck Title (used for the URL slug, and must be unique)
+title: Validating Data with Schema Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Slideshow Title
+# Validating Data with Schema
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -73,14 +73,6 @@ A sample unordered list:
    - [The remark formatting guide](https://github.com/gnab/remark/wiki/Formatting)
    - [The remark Markdown guide](https://github.com/gnab/remark/wiki/Markdown)
 ]
-
----
-
-# What We've Learned
-
-- Thing 1
-- Thing 2
-- Thing 3
 
 ---
 template: inverse

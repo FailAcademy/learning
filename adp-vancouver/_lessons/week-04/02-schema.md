@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Validating Data with Schema
-slides: []
+slides: ['_slides/week-04/02-schema.md']
 lesson_date: 2016-10-18
 ---
 
