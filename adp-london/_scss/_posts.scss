@@ -163,6 +163,30 @@ a.pagination-item:hover {
    }
 }
 
+.gh-check {
+   .page > ul {
+      margin-left: 0;
+
+      & > li {
+         list-style: none;
+         margin-left: 1.5em;
+         text-indent: -1.25em;
+
+         input  {
+            margin-right: 5px;
+         }
+
+         ul {
+            margin: 0 0 0 1.5em;
+
+            li {
+               text-indent: 0;
+            }
+         }
+      }
+   }
+}
+
 .schedule {
    th:first-child {
       width: 37.5%;

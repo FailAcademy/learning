@@ -5,35 +5,35 @@ slides: ['_slides/week-07/02-unit-testing.md', '_slides/week-07/02-testing-compo
 lesson_date: 2016-11-08
 ---
 
+## Pre-Work
+
+Read [I pity the fool who doesn't write unit tests](https://blog.codinghorror.com/i-pity-the-fool-who-doesnt-write-unit-tests/) and be prepared to explain why writing unit tests is an essential part of application development.
+
+---
+
 ## Learning Objectives
 
-- explain the importance of writing unit tests
-- setup and write unit tests using [Ava](https://github.com/avajs/ava) & [Jest](https://github.com/facebook/jest)
-- run tests using NPM scripts
-- set up a test runner watcher
-- write unit tests for React components using Jest & [Enzyme](https://github.com/airbnb/enzyme)
-- setup React snapshot testing with Jest
+- Explain the importance of writing unit tests.
+- Set-up and write unit tests using [Ava](https://github.com/avajs/ava) and [Jest](https://github.com/facebook/jest).
+- Run tests using NPM scripts.
+- Set-up a test runner watcher.
+- Write unit tests for React components using Jest and [Enzyme](https://github.com/airbnb/enzyme).
+- Setup React snapshot testing with Jest.
 
 ---
 
 ## Keywords
 
-- unit test
+- Unit test
 - TDD
 - BDD
-- snapshot testing
-
----
-
-## Pre-Work
-
-- Read [I pity the fool who doesn't write unit tests](https://blog.codinghorror.com/i-pity-the-fool-who-doesnt-write-unit-tests/) and be prepared to explain why writing unit tests .
+- Snapshot testing
 
 ---
 
 ## Exercise 1
 
-TDD walkthrough and practice with Worst Pokemon app.
+TDD walkthrough and practice with the Worst Pokemon app.
 
 ---
 
@@ -51,13 +51,14 @@ Walkthrough of testing React components with [Enzyme](https://github.com/airbnb/
 
 ## Lab Activity
 
-1. Write unit tests for your reducers, actions, and other logic.
+First, you will write unit tests for your reducers, actions, and other logic.
 
-2. Write snapshot tests for your components.
+Next, you will write snapshot tests for your components.
 
 ---
 
 ## Additional Resources
+
 - [Ava & TypeScript](https://github.com/avajs/ava/blob/master/docs/recipes/typescript.md)
 - [Testing Redux](http://redux.js.org/docs/recipes/WritingTests.html)
 - [Redux Unit Testing](https://www.codementor.io/reactjs/tutorial/redux-unit-test-mocha-mocking)

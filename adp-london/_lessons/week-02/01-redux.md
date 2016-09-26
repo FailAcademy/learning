@@ -5,24 +5,26 @@ slides: ['_slides/week-02/01-redux.md']
 lesson_date: 2016-10-03
 ---
 
-## Learning Objectives
+## Pre-Work
 
-- Distinguish between MVC and Flux patterns
-- Identify the benefits of using Flux or Redux to model state
-- Identify the roles of Redux 'store', 'reducers', 'actions', 'action-creators' and 'action-types'
-- Setup a basic project using Redux in raw Javascript
-- Create structured actions following [Flux Stand Actions](https://github.com/acdlite/flux-standard-action)
-- Explain the results of calling dispatch(action) and getState()
+Do your own personal research and be prepared tomorrow to explain:
+
+- the MVC pattern
+- the Flux pattern
+- the differences between MVC & Flux
+
+Read the [Redux Introduction](http://redux.js.org/docs/introduction/index.html)
 
 ---
 
-## Pre-Work
+## Learning Objectives
 
-- Do your own personal research and be prepared tomorrow to explain:
-  - the MVC pattern
-  - the Flux pattern
-  - the differences between MVC & Flux
-- Read the [Redux Introduction](http://redux.js.org/docs/introduction/index.html)
+- Distinguish between MVC and Flux patterns.
+- Identify the benefits of using Flux or Redux to model state.
+- Identify the roles of Redux store, reducers, actions, action-creators and action-types.
+- Setup a basic project using Redux in raw JavaScript.
+- Create structured actions following [Flux Stand Actions](https://github.com/acdlite/flux-standard-action).
+- Explain the results of calling `dispatch(action)` and `getState()`.
 
 ---
 
@@ -40,9 +42,10 @@ lesson_date: 2016-10-03
 ## Exercise 1
 
 Create a diagram or chart to explain each of the following:
-  a. MVC
-  b. Flux
-  c. Redux
+
+- MVC
+- Flux
+- Redux
 
 ---
 
@@ -54,7 +57,7 @@ Each group will choose a different app from [examples](http://redux.js.org/docs/
 
 Prepare a play to demonstrate how your app works.
 
-Consider the different **roles** in your app.
+Consider the different **roles** in your app:
 
 - action creator
 - reducer
@@ -65,9 +68,9 @@ Consider the different **roles** in your app.
 
 ## Exercise 3
 
-Create a Redux data layer for your "Worst Pokemon" voting app.
+Create a Redux data layer for your "Worst Pokemon" voting app:
 
-```shell
+```bash
 git clone https://github.com/redacademy/adp-redux-walkthrough.git
 cd adp-redux-walkthrough
 git reset --hard e823513
@@ -77,7 +80,7 @@ git reset --hard e823513
 
 ## Lab Activity
 
-Setup Redux for your Project #1.
+*Lab activity detail TBA.*
 
 ---
 
