@@ -5,28 +5,26 @@ slides: ['_slides/week-07/04-e2e-testing.md']
 lesson_date: 2016-11-10
 ---
 
-## Lesson Objectives
+## Pre-Work
 
-- write E2E tests using [NightWatch.js](http://nightwatchjs.org/)
-- setup snapshot testing on failures and different window sizes
-- setup E2E testing with multiple browsers
+Prior to class, review the docs for [NightWatch](http://nightwatchjs.org/guide#guide) and come prepared to explain/discuss what we can use it for.
+
+---
+
+## Learning Objectives
+
+- Write E2E tests using [NightWatch.js](http://nightwatchjs.org/).
+- Set-up snapshot testing on failures and different window sizes.
+- Set-up E2E testing with multiple browsers.
 
 ---
 
 ## Keywords
 
 - E2E tests
-- selenium
+- Selenium
 - webdriver
-- page objects
-
-
----
-
-## Pre-Work
-
-- Read about the following two tools. What are they used for?
-  - [NightWatch](http://nightwatchjs.org/guide#guide).
+- Page objects
 
 ---
 
@@ -48,7 +46,7 @@ Write E2E tests for the Worst Pokemon app, checking that:
 
 ## Lab Activity
 
-Setup Nightwatch.js & E2E testing scenarios for your apps.
+Setup Nightwatch.js and E2E testing scenarios for your REDIt app.
 
 ---
 
