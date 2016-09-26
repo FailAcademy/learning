@@ -45,7 +45,7 @@ lesson_date: 2016-10-24
 
 *Lab activity details TBA.*
 
---
+---
 
 ## Additional Resources
 
