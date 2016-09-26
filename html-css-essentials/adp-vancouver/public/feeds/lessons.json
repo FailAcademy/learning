@@ -22,21 +22,40 @@
       "start": "2016-09-30"
    },
    {
-      "title": "Portfolio Development",
+      "title": "Project Work Day",
       "allDay": true,
-      "start": "2016-11-28",
-      "end": "2016-12-03"
+      "start": "2016-10-07"
    },
-    {
+   {
+      "title": "Project Work Day",
+      "allDay": true,
+      "start": "2016-10-14"
+   },
+   {
+      "title": "Project Work Day",
+      "allDay": true,
+      "start": "2016-10-28"
+   },
+   {
       "title": "Self Directed Meteor Project",
       "allDay": true,
       "start": "2016-10-31",
       "end": "2016-11-05"
    },
    {
+      "title": "Project Work Day",
+      "allDay": true,
+      "start": "2016-11-17"
+   },
+   {
+      "title": "Project Work Day",
+      "allDay": true,
+      "start": "2016-11-18"
+   },
+   {
       "title": "Community Project Work",
       "allDay": true,
-      "start": "2016-12-05",
+      "start": "2016-11-28",
       "end": "2016-12-16"
    },
    {
@@ -44,5 +63,59 @@
       "allDay": false,
       "start": "2016-09-29T13:00:00+00:00",
       "end": "2016-09-29T15:00:00+00:00"
+   },
+   {
+      "title": "PPD Lesson",
+      "allDay": false,
+      "start": "2016-10-06T13:00:00+00:00",
+      "end": "2016-10-06T15:00:00+00:00"
+   },
+   {
+      "title": "PPD Lesson",
+      "allDay": false,
+      "start": "2016-10-13T13:00:00+00:00",
+      "end": "2016-10-13T15:00:00+00:00"
+   },
+   {
+      "title": "PPD Lesson",
+      "allDay": false,
+      "start": "2016-10-20T13:00:00+00:00",
+      "end": "2016-10-20T15:00:00+00:00"
+   },
+   {
+      "title": "PPD Lesson",
+      "allDay": false,
+      "start": "2016-10-27T13:00:00+00:00",
+      "end": "2016-10-27T15:00:00+00:00"
+   },
+   {
+      "title": "PPD Lesson",
+      "allDay": false,
+      "start": "2016-11-03T13:00:00+00:00",
+      "end": "2016-11-03T15:00:00+00:00"
+   },
+   {
+      "title": "PPD Lesson",
+      "allDay": false,
+      "start": "2016-11-10T13:00:00+00:00",
+      "end": "2016-11-10T15:00:00+00:00"
+   },
+   {
+      "title": "PPD Lesson",
+      "allDay": false,
+      "start": "2016-11-17T13:00:00+00:00",
+      "end": "2016-11-17T15:00:00+00:00"
+   },
+   {
+      "title": "PPD Lesson",
+      "allDay": false,
+      "start": "2016-11-24T13:00:00+00:00",
+      "end": "2016-11-24T15:00:00+00:00"
+   },
+   {
+      "title": "PPD Lesson",
+      "allDay": false,
+      "start": "2016-12-01T13:00:00+00:00",
+      "end": "2016-12-01T15:00:00+00:00"
    }
 ]
