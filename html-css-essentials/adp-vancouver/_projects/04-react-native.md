@@ -50,7 +50,7 @@ Your project must:
 - [ ] Contain components created using `React.Component`, `const`, or `function` only
 - [ ] Implement "presentational" and "container" components appropriately throughout the application
 - [ ] Make appropriate use of React Native's UI components (including `<View>`, `<Text>`, `<Image>`, `<ListView>`, `<TouchableHighlight>`, etc.)
-- [ ] Implement styles on a per-component basis using `Stylesheet.create`
+- [ ] Implement styles on a per-component basis using `Stylesheet.Create`
 - [ ] Use [React Native Navigation](https://github.com/wix/react-native-navigation) to implement a cross-platform navigator and tab bar for scene navigation
 - [ ] Use [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons) for icon assets throughout the app (specifically, the Octicon library)
 - [ ] Use [Realm React Native](https://realm.io/docs/react-native/latest/) as a database
