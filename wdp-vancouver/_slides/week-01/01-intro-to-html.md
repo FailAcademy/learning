@@ -211,14 +211,6 @@ template: inverse
 
 ---
 
-# A Little Bit of History
-
-Doctypes have a long and complicated history on the web.
-
-The important thing to know is that the doctype declaration is not an HTML tag, but rather tells the browser which version of HTML the webpage uses.
-
----
-
 # Then & Now...
 
 **XHTML:**
@@ -231,24 +223,6 @@ The important thing to know is that the doctype declaration is not an HTML tag, 
 
 ```html
 <!DOCTYPE html>
-```
-
----
-
-# Where Does It Go?
-
-Doctype declarations go at the top of your `.html` files:
-
-```html
-<!DOCTYPE html>
-<html>
-   <head>
-      <title>This is the Page Title</title>
-   </head>
-   <body>
-      <p>This is a paragraph.</p>
-   </body>
-</html>
 ```
 
 ---
@@ -272,6 +246,15 @@ In addition to adding a doctype, there's other information we can add to the `<h
    </body>
 </html>
 ```
+
+---
+# Mini Exercise
+
+What is the difference between **Meta Tags** and **Attributes**?
+
+What does **utf-8** mean?
+
+Group up in pairs of two and within 5 minutes try and figure it out! 
 
 ---
 
@@ -412,6 +395,16 @@ An HTML5 webpage would look something more like this:
 ```
 
 ---
+# Mini Exercise
+
+Why do we keep using the word **semantic**?
+
+In groups of 4 (or so) have a quick discussion about 
+
+1. What the definition of semantic is?
+2. Why is semantic code important?
+
+---
 class: center, middle
 
 .inline-images[
@@ -434,26 +427,6 @@ In teams of two, research your assigned element and report back to the class:
 template: inverse
 
 # Other Essential Elements
-
----
-
-# Strong & Emphasis
-
-The `<strong>` element indicates that the text contained within is of strong importance:
-
-```html
-<p><strong>Warning!</strong> This is extremely dangerous.</p>
-```
-
-A browser will display this text as bold by default.
-
-The `<em>` tag indicates a subtle shift in meaning of the text:
-
-```html
-<p>The most important thing is <em>that you do not quit!</em></p>
-```
-
-A browser will display this text as italicized by default.
 
 ---
 
@@ -485,16 +458,19 @@ And if a page is in a sub-folder:
 ```
 
 ---
+# Link Elemnts
 
-# Link Elements
-
-Links can point to email addresses too if we add `mailto:` at the front of the `href` value followed by an email address:
+Links can be internal
 
 ```html
-<a href="mailto:mandi@redacademy.com">Email Mandi</a>
+<a href="assets/images/funnyImage.png">Click here for a funny image</a>
 ```
 
-When a user click this link, it will open their default email application with the email address in the "To:" line.
+or they can be external
+
+```html
+<a href="http://www.bodyrock.tv/wp-content/uploads/2013/06/Funny-Picture-Spirit-of-Baby.jpg">Click here for a funny image</a>
+```
 
 ---
 
@@ -577,5 +553,17 @@ Finally, you and your partner will share your insights with the class.
 template: inverse
 
 # Questions?
+
+---
+# Project
+
+Today's lab time will be dedicated to Project 1.
+
+Before you get started, you should watch these videos to reinforce the concepts learned in class:
+
+- [HTML - Hamburger Mark-up Language](http://www.dontfeartheinternet.com/02-html/)
+- [Don't Fear Starting from Scratch - Part 1: HTML](http://www.dontfeartheinternet.com/04-from-scratch/)
+
+You're goal for the end of the first day is to have the different sections of the Project 1 website roughed-out in HTML. It should look like [this](http://redacademy.github.io/aloha-apparel-pt1/index-day1.html)
 
 {% endhighlight %}
