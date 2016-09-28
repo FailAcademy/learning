@@ -107,7 +107,7 @@ When routes in our application change no request to the server is made. Instead,
 
 Let's create a new React app to test out some of React Router's features. First run:
 
-`create-react-app`
+`create-react-app router-demo`
 
 Then install React Router:
 
@@ -135,7 +135,7 @@ import {
 
 # Router Basics
 
-We just imported a five different modules that we will use set up routing in our app:
+We just imported five different modules that we will use set up routing in our app:
 
 - `Router`: used to wrap all of the routes we define
 - `Route`: used for identifying each route
