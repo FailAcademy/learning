@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# React
+# Introducing React
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
