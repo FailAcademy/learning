@@ -44,20 +44,14 @@ Setup the form demos project.
 
 ---
 
-## Exercise 2
+## Lab Activity
 
-Create a form in your "REDit" project. Include:
+1. Create a form in your "REDit" project. Include:
   - saving data to the Redux store
   - validation of fields
   - styled components
   - error feedback
   - a disabled submit button when the form is invalid
-
----
-
-## Lab Activity
-
-1. Create a form in your app using "redux-form". It should follow the same guidelines as Exercise 2.
 
 ---
 

@@ -119,13 +119,6 @@ The following resources will help:
 
 3. Change the previous example to not fail at "d", but instead handle the error and log "Error at 'd'" to the console. Hint: use `catch`.
 
-4. Use a native JS Promise to load data from an api with the following guidelines. [API suggestions](https://github.com/toddmotto/public-apis)
-
-  - If the first request fails, it should retry.
-  - If the second request fails, it should retry again.
-  - If the third request fails, it should return an error.
-  - If a request succeeds, it should log the data to the console.
-
 ---
 
 ## Exercise 5
