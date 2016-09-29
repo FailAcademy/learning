@@ -26,7 +26,6 @@ lesson_date: 2016-09-26
 - Platform
 - Framework
 - Library
-- Component
 
 ---
 
@@ -42,7 +41,9 @@ We will discuss your choices with everyone in the class.
 
 ## Lab Activity
 
-*Lab activity TBA...*
+Before we jump into building applications with code, we'll roll up our sleeves for a hands-on activity to try to design a system that protects an egg (yes, a real egg) from breaking after a fall.
+
+Details to follow in class...
 
 ---
 

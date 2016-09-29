@@ -5,25 +5,26 @@ slides: ['_slides/week-02/03-redux-middleware.md']
 lesson_date: 2016-10-05
 ---
 
+## Pre-Work
+
+Prior to class, please read the Redux docs on [middleware](http://redux.js.org/docs/advanced/Middleware.html).
+
+---
+
 ## Learning Objectives
 
-- Apply Redux middleware, including "redux-logger" and "redux-thunk"
-- Use "redux-thunk" to dispatch multiple actions from an action creator
-- learn how to setup middleware in your project
+- Define what middleware is in relation to Redux, and its role in an application.
+- Apply Redux middleware, including `redux-logger` and `redux-thunk`.
+- Use `redux-thunk` to dispatch multiple actions from an action creator.
+- Learn how to setup middleware in your project.
 
 ---
 
 ## Keywords
 
-- middleware
-- logger
-- thunk
-
----
-
-## Pre-Work
-
-- Read the Redux docs on [middleware](http://redux.js.org/docs/advanced/Middleware.html).
+- Middleware
+- Logger
+- Thunk
 
 ---
 
@@ -41,12 +42,11 @@ Setup [redux-thunk](https://github.com/gaearon/redux-thunk) in your "Worst Pokem
 
 # Exercise 3
 
-Setup an "async action" that sorts pokemon by their number of votes.
-(highest to least). Call this action "SORT_BY_POPULARITY".
+Setup an "async action" that sorts Pokemon by their number of votes (highest to least). Call this action `SORT_BY_POPULARITY`.
 
-The sorting action should be called every time you dispatch "VOTE_UP".
+The sorting action should be called every time you dispatch `VOTE_UP`.
 
-Hint: *use redux-thunk*.
+**Hint:** Use `redux-thunk` to complete this exercise.
 
 ---
 
@@ -61,6 +61,12 @@ Some middleware suggestions:
 - Redux-Debounce / Redux-Throttle
 - Redux-Authentication (https://github.com/Jackong/redux-authentication)
 - [Other suggestions found here](https://github.com/xgrommx/awesome-redux#react---a-javascript-library-for-building-user-interfaces)
+
+---
+
+## Lab Activity
+
+*Lab activity detail TBA.*
 
 ---
 
