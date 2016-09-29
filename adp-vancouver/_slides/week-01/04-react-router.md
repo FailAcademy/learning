@@ -111,9 +111,9 @@ Let's create a new React app to test out some of React Router's features. First 
 
 Then install React Router:
 
-`npm-install-react-router`
+`npm install react-router`
 
-*Remember that React is a library, not a framework. Installing `react-router` give React more framework-like capabilities.*
+*Remember that React is a library, not a framework. Installing `react-router` gives React more framework-like capabilities.*
 
 ---
 
