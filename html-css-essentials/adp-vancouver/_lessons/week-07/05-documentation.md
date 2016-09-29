@@ -1,35 +1,33 @@
 ---
 layout: lesson
 title: Documentation
-slides: []
+slides: ['_slides/week-07/05-documentation.md']
 lesson_date: 2016-11-10
+---
+
+## Pre-Work
+
+Prior to class, please read:
+
+- [Choosing a JavaScript Documentation Generator – JSDoc vs YUIDoc vs Doxx vs Docco](http://www.fusioncharts.com/blog/2013/12/jsdoc-vs-yuidoc-vs-doxx-vs-docco-choosing-a-javascript-documentation-generator/)
+
 ---
 
 ## Lesson Objectives
 
-- write better documentation for your code
-- write documentation for your components
+- Write better documentation for your code.
+- Write documentation for your components.
 
 ---
 
 ## Keywords
 
-- documentation generator
-- living documentation
+- Documentation generator
+- Living documentation
 
 ---
 
-## Pre-Work
-
-- Read [Comparing JS documentations generators](http://www.fusioncharts.com/blog/2013/12/jsdoc-vs-yuidoc-vs-doxx-vs-docco-choosing-a-javascript-documentation-generator/
-
----
-
-
-
----
-
-## Exercise
+## Exercise 1
 
 Follow along with the [learn-jsdoc tutorial](https://github.com/dwyl/learn-jsdoc).
 
@@ -49,13 +47,13 @@ Try out [React-docgen](https://github.com/reactjs/react-docgen) or [React-docgen
 
 ---
 
-## Exercise 3
+## Exercise 4
 
 Create [React Cards](https://github.com/steos/reactcards) for several components in Worst Pokemon app.
 
 ---
 
-## Exercise 4
+## Exercise 5
 
 Discuss which documentation approach you found most helpful.
 
@@ -65,11 +63,11 @@ Decide on a documentation method for your own project.
 
 ## Lab Activity
 
-Improve documentation in your app using JSDoc & React Cards.
+Improve documentation in your app using JSDoc and React Cards.
 
 ---
 
 ## Additional Resources
 
 - [jsdoc tutorial](http://usejsdoc.org/about-tutorials.html)
-- [an introduction to jsDoc](http://www.2ality.com/2011/08/jsdoc-intro.html)
+- [An introduction to JSDoc](http://www.2ality.com/2011/08/jsdoc-intro.html)

@@ -249,7 +249,7 @@ class App extends Component {
 }
 ```
 
-**Where might we call `handleMood()`?**
+**Where might we call `toggleMood()`?**
 
 ---
 class: center, middle
@@ -470,14 +470,14 @@ addToDo(event){
    const id = this.state.lastId + 1;
 
    if (this.toDoInput.value) {
-      this.state.todos.push({
+      let newToDos = this.state.todos.concat({
          id,
          title: this.toDoInput.value,
          complete: false
       });
 
       this.setState({
-         todos: this.state.todos,
+         todos: newToDos,
          lastId: id
       });
 
