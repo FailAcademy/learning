@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: Meteor and React
-slides: ['_slides/week-05/03-meteor-and-react.md']
-lesson_date: 2016-10-26
+title: SSL
+slides: ['_slides/week-09/05-ssl.md']
+lesson_date: 2016-11-25
 ---
 
 ## Pre-work
@@ -14,6 +14,12 @@ lesson_date: 2016-10-26
 ## Learning Objectives
 
 *Learning objectives TBA.*
+
+---
+
+## Keywords
+
+*Keywords TBA.*
 
 ---
 

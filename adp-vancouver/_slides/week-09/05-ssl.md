@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: The Slide Deck Title (used for the URL slug, and must be unique)
+title: SSL Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Slideshow Title
+# SSL
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 

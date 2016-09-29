@@ -1,13 +1,13 @@
 ---
 layout: lesson
 title: Production Optimizations
-slides: []
+slides: ['_slides/week-09/02-production-optimizations.md']
 lesson_date: 2016-11-22
 ---
 
 ## Pre-work
 
-Find 5 ways to optimize the production version of your app. Be prepared enough to explain your findings to the class.
+Find five ways to optimize the production version of your app. Be prepared enough to explain your findings to the class.
 
 ---
 
@@ -46,19 +46,25 @@ Find 5 ways to optimize the production version of your app. Be prepared enough t
 
 ## Exercise 1
 
-
+*Exercise details TBA.*
 
 ---
 
 ## Exercise 2
 
+*Exercise details TBA.*
 
+---
+
+## Exercise 3
+
+*Exercise details TBA.*
 
 ---
 
 ## Lab Activity
 
-
+*Lab activity details TBA.*
 
 ---
 
