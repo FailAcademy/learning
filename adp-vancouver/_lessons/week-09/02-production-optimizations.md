@@ -7,7 +7,8 @@ lesson_date: 2016-11-22
 
 ## Pre-work
 
-Find five ways to optimize the production version of your app. Be prepared enough to explain your findings to the class.
+Find five ways to optimize the production version of your app. 
+Be prepared enough to explain your findings to the class.
 
 ---
 

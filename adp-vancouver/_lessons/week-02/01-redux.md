@@ -13,7 +13,13 @@ Do your own personal research and be prepared tomorrow to explain:
 - the Flux pattern
 - the differences between MVC & Flux
 
-Read the [Redux Introduction](http://redux.js.org/docs/introduction/index.html)
+Read the [Redux Introduction](http://redux.js.org/docs/introduction/index.html). 
+Be prepared to explain the problem Redux is trying to solve.
+
+Read [You might not need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367).
+Be prepared to give an example of:
+  - an app that doesn't need Redux
+  - an app that would benefit from using Redux
 
 ---
 
@@ -88,5 +94,6 @@ git reset --hard e823513
 
 - [Scotch.io: Getting Started with Redux](https://scotch.io/bar-talk/getting-started-with-redux-an-intro)
 - [Redux without Profanity](https://tonyhb.gitbooks.io/redux-without-profanity/content/index.html)
-- [Cartoon guide to Redux](https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6#.56hltw7kz)
+- [Cartoon guide to Redux](https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6)
 - [Egghead Tutorial](https://egghead.io/courses/getting-started-with-redux)
+- [Learn Redux](https://learnredux.com/)
