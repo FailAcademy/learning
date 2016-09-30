@@ -10,6 +10,10 @@
 
 - what is a hash
 
+- issues with relative/absolute paths
+`<Link to="path/1">Link</Link>` - adds paths on the end of the current path
+This can result in "http://localhost:8000/path/path/path/path/1"
+Use an absolute link: `<Link to="/path/1">Link</Link>`
 
 ## Directions
 
