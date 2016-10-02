@@ -49,15 +49,14 @@ npm start
 
 ---
 
-## Exercise 2
+## Lab Activity
 
-Create a form in your "REDit" project. In the form, include:
-
-- Saving data to the Redux store
-- Validation of fields
-- Typed components
-- Error feedback
-- A disabled submit button when the form is invalid
+1. Create a form in your "REDit" project. Include:
+  - saving data to the Redux store
+  - validation of fields
+  - styled components
+  - error feedback
+  - a disabled submit button when the form is invalid
 
 ---
 

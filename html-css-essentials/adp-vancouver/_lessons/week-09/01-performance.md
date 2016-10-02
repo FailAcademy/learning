@@ -41,6 +41,8 @@ Read this [Google Developer article on Performance](https://developers.google.co
 
 Create your own testing tool using `performance.now()`.
 
+It should be a function that takes a function as a parameter and outputs the total duration of that function.
+
 ---
 
 ## Exercise 2
@@ -54,6 +56,8 @@ Choose three additional functions from your code and try to calculate the Big O 
 ## Exercise 3
 
 Prepare a list of performance improvements based on the reading from [Google Developer: Performance](https://developers.google.com/web/fundamentals/performance/?hl=en).
+
+Compare your list with your group.
 
 ---
 
