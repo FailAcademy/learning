@@ -24,6 +24,7 @@ Prior to class, please review these sections from the Atlassian Git guide:
 - Implement the "Successful Branching Model".
 - Understand Semver conventions.
 - `merge` a "Release branch" into production.
+- Create a feature branch and add a feature and use it to add a feature.
 - `tag` a merge commit containing a production release using Semver conventions.
 - `stash` some changes and re apply them to your code later.
 - Use the `cherry-pick` command to add a commit from another branch without merging.
@@ -41,6 +42,9 @@ Prior to class, please review these sections from the Atlassian Git guide:
 - `cherry-pick`
 - Git hooks
 - Release
+- Feature
+- Feature branch
+- Development branch
 
 ---
 

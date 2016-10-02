@@ -22,7 +22,7 @@ Prior to class, please read:
 - Demonstrate session state using JSON web tokens.
 - Use Express and Passport to save and authenticate user login and passwords.
 - Justify a particular type of hashing function for storing passwords.
-- Use OAuth2 to handle user authentication with an external API service (such as Github, Facebook or Twitter).
+- Use an OAuth2 library to handle user authentication with an external API service (such as Github, Facebook or Twitter).
 
 ---
 
