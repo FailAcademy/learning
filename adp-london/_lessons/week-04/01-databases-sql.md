@@ -62,7 +62,7 @@ Read about some of the reasons you'll learn about PostgreSQL in this class:
 
 To learn about fuzzy search, we'll follow this [example tutorial](http://rachbelaid.com/postgres-full-text-search-is-good-enough/).
 
-When you've completed the tutorial, apply the techniques you've learned 
+When you've completed the tutorial, apply the techniques you've learned to your project!
 
 ---
 
