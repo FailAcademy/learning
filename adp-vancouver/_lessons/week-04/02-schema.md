@@ -7,14 +7,36 @@ lesson_date: 2016-10-18
 
 ## Pre-work
 
-*Pre-work for this lesson TBA.*
+Please read over the following links:
+
+- [Postgres Data Types](https://www.tutorialspoint.com/postgresql/postgresql_data_types.htm)
+- [PostgreSQL Schema](https://www.tutorialspoint.com/postgresql/postgresql_schema.htm)
+- [PostgreSQL Constraints](https://www.tutorialspoint.com/postgresql/postgresql_constraints.htm)
+- [PostgreSQL Useful Functions](https://www.tutorialspoint.com/postgresql/postgresql_useful_functions.htm) 
 
 ---
 
 ## Learning Objectives
 
 - Distinguish different data types in a SQL database context.
+- Create a simple Schema using PostgreSQL basic syntax.
+- Write a simple Join using the JOIN clause.
+- Add constraints to ensure consistent data.
+- Get familiar with PostgreSQL functions.
 - Write a simple validation function.
+- Write a simple PostgreSQL View.
+- Discover the Sequelize ORM.
+
+---
+
+## Keywords
+
+- Data Types
+- Schema
+- Constraints
+- JOIN
+- View
+- ORM
 
 ---
 
