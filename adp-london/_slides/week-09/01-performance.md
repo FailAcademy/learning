@@ -420,7 +420,30 @@ How can we use our knowledge of render blocking to improve performance?
 
 # Jank
 
-Jank
+- What is **jank**?
+- Does your app show any instances of jank?
+- How often do devices refresh their screen?
+- How can you avoid jank?
+
+---
+
+# Jank
+
+To avoid jank, bring your rendering below **10ms**.
+
+---
+
+# Avoiding Jank
+
+- optimize JS
+- reduce elements rendered
+- reduce elements styled
+- reduce css rules. Use CSS Modules or BEM.
+- use **flexbox** over complex layout
+- reduce **thrashing**
+- simplify animations and layout
+- **debounce** inputs & scrolling
+
 
 ---
 template: inverse
@@ -445,7 +468,37 @@ How might you improve HTTP performance?
 
 # HTTP Caching
 
+**HTTP Caching** refers to saving loaded files in the browser. 
 
+Previously made requests can be loaded, and don't need to go over the wire.
+
+---
+
+# Cache: ETags
+
+Provide a use case for each of the following:
+
+- "no-cache" vs. "no-store"
+- "public" vs. "private"
+- "max-age"
+
+---
+
+# Cache: Max-Age
+
+max-age=86400 = 1 day (60 sec * 60 mins * 24 hours)
+
+max-age=300 = ?
+
+max-age=604800 = ?
+
+---
+
+# Cache Manager
+
+- [React-Lazy-Cache](https://github.com/erikras/react-lazy-cache)
+- [Facebook: DataLoader](https://github.com/facebook/dataloader)
+- [Node-Cache](https://github.com/mpneuried/nodecache)
 
 ---
 
@@ -455,7 +508,24 @@ Read [HTTP/2](https://blog.newrelic.com/2016/02/09/http2-best-practices-web-perf
 
 - What are the benefits of using HTTP/2 over HTTP/1.1?
 - Are there any downsides to using HTTP/2?
+- How can you setup HTTP/2?
 
 ---
+
+# HTTP/2
+
+- creates a single connection between the client and server
+- multiple requests at the same time
+- allows prioritizing resources
+- uses fewer server resources
+
+---
+
+# Review
+
+- What were some of your favorite performance improvements?
+- Which performance improvements did were missing from today?
+- Which performance improvements will you implement?
+- How will you use "big O" to improve your code?
 
 {% endhighlight %}
