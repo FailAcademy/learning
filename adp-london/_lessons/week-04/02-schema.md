@@ -19,6 +19,7 @@ Please read over the following links:
 ## Learning Objectives
 
 - Distinguish different data types in a SQL database context.
+- Describe why a Schema is necessary.
 - Create a simple Schema using PostgreSQL basic syntax.
 - Write a simple Join using the JOIN clause.
 - Add constraints to ensure consistent data.

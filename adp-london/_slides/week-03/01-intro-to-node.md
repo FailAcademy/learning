@@ -22,6 +22,7 @@ layout: false
 
 1. Distinguish between Client and Server
 2. Introduce Node & write and run a simple 'hello world' HTTP Server
+3. Debug a Node Program
 3. Install and setup Express.js
 4. Create a 'hello world' Server using Express
 6. Create a RESTful interface to an Express Server
@@ -69,22 +70,19 @@ template: inverse
 Read [this Article](https://webhostinggeeks.com/blog/what-are-web-servers-and-why-are-they-needed/).
 
 When you're finished, try to answer the following questions with each other:
-- Where does your web application code run, in the diagram on the previous slide?
-- Does a Web Server need to run on it's own computer system? Or, Can a single system
-host multiple Web Servers?
 - How do servers communicate with clients & clients with servers?
 - What is HTTP?
 
 ---
 
-# Why do I need a web server?
+### Why do I need a web server?
 
 The browser cannot handle all our needs on its own:
 
-- browser cannot host your site
-- browser does not have access to files on your computer
-- browser cannot keep secrets
-- browser should not access a database directly
+- A Browser cannot host your site
+- The Browser does not have access to files on your computer
+- A Browser cannot keep secrets
+- A Browser should not access a database directly
 
 Discuss with a partner why the browser is designed with these limitations.
 
@@ -144,6 +142,48 @@ Open **Question.md** and answer each of them.
 
 template: inverse
 
+# Debugging Node
+
+---
+
+# Debugging Node
+
+Run the example http server using the command: <br/>
+`node debug server.js`
+
+```js
+const http = require('http');
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World\n');
+}).listen(port);
+
+console.log(`Server running @ localhost:${port}`);
+```
+
+
+
+---
+
+# Exercise 3
+
+Let's debug our example Node Web Server by running the server with the `debug` flag.
+
+We'll also use some new tools that allow us to debug code running inside of Node, in our web browser in parallel to our client side code!
+
+**Try using these tools:**: <br/>
+The Visual Studio Code Debugger. <br/>
+[The Chrome Dev Tools debugger](https://mattdesl.svbtle.com/debugging-nodejs-in-chrome-devtools). <br/>
+Another [Chrome Dev Tools debugger approach](https://blog.hospodarets.com/nodejs-debugging-in-chrome-devtools).
+
+
+---
+
+template: inverse
+
 # Express
 
 ---
@@ -153,13 +193,43 @@ template: inverse
 Install and set up Express in a new Node project. The group who chose to explore Express in the previous exercise
 will provide guidance to the rest of the class.
 
+[Express installation instructions](https://expressjs.com/en/starter/installing.html).
+
+---
+
+# Using Express
+
+Create a new Express App!
+
+```shell
+npm init -y
+npm i -S express
+touch index.js
+```
+
+Create a file called server.js and add the following code: <br/>
+
+```js
+const port = 3000;
+const express = require('express');
+const app = express();
+
+app.get('/', function (req, res) {
+  res.send("hello, world!");
+});
+
+const server = app.listen(3000, function() {
+ console.log(`Server running @ localhost:${port}`);
+});
+```
+
 ---
 
 # Start
 
 Create an NPM script for running your app.
 
-/ package.json
+Inside of your `package.json` add the following: <br/>
 
 ```js
 "scripts": {
@@ -167,32 +237,25 @@ Create an NPM script for running your app.
 }
 ```
 
-Call the script:
+You can now call this script from the command line:
 
 ```shell
 npm start
 ```
 
----
-
-# Restarting the Server
-
-It can get annoying when you have to restart the server on changes.
-
-- How might we restart the server on file changes?
+You can give your scripts any name you like. Try renaming the `start` script to something else.
+Can you still run the script by name using the `npm` command?
 
 ---
 
 # Nodemon
 
-Install "Nodemon".
+When developing Node applications, you'll have to restart the webserver after you make changes in your files.
+Use the Nodemon tool to automate server restarts on file changes.
 
 ```shell
 npm install --save-dev nodemon
 ```
-
-Nodemon will automatically restart the server when changes are made.
-
 Change your start script to use "nodemon" instead of "node".
 
 ```js
@@ -211,34 +274,7 @@ template: inverse
 
 # Routing
 
-Run:
-
-```shell
-npm init -y
-npm i -S express
-touch index.js
-```
-
-Paste in index.js:
-
-```js
-const express = require('express');
-const app = express();
-
-app.get('/', function (req, res) {
-  res.send("hello, world!");
-});
-
-const server = app.listen(3000, function() {
-  console.log("server running at http://localhost:" + server.address().port)
-});
-```
-
----
-
-# Routing
-
-We added a route to the base location ("/").
+We've added a route to the base location ("/").
 
 ```js
 app.get('/', function (req, res) {
@@ -251,36 +287,41 @@ Demonstrate that you can route between the pages in the browser.
 
 ---
 
-## Exercise 3
+# Let's get some data
 
-We will be adding the following to our index.js:
-
+Add the following dependencies to your project:<br/>
 ```js
 var fs = require('fs');
 var _ = require('lodash');
-!(have to install lodash)
 var users = [];
 ```
 
-Research why we are adding these and we will talk about it in class.
-
+Why we are adding these?
 
 ---
 
-# User model
+# The User Model
+
+Use the modules you just installed to load some data from a `.json` file, on disk!
+
 
 ```js
+// Read users.json from disk.
 fs.readFile('users.json', {encoding: 'utf8'}, function (err, data) {
-  if (err) throw err
+  if (err) throw err;
+    // Parse the json file when Node has finished loading it.
+    JSON.parse(data).forEach(function (user) {
+      user.name.full =
+        _.startCase(user.name.first + ' ' + user.name.last);
+
+      users.push(user);
+    });
+    // End parse.
+  });
+});
 ```
 
-```js
-  JSON.parse(data).forEach(function (user) {
-    user.name.full = _.startCase(user.name.first + ' ' + user.name.last)
-    users.push(user)
-  })
-})
-```
+** Where does this code belong, in our project?**
 
 ---
 
