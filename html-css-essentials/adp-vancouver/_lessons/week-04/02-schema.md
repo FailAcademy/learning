@@ -59,6 +59,12 @@ Please read over the following links:
 
 ---
 
+## Exercise 4
+
+Write a `SELECT` query that Applies the PostgreSQL aggregate functions `SUM` and `AVG` to some JSON data.
+
+---
+
 ## Lab Activity
 
 *Lab activity details TBA.*
