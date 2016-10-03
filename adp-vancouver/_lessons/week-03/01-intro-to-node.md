@@ -18,10 +18,12 @@ You'll need to know what the **port** and **protocol** options are for. Try runn
 ## Learning Objectives
 
 - Explain the differences between writing code for the client versus writing code for the server.
+- Describe HTTP.
+- Explain why Node is important and how it's being used.
 - Write and run a simple "Hello, world!" HTTP Server with Node.
 - Create a "Hello, world!" HTTP server using Express.
 - Set up and deploy a Node web server using Express.
-- Write HTTP requests that handle logic using Express.
+- Write HTTP request / response handlers, send data from the client to the server.
 - Make web requests to third-party web servers using Express.
 - Define what a "RESTful" architectural style is application development.
 - Use RESTful methods to communicate between an Express server and a web browser.
@@ -48,7 +50,7 @@ Read through [this article](https://webhostinggeeks.com/blog/what-are-web-server
 When you're finished, try to answer the following questions with each other:
 
 - Where does your web application code run, in the diagram on the previous slide?
-- Does a Web Server need to run on it's own computer system? Or, Can a single system
+- Does a Web Server need to run on it's own computer system? Can a single system
 host multiple Web Servers?
 - How do servers communicate with clients & clients with servers?
 - What is HTTP?
@@ -67,16 +69,9 @@ Open `Question.md` and answer each of them.
 
 ## Exercise 3
 
-Add the following to your `index.js` file:
-
-```js
-var fs = require('fs');
-var _ = require('lodash');
-!(have to install lodash)
-var users = [];
-```
-
-Investigate what `fs` and `lodash` are, determine why we would use them, and discuss with the class.
+Let's debug our example Node Web Server by running the server with the `debug` flag.
+We'll also use some new tools that allow us to debug code running inside of Node,
+in our web browser in parallel to our client side code!
 
 ---
 
@@ -87,6 +82,13 @@ In a small group, attempt to implement a web server using one of the following N
 1. [**Hapi**](http://hapijs.com/)
 2. [**Koa**](http://koajs.com/)
 3. [**Sails**](http://sailsjs.org/)
+
+---
+
+## Exercise 5
+
+When you've successfully created a Web Server using one of the frameworks mentioned in the last exercise
+deploy your site to the cloud using [Surge](http://surge.sh/), or [Now](https://zeit.co/now)
 
 ---
 
