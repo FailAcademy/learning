@@ -25,8 +25,12 @@ Read about some of the reasons you'll learn about PostgreSQL in this class:
 
 - Define what role a database plays in an application.
 - Explain how a relational database is structured.
+- Install and set up an instance of PostgreSQL.
+- Explain the difference between `TABLE` and `DATABASE`.
 - Write basic SQL queries to perform CRUD operations on a database.
-- Store and retrieve JSON data from a local instance of Postgres.
+- Write basic SQL queries to perform CRUD operations on a JSON data.
+- Write SQL queries in a SQL file and execute commands form the `psql` prompt.
+- Create relationships between data in separate tables using Primary Keys.
 - Describe full-text search.
 - Describe 'Fuzzy Search' and perform a fuzzy search on a PostgreSQL dataset.
 
@@ -40,6 +44,7 @@ Read about some of the reasons you'll learn about PostgreSQL in this class:
 - Fields
 - Cells
 - Unique identifier
+- Primary Key
 - Fuzzy search
 - Full text search
 - CRUD
@@ -48,27 +53,91 @@ Read about some of the reasons you'll learn about PostgreSQL in this class:
 
 ## Exercise 1
 
-*Exercise details TBA.*
+You should have a running instance of PostgreSQL running on your computer. In this lab activity,
+we'll go through the process of setting up a few new databases within it, to use throughout the rest of our
+time with PostgreSQL.
+
+- Create 2 databases, one called `development`, and one called `production`.
+We'll use the development database to try out new things. Once we're comfortable, we'll apply
+what works to our `production` database.
+
+- Use the `CREATE USER <name> WITH PASSWORD <pw>` command to create a new user and configure a password for each database.
+See [documentation](https://www.postgresql.org/docs/9.6/static/sql-createuser.html).
+
+(This setup is meant to mock a real world database setup, and to give us the opportunity to become familiar with
+creating and authorizing a new Database on your local machine. In a real production setting, our setup would be more complicated).
 
 ---
 
 ## Exercise 2
 
-*Exercise details TBA.*
+**CRUD** operations.
+
+In this exercise we'll store and retrieve data from our new PostgreSQL database instance!
+Using your `development` database:
+
+1) Log into the PostgreSQL command prompt using the `psql` command.
+
+2) Create a table called `table-data`
+
+<!--
+XXX TODO XXX
+
+INSERT
+SELECT
+UPDATE
+DROP TABLE
+DROP DATABASE
+JOIN
+WHERE
+REFERENCES
+-->
 
 ---
 
 ## Exercise 3
 
-To learn about fuzzy search, we'll follow this [example tutorial](http://rachbelaid.com/postgres-full-text-search-is-good-enough/).
+**CRUD** operations with JSON data.
 
-When you've completed the tutorial, apply the techniques you've learned to your project!
+In this exercise we'll store and retrieve JSON data from a local instance of PostgreSQL, by completing the following steps:
+(Use the PostgreSQL command prompt or create a SQL file).
+Using your `development` database:
+
+1) Create a file name json-crud.sql. We'll use this file to add all of the commands we'll use in this exercise, and
+execute them all at once by loading the file from the `psql` command prompt.
+
+2) Create a table called `json-data`
+
+
+---
+
+## Exercise 4
+
+<!--
+XXX TODO XXX
+
+Relationships
+Primary Key
+
+-->
+
+---
+
+## Exercise 5
+
+To learn about fuzzy search, we'll follow this [example tutorial](http://rachbelaid.com/postgres-full-text-search-is-good-enough/).
 
 ---
 
 ## Lab Activity
 
-*Lab activity details TBA.*
+<!--
+XXX TODO XXX
+
+- Create a database to use with REDit.
+- You can choose to create your schema manually, or install the sequelize ORM in your project.
+
+-->
 
 ---
 
