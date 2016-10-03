@@ -88,9 +88,7 @@ SELECT
 UPDATE
 DROP TABLE
 DROP DATABASE
-JOIN
 WHERE
-REFERENCES
 -->
 
 ---
@@ -116,6 +114,9 @@ execute them all at once by loading the file from the `psql` command prompt.
 <!--
 XXX TODO XXX
 
+JOIN
+REFERENCES
+CONSTRAINTS / CHECK / NOT NULL
 Relationships
 Primary Key
 
@@ -131,13 +132,18 @@ To learn about fuzzy search, we'll follow this [example tutorial](http://rachbel
 
 ## Lab Activity
 
-<!--
-XXX TODO XXX
+In today's labe we'll set up a database to use with the REDit project. You'll need to: <br/>
+Create a local database and database user for your REDit project. Connect to the database from your Express server
+using the user and password you created.
 
-- Create a database to use with REDit.
-- You can choose to create your schema manually, or install the sequelize ORM in your project.
+You'll have 2 options for adding PostgreSQL connectivity to your application: <br/>
 
--->
+- [Sequelize OMR]([Sequelize ORM Documenation](http://docs.sequelizejs.com/en/v3/)
+This is a full featured ORM, We'll learn more about ORM's in the following lesson.
+
+- [node-postgres](https://github.com/brianc/node-postgres)
+This library allows you to write SQL queries from your JavaScript code, and does not expose and ORM.
+
 
 ---
 
