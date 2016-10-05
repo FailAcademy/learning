@@ -353,14 +353,38 @@ function sortByKey(key) {
 
 # Group-Work
 
-With a partner, choose an additional middleware to implement in your "Worst Pokemon" app. Some suggestions:
+With a partner, implement local storage state saving in your Redux app.
 
-- [Redux LocalStorage](https://github.com/elgerlambert/redux-localstorage)
-- [Toast Error Messages](See the bottom of https://www.codementor.io/reactjs/tutorial/beginner-s-guide-to-redux-middleware)
-- Redux-Debounce / Redux-Throttle
-- [Redux-Authentication](https://github.com/Jackong/redux-authentication)
+[Redux LocalStorage](https://github.com/elgerlambert/redux-localstorage)
 
-Other suggestions found [here](https://github.com/xgrommx/awesome-redux#react---a-javascript-library-for-building-user-interfaces).
+Use the latest version and follow the "1.0" docs.
 
+`npm install --save redux-localstorage@rc`
+
+---
+
+# LocalStorage
+
+Let's checkout local storage. 
+
+Go to "github.com" in Chrome.
+
+Open "devtools" -> "Application" -> "localStorage". 
+
+---
+
+# LocalStorage API
+
+- save strings to localStorage with `localStorage.setItem(key, value)`.
+
+- get strings from localStorage with `localStorage.getItem(key)`.
+
+```js
+localStorage.setItem('redux', 'is Awesome');
+localStorage.getItem('redux'); // "is Awesome"
+
+localStorage.setItem('state', JSON.stringify({a: 1}));
+JSON.parse(localStorage.getItem('state')); // { a: 1 }
+```
 
 {% endhighlight %}

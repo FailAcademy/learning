@@ -14,7 +14,6 @@ Be prepared enough to explain your findings to the class.
 
 ## Learning Objectives
 
-- HTTP caching
 - image optimization
 - image dimensions
 - vector vs. raster images
@@ -31,7 +30,6 @@ Be prepared enough to explain your findings to the class.
 
 ## Keywords
 
-- HTTP caching
 - image optimization
 - vector images
 - raster images
