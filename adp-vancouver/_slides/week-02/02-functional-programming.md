@@ -134,8 +134,13 @@ class: middle
 3. Recursion
 
 ---
-class: center, middle
 name: inverse
+
+# Array Methods
+
+---
+
+class: center, middle
 
 # Array Methods
 
@@ -206,17 +211,103 @@ How are they different? When should each be used?
 - `map`
 - `concat`
 - `push`
+- `slice`
+- `splice`
 
 ---
+
 class: middle, center
 
 # Practice
 
 Try the [Netflix Functional Tutorial](http://reactivex.io/learnrx/).
 
+---
+
+# Logger
+
+Tip: in the console of the Netflix tutorial add the following code:
+
+```js
+Array.prototype.log = function(message) {
+  console.log(message, this);
+  return this;
+}
+```
+
+How might this be used?
 
 ---
-class: middle
+
+# Logger
+
+The logger can help you read your code, step by step.
+
+```js
+let a = data
+          .map(changeData)
+          .log('change data')
+          .map(alterData)
+          .log('alter data')
+```
+
+It will log the state at each step.
+
+---
+
+# Debugger
+
+Tip: in the console of the Netflix tutorial add the following code:
+
+```js
+Array.prototype.debug = function() {
+  debugger;
+  return this;
+}
+```
+
+This will create a break point at each step it is added.
+
+---
+name: inverse
+# Imperative vs. Declarative
+
+---
+
+# Imperative: How
+
+Tell the computer what to do, step by step.
+
+```js
+let list = [1, 2, 3];
+// loop over each item
+for (let i = 0; i < list.length; i++) {
+  // add 1 to each item
+  list[i] = list[i] + 1;
+  // remove even numbers
+  if (list[i] % 2 === 0) {
+    list = list.slice(0, i) + list.slice(i + 1, list.length);
+  }
+  // multiply the number by 10
+  list[i] = list[i] * 10;
+}
+```
+
+---
+
+# Declarative: What
+
+Describe the "transformation". What should happen.
+
+```js
+let list = [1, 2, 3];
+
+list.map(add1)
+    .filter(isEven)
+    .map(multiply10);
+```
+
+---
 
 # Teach Each Other
 
