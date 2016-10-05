@@ -86,7 +86,10 @@ git reset --hard e823513
 
 ## Lab Activity
 
-*Lab activity detail TBA.*
+1. Setup Redux in your REDit app. Your app should include:
+  - store
+  - `combineReducers` with a "posts" reducer passed in
+  - a VOTE_UP action that increments the vote on a post
 
 ---
 
