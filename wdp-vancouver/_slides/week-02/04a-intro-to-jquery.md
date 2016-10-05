@@ -545,7 +545,7 @@ $('.numbers').children(':first').remove();
 
 Note that `.prepend()` and `.append()` will add content inside the element's opening and closing tags respectively.
 
-The `.before()` and `.after` methods will add content just before or just after the selected element.
+The `.before()` and `.after()` methods will add content just before or just after the selected element.
 
 ---
 
@@ -714,7 +714,7 @@ We can use this to our advantage!
 
 *And why exactly is this useful?*
 
-Sometimes we want attach events to HTML elements that already have default behaviours that we need to override.
+Sometimes we want to attach events to HTML elements that already have default behaviours that we need to override.
 
 For instance, you may want to attach a special click handler to an `<a>` that performs a different action than clicking through to a link (e.g. revealing a hidden `<div>`).
 
