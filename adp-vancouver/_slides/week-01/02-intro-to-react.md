@@ -203,6 +203,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 # JSX Gotchas
 
 - There must be exactly one outer-most tag returned with your JSX (so you can't return sibling elements)
+- You cannot use `//` comments. JSX comments look like the following: `{/* a comment */}`
 - If you need to add a `class` to an element, you must use `className`
 - If you need to add a `for` attribute, you must use `htmlFor`
 - Self-closing tags must have a `/` before the `>`
@@ -302,6 +303,27 @@ A boilerplate React app with:
 template: inverse
 
 # Working with Components
+
+---
+
+# Multiple Components
+
+React components can have multiple render statements.
+
+```js
+render() {
+  switch(this.props.value) {
+    case 1:
+      return <div>Only one</div>;
+    case 2:
+      return <div>More than one</div>;
+    default:
+      return null;
+  }
+}
+```
+
+Returning `null` tells the component not to render.
 
 ---
 
