@@ -51,13 +51,9 @@ db.stats()
 
 db.getCollectionNames()
 
-use db_name
-
 db.collection.find()
 
 db.collection.insert({field: value})
-
-show dbs
 
 db.collection.remove({})
 
@@ -80,13 +76,13 @@ Review the MongoDB docs on [Query and Projection Operators](https://docs.mongodb
 
 ## Lab Activity
 
-We're going to keep practicing our MongoDB skills, but with a much larger dataset. 
+We're going to keep practicing our MongoDB skills, but with a much larger dataset.
 
 Clone the following repo:
 
 - https://github.com/redacademy/adp-mongo-project
 
-Complete each of the challenges in `README.md` based on the dataset provided in `primer-dataset.json`. 
+Complete each of the challenges in `README.md` based on the dataset provided in `primer-dataset.json`.
 
 ---
 
@@ -94,4 +90,6 @@ Complete each of the challenges in `README.md` based on the dataset provided in 
 
 - [NoSQL Databases Explained](https://www.mongodb.com/nosql-explained)
 - [SQL vs NoSQL: The Differences](https://www.sitepoint.com/sql-vs-nosql-differences/)
+- [NoSQL Databases: a Survey and Decision Guidance](https://medium.com/baqend-blog/nosql-databases-a-survey-and-decision-guidance-ea7823a822d#.db92brvvh)
+- [SQL or NoSQL?](https://www.pgcasts.com/)
 - [Query Translator: Convert MySQL Queries to MongoDB Syntax](http://www.querymongo.com/)

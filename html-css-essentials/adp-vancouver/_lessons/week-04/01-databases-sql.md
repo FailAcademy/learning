@@ -19,6 +19,8 @@ Read about some of the reasons you'll learn about PostgreSQL in this class:
 
 - [PostgreSQL Advantages](https://www.postgresql.org/about/advantages/)
 
+Complete Part 1 *Simple SQL Queries*, from [these exercises](https://www.pgexercises.com/questions/basic/).
+
 ---
 
 ## Learning Objectives
@@ -30,7 +32,7 @@ Read about some of the reasons you'll learn about PostgreSQL in this class:
 - Write basic SQL queries to perform CRUD operations on a database.
 - Write basic SQL queries to perform CRUD operations on a JSON data.
 - Write SQL queries in a SQL file and execute commands form the `psql` prompt.
-- Create relationships between data in separate tables using Primary Keys.
+- Use Aggregate functions to perform operations on a PostgreSQL dataset.
 - Describe full-text search.
 - Describe 'Fuzzy Search' and perform a fuzzy search on a PostgreSQL dataset.
 
@@ -43,11 +45,11 @@ Read about some of the reasons you'll learn about PostgreSQL in this class:
 - Table
 - Fields
 - Cells
-- Unique identifier
 - Primary Key
 - Fuzzy search
 - Full text search
 - CRUD
+- ACID
 
 ---
 
@@ -67,6 +69,15 @@ See [documentation](https://www.postgresql.org/docs/9.6/static/sql-createuser.ht
 (This setup is meant to mock a real world database setup, and to give us the opportunity to become familiar with
 creating and authorizing a new Database on your local machine. In a real production setting, our setup would be more complicated).
 
+<!-- XXX TODO XXX
+
+INSERT
+UPDATE
+DROP TABLE
+DROP DATABASE
+
+-->
+
 ---
 
 ## Exercise 2
@@ -78,18 +89,9 @@ Using your `development` database:
 
 1) Log into the PostgreSQL command prompt using the `psql` command.
 
-2) Create a table called `table-data`
+2) Create a new table called `tabledata`
 
-<!--
-XXX TODO XXX
-
-INSERT
-SELECT
-UPDATE
-DROP TABLE
-DROP DATABASE
-WHERE
--->
+2) Add some data to your new database.
 
 ---
 
@@ -104,21 +106,21 @@ Using your `development` database:
 1) Create a file name json-crud.sql. We'll use this file to add all of the commands we'll use in this exercise, and
 execute them all at once by loading the file from the `psql` command prompt.
 
-2) Create a table called `json-data`
+2) Create a table called `jsondata`
 
 
 ---
 
 ## Exercise 4
 
+Let's query our data.
+
 <!--
 XXX TODO XXX
 
-JOIN
-REFERENCES
-CONSTRAINTS / CHECK / NOT NULL
-Relationships
-Primary Key
+SELECT
+FROM
+WHERE
 
 -->
 
@@ -132,7 +134,7 @@ To learn about fuzzy search, we'll follow this [example tutorial](http://rachbel
 
 ## Lab Activity
 
-In today's labe we'll set up a database to use with the REDit project. You'll need to: <br/>
+In today's lab we'll set up a database to use with the REDit project. You'll need to: <br/>
 Create a local database and database user for your REDit project. Connect to the database from your Express server
 using the user and password you created.
 
@@ -152,5 +154,4 @@ This library allows you to write SQL queries from your JavaScript code, and does
 - [Learn SQL - Codeacademy](https://www.codecademy.com/learn/learn-sql)
 - [18+ Best Online Resources for Learning SQL and Database Concepts](http://www.vertabelo.com/blog/notes-from-the-lab/18-best-online-resources-for-learning-sql-and-database)
 - [A Visual Explanation of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
-- [NoSQL Databases: a Survey and Decision Guidance](https://medium.com/baqend-blog/nosql-databases-a-survey-and-decision-guidance-ea7823a822d#.db92brvvh)
 - [PostgreSQL Docs: Full Text Search](http://www.postgresql.org/docs/9.1/static/textsearch-indexes.html)
