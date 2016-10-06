@@ -117,8 +117,6 @@ Discuss strengths and weaknesses of each pattern (MVC, Flux, Redux) in relation 
 
 Students will code along to build a Redux "Worst Pokemon" voting up. Encourage students to experiment, help each other and break things.
 
-[ADP-Redux-Walkthrough](https://github.com/redacademy/adp-redux-walkthrough) - branch "a-redux"
-
 Follow git commit diffs. Tutorial walks through. See the added talking points.
 
   1. state

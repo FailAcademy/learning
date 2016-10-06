@@ -55,7 +55,6 @@ Discussion: Which **hashing algorithm** should you use? Why?
 
 Test your password hash at https://crackstation.net/.
 
-
 ## Authentication as a Service (20)
 
 Read: [An Introduction to OAuth2](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
@@ -71,3 +70,5 @@ Code: Setup your project with OAuth2 authentication using Github.
 1. Talk about HTTPS. What is the S? How do you enable it?
 2. What is a "certificate authority"? Should we trust a certificate authority?
 3. Talk about [Let's Encrypt](https://letsencrypt.org/).
+
+## If Time: 2 Factor Auth
