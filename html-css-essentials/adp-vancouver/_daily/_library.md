@@ -23,6 +23,8 @@
 ### `map`
 ### `filter`
 ### `reduce`
+### `find`
+### `findOne` - hint: use a for loop with a break
 
 ---
 
