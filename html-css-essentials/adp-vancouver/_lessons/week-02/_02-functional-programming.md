@@ -206,9 +206,11 @@ b) .concat & .push
 // Example answer
 
 | Pure    | Impure  |
-|---------|----------|
+|---------|---------|
 | map     | forEach |
-| concat | push    |
+| concat  | push    |
+| slice   | splice  |
+| reduce  |         |
 
 - Discuss when to use map, when to use forEach.
 
@@ -217,6 +219,7 @@ b) .concat & .push
 - Say we want to add one to each number in an array
 
 ```js
+
 [1, 2, 3].map(x => x + 1);
 // [2, 3, 4]
 
