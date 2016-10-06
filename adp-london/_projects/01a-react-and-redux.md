@@ -32,10 +32,10 @@ Your project must:
 
 Your project must:
 
-- [ ] Load mock data as "posts" and "categories"
+- [ ] Load mock data as "posts" and "weeks"
 - [ ] Display posts in a list
 - [ ] Allow post sorting (by "newest" or "popularity")
-- [ ] Allow post filtering (by category)
+- [ ] Allow post filtering (by post list)
 - [ ] Allow users to up-vote posts
 - [ ] Use routing to change the URL when the user sorts or filters
 
@@ -61,6 +61,7 @@ Your project must:
 - [ ] Use [`react-redux`](https://github.com/reactjs/react-redux) `connect` to map state to props
 - [ ] Use `connect` to map dispatch to props
 - [ ] Add [`redux-logger`](https://github.com/evgenyrodionov/redux-logger) middleware during "development" mode
+- [ ] Add and use [`redux-thunk`](https://github.com/gaearon/redux-thunk) middleware for async dispatches
 - [ ] Reflect the designer's vision for the application's UI
 
 ### Quality
@@ -81,7 +82,9 @@ Want to challenge yourself? Your project could also:
 - [ ] Use pure functions only (without side effects)
 - [ ] Contain components with arguments passed using "props" only (i.e. no use of `setState`)
 - [ ] Write actions using the [Flux Standard Action](https://github.com/acdlite/flux-standard-action) pattern
-- [ ] Add and use [`redux-thunk`](https://github.com/gaearon/redux-thunk) middleware for async dispatches
+- [ ] Implement localStorage to preserve state
+- [ ] Use a responsive design with a sliding drawer for the "Weeks" view
+- [ ] Allow users to only VOTE_UP a single time
 
 ## Submission Instructions
 

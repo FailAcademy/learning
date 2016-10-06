@@ -22,6 +22,7 @@ Complete the following readings before class:
 - Distinguish between `.push` and `.concat`.
 - Use the spread operator (`...`) to avoid array mutation.
 - Use `Object.assign` to avoid object mutation.
+- Distinguish between **imperative** & **declarative** programming
 
 ---
 
@@ -37,6 +38,8 @@ Complete the following readings before class:
 - [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 - [push](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
 - [concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
+- imperative
+- declarative
 - Spread operator
 
 ---

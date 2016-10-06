@@ -19,9 +19,11 @@ Please read over the following links:
 ## Learning Objectives
 
 - Distinguish different data types in a SQL database context.
+- Describe why a Schema is necessary.
 - Create a simple Schema using PostgreSQL basic syntax.
 - Write a simple Join using the JOIN clause.
 - Add constraints to ensure consistent data.
+- Describe the difference between 'Foreign key' and 'Primary key'.
 - Get familiar with PostgreSQL functions.
 - Write a simple validation function.
 - Write a simple PostgreSQL View.
@@ -34,6 +36,9 @@ Please read over the following links:
 - Data Types
 - Schema
 - Constraints
+- Relations
+- Primary Key
+- Foreign Key
 - JOIN
 - View
 - ORM
@@ -42,25 +47,66 @@ Please read over the following links:
 
 ## Exercise 1
 
-*Exercise details TBA.*
+<!-- XXX TODO XXX
+Create the schema and data types for REDit
+-->
 
 ---
 
 ## Exercise 2
 
-*Exercise details TBA.*
+<!-- XXX TODO XXX
+Create the relationships between data, discuss:
+- Primary Key
+- Foriegn Key
+- One to One
+- One to many
+- Many to many
+-->
 
 ---
 
 ## Exercise 3
 
-*Exercise details TBA.*
+**More fun with queries**
+
+Now that we have our data and relationships set up. Let's write some SQL queries:
+
+- Write a query that returns all of the tags for a given post.
+- Write a query that returns the number of posts in the database.
+- Write a query that returns the average number of votes on posts in your database.
+- Write a query that returns the 5 newest posts.
+
+---
+
+## Exercise 4
+
+Now that we have our data and relationships set up. Let's write some views that aggregate data from the database:
+
+- Write a View that returns all of the posts for a tag with a given name.
 
 ---
 
 ## Lab Activity
 
-*Lab activity details TBA.*
+How does the Sequelize ORM handle queries and relationships. Add Sequelze to your project.
+When your project loads, create some *stub* data in your REDit database using the Sequelize API.
+
+Once you've initialized your database instance, you'll add the commands to instre data, and create relationships
+inside of the `sync` method, exposed by the instance, like this:
+
+```js
+
+db.sync({ force: true }).then(() => {
+
+  // Your Sequelize code here.
+
+})
+
+```
+
+The `{ force: true }` tells Sequelize to destroy and recreate the database each time `nodemon` reloads your server.
+This is ideal for development. We'll remove this code and the *stubbed data* when it comes time to deploy our app!
 
 ---
 
