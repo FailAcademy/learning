@@ -12,7 +12,10 @@ Please read over the following links:
 - [Postgres Data Types](https://www.tutorialspoint.com/postgresql/postgresql_data_types.htm)
 - [PostgreSQL Schema](https://www.tutorialspoint.com/postgresql/postgresql_schema.htm)
 - [PostgreSQL Constraints](https://www.tutorialspoint.com/postgresql/postgresql_constraints.htm)
-- [PostgreSQL Useful Functions](https://www.tutorialspoint.com/postgresql/postgresql_useful_functions.htm) 
+- [PostgreSQL VIEW](https://www.tutorialspoint.com/postgresql/postgresql_views.htm)
+- [PostgreSQL Useful Functions](https://www.tutorialspoint.com/postgresql/postgresql_useful_functions.htm)
+
+Complete Part 2 *Joins and Subqueries*, from [these exercises](https://pgexercises.com/questions/joins/).
 
 ---
 
@@ -47,22 +50,43 @@ Please read over the following links:
 
 ## Exercise 1
 
-<!-- XXX TODO XXX
-Create the schema and data types for REDit
--->
+Let's create our REDit database, if we have not done so yet, and insert some data:
+Just insert the data for now. Don't worry about the schema and constrains, we'll add those later).
+
+- 1 User
+- 3 Weeks
+- 6 Posts
+- 4 Tags
+- 9 Lessons
+
+You can choose how to do this:
+
+- Using the `psql` prompt
+- Using the `psql` prompt and a .sql file
+- Using a Postgres GUI: [pgAdmin4](https://www.pgadmin.org/)
 
 ---
 
 ## Exercise 2
 
-<!-- XXX TODO XXX
-Create the relationships between data, discuss:
-- Primary Key
-- Foriegn Key
-- One to One
-- One to many
-- Many to many
--->
+Ensure your REDit database has the following relationships.
+
+- User has many Posts.
+- Tag belongs to many Posts.
+- Post belongs to many Tags.
+- Lesson belongs to Week.
+- Week has many Lessons.
+- Post belongs to Lesson.
+- Lesson has many Posts.
+
+**Some things to consider:**
+
+- Why have we structured our database in this way?
+- How are relationships between tables in out database created.
+- How are 'many to many' relationships defined.
+- What is the purpose of a primary key?
+- What is the purpose of a foreign key?
+- Are there performance implications we should consider when creating out relationships, and if so what are they?
 
 ---
 
@@ -70,7 +94,7 @@ Create the relationships between data, discuss:
 
 **More fun with queries**
 
-Now that we have our data and relationships set up. Let's write some SQL queries:
+Now that we have our data and relationships set up. Let's write some SQL queries.
 
 - Write a query that returns all of the tags for a given post.
 - Write a query that returns the number of posts in the database.
@@ -83,7 +107,19 @@ Now that we have our data and relationships set up. Let's write some SQL queries
 
 Now that we have our data and relationships set up. Let's write some views that aggregate data from the database:
 
-- Write a View that returns all of the posts for a tag with a given name.
+- Write a View that returns all of the posts that are tagged tag with a given tag name.
+
+---
+
+## Exercise 5
+
+We're nearly done setting up our database. The final aspect of creating our schema is adding constraints.
+When creating constraints we need to consider things like:
+
+- What fields in our tables should be unique?
+- What are the specific types of data we're storing in each column?
+
+Add the appropriate constraints to your REDit database.
 
 ---
 
@@ -96,13 +132,11 @@ Once you've initialized your database instance, you'll add the commands to instr
 inside of the `sync` method, exposed by the instance, like this:
 
 ```js
-
 db.sync({ force: true }).then(() => {
 
   // Your Sequelize code here.
 
-})
-
+});
 ```
 
 The `{ force: true }` tells Sequelize to destroy and recreate the database each time `nodemon` reloads your server.
