@@ -105,6 +105,17 @@ When routes in our application change no request to the server is made. Instead,
 
 # Exercise 2
 
+Visit [Reddit](http://reddit.com).
+
+Click on several links and map out how the urls are structured:
+
+- hot posts
+- new posts
+- submitting posts
+- comment on posts
+- a subReddit
+- showing only posts in the past hour
+
 ---
 
 # An Example
