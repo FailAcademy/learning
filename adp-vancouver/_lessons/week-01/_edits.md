@@ -5,6 +5,17 @@
 
 ## Day 2
 
+- add slides about commenting with React JSX `{/* */}`
+
+- have a discussion about naming components.
+
+  - <Posts />         ->    <PostList />
+  - <Post />          ->    <PostListItem />, <Post />
+  - <SinglePost />    ->    <Post />, <PostDetails/>
+
+  - be descriptive
+  - start with the base noun, so posts can be easily categorized
+
 - Students had some confusion over React rendering. They didn't know you can only render a single element.
 
 
@@ -59,8 +70,6 @@ Topics/Questions
 
 ## Day 4
 
-## Topics/Questions
-
 - browser history
   - why?
   - how it works
@@ -75,8 +84,6 @@ Topics/Questions
 `<Link to="path/1">Link</Link>` - adds paths on the end of the current path
 This can result in "http://localhost:8000/path/path/path/path/1"
 Use an absolute link: `<Link to="/path/1">Link</Link>`
-
-## Directions
 
 - clearer directions in lab activity about:
   - using routes for sorting (newest, popular)
