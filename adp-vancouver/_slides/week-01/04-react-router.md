@@ -103,6 +103,10 @@ When routes in our application change no request to the server is made. Instead,
 
 ---
 
+# Exercise 2
+
+---
+
 # An Example
 
 Let's create a new React app to test out some of React Router's features. First run:
@@ -331,7 +335,7 @@ We can also use route params with the `Link` component:
 
 ---
 
-# Exercise 2
+# Exercise 3
 
 Based on what you just learned in the preceding examples, apply this to your project now. You will need to create routes that point users to:
 
@@ -412,7 +416,7 @@ class App extends Component {
 
 ---
 
-# Exercise 3
+# Exercise 4
 
 Time to implement switch `hashHistory` to `browserHistory` in your app.
 

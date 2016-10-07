@@ -370,16 +370,50 @@ What features do we have in our app that we do not want in **production**?
 
 - logger
 - devTools
+- no warnings or propType errors
 
 ---
 
-# process.env.NODE_ENV
+# Environmental Variables
 
-We can pass in a variable specifying a Node environment of **production** when we deploy.
+Variables can be passed into a NODE process using `process.env`.
 
-`NODE_ENV = "PRODUCTION" && npm start`
+These variables can only be strings.
 
-Then we can detect if our app is in production using:
+For example:
+
+Setting `NODE_ENV = "X"` can be accessed as `process.env.NODE_ENV` as "X". 
+
+---
+
+# Setting NODE_ENV
+
+The Node environment can be set from the command line.
+
+```shell
+NODE_ENV = 'PRODUCTION'
+```
+
+Using "create-react-app", this is handled by the "build" script.
+
+---
+
+# React in Production
+
+When React is run with the NODE_ENV of "PRODUCTION", it has several performance improvements.
+
+These include:
+
+- no warnings
+- no propType checks
+
+---
+
+# Using process.env.NODE_ENV
+
+You can detect if your app is in production using:
+
+/store.js
 
 ```js
 if (process.env.NODE_ENV !== 'PRODUCTION') {
@@ -391,7 +425,7 @@ if (process.env.NODE_ENV !== 'PRODUCTION') {
 
 ---
 
-# Remove Logger
+# Production: Remove Logger
 
 Skip unnecessary middleware in production.
 

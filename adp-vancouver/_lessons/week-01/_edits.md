@@ -15,6 +15,8 @@
   - start with the base noun, so posts can be easily categorized
 
 
+- there was a question about `if` statements inside React rendering methods. Maybe worth discussing.
+
 ## Day 3
 
 Topics/Questions
