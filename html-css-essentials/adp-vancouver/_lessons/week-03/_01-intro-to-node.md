@@ -12,6 +12,11 @@
 1. What is a request?
 2. What would be the response?
 
+- Examine the important bits of HTTP
+  - Status codes
+  - Headers
+  - HTTP VERBS
+
 Use the metaphor on a chef and a server
 Build out a Node.js Server
 
