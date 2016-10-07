@@ -71,8 +71,6 @@ creating and authorizing a new Database on your local machine. In a real product
 
 <!-- XXX TODO XXX
 
-INSERT
-UPDATE
 DROP TABLE
 DROP DATABASE
 
@@ -92,6 +90,14 @@ Using your `development` database:
 2) Create a new table called `tabledata`
 
 2) Add some data to your new database.
+
+
+<!-- XXX TODO XXX
+
+INSERT
+UPDATE
+
+-->
 
 ---
 
