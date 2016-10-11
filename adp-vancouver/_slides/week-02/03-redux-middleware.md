@@ -347,44 +347,105 @@ function sortByKey(key) {
     }
   }
 }
+
+list.sort(sortByKey('votes'));
 ```
 
 ---
+name: inverse
 
-# Group-Work
-
-With a partner, implement local storage state saving in your Redux app.
-
-[Redux LocalStorage](https://github.com/elgerlambert/redux-localstorage)
-
-Use the latest version and follow the "1.0" docs.
-
-`npm install --save redux-localstorage@rc`
+# Production vs. Development
 
 ---
 
-# LocalStorage
+# Production vs. Development
 
-Let's checkout local storage. 
-
-Go to "github.com" in Chrome.
-
-Open "devtools" -> "Application" -> "localStorage". 
+What features do we have in our app that we do not want in **production**?
 
 ---
 
-# LocalStorage API
+# Production vs. Development
 
-- save strings to localStorage with `localStorage.setItem(key, value)`.
+What features do we have in our app that we do not want in **production**?
 
-- get strings from localStorage with `localStorage.getItem(key)`.
+- logger
+- devTools
+- no warnings or propType errors
+
+---
+
+# Environmental Variables
+
+Variables can be passed into a NODE process using `process.env`.
+
+These variables can only be strings.
+
+For example:
+
+Setting `NODE_ENV = "X"` can be accessed as `process.env.NODE_ENV` as "X". 
+
+---
+
+# Setting NODE_ENV
+
+The Node environment can be set from the command line.
+
+```shell
+NODE_ENV = 'PRODUCTION'
+```
+
+Using "create-react-app", this is handled by the "build" script.
+
+---
+
+# React in Production
+
+When React is run with the NODE_ENV of "PRODUCTION", it has several performance improvements.
+
+These include:
+
+- no warnings
+- no propType checks
+
+---
+
+# Using process.env.NODE_ENV
+
+You can detect if your app is in production using:
+
+/store.js
 
 ```js
-localStorage.setItem('redux', 'is Awesome');
-localStorage.getItem('redux'); // "is Awesome"
-
-localStorage.setItem('state', JSON.stringify({a: 1}));
-JSON.parse(localStorage.getItem('state')); // { a: 1 }
+if (process.env.NODE_ENV !== 'PRODUCTION') {
+  // do development stuff
+} else {
+  // do production stuff
+}
 ```
+
+---
+
+# Production: Remove Logger
+
+Skip unnecessary middleware in production.
+
+```js
+let middlewareList = [reduxThunk];
+
+if (process.env.NODE_ENV !== 'PRODUCTION') {
+  const logger = require('redux-logger')();
+  middlewareList.push(logger);
+}
+
+const middlewares = applyMiddleware(...middlewareList);
+```
+
+---
+
+# Review
+
+1. What is middleware and why do we like it?
+2. Discuss three popular redux-middleware
+3. Discuss how we specify code for PRODUCTION or DEVELOPMENT
 
 {% endhighlight %}
