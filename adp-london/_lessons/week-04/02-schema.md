@@ -50,6 +50,8 @@ Complete Part 2 *Joins and Subqueries*, from [these exercises](https://pgexercis
 
 ## Exercise 1
 
+Review [this guide](http://www.sqlstyle.guide/) before getting started.
+
 Let's create our REDit database, if we have not done so yet, and insert some data:
 Just insert the data for now. Don't worry about the schema and constrains, we'll add those later).
 
@@ -146,5 +148,6 @@ This is ideal for development. We'll remove this code and the *stubbed data* whe
 
 ## Additional Resources
 
+- [Free PostgreSQL GUI](https://github.com/web-pal/DBGlass) build with JavaScript 
 - [Sequelize ORM Documenation](http://docs.sequelizejs.com/en/v3/)
 - [The Sequelize ORM in Practice](http://www.redotheweb.com/2013/02/20/sequelize-the-javascript-orm-in-practice.html)

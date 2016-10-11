@@ -45,7 +45,19 @@ Do some project reorganization based on these observations. Remember that your `
 
 ---
 
-## Exercise 2
+# Exercise 2
+
+Visit [Reddit](http://reddit.com). Click on several links and map out how the urls are structured.
+
+- hot
+- new
+- controversial
+- a subReddit
+- past hour
+
+---
+
+## Exercise 3
 
 Based on what you just learned in the preceding examples, apply this to your project now. You will need to create routes that point users to:
 
@@ -56,7 +68,7 @@ Based on what you just learned in the preceding examples, apply this to your pro
 
 ---
 
-## Exercise 3
+## Exercise 4
 
 Time to implement switch `hashHistory` to `browserHistory` in your app.
 
