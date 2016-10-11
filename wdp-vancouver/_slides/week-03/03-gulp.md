@@ -79,7 +79,7 @@ The command `npm install` will automatically install plugins from the npm plugin
 
 Your `package.json` file is a list of all of the 3rd party modules your project needs to run.
 
-It's important that you keep this file up to date&mdhash;npm does most of this manually, but there may be time when you need to manually edit your `package.json` file to accurately reflect the dependencies for your project.
+It's important that you keep this file up to date; npm does most of this automatically, but there may be times when you need to manually edit your `package.json` file to accurately reflect the dependencies for your project.
 
 Every time we install a new dependency for our project, it will be added to this file automatically.
 
@@ -91,7 +91,7 @@ By tracking our dependencies (and dev dependencies) in a `package.json` file, th
 
 We'll see that our `node_modules` directory can get quite large, and there's also no need to version-control other people's packages (presumably, they are doing this on their end).
 
-With an up-to-date `package.json` file, amother dev can simply download our project files, run `npm install`, and automatically install all of the project dependencies from the npm plugin repository. Magic!
+With an up-to-date `package.json` file, another dev can simply download our project files, run `npm install`, and automatically install all of the project dependencies from the npm plugin repository. Magic!
 
 ---
 class: center, middle
