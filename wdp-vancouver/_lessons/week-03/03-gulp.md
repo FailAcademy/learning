@@ -60,7 +60,7 @@ In addition to working on Project 2 today, you'll also want to implement the fol
 
 The first plugin will prevent pipe breaking when Gulp encounters an error in your code (e.g. when there's a syntax error in your JS while trying to uglify it). You'll want to incorporate this in your `scripts` task, and the `sass` task that we'll create tomorrow.
 
-The second plugin will allow you to check your JS code style against a styleguide (such as the Airbnb styleguide). You'll want to create a new `eslint` task to implement this plugin.
+The second plugin will allow you to check your JS code style against a styleguide. You'll want to create a new `eslint` task to implement this plugin.
 
 - https://github.com/adametry/gulp-eslint
 
