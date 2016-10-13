@@ -47,7 +47,7 @@ On the element you want to transition, you could add the following CSS:
 }
 ```
 
-This is the CSS **shorthand** for apply transitions to selectors.
+This is the CSS **shorthand** for applying transitions to selectors.
 
 ---
 
@@ -159,7 +159,7 @@ Choose your own adventure!
 
 Open up a Codepen and try applying what you just learned about CSS3 transitions to create an interesting demo for the class. Be creative!
 
-Make sure your applying your transitions to properties that are actually animatable.
+Make sure you are applying your transitions to properties that are actually animatable.
 
 ---
 template: inverse
@@ -171,7 +171,7 @@ class: center, middle
 
 ### Transforms Defined
 
-CSS transforms let you modify elements in their coordinate space. They can be rotated, **translated**, **scaled**, and **skewed**.
+CSS transforms let you modify elements in their coordinate space. They can be **rotated**, **translated**, **scaled**, and **skewed**.
 
 ---
 class: center, middle
@@ -228,7 +228,7 @@ These properties are the same as their 2D counterparts:
 
 - `rotateX( deg )`, `rotateY( deg )`, `rotateZ( deg )`
 
-The 3D functions are more complex require values for 3 dimensions:
+The 3D functions are more complex and require values for 3 dimensions:
 
 - `rotate3d( x, y, z, deg )`
 - `translate3d( x, y, z )`
@@ -317,7 +317,7 @@ We can also use shorthand when applying animation:
 
 # Transform Origin
 
-And we can specific a `transform-origin` to control how our animation is applied to an element (very helpful when pared with certain CSS transform properties):
+And we can specify a `transform-origin` to control how our animation is applied to an element (very helpful when paired with certain CSS transform properties):
 
 ```css
 ￼@keyframes swing {
