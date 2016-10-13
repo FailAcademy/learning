@@ -997,7 +997,7 @@ function volume(width, height, depth) {
 
 Function expressions usually don't have a name. Functions without names are known as an **anonymous functions**.
 
-This function expression is stored in a variable called `area`:
+This function expression is stored in a variable called `volume`:
 
 ```js
 var volume = function(width, height, depth) {
@@ -1121,9 +1121,9 @@ So in reality, the code your browser sees actually looks like this at the time i
 ```js
 var faveColour; // bucket waiting to be filled
 faveColour = 'blue'; // now it's filled with blue
-var faveColour; // now it's redeclared and empty again
 
 function sayColour() {
+   var faveColour; // now it's redeclared and empty again
    console.log(faveColour); // our bucket was empty so it's undefined
    faveColour = 'red'; // but now we filled the bucket with red
    console.log(faveColour); // so we log 'red' now
