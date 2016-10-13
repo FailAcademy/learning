@@ -61,10 +61,10 @@ Let's unpack what each of those values are for:
 }
 ```
 
-- `all` : The property you want to animate
-- `1s` : The duration of your animation
-- `ease-in-out` : The "timing function" of your animation
-- `1.5s` : Delay time, before the animation starts
+- `all` : The **property** you want to animate
+- `1s` : The **duration** of your animation
+- `ease-in-out` : The **"timing function"** of your animation
+- `1.5s` : **Delay time**, before the animation starts
 
 ---
 
