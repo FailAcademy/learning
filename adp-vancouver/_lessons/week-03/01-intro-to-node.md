@@ -18,7 +18,7 @@ You'll need to know what the **port** and **protocol** options are for. Try runn
 ## Learning Objectives
 
 - Explain the differences between writing code for the client versus writing code for the server.
-- Describe HTTP.
+- Describe the popular protocols of the web: HTTP, WebSockets, FTP, SSH, DNS, POP
 - Explain why Node is important and how it's being used.
 - Write and run a simple "Hello, world!" HTTP Server with Node.
 - Create a "Hello, world!" HTTP server using Express.
@@ -27,6 +27,7 @@ You'll need to know what the **port** and **protocol** options are for. Try runn
 - Make web requests to third-party web servers using Express.
 - Define what a "RESTful" architectural style is application development.
 - Use RESTful methods to communicate between an Express server and a web browser.
+- Deploy a Node Web Server to the cloud using a free hosting provider.
 
 ---
 
