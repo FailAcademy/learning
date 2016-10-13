@@ -169,11 +169,11 @@ some content here
 // sync.js
 const { readFileSync } = require('fs');
 
-const start = performance.now();
+const start = new Date();
 
-const syncData = readFileSync('file.md', 'utf8');
-const end = performance.now();
-console.log(syncData);
+const syncData = readFileSync('file.md', 'utf8');)
+
+const end = new Date();
 console.log(`This synchronous code was blocked for ${end - start} ms`);
 ```
 
@@ -183,15 +183,15 @@ console.log(`This synchronous code was blocked for ${end - start} ms`);
 // async.js
 const { readFile } = require('fs');
 
-const startAsync = performance.now();
+const startAsync = new Date();
 
 readFile('file.md', (err, data) => {
-  const endIn = performance.now();
+  const endIn = new Date();
   if (err) throw err;
-  console.log(data);
   console.log(`This inside code was blocked for ${endIn - startAsync} ms`);
+  console.log(data);
 });
-const endOut = performance.now();
+const endOut = new Date();
 console.log(`This outside code was blocked for ${endOut - startAsync} ms`);
 ```
 
