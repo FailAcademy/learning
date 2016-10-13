@@ -20,11 +20,11 @@ Wednesday, October 12      | [CSS Layouts](/lesson/css-layouts/)
 Week 3                     | Topics
 -------------------------- | --------------------------
 Monday, October 17         | [Flexbox](/lesson/flexbox/)
-Wednesday, October 19      | [Responsive Web Design](/lesson/responsive-web-design/) <br /> _Project 1 Check-in Evaluation_
+Wednesday, October 19      | [Responsive Web Design](/lesson/responsive-web-design/)
 
 Week 4                     | Topics
 -------------------------- | --------------------------
-Monday, October 24         | [Custom Web Fonts and Icon Fonts](/lesson/custom-web-fonts-and-icon-fonts/)
+Monday, October 24         | [Custom Web Fonts and Icon Fonts](/lesson/custom-web-fonts-and-icon-fonts/) <br /> _Project 1 Check-in Evaluation_
 Wednesday, October 26      | [CSS3 Properties](/lesson/css3-properties/)
 
 Week 5                     | Topics
