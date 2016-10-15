@@ -31,6 +31,7 @@ lesson_date: 2016-10-06
 - `mapStateToProps`
 - `mapDispatchToProps`
 - Selector
+- Query string
 
 ---
 
@@ -100,12 +101,13 @@ Next, use `mapDispatchToProps` second parameter to connect dispatched events in 
 
 ## Exercise 7
 
-In your group, write some guidelines for connecting React and Redux.
+Let's implement sorting a list of data using React Router. We'll use a query string to trigger the sort in our component.
+Here's what we'll have to do:
 
-Think about:
+- Implement the React Router Link component to trigger the addition of the query string to the location.
+- In your list component, you'll need to respond to the changing query string, capture the query and sort
+the list based on the value.
 
-- `mapStateToProps`: which components?
-- `mapDispatchToProps`: which components?
 
 ---
 
