@@ -7,9 +7,12 @@ lesson_date: 2016-10-11
 
 ## Pre-Work
 
-Having a bit of background on HTTP will be helpful context for what we undertake in this lesson. Please review the following section of the Node.js docs before class:
+Having a bit of background will be helpful context for what we undertake in this lesson.
 
-- [`http.request`](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_http_request_options_callback). 
+Please read this article: ["Why the Internet Only Just Works"](http://fermatslibrary.com/s/why-the-internet-only-just-works).
+When you're finished please review the following section of the Node.js docs before class:
+
+- [`http.request`](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_http_request_options_callback).
 
 You'll need to know what the **port** and **protocol** options are for. Try running the Example code in this section of the docs, and see what happens.
 
