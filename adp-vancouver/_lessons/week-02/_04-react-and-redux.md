@@ -80,11 +80,14 @@ Introduce [react-redux-router](https://github.com/reactjs/react-router-redux)
 
 Help students implement react-redux-router in their projects.
 
-### Reselect (25)
 
-Introduce [reselect](https://github.com/reactjs/reselect)
+### Sorting Exercise
 
-Help students implement reselect in their projects.
+Students will sort their posts list. Implement the example here:
+https://github.com/redacademy/adp-sorting-exercise.git
+(Using create React app).
+
+
 
 ### Challenge
 

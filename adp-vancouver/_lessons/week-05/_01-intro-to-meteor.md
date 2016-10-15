@@ -32,7 +32,7 @@
 [] Configure router with layout and application component
 ----------------------------------------------------------
 
-*DAY 2 (Ben/Mack)*
+*DAY 2 (Mack)*
 - Segway from Mongo to Meteor
 ----------------------------------------------------------
 [] Introduce Reactivity
@@ -43,11 +43,14 @@
 	- Show "Meteor Toys"
 [] Create initial App Schema
 [] Patterns for validating data (check / RPC)
-[] Tests?
-
+[] Using Reactive Data with react-meteor-data
 
 *DAY 3 (Mack)*
 - Intro Meteor's Magic Authentication packages
 ----------------------------------------------------------
 [] Add Authentication Routes / Components to App.
-[] Tests?
+
+- Meteor in Production
+----------------------------------------------------------
+[] Look at Meteor's build system in detail, starting with .meteor/build/README.md
+[] Deploying self-hosted Meteor Apps using DigitalOcean / Dokku
