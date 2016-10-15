@@ -35,13 +35,6 @@ template: inverse
 
 ---
 
-# Definitions
-
-1. **Server**: A person or thing that provides a service or commodity, in particular.
-2. **Web**: A network of fine threads constructed by a spider from fluid secreted by its spinnerets, used to catch its prey.
-
----
-
 # Vocabulary
 
 #### **Web Server** = **HTTP Server** = **Server**
@@ -115,7 +108,7 @@ Copy the following code into a file named "server.js":
 
 ```js
 const http = require('http');
-const port = 3000;
+const port = 80;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
@@ -132,11 +125,11 @@ Run this script using `node server.js`.
 
 # Exercise 2
 
-**Clone this repository**: <br/>
-https://github.com/redacademy/adp-node-server-intro.git
+Create a static file server!
 
-Open **Question.md** and answer each of them.
-
+Use the Node Web Server you just created to serve up an HTML file (index.html) to connected clients.
+- What modules will you need to accomplish this?
+- What is the correct 'Content-Type' header to set on your response?
 
 ---
 
