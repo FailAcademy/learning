@@ -47,13 +47,16 @@ Do some project reorganization based on these observations. Remember that your `
 
 # Exercise 2
 
-Visit [Reddit](http://reddit.com). Click on several links and map out how the urls are structured.
+Visit [Reddit](http://reddit.com).
 
-- hot
-- new
-- controversial
+Click on several links and map out how the urls are structured:
+
+- hot posts
+- new posts
+- submitting posts
+- comment on posts
 - a subReddit
-- past hour
+- showing only posts in the past hour
 
 ---
 
