@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: ListView Components, Navigation and Icons
+title: ListView Components, Navigation & Icons
 slides: ['_slides/week-08/02-listview-navigation-icons.md']
 lesson_date: 2016-11-15
 ---
