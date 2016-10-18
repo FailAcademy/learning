@@ -1,7 +1,6 @@
 # SQL
 
 ## Overview
-- Excel video
 - History of SQL
 - Other types of Databases
 - Why Postgres?
@@ -10,23 +9,17 @@
 - Example of SQL syntax
 - Syntax of tables
 - PostgreSQL dialect
+- Discuss why planning is important.
 
 ## Install Postgres and set up users.
 
-## Perform CRUD on table Data 
-- SHow basic queries and some JOIN queries
+- use the \h command and the \? command to discover the SQL syntax necessary for performing operations.
+- Set up pgadmin4 or other GIU and experiemnt with how thwey are used
+- Give students the option to user either psql of theeir GUI's
+
+
+## Perform CRUD on table Data
+- Show basic queries and some JOIN queries
 
 ## Data in 2 tables
 - Primary keys
-
-Cover as many of these as time will allow: 
-
-INSERT
-SELECT
-UPDATE
-DROP TABLE
-DROP DATABASE
-JOIN
-WHERE
-REFERENCES
-
