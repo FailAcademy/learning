@@ -50,7 +50,9 @@ Prior to class, please review these sections from the Atlassian Git guide:
 
 ## Exercise 1
 
-*Exercise details TBA.*
+To warm up your git muscles, Please complete level 2 -> 4 on [learngitbranching.js.org](http://learngitbranching.js.org/)
+When your finished,please spend 15 minutes capturing as much of what you discovered
+in your notebooks.
 
 ---
 
