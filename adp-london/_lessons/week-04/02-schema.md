@@ -1,7 +1,6 @@
 ---
 layout: lesson
-title: Intro to Databases with PostgresSQL
-slides: ['_slides/week-04/02-schema.md']
+title: Introducing PostgreSQL II
 lesson_date: 2016-10-18
 ---
 
@@ -121,6 +120,7 @@ This is ideal for development. We'll remove this code and the *stubbed data* whe
 
 ## Additional Resources
 
-- [Free PostgreSQL GUI](https://github.com/web-pal/DBGlass) build with JavaScript 
+- [A Visual Explanation of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
+- [Free PostgreSQL GUI](https://github.com/web-pal/DBGlass) build with JavaScript
 - [Sequelize ORM Documenation](http://docs.sequelizejs.com/en/v3/)
 - [The Sequelize ORM in Practice](http://www.redotheweb.com/2013/02/20/sequelize-the-javascript-orm-in-practice.html)
