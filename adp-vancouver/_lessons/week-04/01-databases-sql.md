@@ -1,7 +1,6 @@
 ---
 layout: lesson
-title: Intro to Databases with PostgresSQL
-slides: ['_slides/week-04/01-intro-database-sql.md']
+title: Introducing PostgreSQL
 lesson_date: 2016-10-17
 ---
 
@@ -95,7 +94,7 @@ The relationships we'll create are defined as follows:
 
 To do this we'll need to add Foreign Key Constraints to some columns.
 
-**Many to many relationships** <br/>
+**Many to many relationships** :<br/>
 Creating many to many relationships requires the creation of a "Link table".
 
 - How are Link Tables implemented.
@@ -104,7 +103,7 @@ Creating many to many relationships requires the creation of a "Link table".
 
 ---
 
-# Exercise 4
+## Exercise 4
 
 Installing and setting up Postgres and a GUI for working with your database is complicated.
 Take some time now to capture the steps for installing and setting up postgres on your local machine.
@@ -132,6 +131,5 @@ Ensure that you've set up the apropriate foreign key constraints!
 
 - [Learn SQL - Codeacademy](https://www.codecademy.com/learn/learn-sql)
 - [18+ Best Online Resources for Learning SQL and Database Concepts](http://www.vertabelo.com/blog/notes-from-the-lab/18-best-online-resources-for-learning-sql-and-database)
-- [A Visual Explanation of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
-- [PostgreSQL Docs: Full Text Search](http://www.postgresql.org/docs/9.1/static/textsearch-indexes.html)
+- [PostgreSQL Docsh](http://www.postgresql.org/docs/9.6)
 
