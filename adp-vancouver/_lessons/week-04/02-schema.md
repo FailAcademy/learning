@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Validating Data with Schema
+title: Intro to Databases with PostgresSQL
 slides: ['_slides/week-04/02-schema.md']
 lesson_date: 2016-10-18
 ---
@@ -8,11 +8,7 @@ lesson_date: 2016-10-18
 ## Pre-work
 
 Please read over the following links:
-
-- [Postgres Data Types](https://www.tutorialspoint.com/postgresql/postgresql_data_types.htm)
-- [PostgreSQL Schema](https://www.tutorialspoint.com/postgresql/postgresql_schema.htm)
 - [PostgreSQL Constraints](https://www.tutorialspoint.com/postgresql/postgresql_constraints.htm)
-- [PostgreSQL VIEW](https://www.tutorialspoint.com/postgresql/postgresql_views.htm)
 - [PostgreSQL Useful Functions](https://www.tutorialspoint.com/postgresql/postgresql_useful_functions.htm)
 
 Complete Part 2 *Joins and Subqueries*, from [these exercises](https://pgexercises.com/questions/joins/).
@@ -21,11 +17,6 @@ Complete Part 2 *Joins and Subqueries*, from [these exercises](https://pgexercis
 
 ## Learning Objectives
 
-- Distinguish different data types in a SQL database context.
-- Describe why a Schema is necessary.
-- Create a simple Schema using PostgreSQL basic syntax.
-- Write a simple Join using the JOIN clause.
-- Add constraints to ensure consistent data.
 - Describe the difference between 'Foreign key' and 'Primary key'.
 - Get familiar with PostgreSQL functions.
 - Write a simple validation function.
@@ -35,60 +26,39 @@ Complete Part 2 *Joins and Subqueries*, from [these exercises](https://pgexercis
 ---
 
 ## Keywords
-
-- Data Types
-- Schema
-- Constraints
-- Relations
-- Primary Key
-- Foreign Key
-- JOIN
-- View
+- `PRIMARY KEY`
+- `CONSTRAINT`
+- `UNIQUE`
+- Compound constraint
+- `CASCADE`
 - ORM
 
 ---
 
 ## Exercise 1
 
-Review [this guide](http://www.sqlstyle.guide/) before getting started.
+We're nearly done setting up our database. The final aspect of creating our schema is adding constraints.
+When creating constraints we need to consider things like:
 
-Let's create our REDit database, if we have not done so yet, and insert some data:
-Just insert the data for now. Don't worry about the schema and constrains, we'll add those later).
+- What fields in our tables should be unique?
+- What are the specific types of data we're storing in each column?
+- How can we check if the data being sent by client applications for storage is valid?
 
-- 1 User
-- 3 Weeks
-- 6 Posts
-- 4 Tags
-- 9 Lessons
-
-You can choose how to do this:
-
-- Using the `psql` prompt
-- Using the `psql` prompt and a .sql file
-- Using a Postgres GUI: [pgAdmin4](https://www.pgadmin.org/)
+Add the appropriate constraints to your project's database.
 
 ---
 
 ## Exercise 2
 
-Ensure your REDit database has the following relationships.
+Set up a link table called user post votes and define a **compond primary key** to ensure that ensure that users can only vote for one post once?
 
-- User has many Posts.
-- Tag belongs to many Posts.
-- Post belongs to many Tags.
-- Lesson belongs to Week.
-- Week has many Lessons.
-- Post belongs to Lesson.
-- Lesson has many Posts.
+Answer the followng questions when describing foreign key constraints: </br>
+- What is the difference betweeen `NOT NULL`, `NO ACTION` & `CASCADE` when specifying 
+foreign key constraints?
+- What are some use cases for each?
 
-**Some things to consider:**
-
-- Why have we structured our database in this way?
-- How are relationships between tables in out database created.
-- How are 'many to many' relationships defined.
-- What is the purpose of a primary key?
-- What is the purpose of a foreign key?
-- Are there performance implications we should consider when creating out relationships, and if so what are they?
+*Hint:*
+- If we delet users from the database, do we also want to delete records of what posts they voted for?
 
 ---
 
@@ -115,13 +85,16 @@ Now that we have our data and relationships set up. Let's write some views that 
 
 ## Exercise 5
 
-We're nearly done setting up our database. The final aspect of creating our schema is adding constraints.
-When creating constraints we need to consider things like:
+**CRUD** operations with JSON data.
 
-- What fields in our tables should be unique?
-- What are the specific types of data we're storing in each column?
+In this exercise we'll store and retrieve JSON data from a local instance of PostgreSQL, by completing the following steps:
+(Use the PostgreSQL command prompt or create a SQL file).
+Using your `development` database:
 
-Add the appropriate constraints to your REDit database.
+1) Create a file name json-crud.sql. We'll use this file to add all of the commands we'll use in this exercise, and
+execute them all at once by loading the file from the `psql` command prompt.
+
+2) Create a table called `jsondata`
 
 ---
 

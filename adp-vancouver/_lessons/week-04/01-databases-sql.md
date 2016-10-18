@@ -1,25 +1,18 @@
 ---
 layout: lesson
-title: Intro to Databases with SQL
+title: Intro to Databases with PostgresSQL
 slides: ['_slides/week-04/01-intro-database-sql.md']
 lesson_date: 2016-10-17
 ---
 
 ## Pre-Work
 
-Watch this video prior to class for some background on SQL databases:
 
-- [What is Database & SQL?](https://www.youtube.com/watch?v=FR4QIeZaPeM)
+Please read over the following links:
+- [Postgres Data Types](https://www.tutorialspoint.com/postgresql/postgresql_data_types.htm)
+- [PostgreSQL Schema](https://www.tutorialspoint.com/postgresql/postgresql_schema.htm)
 
-You need to download and install PostgrSQL prior to today's lessons:
-
-- [PostgreSQL - Downloads](https://www.postgresql.org/docs/9.6/static/installation.html)
-
-Read about some of the reasons you'll learn about PostgreSQL in this class:
-
-- [PostgreSQL Advantages](https://www.postgresql.org/about/advantages/)
-
-Complete Part 1 *Simple SQL Queries*, from [these exercises](https://www.pgexercises.com/questions/basic/).
+To start getting familiar with SQL syntax, complete Part 1, from [these exercises](https://www.pgexercises.com/questions/basic/).
 
 ---
 
@@ -29,12 +22,14 @@ Complete Part 1 *Simple SQL Queries*, from [these exercises](https://www.pgexerc
 - Explain how a relational database is structured.
 - Install and set up an instance of PostgreSQL.
 - Explain the difference between `TABLE` and `DATABASE`.
+- Model data, and create tables to store it.
+- Distinguish different data types in a SQL database context.
+- Describe why a Schema is necessary.
+- Create a simple Schema using PostgreSQL basic syntax.
 - Write basic SQL queries to perform CRUD operations on a database.
-- Write basic SQL queries to perform CRUD operations on a JSON data.
 - Write SQL queries in a SQL file and execute commands form the `psql` prompt.
-- Use Aggregate functions to perform operations on a PostgreSQL dataset.
-- Describe full-text search.
-- Describe 'Fuzzy Search' and perform a fuzzy search on a PostgreSQL dataset.
+- Add constraints to ensure consistent data.
+- Implement an auto-incrementing id field.
 
 ---
 
@@ -42,14 +37,13 @@ Complete Part 1 *Simple SQL Queries*, from [these exercises](https://www.pgexerc
 
 - Relational database
 - SQL
-- Table
-- Fields
-- Cells
-- Primary Key
-- Fuzzy search
-- Full text search
 - CRUD
-- ACID
+- `CREATE TABLE`
+- `ALTER TABLE`
+- `FOREIGN KEY`
+- `INSERT`
+- Data Types
+- Schema
 
 ---
 
@@ -59,8 +53,8 @@ You should have a running instance of PostgreSQL running on your computer. In th
 we'll go through the process of setting up a few new databases within it, to use throughout the rest of our
 time with PostgreSQL.
 
-- Create 2 databases, one called `development`, and one called `production`.
-We'll use the development database to try out new things. Once we're comfortable, we'll apply
+- Create 2 databases
+We'll use on of these databases to try out new things. Once we're comfortable, we'll apply
 what works to our `production` database.
 
 - Use the `CREATE USER <name> WITH PASSWORD <pw>` command to create a new user and configure a password for each database.
@@ -69,89 +63,68 @@ See [documentation](https://www.postgresql.org/docs/9.6/static/sql-createuser.ht
 (This setup is meant to mock a real world database setup, and to give us the opportunity to become familiar with
 creating and authorizing a new Database on your local machine. In a real production setting, our setup would be more complicated).
 
-<!-- XXX TODO XXX
-
-DROP TABLE
-DROP DATABASE
-
--->
 
 ---
 
 ## Exercise 2
 
-**CRUD** operations.
+Create Tables and set Data Types. What types of data do we need to model for our REDit application?
 
-In this exercise we'll store and retrieve data from our new PostgreSQL database instance!
-Using your `development` database:
+- Use the `CREATE TABLE` command to set up some tables in our test database.
+- Set the apropriate data-types for each column in our schema.
 
-1) Log into the PostgreSQL command prompt using the `psql` command.
+**Handling Id's** <br/>
+Each entry into the database for each of the schemas should have an id. This will be necessary for building
+the relationships between data in out database.
 
-2) Create a new table called `tabledata`
-
-2) Add some data to your new database.
-
-
-<!-- XXX TODO XXX
-
-INSERT
-UPDATE
-
--->
+- What data type is provided to implement and auto-incrementing id column?
+- What are some important behaviors of an auto-incrementing column?
 
 ---
 
 ## Exercise 3
 
-**CRUD** operations with JSON data.
+Postgres is a 'Relational Database'. So far we have not specified any relationships between our data models.
+Let's create relationships between the tables we created in the last lesson.
 
-In this exercise we'll store and retrieve JSON data from a local instance of PostgreSQL, by completing the following steps:
-(Use the PostgreSQL command prompt or create a SQL file).
-Using your `development` database:
+The relationships we'll create are defined as follows:
 
-1) Create a file name json-crud.sql. We'll use this file to add all of the commands we'll use in this exercise, and
-execute them all at once by loading the file from the `psql` command prompt.
+ - 1 to 1 (1:1)
+ - 1 to many (1:n)
+ - Many to many (n:n)
 
-2) Create a table called `jsondata`
+To do this we'll need to add Foreign Key Constraints to some columns.
 
+**Many to many relationships** <br/>
+Creating many to many relationships requires the creation of a "Link table".
 
----
-
-## Exercise 4
-
-Let's query our data.
-
-<!--
-XXX TODO XXX
-
-SELECT
-FROM
-WHERE
-
--->
+- How are Link Tables implemented.
+- Why are link tables necessary in order to define n:n relationships between columns in our database?
+- WHat are the many to many relationships in our priject application's database?
 
 ---
 
-## Exercise 5
+# Exercise 4
 
-To learn about fuzzy search, we'll follow this [example tutorial](http://rachbelaid.com/postgres-full-text-search-is-good-enough/).
+Installing and setting up Postgres and a GUI for working with your database is complicated.
+Take some time now to capture the steps for installing and setting up postgres on your local machine.
 
 ---
 
-## Lab Activity
+## Lab activity
 
-In today's lab we'll set up a database to use with the REDit project. You'll need to: <br/>
-Create a local database and database user for your REDit project. Connect to the database from your Express server
-using the user and password you created.
+Now that we've created our schema (table) for our project applications, user the `INSERT` command to populate
+your data base with some mock data.
 
-You'll have 2 options for adding PostgreSQL connectivity to your application: <br/>
+Add the following mock data to your database:
 
-- [Sequelize OMR]([Sequelize ORM Documenation](http://docs.sequelizejs.com/en/v3/)
-This is a full featured ORM, We'll learn more about ORM's in the following lesson.
+- 1 User
+- 1 Week
+- 1 Lesson
+- 4 Posts
+- 2 Tags
 
-- [node-postgres](https://github.com/brianc/node-postgres)
-This library allows you to write SQL queries from your JavaScript code, and does not expose and ORM.
-
+Ensure that you've set up the apropriate foreign key constraints!
 
 ---
 
@@ -161,3 +134,4 @@ This library allows you to write SQL queries from your JavaScript code, and does
 - [18+ Best Online Resources for Learning SQL and Database Concepts](http://www.vertabelo.com/blog/notes-from-the-lab/18-best-online-resources-for-learning-sql-and-database)
 - [A Visual Explanation of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
 - [PostgreSQL Docs: Full Text Search](http://www.postgresql.org/docs/9.1/static/textsearch-indexes.html)
+
