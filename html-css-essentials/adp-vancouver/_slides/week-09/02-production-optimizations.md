@@ -53,6 +53,38 @@ template: inverse
 
 ---
 
+# Minimizing Build
+
+`webpack --display-modules --sort-modules-by size`
+
+---
+
+# Webpack Require Modules
+
+Limit your modules by requiring only specific paths.
+
+```js
+import { x } from 'lib'
+// loads the entire library in the build
+
+import x from 'lib/x'
+// loads only x in the build
+```
+
+---
+
+# Module Partials
+
+Some modules are broken down into their element modules.
+
+[lodash modules](https://www.npmjs.com/browse/keyword/lodash-modularized).
+
+If a package is popular enough, there may even be a plugin to serve the minimum modules.
+
+[lodash-webpack-plugin](https://www.npmjs.com/package/lodash-webpack-plugin)
+
+---
+
 # Minify
 
 - JS
