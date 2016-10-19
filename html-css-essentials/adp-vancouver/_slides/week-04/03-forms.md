@@ -17,7 +17,30 @@ class: center, middle, inverse
 ---
 layout: false
 
+## Exercise 1
+
+Write a basic form in HTML only that alerts the value of an input.
+
+---
+
+# Basic Form
+
+`onSubmit` will be triggered when the button with type `submit` is clicked.
+
+```html
+<form onSubmit="alert(document.getElementById('name').value)">
+  <input id="name" type="text" />
+  <button type="submit">Submit</button>
+</form>
+```
+
+We can capture the input value using a selector.
+
+---
+
 # Agenda
+
+Building forms in React
 
 1. Controlled vs. Uncontrolled components
 2. React form events
@@ -25,9 +48,10 @@ layout: false
 4. Form validation
 5. Displaying errors
 
+
 ---
 
-# Setup
+# Exercise 2
 
 Install a repo of React-Form demos.
 
@@ -159,6 +183,21 @@ We can trigger an `onSubmit` event by setting the type of a button or input to "
 
 ---
 
+## Exercise 3
+
+Add an extra field to either your **controlled** or  **uncontrolled** form.
+
+The output data should be in JSON, like the following:
+
+```json
+{
+  "username": "name",
+  "password": "pass"
+}
+```
+
+---
+
 # A Common Issue
 
 The following code will throw an error on submit. Why?
@@ -177,6 +216,17 @@ render() {
   </form>
 }
 ```
+
+---
+
+## Exercise 4
+
+Add any of the following to a form of your choosing:
+
+- show an error message if the password is shorter than 5 characters
+- make it impossible for a user to type a username longer than 8 characters
+- validate that a username does not contain any capital letters
+- disable the submit button if any of the fields are invalid
 
 ---
 template: inverse
