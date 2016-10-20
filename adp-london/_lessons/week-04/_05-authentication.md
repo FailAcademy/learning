@@ -8,13 +8,77 @@
 
 ## Game (20)
 
-1. Example: "A" wants to communicate a number with "B", but "C" is listening in between. How can they communicate?
-(// answer: give each a secret shared number to each, say the shared number + your number)
+1. Start with a Cryptogram.
 
-2. Encryption paint game. Public and private key example.
+Show a cryptogram (./cryptogram.png) and have students discuss how they might solve.
 
-3. Encryption as multiplication example. Public and private key example.
+Look for them to use the word "key".
 
+2. Show some basic math.
+
+Key + Encrypted Code = Message 
+
+3. Communication puzzle.
+
+"A" wants to communicate a number with "B", while "C" is listening in between. How can they securely communicate?
+(// answer: give each a secret shared key (a number both know) and add that number to your secret number)
+
+4. A computer could guess this number. 
+
+How long would it take a computer with 1 GHz/Sec to solve a 3 letter code.
+
+1000 / 1 000 000 000 = around 0.000001 seconds
+
+We can make passwords longer so it takes a computer longer to crack them.
+
+128 bit encryption refers to a password about 128/30 = 38 characters long = 1e29 seconds
+
+We cannot make a secret "impossible" to crack, but we can make it take a really, really long time to solve.
+
+3. Encryption paint game. Public and private key example.
+
+Let's use a clearer example:
+
+Two people want to communicate a **secret** color, but they can only do so by passing visible colors across the room.
+
+```
+Private    Public   Private
+         |        |
+  A      |        |     B  
+         |        |
+```
+
+Remind students the goal is to create a "shared key".
+
+A) Both A & B choose a PRIVATE color
+B) A & B together choose a PUBLIC color
+C) key = PRIVATE_A * PUBLIC * PRIVATE_B
+
+```
+Private    Public    Private
+         |         |
+  "red"  | "white" |  "blue" = key (all 3 mixed)  
+         |         |
+```
+
+A sends "pink", B mixes pink with blue for the secret key.
+
+4. Encryption as multiplication example. Public and private key example.
+
+```
+Private    Public    Private
+         |         |
+  3      |    4    |     5  
+         |         |
+```
+
+key = 60
+
+A sends (3 * 4 = 12), B multiplies her secret key (12 * 5 = 60) 
+
+5. It's important that the math is easy to do one way, and hard to do the other way. Like mixing paint.
+
+Imagine we live in a world without division, or that division took a lot of trial and error. This is how encryption works.
 
 ## Tokens vs. Cookies (20)
 
