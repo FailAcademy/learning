@@ -38,6 +38,12 @@ Prior to class, read through the following documentation:
 
 ## Exercise 1
 
+Write a basic form in HTML only that alerts the value of an input.
+
+---
+
+## Exercise 2
+
 Setup the form demos project.
 
 ```bash
@@ -49,10 +55,43 @@ npm start
 
 ---
 
+## Exercise 3
+
+Add an extra field to either your **controlled** or  **uncontrolled** form.
+
+The output data should be in JSON, like the following:
+
+```json
+{
+  "username": "name",
+  "password": "pass"
+}
+```
+
+---
+
+## Exercise 4
+
+Add any of the following to a form of your choosing:
+
+- show an error message if the password is shorter than 5 characters
+- make it impossible for a user to type a username longer than 8 characters
+- validate that a username does not contain any capital letters
+- disable the submit button if any of the fields are invalid
+
+---
+
 ## Lab Activity
 
 Create the forms that you'll use in your REDit app, using `redux-form`. It should follow the same guidelines as Exercise 2.
 You'll need to create both a user (login) form and a form for creating new posts.
+
+Be sure to include:
+  - saving data to the Redux store
+  - validation of fields
+  - styled components
+  - error feedback
+  - a disabled submit button when the form is invalid
 
 ---
 
