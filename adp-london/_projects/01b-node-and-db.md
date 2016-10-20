@@ -51,7 +51,6 @@ Your project must:
 - [ ] Use Passport to authenticate user logins and passwords (server-side)
 - [ ] Sanitize data (server-side)
 - [ ] Implement data validation using schema (server-side)
-- [ ] Implement sessions (server-side)
 - [ ] Make efficient database queries (server-side)
 - [ ] Save state to database (server-side)
 

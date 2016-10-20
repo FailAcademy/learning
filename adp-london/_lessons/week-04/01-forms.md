@@ -2,7 +2,7 @@
 layout: lesson
 title: Forms
 slides: ['_slides/week-04/03-forms.md']
-lesson_date: 2016-10-19
+lesson_date: 2016-10-17
 ---
 
 ## Pre-Work
@@ -51,18 +51,8 @@ npm start
 
 ## Lab Activity
 
-1. Create a form in your "REDit" project. Include:
-  - saving data to the Redux store
-  - validation of fields
-  - styled components
-  - error feedback
-  - a disabled submit button when the form is invalid
-
----
-
-## Lab Activity
-
-Create a form in your REDit app using `redux-form`. It should follow the same guidelines as Exercise 2.
+Create the forms that you'll use in your REDit app, using `redux-form`. It should follow the same guidelines as Exercise 2.
+You'll need to create both a user (login) form and a form for creating new posts.
 
 ---
 
