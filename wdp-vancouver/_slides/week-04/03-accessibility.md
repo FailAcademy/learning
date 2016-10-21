@@ -257,7 +257,7 @@ Some Chrome extensions and other tools to assist with accessibility testing:
 
 # Exercise 2
 
-Let's to do some accessibility testing on our Aloha projects.
+Let's do some accessibility testing on our Aloha projects.
 
 First follow the instructions to **[add the tota11y script](http://khan.github.io/tota11y/)** on your Aloha site. Also **[install the Accessibility Developer Tools extension](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb)** in Chrome. Run an audit with each tool...what kinds of accessibility issues can you identify?
 
