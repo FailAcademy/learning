@@ -72,7 +72,7 @@ Use this list to start: `[47, 50, 22, 11, 15, 90, 88]`
 
 ## Question 3
 
-Create a function the reverses a string.
+Create a function that reverses a string.
 
 Your function must be capable of reversing an entire sentence, and preserving the order of words (reverse in place).<br/>
 
