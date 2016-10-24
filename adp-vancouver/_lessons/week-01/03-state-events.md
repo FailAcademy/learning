@@ -126,3 +126,4 @@ From the React docs:
 - [Interactivity and Dynamic UIs](https://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html)
 - [Refs to Components](https://facebook.github.io/react/docs/more-about-refs.html)
 - [Component Specs and Lifecycle](https://facebook.github.io/react/docs/component-specs.html)
+- [A Visual Guide to State in React](https://daveceddia.com/visual-guide-to-state-in-react/)
