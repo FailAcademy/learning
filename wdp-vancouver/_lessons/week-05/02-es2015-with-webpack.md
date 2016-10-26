@@ -224,6 +224,25 @@ Run: `webpack-dev-server` to view your site in the browser @ **localhost:3000**.
 
 ## Exercise 6
 
+Webpack can also be used to handle files, such as fonts and images.
+
+`npm install --save-dev file-loader`
+
+Add the following loader to your list of loaders in "webpack.config.js":
+
+```js
+{
+  test: /\.(eot|svg|ttf|woff|woff2)$/,
+  loader: 'file?name=public/fonts/[name].[ext]'
+}
+```
+
+Your loaded fonts should now be added to the bundle.
+
+---
+
+## Exercise 7
+
 Now that Webpack is set up for development let's create a convenient command for running the development server in our project:
 
 Add the following to your `package.json`:
