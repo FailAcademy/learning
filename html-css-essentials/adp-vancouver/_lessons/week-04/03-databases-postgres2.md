@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Introducing PostgreSQL II
-lesson_date: 2016-10-18
+lesson_date: 2016-10-19
 ---
 
 ## Pre-work
@@ -25,6 +25,7 @@ Complete Part 2 *Joins and Subqueries*, from [these exercises](https://pgexercis
 ---
 
 ## Keywords
+
 - `PRIMARY KEY`
 - `CONSTRAINT`
 - `UNIQUE`
