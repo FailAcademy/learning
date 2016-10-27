@@ -51,7 +51,6 @@ Install the Sequelize ORM into your project using npm. Once you have it installe
 - Create a file called `index.js` within the `database` directory and connect to a local PostgreSQL database
 using the username and password you configured. **This database should be 'empty'. It must not have any schema (tables).** 
 
->>>>>>> master
 ---
 
 ## Exercise 2
@@ -65,7 +64,6 @@ Once you've created your application's schema. Use Sequelize to insert some samp
 - How does Sequelize create tables on the connected database?
 - How can we create some sample data, using Sequelize?
 - How are relationships (Foriegn key) defined in Sequelize?
->>>>>>> master
 
 ---
 
