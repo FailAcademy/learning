@@ -40,7 +40,9 @@ Prior to class, please read:
 
 ## Exercise 1
 
-*Exercise details TBA.*
+<!--
+   // Handling snesitive configuration data in your application
+-->
 
 ---
 
