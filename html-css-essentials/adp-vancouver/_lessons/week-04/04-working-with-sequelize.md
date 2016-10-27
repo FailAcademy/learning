@@ -10,7 +10,7 @@ lesson_date: 2016-10-20
 In todays class we'll be looking at the Sequelize ORM.
 Please read over the [documentation](http://docs.sequelizejs.com/en/v3/) before today's class.
 
-We'll also cover the Express Router. Please read over the [documentation](https://expressjs.com/en/guide/routing.html). 
+We'll also cover the Express Router. Please read over the [documentation](https://expressjs.com/en/guide/routing.html).
 Specificall the section on `express.Router`.
 
 ---
@@ -47,19 +47,42 @@ and display it in your project
 
 ## Exercise 1
 
-
-
+<!--
+    // INSTALL AND CONNECT SEQUELIZE
+-->
 ---
 
 ## Exercise 2
+
+
+<!--
+    // CREATE SCHEMA WITH SEQUELIZE
+    // DEFINE RELATIONSHIPS
+    // ADD STUB DATA
+-->
 
 ---
 
 ## Exercise 3
 
+
+<!--
+    // CREATE ROUTES MODULES
+    // SET UP RESTFUL ROUTE HANDLER FOR CREATE POST
+-->
+
+
 ---
 
 ## Exercise 4
+
+<!--
+    // SAVE DATA TO DATABASE USING FETCH / EXPRESS / SEQUELIZE
+-->
+
+---
+
+## Exercise 5
 
 Go [here](https://www.codebashing.com/) and play the demo.
 
@@ -76,7 +99,7 @@ Make sure you can begin to answer the following questions: <br/>
 
 ## Lab Activity
 
-In today's lab we'll add the ability to create posts in your project. This will be the first time we'll 
+In today's lab we'll add the ability to create posts in your project. This will be the first time we'll
 implement code across the "Full Stack".
 
 Ensure that the proer validation checks are in place at all levels of the stack.
