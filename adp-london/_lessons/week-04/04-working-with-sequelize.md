@@ -51,6 +51,7 @@ Install the Sequelize ORM into your project using npm. Once you have it installe
 - Create a file called `index.js` within the `database` directory and connect to a local PostgreSQL database
 using the username and password you configured. **This database should be 'empty'. It must not have any schema (tables).** 
 
+>>>>>>> master
 ---
 
 ## Exercise 2
@@ -64,6 +65,7 @@ Once you've created your application's schema. Use Sequelize to insert some samp
 - How does Sequelize create tables on the connected database?
 - How can we create some sample data, using Sequelize?
 - How are relationships (Foriegn key) defined in Sequelize?
+>>>>>>> master
 
 ---
 
@@ -109,16 +111,13 @@ Specifically:
 
 Go [here](https://www.codebashing.com/) and play the demo.
 
-When you're finished, try to perform a SQL injection attack on your database!
+When you're finished, try to perfor a SQL injection attack on your database!
+Make sure you can begin to answer the following questions:
 
-Make sure you can begin to answer the following questions: <br/>
 - What is a SQL injection attack and how is it performed?
-
-What are some of the methods for protecting agains injection attacks?
-
-  - On the client
-  - On the server
-  - Using PostgreSQL
+- What are some of the methods for protecting against inection attacks
+  - On the client.
+  - On the server.
 
 ---
 
