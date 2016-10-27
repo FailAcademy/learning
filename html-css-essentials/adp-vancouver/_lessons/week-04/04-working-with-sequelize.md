@@ -1,7 +1,6 @@
 ---
 layout: lesson
 title: The Sequelize ORM
-slides: ['_slides/week-04/04-validating-and-sanitizing.md']
 lesson_date: 2016-10-20
 ---
 
@@ -39,7 +38,6 @@ and display it in your project
 - ORM
 - CORS
 - `fetch`
-- Check Constraints
 - Unique Constraints
 - Injection attack
 
@@ -47,38 +45,65 @@ and display it in your project
 
 ## Exercise 1
 
-<!--
-    // INSTALL AND CONNECT SEQUELIZE
--->
+Install the Sequelize ORM into your project using npm. Once you have it installed:
+
+- Create a sub-directory called `database` inside your server folder.
+- Create a file called `index.js` within the `database` directory and connect to a local PostgreSQL database
+using the username and password you configured. **This database should be 'empty'. It must not have any schema (tables).** 
+
+>>>>>>> master
 ---
 
 ## Exercise 2
 
+Let's define our schema using Sequelize. Review the Sequelize documentation and create a schema for your project.
+Be sure to *set up the appropriate relationships* between your models, and the apropriate constraints *(hint: UNIQUE)*,
+using Sequelize conventions.
 
-<!--
-    // CREATE SCHEMA WITH SEQUELIZE
-    // DEFINE RELATIONSHIPS
-    // ADD STUB DATA
--->
+Once you've created your application's schema. Use Sequelize to insert some sample data into your database.
+
+- How does Sequelize create tables on the connected database?
+- How can we create some sample data, using Sequelize?
+- How are relationships (Foriegn key) defined in Sequelize?
+>>>>>>> master
 
 ---
 
 ## Exercise 3
 
+**REST** & **CRUD** & Express Routes
 
-<!--
-    // CREATE ROUTES MODULES
-    // SET UP RESTFUL ROUTE HANDLER FOR CREATE POST
--->
+First, work with a partner, we'll take up this discussion with the class afterwards:
 
+- Define REST
+- Define CRUD
+- Define API (In the context of REST)
+
+We're going to use the Express Router to set up *modular routes* in our Express server.
+Here is the code for creating the express router:
+
+```javascript
+const router = express.Router({
+  mergeParams: true
+});
+```
+
+- Why should we set up 'modular' routes in our projects?
+- What are the 2 types of routes we'll be creating in our projects?
+- Is it important to differentiate between types of routes? If so how should this be done?
 
 ---
 
 ## Exercise 4
 
-<!--
-    // SAVE DATA TO DATABASE USING FETCH / EXPRESS / SEQUELIZE
--->
+Now that you have some experience using both PostgreSQL queries to create your database, and Sequelize,
+Discuss with your neighbour some of the benefits and drawbacks of each approach.
+
+Specifically:
+
+- Is the Sequelize ORM a 'developer friendly' library?
+- What are the limitations of the Sequelize ORM, based on what you've seen so far.
+- How are relationships defined using the Sequelize ORM, vs using raw SQL queries?
 
 ---
 
@@ -87,12 +112,23 @@ and display it in your project
 Go [here](https://www.codebashing.com/) and play the demo.
 
 When you're finished, try to perfor a SQL injection attack on your database!
+Make sure you can begin to answer the following questions:
 
-Make sure you can begin to answer the following questions: <br/>
 - What is a SQL injection attack and how is it performed?
 - What are some of the methods for proteting agains inection attacks
   - On the client.
   - On the server.
+
+When you're finished, try to perform a SQL injection attack on your database!
+
+Make sure you can begin to answer the following questions:
+
+- What is a SQL injection attack and how is it performed?
+
+What are some of the methods for protecting agains injection attacks?
+
+  - On the client
+  - On the server
   - Using PostgreSQL
 
 ---
@@ -102,7 +138,7 @@ Make sure you can begin to answer the following questions: <br/>
 In today's lab we'll add the ability to create posts in your project. This will be the first time we'll
 implement code across the "Full Stack".
 
-Ensure that the proer validation checks are in place at all levels of the stack.
+Ensure that the proper validation checks are in place in all layers of the stack.
 
 ---
 
