@@ -1,7 +1,6 @@
 ---
 layout: lesson
 title: Git for Teams
-slides: ['_slides/week-05/05-git-for-teams.md']
 lesson_date: 2016-10-27
 ---
 
@@ -29,7 +28,7 @@ Prior to class, please review these sections from the Atlassian Git guide:
 - `stash` some changes and re apply them to your code later.
 - Use the `cherry-pick` command to add a commit from another branch without merging.
 - Learn strategies for working with & maintaining repos with lot's of branches.
-- Use a git hook to validate a `git push`.
+- Use a git hook to validate a `git commit`.
 
 ---
 
@@ -51,26 +50,46 @@ Prior to class, please review these sections from the Atlassian Git guide:
 ## Exercise 1
 
 To warm up your git muscles, Please complete level 2 -> 4 on [learngitbranching.js.org](http://learngitbranching.js.org/)
-When your finished,please spend 15 minutes capturing as much of what you discovered
-in your notebooks.
+When your finished, please spend 15 minutes capturing as much of what you discovered in your notes. THis will help us have a discussion later.
 
 ---
 
 ## Exercise 2
 
-*Exercise details TBA.*
+Git is a flexible tool. It has many options, but it does not force its users into any specific worlflows.
+As a result, developers use git in a variety of ways.
+
+Flexibility is is a double edge sword, as most developers who are new to git, will use  the set of commands they
+are familiar with, and ignore other useful features.
+
+- What are the features you are familiar with in Git. Discuss how you currently use git, with your nearest neighbour.
+
+If you have not already, read ["A Successful Branching Model"](http://nvie.com/posts/a-successful-git-branching-model/).
+
+- Why was this model developed?
+- How is this model diffrernt from how you currently use git?
+- How does this model help developers build software?
+- Could you make this model better?
 
 ---
 
 ## Exercise 3
 
-*Exercise details TBA.*
+In your own words, explain to your neighbour why you would use the following git commands:
+
+- Rebase
+- Stash
+- Merge
+- Cherry-pick
 
 ---
 
 ## Lab Activity
 
-*Lab activity details TBA.*
+Let's create a pre-commit git hook. You're hook should run a bash script that prints something to the command line.
+
+- How could this technique be used to improve software quality?
+- What other types of git hooks can we create?
 
 ---
 
