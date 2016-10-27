@@ -115,21 +115,9 @@ When you're finished, try to perfor a SQL injection attack on your database!
 Make sure you can begin to answer the following questions:
 
 - What is a SQL injection attack and how is it performed?
-- What are some of the methods for proteting agains inection attacks
+- What are some of the methods for protecting against inection attacks
   - On the client.
   - On the server.
-
-When you're finished, try to perform a SQL injection attack on your database!
-
-Make sure you can begin to answer the following questions:
-
-- What is a SQL injection attack and how is it performed?
-
-What are some of the methods for protecting agains injection attacks?
-
-  - On the client
-  - On the server
-  - Using PostgreSQL
 
 ---
 
