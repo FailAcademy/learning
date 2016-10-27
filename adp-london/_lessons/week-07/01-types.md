@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: TypeScript
-slides: ['_slides/week-07/01-typescript.md']
+title: Types
+slides: ['_slides/week-07/01-flow.md']
 lesson_date: 2016-11-07
 ---
 
@@ -11,16 +11,16 @@ Complete the following readings before class:
 
 - [Why TypeScript](https://basarat.gitbooks.io/typescript/content/docs/why-typescript.html)
 - [Why you shouldn't be scared of TypeScript](https://scotch.io/tutorials/why-you-shouldnt-be-scared-of-typescript)
+- [Flow](https://flowtype.org/)
 
 ---
 
 ## Learning Objectives
 
-- Define TypeScript and why it is a useful subset of JavaScript.
-- Install TypeScript and an associated editor plugin
-- Set-up a "tsconfig.json" file and TSLint with a "tslint.json" file.
-- Write effective types, interfaces, and generics.
-- Install TypeScript definition files using TSD.
+- Explain how types help you avoid errors in your code
+- Setup type checking in your editor and project
+- Write effective types, interfaces, and generics for existing code
+- Install type declaration files for common libraries using flow-type
 - Write types for existing React and Redux code.
 
 ---
@@ -45,30 +45,39 @@ Compare [TypeScript](https://www.typescriptlang.org/play/) with [Babel](https://
 
 ## Exercise 2
 
-Walk-through the different ways of writing types in TypeScript:
+Walk-through the different ways of writing types in Jest:
 
 - Type inference
 - Types
 - Interfaces
 - Generics
+- Declaration files
 
 ---
 
 ## Lab Activity
 
-Setup a project to use Typescript. Be sure to include:
+Setup a project to use Jest. Be sure to include:
 
 - React with Webpack
-- Files changed to `.ts` or `.tsx`
+- a ".flowconfig" file
+- files leading with `// @flow`
 - Specified types & interfaces
 - Specified declaration files
+- `babel-plugin-transform-flow-strip-types` to remove types from output
 
 ---
 
 ## Additional Resources
 
+##### Jest
+- [Flow: Five Simple Examples](https://flowtype.org/docs/five-simple-examples.html)
+- [A Flow Tutorial](https://www.shortcutfoo.com/blog/facebook-flow-tutorial/)
+- [Redux-Flow Tutorial](http://dchambers.github.io/articles/redux-flow-tutorial/)
+
+##### TypeScript
 - [PluralSight course on TypeScript](https://www.pluralsight.com/courses/typescript)
 - [TypeScript Docs](http://www.typescriptlang.org/)
-- [Typescript Examples Repo](https://github.com/Microsoft/TypeScriptSamples)
 - [TypeScript: Deep Dive](https://basarat.gitbooks.io/typescript/content/)
 - [EdX: Intro to TypeScript](https://www.edx.org/course/introduction-typescript-microsoft-dev201x-1)
+
