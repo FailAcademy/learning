@@ -25,6 +25,7 @@ Complete Part 2 *Joins and Subqueries*, from [these exercises](https://pgexercis
 ---
 
 ## Keywords
+
 - `PRIMARY KEY`
 - `CONSTRAINT`
 - `UNIQUE`
