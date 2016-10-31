@@ -83,7 +83,7 @@ Once you build you function, try it out on the `$months` array.
 
 ## Lab Activity
 
-For the next two days, we'll spend lab time building a pseudo-blog in PHP called "Borrowed Borowitz" (the sample content for this project was "borrowed" from the Borowitz Report so it's probably **not** a good idea to push this copyrighted material to GitHub when you're done!).
+For the next two days, we'll spend lab time building a pseudo-blog in PHP called **Space Blog**.
 
 We're calling this a "pseudo-blog" because you won't actually be creating a database or a UI for adding new content to the site (phew!). You will instead parse some provided post-like JSON-formatted data in PHP to create a site that looks like a blog.
 

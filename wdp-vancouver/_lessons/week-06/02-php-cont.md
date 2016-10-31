@@ -89,7 +89,7 @@ $movies_2 = array(
 
 ## Lab Activity
 
-Today we'll use our lab time to wrap up building our Borrowed Borowitz sites.
+Today we'll use our lab time to wrap up building our Space Blog sites.
 
 Incorporate some of what you learned in class today about PHP's **built-in functions**, **alternative syntax**, and **built-in array functions** when putting the finishing touches on the blog.
 

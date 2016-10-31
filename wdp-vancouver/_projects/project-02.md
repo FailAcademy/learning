@@ -75,7 +75,7 @@ Your project must:
 
 **Additional requirements:**
 
-- Be sure to **test** your project completely in **all major browsers** (Chrome, Firefox, Safari, Opera, IE11) when you think you're finished
+- Be sure to **test** your project completely in **all major browsers** (Chrome, Firefox, Safari, Opera, IE11/Edge) when you think you're finished
 
 **Stretch goals:**
 

@@ -16,7 +16,7 @@ We'll discuss some puzzling and irritating language features, and how to avoid t
 
 ## Learning Objectives
 
-- Describe the circumstances where JavaScript will explicitly change they canonical type of a value.
+- Describe the circumstances where JavaScript will explicitly change the canonical type of a value.
 - Describe the behaviour of the loose (`==`) versus strict (`===`) comparison operators.
 - Define the purpose of an immediately-invoked function expression (IIFE).
 - Explain how function scope works in JavaScript, as well as hoisting and scope chaining.
