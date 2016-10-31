@@ -819,7 +819,7 @@ Note that the variable passed as an argument is **passed by value** here. This m
 
 # Variable Scope
 
-If we need to change the value of the variable in the global space too, we must **pass it by reference** by prepending and ampersand to the function parameter:
+If we need to change the value of the variable in the global space too, we must **pass it by reference** by prepending an ampersand to the function parameter:
 
 ```php
 $global_var = "a global variable";
