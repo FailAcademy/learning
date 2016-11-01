@@ -1,7 +1,6 @@
 ---
 layout: lesson
 title: Introducing Meteor
-slides: ['_slides/week-05/intro-to-meteor.md']
 lesson_date: 2016-10-24
 ---
 
