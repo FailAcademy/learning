@@ -79,7 +79,7 @@ A page life cycle is nothing more than a combination of the **events** that take
 
 # Events in WP
 
-When a page is loaded on a WP site, many thing happen during the page lifecycle:
+When a page is loaded on a WP site, many things happen during the page lifecycle:
 
 - Plugins are loaded
 - The active theme is initialized
