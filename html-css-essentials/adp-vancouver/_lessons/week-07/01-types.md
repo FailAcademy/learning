@@ -7,11 +7,11 @@ lesson_date: 2016-11-07
 
 ## Pre-Work
 
-Complete the following readings before class:
+Read the following articles before class. Be prepared to discuss why types might be addition to your project.
 
+- [Flow](https://flowtype.org/)
 - [Why TypeScript](https://basarat.gitbooks.io/typescript/content/docs/why-typescript.html)
 - [Why you shouldn't be scared of TypeScript](https://scotch.io/tutorials/why-you-shouldnt-be-scared-of-typescript)
-- [Flow](https://flowtype.org/)
 
 ---
 
