@@ -3,7 +3,7 @@
 ## Setup
 
 ```shell
-git clone https://github.com/ShMcK/adp-react-form-demos.git
+git clone https://github.com/redacademy/adp-react-forms.git
 cd adp-react-form-demos
 npm install
 npm start
