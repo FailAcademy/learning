@@ -1,8 +1,7 @@
 ---
 layout: lesson
-title: Introducing MongoDB
-slides: [_slides/week-05/02-intro-to-mongo.md]
-lesson_date: 2016-10-25
+title: Pub-Sub & Security in Meteor
+lesson_date: 2016-10-26
 ---
 
 ## Pre-Work
