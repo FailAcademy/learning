@@ -233,12 +233,50 @@ In this example, `greet` is a method of `Person`.
 
 ---
 
+# Quiz 1
+
+The `constructor` is a special method. Why?
+
+**A)** It is necessary to construct a `class`
+
+**B)** It runs first when a `class` is created
+
+**C)** It's not actually special, but I am
+
+---
+
+# Quiz 2
+
+What does `this` refer to in the previous example?
+
+**A)** The *Person* `class`
+
+**B)** The instance of *Person* called *joe*
+
+**C)** `that`
+
+---
+
+# Exercise 2
+
+Pick one of the classes your group modelled in the previous soccer game exercise, and use that to **write your first ES2015 class**.
+
+Ensure that you set all the appropriate **properties** in the `constructor` and create all the required **methods** for your class.
+
+---
+
+template: inverse
+
+# Imports & Exports
+
+---
+
 # Exporting & Importing
 
 Just like functions, classes can be imported and exported from module:
 
 ```js
-// In "person.js" file
+// In "Person.js" file
 
 export default class Person {
    //...class code here
@@ -281,37 +319,24 @@ let Joe = new Person('Joe', 'Schmo');
 
 ---
 
-# Quiz
+# Quiz 3
 
-The `constructor` is a special method. Why?
+How do we import `hello` from the following file.
 
-**A)** It is necessary to construct a `class`
+/ file.js
 
-**B)** It runs first when a `class` is created
+```js
+export default const hello = 'world'
+```
 
-**C)** It's not actually special, but I am
+**A)** `import { hello } from './file'`
 
----
+**B)** `import something from './file'`
 
-# Quiz
-
-What does `this` refer to in the previous example?
-
-**A)** The *Person* `class`
-
-**B)** The instance of *Person* called *joe*
-
-**C)** `that`
+**C)** `import { hello } from 'file'`
 
 ---
 
-# Exercise 2
-
-Pick one of the classes your group modelled in the previous soccer game exercise, and use that to **write your first ES2015 class**.
-
-Ensure that you set all the appropriate **properties** in the `constructor` and create all the required **methods** for your class.
-
----
 template: inverse
 
 # Inheritance
@@ -343,26 +368,43 @@ In this example `Student` extends `Person`, which means it is a **subclass** of 
 
 # Extends
 
-Use `super` to specify which properties will be inherited. The *spread operator* (`...`) will collect all properties:
+Use `super` to specify which properties will be inherited.
 
 ```js
 class Person {
-   // ...other class code
-
-   greet() {
-      console.log('hello');
+   constructor(name) {
+      this.name = name
    }
 }
 
 class Student extends Person {
-   constructor(...props) {
-      super(props);
+   constructor(prop) {  // pass name in 
+      super(prop);  // pass name to parent constructor
       this.hasPencil = true;
    }
 }
 
-let Joe = new Student();
-Joe.greet(); // hello
+let Joe = new Student('Joe');
+Joe.name; // Joe
+```
+
+---
+
+# Rest & Spread
+
+We can use "rest" and "spread" operators to pass multiple props to our parent.
+
+```js
+class Student extends Person {
+   constructor(...props) {
+      // create array of ['Joe', 'Schmo', 22] 
+      super(...props);
+      // call super('Joe', 'Schmo', 22)
+      this.hasPencil = true;
+   }
+}
+
+let Joe = new Student('Joe', 'Schmo', 22);
 ```
 
 ---
