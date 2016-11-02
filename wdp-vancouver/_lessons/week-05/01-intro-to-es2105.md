@@ -9,12 +9,12 @@ lesson_date: 2016-10-25
 
 Visit the **[Learn ES2015](https://babeljs.io/docs/learn-es2015/)** page and review the list of new features of JavaScript that are a part of ES2015. Pay attention to these sections in particular:
 
+- [Let + Const](https://babeljs.io/docs/learn-es2015/#let--const)
 - [Arrows and Lexical This](https://babeljs.io/docs/learn-es2015/#arrows-and-lexical-this)
 - [Enhanced Object Literals](https://babeljs.io/docs/learn-es2015/#enhanced-object-literals)
 - [Template Strings](https://babeljs.io/docs/learn-es2015/#template-strings)
 - [Destructuring](https://babeljs.io/docs/learn-es2015/#destructuring)
 - [Default + Rest + Spread](https://babeljs.io/docs/learn-es2015/#default--rest--spread)
-- [Let + Const](https://babeljs.io/docs/learn-es2015/#let--const)
 - [Iterators + For..Of](https://babeljs.io/docs/learn-es2015/#iterators--forof)
 
 While reviewing each section, open the the [Babel online REPL](http://babeljs.io/repl/) and try pasting each ES2015 code example into it to see how it would be implemented in ES5 syntax.
@@ -67,7 +67,15 @@ Use arrow functions to fix [this CodePen](http://codepen.io/redacademy/pen/mPjXV
 
 ## Exercise 3
 
-Use a template literal to refactor [this CodePen](http://codepen.io/redacademy/pen/mPjXVW).
+Use a template literal to refactor the following code.
+
+```js
+function fullName(first, last, birthYear) {
+  return first + ' ' + last + ',\nage: ' + 2016 - birthYear + '.';
+}
+
+fullName('Emma', 'Morano', 1900);
+```
 
 ---
 

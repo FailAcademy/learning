@@ -420,7 +420,15 @@ let funkyArrows = `
 
 # Exercise 3
 
-Use a template literal to refactor [this CodePen](http://codepen.io/redacademy/pen/mPjXVW).
+Use a template literal to refactor the following code.
+
+```js
+function fullName(first, last, birthYear) {
+  return first + ' ' + last + ',\nage: ' + 2016 - birthYear + '.';
+}
+
+fullName('Emma', 'Morano', 1900);
+```
 
 
 ---
