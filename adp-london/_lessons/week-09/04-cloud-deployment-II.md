@@ -1,7 +1,6 @@
 ---
 layout: lesson
-title: Continuous Integration
-slides: ['_slides/week-09/04-continuous-integration.md']
+title: Cloud Deployment II
 lesson_date: 2016-11-24
 ---
 
@@ -13,7 +12,8 @@ lesson_date: 2016-11-24
 
 ## Learning Objectives
 
-*Learning objectives TBA.*
+- Introduce Docker
+- Describe Single-Tenant vs Multi-Tenant environments
 
 ---
 
