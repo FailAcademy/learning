@@ -225,7 +225,7 @@ template: inverse
 class: center, middle
 
 .large[
-   The template hierarchy is how WordPress decides what template file(s) to use for individual pages or your site.
+   The template hierarchy is how WordPress decides what template file(s) to use for individual pages for your site.
 ]
 
 ---

@@ -58,7 +58,7 @@ class: center, middle
 
 # .org vs. .com
 
-- .com sites are a hosted service offered by Automattic
+- .com sites are a hosted service offered by [Automattic](https://automattic.com/)
 - .com sites don't offer much in the way of customization
 - .org sites are self-hosted by you
 - .org sites are entirely customizable via plugins and themes
