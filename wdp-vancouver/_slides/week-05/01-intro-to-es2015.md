@@ -101,7 +101,7 @@ You'll need to install `gulp-babel` as a development dependency too. To do that,
 
 `npm install -D gulp-babel babel-preset-es2015`
 
-But what's that `babel-preset-es2015` package for?
+What is the `babel-preset-es2015` package for?
 
 ---
 
@@ -119,11 +119,23 @@ To use a preset, you'll need to create a `.babelrc` file include the following c
 ---
 template: inverse
 
-# Let & Const
+# let & const
 
 ---
 
-# Problem: Hoisting
+# Variables
+
+There are now three ways to declare variables in JavaScript:
+
+- `var`
+- `let`
+- `const`
+
+These new solutions solve some common problems with variable declarations.
+
+---
+
+# Problem 1: Hoisting
 
 The variable `i` is hoisted to the top of the function and shared across each iteration of the loop.
 
@@ -161,9 +173,9 @@ Conversely, `var` defines a variable globally, or locally to an entire function 
 
 ---
 
-# Problem: Avoiding Change
+# Problem 2: Avoiding Redeclaration
 
-Sometimes we want to create **read-only** variables, but variables defined with `var` or `let` can be reassigned:
+Variables defined with `var` can lead to "name conflicts", where a coder overwrites a variable name, often unknowingly.
 
 ```js
 var teachers = [
@@ -173,16 +185,37 @@ var teachers = [
   'Mack',
 ];
 
-teachers = ['Alice', 'Bob', 'Jane'];
+var teachers = ['Alice', 'Bob', 'Jane'];
+// teachers variable is redeclared
 ```
 
-**[Open this example in Codepen](http://codepen.io/redacademy/pen/jqpYoz)** to see this gotcha in action.
+Both `let` and `const` prevent redeclaring with the same variable name.
+
+---
+
+# Problem 3: Avoiding Change
+
+`let` still allows reassigning of the value.
+
+```js
+let teachers = [
+  'Mandi',
+  'Ben',
+  'Shawn',
+  'Mack',
+];
+
+teachers = ['Alice', 'Bob', 'Jane'];
+// note: not redeclared, only changing the value
+```
+
+However, some values could benefit from being marked as unchanging.
 
 ---
 
 # Solution: const
 
-Constants are block-scoped like variables defined with `let`, but they cannot be redeclared and their values cannot be reassigned:
+`const` acts like `let`, but with the addition that its values cannot be reassigned.
 
 ```js
 const teachers = [
@@ -202,7 +235,7 @@ teachers = ['Kyle', 'Kurtis', 'Rony'];
 
 *What happens when you try running the following code?*
 
-**1. Reassigning a value**
+**1. Reassigning a primitive value**
 
 ```js
 const value = 1;
@@ -212,7 +245,7 @@ const numbers = [1, 2, 3];
 numbers = [4, 5, 6];
 ```
 
-**2. Changing a value**
+**2. Updating an object or array**
 
 ```js
 const array = [1, 2, 3];
@@ -226,13 +259,12 @@ object['c'] = 3;
 
 # let vs. const
 
-Both behave similarly in that they allow block-scoped declarations, so consider your intention for the variable when choosing one over the other:
+When might you use `const` over `let`?
 
-- Use `let` when you want to allow your variables to be potentially reassigned to new values
-- Use `const` when you don't want them to change
-- Constants also help convey intent and make your code more future-friendly (vs. simply using **magic numbers**)
+Fix [this Codepen](http://codepen.io/redacademy/pen/jqpYoz) and justify your changes.
 
 ---
+
 template: inverse
 
 # Arrow Functions
