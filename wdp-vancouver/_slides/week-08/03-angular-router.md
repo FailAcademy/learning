@@ -90,12 +90,6 @@ const appRoutes: Routes = [
   // ...etc
 ];
 
-
-// User defined directives
-export const appRoutingProviders: any[] = [
-
-];
-
 // Export!
 export const routing = RouterModule.forRoot(appRoutes);
 ```
@@ -121,12 +115,18 @@ Once your root definition file is finished we can add routes to our main applica
     BrowserModule,
     FormsModule,
     routing
-  ],
-  providers:    [
-    HTTP_PROVIDERS,
-    appRoutingProviders,
-  ],
+  ]
 // ...
+```
+
+---
+
+When the browser URL for this application becomes /home, the router matches that URL to the Route path /home and displays the HomeComponent in a RouterOutlet that we've placed in the host view's HTML.
+
+In what file do we put the following code?
+```html
+<!-- Routed views go here! -->
+<router-outlet></router-outlet>
 ```
 
 ---
@@ -142,32 +142,11 @@ using the `routerLink` directive:
 
 ```html
 <!-- For example -->
-<a [routerLink]="['/register']">link to register page</a>
+<a routerLink="/register">link to register page</a>
 
 ```
 
 *Note how quotation marks are used.*
-
----
-
-# Router Directives
-
-The `routerLink` directive will not work unless you add the `ROUTER_DIRECTIVES` bundle
-to the component in where the template contains this directive.
-
-This is how **all** directives work in Angular 2.
-
-```js
-import { ROUTER_DIRECTIVES } from '@angular/router'
-
-@Component({
-//  ... component definition
-
-directives: [ROUTER_DIRECTIVES]
-
-// ...
-
-```
 
 ---
 

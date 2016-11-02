@@ -292,19 +292,18 @@ Angular is a tool best suited for building BIG SPAs. For our purposes, we'll nee
 The `main.ts` file in root of the **src/** folder is the first file that is executed when you run your application, and should contain the following code.
 
 ```js
-import { bootstrap } from '@angular/platform-browser-dynamic';
+import './polyfills.ts';
+
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
-
-// The name of main application component may be different depending
-// on the name you provided when you ran the generator...
-
-import { Angular2ProjectAppComponent, environment } from './app/';
+import { environment } from './environments/environment';
+import { AppModule } from './app/';
 
 if (environment.production) {
-   enableProdMode();
+  enableProdMode();
 }
 
-bootstrap(Angular2ProjectAppComponent);
+platformBrowserDynamic().bootstrapModule(AppModule);
 ```
 
 ---
@@ -314,14 +313,14 @@ bootstrap(Angular2ProjectAppComponent);
 This import loads Angular's browser platform renderer. Angular 2 apps can be 'rendered' on a number of different platforms (including, for example, iOS). Because we're building our app for the browser, we'll be using Angular's browser platform renderer!
 
 ```js
-import { bootstrap } from '@angular/platform-browser-dynamic';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 ```
 
 When this method is called, Angular does what it needs to do to render your main application Component!
 
 
 ```js
-bootstrap(Angular2ProjectAppComponent);
+platformBrowserDynamic().bootstrapModule(AppModule);
 ```
 
 ---

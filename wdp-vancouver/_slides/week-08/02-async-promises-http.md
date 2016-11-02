@@ -88,7 +88,7 @@ Take 15 minutes to answer the [questions on the lesson page](/lesson/async-promi
 ---
 template: inverse
 
-# Services and Promises
+# Ajax & Angular 2
 
 ---
 
@@ -127,7 +127,6 @@ Promises are a first class representation of a value that may be made available 
 To gain a better understanding of promises, code along these tutorial videos:
 
 - [Introduction to promises](https://s3-us-west-2.amazonaws.com/red-wdp/lms-assets/Pluralsight-Introduction-to-promises.wmv)
-- [Implementing promises in ES5](https://s3-us-west-2.amazonaws.com/red-wdp/lms-assets/Pluralsight-Implement-promises.wmv)
 
 Knowing how promises work is essential for working with [async](http://rowanmanning.com/posts/javascript-for-beginners-async/) code, like the API requests we'll be making from inside our service classes.
 
