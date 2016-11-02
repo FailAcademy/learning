@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: SSL
-slides: ['_slides/week-09/05-ssl.md']
+title: Continuous Integration
+slides: ['_slides/week-09/04-continuous-integration.md']
 lesson_date: 2016-11-25
 ---
 
