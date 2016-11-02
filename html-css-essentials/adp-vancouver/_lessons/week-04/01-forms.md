@@ -47,7 +47,7 @@ Write a basic form in HTML only that alerts the value of an input.
 Setup the form demos project.
 
 ```bash
-git clone https://github.com/ShMcK/adp-react-form-demos.git
+git clone https://github.com/redacademy/adp-react-forms.git
 cd adp-react-form-demos
 npm install
 npm start
