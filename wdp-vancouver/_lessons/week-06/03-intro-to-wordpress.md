@@ -85,7 +85,7 @@ Next, apply some of the skills you learned earlier today by styling up a slightl
 
 To start, you can **[download the lab files here](/public/files/labs/wp-theme-lab.zip)**.
 
-Next, using either the WP installation you set up earlier today or a fresh one that you create with VV, move the `median` directory into the `wp-content/themes` directory for that site.
+Next, using either the WP installation you set up earlier today or a fresh install (using the installation steps at the beginning of the slide deck), move the `median` directory into the `wp-content/themes` directory for that site.
 
 From there, your task is to style the theme as per the included design comps. Here are some design specs to help you out:
 
