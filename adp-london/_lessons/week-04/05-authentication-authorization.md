@@ -40,31 +40,23 @@ Prior to class, please read:
 
 ## Exercise 1
 
-<!--
-   // Handling snesitive configuration data in your application
--->
+Draw a diagram on how the client and server can handle authentication with either "tokens" or "cookies". Compare the advantages and disadvantages of each.
 
 ---
 
 ## Exercise 2
 
-Draw a diagram on how the client and server can handle authentication with either "tokens" or "cookies". Compare the advantages and disadvantages of each.
+Create a demo using [JSON Web Tokens](https://jwt.io/introduction/)'s to demonstrate client authentication.
 
 ---
 
 ## Exercise 3
 
-Create a demo using [JSON Web Tokens](https://jwt.io/introduction/)'s to demonstrate client authentication.
-
----
-
-## Exercise 4
-
 Create a demo using [Passport](http://passportjs.org) for login and password authentication.
 
 ---
 
-## Exercise 5
+## Exercise 4
 
 Think about storing passwords...
 
@@ -72,7 +64,7 @@ First read through [Hashing Security](https://crackstation.net/hashing-security.
 
 ---
 
-## Exercise 6
+## Exercise 5
 
 Add OAuth2 authentication to your app with [Github](https://github.com/cfsghost/passport-github) and another [third-party authentication service](http://passportjs.org/docs) of your choice.
 
@@ -84,7 +76,6 @@ In today's lab, please set up the following in your REDit app:
 
 1. Login and password authentication
 2. JWT authentication
-3. OAuth2 authentication
 
 ---
 
