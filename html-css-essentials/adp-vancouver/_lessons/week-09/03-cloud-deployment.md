@@ -37,7 +37,7 @@ We're not going to jump into AWS today. Instead we'll start from the simplest, a
 
 ## Keywords
 
-- Cloud
+- Cloud ☁
 - Virtual Machine
 - Single Tenant
 - Multi Tenant
