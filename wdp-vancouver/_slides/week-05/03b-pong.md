@@ -76,36 +76,6 @@ Your drawing should include:
 
 ---
 
-# X & Y Axis
-
-![X & Y axis](/public/img/slide-assets/pong/basic-xy.png)
-
----
-
-# Board Dimensions
-
-![Board Dimensions](/public/img/slide-assets/pong/basic-height-width.png)
-
----
-
-# Centering the Ball
-
-![Centering the ball](/public/img/slide-assets/pong/basic-ball-position.png)
-
----
-
-# Positioning P1
-
-![Positioning P1](/public/img/slide-assets/pong/basic-p1-position.png)
-
----
-
-# Positioning P2
-
-![Positioning P2](/public/img/slide-assets/pong/basic-p2-position.png)
-
----
-
 # Challenge 2: Planning
 
 Plan out your project on paper with a partner.
@@ -136,17 +106,23 @@ Target the canvas in an `index.html` file:
 <canvas id="game"></canvas>
 ```
 
+---
+
+# Styles
+
 Add a background in the `game.css` file:
 
 ```css
 #game {
    background-color: #353535; /* add this! */
    display: block;
-   height: 256px;
    margin: 20px auto;
+   height: 256px;
    width: 512px;
 }
 ```
+
+This specifies our canvas **height** & **width**.
 
 ---
 
@@ -248,6 +224,18 @@ class Game {
    setTimeout(gameLoop, fps);
 }());
 ```
+
+---
+
+# X & Y Axis
+
+![X & Y axis](/public/img/slide-assets/pong/basic-xy.png)
+
+---
+
+# Board Dimensions
+
+![Board Dimensions](/public/img/slide-assets/pong/basic-height-width.png)
 
 ---
 
@@ -406,6 +394,19 @@ class Game {
    //...
 }
 ```
+
+---
+
+# Positioning P1
+
+![Positioning P1](/public/img/slide-assets/pong/basic-p1-position.png)
+
+---
+
+# Positioning P2
+
+![Positioning P2](/public/img/slide-assets/pong/basic-p2-position.png)
+
 
 ---
 
@@ -579,6 +580,12 @@ What **properties** and **methods** does a ball have?
 # Ball Dimensions
 
 ![Ball Radius](/public/img/slide-assets/pong/basic-ball-radius.png)
+
+---
+
+# Centering the Ball
+
+![Centering the ball](/public/img/slide-assets/pong/basic-ball-position.png)
 
 ---
 
@@ -823,16 +830,60 @@ Complete the following requirements for this challenge:
 
 ---
 
+# Challenge 12: Audio
+
+Add sounds for wall & paddle bounces, goals, music.
+
+```js
+const ping = new Audio('path/to/audio.wav');
+
+ping.play(); // ♪ ping ♪
+```
+
+---
+
+# Images
+
+Canvas also allows you to draw images.
+
+```js
+ctx.drawImage('path/to/image.png', x, y);
+```
+
+---
+
+# Compare Circle & Image
+
+![circle and image](/public/img/slide-assets/pong/ball-as-image.png)
+
+---
+
+# Using Image Centering
+
+![circle and image](/public/img/slide-assets/pong/image-center.png)
+
+---
+
+# Challenge 13: Images
+
+Create an image on your canvas.
+
+* ball
+* paddle
+* background
+
+---
+
 # Stretch Goals:
 
-- Make it prettier
-- Adjust sizes paddle & ball sizes and colours
-- Trigger multiple balls
-- Create balls with special effects (different speeds, sizes, effects, etc.)
-- Trigger speed changes or size changes of paddles
-- Fire a shot from a paddle on key press
-- Declare a winner at a final score
-- Create an AI paddle that tracks the ball (easier than you might think)
+* Make it prettier
+* Adjust sizes paddle & ball sizes and colours
+* Trigger multiple balls
+* Create balls with special effects (different speeds, sizes, effects, etc.)
+* Trigger speed changes or size changes of paddles
+* Fire a shot from a paddle on key press
+* Declare a winner at a final score
+* Create an AI paddle that tracks the ball (easier than you might think)
 
 ---
 
