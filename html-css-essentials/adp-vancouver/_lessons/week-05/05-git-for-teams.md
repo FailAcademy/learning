@@ -96,4 +96,4 @@ Let's create a pre-commit git hook. You're hook should run a bash script that pr
 ## Additional Resources
 
 - [Git for Teams](http://gitforteams.com/) (O'Reilly book resources)
-- [Git for Teams](https://gitlab.com/gitforteams/gitforteams) (Gitlab resource) 
+- [Git for Teams](https://gitlab.com/gitforteams/gitforteams) (Gitlab resource)
