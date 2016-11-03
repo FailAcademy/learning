@@ -57,11 +57,13 @@ canvas.fillRect(x1, y1, x2, y2);
 
 ---
 
-# Challenge 1
+![Basic Pong](/public/img/slide-assets/pong/basic.png)
 
-Draw a Pong game outline using Canvas.
+---
 
-Use this [Starter](http://codepen.io/Sh_McK/pen/QEzGGx).
+# Challenge 1: Canvas
+
+Draw a Pong game outline using Canvas and this [Starter](http://codepen.io/Sh_McK/pen/QEzGGx).
 
 Your drawing should include:
   - board
@@ -70,27 +72,41 @@ Your drawing should include:
   - a dividing line down the middle of the board
   - a scoreboard
 
----
-
-# Movement
-
-How do we make the paddle and ball move?
-
-Can you make a movement demo using `setTimeout(fn, timeout)`?
+**Bonus:** Try to make the paddle or ball move.
 
 ---
 
-# Colour Bleeding
+# X & Y Axis
 
-Movement of a ball may end up looking like a straight line, instead of a moving circle. This is because we are drawing over top of our original drawing repeatedly.
-
-Change the colour each time you draw the paddle you will see this re-draw effect.
-
-What might be quick and easy fix for colour bleeding?
+![X & Y axis](/public/img/slide-assets/pong/basic-xy.png)
 
 ---
 
-# Challenge 2
+# Board Dimensions
+
+![Board Dimensions](/public/img/slide-assets/pong/basic-height-width.png)
+
+---
+
+# Centering the Ball
+
+![Centering the ball](/public/img/slide-assets/pong/basic-ball-position.png)
+
+---
+
+# Positioning P1
+
+![Positioning P1](/public/img/slide-assets/pong/basic-p1-position.png)
+
+---
+
+# Positioning P2
+
+![Positioning P2](/public/img/slide-assets/pong/basic-p2-position.png)
+
+---
+
+# Challenge 2: Planning
 
 Plan out your project on paper with a partner.
 
@@ -323,7 +339,7 @@ import { b, c } from './namedExport'
 
 ---
 
-# Challenge 3
+# Challenge 3: File Structure
 
 Break your game into different modules as illustrated.
 
@@ -411,7 +427,15 @@ class Game {
 ```
 ---
 
-# Challenge 4
+# Movement
+
+How do we make the paddle and ball move?
+
+Can you make a movement demo using `setTimeout(fn, timeout)`?
+
+---
+
+# Challenge 4: Paddle Style
 
 In this challenge, you'll need to make two adjustments to your game:
 
@@ -496,7 +520,28 @@ const keys = {
 
 ---
 
-# Challenge 5
+# Paddle Up
+
+![Paddle up](/public/img/slide-assets/pong/paddle-move-up.png)
+
+---
+
+# Paddle Range
+
+The paddle can still move off the board going up or down.
+
+How might we solve this problem?
+
+---
+
+# Paddle Down
+
+![Paddle down](/public/img/slide-assets/pong/paddle-move-max-min.png)
+
+
+---
+
+# Challenge 5: Paddles
 
 Complete the following requirements for this challenge:
 
@@ -508,7 +553,7 @@ Complete the following requirements for this challenge:
 
 ---
 
-# Challenge 6
+# Challenge 6: Settings
 
 Move all settings into a `settings.js` file and import them where needed.
 
@@ -531,6 +576,12 @@ What **properties** and **methods** does a ball have?
 
 ---
 
+# Ball Dimensions
+
+![Ball Radius](/public/img/slide-assets/pong/basic-ball-radius.png)
+
+---
+
 # Ball
 
 Now let's set-up our `Ball` class:
@@ -538,22 +589,40 @@ Now let's set-up our `Ball` class:
 ```js
 // In Ball.js...
 
-const size = 5;
-
 export default class Ball {
    constructor() {
       this.x = 50; // random x
       this.y = 50; // random y
       this.vy = Math.floor(Math.random() * 12 - 6); // y direction
       this.vx = (7 - Math.abs(this.vy)); // x direction
-      this.size = size;
+      this.radius = 5;
    }
 }
  ```
 
 ---
 
-# Challenge 7
+# Ball Down/Right
+
+![ball move down and right](/public/img/slide-assets/pong/ball-move-down-right.png)
+
+---
+
+# Reversing Ball direction
+
+How might we change **vx** and **vy** to make the ball move in the **opposite** direction?
+
+*Note: this is the same way we make the ball "bounce".*
+
+---
+
+# Ball Up/Left
+
+![ball move up and left](/public/img/slide-assets/pong/ball-move-up-left.png)
+
+---
+
+# Challenge 7: Create Ball
 
 Complete the following requirements for this challenge:
 
@@ -621,30 +690,24 @@ class Ball {
 
 # Ball Wall Bounce
 
-Detect when the ball hits the sides:
-
-```js
-class Ball {
-   //...
-   render(ctx) {
-      //...
-      const hitLeft = this.x >= this.width;
-      const hitRight = this.x + this.size <= 0;
-      const hitTop = this.y + this.size <= 0;
-      const hitBottom = this.y >= this.height;
-      //...
-   }
-}
-```
+![ball wall bounce](/public/img/slide-assets/pong/ball-wall-bounce.png)
 
 ---
 
-# Challenge 8
+# Goal Detection
+
+![goal detection](/public/img/slide-assets/pong/ball-goal.png)
+
+---
+
+# Challenge 8: Ball Bounce
 
 Complete the following requirements for this challenge:
 
-* Make the ball `vx` flip to `-vx` when it hits a side wall
-* Make the ball `vy` flip to `-vy` when it hits a top or bottom wall
+* Make the ball appear to bounce from the top and bottom walls
+* Write a method `goal` and call it when the ball goes too far on the left or right side
+* `console.log('GOALLLL')` on each goal
+* Reset the ball location to the middle after a goal
 
 ---
 template: inverse
@@ -691,66 +754,30 @@ render(ctx, player1, player2) {
 
 ---
 
-# Collision 1/2
+# Collision Detection
 
-Add the `paddleCollison` method to your `Ball` class:
+Detecting when the ball hits the paddle requires knowing two things:
 
-```js
-paddleCollision(player1, player2) {
-   if (this.vx > 0) {
-      const inRightEnd = player2.x <= this.x + this.width &&
-      player2.x > this.x - this.vx + this.width;
-      if (inRightEnd) {
-         const collisionDiff = this.x + this.width - player2.x;
-         const k = collisionDiff / this.vx;
-         const y = this.vy * k + (this.y - this.vy);
-         const hitRightPaddle = y >= player2.y && y + this.height <=
-         player2.y + player2.height;
-         if (hitRightPaddle) {
-            this.x = player2.x - this.width;
-            this.y = Math.floor(this.y - this.vy + this.vy * k);
-            this.vx = -this.vx;
-         }
-      }
-   } // else more...
-}
-```
+* the ball and paddle x values
+* the ball and paddle y values 
 
 ---
 
-# Collision 2/2
+# X Collision Detection
 
-```js
-paddleCollision(player1, player2) {
-   if (this.vx > 0) {
-      // see previous slide...
-   } else {
-      const inLeftEnd = player1.x + player1.width >= this.x;
-      if (inLeftEnd) {
-         const collisionDiff = player1.x + player1.width - this.x;
-         const k = collisionDiff / -this.vx;
-         const y = this.vy * k + (this.y - this.vy);
-         const hitLeftPaddle = y >= player1.y && y + this.height <=
-         player1.y + player1.height;
-         if (hitLeftPaddle) {
-            this.x = player1.x + player1.width;
-            this.y = Math.floor(this.y - this.vy + this.vy * k);
-            this.vx = -this.vx;
-         }
-      }
-   }
-}
-```
+![paddle bounce detect x](/public/img/slide-assets/pong/paddle-bounce-detect-x.png)
 
 ---
 
-# Challenge 9
+# Y Collision Detection
 
-Complete the following requirements for this challenge:
+![paddle bounce detect y](/public/img/slide-assets/pong/paddle-bounce-detect-y.png)
 
-* Make a method called `wallCollision` and move its code there
-* Make a method called `drawBall` and move its code there
-* Break `paddleCollision` into smaller more readable methods
+---
+
+# Challenge 9: Paddle Bounce
+
+Detect when a ball hits a paddle and have it bounce (reverse direction).
 
 ---
 template: inverse
@@ -776,44 +803,21 @@ Scoring a goal will require:
 
 ---
 
-# Challenge 10
+# Challenge 10: Scores
 
 Complete the following requirements for this challenge:
 
-* Write a method `goal` and call it when the ball goes too far on the left or right side
-* Reset the ball location to the middle after a goal
 * Increment player scores on a goal
 * Change the ball direction after a goal on one side
 
 ---
 
-# Score Board
-
-We'll need to create a `ScoreBoard` class now:
-
-```js
-// In ScoreBoard.js...
-
-export default class ScoreBoard {
-   constructor(x, y) {
-      this.x = x;
-      this.y = y;
-      this.score = 0;
-   }
-   draw(ctx) {
-      ctx.font = "30px Helvetica";
-      ctx.fillText(this.score, this.x, this.y);
-   }
-}
-```
-
----
-
-# Challenge 11
+# Challenge 11: Scoreboard
 
 Complete the following requirements for this challenge:
 
 * Instantiate and render the `ScoreBoard` in `Game.js`
+* Calculate the x & y values for each scoreboard
 * Render player scores in the game
 * Play a sound on wall collision and paddle collision
 
@@ -828,11 +832,12 @@ Complete the following requirements for this challenge:
 - Trigger speed changes or size changes of paddles
 - Fire a shot from a paddle on key press
 - Declare a winner at a final score
+- Create an AI paddle that tracks the ball (easier than you might think)
 
 ---
 
 template: inverse
 
-#Questions?
+# Questions?
 
 {% endhighlight %}
