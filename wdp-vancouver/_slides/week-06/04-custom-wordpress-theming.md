@@ -397,7 +397,7 @@ The `comments.php` file is the template file that contains all the logic for dis
 And inside `comments.php`:
 
 - **[wp_list_comments()](https://codex.wordpress.org/Function_Reference/wp_list_comments)** can be configured with an array of arguments to customize how comments are listed
-- **[comment_form()](https://codex.wordpress.org/Function_Reference/comment_form)** can be configured with an array of arguments to customize how the comment for is displayed
+- **[comment_form()](https://codex.wordpress.org/Function_Reference/comment_form)** can be configured with an array of arguments to customize how the comment form is displayed
 
 ---
 
