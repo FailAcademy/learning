@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: ListView Components, Navigation & Icons
-slides: ['_slides/week-08/02-listview-navigation-icons.md']
+title: Navigation and Dependencies
+slides: ['_slides/week-08/02-navigation-and-dependencies.md']
 lesson_date: 2016-11-15
 ---
 
@@ -13,12 +13,12 @@ lesson_date: 2016-11-15
 
 ## Learning Objectives
 
-- Use the built-in `<ListView>` component to display vertical scrolling lists of dynamic data in a React Native application.
-- Populate a `<ListView>` component with data fetched from third-party API.
-- Distinguish now navigation in a mobile application is different from a web application.
-- Add a the `react-native-navigation` module to a React Native app as a cross-platform tab bar and navigator solution.
+- Distinguish how navigation in a mobile application is different from a web application.
+- Explore built-in navigation options options in React Native.
+- Add a the `ex-navigator` module to a React Native app as a cross-platform tab bar, drawer, and navigator solution.
 - Add vector-based icon fonts to a React Native app using `react-native-vector-icons`.
 - Use `react-native link` to link native dependencies in a application, and manually link native dependencies where `react-native link` cannot be used.
+- Manually link native dependencies (such as the `CameraRoll`) directly inside of Xcode.
 
 ---
 

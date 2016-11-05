@@ -203,8 +203,8 @@ ReactDOM.render(<App />, document.getElementById('root'));
 # JSX Gotchas
 
 - There must be exactly one outer-most tag returned with your JSX (so you can't return sibling elements)
-- You cannot use `//` comments. JSX comments look like the following: `{/* a comment */}`
-- If you need to add a `class` to an element, you must use `className`
+- To add a comment in JSX use: `{/* a comment */}`
+- If you need to add a `class` to an element use `className`
 - If you need to add a `for` attribute, you must use `htmlFor`
 - Self-closing tags must have a `/` before the `>`
 - Event listener names must be camel case (e.g. `onClick`)

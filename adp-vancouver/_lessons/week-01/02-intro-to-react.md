@@ -47,7 +47,9 @@ We're going to build a to-do app together with React.
 
 Let's start by determining how to chunk the mock-up into components:
 
-![To-do mock-up](/public/img/slide-assets/react-todo-mockup.png)
+<p style="display: flex; justify-content: center;" }>
+	<img src="/public/exercises/react-todo-mockup.png" alt="To-do mock-up" />
+</p>
 
 When determining how to chunk the UI into components, remember that (ideally) a component should only do one thing.
 
