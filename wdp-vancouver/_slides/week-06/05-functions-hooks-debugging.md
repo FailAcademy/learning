@@ -278,6 +278,8 @@ function scripts() {
 }
 ```
 
+Let's try this in our project with Font Awesome!
+
 ---
 class: center, middle
 
