@@ -539,9 +539,14 @@ And this right before the closing body tag:
 
 # Exercise 2
 
-Let's explore the `redstarter` theme together...
+Let's explore the inhabitent site demo site and apply our knowledge of the template hierarchy.
 
-You can [download a copy here](https://github.com/redacademy/redstarter/archive/master.zip) and add it to your `wp-content/themes` directory to follow along.
+Visit the inhabitent demo site at [tent.academy.red](http://tent.academy.red/).
+
+Explore the site and using the WordPress template heiarchy, try to idenitfy the template files needed to build this theme. 
+
+Write down these template files and how they correspond with the site. 
+
 
 ---
 
