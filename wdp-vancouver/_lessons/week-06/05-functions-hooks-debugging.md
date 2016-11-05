@@ -56,6 +56,10 @@ You'll be assigned one of the following hooks to investigate:
 - `transition_post_status`
 - `wp_enqueue_scripts`
 - `wp_head` / `wp_footer`
+- `the_content`
+- `stylesheet_uri`
+- `publish_post`
+
 
 Specifically, figure out if your assigned hooks is an action or filter. What does it do? When does it fire or what does it modify? What is it good for?
 
