@@ -129,7 +129,7 @@ Unsplash provides a JS wrapper to simplify working with its API that you will al
 
 Your goal for today is to build out the `Random` scene for your app, complete with the photographer's username and avatar overlain on the randomly retrieved image.
 
-When you complete that task, you can begin building out the feed of recently added photos in the `Recent` scene.git
+When you complete that task, you can begin building out the feed of recently added photos in the `Recent` scene.
 
 ---
 
