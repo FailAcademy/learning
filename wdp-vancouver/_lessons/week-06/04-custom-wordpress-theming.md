@@ -64,7 +64,7 @@ Copy the starter theme directory into **a new WP installation** on your computer
 
 Next, to get your project set-up, you'll want to run `npm install` in the root of the theme directory so you can get Gulp up and running.
 
-In the [project assets folder](https://s3-us-west-2.amazonaws.com/red-wdp/project-04.zip) you'll also find all of the content for the site. You'll need to add the content to your site via the WP admin area. **Start with posts!** You will find the featured image for each post in `_assets/images/blog-photos/`.
+In the [project assets folder](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-04.zip) you'll also find all of the content for the site. You'll need to add the content to your site via the WP admin area. **Start with posts!** You will find the featured image for each post in `_assets/images/blog-photos/`.
 
 We'll learn how to create a custom post type for the product content next week.
 
