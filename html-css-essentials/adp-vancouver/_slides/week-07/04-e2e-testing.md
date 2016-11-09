@@ -19,14 +19,15 @@ layout: false
 
 # Agenda
 
-1. run a selenium server
-2. setup and run NightWatch
-3. write tests
-4. write more amazing tests
-5. write tests better
+1. why E2E test
+2. run a selenium server
+3. setup and run NightWatch
+4. write tests
+5. write more amazing tests
+6. write tests better
 
 ---
-class: middle, center
+class: center, middle
 
 # Why E2E Test?
 
@@ -59,7 +60,7 @@ Be patient!
 
 # Install NightWatch
 
-Nightwatch requires Webdriver & Selenium.
+NightWatch requires WebDriver & Selenium.
 
 ```bash
 npm install -g nightwatch
@@ -408,6 +409,7 @@ Show a snapshot when your test fails.
         "on_error" : false,
         "path" : "e2e/screenshots/fail",
       },
+      /* ... */
 ```
 
 ---
