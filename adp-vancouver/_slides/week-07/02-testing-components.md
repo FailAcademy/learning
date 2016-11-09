@@ -470,9 +470,45 @@ Works with `.css`, `.less`, `.sass` & `.styl` files.
 
 ---
 
-# Meteor & Jest
+# Babel & Jest 1/2
 
-Meteor's preprocessor can conflict with Jest's Babel preprocesor.
+If you have an issue running Meteor with Jest, this may be the cause.
+
+```json
+"jest": {
+  "transform": {
+      ".jsx?": "<rootDir>/tests/babel-jsx-transform.js"
+   }
+}
+```
+
+See the next slide for the "babel-jsx-transform.js" file contents.
+
+---
+
+# Babel & Jest 2/2
+
+You may need to add other presets as well.
+
+`npm install --save-dev babel-core babel-preset-jest'
+
+```js
+const babel = require('babel-core');
+const jestPreset = require('babel-preset-jest');
+
+module.exports = {
+  process(src, filename) {
+    if (babel.util.canCompile(filename)) {
+      return babel.transform(src, {
+        filename,
+        presets: [jestPreset], // add other presets here
+        retainLines: true,
+      }).code;
+    }
+    return src;
+  },
+};
+```
 
 ---
 
