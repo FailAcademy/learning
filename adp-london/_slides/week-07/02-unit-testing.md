@@ -287,12 +287,19 @@ class: middle
 ### What makes a good test description?
 
 ---
+
+### What makes a good test description?
+
+- source of problem is clear if fails
+- "should", "shouldn't" statement
+
+---
 template: inverse
 
 # Testing Gotchas
 
 ---
-# Test Challenge #1
+## Test Challenge #1
 
 Add the following test to "test/index.js".<br />
 Make it PASS.
@@ -308,7 +315,32 @@ test('should add an item to the array', t => {
 ```
 ---
 
-# Test Challenge #2
+# Problem: Test Challenge #1
+
+Reference vs. Value Equality
+
+```js
+true === true // true
+'a' === 'a' // true
+[1, 2, 3] === [1, 2, 3] // false
+{ a: 1 } === { a: 1 } // false
+```
+
+---
+
+# Solution: Test Challenge #1
+
+Use `is` for simple reference equality.
+
+`t.is(true, true) // true`
+
+Use `deepEqual` for value equality.
+
+`t.deepEqual([1, 2, 3], [1, 2, 3]) // true`
+
+---
+
+## Test Challenge #2
 
 Add the following test to "test/index.js".<br />
 Make it PASS.
@@ -322,6 +354,40 @@ test('function returns 42 after 1 second', t => {
   t.is(expected, result);
 });
 ```
+---
+
+# Problem: Test Challenge #2
+
+The tests completes before the code is completed.
+
+```js
+function waitOneSecondAndReturn42() {
+  return setTimeout(() => 42, 1000);
+}
+
+test('function returns 42 after 1 second', t => {
+  const expected = 42;
+  const result = waitOneSecondAndReturn42();
+  t.is(expected, result);
+});
+```
+
+---
+
+# Solution: Test Challenge #2
+
+Use `async` & `await` to return a value after the function completes. 
+
+```js
+test('function returns 42 after 1 second', async t => {
+  const expected = 42;
+  const result = await waitOneSecondAndReturn42();
+  t.is(expected, result);
+});
+```
+
+*Note: this may require a babel preprocessor*
+
 ---
 
 # Difficult to Test
@@ -374,18 +440,9 @@ function redirectTo(url) {
 ---
 class: middle
 
-# TypeScript
-
-To test TypeScript, we must first compile our code to JS.
-
-Setup [Ava & TypeScript](https://github.com/avajs/ava/blob/master/docs/recipes/typescript.md)
-
----
-class: middle
-
 ## Challenge
 
-1. Write a tests for some of your previous code.
+1. Write a tests for some of your previous logic code.
 
 ---
 
