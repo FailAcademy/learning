@@ -448,6 +448,44 @@ You can check if the function was called, or which params it was called with.
 
 ---
 
+template: inverse
+
+# Testing Issues
+
+---
+
+# CSS in Jest
+
+`npm install --save-dev jest-css-modules`
+
+Works with `.css`, `.less`, `.sass` & `.styl` files.
+
+```json
+"jest": {
+  "transform": {
+      ".css": "<rootDir>/node_modules/jest-css-modules"
+   }
+}
+```
+
+---
+
+# Meteor & Jest
+
+Meteor's preprocessor can conflict with Jest's Babel preprocesor.
+
+---
+
+# Material-UI & Jest
+
+`react-test-renderer` has several conflicts with Material-UI. 
+
+Use [enzyme-to-json](https://github.com/adriantoine/enzyme-to-json) with enzyme instead. 
+
+`npm install --save-dev enzyme enzyme-to-json react-addons-test-utils`
+
+---
+
 ## Challenge
 
 Write unit tests to test your components. Include:
