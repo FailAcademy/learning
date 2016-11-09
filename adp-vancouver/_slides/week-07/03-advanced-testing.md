@@ -505,7 +505,7 @@ Enable code coverage.
 
 ```json
 "jest": {
-  "collectCoverage": false
+  "collectCoverage": true
 }
 ```
 
@@ -561,61 +561,11 @@ Anything under the threshold will fail.
 }
 ```
 
----
-template: inverse
-
-# Testing with TypeScript`
-
----
-
-# Testing with TypeScript
-
-Pre-Compile the tests.
-
-Find all tests ending in ".test.ts{x}".
-Save your compiled tests in a cache.
-
-```json
-"jest": {
-  "scriptPreprocessor": "<rootDir>/src/__tests__/preprocessor.js",
-  "moduleFileExtensions": ["ts", "tsx", "js"],
-  "testRegex": "src/*/.*\\.test\\.(ts|tsx|js)$",
-  "cacheDirectory": "src/__tests__/__cache__"
-}
-```
-
----
-
-# Testing with TypeScript
-
-Transpile all tests with TypeScript
-
-src/__tests__/preprocessor.js
-
-```js
-const tsc = require('typescript');
-
-module.exports = {
-  process: (src, path) => {
-    if (path.endsWith('.ts') || path.endsWith('.tsx')) {
-      return tsc.transpile(src, {
-          module: tsc.ModuleKind.CommonJS,
-          jsx: tsc.JsxEmit.React,
-        }, path, []);
-    }
-    return src;
-  }
-};
-```
-
----
-
 # Review
 
 - spies - function listener
 - stubs - function with a set return value
 - mocks - fake function
 - code coverage - % of code backed by tests
-- typescript tests - pre-compile & cache
 
 {% endhighlight %}

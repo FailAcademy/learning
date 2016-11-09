@@ -512,6 +512,27 @@ module.exports = {
 
 ---
 
+# Testing with TypeScript
+
+Pre-Compile the tests.
+
+Find all tests ending in ".test.ts{x}".
+Save your compiled tests in a cache.
+
+```json
+"jest": {
+    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
+    },
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$"
+}
+```
+
+See a [Jest TypeScript](https://github.com/facebook/jest/tree/master/examples/typescript) example.
+
+---
+
 # Material-UI & Jest
 
 `react-test-renderer` has several conflicts with Material-UI. 
