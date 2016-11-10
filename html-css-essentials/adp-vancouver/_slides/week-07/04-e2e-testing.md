@@ -60,12 +60,12 @@ Be patient!
 
 # Install NightWatch
 
-NightWatch requires WebDriver & Selenium.
+NightWatch requires Java, WebDriver & Selenium.
+
+Install the [Java SDK > version 7](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 ```bash
-npm install -g nightwatch
-
-npm install -g webdriver-manager
+npm install -g nightwatch webdriver-manager
 
 brew doctor
 brew update
@@ -95,27 +95,6 @@ Change the "src_folders" to point to "e2e".
 ```json
 {
   "src_folders" : ["e2e"],
-}
-```
-
----
-
-# NightWatch + Babel
-
-Install a plugin to use ES2015 with NightWatch.
-
-```shell
-npm i babel-plugin-add-module-exports --save-dev
-```
-
-Specify your configuration in ".babelrc"
-
-.babelrc
-
-```
-{
-  presets: ["es2015"],
-  plugins: ["add-module-exports"]
 }
 ```
 
@@ -163,25 +142,20 @@ Nightwatch requires three different processes running at the same time.
 2. run a selenium server
 3. run nightwatch
 
+We must run these processes in three different terminals.
+
 ---
 
 # E2E NPM Scripts
 
-We can combine the first 2 steps into a single step, using [concurrently](https://github.com/kimmobrunfeldt/concurrently).
-
-Install concurrently.
-
-```shell
-npm install -g concurrently
-```
-
-Add scripts. 
+Setup scripts for each of the three processes you need to run.
 
 / package.json
 
 ```json
 "scripts": {
-  "e2e-setup": "concurrently 'npm start' 'webdriver-manager start'",
+  "start": "...",
+  "selenium": "webdriver-manager update && webdriver-manager start",
   "e2e": "nightwatch"
 }
 ```
@@ -190,13 +164,19 @@ Add scripts.
 
 # Run Tests
 
-Run the setup.
+Run your app
 
 ```shell
-npm run e2e-setup
+npm start
 ```
 
-Switch to a new command line window and run the tests.
+Open a new command line window. Run the setup.
+
+```shell
+npm run selenium
+```
+
+Open to a new command line window and run the tests.
 
 ```shell
 npm run e2e
@@ -602,6 +582,25 @@ We can then reference elements using "@ELEMENT_NAME".
 
 ---
 
+# Loading Page Objects
+
+Page objects are collected by NightWatch. There is no need to import them.
+
+```js
+'Some example test': (browser) => {
+  // loads "e2e/pages/main.js" page object
+  let main = browser.page.main();
+
+  main
+    .navigate() // go to the url
+    // actions and assertions chained here
+  
+  browser.end() // end your test with the browser method
+}
+```
+
+---
+
 # Calling Page Objects
 
 /e2e/main.js
@@ -618,7 +617,6 @@ We can then reference elements using "@ELEMENT_NAME".
 
   // with page objects
   let main = browser.page.main();
-
   main
     .navigate()
     .waitForElementVisible('body', 1000)
@@ -651,6 +649,15 @@ We can then reference elements using "@ELEMENT_NAME".
     browser.end();
   }
 ```
+
+---
+
+# Review
+
+* Why E2E test?
+* Which 3 processes do we need to run for E2E testing?
+* Why use snapshot testing?
+* Name three things you want to E2E test in your app.
 
 ---
 
