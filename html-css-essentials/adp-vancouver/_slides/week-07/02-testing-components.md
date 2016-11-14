@@ -448,6 +448,101 @@ You can check if the function was called, or which params it was called with.
 
 ---
 
+template: inverse
+
+# Testing Issues
+
+---
+
+# CSS in Jest
+
+`npm install --save-dev jest-css-modules`
+
+Works with `.css`, `.less`, `.sass` & `.styl` files.
+
+```json
+"jest": {
+  "transform": {
+      ".css": "<rootDir>/node_modules/jest-css-modules"
+   }
+}
+```
+
+---
+
+# Babel & Jest 1/2
+
+If you have an issue running Meteor with Jest, this may be the cause.
+
+```json
+"jest": {
+  "transform": {
+      ".jsx?": "<rootDir>/tests/babel-jsx-transform.js"
+   }
+}
+```
+
+See the next slide for the "babel-jsx-transform.js" file contents.
+
+---
+
+# Babel & Jest 2/2
+
+You may need to add other presets as well.
+
+`npm install --save-dev babel-core babel-preset-jest'
+
+```js
+const babel = require('babel-core');
+const jestPreset = require('babel-preset-jest');
+
+module.exports = {
+  process(src, filename) {
+    if (babel.util.canCompile(filename)) {
+      return babel.transform(src, {
+        filename,
+        presets: [jestPreset], // add other presets here
+        retainLines: true,
+      }).code;
+    }
+    return src;
+  },
+};
+```
+
+---
+
+# Testing with TypeScript
+
+Pre-Compile the tests.
+
+Find all tests ending in ".test.ts{x}".
+Save your compiled tests in a cache.
+
+```json
+"jest": {
+    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/preprocessor.js"
+    },
+    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$"
+}
+```
+
+See a [Jest TypeScript](https://github.com/facebook/jest/tree/master/examples/typescript) example.
+
+---
+
+# Material-UI & Jest
+
+`react-test-renderer` has several conflicts with Material-UI. 
+
+Use [enzyme-to-json](https://github.com/adriantoine/enzyme-to-json) with enzyme instead. 
+
+`npm install --save-dev enzyme enzyme-to-json react-addons-test-utils`
+
+---
+
 ## Challenge
 
 Write unit tests to test your components. Include:

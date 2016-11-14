@@ -23,7 +23,7 @@ Prior to class, review the docs for [NightWatch](http://nightwatchjs.org/guide#g
 
 - E2E tests
 - Selenium
-- webdriver
+- Webdriver
 - Page objects
 
 ---
