@@ -141,6 +141,41 @@ How could we use spies to test that everything works?
 
 ---
 
+# Restaurant Spy
+
+Create a setup for your waiter function.
+
+```js
+function waiter() {
+  // incomplete function, never called
+}
+
+
+function customer(order) {
+  return waiter(order)
+}
+```
+
+---
+
+# Restaurant Spy
+
+Replace the waiter with a spy.
+
+```js
+it('calls the waiter with an array of strings', () => {
+  const order = ['water', 'tacos']
+  // spy on the voteUp action call
+  waiter = jest.fn()
+  // click on the button
+  customer(order)
+  // expect the voteUp to be called with +1
+  expect(waiter).toBeCalledWith(order)
+})
+```
+
+---
+
 # Spies
 
 Where else might spies be useful in your project?
@@ -194,26 +229,44 @@ template: inverse
 
 # Scenario 2: Testing the System
 
-customer -> (order) -> mock waiter -> (order) -> cook
+customer -> (order) -> waiter
 
-To test the entire system we could mock the waiter.
+We want to ensure that when a customer calls the waiter with an order, 
+the waiter returns the order.
 
-This way when we pass in an order, we can ensure it passes to the cook.
-
-What might a mock waiter look like?
+customer <("Give me a taco")
+waiter <("Here's your taco")
 
 ---
 
-# Mock Waiter
+# Stub
 
-The mock waiter acts a simplified version of the actual funciton.
+A stub is created by passing an anonymous function into `jest.fn`
 
 ```js
-function mockWaiter(order) {
-  cook(order);
+stub = jest.fn(() => 42)
+
+expect(stub()).toBe(42)
+```
+
+---
+
+# Stub Waiter
+
+The mock waiter acts a simplified version of the actual function.
+
+```js
+function customer(order) {
+  return waiter(order)
 }
 
-expect(customer('burger')).toEqual(['burger'])
+it('the waiter to return the order', () => {
+  const order = ['water', 'tacos']
+  // create a stub
+  waiter = jest.fn(() => order)
+  // the original waiter function is over-written and never called
+  expect(customer(order)).toEqual(order)
+})
 ```
 
 ---
@@ -221,79 +274,33 @@ expect(customer('burger')).toEqual(['burger'])
 # Mocks
 
 - **stub** - a simple function that returns a value
-- **mock** - a function that can pretends to be another function. A mock can be more complicated than just a stub.
+
+`jest.fn(() => 42)`
+
+- **mock** - a function that can pretends to be another function. A more complicated stub.
+
+`jest.fn((order) => order)`  (simplest mock)
 
 ---
 
-
-# A Simple Stub
-
-We've already tested `sayHi`.
+# Mock Waiter
 
 ```js
-function sayHi() {
-  return 'hi';
+function customer(order) {
+  return waiter(order)
 }
 
-function saySayHi() {
-  return sayHi();
-}
-```
-
-How might we test `saySayHi` without running `sayHi`?
-
----
-
-# A Simple Stub
-
-Create a **stub** for `sayHi`.
-
-- mock function: [jest.fn](https://facebook.github.io/jest/docs/api.html#mock-functions)
-
-```js
-// stub, function automatically returns 'hi'
-let sayHi = jest.fn(() => 'hi');
-
-function saySayHi() {
-  return sayHi();
+function mockWaiter(order) {
+  const order = await setTimeout(() => order, 1000) 
+  return order
 }
 
-expect(saySayHi()).toBe('hi');
-```
-
----
-
-# A Simple Mock
-
-A **mock** generally refers to a more complicated stub.
-
-How might we test `saySayWords`?
-
-```js
-function sayWords(words) {
-  return words;
-}
-
-function saySayWords(words) {
-  return sayWords(words);
-}
-```
-
----
-
-# A Simple Mock
-
-Create a mock of sayWords.
-
-```js
-// mock, always returns words
-let sayWords = jest.fn((words) => words);
-
-function saySayWords(words) {
-  return sayWords(words);
-}
-
-expect(saySayWords('hi')).toBe('hi');
+it('the waiter returns an order after 10 seconds', async () => {
+  const order = ['water', 'tacos']
+  // create a mock
+  waiter = jest.fn(mockWaiter)
+  expect(customer(order)).toEqual(order)
+})
 ```
 
 ---
@@ -422,7 +429,7 @@ Sometimes a mock needs all the methods of the main function.
 
 Think about mocking a store. It might require working `getState` and `dispatch` methods.
 
-For these cases, we can often use a mocking library.
+For these cases, we can often use a **mocking library**, like 'redux-mock-store'.
 
 ---
 
@@ -470,7 +477,7 @@ it('should dispatch the voteUp action', () => {
       expect(store.getActions()).toEqual(expectedActions);
   });
 });
-
+```
 
 ---
 
@@ -498,7 +505,7 @@ Enable code coverage.
 
 ```json
 "jest": {
-  "collectCoverage": false
+  "collectCoverage": true
 }
 ```
 
@@ -554,56 +561,11 @@ Anything under the threshold will fail.
 }
 ```
 
----
-
-# Testing with TypeScript
-
-Pre-Compile the tests.
-
-Find all tests ending in ".test.ts{x}".
-Save your compiled tests in a cache.
-
-```json
-"jest": {
-  "scriptPreprocessor": "<rootDir>/src/__tests__/preprocessor.js",
-  "moduleFileExtensions": ["ts", "tsx", "js"],
-  "testRegex": "src/*/.*\\.test\\.(ts|tsx|js)$",
-  "cacheDirectory": "src/__tests__/__cache__"
-}
-```
-
----
-
-# Testing with TypeScript
-
-Transpile all tests with TypeScript
-
-src/__tests__/preprocessor.js
-
-```js
-const tsc = require('typescript');
-
-module.exports = {
-  process(src, path) {
-    if (path.endsWith('.ts') || path.endsWith('.tsx')) {
-      return tsc.transpile(src, {
-          module: tsc.ModuleKind.CommonJS,
-          jsx: tsc.JsxEmit.React,
-        }, path, []);
-    }
-    return src;
-  }
-};
-```
-
----
-
 # Review
 
 - spies - function listener
 - stubs - function with a set return value
 - mocks - fake function
 - code coverage - % of code backed by tests
-- typescript tests - pre-compile & cache
 
 {% endhighlight %}

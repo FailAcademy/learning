@@ -142,6 +142,14 @@ Some general React Native resources:
 - [Awesome React Native](https://github.com/jondot/awesome-react-native)
 - [Spencer Carli on Medium](https://medium.com/@spencer_carli)
 
+Tips for configuring eslint with React Native:
+
+- [Getting eslint right in React Native](https://medium.com/the-react-native-log/getting-eslint-right-in-react-native-bd27524cc77b#.g7alsqenx)
+
+A video series on styling components and building layouts with React Native:
+
+- [React Native - Design](https://www.youtube.com/playlist?list=PL7D-0n1z1EbhkundIsOBaN_mlLvV4_hyO)
+
 More on ListViews:
 
 - [React Native Basics: How to Use the ListView Component](https://medium.com/differential/react-native-basics-how-to-use-the-listview-component-a0ec44cf1fe8#.asxki5zib)
