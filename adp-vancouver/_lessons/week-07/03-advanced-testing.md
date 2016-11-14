@@ -16,7 +16,6 @@ Prior to class, more about [Enzyme](http://airbnb.io/enzyme/). Write three unit 
 - Write spies using Jest.
 - Write stubs and mocks using Jest.
 - Set-up code coverage in Jest.
-- Set-up Jest to pre-compile Typescript.
 
 ---
 
@@ -65,6 +64,5 @@ Write unit tests to test your existing React components, middleware and action c
 ## Resources
 
 - [Ava & React](https://github.com/avajs/ava/blob/master/docs/recipes/react.md)
-- [Setting up Code Coverage](https://blog.engineyard.com/2015/measuring-clientside-javascript-test-coverage-with-istanbul)
 - [Unit Test Best Practices](https://gist.github.com/axyz/64c5087565b2c1907c0a8c4952cba27f)
 - [The Difference Between Mocks & Stubs](http://martinfowler.com/articles/mocksArentStubs.html#TheDifferenceBetweenMocksAndStubs)

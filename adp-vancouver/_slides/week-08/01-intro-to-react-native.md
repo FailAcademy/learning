@@ -65,7 +65,7 @@ RN works because its **bridge** creates an interface between React and the host 
 
 # Rendering to the DOM
 
-Reacall that when we use React, we also need to include the `ReactDOM` module to render our components to the DOM:
+Recall that when we use React, we also need to include the `ReactDOM` module to render our components to the DOM:
 
 ```js
 import React, { Component } from 'react';
@@ -164,7 +164,7 @@ From your project directory, now run:
 react-native run-ios
 ```
 
-You can also add the `--simulator="iPhone 5s` flag to that command to launch your app on a specific device.
+You can also add the `--simulator="iPhone SE` flag to that command to launch your app on a specific device.
 
 ---
 
@@ -182,7 +182,7 @@ The generated directory structure for your project will include:
 |-- package.json     # obviously...don't leave home without it
 ```
 
-For now, we will work primarily in `index.ios.js`, but talk more in depth about project organization later in the lesson.
+For now, we will work primarily in `index.ios.js`, but will talk more in depth about project organization later in the lesson.
 
 ---
 
@@ -570,13 +570,13 @@ this.state = {
 
 The `rowHasChanged` change function is responsible for detecting changes in our `<ListView>`.
 
-The `cloneWithRows` method allow us to actually pass some data into our `<ListView>` for rendering.
+The `cloneWithRows` method allows us to actually pass some data into our `<ListView>` for rendering.
 
 ---
 
 # ListView
 
-Other things we can customize a `<ListView>`:
+Other things we can customize in a `<ListView>`:
 
 - Add a separator (between list items, excluding the last)
 - Add a header (or sticky header) to the top of your list (a search box maybe?)
@@ -589,7 +589,7 @@ Other things we can customize a `<ListView>`:
 
 We often want to populate a `<ListView>` with external data.
 
-Let's start by creating our new `<ListView>`, but we won't put any data in it with `cloneWithRows` just yet...
+Let's start by creating our new `ListView`, but we won't put any data in it with `cloneWithRows` just yet...
 
 ```js
 constructor() {

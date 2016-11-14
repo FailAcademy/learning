@@ -19,6 +19,7 @@ Read [I pity the fool who doesn't write unit tests](https://blog.codinghorror.co
 - Set-up a test runner watcher.
 - Write unit tests for React components using Jest and [Enzyme](https://github.com/airbnb/enzyme).
 - Setup React snapshot testing with Jest.
+- Setup Jest with a precompiler
 
 ---
 

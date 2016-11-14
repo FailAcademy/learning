@@ -99,6 +99,10 @@ User guide for Android Studio:
 
 - [Meet Android Studio](https://developer.android.com/studio/intro/index.html)
 
-More on building cross-platform components: 
+More on building cross-platform components:
 
 - [Better Cross-Platform React Native Components](https://medium.com/differential/better-cross-platform-react-native-components-cb8aadeba472#.jyrww11oo)
+
+UX and Android navigation:
+
+- [Bye, Bye Burger!](https://medium.com/startup-grind/bye-bye-burger-5bd963806015#.rbncat6ic)
