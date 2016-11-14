@@ -9,6 +9,8 @@ Build a mobile application using React Native that accesses the Unsplash API to 
 
 Your project must be cross-platform (iOS/Android) and contain a database (Realm).
 
+You can [download the project assets here](https://s3-us-west-2.amazonaws.com/red-adp/project-files/project-04.zip).
+
 ## Requirements
 
 ### Common
@@ -70,8 +72,9 @@ Want to challenge yourself? Your project could also:
 - [ ] Include Redux for state management in the app
 - [ ] Use Flow for static typechecking in the app
 
-**Enhance scene UX:**
+**Enhance UX:**
 
+- [ ] Cache requests made to the Unsplash API (to improve performance and reduce the likelihood of hitting the Unsplash API rate limit)
 - [ ] Use React Native's `Animated` and `PanResponder` to build out custom animation that allows a user to swipe left to load a new random photo in the Random scene
 - [ ] Add the ability to dynamically append additional results wherever the Unsplash API permits pagination (consider exploring an enhanced, third-party listview component for this)
 
