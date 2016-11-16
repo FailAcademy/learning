@@ -20,18 +20,8 @@ layout: false
 # Agenda
 
 1. Whats and whys of embedded databases
-2. Adding Realm to a React Native project and defining scheme
+2. Adding Realm to a React Native project and defining schema
 3. Saving and retrieving Realm data in an app
-
----
-
-- Define what a mobile database is, and why one may be needed in a native mobile application.
-- Explain how Realm is different from other mobile database options.
-- Integrate a Realm database into a React Native application.
-- Define schema within a React Native application.
-- Leverage React Component Lifecycle methods to perform CRUD operations on the database base in relation user interactions.
-- Populate a `<ListView>` component with data fetched a Realm database.
-- Sync application UI state as data is added and removed from a Realm database.
 
 ---
 template: inverse
@@ -83,12 +73,10 @@ Note that data stored in `AsyncStorage` won't be encrypted.
 
 What [Realm](https://realm.io/) is:
 
-- It's an embedded (local) database
 - It's **not an ORM** built on something that already exists
 - "It's objects all the way down"
 - It avoids expensive operations when trying to map a relational model to an object-focused model by design (so it's super fast)
-- It was designed specifically to be used in phones and tablets
-- It's insanely easy to add and use in an app
+- It was designed specifically to be used in phones and tablets and it's insanely easy to add and use in an app
 
 ---
 template: inverse
@@ -117,7 +105,7 @@ Congratulations, you have now added an embedded a mobile database in your app, a
 
 # Supported Data Types
 
-Realm supports the following basic types: bool, int, float, double, string, data, and date.
+Realm supports the following basic types: **bool**, **int**, **float**, **double**, **string**, **data**, and **date**:
 
 - `bool` (maps to JavaScript `Boolean` objects)
 - `int`, `float`, `double` (maps to JavaScript `Number` objects)
@@ -154,7 +142,7 @@ export default new Realm({schema: [Dog]});
 What else can we do with our model?
 
 - Selectively index properties
-- Set a primary keys (but no there's auto-incrementing of primary keys out-of-the-box yet...)
+- Set a primary key (but no there's auto-incrementing of primary keys out-of-the-box yet...)
 - Set a default value
 
 ---
@@ -178,7 +166,7 @@ template: inverse
 
 # Writing
 
-Writing data to your Realm database is as easy too. All database writes must be wrapped in the following method:
+Writing data to your Realm database is easy too. All database writes must be wrapped in the following method:
 
 ```js
 realm = new Realm({schema: [Dog]});

@@ -71,9 +71,9 @@ Add your helper function as the `renderIcon` prop on each `<TabNavigationItem>`.
 
 Following the **[instructions for manual linking](https://facebook.github.io/react-native/docs/linking-libraries-ios.html#manual-linking)** in the React Native docs, add the `CameraRoll` library to your project.
 
-You will need to library later in order to build out all of the functionality for the Photobox scene.
+You will need this library later in order to build out all of the functionality for the Photobox scene.
 
-**Note:** You will also need to update your `info.plist` files as per **[these instructions](https://github.com/facebook/react-native/issues/10115)** to avoid fatal app crashes when saving to the camera roll for iOS 10.
+**Note:** You will also need to update your `info.plist` file as per **[these instructions](https://github.com/facebook/react-native/issues/10115)** to avoid fatal app crashes when saving to the camera roll for iOS 10.
 
 ---
 
