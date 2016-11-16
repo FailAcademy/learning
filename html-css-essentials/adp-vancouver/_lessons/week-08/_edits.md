@@ -3,6 +3,9 @@
 
 ## Day 1
 
+- Put robot json URL somewhere more sensible (on https)
+- Fix error with simulator flag (needs end quote)
+
 ## Day 2
 
 ## Day 3

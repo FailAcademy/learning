@@ -158,13 +158,13 @@ Ideally, we want an all-in-one navigation solution with:
 - Support for **Android back button**
 - Integration with the a (potentially cross-platform) **tab bar**
 - Support for **nested nav stacks** without creating state management headaches for ourselves
-- Good **performance** (use native animation)
+- Good **performance** (uses native animation)
 
 ---
 
 # ExNavigation
 
-- A higher level of abstration of `NavigationExperimental`
+- A higher level of abstration on `NavigationExperimental`
 - Provides a set of defaults that can be customized
 - Supports tab navigation, sliding drawer navigation, the Android back button, and modals
 - Your routes are your React Components
@@ -270,7 +270,7 @@ Sometimes we may need to manually link native dependencies in Xcode.
 
 For instance, React Native includes a `CameraRoll` module bundled with it, but if we want to use this library (to allow users to save Unsplash images to their camera roll) we'll need to manually link it.
 
-To do that, we'll need to open our project folder and navigate to `node_modules/react-native/Librares/...` and also open Xcode
+To do that, we'll need to open our project folder and navigate to `node_modules/react-native/Librares/...` and also open Xcode.
 
 ---
 
@@ -278,9 +278,9 @@ To do that, we'll need to open our project folder and navigate to `node_modules/
 
 Following the **[instructions for manual linking](https://facebook.github.io/react-native/docs/linking-libraries-ios.html#manual-linking)** in the React Native docs, add the `CameraRoll` library to your project.
 
-You will need to library later in order to build out all of the functionality for the Photobox scene.
+You will need this library later in order to build out all of the functionality for the Photobox scene.
 
-**Note:** You will also need to update your `info.plist` files as per **[these instructions](https://github.com/facebook/react-native/issues/10115)** to avoid fatal app crashes when saving to the camera roll for iOS 10.
+**Note:** You will also need to update your `info.plist` file as per **[these instructions](https://github.com/facebook/react-native/issues/10115)** to avoid fatal app crashes when saving to the camera roll for iOS 10.
 
 ---
 
