@@ -2,7 +2,7 @@
 layout: lesson
 title: Production Optimizations
 slides: ['_slides/week-09/02-production-optimizations.md']
-lesson_date: 2016-11-22
+lesson_date: 2016-11-21
 ---
 
 ## Pre-work

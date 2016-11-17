@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Cloud Deployment II
-lesson_date: 2016-11-24
+lesson_date: 2016-11-23
 ---
 
 ## Pre-work
