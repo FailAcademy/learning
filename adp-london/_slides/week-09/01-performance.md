@@ -29,10 +29,16 @@ template: inverse
 
 ---
 
+# Performance Example
+
+What happens as `x` gets bigger?
+
 ```js
+const x = 100000;
+
 function run() {
   let total = 0;
-  for (let i = 1; i < 100000; i++) {
+  for (let i = 1; i < x; i++) {
     total += i;
   }
   return total;
@@ -40,6 +46,8 @@ function run() {
 
 run();
 ```
+
+How might we measure the performance of `run`?
 
 ---
 
@@ -69,6 +77,8 @@ function measurePerf(fn) {
 
 # Measuring Performance
 
+Create a function to measure the performance of a function.
+
 ```js
 function measurePerf(fn) {
   const start = performance.now();
@@ -82,6 +92,8 @@ function measurePerf(fn) {
 ---
 
 # Basic Setup 
+
+Create a UI to view your performance tests.
 
 ```html
   <h3>Measuring Performance</h3>
@@ -110,7 +122,7 @@ Why might the numbers be different?
 
 # Median
 
-Change your function to calculate the "median".
+Change your `measurePerf` function to calculate the "median".
 
 ---
 
@@ -172,6 +184,12 @@ Imagine we have a phone book with one name. Whenever we look up that name it wil
 
 We call this "order 1", or "O(1)". 
 
+```js
+function addOne(x) {
+  return x + 1;
+}
+```
+
 ---
 
 # O(n)
@@ -194,7 +212,6 @@ In code, "O(n)" is just a loop:
   - `forEach`
   - `map`
   - `find`
-  - etc.
 
 ```js
 let names = [/* 100 names */];
@@ -354,7 +371,7 @@ Which is faster?
 - O(n^2)
 - O(2n)
 
-Calculate the number of operations for a list of 1000 items.
+*Hint: Calculate the number of operations for a list of 1000 items.*
 
 ---
 
