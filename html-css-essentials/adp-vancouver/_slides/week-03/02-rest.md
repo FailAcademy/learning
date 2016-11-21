@@ -22,6 +22,8 @@ layout: false
 
 1. HTTP * URIs
 2. RESTful Guidelines
+3. Creating an Express REST API
+4. Consuming your REST API from the client
 
 ---
 
@@ -48,7 +50,7 @@ template: inverse
 
 ---
 
-# Example: Faces
+# Example 1: Faces
 
 An API for building cute faces.
 
@@ -61,7 +63,7 @@ https://api.adorable.io/avatars/list
 
 ---
 
-# Creating a Face
+## Challenge 1: Making Faces
 
 We can construct a face with the following formula
 
@@ -76,7 +78,7 @@ https://api.adorable.io/avatars/face/eyes4/nose3/mouth7/8e8895
 
 ---
 
-# Example: PokeAPI
+# Example 2: PokeAPI
 
 http://pokeapi.co/
 
@@ -95,9 +97,30 @@ In REST, as in your database, each data point is given a unique **id**, as in th
 https://api.adorable.io/avatars/1
 http://pokeapi.co/api/v2/pokemon/6/
 http://pokeapi.co/api/v2/pokemon/charizard/
+
+What do you think the following example is loading?
+
 http://example.com/pokemon/1234
 
-In this case, the end point would access data for a specific pokemon with the id of "1234".
+---
+
+# Postman
+
+Loading end points in the browser automatically triggers the GET request.
+
+Postman allows us to easily change our endpoints to use PUT, POST or DELETE.
+
+[Download Postman](https://www.getpostman.com/)
+
+---
+
+## Challenge 2: Consuming Endpoints
+
+Load specific information about a pokemon using Postman.
+
+- Charizard's abilities
+- the gender of Bulbasaur
+- a url linking to a photo of Luvdisc
 
 ---
 
@@ -111,62 +134,6 @@ REST is broken down into four actions that can be used to describe any data tran
 - DELETE - remove data
 
 This standard is similar to CRUD (create, read, update, delete).
-
----
-
-# Postman
-
-Loading end points in the browser automatically triggers the GET request.
-
-Postman allows us to easily change our endpoints to use PUT, POST or DELETE.
-
----
-
-# Example: MovieDB
-
-The MovieDB is an open source API for films. 
-
-https://developers.themoviedb.org/3
-
-We will use it to practice our different RESTful requests.
-
----
-
-# API_KEY
-
-Most online APIs require an API key.
-
-Use the following pre-registered API key to make requests.
-
-API_KEY = 919c0b4659735831d827bdf5e264080f
-
-https://api.themoviedb.org/3/movie/550?api_key={API_KEY}
-
-Which film is loaded by the above request?
-
----
-
-# Session ID
-
-First get a session ID.
-
-Click on "Try it Out", add the API key and send a request.
-
-https://developers.themoviedb.org/3/authentication/create-request-token
-
-Copy your session id somewhere for use later.
-
----
-
-# POST
-
-Add to favorites:
-
-https://developers.themoviedb.org/3/account
-
-Rate a movie:
-
-https://developers.themoviedb.org/3/movies
 
 ---
 
@@ -185,7 +152,7 @@ which will not be covered in these examples.
 
 ---
 
-# REST in Action
+## Challenge 3: REST
 
 Which of the following will we need, and for what purpose?
 
@@ -234,7 +201,7 @@ In a new project, setup a few dependencies.
 const express = require('express')
 const app = express()
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 4000
 
 app.listen(port)
 console.log('Listening on port', port)
@@ -250,7 +217,7 @@ Run these server to ensure it's working.
 
 # Body Parser
 
-Body parser is middleware used for parsing requests. 
+Body parser is middleware used for parsing HTML, JSON & URL's from requests. 
 We will need it to interpret our **JSON** and **URL** data.
 
 `npm install --save body-parser'
@@ -278,7 +245,7 @@ The router will provide the url end points.
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.json({ msg: 'API is working' });
+    res.status(200).json('success!');
 });
 
 // prefix all api calls with the path /api
@@ -301,7 +268,7 @@ const pokemon = [{
 }]
 
 router.get('/pokemon', (req, res) => {
-    res.json({ data: pokemon });
+    res.status(200).json({ data: pokemon });
 });
 ```
 
@@ -315,6 +282,7 @@ router.get('/pokemon', (req, res) => {
 router.post('/pokemon', (req, res) => {
   // assuming the req.body.pokemon is a valid pokemon
   pokemon.push(req.body.pokemon)
+  res.status(200).json('pokemon added')
 })
 ```
 
@@ -330,7 +298,7 @@ The response can be used to signal a successful or failed save, or to update the
 router.post('/pokemon', (req, res) => {
   // assuming the req.body.pokemon is a valid pokemon
   pokemon.push(req.body.pokemon)
-  res.json({ msg: 'Pokemon added!', data: pokemon });
+  res.status(200).json('pokemon added');
 })
 ```
 
@@ -360,7 +328,7 @@ router.route('/pokemon/:pokemon_id')
       const pokemon = p[0]
       res.json(p[0])
     } else {
-      res.send('Error: Pokemon not found')
+      res.status(400).json('Error: Pokemon not found')
     }
   })
 ```
@@ -385,6 +353,8 @@ const good = Object.assign({}, { a: 1, b : 3}, { a: 2 })
 
 # PUT update a Pokemon
 
+Update the pokemon with an object of changes.
+
 ```js
 router.route('/pokemon/:pokemon_id')
   .get(/* ... */)
@@ -397,12 +367,14 @@ router.route('/pokemon/:pokemon_id')
         return Object.assign({}, x, changes)
       }
       return x
-  })
+    };
+    res.status(400).json('Pokemon updated')
+  )
 ```
 
 ---
 
-# Remove a Pokemon
+## Challenge 4: Remove a Pokemon
 
 Write a method to remove a pokemon from the list.
 
@@ -420,6 +392,7 @@ router.route('/pokemon/:pokemon_id')
   .put(/* ... */)
   .delete((req, res) => {
     pokemon = pokemon.filter(x => req.params.pokemon_id !== x.id)
+    res.status(200).json('pokemon deleted')
   })
 ```
 
@@ -432,6 +405,146 @@ Imagine we have an online store.
 Plan out some a RESTFUL API organized by endpoints using GET, POST, PUT, & DELETE.
 
 ---
+
+template: inverse
+
+# Connecting to your REST API
+
+---
+
+# Connecting to your REST API
+
+We can now use our REST API to handle actions from the server.
+
+Let's start by loading our list of pokemon.
+
+---
+
+# AJAX
+
+AJAX is client-side way of requesting data from a server.
+
+It is short for (Asynchronous Javascript & XML).
+
+```js
+function ajaxRequest(data) {
+  var xhttp = new XMLHttpRequest();
+  // a lot more goes here
+  xhttp.open("GET", data, true);
+  xhttp.send();
+}
+```
+
+---
+
+# Fetch API
+
+Fetch is a more modern browser API for making AJAX requests.
+
+Fetch automatically returns a Promise.
+
+```js
+fetch('/path/to/file/or/api')
+.then((response) => response.json())
+.then((jsonData) => {
+  // do something here
+});
+```
+
+It is not fully implemented by all browsers. [CanIUse.com](http://caniuse.com/#search=fetch)
+
+---
+
+# Fetch Polyfill
+
+We can use a package called ["isomorphic-fetch"](https://github.com/matthew-andrews/isomorphic-fetch), 
+which brings the same `fetch` api to both the browser & server.
+
+```shell
+npm install isomorphic-fetch --save
+```
+
+```js
+import fetch from 'isomorphic-fetch';
+
+fetch('/path/to/file/or/api')
+.then((response) => response.json())
+.then((jsonData) => {
+  // do something here
+});
+```
+
+---
+
+# Loading Data
+
+We can load the data in several different ways.
+
+1. In a components `componentWillMount` life-cycle
+2. As a Redux action creator, loading data through props
+
+We will try implementing and comparing both methods
+
+---
+
+# Loading Data in a Component
+
+Call `setState` when a fetch is returned. 
+
+```js
+class SomeClass extends React.Component {
+  componentWillMount() {
+    fetch('/path/to/api')
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({ data });
+    });
+  }
+}
+```
+
+---
+
+# Loading Data in Redux
+
+Call a loading action on startup.
+
+```js
+store.dispatch(initData())
+```
+
+Use a thunk inside an action creator to return the data.
+
+```
+const initData = () => (dispatch) => {
+  fetch('/path/to/api')
+      .then((response) => response.json())
+      .then((data) => {
+        dispatch({ type: 'INIT_DATA', payload: { data }});
+    });
+}
+```
+
+---
+
+# Loading Data
+
+Which method do you prefer and why?
+
+- loading data in a component
+- loading data in Redux
+
+---
+
+## Challenge 5: Connecting
+
+Set your app up to load client data from the server using REST.
+
+- plan a RESTful API for your Reddit app.
+- create and test your REST end points
+- consume the data from the client
+
+
 
 {% endhighlight %}
 
