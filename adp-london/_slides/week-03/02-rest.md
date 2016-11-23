@@ -154,7 +154,7 @@ which will not be covered in these examples.
 
 ## Challenge 3: REST
 
-Which of the following will we need, and for what purpose?
+For our Pokemon app, which of the following will we need and why?
 
 ###/pokemon
 GET
@@ -230,7 +230,6 @@ const bodyParser = require('body-parser')
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
-
 /* ... app.listen(port) ...  */
 ```
 
@@ -242,14 +241,14 @@ The router will provide the url end points.
 
 ```js
 /* ... body parser ... */
-const router = express.Router();
+const apiRouter = express.Router();
 
-router.get('/', (req, res) => {
+apiRouter.get('/', (req, res) => {
     res.status(200).json('success!');
 });
 
 // prefix all api calls with the path /api
-app.use('/api', router);
+app.use('/api', apiRouter);
 
 /* ... app.listen(port) ...  */
 ```
@@ -267,7 +266,7 @@ const pokemon = [{
   votes: 3   
 }]
 
-router.get('/pokemon', (req, res) => {
+apiRouter.get('/pokemon', (req, res) => {
     res.status(200).json({ data: pokemon });
 });
 ```
@@ -276,10 +275,10 @@ router.get('/pokemon', (req, res) => {
 
 # POST Pokemon
 
-`router.post` can be used to save new data in the body of the **request**.
+`apiRouter.post` can be used to save new data in the body of the **request**.
 
 ```js
-router.post('/pokemon', (req, res) => {
+apiRouter.post('/pokemon', (req, res) => {
   // assuming the req.body.pokemon is a valid pokemon
   pokemon.push(req.body.pokemon)
   res.status(200).json('pokemon added')
@@ -295,7 +294,7 @@ If no response is given, the data will be added silently.
 The response can be used to signal a successful or failed save, or to update the existing data.
 
 ```js
-router.post('/pokemon', (req, res) => {
+apiRouter.post('/pokemon', (req, res) => {
   // assuming the req.body.pokemon is a valid pokemon
   pokemon.push(req.body.pokemon)
   res.status(200).json('pokemon added');
@@ -309,7 +308,7 @@ router.post('/pokemon', (req, res) => {
 We can join routes together using `router.route`
 
 ```js
-router.route('/pokemon')
+apiRouter.route('/pokemon')
   .get((req, res) => /* ...get... */)
   .post((req, res) => /* ..post... */ )
 ```
@@ -321,7 +320,7 @@ router.route('/pokemon')
 Match on the id to find a single item.
 
 ```js
-router.route('/pokemon/:pokemon_id')
+apiRouter.route('/pokemon/:pokemon_id')
   .get((req, res) => {
     const matches = pokemon.find(x => req.params.pokemon_id === x.id)
     if (matches.length) {
@@ -356,7 +355,7 @@ const good = Object.assign({}, { a: 1, b : 3}, { a: 2 })
 Update the pokemon with an object of changes.
 
 ```js
-router.route('/pokemon/:pokemon_id')
+apiRouter.route('/pokemon/:pokemon_id')
   .get(/* ... */)
   .put((req, res) => {
     // where x is an object of changes
@@ -387,7 +386,7 @@ Write a method to remove a pokemon from the list.
 We can return override the pokemon list with a filtered list. 
 
 ```js
-router.route('/pokemon/:pokemon_id')
+apiRouter.route('/pokemon/:pokemon_id')
   .get(/* ... */)
   .put(/* ... */)
   .delete((req, res) => {
@@ -467,11 +466,32 @@ npm install isomorphic-fetch --save
 ```js
 import fetch from 'isomorphic-fetch';
 
-fetch('/path/to/file/or/api')
+fetch('/api/path/to/endpoint')
 .then((response) => response.json())
 .then((jsonData) => {
   // do something here
 });
+```
+
+---
+
+# Fetch POST, PUT, DELETE
+
+We have to specify different headers for non-GET requests.
+
+```js
+import fetch from 'isomorphic-fetch';
+
+fetch('/api/path/to/endpoint', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    username: 'hello',
+    password: 'pw',
+  })
+})
 ```
 
 ---
@@ -517,7 +537,7 @@ Use a thunk inside an action creator to return the data.
 
 ```
 const initData = () => (dispatch) => {
-  fetch('/path/to/api')
+  fetch('/api/path/to/endpoint')
       .then((response) => response.json())
       .then((data) => {
         dispatch({ type: 'INIT_DATA', payload: { data }});
