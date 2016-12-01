@@ -569,8 +569,8 @@ var point = {
 var x = point.x;
 var y = point.y;
 
-console.log(a); // 1
-console.log(b); // 2
+console.log(x); // 1
+console.log(y); // 2
 ```
 
 ---
@@ -587,10 +587,10 @@ let point = {
   y: 2
 };
 
-let { x, y } = point;
+let {x, y} = point;
 
-console.log(a); // 1
-console.log(b); // 2
+console.log(x); // 1
+console.log(y); // 2
 ```
 
 ---
