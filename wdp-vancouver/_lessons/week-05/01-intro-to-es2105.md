@@ -120,6 +120,10 @@ The official ES2015 Specification:
 
 - [ECMAScript® 2015 Language Specification](http://www.ecma-international.org/ecma-262/6.0/)
 
+A free video series on ES2015 from Laracasts:
+
+- [ES2015 Crash Course](https://laracasts.com/series/es6-cliffsnotes)
+
 Understanding `var` versus `let` versus `const`:
 
 - [Variable and Function Hoisting in ES2015](https://bitsofco.de/variable-and-function-hoisting-in-es2015/)
