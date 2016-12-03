@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      COURSE NAME &middot; Learning Materials
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css" type="text/css">
+  <link rel="stylesheet" href="/public/css/syntax.css" type="text/css">
+  <link rel="stylesheet" href="/public/style.css" type="text/css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,100,100italic,400italic,700,700italic" type="text/css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+</head>
+
+
+   <body class="theme-base-red">
+
+      <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+   <div class="sidebar-item">
+       <p>Learning materials for the RED Academy COURSE NAME course.</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+
+      
+      
+         
+            
+         
+      
+         
+            
+         
+      
+         
+            
+               <a class="sidebar-nav-item" href="/about/">About</a>
+            
+         
+      
+         
+            
+               <a class="sidebar-nav-item" href="/projects/">Projects</a>
+            
+         
+      
+         
+      
+         
+            
+               <a class="sidebar-nav-item" href="/schedule/">Course Schedule</a>
+            
+         
+      
+   </nav>
+
+   <div class="sidebar-item">
+      <p>Lessons:</p>
+   </div>
+
+   <nav class="sidebar-nav sidebar-nav--lessons">
+      
+      
+
+      
+         
+            
+               
+               <a class="sidebar-nav-item" href="/lesson/01-lesson/">
+                  <span class="lesson-count">1.</span> <span class="lesson-name">Intro to HTML</span></a>
+            
+         
+      
+   </nav>
+
+   <div class="sidebar-item">
+      <p>On GitHub:</p>
+   </div>
+
+   <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="https://github.com/redacademy/red-jekyll-lm">GitHub Repo</a>
+      <span class="sidebar-nav-item">Currently v1.0.0</span>
+   </nav>
+
+   <div class="sidebar-item">
+      <p>&copy; 2016. All rights reserved.</p>
+   </div>
+</div>
+
+
+      <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+           content to avoid any CSS collisions with our real content. -->
+      <div class="wrap">
+         <div class="masthead">
+            <div class="container">
+               <h3 class="masthead-title">
+                  <a href="/" title="Home">
+                     <img src="/public/img/red-logo.svg" width="268" height="45" alt="Red Academy logo" />
+                  </a>
+                  <div class="course-name">
+                     COURSE NAME
+                     <small>Learning Materials</small>
+                  </div>
+               </h3>
+            </div>
+         </div>
+
+         <div class="container content">
+            <div class="page">
+   <p>Welcome to RED Academy's [COURSE NAME] course!</p>
+
+   <h2>Lessons</h2>
+   <p>The following lessons are available for you to view:</p>
+   <ol class="archive-list">
+      
+      
+
+      
+         
+            
+               
+               <li>
+                  <span class="lesson-count">1.</span> <span class="lesson-name"><a href="/lesson/01-lesson/">Intro to HTML</a></span>
+               </li>
+            
+         
+      
+   </ol>
+
+   <h2>Projects</h2>
+   <p>Detailed overviews for each of the course&#8217;s projects:</p>
+   <ul class="archive-list">
+      
+         <li>
+            <a href="/project/final-project/">Final Project</a>
+         </li>
+      
+   </ul>
+
+</div>
+
+         </div>
+      </div>
+
+      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+      <!-- Scripts -->
+      <script>
+         (function(document) {
+            var toggle = document.querySelector('.sidebar-toggle');
+            var sidebar = document.querySelector('#sidebar');
+            var checkbox = document.querySelector('#sidebar-checkbox');
+
+            document.addEventListener('click', function(e) {
+               var target = e.target;
+
+               if(!checkbox.checked ||
+                  sidebar.contains(target) ||
+                  (target === checkbox || target === toggle)) return;
+
+               checkbox.checked = false;
+            }, false);
+         })(document);
+      </script>
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script src="/public/js/jquery.fitvids.js"></script>
+      <script>
+      	jQuery(document).ready(function() {
+      		jQuery('.fluid-video-wrapper').fitVids();
+      	});
+   	</script>
+   </body>
+</html>
