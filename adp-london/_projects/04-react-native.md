@@ -56,13 +56,6 @@ Your project must:
 - [ ] Use [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons) for icon assets throughout the app (specifically, the Octicon library)
 - [ ] Use [Realm React Native](https://realm.io/docs/react-native/latest/) as an embedded database
 
-### Quality
-
-Your project must:
-
-- [ ] Contain an organized file tree separating stateless components from stateful scenes, as well as sub-directories for organizing files with configuration code reusable functions
-- [ ] Be free of lint errors from ESLint
-
 ### Stretch Goals
 
 Want to challenge yourself? Your project could also:
