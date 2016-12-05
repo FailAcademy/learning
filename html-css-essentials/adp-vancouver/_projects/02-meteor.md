@@ -39,6 +39,7 @@ Your project must:
 Your project must:
 
 - [ ] Validate database using schema
+- [ ] Remove “autopublish” and “insecure” packages
 
 ### Quality
 

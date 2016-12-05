@@ -29,10 +29,16 @@ template: inverse
 
 ---
 
+# Performance Example
+
+What happens as `x` gets bigger?
+
 ```js
+const x = 100000;
+
 function run() {
   let total = 0;
-  for (let i = 1; i < 100000; i++) {
+  for (let i = 1; i < x; i++) {
     total += i;
   }
   return total;
@@ -40,6 +46,8 @@ function run() {
 
 run();
 ```
+
+How might we measure the performance of `run`?
 
 ---
 
@@ -69,6 +77,8 @@ function measurePerf(fn) {
 
 # Measuring Performance
 
+Create a function to measure the performance of a function.
+
 ```js
 function measurePerf(fn) {
   const start = performance.now();
@@ -81,7 +91,27 @@ function measurePerf(fn) {
 
 ---
 
+# Measuring Performance
+
+Use "rest" & "spread" for testing variables.
+
+```js
+function measurePerf(fn, ...params) {
+  const start = performance.now();
+  fn(...params);
+  const end = performance.now();
+  const duration = end - start;
+  return duration;
+}
+
+measurePerf(add, 1, 2);
+```
+
+---
+
 # Basic Setup 
+
+Create a UI to view your performance tests.
 
 ```html
   <h3>Measuring Performance</h3>
@@ -110,7 +140,7 @@ Why might the numbers be different?
 
 # Median
 
-Change your function to calculate the "median".
+Change your `measurePerf` function to calculate the "median".
 
 ---
 
@@ -126,7 +156,7 @@ function measurePerf(fn) {
 
 function medianPerf(list) {
   let middleIndex = Math.floor(list.length / 2);
-  return list[middleIndex];
+  return runs.sort()[middleIndex];
 }
 
 document.getElementById("run")
@@ -172,6 +202,12 @@ Imagine we have a phone book with one name. Whenever we look up that name it wil
 
 We call this "order 1", or "O(1)". 
 
+```js
+function addOne(x) {
+  return x + 1;
+}
+```
+
 ---
 
 # O(n)
@@ -194,7 +230,6 @@ In code, "O(n)" is just a loop:
   - `forEach`
   - `map`
   - `find`
-  - etc.
 
 ```js
 let names = [/* 100 names */];
@@ -322,10 +357,11 @@ function removeDups(list) {
   let items = {};
   list.forEach(item => {
     if (!items[item]) {
+      items[item] = true;
       output.push(item);
     }
-    items[item] = true;
   });
+  return output;
 }
 ```
 
@@ -354,7 +390,7 @@ Which is faster?
 - O(n^2)
 - O(2n)
 
-Calculate the number of operations for a list of 1000 items.
+*Hint: Calculate the number of operations for a list of 1000 items.*
 
 ---
 
@@ -466,6 +502,25 @@ How might you improve HTTP performance?
 
 ---
 
+# HTTP/2
+
+Read [HTTP/2](https://blog.newrelic.com/2016/02/09/http2-best-practices-web-performance/).
+
+- What are the benefits of using HTTP/2 over HTTP/1.1?
+- Are there any downsides to using HTTP/2?
+- How can you setup HTTP/2?
+
+---
+
+# HTTP/2
+
+- creates a single connection between the client and server
+- multiple requests at the same time
+- allows prioritizing resources
+- uses fewer server resources
+
+---
+
 # HTTP Caching
 
 **HTTP Caching** refers to saving loaded files in the browser. 
@@ -502,29 +557,10 @@ max-age=604800 = ?
 
 ---
 
-# HTTP/2
-
-Read [HTTP/2](https://blog.newrelic.com/2016/02/09/http2-best-practices-web-performance/).
-
-- What are the benefits of using HTTP/2 over HTTP/1.1?
-- Are there any downsides to using HTTP/2?
-- How can you setup HTTP/2?
-
----
-
-# HTTP/2
-
-- creates a single connection between the client and server
-- multiple requests at the same time
-- allows prioritizing resources
-- uses fewer server resources
-
----
-
 # Review
 
 - What were some of your favorite performance improvements?
-- Which performance improvements did were missing from today?
+- Which performance improvements were missing from today?
 - Which performance improvements will you implement?
 - How will you use "big O" to improve your code?
 
