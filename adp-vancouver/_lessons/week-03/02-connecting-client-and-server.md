@@ -1,126 +1,94 @@
 ---
 layout: lesson
 title: Connecting Client & Server
-slides: ['_slides/week-03/02-connecting-client-and-server.md']
+slides: ['_slides/week-03/02-rest.md']
 lesson_date: 2016-10-12
 ---
 
 ## Pre-Work
 
-- Read "Redux without Profanity" [Chapter 4: State Management]( https://tonyhb.gitbooks.io/redux-without-profanity/content/ch1-state-management.html)
+- Be prepared to discuss the question "What is REST"?
 
 ---
 
 ## Learning Objectives
 
-- Create a full-stack Redux data layer.
-- Communicate between the client and server using web sockets.
-- Provide the client with an ID for tracking user progress.
-- Demonstrate an the use of an optimistic update in an application UI.
+- Understand REST and the methods GET, POST, PUT & DELETE
+- Setup RESTful endpoints using Express
+- Use fetch on the client to get data from the server 
 
 ---
 
 ## Keywords
 
-- Universal JavaScript
-- Optimistic UI
-- Web sockets
+- REST
+- CRUD
+- API
+- AJAX
+- fetch
 
 ---
 
 ## Exercise 1
 
-With a partner, outline a way to sync the client and server using Redux in a high-level overview.
+Experiment with the faces API to make different faces from different URL end points.
 
-As a rough example:
+`/avatars/face/:eyes/:nose/:mouth/:color`
 
-```
-|--------| action |--------|
-| client |   -->  | server |
-|--------|        |--------|
-```
+See an example below: 
+
+https://api.adorable.io/avatars/face/eyes4/nose3/mouth7/8e8895
+
+*Note: color must be a hex value*
 
 ---
 
 ## Exercise 2
 
-Create a basic Express server. Load Webpack through `webpack-dev-middleware`.
+Load specific information about a pokemon using [Postman](https://www.getpostman.com/).
 
-**Hint:** See the [Webpack docs](http://webpack.github.io/docs/webpack-dev-server.html).
+- Charizard's abilities
+- the gender of Bulbasaur
+- a url linking to a photo of Luvdisc
 
 ---
 
-## Exercise 3
+# Exercise 3
 
-Demonstrate client/server communication with a "ping/pong" demo using web sockets.
+Plan out end points for your Worst Pokemon app.
 
-Use a different port (e.g. `3030`) for your socket server.
+Which of the following will you need and why?
 
-There should be a 1000ms delay between receiving a message and emitting the next message.
+###/pokemon
+GET
+POST
+PUT
+DELETE
+
+###/pokemon/(:id)
+GET
+POST
+PUT
+DELETE
 
 ---
 
 ## Exercise 4
 
-Create a basic middleware and call it on the client in the following file:
-
-`/client/socket/remoteMiddleware.js`
-
-```js
-export default store => next => action => {
-  console.log('action', action);
-  return next(action);
-}
-```
-
-The middleware should emit an action through the socket.
-
----
-
-## Exercise 5
-
-Create a `store` on the server. Determine how will it be different from your client `store`?
-
-Be sure to update the server store whenever the server receives a new action.
-
-Trigger a `SET_STATE` action on the client to update the client sate with the updated server state.
-
----
-
-## Exercise 6
-
-Give each client a `clientId` as an identifier:
-
-1. Give the client an id using [`uuid`](https://github.com/defunctzombie/node-uuid)
-2. Store the `clientId` in the store
-3. Pass the `clientId` with all middleware calls
-4. Store votes as an array of `clientId`'s
-5. Return votes as the size of the votes array
-
----
-
-## Exercise 7
-
-Determine the best method to sync your server store with a database...
-
-- In reducers?
-- Using middleware?
-- A plugin?
-
-Explain and justify your conclusion.
+Write the RESTful end points you planned in Exercise 3 using Express. 
 
 ---
 
 ## Lab Activity
 
-In today's lab, you will begin converting your project to be a full-stack app&mdash;finally connecting the client and server. 
+In today's lab, you will begin converting your REDit project to be a full-stack app&mdash;finally connecting the client and server. 
 
-You will need to integrate the [react-redux-router](https://github.com/reactjs/react-router-redux) with your project.
+You will create a RESTful backend using Express, to communicate data to your client through end points.
 
 ---
 
 ## Additional Resources
 
-- [FullStack Redux Tutorial](http://teropa.info/blog/2015/09/10/full-stack-redux-tutorial.html)
-- [React Redux Fullstack Starter](https://github.com/michaelcheng429/react-redux-fullstack-starter)
-- [Universal Redux Demo](https://github.com/erikras/react-redux-universal-hot-example)
+- [Learn REST - A Tutorial](http://www.restapitutorial.com/)
+- [Scotch.io: Build a RESTful API with Express](https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4)
+- [CodeSchool Express](https://www.codeschool.com/courses/building-blocks-of-express-js)
