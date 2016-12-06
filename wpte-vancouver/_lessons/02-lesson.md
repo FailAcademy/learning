@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Intro to WordPress
-slides: ['_slides/01-lesson-slides.md']
+slides: ['_slides/02-lesson-slides.md']
 ---
 
 ## Pre-work

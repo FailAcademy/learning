@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Domain and Hosting Basics
-slides: ['_slides/01-lesson-slides.md']
+slides: ['_slides/09-lesson-slides.md']
 ---
 
 ## Pre-work

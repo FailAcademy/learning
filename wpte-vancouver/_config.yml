@@ -4,16 +4,16 @@
 permalink:           pretty
 
 # Setup
-title:               COURSE NAME
+title:               WordPress Theming Essentials
 tagline:             'Learning Materials'
-description:         'Learning materials for the RED Academy COURSE NAME course.'
+description:         'Learning materials for the RED Academy WordPress Theming Essentials course.'
 url:                 http://red-XYZ.herokuapp.com
 baseurl:             ''
 paginate:            10
 paginate_path:       '/news/page:num/'
 
 # About/contact
-author:
+author:              Rose Cass
   name:              Mandi Wise (forked from Mark Otto)
   url:               https://twitter.com/mandiwise
   email:             mandi@redacademy.com
@@ -21,7 +21,7 @@ author:
 # Custom vars
 version:             1.0.0
 github:
-  repo:              https://github.com/redacademy/red-jekyll-lm
+  repo:              https://github.com/redacademy/wpte-vancouver
 
 # Collections
 collections:

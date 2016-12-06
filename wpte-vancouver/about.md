@@ -15,10 +15,10 @@ Prior to beginning the course, students are strongly encouraged to try out do th
 
 ### Part-time
 
-The evening program classes run from 6:00 to 9:00 p.m. on Monday nights. Students are required to complete homework in between classes.
+The evening program classes run from 6:00 to 9:00 p.m. on Tuesday and Thursday nights. Students are required to complete homework in between classes.
 
 ## Instructor
 
-The lead instructor for the Web Developer Foundation course is Rose Cass.
+The lead instructor for the WordPress Theming Essentials course is Rose Cass.
 
 Students project links will be submitted to: [rose.cass@redacademy.com](mailto:rose.cass@redacademy.com)

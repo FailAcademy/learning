@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Theming Basics
-slides: ['_slides/01-lesson-slides.md']
+slides: ['_slides/03-lesson-slides.md']
 ---
 
 ## Pre-work

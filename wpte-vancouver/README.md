@@ -1,6 +1,6 @@
 # README
 
-Welcome to RED Academy's [COURSE NAME] learning materials!
+Welcome to RED Academy's WordPresss Theming Essentials learning materials!
 
 ## Development
 
@@ -21,6 +21,6 @@ Lesson slidedecks are generated via [remark](https://github.com/gnab/remark) by 
 
 ## License
 
-Structural code is open-sourced under the [MIT license](LICENSE.md). Learning materials content is copyright (c) 2015 RED Academy.
+Structural code is open-sourced under the [MIT license](LICENSE.md). Learning materials content is copyright (c) 2016 RED Academy.
 
 <3

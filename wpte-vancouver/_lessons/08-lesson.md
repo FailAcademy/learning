@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Advanced Customization
-slides: ['_slides/01-lesson-slides.md']
+slides: ['_slides/08-lesson-slides.md']
 ---
 
 ## Pre-work

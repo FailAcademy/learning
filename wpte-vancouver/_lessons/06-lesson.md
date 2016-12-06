@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Plugin Basics
-slides: ['_slides/01-lesson-slides.md']
+slides: ['_slides/06-lesson-slides.md']
 ---
 
 ## Pre-work
