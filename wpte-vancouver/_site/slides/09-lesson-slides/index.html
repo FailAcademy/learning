@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>CSS Slides</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css" type="text/css">
+  <link rel="stylesheet" href="/public/css/syntax.css" type="text/css">
+  <link rel="stylesheet" href="/public/style.css" type="text/css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,100,100italic,400italic,700,700italic" type="text/css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+</head>
+
+
+   <body>
+
+   
+
+   <textarea id="source">
+name: inverse
+layout: true
+class: center, middle, inverse
+
+---
+
+# Slideshow Title
+
+.title-logo[![Red logo](/public/img/red-logo-white.svg)]
+
+---
+layout: false
+
+# Agenda
+
+1. Introduction
+2. Deep-dive
+3. ...
+
+---
+
+.left-column[
+  ## Column Layout
+]
+
+.right-column[
+You can make two-column layouts as well.red[*] in a slideshow!
+
+A sample unordered list:
+
+- List item 1
+- List item 2
+- List item 3
+
+.footnote[.red[*] And add footnotes too]
+]
+
+---
+
+# Syntax Highlighting
+
+```html
+&lt;!-- A bit of sample HTML with syntax highlighting--&gt;
+
+&lt;html&gt;
+   &lt;head&gt;
+      &lt;title&gt;An Awesome Website&lt;/title&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+      &lt;h1&gt;Hello world again!&lt;/h1&gt;
+      &lt;p class="my-class"&gt;Just a little bit of sample code.&lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+```
+
+---
+
+.left-column[
+  ## Remark How-tos
+]
+
+.right-column[
+   This slideshow is based on [remark.js](https://github.com/gnab/remark).
+
+   To learn more about building a slideshow with remark, check out:
+
+   - [The remark formatting guide](https://github.com/gnab/remark/wiki/Formatting)
+   - [The remark Markdown guide](https://github.com/gnab/remark/wiki/Markdown)
+]
+
+---
+template: inverse
+
+# Fin!
+
+   </textarea>
+
+     <!-- Remark scripts -->
+     <script src="./../../public/js/remark-latest.min.js"></script>
+     <script>
+         var hljs = remark.highlighter.engine;
+         var slideshow = remark.create({
+            highlightStyle: 'tomorrow-night-bright',
+            highlightLanguage: 'xml',
+            navigation: {
+               scroll: false
+               // , click: true
+            }
+         });
+      </script>
+
+      <!-- For embedding Tweets in slides -->
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+   </body>
+</html>

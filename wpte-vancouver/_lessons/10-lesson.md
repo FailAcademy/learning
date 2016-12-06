@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Intro to PHP
+title: WP Deployment and Hosting
 slides: ['_slides/01-lesson-slides.md']
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Intro to PHP
+title: Custom Theming Basics
 slides: ['_slides/01-lesson-slides.md']
 ---
 
