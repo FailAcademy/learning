@@ -4,24 +4,30 @@ title: Course Schedule
 class: schedule
 ---
 
-## Summer 2016
+## Winter 2017
 
 Week 1                     | Topics
 -------------------------- | --------------------------
-Monday, July 15            | [Intro to HTML](/lesson/intro-to-html/)
+Tuesday, February 21       | [Intro to HTML](/lesson/intro-to-html/)
+Thursday, February 23      | [Intro to HTML](/lesson/intro-to-html/)
+
 
 Week 2                     | Topics
 -------------------------- | --------------------------
-Monday, July 22            | [Intro to HTML](/lesson/intro-to-html/)
+Tuesday, February 28       | [Intro to HTML](/lesson/intro-to-html/)
+Thursday, March 2          | [Intro to HTML](/lesson/intro-to-html/)
 
 Week 3                     | Topics
 -------------------------- | --------------------------
-Monday, July 29            | [Intro to HTML](/lesson/intro-to-html/)
+Tuesday, March 7           | [Intro to HTML](/lesson/intro-to-html/)
+Thursday, March 9          | [Intro to HTML](/lesson/intro-to-html/)
 
 Week 4                     | Topics
 -------------------------- | --------------------------
-Monday, August 6           | [Intro to HTML](/lesson/intro-to-html/)
+Tuesday, March 14          | [Intro to HTML](/lesson/intro-to-html/)
+Thursday, March 16         | [Intro to HTML](/lesson/intro-to-html/)
 
 Week 5                     | Topics
 -------------------------- | --------------------------
-Monday, August 13          | __Final Project due__ (in-class presentations)
+Tuesday, March 21          | [Intro to HTML](/lesson/intro-to-html/)
+Thursday, March 23         | [Intro to HTML](/lesson/intro-to-html/)
