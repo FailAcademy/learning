@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: The Slide Deck Title (used for the URL slug, and must be unique)
+title: WP Deployment and Hosting
 ---
 
 {% highlight html %}
