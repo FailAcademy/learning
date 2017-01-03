@@ -8,5 +8,6 @@
 [] http://learngitbranching.js.org/ -> Complete Level 2, 3, 4
 [] Discuss the team workflow for updating the LMS at RED; Demonstrate it.
 [] Examine the 'git flow' strategy.
+[] Install git flow command line tool.
 [] Have students attempt a mock release using the 'git flow' technique.
 [] Look at advanced features: Hooks, Interactive rebasing.
