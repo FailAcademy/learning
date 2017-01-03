@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: The Web Platform
-lesson_date: 2016-09-26
+lesson_date: 2017-01-09
 ---
 
 ## Pre-work

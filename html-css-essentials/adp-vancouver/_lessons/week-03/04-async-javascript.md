@@ -2,7 +2,7 @@
 layout: lesson
 title: Asynchronous JavaScript
 slides: ['_slides/week-03/03-async-javascript.md']
-lesson_date: 2016-10-13
+lesson_date: 2017-01-26
 ---
 
 ## Pre-Work

@@ -1,24 +1,8 @@
 # Class Intro Lesson (3hrs+)
 
-
-### Materials
-  - intro
-    - sticker name tags
-    - pens
-  - egg drop
-    - bag of straws
-    - box of eggs
-    - rolls of tape for each 2-4 student group
-  - word map
-    - large piece of paper for each team of 2-4 students
-    - pens
-
-
-
 ## Brief Intro (5-10)
 
 Overview of why the course was created, and where we hope students will be after the course.
-
 
 ## Today's Objectives (2)
 
