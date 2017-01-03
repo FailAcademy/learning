@@ -13,108 +13,113 @@
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2016-10-17"
+      "start": "2017-01-30"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2016-10-28"
+      "start": "2017-02-10"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2016-11-18"
+      "start": "2017-02-24"
+   },
+   {
+      "title": "Project Work Day",
+      "allDay": true,
+      "start": "2017-03-03"
    },
    {
       "title": "UX Guest Lecture",
       "allDay": true,
-      "start": "2016-10-18"
+      "start": "2017-01-31"
    },
    {
       "title": "CSS Drills",
       "allDay": true,
-      "start": "2016-10-18"
+      "start": "2017-01-31"
    },
    {
       "title": "Analytics Lesson",
       "allDay": true,
-      "start": "2016-11-21"
+      "start": "2017-03-08"
    },
    {
       "title": "SEO Lesson",
       "allDay": true,
-      "start": "2016-11-25"
+      "start": "2017-03-10"
    },
    {
       "title": "GitHub Portfolio Development",
       "allDay": true,
-      "start": "2016-11-21",
-      "end": "2016-11-26"
+      "start": "2017-03-06",
+      "end": "2017-03-11"
    },
    {
       "title": "Community Project Work",
       "allDay": true,
-      "start": "2016-11-28",
-      "end": "2016-12-16"
+      "start": "2017-03-13",
+      "end": "2017-03-31"
    },
    {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2016-09-29T13:00:00+00:00",
-      "end": "2016-09-29T15:00:00+00:00"
+      "start": "2017-01-19T13:00:00+00:00",
+      "end": "2017-01-19T15:00:00+00:00"
    },
    {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2016-10-06T13:00:00+00:00",
-      "end": "2016-10-06T15:00:00+00:00"
+      "start": "2017-01-26T13:00:00+00:00",
+      "end": "2017-01-26T15:00:00+00:00"
    },
    {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2016-10-13T13:00:00+00:00",
-      "end": "2016-10-13T15:00:00+00:00"
+      "start": "2017-02-02T13:00:00+00:00",
+      "end": "2017-02-02T15:00:00+00:00"
    },
    {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2016-10-20T13:00:00+00:00",
-      "end": "2016-10-20T15:00:00+00:00"
+      "start": "2017-02-09T13:00:00+00:00",
+      "end": "2017-02-09T15:00:00+00:00"
    },
    {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2016-10-27T13:00:00+00:00",
-      "end": "2016-10-27T15:00:00+00:00"
+      "start": "2017-02-16T13:00:00+00:00",
+      "end": "2017-02-16T15:00:00+00:00"
    },
    {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2016-11-03T13:00:00+00:00",
-      "end": "2016-11-03T15:00:00+00:00"
+      "start": "2017-02-24T13:00:00+00:00",
+      "end": "2017-02-24T15:00:00+00:00"
    },
    {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2016-11-10T13:00:00+00:00",
-      "end": "2016-11-10T15:00:00+00:00"
+      "start": "2017-03-02T13:00:00+00:00",
+      "end": "2017-03-02T15:00:00+00:00"
    },
    {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2016-11-17T13:00:00+00:00",
-      "end": "2016-11-17T15:00:00+00:00"
+      "start": "2017-03-09T18:00:00+00:00",
+      "end": "2017-03-09T20:00:00+00:00"
    },
    {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2016-11-24T13:00:00+00:00",
-      "end": "2016-11-24T15:00:00+00:00"
+      "start": "2017-03-16T13:00:00+00:00",
+      "end": "2017-03-16T15:00:00+00:00"
    },
    {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2016-12-01T13:00:00+00:00",
-      "end": "2016-12-01T15:00:00+00:00"
+      "start": "2017-03-23T13:00:00+00:00",
+      "end": "2017-03-23T15:00:00+00:00"
    }
 ]

@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Advanced JavaScript
-slides: ['_slides/week-03/01-advanced-javascript.md']
-lesson_date: 2016-10-24
+slides: ['_slides/week-05/01-advanced-javascript.md']
+lesson_date: 2017-02-06
 
 ---
 

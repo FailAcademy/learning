@@ -2,7 +2,7 @@
 layout: lesson
 title: OOP, Plugin Dev & Widget API
 slides: ['_slides/week-07/03-oop-plugins-widgets.md']
-lesson_date: 2016-11-09
+lesson_date: 2017-02-22
 ---
 
 ## Pre-Work
