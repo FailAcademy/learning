@@ -2,7 +2,7 @@
 layout: lesson
 title: Connecting Client & Server
 slides: ['_slides/week-03/02-rest.md']
-lesson_date: 2016-10-12
+lesson_date: 2017-01-24
 ---
 
 ## Pre-Work
