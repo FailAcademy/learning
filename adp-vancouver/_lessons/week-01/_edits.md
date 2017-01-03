@@ -34,6 +34,8 @@ Topics/Questions
 
 ## Day 4
 
+- UPDATE TO LATEST VERSION OF REACT ROUTER
+
 - browser history
   - why?
   - how it works
