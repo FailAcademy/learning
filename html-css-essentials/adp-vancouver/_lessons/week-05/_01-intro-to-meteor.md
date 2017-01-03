@@ -24,7 +24,6 @@
 [] Create test for index component & test folder .eslintrc
 [] Install React Storybook
 [] Create Index component Story
-[] Deploy Meteor application to Dokku instance
 [] Install Redux & react-redux
 [] Install react-router & react-router-redux
 [] Create Layout component
