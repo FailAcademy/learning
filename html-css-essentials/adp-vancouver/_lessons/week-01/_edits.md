@@ -7,35 +7,7 @@
 
 ## Day 3
 
-Topics/Questions
-
-- `PureComponent`
-
-- students seem unclear about what THIS is:
-
-  `const component = ({THIS}) => { ... }`
-
-  - explain that the first thing passed in is `props`
-  - show them that `const { THIS } = this.props` is the same
-
 ## Day 4
-
-- UPDATE TO LATEST VERSION OF REACT ROUTER
-
-- browser history
-  - why?
-  - how it works
-
-- view urls on other websites
-  - Medium (what is a hash at the end, why is it there?)
-  - Reddit
-
-- what is a hash
-
-- issues with relative/absolute paths
-`<Link to="path/1">Link</Link>` - adds paths on the end of the current path
-This can result in "http://localhost:8000/path/path/path/path/1"
-Use an absolute link: `<Link to="/path/1">Link</Link>`
 
 - clearer directions in lab activity about:
   - using routes for sorting (newest, popular)
