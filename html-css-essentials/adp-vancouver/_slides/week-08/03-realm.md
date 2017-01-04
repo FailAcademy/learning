@@ -151,7 +151,7 @@ What else can we do with our model?
 
 If you haven't already, create a `config/model.js` file in your Splashify project.
 
-In this file, define the model for a `Fave` object. Our `Fave` objects should have an `id` string property and a `faved_on` data property. 
+In this file, define the model for a `Fave` object. Our `Fave` objects should have an `id` string property and a `faved_on` date property. 
 
 Set the `id` as the `primaryKey` for your model.
 
