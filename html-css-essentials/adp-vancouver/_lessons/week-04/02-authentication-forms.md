@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: Forms
+title: Authentication & Forms
 slides: ['_slides/week-04/03-forms.md']
-lesson_date: 2016-10-17
+lesson_date: 2017-01-31
 ---
 
 ## Pre-Work
