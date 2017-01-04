@@ -202,10 +202,17 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 # JSX Gotchas
 
-- There must be exactly one outer-most tag returned with your JSX (so you can't return sibling elements)
+- There must be **exactly one outer-most element returned** with your JSX (so you can't return sibling elements, only a parent with children)
 - To add a comment in JSX use: `{/* a comment */}`
-- If you need to add a `class` to an element use `className`
+- If you need to add a `class` to an element, you must use `className`
 - If you need to add a `for` attribute, you must use `htmlFor`
+
+*Conintued...*
+
+---
+
+# More JSX Gotchas
+
 - Self-closing tags must have a `/` before the `>`
 - Event listener names must be camel case (e.g. `onClick`)
 - JSX must be transformed into real JS to be parsed by ES5 JS engines (we'll use Babel for that)
@@ -306,13 +313,104 @@ template: inverse
 
 ---
 
-# Multiple Components
+# Conditional Rendering
 
-React components can have multiple render statements.
+Sometimes we need to conditionally render content in a component:
 
 ```js
 render() {
-  switch(this.props.value) {
+  let hello = true;
+
+  return (
+    <div>
+      <h1>Awesome App</h1>
+      { hello &&
+        <p>Hello, world!</p>
+      }
+    </div>
+  );
+}
+```
+
+---
+
+# Conditional Rendering
+
+Or with if-else:
+
+```js
+render() {
+  let hello = true;
+
+  return (
+    <div>
+      <h1>Awesome App</h1>
+      { hello ? (
+        <p>Hello, world!</p>
+      ) : (
+        <p>Goodbye, world!</p>
+      )}
+    </div>
+  );
+}
+```
+
+---
+
+# Conditional Rendering
+
+We can be more verbose for clarity:
+
+```js
+render() {
+  let hello = true;
+  let greeting = null;
+
+  if ( hello ) {
+    greeting = <p>Hello, world!</p>;
+  } else {
+    greeting = <p>Goodbye, world!</p>;
+  }
+
+  return (
+    <div>
+      <h1>Awesome App</h1>
+      { greeting }
+    </div>
+  );
+}
+```
+
+---
+
+# Conditional Rendering
+
+This is a bit more compact:
+
+```js
+render() {
+  let hello = true;
+
+  return (
+    <div>
+      <h1>Awesome App</h1>
+      <p>{ hello ? 'Hello, world!' : 'Goodbye, world!' }</p>
+    </div>
+  );
+}
+```
+
+---
+
+# Conditional Rendering
+
+React components can also use switch statements:
+
+```js
+render() {
+  let myValue = 2;
+
+  switch( myValue ) {
     case 1:
       return <div>Only one</div>;
     case 2:
@@ -334,11 +432,11 @@ We will often want to create components that display data by iterating over a li
 ```js
 class App extends Component {
   render() {
-    const skillList = ['React', 'Angular 2', 'Vue.js'];
+    const skills = ['React', 'Angular 2', 'Vue.js'];
 
     return (
       <ul>
-        {skillList.map((skill, index) => (<li key={index}>{skill}</li>))}
+        {skills.map((skill, i) => (<li key={i}>{skill}</li>))}
       </ul>
     );
   }
@@ -355,9 +453,9 @@ Wondering what's up with the `key` attribute on the `<li>`?
 
 The `key` attribute helps React keep track of **dynamic children** (i.e. where child items may be added, removed, re-sorted, etc.).
 
-Even if your children aren't going to change in any way, React will complain to you in the browser console if you don't add a unique `key` for each item.
+Even if your children aren't going to change in any way, **React will complain** to you in the browser console if you don't add a unique `key` for each item.
 
-Using the array index is sufficient, but other unique values can be used for keys too.
+**Note:** Using the array item's **index is not ideal** (because these can change), so other unique values should be used for keys if possible.
 
 ---
 
@@ -403,19 +501,38 @@ class App extends Component {
 In more recent versions of React, we can also build components using this syntax:
 
 ```js
-const App = () => (
-   <h1 id="title">Hello, world!</h1>
-);
+const App = () => {
+  return (
+    <h1 id="title">Hello, world!</h1>
+  );
+}
+
+// Or more succinctly...
+const App = () => <h1 id="title">Hello, world!</h1>;
 ```
 
 ---
 
 # What's the Diff?
 
-- Stateless functional components allow us to create components that are meant to be pure functions of their props (more on props in a moment!)
-- They do not retain internal state
+- Stateless functional components allow us to create components that are meant to be **pure functions of their props** (more on props in a moment!)
+- They **do not retain internal state**
 - They do not have the **component lifecycle methods** (i.e. no `render()`, etc.)
 - Later this week we will use ES2015 classes to create **Container Components** and the stateless functional approach to create **Presentational Components**...
+
+---
+
+# Naming Components
+
+When naming components, the convention is to use **PascalCase**. We also want to make sure we name our components in a way that makes sense given the larger context of our app.
+
+The key is to **be descriptive**, and start with a **base noun** so components can be easily categorized. For example:
+
+```js
+<PostsContainer />  ->  <Posts />
+<Posts />           ->  <PostList />, <Post />
+<Post />            ->  <PostListItem />, <PostDetails/>
+``` 
 
 ---
 
@@ -450,8 +567,8 @@ class: center, middle
 
 # Props
 
-- Arguments passed to components are called **props** in React
-- Props allow us to provide configuration values for a given component
+- **Arguments passed to React components** are called props
+- Props allow us to provide **configuration values** for a given component
 - They look a lot like plain ol' HTML attributes
 - **ES2015 Components:** Arguments passed as props can be accessed using the `this.props` object
 - **Functional Stateless Components:** `props` should be passed in as an argument to the arrow function (or destructuring may be used to access specific props directly)
@@ -468,7 +585,7 @@ const HelloWorld = (props) => (
 );
 
 // Or with destructuring...
-// const HelloWorld = ({greeting}) => (
+// const HelloWorld = ({ greeting }) => (
 //    <h1>{greeting}</h1>
 // );
 ```
@@ -517,7 +634,7 @@ Make this change. Your app will be broken again...what needs to be updated in yo
 
 # Exercise 7
 
-Our app needs a couple more props. First, create a `ToDoCount` component with a `number` prop to display the number of to-dos in the list **with** the word "todo" or "todos" displayed depending on how many items are present.
+Our app needs a couple more components. First, create a `ToDoCount` component with a `number` prop to display the number of to-dos in the list **with** the word "todo" or "todos" displayed depending on how many items are present.
 
 Next, create a `ClearButton` component with `removeCompleted` prop. This component's prop will be set to function that will fire on the button's `onClick` event.
 
@@ -536,6 +653,34 @@ Why do we need this? It's because not all components use self-closing tags. For 
 ```
 
 In this example, `this.props.children` would equal "I am a child of HelloWorld."
+
+---
+
+# this.props.children
+
+We can also render components inside of other components:
+
+```js
+class HelloWorld extends React.Component {
+  render() {
+    return (
+      <div>
+        {this.props.children}
+      </div>
+    );
+  }
+}
+
+class App extends React.Component {
+  render() {
+    return (
+      <HelloWorld>
+        <h1 id="title">Hello, world!</h1>
+      </HelloWorld>
+    );
+  }
+}
+```
 
 ---
 
@@ -569,6 +714,28 @@ HelloWorld.propTypes = {
 ```
 
 What do you think this `propType` necessitates when using the component?
+
+---
+
+# Default Props
+
+We can also set defaults for our components props, which will take effect if no prop is set where the component is used:
+
+```js
+import React, { Component, PropTypes } from 'react';
+
+class HelloWorld extends Component {
+   // the component's code...
+}
+
+HelloWorld.propTypes = {
+   greeting: PropTypes.string
+};
+
+HelloWorld.defaultProps = {
+  greeting: 'Hello, world!'
+};
+```
 
 ---
 
