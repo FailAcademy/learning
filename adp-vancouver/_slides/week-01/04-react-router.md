@@ -377,7 +377,7 @@ The query string is a key that history uses to look up persistent state data in 
 - **Home:** http://localhost:3000/
 - **Contact:** http://localhost:3000/contact
 
-But there's a catch! We need a server to do this...one that will always return the server at any route.
+But there's a catch! We need a server to do this...one that will always return the server at any route. <-- what does this mean?
 
 Luckily, there is an Express server already configured in the RED React Seed.
 
