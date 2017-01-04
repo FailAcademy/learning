@@ -123,7 +123,7 @@ Make this change. Your app will be broken again...what needs to be updated in yo
 
 Our app needs a couple more props. First, create a `ToDoCount` component with a `number` prop to display the number of to-dos in the list **with** the word "todo" or "todos" displayed depending on how many items are present.
 
-Next, create a `ClearButton` component with `removeCompleted` prop. This component's prop will be set to function that will fire on the button's `onClick` event.
+Next, create a `ClearButton` component with a `removeCompleted` prop. This component's prop will be set to a function that will fire on the button's `onClick` event.
 
 Once you've created your new components, add them to your `App` inside of a `<div>` with a class of `todo-admin`. You can pass any integer for the `number` prop and an empty string for the `removeCompleted` prop for now.
 
