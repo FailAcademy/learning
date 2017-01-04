@@ -62,12 +62,65 @@ class: center, middle
 
 ---
 
-# Cheatsheet
+# Cheatsheet #1
 
-- Container components should be responsible for fetching data
-- Container components should define event handlers and pass them down as props
-- Presentational components should never change prop data (only receive it)
-- Presentational components should format the data for the view only
+*Container components:*
+
+- Should be responsible for **fetching data**
+- Should **define event handlers** and pass them down as props
+
+*Presentational components:*
+
+- Should **never change prop data** (only receive it)
+- Should **format the data** for the view only
+
+---
+class: center, middle
+
+.large[
+  Knowing this, what type of components should we use for presentational and container components?
+]
+
+---
+
+# Cheatsheet #2
+
+Container | Presentational
+----------|---------------
+Stateful  | Stateless
+Classes   | Functions
+Impure    | Pure
+
+**Note:** Container and presentational components can be represented on either side of these dichotomies, however, presentational components tend to be **stateless, pure functions** while container components tend to be **stateful classes** that **may or may not be pure**.
+
+---
+
+# In Practice
+
+```js
+// CONTAINER COMPONENT
+
+class Posts extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      posts: [{ title: 'Hello, world!' }]
+    };
+  }
+
+  render() {
+    return <PostList posts={this.state.posts} />;
+  }
+}
+
+// PRESENTATIONAL COMPONENT
+
+const PostList = ({ posts }) => (
+  <ul>
+    { posts.map((post) => <li>{post.title}</li>) }
+  </ul>
+);
+```
 
 ---
 
@@ -105,16 +158,14 @@ When routes in our application change no request to the server is made. Instead,
 
 # Exercise 2
 
-Visit [Reddit](http://reddit.com).
-
-Click on several links and map out how the urls are structured:
+Visit **[Reddit](http://reddit.com)**. Click on several links and map out how the urls are structured:
 
 - hot posts
 - new posts
 - submitting posts
 - comment on posts
 - a subReddit
-- showing only posts in the past hour
+- showing posts only posted in the past hour
 
 ---
 
@@ -126,7 +177,7 @@ Let's create a new React app to test out some of React Router's features. First 
 
 Then install React Router:
 
-`npm install react-router`
+`npm install react-router --save`
 
 *Remember that React is a library, not a framework. Installing `react-router` gives React more framework-like capabilities.*
 
@@ -172,8 +223,8 @@ class App extends Component {
   render() {
     return (
       <Router history={hashHistory}>
-        <Route path='/' component={Home} />
-        <Route path='/contact' component={Contact} />
+        <Route path="/" component={Home} />
+        <Route path="/contact" component={Contact} />
       </Router>
     );
   }
@@ -202,17 +253,17 @@ The `Link` component allows you to link directly to the routes you have defined 
 
 ```js
 const Home = () => (
-   <div>
-      <h1>Hello, World!</h1>
-      <Link to="/contact">Contact</Link>
-   </div>
+  <div>
+    <h1>Hello, World!</h1>
+    <Link to="/contact">Contact</Link> {/* include forward slash! */}
+  </div>
 );
 
 const Contact = () => (
-   <div>
-      <h1>Get in touch!</h1>
-      <Link to="/">Home</Link>
-   </div>
+  <div>
+    <h1>Get in touch!</h1>
+    <Link to="/">Home</Link>
+  </div>
 );
 ```
 
@@ -228,9 +279,9 @@ React Router makes this very easy with **nested routes**. First, set-up the new 
 // other code...
 
 const Layout = ({children}) => (
-   <div className="app-wrapper">
-      {children}
-   </div>
+  <div className="app-wrapper">
+    {children}
+  </div>
 );
 ```
 
@@ -245,10 +296,10 @@ class App extends Component {
   render() {
     return (
       <Router history={hashHistory}>
-         <Route path='/' component={Home} />
-         <Route component={Layout}>
-            <Route path='contact' component={Contact} />
-         </Route>
+        <Route path="/" component={Home} />
+        <Route component={Layout}>
+          <Route path="contact" component={Contact} />
+        </Route>
       </Router>
     )
   }
@@ -271,9 +322,9 @@ Nested routes also allow us to eliminate redundancy:
 
 ```js
 <Route path="posts">
-   <Route path="new" component={PostForm} />
-   <Route path="hello-world" component={Post} />
-   <Route path="scram-world" component={Post} />
+  <Route path="new" component={PostForm} />
+  <Route path="hello-world" component={Post} />
+  <Route path="scram-world" component={Post} />
 </Route>
 ```
 
@@ -290,10 +341,10 @@ class App extends Component {
   render() {
     return (
       <Router history={hashHistory}>
-        <Route path='/' component={Layout}>
+        <Route path="/" component={Layout}>
          <IndexRoute component={Home} />
-         <Route path='contact' component={Contact} />
-         <Route path='*' component={NotFound} />
+         <Route path="contact" component={Contact} />
+         <Route path="*" component={NotFound} />
         </Route>
       </Router>
     )
@@ -309,9 +360,9 @@ Params allow us to navigate to routes with some sort of variable segment in the 
 
 ```js
 <Route path="posts">
-   <Route path="new" component={PostForm} />
-   <Route path="hello-world" component={Post} />
-   <Route path="scram-world" component={Post} />
+  <Route path="new" component={PostForm} />
+  <Route path="hello-world" component={Post} />
+  <Route path="scram-world" component={Post} />
 </Route>
 ```
 
@@ -319,8 +370,8 @@ With params:
 
 ```js
 <Route path="posts">
-   <Route path="new" component={PostForm} />
-   <Route path=":name" component={Post} />
+  <Route path="new" component={PostForm} />
+  <Route path=":name" component={Post} />
 </Route>
 ```
 
@@ -330,7 +381,7 @@ With params:
 
 So how do we make use of the params in our routes?
 
-Remember that routes are components themselves, so params are passed down as props to the component specified for the route.
+Remember that **routes are components themselves**, so params are passed down as props to the component specified for the route.
 
 This will give us access to the passed topic in `props.params.name` in our `Post` component constructor (to perhaps selectively load content based on the `name`). You will be able to see this is the React dev tools.
 
@@ -341,8 +392,69 @@ This will give us access to the passed topic in `props.params.name` in our `Post
 We can also use route params with the `Link` component:
 
 ```js
-<Link to="posts" params={{name: 'hello-world'}}>Hello, world!</Link>  
+<Link to="posts" params={% raw %}{{name: 'hello-world'}}{% endraw %}>Hello, world!</Link>  
 ```
+
+---
+
+# Another Example
+
+Back to [reddit.com](https://www.reddit.com/):
+
+```bash
+# homepage
+/
+
+# re-directs to /subreddits
+/r
+
+# homepage of Subreddit
+/r/space
+
+# browse all comments for the Subreddit
+/r/space/comments
+
+# redirects to URL below
+/r/space/comments/5lxs89
+
+# browse comments page for post
+/r/space/comments/5lxs89/clouds_of_andromeda
+
+# URL for specific comment
+/r/space/comments/5lxs89/clouds_of_andromeda/dbztmtr
+```
+
+---
+
+# Another Example
+
+If we were building actual Reddit in React, our specific comment URLs might look like this:
+
+```bash
+/r/:subRedditName/comments/:postId/:postName/:commentId
+```
+
+The parts that start with `:` are URL parameters whose values will be parsed out and made available in `this.props.params.PARAM_NAME`.
+
+---
+
+# Try It Out
+
+Try adding the following component and route to your router demo app (in the appropriate places):
+
+```js
+const Post = () => (
+  <div>
+    <h1>Welcome to My First Post</h1>
+  </div>
+);
+
+<Route path="posts">
+  <Route path=":name" component={Post} />
+</Route>
+```
+
+Try navigating to `/posts`. What happens? What about `/posts/welcome`? What do you see in the props for this component in your React dev tools now?
 
 ---
 
@@ -361,25 +473,55 @@ Based on what you just learned in the preceding examples, apply this to your pro
 
 React Router allows us to set `hashHistory` or `browserHistory` on the `Router` component.
 
-Hash history (what we have set now) works without configuring a server. And it's why we have weird query strings at the end of the URL like so:
+Hash history (what we have now) **works without configuring a server**. It uses `window.location.hash` and that's why we have `#` showing up in our URLs, even though we didn't put it there ourselves:
 
-- **Home:** http://localhost:3000/#/?_k=yxa2a1
-- **Contact:** http://localhost:3000/#/contact?_k=3as5bo
-
-The query string is a key that history uses to look up persistent state data in `window.sessionStorage` between page loads.
+- **Home:** http://localhost:3000/#/
+- **Contact:** http://localhost:3000/#/contact/
 
 ---
 
 # Hash vs. Browser
 
-**Browser history** is the recommended method in the React Router docs. It uses the Browser History API and will eliminate the hashes from your URLs:
+**Browser history** is the recommended method in the React Router docs. It uses the **[Browser History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API)** and will eliminate the hashes from your URLs:
 
 - **Home:** http://localhost:3000/
 - **Contact:** http://localhost:3000/contact
 
-But there's a catch! We need a server to do this...one that will always return the server at any route. <-- what does this mean?
+But there's a catch! We need a server to use this...one that will always return `index.html` at any route. (Using the Browser History API also enables us to use server-side rendering.)
 
-Luckily, there is an Express server already configured in the RED React Seed.
+Luckily, there's a server already configured in RED React Seed.
+
+---
+
+# An Example
+
+Try visiting this article about the Browser History API:
+
+**https://css-tricks.com/using-the-html5-history-api/**
+
+Open your dev tools console, and run this code, line by line:
+
+```js
+window.history
+
+// Run this, then try navigating back and forth
+history.replaceState(null, null, 'hello');
+
+// Run this, now try navigating back and forth again
+history.pushState(null, null, 'hello');
+```
+
+What do you notice? Be sure to watch the browser's address bar will you do this...
+
+---
+
+# Hash vs. Browser
+
+*Some further clarification...*
+
+- Hashes in URLs were meant to refer to a specific place in the document, so adding/changing a hash was a way to update the URL with `window.location` without refreshing the page (in a SPA)
+- `hashHistory` works on the client side alone
+- `browserHistory` (as stated) requires a server to return a particular resource
 
 ---
 
@@ -387,7 +529,7 @@ Luckily, there is an Express server already configured in the RED React Seed.
 
 *Why bother with `hashHistory` at all?*
 
-You would use `hashHistory` if you are worried about supporting <IE9.
+You would use `hashHistory` if you're worried about supporting <IE9 (without full page re-loads). Or perhaps if you're deploying a site on GitHub Pages...
 
 It's also helpful it you're building a quick and dirty React app and don't want to go to the trouble of setting up a server to handle `browserHistory` right away.
 
@@ -399,11 +541,11 @@ To use `browserHistory`, we'll need to import that instead of `hashHistory`:
 
 ```js
 import {
-   Router,
-   Route,
-   Link,
-   IndexRoute,
-   browserHistory // update this!
+  Router,
+  Route,
+  Link,
+  IndexRoute,
+  browserHistory // update this!
 } from 'react-router';
 ```
 
