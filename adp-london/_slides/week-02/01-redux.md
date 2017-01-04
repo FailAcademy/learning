@@ -72,7 +72,7 @@ class: middle
 class: center, middles
 # [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
 
-![Redux Devtools](/public/img/slide-assets/ReduxDevTools.gif)
+![Redux Devtools](/public/img/slide-assets/reduxdevtools.gif)
 
 ---
 class: middle
