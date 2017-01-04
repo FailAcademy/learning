@@ -5,18 +5,6 @@
 
 ## Day 2
 
-- have a discussion about naming components.
-
-  - <Posts />         ->    <PostList />
-  - <Post />          ->    <PostListItem />, <Post />
-  - <SinglePost />    ->    <Post />, <PostDetails/>
-
-  - be descriptive
-  - start with the base noun, so posts can be easily categorized
-
-
-- there was a question about `if` statements inside React rendering methods. Maybe worth discussing.
-
 ## Day 3
 
 Topics/Questions
@@ -29,8 +17,6 @@ Topics/Questions
 
   - explain that the first thing passed in is `props`
   - show them that `const { THIS } = this.props` is the same
-
-- Discuss why we use a `key` when mapping over arrays of components
 
 ## Day 4
 
