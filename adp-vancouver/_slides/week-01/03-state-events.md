@@ -218,7 +218,7 @@ Check out the docs for a full list of **[supported events in React](https://face
 
 Our to-do app won't be very useful until we can add, check-off, and remove to-dos from the list. To do that, we will need some way to update component state.
 
-**Important!** Outside of a component's class `constructor`, we only don't assign (or re-assign) to the state object directly.
+**Important!** Outside of a component's class `constructor`, we don't assign (or re-assign) to the state object directly.
 
 Instead, we will call `this.setState()` and pass it an appropriate object as an argument.
 
