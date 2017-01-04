@@ -1,15 +1,15 @@
 ---
 layout: project
-title: Project 4 - Splashify
-due: Monday, November 21st (beginning of class)
+title: Project 4 - r10
+due: Monday, March 6th (beginning of class)
 class: gh-check
 ---
 
-Build a mobile application using React Native that accesses the Unsplash API to allow users to view recently posted photos, search for photos, and store their favourite photos in a database.
+Build a mobile conference schedule application using React Native.
 
 Your project must be cross-platform (iOS/Android) and contain a database (Realm).
 
-You can [download the project assets here](https://s3-us-west-2.amazonaws.com/red-adp/project-files/project-04.zip).
+You can [download the project assets here](**TBA**).
 
 ## Requirements
 
@@ -30,15 +30,6 @@ Your project must:
 
 Your project must:
 
-- [ ] Contain About, Faves, Lightbox, Random, Recent, and User scenes
-- [ ] Display a feed of the five latest photos posted to Unsplash in a Recent Scene
-- [ ] Display photos in a Lightbox scene when tapped
-- [ ] Allow users to favourite and un-favourite photos from the Lightbox scene, and save references to those photos in a mobile database
-- [ ] Allow users to save an image to their camera roll from the Lightbox scene
-- [ ] Display data about a photographer inside a User scene when an Unsplash username is tapped
-- [ ] Display previously favourited photos in a Faves scene in a grid format, and in reverse chronological order (i.e. most recently saved first)
-- [ ] Include a Random scene that displays a random photo
-- [ ] Include an About scene with static image assets (optimized up to @3x) and static text that opens URLs in a web browser
 - [ ] Display a loading indicator when data is being fetched
 
 ### Development
@@ -70,13 +61,6 @@ Want to challenge yourself? Your project could also:
 - [ ] Cache requests made to the Unsplash API (to improve performance and reduce the likelihood of hitting the Unsplash API rate limit)
 - [ ] Use React Native's `Animated` and `PanResponder` to build out custom animation that allows a user to swipe left to load a new random photo in the Random scene
 - [ ] Add the ability to dynamically append additional results wherever the Unsplash API permits pagination (consider exploring an enhanced, third-party listview component for this)
-
-**Include Search and Collections scenes:**
-
-- [ ] Allow users to search for photos using a text-based keyword
-- [ ] Display fetched search results in a grid format
-- [ ] Display a list of recent collections in the Search scene by default (under the search bar)
-- [ ] Display a feed of the five most popular collection photos in a Collection scene when a collection cover image is tapped from the Search scene
 
 ## Submission Instructions
 
