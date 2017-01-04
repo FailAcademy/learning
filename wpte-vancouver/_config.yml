@@ -1,6 +1,4 @@
 # Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           pretty
 
 # Setup
@@ -13,10 +11,10 @@ paginate:            10
 paginate_path:       '/news/page:num/'
 
 # About/contact
-author:              Rose Cass
-  name:              Mandi Wise (forked from Mark Otto)
-  url:               https://twitter.com/mandiwise
-  email:             mandi@redacademy.com
+author:              
+  name:              Rose Cass (forked from Mark Otto)
+  url:               https://twitter.com/rcass
+  email:             rose.cass@redacademy.com
 
 # Custom vars
 version:             1.0.0
@@ -47,7 +45,7 @@ redcarpet:
   extensions: ['smart', 'tables', 'autolink']
 
 # Plugins
-gems: ['jekyll-paginate']
+gems: ['jekyll-paginate', 'redcarpet']
 
 # Exclusions
 exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'README.md', 'LICENSE.md', 'CONTRIBUTING.md', 'installation.md']
