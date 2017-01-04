@@ -83,7 +83,10 @@ Add any of the following to a form of your choosing:
 
 ## Lab Activity
 
-1. Create a form in your "REDit" project. Include:
+Create the forms that you'll use in your REDit app, using `redux-form`. It should follow the same guidelines as Exercise 2.
+You'll need to create both a user (login) form and a form for creating new posts.
+
+Be sure to include:
   - saving data to the Redux store
   - validation of fields
   - styled components
