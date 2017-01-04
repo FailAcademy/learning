@@ -1,7 +1,7 @@
 ---
 layout: project
-title: Project 3 - Resubmit with Testing
-due: Monday, November 14th (beginning of class)
+title: Project 3 - Code Quality Improvements
+due: Monday, February 27th (beginning of class)
 class: gh-check
 ---
 
