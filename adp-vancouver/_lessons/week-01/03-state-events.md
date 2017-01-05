@@ -102,7 +102,7 @@ Today's lab will be spent building out our stateful `PostList` container compone
 
 There are two properties we'll want to keep track of in our app state:
 
-- `posts`: the list of posts (imported from `data.js`)
+- `posts`: the list of posts (imported from `mock-data.js`)
 - `orderBy`: whether they are sorted by date (`newest`, the default) or popularity (`popular`)
 
 The `PostList` component will also require three event handlers to pass as props to child components:
@@ -111,11 +111,13 @@ The `PostList` component will also require three event handlers to pass as props
 - `sortNewest()` passed to another Material UI `FlatButton`
 - `updateVote()` passed to our `Post` component
 
-And one helper method to render the posts:
+We will also use `sortPopular()` and `sortNewest()` to re-sort the posts in the `componentDidUpdate()` React lifecycle method so our component knows to re-render itself after either of the buttons are clicked. Note that both of these methods will need to have `posts` as a parameter.
 
-- `renderPosts()` (conditionally sorting the posts based on the `orderBy` state property)
+Lastly, we ill create one helper method to render the posts:
 
-First, we'll need to fully build out our `Post` component so we can render it as a child of the `PostList`, or course!
+- `renderPosts()` (will take `posts` as a parameter, and map over the results as individual `<Post />` components)
+
+But first, we'll need to fully build out our `Post` component so we can render it as a child of the `PostList`, or course!
 
 ---
 
