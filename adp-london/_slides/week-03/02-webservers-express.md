@@ -19,10 +19,12 @@ layout: false
 
 # Agenda
 
-1. full-stack Redux
-2. web sockets
-3. universal javascript
-4. optimistic ui
+1. Install and setup Express.js
+2. Create a 'hello world' Server using Express
+3. Create a RESTful interface to an Express Server
+4. Create an Express middleware
+5. Parse Web requests coming into Express
+6. Send a cookie between client & server
 
 ---
 
@@ -36,28 +38,6 @@ layout: false
 
 - What do we still have to do?
 - Where is the "single source of truth"?
-
----
-
-## Exercise 1
-
-With a partner, outline a way to sync the client and server using Redux.
-
-A high level overview is sufficient, as in the previous slide.
-
----
-template: inverse
-
-# Fullstack Worst Pokemon
-
-Continue from your current "Worst Pokemon" app.
-
----
-
-## Exercise 2
-
-1. create an Express server to load your React app
-2. load webpack through `webpack-dev-middleware`
 
 ---
 
@@ -78,14 +58,6 @@ Explain the following analogies:
 1. **HTTP**: like a piece of mail.
 
 2. **Web Sockets**: like a text message, or a phone call.
-
----
-
-## Exercise 3
-
-1. Setup a socket server on port 3030.
-2. Setup a socket client also on port 3030.
-3. Demonstrate communication between client & server by logging "ping" on the client & "pong" on the server with 1 second intervals.
 
 ---
 
