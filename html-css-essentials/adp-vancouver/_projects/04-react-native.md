@@ -5,11 +5,11 @@ due: Monday, March 6th (beginning of class)
 class: gh-check
 ---
 
-Build a mobile conference schedule application using React Native.
+Build a mobile application for an upcoming developer conference using React Native. 
 
 Your project must be cross-platform (iOS/Android) and contain a database (Realm).
 
-You can [download the project assets here](**TBA**).
+You can [download the project assets here](https://s3-us-west-2.amazonaws.com/red-adp/project-files/project-04.zip).
 
 ## Requirements
 
@@ -30,7 +30,13 @@ Your project must:
 
 Your project must:
 
-- [ ] Display a loading indicator when data is being fetched
+- [ ] Contain Schedule, Session, Speaker, Faves, and About scenes
+- [ ] Display a loading indicator when data is fetched by the app
+- [ ] Display the conference sessions in chronological order in a `ListView` with section headers (based on the start time) in the Schedule scene
+- [ ] Display an individual conference session's details in a Session scene when a session is tapped from within the Schedule scene
+- [ ] Display information about a session's speaker in a lightbox-style Speaker scene when the speaker's name is tapped
+- [ ] Allow users to favourite and un-favourite sessions, and display saved favourites in a Faves Scene
+- [ ] Implement animated show/hide functionality for the Code of Conduct sections in the About scene (using React Native's `Animated` module)
 
 ### Development
 
@@ -40,11 +46,13 @@ Your project must:
 - [ ] Use ES2015 `import` and `export`
 - [ ] Contain components created using `React.Component`, `const`, or `function` only
 - [ ] Implement "presentational" and "container" components appropriately throughout the application
+- [ ] Include Redux for state management in the app
 - [ ] Make appropriate use of React Native's UI components (including `<View>`, `<Text>`, `<Image>`, `<ListView>`, `<TouchableHighlight>`, etc.)
 - [ ] Implement styles on a per-component basis using `Stylesheet.Create`
 - [ ] Leverage code-reuse strategies across iOS and Android platforms as much as possible
 - [ ] Use [ExNavigation](https://github.com/wix/react-native-navigation) to implement a navigator (iOS/Android), tab bar (iOS only), and drawer (Android only) for scene navigation
 - [ ] Use [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons) for icon assets throughout the app (specifically, the Octicon library)
+- [ ] Use [React Native Linear Gradient](https://github.com/react-native-community/react-native-linear-gradient) to generate the gradient background
 - [ ] Use [Realm React Native](https://realm.io/docs/react-native/latest/) as an embedded database
 
 ### Stretch Goals
@@ -53,14 +61,15 @@ Want to challenge yourself? Your project could also:
 
 **Improve code efficiency and quality:**
 
-- [ ] Include Redux for state management in the app
 - [ ] Use Flow for static typechecking in the app
 
 **Enhance UX:**
 
-- [ ] Cache requests made to the Unsplash API (to improve performance and reduce the likelihood of hitting the Unsplash API rate limit)
-- [ ] Use React Native's `Animated` and `PanResponder` to build out custom animation that allows a user to swipe left to load a new random photo in the Random scene
-- [ ] Add the ability to dynamically append additional results wherever the Unsplash API permits pagination (consider exploring an enhanced, third-party listview component for this)
+- [ ] Cache requests made to the Firebase app to improve performance
+
+**Include Attendee Registration:**
+
+- [ ] Add a basic flow allowing users to register for the conference
 
 ## Submission Instructions
 
