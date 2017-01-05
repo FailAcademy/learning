@@ -22,11 +22,8 @@ layout: false
 
 1. Distinguish between Client and Server
 2. Introduce Node & write and run a simple 'hello world' HTTP Server
-3. Debug a Node Program
-3. Install and setup Express.js
-4. Create a 'hello world' Server using Express
-6. Create a RESTful interface to an Express Server
-7. Explore the features of Express
+3. Debug a Node Program using VS Code
+
 
 ---
 template: inverse
