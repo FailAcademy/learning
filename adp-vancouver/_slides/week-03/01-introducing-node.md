@@ -80,7 +80,7 @@ Discuss with a partner why the browser is designed with these limitations.
 
 template: inverse
 
-<img style="display:block; margin:0 auto;" src="https://nodejs.org/static/images/logo-header.png">
+<img style="display:block; margin:0 auto;" src="https://nodejs.org/static/images/logo.svg">
 
 ---
 

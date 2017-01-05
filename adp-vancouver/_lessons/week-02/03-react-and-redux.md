@@ -115,7 +115,7 @@ the list based on the value.
 
 In today's lab, you're going to set-up `react-redux` in your project. Map out your components as "presentational" or "container" components.
 
-You will also write selectors for your app. If necessary, use [reselect](https://github.com/reactjs/reselect).
+When you're finished, add [react-router-redux](https://github.com/reactjs/react-router-redux) to your REDit application.
 
 ---
 
