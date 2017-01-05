@@ -27,8 +27,8 @@ You'll need to know what the **port** and **protocol** options are for. Try runn
 - Create a "Hello, world!" HTTP server using Express.
 - Set up and deploy a Node web server using Express.
 - Write HTTP request / response handlers, send data from the client to the server.
-- Deploy a Node Web Server to the cloud using a free hosting provider.
 - Debug a running NodeJS Web Server
+- Deploy a Node Web Server to the cloud using a free hosting provider.
 
 ---
 
@@ -42,25 +42,15 @@ You'll need to know what the **port** and **protocol** options are for. Try runn
 
 ---
 
-## Exercise 2
+## Exercise 1
 
-**Clone this repository**:
-
-- https://github.com/redacademy/adp-node-server-intro.git
-
-Open `Question.md` and answer each of them.
-
----
-
-## Exercise 3
-
-Let's debug our example Node Web Server by running the server with the `debug` flag.
+Let's debug an example Node Web Server by running the server with the `debug` flag.
 We'll also use some new tools that allow us to debug code running inside of Node,
 in our web browser in parallel to our client side code!
 
 ---
 
-## Exercise 4
+## Exercise 2
 
 In a small group, attempt to implement a web server using one of the following Node web server frameworks:
 
@@ -70,7 +60,7 @@ In a small group, attempt to implement a web server using one of the following N
 
 ---
 
-## Exercise 5
+## Exercise 3
 
 When you've successfully created a Web Server using one of the frameworks mentioned in the last exercise
 deploy your site to the cloud using [Now](https://zeit.co/now)

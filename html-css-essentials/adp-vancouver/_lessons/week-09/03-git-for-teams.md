@@ -86,10 +86,25 @@ In your own words, explain to your neighbour why you would use the following git
 
 ## Lab Activity
 
-Let's create a pre-commit git hook. You're hook should run a bash script that prints something to the command line.
+In today's Lab we'll set up our GitHub environment for our Community Projects, which will begin next week. 
 
-- How could this technique be used to improve software quality?
-- What other types of git hooks can we create?
+### Install the ZenHub Chrome extension.
+
+The ZenHub extension turns github into a project menagement platform. We'll be using the 'Boards' feature. Boardsis a simple Kanban system for 
+tracking issues as tasks in github.
+
+**Set up the following Boards:**
+
+- New issues
+- In Progress
+- Review / QA
+- Closed
+
+### Issue Lifecycle Demo
+
+Once the board is set up, as a class we'll demonstrate an issue lifecycle from creation, to feature-branch to commit & merge into master.
+We'll be using the git-flow techniques to manage commits into this repository. *All commmits to master must be in the form of a pull request* 
+
 
 ---
 
