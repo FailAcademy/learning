@@ -1,6 +1,6 @@
 INSERT INTO lessons (
-	title, 
-	date, 
+	title,
+	date,
 	weekid
 ) VALUES (
 	'Lesson 1',
@@ -8,9 +8,9 @@ INSERT INTO lessons (
 	1
 );
 
-INSERT INTO posts 
+INSERT INTO posts
 (
-	title, 
+	title,
 	date,
 	votes,
 	link,
@@ -26,9 +26,9 @@ VALUES (
 	 2
 );
 
-INSERT INTO posts 
+INSERT INTO posts
 (
-	title, 
+	title,
 	date,
 	votes,
 	link,
@@ -45,9 +45,9 @@ VALUES (
 );
 
 
-INSERT INTO posts 
+INSERT INTO posts
 (
-	title, 
+	title,
 	date,
 	votes,
 	link,

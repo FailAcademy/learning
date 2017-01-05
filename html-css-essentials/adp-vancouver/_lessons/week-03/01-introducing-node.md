@@ -27,10 +27,8 @@ You'll need to know what the **port** and **protocol** options are for. Try runn
 - Create a "Hello, world!" HTTP server using Express.
 - Set up and deploy a Node web server using Express.
 - Write HTTP request / response handlers, send data from the client to the server.
-- Make web requests to third-party web servers using Express.
-- Define what a "RESTful" architectural style is application development.
-- Use RESTful methods to communicate between an Express server and a web browser.
 - Deploy a Node Web Server to the cloud using a free hosting provider.
+- Debug a running NodeJS Web Server
 
 ---
 
@@ -39,25 +37,8 @@ You'll need to know what the **port** and **protocol** options are for. Try runn
 - Server
 - Client
 - Request
-- API
-- REST
 - HTTP
 - Node
-- Express
-
----
-
-## Exercise 1
-
-Read through [this article](https://webhostinggeeks.com/blog/what-are-web-servers-and-why-are-they-needed/).
-
-When you're finished, try to answer the following questions with each other:
-
-- Where does your web application code run, in the diagram on the previous slide?
-- Does a Web Server need to run on it's own computer system? Can a single system
-host multiple Web Servers?
-- How do servers communicate with clients & clients with servers?
-- What is HTTP?
 
 ---
 
@@ -92,7 +73,7 @@ In a small group, attempt to implement a web server using one of the following N
 ## Exercise 5
 
 When you've successfully created a Web Server using one of the frameworks mentioned in the last exercise
-deploy your site to the cloud using [Surge](http://surge.sh/), or [Now](https://zeit.co/now)
+deploy your site to the cloud using [Now](https://zeit.co/now)
 
 ---
 
