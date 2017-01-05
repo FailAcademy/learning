@@ -83,6 +83,8 @@ In today's lab we will put the finishing touches on getting the routes working f
 
 After that, the remainder of the time this week will be spent putting on the finishing touches on the Week 1 version of REDit. That means fully building out the front-end using Material UI components too!
 
+As a stretch goal for this week, now that you have React Router implemented look into refactoring your `<PostList />` component so a relevant query string is added to the URL when the New or Popular buttons are clicked. Next, use this query string (which will be available in the component props) to re-sort REDit's posts on `componentDidUpdate()` instead.
+
 ---
 
 ## Additional Resources
