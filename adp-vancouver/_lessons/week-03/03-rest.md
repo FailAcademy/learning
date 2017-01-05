@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Connecting Client & Server
-slides: ['_slides/week-03/02-rest.md']
+slides: ['_slides/week-03/03-rest.md']
 lesson_date: 2017-01-25
 ---
 
