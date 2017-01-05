@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Git for Teams
-lesson_date: 2016-10-28
+lesson_date: 2017-03-08
 ---
 
 ## Pre-work

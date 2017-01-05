@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: Types
-slides: ['_slides/week-07/01-flow.md']
-lesson_date: 2016-11-07
+title: Typed JS - Flow vs. TypeScript
+slides: ['_slides/week-07/01-typescript-flow.md']
+lesson_date: 2017-02-20
 ---
 
 ## Pre-Work

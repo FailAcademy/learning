@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Meteor + React
-lesson_date: 2016-10-27
+lesson_date: 2017-02-09
 ---
 
 ## Pre-Work
