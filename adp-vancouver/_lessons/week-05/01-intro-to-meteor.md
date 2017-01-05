@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Introducing Meteor
-lesson_date: 2016-10-24
+lesson_date: 2017-02-06
 ---
 
 ## Pre-work

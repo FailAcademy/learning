@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: Performance
-slides: ['_slides/week-09/01-performance.md']
-lesson_date: 2016-11-21
+title: Performance & Optimization
+slides: ['_slides/week-07/05-performance.md']
+lesson_date: 2017-02-24
 ---
 
 ## Pre-work
