@@ -58,15 +58,15 @@ Some middleware suggestions:
 
 - [Redux LocalStorage](https://github.com/elgerlambert/redux-localstorage)
 - [Toast Error Messages](See the bottom of https://www.codementor.io/reactjs/tutorial/beginner-s-guide-to-redux-middleware)
-- Redux-Debounce / Redux-Throttle
-- Redux-Authentication (https://github.com/Jackong/redux-authentication)
 - [Other suggestions found here](https://github.com/xgrommx/awesome-redux#react---a-javascript-library-for-building-user-interfaces)
 
 ---
 
 ## Lab Activity
 
-*Lab activity detail TBA.*
+In todays lab we'll continue to work on our REDit project.
+
+
 
 ---
 
