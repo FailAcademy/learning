@@ -10,7 +10,7 @@
 
   <title>
     
-      Domain and Hosting Basics &middot; WordPress Theming Essentials
+      Intro to WordPress &middot; WordPress Theming Essentials
     
   </title>
 
@@ -88,7 +88,7 @@
          
             
                
-               <a class="sidebar-nav-item" href="/lesson/01-lesson/">
+               <a class="sidebar-nav-item" href="/lesson/01-intro-to-php/">
                   <span class="lesson-count">1.</span> <span class="lesson-name">Intro to PHP</span></a>
             
          
@@ -96,7 +96,7 @@
          
             
                
-               <a class="sidebar-nav-item" href="/lesson/02-lesson/">
+               <a class="sidebar-nav-item" href="/lesson/02-intro-to-wordpress/">
                   <span class="lesson-count">2.</span> <span class="lesson-name">Intro to WordPress</span></a>
             
          
@@ -104,7 +104,7 @@
          
             
                
-               <a class="sidebar-nav-item" href="/lesson/03-lesson/">
+               <a class="sidebar-nav-item" href="/lesson/03-theming-basics/">
                   <span class="lesson-count">3.</span> <span class="lesson-name">Theming Basics</span></a>
             
          
@@ -112,7 +112,7 @@
          
             
                
-               <a class="sidebar-nav-item" href="/lesson/04-lesson/">
+               <a class="sidebar-nav-item" href="/lesson/04-custom-theming-basics/">
                   <span class="lesson-count">4.</span> <span class="lesson-name">Custom Theming Basics</span></a>
             
          
@@ -120,7 +120,7 @@
          
             
                
-               <a class="sidebar-nav-item" href="/lesson/05-lesson/">
+               <a class="sidebar-nav-item" href="/lesson/05-wordpress-loop/">
                   <span class="lesson-count">5.</span> <span class="lesson-name">The WordPress Loop</span></a>
             
          
@@ -128,7 +128,7 @@
          
             
                
-               <a class="sidebar-nav-item" href="/lesson/06-lesson/">
+               <a class="sidebar-nav-item" href="/lesson/06-plugin-basics/">
                   <span class="lesson-count">6.</span> <span class="lesson-name">Plugin Basics</span></a>
             
          
@@ -136,7 +136,7 @@
          
             
                
-               <a class="sidebar-nav-item" href="/lesson/07-lesson/">
+               <a class="sidebar-nav-item" href="/lesson/07-sidebar-menus-widgets/">
                   <span class="lesson-count">7.</span> <span class="lesson-name">Sidebars, Menus, and Widgets</span></a>
             
          
@@ -144,7 +144,7 @@
          
             
                
-               <a class="sidebar-nav-item" href="/lesson/08-lesson/">
+               <a class="sidebar-nav-item" href="/lesson/08-advanced-customization/">
                   <span class="lesson-count">8.</span> <span class="lesson-name">Advanced Customization</span></a>
             
          
@@ -152,7 +152,7 @@
          
             
                
-               <a class="sidebar-nav-item" href="/lesson/09-lesson/">
+               <a class="sidebar-nav-item" href="/lesson/09-domain-hosting-basics/">
                   <span class="lesson-count">9.</span> <span class="lesson-name">Domain and Hosting Basics</span></a>
             
          
@@ -160,7 +160,7 @@
          
             
                
-               <a class="sidebar-nav-item" href="/lesson/10-lesson/">
+               <a class="sidebar-nav-item" href="/lesson/10-wp-deployment-hosting/">
                   <span class="lesson-count">10.</span> <span class="lesson-name">WP Deployment and Hosting</span></a>
             
          
@@ -201,7 +201,7 @@
 
          <div class="container content">
             <div class="post">
-  <h1 class="post-title">Domain and Hosting Basics</h1>
+  <h1 class="post-title">Intro to WordPress</h1>
 
   
      <p>This lesson's slides:</p>
@@ -210,24 +210,24 @@
             
         
             
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
               <li>
-                 <a href="/slides/09-lesson-slides/">Domain and Hosting Basics</a>
+                 <a href="/slides/02-intro-to-wordpress/">Intro to WordPress</a>
               </li>
            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
         
             
         
@@ -235,12 +235,14 @@
   
   <hr />
 
-  <h2>Pre-work</h2>
+  <h2>Pre-Work</h2>
 
-<p>From the HTML &amp; CSS textbook:</p>
+<p>If you&rsquo;ve never seen the WordPress admin interface before, watch this series of videos on Level Up Tutorials to familiarize yourself with its features before class:</p>
 
 <ul>
-<li>A Closer Look at Tags (pp. 23-24)</li>
+<li><a href="https://leveluptutorials.com/tutorials/wordpress-basics/series-introduction">WordPress Basics</a></li>
+<li><a href="https://code.tutsplus.com/courses/create-content-in-wordpress-with-posts-and-pages">Create Content in WordPress With Posts and Pages
+</a></li>
 </ul>
 
 <hr>
@@ -248,7 +250,11 @@
 <h2>Learning Objectives</h2>
 
 <ul>
-<li>Learn how to use HTML elements and attributes.</li>
+<li>Describe what a content management system is and its role in managing a website.</li>
+<li>Identify the difference between <a href="https://wordpress.org/">wordpress.org</a> and <a href="https://wordpress.com/">wordpress.com</a>.</li>
+<li>Install WordPress in a local server environment.</li>
+<li>Identify the essential components of a WordPress theme, including the loop.</li>
+<li>Navigate the WordPress admin area to create posts and pages, and install plugins and themes.</li>
 </ul>
 
 <hr>
@@ -256,54 +262,69 @@
 <h2>Keywords</h2>
 
 <ul>
-<li><a href="https://developer.mozilla.org/en/docs/Web/HTML/Element">Element</a></li>
+<li>Content management system (CMS)</li>
+<li>Theme</li>
+<li>Plugin</li>
+<li>Multisite</li>
+<li>Permalink</li>
 </ul>
 
 <hr>
 
 <h2>Exercise 1</h2>
 
-<p>Do this activity!</p>
+<p>We can also install WP locally using MAMP:</p>
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<ol>
+<li><a href="https://wordpress.org/download/">Download WordPress</a></li>
+<li>Unzip your download and move it to your <code>htdocs</code> folder (rename the unzipped folder if you like)</li>
+<li>Go to phpMyAdmin (via MAMP) and create a new database</li>
+<li>Rename <code>wp-config-sample.php</code> to <code>wp-config.php</code> and fill in your database name and MAMP credentials</li>
+<li>Go to <a href="http://localhost:8888/YOUR-FOLDER/wp-admin/install.php">http://localhost:8888/YOUR-FOLDER/wp-admin/install.php</a> and complete your install</li>
+</ol>
 
 <hr>
 
 <h2>Exercise 2</h2>
 
-<p>This is how you add highlighted syntax to a lesson page:</p>
-<div class="highlight"><pre><code class="language-html" data-lang="html">
-<span class="c">&lt;!-- A bit of sample HTML with syntax highlighting--&gt;</span>
+<p>Let&rsquo;s start customizing our WordPress installation.</p>
 
-<span class="nt">&lt;html&gt;</span>
-   <span class="nt">&lt;head&gt;</span>
-      <span class="nt">&lt;title&gt;</span>An Awesome Website<span class="nt">&lt;/title&gt;</span>
-   <span class="nt">&lt;/head&gt;</span>
-   <span class="nt">&lt;body&gt;</span>
-      <span class="nt">&lt;h1&gt;</span>Hello world again!<span class="nt">&lt;/h1&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"my-class"</span><span class="nt">&gt;</span>Just a little bit of sample code.<span class="nt">&lt;/p&gt;</span>
-   <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
+<p>Install the <a href="https://wordpress.org/plugins/contact-form-7/">Contact Form 7</a> plugin and try creating a form. Follow the instructions it provides for including a form in a page (feel free to create a special page for this if you like).</p>
 
-</code></pre></div>
-<p>Or include an image:</p>
-
-<p><img src="/public/img/human-to-machine.png" alt="My helpful screenshot"></p>
+<p>Also try browsing for a new theme to install on your site and activate it. Take a look at the front end of your site to see what effect it had. Did anything weird or unexpected happen?</p>
 
 <hr>
 
-<h2>Homework</h2>
+<h2>Project Activity</h2>
 
-<p>This is a link to the lab activity&hellip;</p>
+<p>Let&rsquo;s start our WordPress theme project.</p>
+
+<p>Using the steps peviously, create a new WordPress install. </p>
+
+<p>Create a new directory in <code>wp-content/themes/</code> and in it save an appropriately formatted <code>style.css</code> file, and an <code>index.php</code> file.</p>
+
+<p>Take the <strong><a href="/public/files/exercises/wp-first-theme.zip">provided HTML template</a></strong> and place its HTML content in <code>index.php</code>. Replace the site title, description, and charset with WP template tags so this information is dynamically gathered from your site&rsquo;s database.</p>
+
+<p>But whoops! How can we link up the <code>style.css</code> file now that it&rsquo;s path is broken? Try adding the loop too!</p>
 
 <hr>
 
 <h2>Additional Resources</h2>
 
+<p>Bookmark these WP resources!</p>
+
 <ul>
-<li><a href="http://www.codecademy.com/learn">Code Academy</a></li>
+<li><a href="https://codex.wordpress.org/">Codex</a></li>
+<li><a href="https://developer.wordpress.org/reference/">Code Reference</a></li>
+<li><a href="https://codex.wordpress.org/Getting_Started_with_WordPress">Getting Started with WordPress</a></li>
+<li><a href="http://wordpress.tv/">WordPress.tv</a></li>
+</ul>
+
+<p>A brief history of some of WordPress&rsquo; major milestones since 2003:</p>
+
+<ul>
+<li><p><a href="https://codex.wordpress.org/History">History - WordPress Codex</a></p></li>
+<li><p><a href="http://wordpress.tv/2015/09/20/zac-gordon-php-for-wordpress/">Zac Gordon: PHP for WordPress</a></p></li>
 </ul>
 
 </div>
@@ -315,10 +336,10 @@
 
 <nav class="pagination" role="navigation">
    
-      <a class="pagination-item older" href="/lesson/08-lesson/" title="Advanced Customization">&larr; Previous Lesson</a>
+      <a class="pagination-item older" href="/lesson/01-intro-to-php/" title="Intro to PHP">&larr; Previous Lesson</a>
    
    
-      <a class="pagination-item newer" href="/lesson/10-lesson/" title="WP Deployment and Hosting">Next Lesson &rarr;</a>
+      <a class="pagination-item newer" href="/lesson/03-theming-basics/" title="Theming Basics">Next Lesson &rarr;</a>
    
 </nav>
 

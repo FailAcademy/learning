@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Intro to PHP
-slides: ['_slides/01-lesson-slides.md']
+slides: ['_slides/01-intro-to-php.md']
 ---
 
 ## Pre-work
