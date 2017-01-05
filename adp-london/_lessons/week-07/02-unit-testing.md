@@ -2,7 +2,7 @@
 layout: lesson
 title: Unit Testing
 slides: ['_slides/week-07/02-unit-testing.md', '_slides/week-07/02-testing-components.md']
-lesson_date: 2016-11-08
+lesson_date: 2017-02-21
 ---
 
 ## Pre-Work

@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Flow Slides
+title: Typed JS - Flow vs. TypeScript Slides
 ---
 
 {% highlight html %}
@@ -173,6 +173,7 @@ export type Action = {
 ```
 
 ---
+template: inverse
 
 # Library Typing Files
 
@@ -233,10 +234,10 @@ class Example extends Compnent {}
 Flow also makes suggestions when you make a mistake.
 
 ```shell
- 3: import React, { Compnent } from 'react';                                                                      
+ 3: import React, { Compnent } from 'react';
                      ^^^^^^^^ Named import from module `react`. 
                      This module has no named export called `Compnent`. 
-Did you mean `Component`?                                                                                       
+Did you mean `Component`?
 ```
 
 
