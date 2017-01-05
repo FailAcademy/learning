@@ -50,23 +50,11 @@ Create a demo using [JSON Web Tokens](https://jwt.io/introduction/)'s to demonst
 
 ---
 
-## Exercise 3
-
-Create a demo using [Passport](http://passportjs.org) for login and password authentication.
-
----
-
 ## Exercise 4
 
-Think about storing passwords...
+Think about storing passwords.
 
 First read through [Hashing Security](https://crackstation.net/hashing-security.htm). Which hashing algorithm should you use and why? Test your password hash at [CrackStation](https://crackstation.net/).
-
----
-
-## Exercise 5
-
-Add OAuth2 authentication to your app with [Github](https://github.com/cfsghost/passport-github) and another [third-party authentication service](http://passportjs.org/docs) of your choice.
 
 ---
 
