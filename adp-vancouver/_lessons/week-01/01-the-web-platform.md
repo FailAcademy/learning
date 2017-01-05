@@ -1,6 +1,7 @@
 ---
 layout: lesson
 title: The Web Platform
+slides: ['_slides/week-01/01-the-web-platform.md']
 lesson_date: 2017-01-09
 ---
 
