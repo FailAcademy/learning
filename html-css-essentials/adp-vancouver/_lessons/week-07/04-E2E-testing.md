@@ -2,7 +2,7 @@
 layout: lesson
 title: E2E Testing
 slides: ['_slides/week-07/04-e2e-testing.md']
-lesson_date: 2016-11-10
+lesson_date: 2017-02-23
 ---
 
 ## Pre-Work

@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Meteor Collections & Accounts
-lesson_date: 2016-10-25
+lesson_date: 2017-02-07
 ---
 
 ## Pre-Work

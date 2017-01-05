@@ -2,7 +2,7 @@
 layout: lesson
 title: Introducing React Native
 slides: ['_slides/week-08/01-intro-to-react-native.md']
-lesson_date: 2016-11-14
+lesson_date: 2017-02-27
 ---
 
 ## Pre-work
