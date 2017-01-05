@@ -151,7 +151,7 @@ REDit will require a more complicated set-up than what we get with Create React 
 
 Take a look at the directory structure inside RED React Seed&mdash;again, it's a bit more complex than what we've seen with the to-do app. Pay particular attention to how the sample components are organized into named sub-directories with `index.js` files. This is the pattern we will follow to build out all of the components the application, so be sure you thoroughly understand what's going on here.
 
-**Note:** RED React Seed has sub-directories for **components** and **containers**. Don't worry about how to differentiate between the two yet, just put everything into `/components` for now and we'll have a deeper discussion about this during the React Router lesson.
+**Note:** RED React Seed has sub-directories for **components**, **containers**, and **layouts**. You can organize your components in these directories based on notes on the component hierarchy below. We will talk more about the role of presentational versus container components in the coming days.
 
 ### Styles
 
@@ -159,26 +159,26 @@ We will primarily use **[Material UI](http://www.material-ui.com/#/)** to style 
 
 Material UI has already been added as project dependency in the RED React Seed, but you should also take some time to review **[its GitHub repo README](https://github.com/callemall/material-ui)**  too.
 
-We will still need to write some extra CSS for our app, and to do that we'll be using [CSS modules](https://github.com/css-modules/css-modules). For all additional component-specific CSS that you need to write for your app, you'll want to follow the example set out in the `App` component in the RED React Seed.
+We will still need to write some extra CSS for our app, and to do that we'll be using [CSS modules](https://github.com/css-modules/css-modules). For all additional component-specific CSS that you need to write for your app, you'll want to follow the example set out in the `App` and `MainLayout` components in the RED React Seed.
 
 ### Code
 
 The remainder of today's lab will be spend roughing-out the component structure for the REDit app. Ultimately, we will need to create the following component structure for our app:
 
-```
-<Layout />
-|- <HeaderBar />
-|- <App />
-   |- <Categories />
-      |- <Week />
-   |- <Welcome />
-   |- <LoginForm />
-   |- <CreatePost />
-   |- <PostList />
-      |- <Post />
+```bash
+<MainLayout />        # /layouts (already exists)
+|- <HeaderBar />      # /components
+|- <App />            # /containers (already exists)
+   |- <Categories />  # /containers
+      |- <Week />     # /components
+   |- <Welcome />     # /containers
+   |- <Login />       # /containers
+   |- <CreatePost />  # /containers
+   |- <PostList />    # /containers
+      |- <Post />     # /components
 ```
 
-During Week 1, the only component that will use an ES2015 class will be the `PostList` component. The rest will all be **functional stateless components**.
+Any components you place in the `/containers` directory should be class-based components, while any components you place in the `/components` directory should be functional stateless components.
 
 Knowing this, rough-out the directory/component structure for all of the required components for this app.
 
