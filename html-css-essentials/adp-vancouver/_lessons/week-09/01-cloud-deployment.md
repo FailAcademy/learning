@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Cloud Deployment
-lesson_date: 2016-11-22
+lesson_date: 2017-03-06
 ---
 
 ## Pre-work
