@@ -98,7 +98,7 @@ To do that, we'll need to use one of React's lifecycle methods. It's up to you t
 
 ## Lab Activity
 
-Today's lab will be spent building out our stateful `PostList` component.
+Today's lab will be spent building out our stateful `PostList` container component.
 
 There are two properties we'll want to keep track of in our app state:
 
