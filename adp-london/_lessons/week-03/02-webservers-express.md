@@ -85,6 +85,23 @@ DELETE
 
 ## Exercise 5
 
+In a small group, attempt to implement a web server using one of the following Node web server frameworks:
+
+1. [**Hapi**](http://hapijs.com/)
+2. [**Koa**](http://koajs.com/)
+3. [**Sails**](http://sailsjs.org/)
+
+---
+
+## Exercise 6
+
+When you've successfully created a Web Server using one of the frameworks mentioned in the last exercise
+deploy your site to the cloud using [Now](https://zeit.co/now)
+
+---
+
+## Exercise 7
+
 Write the RESTful end points you planned in Exercise 3 using Express.
 
 ---
