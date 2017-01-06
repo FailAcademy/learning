@@ -235,20 +235,22 @@
   
   <hr />
 
-  <h2>Pre-work</h2>
+  <h1>Pre-Work</h1>
 
-<p>From the HTML &amp; CSS textbook:</p>
-
-<ul>
-<li>A Closer Look at Tags (pp. 23-24)</li>
-</ul>
+<p>Review HTML &amp; CSS.
+You should have a strong of HTML &amp; CSS and familiarity with JavaScript.</p>
 
 <hr>
 
 <h2>Learning Objectives</h2>
 
 <ul>
-<li>Learn how to use HTML elements and attributes.</li>
+<li>Distinguish the difference between a server-side and client-side programming language.</li>
+<li>Identify the fundamental components of PHP syntax.</li>
+<li>Use statements, variables, loops, operators, conditionals, and arrays in PHP.</li>
+<li>Use functions to create reusable blocks of DRY code.</li>
+<li>Distinguish the difference between indexed and associative arrays.</li>
+<li>Dynamically generate a webpage using <code>include()</code> or <code>require()</code>.</li>
 </ul>
 
 <hr>
@@ -256,54 +258,87 @@
 <h2>Keywords</h2>
 
 <ul>
-<li><a href="https://developer.mozilla.org/en/docs/Web/HTML/Element">Element</a></li>
+<li>Statement</li>
+<li>Variable</li>
+<li>Boolean</li>
+<li>Loop</li>
+<li>Conditional</li>
+<li>Operator</li>
+<li>Concatenate</li>
+<li>Array</li>
+<li>Function</li>
+<li>localhost</li>
 </ul>
 
 <hr>
 
 <h2>Exercise 1</h2>
 
-<p>Do this activity!</p>
+<p>Time to try out some PHP:</p>
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<ul>
+<li>Create an <code>index.php</code> file in a sub-directory of the <code>htdocs</code> folder in your MAMP installation (e.g. <code>sandbox</code>, etc.)</li>
+<li>In that file type <code>&lt;?php  ?&gt;</code></li>
+<li>Between your opening and closing PHP tags type <code>echo &quot;Hello, world!&quot;;</code></li>
+<li>Go to <a href="http://localhost:8888/%5BSUB_DIR_NAME%5D/">http://localhost:8888/[SUB_DIR_NAME]/</a> (or if you&rsquo;re on port 80, <a href="http://localhost/%5BSUB_DIR_NAME%5D/">http://localhost/[SUB_DIR_NAME]/</a>)</li>
+<li>Also try running <code>php index.php</code> in your CLI&hellip;</li>
+</ul>
 
 <hr>
 
 <h2>Exercise 2</h2>
 
-<p>This is how you add highlighted syntax to a lesson page:</p>
-<div class="highlight"><pre><code class="language-html" data-lang="html">
-<span class="c">&lt;!-- A bit of sample HTML with syntax highlighting--&gt;</span>
+<p>Get ready for your second round of FizzBuzz&hellip;PHP-style!</p>
 
-<span class="nt">&lt;html&gt;</span>
-   <span class="nt">&lt;head&gt;</span>
-      <span class="nt">&lt;title&gt;</span>An Awesome Website<span class="nt">&lt;/title&gt;</span>
-   <span class="nt">&lt;/head&gt;</span>
-   <span class="nt">&lt;body&gt;</span>
-      <span class="nt">&lt;h1&gt;</span>Hello world again!<span class="nt">&lt;/h1&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"my-class"</span><span class="nt">&gt;</span>Just a little bit of sample code.<span class="nt">&lt;/p&gt;</span>
-   <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
+<p>You&rsquo;ll complete this exercise inside of your <code>index.php</code> file.</p>
 
-</code></pre></div>
-<p>Or include an image:</p>
+<p>For numbers divisible by 3, <code>echo</code> <strong>Fizz</strong> instead of the number, and for numbers divisible by 5 (and not 3), <code>echo</code> <strong>Buzz</strong> instead.</p>
 
-<p><img src="/public/img/human-to-machine.png" alt="My helpful screenshot"></p>
+<p>When you have that working, modify your program to <code>echo</code> <strong>FizzBuzz</strong>, for numbers that are divisible by both 3 and 5 (and still <code>echo</code> <strong>Fizz</strong> or <strong>Buzz</strong> for numbers divisible by only one of those).</p>
 
 <hr>
 
-<h2>Homework</h2>
+<h2>Exercise 3</h2>
 
-<p>This is a link to the lab activity&hellip;</p>
+<p>Let&rsquo;s create a function in PHP that allows us to <code>print_r</code> our arrays automatically wrapped in <code>&lt;pre&gt;</code> tags.</p>
+
+<p>Refer back to the earlier example of how to do this without a function, and think about what you&rsquo;ll need to pass in as a parameter for this function.</p>
+
+<p>Once you build you function, try it out on the <code>$months</code> array.</p>
+
+<hr>
+
+<h2>Project Activity</h2>
 
 <hr>
 
 <h2>Additional Resources</h2>
 
+<p><a href="https://www.codecademy.com/en/tracks/php">Codeacademy PHP tutorial</a></p>
+
+<p>PHP is a well-documented language and you can find its docs here:</p>
+
 <ul>
-<li><a href="http://www.codecademy.com/learn">Code Academy</a></li>
+<li><a href="http://php.net/docs.php">Documentation</a></li>
+</ul>
+
+<p>An awesome, well-written PHP resource:</p>
+
+<ul>
+<li><a href="http://www.phptherightway.com/">PHP the Right Way</a></li>
+<li>At the very least, <a href="http://www.phptherightway.com/pages/The-Basics.html">read this chapter</a></li>
+</ul>
+
+<p>This online book is a bit dated, but the following chapter is still relevant and very explanatory:</p>
+
+<ul>
+<li><a href="http://www.hackingwithphp.com/2/6/0/how-php-is-written">Hacking with PHP - How PHP is Written</a></li>
+</ul>
+
+<p>Another PHP resource, written with WP devs in mind:</p>
+
+<ul>
+<li><a href="http://premium.wpmudev.org/blog/wordpress-development-beginners-php/">WordPress Development for Beginners: Learning PHP</a></li>
 </ul>
 
 </div>

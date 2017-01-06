@@ -9,8 +9,7 @@ slides: ['_slides/02-intro-to-wordpress.md']
 If you've never seen the WordPress admin interface before, watch this series of videos on Level Up Tutorials to familiarize yourself with its features before class:
 
 - [WordPress Basics](https://leveluptutorials.com/tutorials/wordpress-basics/series-introduction)
-- [Create Content in WordPress With Posts and Pages
-](https://code.tutsplus.com/courses/create-content-in-wordpress-with-posts-and-pages)
+- [Create Content in WordPress With Posts and Pages](https://code.tutsplus.com/courses/create-content-in-wordpress-with-posts-and-pages)
 
 ---
 
