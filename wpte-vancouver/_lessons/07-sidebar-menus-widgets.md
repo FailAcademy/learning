@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Sidebars, Menus, and Widgets
-slides: ['_slides/07-lesson-slides.md']
+slides: ['_slides/07-sidevar-menus-widgets.md']
 ---
 
 ## Pre-work

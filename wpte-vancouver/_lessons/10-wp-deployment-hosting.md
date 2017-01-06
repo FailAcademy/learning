@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: WP Deployment and Hosting
-slides: ['_slides/10-lesson-slides.md']
+slides: ['_slides/10-wp-deployment-hosting.md']
 ---
 
 ## Pre-work

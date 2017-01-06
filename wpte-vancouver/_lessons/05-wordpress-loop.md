@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: The WordPress Loop
-slides: ['_slides/05-lesson-slides.md']
+slides: ['_slides/05-wordpress-loop.md']
 ---
 
 ## Pre-work
