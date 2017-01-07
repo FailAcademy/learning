@@ -2,7 +2,7 @@
 layout: lesson
 title: Web Apps and JS Frameworks
 slides: ['_slides/week-08/01a-apps-and-frameworks.md']
-lesson_date: 2016-11-14
+lesson_date: 2017-02-27
 ---
 
 ## Pre-work

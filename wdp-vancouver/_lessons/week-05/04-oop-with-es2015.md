@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Object Oriented Programming in JS
-slides: ['_slides/week-05/03a-oop-with-es2015.md', '_slides/week-05/03b-pong.md']
-lesson_date: 2016-10-27
+slides: ['_slides/week-05/04a-oop-with-es2015.md', '_slides/week-05/04b-pong.md']
+lesson_date: 2017-02-09
 ---
 
 ## Pre-Work
@@ -12,9 +12,9 @@ Complete the following readings on ES2015 classes before class:
 - [An Introduction to ES6 Classes](https://strongloop.com/strongblog/an-introduction-to-javascript-es6-classes/)
 - [Learn ES2015: Classes](https://babeljs.io/docs/learn-es2015/#classes)
 
-We'll be using HTML Canvas to build the Pong game in Project 3, so you'll want to work through this tutorial before class:
+We'll be creating SVGs to build the Pong game in Project 3, so you'll want to take a look through this guide before class:
 
-- [HTML5 Canvas Tutorial: An Introduction](https://www.sitepoint.com/html5-canvas-tutorial-introduction/)
+- [Pocket Guide to Writing SVG](http://svgpocketguide.com/book/)
 
 ---
 
@@ -26,6 +26,7 @@ We'll be using HTML Canvas to build the Pong game in Project 3, so you'll want t
 - Describe how `this` functions within classes.
 - Describe and use `extends` and `super` for inheritance purposes.
 - Use `import` and `export` to import and export ES2015 classes to modules (as `default` or named exports).
+- Code scalable vector graphics (SVGs) and add them inline to the DOM with JavaScript.
 
 ---
 
@@ -37,7 +38,7 @@ We'll be using HTML Canvas to build the Pong game in Project 3, so you'll want t
 - [`new`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)
 - [`extends`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends)
 - [`super`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super)
-- [HTML5 Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
+- [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG)
 
 ---
 
@@ -100,6 +101,6 @@ More reading on classes in ES2015:
 
 - [Object-Oriented JavaScript — A Deep Dive into ES6 Classes](https://www.sitepoint.com/object-oriented-javascript-deep-dive-es6-classes/)
 
-An extended MDN tutorial on HTML Canvas:
+A CSS Tricks video tutorial on SVGs:
 
-- [Canvas tutorial](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial)
+- [Everything You Need To Know About SVG](https://css-tricks.com/lodge/svg/)
