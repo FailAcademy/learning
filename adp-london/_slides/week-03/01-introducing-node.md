@@ -105,7 +105,7 @@ server.listen(9000, function() {
 });
 
 
-function handleConnection(){
+function handleConnection() {
   // TODO: Handle connection!
 }
 
@@ -122,7 +122,7 @@ In order to show when the **server** has recieved a connection from a **client**
 we'll need to add some code to the `handleConnection` callback.
 
 ```js
-function handleConnection(socket){
+function handleConnection(socket) {
   const remoteAddress = `${socket.remoteAddress}:${socket.remotePort}`;
   console.log(`new client connection from ${remoteAddress}`);
 }
@@ -154,6 +154,18 @@ new client connection from ::1:63342
 
 ---
 
+class: center, middle
+<p style="text-align:center; margin:0;">
+  <img style="display:inline;" src="http://cheswick.com/ches/map/gallery/wired.gif" width="250" height="250">
+</p>
+
+### Congratulations, you've successfully created a new network 'node' and connected it to the internet!
+
+It doesn't do anything useful yet.
+Before we can start sending and recieving data, we'll need to add a few more things...
+
+---
+
 # Exercise 1
 
 Implement the following `socket` event handlers in your `handleConnection` callback:
@@ -164,6 +176,32 @@ Implement the following `socket` event handlers in your `handleConnection` callb
 
 Each handler should `console.log` the `remoteAddress` as well as any relavent parameters (e.g. incoming data, or error messages).
 Review the documentation here before you begin: [https://nodejs.org/api/net.html](https://nodejs.org/api/net.html)
+
+---
+template: inverse
+
+# Debugging a Node Applcation
+
+---
+
+# Debugging Node
+
+To debug a node applcation, start the node process using the following command:
+
+```bash
+node --debug index.js
+```
+You should see this output in your teminal:
+```bash
+Debugger listening on 127.0.0.1:5858
+```
+
+## How do we use the debugger? What do we use it for?
+
+---
+
+# Debugging Node
+
 
 
 
