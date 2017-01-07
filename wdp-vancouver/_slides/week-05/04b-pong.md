@@ -19,10 +19,144 @@ layout: false
 
 # Agenda
 
-* Practice OOP programming
-* Practice Logic in JavaScript
-* Create a "Pong" game using HTML5 Canvas
-* Have some fun with this :)
+- Learn how to build SVGs from scratch
+- Practice OOP programming and logic in JavaScript
+- Build a "Pong" game using SVGs dynamically generated from ES2015 classes
+- Have some fun with this :)
+
+---
+template: inverse
+
+# SVGs
+
+---
+class: center, middle
+
+.large[
+  **Review time!**
+
+  What is an SVG?<br /> What do they do for us?
+]
+
+---
+
+# SVG Features
+
+- **Solid browser support** (standard was developed in 1999)
+- **Scales like a champ**, so SVGs look great on high-density pixel displays...but they're small! (best of both worlds)
+- You can **embed them directly in an HTML document** (as inline SVGs) and target CSS or JS at them just like normal DOM elements (and animate them!)
+- You can include them in the `src` attribute of an `<img>` element (as we have done), but you won't be able to target CSS or JS directly at them
+
+---
+
+# SVG vs. HTML5 Canvas?
+
+- SVG is for rendering vector graphics, while canvas renders raster graphics
+- Canvas requires a single DOM element, `<canvas>`, that we draw a picture into (using JS)
+- After canvas draws the picture, it has no memory of what the pixels represent (so to create animations, you clear out the canvas element, then re-draw it)
+
+---
+
+# How Do We Make One?
+
+SVGs look a lot like HTML elements:
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" width="100" height="100">
+    <rect x="0" y="0" width="50" height="50" />
+</svg>
+```
+
+**Note:** SVG files aren't actually HTML, they are XML. The `xmlns` attribute changes the the `<svg>` element (and it's children) to a different namespace, so we can use elements like `<rect>` that don't exist in HTML.
+
+The `version="1.1"` attribute refers to the version of the SVG spec we're using.
+
+---
+
+# SVG Workspace
+
+- **Viewport**: The viewport **defines visible area of the SVG**.The canvas where an SVG is drawn is conceptually infinite in both dimensions, but parts of the SVG that lie beyond the viewport are clipped off. The `width` and `height` attributes on an `<svg>` define the viewport dimenions.
+- **Viewbox**: The `viewBox` defines the coordinate system we will use to draw SVGs onto the canvas. Think of it as a **nested coordinate system** that can be larger or smaller than the viewport. The first two coordinates define the top/left `x` and `y` values of the `viewBox`, the last two define the height and width.
+
+---
+
+# Try It Out
+
+Paste the SVG example (two slides back) into a Codepen...
+
+- Change the `viewBox` to `0 0 50 50`. What happens?
+- Now try `0 0 200 200`. What do you observe?
+- Next, try `25 25 100 100`. What happens to the rectangle now? Is this what you expect?
+- Finally, add `preserveAspectRatio="none"` as a new attribute on the SVG element, and change the `viewBox` value to `0 0 100 200`. How do you explain this behaviour?
+
+---
+
+# More on Rectangles
+
+We have seen how we can specify the top-left coordinates and width/height of rectangle.
+
+We can also specific the border radius of the corners with `rx` and `ry` attributes, change the fill colour, or add a `stroke`:
+
+```html
+<rect x="0" y="0" width="50" height="50" fill="#FFFFFF" stroke="#000000" stroke-width="5" />
+```
+
+What happens to the stroke in relation to the viewport?
+
+**Try it with CSS!** Add an `id` to the `<rect>` and set `stroke`, `stroke-width`, and `fill` as CSS properties instead.
+
+---
+
+# All Shapes and Sizes
+
+We can make much more than rectangles in SVGs:
+
+```html
+<circle cx="50" cy="50" r="10"/>
+```
+
+```html
+<ellipse cx="50" cy="50" fill="blue" rx="15" ry="30"/>
+```
+
+```html
+<line x1="50" y1="0" x2="50" y2="100" stroke="black" />
+```
+
+```html
+<text x="50" y="50" text-anchor="middle">SVG</text>
+```
+
+```html
+<polygon points="50,20 20,80 80,80" />
+```
+
+---
+
+# Leveling Up...
+
+We can also group elements together:
+
+```html
+<g transform="translate(10, 10)">
+  <circle cx="50" cy="30" r="10"/>
+  <circle cx="50" cy="70" r="10"/>
+</g>
+```
+
+And draw paths to create more complicated SVGs&mdash;this will look familiar to you if you've ever opened an SVG exported from Illustrator, etc.:
+
+```html
+<path d="M50,20 L50,20 L20,80 L80,80 Z"></path>
+```
+
+---
+
+# Warm-up Round
+
+Use `<circle>`, `<rect>`, and `<line>` elements to draw an old-timey radio. The viewport and `viewBox` should be `400` by `260` pixels. All elements have a `stroke-width` of `5`:
+
+<img src="/public/files/exercises/svg-radio-mockup.jpg" alt="SVG radio mock-up" style="display: block; margin: 0 auto;" />
 
 ---
 template: inverse
@@ -31,62 +165,34 @@ template: inverse
 
 ---
 
-# HTML5 Canvas
+# Set-up
 
-Canvas is a web API that allows you to draw graphics, create animations, as well as render video and 3d accelerated WebGL graphics.
+A boilerplate for this project has been scaffolded for you. 
 
-**Some Canvas examples:**
+Download it here, initialize a new Git repo in it, push it to your GitHub, and `npm install`:
 
-- [cube](http://codepen.io/yoksel/pen/nxgrp)
-- [animated logo](http://meru.ca/)
-- [robot friends](http://codepen.io/wattenberger/pen/Bksoc)
+**https://github.com/redacademy/pong-starter**
 
 ---
 
-# Canvas: Drawing Shapes
+# Explore Pong Starter
 
-See the [Canvas Shapes API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) for more.
+Take a look through the directory structure of your start Pong game. What do we have to start working with? 
 
-Canvas is a lot like telling a computer how to paint. We use step by step, clear instructions.
-
-```js
-// rectangle
-canvas.fillStyle = 'blue';
-canvas.fillRect(x1, y1, x2, y2);
-```
+What do you think we'll need to create?
 
 ---
 
 # Challenge 1
 
-Draw a Pong game outline using Canvas.
+We will generate our SVGs with JS in this project, but before we do, let's get a feel for what we'll be building by roughing-out the SVG mark-up in in `index.html`.
 
-Use this [Starter](http://codepen.io/Sh_McK/pen/QEzGGx).
+Your SVG should include:
 
-Your drawing should include:
-  - board
-  - 2 paddles
-  - a ball in the center of the board
-  - a dividing line down the middle of the board
-  - a scoreboard
-
----
-
-# Movement
-
-How do we make the paddle and ball move?
-
-Can you make a movement demo using `setTimeout(fn, timeout)`?
-
----
-
-# Colour Bleeding
-
-Movement of a ball may end up looking like a straight line, instead of a moving circle. This is because we are drawing over top of our original drawing repeatedly.
-
-Change the colour each time you draw the paddle you will see this re-draw effect.
-
-What might be quick and easy fix for colour bleeding?
+- A board
+- 2 paddles
+- A ball in the center of the board
+- A dividing line down the middle of the board
 
 ---
 
@@ -96,40 +202,65 @@ Plan out your project on paper with a partner.
 
 1. Which **classes** will we need to create our Pong game? (Hint: think in nouns.) Draw a box for each class.
 
-2. Which **properties** and **methods** will these classes have? (e.g. a class representing the ball may need a `wallBounce` method, etc.) Write these inside your class boxes.
+2. What **properties** and **methods** will these classes have? For example, a class representing the ball may need a `wallBounce` method, etc. Write these inside your class boxes.
 
 3. Compare your classes with another group.
 
 ---
 
-# Initial Setup
+# JS and the DOM
 
-Set up a new project directory on your computer with Webpack (as per the [ES2015/Webpack lesson](/lesson/developing-with-es2015-webpack/)).
+Before we get started...we are in a jQuery-free zone!
 
-Set your project up to transpile Babel, compile Sass, and run a development server.
+So how do we **store references** to DOM elements using plain vanilla JS?
 
-Ensure your Webpack dev environment is functioning properly before proceeding.
+How do we **create and add an element** to the DOM? 
+
+And how do we **set attributes/values** on those elements?
 
 ---
 
-# Initial Setup
+# DOM Selectors
 
-Target the canvas in an `index.html` file:
+So far we have only used jQuery to select DOM elements, be we can (of course!) do this with regular JS too:
 
-```html
-<canvas id="game"></canvas>
+```js
+document.querySelector('div.game-wrapper');
+document.querySelectorAll('h1');
+document.getElementById('game');
+document.getElementsByTagName('div');
+document.getElementsByClassName('game-wrapper');
 ```
 
-Add a background in the `game.css` file:
+Try running these lines of code in your browser console to see what you get back.
 
-```css
-#game {
-   background-color: #353535; /* add this! */
-   display: block;
-   height: 256px;
-   margin: 20px auto;
-   width: 512px;
-}
+---
+
+# DOM Manipulation
+
+Just like with jQuery, we can create and append new elements to the DOM, and set/change their attributes:
+
+```js
+let el = document.getElementById('game');
+el.setAttribute('width', '512');
+
+let newPara = document.createElement('p');
+el.appendChild(newPara).innerHTML = 'Hello, world!';
+```
+
+---
+
+# Creating SVG Elements
+
+Note that when we create an SVG element, we must call slightly different methods so we can declare the necessary XML namespace when we create the element:
+
+```js
+const SVG_NS = 'http://www.w3.org/2000/svg';
+const rect = document.createElementNS(SVG_NS, 'rect');
+rect.setAttributeNS(null, 'width', 10);
+rect.setAttributeNS(null, 'height', 10);
+rect.setAttributeNS(null, 'x', 5);
+rect.setAttributeNS(null, 'y', 5);
 ```
 
 ---
