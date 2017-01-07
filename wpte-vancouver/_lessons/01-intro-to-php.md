@@ -82,6 +82,8 @@ Once you build you function, try it out on the `$months` array.
 
 ## Additional Resources
 
+Additional PHP tutorial
+
 [Codeacademy PHP tutorial](https://www.codecademy.com/en/tracks/php)
 
 PHP is a well-documented language and you can find its docs here:

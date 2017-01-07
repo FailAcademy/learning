@@ -777,7 +777,7 @@ array.forEach(callback)     | array_walk($array, $callback)
 
 # Exercise 2
 
-Get ready for your second round of FizzBuzz...PHP-style!
+Get ready for your second round of FizzBuzz, PHP-style!
 
 You'll complete this exercise inside of your `index.php` file.
 
