@@ -22,6 +22,7 @@ You should have a strong of HTML & CSS and familiarity with JavaScript.
 - Distinguish the difference between indexed and associative arrays.
 - Dynamically generate a webpage using `include()` or `require()`.
 
+
 ---
 
 ## Keywords
