@@ -38,13 +38,10 @@ The following schedules are currently available:
 
 ### Vancouver
 
-The instructor for the **first half** of Web Developer Foundation course in Vancouver is **Christoffer Johansen**.
+The instructor for the Web Developer Foundation course in Vancouver is **Christoffer Johansen**.
 
 Students project links for this half of the course will be submitted to: **[christoffer.jjohansen@gmail.com](mailto:christoffer.jjohansen@gmail.com)**
 
-The instructor for the **second half** of Web Developer Foundation course in Vancouver is **Johnny Ji**.
-
-Students project links for this half of the course will be submitted to: **[johnny@johnnyji.com](mailto:johnny@johnnyji.com)**
 
 ### Toronto
 
