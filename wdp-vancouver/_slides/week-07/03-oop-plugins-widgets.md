@@ -172,14 +172,14 @@ class: center, middle
 class: center, middle
 
 .large[
-   **[Check out the class!](https://github.com/WordPress/WordPress/blob/master/wp-includes/query.php#L835)**
+   **[Check out the class!](https://github.com/WordPress/WordPress/blob/af885f45cf0f16e2c8c609786991c0fe2c148af5/wp-includes/class-wp-query.php#L18)**
 ]
 
 ---
 class: center, middle
 
 .large[
-   **[See it in action...](https://github.com/WordPress/WordPress/blob/master/wp-includes/post.php#L1711)**
+   **[See it in action...](https://github.com/WordPress/WordPress/blob/af885f45cf0f16e2c8c609786991c0fe2c148af5/wp-includes/class-wp-query.php#L1667)**
 ]
 
 ---
