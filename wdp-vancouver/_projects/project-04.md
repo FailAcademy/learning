@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 4 - Inhabitent Site
-due: Monday, November 14th (beginning of class)
+due: Monday, February 27th (beginning of class)
 ---
 
 For Project 4, you will create a multi-page website with a blog for a camping supply company called Inhabitent Camping Supply Co. using WordPress as a content management system.
