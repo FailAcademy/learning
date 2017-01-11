@@ -296,7 +296,7 @@ class: center, middle
 
 # Next Steps
 
-We will need to add a `toggleComplete` attribute to our `ToDo` component inside `App`:
+We will need to add a `toggleComplete` prop to our `ToDo` component inside `App`:
 
 ```js
 render() {
@@ -304,11 +304,12 @@ render() {
    return (
       // ...
       <ul>
-      { this.state.todos.map((todo, index) => (
+      { this.state.todos.map((todo) => (
          <ToDo
-            key={index}
+            key={todo.id}
             item={todo}
-            toggleComplete={this.toggleComplete.bind(this, todo)} />
+            toggleComplete={this.toggleComplete.bind(this, todo)} 
+          />
       ))}
       </ul>
       // ...
@@ -449,7 +450,7 @@ The `ref` attribute can be a callback function where the referenced component wi
 ```js
 <input type="text" ref={(input) => (this.toDoInput = input)} />
 
-// What's happening here...
+// What's actually happening here...
 
 <input type="text"
    ref={ function(input) { this.toDoInput = input }.bind(this) } />
