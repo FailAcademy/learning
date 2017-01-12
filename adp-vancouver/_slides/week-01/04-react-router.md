@@ -150,9 +150,13 @@ In other words, routing allows us to take a path and use it to generate the corr
 
 **Note!**
 
-We're building a SPA, so our application uses a single static HTML file to display all of it's content.
+We're building a SPA, so our application uses **a single static HTML file** to display all of it's content.
 
-When routes in our application change no request to the server is made. Instead, React is dynamically rendering content, and changing the URL.
+**When routes changes** in our application, we must ensure that:
+
+- The URL in the address bar reflects what is being shown
+- Forward and back nav work in the browser
+- The user can navigate to a new URL and they will see the expected view
 
 ---
 
@@ -521,7 +525,7 @@ What do you notice? Be sure to watch the browser's address bar will you do this.
 
 - Hashes in URLs were meant to refer to a specific place in the document, so adding/changing a hash was a way to update the URL with `window.location` without refreshing the page (in a SPA)
 - `hashHistory` works on the client side alone
-- `browserHistory` (as stated) requires a server to return a particular resource
+- `browserHistory` (as stated) requires a server to always return `index.html` regardless of what "resource" is requested
 
 ---
 
