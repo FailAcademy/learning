@@ -25,11 +25,11 @@ Be prepared to give an example of:
 
 ## Learning Objectives
 
-- Distinguish between MVC and Flux patterns.
-- Identify the benefits of using Flux or Redux to model state.
+- Distinguish between MVC and Redux patterns.
+- Identify the benefits of using Redux to model state.
 - Identify the roles of Redux store, reducers, actions, action-creators and action-types.
 - Setup a basic project using Redux in raw JavaScript.
-- Create structured actions following [Flux Stand Actions](https://github.com/acdlite/flux-standard-action).
+- Create structured actions following [Flux Standard Actions](https://github.com/acdlite/flux-standard-action).
 - Explain the results of calling `dispatch(action)` and `getState()`.
 
 ---
@@ -50,7 +50,6 @@ Be prepared to give an example of:
 Create a diagram or chart to explain each of the following:
 
 - MVC
-- Flux
 - Redux
 
 ---
