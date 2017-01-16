@@ -162,6 +162,7 @@ fs.readFile('users.json', {encoding: 'utf8'}, function (err, data) {
 
 ---
 
+<<<<<<< HEAD:_slides/week-03/02-webservers-express.md
 # app.get
 
 ```js
@@ -198,6 +199,8 @@ app.get('/:username', function (req, res) {
 ---
 
 
+=======
+>>>>>>> cd587f86b08182b76ab2d03947986591d143c89d:_slides/week-03/02-webservers-express.md
 # Exercise 4
 
 Create a basic middleware and call it on the client.
