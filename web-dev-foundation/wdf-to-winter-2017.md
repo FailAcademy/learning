@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Schedule - Vancouver
+title: Schedule - Toronto
 class: schedule
 ---
 
