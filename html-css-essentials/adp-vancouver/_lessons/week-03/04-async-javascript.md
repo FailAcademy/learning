@@ -15,6 +15,10 @@ Also be sure to review how timers work in JS:
 
 - [Understanding timers: setTimeout and setInterval](http://javascript.info/tutorial/settimeout-setinterval)
 
+Learn about the event loop:
+
+- [Philip Roberts: What the heck is the event loop anyway?](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+
 ---
 
 ## Learning Objectives
