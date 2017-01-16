@@ -122,13 +122,13 @@ In order to show when the **server** has recieved a connection from a **client**
 we'll need to add some code to the `handleConnection` callback.
 
 ```js
-function handleConnection(socket) {
-  const remoteAddress = `${socket.remoteAddress}:${socket.remotePort}`;
+function handleConnection(conn) {
+  const remoteAddress = `${conn.remoteAddress}:${conn.remotePort}`;
   console.log(`new client connection from ${remoteAddress}`);
 }
 ```
 
-- **Add the `socket` parameter and `console.log` connection details when a connection happens!**
+- **Add the `conn` parameter and `console.log` connection details when a connection happens!**
 
 ## Where is the client?
 
@@ -136,7 +136,7 @@ function handleConnection(socket) {
 
 ---
 
-# Test using Netcat
+# Simple Netcat Client
 
 **We'll use Netcat to test our nre TCP/UDP server.**
 
@@ -168,7 +168,7 @@ Before we can start sending and recieving data, we'll need to add a few more thi
 
 # Exercise 1
 
-Implement the following `socket` event handlers in your `handleConnection` callback:
+Implement the following `conn` event handlers in your `handleConnection` callback:
 
 - #### 'data'
 - #### 'close'
@@ -184,26 +184,134 @@ template: inverse
 
 ---
 
-# Debugging Node
+# V8 Inspector Integration
 
 To debug a node applcation, start the node process using the following command:
 
 ```bash
-node --debug index.js
+node --debug --inspect index.js
 ```
-You should see this output in your teminal:
+You should see output in your teminal:
 ```bash
-Debugger listening on 127.0.0.1:5858
+Debugger listening on port 9229.
+Warning: This is an experimental feature and could change at any time.
+To start debugging, open the following URL in Chrome:
+    chrome-devtools://devtools/bundled/inspector.html?experiments=true&v8only=true&ws=127.0.0.1:9229/3b270900-1c51-460c-a7a4-d593f462b2d7
 ```
 
-## How do we use the debugger? What do we use it for?
+Copy & paste the `chrome-devtools://` url into a new chrome tab to start your debugging session.
 
 ---
 
-# Debugging Node
+Open your debugger and set a breakpoint somewhere in your code. Send a message to your server using Netcat to trigger it!
 
+<img src="/public/img/slide-assets/node-debugger-breakpoint.png" />
 
+---
 
+# Exercise 2
+
+Use the debugger and set a breakpoint in your `data` event handler. Intercept the incoming data, and use the debugger's console to change the value
+of the data parameter (the incoming data) before it's logged.
+
+(Use Netcat to send data to your new TCP service)
+
+When you're finished, watch this video from Google I/O!
+[DevTools in 2016: Accelerate your workflow - Google I/O 2016](https://www.youtube.com/watch?v=x8u0n4dT-WI&feature=youtu.be&t=2571)
+
+---
+
+# Completed TCP Service
+
+Finally, lets return some data from our service. At the moment does not send any information back to the client.
+
+Add the following code to your `data` handler to complete the service.
+
+```js
+    // console.log ...
+    conn.write(
+      `Got "${d.trim()}". Let me uppercase: "${d.toUpperCase()}"`
+    )
+```
+
+Now, we have a friendly uppercasing service!
+
+---
+template: inverse
+
+# Load Testing
+
+---
+
+# Load Testing
+
+Lets try to understand what our new Node process (uppercasing service) is doing while it's running. <br/>
+**Install the following tools:**
+
+- [pm2](http://pm2.keymetrics.io/) `npm i -g pm2`
+  - A process manager for Node apps.
+- [tcpkali](https://github.com/machinezone/tcpkali) `brew install tcpkali`
+  - A TCP/IP load testing tool
+- [htop](https://hisham.hm/htop/) `brew install htop`
+  - A cool process/memory monitor for you OSX
+---
+
+# Load Testing
+
+### 🔥 Fire up your load testing suite
+
+Open 3 separate terminals & run each of the following commands in it's own terminal window.
+
+- **Start your node app using :** `pm2 start index.js` <br/> (from your project directory)
+- **Start the pm2 monitor :** `pm2 monit`
+- **Start htop :** `htop`
+
+---
+
+**Open a 4th terminal so that we can run the load testing tool.**
+Your screen should look something like this:
+
+<img src="/public/img/slide-assets/load-testing-setup.png" />
+
+---
+
+# Process: Memory & CPU
+
+Let's introduce some code into our server that will cause problems.
+Add the following code to your project:
+
+```js
+// Top of file, after require/imports
+const requests = [];
+```
+Re-write your `data` event handler:
+```js
+  const newString =  `Got "${d.trim()}": "${d.toUpperCase()}"`
+  requests.push(newString)
+  conn.write(newString)
+```
+---
+
+# Exercise 3
+
+Run the following commands and observe your terminals:
+```bash
+```
+```bash
+```
+```bash
+```
+
+Observe the following for each:
+- System memory and CPU usage
+- Node process memory and CPU usage
+- The output returned from the server process
+
+---
+
+template: inverse
+
+# Work Queues
 
 ---
 

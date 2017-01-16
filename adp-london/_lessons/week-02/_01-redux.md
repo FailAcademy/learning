@@ -8,7 +8,7 @@ Remind students that in this lesson we will approach learning in two ways:
 
 ### Discussion (15)
 
-1. Write: "Good application design is ___________."
+1. "A well-designed application is..."
 
 Ask students to fill in the blank.
 
@@ -29,8 +29,6 @@ We will look at a 10,000 ft overview of MVC, Flux & Redux.
 
 
 ### MVC Overview (20)
-
-Give students 10 minutes to read and discuss MVC in groups. Tell them to create a diagram or chart, and you will select your favourite to present.
 
 - What are the parts of MVC?
 
@@ -56,26 +54,13 @@ M   ->   C    ->    V
 3. Ember.js
 4. Knockout.js
 
-- Why do people like this pattern?
+Take time to draw out each diagram with the students before showing the slide diagrams.
 
-1. separation of concerns
-2. easy to change view
+### React Design Overview
 
+Draw the tree diagram for modeling the simple use case.
 
-### Flux Overview (20)
-
-Give students 10 minutes to read and discuss Flux in groups. Tell them to create a diagram or chart, and you will select your favourite to present.
-
-|:  M  :|:       C    :|:  V  :|
-|-------|--------------|------ |
-| store | dispatcher   |   X   |
-|       | actions      |       |
-
-```
-View  -> Action -> Dispatcher -> Store     ->     View
-             - event            - hub          - data & logic
-      { type: ADD_ONE }
-```
+Be sure to highlight passing of props, problems with sharing local state, and any pitfalls that passing by reference might create.
 
 ### Redux Overview (40)
 
@@ -142,3 +127,10 @@ Review app in light of Redux diagrams.
 
 1. Challenge students to add more actions.
 2. Challenge students to add more reducers.
+
+### Notes: 
+
+npm install --save redux
+npm install --save react-redux
+npm install --save-dev redux-devtools
+
