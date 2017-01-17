@@ -19,7 +19,7 @@ layout: false
 
 # Agenda
 
-1. Introduce npm
+1. Introduce Node.js and npm
 1. Introduce and install Gulp
 2. Set up Gulp in your project
 3. Create named tasks
@@ -28,7 +28,24 @@ layout: false
 ---
 template: inverse
 
-# Node Package Manager (npm)
+# Node.js and npm
+
+---
+class: center, middle
+
+.large[
+    Node is a cross-platform JavaScript runtime environment built on Chrome's V8 JavaScript engine. 
+]
+
+---
+
+# Huh?
+
+Some vocabulary words:
+
+- **Runtime**: The software and hardware resources that support program execution on a computer.
+- **V8**: This is Google's open-source JS engine that is used in Google Chrome. (It's written in C++.)
+- **JavaScript engine**: Compiles and executes JavaScript source code, handles memory allocation for objects, takes care of garbage collection, etc.
 
 ---
 
@@ -38,13 +55,15 @@ The term **dependencies** is generally used to refer to any code your project **
 
 Our projects can have dependencies that are specific to our dev environments only (appropriately named **development dependencies**).
 
-We'll use the **Node Package Manager** to install 3rd party dependencies (other people's code designed to be **modular**), into our project automatically.
+We'll use the **Node Package Manager (npm)** to install 3rd party dependencies (other people's code designed to be **modular**), into our project automatically.
 
 ---
 
 # npm
 
 **[Node Package Manager (npm)](https://www.npmjs.com/)** is a tool that was built to help Node.js developers distribute and use modules of code in the Node.js environment.
+
+It's the largest ecosystem of open source libraries in the world.
 
 Initially npm was only useful to developers working in Node.js (i.e. not in the browser, like us) environments.
 

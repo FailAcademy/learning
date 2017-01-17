@@ -248,13 +248,14 @@ In addition to adding a doctype, there's other information we can add to the `<h
 ```
 
 ---
+
 # Mini Exercise
 
 What is the difference between **Meta Tags** and **Attributes**?
 
-What does **utf-8** mean?
+What does `utf-8` mean?
 
-Group up in pairs of two and within 5 minutes try and figure it out! 
+Group up in pairs of two and try and figure it out!
 
 ---
 
@@ -395,11 +396,12 @@ An HTML5 webpage would look something more like this:
 ```
 
 ---
+
 # Mini Exercise
 
 Why do we keep using the word **semantic**?
 
-In groups of 4 (or so) have a quick discussion about 
+In groups of 4 (or so) have a quick discussion about:
 
 1. What the definition of semantic is?
 2. Why is semantic code important?
