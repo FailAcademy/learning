@@ -2,7 +2,7 @@
 layout: lesson
 title: Animation with jQuery
 slides: ['_slides/week-02/05-jquery-animation.md']
-lesson_date: 2016-10-07
+lesson_date: 2017-01-20
 ---
 
 ## Pre-Work

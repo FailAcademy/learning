@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Sass / CSS Preprocessors
-slides: ['_slides/week-03/04a-sass.md']
-lesson_date: 2016-10-13
+slides: ['_slides/week-03/03-sass.md']
+lesson_date: 2017-01-25
 ---
 
 ## Pre-Work

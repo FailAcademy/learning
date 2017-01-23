@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 3 - Pong Game
-due: Monday, October 31st (beginning of class)
+due: Tuesday, February 14th (beginning of class)
 ---
 
 For Project 3, you're going to create a pong game. You can [clone the project starter repo here](https://github.com/redacademy/pong-starter).
@@ -37,14 +37,14 @@ Your project must:
 Your project must contain:
 
 - Use HTML5 Audio sounds triggered on ball bounces
-- Use an HTML5 Canvas board to contain the pong game with an initialized board with a background and coloured paddles and ball.
+- Use SVGs to render the pong game with an initialized board with a background and coloured paddles and ball.
 
 **JS requirements:**
 
 Your project must:
 
 - Use default `import` and `export`
-- Use an ES6 class `constructor` and methods
+- Use an ES2015 class `constructor` and methods
 - Instantiate new objects using `new`
 - Use of `this` appropriately within classes
 - Be written in an object-oriented style using classes
@@ -53,10 +53,12 @@ Your project must:
 
 Want to challenge yourself? Your project could also:
 
-- Trigger additional balls on a keypress
-- Create additional balls with special properties (different speeds, sizes, etc.)
-- Trigger speed changes or size changes of paddles
-- Fire a shot from a paddle on key press
+- Make it prettier.
+- Trigger multiple balls.
+- Create balls with special effects (different speeds, sizes, effects, etc.).
+- Trigger speed changes or size changes of paddles.
+- Fire a shot from a paddle on key press.
+- Declare a winner at a final score.
 
 ## Submission Instructions
 

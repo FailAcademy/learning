@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Intro to ECMAScript 2015
-slides: ['_slides/week-05/01-intro-to-es2015.md']
-lesson_date: 2016-10-25
+slides: ['_slides/week-05/02-intro-to-es2015.md']
+lesson_date: 2017-02-07
 ---
 
 ## Pre-Work
@@ -119,6 +119,14 @@ See ES2015 support differences in browsers:
 The official ES2015 Specification:
 
 - [ECMAScript® 2015 Language Specification](http://www.ecma-international.org/ecma-262/6.0/)
+
+A free video series on ES2015 from Laracasts:
+
+- [ES2015 Crash Course](https://laracasts.com/series/es6-cliffsnotes)
+
+Understanding `var` versus `let` versus `const`:
+
+- [Variable and Function Hoisting in ES2015](https://bitsofco.de/variable-and-function-hoisting-in-es2015/)
 
 Extra reading on ES2015 basics:
 

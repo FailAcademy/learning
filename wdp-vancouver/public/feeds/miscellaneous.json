@@ -2,62 +2,80 @@
    {
       "title": "Pre-Work",
       "allDay": true,
-      "start": "2016-06-27",
-      "end": "2016-07-02"
+      "start": "2017-01-02",
+      "end": "2017-01-09"
+   },
+   {
+      "title": "ADP/WDP Mentoring",
+      "allDay": false,
+      "start": "2017-01-27T15:00:00+00:00",
+      "end": "2017-01-27T16:15:00+00:00"
+   },
+   {
+      "title": "ADP/WDP Mentoring",
+      "allDay": false,
+      "start": "2017-02-24T15:00:00+00:00",
+      "end": "2017-02-24T16:15:00+00:00"
+   },
+   {
+      "title": "ADP/WDP Mentoring",
+      "allDay": false,
+      "start": "2017-03-17T15:00:00+00:00",
+      "end": "2017-03-17T16:15:00+00:00"
    },
    {
       "title": "BC Family Day",
       "allDay": true,
-      "start": "2016-02-08"
+      "start": "2017-02-13"
    },
    {
       "title": "Good Friday",
       "allDay": true,
-      "start": "2016-03-25"
+      "start": "2017-04-14"
    },
    {
       "title": "Easter Monday",
       "allDay": true,
-      "start": "2016-03-28"
+      "start": "2017-04-17"
    },
    {
       "title": "Victoria Day",
       "allDay": true,
-      "start": "2016-05-23"
+      "start": "2017-05-22"
    },
    {
-      "title": "Canada Day",
+      "title": "Canada Day Stat",
       "allDay": true,
-      "start": "2016-07-01"
+      "start": "2017-07-03"
    },
    {
       "title": "BC Day",
       "allDay": true,
-      "start": "2016-08-01"
+      "start": "2017-08-04"
    },
    {
       "title": "Labour Day",
       "allDay": true,
-      "start": "2016-09-05"
+      "start": "2017-09-04"
    },
    {
       "title": "Thanksgiving Monday",
       "allDay": true,
-      "start": "2016-10-10"
+      "start": "2017-10-09"
    },
    {
       "title": "Remembrance Day",
       "allDay": true,
-      "start": "2016-11-11"
+      "start": "2017-11-11"
    },
    {
       "title": "Christmas Day",
       "allDay": true,
-      "start": "2016-12-25"
+      "start": "2017-12-25"
    },
    {
       "title": "New Years Day",
       "allDay": true,
-      "start": "2017-01-01"
+      "start": "2018-01-01"
    }
 ]

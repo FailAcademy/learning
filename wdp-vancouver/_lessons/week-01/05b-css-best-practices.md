@@ -2,7 +2,7 @@
 layout: lesson
 title: CSS Best Practices
 slides: ['_slides/week-01/05b-css-best-practices.md']
-lesson_date: 2016-09-30
+lesson_date: 2017-01-13
 ---
 
 ## Pre-Work

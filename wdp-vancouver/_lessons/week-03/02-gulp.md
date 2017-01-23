@@ -1,11 +1,23 @@
 ---
 layout: lesson
 title: Gulp
-slides: ['_slides/week-03/03-gulp.md']
-lesson_date: 2016-10-12
+slides: ['_slides/week-03/02-gulp.md']
+lesson_date: 2017-01-24
 ---
 
 ## Pre-Work
+
+### Software Installation:
+
+Prior to class, please download and install Node.js:
+
+- [Node.js website](https://nodejs.org/en/)
+
+**Note:** If you are working on a Mac, [consider installing Homebrew first](http://brew.sh/), then use Homebrew to install Node instead by running:
+
+`brew install node`
+
+### Reading:
 
 Visit **[this GitHub repo](https://github.com/osscafe/gulp-cheatsheet)** and have a look at the **English JavaScript** cheatsheets to get a feeling for what Gulp does, and for the code we'll be writing in today's lesson.
 
@@ -15,6 +27,7 @@ You are encouraged to save these cheatsheets for your own reference.
 
 ## Learning Objectives
 
+- Explain what it means to install a JavaScript runtime on your computer, or a server.
 - Explain the benefits of automation in web projects.
 - Implement the following automation tasks: `uglification`, `watch`, and `browser-sync`.
 - Install Gulp globally and as a project development dependency.
@@ -25,11 +38,13 @@ You are encouraged to save these cheatsheets for your own reference.
 
 ## Keywords
 
+- Node.js
 - npm (Node Package Manager)
 - Dependencies
 - Automation
 - Build task
 - File watcher
+- Linting
 
 ---
 

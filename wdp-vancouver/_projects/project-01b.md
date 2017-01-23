@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 1 / Part 2 - Aloha Homepage
-due: Tuesday, October 11th (beginning of class)
+due: Monday, January 23rd (beginning of class)
 ---
 
 For the second part of Project 1, you're going to level-up the Aloha Apparel Co. website by adding interactivity with JS.
