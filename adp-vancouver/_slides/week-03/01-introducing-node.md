@@ -15,7 +15,18 @@ class: center, middle, inverse
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
-<!--TODO: Add Agenda -->
+---
+layout: false
+
+# Agenda
+
+- Understand the History and beginnings of Node
+- Review TCP / UDP protocols
+- Model JavaScript's Event Loop
+- Build a simple TCP / UDP messaging server
+- Install and use Node's profiniling tools
+
+
 
 ---
 template: inverse
