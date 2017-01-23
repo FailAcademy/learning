@@ -26,7 +26,6 @@ lesson_date: 2017-01-23
 ## Additional Resources
 
 - https://github.com/sindresorhus/awesome-nodejs
-
 - https://github.com/sindresorhus/awesome-nodejs#filesystem
 - https://github.com/caolan/async
 - https://http2.github.io/
