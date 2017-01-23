@@ -97,10 +97,8 @@ deploy your site to the cloud using [Surge](http://surge.sh/), or [Now](https://
 ---
 
 ## Additional Resources
-
-- [What is a Web Server?](https://developer.mozilla.org/en-US/Learn/Common_questions/What_is_a_web_server) <br/>
-- REST (Representational State Transfer): [Roy Fielding's doctoral dissertation](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
-- [About Node.js](https://nodejs.org/en/about/)
-- [Express homepage](https://expressjs.com/)
-- [Node Playbook](https://github.com/HiFaraz/node-playbook/blob/master/README.md)
-- [NodeSchool](http://nodeschool.io/)
+- https://github.com/sindresorhus/awesome-nodejs
+- https://github.com/sindresorhus/awesome-nodejs#filesystem
+- https://github.com/caolan/async
+- https://http2.github.io/
+- http://socketcluster.io/#!/docs/full-stack
