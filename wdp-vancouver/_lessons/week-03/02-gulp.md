@@ -33,6 +33,7 @@ You are encouraged to save these cheatsheets for your own reference.
 - Install Gulp globally and as a project development dependency.
 - Install Gulp plugins via the command line, build a `gulpfile.js` file, and run related tasks.
 - Distinguish between Gulp and other solutions for managing build/other automation tasks.
+- Set-up ESLint to run as a Gulp task to check JavaScript code against specific style rules.
 
 ---
 
@@ -58,26 +59,61 @@ Run the task and see what happens...
 
 ## Exercise 2
 
-Let's try implementing the BrowserSync plugin in our projects with Gulp.
+Let's implement BrowserSync in our projects with Gulp.
 
-Learn how to do that here:
+Learn how to do that here: **[www.browsersync.io/docs/gulp/](http://www.browsersync.io/docs/gulp/)**
 
-**[www.browsersync.io/docs/gulp/](http://www.browsersync.io/docs/gulp/)**
+**Hint:** We're already watching our JS source files, uglifying them, and moving the newly minified files into the `build` directory. Think about what file will we want to watch for changes on, and subsequently reload the browser afterward.
+
+---
+
+## Exercise 3
+
+Add ESLint as a part of your build process with Gulp. Begin by installing `gulp-eslint`:
+
+- [`gulp-eslint`](https://www.npmjs.com/package/gulp-eslint)
+
+We have alread created our `.eslintrc` files as part of the lesson, so now it's up to you to:
+
+1. Create a named `lint` task in your `gulpfile.js`
+2. Add the `lint` task as a dependency for the `scripts` task
 
 ---
 
 ## Lab Activity
 
-In addition to working on Project 2 today, you'll also want to implement the following additional Gulp plugins in your project:
+To begin the lab today, you'll want to implement the following additional Gulp plugins in your project:
 
-- `gulp-plumber`
-- `gulp-eslint`
+- [`gulp-plumber`](https://www.npmjs.com/package/gulp-plumber)
+- [`gulp-notify`](https://www.npmjs.com/package/gulp-notify)
 
-The first plugin will prevent pipe breaking when Gulp encounters an error in your code (e.g. when there's a syntax error in your JS while trying to uglify it). You'll want to incorporate this in your `scripts` task, and the `sass` task that we'll create tomorrow.
+The first plugin will prevent pipe breaking when Gulp encounters an error in your code (e.g. when there's a syntax error in your JS while trying to uglify it). The second plugin will notify us with a helpful error message when that happens.
 
-The second plugin will allow you to check your JS code style against a styleguide. You'll want to create a new `eslint` task to implement this plugin.
+Be sure to require these new modules in your project:
 
-- https://github.com/adametry/gulp-eslint
+```js
+var gulp = require('gulp'),
+  // ...other already required plugins!!
+  plumber = require('gulp-plumber'),
+  notify = require('gulp-notify');
+```
+
+When you set-up `gulp-plumber` in your `gulpfile.js`, take advantage of the option to pass in a function as an argument that will act as an **error handler** (which makes use of the `gulp-notify` plugin).
+
+To do that, include this function underneath the required modules in your `gulpfile.js` and pass it in as an argument whenever you call `plumber()`:
+
+```js
+var plumberErrorHandler = {
+  errorHandler: notify.onError({
+    title: 'Gulp',
+    message: 'Error: <%= error.message %>'
+  })
+};
+```
+
+You'll want to incorporate `plumber` in your `scripts` task...and the `sass` task that we'll create tomorrow.
+
+After you add the `gulp-plumber` and `gulp-notify` plugins successfully in your project, continue working on the rest of Instanews for the remainder of the day.
 
 ---
 

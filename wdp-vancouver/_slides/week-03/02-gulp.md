@@ -23,7 +23,7 @@ layout: false
 1. Introduce and install Gulp
 2. Set up Gulp in your project
 3. Create named tasks
-4. Add more Gulp tasks to our projects!
+4. Add ESLint to our project
 
 ---
 template: inverse
@@ -43,9 +43,14 @@ class: center, middle
 
 Some vocabulary words:
 
-- **Runtime**: The software and hardware resources that support program execution on a computer.
-- **V8**: This is Google's open-source JS engine that is used in Google Chrome. (It's written in C++.)
-- **JavaScript engine**: Compiles and executes JavaScript source code, handles memory allocation for objects, takes care of garbage collection, etc.
+- **Runtime**: Think of this as the code runs your JS code in a programming environment.
+- **JavaScript engine**: The thing that compiles and executes JavaScript source code, handles memory allocation for objects, takes care of garbage collection, etc.
+- **V8**: This is Google's open-source JS engine that is used in Google Chrome (written in C++).
+
+---
+class: center, middle
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/ztspvPYybIY?rel=0" frameborder="0" allowfullscreen></iframe>
 
 ---
 
@@ -67,7 +72,7 @@ It's the largest ecosystem of open source libraries in the world.
 
 Initially npm was only useful to developers working in Node.js (i.e. not in the browser, like us) environments.
 
-However, since it's release, NPM has become widely used to distribute modules for all JavaScript environments, thanks to tools like **[Browserify](http://browserify.org/)** and **[webpack](https://webpack.github.io/)** (more on those later).
+However, since it's release, npm has become widely used to distribute modules for all JavaScript environments, thanks to tools like **[Browserify](http://browserify.org/)** and **[webpack](https://webpack.github.io/)** (more on those later).
 
 ---
 class: center, middle
@@ -96,7 +101,7 @@ The command `npm install` will automatically install plugins from the npm plugin
 
 # The package.json File
 
-Your `package.json` file is a list of all of the 3rd party modules your project needs to run.
+Your `package.json` file is a list of all of the third party modules your project needs to run.
 
 It's important that you keep this file up to date; npm does most of this automatically, but there may be times when you need to manually edit your `package.json` file to accurately reflect the dependencies for your project.
 
@@ -178,10 +183,10 @@ var uglify = require('gulp-uglify'),
     rename = require('gulp-rename');
 
 gulp.task('default', function(){
-    gulp.src('./js/*.js') // What files do we want gulp to consume?
-      .pipe(uglify()) // Call the uglify function on these files
-      .pipe(rename({ extname: '.min.js' })) //  Rename the uglified file
-      .pipe(gulp.dest('./build/js')) // Where do we put the result?
+  gulp.src('./js/*.js') // What files do we want gulp to consume?
+    .pipe(uglify()) // Call the uglify function on these files
+    .pipe(rename({ extname: '.min.js' })) // Rename the uglified file
+    .pipe(gulp.dest('./build/js')) // Where do we put the result?
 });
 ```
 
@@ -213,18 +218,19 @@ class: center, middle
 ```js
 var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
-	 rename = require('gulp-rename');
+    rename = require('gulp-rename');
 
 gulp.task('scripts', function(){
-    gulp.src('./js/*.js')
-      .pipe(uglify())
-      .pipe(rename({ extname: '.min.js' }))
-      .pipe(gulp.dest('./build/js'))
+  gulp.src('./js/*.js')
+    .pipe(uglify())
+    .pipe(rename({ extname: '.min.js' }))
+    .pipe(gulp.dest('./build/js'))
 });
 
 gulp.task('say_hello', function(){
 	console.log('Hello!');
 });
+
 // Modify our default task method by passing an array of task names
 gulp.task('default', ['say_hello', 'scripts']);
 ```
@@ -283,11 +289,143 @@ You can automatically reload your browser when you save changes to files in your
 
 # Exercise 2
 
-Let's try implementing the BrowserSync plugin in our projects with Gulp.
+Let's implement BrowserSync in our projects with Gulp.
 
-Learn how to do that here:
+Learn how to do that here: **[www.browsersync.io/docs/gulp/](http://www.browsersync.io/docs/gulp/)**
 
-**[www.browsersync.io/docs/gulp/](http://www.browsersync.io/docs/gulp/)**
+**Hint:** We're already watching our JS source files, uglifying them, and moving the newly minified files into the `build` directory. Think about what file will we want to watch for changes on, and subsequently reload the browser afterward.
+
+---
+template: inverse
+
+# ESLint
+
+---
+
+# What is Linting?
+
+Linting is a way for us to **check problematic patterns** in our code and make sure that it **adheres to certain style guidelines** for our project.
+
+Essentially, it's a way for you to set-up some rules about **how you want your code to always look**. You can then check your code again these rules, and ensure that you're following them.
+
+*Why should we care about doing this?*
+
+---
+
+# ESLint
+
+**[ESLint](http://eslint.org/)** is a popular tool for checking our JS code against whatever styleguide/rules we choose.
+
+*And we have control over exactly what to check!*
+
+Once we set our styleguide/rules, ESLint will help us find potential issues in our JS code without needing to execute that code first.
+
+---
+
+# How It Works
+
+First, we need an `.eslintrc` file to **configure** the rules against which to check our code. 
+
+Create that file now in the root of your project directory:
+
+```bash
+touch .eslintrc
+```
+
+**Note:** You may also configure ESLint rules in `package.json`, but we'll use a separate config file for Project 2.
+
+---
+
+# How It Works
+
+We need to format our config file in a specific way (see below). We will use the `eslint:recommended` rules instead of a separate styleguide.
+
+```js
+{
+  "extends": "eslint:recommended",
+  "rules": {
+    // our rules will go here...
+  },
+  "globals": {
+    // any globals we want to allow will go here
+  },
+  "env": {
+    "browser": true
+  }
+}
+```
+
+Take a look at the **[default ESLint config rules](http://eslint.org/docs/rules/)**.
+
+---
+
+# Rules
+
+How rules work in ESLint:
+
+- `off` or `0`: turn the rule off
+- `warn` or `1`: turn the rule on as a warning
+- `error` or `2`: turn the rule on as an error
+
+*In other words:*
+
+```js
+"no-alert": 0 // This is totally OK!
+"no-alert": 1 // Should avoid this, so warn me about it in the console.
+"no-alert": 2 // So bad. Shut it down. Throw an error. Boom.
+```
+
+---
+
+# Add Some Rules!
+
+Add these rules to your `.eslintrc` file:
+
+```js
+//...
+"rules": {
+  "no-alert": 1,
+  "camelcase": 1,
+  "curly": 1,
+  "eqeqeq": 1,
+  "no-console": 1,
+  "guard-for-in": 1,
+  "no-empty": 1,
+  "no-param-reassign": 1,
+  "no-unused-vars": 1,
+  "quotes": [ 1, "single"]
+},
+//...
+```
+
+---
+
+# Globals
+
+The `no-undef` rule will warn on variables that are accessed but not defined within the same file. If you are using global variables inside of a file, then you'll want to add them to `globals` in your `.eslintrc`:
+
+```js
+//...
+"globals": {
+	"jQuery": false,
+	"$": false
+},
+//...
+```
+
+Setting `true` will allow the variable to be overwritten, and setting false will disallow overwriting.
+
+---
+
+# Exercise 3
+
+Add ESLint as a part of your build process with Gulp. Begin by installing [`gulp-eslint`](https://www.npmjs.com/package/gulp-eslint).
+
+We have already created our `.eslintrc` files as part of the lesson, so now it's up to you to:
+
+1. Create a named `lint` task in your `gulpfile.js`
+2. Add the `lint` task as a dependency for the `scripts` task
+
 
 ---
 
@@ -296,7 +434,8 @@ Learn how to do that here:
 1. What Gulp is for and how we install it
 2. How to set up Gulp in our project
 3. How to create named tasks
-4. Why automation is important
+4. How to set-up ESLint in our project
+5. Why automation is important
 
 ---
 template: inverse
