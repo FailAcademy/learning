@@ -15,12 +15,7 @@ class: center, middle, inverse
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
----
-layout: false
-
-# Agenda
-
-- Debugging Node with VS Code
+<!--TODO: Add Agenda -->
 
 ---
 template: inverse
@@ -49,6 +44,25 @@ Node.js provides the minimum viable foundation to support the main Internet prot
 - How to structure an application using multiple 3rd party modules, and how to reliably judge the quality of a 3rd party module
 - How to leverage the **Event Loop** and Node's **Async**, single-threaded nature (more on this to come!)
 - How to use various Networking Protocols
+
+---
+
+# The "Event Loop" ?
+
+<img src="/public/img/slide-assets/node-event-loop.png" />
+
+.footnote[From 'NodeJS the Right Way' - J. Wilson]
+
+---
+class: center, middle
+
+# What is Node?
+
+Node's most useful features are: <br/>
+The **event loop** and **non-blocking I/O**
+
+Node programs are **single threaded** and **highly parallel**
+
 
 ---
 
@@ -294,15 +308,7 @@ Re-write your `data` event handler:
 
 # Exercise 3
 
-Run the following commands and observe your terminals:
-```bash
-```
-```bash
-```
-```bash
-```
-
-Observe the following for each:
+Run some load tests on your TCP Server and ovserve the following:
 - System memory and CPU usage
 - Node process memory and CPU usage
 - The output returned from the server process
@@ -311,7 +317,10 @@ Observe the following for each:
 
 template: inverse
 
-# Work Queues
+# Internet Messaging with Node
+
+---
+
 
 ---
 
