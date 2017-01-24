@@ -2,7 +2,7 @@
 layout: lesson
 title: Creating a Web Server with Express
 slides: ['_slides/week-02/02-webservers-express.md']
-lesson_date: 2017-01-24
+lesson_date: 2017-01-25
 ---
 
 ## Pre-Work
