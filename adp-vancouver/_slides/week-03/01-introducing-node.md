@@ -58,13 +58,6 @@ Node.js provides the minimum viable foundation to support the main Internet prot
 
 ---
 
-# The "Event Loop" ?
-
-<img src="/public/img/slide-assets/node-event-loop.png" />
-
-.footnote[From 'NodeJS the Right Way' - J. Wilson]
-
----
 class: center, middle
 
 # What is Node?
@@ -203,6 +196,16 @@ Each handler should `console.log` the `remoteAddress` as well as any relavent pa
 Review the documentation here before you begin: [https://nodejs.org/api/net.html](https://nodejs.org/api/net.html)
 
 ---
+
+# UTF8
+
+If you're sending incoming data to the server console, you may have noticed somehting like this `<Buffer 9c 4f 4f 4f>` in the output.
+
+This happens because TCP sends **streams of bytes** acrocss the network, and it's up to our application to decode them properly!
+
+## What is utf8?
+
+---
 template: inverse
 
 # Debugging a Node Applcation
@@ -300,29 +303,15 @@ Your screen should look something like this:
 
 ---
 
-# Process: Memory & CPU
-
-Let's introduce some code into our server that will cause problems.
-Add the following code to your project:
-
-```js
-// Top of file, after require/imports
-const requests = [];
-```
-Re-write your `data` event handler:
-```js
-  const newString =  `Got "${d.trim()}": "${d.toUpperCase()}"`
-  requests.push(newString)
-  conn.write(newString)
-```
----
-
 # Exercise 3
 
 Run some load tests on your TCP Server and ovserve the following:
 - System memory and CPU usage
 - Node process memory and CPU usage
 - The output returned from the server process
+
+run the command: <br/>
+`tcpkali -c 100 -d -m "$" -r 100 localhost:9000`
 
 ---
 
@@ -332,6 +321,29 @@ template: inverse
 
 ---
 
+# Exercise 4
+
+**Create a minimal Chat Server**
+
+Change your TCP service to deliver any incoming data to all connected clients.
+
+- Your server will need to store all connections
+- Messages you send to the server should not return to you
+
+---
+
+# Process: Memory & CPU
+
+Introducing the code reccomended on the previous slide may have intorduced a memory leak.
+Run the load tester to find out!
+
+- What do we have to do to prevent the memory leak?
+
+---
+
+# Lab Activity
+
+See the lesson page for today's Lab!
 
 ---
 
