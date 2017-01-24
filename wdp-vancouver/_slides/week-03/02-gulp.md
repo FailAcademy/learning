@@ -43,7 +43,7 @@ class: center, middle
 
 Some vocabulary words:
 
-- **Runtime**: Think of this as the code runs your JS code in a programming environment.
+- **Runtime**: Think of this as the code that runs your JS code in a programming environment.
 - **JavaScript engine**: The thing that compiles and executes JavaScript source code, handles memory allocation for objects, takes care of garbage collection, etc.
 - **V8**: This is Google's open-source JS engine that is used in Google Chrome (written in C++).
 
