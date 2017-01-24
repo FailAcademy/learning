@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Connecting Client & Server
-lesson_date: 2017-01-25
+lesson_date: 2017-01-26
 ---
 
 ## Pre-work
