@@ -99,14 +99,12 @@ To do this, start by creating a new branch on your project's repo called `es2015
 
 Specifically, you will need to:
 
-- Add a Gulp Babel to your project so you can transpile your JS to ES5
-- Replace all instances of `var` with `let` or `const` where appropriate
+- Add a **[`gulp-babel`](https://www.npmjs.com/package/gulp-babel)** to your project so you can transpile your JS to ES5
+- You will also need to add `"parser": "babel-eslint",` to your `.eslintrc` config file, and then `npm install --save-dev babel-eslint` to use the parser when linting
+- Replace all instances of `var` with `let` or `const` (whichever is most appropriate)
 - Use a template literal to replace any string concatenation
-
-#### Challenge yourself:
-
-- Refactor out your API call into a separate function and use `import` and `export` to load this function from another file. **Babel** alone does not compile modules into a format that your browser will recognize. Look at tomorrow's lesson for clues.
-- If you figure this out, next try removing the `<script>` element from your project's `index.html` file that loads jQuery, install jQuery from npm as a project dependency (but **not** a development dependency this time!), and `import` jQuery in your main project JS file instead
+- Use arrow functions where appropriate
+- Use object destructuring to save data from the article object into variables
 
 ---
 
