@@ -7,7 +7,11 @@ lesson_date: 2017-02-28
 
 ## Pre-Work
 
-Please complete the following readings before class:
+Watch this video on Promises from Laracast's [ES2015 Crash Course](https://laracasts.com/series/es6-cliffsnotes):
+
+- [13: Promises](https://laracasts.com/series/es6-cliffsnotes/episodes/13)
+
+Also complete the following readings before class:
 
 - [ES6 — promises](https://medium.com/ecmascript-2015/es6-promises-9ca8d8b4aca6#.hhgv28aep)
 - [JavaScript Promises ... In Wicked Detail](http://www.mattgreer.org/articles/promises-in-wicked-detail/)

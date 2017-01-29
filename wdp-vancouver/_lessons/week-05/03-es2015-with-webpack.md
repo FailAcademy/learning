@@ -7,9 +7,10 @@ lesson_date: 2017-02-08
 
 ## Pre-Work
 
-Watch the following short video tutorial on Webpack before class:
+Watch the following short video tutorials on Webpack before class:
 
 - [Getting Started with webpack](https://www.youtube.com/watch?v=TaWKUpahFZM)
+- [12: Module Bundling With Webpack](https://laracasts.com/series/es6-cliffsnotes/episodes/12)
 
 Read the following articles before class:
 

@@ -7,10 +7,14 @@ lesson_date: 2017-02-09
 
 ## Pre-Work
 
-Complete the following readings on ES2015 classes before class:
+Watch these videos from Laracast's [ES2015 Crash Course](https://laracasts.com/series/es6-cliffsnotes):
 
-- [An Introduction to ES6 Classes](https://strongloop.com/strongblog/an-introduction-to-javascript-es6-classes/)
-- [Learn ES2015: Classes](https://babeljs.io/docs/learn-es2015/#classes)
+- [09: Classes](https://laracasts.com/series/es6-cliffsnotes/episodes/9)
+- [10: ES6 Modules](https://laracasts.com/series/es6-cliffsnotes/episodes/10)
+
+Also complete the following reading on ES2015 classes before class:
+
+- [An Introduction to ES6 Classes](https://strongloop.com/strongblog/an-introduction-to-javascript-es6-classes/))
 
 We'll be creating SVGs to build the Pong game in Project 3, so you'll want to take a look through this guide before class:
 

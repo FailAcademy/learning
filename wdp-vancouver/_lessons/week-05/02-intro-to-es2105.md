@@ -7,21 +7,22 @@ lesson_date: 2017-02-07
 
 ## Pre-Work
 
-Visit the **[Learn ES2015](https://babeljs.io/docs/learn-es2015/)** page and review the list of new features of JavaScript that are a part of ES2015. Pay attention to these sections in particular:
+Watch these videos from Laracast's [ES2015 Crash Course](https://laracasts.com/series/es6-cliffsnotes):
 
-- [Let + Const](https://babeljs.io/docs/learn-es2015/#let--const)
-- [Arrows and Lexical This](https://babeljs.io/docs/learn-es2015/#arrows-and-lexical-this)
-- [Enhanced Object Literals](https://babeljs.io/docs/learn-es2015/#enhanced-object-literals)
-- [Template Strings](https://babeljs.io/docs/learn-es2015/#template-strings)
-- [Destructuring](https://babeljs.io/docs/learn-es2015/#destructuring)
-- [Default + Rest + Spread](https://babeljs.io/docs/learn-es2015/#default--rest--spread)
-- [Iterators + For..Of](https://babeljs.io/docs/learn-es2015/#iterators--forof)
+- [01: Babel Setup](https://laracasts.com/series/es6-cliffsnotes/episodes/1)
+- [03: To Var, Let, or Const](https://laracasts.com/series/es6-cliffsnotes/episodes/3)
+- [04: Arrows](https://laracasts.com/series/es6-cliffsnotes/episodes/4)
+- [05: Default Parameters](https://laracasts.com/series/es6-cliffsnotes/episodes/5)
+- [06: Rest and Spread](https://laracasts.com/series/es6-cliffsnotes/episodes/6)
+- [07: Template Strings](https://laracasts.com/series/es6-cliffsnotes/episodes/7)
+- [08: Awesome Object Enhancements](https://laracasts.com/series/es6-cliffsnotes/episodes/8)
 
-While reviewing each section, open the the [Babel online REPL](http://babeljs.io/repl/) and try pasting each ES2015 code example into it to see how it would be implemented in ES5 syntax.
+Optional (but worthwhile!) additional viewing:
 
-Also read through this excellent summary of the new ES2015 features before class:
+- [14: Useful String Additions](https://laracasts.com/series/es6-cliffsnotes/episodes/14)
+- [15: Array#find and Array#includes](https://laracasts.com/series/es6-cliffsnotes/episodes/15)
 
-- [ES6 Overview in 350 Bullet Points](https://github.com/bevacqua/es6)
+While watching each video, open the the **[Babel online REPL](http://babeljs.io/repl/)** and try writing out each ES2015 code example into it to see how it would be implemented in ES5 syntax.
 
 ---
 
@@ -110,6 +111,16 @@ Specifically, you will need to:
 
 ## Additional Resources
 
+From the Babel docs, check out**[Learn ES2015](https://babeljs.io/docs/learn-es2015/)** with particular focus on these sections:
+
+- [Let + Const](https://babeljs.io/docs/learn-es2015/#let--const)
+- [Arrows and Lexical This](https://babeljs.io/docs/learn-es2015/#arrows-and-lexical-this)
+- [Enhanced Object Literals](https://babeljs.io/docs/learn-es2015/#enhanced-object-literals)
+- [Template Strings](https://babeljs.io/docs/learn-es2015/#template-strings)
+- [Destructuring](https://babeljs.io/docs/learn-es2015/#destructuring)
+- [Default + Rest + Spread](https://babeljs.io/docs/learn-es2015/#default--rest--spread)
+- [Iterators + For..Of](https://babeljs.io/docs/learn-es2015/#iterators--forof)
+
 See ES2015 support differences in browsers:
 
 - [ECMAScript 6 compatibility table](http://kangax.github.io/compat-table/es6/)
@@ -118,9 +129,9 @@ The official ES2015 Specification:
 
 - [ECMAScript® 2015 Language Specification](http://www.ecma-international.org/ecma-262/6.0/)
 
-A free video series on ES2015 from Laracasts:
+An excellent, concise summary of the new ES2015 features:
 
-- [ES2015 Crash Course](https://laracasts.com/series/es6-cliffsnotes)
+- [ES6 Overview in 350 Bullet Points](https://github.com/bevacqua/es6)
 
 Understanding `var` versus `let` versus `const`:
 
