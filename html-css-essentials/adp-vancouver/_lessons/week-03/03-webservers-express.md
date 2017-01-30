@@ -1,119 +1,124 @@
 ---
 layout: lesson
 title: Creating a Web Server with Express
-slides: ['_slides/week-02/02-webservers-express.md']
 lesson_date: 2017-01-25
 ---
 
 ## Pre-Work
 
-**TBA**
+Please review the [Express documentation](http://expressjs.com/) in preperation for this lesson.
+
+Set up Chrome's developer tools Netowrk tb to help us debug our application: 
+Make sure you have the following 6 columns visible: 
+
+|  Name   |  Method   |  Status   |  Type   |  Size   |  Time   |
+|---------|:----------|:----------|:--------|:--------|:--------|
+
+*(Right click on the column headers to modify which ones are visible)*
 
 ---
 
 ## Learning Objectives
 
-- Make web requests to third-party web servers using Express.
+- Serve an `index.html` file to a web browser from Express
+- Use chrome's network tab to inspect HTTP request/response.
 - Define what a "RESTful" architectural style is application development.
 - Use RESTful methods to communicate between an Express server and a web browser.
-- Use at least one other NodeJS based Web Server.
-- Understand REST and the methods GET, POST, PUT & DELETE.
+- Understand REST and the methods `GET`, `POST`.
 - Setup RESTful endpoints using Express.
 - Use fetch on the client to get data from the server.
+- Use CORS to share resources across domains.
+- Use Express middleware for processing requests.
+- Send and recieve JSON from a client to Express, using `fetch`.
 
 ---
 
 ## Keywords
 
+- HTTP
 - REST
-- CRUD
-- API
-- AJAX
+- Endpoint
 - fetch
+- CORS
+- Status Code 
+- Middleware 
+- `req`
+- `res`
 
 ---
 
 ## Exercise 1
 
-**TBA**
+Before we begin creating an Express Web Server, in a group of 2 or more, draw a diagram of a 
+client-server application. Be sure to diagram the lines of communication, and be as detailed as possible. Label as 
+many things as you can.
 
 ---
 
 ## Exercise 2
 
-Experiment with the faces API to make different faces from different URL end points.
+*How do we serve static files using Experess?*
 
-`/avatars/face/:eyes/:nose/:mouth/:color`
+You've set up a simple Express server, now modify it to serve an `index.html` file to connected browsers.
 
-See an example below: 
-
-https://api.adorable.io/avatars/face/eyes4/nose3/mouth7/8e8895
-
-*Note: color must be a hex value*
+There a a number of ways to accomplish this. Check the [Express documentation](http://expressjs.com/)  for suggestions
+about how to accomplish this task.
 
 ---
 
 ## Exercise 3
 
-Load specific information about a pokemon using [Postman](https://www.getpostman.com/).
+Set up an Express *endpoint* using Express' built in request handler syntax.
+Serve a response *and* the correct status code back to the browser.
 
-- Charizard's abilities
-- the gender of Bulbasaur
-- a url linking to a photo of Luvdisc
+- Define the term "endpoint" in the context of Express.
+- What is the correct status code for a successful response?
+- How can we use our browser's network tab to debug our endpoint?
 
 ---
 
 ## Exercise 4
 
-Plan out end points for your Worst Pokemon app.
+*How does Express middleware work?*
 
-Which of the following will you need and why?
+Send a request through 2 or more Express middleware. `console.log` something in each one.
 
-###/pokemon
-GET
-POST
-PUT
-DELETE
-
-###/pokemon/(:id)
-GET
-POST
-PUT
-DELETE
+- Does the order in which you write you middlware matter?
+- Suggest some possible use-cases for Express middleware.
+- What role does the `next()` function play?
+- Are Express middleware async?
 
 ---
 
 ## Exercise 5
 
-In a small group, attempt to implement a web server using one of the following Node web server frameworks:
+**Serving JSON**
 
-1. [**Hapi**](http://hapijs.com/)
-2. [**Koa**](http://koajs.com/)
-3. [**Sails**](http://sailsjs.org/)
+Set up an Express endpoint to serve JSON content!
+
+- How do we set up express to serve JSON without using the filesystem API?
 
 ---
 
 ## Exercise 6
 
-When you've successfully created a Web Server using one of the frameworks mentioned in the last exercise
-deploy your site to the cloud using [Now](https://zeit.co/now)
+**Connect Express to you project application**
 
----
+Establish a connection between your project's front-end to your new Express backend.
 
-## Exercise 7
-
-Write the RESTful end points you planned in Exercise 3 using Express.
+- Can you make requests from a site on one domain to a server on another?
 
 ---
 
 ## Lab Activity
 
 In today's lab, you will begin converting your REDit project to be a full-stack app&mdash;finally connecting the client and server.
+You will create a RESTful backend using Express, to communicate data to your client through endpoints.
 
-You will create a RESTful backend using Express, to communicate data to your client through end points.
+In your client application, use [Redux-Thunk](https://github.com/gaearon/redux-thunk) to help you handle async requests.
 
 ---
 
 ## Additional Resources
 
-**TBA**
+[HTTP Status Codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) on Wikipedia.
