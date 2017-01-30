@@ -22,7 +22,7 @@ layout: false
 # Agenda
 
 1. Client vs Server Validation
-1. Controlled vs Uncontroller Components
+1. Controlled vs Uncontrolled Components
 1. Form Validation in Redux
 1. UX Guest Speaker
 1. Finish the `Gandalf` library
