@@ -13,11 +13,12 @@ Watch [this video](https://www.youtube.com/watch?v=8aGhZQkoFbQ) for a primer on 
 
 ## Learning Objectives
 
-- Understand the History and beginnings of Node
-- Review TCP / UDP protocols
-- Model JavaScript's Event Loop
-- Build a simple TCP / UDP messaging server
-- Install and use Node's profiniling tools
+- Understand the History and beginnings of Node.
+- Review TCP / UDP protocols.
+- Describe the Client-Server Computing Model.
+- Model JavaScript's Event Loop.
+- Build a simple TCP / UDP messaging server.
+- Install and use Node's profiniling tools.
 
 ---
 
