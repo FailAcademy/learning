@@ -111,15 +111,14 @@ Specifically, you will need to:
 
 ## Additional Resources
 
-From the Babel docs, check out**[Learn ES2015](https://babeljs.io/docs/learn-es2015/)** with particular focus on these sections:
+A great Codepen blog post series:
 
-- [Let + Const](https://babeljs.io/docs/learn-es2015/#let--const)
-- [Arrows and Lexical This](https://babeljs.io/docs/learn-es2015/#arrows-and-lexical-this)
-- [Enhanced Object Literals](https://babeljs.io/docs/learn-es2015/#enhanced-object-literals)
-- [Template Strings](https://babeljs.io/docs/learn-es2015/#template-strings)
-- [Destructuring](https://babeljs.io/docs/learn-es2015/#destructuring)
-- [Default + Rest + Spread](https://babeljs.io/docs/learn-es2015/#default--rest--spread)
-- [Iterators + For..Of](https://babeljs.io/docs/learn-es2015/#iterators--forof)
+- [ES6 Sampler #1: (Let & Const)](http://codepen.io/k3no/post/es6-sampler-plate)
+- [ES6 Sampler #2: Fat Arrows](http://codepen.io/k3no/post/es6-sampler-2-fat-arrows)
+- [ES6 Sampler #3: Classes](http://codepen.io/k3no/post/es6-sampler-3-classes-prototypes)
+- [ES6 Sampler #4: Spread](http://codepen.io/k3no/post/es6-sampler-4-spread)
+- [ES6 Sampler #5: Promises (were made)](http://codepen.io/k3no/post/es6-sampler-5-promises-were-made)
+- [ES6 Sampler #6 Odds & Ends](https://codepen.io/k3no/post/es6-sampler-6-odds-ends)
 
 See ES2015 support differences in browsers:
 
