@@ -61,18 +61,6 @@ To complete todays exercises we'll need to create accounts on the Cloud Hosting 
 
 ---
 
-## Exercise 2
-
-*Exercise details TBA.*
-
----
-
-## Exercise 3
-
-*Exercise details TBA.*
-
----
-
 ## Lab Activity
 
 Boot a copy of Ubuntu 16.04 on Digital Ocean (Droplet), Microsoft Azure, and AWS (EC2).
