@@ -43,30 +43,6 @@ Be prepared enough to explain your findings to the class.
 
 ---
 
-## Exercise 1
-
-*Exercise details TBA.*
-
----
-
-## Exercise 2
-
-*Exercise details TBA.*
-
----
-
-## Exercise 3
-
-*Exercise details TBA.*
-
----
-
-## Lab Activity
-
-*Lab activity details TBA.*
-
----
-
 ## Additional Resources
 
 - [Google: Image Optimizations](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization?hl=en)
