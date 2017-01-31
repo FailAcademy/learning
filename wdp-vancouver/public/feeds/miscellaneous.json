@@ -24,6 +24,18 @@
       "end": "2017-03-17T16:15:00+00:00"
    },
    {
+      "title": "Field Trip (STAT)",
+      "allDay": false,
+      "start": "2017-02-03T15:00:00+00:00",
+      "end": "2017-02-03T16:15:00+00:00"
+   },
+   {
+      "title": "Field Trip (MetaLab)",
+      "allDay": false,
+      "start": "2017-02-23T16:00:00+00:00",
+      "end": "2017-02-23T16:16:00+00:00"
+   },
+   {
       "title": "BC Family Day",
       "allDay": true,
       "start": "2017-02-13"
