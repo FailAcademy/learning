@@ -6,7 +6,6 @@ lesson_date: 2017-01-31
 
 ## Pre-Work
 
-
 Please read over the following links:
 - [Postgres Data Types](https://www.tutorialspoint.com/postgresql/postgresql_data_types.htm)
 - [PostgreSQL Schema](https://www.tutorialspoint.com/postgresql/postgresql_schema.htm)
