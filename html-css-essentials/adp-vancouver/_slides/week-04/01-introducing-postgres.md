@@ -41,7 +41,7 @@ Websites can continuously update because it is pulling information from a databa
 
 Each app that you use stores data
 
-For example Facebook stores data on 
+For example Facebook stores data on
   1. users - who you are
   2. users_friends - who your friends are
   3. users_posts - what you like to posts
