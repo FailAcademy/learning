@@ -1,12 +1,11 @@
 CREATE TABLE "public"."users" (
 	"userid" serial,
-	"firstname" text, 
+	"firstname" text,
 	"lastname" text,
-	"email" text, 
+	"email" text,
 	"password" text,
 	 PRIMARY KEY ("userid")
 );
-
 
 CREATE TABLE "public"."posts" (
     "postid" serial,
