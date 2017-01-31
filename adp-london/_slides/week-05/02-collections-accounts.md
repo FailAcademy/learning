@@ -1,6 +1,7 @@
 ---
 layout: slidedeck
-title: Meteor and React Slides
+title: Collections and Accounts Slides
+
 ---
 
 {% highlight html %}
@@ -10,7 +11,7 @@ class: center, middle, inverse
 
 ---
 
-# Meteor and React
+# Collections and Accounts
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
