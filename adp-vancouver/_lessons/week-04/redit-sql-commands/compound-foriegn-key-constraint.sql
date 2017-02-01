@@ -1,3 +1,6 @@
+// Users should not be able to vote
+// on the same post twice!
+
 create table userpostvotes (
 	"userid" integer not null,
 	"postid" integer not null,

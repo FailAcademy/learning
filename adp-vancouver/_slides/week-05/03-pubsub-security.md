@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Introducing Meteor (with React) Slides
+title: Pub-Sub and Security in Meteor Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Introducing Meteor (with React)
+# Pub-Sub and Security in Meteor
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
