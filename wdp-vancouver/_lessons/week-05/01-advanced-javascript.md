@@ -100,45 +100,6 @@ var name = "John";
 
 ## Exercise 3
 
-### Functions Inside Conditionals
-
-**What will the output be?**
-
-```js
-(function(){
-
-    if(true){                               // 1
-
-        function innerFunc() {              // 2
-
-            console.log("innerFunc: Inside if");
-        }
-
-        var innerFuncExpr = function () {   // 3
-
-            console.log("innerFuncExpr: Inside if");
-        }
-    } else {                                // 4
-
-        function innerFunc() {              // 5    
-            console.log("innerFunc: Inside else");
-        }
-        var innerFuncExpr = function () {   // 6
-
-            console.log("innerFuncExpr: Inside else");
-        }
-    }
-
-    innerFunc();                            // 7
-    innerFuncExpr();                        // 8
-
-})();
-```
-
----
-
-## Exercise 4
-
 ### Passing by Value versus Reference
 
 **What will the output be?**
