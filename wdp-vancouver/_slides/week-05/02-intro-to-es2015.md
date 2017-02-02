@@ -178,12 +178,22 @@ Conversely, `var` defines a variable globally, or locally to an entire function 
 Variables defined with `var` can lead to "name conflicts", where a coder overwrites a variable name, often unknowingly.
 
 ```js
-var teachers = [
-  'Mandi',
-  'Ben',
-  'Shawn',
-  'Mack',
-];
+var teachers = [ 'Ben', 'Blake', 'Mack', 'Mandi', 'Rose' ];
+
+var teachers = ['Alice', 'Bob', 'Jane'];
+// teachers variable is redeclared
+```
+
+Both `let` and `const` prevent redeclaring with the same variable name (but you can **reassign** a variable set with `let`).
+
+---
+
+# Problem 3: Avoiding Change
+
+`let` still allows reassigning of the value.
+
+```js
+let teachers = [ 'Ben', 'Blake', 'Mack', 'Mandi', 'Rose' ];
 
 var teachers = ['Alice', 'Bob', 'Jane'];
 // teachers variable is redeclared
@@ -218,12 +228,7 @@ However, some values could benefit from being marked as unchanging.
 `const` acts like `let`, but with the addition that its values cannot be reassigned.
 
 ```js
-const teachers = [
-  'Mandi',
-  'Ben',
-  'Shawn',
-  'Mack',
-];
+const teachers = [ 'Ben', 'Blake', 'Mack', 'Mandi', 'Rose' ];
 
 teachers = ['Kyle', 'Kurtis', 'Rony'];
 // TypeError: Assignment to constant variable.
@@ -251,7 +256,7 @@ numbers = [4, 5, 6];
 const array = [1, 2, 3];
 array.push(4);
 
-const object = {a: 1, b: 2};``
+const object = {a: 1, b: 2};
 object['c'] = 3;
 ```
 
@@ -479,7 +484,7 @@ function makePerson(name, city) {
 	};
 }
 
-makePerson( 'Shawn', 'Vancouver' );
+makePerson( 'Mandi', 'Vancouver' );
 ```
 
 ---
@@ -498,7 +503,7 @@ function makePerson(name, city) {
 	};
 }
 
-makePerson( 'Shawn', 'Vancouver' );
+makePerson( 'Mandi', 'Vancouver' );
 ```
 
 ---
@@ -569,8 +574,8 @@ var point = {
 var x = point.x;
 var y = point.y;
 
-console.log(a); // 1
-console.log(b); // 2
+console.log(x); // 1
+console.log(y); // 2
 ```
 
 ---
@@ -587,10 +592,10 @@ let point = {
   y: 2
 };
 
-let { x, y } = point;
+let {x, y} = point;
 
-console.log(a); // 1
-console.log(b); // 2
+console.log(x); // 1
+console.log(y); // 2
 ```
 
 ---
@@ -603,7 +608,7 @@ Another example using destructuring on an object:
 
 ```js
 var person = {
-	name: 'Shawn',
+	name: 'Mandi',
 	city: 'Vancouver',
 };
 

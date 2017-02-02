@@ -72,7 +72,7 @@ At a high level, you can think of accessibility on the web as making sure that *
 
 # Canadian Laws
 
-- Many provinces ([including BC](http://www2.gov.bc.ca/gov/content/governments/about-the-bc-government/accessibility/accessibility-2024/building-blocks/accessible-internet)) have legislation in place requiring government websites to be accessible
+- Many provinces ([including BC](http://www2.gov.bc.ca/gov/content/home/accessibility)) have legislation in place requiring government websites to be accessible
 - Ontario takes it a step further with **Accessibility for Ontarians with Disabilities Act (AODA)**, which requires organizations that employ more than 50 people, or are publicly funded, to post accessible content to their website
 
 ---

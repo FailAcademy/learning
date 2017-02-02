@@ -2,7 +2,7 @@
 layout: lesson
 title: WordPress Functions, Hooks & Debugging
 slides: ['_slides/week-06/05-functions-hooks-debugging.md']
-lesson_date: 2016-11-04
+lesson_date: 2017-02-17
 ---
 
 ## Pre-Work
@@ -56,6 +56,10 @@ You'll be assigned one of the following hooks to investigate:
 - `transition_post_status`
 - `wp_enqueue_scripts`
 - `wp_head` / `wp_footer`
+- `the_content`
+- `stylesheet_uri`
+- `publish_post`
+
 
 Specifically, figure out if your assigned hooks is an action or filter. What does it do? When does it fire or what does it modify? What is it good for?
 

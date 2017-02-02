@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Advanced JavaScript
-slides: ['_slides/week-03/01-advanced-javascript.md']
-lesson_date: 2016-10-24
+slides: ['_slides/week-05/01-advanced-javascript.md']
+lesson_date: 2017-02-06
 
 ---
 
@@ -99,45 +99,6 @@ var name = "John";
 ---
 
 ## Exercise 3
-
-### Functions Inside Conditionals
-
-**What will the output be?**
-
-```js
-(function(){
-
-    if(true){                               // 1
-
-        function innerFunc() {              // 2
-
-            console.log("innerFunc: Inside if");
-        }
-
-        var innerFuncExpr = function () {   // 3
-
-            console.log("innerFuncExpr: Inside if");
-        }
-    } else {                                // 4
-
-        function innerFunc() {              // 5    
-            console.log("innerFunc: Inside else");
-        }
-        var innerFuncExpr = function () {   // 6
-
-            console.log("innerFuncExpr: Inside else");
-        }
-    }
-
-    innerFunc();                            // 7
-    innerFuncExpr();                        // 8
-
-})();
-```
-
----
-
-## Exercise 4
 
 ### Passing by Value versus Reference
 

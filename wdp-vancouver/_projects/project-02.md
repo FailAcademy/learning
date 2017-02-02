@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 2 - Instanews App
-due: Tuesday, October 18th (beginning of class)
+due: Tuesday, January 31st (beginning of class)
 ---
 
 For Project 2, you're going to create a one-page, responsive website that allows a user to filter top news story categories via the [New York Times API](http://developer.nytimes.com/docs/top_stories_api/).
@@ -81,8 +81,8 @@ Your project must:
 
 Want to challenge yourself? Your project could also:
 
-- Incorporate a `<select>` field with custom styles applied (you will need a jQuery plugin for this such as [Heapbox](https://github.com/FilipBartos/heapbox))
-- Incorporate a combination of jQuery and CSS3-based animation to animate the movement of the header on the `<select>` change
+- Incorporate a `<select>` field with custom styles applied (you will need a jQuery plugin for this such as [Selectric](http://selectric.js.org/))
+- Incorporate a combination of jQuery and CSS3-based animation to animate the movement of the header on the `<select>` change 
 - Use CSS3 transitions to show and hide the article abstract on hover
 
 ## Submission Instructions

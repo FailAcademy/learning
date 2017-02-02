@@ -1,27 +1,28 @@
 ---
 layout: lesson
 title: Intro to ECMAScript 2015
-slides: ['_slides/week-05/01-intro-to-es2015.md']
-lesson_date: 2016-10-25
+slides: ['_slides/week-05/02-intro-to-es2015.md']
+lesson_date: 2017-02-07
 ---
 
 ## Pre-Work
 
-Visit the **[Learn ES2015](https://babeljs.io/docs/learn-es2015/)** page and review the list of new features of JavaScript that are a part of ES2015. Pay attention to these sections in particular:
+Watch these videos from Laracast's [ES2015 Crash Course](https://laracasts.com/series/es6-cliffsnotes):
 
-- [Let + Const](https://babeljs.io/docs/learn-es2015/#let--const)
-- [Arrows and Lexical This](https://babeljs.io/docs/learn-es2015/#arrows-and-lexical-this)
-- [Enhanced Object Literals](https://babeljs.io/docs/learn-es2015/#enhanced-object-literals)
-- [Template Strings](https://babeljs.io/docs/learn-es2015/#template-strings)
-- [Destructuring](https://babeljs.io/docs/learn-es2015/#destructuring)
-- [Default + Rest + Spread](https://babeljs.io/docs/learn-es2015/#default--rest--spread)
-- [Iterators + For..Of](https://babeljs.io/docs/learn-es2015/#iterators--forof)
+- [01: Babel Setup](https://laracasts.com/series/es6-cliffsnotes/episodes/1)
+- [03: To Var, Let, or Const](https://laracasts.com/series/es6-cliffsnotes/episodes/3)
+- [04: Arrows](https://laracasts.com/series/es6-cliffsnotes/episodes/4)
+- [05: Default Parameters](https://laracasts.com/series/es6-cliffsnotes/episodes/5)
+- [06: Rest and Spread](https://laracasts.com/series/es6-cliffsnotes/episodes/6)
+- [07: Template Strings](https://laracasts.com/series/es6-cliffsnotes/episodes/7)
+- [08: Awesome Object Enhancements](https://laracasts.com/series/es6-cliffsnotes/episodes/8)
 
-While reviewing each section, open the the [Babel online REPL](http://babeljs.io/repl/) and try pasting each ES2015 code example into it to see how it would be implemented in ES5 syntax.
+Optional (but worthwhile!) additional viewing:
 
-Also read through this excellent summary of the new ES2015 features before class:
+- [14: Useful String Additions](https://laracasts.com/series/es6-cliffsnotes/episodes/14)
+- [15: Array#find and Array#includes](https://laracasts.com/series/es6-cliffsnotes/episodes/15)
 
-- [ES6 Overview in 350 Bullet Points](https://github.com/bevacqua/es6)
+While watching each video, open the the **[Babel online REPL](http://babeljs.io/repl/)** and try writing out each ES2015 code example into it to see how it would be implemented in ES5 syntax.
 
 ---
 
@@ -99,18 +100,25 @@ To do this, start by creating a new branch on your project's repo called `es2015
 
 Specifically, you will need to:
 
-- Add a Gulp Babel to your project so you can transpile your JS to ES5
-- Replace all instances of `var` with `let` or `const` where appropriate
+- Add a **[`gulp-babel`](https://www.npmjs.com/package/gulp-babel)** to your project so you can transpile your JS to ES5
+- You will also need to add `"parser": "babel-eslint",` to your `.eslintrc` config file, and then `npm install --save-dev babel-eslint` to use the parser when linting
+- Replace all instances of `var` with `let` or `const` (whichever is most appropriate)
 - Use a template literal to replace any string concatenation
-
-#### Challenge yourself:
-
-- Refactor out your API call into a separate function and use `import` and `export` to load this function from another file. **Babel** alone does not compile modules into a format that your browser will recognize. Look at tomorrow's lesson for clues.
-- If you figure this out, next try removing the `<script>` element from your project's `index.html` file that loads jQuery, install jQuery from npm as a project dependency (but **not** a development dependency this time!), and `import` jQuery in your main project JS file instead
+- Use arrow functions where appropriate
+- Use object destructuring to save data from the article object into variables
 
 ---
 
 ## Additional Resources
+
+A great Codepen blog post series:
+
+- [ES6 Sampler #1: (Let & Const)](http://codepen.io/k3no/post/es6-sampler-plate)
+- [ES6 Sampler #2: Fat Arrows](http://codepen.io/k3no/post/es6-sampler-2-fat-arrows)
+- [ES6 Sampler #3: Classes](http://codepen.io/k3no/post/es6-sampler-3-classes-prototypes)
+- [ES6 Sampler #4: Spread](http://codepen.io/k3no/post/es6-sampler-4-spread)
+- [ES6 Sampler #5: Promises (were made)](http://codepen.io/k3no/post/es6-sampler-5-promises-were-made)
+- [ES6 Sampler #6 Odds & Ends](https://codepen.io/k3no/post/es6-sampler-6-odds-ends)
 
 See ES2015 support differences in browsers:
 
@@ -119,6 +127,14 @@ See ES2015 support differences in browsers:
 The official ES2015 Specification:
 
 - [ECMAScript® 2015 Language Specification](http://www.ecma-international.org/ecma-262/6.0/)
+
+An excellent, concise summary of the new ES2015 features:
+
+- [ES6 Overview in 350 Bullet Points](https://github.com/bevacqua/es6)
+
+Understanding `var` versus `let` versus `const`:
+
+- [Variable and Function Hoisting in ES2015](https://bitsofco.de/variable-and-function-hoisting-in-es2015/)
 
 Extra reading on ES2015 basics:
 

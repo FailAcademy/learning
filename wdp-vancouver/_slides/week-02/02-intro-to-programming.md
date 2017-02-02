@@ -78,7 +78,7 @@ class: center, middle
 ---
 template: inverse
 
-# Using Psuedocode
+# Using Pseudocode
 
 ---
 
@@ -96,7 +96,7 @@ class: center, middle
 
 Pseudocode is code that's meant for human reading, not machine reading.
 
-Pseudocode simply writing out an algorithm in human-readable words, instead of computer code.
+Pseudocode is simply writing out an algorithm in human-readable words, instead of computer code.
 
 ---
 
@@ -248,7 +248,7 @@ class: center, middle
 
 Check out the [WordPress Trac](https://core.trac.wordpress.org/tickets/latest) to see how people around the world are contributing to this piece of software right now.
 
-Their contributions (and potentially yours one day!) will impact how over 25% of of the top 10 million sites on the web run.
+Their contributions (and potentially yours one day!) will impact how over 27% of of the top 10 million sites on the web run.
 
 ---
 class: center, middle
@@ -270,7 +270,7 @@ class: center, middle
 
 This may seem obvious. More specifically, you should aim to gain some level of ability to **touch-type**, which means typing without looking at the keyboard.
 
-Being a fast typer is not a requirement for being a good programmer, but it will save you time.
+Being a fast typist is not a requirement for being a good programmer, but it will save you time.
 
 If you're working on a team, you'll also me typing a lot of emails, chat messages, project briefs and so on. Communication gets easier when you have mastered the tools you'll use for it.
 
@@ -374,7 +374,7 @@ class: center, middle
 
 How to improve your coding chops:
 
-1. Look at other peoples code
+1. Look at other people's code
 2. Run other people's code
 3. Write more code!
 4. Learn to love your IDE/debugger

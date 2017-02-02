@@ -2,7 +2,7 @@
 layout: lesson
 title: Flexbox
 slides: ['_slides/week-02/01-flexbox.md']
-lesson_date: 2016-10-03
+lesson_date: 2017-01-16
 ---
 
 ## Pre-Work
@@ -106,3 +106,7 @@ Try out flexbox properties using this point-and-click interface:
 How to add flexbox support to really old versions of IE:
 
 - [Flexibility](https://github.com/10up/flexibility)
+
+Want to play tower defence but need to learn flexbox...
+
+- [Flexbox defence](http://www.flexboxdefense.com/)

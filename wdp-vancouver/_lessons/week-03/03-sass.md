@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Sass / CSS Preprocessors
-slides: ['_slides/week-03/04a-sass.md']
-lesson_date: 2016-10-13
+slides: ['_slides/week-03/03-sass.md']
+lesson_date: 2017-01-25
 ---
 
 ## Pre-Work
@@ -11,11 +11,9 @@ Visit the Sass homepage and take a look around:
 
 - [Sass Homepage](http://sass-lang.com/guide)
 
-Check out these online tutorials:
+Please read through this introductory article on Sass before the lesson:
 
-- [SASS Tutorial pt. 1](https://www.codeschool.com/courses/assembling-sass)
-- [SASS Tutorial pt. 2](https://www.codeschool.com/courses/assembling-sass-part-2)
-
+- [Intro to Sass | SCSS101](https://codepen.io/sasstantrum/post/intro-to-sass)
 
 ---
 

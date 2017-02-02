@@ -109,6 +109,7 @@ Use `wp_localize_script()` to pass data from PHP to JS:
 // In your functions.php file
 
 function red_scripts() {
+   wp_enqueue_script( 'jquery' );
    wp_enqueue_script( 'red_api', get_template_directory_uri() . '/build/js/api.min.js', array( 'jquery' ), false, true );
 
  	wp_localize_script( 'red_api', 'api_vars', array(
@@ -189,21 +190,23 @@ add_action( 'wp_enqueue_scripts', 'red_scripts' );
 Now we'll set up our Ajax-ified event handler:
 
 ```js
-$('#close-comments').on('click', function(event) {
-   event.preventDefault();
+(function( $ ) {
+   $('#close-comments').on('click', function(event) {
+      event.preventDefault();
 
-   $.ajax({
-      method: 'post',
-      url: red_vars.ajax_url,
-      data: {
-         'action': 'red_comment_ajax',
-         'security': red_vars.comment_nonce,
-         'the_post_id': red_vars.post_id
-      }
-   }).done( function(response) {
-      alert('Success! Comments are closed for this post.');
+      $.ajax({
+         method: 'post',
+         url: red_vars.ajax_url,
+         data: {
+            'action': 'red_comment_ajax',
+            'security': red_vars.comment_nonce,
+            'the_post_id': red_vars.post_id
+         }
+      }).done( function(response) {
+         alert('Success! Comments are closed for this post.');
+      });
    });
-});
+})( jQuery );
 ```
 
 ---

@@ -397,7 +397,7 @@ The `comments.php` file is the template file that contains all the logic for dis
 And inside `comments.php`:
 
 - **[wp_list_comments()](https://codex.wordpress.org/Function_Reference/wp_list_comments)** can be configured with an array of arguments to customize how comments are listed
-- **[comment_form()](https://codex.wordpress.org/Function_Reference/comment_form)** can be configured with an array of arguments to customize how the comment for is displayed
+- **[comment_form()](https://codex.wordpress.org/Function_Reference/comment_form)** can be configured with an array of arguments to customize how the comment form is displayed
 
 ---
 
@@ -539,9 +539,14 @@ And this right before the closing body tag:
 
 # Exercise 2
 
-Let's explore the `redstarter` theme together...
+Let's explore the inhabitent site demo site and apply our knowledge of the template hierarchy.
 
-You can [download a copy here](https://github.com/redacademy/redstarter/archive/master.zip) and add it to your `wp-content/themes` directory to follow along.
+Visit the inhabitent demo site at [tent.academy.red](http://tent.academy.red/).
+
+Explore the site and using the WordPress template heiarchy, try to idenitfy the template files needed to build this theme. 
+
+Write down these template files and how they correspond with the site. 
+
 
 ---
 

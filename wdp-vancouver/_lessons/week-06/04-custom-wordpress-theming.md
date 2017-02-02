@@ -2,7 +2,7 @@
 layout: lesson
 title: Custom WordPress Theming
 slides: ['_slides/week-06/04-custom-wordpress-theming.md']
-lesson_date: 2016-11-03
+lesson_date: 2017-02-17
 ---
 
 ## Pre-Work
@@ -46,9 +46,13 @@ Based on the questions posed, determine what will be the correct template file t
 
 ## Exercise 2
 
-Let's explore the `redstarter` theme together...
+Let's explore the inhabitent site demo site and apply our knowledge of the template hierarchy.
 
-You can [download a copy here](https://github.com/redacademy/redstarter/archive/master.zip) and add it to your `wp-content/themes` directory to follow along.
+Visit the inhabitent demo site at [tent.academy.red](http://tent.academy.red/).
+
+Explore the site and using the WordPress template heiarchy, try to idenitfy the template files needed to build this theme. 
+
+Write down these template files and how they correspond with the site. 
 
 ---
 
@@ -60,7 +64,7 @@ Copy the starter theme directory into **a new WP installation** on your computer
 
 Next, to get your project set-up, you'll want to run `npm install` in the root of the theme directory so you can get Gulp up and running.
 
-In the [project assets folder](https://s3-us-west-2.amazonaws.com/red-wdp/project-04.zip) you'll also find all of the content for the site. You'll need to add the content to your site via the WP admin area. **Start with posts!** You will find the featured image for each post in `_assets/images/blog-photos/`.
+In the [project assets folder](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-04.zip) you'll also find all of the content for the site. You'll need to add the content to your site via the WP admin area. **Start with posts!** You will find the featured image for each post in `_assets/images/blog-photos/`.
 
 We'll learn how to create a custom post type for the product content next week.
 
