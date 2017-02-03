@@ -14,14 +14,13 @@ Before we begin working with Meteor this week, please read over the [Meteor Guid
 ## Learning Objectives
 
 - Survey the history and origins of the Meteor project and the MDG.
-- Describe why Meteor exists.
-- Describe what problems Meteor solves for developers.
-- Explain Meteor's shared client-server architechture.
+- Explain why a developer would want to use Meteor to build an application, and what problems it solves for developers.
+- Describe Meteor's shared client-server architecture.
 - Uncover the component parts of Meteor.
-- Use Meteor's package system.
+- Use AtmosphereJS, Meteor's package system.
 - Describe some potential drawbacks of using Meteor.
 - Deploy a Meteor App using `meteor-now`.
-- Refactor our React-Todos app to use Meteor.
+- Refactor our React To-Do app into a Meteor app.
 
 ---
 
@@ -33,30 +32,26 @@ Before we begin working with Meteor this week, please read over the [Meteor Guid
 - Reactivity / Reactive programming
 - Fibers & the Event Loop
 - MDG
-- Atmosphere
+- AtmosphereJS
 - Galaxy
 
 ---
 
 ## Exercise 1
 
-Design an Application Platform
+**Design an application platform:**
 
-- Split into two groups and create your ideal application platform, on paper. Your platform should be
-geared towards developers who want to create Web Apps and should include all the necessary components.
+Split into two groups and create your ideal application platform, on paper. Your platform should be geared towards developers who want to create Web Apps and should include all the necessary components.
 
-- When you've come up with a platform design, then come up with a marketing plan for your platform.
-When you have a marketing plan, you'll present it to the class. Your plan should hilight all of the reasons
-developers should choose your platform, over their own custom solution.
+When you've come up with a platform design, then come up with a marketing plan for your platform. When you have a marketing plan, you'll present it to the class. Your plan should highlight all of the reasons developers should choose your platform, over their own custom solution.
 
 ---
 
 ## Exercise 2
 
-How do Desktop apps perform vs. Browser based apps?
+*How do desktop apps perform versus browser-based apps?*
 
-- In a group, discuss the main differences in User Experience, between Desktop apps and Web Apps.
-
+In a group, discuss the main differences in user experience between desktop apps and web apps.
 
 ---
 
@@ -69,7 +64,33 @@ How do Desktop apps perform vs. Browser based apps?
 
 ## Lab Activity
 
+In today's lab, we'll start refactoring our React To-Do app from the the first week into a Meteor app. Please complete the following tasks before tomorrow's class.
 
+### Step 1: Installation
+
+1. Create new Meteor app by running `meteor create meteor-react-todo`.
+2. Also install React: `meteor npm install react react-dom`.
+
+### Step 2: Copy-Pasta
+
+1. Move your existing `index.js` code to `client/main.js`.
+2. Move your existing `index.css` to `client/main.css`.
+3. Refactor the content in `client.html` to only contain the single `<div>` you'll use to render your React app.
+4. Create an `imports/ui/containers/App` directory in your Meteor app and move `App.js` and `App.css` there. Considering following component naming/organization best practices and rename `App.js` to `index.js` and `App.css` to `styles.css` too.
+5. Update all broken file import paths/names everywhere!
+
+### Step 3: Meteor/React Initialization
+
+1. Add `import { Meteor } from 'meteor/meteor';` to `client/main.js`
+2. Wrap `ReactDOM.render` in `Meteor.startup( /* ... */ );` (because we don't want to try to render anything to the DOM before Meteor is ready!)
+3. Boom! Everything should be working again in your app.
+
+### Step 4: Clean-up
+
+Now would be a good time to consider refactoring some of the presentational components out of the container `App` component...
+
+1. Move your `ToDoCount`, `ToDoInput`, `ClearButton`, and `ToDoItem` components into `imports/ui/components/<COMPONENT_NAME>` directories. 
+2. Now import these components into your main `App` component file instead.
 
 ---
 
