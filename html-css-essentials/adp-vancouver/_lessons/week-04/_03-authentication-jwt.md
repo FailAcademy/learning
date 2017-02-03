@@ -16,23 +16,20 @@ Look for them to use the word "key".
 
 2. Show some basic math.
 
-Key + Encrypted Code = Message 
+Key + Encrypted Code = Message
 
 3. Communication puzzle.
 
 "A" wants to communicate a number with "B", while "C" is listening in between. How can they securely communicate?
 (// answer: give each a secret shared key (a number both know) and add that number to your secret number)
+(The transaction is a handshake)
 
-4. A computer could guess this number. 
+4. A computer could guess this number.
 
 How long would it take a computer with 1 GHz/Sec to solve a 3 letter code.
-
 1000 / 1 000 000 000 = around 0.000001 seconds
-
 We can make passwords longer so it takes a computer longer to crack them.
-
 128 bit encryption refers to a password about 128/30 = 38 characters long = 1e29 seconds
-
 We cannot make a secret "impossible" to crack, but we can make it take a really, really long time to solve.
 
 3. Encryption paint game. Public and private key example.

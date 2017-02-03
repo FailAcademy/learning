@@ -1,4 +1,4 @@
-select posts.title, posts.id from posts 
+select posts.title, posts.id from posts
 	inner join posttags
 			on posts.id = posttags.postid
 	inner join tags
