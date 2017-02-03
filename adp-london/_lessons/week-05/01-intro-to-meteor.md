@@ -75,6 +75,14 @@ How do Desktop apps perform vs. Browser based apps?
 
 ## Additional Resources
 
+From the official Meteor docs:
+
+- [Application Structure](https://guide.meteor.com/structure.html)
+
+A Google Chrome extension with some Meteor dev tools:
+
+- [Meteor DevTools](https://chrome.google.com/webstore/detail/meteor-devtools/ippapidnnboiophakmmhkdlchoccbgje)
+
 The best user guide for Meteor, and one of the best Documentations projects for any software platform:
 
 - [Discover Meteor](https://www.discovermeteor.com/)
