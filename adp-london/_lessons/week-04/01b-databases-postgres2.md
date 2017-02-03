@@ -50,15 +50,15 @@ Add the appropriate constraints to your project's database.
 
 ## Exercise 2
 
-Set up a link table called user post votes and define a **compond primary key** to ensure that ensure that users can only vote for one post once?
+Set up a link table called user post votes and define a **compond primary key** to ensure that ensure that users can only vote for one post once.
 
 Answer the followng questions when describing foreign key constraints: </br>
-- What is the difference betweeen `NOT NULL`, `NO ACTION` & `CASCADE` when specifying 
+- What is the difference betweeen `SET NULL`, `NO ACTION` & `CASCADE` when specifying 
 foreign key constraints?
 - What are some use cases for each?
 
 *Hint:*
-- If we delet users from the database, do we also want to delete records of what posts they voted for?
+- If we delete users from the database, do we also want to delete records of what posts they voted for?
 
 ---
 
