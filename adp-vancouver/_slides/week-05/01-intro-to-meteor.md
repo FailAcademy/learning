@@ -19,68 +19,92 @@ layout: false
 
 # Agenda
 
-1. Introduction
-2. Deep-dive
-3. ...
+1. The Client-Server model
+2. History of Meteor & MDG
+3. Application Platforms
+4. Meteor's Parts
+5. Benefits of Meteor
+6. Drawbacks of Meteor
+
+---
+template: inverse
+
+# Client server model
 
 ---
 
-.left-column[
-  ## Column Layout
-]
+- Limits of HTTP
+- Latency
+- Websockets FTW
+- No shared code
+- UI gets the short shift
 
-.right-column[
-You can make two-column layouts as well.red[*] in a slideshow!
+---
+template: inverse
 
-A sample unordered list:
-
-- List item 1
-- List item 2
-- List item 3
-
-.footnote[.red[*] And add footnotes too]
-]
+# History of Meteor & MDG
 
 ---
 
-# Syntax Highlighting
+- Open source
+- Asana
+- Since 2012
+- 25m funding
 
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
+---
+template: inverse
 
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
+# Application Platforms
 
 ---
 
-.left-column[
-  ## Remark How-tos
-]
+- Exercise
 
-.right-column[
-   This slideshow is based on [remark.js](https://github.com/gnab/remark).
+---
+template: inverse
 
-   To learn more about building a slideshow with remark, check out:
-
-   - [The remark formatting guide](https://github.com/gnab/remark/wiki/Formatting)
-   - [The remark Markdown guide](https://github.com/gnab/remark/wiki/Markdown)
-]
+# Meteor's Parts
 
 ---
 
-# What We've Learned
+- Mongo
+- DDP
+- EJSON
 
-- Thing 1
-- Thing 2
-- Thing 3
+- Session
+- Collections
+- Accounts
+
+- DDP
+- Tracker
+- Pub/Sub
+
+- isServer / isClient
+
+---
+template: inverse
+
+# Benefits of Meteor
+
+---
+
+- No loading!
+- Send less data!
+- Reactive!
+- So many sensible defaults!
+- Fast TTL!
+
+---
+template: inverse
+
+# Drawbacks of Meteor
+
+---
+
+- JS Ecosystem interop
+- Mongo by default
+- Performance gotchas
+- Deployment
 
 ---
 template: inverse
