@@ -30,7 +30,8 @@ Before we begin working with Meteor this week, please read over the [Meteor Guid
 - Developer experience
 - Universal JavaScript
 - Reactivity / Reactive programming
-- Fibers & the Event Loop
+- Fibers and the Event Loop
+- Optimistic UI
 - MDG
 - AtmosphereJS
 - Galaxy

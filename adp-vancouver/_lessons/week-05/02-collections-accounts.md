@@ -33,7 +33,14 @@ Also consider installing [RoboMongo](https://robomongo.org/) for a nice GUI for 
 
 ## Keywords
 
-*Keywords TBA.*
+- MongoDB
+- NoSQL
+- CRUD
+- Normalization
+- Collection
+- Document
+- Embedded document
+- Minimongo
 
 ---
 
@@ -109,7 +116,7 @@ Official MongoDB docs worth bookmarking:
 
 Official Meteor documentation on collections and accounts:
 
-- [Meteor Collections API Docs](https://docs.meteor.com/api/collections.html)
-- [Meteor Guide - Collections](http://guide.meteor.com/collections.html)
-- [Meteor Accounts API Docs](https://docs.meteor.com/api/accounts.html)
-- [Meteor Guide - Users and Accounts](https://guide.meteor.com/accounts.html)
+- [Collections - Meteor Docs](https://docs.meteor.com/api/collections.html)
+- [Collections - Meteor Guide](http://guide.meteor.com/collections.html)
+- [Accounts - Meteor Docs](https://docs.meteor.com/api/accounts.html)
+- [Users and Accounts - Meteor Guide](https://guide.meteor.com/accounts.html)
