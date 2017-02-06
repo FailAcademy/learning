@@ -17,6 +17,7 @@ Before we begin working with Meteor this week, please read over the [Meteor Guid
 - Explain why a developer would want to use Meteor to build an application, and what problems it solves for developers.
 - Describe Meteor's shared client-server architecture.
 - Uncover the component parts of Meteor.
+- Install the Meteor Dev Tools Chrome Extension.
 - Use AtmosphereJS, Meteor's package system.
 - Describe some potential drawbacks of using Meteor.
 - Deploy a Meteor App using `meteor-now`.
@@ -42,7 +43,8 @@ Before we begin working with Meteor this week, please read over the [Meteor Guid
 
 **Design an application platform:**
 
-Split into two groups and create your ideal application platform, on paper. Your platform should be geared towards developers who want to create Web Apps and should include all the necessary components.
+
+Split into two groups. Imagine you're planning an application platform for *other developers* to use. Your platform should be geared towards developers who want to create Web Apps and should include all the necessary components. Feel free to **invent or imagine technology or solutions that don't currently exist**
 
 When you've come up with a platform design, then come up with a marketing plan for your platform. When you have a marketing plan, you'll present it to the class. Your plan should highlight all of the reasons developers should choose your platform, over their own custom solution.
 
@@ -50,15 +52,26 @@ When you've come up with a platform design, then come up with a marketing plan f
 
 ## Exercise 2
 
-*How do desktop apps perform versus browser-based apps?*
+Install Meteor and run `meteor create`.
 
-In a group, discuss the main differences in user experience between desktop apps and web apps.
+See if you can add the following features to the example project that is generated:
+
+- A button that decrements the counter
+- A text input and button combination. When the user clicks the button, whatever text
+is in the input appears on screen.
+
+Install the Meteor Dev Tools Chrome extension, and observe Meteor's DDP websocket
+transport protocol in action! Open the mongoDB shell using the `meteor mongo` command
+and take a peek at your new mongoDB database.
 
 ---
 
 ## Exercise 3
 
+Now that we know a little bit about What Meteor does, watch the following short Video on Fibers & Futures in Node, for some insight on how it does it:
 
+- [Evented Mind, Introducing Fibers in Node](https://www.eventedmind.com/items/nodejs-introducing-fibers).
+- [Evented Mind, Using Futures](https://www.eventedmind.com/items/nodejs-using-futures).
 
 
 ---
