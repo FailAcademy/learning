@@ -34,7 +34,7 @@ Before we begin working with Meteor this week, please read over the [Meteor Guid
 - Fibers and the Event Loop
 - Optimistic UI
 - MDG
-- AtmosphereJS
+- Atmosphere
 - Galaxy
 
 ---
@@ -72,7 +72,6 @@ Now that we know a little bit about What Meteor does, watch the following short 
 
 - [Evented Mind, Introducing Fibers in Node](https://www.eventedmind.com/items/nodejs-introducing-fibers).
 - [Evented Mind, Using Futures](https://www.eventedmind.com/items/nodejs-using-futures).
-
 
 ---
 

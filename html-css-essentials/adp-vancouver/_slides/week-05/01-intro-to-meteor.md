@@ -65,8 +65,6 @@ Meteor simplifies and improves the *Developer Experience* of building Client-Ser
 
 # Exercise 1
 
-**Design an application platform:**
-
 Split into two groups. Imagine you're planning an application platform for *other developers* to use. Your platform should be geared towards developers who want to create Web Apps and should include all the necessary components. Feel free to **invent or imagine technology or solutions that don't currently exist**
 
 When you've come up with a platform design, then come up with a marketing plan for your platform. When you have a marketing plan, you'll present it to the class. Your plan should highlight all of the reasons developers should choose your platform, over their own custom solution.
@@ -154,12 +152,51 @@ Let's review the Awesome Meteor API Documentation and discuss the finer points o
 
 ---
 
+## Meteor, Atmosphere & NPM
+
+In 2011 NPM had not yet established itself as the de-facto package manager for Node applications.
+
+Because of Meteor unique architechture, and inorder to preserve it's simple developer experience, while allowing
+3rd party developers to contribute useful packages for use with Meteor, MDG built a proprietary packging system.
+
+The community responded by building a package hub called:
+### [Atmosphere](https://atmospherejs.com/)
+
+---
+
+## Meteor, Atmosphere & NPM
+
+As Meteor grew in popularity, the benefits of this system were soon overshadowed, by the demand from the JavaScript
+community at large, for NPM integration. Most JavaScript developers, especially those building software with Node,
+use NPM.
+
+The result is that there are 2 ways of aquiring packages to use with your Meteor Project.
+
+- Meteor's packaging system is still very useful, and you'll use it to add and remove all of the **Standard Packages**
+that come built into Meteor.
+
+---
+
+# Deploying Meteor Apps
+
+Historically, Meteor has been difficult to deploy, because of it's unique architechture.
+This is no longer the case. MDG has created [Galaxy](https://www.meteor.com/hosting). An all in one paid hosting
+solution for Meteor apps.
+
+The Open Source community has also built deployment solutions. The 2 most popular are: 
+- [MUP](https://github.com/zodern/meteor-up) Built by Arounoda Surispala, a hero in the Moeteor OS community.
+- [meteor-now](https://www.npmjs.com/package/meteor-now) Built on the fantastic **[Now](https://zeit.co/now)** Node deployment tool.
+Install Now and deploy your example app to see just how easy it is...
+
+---
+
 # Meteor's Parts
 
 Based on our review of the API, let's attempt to answer the following questions:
 
 - How does Meteor address some of the shortcomings we mentioned earlier?
 - What are some of the innovative or unusual aspects of Meteor's API?
+- What are some of the important Deployment gotchas involved in running a production Meteor application?
 - How will working with Meteor make our lives as Full-Stack JavaScript Developers more sane?
 
 ---
@@ -220,6 +257,7 @@ template: inverse
 - mongoDB by default
 - Performance gotchas
 - Deployment
+- Doesn't work seamlessly with all JS
 
 ... Anything else?
 
