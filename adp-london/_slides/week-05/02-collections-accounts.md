@@ -40,7 +40,7 @@ class: center, middle
 
 # About MongoDB
 
-- Stores data in rich documents (use array, embedded documents, etc.)
+- Stores data in rich documents (use arrays, embedded documents, etc.)
 - Uses JSON to format the documents
 - Schema-free by default
 - Allows us to design data models to support common access patterns (compared to a relational design that may require joins across tables)
@@ -53,11 +53,21 @@ class: center, middle
 A loose comparison of SQL vs. MongoDB terminology:
 
 ```
-Database    => Database
-Table       => Collection
-Row         => Document
-Column      => Field
-Primary Key => Primary Key (_id)
+  SQL          |  MongoDB
+-----------------------------------------
+  Database     |  Database
+
+  Table        |  Collection
+
+  Index        |  Index
+
+  Row          |  Document
+
+  Column       |  Field
+
+  Primary Key  |  Primary Key (_id)
+
+  Joining      |  Linking or Embedding
 ```
 
 ---
@@ -77,7 +87,7 @@ Recall that these value types are supported by JSON (and MongoDB!):
 
 # BSON?
 
-Any valid JSON can be easily imported and queried in MongoDB. It also supports additional data types too, like a date field. 
+Any valid JSON can be easily imported and queried in MongoDB. It also **[supports additional data types too](https://docs.mongodb.com/manual/reference/operator/query/type/#available-types)**, like a date field. 
 
 But ultimately, MongoDB stores data as **BSON** (binary JSON).
 
@@ -190,7 +200,7 @@ We **[call methods on our cursor](https://docs.mongodb.com/manual/reference/meth
 db.students.find().forEach( (doc) => print( doc.name ) );
 ```
 
-A cursor will typically retrieve a **batch of up to 101 results** for you to iterate through before retrieving another batch.
+A cursor will typically retrieve a **batch of up to 101 results** for you to iterate through before retrieving another batch (or 20 results in the shell if not assigned to a variable).
 
 ---
 
@@ -227,7 +237,7 @@ db.students.find({cohort: 6, passing: true}); # implicit $and
 # These also do the same thing...
 
 db.students.find({ $or: [ { name: "Bob" }, { name: "Anne" } ] });
-db.students.find({ name: { $not: {$eq: "Joe"} } });
+db.students.find({ name: { $not: { $eq: "Joe" } } });
 ```
 
 ---
@@ -251,7 +261,7 @@ db.students.find(
 As a second argument to `.find()` we can pass another object known as a **projection**.
 
 ```bash
-db.students.find({cohort: 6, passing: true}, {_id: 0, name: 1});
+db.students.find({ cohort: 6, passing: true }, { _id: 0, name: 1 });
 ```
 
 Projections allow us to only request the fields/data we need from a document over the wire&mdash;performance FTW.
@@ -346,9 +356,9 @@ Let's practice importing and querying data in MongoDB. Outside of the Mongo shel
 
 - How many people are humans from Tatooine?
 - How many people appear in The Empire Strikes Back?
-- How many people are taller than than 160cm?
+- How many people are taller than than 170cm?
 - How many people fly some form of X-Wing?
-- Return the names and masses of humans, ordered in descending order by mass. Skip the first two results and limit your results to only four people.
+- Return the names and masses of humans, ordered in descending order by known mass. Skip the first two results and limit your results to only four people.
 
 ---
 template: inverse
