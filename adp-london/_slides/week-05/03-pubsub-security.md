@@ -28,10 +28,39 @@ template: inverse
 # Meteor Methods
 
 ---
+template: inverse
+
+# Meteor Methods
+
+.large[Think of Meteor Methods as an **API for your server**]
+
+---
+class: middle
+
+## Typical client/server relationship
+
+- Server implements a REST API in language X
+- Someone has to write a library for accessing that API in the client's language
+- The client uses the library to interact with the server
+
+---
+class: middle
+
+## Meteor client/server relationship
+
+- Methods are written on the server
+- Client uses the Meteor interface to call the method
+
+---
+template: inverse
+
+# DDP
+
+---
 class: center, middle
 
 .large[
-  At the moment, any user can edit any part of the database from the client side of the app...
+  Our app is insecure right now. Why?
 ]
 
 ---
@@ -48,17 +77,7 @@ Congrats! You have now revoked the client-side permissions from your app, and wi
 
 ---
 
-# Meteor Methods
-
-Think of Meteor Methods as an **endpoint for your server.**
-
----
-
-More content probably goes here...
-
----
-
-# Where to Put Them
+# Where to Put Methods
 
 In our `imports/api/todos.js` we'll make a call to `Meteor.methods()`. Add a Method for `toggleComplete`:
 
