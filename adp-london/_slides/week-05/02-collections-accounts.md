@@ -232,7 +232,7 @@ Also note the `$in` operator selects the documents where the value of a field eq
 # These do the same thing...
 
 db.students.find({ $and: [ { cohort: 6 }, { passing: true } ] });
-db.students.find({cohort: 6, passing: true}); # implicit $and
+db.students.find({ cohort: 6, passing: true }); # implicit $and
 
 # These also do the same thing...
 
@@ -296,12 +296,12 @@ We can also `updateOne()` and `updateMany()` in MongoDB:
 
 ```bash
 db.students.updateMany(
-  { "name" : "Bob" },
-  { $set: { "passing" : false } }
+  { name : "Bob" },
+  { $set: { passing : false } }
 );
 
 db.students.updateOne(
-  { "name" : "Alice" },
+  { name : "Alice" },
   { $set: { cohort: 6, passing: true } },
   { upsert: true }
 );
@@ -414,7 +414,7 @@ meteor mongo
 Try adding a todo:
 
 ```bash
-db.todos.insert({ { id: 0, title: 'Learn React', complete: false } });
+db.todos.insert({ id: 0, title: 'Learn React', complete: false });
 ```
 
 Run `db.todos.find()`. What do you notice about the `id`? 
@@ -435,7 +435,7 @@ Then add your to-do again in the `meteor mongo` shell:
 
 ```bash
 meteor mongo
-db.todos.insert({ { title: 'Learn React', complete: false } });
+db.todos.insert({ title: 'Learn React', complete: false });
 ```
 
 Run `db.todos.find()` to confirm everything is OK.
@@ -501,7 +501,7 @@ You may also want to set `defaultProps` for `todos` as an empty array so your ap
 
 Meteor can create a default to-do on start-up if none exist.
 
-To do that, `imports/server/fixtures.js` and import it into `imports/server/index.js`. Add this code to `fixtures.js`:
+Create `imports/server/fixtures.js` and import it into `imports/server/index.js`. Add this code to `fixtures.js`:
 
 ```js
 import { Meteor } from 'meteor/meteor';
@@ -640,7 +640,7 @@ Update your `propTypes` too!
 
 # Exercise 5
 
-Let's wrap all of the components in our to-do list that should only be visible to logged in users (i.e. the input, to-do list, the to-do count, and clear button). Leave the `<h1>` visible.
+Let's wrap all of the components in our to-do list that should only be visible to logged in users (i.e. the input, to-do list, the to-do count, and clear button) in a `<div>`. Leave the `<h1>` visible.
 
 When a user is not logged in, alternatively display the following:
 
