@@ -322,7 +322,7 @@ Lastly, we have `deleteOne()` and `deleteMany()` to remove documents:
 db.students.deleteOne({ _id : ObjectId("5892ce85ebd5c3837116cdec") });
 
 # Delete all the Joes!
-db.orders.deleteMany({ name : "Joe" });
+db.students.deleteMany({ name : "Joe" });
 ```
 
 You can use `db.students.drop()` to drop the entire collection. But use with caution!
