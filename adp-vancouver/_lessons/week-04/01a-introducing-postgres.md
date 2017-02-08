@@ -47,8 +47,11 @@ To start getting familiar with SQL syntax, complete Part 1, from [these exercise
 
 ## Exercise 1
 
-You should have a running instance of PostgreSQL running on your computer. In this lab activity,
-we'll go through the process of setting up a few new databases within it, to use throughout the rest of our
+You should have a running instance of PostgreSQL running on your computer.
+
+If you have not installed PostgreSQL yet, get the app installer here: https://postgresapp.com/
+
+In this lab activity, we'll go through the process of setting up a few new databases within it, to use throughout the rest of our
 time with PostgreSQL.
 
 - Create 2 databases
