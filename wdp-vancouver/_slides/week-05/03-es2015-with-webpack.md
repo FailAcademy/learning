@@ -145,7 +145,7 @@ How does Webpack treat CSS files? How is this different from the more traditiona
 
 ---
 
-# Exercises 1-5
+# Exercises 1-4
 
 Now, we're ready to install Webpack in a new project.
 

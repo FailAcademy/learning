@@ -14,7 +14,7 @@ Watch these videos from Laracast's [ES2015 Crash Course](https://laracasts.com/s
 
 Also complete the following reading on ES2015 classes before class:
 
-- [An Introduction to ES6 Classes](https://strongloop.com/strongblog/an-introduction-to-javascript-es6-classes/))
+- [An Introduction to ES6 Classes](https://strongloop.com/strongblog/an-introduction-to-javascript-es6-classes/)
 
 We'll be creating SVGs to build the Pong game in Project 3, so you'll want to take a look through this guide before class:
 
