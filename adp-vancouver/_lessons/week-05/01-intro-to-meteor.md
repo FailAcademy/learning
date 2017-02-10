@@ -88,7 +88,7 @@ In today's lab, we'll start refactoring our React To-Do app from the the first w
 
 1. Move your existing `index.js` code to `client/main.js`.
 2. Move your existing `index.css` to `client/main.css`.
-3. Refactor the content in `client.html` to only contain the single `<div>` you'll use to render your React app.
+3. Refactor the content in `client/main.html` to only contain the single `<div>` you'll use to render your React app.
 4. Create an `imports/ui/containers/App` directory in your Meteor app and move `App.js` and `App.css` there. Considering following component naming/organization best practices and rename `App.js` to `index.js` and `App.css` to `styles.css` too.
 5. Update all broken file import paths/names everywhere!
 
@@ -100,7 +100,7 @@ In today's lab, we'll start refactoring our React To-Do app from the the first w
 
 ### Step 4: Clean-up
 
-Now would be a good time to consider refactoring some of the presentational components out of the container `App` component...
+Now would be a good time to consider refactoring some of the 'presentational' components out of the container `App` component...
 
 1. Move your `ToDoCount`, `ToDoInput`, `ClearButton`, and `ToDoItem` components into `imports/ui/components/<COMPONENT_NAME>` directories. 
 2. Now import these components into your main `App` component file instead.
