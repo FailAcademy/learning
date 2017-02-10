@@ -136,7 +136,7 @@ function handleConnection() {
 
 # Building a TCP Service
 
-In order to show when the **server** has recieved a connection from a **client**,
+In order to show when the **server** has received a connection from a **client**,
 we'll need to add some code to the `handleConnection` callback.
 
 ```js
@@ -180,7 +180,7 @@ class: center, middle
 ### Congratulations, you've successfully created a new network 'node' and connected it to the internet!
 
 It doesn't do anything useful yet.
-Before we can start sending and recieving data, we'll need to add a few more things...
+Before we can start sending and receiving data, we'll need to add a few more things...
 
 ---
 
@@ -192,16 +192,16 @@ Implement the following `conn` event handlers in your `handleConnection` callbac
 - #### 'close'
 - #### 'error'
 
-Each handler should `console.log` the `remoteAddress` as well as any relavent parameters (e.g. incoming data, or error messages).
+Each handler should `console.log` the `remoteAddress` as well as any relevant parameters (e.g. incoming data, or error messages).
 Review the documentation here before you begin: [https://nodejs.org/api/net.html](https://nodejs.org/api/net.html)
 
 ---
 
 # UTF8
 
-If you're sending incoming data to the server console, you may have noticed somehting like this `<Buffer 9c 4f 4f 4f>` in the output.
+If you're sending incoming data to the server console, you may have noticed somthing like this `<Buffer 9c 4f 4f 4f>` in the output.
 
-This happens because TCP sends **streams of bytes** acrocss the network, and it's up to our application to decode them properly!
+This happens because TCP sends **streams of bytes** across the network, and it's up to our application to decode them properly!
 
 ## What is utf8?
 
@@ -214,12 +214,12 @@ template: inverse
 
 # V8 Inspector Integration
 
-To debug a node applcation, start the node process using the following command:
+To debug a node application, start the node process using the following command:
 
 ```bash
 node --debug --inspect index.js
 ```
-You should see output in your teminal:
+You should see output in your terminal:
 ```bash
 Debugger listening on port 9229.
 Warning: This is an experimental feature and could change at any time.
@@ -305,7 +305,7 @@ Your screen should look something like this:
 
 # Exercise 3
 
-Run some load tests on your TCP Server and ovserve the following:
+Run some load tests on your TCP Server and observe the following:
 - System memory and CPU usage
 - Node process memory and CPU usage
 - The output returned from the server process
@@ -334,7 +334,7 @@ Change your TCP service to deliver any incoming data to all connected clients.
 
 # Process: Memory & CPU
 
-Introducing the code reccomended on the previous slide may have intorduced a memory leak.
+Introducing the code recommended on the previous slide may have introduced a memory leak.
 Run the load tester to find out!
 
 - What do we have to do to prevent the memory leak?
