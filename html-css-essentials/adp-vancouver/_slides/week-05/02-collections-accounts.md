@@ -417,7 +417,7 @@ Try adding a todo:
 db.todos.insert({ id: 0, title: 'Learn React', complete: false });
 ```
 
-Run `db.todos.find()`. What do you notice about the `id`? 
+Run `db.todos.find()`. What do you notice about the `id`?
 
 Let's remove our manually generated IDs everywhere now, and just use the ID Mongo generates for each to-do document.
 
@@ -749,7 +749,7 @@ So with a MongoDB you think about what pieces of data are **used together**, wha
 - We must have a plan for keeping our data consistent even though MongoDB lacks foreign key constraints
 - **Third Normal Form:** Says that every non-key attribute in the table must provide a fact about the key, the whole key, and nothing but the key (not as worried about this in MongoDB)
 - Must consider if data have a **1:1**, **1:Many**, or **Many:Many** (or **1:Few** or **Few:Few**) relationship
-  
+
 ---
 
 # What We've Learned
