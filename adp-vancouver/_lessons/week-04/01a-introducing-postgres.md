@@ -72,10 +72,10 @@ creating and authorizing a new Database on your local machine. In a real product
 Create Tables and set Data Types. What types of data do we need to model for our REDit application?
 
 - Use the `CREATE TABLE` command to set up some tables in our test database.
-- Set the apropriate data-types for each column in our schema.
+- Set the appropriate data-types for each column in our schema.
 
 **Handling Id's** <br/>
-Each entry into the database for each of the schemas should have an id. This will be necessary for building
+Each entry into the database for each of the schema should have an id. This will be necessary for building
 the relationships between data in out database.
 
 - What data type is provided to implement and auto-incrementing id column?
@@ -85,7 +85,7 @@ the relationships between data in out database.
 
 ## Exercise 3
 
-Postgres is a 'Relational Database'. So far we have not specified any relationships between our data models.
+PostgreSQL is a 'Relational Database'. So far we have not specified any relationships between our data models.
 Let's create relationships between the tables we created in the last lesson.
 
 The relationships we'll create are defined as follows:
@@ -101,14 +101,14 @@ Creating many to many relationships requires the creation of a "Link table".
 
 - How are Link Tables implemented.
 - Why are link tables necessary in order to define n:n relationships between columns in our database?
-- WHat are the many to many relationships in our priject application's database?
+- WHat are the many to many relationships in our project application's database?
 
 ---
 
 ## Exercise 4
 
-Installing and setting up Postgres and a GUI for working with your database is complicated.
-Take some time now to capture the steps for installing and setting up postgres on your local machine.
+Installing and setting up PostgreSQL and a GUI for working with your database is complicated.
+Take some time now to capture the steps for installing and setting up PostgreSQL on your local machine.
 
 ---
 
@@ -125,7 +125,7 @@ Add the following mock data to your database:
 - 4 Posts
 - 2 Tags
 
-Ensure that you've set up the apropriate foreign key constraints!
+Ensure that you've set up the appropriate foreign key constraints!
 
 ---
 
@@ -133,5 +133,5 @@ Ensure that you've set up the apropriate foreign key constraints!
 
 - [Learn SQL - Codeacademy](https://www.codecademy.com/learn/learn-sql)
 - [18+ Best Online Resources for Learning SQL and Database Concepts](http://www.vertabelo.com/blog/notes-from-the-lab/18-best-online-resources-for-learning-sql-and-database)
-- [PostgreSQL Docsh](http://www.postgresql.org/docs/9.6)
+- [PostgreSQL Docs](http://www.postgresql.org/docs/9.6)
 

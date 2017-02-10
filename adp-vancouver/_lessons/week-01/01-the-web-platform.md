@@ -11,7 +11,7 @@ lesson_date: 2017-01-09
 
 Create a function that outputs a random colour. The function should output the relevant colour values for HEX, RGBa and HSLa.
 
-Feel free to use code you find on the internet, but be prepared to explain how it works.
+Feel free to use code you find on the Internet, but be prepared to explain how it works.
 
 The JavaScript for your colour display widget should be written in ES2015. Modern browsers support this out-of-the-box, so you don't have to use Webpack or any other conversion tool.
 

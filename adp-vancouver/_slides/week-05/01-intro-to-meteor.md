@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Introducing Meteor <br/> 
+# Introducing Meteor <br/>
 (with React)
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
@@ -56,7 +56,7 @@ Meteor comes with everything a JavaScript developer might need to build a fully 
 
 class: center, middle
 
-Meteor simplifies and improves the *Developer Experience* of building Client-Server applications: 
+Meteor simplifies and improves the *Developer Experience* of building Client-Server applications:
 
 - It's a complete and fully integrated suite of programs.
 - It's simple and powerful set of JavaScript API's for working with those programs.
@@ -91,7 +91,7 @@ The Meteor platform includes:
 
 **So far in the course we've built a typical RESTful style Client-Server application.**
 
-This architechture has been in use for a long time. For experienced developers, the
+This architecture has been in use for a long time. For experienced developers, the
 shortcomings of this type of application have become obvious, here are a few:
 
 - HTTP is a slow and bloated transport protocol
@@ -101,7 +101,7 @@ shortcomings of this type of application have become obvious, here are a few:
 ---
 class: center, middle
 
-Meteor was created to address these and many other shortcomings in typical Client-Server Application architechture.
+Meteor was created to address these and many other shortcomings in typical Client-Server application architecture.
 
 <img style="display:block; margin: 0 auto;" src="/public/img/slide-assets/simply-the-best.jpg">
 
@@ -119,7 +119,7 @@ template: inverse
 - Meteor was first introduced in 2011 under the name [Skybreak](https://blog.meteor.com/skybreak-is-now-meteor-e680d1dbaf84#.8iukm4iye).
 - The startup **The Meteor Development Group** (MDG) was incubated by Y Combinator.
 - In 2014, MDG acquired Y Combinator alum FathomDB.
-- In 2012 MDG recieved 11 million in funding from the investment firm *Andreessen Horowitz*.
+- In 2012 MDG received 11 million in funding from the investment firm *Andreessen Horowitz*.
 
 ---
 
@@ -156,8 +156,8 @@ Let's review the Awesome Meteor API Documentation and discuss the finer points o
 
 In 2011 NPM had not yet established itself as the de-facto package manager for Node applications.
 
-Because of Meteor unique architechture, and inorder to preserve it's simple developer experience, while allowing
-3rd party developers to contribute useful packages for use with Meteor, MDG built a proprietary packging system.
+Because of Meteor unique architecture , and in order to preserve it's simple developer experience, while allowing
+3rd party developers to contribute useful packages for use with Meteor, MDG built a proprietary packaging system.
 
 The community responded by building a package hub called:
 ### [Atmosphere](https://atmospherejs.com/)
@@ -170,7 +170,7 @@ As Meteor grew in popularity, the benefits of this system were soon overshadowed
 community at large, for NPM integration. Most JavaScript developers, especially those building software with Node,
 use NPM.
 
-The result is that there are 2 ways of aquiring packages to use with your Meteor Project.
+The result is that there are 2 ways of acquiring packages to use with your Meteor Project.
 
 - Meteor's packaging system is still very useful, and you'll use it to add and remove all of the **Standard Packages**
 that come built into Meteor.
@@ -179,12 +179,12 @@ that come built into Meteor.
 
 # Deploying Meteor Apps
 
-Historically, Meteor has been difficult to deploy, because of it's unique architechture.
+Historically, Meteor has been difficult to deploy, because of it's unique architecture.
 This is no longer the case. MDG has created [Galaxy](https://www.meteor.com/hosting). An all in one paid hosting
 solution for Meteor apps.
 
-The Open Source community has also built deployment solutions. The 2 most popular are: 
-- [MUP](https://github.com/zodern/meteor-up) Built by Arounoda Surispala, a hero in the Moeteor OS community.
+The Open Source community has also built deployment solutions. The 2 most popular are:
+- [MUP](https://github.com/zodern/meteor-up) Built by Arounoda Surispala, a hero in the Meteor OS community.
 - [meteor-now](https://www.npmjs.com/package/meteor-now) Built on the fantastic **[Now](https://zeit.co/now)** Node deployment tool.
 Install Now and deploy your example app to see just how easy it is...
 
