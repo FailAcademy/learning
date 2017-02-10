@@ -41,13 +41,18 @@
       "allDay": true,
       "start": "2017-02-03"
    },
-      {
-      "title": "Handoffs / Invision + Inspect with UI",
+   {
+      "title": "Project Planning Day",
+      "allDay": true,
+      "start": "2017-02-09"
+   },
+   {
+      "title": "Project Planning Day",
       "allDay": true,
       "start": "2017-02-10"
    },
    {
-      "title": "Self Directed Meteor Project",
+      "title": "Self Directed Meteor Project Work Days",
       "allDay": true,
       "start": "2017-02-14T13:00:00+00:00",
       "end": "2017-02-18T15:00:00+00:00"

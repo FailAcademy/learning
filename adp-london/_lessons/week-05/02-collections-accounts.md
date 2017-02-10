@@ -50,9 +50,9 @@ Let's practice importing and querying data in MongoDB. Outside of the Mongo shel
 
 - How many people are humans from Tatooine?
 - How many people appear in The Empire Strikes Back?
-- How many people are taller than than 160cm?
+- How many people are taller than than 170cm?
 - How many people fly some form of X-Wing?
-- Return the names and masses of humans, ordered in descending order by mass. Skip the first two results and limit your results to only four people.
+- Return the names and masses of humans, ordered in descending order by known mass. Skip the first two results and limit your results to only four people.
 
 ---
 

@@ -13,7 +13,7 @@ Prior to today's class, please read:
 
 Also be sure to review how timers work in JS:
 
-- [Understanding timers: setTimeout and setInterval](http://javascript.info/tutorial/settimeout-setinterval)
+- [Understanding timers: `setTimeout` and `setInterval`](http://javascript.info/tutorial/settimeout-setinterval)
 
 Learn about the event loop:
 
@@ -23,7 +23,7 @@ Learn about the event loop:
 
 ## Learning Objectives
 
-- Understand and be able to differentiate asynchrony, parallelism and concurrency.
+- Understand and be able to differentiate 'asynchrony', parallelism and concurrency.
 - Explain the JavaScript "event loop", and how it interprets the code we write.
 - Distinguish between blocking and non-blocking code (for example, `fs.readFile` versus `fs.readFileSync`).
 - Understand the syntactic and semantic implications of "Callback Hell"

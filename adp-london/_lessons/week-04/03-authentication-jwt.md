@@ -20,9 +20,7 @@ Prior to class, please read:
 - Explain a high level overview of how authentication can work.
 - Distinguish between sessions and cookies or tokens.
 - Demonstrate session state using JSON web tokens.
-- Use Express and Passport to save and authenticate user login and passwords.
-- Justify your choice of a particular type of hashing function for storing passwords.
-- Use an OAuth2 library to handle user authentication with an external API service (such as Github, Facebook or Twitter).
+- Save and authenticate user login and passwords.
 
 ---
 
@@ -34,7 +32,6 @@ Prior to class, please read:
 - Cookies
 - Tokens
 - Hashing algorithm
-- OAuth2
 
 ---
 

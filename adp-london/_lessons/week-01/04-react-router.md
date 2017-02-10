@@ -31,7 +31,7 @@ Also read through these CSS Tricks articles on using container components and Re
 ## Keywords
 
 - Container component
-- Presentational component
+- 'Presentational' component
 - Route
 - Browser History API
 
