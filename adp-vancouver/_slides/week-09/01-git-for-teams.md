@@ -21,7 +21,7 @@ layout: false
 # Agenda
 
 1. Define what makes a good team?
-2. How can Git be used to make your team more effiecient 
+2. How can Git be used to make your team more efficient 
 3. Understand common errors with Git Teams
 
 ---
@@ -45,10 +45,10 @@ Is where the sum of the parts is greater than the whole.
 
 Everyone is tasked with making a website for our class. This site must be about Git and the benefits of using it. Everyone must collaborate on it. 
 
-The process will consist of 4 seperate 5 minute stages. 
+The process will consist of 4 separate 5 minute stages. 
 1. Everyone is working on creating the site separately.
 2. Everyone will zip their files over to an elected person. This person will work on merging all the files into one. The remaining people will continue on improving the site. 
-3. Rotate untill everyone has had a chance to merge.
+3. Rotate until everyone has had a chance to merge.
 
 ---
 class: center, middle
@@ -59,9 +59,9 @@ What are a few things everyone would do in order to make this process easier?
 ---
 #Exercise 2
 
-How would you create verision control?
+How would you create version control?
 
-Spend a few minutes writing down all the features you would like your verison control to have. Specifically tailor it to a team environment. 
+Spend a few minutes writing down all the features you would like your version control to have. Specifically tailor it to a team environment. 
 
 ---
 #Workflow
