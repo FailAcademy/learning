@@ -17,7 +17,7 @@ lesson_date: 2017-01-26
 - Wrap a lower level library for a particular use case
 - Understand the 'service' paradigm
 - Design a service with a simple, intuitive API for making API requests
-- Use `redux-thunk` to allow reducx actions to make asynchronous requests
+- Use `redux-thunk` to allow Redux actions to make asynchronous requests
 
 ---
 

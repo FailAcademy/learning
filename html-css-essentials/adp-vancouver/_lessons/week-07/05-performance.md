@@ -49,7 +49,7 @@ It should be a function that takes a function as a parameter and outputs the tot
 
 With a partner, calculate the Big O of given functions.
 
-Choose three additional functions from your code and try to calculate the Big O of each. Compare your estimation with another student.
+Choose three additional functions from your code and try to calculate the 'Big O' of each. Compare your estimation with another student.
 
 ---
 
