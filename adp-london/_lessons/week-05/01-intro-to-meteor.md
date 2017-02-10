@@ -100,7 +100,7 @@ In today's lab, we'll start refactoring our React To-Do app from the the first w
 
 ### Step 4: Clean-up
 
-Now would be a good time to consider refactoring some of the presentational components out of the container `App` component...
+Now would be a good time to consider refactoring some of the 'presentational' components out of the container `App` component...
 
 1. Move your `ToDoCount`, `ToDoInput`, `ClearButton`, and `ToDoItem` components into `imports/ui/components/<COMPONENT_NAME>` directories. 
 2. Now import these components into your main `App` component file instead.

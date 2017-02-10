@@ -18,7 +18,7 @@ Watch [this video](https://www.youtube.com/watch?v=8aGhZQkoFbQ) for a primer on 
 - Describe the Client-Server Computing Model.
 - Model JavaScript's Event Loop.
 - Build a simple TCP / UDP messaging server.
-- Install and use Node's profiniling tools.
+- Install and use Node's profiling tools.
 
 ---
 
@@ -30,7 +30,7 @@ Watch [this video](https://www.youtube.com/watch?v=8aGhZQkoFbQ) for a primer on 
 - TCP / UPD
 - Process Manager
 - Memory Leak
-- Back Presssure
+- Back Pressure
 
 ---
 
@@ -42,7 +42,7 @@ Implement the following `conn` event handlers in your `handleConnection` callbac
 - #### 'close'
 - #### 'error'
 
-Each handler should `console.log` the `remoteAddress` as well as any relavent parameters (e.g. incoming data, or error messages).
+Each handler should `console.log` the `remoteAddress` as well as any relevant parameters (e.g. incoming data, or error messages).
 Review the documentation here before you begin: [https://nodejs.org/api/net.html](https://nodejs.org/api/net.html)
 
 ---
@@ -62,7 +62,7 @@ When you're finished, watch this video from Google I/O!
 
 # Exercise 3
 
-Run some load tests on your TCP Server and ovserve the following:
+Run some load tests on your TCP Server and observe the following:
 - System memory and CPU usage
 - Node process memory and CPU usage
 - The output returned from the server process
@@ -87,7 +87,7 @@ Change your TCP service to deliver any incoming data to all connected clients.
 
 **Option 1**
 
-Building a TCP server from scratch is not somehting you'll normally do.
+Building a TCP server from scratch is not something you'll normally do.
 There are a wide range of behaviors and edge cases we'd have to account for, if we wanted our chat server to work
 in the way that we're accustomed to.
 
