@@ -7,7 +7,7 @@ lesson_date: 2017-03-07
 ## Pre-work
 
 In todays lesson we'll be using DOcker to simplify the deployment of applications in the Cloud. 
-Docker is a complex oftware and this lesson will be a brief introduction to Docker Containers, 
+Docker is a complex software and this lesson will be a brief introduction to Docker Containers, 
 the `DOCKERFILE` and Docker Hub.
 
 Read over the [Docker Documentation](https://docs.docker.com/), and Install Docker for Mac.

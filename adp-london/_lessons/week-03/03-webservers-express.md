@@ -6,10 +6,10 @@ lesson_date: 2017-01-25
 
 ## Pre-Work
 
-Please review the [Express documentation](http://expressjs.com/) in preperation for this lesson.
+Please review the [Express documentation](http://expressjs.com/) in preparation for this lesson.
 
-Set up Chrome's developer tools Netowrk tb to help us debug our application: 
-Make sure you have the following 6 columns visible: 
+Set up Chrome's developer tools Network tb to help us debug our application:
+Make sure you have the following 6 columns visible:
 
 |  Name   |  Method   |  Status   |  Type   |  Size   |  Time   |
 |---------|:----------|:----------|:--------|:--------|:--------|
@@ -29,7 +29,7 @@ Make sure you have the following 6 columns visible:
 - Use fetch on the client to get data from the server.
 - Use CORS to share resources across domains.
 - Use Express middleware for processing requests.
-- Send and recieve JSON from a client to Express, using `fetch`.
+- Send and receive JSON from a client to Express, using `fetch`.
 
 ---
 
@@ -57,7 +57,7 @@ many things as you can.
 
 ## Exercise 2
 
-*How do we serve static files using Experess?*
+*How do we serve static files using Express?*
 
 You've set up a simple Express server, now modify it to serve an `index.html` file to connected browsers.
 
@@ -96,7 +96,7 @@ Send a request through 2 or more Express middleware. `console.log` something in 
 
 Set up an Express endpoint to serve JSON content!
 
-- How do we set up express to serve JSON without using the filesystem API?
+- How do we set up express to serve JSON without using the file system API?
 
 ---
 
