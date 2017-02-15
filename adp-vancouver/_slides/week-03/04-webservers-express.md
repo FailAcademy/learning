@@ -242,9 +242,9 @@ Create and sync up a second "redux" state on the server.
 
 Notice how our client and server code are both sharing the same reducers.
 
-This is often called **universal javascript** or **isomorphic javascript**.
+This is often called **universal JavaScript** or **isomorphic JavaScript**.
 
-- What are some benefits and draw backs of "universal javascript"?
+- What are some benefits and draw backs of "universal JavaScript"?
 
 ---
 
@@ -297,7 +297,7 @@ Explain and justify your solution.
 
 1. full-stack Redux
 2. web sockets
-3. universal javascript
+3. universal JavaScript
 4. optimistic ui
 
 {% endhighlight %}
