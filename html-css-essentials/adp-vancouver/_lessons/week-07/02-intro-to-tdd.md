@@ -55,5 +55,5 @@ Use what you learned about mocking dependencies to make it work!
 
 ## Additional Resources
 
-- (Jest)[https://facebook.github.io/jest/]
-- (Jasmine)[https://jasmine.github.io/]
+- [Jest](https://facebook.github.io/jest/)
+- [Jasmine](https://jasmine.github.io/)
