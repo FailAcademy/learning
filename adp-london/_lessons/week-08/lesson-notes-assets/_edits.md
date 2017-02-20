@@ -3,8 +3,6 @@
 
 ## Day 1
 
-- Put robot json URL somewhere more sensible (on https)
-- Fix error with simulator flag (needs end quote)
 
 ## Day 2
 
@@ -30,11 +28,14 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 ## Day 5
 
+- Make short animation lesson...
+
 - 
 
 ## Project Notes
 
 - Project is too complex and ambitious for one week...need to simplify
 - Don't make container components a matter of opinion
+- Icon reference: https://ionicframework.com/docs/v2/ionicons/
 
 ## Miscellaneous
