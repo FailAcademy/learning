@@ -1,68 +1,62 @@
 ---
 layout: lesson
-title: Advanced Testing
-slides: ['_slides/week-07/03-advanced-testing.md']
+title: Behaviour Driven Development
+slides: ['_slides/week-07/03-bdd.md']
 lesson_date: 2017-02-22
 ---
 
 ## Pre-Work
 
-Prior to class, more about [Enzyme](http://airbnb.io/enzyme/). Write three unit tests for React components using Enzyme.
+Read:
+
+- [Introducing BDD](https://dannorth.net/introducing-bdd/)
+- [What's in a Story?](https://dannorth.net/whats-in-a-story/)
+- [A practical blog on how to write Scenarios using BDD](https://elabor8.com.au/a-practical-blog-on-how-to-write-scenarios-using-bdd/)
 
 ---
 
 ## Learning Objectives
 
-- Write spies using Jest.
-- Write stubs and mocks using Jest.
-- Set-up code coverage in Jest.
+- Understand how stakeholders are integral to BDD
+- Write BDD stories
+- Use documentation as Interface Discovery
+- Convert BDD stories to actual tests
+- Understand the pros and cons of TDD and BDD
 
 ---
 
 ## Keywords
 
-- Shallow and mount rendering
-- Stub
-- Spy
-- Mock
-- Code coverage
-
----
-
-## Exercise 1
-
-Write unit tests for React components in the Worst Pokemon project.
-
----
-
-## Exercise 2
-
-Write unit tests for action creators and middleware in your Worst Pokemon project.
-
-These tests should use **spies** or **mocks**.
-
----
-
-## Exercise 3
-
-Setup a test watcher with code-coverage reporting.
-
----
-
-## Exercise 4
-
-Setup your Worst Pokemon project to use pre-compiled TypeScript tests.s
+- BDD
+- Stories
+- Narrative
+- Scenario
+- Stakeholder
+- Interface Discovery
+- Given/When/Then
 
 ---
 
 ## Lab Activity
 
-Write unit tests to test your existing React components, middleware and action creators from an earlier project.
+We're going to write tests and some new features for the Gandalf library.
+Here's how we'll do it:
+
+```
+# Code Along
+- Prep Gandalf for unit tests using Jest
+- Write a couple unit tests for existing functionality
+
+# On your own
+- Use BDD to define some new features
+- Use documentation to discover the interface for these new features
+- Use TDD to implement the new features
+```
+
+When we're done, we'll have useful, documented, and tested new code.
 
 ---
 
-## Resources
+## Additional Reading
 
-- [Ava & React](https://github.com/avajs/ava/blob/master/docs/recipes/react.md)
-- [Unit Test Best Practices](https://gist.github.com/axyz/64c5087565b2c1907c0a8c4952cba27f)
-- [The Difference Between Mocks & Stubs](http://martinfowler.com/articles/mocksArentStubs.html#TheDifferenceBetweenMocksAndStubs)
+- [Beyond Test Driven Development](https://lizkeogh.com/2012/06/24/beyond-test-driven-development/)
