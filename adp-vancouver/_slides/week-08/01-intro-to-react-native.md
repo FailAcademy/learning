@@ -130,7 +130,7 @@ Before we can create our first React Native app, we must ensure we have the foll
 2. [Homebrew](http://brew.sh/)
 3. [Node](https://nodejs.org/en/)
 
-You will likely also want to install a VS Code extension called [React Native Tools](https://github.com/Microsoft/vscode-react-native).
+You will likely also want to install a VS Code extension called **[React Native Tools](https://github.com/Microsoft/vscode-react-native)** and the **[React Native Debugger](https://github.com/jhen0409/react-native-debugger)**.
 
 ---
 
@@ -164,7 +164,7 @@ From your project directory, now run:
 react-native run-ios
 ```
 
-You can also add the `--simulator="iPhone SE` flag to that command to launch your app on a specific device.
+You can also add the `--simulator="iPhone SE"` flag to that command to launch your app on a specific device.
 
 ---
 
@@ -180,6 +180,7 @@ The generated directory structure for your project will include:
 |-- ios/             # boilerplate for iOS
 |-- node_modules     # yes, we can use npm packages with RN!
 |-- package.json     # obviously...don't leave home without it
+|-  # ...            # other RN config files...
 ```
 
 For now, we will work primarily in `index.ios.js`, but will talk more in depth about project organization later in the lesson.
@@ -226,6 +227,7 @@ For Android, we would see the Java equivalent in the `MainActivity.java` file.
 - RN has a built-in inspector, perf monitor, etc.
 - To view iOS simulator logs from the CLI, you can run `react-native log-ios`
 - The red screen of death will often point you in the right direction...but not always
+- The third-party [React Native Debugger](https://github.com/jhen0409/react-native-debugger) is essential for debugging your React and Redux code
 
 ---
 template: inverse
@@ -687,7 +689,7 @@ We won't want to depend on `index.ios.js` and `index.android.js` exclusively as 
 ```bash
 |-- __tests__
 |-- android/
-|-- app/ # <-------- ADD THIS DIR!
+|-- js/ # <----------- ADD THIS DIR!
 |-- index.android.js
 |-- index.ios.js
 |-- ios/
@@ -702,10 +704,10 @@ We won't want to depend on `index.ios.js` and `index.android.js` exclusively as 
 Inside the `app` folder...
 
 ```bash
-|-- app/
+|-- js/
 |   |-- components # smaller chunks of reusable, stateless UI
 |   |-- config     # keep configuration out of code!
-|   |-- images     # static image assets
+|   |-- assets     # static image assets and custom fonts
 |   |-- lib        # general functions (code re-use FTW!)
 |   |-- navigation # define routes and nav components
 |   |-- scenes     # container components that render each scene
@@ -750,9 +752,9 @@ What to put in your `config` folder:
 
 ```bash
 |-- config/
-|   |-- models.js   # for defining our Realm db schema later
-|   |-- settings.js # for API keys, etc.
-|   |-- styles.js   # for shared styles (typography, colours, etc.)
+|   |-- models.js # for defining our Realm db schema later
+|   |-- api.js    # for API details, etc.
+|   |-- styles.js # for shared styles (typography, colours, etc.)
 ```
 
 **Note:** In RN, we typically want to **reuse styled components**, rather than reusing styles. 
