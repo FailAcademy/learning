@@ -17,6 +17,17 @@ class: center, middle, inverse
 
 ---
 layout: false
+
+# Agenda
+
+1. Code completion
+2. Write failing tests
+3. Red Green Refactor
+4. Mocks, Stubs, Fakes
+5. Handling dependencies in unit tests
+---
+
+layout: false
 class: middle, center
 
 .large[How do you know when your code is "done"?]
