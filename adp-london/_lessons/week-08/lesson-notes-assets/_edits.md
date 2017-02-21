@@ -6,8 +6,6 @@
 
 ## Day 2
 
-- Build this lesson out in greater depth
-- Need more hand-holding re: pushing and popping screens, and using params
 
 ## Day 3
 
@@ -30,12 +28,8 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 - Make short animation lesson...
 
-- 
-
 ## Project Notes
 
-- Project is too complex and ambitious for one week...need to simplify
-- Don't make container components a matter of opinion
 - Icon reference: https://ionicframework.com/docs/v2/ionicons/
 
 ## Miscellaneous
