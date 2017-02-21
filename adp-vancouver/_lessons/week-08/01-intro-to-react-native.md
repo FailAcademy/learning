@@ -123,7 +123,11 @@ Begin by creating a new React Native app name `R10`. Working from the project's 
 
 Your goal for today is to build out and style the `About` scene for your app. Don't worry about adding the toggling animation on the Code of Conduct points yet (we'll work on that at the end of the week). For now, just display all of the Code of Conduct content statically.
 
-In preparation for tomorrow's lesson on navigation, you may also want to rough out container components for the app's other scenes (i.e. Schedule, Session, Speaker, and Faves).
+Be sure to **add a loading state** to your sceen while content is being fetched...in other words, display an `ActivityIndicator` component in the scene until the request to Firebase for the Code of Conduct points is complete.
+
+In preparation for tomorrow's lesson on navigation, you may also want to rough out container components for the app's other scenes (i.e. `Schedule`, `Session`, `Speaker`, and `Faves`).
+
+Be sure to set-up all of the colors for you app in an object exported from `config/styles.js` too.
 
 ---
 

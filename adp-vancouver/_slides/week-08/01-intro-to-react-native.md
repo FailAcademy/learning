@@ -709,6 +709,7 @@ Inside the `app` folder...
 |   |-- config     # keep configuration out of code!
 |   |-- assets     # static image assets and custom fonts
 |   |-- lib        # general functions (code re-use FTW!)
+|   |-- redux      # store and reducers go here
 |   |-- navigation # define routes and nav components
 |   |-- scenes     # container components that render each scene
 |   |-- index.js   # single entry point of a cross-platform app
