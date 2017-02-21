@@ -1,7 +1,6 @@
 ---
 layout: lesson
 title: Typed JS using TypeScript
-slides: ['_slides/week-07/01-typescript-flow.md']
 lesson_date: 2017-02-20
 ---
 
