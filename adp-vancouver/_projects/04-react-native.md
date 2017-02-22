@@ -5,11 +5,41 @@ due: Monday, March 6th (beginning of class)
 class: gh-check
 ---
 
-Build a mobile application for an upcoming developer conference using React Native. 
+Build a mobile application using React Native for an upcoming developer conference called R10.
 
 Your project must be cross-platform (iOS/Android) and contain a database (Realm).
 
 You can [download the project assets here](https://s3-us-west-2.amazonaws.com/red-adp/project-files/project-04.zip).
+
+## Configuaration
+
+### API Endpoints
+
+You can fetch content for this app at the following endpoints:
+
+**Sessions:**
+https://r10app-95fea.firebaseio.com/sessions.json
+
+**Speakers:**
+https://r10app-95fea.firebaseio.com/speakers.json
+
+**Code of Conduct:**
+https://r10app-95fea.firebaseio.com/code_of_conduct.json
+
+### Design specs
+
+**Colours:**
+
+- Medium Grey: `#999999`
+- Light Grey: `#e6e6e6`
+- Blue: `#8797D6`
+- Purple: `#9963ea`
+- Red: `#cf392a`
+
+**Fonts:**
+
+- Montserrat Regular
+- Montserrat Light
 
 ## Requirements
 
@@ -67,9 +97,9 @@ Want to challenge yourself? Your project could also:
 
 - [ ] Cache requests made to the Firebase app to improve performance
 
-**Include Attendee Registration:**
+**Include a Map scene:**
 
-- [ ] Add a basic flow allowing users to register for the conference
+- [ ] Add an additional scene containing a map using [React Native Maps](https://github.com/airbnb/react-native-maps) with a custom image pin to show the conference location
 
 ## Submission Instructions
 
