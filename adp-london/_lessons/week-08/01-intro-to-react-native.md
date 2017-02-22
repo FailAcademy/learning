@@ -103,7 +103,7 @@ Now you're going to build a slightly more complex `<ListView>` in your `HelloWor
 
 The URL below contains JSON with data for 100 robot users:
 
-https://raw.githubusercontent.com/redacademy/adp-vancouver/production/public/exercises/listview-data.json?token=ABcsvIa5rKpRui1Pq2cuOpa0cNY7zYi0ks5YJkfNwA%3D%3D
+https://robot-data.firebaseio.com/robots.json
 
 Your goal is to build a `<ListView>` that renders the data like this:
 
@@ -117,19 +117,17 @@ Bonus points if you figure out how to sort the robots alphabetically by first na
 
 ## Lab Activity
 
-In today's lab, we're going to start working on the Splashify project.
+In today's lab, we're going to start working on the R10 project.
 
-Begin by creating a new React Native app name `Splashify`. Working from the project's design comps, plan out the directory structure for your app.
+Begin by creating a new React Native app name `R10`. Working from the project's design comps, plan out the directory structure for your app.
 
-You'll also need to [sign-up as a developer](https://unsplash.com/developers) with Unsplash so you can register an application to consume data from its API.
+Your goal for today is to build out and style the `About` scene for your app. Don't worry about adding the toggling animation on the Code of Conduct points yet (we'll work on that at the end of the week). For now, just display all of the Code of Conduct content statically.
 
-Unsplash provides a JS wrapper to simplify working with its API that you will also want to add to your project:
+Be sure to **add a loading state** to your sceen while content is being fetched...in other words, display an `ActivityIndicator` component in the scene until the request to Firebase for the Code of Conduct points is complete.
 
-- [unsplash/unsplash-js](https://github.com/unsplash/unsplash-js)
+In preparation for tomorrow's lesson on navigation, you may also want to rough out container components for the app's other scenes (i.e. `Schedule`, `Session`, `Speaker`, and `Faves`).
 
-Your goal for today is to build out the `Random` scene for your app, complete with the photographer's username and avatar overlain on the randomly retrieved image.
-
-When you complete that task, you can begin building out the feed of recently added photos in the `Recent` scene.
+Be sure to set-up all of the colors for you app in an object exported from `config/styles.js` too.
 
 ---
 
@@ -141,6 +139,11 @@ Some general React Native resources:
 - [JS Coach - React Native](https://js.coach/react-native)
 - [Awesome React Native](https://github.com/jondot/awesome-react-native)
 - [Spencer Carli on Medium](https://medium.com/@spencer_carli)
+
+Extra RN tools:
+
+- [React Native Tools (for VS Code)](https://github.com/Microsoft/vscode-react-native).
+- [React Native Debugger](https://github.com/jhen0409/react-native-debugger)
 
 Tips for configuring eslint with React Native:
 
@@ -158,6 +161,5 @@ More on ListViews:
 
 Miscellaneous RN resources:
 
-- [Renaming a React Native Project](http://blog.tylerbuchea.com/renaming-a-react-native-project/)
 - [React Native: Idea to Product in One Week](https://medium.com/adjust-creative/prototyping-with-react-native-an-idea-to-production-in-one-week-3a6b4f474897#.ysexqnc13)
 - [Building the F8 2016 App](http://makeitopen.com/tutorials/building-the-f8-app/planning/)

@@ -67,7 +67,6 @@ Some middleware suggestions:
 In todays lab we'll continue to work on our REDit project.
 
 
-
 ---
 
 ## Additional Resources

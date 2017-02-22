@@ -38,7 +38,7 @@ And if you're interested in taking a deeper dive into what's going on under the 
 
 ## Exercise 1
 
-If you haven't already, create a `config/model.js` file in your Splashify project.
+If you haven't already, create a `config/model.js` file in your project.
 
 In this file, define the model for a `Fave` object. Our `Fave` objects should have an `id` string property and a `faved_on` data property. 
 
@@ -50,22 +50,29 @@ Be sure to initialize your new Realm with its `Fave` model, and export it so its
 
 ## Exercise 2
 
-Create a `databaseHelpers.js` file in the `lib` directory of your project now. In it, write two functions: 
+Inside your `config/models.js` file, write three functions (which you will export) to perform CRUD operations in related "faves" action creators later:
 
-1. A function that **checks if a particular photo has been faved**. It should return true or false. We can use it to conditionally render the colour of the star icon in the Photobox scene.
-2. A function that **saves or deletes a photo as a fave**. If the photo is already faved it should be deleted from the database, otherwise it should be added to the database. We can use this function to take the appropriate write action when the star icon is tapped in the Photobox scene.
+1. A function that **adds a Fave object** to the database
+2. A function that **removes a Fave object** from the database
+3. A function that **queries** the database for **all Fave objects**
+
+*Where (and how) will you use these functions?*
 
 ---
 
 ## Lab Activity
 
-In today's lab, we'll work on building out the Faves scene. The Faves scene will list all of our currently faved photos in a grid format, and if a user taps any of the photo thumbnails in the grid our app will pop it into a Photobox scene on the top-level stack.
+In today's lab we'll work on putting our new Fave CRUD operations to use in relevant action creators, and dispatch those actions when the "Add to Faves" or "Remove from Faves" button is tapped in the Session scene.
 
-To build out our Faves scene, we'll need to retrieve a list of faved photos from the database, sorted in descending order by date. We'll need to map over our list of faves to extract the IDs from each photo, which we can then use to fetch each corresponding photo object from the Unsplash API. We can then populate the successful response returned from the Promise into `<ListView>` component, and style it accordingly.
+Once you can see that data is writing to your database when the button is tapped (use the Realm Browser for this!), work on building out your Faves scene to display just the sessions that a user has faved inside a `ListView` component.
 
-One gotcha is that we'll need to keep the UI state of our Faves scene in sync with the writes we make to the database from the Photobox scene (i.e. when tapping the star icon to fave or unfave a photo).
+To build out the Faves scene, we'll need to filter the sessions we fetch from Firebase and check to see if they have a `session_id` that corresponds to one of the IDs in the array of Fave objects retrieved from Realm. Use this array of sessions to populate your Redux store, and pass it into your `FavesContainer` as a prop.
 
-To do this, we'll need to research how **[change events](https://realm.io/docs/react-native/latest/#change-events)** work in Realm, and add one of these to our Faves container components constructor, and update our UI whenever a photo is added or removed as a fave.
+The rest of the Faves scene will be built similarly to the Schedule scene. Reuse presentational components between the two wherever possible!
+
+One gotcha is that we'll need to keep the UI state of our Faves scene in sync with the writes we make to the database from the Session scene (i.e. when tapping the button to fave or unfave a session).
+
+To do this, we'll need to research how **[change events](https://realm.io/docs/react-native/latest/#change-events)** work in Realm, and add one of these to our Faves and Session container component constructors, and update our UI whenever a session is added or removed as a fave.
 
 ---
 

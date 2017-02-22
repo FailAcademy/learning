@@ -6,7 +6,7 @@ lesson_date: 2017-03-06
 
 ## Pre-work
 
-Deploying applications "in the Cloud" is a fact of life for developers building internet connected software.
+Deploying applications "in the Cloud" is a fact of life for developers building Internet connected software.
 Over the next 2 days we'll learn about a number of Cloud Computing providers and how to start using them to deploy
 Websites and Web Servers.
 
