@@ -1,5 +1,12 @@
 # Collections and Accounts
 
+## Fixing MongoDB permissions issues after install:
+
+```bash
+sudo mkdir -p /data/db
+sudo chown $USER /data/db
+```
+
 ## Exercise 1 Solutions
 
 ### How many people are humans from Tatooine?
@@ -18,11 +25,11 @@ db.people.find({"homeworld.name": "Tatooine", "species.name": "Human"}).count()
 db.people.find({ films: { $elemMatch: { $eq: "The Empire Strikes Back" } } }).count()
 ```
 
-**Note:** Students may think they need to use the `$in` operator. The `$in` operator selects the documents where the value of a field equals any value in the specified array, rather than searching for matching value in an array field (e.g. `db.people.find({ name: { $in: ["Luke Skywalker", "Leia Organa"] } })`).
+**Note:** Students may think they need to use the `$in` operator. The `$in` operator selects the documents where the value of a field equals any value in the specified array, rather than searching for a matching value in an array field (e.g. `db.people.find({ name: { $in: ["Luke Skywalker", "Leia Organa"] } })`).
 
 **Answer:** 16
 
-### How many people are taller than than 160cm?
+### How many people are taller than 170cm?
 
 ```bash
 db.people.find({ height: { $gt: 170 } }).count()

@@ -35,6 +35,16 @@ Note that you may also need to install "Android SDK Platform 23" and "Sources fo
 
 ### Step 4:
 
+Add the following lines to your `~/.bash_profile`:
+
+```bash
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+```
+
+### Step 5:
+
 We still have to install an emulator (aka an "Android Virtual Device") to run our React Native app on. To do that, run the following command to open the AVD Manager:
 
 ```bash
@@ -68,16 +78,16 @@ Now try starting your new emulator and see if it powers up.
 
 ## Exercise 1
 
-Using what you learned about the `Platform` modules, make two adjustments to your Splashify project:
+Using what you learned about the `Platform` modules, make two adjustments to your R10 project:
 
-1. Conditionally render the download icon in your Photobox component. The `CameraRoll` library doesn't allow users to download external images to their devices (only local), so we will hide this functionality for our Android app.
-2. Render fonts by platform. Continue to use Courier (main) and Helvetica (alt) for iOS, but Courier Prime (main) and Roboto (alt) for Android. You'll need to add a Courier Prime `.ttf` to `android/app/src/main/assets/fonts` and restart the packager afterward.
+1. Conditionally render the heart icon in the Schedule, Session, and Faves scenes to use `md-heart` instead of `ios-heart`.
+2. Render fonts by platform. To get Monserrat (Regular) working on Android, you'll need to set your main font to `Monserrat-Regular` for that platform (rather than `Monserrat`, as we did on iOS). Use `Platform.Select` for this.
 
 ---
 
 ## Exercise 2
 
-*Exercise details TBA.*Time to make Splashify's navigation UI more platform-appropriate for Android.
+Time to make R10's navigation UI more platform-appropriate for Android.
 
 To do that, you're going to use platform-specific file extensions for the `NavigationLayout` component, and implement `DrawerNavigation` (from the ExNavigation module) for Android in lieu of the `TabNavigation` component that we've used for the iOS app.
 
