@@ -52,7 +52,7 @@ Your project must:
 
 Your project must:
 
-- [ ] Be deployed online
+- [ ] Be deployed to the Cloud
 
 ### Stretch Goals
 

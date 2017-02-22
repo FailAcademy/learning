@@ -50,10 +50,10 @@ Add the appropriate constraints to your project's database.
 
 ## Exercise 2
 
-Set up a link table called user post votes and define a **compond primary key** to ensure that ensure that users can only vote for one post once.
+Set up a link table called user post votes and define a **compound primary key** to ensure that ensure that users can only vote for one post once.
 
-Answer the followng questions when describing foreign key constraints: </br>
-- What is the difference betweeen `SET NULL`, `NO ACTION` & `CASCADE` when specifying 
+Answer the following questions when describing foreign key constraints: </br>
+- What is the difference between `SET NULL`, `NO ACTION` & `CASCADE` when specifying 
 foreign key constraints?
 - What are some use cases for each?
 
@@ -103,7 +103,7 @@ execute them all at once by loading the file from the `psql` command prompt.
 How does the Sequelize ORM handle queries and relationships. Add Sequelze to your project.
 When your project loads, create some *stub* data in your REDit database using the Sequelize API.
 
-Once you've initialized your database instance, you'll add the commands to instre data, and create relationships
+Once you've initialized your database instance, you'll add the commands to insert data, and create relationships
 inside of the `sync` method, exposed by the instance, like this:
 
 ```js
