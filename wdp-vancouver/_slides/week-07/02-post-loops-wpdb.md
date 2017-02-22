@@ -152,9 +152,9 @@ It looks a lot like the default WP loop, with some exceptions:
 
 # get_posts()
 
-- Basically a wrapper for `WP_Query`
-- However, it's a function, not a class, so none of the `WP_Query` methods will be available to you
-- It's also not actually a loop&mdash;it returns an array of `WP_Post` objects that you can loop over yourself
+- A wrapper for `WP_Query`
+- However, it's a function (not an object instantiated from the `WP_Query` class) so none of the `WP_Query` methods will be available to you
+- What is does is returns an array of `WP_Post` objects that you can loop over yourself
 
 ---
 
