@@ -284,7 +284,7 @@ class: center, middle
 class: center, middle
 
 .large[
-   [Let's check it out &rarr;](https://wordpress.org/plugins/rest-api/)
+   [Let's check it out &rarr;](https://developer.wordpress.org/rest-api/)
 ]
 
 ---
@@ -295,7 +295,7 @@ class: center, middle
 GET http://fourth.academy.red/wp-json/wp/v2/posts
 ```
 
-`http://fourth.academy.red/`: the URL of the WP installion
+`http://fourth.academy.red/`: URL of the WP installation
 
 `/wp-json`: the endpoint prefix
 
@@ -327,7 +327,7 @@ A **resource** is a discrete entity within WordPress (e.g. post, page, comment, 
 
 - **Endpoints** are functions available through the API (e.g. updating post meta or deleting a taxonomy term)
 - A **route** is the “name” you use to access endpoints&mdash;so a route may have multiple endpoints depending on what you can do with it!
-- A **schema** is a representation of the format for the API's response data ([detailed resource here](http://v2.wp-api.org/reference/))
+- A **schema** is a representation of the format for the API's response data ([detailed resource here](https://developer.wordpress.org/rest-api/reference/))
 
 ---
 
