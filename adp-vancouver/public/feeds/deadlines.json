@@ -17,10 +17,10 @@
 		"url": ""
    },
    {
-		"title": "REDit Testing Due",
+		"title": "TDD (Rojo)",
 		"allDay": true,
 		"start": "2017-02-27",
-		"url": "/project/03-testing-resubmit/"
+		"url": "/project/03-tdd-rojo/"
    },
    {
 		"title": "React + Meteor Project Due",
