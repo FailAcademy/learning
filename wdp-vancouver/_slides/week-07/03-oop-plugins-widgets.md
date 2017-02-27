@@ -179,7 +179,7 @@ class: center, middle
 class: center, middle
 
 .large[
-   **[See it in action...](https://github.com/WordPress/WordPress/blob/af885f45cf0f16e2c8c609786991c0fe2c148af5/wp-includes/class-wp-query.php#L1667)**
+   **[See it in action...](https://github.com/WordPress/WordPress/blob/fe0b8a2aaf49ff5f33a866309ed8730fd7675674/wp-includes/post.php#L1661)**
 ]
 
 ---

@@ -11,22 +11,16 @@ lesson_date: 2017-02-27
 
 In today's class we'll begin to code an application using Angular 2. To make things easier we'll use the Angular command-line interface. Run:
 
-`npm install -g angular-cli`
+`npm install -g @angular/cli`
 
 We will also be using the TypeScript compiler to compile TypeScript code. Run:
 
 `npm install -g typescript`
 
-We will use a Yeoman TypeScript project generator to set up our exercises. Run:
-
-`npm install -g generator-node-typescript gulp-cli typings`
-
 Install the TypeScript syntax package for your editor:
 
 - [atom-typescript](https://atom.io/packages/atom-typescript)
 - [TypeScript Plugin for Sublime Text](https://github.com/Microsoft/TypeScript-Sublime-Plugin)
-
-Download the [TypeScript boilerplate project](https://github.com/Codesleuth/vscode-typescript-boilerplate).
 
 Download [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en), install it, and create an account.
 
@@ -49,7 +43,6 @@ Take a look through the source code of this Angular 2 app:
 - Define TypeScript and why it is a useful subset of JavaScript.
 - Use TypeScript annotations.
 - Define a TypeScript Class.
-- Implement a TypeScript Method Decorator, Class Decorator, Property Decorator, and Interface.
 - Generate an Angular 2 application using the `angular-cli` and explore the built-in functionality.
 - Use the `angular-cli` to generate the routes, components, and services need for a basic application.
 
