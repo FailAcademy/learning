@@ -334,9 +334,7 @@ Add your helper function as the `renderIcon` prop on each `<TabNavigationItem>`.
 
 Sometimes we may need to manually link native dependencies in Xcode.
 
-For instance, React Native includes a `CameraRoll` module bundled with it, but if we want to use this library (to allow users to save images from the app to their camera roll) we'll need to manually link it.
-
-To do that, we would need to open our project folder and navigate to `node_modules/react-native/Librares/...` and also open Xcode.
+For instance, React Native includes a `CameraRoll` module bundled with it, but if we want to use this library (to allow users to save images from the app to their camera roll) we need to manually link it. To do that, we need to open our project folder and navigate to `node_modules/react-native/Librares/...` and also open Xcode.
 
 **[Instructions for manual linking](https://facebook.github.io/react-native/docs/linking-libraries-ios.html#manual-linking)** are available in the React Native docs.
 
