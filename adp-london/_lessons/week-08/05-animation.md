@@ -39,7 +39,9 @@ Note that you can use one of the built-in `Presets` for this exercise, or create
 
 ## Exercise 2
 
-*Exercise TBA.*
+Using what you just learned about the `Animated` module, create a `spin` method in your Code of Conduct item component to rotate the "+" sign 360 degrees when the item is toggled open using `Animated.timing()`.
+
+Be sure to also change the "+" to a "-" when the item toggles open (and back again when it is closed).
 
 ---
 
@@ -55,6 +57,7 @@ Official React Native documentation:
 
 - [LayoutAnimation](https://facebook.github.io/react-native/docs/layoutanimation.html)
 - [Animated](https://facebook.github.io/react-native/docs/animated.html)
+- [Animations](https://facebook.github.io/react-native/docs/animations.html)
 
 A few helpful examples of how to add animation to a React Native app:
 
