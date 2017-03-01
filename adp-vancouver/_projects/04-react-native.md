@@ -23,6 +23,9 @@ https://r10app-95fea.firebaseio.com/sessions.json
 **Speakers:**
 https://r10app-95fea.firebaseio.com/speakers.json
 
+**Single Speaker:**
+https://r10app-95fea.firebaseio.com/speakers.json?orderBy="speaker_id"&equalTo="KZ2o1E2jzFmYHB33hUb" (`speaker_id` is different for each speaker)
+
 **Code of Conduct:**
 https://r10app-95fea.firebaseio.com/code_of_conduct.json
 
