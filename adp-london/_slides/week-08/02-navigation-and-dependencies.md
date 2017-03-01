@@ -192,7 +192,7 @@ Follow the [installation instructions](https://github.com/exponentjs/ex-navigati
 
 Define your routes in `navigation/routes.js`. Define `static route = {}` in each of your scene container components to configure a nav bar title for each scene.
 
-In your `app/index.js` file, add the `<NavigationProvider>` with a single `<StackNavigation>`, and set the `initialRoute` to your Schedule scene.
+In your `js/index.js` file, add the `<NavigationProvider>` with a single `<StackNavigation>`, and set the `initialRoute` to your Schedule scene.
 
 Try swapping your `initialRoute` to your About scene and see if it works also.
 
@@ -212,7 +212,7 @@ We can use Redux in a React Native app just like a regular web-based React app.
 Begin by installing Redux and related dependencies:
 
 ```bash
-npm install --save redux react-react redux-thunk
+npm install --save redux react-redux redux-thunk
 ```
 
 We will use the `redux-thunk` middleware make it possible to do asynchronous work in our action creators.
