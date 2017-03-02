@@ -73,7 +73,7 @@ react-native run-android
 
 # Debugging Tools
 
-Debugging Android-related issues may often require looking some logs. To dump a log of all system messages (including stack traces and errors) run:
+Debugging Android-related issues may often require looking at some logs. To dump a log of all system messages (including stack traces and errors) run:
 
 ```bash
 adb logcat
@@ -210,16 +210,16 @@ And in `index.js`:
 
 ```js
 // automatically imports the right file!
-import Button from './Button';
+import Widget from './Widget';
 
-export default Button;
+export default Widget;
 ```
 
 ---
 
 # Exercise 2
 
-Time to make R10's navigation UI more platform-appropriate for Android.
+Time to make R10's navigation UI more platform-appropriate for Android...
 
 To do that, you're going to use platform-specific file extensions for the `NavigationLayout` component, and implement `DrawerNavigation` (from the ExNavigation module) for Android in lieu of the `TabNavigation` component that we've used for the iOS app.
 
