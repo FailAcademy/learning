@@ -47,13 +47,21 @@
    },
    {
       "title": "Analytics Lesson",
-      "allDay": true,
-      "start": "2017-03-08"
+      "allDay": false,
+      "start": "2017-03-08T13:00:00+00:00",
+      "end": "2017-03-08T15:00:00+00:00"
    },
    {
       "title": "SEO Lesson",
-      "allDay": true,
-      "start": "2017-03-10"
+      "allDay": false,
+      "start": "2017-03-09T09:00:00+00:00",
+      "end": "2017-03-09T12:00:00+00:00"
+   },
+   {
+       "title": "InVision Lesson",
+       "allDay": false,
+       "start": "2017-03-07T09:00:00+00:00",
+       "end": "2017-03-07T12:00:00+00:00"
    },
    {
       "title": "GitHub Portfolio Development",
