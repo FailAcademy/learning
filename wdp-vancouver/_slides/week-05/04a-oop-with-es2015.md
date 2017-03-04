@@ -66,20 +66,22 @@ A class is a **blueprint** for creating an object.<br />(And your computer is th
 **Encapsulation** means that we bundle related code together with the same object:
 
 ```js
-// without an object:
+// Without an object:
 
 let firstName = 'Joe';
 let lastName = 'Schmo';
 function fullName() {
-   return firstName + ' ' + lastName
+  return `${firstName} ${lastName}`;
 }
 
-// with an object:
+// With an object:
 
 let Person = {
-   firstName: 'Joe',
-   lastName: 'Schmo',
-   fullName: () => this.firstName + ' ' + this.lastName
+  firstName: 'Joe',
+  lastName: 'Schmo',
+  fullName: function () { 
+    return `${this.firstName} ${this.lastName}`; 
+  }
 }
 ```
 
@@ -125,21 +127,29 @@ Also be sure to name classes with a **capital letter**.
 
 ---
 
-# ES5 Prototypal Classes
+# ES5 Prototypes
 
 In ES5, we use `Function.prototype` to simulate classes:
 
 ```js
+// We call this type of function a constructor...
+// It's job is to initialize new objects:
+
 var Person = function(firstName, lastName) {
   this.firstName = firstName;
   this.lastName = lastName;
 }
 
+// Add a fullName() method to the Person prototype property:
+
 Person.prototype.fullName = function() {
-  return this.firstName + ' ' + this.lastName;
+  return `${this.firstName} ${this.lastName}`;
 }
 
-var joe = new Person('Joe', 'Schmo');
+// Create a new object with the Person() constructor:
+
+let joe = new Person('Joe', 'Schmo');
+
 console.log(joe.fullName());
 ```
 
@@ -181,7 +191,7 @@ let mary = new Person('Mary', 'Jones');
 let al = new Person('Barrack', 'Obama');
 ```
 
-In this example, `joe` is an instance of `Person`.
+In this example, `joe`, `mary`, and `al` are instances of `Person`.
 
 **Keywords:** `new`
 
@@ -249,9 +259,9 @@ The `constructor` is a special method. Why?
 
 What does `this` refer to in the previous example?
 
-**A)** The *Person* `class`
+**A)** The `Person` class
 
-**B)** The instance of *Person* called *joe*
+**B)** The instance of `Person` called `joe`
 
 **C)** `that`
 
@@ -321,11 +331,11 @@ let Joe = new Person('Joe', 'Schmo');
 
 # Quiz 3
 
-How do we import `hello` from the following file.
-
-/ file.js
+How do we import `hello` from `file.js` into a another file in the same directory?
 
 ```js
+// the file that contains this code is called "file.js"
+
 export default const hello = 'world'
 ```
 
@@ -392,7 +402,7 @@ Joe.name; // Joe
 
 # Rest & Spread
 
-We can use "rest" and "spread" operators to pass multiple props to our parent.
+We can use **rest** and **spread** operators to pass multiple props to our parent.
 
 ```js
 class Student extends Person {
@@ -413,7 +423,7 @@ let Joe = new Student('Joe', 'Schmo', 22);
 
 1. What is a **method**? What is a **property**?
 1. What is an **instance**? How do you make one?
-1. How 2 things do you need to do to **inherit** from another class?
+1. What two things do you need to do to **inherit** from another class?
 
 ---
 

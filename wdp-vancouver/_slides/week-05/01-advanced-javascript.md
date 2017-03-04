@@ -19,11 +19,139 @@ layout: false
 
 # Agenda
 
+1. Truthiness
 1. Type coercion
-2. Function scope and hoisting
-3. Functions inside conditionals
-4. Passing by value versus reference
-5. Methods, objects, `this` & `bind`
+1. Hoisting
+1. Scope
+1. Passing by value & reference
+1. What is `this`
+
+---
+
+template: inverse
+
+# Truthiness
+
+---
+class: middle
+
+## Let's talk about truth.
+
+When is a BLANK not a BLANK? (Groups of two)
+
+- String
+- Number
+- `null` value
+- `undefined` value
+- Array
+- Object
+
+---
+class: middle
+
+## Let's try it!
+
+If you use two "bangs" (exclamation marks), you can force Javascript
+to show you the true of false interpretation of a value.
+
+```js
+var str = 'abcde';
+
+console.log(str); // 'abcde
+console.log(!!str); // true
+```
+
+In your group, test out your theories on truthiness using `!!`.
+
+PS: Why does this work?
+
+---
+
+## Truthiness in action
+
+```js
+function shoutOutLoud(wordToShout) {
+  if (wordToShout) {
+    console.log(wordToShout.toUpperCase());
+  } else {
+    console.log('[silence]');
+  }
+}
+
+function talkLikeATeenager(words) {
+  if (words && words.length) {
+    console.log(words.join(', liiiike '));
+  } else {
+    console.log('Ugh, stop wasting my time');
+  }
+}
+```
+
+---
+template: inverse
+
+# Type Coercion
+
+---
+class: middle, center
+
+# WAT
+
+.large[[Mind. Blown.](https://www.destroyallsoftware.com/talks/wat)]
+
+.inline-images[
+  ![Mind blown](/public/img/slide-assets/mind-blown.gif)
+]
+
+---
+
+## WAT
+
+Enter these into your console:
+```javacript
+1 + 2
+1 + '2'
+
+'' == false
+0 == false
+null == false
+undefined == false
+null == undefined
+
+function f() {}
+
+f + 100
+f + null
+f + [1, 2, 3, 4, 5] + undefined
+```
+
+---
+
+## Exercise 1
+
+**What will the output be?**
+
+```js
+function printHi() {
+
+  var myVar = 5;
+
+  if(myVar == '5') {  // 1
+    console.log("BLOCK ONE!")
+  }
+
+  if(myVar === '5') { // 2
+    console.log("BLOCK TWO!")
+  }
+
+  switch(myVar){      // 3
+      case '5':
+      console.log("BLOCK 3");
+    }
+  }
+
+printHi();
+```
 
 ---
 
@@ -34,23 +162,163 @@ layout: false
 *Explanation:*
 
 - The **if block** (#1), compares the **number** 5 with the **string** '5' with double equals (`==`). JavaScript does **coercion** when comparing "things" using `==` and due to this **coercion**, the `console.log` within the **if block** gets executed.
-- Coercion does not happen for **variables** within the **switch statement**. **Switch statements** use strict type checking (`===`).
+- The `if` block using `===` (#2) and the `switch` statement (#3), compare the **number** 5 with the **string** '5' without doing any **coercion**. So they return `false`.
+
+---
+class: middle, center
+
+## So is coercion a good thing?
+
+---
+template: inverse
+
+# Hoisting
 
 ---
 
-# Exercise 2
+## Hoisting
 
-**Function Scope and Hoisting**
+Before your Javascript code is executed, it does a few quick passes that rearranges your code. This process is called __Hoisting__.
 
-*Explanation:*
+Steps:
 
-- **Hoisting**: Hoisting takes place during the parsing phase of executing a JS code. In this phase, all **variable declarations** are taken and a default value of `undefined` is assigned to them. Note that the code is not run in this phase, so any **assignment** of a **value** to a **variable** will not be executed.
+- Look at the entire file and move all `function` declarations to the top, in the order they're defined.
+- Look at the altered file and move all `var` declarations to the top, in the order they're defined.
+- We only move `var` __definitions__, not their assignments.
 
-.footnote[More on the next slide ...]
+---
+class: middle
+
+## Pre-Hoist
+
+```js
+var foo = 'bar';
+
+function myFunc(x) {
+  return x + 1;
+}
+
+if (foo) {
+  myFunc(10);
+}
+```
+---
+class: middle
+
+## Becomes
+
+```js
+function myFunc(x) {
+  return x + 1;
+}
+var foo;
+
+foo = 'bar';
+
+if (foo) {
+  myFunc(10);
+}
+```
 
 ---
 
-# Exercise 2
+## Exercise 2
+
+### Hoisting
+
+Let's do Taylor McGann's [exercises](http://blog.taylormcgann.com/2014/01/11/hoisting-javascript/)
+
+---
+template: inverse
+
+# Scope
+
+---
+class: middle
+
+## Scope
+
+A variable is __in scope__ depending on where a variable is declared.
+
+In Javascript, variables are _scoped_ to functions.
+
+---
+
+## Scope Example
+
+```js
+myVar = 'abcde';
+var yourVar = 'yourVar';
+
+function myFunc(param) {
+  var innerParam = 'hello!';
+
+  return param + myVar + yourVar;
+}
+
+console.log(innerParam);
+```
+
+In another file:
+
+```js
+console.log(myVar);
+```
+
+---
+
+## IIFE
+
+Immediately Invoked Function Expression
+
+```javacript
+function() {
+  myVar = 'abcde';
+  var yourVar = 'yourVar';
+
+  function myFunc(param) {
+    var innerParam = 'hello!';
+
+    return param + myVar + yourVar;
+  }
+
+  console.log(innerParam);
+}();
+```
+
+In another file:
+
+```js
+console.log(myVar);
+```
+
+---
+
+## Exercise 3
+
+**What will the output be?**
+
+```js
+var name = "John";
+var lastName = "Smith";
+
+(function(){
+  console.log("The name is : " + name);
+
+  var name = "Jane";
+  var age = 32;
+
+  console.log("The name is : " + name);
+})();
+
+console.log(name);
+console.log(lastName);
+console.log(age);
+```
+
+---
+
+# Exercise 3
 
 **Function Scope and Hoisting**
 
@@ -59,74 +327,69 @@ layout: false
 - **Function Scope**:  Every **variable** in JS is scoped at a function level, so this means that **variables** which are declared inside a function is not accessible outside the function in which it is declared.
 - **Scope chaining**: When a **variable** is not found in a **function scope**, the execution environment traverses to an outer **scope** to look for it.
 
-.footnote[More on the next slide ...]
+---
+template: inverse
+
+# Passing by value & reference
+
+---
+class: middle
+
+## On your feet!
+
+We need several primitives, and array, an object, and two variables.
+
+Let's act out how values are passed.
+
+---
+class: middle
+
+## Beware Mutation
+
+```javacript
+var susan = {
+  id: 123,
+  name: 'Susan Taylor'
+}
+var newName = 'Susan Hunt';
+
+function updateStudentName(student, name) {
+  student.name = newName;
+  name = 'Susan Taylor';
+}
+
+updateStudentName(susan, newName);
+console.log('susan', susan);
+console.log('newName', newName);
+```
 
 ---
 
-# Exercise 2
+## Exercise 4
 
-**Function Scope and Hoisting**
+**What will the output be?**
 
-- So in the code example, the **statement** `var name = "Jane"` declares a **variable** "name" which is local to the **function scope**. The outer **variable** which has the same **variable** name is ignored, and the **variable** in current **scope** is used.
-- Hence the second **statement** `console.log("The name is : " + name);` logs a value "Jane".
+```js
+var me = {                  // 1
+  'partOf' : 'A Team'
+};
 
----
+function myTeam(me) {       // 2
+  me = {                  // 3
+    'belongsTo' : 'A Group'
+  };
+}
 
-# Exercise 3
+function myGroup(me) {      // 4
+  me.partOf = 'A Group';  // 5
+}
 
-**Functions Inside Conditionals**
+myTeam(me);
+console.log(me);            // 6
 
-*Explanation:*
-
-- There are two types of functions inside the **if/else blocks**. The `innerFunc` is the commonly known **function declaration** and `innerFuncExpr` is the **function expression**.
-- At any point of time, only one of the if or else **block** should get executed, in this case the if **block** at #1.
-
-.footnote[More on the next slide ...]
-
----
-
-# Exercise 3
-
-**Functions Inside Conditionals**
-
-- The first `console.log` output for the invocation at #7 suggests the `innerFunc` inside the **else block** is getting executed.
-- To understand this behaviour, we have to understand how *hoisting* works in JS. The function `innerFunc` is declared within both the if and the else **block**, the JS engine **hoists** the function declarations to the top of the enclosing function!
-
-.footnote[More on the next slide ...]
-
----
-
-# Exercise 3
-
-**Functions Inside Conditionals**
-
-*Explanation:*
-
-- There is only one **function declaration** and that is the one which JS engine encounters last during the parsing phase. So, in this case the else **block** `innerFunc` will overwrite the if **block** declaration, irrespective of where the declarations are within the **conditional blocks**. There is one `innerFunc` declaration and hence the output of the invocation at #7.
-
-.footnote[More on the next slide ...]
-
----
-
-# Exercise 3
-
-**Functions Inside Conditionals**
-
-*Explanation:*
-
-- The `innerFuncExpr` is the **function expression**, which does not get **hoisted** to the top of the enclosing **function scope**. So, we see the proper `console.log` output for the invocation at #8.
-
-.footnote[More on the next slide ...]
-
----
-
-# Exercise 3
-
-**Functions Inside Conditionals**
-
-- Do not declare the **functions** or the **variables** within **conditional blocks** as JavaScript does not have **block scope**. In the JavaScript specs, **function declarations** are not allowed within **conditional blocks**.
-
-- If you must, use a **function expression**, within the **conditional blocks**.
+myGroup(me);
+console.log(me);            // 7
+```
 
 ---
 
@@ -136,7 +399,7 @@ layout: false
 
 *Explanation:*
 
-- JavaScript is neither **pass-by-value** or **pass-by-reference**! When the `myTeam` method is **invoked**, JavaScript is passing the **reference** to the `me` **object** as a **value**. The **invocation** itself creates two independent **references** to the same **object**, (though the name being same here (`me`), is misleading and gives us the impression that it is a single reference.
+- When the `myTeam` method is **invoked**, JavaScript is passing the **reference** to the `me` **object** as a **value**. The **invocation** itself creates two independent **references** to the same **object**, (though the name being same here (`me`), is misleading and gives us the impression that it is a single reference.
 
 .footnote[More on the next slide ...]
 
@@ -159,31 +422,114 @@ layout: false
 - In the case of the `myGroup` invocation, we are passing the **object** `me`. But unlike the previous scenario we described, we are not assigning this **variable** to any new **object**, This means the object **reference value** within the `myGroup` **function scope** still is the original object's **reference value** and when we are modifying the **property** within this **scope**, it is effectively modifying the original object's **property**. Hence, you get the output from #7.
 
 ---
+template: inverse
+
+# What is `this`
+
+---
+class: middle
+
+## Who am I?
+
+Functions (and objects) in Javascript have a reference to themselves called `this`.
+
+```js
+function Student(name) {
+  this.name = name;
+}
+
+var susan = new Student(name);
+console.log(susan.name);
+```
+---
+class: middle
+
+## Who am I?
+
+`this` is relative. What do you think will happen when we execute the code below?
+
+```js
+function Student(name) {
+  this.name = name;
+  this.favouriteFoods = ['pizza', 'sushi', 'apples'];
+
+  this.getName = function() {
+    return this.name;
+  }
+}
+
+var susan = new Student(name);
+console.log(susan.getName());
+```
+
+---
+class: middle
+
+## Who am I?
+
+The `getName` function has access to `this`, because it is an __method__ on the `Student` object.
+Therefore they share the same scope.
+
+---
+class: middle
+
+## Exercise 5
+
+`this` is relative. What do you think will happen when we execute the code below?
+
+```js
+function student(name) {
+  this.myName = name;
+
+  this.printName = function() {
+    setTimeout(function() {
+      console.log(this.myName);
+    }, 2000);
+  }
+}
+
+var scott = new student('scott');
+scott.printName();
+```
+---
 
 # Exercise 5
 
-**Methods, Objects, `this` & `bind`**
-
-*Explanation:*
-
-- The `forEach` method's callback function is **out of scope**. This means it has no reference to `this`, because it is not a method on the myself object.
-- Only methods assigned as properties of objects **have access to their parent** using `this`, otherwise `this` returns undefined. Invoking `printMyNickNames` will result in a `TypeError`!
+The `setTimeout` function takes an anonymous function as its first argument.
+That function has its own scope, so `this` becomes a different object entirely.
+In this case, it's the `Window` object.
 
 ---
 
-# Practice Makes Perfect
+## How do we fix it?
 
-Today you'll practice what you've learned using a fantastic free online resource called [Free Code Camp](http://www.freecodecamp.com/ma).
+```js
+function student(name) {
+  var self = this;
+  self.myName = name;
 
-Go to the Free Code Camp website, find the **Basic JavaScript (10 hours)** section, and complete as many of these exercises as you can today.
+  this.printName = function() {
+    setTimeout(function() {
+      console.log(self.myName);
+    }, 2000);
+  }
+}
 
-Remember to use your instructors and your fellow students as a resource if you're stuck.
-
-**Good luck!**
+var scott = new student('scott');
+scott.printName();
+```
 
 ---
-template: inverse
 
-# Questions?
+# Lab activity
+
+You're going to contribute to the [JS Fundamentals Site](https://redacademy.github.io/js-fundamentals/#contributing).
+
+Each table is assigned 1 topic:
+
+1. Truthiness, Coercion. Bonus: `&&` and `||`
+1. Hoisting, Scope. Bonus: Declarations within conditionals (if/else)
+1. Handling `this`. Bonus: the `bind` method
+1. Pass by value & reference. Bonus: "Pure" functions
 
 {% endhighlight %}

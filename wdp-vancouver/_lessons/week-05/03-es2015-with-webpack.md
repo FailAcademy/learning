@@ -7,17 +7,11 @@ lesson_date: 2017-02-08
 
 ## Pre-Work
 
-Watch the following short video tutorials on Webpack before class:
-
-- [Getting Started with webpack](https://www.youtube.com/watch?v=TaWKUpahFZM)
-- [12: Module Bundling With Webpack](https://laracasts.com/series/es6-cliffsnotes/episodes/12)
-
 Read the following articles before class:
 
 - [Choosing a JavaScript Build Tool – Babel, Browserify, Webpack, Grunt and Gulp](http://jamesknelson.com/which-build-system-should-i-use-for-my-javascript-app/)
-- [Why npm Scripts?](https://css-tricks.com/why-npm-scripts/)
 
-Also take some time before class to explore the [Webpack documentation](https://webpack.github.io/docs/) page.
+Also take some time before class to explore the [Webpack documentation](https://webpack.js.org/) page.
 
 ---
 
@@ -25,7 +19,6 @@ Also take some time before class to explore the [Webpack documentation](https://
 
 - Install the Webpack compiler in a development environment.
 - Explore Webpack's CLI and 'loader' interface.
-- Use Webpack with Babel to transpile JavaScript code from ES2015 to ES5.
 - Use Webpack to transform and bundle SCSS files.
 - Use Webpack to set up source maps for compiled files (both CSS and JS).
 - Use Webpack's development server to watch files and compile on save.
@@ -71,7 +64,7 @@ module.exports = {
 
 Important: All of your `webpack.config.js` code will be inside of the above object separated by commas.
 
-Run `npm install --save-dev webpack webpack-dev-server`
+Run `npm install -g webpack`
 
 Once everything is set up we'll observe what happens when we run the following CLI commands:
 
@@ -87,66 +80,18 @@ https://webpack.github.io/docs/cli.html
 
 ## Exercise 2
 
-Install ["webpack-validator"](https://github.com/js-dxtools/webpack-validator). This will help us find common typos and other errors in your webpack.config file.
+We'll want a development server to serve a webpage that contains our JavaScript bundle.
 
-- `npm install -g webpack-validator`
+With Webpack, this is simple! Run: `npm install -g webpack-dev-server`
 
-To run "webpack-validator", in a terminal run:
+Once this command is finished, from the terminal in the root of your project run: `webpack-dev-server`
 
-`webpack-validator webpack.config.js`
+Congratulations, you have a development server that will reload your browser when you change the files in the `src` directory.
 
-To test if "webpack-validator" is working, make a typo in your `webpack.config.js` file and run the above command again. Notice how it specifies the exact line number and position of the error.
-
-We may be calling this often, let's add it to our `package.json` file as an npm script. Add the following to your `package.json` under the key "scripts"
-
-```js
-{
-  /* ... */
-  "scripts": {
-    "validate": "webpack-validator webpack.config.js"
-  },
-}
-```
-
-You can now validate your Webpack by running `npm run validate`.
 
 ---
 
 ## Exercise 3
-
-Now that Webpack is creating a *JavaScript bundle*, let's add some configuration for compiling ES2015.
-
-We'll do this using a **Webpack loader**:
-
-First, run the following commands (in your project's root directory):
-
-- `npm install --save-dev babel-core`
-- `npm install --save-dev babel-loader`
-- `npm install --save-dev babel-preset-es2015`
-
-Next, update your `webpack.config.js` file inside of the `module.exports` object:
-
-```js
-// ...
-
-module: {
-   loaders: [
-   {
-     test: /\.js$/,
-     loader: 'babel-loader',
-     query: {
-       presets: ['es2015']
-     }
-   }
- ],
-},
-
-// ...the rest
-```
-
----
-
-## Exercise 4
 
 Webpack can be used to bundle almost every kind of asset for the web. It's very flexible in this regard.
 
@@ -159,17 +104,27 @@ First, run the following commands (in your project's root directory):
 - `npm install --save-dev style-loader`
 - `npm install --save-dev node-sass`
 
-Next, add the following code to your webpack.config.js Inside the `loaders` Array, after the JavaScript loader.
+Next, add the following code to your webpack.config.js Inside the `rules` Array, after the JavaScript loader.
 
 ```js
 // ...
 
 module: {
-   loaders: [
+   rules: [
    // ...other loaders...
      {
         test: /\.scss$/,
-        loaders: ["style", "css", "sass"]
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'sass-loader'
+          }
+        ]
      },
   ]
 }
@@ -177,53 +132,11 @@ module: {
 // ...the rest
 ```
 
----
-
-## Exercise 5
-
-Now that we're compiling our source files into a JavaScript bundle, we'll have to take some extra steps in order to debug our compiled and bundled code.
-
-First, add a dev server configuration to your webpack.config.js file inside of your `module.exports` object.
-
-```js
-//...
-
-devServer: {
-   inline: true,
-   host: '0.0.0.0',
-   port: '3000',
-   watchOptions: {
-      aggregateTimeout: 300,
-      poll: true
-   }
-},
-
-//...the rest
-```
-
-And add source maps to make it easier to debug your code. This will replace your previous sass loader from Exercise 4.
-
-```js
-// ...
-
-module: {
-   loaders: [
-   // ...other loaders...
-    {
-      test: /\.scss$/,
-      loaders: ["style", "css?sourceMap", "sass?sourceMap"]
-    }
-  ]
-}
-
-// ...the rest
-```
-
-Run: `webpack-dev-server` to view your site in the browser @ **localhost:3000**.
+Once you've added your loaders, `import` your `.scss` file into `main.js`, restart webpack-dev-server. Your `.scss` styles should visible in the browser.
 
 ---
 
-## Exercise 6
+## Exercise 4
 
 Webpack can also be used to handle files, such as fonts and images.
 
@@ -234,31 +147,13 @@ Add the following loader to your list of loaders in "webpack.config.js":
 ```js
 {
   test: /\.(eot|svg|ttf|woff|woff2)$/,
-  loader: 'file?name=public/fonts/[name].[ext]'
+  use: [{
+    loader: 'file?name=public/fonts/[name].[ext]'
+  }]
 }
 ```
 
-Your loaded fonts should now be added to the bundle.
-
----
-
-## Exercise 7
-
-Now that Webpack is set up for development let's create a convenient command for running the development server in our project:
-
-Add the following to your `package.json`:
-
-```js
-// ...
-
-"scripts": {
-    "start": "webpack-dev-server"
- }
-
-// ... the rest
-```
-
-To test this script, run: `npm start` form the command line.
+Create `/public/fonts` folder in your project. Any fonts you import into your `.scss` from this folder will be added to `bundle.js`.
 
 ---
 
@@ -272,9 +167,5 @@ We'll install Webpack in our Instanews project and spend our time in class today
 
 Official Webpack documentation:
 
-- [Webpack homepage](https://webpack.github.io/)
-- [Webpack Dev Server Documentation](https://webpack.github.io/docs/webpack-dev-server.html)
+- [Webpack homepage](https://webpack.js.org/)
 
-A beginner-friendly guide to Webpack:
-
-- [webpack-howto](https://github.com/petehunt/webpack-howto)

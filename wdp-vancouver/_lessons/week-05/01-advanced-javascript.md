@@ -18,8 +18,8 @@ We'll discuss some puzzling and irritating language features, and how to avoid t
 
 - Describe the circumstances where JavaScript will explicitly change the canonical type of a value.
 - Describe the behaviour of the loose (`==`) versus strict (`===`) comparison operators.
-- Define the purpose of an immediately-invoked function expression (IIFE).
 - Explain how function scope works in JavaScript, as well as hoisting and scope chaining.
+- Define the purpose of an immediately-invoked function expression (IIFE).
 - Describe the behaviour of function expressions versus function declarations written inside conditional blocks.
 - Describe what is meant by the difference between "passing by value" and "passing by reference".
 - Explain why JavaScript provides a `bind` method.
@@ -29,9 +29,11 @@ We'll discuss some puzzling and irritating language features, and how to avoid t
 
 ## Keywords
 
+- Truthy, Truthiness, Falsey, Falseyness
 - [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
 - [Immediately-invoked function expression (IIFE)](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
 - Hoisting
+- Global variables
 - [`this`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/this)
 - [`bind`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
 
@@ -46,93 +48,57 @@ We'll discuss some puzzling and irritating language features, and how to avoid t
 ```js
 function printHi() {
 
-    var myVar = 5;
+  var myVar = 5;
 
-    if(myVar == '5') {  // 1
-        console.log("Hi, from if block")
-    }
+  if(myVar == '5') {  // 1
+    console.log("BLOCK ONE!")
+  }
 
-    switch(myVar){      // 2
-        case '5':
-            console.log("Hi, from switch case block");        
+  if(myVar === '5') { // 2
+    console.log("BLOCK TWO!")
+  }
+
+  switch(myVar){      // 3
+      case '5':
+      console.log("BLOCK 3");
     }
-}
+  }
 
 printHi();
-```
-
-**What will the output be?**
-
-```js
-(function () {
-    falseString = "false";                      // 1
-    if(true) {              
-        var falseString;                        // 2
-        if(falseString) {                       // 3
-            console.log(falseString == true);   // 4
-            console.log(falseString == false);  // 5
-        }
-    }
-})();
 ```
 
 ---
 
 ## Exercise 2
 
-### Function Scope and Hoisting
+### Hoisting
 
-**What will the output be?**
-
-```js
-var name = "John";
-
-(function(){
-    console.log("The name is : " + name);
-
-    var name = "Jane";
-
-    console.log("The name is : " +name);
-})();
-```
+Let's do Taylor McGann's [exercises](http://blog.taylormcgann.com/2014/01/11/hoisting-javascript/)
 
 ---
 
 ## Exercise 3
 
-### Functions Inside Conditionals
+### Function Scope
 
 **What will the output be?**
 
 ```js
+var name = "John";
+var lastName = "Smith";
+
 (function(){
+    console.log("The name is : " + name);
 
-    if(true){                               // 1
+    var name = "Jane";
+    var age = 32;
 
-        function innerFunc() {              // 2
-
-            console.log("innerFunc: Inside if");
-        }
-
-        var innerFuncExpr = function () {   // 3
-
-            console.log("innerFuncExpr: Inside if");
-        }
-    } else {                                // 4
-
-        function innerFunc() {              // 5    
-            console.log("innerFunc: Inside else");
-        }
-        var innerFuncExpr = function () {   // 6
-
-            console.log("innerFuncExpr: Inside else");
-        }
-    }
-
-    innerFunc();                            // 7
-    innerFuncExpr();                        // 8
-
+    console.log("The name is : " +name);
 })();
+
+console.log(name);
+console.log(lastName);
+console.log(age);
 ```
 
 ---
@@ -145,21 +111,20 @@ var name = "John";
 
 ```js
 var me = {                  // 1
-    'partOf' : 'A Team'
+  'partOf' : 'A Team'
 };
 
 function myTeam(me) {       // 2
-
-    me = {                  // 3
-        'belongsTo' : 'A Group'
-    };
+  me = {                  // 3
+    'belongsTo' : 'A Group'
+  };
 }
 
 function myGroup(me) {      // 4
-    me.partOf = 'A Group';  // 5
+  me.partOf = 'A Group';  // 5
 }
 
-myTeam(me);     
+myTeam(me);
 console.log(me);            // 6
 
 myGroup(me);
@@ -170,36 +135,49 @@ console.log(me);            // 7
 
 ## Exercise 5
 
-### Methods, Objects, `this` & `bind`
+### What is `this`
 
 **What will the output be?**
 
 ```js
-var myself = {
-    myName: 'Tom',
-    myNickNames: [ 'T-Dog', 'TotalTom' ],
-    printMyNickNames: function () {
-    'use strict';
-        this.myNickNames.forEach(
-            function (nickName) {                                // 1
-                console.log(this.myName +', nick: '+ nickName);  // 2
-            }
-        );
-    }
-};
+function student(name) {
+  this.name = name;
 
-myself.printMyNickNames();
+  this.getName = function() {
+    return this.name;
+  }
+}
+
+var susan = new Student(name);
+console.log(susan.getName());
 ```
 
 ---
 
 ## Lab Activity
 
-Today you'll practice what you've learned using a fantastic free online resource called [Free Code Camp](http://www.freecodecamp.com/ma).
+You're going to contribute to the [JS Fundamentals Site](https://redacademy.github.io/js-fundamentals/#contributing).
 
-Go to the Free Code Camp website, find the **Basic JavaScript (10 hours)** section, and complete as many of these exercises as you can today.
+Each table is assigned 1 topic:
+
+1. Truthiness, Coercion. Bonus: `&&` and `||`
+1. Hoisting, Scope. Bonus: Declarations within conditionals (if/else)
+1. Handling `this`. Bonus: the `bind` method
+1. Pass by value & reference. Bonus: "Pure" functions
+
+---
+
+# Practice Makes Perfect
+
+Practice what you've learned by continuing on with [Free Code Camp](http://www.freecodecamp.com/ma).
+
+Find the **Basic JavaScript (10 hours)** section, and complete as many of these exercises as you can today.
 
 Remember to use your instructors and your fellow students as a resource if you're stuck.
+
+NOTE: There is a string lesson about `\n` and `\r` with a bug. If you hit it, skip it!
+
+**Good luck!**
 
 ---
 
