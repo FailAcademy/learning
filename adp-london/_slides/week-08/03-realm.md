@@ -149,7 +149,7 @@ What else can we do with our model?
 
 # Exercise 1
 
-If you haven't already, create a `config/model.js` file in your Splashify project.
+If you haven't already, create a `config/model.js` file in your project.
 
 In this file, define the model for a `Fave` object. Our `Fave` objects should have an `id` string property and a `faved_on` date property. 
 
@@ -255,10 +255,13 @@ console.log('the path is: ', realm.path);
 
 # Exercise 2
 
-Create a `databaseHelpers.js` file in the `lib` directory of your project now. In it, write two functions: 
+Inside your `config/models.js` file, write three functions (which you will export) to perform CRUD operations in related "faves" action creators later:
 
-1. A function that **checks if a particular photo has been faved**. It should return true or false. We can use it to conditionally render the colour of the star icon in the Photobox scene.
-2. A function that **saves or deletes a photo as a fave**. If the photo is already faved it should be deleted from the database, otherwise it should be added to the database. We can use this function to take the appropriate write action when the star icon is tapped in the Photobox scene.
+1. A function that **adds a Fave object** to the database
+2. A function that **removes a Fave object** from the database
+3. A function that **queries** the database for **all Fave objects**
+
+*Where (and how) will you use these functions?*
 
 ---
 

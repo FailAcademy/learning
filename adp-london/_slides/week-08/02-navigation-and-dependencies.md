@@ -21,7 +21,8 @@ layout: false
 
 1. Reasoning about mobile navigation
 2. Navigation options in React Native
-3. Using third-party modules and linking dependencies in an RN app
+3. Managing state with Redux in React Native (with a navigator!)
+4. Using third-party modules and linking dependencies in an iOS RN app
 
 ---
 template: inverse
@@ -141,6 +142,7 @@ Some of third-party solutions wrap the JS navigator or `NavigationExperimental`,
 - [wix/react-native-navigation](https://github.com/wix/react-native-navigation)
 - [aksonov/react-native-router-flux](https://github.com/aksonov/react-native-router-flux)
 - [exponentjs/ex-navigation](https://github.com/exponentjs/ex-navigation)
+- [react-community/react-navigation](https://github.com/react-community/react-navigation) (still beta...)
 
 ---
 class: center, middle
@@ -176,9 +178,9 @@ Ideally, we want an all-in-one navigation solution with:
 # Configuration
 
 - `createRouter` will be used to map route name to components
-- the `<NavigationProvider>` will wrap our navigation scheme at the top level of our app only
+- The `<NavigationProvider>` will wrap our navigation scheme at the top level of our app only
 - `<StackNavigation>` represents a single stack of screens (and each tab in a tab bar can contain its own stack)
-- we define our route configuration with the component itself using `static route = {}`
+- We define our route configuration with the component itself using `static route = {}`
 
 See the **[minimal navigation set up example](https://github.com/exponentjs/ex-navigation#a-minimal-navigation-set-up).**
 
@@ -190,9 +192,73 @@ Follow the [installation instructions](https://github.com/exponentjs/ex-navigati
 
 Define your routes in `navigation/routes.js`. Define `static route = {}` in each of your scene container components to configure a nav bar title for each scene.
 
-In your `app/index.js` file, add the `<NavigationProvider>` with a single `<StackNavigation>`, and set the `initialRoute` to your Recent scene.
+In your `js/index.js` file, add the `<NavigationProvider>` with a single `<StackNavigation>`, and set the `initialRoute` to your Schedule scene.
 
-Try swapping your `initialRoute` to your Random scene and see if it works also.
+Try swapping your `initialRoute` to your About scene and see if it works also.
+
+---
+class: center, middle
+
+.large[
+  Adding Redux...<br />worth the effort.
+]
+
+---
+
+# Install Redux
+
+We can use Redux in a React Native app just like a regular web-based React app.
+
+Begin by installing Redux and related dependencies:
+
+```bash
+npm install --save redux react-redux redux-thunk
+```
+
+We will use the `redux-thunk` middleware make it possible to do asynchronous work in our action creators.
+
+Next, we'll create our `store.js` file in a `redux` directory...
+
+---
+
+# The Store
+
+```js
+import { createNavigationEnabledStore } from '@exponent/ex-navigation';
+import { compose, createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+
+import rootReducer from './reducers'; // we haven't made these yet...
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // definitely enable Redux dev tools!
+
+const createStoreWithNavigation = createNavigationEnabledStore({
+  createStore,
+  navigationStateKey: 'navigation',
+}); // as per the ExNavigation docs...
+
+const store = createStoreWithNavigation(
+  rootReducer,
+  {}, // initial state
+  composeEnhancers(
+    applyMiddleware(thunk)
+  ) // enhancers
+);
+
+export default store;
+```
+
+---
+
+# Exercise 2
+
+Now set up the `reducers.js` file in the `redux` directory.
+
+Be sure to import `combineReducers` into this file, as well as the named `NavigationReducer` export from ExNavigation. Export your combined reducers from this file.
+
+Next, provide the `NavigationContext`, directly to the `NavigationProvider` component in your app's main `index.js` file. You'll also need to wrap everything in the `Provider` component from `react-redux`, just like usual.
+
+Please refer to the **[ExNavigation docs](https://github.com/exponent/ex-navigation#integrate-with-your-existing-redux-store)** for assistance completing this exercise.
 
 ---
 
@@ -206,11 +272,11 @@ If we were to simply push this scene onto the stack inside the tab bar, we would
 
 ---
 
-# Exercise 2
+# Exercise 3
 
-Time to add a tab bar to our iOS app. Create a file called `NavigationLayout.js` in your `app/navigation` directory. Use this file to build out a component where the `render` function returns ExNavigator's `<TabNavigation>` component.
+Time to add a tab bar to our iOS app. Create a file called `NavigationLayout.js` in your `js/navigation` directory. Use this file to build out a component where the `render` function returns ExNavigator's `<TabNavigation>` component.
 
-Create a `<TabNavigationItem>` for your Recent and Random routes (you can rough out your Faves and About scene components as well now if you like). What do you need to change in your top-level `initialRoute` now?
+Create a `<TabNavigationItem>` for your About and Schedule routes. What do you need to change in your top-level `initialRoute` now?
 
 Thinking ahead, each `<TabNavigationItem>` should have its own `<StackNavigation>` component nested inside of it too.
 
@@ -228,7 +294,7 @@ Sometimes we need to install additional libraries in our apps, and these librari
 There are two way we can do this:
 
 1. Automatic linking with `react-native link`
-2. Manual linking (in Xcode)
+2. Manual linking (in Xcode or the Android directory)
 
 ---
 
@@ -242,7 +308,7 @@ To use it, you'll need to install a package that requires linking:
 npm install <library-with-native-dependencies> --save
 ```
 
-React Native will link your libs based on `dependencies` and `devDependencies` in your `package.json` file. Then you can link up your dependencies for iOS and Android:
+React Native will link your libs based on `dependencies` and `devDependencies` in your `package.json` file. Then you can link up your dependencies for iOS and Android by running:
 
 ```bash
 react-native link
@@ -252,13 +318,13 @@ Voila! That's it.
 
 ---
 
-# Exercise 3
+# Exercise 4
 
 Our app is going to need some icons, so for that we're going to add the **[React Native Vector Icons package](https://github.com/oblador/react-native-vector-icons)**.
 
 Note that this package's native dependencies can be automatically linked with `react-native link`.
 
-Once this is done, write yourself a helper `renderIcon` function in your `NavigationLayout.js` to render the appropriate Octicon icon for each of the tabs in your tab bar. An icon should be `black` if selected, and `#999999` if not.
+Once this is done, write yourself a helper `renderIcon` function in your `NavigationLayout.js` to render the appropriate Ionicon icon for each of the tabs in your tab bar. An icon should be `white` if selected, and `#999999` if not.
 
 Add your helper function as the `renderIcon` prop on each `<TabNavigationItem>`.
 
@@ -268,19 +334,27 @@ Add your helper function as the `renderIcon` prop on each `<TabNavigationItem>`.
 
 Sometimes we may need to manually link native dependencies in Xcode.
 
-For instance, React Native includes a `CameraRoll` module bundled with it, but if we want to use this library (to allow users to save Unsplash images to their camera roll) we'll need to manually link it.
+For instance, React Native includes a `CameraRoll` module bundled with it, but if we want to use this library (to allow users to save images from the app to their camera roll) we need to manually link it. To do that, we need to open our project folder and navigate to `node_modules/react-native/Librares/...` and also open Xcode.
 
-To do that, we'll need to open our project folder and navigate to `node_modules/react-native/Librares/...` and also open Xcode.
+**[Instructions for manual linking](https://facebook.github.io/react-native/docs/linking-libraries-ios.html#manual-linking)** are available in the React Native docs.
 
 ---
 
-# Exercise 4
+# Exercise 5
 
-Following the **[instructions for manual linking](https://facebook.github.io/react-native/docs/linking-libraries-ios.html#manual-linking)** in the React Native docs, add the `CameraRoll` library to your project.
+We want to use Montserrat as a custom font in our app, and `react-native link` can help with this too.
 
-You will need this library later in order to build out all of the functionality for the Photobox scene.
+Inside of the app's `package.json` file, add the following:
 
-**Note:** You will also need to update your `info.plist` file as per **[these instructions](https://github.com/facebook/react-native/issues/10115)** to avoid fatal app crashes when saving to the camera roll for iOS 10.
+```js
+"rnpm": {
+  "assets": [
+    "js/assets/fonts"
+  ]
+}
+```
+
+Move your project's fonts into the above directory and run `react-native link` again. You should now be able to set the `fontFamily` to `Montserrat` and `Montserrat-Light` in your app...without crashing it :)
 
 ---
 
@@ -288,6 +362,7 @@ You will need this library later in order to build out all of the functionality 
 
 - Special considerations for building out user-friendly navigation in mobile apps
 - What navigation options are built into React Native, and what third-party options are available
+- How to Redux-ify our React Native app
 - How to use a navigator and tab bar
 - How to add third-party libraries and link their dependencies both automatically and manually
 
