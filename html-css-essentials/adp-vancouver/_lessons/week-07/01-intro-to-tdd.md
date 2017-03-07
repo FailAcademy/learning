@@ -7,7 +7,13 @@ lesson_date: 2017-02-20
 
 ## Pre-Work
 
-Read [I pity the fool who doesn't write unit tests](https://blog.codinghorror.com/i-pity-the-fool-who-doesnt-write-unit-tests/) and be prepared to explain why writing unit tests is an essential part of application development.
+Read:
+
+- [How to Impress in a Junior Developer Job Interview
+](https://www.codementor.io/learn-programming/junior-developer-interview-tips-to-success)
+- [I pity the fool who doesn't write unit tests](https://blog.codinghorror.com/i-pity-the-fool-who-doesnt-write-unit-tests/) and be prepared to explain why writing unit tests is an essential part of application development.
+- [5 Whiteboard Coding Tips for Interviews](http://product.hubspot.com/blog/5-whiteboard-coding-tips-for-interviews)
+
 
 ---
 
@@ -62,7 +68,7 @@ Write a function that takes a string an returns whether it is a palindrome.
 
 ---
 
-## Lab Activity: Character Count String
+## Lab Activity: String Compression
 
 Write a function that takes a string and returns a new string that numerically indicates any repeated characters.
 
