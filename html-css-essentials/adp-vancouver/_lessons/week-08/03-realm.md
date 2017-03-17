@@ -72,7 +72,7 @@ The rest of the Faves scene will be built similarly to the Schedule scene. Reuse
 
 One gotcha is that we'll need to keep the UI state of our Faves scene in sync with the writes we make to the database from the Session scene (i.e. when tapping the button to fave or unfave a session).
 
-To do this, we'll need to research how **[change events](https://realm.io/docs/react-native/latest/#change-events)** work in Realm, and add one of these to our Faves and Session container component constructors, and update our UI whenever a session is added or removed as a fave.
+To do this, we'll need to research how **[change events](https://realm.io/docs/javascript/latest/#realm-notifications)** work in Realm, and add one of these to our Faves and Session container component constructors, and update our UI whenever a session is added or removed as a fave.
 
 ---
 
