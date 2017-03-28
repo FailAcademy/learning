@@ -47,7 +47,7 @@ redcarpet:
   extensions: ['smart', 'tables', 'autolink']
 
 # Plugins
-gems: ['jekyll-paginate']
+gems: ['jekyll-paginate', 'redcarpet']
 
 # Exclusions
 exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'README.md', 'LICENSE.md', 'CONTRIBUTING.md', 'installation.md']
