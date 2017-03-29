@@ -3,12 +3,14 @@
 
 ## Day 1
 
+- Add slides about FlatList and SectionList components
 
 ## Day 2
 
 - Split this lab across two days
 
 ## Day 3
+
 
 
 ## Day 4
@@ -26,5 +28,6 @@
 - Icon reference: https://ionicframework.com/docs/v2/ionicons/
 - Make a point of showing them the moment lib
 - They probably need more direction on the lightbox as well
+- Update to react-navigation this time around
 
 ## Miscellaneous
