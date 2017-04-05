@@ -181,37 +181,39 @@ Let's create a new React app to test out some of React Router's features. First 
 
 Then install React Router:
 
-`npm install react-router --save`
+`npm install react-router-dom --save`
 
-*Remember that React is a library, not a framework. Installing `react-router` gives React more framework-like capabilities.*
+*Remember that React is a library, not a framework. Installing `react-router-dom` gives it more framework-like capabilities.*
 
 ---
 
 # Adding the Router
 
-To use the Router, we'll need to import it into our app. Add this code to your `App.js` file:
+To use React Router, we'll need to import it into our app. 
+
+Add this code to your `App.js` file:
 
 ```js
-import {
-   Router,
-   Route,
-   Link,
-   IndexRoute,
-   hashHistory
-} from 'react-router';
+import { 
+  BrowserRouter as Router, 
+  Route,
+  Switch,
+  Link,
+  Redirect
+} from 'react-router-dom';
 ```
 
 ---
 
 # Router Basics
 
-We just imported five different modules that we will use set up routing in our app:
+We just imported four different modules that we will use set up routing in our app:
 
-- `Router`: used to wrap all of the routes we define
-- `Route`: used for identifying each route
+- `BrowserRouter`: used to wrap all of the routes we define
+- `Route`: used for identifying each route (nclusively)
+- `Switch`: used to render the first child `Route` that matches the location
 - `Link`: used to navigate around an application
-- `IndexRoute`: used to render a particular component as the index (i.e. default) route
-- `hashHistory`: used to manage front-end SPA-style routing
+- `Redirect`: used to navigate to a new location, like server-side redirects (HTTP 3xx) do
 
 ---
 
@@ -226,182 +228,281 @@ const Contact = () => <h1>Get in touch!</h1>;
 class App extends Component {
   render() {
     return (
-      <Router history={hashHistory}>
-        <Route path="/" component={Home} />
-        <Route path="/contact" component={Contact} />
+      <Router>
+        <div>
+          <Route exact path="/" component={Home} />
+          <Route path="/contact" component={Contact} />
+        </div>
       </Router>
     );
   }
 }
 ```
 
-`Router` and `Route` don't actually render anything, they just define rules for our app. Each `Route` renders its `component`.
+---
+
+# Adding the Router
+
+*Things to note...*
+
+`Router` and `Route` **don't render anything by themselves**. They just define rules for our app. Each `Route` renders its `component`.
+
+Also note that `Router` **can only have one child**, so multiple `Route` components should be wrapped in a `div`, etc.
+
+Lastly, the `exact` qualifier ensures that the `path` prop **exactly matches what's in the browser address bar** before rendering the component.
 
 ---
 
 # Adding a 404 Page
 
-Adding a 404 page for undefined routes is easy to do with React Router:
+We can also use the `Route` component to render something for any undefined route. First, create a component to render when there's a 404:
 
 ```js
 const NotFound = () => <h1>Whoops. You broke the internet again.</h1>;
-
-<Route path='*' component={NotFound} />
 ```
+
+Then add the route:
+
+```js
+<Route component={NotFound} />
+```
+
+Look ma, no path! But now there's a bug we need to fix...
+
+---
+
+# Switch
+
+`Switch` allows us to render a route **exclusively**, i.e. it allows us to pick only one `Route` to render at a given path:
+
+```js
+<Router history={history}>
+  <div>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/contact" component={Contact} />
+      <Route component={NotFound} />
+    </Switch>
+  </div>
+</Router>
+```
+
+---
+
+# Rendering: 3 Ways
+
+There are 3 ways to show components for a given `Route`.
+
+We have already seen the first, using the `component` prop:
+
+```js
+<Route exact path="/" component={Home} />
+```
+
+---
+
+# Rendering: 3 Ways
+
+We can also use the `render` prop and pass it a function:
+
+```js
+<Route exact path="/" render={() => <h1>Hello, World!</h1>} />
+```
+
+**Note:** Defining this function elsewhere (rather than passing in an anonymous function) would likely be preferable though.
+
+---
+
+# Rendering: 3 Ways
+
+Lastly, we can use the `children` prop:
+
+```js
+<Route 
+  path ="/match-me" 
+  children={({ match }) => match && <p>It matched!</p>} 
+/>
+```
+
+The difference between `render` and `children` is that the function passed into `children` will always run (regardless of whether there is a match), **unless** you explicitly check for a match using the `match` parameter in the function.
 
 ---
 
 # Link Components
 
-The `Link` component allows you to link directly to the routes you have defined (using its `to` prop). Try adding a links to and from the `Home` and `Contact` components:
+The `Link` component allows you to link directly to the routes you have defined. Let's make a nav bar for our app:
 
 ```js
-const Home = () => (
+const NavBar = () => (
   <div>
-    <h1>Hello, World!</h1>
+    <Link to="/">Home</Link> 
     <Link to="/contact">Contact</Link> {/* include forward slash! */}
   </div>
 );
+```
 
-const Contact = () => (
-  <div>
-    <h1>Get in touch!</h1>
-    <Link to="/">Home</Link>
-  </div>
-);
+```js
+<div>
+  <NavBar />
+  <Switch>
+    <Route path="/" exact component={Home} />
+    <Route path="/contact" component={Contact} />
+    <Route component={NotFound} />
+  </Switch>
+</div>
 ```
 
 ---
 
-# Nested Routes
+# NavLink Components
 
-What if we decide we want to apply a special layout to our Contact page, perhaps to target some CSS to turn its background pink?
+The `NavLink` component is like a `Link`, but with special feature that makes it better for setting up navigation menus.
 
-React Router makes this very easy with **nested routes**. First, set-up the new `Layout` component in your app:
+Ultimately, it allows us to add style-related attributes to the rendered element when it matches the current URL.
+
+Let's' use the `NavLink` instead. First, import the component from `react-router-dom`:
 
 ```js
-// other code...
-
-const Layout = ({children}) => (
-  <div className="app-wrapper">
-    {children}
-  </div>
-);
+import {
+  // ...other imports
+  NavLink
+} from 'react-router-dom';
 ```
 
 ---
 
-# Nested Routes
+# NavLink Components
 
-Next, add a nested route for `Contact`:
+Note that if you added any qualifiers to your route you need to add the same ones to your `NavLink` as well...
 
-```js
-class App extends Component {
-  render() {
-    return (
-      <Router history={hashHistory}>
-        <Route path="/" component={Home} />
-        <Route component={Layout}>
-          <Route path="contact" component={Contact} />
-        </Route>
-      </Router>
-    )
-  }
+```css
+.selected {
+  color: red;
 }
 ```
 
-Notice how we define a `Route` without specifying a path? This means don't need to add additional segments to an URL in order to nest routes.
+```js
+const NavBar = () => (
+  <div>
+    <NavLink to="/" exact activeClassName="selected">Home</NavLink>
+    <NavLink to="/contact" activeClassName="selected">Contact</NavLink>
+  </div>
+);
+```
+
+You can also use the `activeStyle` prop with the `NavLink` and pass it a style object.
 
 ---
 
 # Nested Routes
 
-Nested routes also allow us to eliminate redundancy:
+What if we want to define routes somewhere that isn't the top-level `App` component?
+
+We can use **nested routes** for that. Let's start by adding a route for a Posts page in our `App` component:
 
 ```js
-<Route path="posts/new" component={PostForm} />
-<Route path="posts/hello-world" component={Post} />
-<Route path="posts/scram-world" component={Post} />
+<Router>
+  <div>
+    <NavBar />
+    <Switch>
+      <Route path="/" exact component={Home} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/posts" component={Post} />
+      <Route component={NotFound} />
+    </Switch>
+  </div>
+</Router>
 ```
 
+---
+
+# Nested Routes
+
+Now create your `Posts` component with its nested routes:
+
 ```js
-<Route path="posts">
-  <Route path="new" component={PostForm} />
-  <Route path="hello-world" component={Post} />
-  <Route path="scram-world" component={Post} />
-</Route>
+const Posts = ({ match }) => (
+  <div>
+    <h1>Blog</h1>
+    <Route 
+      path={`${match.url}/hello-world`}
+      render={({ match }) => <h2>Hello, World!</h2>}
+    />
+    <Route 
+      path={`${match.url}/scram-world`}
+      render={({ match }) => <h2>Scram, World!</h2>}
+    />
+  </div>
+);
+```
+
+Note the use of `match` to dynamically grab the path of the `Posts` component route.
+
+---
+
+# Redirects
+
+Redirects, as they suggest take the user to a different route. They can be rendered for or nested in a route:
+
+```js
+<Route render={() => (
+  loggedIn ? (
+    <Redirect to="/dashboard"/>
+  ) : (
+    <LoginForm />
+  )
+) />
+```
+
+Or used inside a `Switch` component:
+
+```js
+<Switch>
+  <Redirect from ="/old" to="/new" />
+  <Route path='/new' component={New} />
+</Switch>
+```
+
+---
+
+# Exercise 3
+
+Based on what you just learned in the preceding examples, apply this to your project now. You will need to create routes that point users to:
+
+- The Welcome page (`/`)
+- The Login page (`/login`)
+- The New Post page (`/posts/new`)
+- The posts topic pages (`/posts/[ID_HERE]`, but note that this should just load the default `PostList` for now)
+- A 404 page
+
+---
+template: inverse
+
+# Parameters
+
+---
+
+# URL Parameters
+
+URL parameters allow us to navigate to routes with some sort of variable segment in the URL using via **route matching**:
+
+```js
+const Posts = ({ match }) => (
+  <div>
+    <h1>Blog</h1>
+    <Route 
+      path={`${match.url}/:name`}
+      render={({ match }) => <h2>{match.params.name}</h2>}
+    />
+  </div>
+);
 ```
 
 *Much DRYer!*
 
 ---
 
-# IndexRoutes
-
-We can also use something called an `<IndexRoute />` with React Router. This allows us to wrap a group of our routes in a component, but set one route as the index:
-
-```js
-class App extends Component {
-  render() {
-    return (
-      <Router history={hashHistory}>
-        <Route path="/" component={Layout}>
-         <IndexRoute component={Home} />
-         <Route path="contact" component={Contact} />
-         <Route path="*" component={NotFound} />
-        </Route>
-      </Router>
-    )
-  }
-}
-```
-
----
-
-# Using Params
-
-Params allow us to navigate to routes with some sort of variable segment in the URL using via **route matching**. If we don't use params, we would have to write our routes like so:
-
-```js
-<Route path="posts">
-  <Route path="new" component={PostForm} />
-  <Route path="hello-world" component={Post} />
-  <Route path="scram-world" component={Post} />
-</Route>
-```
-
-With params:
-
-```js
-<Route path="posts">
-  <Route path="new" component={PostForm} />
-  <Route path=":name" component={Post} />
-</Route>
-```
-
----
-
-# Using Params
-
-So how do we make use of the params in our routes?
-
-Remember that **routes are components themselves**, so params are passed down as props to the component specified for the route.
-
-This will give us access to the passed topic in `props.params.name` in our `Post` component constructor (to perhaps selectively load content based on the `name`). You will be able to see this is the React dev tools.
-
----
-
-# Using Params
-
-We can also use route params with the `Link` component:
-
-```js
-<Link to="posts" params={% raw %}{{name: 'hello-world'}}{% endraw %}>Hello, world!</Link>  
-```
-
----
-
-# Another Example
+# URL Parameter Example
 
 Back to [reddit.com](https://www.reddit.com/):
 
@@ -430,7 +531,7 @@ Back to [reddit.com](https://www.reddit.com/):
 
 ---
 
-# Another Example
+# URL Parameter Example
 
 If we were building actual Reddit in React, our specific comment URLs might look like this:
 
@@ -438,46 +539,79 @@ If we were building actual Reddit in React, our specific comment URLs might look
 /r/:subRedditName/comments/:postId/:postName/:commentId
 ```
 
-The parts that start with `:` are URL parameters whose values will be parsed out and made available in `this.props.params.PARAM_NAME`.
+The parts that start with `:` are URL parameters whose values will be parsed out and made available in `props.match.params.PARAM_NAME` in your component.
 
 ---
 
-# Try It Out
+# Query Strings
 
-Try adding the following component and route to your router demo app (in the appropriate places):
+React Router 4 **does not have a built-in way to parse query strings** at the end of an URL (e.g. `?sort=popular`).
+
+You can, however, link to an URL with a query string in the `to` props of a `Link` component like this:
 
 ```js
-const Post = () => (
-  <div>
-    <h1>Welcome to My First Post</h1>
-  </div>
-);
-
-<Route path="posts">
-  <Route path=":name" component={Post} />
-</Route>
+<Link to={% raw %}{{pathname: `${match.url}`, search: '?sort=popular'}}{% endraw %}>
+  Sort by Popularity
+</Link>
 ```
 
-Try navigating to `/posts`. What happens? What about `/posts/welcome`? What do you see in the props for this component in your React dev tools now?
+Add this to your `Posts` component. You can then access the query string for the route in `props.location.search`.
 
 ---
 
-# Exercise 3
+# Query String Example
 
-Based on what you just learned in the preceding examples, apply this to your project now. You will need to create routes that point users to:
+We can then use the emerging [`URLSearchParams`](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) standard to parse the query string, but we will need to add a polyfill to ensure support for older browsers:
 
-- The Welcome page (`/`)
-- The Login page (`/login`)
-- The New Post page (`/posts/new`)
-- The posts topic pages (`/posts/[topic-name-here]`, but note that this should just load the default `PostList` for now)
+```bash
+npm install url-search-params-polyfill --save
+```
+
+Then import the polyfill wherever you plan on instantiaing a new `URLSearchParams`:
+
+```js
+import 'url-search-params-polyfill';
+```
+
+---
+
+# Query String Example
+
+You can then parse your query string `id` param like this:
+
+```js
+const Posts = ({ match, location }) => {
+  const searchParams = new URLSearchParams(location.search);
+  const sortValue = searchParams.get('sort');
+
+  return (
+    <div>
+      <h1>Blog</h1>
+      <Link to={% raw %}{{pathname: `${match.url}`, search: '?sort=popular'}}{% endraw %}>
+        Sort by Popularity
+      </Link>
+      <Route 
+        path={`${match.url}/:name`}
+        render={({ match }) => <h2>{match.params.name}</h2>}
+      />
+      {sortValue && <p>You are sorting by "{sortValue}" right now.</p>}
+    </div>
+  )
+};
+```
+
+---
+template: inverse
+
+# History and URLs
 
 ---
 
 # Dealing with History
 
-React Router allows us to set `hashHistory` or `browserHistory` on the `Router` component.
+React Router offers more than one type of top-level router component. We have see the `BrowserRouter` so far, but there's also a `HashRouter`.
 
-Hash history (what we have now) **works without configuring a server**. It uses `window.location.hash` and that's why we have `#` showing up in our URLs, even though we didn't put it there ourselves:
+Hash history **works without configuring a server**. It uses `window.location.hash` and that's why we have `#` showing up in our URLs, even though we didn't put it there ourselves:
 
 - **Home:** http://localhost:3000/#/
 - **Contact:** http://localhost:3000/#/contact/
@@ -486,18 +620,18 @@ Hash history (what we have now) **works without configuring a server**. It uses 
 
 # Hash vs. Browser
 
-**Browser history** is the recommended method in the React Router docs. It uses the **[Browser History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API)** and will eliminate the hashes from your URLs:
+The `BrowserRouter` (used in our demo) uses the **[Browser History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API)** and will eliminate the hashes from your URLs:
 
 - **Home:** http://localhost:3000/
 - **Contact:** http://localhost:3000/contact
 
-But there's a catch! We need a server to use this...one that will always return `index.html` at any route. (Using the Browser History API also enables us to use server-side rendering.)
+**But there's a catch!** We need a server to use this...one that will always return `index.html` at any route. (Using the Browser History API also enables us to use server-side rendering.)
 
-Luckily, there's a server already configured in RED React Seed.
+Luckily, there's a server already configured in RED React Seed, and Create React App.
 
 ---
 
-# An Example
+# Browser History Demo
 
 Try visiting this article about the Browser History API:
 
@@ -537,47 +671,56 @@ You would use `hashHistory` if you're worried about supporting <IE9 (without ful
 
 It's also helpful it you're building a quick and dirty React app and don't want to go to the trouble of setting up a server to handle `browserHistory` right away.
 
----
-
-# Using Browser History
-
-To use `browserHistory`, we'll need to import that instead of `hashHistory`:
-
-```js
-import {
-  Router,
-  Route,
-  Link,
-  IndexRoute,
-  browserHistory // update this!
-} from 'react-router';
-```
 
 ---
 
-# Using Browser History
+# Other Routers
 
-We will also need to set the `history` prop accordingly on the `Router` component:
+`MemoryRouter`:
+
+- An entirely in-memory router (doesn't depend on URLs in the browser address bar)
+- Useful for testing and proof-of-concept
+
+`StaticRouter`:
+
+- Meant to be used with server-side rendering
+
+`NativeRouter`:
+
+- For use in React Native apps
+
+---
+
+# withRouter
+
+Sometimes you need to access to the `history` object’s properties (or the `match` or `location` props) outside of named route in your app. 
+
+To do this, you can wrap the component that needs access to these props in the `withRouter` **higher-order component (HOC)** from React Router.
+
+---
+
+# withRouter
+
+Example of `withRouter` in use:
 
 ```js
-class App extends Component {
-  render() {
-    return (
-      <Router history={browserHistory}>
-        {/* other code here! */}
-      </Router>
-    )
-  }
+import React, { PropTypes } from 'react';
+import { withRouter } from 'react-router-dom';
+
+const Header = ({ history }) => (
+  <button onClick={() => history.push('/')}>Go Home</button>
+);
+
+Header.propTypes = {
+  match: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired
 }
+
+export default withRouter(Header); // THIS IS HOW WE USE IT!
 ```
 
----
-
-# Exercise 4
-
-Time to implement switch `hashHistory` to `browserHistory` in your app.
-
-Note that there is already an Express server configured for you in `server/index.js`, so `browserHistory` will (mostly) work out of the box.
+*We'll do a lot more with HOCs in our app when we add Redux next week...*
 
 ---
 
