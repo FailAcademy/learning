@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Developing with ES2015 & Webpack Slides
+title: Developing with ES.next & Webpack Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Developing with ES2015 & Webpack
+# Developing with ES.next & Webpack
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -19,7 +19,7 @@ layout: false
 
 # Agenda
 
-1. ES2015 Modules
+1. ES.next Modules
 2. What is Webpack?
 3. How to use Webpack
 
@@ -27,7 +27,7 @@ layout: false
 
 template: inverse
 
-# ES2015 Modules
+# ES.next Modules
 
 ---
 class: center, middle
@@ -72,9 +72,9 @@ No native or agreed upon solution in ES5:
 
 ---
 
-# ES2015 Modules
+# ES.next Modules
 
-ES2015 standardizes modules!
+ES.next standardizes modules!
 
 Run: `npm install --save jquery`
 
@@ -97,7 +97,7 @@ All the code in the jQuery package is completely trapped inside of this module a
 
 ---
 
-# ES2015 Modules
+# ES.next Modules
 
 Using modules requires using `import`/`export` keywords:
 
@@ -149,13 +149,13 @@ How does Webpack treat CSS files? How is this different from the more traditiona
 
 Now, we're ready to install Webpack in a new project.
 
-Follow the exercise instructions found on the [lesson page](/lesson/developing-with-es2015-webpack/).
+Follow the exercise instructions found on the [lesson page](/lesson/developing-with-esnext-webpack/).
 
 ---
 
 # What We've Learned
 
-- How to use `import` and `export` with ES2015 modules
+- How to use `import` and `export` with ES.next modules
 - How to set-up Webpack in a project
 - How to bundle our JS and use Webpack
 - How to compile Sass with Webpack

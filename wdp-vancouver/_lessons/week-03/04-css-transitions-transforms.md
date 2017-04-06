@@ -2,7 +2,7 @@
 layout: lesson
 title: CSS3 Transitions & Transforms
 slides: ['_slides/week-03/04-css-transitions-transforms.md']
-lesson_date: 2017-01-26
+lesson_date: 2017-04-28
 ---
 
 ## Pre-Work

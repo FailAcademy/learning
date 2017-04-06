@@ -21,7 +21,7 @@ layout: false
 
 - Learn how to build SVGs from scratch
 - Practice OOP programming and logic in JavaScript
-- Build a "Pong" game using SVGs dynamically generated from ES2015 classes
+- Build a "Pong" game using SVGs dynamically generated from ES.next classes
 - Have some fun with this :)
 
 ---

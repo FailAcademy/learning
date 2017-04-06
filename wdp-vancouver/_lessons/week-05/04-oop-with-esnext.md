@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Object Oriented Programming in JS
-slides: ['_slides/week-05/04a-oop-with-es2015.md', '_slides/week-05/04b-pong.md']
-lesson_date: 2017-02-09
+slides: ['_slides/week-05/04a-oop-with-esnext.md', '_slides/week-05/04b-pong.md']
+lesson_date: 2017-05-11
 ---
 
 ## Pre-Work
@@ -12,7 +12,7 @@ Watch these videos from Laracast's [ES2015 Crash Course](https://laracasts.com/s
 - [09: Classes](https://laracasts.com/series/es6-cliffsnotes/episodes/9)
 - [10: ES6 Modules](https://laracasts.com/series/es6-cliffsnotes/episodes/10)
 
-Also complete the following reading on ES2015 classes before class:
+Also complete the following reading on ES.next classes before class:
 
 - [An Introduction to ES6 Classes](https://strongloop.com/strongblog/an-introduction-to-javascript-es6-classes/)
 
@@ -29,7 +29,7 @@ We'll be creating SVGs to build the Pong game in Project 3, so you'll want to ta
 - Describe and use the elements of a `class`, including the `constructor` and 'methods'.
 - Describe how `this` functions within classes.
 - Describe and use `extends` and `super` for inheritance purposes.
-- Use `import` and `export` to import and export ES2015 classes to modules (as `default` or named exports).
+- Use `import` and `export` to import and export ES.next classes to modules (as `default` or named exports).
 - Code scalable vector graphics (SVGs) and add them inline to the DOM with JavaScript.
 
 ---
@@ -58,7 +58,7 @@ Work in groups to create a **poster-based representation** your object-oriented 
 
 ## Exercise 2
 
-Pick one of the classes your group modeled in the previous soccer game exercise, and use that to **write your first ES2015 class**.
+Pick one of the classes your group modeled in the previous soccer game exercise, and use that to **write your first ES.next class**.
 
 Ensure that you set all the appropriate **properties** in the `constructor` and create all the required **methods** for your class.
 
@@ -81,7 +81,7 @@ Now model our own classroom using the following classes. Note that `WebDevStuden
 
 ## Lab Activity
 
-In today's lab, you'll commence work on Project 3 using what you've now learned about ES2015 syntactical features and Webpack to build a Pong game.
+In today's lab, you'll commence work on Project 3 using what you've now learned about ES.next syntactical features and Webpack to build a Pong game.
 
 Clone the "Pong Starter" to get started.
 
@@ -99,7 +99,7 @@ Refer to the [project requirements page](/project/project-3-pong-game/) and the 
 
 ## Additional Resources
 
-More reading on classes in ES2015:
+More reading on classes in ES.next:
 
 - [Object-Oriented JavaScript — A Deep Dive into ES6 Classes](https://www.sitepoint.com/object-oriented-javascript-deep-dive-es6-classes/)
 
