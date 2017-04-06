@@ -2,46 +2,47 @@
 	{
 		"title": "REDit (Part 1) Due",
 		"allDay": true,
-		"start": "2017-01-23",
+		"start": "2017-04-24",
 		"url": "/project/01a-react-and-redux"
    }, {
 		"title": "REDit (Part 2) Due",
 		"allDay": true,
-		"start": "2017-01-30",
+		"start": "2017-05-08",
 		"url": "/project/01b-node-and-db/"
    },
     {
 		"title": "REDit Code Review",
 		"allDay": true,
-		"start": "2017-02-02",
+		"start": "2017-05-11",
 		"url": ""
    },
-   {
-		"title": "TDD (Rojo)",
-		"allDay": true,
-		"start": "2017-02-27",
-		"url": "/project/03-tdd-rojo/"
-   },
-   {
+    {
 		"title": "React + Meteor Project Due",
 		"allDay": true,
 		"start": "2017-02-20",
 		"url": "/project/02-meteor/"
-   },{
+   },
+   {
+		"title": "TDD (Rojo)",
+		"allDay": true,
+		"start": "2017-05-23",
+		"url": "/project/03-tdd-rojo/"
+   },
+   {
 		"title": "r10 Due",
 		"allDay": true,
-		"start": "2017-03-06",
+		"start": "2017-06-05",
 		"url": "/project/05-mobile"
    },
     {
 		"title": "Portfolio Evaluations",
 		"allDay": true,
-		"start": "2017-03-09",
+		"start": "2017-06-12",
 		"url": ""
    }, {
 		"title": "Community Project Due",
 		"allDay": true,
-		"start": "2017-03-31",
+		"start": "2017-06-30",
 		"url": "/project/05-mobile"
    }
 ]
