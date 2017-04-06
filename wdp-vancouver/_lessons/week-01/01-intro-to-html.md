@@ -1,11 +1,15 @@
 ---
 layout: lesson
-title: Intro to HTML
+title: Intro to Your Computer & HTML
 slides: ['_slides/week-01/01-intro-to-html.md']
 lesson_date: 2017-01-09
 ---
 
 ## Pre-Work
+
+Readings created by RED Academy:
+
+- [HTML Fundamentals](https://redacademy.github.io/html-fundamentals/)
 
 Readings from *Learn to Code HTML & CSS*:
 
@@ -19,6 +23,17 @@ Before the first class, also be sure to work through all of the free modules in 
 
 ## Learning Objectives
 
+__Your Computer__
+
+- Build a repertoire of keyboard shortcuts
+- Learn how to use Spotlight
+- Understand the basics of a filesystem
+- Understand how productivity apps can speed workflow
+- Parctice navigating between applications
+- Practice using multiple desktops
+
+__HTML__
+
 - Define what a mark-up language is and the function of HTML on the web.
 - Write well-structured HTML by properly nesting elements and applying appropriate attributes to them.
 - Use basic HTML elements including headings, paragraphs, links, and lists.
@@ -27,6 +42,17 @@ Before the first class, also be sure to work through all of the free modules in 
 ---
 
 ## Keywords
+
+__Your Computer__
+
+- Filesystem & File Tree
+- Spotlight
+- Shortcuts
+- Multiple Desktops
+- Gestures
+- Spectacle
+
+__HTML__
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [Doctype](http://www.sitepoint.com/web-foundations/doctypes/)

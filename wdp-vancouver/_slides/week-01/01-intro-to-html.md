@@ -130,7 +130,7 @@ class: center, middle
 
 # What We Need
 
-1. A code editor (Atom, Sublime Text, etc.)
+1. **[Visual Studio Code](https://code.visualstudio.com/)**
 2. A file with an HTML extension
 3. An handful of HTML elements that are common to all webpages
 
@@ -142,11 +142,7 @@ Any program that edits plain text files can be used as a code editor (e.g. Notep
 
 But programs that are specially designed for editing code offer extra features like **syntax highlighting**.
 
-Some good (free) code editors for Mac and Windows include:
-
-- **[Atom](https://atom.io/)**
-- **[Sublime Text](http://www.sublimetext.com/)**
-- **[Visual Studio Code](https://code.visualstudio.com/)**
+**[Visual Studio Code](https://code.visualstudio.com/)** is our favourite.
 
 ---
 
