@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: The Command Line Interface and Git
-slides: ['_slides/week-01/05a-cli-git.md']
-lesson_date: 2017-01-13
+slides: ['_slides/week-01/03b-cli-git.md']
+lesson_date: 2017-04-13
 ---
 
 ## Pre-Work
@@ -119,7 +119,7 @@ Now let's visualize what we just did on the CLI using humans and Fatboys...
 
 ## Lab Activity
 
-Today's lab activity time will be dedicated to continuing to work on Project 1.
+See the [HTML Forms](/lesson/html-forms/) for lab activity details.
 
 If you're not 100% comfortable, take time to get more practice with Git-based version control by completing Codeacademy's [Learn Git](https://www.codecademy.com/learn/learn-git).
 

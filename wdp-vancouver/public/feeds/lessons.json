@@ -11,134 +11,116 @@
       "url": {{lesson.url | jsonify}}
    },{% endfor %}
    {
-      "title": "Project Work Day",
+      "title": "Day 1 Orientation",
       "allDay": true,
-      "start": "2017-01-27"
+      "start": "2017-04-10"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2017-01-30"
+      "start": "2017-04-24"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2017-02-10"
+      "start": "2017-05-01"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2017-02-24"
-   },
-   {
-      "title": "Project Work Day",
-      "allDay": true,
-      "start": "2017-03-03"
+      "start": "2017-06-02"
    },
    {
       "title": "UX Guest Lecture",
       "allDay": true,
-      "start": "2017-01-31"
+      "start": "2017-05-02"
    },
    {
       "title": "CSS Drills",
       "allDay": true,
-      "start": "2017-01-31"
+      "start": "2017-05-02"
    },
    {
       "title": "Invision Lesson (UX)",
       "allDay": false,
-      "start": "2017-03-07T09:15:00+00:00",
-      "end": "2017-03-07T11:15:00+00:00"
+      "start": "2017-06-05T09:15:00+00:00",
+      "end": "2017-06-05T11:15:00+00:00"
    },
    {
-      "title": "Analytics Lesson",
+      "title": "Analytics & SEO Lesson (DM)",
       "allDay": false,
-      "start": "2017-03-08T13:00:00+00:00",
-      "end": "2017-03-08T16:00:00+00:00"
-   },
-   {
-      "title": "SEO Lesson",
-      "allDay": false,
-      "start": "2017-03-09T09:00:00+00:00",
-      "end": "2017-03-09T12:00:00+00:00"
+      "start": "2017-06-08T13:00:00+00:00",
+      "end": "2017-06-08T16:00:00+00:00"
    },
    {
       "title": "Design Presentations",
       "allDay": true,
-      "start": "2017-03-10",
-      "end": "2017-03-10"
+      "start": "2017-06-09"
    },
    {
       "title": "GitHub Portfolio Development",
       "allDay": true,
-      "start": "2017-03-06",
-      "end": "2017-03-11"
+      "start": "2017-06-05",
+      "end": "2017-06-10"
    },
    {
       "title": "Community Project Work",
       "allDay": true,
-      "start": "2017-03-13",
-      "end": "2017-03-31"
+      "start": "2017-06-12",
+      "end": "2017-06-30"
    },
    {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2017-01-19T13:00:00+00:00",
-      "end": "2017-01-19T15:00:00+00:00"
+      "start": "2017-04-20T13:00:00+00:00",
+      "end": "2017-04-20T15:00:00+00:00"
    },
    {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2017-01-26T13:00:00+00:00",
-      "end": "2017-01-26T15:00:00+00:00"
+      "start": "2017-05-04T13:00:00+00:00",
+      "end": "2017-05-04T15:00:00+00:00"
    },
    {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2017-02-02T13:00:00+00:00",
-      "end": "2017-02-02T15:00:00+00:00"
+      "start": "2017-05-11T18:00:00+00:00",
+      "end": "2017-05-11T20:00:00+00:00"
+   },   
+   {
+      "title": "PPD Lesson",
+      "allDay": false,
+      "start": "2017-05-18T13:00:00+00:00",
+      "end": "2017-05-18T15:00:00+00:00"
    },
    {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2017-02-09T13:00:00+00:00",
-      "end": "2017-02-09T15:00:00+00:00"
+      "start": "2017-05-18T18:00:00+00:00",
+      "end": "2017-05-18T20:00:00+00:00"
+   },    
+   {
+      "title": "PPD Lesson",
+      "allDay": false,
+      "start": "2017-05-24T13:00:00+00:00",
+      "end": "2017-05-24T15:00:00+00:00"
    },
    {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2017-02-16T13:00:00+00:00",
-      "end": "2017-02-16T15:00:00+00:00"
+      "start": "2017-06-01T13:00:00+00:00",
+      "end": "2017-06-01T15:00:00+00:00"
    },
    {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2017-02-24T13:00:00+00:00",
-      "end": "2017-02-24T15:00:00+00:00"
+      "start": "2017-06-15T13:00:00+00:00",
+      "end": "2017-06-15T15:00:00+00:00"
    },
    {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2017-03-02T13:00:00+00:00",
-      "end": "2017-03-02T15:00:00+00:00"
-   },
-   {
-      "title": "PPD Lesson",
-      "allDay": false,
-      "start": "2017-03-09T18:00:00+00:00",
-      "end": "2017-03-09T20:00:00+00:00"
-   },
-   {
-      "title": "PPD Lesson",
-      "allDay": false,
-      "start": "2017-03-16T13:00:00+00:00",
-      "end": "2017-03-16T15:00:00+00:00"
-   },
-   {
-      "title": "PPD Lesson",
-      "allDay": false,
-      "start": "2017-03-23T13:00:00+00:00",
-      "end": "2017-03-23T15:00:00+00:00"
+      "start": "2017-06-22T13:00:00+00:00",
+      "end": "2017-06-22T15:00:00+00:00"
    }
 ]
