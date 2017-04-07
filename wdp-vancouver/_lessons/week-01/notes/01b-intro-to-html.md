@@ -1,6 +1,15 @@
-Need to cover:
-
 ## Intro to HTML
+
+Competition:
+
+Break into groups, and write every word you know associated w/ HTML. We'll read them out, cancel each other out, and the group with the most remaining wins.
+
+Debrief:
+- Make sure Inline and Block elements are covered
+- Make sure key elements are covered: Links, images, lists, semantic elements
+- HTML Versions
+- Meta tags `<meta charset="utf-8">`
+- Make sure we cover attributes
 
 Question:
 
@@ -39,11 +48,26 @@ Debrief:
 - Discuss why is might be useful to create models before we write code
 - Talk about the universality of trees, ie filesystem
 
-Competition:
+Activity:
 
-Break into groups, and write every word you know associated w/ HTML. We'll read them out, cancel each other out, and the group with the most remaining wins.
+Help me render your tree using the following rules:
+
+- Everything is a box
+- Parent elements contain child elements by nesting them within
+- Traverse the tree depth first, pre-order
+- Block Elements take up the full width of their container
+- Inline Elements are arranged side by side
+
+Activity:
+
+Open developer tools for the page we just turned into a tree and rendered. Show them how to access the DOM tree, and show them how hovering elements highlights the boxes we drew in the previous exercise.
 
 Debrief:
-- Make sure key elements are covered: Links, images, lists, semantic elements
-- Meta tags
+- Default styles
+- Dev Tools Shortcut (add to shortcuts.txt)
+- Dev tools orientation
+
+Lab Activity:
+
+
 

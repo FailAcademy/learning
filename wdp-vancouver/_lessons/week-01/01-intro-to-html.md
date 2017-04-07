@@ -101,12 +101,13 @@ Finally, you and your partner will share your insights with the class.
 
 Today's lab time will be dedicated to Project 1.
 
-Before you get started, you should watch these videos to reinforce the concepts learned in class:
+Before you get started, you should watch this video to reinforce the concepts learned in class:
 
 - [HTML - Hamburger Mark-up Language](http://www.dontfeartheinternet.com/02-html/)
-- [Don't Fear Starting from Scratch - Part 1: HTML](http://www.dontfeartheinternet.com/04-from-scratch/)
 
-You're goal for the end of the first day is to have the different sections of the Project 1 website roughed-out in HTML.
+You're goal for the end of the first day is to have the different sections of the [Project 1](project/project-1-part-1-aloha-homepage/) website roughed-out in HTML.
+
+For help with how to get started, see the [RED HTML Wiki](https://redacademy.github.io/html-fundamentals/#setting-up-a-project).
 
 ---
 
@@ -115,6 +116,10 @@ You're goal for the end of the first day is to have the different sections of th
 Don't let the title of this article series put you off&mdash;it has some of the clearest explanations of basic HTML concepts you'll find on the web:
 
 - [Web Design for Kids](http://webdesign.tutsplus.com/series/web-design-for-kids--cms-823)
+
+Starting a site from scratch:
+
+- [Don't Fear Starting from Scratch - Part 1: HTML](http://www.dontfeartheinternet.com/04-from-scratch/)
 
 Some background information, for some context (and for fun):
 
