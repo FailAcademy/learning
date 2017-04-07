@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Flexbox
-slides: ['_slides/week-02/01-flexbox.md']
-lesson_date: 2017-01-16
+slides: ['_slides/week-02/01b-flexbox.md']
+lesson_date: 2017-04-18
 ---
 
 ## Pre-Work
@@ -75,13 +75,11 @@ Think about whether you need to make any adjustments to the mark-up to make this
 
 ## Lab Activity
 
-Today's lab time is all about getting comfortable with flexbox...
+See the [CSS3 & Responsive Web Design lesson](/lesson/css3-responsive-web-design/) for additional lab activity details.
 
-First, code along with the videos in the **[What the Flexbox?!](http://flexbox.io/#/)** series.
+If you'd like to get more practice on flexbox before you begin incorporating it into your project, take what you've learned today and apply it to solving the 24 challenges in **[Flexbox Froggy](http://flexboxfroggy.com/)**.
 
-Once you finish those, take what you've learned about flexbox and apply it to solving the 24 challenges in **[Flexbox Froggy](http://flexboxfroggy.com/)**.
-
-Finally, spend any remaining time today removing all floats from your project and replace them with flexbox properties.
+Then you can spend any remaining time today removing all floats from your project and replace them with flexbox properties.
 
 ---
 

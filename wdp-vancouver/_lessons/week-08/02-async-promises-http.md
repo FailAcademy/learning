@@ -2,7 +2,7 @@
 layout: lesson
 title: Async, Promises & HTTP in Angular 2
 slides: ['_slides/week-08/02-async-promises-http.md']
-lesson_date: 2017-02-28
+lesson_date: 2017-05-31
 ---
 
 ## Pre-Work

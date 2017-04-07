@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to jQuery
 slides: ['_slides/week-02/04a-intro-to-jquery.md']
-lesson_date: 2017-01-19
+lesson_date: 2017-04-21
 ---
 
 ## Pre-Work
@@ -92,9 +92,9 @@ You can complete this activity in a basic HTML file in a text editor of your cho
 
 ## Lab Activity
 
-We’ll continue to work on the second part of Project 1 in today’s lab.
+We’ll continue to work on Project 1 in today’s lab.
 
-You goal for today is to begin implementing the required interactive elements to the website using jQuery.
+Your goal for today is to implement the required interactive elements to the website using jQuery.
 
 ---
 

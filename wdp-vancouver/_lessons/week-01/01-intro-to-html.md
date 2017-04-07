@@ -1,11 +1,15 @@
 ---
 layout: lesson
-title: Intro to HTML
+title: Intro to Your Computer & HTML
 slides: ['_slides/week-01/01-intro-to-html.md']
-lesson_date: 2017-01-09
+lesson_date: 2017-04-11
 ---
 
 ## Pre-Work
+
+Readings created by RED Academy:
+
+- [HTML Fundamentals](https://redacademy.github.io/html-fundamentals/)
 
 Readings from *Learn to Code HTML & CSS*:
 
@@ -19,6 +23,17 @@ Before the first class, also be sure to work through all of the free modules in 
 
 ## Learning Objectives
 
+__Your Computer__
+
+- Build a repertoire of keyboard shortcuts
+- Learn how to use Spotlight
+- Understand the basics of a filesystem
+- Understand how productivity apps can speed workflow
+- Parctice navigating between applications
+- Practice using multiple desktops
+
+__HTML__
+
 - Define what a mark-up language is and the function of HTML on the web.
 - Write well-structured HTML by properly nesting elements and applying appropriate attributes to them.
 - Use basic HTML elements including headings, paragraphs, links, and lists.
@@ -27,6 +42,17 @@ Before the first class, also be sure to work through all of the free modules in 
 ---
 
 ## Keywords
+
+__Your Computer__
+
+- Filesystem & File Tree
+- Spotlight
+- Shortcuts
+- Multiple Desktops
+- Gestures
+- Spectacle
+
+__HTML__
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [Doctype](http://www.sitepoint.com/web-foundations/doctypes/)
@@ -75,12 +101,13 @@ Finally, you and your partner will share your insights with the class.
 
 Today's lab time will be dedicated to Project 1.
 
-Before you get started, you should watch these videos to reinforce the concepts learned in class:
+Before you get started, you should watch this video to reinforce the concepts learned in class:
 
 - [HTML - Hamburger Mark-up Language](http://www.dontfeartheinternet.com/02-html/)
-- [Don't Fear Starting from Scratch - Part 1: HTML](http://www.dontfeartheinternet.com/04-from-scratch/)
 
-You're goal for the end of the first day is to have the different sections of the Project 1 website roughed-out in HTML.
+You're goal for the end of the first day is to have the different sections of the [Project 1](project/project-1-part-1-aloha-homepage/) website roughed-out in HTML.
+
+For help with how to get started, see the [RED HTML Wiki](https://redacademy.github.io/html-fundamentals/#setting-up-a-project).
 
 ---
 
@@ -89,6 +116,10 @@ You're goal for the end of the first day is to have the different sections of th
 Don't let the title of this article series put you off&mdash;it has some of the clearest explanations of basic HTML concepts you'll find on the web:
 
 - [Web Design for Kids](http://webdesign.tutsplus.com/series/web-design-for-kids--cms-823)
+
+Starting a site from scratch:
+
+- [Don't Fear Starting from Scratch - Part 1: HTML](http://www.dontfeartheinternet.com/04-from-scratch/)
 
 Some background information, for some context (and for fun):
 

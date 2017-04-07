@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: OOP with ES2015
+title: OOP with ES.next
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# OOP with ES2015
+# OOP with ES.next
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -20,7 +20,7 @@ layout: false
 # Agenda
 
 1. What is OOP?
-2. ES2015 class syntax
+2. ES.next class syntax
 3. Inheritance
 
 ---
@@ -105,7 +105,7 @@ Work in groups to create a **poster-based representation** your object-oriented 
 ---
 template: inverse
 
-# ES2015 Classes
+# ES.next Classes
 
 ---
 
@@ -155,9 +155,9 @@ console.log(joe.fullName());
 
 ---
 
-# ES2015 Classes
+# ES.next Classes
 
-Classes work the same in ES2015, but with cleaner syntax:
+Classes work the same in ES.next, but with cleaner syntax:
 
 ```js
 class Person {
@@ -269,7 +269,7 @@ What does `this` refer to in the previous example?
 
 # Exercise 2
 
-Pick one of the classes your group modelled in the previous soccer game exercise, and use that to **write your first ES2015 class**.
+Pick one of the classes your group modelled in the previous soccer game exercise, and use that to **write your first ES.next class**.
 
 Ensure that you set all the appropriate **properties** in the `constructor` and create all the required **methods** for your class.
 
@@ -443,7 +443,7 @@ Now model our own classroom using the following classes. Note that `WebDevStuden
 # What We've Learned
 
 - Basic concepts of object-oriented programming
-- How to use the new ES2015 class syntax
+- How to use the new ES.next class syntax
 - How inheritance works with subclasses
 
 ---

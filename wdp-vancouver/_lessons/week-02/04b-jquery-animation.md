@@ -2,7 +2,7 @@
 layout: lesson
 title: Animation with jQuery
 slides: ['_slides/week-02/05-jquery-animation.md']
-lesson_date: 2017-01-20
+lesson_date: 2017-04-21
 ---
 
 ## Pre-Work
@@ -77,9 +77,7 @@ Your task is to find an example of an interesting jQuery plugin and create a dem
 
 ## Lab Activity
 
-We’ll continue to work on the second part of Project 1 in today’s lab.
-
-You goal for today is to finalize the implementation of the website's interactive features that require jQuery.
+See the [Intro to jQuery](/lesson/intro-to-jquery/) for lab activity details.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to ES2015 Slides
+title: Intro to ES.next Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Intro to ES2015
+# Intro to ES.next
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -19,10 +19,10 @@ layout: false
 
 # Agenda
 
-1. ES5 vs. ES2015 (plus dev environment set-up)
+1. ES5 vs. ES.next (plus dev environment set-up)
 2. `let` and `const`
 3. Arrow functions
-4. ES2015 shorthand
+4. ES.next shorthand
 5. `for...of` loops
 
 ---
@@ -38,11 +38,11 @@ Ecma International is the standards organization in charge of publishing each ne
 | 1999 | ES3        |
 | ?    | ES4        |
 | 2009 | ES5        |
-| 2015 | ES6/ES2015 |
+| 2015 | ES6/ES.next |
 
 ---
 
-# ES2015 Compatibility
+# ES.next Compatibility
 
 How well does ES5 work in browsers today?
 
@@ -54,13 +54,13 @@ How about ES6?
 
 ---
 
-# Using ES2015 Today
+# Using ES.next Today
 
-**How do we use ES2015 today?**
+**How do we use ES.next today?**
 
 Answer: **Transpiling**
 
-Try to change your ES2015 code to ES5 using the [Babel online REPL](https://babeljs.io/repl/).
+Try to change your ES.next code to ES5 using the [Babel online REPL](https://babeljs.io/repl/).
 
 *We'll also need to transpile our code when we use TypeScript with Angular later in the course.*
 
@@ -73,7 +73,7 @@ template: inverse
 
 # Gulp Babel
 
-We'll need to use a Gulp plugin to transpile our ES2015 code to ES5 during our build process. We can use [**Gulp-Babel**](https://www.npmjs.com/package/gulp-babel) for that:
+We'll need to use a Gulp plugin to transpile our ES.next code to ES5 during our build process. We can use [**Gulp-Babel**](https://www.npmjs.com/package/gulp-babel) for that:
 
 ```js
 const gulp = require('gulp');
@@ -339,14 +339,14 @@ function counterES5() {
 
 ---
 
-# ES2015 Solution
+# ES.next Solution
 
 Use an **arrow function** to bind the scope of the function where it is defined, rather than where it is called.
 
 This is also know as **lexical binding**.
 
 ```js
-function counterES2015() {
+function counterESnext() {
 	this.seconds = 0;
 
 	window.setInterval(() => {
@@ -369,7 +369,7 @@ function multiply(a, b) { return a * b; }
 var multiply = function(a, b) { return a * b; }
 ```
 
-**ES2015 `=>`:**
+**ES.next `=>`:**
 
 ```js
 const sayHi = () => console.log('hi');
@@ -407,7 +407,7 @@ Use arrow functions to fix [this CodePen](http://codepen.io/redacademy/pen/mPjXV
 ---
 template: inverse
 
-# ES2015 Shorthand
+# ES.next Shorthand
 
 ---
 
@@ -423,7 +423,7 @@ var city = 'Vancouver';
 var description = name + ' lives in ' + city;
 ```
 
-**ES2015:**
+**ES.next:**
 
 ```js
 let description = `${name} lives in ${city}`;
@@ -443,7 +443,7 @@ Template literals also preserve white space:
 var funkyArrows = '\n-->\n    -->\n        ->\n';
 ```
 
-**ES2015:**
+**ES.next:**
 
 ```js
 let funkyArrows = `
@@ -493,7 +493,7 @@ makePerson( 'Mandi', 'Vancouver' );
 
 The new property value shorthand allows us to abbreviate the initialization of a property within an object literal, provided that the property key matches an existing variable name.
 
-**ES2015:**
+**ES.next:**
 
 ```js
 function makePerson(name, city) {
@@ -547,7 +547,7 @@ multiply(1);
 
 With ES20165, default function parameters allow us to initialize parameters with default values if no value or `undefined` is passed.
 
-**ES2015:**
+**ES.next:**
 
 ```js
 function multiply(a, b = 1) {
@@ -584,7 +584,7 @@ console.log(y); // 2
 
 Destructuring allows us to assign properties from objects to individual variables with the same name:
 
-**ES2015:**
+**ES.next:**
 
 ```js
 let point = {
@@ -617,7 +617,7 @@ function getName(person) {
 }
 ```
 
-**ES2015:**
+**ES.next:**
 
 ```js
 function getName({name}) {
@@ -640,7 +640,7 @@ var second = winners[1];
 var third = winners[2];
 ```
 
-**ES2015:**
+**ES.next:**
 
 ```js
 let [first, second, third] = winners;
@@ -729,7 +729,7 @@ The tax amount will needed to be added to the subtotal of the summed item prices
 
 # What We've Learned
 
-- Syntactical differences between ES5 and ES2015
+- Syntactical differences between ES5 and ES.next
 - How and where to replace `var` with `let` or `const`
 - How to use arrow functions
 - How to write more efficient JS with template literals, enhanced object literals, rest parameters, spread operators, and default parameters

@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: CSS3 & Responsive Web Design
-slides: ['_slides/week-01/03-css3-rwd.md']
-lesson_date: 2017-01-11
+slides: ['_slides/week-02/01a-css3-rwd.md']
+lesson_date: 2017-04-18
 ---
 
 ## Pre-Work
@@ -71,7 +71,7 @@ Now that we've had a chance to brush up our RWD skills, let's strategize how we'
 
 Take a few moments to review the two narrower design comps and think about what areas of the site will specifically be affected by the changes that are happening at each breakpoint.
 
-Jot some idea out on your own, then you'll team up to discuss this with a partner. We'll then reconvene to discuss each other's findings, as well as any questions or concerns before starting with the lab work.
+Jot some idea out on your own, then you'll team up to discuss this with a partner. We'll then reconvene to discuss each others findings, as well as any questions or concerns before starting with the lab work.
 
 ---
 
@@ -90,8 +90,6 @@ Also take a look at Project 1, and see if you can recommend where it this proper
 We'll continue to work on Project 1 in today's lab.
 
 Your goal for today is to "refactor" your CSS into mobile-first media queries based on the provided design comps.
-
-(Remember that this is a stretch goal for Part 1 of Project 1, but it's a requirement for Part 2. You'll thank yourself next week if you begin working on this now!)
 
 ---
 
