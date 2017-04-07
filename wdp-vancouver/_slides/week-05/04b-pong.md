@@ -424,6 +424,10 @@ export const KEYS = {
 
 But we'll need some way to figure out what codes correspond to these keys...
 
+*Hint: you can use `event.key`*
+For multiple keys: http://stackoverflow.com/questions/5203407/javascript-multiple-keys-pressed-at-once
+
+
 ---
 
 # Keycode Constants
@@ -848,7 +852,7 @@ This is the basic set-up for our ball's `paddleCollision` method. Why would we s
 ```js
 // Ball.js
 paddleCollision(player1, player2) {
-  if (this.vx > 0) { 
+  if (this.vx > 0) {
     //...
   } else {
     //...

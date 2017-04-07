@@ -46,14 +46,28 @@
       "start": "2017-01-31"
    },
    {
+      "title": "Invision Lesson (UX)",
+      "allDay": false,
+      "start": "2017-03-07T09:15:00+00:00",
+      "end": "2017-03-07T11:15:00+00:00"
+   },
+   {
       "title": "Analytics Lesson",
-      "allDay": true,
-      "start": "2017-03-08"
+      "allDay": false,
+      "start": "2017-03-08T13:00:00+00:00",
+      "end": "2017-03-08T16:00:00+00:00"
    },
    {
       "title": "SEO Lesson",
+      "allDay": false,
+      "start": "2017-03-09T09:00:00+00:00",
+      "end": "2017-03-09T12:00:00+00:00"
+   },
+   {
+      "title": "Design Presentations",
       "allDay": true,
-      "start": "2017-03-10"
+      "start": "2017-03-10",
+      "end": "2017-03-10"
    },
    {
       "title": "GitHub Portfolio Development",

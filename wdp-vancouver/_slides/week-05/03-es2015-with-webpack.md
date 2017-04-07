@@ -145,7 +145,7 @@ How does Webpack treat CSS files? How is this different from the more traditiona
 
 ---
 
-# Exercises 1-5
+# Exercises 1-4
 
 Now, we're ready to install Webpack in a new project.
 
@@ -157,7 +157,7 @@ Follow the exercise instructions found on the [lesson page](/lesson/developing-w
 
 - How to use `import` and `export` with ES2015 modules
 - How to set-up Webpack in a project
-- How to bundle our JS and use Webpack with Babel
+- How to bundle our JS and use Webpack
 - How to compile Sass with Webpack
 - How to make our code easier to debug with source maps in Webpack
 
