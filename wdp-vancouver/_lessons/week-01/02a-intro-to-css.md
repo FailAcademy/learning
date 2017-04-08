@@ -6,8 +6,9 @@ lesson_date: 2017-04-12
 ---
 
 ## Pre-Work
+Reading the [RED Academy CSS Fundamentals Wiki](https://redacademy.github.io/css-fundamentals/)
 
-Readings from *Learn to Code HTML & CSS*:
+Additional pre-work (if you have time), readings from *Learn to Code HTML & CSS*:
 
 - [Getting to Know CSS](http://learn.shayhowe.com/html-css/getting-to-know-css/)
 - [Opening the Box Model](http://learn.shayhowe.com/html-css/opening-the-box-model/)
