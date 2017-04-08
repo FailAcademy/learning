@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 5 - Mars Colony App
-due: Monday, March 6th (beginning of class)
+due: Monday, June 5th (beginning of class)
 ---
 
 For Project 5, you're going to create a web-based application for Earth colonists exploring Mars using Angular 2.
