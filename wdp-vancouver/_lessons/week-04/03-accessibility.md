@@ -198,3 +198,8 @@ Information on Canadian laws regarding web accessibility:
 An article more on "compatibility" than "accessibility" but still a good, relevant read:
 
 - [Make the Web Work For Everyone](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/)
+
+Use CSS to lint your HTML and make it more accessible:
+
+- [Linting HTML using CSS](https://bitsofco.de/linting-html-using-css/)
+- [Alix for Chrome](https://chrome.google.com/webstore/detail/alix-for-chrome/aepmadgjacfjcneccddiccnkbpimobge)
