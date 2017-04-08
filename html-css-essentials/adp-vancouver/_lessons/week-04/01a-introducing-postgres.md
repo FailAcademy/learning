@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Introducing PostgreSQL
-lesson_date: 2017-01-31
+lesson_date: 2017-05-01
 ---
 
 ## Pre-Work
