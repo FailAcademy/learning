@@ -8,6 +8,8 @@
 
 ## Day 2
 
+- Add this resource: https://vasanthk.gitbooks.io/react-bits/
+
 ## Day 3
 
 ## Day 4
