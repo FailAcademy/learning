@@ -1,9 +1,9 @@
 [
-   {
+  {
       "title": "Pre-Work",
       "allDay": true,
-      "start": "2017-01-02",
-      "end": "2017-01-09"
+      "start": "2017-04-03",
+      "end": "2017-04-08"
    },
    {
       "title": "ADP/WDP Mentoring",
@@ -16,12 +16,6 @@
       "allDay": false,
       "start": "2017-05-26T15:00:00+00:00",
       "end": "2017-05-26T16:15:00+00:00"
-   },
-   {
-      "title": "ADP/WDP Mentoring",
-      "allDay": false,
-      "start": "2017-06-16T15:00:00+00:00",
-      "end": "2017-06-16T16:15:00+00:00"
    },
    {
       "title": "BC Family Day",
