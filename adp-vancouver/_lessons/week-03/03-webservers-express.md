@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Creating a Web Server with Express
-lesson_date: 2017-01-25
+lesson_date: 2017-04-26
 ---
 
 ## Pre-Work
