@@ -8,6 +8,7 @@
 ## Day 2
 
 - Split this lab across two days
+- Access to camera roll or address book
 
 ## Day 3
 
