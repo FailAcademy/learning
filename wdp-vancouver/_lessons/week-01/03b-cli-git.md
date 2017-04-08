@@ -127,13 +127,11 @@ If you're not 100% comfortable, take time to get more practice with Git-based ve
 
 ## Additional Resources
 
-A quick intro to the command line:
+Handy command line resources for beginners:
 
 - [The Command Line Crash Course](http://cli.learncodethehardway.org/book/)
-
-A handy cheat sheet of basic commands:
-
 - [Command Line Cheat Sheet](http://www.git-tower.com/blog/command-line-cheat-sheet/)
+- [Explain Shell](https://explainshell.com/)
 
 Some commands you'll want to steer clear of on the CLI:
 
