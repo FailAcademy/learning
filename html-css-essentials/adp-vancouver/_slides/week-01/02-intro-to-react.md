@@ -699,10 +699,15 @@ Proptypes are a feature of React that allow us validate whether props were set o
 
 # Using Proptypes
 
-To use proptypes, you'll also want to import `Proptypes` from `React` in your `App.js` file:
+To use proptypes, you'll need to import `Proptypes` from `prop-types` in your `App.js` file:
+
+```bash
+npm install --save prop-types
+```
 
 ```js
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class HelloWorld extends Component {
    // the component's code...
@@ -722,7 +727,8 @@ What do you think this `propType` necessitates when using the component?
 We can also set defaults for our components props, which will take effect if no prop is set where the component is used:
 
 ```js
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class HelloWorld extends Component {
    // the component's code...

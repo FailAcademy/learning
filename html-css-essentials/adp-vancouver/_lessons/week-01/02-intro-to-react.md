@@ -7,9 +7,7 @@ lesson_date: 2017-04-11
 
 ## Pre-work
 
-Prior to class today, be sure to complete this Codeacademy course:
-
-- [Learn ReactJS: Part I](https://www.codecademy.com/pt/learn/react-101)
+*There is no pre-work for this lesson.*
 
 ---
 
@@ -47,7 +45,7 @@ We're going to build a to-do app together with React.
 
 Let's start by determining how to chunk the mock-up into components:
 
-<p style="display: flex; justify-content: center;" }>
+<p style="display: flex; justify-content: center;">
 	<img src="/public/exercises/react-todo-mockup.png" alt="To-do mock-up" />
 </p>
 
@@ -202,6 +200,7 @@ Some other helpful React tutorials and ebooks:
 
 - [Plotly Academy](http://academy.plot.ly/)
 - [React Enlightenment](http://www.reactenlightenment.com/)
+- [Simple React Development in 2017](https://hackernoon.com/simple-react-development-in-2017-113bd563691f)
 
 Recorded talks from React.js Conf:
 
