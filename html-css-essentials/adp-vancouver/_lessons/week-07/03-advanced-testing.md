@@ -2,7 +2,7 @@
 layout: lesson
 title: Behaviour Driven Development
 slides: ['_slides/week-07/03-bdd.md']
-lesson_date: 2017-02-22
+lesson_date: 2017-05-24
 ---
 
 ## Pre-Work

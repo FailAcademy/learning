@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 3 - TDD (Rojo)
-due: Monday, February 27th (beginning of class)
+due: Monday, May 29th (beginning of class)
 class: gh-check
 ---
 
