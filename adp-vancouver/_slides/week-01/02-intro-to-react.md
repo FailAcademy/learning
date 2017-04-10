@@ -109,13 +109,43 @@ class: center, middle
 
 ---
 
-# React Nodes
+# Elements & Components
 
-A React component is any part of a user interface that can contain **React nodes**.
-
-A React node is **a light, stateless, immutable, virtual representation of a DOM node**. It is the primary type/value created when using React.
+React elements are simply JS objects used to **describe how the HTML for the component should look **. There are no methods on the object, just data.
 
 They can be created with plain JS or **JavaScript XML (JSX)**.
+
+React components, on the other hand, **refer to an instance** of a React component class.
+
+We use `ReactDOM.render()` to render a React element into a particular DOM element, and the return value of this method is the React component instance.
+
+---
+
+# React Elements
+
+What a React element looks like:
+
+```js
+// Without JSX
+let helloWorld = React.createElement(
+  "div",
+  null,
+  "Hello World!"
+);
+
+// Using JSX
+let helloWorld = <div>Hello World!</div>;
+
+// Both produce a JS object that looks something like this...
+let helloWorld = {
+  key: null,
+  props: {
+    children: "Hello World!"
+  },
+  ref: null,
+  type: "div"
+};
+```
 
 ---
 class: center, middle
@@ -130,7 +160,7 @@ JSX makes it **easier to read and write** React components in our code, but Reac
 class: center, middle
 
 .large[
-   Let's see how we would create a component both ways...
+   Let's take a closer look at how we would create a React component both ways...
 ]
 
 ---
@@ -195,7 +225,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 - We must import the `React` and `ReactDOM` libraries before we can create React components
 - `React` provides us with a `Component` class to extend and create our own components (we can also create *functional stateless components* without the `Component` class)
 - `render` method comes from `Component`, and is required
-- If you want to return React nodes on more than one line, you must wrap your return value in `()`
+- If you want to return React elements on more than one line, you must wrap your return value in `()`
 - Look ma, no quotes! (...because JSX isn't a string)
 
 ---
