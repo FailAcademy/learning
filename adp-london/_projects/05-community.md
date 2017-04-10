@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 5 - Community Project
-due: Friday, March 31st (beginning of class)
+due: Friday, June 30th (beginning of class)
 ---
 
 For your final project, you will work in groups to build a mobile app for a RED Community Partner Project that has previously been through a UX/UI design process.

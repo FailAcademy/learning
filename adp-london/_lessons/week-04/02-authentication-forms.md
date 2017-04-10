@@ -2,7 +2,7 @@
 layout: lesson
 title: Authentication & Forms
 slides: ['_slides/week-04/01b-client-side-validation.md']
-lesson_date: 2017-01-30
+lesson_date: 2017-05-03
 ---
 
 ## Pre-Work
