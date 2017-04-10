@@ -7,7 +7,7 @@ lesson_date: 2017-04-12
 
 ## Pre-work
 
-*There is no pre-work for this lesson (provided you have finished Learn ReactJS: Part I on Codeacademy).*
+*There is no pre-work for this lesson.*
 
 ---
 
