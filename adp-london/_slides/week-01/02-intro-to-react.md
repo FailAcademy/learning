@@ -111,11 +111,11 @@ class: center, middle
 
 # Elements & Components
 
-React elements are simply JS objects used to **describe how the HTML for the component should look **. There are no methods on the object, just data.
+React elements are simply **JS objects used to describe how the HTML for the component should look **, i.e. it is an object-based representation of a DOM note. There are no methods on the object, just data.
 
 They can be created with plain JS or **JavaScript XML (JSX)**.
 
-React components, on the other hand, **refer to an instance** of a React component class.
+Components, on the other hand, are **functions or classes that return React elements.**
 
 We use `ReactDOM.render()` to render a React element into a particular DOM element, and the return value of this method is the React component instance.
 
@@ -723,7 +723,7 @@ Proptypes are a feature of React that allow us validate whether props were set o
 - is an array containing only items of a specified type
 - is an object with a specific shape
 - satisfies a condition set out in a custom validator
-- **[...etc.](https://facebook.github.io/react/docs/reusable-components.html#prop-validation)**
+- **[...etc.](https://facebook.github.io/react/docs/typechecking-with-proptypes.html)**
 
 ---
 
@@ -779,7 +779,7 @@ HelloWorld.defaultProps = {
 
 Add proptypes for the `ToDo`, `ToDoCount`, and `ClearButton` components.
 
-We need our `todo` prop to be an object with a specific set of properties, so you will need to use `PropTypes.shape()` for that. Use the React doc's reference on **[Prop Validation](https://facebook.github.io/react/docs/reusable-components.html#prop-validation)** to find out how to do this.
+We need our `todo` prop to be an object with a specific set of properties, so you will need to use `PropTypes.shape()` for that. Use the React doc's reference on **[Prop Validation](https://facebook.github.io/react/docs/typechecking-with-proptypes.html)** to find out how to do this.
 
 Make all of the props for all components **required**.
 
