@@ -131,7 +131,7 @@ Once you've created your new components, add them to your `App` inside of a `<di
 
 Add proptypes for the `ToDo`, `ToDoCount`, and `ClearButton` components.
 
-We need our `todo` prop to be an object with a specific set of properties, so you will need to use `PropTypes.shape()` for that. Use the React doc's reference on **[Prop Validation](https://facebook.github.io/react/docs/reusable-components.html#prop-validation)** to find out how to do this.
+We need our `todo` prop to be an object with a specific set of properties, so you will need to use `PropTypes.shape()` for that. Use the React doc's reference on **[Prop Validation](https://facebook.github.io/react/docs/typechecking-with-proptypes.html)** to find out how to do this.
 
 Make all of the props for all components **required**.
 
