@@ -1,5 +1,9 @@
 # Your Computer
 
+## PC vs Mac
+
+Get an understanding of Mac vs PC usage in the class.
+
 ## Spotlight
 
 Think/Pair/Share: how do you open an application or file you've never used before?
@@ -8,7 +12,13 @@ Debrief:
 - Identify that you don't need to memorize your filesystem in order to open things
 - Identify how hotkeys can speed your workflow
 
+OSX:
+
 Introduce Spotlight - Cmd + Space
+
+Windows:
+
+The 'Windows' key has a similar behaviour to Spotlight
 
 ## Discussion: Application Dependencies
 
@@ -20,26 +30,33 @@ Debrief:
 - Efficiencies in finding and installing new software
 - Pitfalls of installing software from the web
 
-## Activity: Filesystem
-
-In Groups: Draw how you think files are organized on your machine.
-
-Debrief:
-- Show files as a tree
-- Show the Finder view that demonstrates the file tree
+## Activity: Create shortcuts.txt
 
 Individually: Create a RED directory
 
 - Open VSCode
 - Open the Desktop Folder as a project
 - Create a new folder called `RED`
-- In that folder, create a text file called shorcuts.txt.
-- Add a the Spotlight hotkey to the file.
+- In that folder, create a text file called shortcuts.txt
+- Add a the Spotlight hotkey to shortcuts.txt
+- Ask them to add shortcuts to that file incrementally
 
 Debrief:
 - Multiple ways to create files
 - File naming conventions & consistency
 - File extensions
+
+## Activity: Filesystem
+
+In Groups: Draw how you think files are organized on your machine.
+Use their prework folder as an example.
+
+Debrief:
+- Show files as a tree
+- Show the Finder view that demonstrates the file tree
+- Talk about hierarchy, and how we represent it using `/` in OSX, and `\` in Windows.
+
+Ie. `Users/blaketurner/Desktop` Represents three tiers of hierarchy by using `/`.
 
 ## Activity: Cmd + Tab
 
@@ -59,10 +76,17 @@ Put your VSCode and Google Chrome windows Side by Side
 Debrief:
 - How did you achieve the activity. Was your method easy?
 
-OSX: Download [Spectacle App](https://www.spectacleapp.com/)
-Windows: Download [WindowSpace](http://www.ntwind.com/software/windowspace.html)
+OSX:
 
-Download Spectacle, introduce hotkeys, repeat side by side activity.
+Download [Spectacle App](https://www.spectacleapp.com/)
+
+Windows:
+
+This ships by default starting in Windows 10.
+Windows Key + left/right/up/down, you can alsodo quarters by pressing up+right, etc.
+OR you can drag windows to the side and they snap in place.
+
+Once apps have been downloaded and hotkeys introduced, repeat the side-by-side activity.
 
 (Add to shortcuts.txt)
 
@@ -74,7 +98,21 @@ Debrief:
 - Did Cmd + Tab cause problems?
 - Was it difficult to choose which window was in the foreground w/ just Cmd + Tab?
 
-Introduce Multiple Desktops, move side by side windows to one desktop, new Chrome window to other desktop. Navigate between w/ gestures. Get windows users to google how to do multiple desktops.
+Introduce multiple desktops:
+
+OSX:
+
+Four finger swipe up reveals the desktops view.
+You can create a new one by clicking the + on the right, and move windows to new desktops by dragging them there.
+Four finger swipe down returns to normal view.
+
+Windows:
+
+ctrl-D to create desktops
+ctrl-left, ctrl-right to move between desktops
+
+Once you've shown how to make multiple desktops, move side by side windows to one desktop, new Chrome window to other desktop.
+Navigate between w/ gestures.
 
 (Add to shortcuts.txt)
 
@@ -83,7 +121,11 @@ Introduce Multiple Desktops, move side by side windows to one desktop, new Chrom
 Open System Preferences using Spotlight. Don't touch your mouse/touchpad!
 Visit the Trackpad section. Spend 5 minutes on Gestures, adding to shortcuts.txt as you go.
 
+Get Windows users to Google any gestures specific to their hardware.
+
 ## Activity: Key Repeat
+
+NOTE: Key repeat is only visible in Terminal on OSX (everything else blocks key repeat), so this might be better to introduce when we
 
 Go to shortcuts.txt press and hold any key. Why is it so slow?
 
