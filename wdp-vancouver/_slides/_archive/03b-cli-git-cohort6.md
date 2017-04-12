@@ -24,7 +24,7 @@ layout: false
 3. Git vs. GitHub
 4. Initializing a repo and making commits
 5. Working with remotes
-6. Deploying with GitHub Pages
+6. Branching and merging (and using GitHub Pages)
 7. Collaborating with others
 
 ---
@@ -40,12 +40,25 @@ class: center, middle
 &mdash;David Baumgold
 
 ---
-class: middle
+class: center, middle
+
+.large[
+   With great power also comes great responsibility...
+]
+
+---
+class: center, middle
+
+.large[
+   But where do I find the command line?
+]
+
+---
 
 # Command Line Apps
 
-- On OSX we will be using iTerm2
-- On Windows, we will be using Git BASH. If you'd like, you can use the built-in Cmd.exe, or install PowerShell, or Cygwin.
+- On a Mac you can use the built-in Terminal app (or iTerm2)
+- On Windows, you can use the built-in Cmd.exe, or install PowerShell, Cygwin, or Git BASH
 
 ---
 template: inverse
@@ -157,32 +170,6 @@ Let's take the command line for a spin.
 
 Now let's visualize what we just did on the CLI using humans and Fatboys...
 
----
-
-# CLI Tooling
-
-Use Homebrew to install `git` and `node`
-
-```sh
-brew install git
-brew install node
-```
-
-Test that this worked:
-
-```sh
-which git  # /usr/local/bin/git
-which node # /usr/local/bin/node
-```
----
-class: middle
-
-# RED CLI Tooling
-
-Install [codebase-review](https://www.npmjs.com/package/codebase-review).
-
-__OSX Only:__
-Install [Coality](https://www.npmjs.com/package/coality).
 
 ---
 template: inverse
@@ -430,6 +417,132 @@ class: center, middle
 ]
 
 ---
+class: center, middle
+
+.large[
+   But wait, there's more!
+]
+
+---
+template: inverse
+
+# Branching and Merging
+
+---
+
+# Branching
+
+**Branches** are a cool feature of Git that allow you to make a copy of your code to which you can make separate commits without affecting the `master` branch.
+
+Branches are helpful when you're working on a new feature for your project and you want to keep it separate from your main codebase until it's fully built-out.
+
+---
+
+# Branching
+
+To create a new branch, check it out, and begin working on it, you simply run `git checkout -b <branch name> master`:
+
+![git branch command](/public/img/slide-assets/git-branch.gif)
+
+---
+
+# Branching
+
+To view all of the branches you've created in your project, run the following command:
+
+```bash
+git branch
+```
+
+---
+
+# Merging Branches
+
+Once you're done working on your branch, you'll need to **merge** your branch back into the master branch:
+
+![git branch command](/public/img/slide-assets/git-merge.gif)
+
+---
+
+# Merging Branches
+
+A typical branching workflow may work like this:
+
+```bash
+# Start a new feature
+git checkout -b new-feature master
+
+# Edit some files
+git add <file>
+git commit -m "Start a feature"
+
+# Edit some files
+git add <file>
+git commit -m "Finish a feature"
+
+# Merge in the new-feature branch, then delete it
+git checkout master
+git merge new-feature
+```
+
+**Tip:** You can back out of the merge (before completing it) by running `git merge --abort` from the command line.
+
+---
+
+# Cleaning Up
+
+We'll want to remove our new branch, since we're done with it.
+
+Run the following command to do this:
+
+```bash
+git branch -d [branch_name]
+```
+
+This step is optional, but we'll want to keep our **repository** free from unused / finished branches as a matter of organization.
+
+---
+
+# Rebase vs. Merge
+
+Some people choose to use `git rebase [branch_name]` instead of `git merge [branch_name]`.
+
+Rebasing is like merging, but it rewrites the history of the branch so that it looks like all of the changes on the branch being merged in actually happened on the destination branch.
+
+---
+class: center, middle
+
+.large[
+   Merging<br /><br />
+]
+
+.inline-images[
+   ![git merge diagram](/public/img/slide-assets/git-merge-diagram.svg)
+]
+
+Image credit: [Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/using-branches)
+
+---
+class: center, middle
+
+.large[
+   Rebasing
+]
+
+.inline-images[
+   ![git rebase diagram](/public/img/slide-assets/git-rebase-diagram.svg)
+]
+
+Image credit: [Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)
+
+---
+class: center, middle
+
+### A Word of Caution!
+
+Rebasing can be dangerous if you don't know what you're doing, and you never want to rebase commits on a branch that has been pushed to public, shared repository.
+
+---
 template: inverse
 
 # A Basic Git Workflow with GitHub
@@ -478,7 +591,7 @@ You will likely need to authenticate with your GH credentials to complete this.
 
 # Adding a Readme
 
-A **README** file is an important part of every repo on GitHub.
+A **readme** file is an important part of every repo on GitHub.
 
 Your readme will provide a basic description of the code in your repo, and possibly also installation instructions, a list of contributors, license information, and other documentation related to the project.
 
@@ -492,6 +605,7 @@ GitHub supports supports [Markdown-formatting in readme files](https://help.gith
 
 ```bash
 touch README.md
+atom README.md
 ```
 
 Now add some markdown to your `README.md` file and save:
@@ -527,13 +641,20 @@ Now check your repo on GitHub to make sure your readme file is in your repo and 
 ---
 template: inverse
 
-# Deploying your site with GitHub Pages
+# All Together Now!<br /> Using GitHub Pages
+
+---
+class: center, middle
+
+.large[
+   Let's combine what we just learned about branching and remotes in Git...
+]
 
 ---
 
 # Why Use GitHub Pages?
 
-It's an easy way to get our projects online (for free!), and a great way to practice our Git skills too.
+It's an easy way to get our projects online (for free!) right now, and a great way to practice our Git skills too.
 
 GitHub Page takes care of hosting your website files and gives a domain name so people can find your website.
 
@@ -561,11 +682,20 @@ GitHub pages have a few limitations:
 
 # Deploying Your Site
 
-Github does most of the work for us! Here's how to get it working:
+To begin creating your project site, we'll start by creating and checking out a new branch in an existing repo that we have on GitHub.
 
-- Visit your Repo Settings
-- Scroll down to the __Github Pages__ section
-- In __Source__, choose `master branch`
+This new branch must be called `gh-pages`.
+
+```bash
+cd my-project-folder
+git checkout -b gh-pages master
+```
+
+Now let's push our files to the **gh-pages** branch on GitHub:
+
+```bash
+git push origin gh-pages
+```
 
 ---
 
@@ -577,11 +707,70 @@ In 10 minutes or less, you'll be able to see your project live at:
 
 `http://<username>.github.io/<project_name>/`
 
+**Important!**
+
+After deploying, you'll want to **switch back** to your `master `branch (or other current working branch).
+
 ---
 
 # Updating Your Site
 
-Whenever you make a push to `master`, your Github Pages site will update!
+In plain English, we'd want to follow these steps:
+
+1. Make and commit our changes on **master**
+2. Push those changes to GitHub
+3. Switch over to our **gh-pages** branch
+4. Merge **master** into **gh-pages** to bring it up to date
+5. Push the **gh-pages** branch to GitHub
+6. Switch back to **master**
+
+---
+
+# Updating Your Site
+
+A sample deployment workflow might look like this:
+
+```bash
+# make and commit our changes on master
+git status
+git add -A
+git commit -m "Some descriptive commit message."
+
+# update the master branch on GitHub
+git push origin master
+
+# switch to the gh-pages branch
+git checkout gh-pages
+git merge master
+
+# commit the changes
+git push origin gh-pages
+
+# return to the master branch
+git checkout master
+```
+
+---
+template: inverse
+
+# Collaborating with Others in Git
+
+---
+class: center, middle
+
+.large[
+   Git makes collaborating with other developers very easy!
+]
+
+---
+
+# Cloning a Repo
+
+You can `git clone <repo address>` to copy an existing repo to your computer:
+
+![git clone command](/public/img/slide-assets/git-clone.gif)
+
+Now you can make changes to your **local version** of the repo.
 
 ---
 
@@ -595,13 +784,52 @@ If you prefer to `pull` without a merge commit, you can run `git pull --rebase` 
 
 ---
 
+# Pull via Rebase
+
+The `--rebase` option can be used to ensure a linear history by preventing unnecessary merge commits.
+
+Many developers prefer rebasing over merging, since it’s like saying, “I want to put my changes on top of what everybody else has done.”
+
+---
+class: center, middle
+
+.inline-images[
+   ![Git pull humour](/public/img/slide-assets/git-pull-meme.jpg)
+]
+
+---
+
+# Pushing Your Changes
+
+Once you make a commit, if you have write access for the repo on GitHub you can push your changes back to the repo on GitHub:
+
+```bash
+git push origin master
+```
+
+*But what if you don't have write access to the repo...?*
+
+---
+
+# Forking a Repo
+
+If you don't have write access for the remote repo on GitHub, you can **fork** the repo, which makes a copy of the repo in your GitHub profile.
+
+This is what you'll be doing when you peer-review each other projects. You'll then send a **pull request** to the original repo owner to incorporate your changes.
+
+Read more on **[forking workflows](https://help.github.com/articles/fork-a-repo/)** and submitting **[pull requests](https://help.github.com/articles/using-pull-requests/)**.
+
+---
+
 # What We've Learned
 
 - What the command line is and how to use it to navigate your file system
 - What version control is
 - The difference between Git and GitHub
 - How to push code to GitHub
+- How to manage workflows with branching and merging
 - How to host a site as a GitHub page
+- What collaborative workflows look like in Git
 
 ---
 template: inverse
