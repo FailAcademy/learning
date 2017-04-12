@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 1 / Part 1 - Aloha Homepage
-due: Monday, January 16th (beginning of class)
+due: Tuesday, April 25th (beginning of class)
 ---
 
 For the Project 1, you're going to create a homepage for your client the Aloha Apparel Co. The first part of this project will focus on building out the HTML and CSS components of this responsive website.

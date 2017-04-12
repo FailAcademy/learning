@@ -9,9 +9,9 @@ lesson_date: 2017-04-13
 
 ### Tutorials
 
-Complete the following Codeacademy course prior to class:
+Complete the following Udacity bash shell tutorial:
 
-- [Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line)
+- [Shell Workshop](https://www.udacity.com/course/shell-workshop--ud206)
 
 Also complete the following Code School Git tutorial before class:
 
@@ -127,13 +127,16 @@ If you're not 100% comfortable, take time to get more practice with Git-based ve
 
 ## Additional Resources
 
-A quick intro to the command line:
+Handy command line resources for beginners:
 
 - [The Command Line Crash Course](http://cli.learncodethehardway.org/book/)
-
-A handy cheat sheet of basic commands:
-
 - [Command Line Cheat Sheet](http://www.git-tower.com/blog/command-line-cheat-sheet/)
+- [Explain Shell](https://explainshell.com/)
+- [The Bash Guide](http://www.bash.academy/)
+
+Generate your bash prompt easily using this drop-and-drop interface:
+
+- [PS1 Generator](http://bashrcgenerator.com/)
 
 Some commands you'll want to steer clear of on the CLI:
 

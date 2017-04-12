@@ -68,11 +68,23 @@ Your second task is to make sure you have fun with this :)
 
 ## Lab Activity
 
-This lesson's lab is a choose-your-own-adventure activity. You can create anything you want using Scratch (a game, an animated story, etc.) as long as it meets the following criteria:
+**Programming with Scratch:**
+
+This lesson's lab is mostly a "choose-your-own-adventure" activity. You can create anything you want using Scratch (a game, an animated story, etc.) as long as it meets the following criteria:
 
 - You must use at least two sprites, at least one of which must resemble something other than a cat
 - You must use at least three functions total (i.e., not necessarily three per sprite)
 - You must use at least one condition, one loop, and one variable
+
+**Writing READMEs:**
+
+Part of being a great developer also means that you do a great job documenting your code.
+
+It's a requirement for every project in this program to write a README explaining the work that you did on it, so during the last hour of today's lab you'll watch this Udacity tutorial, and begin writing a README for Project 1 using [Markdown](https://guides.github.com/features/mastering-markdown/).
+
+- [Writing READMEs](https://www.udacity.com/course/writing-readmes--ud777)
+
+Be sure to commit your new `README.md` file to your project repo!
 
 ---
 
