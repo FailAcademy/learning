@@ -23,17 +23,17 @@ You'll also need to install an appropriate **CLI app** and **Git**.
 
 **Mac users:**
 
-Please ensure that you have the Terminal app installed on your computer (this app comes pre-installed on every Mac, but make sure you verify that it's there).
+We will be using iTerm2, which is a much better app than the default Terminal app.
 
-Next, to install Git:
+[Download iTerm2](https://www.iterm2.com/downloads.html).
 
-1. [Download the latest version of git.](https://git-scm.com/downloads)
-2. Open the `.dmg` file you downloaded and double-click the `.pkg` file to install it. If you get a notice saying that the package is from and “unidentified developer”, close out this warning message and instead right-click on the `.pkg` file and choose “Open”, then choose “Open” again in the dialogue box that pops up.
-3. Open your Terminal app and type `git --version` and press return. If you see a *prompt that says The ‘git’ command requires command line developer tools. Would you like to install the tools?*, then go ahead and install it (this will take up ~150MB of hard drive space).
+__Important:__ Make sure you download the _stable_ version.
+
+We will be using [Homebrew](https://brew.sh/) to install command-line tools. If you're feeling adventurous, you can install it before class.
 
 **Windows users:**
 
-To install Git:
+Install Git:
 
 1. [Download Git for Windows.](https://git-scm.com/download/win)
 2. Double-click the `.exe` file you just downloaded to install Git on your system.
@@ -48,7 +48,6 @@ The installation process will also install Git BASH on your computer, which you 
 - Use the Git CLI to perform common Git tasks.
 - Explore GitHub and the Git workflows we'll be using for the remainder of the course.
 - Create a Git repo locally, commit code, and push the code to remote repo on GitHub.
-- Deploy a website on GitHub Pages using a `gh-pages` branch.
 
 ---
 
@@ -67,10 +66,6 @@ The installation process will also install Git BASH on your computer, which you 
 - Commit
 - Branch
 - Push/Pull
-- Remote
-- Merge
-- Merge conflict
-- Revert
 
 **Command line instructions:**
 
@@ -88,7 +83,6 @@ The installation process will also install Git BASH on your computer, which you 
 - `commit`
 - `push`
 - `pull`
-- `merge`
 - `log`
 
 ---
