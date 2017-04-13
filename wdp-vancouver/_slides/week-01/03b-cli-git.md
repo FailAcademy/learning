@@ -185,6 +185,29 @@ __OSX Only:__
 Install [Coality](https://www.npmjs.com/package/coality).
 
 ---
+class: middle
+
+## Customize your Prompt
+
+Add the following to `~/.bash_profile`
+
+```sh
+txtcyn=$'\e[0;36m'  # Cyan
+txtrst=$'\e[0m'     # Text Reset
+
+function parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="⚡️  \W\[$txtcyn\]\$(parse_git_branch) \[$txtrst\]\$ "
+```
+
+Once that's saved, run the following:
+
+```sh
+source ~/.bash_profile
+```
+
+---
 template: inverse
 
 # Version Control:<br /> Whys and Hows
