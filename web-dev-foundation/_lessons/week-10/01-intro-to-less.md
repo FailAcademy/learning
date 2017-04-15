@@ -74,4 +74,4 @@ Just for fun, check out this article for examples of how to create color palette
 
 A sample project using Node.js, Gulp, and BrowserSync with hot reloading for a quick, LESS workflow:
 
-- [I can CSS preprocess with LESS Starter Pack](https://github.com/tinacious/less_starter_pack)
+- [I can CSS preprocess with LESS Starter Pack](https://github.com/redacademy/less_starter_pack)
