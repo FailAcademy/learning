@@ -17,10 +17,10 @@ Week 2              | Topics
 Monday, April 24    | [Intro to CSS](/lesson/intro-to-css/)
 Wednesday, April 26 | [Using Media on the Web](/lesson/using-media-on-the-web/) <br/>[Responsive Web Design](/lesson/responsive-web-design)
 
-Week 3        | Topics
---------------|-------------------------------------------------------------------------------------------------------------
-Monday, May 1 | [Responsive Web Design](/lesson/responsive-web-design) (continued) <br/> [CSS Layouts](/lesson/css-layouts/)
-Monday, May 3 | [CSS Layouts](/lesson/css-layouts/) (continued) <br/>[Flexbox](/lesson/flexbox/)
+Week 3           | Topics
+-----------------|-------------------------------------------------------------------------------------------------------------
+Monday, May 1    | [Responsive Web Design](/lesson/responsive-web-design) (continued) <br/> [CSS Layouts](/lesson/css-layouts/)
+Wednesday, May 3 | [CSS Layouts](/lesson/css-layouts/) (continued) <br/>[Flexbox](/lesson/flexbox/)
 
 Week 4            | Topics
 ------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------
