@@ -71,3 +71,7 @@ A GUI-based Less compiler:
 Just for fun, check out this article for examples of how to create color palettes programmatically with Less functions:
 
 - [Creating Color Schemes with LESS Color Functions](http://webdesign.tutsplus.com/tutorials/creating-color-schemes-with-less-color-functions--cms-23668).
+
+A sample project using Node.js, Gulp, and BrowserSync with hot reloading for a quick, LESS workflow:
+
+- [I can CSS preprocess with LESS Starter Pack](https://github.com/tinacious/less_starter_pack)
