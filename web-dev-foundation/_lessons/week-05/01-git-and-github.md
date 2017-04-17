@@ -114,3 +114,13 @@ More technical documentation on how GitHub Pages works:
 Another quick how-to guide for creating a GitHub Pages site:
 
 - [Using GitHub Pages To Host Your Website](http://blog.teamtreehouse.com/using-github-pages-to-host-your-website)
+
+E-book and video courses on how to use Git from the Git Tower app and the command line:
+
+- [Git and version control with Tower or on the command line](https://www.git-tower.com/learn/)
+
+Other Git clients:
+
+- [SourceTree](https://www.sourcetreeapp.com/) &ndash; free GUI
+- [Tig](https://jonas.github.io/tig/) &ndash; free terminal-based GUI
+- [Tower](https://www.git-tower.com) &ndash; paid GUI
