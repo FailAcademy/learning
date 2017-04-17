@@ -30,8 +30,9 @@ class: center, middle
 
 ---
 class: center, middle
-name: inverse
-### Pure or Impure?
+
+## Pure or Impure?
+
 Discuss with a partner whether you think the function is **pure** or **impure**. Justify your reasons.
 
 ---
@@ -96,7 +97,7 @@ class: middle, center
 ---
 class: middle
 
-# A pure function has three parts.
+### A pure function has three parts
 
 ```
 
@@ -134,13 +135,12 @@ class: middle
 3. Recursion
 
 ---
-name: inverse
+template: inverse
 
 # Array Methods
 
 ---
-
-class: center, middle
+class: middle
 
 # Array Methods
 
@@ -148,7 +148,20 @@ In your browser console, type `Array.prototype.`.
 
 ![Array Method](/public/img/slide-assets/arrayMethod.png)
 
-What are array methods are autocompleted?
+What array methods are autocompleted?
+
+---
+class: middle
+
+## ES.Next playground
+
+We will be writing all of our code using the [ES.Next Playground](https://github.com/redacademy/esnext-playground).
+
+```
+git clone https://github.com/redacademy/esnext-playground.git
+npm i
+git checkout -b functional-programming
+```
 
 ---
 class: middle
@@ -156,17 +169,17 @@ class: middle
 # Filter
 ![Array Filter](/public/img/slide-assets/array-filter.png)
 
-Write a function called "filter" that takes a list of integers and returns only the even numbers.
+Write a function called `getEvenNumbers` that takes a list of integers and returns only the even numbers.
 
 ```js
-let list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 ```
 
 ---
 class: middle
-**Current Array**: `let list = [1, 2, 3, 4, 5, 6, 7, 8, 9];`
-
 # esreveR
+
+`const list = [1, 2, 3, 4, 5, 6, 7, 8, 9];`
 
 Using an array method, make the list look like this:
 
@@ -176,7 +189,7 @@ Using an array method, make the list look like this:
 class: middle
 # Chaining
 
-**Current Array**: `let list = [9, 8, 7, 6, 5, 4, 3, 2, 1]`
+`const list = [9, 8, 7, 6, 5, 4, 3, 2, 1]`
 
 In one line of code, make the list look like this:
 
@@ -215,61 +228,8 @@ How are they different? When should each be used?
 - `splice`
 
 ---
+template: inverse
 
-class: middle, center
-
-# Practice
-
-Try the [Netflix Functional Tutorial](http://reactivex.io/learnrx/).
-
----
-
-# Logger
-
-Tip: in the console of the Netflix tutorial add the following code:
-
-```js
-Array.prototype.log = function(message) {
-  console.log(message, this);
-  return this;
-}
-```
-
-How might this be used?
-
----
-
-# Logger
-
-The logger can help you read your code, step by step.
-
-```js
-let a = data
-          .map(changeData)
-          .log('change data')
-          .map(alterData)
-          .log('alter data')
-```
-
-It will log the state at each step.
-
----
-
-# Debugger
-
-Tip: in the console of the Netflix tutorial add the following code:
-
-```js
-Array.prototype.debug = function() {
-  debugger;
-  return this;
-}
-```
-
-This will create a break point at each step it is added.
-
----
-name: inverse
 # Imperative vs. Declarative
 
 ---
@@ -300,7 +260,7 @@ for (let i = 0; i < list.length; i++) {
 Describe the "transformation". What should happen.
 
 ```js
-let list = [1, 2, 3];
+const list = [1, 2, 3];
 
 list.map(add1)
     .filter(isEven)
@@ -308,14 +268,67 @@ list.map(add1)
 ```
 
 ---
-
 # Teach Each Other
 
-Each group will get a topic. You have 30 minutes to understand the concept and teach it to the class using examples. Explain how
+Each group will get a topic. You have 30 minutes to understand the concept and teach it to the class using examples.
 
 - `...` Spread Operator
 - `Object.assign`
 - `reduce` array method
 - Array and Object destructuring
+
+---
+template: inverse
+
+# Practice
+---
+class: middle
+
+## Iterating Over Objects
+
+```js
+const team = {
+  sam: 13,
+  riyad: 12,
+  chris: 8,
+  jimmy: 4,
+  ellis: 6
+};
+```
+
+Write a function that logs each player's number.
+
+---
+class: middle
+
+## Summing Array Values
+
+```js
+const studentAges = [10, 13, 14, 12, 11];
+```
+
+Write a function that returns the total age of all of the students.
+---
+class: middle
+
+## Creating a new object
+
+```js
+const team = {
+  sam: 13,
+  riyad: 12,
+  chris: 8,
+  jimmy: 4,
+  ellis: 6
+};
+```
+
+Write a function `flip` that returns a new object with the keys and values flipped.
+
+Ie. `sam: 13` becomes `13: 'sam'`.
+---
+template: inverse
+
+# Lab
 
 {% endhighlight %}
