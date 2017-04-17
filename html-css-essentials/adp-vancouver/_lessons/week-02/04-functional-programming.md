@@ -2,7 +2,7 @@
 layout: lesson
 title: Functional Programming
 slides: ['_slides/week-02/02-functional-programming.md']
-lesson_date: 2017-04-21
+lesson_date: 2017-04-18
 ---
 
 ## Pre-Work
@@ -17,7 +17,7 @@ Complete the following readings before class:
 ## Learning Objectives
 
 - Identify the differences between pure and impure functions, and write code that avoids side effects.
-- Use common array methods (`.map`, `.filter`, `.sort`) for altering array data.
+- Practice common array methods (`.map`, `.filter`, `.sort`, `.reduce`).
 - Distinguish between `.forEach` and `.map`.
 - Distinguish between `.push` and `.concat`.
 - Use the spread operator (`...`) to avoid array mutation.
@@ -44,34 +44,106 @@ Complete the following readings before class:
 
 ---
 
-## Exercise 1
+## Lab Activity: Functional Produce
 
-Let's play the "Pure or Impure?" game.
+Today we're going to automate grocery store fruit management.
 
----
+The task is to write three functions that can be chained together.
 
-## Exercise 2
+The first, `countFruit` takes shipping company's poorly structured fruit data and converts it into usable form.
 
-Practice with array methods by trying the [Netflix Functional Tutorial](http://reactivex.io/learnrx/).
+```js
+// Before
+const data = [
+  ['apples', 73],
+  ['pears', 12],
+  ['oranges', 97],
+  ['grapes', 387],
+  ['grapes', 88],
+  ['pears', 33],
+  ['apples', 75],
+  ['grapes', 23],
+  ['oranges', 86],
+  ['kiwis', 201]
+];
 
----
+// After
+{ apples: 148, pears: 45, oranges: 183, grapes: 498, kiwis: 201 }
+```
 
-## Exercise 3
+The second function, `stockUp`, adds an identical amount of fruit to each category.
 
-Each group will be given a topic.
+```js
+// Before
+const fruit = {
+  apples: 148,
+  pears: 45,
+  oranges: 183,
+  grapes: 498,
+  kiwis: 201
+};
 
-You have 30 minutes to understand the concept and teach it to the class using examples.
+// stockUp is called with '5'
 
-- Spread (`...`)
-- `Object.assign`
-- `reduce`
-- Destructuring
+// After
+const fruit = {
+  apples: 153,
+  pears: 50,
+  oranges: 188,
+  grapes: 503,
+  kiwis: 206
+};
+```
 
----
+The third function, `explain` will give a human readable output of the fruit inventory.
 
-## Lab Activity
+```js
+// Data
+const fruit = {
+  apples: 148,
+  pears: 45,
+  oranges: 183,
+  grapes: 498,
+  kiwis: 201
+}
+```
 
-*Lab activity detail TBA.*
+Ouput:
+
+```
+148 apples, 45 pears, 183 oranges, 498 grapes, 201 kiwis
+```
+
+These methods should be designed to be chained in order:
+
+```js
+data.countFruit().stockUp(7).explain();
+```
+
+In order to chain these functions, you will need to extend both the `Array` and `Object` prototypes.
+
+Example:
+
+```js
+Array.prototype.countFruit = () => {
+  console.log(this); // Array available as 'this'
+  return {};
+};
+```
+
+These functions must be __pure__. In order to assure purity, use [Deep Freeze](https://github.com/substack/deep-freeze) to freeze `this` in each function.
+Deep Freeze will throw an error if you try to mutate anything it has frozen.
+
+```js
+// Make sure to run in strict mode
+'use strict';
+
+Object.prototype.stockUp = (count) => {
+  deepFreeze(this);
+  console.log(this); // Object available as 'this'
+  return {};
+}
+```
 
 ---
 
