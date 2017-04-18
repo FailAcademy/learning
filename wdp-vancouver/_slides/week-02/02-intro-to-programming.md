@@ -46,7 +46,7 @@ class: center, middle
 class: center, middle
 
 .large[
-    There's [subreddit](https://www.reddit.com/r/itsaunixsystem/comments/4rvcuw/white_collar_paint_the_best_spreadsheet_editor_in/) for that...
+   There's [subreddit](https://www.reddit.com/r/itsaunixsystem/comments/4rvcuw/white_collar_paint_the_best_spreadsheet_editor_in/) for that...
 ]
 
 ---
