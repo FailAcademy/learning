@@ -32,7 +32,35 @@ template: inverse
 class: center, middle
 
 .inline-images[
-   ![Programming like a boss](http://cdn.meme.am/instances/500x/21186129.jpg)
+   ![Programming like a boss](/public/img/slide-assets/programming-moms-basement.jpg)
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![You didn't say the magic word](/public/img/slide-assets/programming-nedry.jpg)
+]
+
+---
+class: center, middle
+
+.large[
+    There's [subreddit](https://www.reddit.com/r/itsaunixsystem/comments/4rvcuw/white_collar_paint_the_best_spreadsheet_editor_in/) for that...
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![Not sure...](/public/img/slide-assets/programming-not-sure.jpg)
+]
+
+---
+class: center, middle
+
+.inline-images[
+   ![Two states of every programmer](/public/img/slide-assets/programming-two-states.jpg)
 ]
 
 ---

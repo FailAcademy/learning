@@ -387,9 +387,11 @@ Plugins allow you to create re-usable components for your webpages, and makes it
 
 # Exercise 2
 
-Your task is to find an example of an interesting **jQuery plugin** and create a demo for your classmates showing how to use it.
+We're not going to build a slider from scratch for Project 1 (phew!).
 
-[See the lesson page](/lesson/animation-with-jquery/) for further instructions.
+Instead, we will use a plugin called **[Flickity](http://flickity.metafizzy.co/)** to implement the product slider. To do that, you will need to **[install Flickity](http://flickity.metafizzy.co/#install)** and then **[initialize it with jQuery](http://flickity.metafizzy.co/#initialize-with-jquery)**.
+
+Do this on your project now!
 
 ---
 

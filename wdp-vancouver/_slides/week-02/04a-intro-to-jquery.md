@@ -34,34 +34,6 @@ template: inverse
 
 ---
 
-.left-column[
-  ## The Window Object
-]
-
-.right-column[
-   The "window object" is the browser's representation of each window or tab.
-
-   .inline-images[
-      ![Window Object](../../public/img/slide-assets/window-object.svg)
-   ]
-]
-
----
-
-.left-column[
-  ## The Document Object
-]
-
-.right-column[
-   The document object is the model of the web page inside of the window/tab. It represents the HTML page:
-
-   .inline-images[
-      ![Document Object](../../public/img/slide-assets/document-object.svg)
-   ]
-]
-
----
-
 class: center, middle
 
 ### Time for things to get real!
@@ -249,8 +221,6 @@ The best practice is to add it near the closing body tag, but it has be included
 
 You can find different versions of jQuery from [jquery.com](http://jquery.com/download/):
 
-- jQuery 1.x will work with IE 6, 7, and 8
-- jQuery 2.x will **not** work with IE 6, 7, and 8
 - The compressed **production** version of jQuery has been "minified" and has all of the whitespace removed
 - The uncompressed **development** version of jQuery still has its whitespace and is easier to read if you want to explore the library's internals
 
@@ -332,7 +302,7 @@ Let's get to the fun stuff and look at a basic example. Take our previous code s
    <p class="intro">Welcome to my page!</p>
    <p>Thanks for stopping by.</p>
    <!-- The rest of the page content... -->
-   <script src="js/jquery-3.0.0.js"></script>
+   <script src="js/jquery-3.2.1.min.js"></script>
    <script src="js/my-script-file.js"></script>
 </body>
 ```
@@ -378,16 +348,22 @@ document.querySelector('.intro')
 It's easy to see why using jQuery is so appealing!
 
 ---
-class: center, middle
 
-### But what does that actually do?
+# What We Just Did...
 
-By writing `$('.intro')` in our code, we run a function that **returns** a **jQuery object** wrapping any elements that have `intro` set as their class.
+But what does that actually do?
+
+By writing `$('.intro')` in our code, we run a function that **returns** a **jQuery collection** (which is an object!), of matching elements.
+
+This is also know as **wrapping** the matching elements in the jQuery object.
+
+You can read more about the [jQuery object](https://learn.jquery.com/using-jquery-core/jquery-object/) in the docs.
 
 ---
-class: center, middle
 
-### And why do we care?
+# And Why Do We Care?
+
+Our jQuery object may look like an array, but has a special set of **methods** you can call on it.
 
 Now that our `.intro` elements are "wrapped" in a jQuery object, all of **jQuery's methods are available** for us to use on those elements. Let's see how that works...
 
@@ -611,6 +587,13 @@ template: inverse
 # Event Handling
 
 ---
+class: center, middle
+
+.large[
+  When we talk about an **event** in the context of a website, what do we mean?
+]
+
+---
 
 # Events in jQuery
 
@@ -637,11 +620,13 @@ class: middle
 
 ---
 
-# Mini-Exercise
+# Event Anatomy
 
-Quick! Look up another example of an event that you can pass in as a parameter to the `.on()` method.
+The basis anatomy of an **event listener** in jQuery is as follows:
 
-Share the method name and what it can be used for with the class.
+- The target element to listen to
+- The event we want to react to
+- The actions to take in response
 
 ---
 

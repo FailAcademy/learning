@@ -59,27 +59,3 @@ This is the homestretch! You now have all the HTML/CSS knowledge you'll need to 
 An intro to building HTML forms and styling them with CSS:
 
 - [My first HTML form](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form)
-
-Open-source font resources:
-
-- [fontsquirrel.com](http://www.fontsquirrel.com/)
-- [fontex.org](http://www.fontex.org/)
-- [openfontlibrary.org](http://openfontlibrary.org/)
-- [Google Fonts](https://www.google.com/fonts#)
-
-Avoiding faux italics and bolding with your `@font-face` fonts:
-
-- [Stack Overflow - How to add multiple font files for the same font?](http://stackoverflow.com/questions/2436749/how-to-add-multiple-font-files-for-the-same-font)
-
-Some Google Font design inspiration:
-
-- [Google Font Pairing](http://femmebot.github.io/google-type/)
-
-Free icon fonts to use on your websites:
-
-- [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
-- [Icomoon](https://icomoon.io/)
-
-Feeling ambitious? You can create your own icons fonts too:
-
-- [Creating and Using a Custom Icon Font - CSS Tricks Video](https://css-tricks.com/video-screencasts/113-creating-and-using-a-custom-icon-font/)

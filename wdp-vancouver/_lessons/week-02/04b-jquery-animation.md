@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Animation with jQuery
-slides: ['_slides/week-02/05-jquery-animation.md']
+slides: ['_slides/week-02/04b-jquery-animation.md']
 lesson_date: 2017-04-21
 ---
 
@@ -62,16 +62,11 @@ Try executing this effect in **two different ways**:
 
 ## Exercise 2
 
-Your second exercise is to research **jQuery plugins**. jQuery plugins are script files containing jQuery that other people have written and that you can include in your website to add extra functionality without having to write all of the code yourself.
+We're not going to build a slider from scratch for Project 1 (phew!).
 
-For example:
+Instead, we will use a plugin called **[Flickity](http://flickity.metafizzy.co/)** to implement the product slider. To do that, you will need to **[install Flickity](http://flickity.metafizzy.co/#install)** and then **[initialize it with jQuery](http://flickity.metafizzy.co/#initialize-with-jquery)**.
 
-- An image slider
-- A media lightbox
-- Animated filtering and sorting of content
-- Interactive navigation behaviour
-
-Your task is to find an example of an interesting jQuery plugin and create a demo for your classmates showing how to use it.
+Do this on your project now!
 
 ---
 
