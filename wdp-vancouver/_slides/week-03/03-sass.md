@@ -545,6 +545,29 @@ gulp.task('sass', function() {
 
 ---
 
+# Nicer Error Reporting
+
+We can add easier-to-read error messages into our Gulp set-up to let us know when we have syntax error in our Sass.
+
+To do that, we'll have [install and add](https://www.npmjs.com/package/gulp-prettyerror) `gulp-prettyerror`:
+
+```js
+gulp.task('sass', function() {
+   gulp.src('./sass/style.scss')
+      .pipe(prettyError()) // ADD THIS LINE
+      .pipe(sass())
+      .pipe(autoprefixer({
+         browsers: ['last 2 versions']
+      }))
+      .pipe(gulp.dest('./build/css'))
+      .pipe(cssnano())
+      .pipe(rename('style.min.css'))
+      .pipe(gulp.dest('./build/css'));
+});
+```
+
+---
+
 # Exercise 2
 
 In this exercise we’ll create media query helpers inside your project using Sass mixins and the `@content` directive, for common breakpoints. We’ll then discuss, how this techniques saves time when developing responsive websites.
