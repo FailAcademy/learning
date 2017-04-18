@@ -82,38 +82,7 @@ We have alread created our `.eslintrc` files as part of the lesson, so now it's 
 
 ## Lab Activity
 
-To begin the lab today, you'll want to implement the following additional Gulp plugins in your project:
-
-- [`gulp-plumber`](https://www.npmjs.com/package/gulp-plumber)
-- [`gulp-notify`](https://www.npmjs.com/package/gulp-notify)
-
-The first plugin will prevent pipe breaking when Gulp encounters an error in your code (e.g. when there's a syntax error in your JS while trying to uglify it). The second plugin will notify us with a helpful error message when that happens.
-
-Be sure to require these new modules in your project:
-
-```js
-var gulp = require('gulp'),
-  // ...other already required plugins!!
-  plumber = require('gulp-plumber'),
-  notify = require('gulp-notify');
-```
-
-When you set-up `gulp-plumber` in your `gulpfile.js`, take advantage of the option to pass in a function as an argument that will act as an **error handler** (which makes use of the `gulp-notify` plugin).
-
-To do that, include this function underneath the required modules in your `gulpfile.js` and pass it in as an argument whenever you call `plumber()`:
-
-```js
-var plumberErrorHandler = {
-  errorHandler: notify.onError({
-    title: 'Gulp',
-    message: 'Error: <%= error.message %>'
-  })
-};
-```
-
-You'll want to incorporate `plumber` in your `scripts` task...and the `sass` task that we'll create tomorrow.
-
-After you add the `gulp-plumber` and `gulp-notify` plugins successfully in your project, continue working on the rest of Instanews for the remainder of the day.
+Now that you have Gulp and ESLint successfully configured for your project, continue working on Instanews for the remainder of the day.
 
 ---
 
