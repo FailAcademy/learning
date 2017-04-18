@@ -125,7 +125,7 @@ In order to chain these functions, you will need to extend both the `Array` and 
 Example:
 
 ```js
-Array.prototype.countFruit = () => {
+Array.prototype.countFruit = function() {
   console.log(this); // Array available as 'this'
   return {};
 };
@@ -138,7 +138,7 @@ Deep Freeze will throw an error if you try to mutate anything it has frozen.
 // Make sure to run in strict mode
 'use strict';
 
-Object.prototype.stockUp = (count) => {
+Object.prototype.stockUp = function(count) {
   deepFreeze(this);
   console.log(this); // Object available as 'this'
   return {};
