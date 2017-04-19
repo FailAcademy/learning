@@ -255,11 +255,11 @@ class: center, middle
 
 ### Culture:
 
-Could you be that guy or girl?
+Could you be that person?
 
 ---
 
-# Are You That Guy/Girl?
+# Are You That Person?
 
 Programming, as an occupation, has a very young culture.
 
