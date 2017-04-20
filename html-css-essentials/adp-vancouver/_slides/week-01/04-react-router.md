@@ -210,7 +210,7 @@ import {
 We just imported four different modules that we will use set up routing in our app:
 
 - `BrowserRouter`: used to wrap all of the routes we define
-- `Route`: used for identifying each route (nclusively)
+- `Route`: used for identifying each route (inclusively)
 - `Switch`: used to render the first child `Route` that matches the location
 - `Link`: used to navigate around an application
 - `Redirect`: used to navigate to a new location, like server-side redirects (HTTP 3xx) do
@@ -407,7 +407,7 @@ We can use **nested routes** for that. Let's start by adding a route for a Posts
     <Switch>
       <Route path="/" exact component={Home} />
       <Route path="/contact" component={Contact} />
-      <Route path="/posts" component={Post} />
+      <Route path="/posts" component={Posts} />
       <Route component={NotFound} />
     </Switch>
   </div>
