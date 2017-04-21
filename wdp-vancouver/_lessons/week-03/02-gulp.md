@@ -88,6 +88,10 @@ Now that you have Gulp and ESLint successfully configured for your project, cont
 
 ## Additional Resources
 
+Udacity Course by Google:
+
+- [Web Tooling & Automation Course](https://www.udacity.com/course/web-tooling-automation--ud892)
+
 Links to Gulp specific pages for reference:
 
 - [Gulp homepage](http://gulpjs.com/)
