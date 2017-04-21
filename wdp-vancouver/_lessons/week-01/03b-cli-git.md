@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: The Command Line Interface and Git
-slides: ['_slides/week-01/03b-cli-git.md']
+slides: ['_slides/week-01/03b-cli.md', '_slides/week-01/03c-git.md']
 lesson_date: 2017-04-13
 ---
 
@@ -25,11 +25,11 @@ You'll also need to install an appropriate **CLI app** and **Git**.
 
 We will be using iTerm2, which is a much better app than the default Terminal app.
 
-[Download iTerm2](https://www.iterm2.com/downloads.html).
+- [Download iTerm2](https://www.iterm2.com/downloads.html) (Make sure you download the _stable_ version)
 
-__Important:__ Make sure you download the _stable_ version.
+We will be using Homebrew to install command-line tools. If you're feeling adventurous, you can install it before class.
 
-We will be using [Homebrew](https://brew.sh/) to install command-line tools. If you're feeling adventurous, you can install it before class.
+- [Install Homebrew](https://brew.sh/)
 
 **Windows users:**
 
@@ -39,6 +39,10 @@ Install Git:
 2. Double-click the `.exe` file you just downloaded to install Git on your system.
 
 The installation process will also install Git BASH on your computer, which you can use to run most of the commands in the lesson.
+
+Install Node.js:
+
+- [Node.js website](https://nodejs.org/en/)
 
 ---
 
@@ -53,8 +57,8 @@ The installation process will also install Git BASH on your computer, which you 
 
 ## Keywords
 
-- Command-line interface (CLI)
-- Graphical user interface (GUI)
+- Command-Line Interface (CLI)
+- Graphical User Interface (GUI)
 - Directory
 - Working directory
 - Command flag/option
@@ -84,38 +88,6 @@ The installation process will also install Git BASH on your computer, which you 
 - `push`
 - `pull`
 - `log`
-
----
-
-## Exercise 1
-
-Time to roll up your sleeves and try out some commands!
-
-You're going to do the following using the CLI only:
-
-1. Try out the the `pwd` and `ls` commands
-2. Navigate to your Desktop and create a directory called `my_site`
-3. Rename the `my_site` directory `website`
-4. Create an `index.html` file inside of your new directory (using the CLI!)
-5. Create an `assets` sub-directory in there too
-6. Add a `style.css` file to `assets`
-7. Delete the `assets` folder and its contents
-8. Delete the `index.html` in the root of your `website` directory
-9. Delete the `website` directory
-
----
-
-## Exercise 2
-
-Now let's visualize what we just did on the CLI using humans and Fatboys...
-
----
-
-## Lab Activity
-
-See the [HTML Forms](/lesson/html-forms/) for lab activity details.
-
-If you're not 100% comfortable, take time to get more practice with Git-based version control by completing Codeacademy's [Learn Git](https://www.codecademy.com/learn/learn-git).
 
 ---
 
