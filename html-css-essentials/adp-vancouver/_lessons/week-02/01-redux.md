@@ -45,44 +45,6 @@ Be prepared to give an example of:
 
 ---
 
-## Exercise 1
-
-Create a diagram or chart to explain each of the following:
-
-- MVC
-- Redux
-
----
-
-## Exercise 2
-
-Download the [Redux DevTools Chrome extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en).
-
-Each group will choose a different app from [examples](http://redux.js.org/docs/introduction/Examples.html).
-
-Prepare a play to demonstrate how your app works.
-
-Consider the different **roles** in your app:
-
-- action creator
-- reducer
-- store
-- view
-
----
-
-## Exercise 3
-
-Create a Redux data layer for your "Worst Pokemon" voting app:
-
-```bash
-git clone https://github.com/redacademy/adp-redux-walkthrough.git
-cd adp-redux-walkthrough
-git reset --hard e823513
-```
-
----
-
 ## Lab Activity
 
 1. Setup Redux in your REDit app. Your app should include:
