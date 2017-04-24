@@ -246,8 +246,6 @@ class: middle
 
 ---
 
-class: middle
-
 ## Todo Demo
 
 Clone and install the Todo demo.
