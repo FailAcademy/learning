@@ -194,10 +194,34 @@ Setup an "async action" that sorts posts by their number of votes.
 
 The sorting action should be called every time you "VOTE_UP".
 
+---
+
+# A Complex Sorting Function
+
+Understanding thunks is helpful beyond Redux.
+
+```js
+function sortByKey(key) {
+  return function(a, b) {
+    switch (true) {
+      case a[key] < b[key]:
+        return 1;
+      case a[key] > b[key]:
+        return -1;
+      default:
+        return 0;
+    }
+  }
+}
+
+post.sort(sortByKey('votes'));
+```
+???
+Have students code this, and use a mock `posts` array to demonstrate the functionality.
 
 ---
 
-### SORT_BY_POPULARITY
+### `SORT_BY_POPULARITY` Action
 
 ```js
 // Action Creator
@@ -218,16 +242,16 @@ store.dispatch(sortByPopularity());
 
 # Async Dispatching
 
-We want to call "SORT_BY_POPULARITY" after each "VOTE_UP". 
-To do this, we can dispatch "SORT_BY_POPULARITY" inside of our "VOTE_UP" action creator.
+We want to call `SORT_BY_POPULARITY` after each `VOTE_UP`. 
+To do this, we can dispatch `SORT_BY_POPULARITY` inside of our `VOTE_UP` action creator.
 
 ---
 
 # Async Dispatching
 
-We want to call "SORT_BY_POPULARITY" after each "VOTE_UP". 
+We want to call `SORT_BY_POPULARITY` after each `VOTE_UP`. 
 
-To do this, we can dispatch "SORT_BY_POPULARITY" inside of our "VOTE_UP" action creator.
+To do this, we can dispatch `SORT_BY_POPULARITY` inside of our `VOTE_UP` action creator.
 
 ```js
 export const voteUp = id => {
@@ -287,111 +311,54 @@ function sortByKey(key) {
 case SORT_BY_POPULARITY:
   return state.posts.sort(sortByKey('votes'));
 ```
----
-
-# Thunk
-
-Understanding thunks is helpful beyond Redux.
-
-```
-function sortByKey(key) {
-  return function(a, b) {
-    switch (true) {
-      case a[key] < b[key]:
-        return 1;
-      case a[key] > b[key]:
-        return -1;
-      default:
-        return 0;
-    }
-  }
-}
-
-post.sort(sortByKey('votes'));
-```
 
 ---
-name: inverse
+template: inverse
 
 # Production vs. Development
 
----
+???
+- What are we talking about when we say 'production' or 'development' in relation to software development?
+- What features do we have in our app that we do not want in 'production'?
 
-# Production vs. Development
-
-What features do we have in our app that we do not want in **production**?
-
----
-
-# Production vs. Development
-
-What features do we have in our app that we do not want in **production**?
-
+Project specific features not for production: <br/>
 - logger
 - devTools
 - no warnings or propType errors
 
 ---
 
-# Environmental Variables
+# `process.env.NODE_ENV`
 
-Variables can be passed into a NODE process using `process.env`.
-
-These variables can only be strings.
-
-For example:
-
-Setting `NODE_ENV = "X"` can be accessed as `process.env.NODE_ENV` as "X". 
-
----
-
-# Setting NODE_ENV
-
-The Node environment can be set from the command line.
-
-```shell
-NODE_ENV = 'PRODUCTION'
-```
-
-Using "create-react-app", this is handled by the "build" script.
-
----
-
-# React in Production
-
-When React is run with the NODE_ENV of "PRODUCTION", it has several performance improvements.
-
-These include:
-
-- no warnings
-- no propType checks
-
----
-
-# Using process.env.NODE_ENV
-
-You can detect if your app is in production using:
-
-/store.js
+You can detect and use environment variables in your app using the following code:
 
 ```js
-if (process.env.NODE_ENV !== 'PRODUCTION') {
+if (process.env.NODE_ENV !== 'production') {
   // do development stuff
 } else {
   // do production stuff
 }
 ```
 
+`process` is a special **global** variable, much like `window` or `document` in Web Browser environments.
+
+???
+Demonstrate how variables can be passed into a Node process using `process.env` by setting some variables
+in your `.[whatever]rc` filees using `export`, as well as running a node script with an environment variable: 
+eg: `APP_NAME='Redit' node index.js`, and `console.log(process.env.APP_NAME);` from within the script.
+
+
+
 ---
 
-# Production: Remove Logger
+### Production: Remove Redux-Logger
 
-Skip unnecessary middleware in production.
+React apps should not use the logger middleware in production environments because of performance penalties, and potential errors. Thunks however will be used. Here is how you determine individual middleware per environment:
 
 ```js
 let middlewareList = [reduxThunk];
 
-if (process.env.NODE_ENV !== 'PRODUCTION') {
+if (process.env.NODE_ENV !== 'prodution') {
   const logger = require('redux-logger')();
   middlewareList.push(logger);
 }
@@ -405,6 +372,6 @@ const middlewares = applyMiddleware(...middlewareList);
 
 1. What is middleware and why do we like it?
 2. Discuss three popular redux-middleware
-3. Discuss how we specify code for PRODUCTION or DEVELOPMENT
+3. Discuss how we specify code for "production" or "development"
 
 {% endhighlight %}
