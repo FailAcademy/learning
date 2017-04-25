@@ -47,20 +47,21 @@ Please read through this introductory article on Sass before the lesson:
 
 ## Exercise 1
 
-In this exercise, we'll refactor some CSS into Sass, using the basic functionality we've learned.
+In this exercise, we'll refactor some CSS into SCSS, using the basic functionality we've learned.
 
-You can [download the exercise file here](/public/files/exercises/sass-e1.zip).
+To do that, fork this Codepen:
 
-Take a look at the code in the `.scss` file, and refactor it into actual Sass by doing the following:
+**https://codepen.io/redacademy/pen/JNbrxQ**
 
-- Nest selectors where appropriate (but be careful not to over-nest them!)
-- Abstract repeated styles (colours, spacing units, etc.) into variables (hint: make these go at the top of the stylesheet)
-- Create a mixin to take care of auto-prefixing where required
-- Use a math operation to adjust the size of the base spacing unit on elements where applicable
+Take a look at the code in the Codepen, and refactor it as SCSS by doing the following:
 
-Last but not least, you'll need to **compile** your Sass into CSS so your browser can read it.
+- **Nest** selectors where appropriate (but be careful not to over-nest them!)
+- Abstract repeated styles (colours, spacing units, etc.) into **variables** (hint: make these go at the top of the stylesheet)
+- Use a **math operator** to adjust the size of the base spacing unit on elements where applicable 
 
-We'll discuss the results by examining the SCSS as well as the compiled CSS.
+Be sure to take a look at the compiled CSS as you go! You can toggle the SCSS/CSS view using the arrow in the top-right corner of the CSS panel. 
+
+You'll know you're done when the compiled CSS looks exactly the same as when you started.
 
 ---
 
