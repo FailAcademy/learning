@@ -43,37 +43,26 @@ https://medium.com/@meagle/understanding-87566abcfb7a
 
 ### Functional Programming Primer
 
-Hello There.
+There are 3 speciffic functional programming concepts that the authors of the Redux Middleware library are using to accomplish the goal of providing a way to address 'cross-cutting' concerns when applying Redux actions.
+<br/>
+#### Currying
+#### Pure functions
+#### Function composition
+<br/>
+Lets get to know these by coding examples of each!
 
 ???
 Pure functions: <br/>
-// github link to exercise solution
+https://github.com/redacademy/adp-exercise-solutions/blob/master/redux-middleware-functional-primer/pure.js
  
 Currying: <br/>
-// github link to exercise solution
+https://github.com/redacademy/adp-exercise-solutions/blob/master/redux-middleware-functional-primer/curried.js
 
 'It's not magic... just a pleasant shorthand for anonymous functions.' <br/>
 **partial(Math.max, 0)** corresponds to **function(x){return Math.max(0, x);}**
 
 Composition: <br/>
-// github link to exercise solution
-
----
-
-# Apply Middleware
-
-Use Redux's `applyMiddleware` to add middleware to your store.
-
-```js
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-
-const store = createStore(
-  combineReducers(/* reducers here */)
-  applyMiddleware(/* middleware here*/)
-);
-```
-
-*What functional programming pattern does `applyMiddleware` resemble?*
+https://github.com/redacademy/adp-exercise-solutions/blob/master/redux-middleware-functional-primer/composition.js
 
 ---
 
@@ -111,13 +100,42 @@ logs the state before and after an action:
 
 ---
 
+# Apply Middleware
+
+Use Redux's `applyMiddleware` to add middleware to your store.
+
+```js
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+
+const store = createStore(
+  combineReducers(/* reducers here */)
+  applyMiddleware(/* middleware here*/)
+);
+```
+
+*What functional programming pattern does `applyMiddleware` resemble?*
+
+???
+Challenge the students: Does the order of the middleware added to `applyMiddleWare` matter? <br/>
+Answer: yes. <br/>
+Because Redux middleware uses function composition, the order does matter. Refer again to the `excitedGreeter` example.
+
+
+---
+
 # Exercise 2
 
 Setup ["redux-logger"](https://github.com/evgenyrodionov/redux-logger) middleware.
 
 ---
 
-# Thunk
+template: inverse
+
+# Thunks
+
+---
+
+# Thunks
 
 Read [this Stack Overflow article](http://stackoverflow.com/questions/35411423/how-to-dispatch-a-redux-action-with-a-timeout/35415559#35415559) on using Redux-Thunk.
 
@@ -126,7 +144,7 @@ Read [this Stack Overflow article](http://stackoverflow.com/questions/35411423/h
 
 ---
 
-# Redux-Thunk: Multiple Actions
+### Redux-Thunk: Multiple Actions
 
 Redux-Thunk allows us to dispatch multiple actions in order.
 
@@ -141,7 +159,7 @@ Why is this important?
 
 ---
 
-# Redux-Thunk: Action Creators
+### Redux-Thunk: Action Creators
 
 Redux thunk allows you to access state in action creators.
 
@@ -156,7 +174,7 @@ Why is this important?
 
 ---
 
-# Redux-Thunk Simplified
+### Redux-Thunk: Simplified
 
 ```js
 // store has access to `getState` & `dispatch`
@@ -171,32 +189,16 @@ const middleware = store => next => action => {
 
 ---
 
-# Notes
-
-- What happens when "redux-logger" isn't called last by `applyMiddleware`.
-
-```js
-const store = createStore(
-  reducers,
-  applyMiddleware(logger, thunk)
-);
-```
-
-- Why does this happen?
-- How can you fix it?
-
----
-
-## Exercise 3
+# Exercise 3
 
 Setup an "async action" that sorts posts by their number of votes.
-(highest to least). Call this action "SORT_BY_POPULARITY".
+(highest to least). Call this action `SORT_BY_POPULARITY`.
 
-The sorting action should be called every time you "VOTE_UP".
+The sorting action should be called every time you `VOTE_UP`.
 
 ---
 
-# A Complex Sorting Function
+### A Complex Sorting Function
 
 Understanding thunks is helpful beyond Redux.
 
@@ -237,13 +239,6 @@ store.dispatch(sortByPopularity());
 store.dispatch(voteUp(2));
 store.dispatch(sortByPopularity());
 ```
-
----
-
-# Async Dispatching
-
-We want to call `SORT_BY_POPULARITY` after each `VOTE_UP`. 
-To do this, we can dispatch `SORT_BY_POPULARITY` inside of our `VOTE_UP` action creator.
 
 ---
 
