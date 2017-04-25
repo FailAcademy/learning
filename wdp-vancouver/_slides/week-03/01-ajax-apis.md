@@ -33,29 +33,122 @@ template: inverse
 class: center, middle
 
 .large[
-   What is Ajax?
+  But first, servers!
 ]
-
----
-class: center, middle
-
-### What is Ajax?
-
-Ajax provides a way to fetch content from a server and load it in the browser without actually reloading the page.
-
----
-class: center, middle
-
-### What is it for?
-
-Ajax is often used when submitting web forms and fetching data from a server, including from third-party APIs.
 
 ---
 class: center, middle
 
 ![HTTP request diagram](../../public/img/slide-assets/http-request-diagram.svg)
 
-It's just like any request a browser makes to a server, but it loads the returned data in the page without affecting the rest of the page. In other words, no reloading! Magic.
+---
+
+# Servers
+
+- A server is just **a program that accepts connections from other programs** on the network
+- Computers that run web servers aren’t anything special, but they often run **Linux** as an operating system
+
+---
+
+# Versus Your Computer
+
+- A server's connection to the Internet is a little different from a typical home or mobile Internet connection
+- A server usually needs to have a stable (static) IP address so that clients can find it and connect to it
+- Most home and mobile systems don't assign your computer a static IP address, and most home Internet routers don't allow incoming connections by default
+
+---
+
+# Requests
+
+HTTP is just the language that web servers and clients use to talk to each other. **Every HTTP request includes an HTTP verb**. Some common HTTP verbs include:
+
+- `GET` is for requesting a resource from the server
+- `POST` is for submitting data to the server (e.g. file uploads)
+- `PUT` can be used for creating a new resources
+- `DELETE` is removing a resource from the server
+- `PATCH` is a newer addition to HTTP, and it expresses the idea changing a resource in some well-defined way
+
+---
+
+# URLs
+
+A URL is **an address for a resource** on the network:
+
+**https://red-wdp.herokuapp.com/lesson/ajax-json-and-apis/**
+
+This one has three visible parts:
+
+  - `https://` is the protocol
+  - `red-wdp.herokuapp.com` is the hostname
+  - `/lesson/ajax-json-and-apis/` is the path
+
+---
+
+# URLs
+
+*Fun facts!*
+
+- In the real world, **paths don't necessarily equate to specific filenames**&mdash;instead, the server interprets the path to figure out what resource to send
+- The part of the URI after the `#` sign is called a **fragment** (the browser doesn't send it to the web server)
+- The `?s=red+academy` is a **query** part of the URI (this does get sent to the server)
+
+---
+
+# Types of Responses
+
+**1xx — Informational.** The request is in progress or there's another step to take.
+
+**2xx — Success!** The request succeeded. The server is sending the data the client asked for.
+
+**3xx — Redirection.** The server is telling the client about a different URL it should redirect to.
+
+**4xx — Client error.** The server didn't understand the client's request, or can't or won't fill it (e.g. bad URL).
+
+**5xx — Server error.** Something went wrong on the server.
+
+---
+
+# Mini-Exercise
+
+Let's model how requests and responses work by using a bakery as a metaphor...
+
+---
+class: center, middle
+
+.large[
+   What is Ajax?
+]
+
+---
+
+# What is Ajax?
+
+Ajax provides a way to exchange data between the browser and the server **without reloading the page**.
+
+Ajax is often used when **submitting web forms** and **fetching data** from a server, including from third-party APIs.
+
+It's **asynchronous** because Ajax doesn’t block other events from happening when the request is sent and the client is waiting for a response.
+
+---
+class: center, middle
+
+.large[
+  But wait!? Isn't JavaScript single-threaded?
+]
+
+---
+class: center, middle
+
+.inline-images[
+  ![JS Runtime](/public/img/slide-assets/js-runtime.png)
+]
+
+---
+class: center, middle
+
+.large[
+  [A visualization...](http://latentflip.com/loupe/)
+]
 
 ---
 
@@ -72,8 +165,8 @@ Methods for making Ajax requests:
 
 - `$.ajax()`
 - `.load()`
-- `$.get`
-- `$.post`
+- `$.get()`
+- `$.post()`
 - `$.getJSON()`
 - `$.getScript()`
 
@@ -163,17 +256,18 @@ template: inverse
 # JSON
 
 ---
-class: center, middle
 
-### What is JSON?
+# What is JSON?
 
-JSON stands for "JavaScript Object Notation" and simply provides a way for us to encode text-based data in a way that's easy to work with.
+JSON stands for **JavaScript Object Notation** and simply provides a way for us to encode text-based data in a way that's easy to work with.
+
+Ultimately, it gives us **a way to encode both simple and more complex data structures** (including strings, numbers, booleans, arrays, objects, and null) into a format that can easily be transmitted between two points.
 
 ---
 
 # What Does It Look Like?
 
-JSON will look very familiar, because it's encoded exactly like a JavaScript object in key-value pairs:
+JSON will look very familiar, because it's encoded similarly to how JS objects are in key-value pairs:
 
 ```javascript
 {
@@ -184,6 +278,8 @@ JSON will look very familiar, because it's encoded exactly like a JavaScript obj
 ```
 
 But it's important to remember that this isn't an actual object, it's just text that looks like an object.
+
+To convert JSON into a JS object, use `JSON.parse()`.
 
 ---
 
@@ -223,7 +319,7 @@ That entire response was passed in as the `data` object parameter in the `.done(
 });
 ```
 
-Because the JSON data is passed in as object, we are able to access it's properties (such as the `login`) using the JavaScript dot notation we're already familiar with.
+Because the JSON data is pre-processed by jQuery based on the response `Content-Type`, it is passed in as a JS object, we are able to access it's properties (such as the `login`) using the JavaScript dot notation we're already familiar with.
 
 ---
 
