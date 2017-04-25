@@ -353,7 +353,8 @@ eg: `APP_NAME='Redit' node index.js`, and `console.log(process.env.APP_NAME);` f
 
 ### Production: Remove Redux-Logger
 
-React apps should not use the logger middleware in production environments because of performance penalties, and potential errors. Thunks however will be used. Here is how you determine individual middleware per environment:
+React apps should not use the logger middleware in product
+ion environments because of performance penalties, and potential errors. Thunks however will be used. Here is how you determine individual middleware per environment:
 
 ```js
 let middlewareList = [reduxThunk];
