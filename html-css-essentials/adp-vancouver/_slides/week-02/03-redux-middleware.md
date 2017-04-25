@@ -16,52 +16,47 @@ class: center, middle, inverse
 
 ---
 layout: false
-class: middle, center
-
-### Where is the middleware?
-
-View -> Action -> Reducer -> Store -> View
-
----
-
-# Middleware
-
-Middleware in action.
-
-```js
-// store has access to `getState` & `dispatch`
-const middleware = store => next => action => next(action);
-```
-
-- Explain to a partner how you think middleware works.
-- Where does the magic happen?
-
----
-
-# Middleware
-
-Middleware in action.
-
-```js
-// store has access to `getState` & `dispatch`
-const middleware = store => next => action => {
-  
-  // magic is here
-
-  return next(action);
-};
-```
-
----
 
 # Agenda
 
-Continue from your "Worst Pokemon" app earlier this week.
+1. Middleware is a software pattern
+2. Functional programming primier
+3. Write a logger middleware
+4. Add middleware to your project
 
-1. `applyMiddleware`
-2. add "logger"
-3. add "thunk"
-4. add an optional middleware
+---
+class: middle, center
+
+### What is Middleware?
+
+View -> Action -> Reducer -> Store -> View
+
+???
+Before diving into Redux middleware, introduce the students to the functional programming concepts that middleware uses: **Pure Functions (This is central to redux in general, but should be reviewed at this point), Function Composition, and Function Currying.**
+Talking about the function signature of a middleware function is a good starting point.
+Pause here to talk about Middleware as a general software pattern as well. Make sure students understand the term 'middleware' is a general term for code which has to do with 'cross-cutting concerns'.
+
+For reference: <br/>
+https://medium.com/@meagle/understanding-87566abcfb7a
+
+---
+
+### Functional Programming Primer
+
+Hello There.
+
+???
+Pure functions: <br/>
+// github link to exercise solution
+ 
+Currying: <br/>
+// github link to exercise solution
+
+'It's not magic... just a pleasant shorthand for anonymous functions.' <br/>
+**partial(Math.max, 0)** corresponds to **function(x){return Math.max(0, x);}**
+
+Composition: <br/>
+// github link to exercise solution
 
 ---
 
@@ -73,36 +68,52 @@ Use Redux's `applyMiddleware` to add middleware to your store.
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 
 const store = createStore(
-  reducers,
+  combineReducers(/* reducers here */)
   applyMiddleware(/* middleware here*/)
 );
 ```
 
+*What functional programming pattern does `applyMiddleware` resemble?*
+
 ---
-class: middle
 
 # Exercise 1
 
-Setup ["redux-logger"](https://github.com/evgenyrodionov/redux-logger) middleware in your "Worst Pokemon" app.
+Search the [Redux source code](https://github.com/reactjs/redux) for examples of the functional
+programming patters we discussed in class. 
 
 ---
 
-# Redux-Logger Simplified
+# Redux Middleware
 
-A simplified version of "redux-logger".
+Here is the 'function signature' for every Redux Middleware. It should be evident that 
+Redux middleware uses function composition apply middleware in sequence.
 
 ```js
-// store has access to `getState` & `dispatch`
 const middleware = store => next => action => {
-
-  console.log(
-    store.getState(),
-    action,
-    next(action).getState()
-  )
-  return next(action);
+  // This middleware does nothing!
+  next(action);
 };
 ```
+
+???
+- Compare this function signature with the `excitedGreeter` example. Students should be able to identify 
+function composition here.
+
+- Challenge the students to assess why the middleware would be called with the store and action.
+
+- Describe how we can get the state before and after the call to `next(action)`. Implement a simple logger that
+logs the state before and after an action:
+
+`console.log(store.getState());` <br/>
+`next(action);` <br/>
+`console.log(store.getState());`
+
+---
+
+# Exercise 2
+
+Setup ["redux-logger"](https://github.com/evgenyrodionov/redux-logger) middleware.
 
 ---
 
@@ -145,14 +156,6 @@ Why is this important?
 
 ---
 
-class: middle
-
-# Redux Thunk
-
-Setup ["redux-thunk"](https://github.com/gaearon/redux-thunk) middleware in your "Worst Pokemon" app.
-
----
-
 # Redux-Thunk Simplified
 
 ```js
@@ -186,7 +189,7 @@ const store = createStore(
 
 ## Exercise 3
 
-Setup an "async action" that sorts pokemon by their number of votes.
+Setup an "async action" that sorts posts by their number of votes.
 (highest to least). Call this action "SORT_BY_POPULARITY".
 
 The sorting action should be called every time you "VOTE_UP".
@@ -194,19 +197,16 @@ The sorting action should be called every time you "VOTE_UP".
 
 ---
 
-# SORT_BY_POPULARITY
-
-/src/pokemon.js
+### SORT_BY_POPULARITY
 
 ```js
+// Action Creator
 const SORT_BY_POPULARITY = 'SORT_BY_POPULARITY';
 export const sortByPopularity = () => ({ type: SORT_BY_POPULARITY });
 ```
 
-/src/index.js
-
 ```js
-import {default as pokemon, voteUp, sortByPopularity} from './pokemon';
+import { voteUp, sortByPopularity} from './redux/actions';
 
 store.dispatch(voteUp(2));
 store.dispatch(sortByPopularity());
@@ -219,7 +219,6 @@ store.dispatch(sortByPopularity());
 # Async Dispatching
 
 We want to call "SORT_BY_POPULARITY" after each "VOTE_UP". 
-
 To do this, we can dispatch "SORT_BY_POPULARITY" inside of our "VOTE_UP" action creator.
 
 ---
@@ -229,8 +228,6 @@ To do this, we can dispatch "SORT_BY_POPULARITY" inside of our "VOTE_UP" action 
 We want to call "SORT_BY_POPULARITY" after each "VOTE_UP". 
 
 To do this, we can dispatch "SORT_BY_POPULARITY" inside of our "VOTE_UP" action creator.
-
-/src/pokemon.js
 
 ```js
 export const voteUp = id => {
@@ -245,26 +242,9 @@ export const voteUp = id => {
 
 ---
 
-# Sorting
-
-Sort pokemon when "SORT_BY_POPULARITY" is called.
-
-/src/pokemon.js
-
-```js
-  case SORT_BY_POPULARITY:
-  return pokemon.sort();
-```
-
-Why doesn't this work?
-
----
-
 # Sort By Votes
 
 Complicated sorting requires a sorting function. 
-
-/src/pokemon.js
 
 ```js
 function sortByVotes(a, b) {
@@ -280,7 +260,7 @@ function sortByVotes(a, b) {
 
 /* in Reducer */
 case SORT_BY_POPULARITY:
-  return pokemon.sort(sortByVotes);
+  return posts.sort(sortByVotes);
 ```
 
 ---
@@ -305,29 +285,8 @@ function sortByKey(key) {
 
 /* in Reducer */
 case SORT_BY_POPULARITY:
-  return pokemon.sort(sortByKey('votes'));
+  return state.posts.sort(sortByKey('votes'));
 ```
----
-
-# Returning a Function
-
-What do we call a function that returns a function?
-
-```
-function sortByKey(key) {
-  return function(a, b) {
-    switch (true) {
-      case a[key] < b[key]:
-        return 1;
-      case a[key] > b[key]:
-        return -1;
-      default:
-        return 0;
-    }
-  }
-}
-```
-
 ---
 
 # Thunk
@@ -348,7 +307,7 @@ function sortByKey(key) {
   }
 }
 
-list.sort(sortByKey('votes'));
+post.sort(sortByKey('votes'));
 ```
 
 ---
