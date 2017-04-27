@@ -14,6 +14,19 @@ class: center, middle, inverse
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
+???
+##### Gulp Review:
+In groups, discuss the function of each:
+  - package.json
+  - node_modules folder
+  - gulpjs.file
+
+Gulpjs.file:
+  - Where are the required modules?
+  - What are the tasks?
+  
+How does the 'scripts' task work?
+  - In groups get them to draw out from working file to production file.
 ---
 layout: false
 
@@ -25,6 +38,8 @@ layout: false
 4. Using Sass on a project
 5. Compiling Sass into CSS
 
+???
+Slide 2 Notes
 ---
 template: inverse
 
