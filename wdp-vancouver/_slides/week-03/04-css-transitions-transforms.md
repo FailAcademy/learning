@@ -14,6 +14,13 @@ class: center, middle, inverse
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
+???
+##### Sass Review:
+In partners check the lab tasks:
+- Media query helpers
+- Basic theme-ability, using Sass variables
+- Separating your styles into Sass partials
+- Sass compilation, minification, and auto-prefixing using Gulp
 ---
 layout: false
 
