@@ -42,6 +42,16 @@ class: center, middle
 
 CSS transitions cause **changes to a property** (or multiple properties) and take place **over a ￼period of time**.
 
+
+
+???
+##### Emphasis steps:
+1. There must be an element with a state change 
+  - Ask for examples of some state changes (:hover, focus, active, etc)
+2. Properties (with different values) must be defined on each state
+3. Now apply the transition css property.
+
+Examples: Button colour change on hover
 ---
 
 # An Example
@@ -56,6 +66,8 @@ On the element you want to transition, you could add the following CSS:
 
 This is the CSS **shorthand** for applying transitions to selectors.
 
+???
+- Note: vendor prefixes are needed currently for browser support.
 ---
 
 # The Syntax
