@@ -18,9 +18,9 @@ Prior to class, read through the following documentation:
 - Understand the key differences between client- and server-side validation
 - Understand UX best practices for implementing client-side validation
 - Compare and contrast controlled and uncontrolled components.
-- Use a library for handling client-side form validation in an application.
-- Provide error feedback on invalid input.
-- Use form elements from 3rd party sources like Material-UI.
+- Use a library for handling client-side form validation in an application
+- Provide error feedback on invalid input
+- Use form elements from 3rd party sources like Material-UI
 
 ---
 
@@ -36,7 +36,7 @@ Prior to class, read through the following documentation:
 
 ## Lab Activity
 
-Create the forms that you'll use in your REDit app, using the `Gandalf` library.
+Create the forms that you'll use in your REDit app, using the [Gandalf Validator](https://www.npmjs.com/package/gandalf-validator) library.
 You'll need to create both a user (login) form and a form for creating new posts.
 
 Be sure to include:
