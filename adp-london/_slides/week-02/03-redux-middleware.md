@@ -16,52 +16,87 @@ class: center, middle, inverse
 
 ---
 layout: false
-class: middle, center
-
-### Where is the middleware?
-
-View -> Action -> Reducer -> Store -> View
-
----
-
-# Middleware
-
-Middleware in action.
-
-```js
-// store has access to `getState` & `dispatch`
-const middleware = store => next => action => next(action);
-```
-
-- Explain to a partner how you think middleware works.
-- Where does the magic happen?
-
----
-
-# Middleware
-
-Middleware in action.
-
-```js
-// store has access to `getState` & `dispatch`
-const middleware = store => next => action => {
-  
-  // magic is here
-
-  return next(action);
-};
-```
-
----
 
 # Agenda
 
-Continue from your "Worst Pokemon" app earlier this week.
+1. Middleware is a software pattern
+2. Functional programming primier
+3. Write a logger middleware
+4. Add middleware to your project
 
-1. `applyMiddleware`
-2. add "logger"
-3. add "thunk"
-4. add an optional middleware
+---
+class: middle, center
+
+### What is Middleware?
+
+View -> Action -> Reducer -> Store -> View
+
+???
+Before diving into Redux middleware, introduce the students to the functional programming concepts that middleware uses: **Pure Functions (This is central to redux in general, but should be reviewed at this point), Function Composition, and Function Currying.**
+Talking about the function signature of a middleware function is a good starting point.
+Pause here to talk about Middleware as a general software pattern as well. Make sure students understand the term 'middleware' is a general term for code which has to do with 'cross-cutting concerns'.
+
+For reference: <br/>
+https://medium.com/@meagle/understanding-87566abcfb7a
+
+---
+
+### Functional Programming Primer
+
+There are 3 speciffic functional programming concepts that the authors of the Redux Middleware library are using to accomplish the goal of providing a way to address 'cross-cutting' concerns when applying Redux actions.
+<br/>
+#### Currying
+#### Pure functions
+#### Function composition
+<br/>
+Lets get to know these by coding examples of each!
+
+???
+Pure functions: <br/>
+https://github.com/redacademy/adp-exercise-solutions/blob/master/redux-middleware-functional-primer/pure.js
+ 
+Currying: <br/>
+https://github.com/redacademy/adp-exercise-solutions/blob/master/redux-middleware-functional-primer/curried.js
+
+'It's not magic... just a pleasant shorthand for anonymous functions.' <br/>
+**partial(Math.max, 0)** corresponds to **function(x){return Math.max(0, x);}**
+
+Composition: <br/>
+https://github.com/redacademy/adp-exercise-solutions/blob/master/redux-middleware-functional-primer/composition.js
+
+---
+
+# Exercise 1
+
+Search the [Redux source code](https://github.com/reactjs/redux) for examples of the functional
+programming patters we discussed in class. 
+
+---
+
+# Redux Middleware
+
+Here is the 'function signature' for every Redux Middleware. It should be evident that 
+Redux middleware uses function composition apply middleware in sequence.
+
+```js
+const middleware = store => next => action => {
+  // This middleware does nothing!
+  next(action);
+};
+```
+
+???
+- Compare this function signature with the `excitedGreeter` example. Students should be able to identify 
+function composition here.
+
+- Challenge the students to assess why the middleware would be called with the store and action.
+
+- Describe how we can get the state before and after the call to `next(action)`. Implement a simple logger that
+logs the state before and after an action:
+
+`console.log(store.getState());` <br/>
+`next(action);` <br/>
+`console.log(store.getState());`
 
 ---
 
@@ -73,40 +108,34 @@ Use Redux's `applyMiddleware` to add middleware to your store.
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 
 const store = createStore(
-  reducers,
+  combineReducers(/* reducers here */)
   applyMiddleware(/* middleware here*/)
 );
 ```
 
----
-class: middle
+*What functional programming pattern does `applyMiddleware` resemble?*
 
-# Exercise 1
+???
+Challenge the students: Does the order of the middleware added to `applyMiddleWare` matter? <br/>
+Answer: yes. <br/>
+Because Redux middleware uses function composition, the order does matter. Refer again to the `excitedGreeter` example.
 
-Setup ["redux-logger"](https://github.com/evgenyrodionov/redux-logger) middleware in your "Worst Pokemon" app.
-
----
-
-# Redux-Logger Simplified
-
-A simplified version of "redux-logger".
-
-```js
-// store has access to `getState` & `dispatch`
-const middleware = store => next => action => {
-
-  console.log(
-    store.getState(),
-    action,
-    next(action).getState()
-  )
-  return next(action);
-};
-```
 
 ---
 
-# Thunk
+# Exercise 2
+
+Setup ["redux-logger"](https://github.com/evgenyrodionov/redux-logger) middleware.
+
+---
+
+template: inverse
+
+# Thunks
+
+---
+
+# Thunks
 
 Read [this Stack Overflow article](http://stackoverflow.com/questions/35411423/how-to-dispatch-a-redux-action-with-a-timeout/35415559#35415559) on using Redux-Thunk.
 
@@ -115,7 +144,7 @@ Read [this Stack Overflow article](http://stackoverflow.com/questions/35411423/h
 
 ---
 
-# Redux-Thunk: Multiple Actions
+### Redux-Thunk: Multiple Actions
 
 Redux-Thunk allows us to dispatch multiple actions in order.
 
@@ -130,7 +159,7 @@ Why is this important?
 
 ---
 
-# Redux-Thunk: Action Creators
+### Redux-Thunk: Action Creators
 
 Redux thunk allows you to access state in action creators.
 
@@ -145,15 +174,7 @@ Why is this important?
 
 ---
 
-class: middle
-
-# Redux Thunk
-
-Setup ["redux-thunk"](https://github.com/gaearon/redux-thunk) middleware in your "Worst Pokemon" app.
-
----
-
-# Redux-Thunk Simplified
+### Redux-Thunk: Simplified
 
 ```js
 // store has access to `getState` & `dispatch`
@@ -168,45 +189,50 @@ const middleware = store => next => action => {
 
 ---
 
-# Notes
+# Exercise 3
 
-- What happens when "redux-logger" isn't called last by `applyMiddleware`.
+Setup an "async action" that sorts posts by their number of votes.
+(highest to least). Call this action `SORT_BY_POPULARITY`.
+
+The sorting action should be called every time you `VOTE_UP`.
+
+---
+
+### A Complex Sorting Function
+
+Understanding thunks is helpful beyond Redux.
 
 ```js
-const store = createStore(
-  reducers,
-  applyMiddleware(logger, thunk)
-);
+function sortByKey(key) {
+  return function(a, b) {
+    switch (true) {
+      case a[key] < b[key]:
+        return 1;
+      case a[key] > b[key]:
+        return -1;
+      default:
+        return 0;
+    }
+  }
+}
+
+post.sort(sortByKey('votes'));
 ```
-
-- Why does this happen?
-- How can you fix it?
-
----
-
-## Exercise 3
-
-Setup an "async action" that sorts pokemon by their number of votes.
-(highest to least). Call this action "SORT_BY_POPULARITY".
-
-The sorting action should be called every time you "VOTE_UP".
-
+???
+Have students code this, and use a mock `posts` array to demonstrate the functionality.
 
 ---
 
-# SORT_BY_POPULARITY
-
-/src/pokemon.js
+### `SORT_BY_POPULARITY` Action
 
 ```js
+// Action Creator
 const SORT_BY_POPULARITY = 'SORT_BY_POPULARITY';
 export const sortByPopularity = () => ({ type: SORT_BY_POPULARITY });
 ```
 
-/src/index.js
-
 ```js
-import {default as pokemon, voteUp, sortByPopularity} from './pokemon';
+import { voteUp, sortByPopularity} from './redux/actions';
 
 store.dispatch(voteUp(2));
 store.dispatch(sortByPopularity());
@@ -218,19 +244,9 @@ store.dispatch(sortByPopularity());
 
 # Async Dispatching
 
-We want to call "SORT_BY_POPULARITY" after each "VOTE_UP". 
+We want to call `SORT_BY_POPULARITY` after each `VOTE_UP`. 
 
-To do this, we can dispatch "SORT_BY_POPULARITY" inside of our "VOTE_UP" action creator.
-
----
-
-# Async Dispatching
-
-We want to call "SORT_BY_POPULARITY" after each "VOTE_UP". 
-
-To do this, we can dispatch "SORT_BY_POPULARITY" inside of our "VOTE_UP" action creator.
-
-/src/pokemon.js
+To do this, we can dispatch `SORT_BY_POPULARITY` inside of our `VOTE_UP` action creator.
 
 ```js
 export const voteUp = id => {
@@ -245,26 +261,9 @@ export const voteUp = id => {
 
 ---
 
-# Sorting
-
-Sort pokemon when "SORT_BY_POPULARITY" is called.
-
-/src/pokemon.js
-
-```js
-  case SORT_BY_POPULARITY:
-  return pokemon.sort();
-```
-
-Why doesn't this work?
-
----
-
 # Sort By Votes
 
 Complicated sorting requires a sorting function. 
-
-/src/pokemon.js
 
 ```js
 function sortByVotes(a, b) {
@@ -280,7 +279,7 @@ function sortByVotes(a, b) {
 
 /* in Reducer */
 case SORT_BY_POPULARITY:
-  return pokemon.sort(sortByVotes);
+  return posts.sort(sortByVotes);
 ```
 
 ---
@@ -305,134 +304,57 @@ function sortByKey(key) {
 
 /* in Reducer */
 case SORT_BY_POPULARITY:
-  return pokemon.sort(sortByKey('votes'));
-```
----
-
-# Returning a Function
-
-What do we call a function that returns a function?
-
-```
-function sortByKey(key) {
-  return function(a, b) {
-    switch (true) {
-      case a[key] < b[key]:
-        return 1;
-      case a[key] > b[key]:
-        return -1;
-      default:
-        return 0;
-    }
-  }
-}
+  return state.posts.sort(sortByKey('votes'));
 ```
 
 ---
-
-# Thunk
-
-Understanding thunks is helpful beyond Redux.
-
-```
-function sortByKey(key) {
-  return function(a, b) {
-    switch (true) {
-      case a[key] < b[key]:
-        return 1;
-      case a[key] > b[key]:
-        return -1;
-      default:
-        return 0;
-    }
-  }
-}
-
-list.sort(sortByKey('votes'));
-```
-
----
-name: inverse
+template: inverse
 
 # Production vs. Development
 
----
+???
+- What are we talking about when we say 'production' or 'development' in relation to software development?
+- What features do we have in our app that we do not want in 'production'?
 
-# Production vs. Development
-
-What features do we have in our app that we do not want in **production**?
-
----
-
-# Production vs. Development
-
-What features do we have in our app that we do not want in **production**?
-
+Project specific features not for production: <br/>
 - logger
 - devTools
 - no warnings or propType errors
 
 ---
 
-# Environmental Variables
+# `process.env.NODE_ENV`
 
-Variables can be passed into a NODE process using `process.env`.
-
-These variables can only be strings.
-
-For example:
-
-Setting `NODE_ENV = "X"` can be accessed as `process.env.NODE_ENV` as "X". 
-
----
-
-# Setting NODE_ENV
-
-The Node environment can be set from the command line.
-
-```shell
-NODE_ENV = 'PRODUCTION'
-```
-
-Using "create-react-app", this is handled by the "build" script.
-
----
-
-# React in Production
-
-When React is run with the NODE_ENV of "PRODUCTION", it has several performance improvements.
-
-These include:
-
-- no warnings
-- no propType checks
-
----
-
-# Using process.env.NODE_ENV
-
-You can detect if your app is in production using:
-
-/store.js
+You can detect and use environment variables in your app using the following code:
 
 ```js
-if (process.env.NODE_ENV !== 'PRODUCTION') {
+if (process.env.NODE_ENV !== 'production') {
   // do development stuff
 } else {
   // do production stuff
 }
 ```
 
+`process` is a special **global** variable, much like `window` or `document` in Web Browser environments.
+
+???
+Demonstrate how variables can be passed into a Node process using `process.env` by setting some variables
+in your `.[whatever]rc` filees using `export`, as well as running a node script with an environment variable: 
+eg: `APP_NAME='Redit' node index.js`, and `console.log(process.env.APP_NAME);` from within the script.
+
+
+
 ---
 
-# Production: Remove Logger
+### Production: Remove Redux-Logger
 
-Skip unnecessary middleware in production.
+React apps should not use the logger middleware in product
+ion environments because of performance penalties, and potential errors. Thunks however will be used. Here is how you determine individual middleware per environment:
 
 ```js
 let middlewareList = [reduxThunk];
 
-if (process.env.NODE_ENV !== 'PRODUCTION') {
+if (process.env.NODE_ENV !== 'prodution') {
   const logger = require('redux-logger')();
   middlewareList.push(logger);
 }
@@ -446,6 +368,6 @@ const middlewares = applyMiddleware(...middlewareList);
 
 1. What is middleware and why do we like it?
 2. Discuss three popular redux-middleware
-3. Discuss how we specify code for PRODUCTION or DEVELOPMENT
+3. Discuss how we specify code for "production" or "development"
 
 {% endhighlight %}
