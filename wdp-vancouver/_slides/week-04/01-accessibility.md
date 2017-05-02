@@ -38,12 +38,18 @@ class: center, middle
 
 Based on the videos you watched for the lesson pre-work, how would you define accessibility?
 
+???
+In groups discuss
 ---
 class: center, middle
 
 > "Founded on the principles of **Universal Design**, the goal of accessibility is to create an inclusive society for people with physical, mobility, visual, auditory or cognitive disabilities. This means everyone has equal access to perceive, understand, engage, navigate and interact with all elements of the physical and digital world."
 
 *&mdash;From the [CNIB website](http://www.cnib.ca/en/services/accessibilities/what_is_accesibility/Pages/default.aspx)*
+
+???
+##### Note
+That impairments can be situational, temporary or permanent
 
 ---
 class: center, middle
@@ -53,6 +59,16 @@ class: center, middle
 At a high level, you can think of accessibility on the web as making sure that **all of your users** can access **all of the content and essential functionality** on your website.
 
 ---
+layout: false
+template: inverse
+
+# Why should we care?
+
+
+???
+In groups discuss why we should care
+- Can you think of someone in your life
+---
 
 # Some Stats
 
@@ -60,6 +76,8 @@ At a high level, you can think of accessibility on the web as making sure that *
 - 81.3% of those with disabilities use aids and assistive devices (source: [Statistics Canada](http://www.statcan.gc.ca/pub/89-654-x/89-654-x2013002-eng.htm))
 - 100% of us are aging right now!
 
+???
+In groups discuss why we should care
 ---
 
 # Why Accessibility on the Web Matters...
@@ -114,12 +132,19 @@ class: center, middle
 
 # A11Y Vocabulary
 
+- **W3C-WAI:** the W3C's [Web Accessibility Initiative](https://www.w3.org/WAI/)
+- **WCAG 2.0:** the W3C-WAI's [Web Content Accessibility Guidelines](https://www.w3.org/WAI/intro/wcag) 
+- **WAI-ARIA:** the W3C-WAI's [Accessible Rich Internet Applications](https://www.w3.org/TR/wai-aria-1.1/) 
+
+---
+
+# A11Y Vocabulary
+
 - **W3C-WAI:** the W3C's [Web Accessibility Initiative](https://www.w3.org/WAI/) provide strategies, guidelines, and resources to help make the web more accessible
 - **WCAG 2.0:** the W3C-WAI's [Web Content Accessibility Guidelines](https://www.w3.org/WAI/intro/wcag) strive to provide a single shared standard for web content accessibility that meets the needs of individuals, organizations, and governments internationally
 - **WAI-ARIA:** the W3C-WAI's [Accessible Rich Internet Applications](https://www.w3.org/TR/wai-aria-1.1/) spec provides guidelines for a framework for improving accessibility of web content and applications, and s special set of HTML attributes to do so
 
 ---
-
 # WCAG 2.0 Principles
 
 - **Perceivable:** content and UI must be perceiveable by all users (not just sighted, etc.)
@@ -135,9 +160,33 @@ The W3C-WAI provides an **[extensive reference guide](https://www.w3.org/WAI/WCA
 
 WebAIM has also summarized these guidelines in a [checklist](http://webaim.org/standards/wcag/checklist).
 
-Working in small groups, you will be assigned one of the principles and will put together a short presentation explaining the principle's related guidelines to the class.
+Working in small groups, a scenario will be described and as a group you must come up with way to ensure accessibility.
 
-Be creative with this! Feel free to use visuals, demos, or other teaching aids for your mini-lesson.
+Accesibility decisions should be backed by the reference guide (W3C-WAI) and/or checklist (WebAIM).
+
+
+---
+class: center, middle
+
+.large[
+   Dailyhive is now going to be publishing video content on their website.
+   What are some accessibilty considerations?
+]
+
+---
+class: center, middle
+
+.large[
+   UBC has a new online form for apply for scholarships. How can accessibility be improved on these forms?
+]
+
+---
+class: center, middle
+
+.large[
+   Vancity has asked you to help develop the bank customer login. 
+   What are some things we can do to help accessibility on this customer login?
+]
 
 ---
 template: inverse
@@ -145,6 +194,7 @@ template: inverse
 # Assistive Technologies and Testing Tools
 
 ---
+
 class: center, middle
 
 .large[
@@ -214,6 +264,9 @@ WebAIM's articles on using screen readers as evaluative tools:
 - [NVDA](http://webaim.org/articles/NVDA)
 
 
+???
+##### Note
+[Screen reader demo](https://classroom.udacity.com/courses/ud891/lessons/8019995517/concepts/80879805860923)
 ---
 class: center, middle
 
