@@ -160,9 +160,33 @@ The W3C-WAI provides an **[extensive reference guide](https://www.w3.org/WAI/WCA
 
 WebAIM has also summarized these guidelines in a [checklist](http://webaim.org/standards/wcag/checklist).
 
-Working in small groups, you will be assigned one of the principles and will put together a short presentation explaining the principle's related guidelines to the class.
+Working in small groups, a scenario will be described and as a group you must come up with way to ensure accessibility.
 
-Be creative with this! Feel free to use visuals, demos, or other teaching aids for your mini-lesson.
+Accesibility decisions should be backed by the reference guide (W3C-WAI) and/or checklist (WebAIM).
+
+
+---
+class: center, middle
+
+.large[
+   Dailyhive is now going to be publishing video content on their website.
+   What are some accessibilty considerations?
+]
+
+---
+class: center, middle
+
+.large[
+   UBC has a new online form for apply for scholarships. How can accessibility be improved on these forms?
+]
+
+---
+class: center, middle
+
+.large[
+   Vancity has asked you to help develop the bank customer login. 
+   What are some things we can do to help accessibility on this customer login?
+]
 
 ---
 template: inverse
@@ -170,6 +194,7 @@ template: inverse
 # Assistive Technologies and Testing Tools
 
 ---
+
 class: center, middle
 
 .large[
