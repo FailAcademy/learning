@@ -91,6 +91,7 @@ In groups discuss why we should care
 # Canadian Laws
 
 - Many provinces ([including BC](http://www2.gov.bc.ca/gov/content/home/accessibility)) have legislation in place requiring government websites to be accessible
+- BC [Accessibility 2024 Action Plan] (http://www2.gov.bc.ca/gov/content/governments/about-the-bc-government/accessibility)
 - Ontario takes it a step further with **Accessibility for Ontarians with Disabilities Act (AODA)**, which requires organizations that employ more than 50 people, or are publicly funded, to post accessible content to their website
 
 ---
@@ -169,24 +170,30 @@ Accesibility decisions should be backed by the reference guide (W3C-WAI) and/or 
 class: center, middle
 
 .large[
-   Dailyhive is now going to be publishing video content on their website.
-   What are some accessibilty considerations?
+   Dailyhive publishing video content on their website.
 ]
+
+???
+What are some accessibilty considerations?
+---
+class: center, middle
+
+.large[
+   Online scholarship application forms. 
+]
+
+???
+How can accessibility be improved on these forms?
 
 ---
 class: center, middle
 
 .large[
-   UBC has a new online form for apply for scholarships. How can accessibility be improved on these forms?
+   Vancity's bank customer login 
 ]
 
----
-class: center, middle
-
-.large[
-   Vancity has asked you to help develop the bank customer login. 
-   What are some things we can do to help accessibility on this customer login?
-]
+???
+What are some things we can do to help accessibility on this customer login?
 
 ---
 template: inverse
@@ -502,7 +509,7 @@ In a Codepen, refactor this snippet of code to be more semantic, accessible HTML
 ```html
 <div>
   <div><strong>All About Kittens</strong></div>
-  <img src="http://placekitten.com/300/200" alt="kitten" />
+  <img src="http://placekitten.com/g/300/200" alt="kitten" />
   <div>Learn all you ever wanted to know about kittens and more! <span onclick="location.href='all-about-kittens.html';" style="cursor: pointer; color: blue; text-decoration: underline;">Continue reading &rarr;</span></div>
 </div>
 ```
