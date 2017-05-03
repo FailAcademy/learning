@@ -7,7 +7,7 @@ lesson_date: 2017-05-04
 
 ## Pre-Work
 
-Before today's class, ensure that you have deployed your Project 1B (Aloha homepage) as a GitHub page.
+Before today's class, ensure that you have deployed your Project 1 (Aloha homepage) as a GitHub page.
 
 ---
 
