@@ -91,7 +91,7 @@ In groups discuss why we should care
 # Canadian Laws
 
 - Many provinces ([including BC](http://www2.gov.bc.ca/gov/content/home/accessibility)) have legislation in place requiring government websites to be accessible
-- BC [Accessibility 2024 Action Plan] (http://www2.gov.bc.ca/gov/content/governments/about-the-bc-government/accessibility)
+- BC [Accessibility 2024 Action Plan](http://www2.gov.bc.ca/gov/content/governments/about-the-bc-government/accessibility)
 - Ontario takes it a step further with **Accessibility for Ontarians with Disabilities Act (AODA)**, which requires organizations that employ more than 50 people, or are publicly funded, to post accessible content to their website
 
 ---
