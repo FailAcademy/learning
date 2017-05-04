@@ -408,7 +408,7 @@ Be sure to append it to the game `<svg>` just like we did with the board.
 
 ---
 
-# Keycode Constants
+# Key Constants
 
 Before we instantiate each player in our game, we'll need to add a new constant to `settings.js`:
 
@@ -424,10 +424,6 @@ export const KEYS = {
 
 But we'll need some way to figure out what codes correspond to these keys...
 
-*Hint: you can use `event.key`*
-For multiple keys: http://stackoverflow.com/questions/5203407/javascript-multiple-keys-pressed-at-once
-
-
 ---
 
 # Keycode Constants
@@ -436,15 +432,15 @@ Run the following code to in your **browser console**:
 
 ```js
 document.addEventListener('keydown', event => {
-  console.log(event.keyCode);
+  console.log(event);
 });
 ```
 
 - What does a **key event** look like?
-- Write down the `keyCode` for `a`, `z`, `↑`, `↓`, and `SPACE`.
+- Write down the `key` for `a`, `z`, `↑`, `↓`, and `SPACE`.
 - Try replacing `keydown` with `keyup`
 
-Fill in the keycodes in `settings.js`, then import your `KEYS` export into `Game.js`.
+Fill in the key names in `settings.js`, then import your `KEYS` export into `Game.js`.
 
 ---
 class: center, middle
@@ -510,7 +506,7 @@ export default class Paddle {
   constructor(boardHeight, width, height, x, y) {
     //...
     document.addEventListener('keydown', event => {
-      console.log(event.keyCode);
+      console.log(event);
     });
   }
 }
@@ -529,7 +525,7 @@ export default class Paddle {
   constructor(boardHeight, width, height, x, y, up, down) {
     //...
     document.addEventListener('keydown', event => {
-      switch (event.keyCode) {
+      switch (event.key) {
         case up:
           console.log('up');
           break;
@@ -919,7 +915,6 @@ export default class Score {
     this.x = x;
     this.y = y;
     this.size = size;
-    this.score = 0;
   }
   //...
 }

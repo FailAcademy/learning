@@ -27,8 +27,10 @@ We'll be creating SVGs to build the Pong game in Project 3, so you'll want to ta
 - Explain what object-oriented programming is in the JavaScript context.
 - Describe and instantiate objects using the new `class` syntax.
 - Describe and use the elements of a `class`, including the `constructor` and 'methods'.
-- Describe how `this` functions within classes.
+- Describe how the scope of `this` works within classes.
+{% comment %} 
 - Describe and use `extends` and `super` for inheritance purposes.
+{% endcomment %} 
 - Use `import` and `export` to import and export ES.next classes to modules (as `default` or named exports).
 - Code scalable vector graphics (SVGs) and add them inline to the DOM with JavaScript.
 
