@@ -318,12 +318,12 @@ We may also want users to enter text into a `<TextInput>` [(ref)](https://facebo
 
 ```js
 <TextInput
-  style={{
+  style={% raw %}{{
       height: 30,
       width: 100,
       borderWidth: 1,
       borderColor: "rgba(0,0,0,0.5)",
-  }}
+  }}{% endraw %}
   placeholder={'Type here'}
   placeholderTextColor={"rgba(198,198,204,1)"}
   onChangeText={(text) => {this.setState({text})}}
