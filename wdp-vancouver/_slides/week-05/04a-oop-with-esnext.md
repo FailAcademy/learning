@@ -21,7 +21,7 @@ layout: false
 
 1. What is OOP?
 2. ES.next class syntax
-3. Inheritance
+{% comment %}3. Inheritance{% endcomment %} 
 
 ---
 template: inverse
@@ -143,12 +143,12 @@ var Person = function(firstName, lastName) {
 // Add a fullName() method to the Person prototype property:
 
 Person.prototype.fullName = function() {
-  return `${this.firstName} ${this.lastName}`;
+  return this.firstName + '  ' + this.lastName;
 }
 
 // Create a new object with the Person() constructor:
 
-let joe = new Person('Joe', 'Schmo');
+var joe = new Person('Joe', 'Schmo');
 
 console.log(joe.fullName());
 ```
@@ -345,6 +345,7 @@ export default const hello = 'world'
 
 **C)** `import { hello } from 'file'`
 
+{% comment %} 
 ---
 
 template: inverse
@@ -437,6 +438,7 @@ Now model our own classroom using the following classes. Note that `WebDevStuden
 - WebDevStudent
 
 **Instantiate your classmates** using `new WebDevStudent()`.
+{% endcomment %} 
 
 ---
 
@@ -444,7 +446,9 @@ Now model our own classroom using the following classes. Note that `WebDevStuden
 
 - Basic concepts of object-oriented programming
 - How to use the new ES.next class syntax
+{% comment %} 
 - How inheritance works with subclasses
+{% endcomment %} 
 
 ---
 template: inverse

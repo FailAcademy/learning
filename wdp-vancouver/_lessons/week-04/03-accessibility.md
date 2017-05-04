@@ -9,7 +9,6 @@ lesson_date: 2017-05-03
 
 Prior to class, watch these videos for a primer on accessibility and why it's important:
 
-- [Derek Featherstone: The Fine Art of Accessibility](https://vimeo.com/72175436)
 - [Stephanie Hobson: Accessibility With CSS – Making Websites Better for Everyone
 ](http://wordpress.tv/2014/09/02/stephanie-hobson-accessibility-with-css-making-websites-better-for-everyone/)
 
@@ -46,9 +45,9 @@ The W3C-WAI provides an **[extensive reference guide](https://www.w3.org/WAI/WCA
 
 WebAIM has also summarized these guidelines in a **[checklist](http://webaim.org/standards/wcag/checklist)**.
 
-Working in small groups, you will be assigned one of the principles and will put together a short presentation explaining the principle's related guidelines to the class.
+Working in small groups, a scenario will be described and as a group you must come up with way to ensure accessibility.
 
-Be creative with this! Feel free to use visuals, demos, or other teaching aids for your mini-lesson.
+Accesibility decisions should be backed by the reference guide (W3C-WAI) and/or checklist (WebAIM).
 
 ---
 
@@ -171,7 +170,7 @@ Tools and tips to assist with colour-related accessibility testing:
 
 From Udacity, an incredibly thorough (free!) course on web accessibility:
 
-- [Web Accessibility - Developing with Empathy](https://www.udacity.com/course/web-accessibility--ud891)
+- [Web Accessibility](https://www.udacity.com/course/web-accessibility--ud891)
 
 A community-driven effort to make web accessibility easier:
 
