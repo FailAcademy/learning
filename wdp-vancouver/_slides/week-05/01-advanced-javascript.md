@@ -21,7 +21,7 @@ layout: false
 
 1. Truthiness
 1. Type coercion
-1. Hoisting
+1. Logical Operators
 1. Scope
 1. Passing by value & reference
 1. What is `this`
@@ -172,63 +172,10 @@ class: middle, center
 ---
 template: inverse
 
-# Hoisting
+# Review: Logical Operators
 
 ---
 
-## Hoisting
-
-Before your Javascript code is executed, it does a few quick passes that rearranges your code. This process is called __Hoisting__.
-
-Steps:
-
-- Look at the entire file and move all `function` declarations to the top, in the order they're defined.
-- Look at the altered file and move all `var` declarations to the top, in the order they're defined.
-- We only move `var` __definitions__, not their assignments.
-
----
-class: middle
-
-## Pre-Hoist
-
-```js
-var foo = 'bar';
-
-function myFunc(x) {
-  return x + 1;
-}
-
-if (foo) {
-  myFunc(10);
-}
-```
----
-class: middle
-
-## Becomes
-
-```js
-function myFunc(x) {
-  return x + 1;
-}
-var foo;
-
-foo = 'bar';
-
-if (foo) {
-  myFunc(10);
-}
-```
-
----
-
-## Exercise 2
-
-### Hoisting
-
-Let's do Taylor McGann's [exercises](http://blog.taylormcgann.com/2014/01/11/hoisting-javascript/)
-
----
 template: inverse
 
 # Scope
@@ -390,37 +337,6 @@ console.log(me);            // 6
 myGroup(me);
 console.log(me);            // 7
 ```
-
----
-
-# Exercise 4
-
-**Passing by Value versus Reference**
-
-*Explanation:*
-
-- When the `myTeam` method is **invoked**, JavaScript is passing the **reference** to the `me` **object** as a **value**. The **invocation** itself creates two independent **references** to the same **object**, (though the name being same here (`me`), is misleading and gives us the impression that it is a single reference.
-
-.footnote[More on the next slide ...]
-
----
-
-# Exercise 4
-
-**Passing by Value versus Reference**
-
-- When we **assigned** a new **object** at #3, we are changing the **reference value** within the `myTeam` **function**, and it will not have any impact on the original **object** outside this **function scope**. Hence the output from #6.
-
-.footnote[More on the next slide ...]
-
----
-
-# Exercise 4
-
-**Passing by Value versus Reference**
-
-- In the case of the `myGroup` invocation, we are passing the **object** `me`. But unlike the previous scenario we described, we are not assigning this **variable** to any new **object**, This means the object **reference value** within the `myGroup` **function scope** still is the original object's **reference value** and when we are modifying the **property** within this **scope**, it is effectively modifying the original object's **property**. Hence, you get the output from #7.
-
 ---
 template: inverse
 
@@ -521,15 +437,8 @@ scott.printName();
 
 ---
 
-# Lab activity
+template: inverse
 
-You're going to contribute to the [JS Fundamentals Site](https://redacademy.github.io/js-fundamentals/#contributing).
-
-Each table is assigned 1 topic:
-
-1. Truthiness, Coercion. Bonus: `&&` and `||`
-1. Hoisting, Scope. Bonus: Declarations within conditionals (if/else)
-1. Handling `this`. Bonus: the `bind` method
-1. Pass by value & reference. Bonus: "Pure" functions
+# Lab
 
 {% endhighlight %}
