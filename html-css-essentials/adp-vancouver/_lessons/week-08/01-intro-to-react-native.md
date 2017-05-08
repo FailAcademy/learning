@@ -35,6 +35,8 @@ Prior to class, please install Xcode on your Mac:
 - `Image`
 - `ScrollView`
 - `ListView`
+- `FlatList`
+- `SectionList`
 
 ---
 
