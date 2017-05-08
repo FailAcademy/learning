@@ -82,7 +82,7 @@ In today's lab, we'll start refactoring our React To-Do app from the the first w
 ### Step 1: Installation
 
 1. Create new Meteor app by running `meteor create meteor-react-todo`.
-2. Also install React: `meteor npm install react react-dom proptypes`.
+2. Also install React: `meteor npm install react react-dom prop-types --save`.
 
 ### Step 2: Copy-Pasta
 
