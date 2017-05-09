@@ -40,11 +40,18 @@ class: center, middle
 
 # About MongoDB
 
-- Stores data in rich documents (use arrays, embedded documents, etc.)
+- Stores data in rich documents (use arrays, **embedded documents**, etc.)
 - Uses JSON to format the documents
 - Schema-free by default
 - Allows us to design data models to support common access patterns (compared to a relational design that may require joins across tables)
 - Makes it way easier to shard data across servers (scale out instead of up!)
+
+---
+class: center, middle
+
+.large[
+  ...versus SQL
+]
 
 ---
 
@@ -69,6 +76,35 @@ A loose comparison of SQL vs. MongoDB terminology:
 
   Joining      |  Linking or Embedding
 ```
+
+---
+
+# NoSQL Schema Design
+
+MongoDB favours an **application-driven schema**.
+
+Compare this to relational schema design where you try to structure the data in a way that's agnostic to the application.
+
+So with a MongoDB you think about what pieces of data are **used together**, what pieces of data **are read-only**, what pieces of data need to be **written all the time** (and match the data access patterns of your application!)
+
+---
+
+# Embedded Docs FTW
+
+- **Potential to improve read performance** if we design around access patterns
+- We must **have a plan for keeping data consistent** even though MongoDB lacks foreign key constraints
+- **Third Normal Form:** Says that every non-key attribute in the table must provide a fact about the key, the whole key, and nothing but the key (not as worried about this in MongoDB)
+- Must consider if data have a **1:1**, **1:Many**, or **Many:Many** (or **1:Few** or **Few:Few**) relationship
+
+---
+
+# Other Differences
+
+- There are **no joins** (think of embedded data as "pre-joins")
+- There are **no foreign key constraints**
+- **Operations are atomic** at the level of the single document (so fields that should be updated together should be contained within a single document)
+- Atomic operations also mean that when you work on a document that **work will be completed before anyone sees the updated document** (they see all the changes or none)
+- There's **no declared schema** (**[but...](https://github.com/aldeed/meteor-simple-schema)**)
 
 ---
 
@@ -701,54 +737,6 @@ Meteor.startup(() => {
 Do another `meteor reset` and re-start Meteor to confirm that your new start-up code works.
 
 Try logging, add new to-dos, log out, and create new user. Is everything working as expected?
-
----
-template: inverse
-
-# Bonus Round: Schema Design in MongoDB
-
----
-
-# Relational Normalization 
-
-Goals of relational normalization include:
-
-1. freeing the database of modification anomalies (of course)
-2. minimizing redesign when extending (ideally)
-3. avoiding any bias toward a particular access pattern (but does this not mean we'll be equally bad at all of them?)
-
-In MongoDB, we will of course be careful to not create anomalies where our data can be inconsistently changed.
-
-The second goal is admirable, but the third is completely contrary to the intention of MongoDB...
-
----
-
-# NoSQL Schema Design
-
-MongoDB favours an **application-driven schema**.
-
-Compare this to relational schema design where you try to structure the data in a way that's agnostic to the application.
-
-So with a MongoDB you think about what pieces of data are **used together**, what pieces of data **are read-only**, what pieces of data need to be **written all the time** (and match the data access patterns of your application!)
-
----
-
-# In MongoDB...
-
-- There are **no joins** (think of embedded data as "pre-joins")
-- There are **no foreign key constraints**
-- **Operations are atomic** at the level of the single document (so fields that should be updated together should be contained within a single document)
-- Atomic operations also mean that when you work on a document that **work will be completed before anyone sees the updated document** (they see all the changes or none)
-- There's **no declared schema** (**[but...](https://github.com/aldeed/meteor-simple-schema)**)
-
----
-
-# Embedded Documents
-
-- Potential to improve read performance if we design around access patterns
-- We must have a plan for keeping our data consistent even though MongoDB lacks foreign key constraints
-- **Third Normal Form:** Says that every non-key attribute in the table must provide a fact about the key, the whole key, and nothing but the key (not as worried about this in MongoDB)
-- Must consider if data have a **1:1**, **1:Many**, or **Many:Many** (or **1:Few** or **Few:Few**) relationship
 
 ---
 
