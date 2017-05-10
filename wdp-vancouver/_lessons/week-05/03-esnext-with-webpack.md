@@ -88,7 +88,6 @@ Once this command is finished, from the terminal in the root of your project run
 
 Congratulations, you have a development server that will reload your browser when you change the files in the `src` directory.
 
-
 ---
 
 ## Exercise 3
