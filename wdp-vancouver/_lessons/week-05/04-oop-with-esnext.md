@@ -12,10 +12,6 @@ Watch these videos from Laracast's [ES2015 Crash Course](https://laracasts.com/s
 - [09: Classes](https://laracasts.com/series/es6-cliffsnotes/episodes/9)
 - [10: ES6 Modules](https://laracasts.com/series/es6-cliffsnotes/episodes/10)
 
-Also complete the following reading on ES.next classes before class:
-
-- [An Introduction to ES6 Classes](https://strongloop.com/strongblog/an-introduction-to-javascript-es6-classes/)
-
 We'll be creating SVGs to build the Pong game in Project 3, so you'll want to take a look through this guide before class:
 
 - [Pocket Guide to Writing SVG](http://svgpocketguide.com/book/)
@@ -64,6 +60,7 @@ Pick one of the classes your group modeled in the previous soccer game exercise,
 
 Ensure that you set all the appropriate **properties** in the `constructor` and create all the required **methods** for your class.
 
+{% comment %}
 ---
 
 ## Exercise 3
@@ -78,6 +75,7 @@ Now model our own classroom using the following classes. Note that `WebDevStuden
 *(note: class is a keyword in JavaScript, and thus cannot be a valid name)*<br />
 
 *Instantiate your classmates using* `new WebDevStudent()`.
+{% endcomment %}
 
 ---
 
