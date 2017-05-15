@@ -2,18 +2,17 @@
 layout: lesson
 title: React Router
 slides: ['_slides/week-01/04-react-router.md']
-lesson_date: 2017-01-12
+lesson_date: 2017-04-13
 ---
 
 ## Pre-work
 
-Prior to class today, be sure to complete this Codeacademy course:
+Prior to class today, watch the videos in this tutorial:
 
-- [Learn ReactJS: Part II](https://www.codecademy.com/pt/learn/react-102)
+- [Add routing to React apps using React Router v4](https://egghead.io/courses/add-routing-to-react-apps-using-react-router-v4)
 
-Also read through these CSS Tricks articles on using container components and React Router:
+Also read through this CSS Tricks articles on using container components:
 
-- [Leveling Up With React: React Router](https://css-tricks.com/learning-react-router/)
 - [Leveling Up With React: Container Components](https://css-tricks.com/learning-react-container-components/)
 
 ---
@@ -23,16 +22,19 @@ Also read through these CSS Tricks articles on using container components and Re
 - Explain the difference between container components and presentational components.
 - Use container components to manage data and behaviour on the front-end of an application, while using presentational components to manage the view.
 - Implement React Router on a project and configure basic application routing.
-- Use the `IndexRoute` and `Link` components, as well as nested routes and params for a DRYer, more robust routing scheme in an application.
-- Implement `browserHistory` with the React Router to managed backward and forward page navigation in an app.
+- Use the `Switch`, `Link`, and `NavLink` components, as well as nested routes and params for a DRYer, more robust routing scheme in an application.
+- Parse URL query strings when using React Router 4 with the help of additional libraries.
+- Explain the difference between schemes for keeping track of browser history using different top-level router components.
 
 ---
 
 ## Keywords
 
 - Container component
-- 'Presentational' component
-- Route
+- Presentational component
+- Routing
+- Query string
+- [`URLSearchParams`](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams)
 - Browser History API
 
 ---
@@ -65,25 +67,24 @@ Based on what you just learned in the preceding examples, apply this to your pro
 - The Welcome page (`/`)
 - The Login page (`/login`)
 - The New Post page (`/posts/new`)
-- The posts topic pages (`/posts/[topic-name-here]`, but note that this should just load the default `PostList` for now)
-
----
-
-## Exercise 4
-
-Time to implement switch `hashHistory` to `browserHistory` in your app.
-
-Note that there is already an Express server configured for you in `server/index.js`, so `browserHistory` will (mostly) work out of the box.
+- The posts topic pages (`/posts/[ID_HERE]`, but note that this should just load the default `PostList` for now)
+- A 404 page
 
 ---
 
 ## Lab Activity
 
-In today's lab we will put the finishing touches on getting the routes working for app.
+In today's lab we will finish setting up the routes for our app.
 
 After that, the remainder of the time this week will be spent putting on the finishing touches on the Week 1 version of REDit. That means fully building out the front-end using Material UI components too!
 
-As a stretch goal for this week, now that you have React Router implemented look into refactoring your `<PostList />` component so a relevant query string is added to the URL when the New or Popular buttons are clicked. Next, use this query string (which will be available in the component props) to re-sort REDit's posts on `componentDidUpdate()` instead.
+As a stretch goal for this week, now that you have React Router implemented look into refactoring your `PostList` container component so a relevant query string is added to the URL when the Newest or Popular buttons are clicked in the `PostToolbar`.
+
+Next, use this query string (which will be available in the `location` prop for the component) to re-sort REDit's posts on `componentWillUpdate()` instead. 
+
+There is no built-in way to parse a query string in React Router anymore, so you'll need to use `URLSearchParams` for that, and be sure to add a polyfill for browsers that don't support it yet.
+
+Lastly, by default `?sort=newest` should be set for your route so you'll need to use a `Redirect` component to add this default query string whenever someone navigates directly to `/posts/:id/`.
 
 ---
 
@@ -93,19 +94,14 @@ A good article explaining the difference between container and presentational co
 
 - [Presentational and Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.alfgvuedk)
 
+Official React Router v4 docs:
+
+- [React Router](https://reacttraining.com/react-router/)
+
 General info on routing in SPAs:
 
 - [Routing URLs in Static Web Apps](https://staticapps.org/articles/routing-urls-in-static-apps/)
 
-A thorough tutorial on React Router:
-
-- [Beginner’s Guide to React Router](https://medium.com/@dabit3/beginner-s-guide-to-react-router-53094349669#.ldpxiu9th)
-
-React Router video tutorials:
-
-- [React Router & Intro to Single Page Apps with React JS](https://www.youtube.com/watch?v=1iAG6h9ff5s)
-- [React Router Params & Queries](https://www.youtube.com/watch?v=ZBxMljq9GSE)
-
 From the official `react-router` docs, all about histories:
 
-- [Histories](https://github.com/ReactTraining/react-router/blob/master/docs/guides/Histories.md#browserhistory)
+- [History](https://reacttraining.com/react-router/web/api/history)

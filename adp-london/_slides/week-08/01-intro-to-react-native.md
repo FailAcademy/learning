@@ -23,7 +23,7 @@ layout: false
 2. Dev environment config and debugging
 3. Basic mobile components
 4. Styling components
-5. ListViews and data
+5. Lists and data
 6. Project organization
 
 ---
@@ -318,12 +318,12 @@ We may also want users to enter text into a `<TextInput>` [(ref)](https://facebo
 
 ```js
 <TextInput
-  style={{
+  style={% raw %}{{
       height: 30,
       width: 100,
       borderWidth: 1,
       borderColor: "rgba(0,0,0,0.5)",
-  }}
+  }}{% endraw %}
   placeholder={'Type here'}
   placeholderTextColor={"rgba(198,198,204,1)"}
   onChangeText={(text) => {this.setState({text})}}
@@ -510,7 +510,19 @@ See the [lesson page](/lesson/01-intro-to-react-native/) for more details...
 ---
 template: inverse
 
-# ListViews Components and Data
+# Lists and Data
+
+---
+
+# Lists and RN
+
+React Native provides three different components for tranforming data into lists in your app UI:
+
+- [ListView](https://facebook.github.io/react-native/docs/listview.html)
+- [FlatList](https://facebook.github.io/react-native/docs/flatlist.html)
+- [SectionList](https://facebook.github.io/react-native/docs/sectionlist.html)
+
+We will focus on the `ListView` component for now as it is the only one that currently supports sticky headers (which we will need for the project).
 
 ---
 

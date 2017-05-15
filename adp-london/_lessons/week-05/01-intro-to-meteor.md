@@ -2,7 +2,7 @@
 layout: lesson
 title: Introducing Meteor (with React)
 slides: ['_slides/week-05/01-intro-to-meteor.md']
-lesson_date: 2017-02-06
+lesson_date: 2017-05-08
 ---
 
 ## Pre-work
@@ -82,7 +82,7 @@ In today's lab, we'll start refactoring our React To-Do app from the the first w
 ### Step 1: Installation
 
 1. Create new Meteor app by running `meteor create meteor-react-todo`.
-2. Also install React: `meteor npm install react react-dom`.
+2. Also install React: `meteor npm install react react-dom prop-types --save`.
 
 ### Step 2: Copy-Pasta
 

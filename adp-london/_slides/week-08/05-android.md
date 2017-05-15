@@ -73,7 +73,7 @@ react-native run-android
 
 # Debugging Tools
 
-Debugging Android-related issues may often require looking some logs. To dump a log of all system messages (including stack traces and errors) run:
+Debugging Android-related issues may often require looking at some logs. To dump a log of all system messages (including stack traces and errors) run:
 
 ```bash
 adb logcat
@@ -174,7 +174,7 @@ This method will return the value for the platform you are on.
 Using what you learned about the `Platform` modules, make two adjustments to your R10 project:
 
 1. Conditionally render the heart icon in the Schedule, Session, and Faves scenes to use the Ionicon `md-heart` instead of `ios-heart`.
-2. To get Monserrat (Regular) working on Android, you'll need to set your main font to `Monserrat-Regular` for that platform (rather than `Monserrat`, as we did on iOS). Use `Platform.Select` for this.
+2. To get Monserrat (Regular) working on Android, you'll need to set your main font to `Monserrat-Regular` for that platform (rather than `Monserrat`, as we did on iOS). Use `Platform.select` for this.
 
 ---
 template: inverse
@@ -210,16 +210,16 @@ And in `index.js`:
 
 ```js
 // automatically imports the right file!
-import Button from './Button';
+import Widget from './Widget';
 
-export default Button;
+export default Widget;
 ```
 
 ---
 
 # Exercise 2
 
-Time to make R10's navigation UI more platform-appropriate for Android.
+Time to make R10's navigation UI more platform-appropriate for Android...
 
 To do that, you're going to use platform-specific file extensions for the `NavigationLayout` component, and implement `DrawerNavigation` (from the ExNavigation module) for Android in lieu of the `TabNavigation` component that we've used for the iOS app.
 

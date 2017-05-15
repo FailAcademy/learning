@@ -2,14 +2,12 @@
 layout: lesson
 title: Introducing React
 slides: ['_slides/week-01/02-intro-to-react.md']
-lesson_date: 2017-01-10
+lesson_date: 2017-04-11
 ---
 
 ## Pre-work
 
-Prior to class today, be sure to complete this Codeacademy course:
-
-- [Learn ReactJS: Part I](https://www.codecademy.com/pt/learn/react-101)
+*There is no pre-work for this lesson.*
 
 ---
 
@@ -47,7 +45,7 @@ We're going to build a to-do app together with React.
 
 Let's start by determining how to chunk the mock-up into components:
 
-<p style="display: flex; justify-content: center;" }>
+<p style="display: flex; justify-content: center;">
 	<img src="/public/exercises/react-todo-mockup.png" alt="To-do mock-up" />
 </p>
 
@@ -133,7 +131,7 @@ Once you've created your new components, add them to your `App` inside of a `<di
 
 Add proptypes for the `ToDo`, `ToDoCount`, and `ClearButton` components.
 
-We need our `todo` prop to be an object with a specific set of properties, so you will need to use `PropTypes.shape()` for that. Use the React doc's reference on **[Prop Validation](https://facebook.github.io/react/docs/reusable-components.html#prop-validation)** to find out how to do this.
+We need our `todo` prop to be an object with a specific set of properties, so you will need to use `PropTypes.shape()` for that. Use the React doc's reference on **[Prop Validation](https://facebook.github.io/react/docs/typechecking-with-proptypes.html)** to find out how to do this.
 
 Make all of the props for all components **required**.
 
@@ -166,16 +164,18 @@ We will still need to write some extra CSS for our app, and to do that we'll be 
 The remainder of today's lab will be spend roughing-out the component structure for the REDit app. Ultimately, we will need to create the following component structure for our app:
 
 ```bash
-<MainLayout />        # /layouts (already exists)
-|- <HeaderBar />      # /components
-|- <App />            # /containers (already exists)
-   |- <Categories />  # /containers
-      |- <Week />     # /components
-   |- <Welcome />     # /containers
-   |- <Login />       # /containers
-   |- <CreatePost />  # /containers
-   |- <PostList />    # /containers
-      |- <Post />     # /components
+<MainLayout />           # /layouts (already exists)
+|- <HeaderBar />         # /components
+|- <App />               # /containers (already exists)
+   |- <Categories />     # /containers
+      |- <Week />        # /components
+   |- <CreatePost />     # /containers
+   |- <Welcome />        # /containers
+   |- <Login />          # /containers
+   |- <PostList />       # /containers
+      |- <PostToolbar /> # /components
+      |- <Post />        # /components
+   |- <NotFound />       # /containers
 ```
 
 Any components you place in the `/containers` directory should be class-based components, while any components you place in the `/components` directory should be functional stateless components.
@@ -200,6 +200,7 @@ Some other helpful React tutorials and ebooks:
 
 - [Plotly Academy](http://academy.plot.ly/)
 - [React Enlightenment](http://www.reactenlightenment.com/)
+- [Simple React Development in 2017](https://hackernoon.com/simple-react-development-in-2017-113bd563691f)
 
 Recorded talks from React.js Conf:
 

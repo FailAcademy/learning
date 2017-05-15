@@ -109,13 +109,43 @@ class: center, middle
 
 ---
 
-# React Nodes
+# Elements & Components
 
-A React component is any part of a user interface that can contain **React nodes**.
-
-A React node is **a light, stateless, immutable, virtual representation of a DOM node**. It is the primary type/value created when using React.
+React elements are simply **JS objects used to describe how the HTML for the component should look **, i.e. it is an object-based representation of a DOM note. There are no methods on the object, just data.
 
 They can be created with plain JS or **JavaScript XML (JSX)**.
+
+Components, on the other hand, are **functions or classes that return React elements.**
+
+We use `ReactDOM.render()` to render a React element into a particular DOM element, and the return value of this method is the React component instance.
+
+---
+
+# React Elements
+
+What a React element looks like:
+
+```js
+// Without JSX
+let helloWorld = React.createElement(
+  "div",
+  null,
+  "Hello World!"
+);
+
+// Using JSX
+let helloWorld = <div>Hello World!</div>;
+
+// Both produce a JS object that looks something like this...
+let helloWorld = {
+  key: null,
+  props: {
+    children: "Hello World!"
+  },
+  ref: null,
+  type: "div"
+};
+```
 
 ---
 class: center, middle
@@ -130,7 +160,7 @@ JSX makes it **easier to read and write** React components in our code, but Reac
 class: center, middle
 
 .large[
-   Let's see how we would create a component both ways...
+   Let's take a closer look at how we would create a React component both ways...
 ]
 
 ---
@@ -195,7 +225,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 - We must import the `React` and `ReactDOM` libraries before we can create React components
 - `React` provides us with a `Component` class to extend and create our own components (we can also create *functional stateless components* without the `Component` class)
 - `render` method comes from `Component`, and is required
-- If you want to return React nodes on more than one line, you must wrap your return value in `()`
+- If you want to return React elements on more than one line, you must wrap your return value in `()`
 - Look ma, no quotes! (...because JSX isn't a string)
 
 ---
@@ -693,16 +723,21 @@ Proptypes are a feature of React that allow us validate whether props were set o
 - is an array containing only items of a specified type
 - is an object with a specific shape
 - satisfies a condition set out in a custom validator
-- **[...etc.](https://facebook.github.io/react/docs/reusable-components.html#prop-validation)**
+- **[...etc.](https://facebook.github.io/react/docs/typechecking-with-proptypes.html)**
 
 ---
 
 # Using Proptypes
 
-To use proptypes, you'll also want to import `Proptypes` from `React` in your `App.js` file:
+To use proptypes, you'll need to import `Proptypes` from `prop-types` in your `App.js` file:
+
+```bash
+npm install --save prop-types
+```
 
 ```js
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class HelloWorld extends Component {
    // the component's code...
@@ -722,7 +757,8 @@ What do you think this `propType` necessitates when using the component?
 We can also set defaults for our components props, which will take effect if no prop is set where the component is used:
 
 ```js
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class HelloWorld extends Component {
    // the component's code...
@@ -743,7 +779,7 @@ HelloWorld.defaultProps = {
 
 Add proptypes for the `ToDo`, `ToDoCount`, and `ClearButton` components.
 
-We need our `todo` prop to be an object with a specific set of properties, so you will need to use `PropTypes.shape()` for that. Use the React doc's reference on **[Prop Validation](https://facebook.github.io/react/docs/reusable-components.html#prop-validation)** to find out how to do this.
+We need our `todo` prop to be an object with a specific set of properties, so you will need to use `PropTypes.shape()` for that. Use the React doc's reference on **[Prop Validation](https://facebook.github.io/react/docs/typechecking-with-proptypes.html)** to find out how to do this.
 
 Make all of the props for all components **required**.
 

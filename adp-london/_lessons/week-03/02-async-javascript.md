@@ -2,7 +2,7 @@
 layout: lesson
 title: Asynchronous JavaScript
 slides: ['_slides/week-03/02-async-javascript.md']
-lesson_date: 2017-01-24
+lesson_date: 2017-04-25
 ---
 
 ## Pre-Work
@@ -14,10 +14,6 @@ Prior to today's class, please read:
 Also be sure to review how timers work in JS:
 
 - [Understanding timers: `setTimeout` and `setInterval`](http://javascript.info/tutorial/settimeout-setinterval)
-
-Learn about the event loop:
-
-- [Philip Roberts: What the heck is the event loop anyway?](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 
 ---
 
@@ -56,9 +52,45 @@ Learn about the event loop:
 
 ## Lab Activity
 
-Apply asynchronous JavaScript techniques in your project.
+Save these three files to your local filesystem:
+
+```
+# opening.txt
+From time to time
+```
+
+```
+# middle.txt
+The clouds give rest
+```
+
+```
+# end.txt
+To the moon-beholders
+```
+
+Write a function that uses Node to get each of the files and concatenate them into a haiku. Maintain the appropriate line breaks.
+
+- There are sync and async versions of the Node API function you will need - use the async version
+- To get the executing path of your node process, use `process.cwd()`
+
+Result:
+
+```
+From time to time
+The clouds give rest
+To the moon-beholders
+```
+
+If you finish, here are some additional challenges:
+
+1. Write the function using Async/Await and Promises
+1. Using Promises, find a way to request all three files concurrently
+1. Using Promises, find a way to request all three concurrently along with a file that does not exist. (Hint: there is no Promise API method that allows for this)
 
 ---
+
+
 
 ## Additional Resources
 

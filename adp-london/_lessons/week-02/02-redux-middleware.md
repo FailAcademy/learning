@@ -2,7 +2,7 @@
 layout: lesson
 title: Redux Middleware
 slides: ['_slides/week-02/03-redux-middleware.md']
-lesson_date: 2017-01-17
+lesson_date: 2017-04-20
 ---
 
 ## Pre-Work
@@ -34,25 +34,9 @@ Setup [redux-logger](https://github.com/evgenyrodionov/redux-logger) middleware 
 
 ---
 
-## Exercise 2
-
-Setup [redux-thunk](https://github.com/gaearon/redux-thunk) in your "Worst Pokemon" app.
-
----
-
-# Exercise 3
-
-Setup an "async action" that sorts Pokemon by their number of votes (highest to least). Call this action `SORT_BY_POPULARITY`.
-
-The sorting action should be called every time you dispatch `VOTE_UP`.
-
-**Hint:** Use `redux-thunk` to complete this exercise.
-
----
-
 ## Exercise 4
 
-With a partner, choose an additional middleware to implement in your "Worst Pokemon" app.
+With a partner, choose an additional middleware to implement.
 
 Some middleware suggestions:
 
@@ -64,8 +48,7 @@ Some middleware suggestions:
 
 ## Lab Activity
 
-In todays lab we'll continue to work on our REDit project.
-
+In todays lab we'll continue to work on our REDit project. Add Redux logger and any other useful Middleware you discover!
 
 ---
 
