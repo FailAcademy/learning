@@ -2,7 +2,7 @@
 layout: lesson
 title: Redux
 slides: ['_slides/week-02/01-redux.md']
-lesson_date: 2017-01-16
+lesson_date: 2017-04-19
 ---
 
 ## Pre-Work
@@ -42,44 +42,6 @@ Be prepared to give an example of:
 - [dispatch](http://redux.js.org/docs/api/Store.html#dispatch)
 - [reducer](http://redux.js.org/docs/basics/Reducers.html)
 - [action](http://redux.js.org/docs/basics/Actions.html)
-
----
-
-## Exercise 1
-
-Create a diagram or chart to explain each of the following:
-
-- MVC
-- Redux
-
----
-
-## Exercise 2
-
-Download the [Redux DevTools Chrome extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en).
-
-Each group will choose a different app from [examples](http://redux.js.org/docs/introduction/Examples.html).
-
-Prepare a play to demonstrate how your app works.
-
-Consider the different **roles** in your app:
-
-- action creator
-- reducer
-- store
-- view
-
----
-
-## Exercise 3
-
-Create a Redux data layer for your "Worst Pokemon" voting app:
-
-```bash
-git clone https://github.com/redacademy/adp-redux-walkthrough.git
-cd adp-redux-walkthrough
-git reset --hard e823513
-```
 
 ---
 

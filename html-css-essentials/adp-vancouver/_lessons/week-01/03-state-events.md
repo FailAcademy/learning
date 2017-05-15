@@ -2,12 +2,12 @@
 layout: lesson
 title: React State and Events
 slides: ['_slides/week-01/03-state-events.md']
-lesson_date: 2017-01-11
+lesson_date: 2017-04-12
 ---
 
 ## Pre-work
 
-*There is no pre-work for this lesson (provided you have finished Learn ReactJS: Part I on Codeacademy).*
+*There is no pre-work for this lesson.*
 
 ---
 

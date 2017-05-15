@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Cloud Deployment
-lesson_date: 2017-03-06
+lesson_date: 2017-06-05
 ---
 
 ## Pre-work
@@ -58,6 +58,7 @@ To complete todays exercises we'll need to create accounts on the Cloud Hosting 
 - [Digital Ocean](https://cloud.digitalocean.com/registrations/new)
 - [Amazon Web Services](https://aws.amazon.com/)
 - [Microsoft Azure](https://azure.microsoft.com/en-us/)
+- [IBM Bluemix](https://www.ibm.com/cloud-computing/bluemix/what-is-bluemix)
 
 ---
 
@@ -73,11 +74,27 @@ Make sure you can answer the following questions:
 - What are the main differences between a Droplet, Azure VM and EC2 Instance?
 - What are the main differences, that you can see, between Digital Ocean, Microsoft Azure and AWS?
 - Based on you experience with a basic install, which cloud hosting provider do you prefer?
-- How does Heroku differ from the other Cloud hosting providers
-
+- How does Heroku differ from the other Cloud hosting providers.
 
 ---
 
 ## Additional Resources
 
-*Additional resources TBA.*
+Apps for Cloud deployment Automation:
+
+- [HashiCorp](https://www.hashicorp.com/)
+
+Digital Ocean has a number of excellent resources:
+
+- [Intro to Digital Ocean](https://www.digitalocean.com/products/)
+- [Digital Ocean Community](https://www.digitalocean.com/community/)
+ -[Digital Ocean Tutorials](https://www.digitalocean.com/community/tutorials)
+
+Amazon Web Services (AWS):
+
+- [AWS Homepage](https://aws.amazon.com/)
+- [Serverless framework for Node](https://serverless.com/)
+
+Heroku:
+
+- [Getting started with Heroku](https://devcenter.heroku.com/start)

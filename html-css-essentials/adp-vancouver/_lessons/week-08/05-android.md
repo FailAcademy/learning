@@ -2,7 +2,7 @@
 layout: lesson
 title: Android Apps with React Native
 slides: ['_slides/week-08/04-android.md']
-lesson_date: 2017-03-02
+lesson_date: 2017-06-02
 ---
 
 ## Pre-work
@@ -81,7 +81,7 @@ Now try starting your new emulator and see if it powers up.
 Using what you learned about the `Platform` modules, make two adjustments to your R10 project:
 
 1. Conditionally render the heart icon in the Schedule, Session, and Faves scenes to use `md-heart` instead of `ios-heart`.
-2. Render fonts by platform. To get Monserrat (Regular) working on Android, you'll need to set your main font to `Monserrat-Regular` for that platform (rather than `Monserrat`, as we did on iOS). Use `Platform.Select` for this.
+2. Render fonts by platform. To get Monserrat (Regular) working on Android, you'll need to set your main font to `Monserrat-Regular` for that platform (rather than `Monserrat`, as we did on iOS). Use `Platform.select` for this.
 
 ---
 

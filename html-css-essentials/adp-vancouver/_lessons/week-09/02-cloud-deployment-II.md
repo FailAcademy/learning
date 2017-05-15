@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Cloud Deployment II
-lesson_date: 2017-03-07
+lesson_date: 2017-06-06
 ---
 
 ## Pre-work
@@ -19,8 +19,7 @@ Read over the [Docker Documentation](https://docs.docker.com/), and Install Dock
 - Introduce Docker
 - Explain why Docker is useful
 - Explain the difference between a Docker Container and a traditional VM
-- Use a basic Docker Workflow to 'Containerize' a Node / Express app
-and push it to Docker Hub
+- Use a basic Docker Workflow to 'Containerize' a Node / Express app and push it to Docker Hub
 - Describe Single-Tenant vs Multi-Tenant environments
 - Set up basic security measures on a Ubuntu Cloud VM
 - Get familiar with basic Linux user administration
@@ -39,3 +38,15 @@ and push it to Docker Hub
 - `chmod`
 - `root`
 
+---
+
+## Additional Resources
+
+Get to know Docker:
+
+- [Docker Homepage](https://www.docker.com/)
+
+Managing Docker Containers & Deployment:
+
+- [Docker Hub](https://hub.docker.com/)
+- [Kitematic App](https://kitematic.com/)
