@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: Coding Interview - TDD Continued
+title: TDD Continued
 slides: ['_slides/week-07/02-tdd-continued.md']
-lesson_date: 2017-02-21
+lesson_date: 2017-05-24
 ---
 
 ## Pre-Work
