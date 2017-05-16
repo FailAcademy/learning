@@ -33,6 +33,8 @@ template: inverse
 
 # What is PHP?
 
+???
+Based on your prework, write down the characterists of php
 ---
 
 class: center, middle
@@ -234,10 +236,10 @@ Again, if we use double quotes to wrap a string variable, we can embed another v
 
 ```php
 $salutation_1 = "Ms.";
-$addressee_1 = "Dear $salutation Sunshine:";
+$addressee_1 = "Dear $salutation_1 Sunshine:";
 
 $salutation_2 = "Mr";
-$addressee_2 = "Dear {$salutation}. Sunshine";
+$addressee_2 = "Dear {$salutation_2}. Sunshine";
 ```
 
 The second approach is called **interpolation**.
