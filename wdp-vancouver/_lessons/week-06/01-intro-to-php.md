@@ -13,11 +13,12 @@ Ensure you have MAMP successfully installed on your computer:
 
 Work through the following sections of the [Codeacademy PHP tutorial](https://www.codecademy.com/en/tracks/php):
 
-- Introduction to PHP
-- Conditionals and Control Flow
+- Welcome to PHP!
+- Control Flow: If/Else
+- Control Flow: Switch
 - Arrays
-- For Loops in PHP
-- While Loops in PHP
+- Loops: For and ForEach
+- Loops: While and Do-While
 
 ---
 

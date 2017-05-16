@@ -33,6 +33,8 @@ template: inverse
 
 # What is PHP?
 
+???
+Based on your prework, write down the characterists of php
 ---
 
 class: center, middle
@@ -234,10 +236,10 @@ Again, if we use double quotes to wrap a string variable, we can embed another v
 
 ```php
 $salutation_1 = "Ms.";
-$addressee_1 = "Dear $salutation Sunshine:";
+$addressee_1 = "Dear $salutation_1 Sunshine:";
 
 $salutation_2 = "Mr";
-$addressee_2 = "Dear {$salutation}. Sunshine";
+$addressee_2 = "Dear {$salutation_2}. Sunshine";
 ```
 
 The second approach is called **interpolation**.
@@ -537,7 +539,7 @@ In fact, arrays in PHP are really **ordered maps**, so they're more closely alig
 
 ```php
 $person = array(
-  'gender' => 'female',
+  'gender' => 'woman',
   'name' => 'Mandi'
 );
 ```
@@ -555,11 +557,11 @@ These are know as **multi-dimensional** arrays:
 ```php
 $people = array(
   array(
-    'gender' => 'female',
+    'gender' => 'woman',
     'name' => 'Mandi'
   ),
   array(
-    'gender' => 'male',
+    'gender' => 'man',
     'name' => 'Mackenzie'
   )
 );
@@ -573,7 +575,7 @@ PHP also allows us to take a JSON-formatted string and convert into an array:
 
 ```js
 {
-  "gender": "female",
+  "gender": "woman",
   "name": "Mandi"
 }
 ```
@@ -585,7 +587,7 @@ $json = file_get_contents( 'my-data.json' );
 $person = json_decode( $json, true );
 
 print_r( $person );
-// output: Array ( [gender] => female [name] => Mandi )
+// output: Array ( [gender] => woman [name] => Mandi )
 ```
 
 *Magic!*
