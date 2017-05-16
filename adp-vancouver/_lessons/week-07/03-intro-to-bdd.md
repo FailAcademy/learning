@@ -2,7 +2,7 @@
 layout: lesson
 title: Behaviour Driven Development
 slides: ['_slides/week-07/03-bdd.md']
-lesson_date: 2017-02-22
+lesson_date: 2017-05-25
 ---
 
 ## Pre-Work
@@ -15,66 +15,38 @@ Read:
 
 ## Learning Objectives
 
-- Practice whiteboarding interviews
-- Practice writing test cases
-- Identify the time complexity of a simple algorithm using Big O Notation
-- Use arrays and hash tables to solve counting problems
+- Understand the differences between TDD and BDD
+- Practice converting real-world problems into BDD stories/scenarios
+- Practice outside-in testing using mocks
+- Practice minimal implementation to get tests to pass
 
 ---
 
 ## Keywords
 
-- Brute Force
-- Big O
+- Stakeholders
+- Narrative
+- Scenario
+- Interface
+- Interface Discovery
+- Outside-in
 
 ---
 
-## Exercise 1: First Unique Character
+## Exercise: Student Stats
 
-Write a function that returns the first unique character in a string.
+Throughout the lesson we will be using BDD/TDD to solve the following problem:
 
+You've just been hired on as a big data consultant for a coding school called Rouge Academie. Management wants to understand more about their students!
 
-Examples:
+Here's their [data set](/public/exercises/bdd-dummy-data.json). Write 2 stories (each w/ at least 2 scenarios) about how you can provide them with insight.
 
-- `'dddeeefggghhh'` => `'f'`
-- `'terfg'` => `'t'`
-- `'frof'` => `'r'`
-- `'ttttt'` => `undefined'`
+For your reference:
 
----
-
-## Exercise 2: Missing Integer
-
-Write a function that, given an array of `n` integers, returns the minimal positive integer (greater than 0) that does not occur in the array.
-
-For example, given:
-
-```
-[1, 3, 6, 4, 1, 2]
-```
-
-The function should return 5.
-
----
-
-## Lab Activity: One Away
-
-There are three types of edits that can be performed on strings: insert a character, remove a character, or replace a character. Given two strings, write a function to check if that are one (or zero) edits away.
-
-Example:
-```
-pale, ple => true
-pales, pale => true
-pale, bale => true
-pale, bake => false
-face, facts => false
-```
-
-- Break the problem into test scenarios
-- Implement the tests using Jest
-- Write code to make your tests pass
-
-What is the time complexity of your solution? Could it be better?
+.condensed[
+- [What's in a Story?](https://dannorth.net/whats-in-a-story/)
+- [A practical blog on how to write Scenarios using BDD](https://elabor8.com.au/a-practical-blog-on-how-to-write-scenarios-using-bdd/)
+]
 
 ---
 
