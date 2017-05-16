@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: Coding Interview - Intro to TDD
+title: Intro to TDD
 slides: ['_slides/week-07/01-intro-to-tdd.md']
-lesson_date: 2017-02-20
+lesson_date: 2017-05-23
 ---
 
 ## Pre-Work

@@ -25,11 +25,17 @@ class: middle
 1. Stories
 1. Outside-in
 1. Interface Discovery
+1. Practice!
+
 ---
 template: inverse
 
 # TDD vs BDD
 .large[Step. Away. From. Computer.]
+
+???
+
+BDD allows us to think about our functionality in terms of how it affects our users. It is a plain-text formalized method for describing how we expect our code to work.
 
 ---
 class: middle
@@ -44,6 +50,10 @@ template: inverse
 
 # Stakeholders
 .large[Believe it or not, programmers don't call all the shots]
+
+???
+
+CEOs, product managers, CTOs, designers, sales, marketing, etc. all have their needs, too!
 
 ---
 
@@ -86,6 +96,11 @@ And [optionally more things are expected]
 template: inverse
 
 # Iteration _before_ coding
+
+???
+
+Let's practice with an example. Remember than we want to be able to understand our functionality before we start implementing.
+
 ---
 class: middle
 
@@ -101,6 +116,17 @@ For your reference:
 - [What's in a Story?](https://dannorth.net/whats-in-a-story/)
 - [A practical blog on how to write Scenarios using BDD](https://elabor8.com.au/a-practical-blog-on-how-to-write-scenarios-using-bdd/)
 ]
+
+???
+
+- Get the students to look at each property of each student's data object
+- What might we want to know the average of? (Age, Experience)
+- Would we want to know the percentage passing each project?
+- How about the satisfaction of those who pass vs the satisfaction of those who fail?
+- We could also look at years experience vs. pass percentage to see if there's a correlation
+
+Note: The solutions are in the `adp-exercise-solutions` repo in the `bdd-student-data` directory. Solutions were written to process average age, average experience, the pass/fail percentage for each project, the satisfaction of those who passed, and the satisfaction of those who failed. Fill your boots!
+
 ---
 class: middle
 
@@ -133,6 +159,13 @@ npm i --save-dev jest-cli
 template: inverse
 
 # Outside-in Testing
+
+???
+
+- What is the difference between outside-in and inside-out approaches?
+- Inside out gets us to start with the smallest possible functions and build outwards
+- Outside in gets us to mock dependencies as we work our way in
+
 ---
 class: middle
 
@@ -145,10 +178,33 @@ This is where TDD gets interesting. We're going to convert our BDD scenarios int
 - Mock all dependencies
 - Make the tests pass
 ]
+
+???
+
+- Outside-in allows us to start coding from the perspective of the user - in this case, our tests best represent the user
+- We start with the functions that user events might trigger
+
+For the code along:
+
+- See the `student-stats.spec.js` file for guidance
+- The key here is that we're ONLY building the interface, and mocking the actual data processing to start
+- Talk about the interface. Should we make a class, a function?
+- Let's make a class called StudentStats. What's the interface? `.get`? `.process`?
+- What about `getAverageAge`? or `getAverageSatisfaction`?
+- Make sure to iterate on the interface while writing the tests.
+
+NOTE: The solution passes in a data object, mocks the `processData` function, and exposes the `queryCohort`, `queryExperience` and `queryProject` methods.
+
 ---
 template: inverse
 
 # Interface Discovery
+
+???
+
+- What is an interface?
+- An interface is what we're given to interact with another class, object, function, etc.
+- A good metaphor is the pedals and wheel of a car. Through that interface we're able to control the complex machinery of the car.
 
 ---
 class: middle
@@ -162,12 +218,59 @@ This is considerably more flexible than iterating on an interface while writing 
 ---
 class: middle
 
-## Lab Activity
+## Now, let's implement!
 
-We've defined the __output__ of `processData`. Use TDD to start implementing that function.
+The trick is to write the least possible code to allow the tests to pass
 
-Start by choosing just one object property. Write tests, then write the minimal amount of code for it to pass. When you finish, move on to the next property.
+???
 
-We'll review your work in the morning.
+Start by building an object of what you'd expect the processed data to look like. It'll probably be something like:
+
+```js
+const processedData = {
+  demographics: {
+    averageAge: 32,
+    averageExperience: 3.2,
+  },
+  projects: {
+    [projectName]: {
+      passPercentage: 56,
+      passSatisfaction: 5.6,
+      failSatisfaction: 3.1,
+    }
+  }
+}
+```
+
+Then we can make sure that the `processData` method returns that object using `jest.mock` (see solution file). After that, we write the simplest possible code to get those tests to pass.
+
+---
+class: middle
+
+## ProcessData TDD
+
+We've defined the __output__ of `processData`. Let's use TDD to start implementing that function.
+
+???
+
+For the code-along:
+
+- Solutions in the `process-data.spec.js` file.
+- Write the tests first
+- The function we are testing, `processData`, will take the data object and return another object with processed data.
+- The key here is to make a mock data object of only 3-4 students. That way it is easy to calculate the expected processed results.
+- `processData` should return an object with a couple properties, `demographics` and `projects`.
+- Start with `demographics`, it's much easier
+- Once you've written a reasonable amount of tests, do the skeleton of the actual function, and make a few tests pass. They'll do the rest in the lab.
+
+---
+class: middle
+
+## Lab: Finish `processData`
+
+You have a scaffold for the `processData` function.
+
+Use your tests to guide you to completing its functionality. If you finish early, think about what other insights you can get from the data!
+
 
 {% endhighlight %}
