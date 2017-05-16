@@ -11,7 +11,7 @@ Work through the following sections of the [Codeacademy PHP tutorial](https://ww
 
 - Functions in PHP, Part I
 - Functions in PHP, Part II
-- Advanced Arrays
+- Advanced Arrays and Maps
 
 ---
 
