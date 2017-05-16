@@ -14,4 +14,4 @@ lesson_date: 2017-05-26
 
 ## Take-Home Coding Interview
 
-Today you will work on [Project 3](http://localhost:4000/project/03-coding-interview/), the take-home coding interview.
+Today you will work on [Project 3](/project/03-coding-interview/), the take-home coding interview.
