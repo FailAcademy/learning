@@ -27,7 +27,7 @@ Your project must:
 - [ ] Have at least 10 well-formed, passing tests
 - [ ] Contain a reasonably DRY (Don't Repeat Yourself) implementation, though the tests can be verbose
 - [ ] Have a screenshot (or screenshots) in its README of the test output in your terminal
-- [ ] Use `codebase-review` to create a pull request of the entire codebase.
+- [ ] Use `codebase-review` to create a pull request of the entire codebase
 
 ### Functionality
 
@@ -36,8 +36,9 @@ Your project must:
 - [ ] Have functionality for printing inventory
 - [ ] Have functionality for refilling inventory
 - [ ] Have functionality for re-supplying change
-- [ ] Dispensing inventory based on payment
-- [ ] Returning change
+- [ ] Have functionality for dispensing inventory based on payment
+- [ ] Have functionality for returning change as coins (eg. $0.35 is 1 quarter and 1 dime)
+
 
 ### Quality
 
