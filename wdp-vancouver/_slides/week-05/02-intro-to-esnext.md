@@ -195,6 +195,26 @@ Both `let` and `const` prevent redeclaring with the same variable name (but you 
 ```js
 let teachers = [ 'Ben', 'Blake', 'Mack', 'Mandi', 'Rose' ];
 
+var teachers = ['Alice', 'Bob', 'Jane'];
+// teachers variable is redeclared
+```
+
+Both `let` and `const` prevent redeclaring with the same variable name.
+
+---
+
+# Problem 3: Avoiding Change
+
+`let` still allows reassigning of the value.
+
+```js
+let teachers = [
+  'Mandi',
+  'Ben',
+  'Shawn',
+  'Mack',
+];
+
 teachers = ['Alice', 'Bob', 'Jane'];
 // note: not redeclared, only changing the value
 ```
