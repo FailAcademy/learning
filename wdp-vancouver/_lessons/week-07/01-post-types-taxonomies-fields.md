@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Custom Post Types, Taxonomies & Fields
-slides: ['_slides/week-07/01-post-types-taxonomies-fields.md']
+slides: ['_slides/week-07/01a-ia-for-wp.md', '_slides/week-07/01b-post-types-taxonomies-fields.md']
 lesson_date: 2017-05-23
 ---
 
@@ -34,15 +34,7 @@ Pre-reading on custom post types, taxonomies, and fields:
 
 ---
 
-## Exercise 1
-
-Time to create a custom post type for our projects...let's build the **Product** custom post type together, and add it to our functionality plugin.
-
-Once we have created our Product custom post type, how we will add its archive page as the "Shop" menu item in the navigation menu?
-
----
-
-## Exercise 2
+## IA: Exercise 1
 
 Work in groups to sort the films below based on a taxonomy of your own design.
 
@@ -88,13 +80,33 @@ After you’re done, try to brainstorm at least five other ways to classify the 
 
 ---
 
-## Exercise 3
+## IA: Exercise 2
+
+Using the sample IA provided, work in a group to decide how you would build that website out using appropriate WordPress APIs. Specifically, determine:
+
+- Can you leverage built-in WP posts, pages, categories or tags in this IA? Where?
+- Will you need any custom post type or taxonomies?
+- What templates from the Template Hierarchy would you make use of in your theme? What would the files be named?
+
+When done, you will present your rationale to the class.
+
+---
+
+## CPT/CT: Exercise 1
+
+Time to create a custom post type for our projects...let's build the **Product** custom post type together, and add it to our functionality plugin.
+
+Once we have created our Product custom post type, how we will add its archive page as the "Shop" menu item in the navigation menu?
+
+---
+
+## CPT/CT: Exercise 2
 
 Now let's add a custom taxonomy called **Product Type** to our project. We generate the code together, and add it our functionality plugin as well.
 
 ---
 
-## Exercise 4
+## CPT/CT: Exercise 3
 
 Let's install the [Custom Field Suite](https://en-ca.wordpress.org/plugins/custom-field-suite/) together, take a tour, and try creating a field group.
 

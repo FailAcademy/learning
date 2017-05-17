@@ -172,38 +172,6 @@ template: inverse
 # Custom Taxonomies
 
 ---
-class: center, middle
-
-### Taxonomies == Metadata
-
-Metadata is *content about your content*.
-
-Taxonomies are a type of metadata that are specific **classification schemes** that you can apply to your content.
-
----
-
-# Types of Metadata
-
-- **Descriptive:** relevant words or phrases that describe the subject matter of the content (e.g. title, tags)
-- **Administrative:** information about how the content was created, and how it can and will be used (author, publication date, license)
-- **Structural:** expresses the content (e.g. page, post)
-
----
-class: center, middle
-
-.large[
-   Taxonomies are a type of **descriptive** metadata.
-]
-
----
-
-# Exercise 2
-
-Let's try classifying some data into taxonomies that we design.
-
-[See the lesson page](/lesson/custom-post-types-taxonomies-fields/) for details.
-
----
 
 # Default Taxonomies
 
@@ -257,7 +225,7 @@ class: center, middle
 
 ---
 
-# Exercise 3
+# Exercise 2
 
 Now let's add a custom taxonomy called **Product Type** to our project. We generate the code together, and add it our functionality plugin as well.
 
@@ -340,7 +308,7 @@ See also: [Adapting Ourselves to Adaptive Content](https://karenmcgrane.com/2012
 
 ---
 
-# Exercise 4
+# Exercise 3
 
 Let's install the [Custom Field Suite](https://en-ca.wordpress.org/plugins/custom-field-suite/) together, take a tour, and try creating a field group.
 
