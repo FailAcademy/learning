@@ -99,6 +99,7 @@ Want to challenge yourself? Your project could also:
 **Enhance UX:**
 
 - [ ] Cache requests made to the Firebase app to improve performance
+- [ ] Add a custom splash screen and app icon for iOS and Android
 
 **Include a Map scene:**
 
