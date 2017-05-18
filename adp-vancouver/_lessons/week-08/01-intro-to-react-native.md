@@ -165,3 +165,10 @@ Miscellaneous RN resources:
 
 - [React Native: Idea to Product in One Week](https://medium.com/adjust-creative/prototyping-with-react-native-an-idea-to-production-in-one-week-3a6b4f474897#.ysexqnc13)
 - [Building the F8 2016 App](http://makeitopen.com/tutorials/building-the-f8-app/planning/)
+
+Resources for adding custom app splash screens and icons:
+
+- [iOS Human Interface Guidelines - Launch Screen](https://developer.apple.com/ios/human-interface-guidelines/graphics/launch-screen/)
+- [iOS Human Interface Guidelines - App Icon](https://developer.apple.com/ios/human-interface-guidelines/graphics/app-icon/)
+- [How to Add a Splash Screen to a React Native App (iOS and Android)](https://medium.com/handlebar-labs/how-to-add-a-splash-screen-to-a-react-native-app-ios-and-android-30a3cec835ae)
+- [MapAppIcon](https://makeappicon.com/)
