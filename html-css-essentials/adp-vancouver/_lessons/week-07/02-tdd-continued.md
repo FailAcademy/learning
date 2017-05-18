@@ -32,7 +32,7 @@ Read:
 
 ## Exercise 1: First Unique Character
 
-Write a function that returns the first unique character in a string.
+Using TDD, write a function that returns the first unique character in a string.
 
 
 Examples:
