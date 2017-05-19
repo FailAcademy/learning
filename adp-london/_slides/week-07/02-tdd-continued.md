@@ -172,6 +172,8 @@ For example, given:
 
 The function should return 5.
 
+???
+
 Start with the __Brute Force__ method. [Solution](https://github.com/redacademy/adp-exercise-solutions/blob/master/adp-testing-week/lib/missing-integer.js).
 
 ---
