@@ -122,7 +122,9 @@ Want to challenge yourself? Your project could also:
 
 Once you have finished working on your site, please export your database by following these instructions:
 
-1. Add Mandi as an Administrator to your site (username: mandi / password: mandi / email: mandi@redacademy.com)
+Note: Please ensure browser sync is OFF before proceeding with the steps below. VERY IMPORTANT.
+
+1. Add Mandi as an Administrator to your site (username: rose / password: rose / email: rose.cass@redacademy.com)
 2. Install the WP Migrate DB plugin
 3. Go to Tools > Migrate DB in the WordPress admin area
 4. Change the "Replace" fields so that the first field contains `//localhost/student` and the second contains `/Applications/MAMP/htdocs/student`
@@ -130,4 +132,4 @@ Once you have finished working on your site, please export your database by foll
 
 **Submitting your project:**
 
-When you're ready to submit your project, **please email a link to your GitHub repository containing your project** with your **database file attached** to [mandi@redacademy.com](mailto:mandi@redacademy.com).
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** with your **database file attached** to [rose.cass@redacademy.com](mailto:rose.cass@redacademy.com).
