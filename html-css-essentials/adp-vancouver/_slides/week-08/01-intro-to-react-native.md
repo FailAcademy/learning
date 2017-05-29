@@ -409,7 +409,7 @@ In RN, we have a few options for adding styles to components:
 
 - Inline styles
 - Styling with objects
-- `StyleSheet.Create`
+- `StyleSheet.create`
 
 ---
 
@@ -451,15 +451,15 @@ let styles = {
 
 ---
 
-# StyleSheet.Create
+# StyleSheet.create
 
-RN also provides us `StyleSheet.Create` as bit of optional syntactic sugar for creating our style objects (but this is likely the way we'll usually want to do it).
+RN also provides us `StyleSheet.create` as bit of optional syntactic sugar for creating our style objects (but this is likely the way we'll usually want to do it).
 
-The previous style objects occasionally offer an advantage over the `StyleSheet.Create` though, because style objects allow our style to be mutable (which may be desirable when using modules such as the `PanResponder`).
+The previous style objects occasionally offer an advantage over the `StyleSheet.create` though, because style objects allow our style to be mutable (which may be desirable when using modules such as the `PanResponder`).
 
 ---
 
-# StyleSheet.Create
+# StyleSheet.create
 
 **Example:**
  
