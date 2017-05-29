@@ -21,41 +21,18 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/[JDK VERSION HERE]/Contents/
 
 ### Step 2:
 
-Install [Android Studio](https://developer.android.com/studio/install.html). This is the official IDE for Android development, but for our purposes will mostly provide us with a GUI for the SDK Manager.
+Install Android Studio as per the instruction in the React Native docs:
+
+**[Android Development Environment](https://facebook.github.io/react-native/docs/getting-started.html#android-development-environment)**
+
 
 ### Step 3:
 
-Open Android Studio and install the Android SDK as per these screen caps:
+Set-up an Android emulator as per the instruction in the React Native docs:
 
-![Android Studio Menu](/public/img/slide-assets/android-studio-menu.png)
+**[Starting the Android Virtual Device](https://facebook.github.io/react-native/docs/getting-started.html#starting-the-android-virtual-device)**
 
-![Android Studio Menu](/public/img/slide-assets/android-sdk-install.png)
-
-Note that you may also need to install "Android SDK Platform 23" and "Sources for Android 23" if you get build errors related to this later on, but test out a build first after you've installed an emulator.
-
-### Step 4:
-
-Add the following lines to your `~/.bash_profile`:
-
-```bash
-export ANDROID_HOME=~/Library/Android/sdk
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-```
-
-### Step 5:
-
-We still have to install an emulator (aka an "Android Virtual Device") to run our React Native app on. To do that, run the following command to open the AVD Manager:
-
-```bash
-android avd
-```
-
-To create an emulator, select "Create" and fill in the following details:
-
-![Android Studio Menu](/public/img/slide-assets/android-create-avd.png)
-
-Now try starting your new emulator and see if it powers up.
+Please note that this must be done from within a project's interface in Android Studio, so you will need to either create an empty project in Android Studio, or open your `android` directory from your RN project in Android Studio to access the AVD Manager.
 
 ---
 

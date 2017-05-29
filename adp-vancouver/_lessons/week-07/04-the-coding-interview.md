@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Coding Interview
+title: Coding Interview Workday
 slides: []
 lesson_date: 2017-05-26
 ---

@@ -35,7 +35,7 @@ lesson_date: 2017-05-30
 
 ## Exercise 1
 
-Follow the [installation instructions](https://github.com/exponentjs/ex-navigation#installation) for ExNavigation and add it to your project.
+Follow the [installation instructions](https://github.com/expo/ex-navigation#installation) for ExNavigation and add it to your project.
 
 Define your routes in `navigation/routes.js`. Define `static route = {}` in each of your scene container components to configure a nav bar title for each scene.
 
@@ -53,7 +53,7 @@ Be sure to import `combineReducers` into this file, as well as the named `Naviga
 
 Next, provide the `NavigationContext`, directly to the `NavigationProvider` component in your app's main `index.js` file. You'll also need to wrap everything in the `Provider` component from `react-redux`, just like usual.
 
-Please refer to the **[ExNavigation docs](https://github.com/exponent/ex-navigation#integrate-with-your-existing-redux-store)** for assistance completing this exercise.
+Please refer to the **[ExNavigation docs](https://github.com/expo/ex-navigation#integrate-with-your-existing-redux-store)** for assistance completing this exercise.
 
 
 ---
