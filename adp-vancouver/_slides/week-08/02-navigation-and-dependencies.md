@@ -128,10 +128,10 @@ See the docs: [NavigationExperiemental](https://facebook.github.io/react-native/
 
 - Uses a Redux-like pattern for managing navigator state
 - Cross-platform
-- Allows more complex navigation animations than Navigator 
+- Allows more complex navigation animations than Navigator
 - Supports the tab bar
 - Supports nested navigation
-- But API is kind of scary
+- But API is kind of scary (and is deprecated)
 
 ---
 
@@ -141,7 +141,7 @@ Some of third-party solutions wrap the JS navigator or `NavigationExperimental`,
 
 - [wix/react-native-navigation](https://github.com/wix/react-native-navigation)
 - [aksonov/react-native-router-flux](https://github.com/aksonov/react-native-router-flux)
-- [exponentjs/ex-navigation](https://github.com/exponentjs/ex-navigation)
+- [expo/ex-navigation](https://github.com/exponentjs/ex-navigation)
 - [react-community/react-navigation](https://github.com/react-community/react-navigation) (still beta...)
 
 ---
@@ -166,7 +166,7 @@ Ideally, we want an all-in-one navigation solution with:
 
 # ExNavigation
 
-- A higher level of abstration on `NavigationExperimental`
+- A higher level of abstraction on `NavigationExperimental`
 - Provides a set of defaults that can be customized
 - Supports tab navigation, sliding drawer navigation, the Android back button, and modals
 - Your routes are your React Components
@@ -182,13 +182,13 @@ Ideally, we want an all-in-one navigation solution with:
 - `<StackNavigation>` represents a single stack of screens (and each tab in a tab bar can contain its own stack)
 - We define our route configuration with the component itself using `static route = {}`
 
-See the **[minimal navigation set up example](https://github.com/exponentjs/ex-navigation#a-minimal-navigation-set-up).**
+See the **[minimal navigation set up example](https://github.com/expo/ex-navigation#a-minimal-navigation-set-up).**
 
 ---
 
 # Exercise 1
 
-Follow the [installation instructions](https://github.com/exponentjs/ex-navigation#installation) for ExNavigation and add it to your project.
+Follow the [installation instructions](https://github.com/expo/ex-navigation#installation) for ExNavigation and add it to your project.
 
 Define your routes in `navigation/routes.js`. Define `static route = {}` in each of your scene container components to configure a nav bar title for each scene.
 
@@ -258,7 +258,7 @@ Be sure to import `combineReducers` into this file, as well as the named `Naviga
 
 Next, provide the `NavigationContext`, directly to the `NavigationProvider` component in your app's main `index.js` file. You'll also need to wrap everything in the `Provider` component from `react-redux`, just like usual.
 
-Please refer to the **[ExNavigation docs](https://github.com/exponent/ex-navigation#integrate-with-your-existing-redux-store)** for assistance completing this exercise.
+Please refer to the **[ExNavigation docs](https://github.com/expo/ex-navigation#integrate-with-your-existing-redux-store)** for assistance completing this exercise.
 
 ---
 

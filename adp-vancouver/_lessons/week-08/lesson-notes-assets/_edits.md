@@ -3,7 +3,7 @@
 
 ## Day 1
 
-- Add slides about FlatList and SectionList components
+
 
 ## Day 2
 
@@ -16,7 +16,7 @@
 
 ## Day 4
 
-- Swap the animation and Android lesson days
+
 
 ## Day 5
 
@@ -29,6 +29,7 @@
 - Icon reference: https://ionicframework.com/docs/v2/ionicons/
 - Make a point of showing them the moment lib
 - They probably need more direction on the lightbox as well
-- Update to react-navigation this time around
 
 ## Miscellaneous
+
+- Update to react-navigation next time if out of beta
