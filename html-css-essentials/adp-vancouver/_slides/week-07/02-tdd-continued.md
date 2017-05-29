@@ -37,7 +37,7 @@ class: middle
 
 ## Exercise: First Unique Character
 
-Write a function that returns the first unique character in a string.
+Using TDD, write a function that returns the first unique character in a string.
 
 Examples:
 
@@ -47,11 +47,26 @@ Examples:
 'frof' => 'r'
 'ttttt' => undefined
 ```
+
+???
+
+The most obvious way to solve this problem is by using a nested loop. For each character (c) in the string, check every other character in the string to see if c is unique.
+
+This has a big O if n^2. [Solution](https://github.com/redacademy/adp-exercise-solutions/blob/master/adp-testing-week/lib/first-unique.js)
+
 ---
 template: inverse
 
 # Time Complexity
 #### How long did your algorithm take to execute?
+
+???
+
+- They won't know what this means!
+- Might be helpful to write out the function's output by hand, or in the console, so we can count iterations. [Example](https://github.com/redacademy/adp-exercise-solutions/blob/master/adp-testing-week/lib/first-unique.js)
+- We should be able to show n^2 iterations for a nested loop
+
+
 ---
 
 ## Time Complexity
@@ -78,8 +93,15 @@ numbers.forEach(number => {
     console.log(`inner: ${number}`);
   });
 });
-
 ```
+
+???
+
+- Differentiate between __worst case__ and __average case__ scenarios
+- Worst case: everything goes wrong so every iteration has to occur
+- Average case: most of the time a medium amount of operations occurs
+- Best case: nailed it.
+
 ---
 ## Time Complexity
 
@@ -95,6 +117,10 @@ Grouped by orders of magnitude. Defined using Big O Notation.
 
 We read O(1) as "has an O of 1", O(n) as "has an O of n", etc.
 
+???
+
+Use the whiteboard to show how orders of magnitude differ as iterations approach infinity. [Figure 2 in Prework](https://justin.abrah.ms/computer-science/big-o-notation-explained.html)
+
 ---
 class: middle
 
@@ -102,12 +128,35 @@ class: middle
 
 What's the time complexity of your solution?
 
+???
+
+- It will be n^2 because of the nested loop
+
+---
+class: middle
+
+## Strategies for Handling Time Complexity
+
+__Using data structures for counting__
+
+What if the first thing you do when iterating over an array is to 'count' the elements within it? How could this apply to the __First Unique Character__ problem?
+
+???
+
+- What would be useful to count for solving this problem? (number of instances of any character)
+- How might we do that?
+
 ---
 class: middle
 
 ## Exercise: First Unique Character
 
 Refactor for O(n).
+
+???
+
+[Solution](https://github.com/redacademy/adp-exercise-solutions/blob/master/adp-testing-week/lib/first-unique.js)
+
 ---
 class: middle
 
@@ -123,16 +172,9 @@ For example, given:
 
 The function should return 5.
 
-What's your time complexity?
+???
 
----
-class: middle
-
-## Strategies for Handling Time Complexity
-
-__Using data structures for counting__
-
-What if the first thing you do when iterating over an array is to 'count' the elements within it? How could this apply to the __Missing Integer__ problem?
+Start with the __Brute Force__ method. [Solution](https://github.com/redacademy/adp-exercise-solutions/blob/master/adp-testing-week/lib/missing-integer.js).
 
 ---
 class: middle
@@ -148,6 +190,10 @@ __Using data structures for counting__
 ]
 
 What's our new time complexity?
+
+???
+
+[Solution](https://github.com/redacademy/adp-exercise-solutions/blob/master/adp-testing-week/lib/missing-integer.js).
 
 ---
 
@@ -165,6 +211,12 @@ face, facts => false
 ```
 
 What is the time complexity of your solution? Could it be better?
+
+???
+
+- This will probably melt their heads a bit, but worth a shot
+
+[Solution](https://github.com/redacademy/adp-exercise-solutions/blob/master/adp-testing-week/lib/one-away.js)
 
 
 {% endhighlight %}
