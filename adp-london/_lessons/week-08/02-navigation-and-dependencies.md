@@ -128,12 +128,12 @@ Build out the schedule `ListView` now with session data fetched from Firebase. U
 
 Now tackle the Session scene. When a session item is tapped in the Schedule scene, you'll want to pop the Session scene (populated with the session's specific details) on top of that nested stack.
 
-You will need to write **[corresponding functions for pushing and popping routes](https://github.com/exponent/ex-navigation#perform-navigation-actions-from-outside-of-a-component)** when storing navigation state in your Redux store, and **[pass some params into your route](https://github.com/exponentjs/ex-navigation#passing-params-to-a-route)** in order for this to work.
+You will need to write **[corresponding functions for pushing and popping routes](https://github.com/expo/ex-navigation#perform-navigation-actions-from-outside-of-a-component)** when storing navigation state in your Redux store, and **[pass some params into your route](https://github.com/expo/ex-navigation#passing-params-to-a-route)** in order for this to work.
 
 As an example, your helper for pushing a Session scene on top of your Schedule's stack might look like this:
 
 ```js
-import { NavigationActions } from '@exponent/ex-navigation';
+import { NavigationActions } from '@expo/ex-navigation';
 import Store from '../redux/store';
 import Router from '../navigation/router';
 
