@@ -141,7 +141,7 @@ Some of third-party solutions wrap the JS navigator or `NavigationExperimental`,
 
 - [wix/react-native-navigation](https://github.com/wix/react-native-navigation)
 - [aksonov/react-native-router-flux](https://github.com/aksonov/react-native-router-flux)
-- [expo/ex-navigation](https://github.com/exponentjs/ex-navigation)
+- [expo/ex-navigation](https://github.com/expo/ex-navigation)
 - [react-community/react-navigation](https://github.com/react-community/react-navigation) (still beta...)
 
 ---
@@ -224,7 +224,7 @@ Next, we'll create our `store.js` file in a `redux` directory...
 # The Store
 
 ```js
-import { createNavigationEnabledStore } from '@exponent/ex-navigation';
+import { createNavigationEnabledStore } from '@expo/ex-navigation';
 import { compose, createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
