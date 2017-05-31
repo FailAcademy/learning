@@ -41,13 +41,7 @@ To begin, please ensure that you have completed all of the **[pre-work for this 
 
 # Starting Your App
 
-Before you can run your app, you need to power up the emulator to run it on. You can launch the Android AVD Manager from the CLI:
-
-```bash
-android avd
-```
-
-From there you can pick which device you want to run from the emulators you have previously created. Click "Start" to launch a given emulator.
+Before you can run your app, you need to power up the emulator to run it on. You must launch an Android emulator from **within Android Studio first**.
 
 Finally, you can `cd` into your RN app directory and run:
 
