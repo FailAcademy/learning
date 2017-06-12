@@ -444,7 +444,7 @@ git push production master
 # Option 2: Git-driven FTP Deployment Tool
 
 - Occasionally you may run into a web host that doesn't support Git
-- [DPLOY](https://leanmeanfightingmachine.github.io/dploy/) is a Node package that allows you to manage deploys based on your Git commits, but deploys the added/changed files to your web host's server using SFTP/FTP
+- [DPLOY RED](https://github.com/redacademy/dploy-red) is a Node package that allows you to manage deploys based on your Git commits, but deploys the added/changed files to your web host's server using SFTP/FTP
 - [Dandelion](https://github.com/scttnlsn/dandelion) is the Ruby version
 
 ---
@@ -455,7 +455,7 @@ DPLOY just takes a few steps to set up:
 
 ```bash
 # Globally install DPLOY
-npm install dploy -g
+npm install https://github.com/redacademy/dploy-red.git -g
 
 # Install DPLOY in the same directory where your Git repo lives
 cd ProjectName/
