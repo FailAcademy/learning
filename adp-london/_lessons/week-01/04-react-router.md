@@ -64,10 +64,10 @@ Visit **[Reddit](http://reddit.com)**. Click on several links and map out how th
 
 Based on what you just learned in the preceding examples, apply this to your project now. You will need to create routes that point users to:
 
-- The Welcome page (`/`)
+- The Items List page (`/`)
 - The Login page (`/login`)
-- The New Post page (`/posts/new`)
-- The posts topic pages (`/posts/[ID_HERE]`, but note that this should just load the default `PostList` for now)
+- The Share an Item page (`/share`)
+- The individual User Profile pages (`/profile/[ID_HERE]`)
 - A 404 page
 
 ---
@@ -76,15 +76,7 @@ Based on what you just learned in the preceding examples, apply this to your pro
 
 In today's lab we will finish setting up the routes for our app.
 
-After that, the remainder of the time this week will be spent putting on the finishing touches on the Week 1 version of REDit. That means fully building out the front-end using Material UI components too!
-
-As a stretch goal for this week, now that you have React Router implemented look into refactoring your `PostList` container component so a relevant query string is added to the URL when the Newest or Popular buttons are clicked in the `PostToolbar`.
-
-Next, use this query string (which will be available in the `location` prop for the component) to re-sort REDit's posts on `componentWillUpdate()` instead. 
-
-There is no built-in way to parse a query string in React Router anymore, so you'll need to use `URLSearchParams` for that, and be sure to add a polyfill for browsers that don't support it yet.
-
-Lastly, by default `?sort=newest` should be set for your route so you'll need to use a `Redirect` component to add this default query string whenever someone navigates directly to `/posts/:id/`.
+After that, the remainder of the time this week will be spent putting on the finishing touches on the Week 1 version of Boomtown. That means fully building out the front-end using Material UI components too!
 
 ---
 

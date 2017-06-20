@@ -24,7 +24,6 @@ layout: false
 3. Creating a React app
 4. Working with components
 5. Adding props to components
-6. Using CSS modules for style
 
 ---
 template: inverse
@@ -784,51 +783,6 @@ We need our `todo` prop to be an object with a specific set of properties, so yo
 Make all of the props for all components **required**.
 
 **Note:** You will end up with a warning in your console for one of your props if you successfully completed the exercise. Why does this happen?
-
----
-
-# CSS Modules
-
-Note that our REDit app will make use of CSS modules. This is why we will see code like this at the top of the `App.js` file:
-
-```js
-import styles from './styles.css';
-```
-
-Importing our CSS into our JS file allows us to apply our styles like this:
-
-```js
-const App = (props) => (
-  <div>
-    <div className={styles['view-container']}>
-    {/* or... <div className={styles.viewContainer}> */}
-      {props.children}
-    </div>
-  </div>
-);
-```
-
----
-
-# CSS Modules
-
-*Why would we do it this way?* Because it's easier for us to do conditionally render styles based on component props:
-
-```js
-const App = (props) => {
-   let className = props.loggedIn ? styles.user : styles.guest;
-
-   return (
-     <div>
-       <div className={className}>
-         {props.children}
-       </div>
-     </div>
-   );
-}
-```
-
-**Bonus!** With CSS modules, each file is compiled separately so generic class names won't pollute the global scope.
 
 ---
 
