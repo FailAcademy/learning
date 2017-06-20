@@ -23,7 +23,6 @@ lesson_date: 2017-04-11
 - Dynamically create an array of components and their props using data stored in an array of objects along with the `.map()`, `.sort()`, and `.filter()` functions.
 - Explain why it is essential to supply a unique "key" for each item in an array containing dynamic child components.
 - Write `Proptype` declarations to catch invalid props.
-- Use CSS modules to apply styles to React components.
 
 ---
 
@@ -141,15 +140,15 @@ Make all of the props for all components **required**.
 
 ## Lab Activity
 
-In today's lab we will begin working on the the REDit application.
+In today's lab we will begin working on the the Boomtown application.
 
 ### Set-up
 
-REDit will require a more complicated set-up than what we get with Create React App, so you'll need to begin by downloading the **[RED React Seed](https://github.com/redacademy/red-react-seed)** instead. Follow the installation instructions in the README.
+We'll use a `create-react-app` for Boomtown as well, but rather than initializing it from scratch we'll use the **[Boomtown Starter](https://github.com/redacademy/boomtown-starter)** as it has a bit of extra boilerplate roughed out for us. Be sure to start with an `npm install`.
 
-Take a look at the directory structure inside RED React Seed&mdash;again, it's a bit more complex than what we've seen with the to-do app. Pay particular attention to how the sample components are organized into named sub-directories with `index.js` files. This is the pattern we will follow to build out all of the components the application, so be sure you thoroughly understand what's going on here.
+Take a look at what's inside the Boomtown Starter as it's a bit more complex than what we've seen with the to-do app. However, it models the component organizational pattern we'll want to use throughout this entire project, so please take the time to familiarize yourself with what's there.
 
-**Note:** RED React Seed has sub-directories for **components**, **containers**, and **layouts**. You can organize your components in these directories based on notes on the component hierarchy below. We will talk more about the role of presentational versus container components in the coming days.
+**Note:** Boomtown Starter has sub-directories for **components** and **containers**. You can organize your components in these directories based on notes on the component hierarchy below. We will talk more about the role of presentational versus container components in the coming days.
 
 ### Styles
 
@@ -157,28 +156,25 @@ We will primarily use **[Material UI](http://www.material-ui.com/#/)** to style 
 
 Material UI has already been added as project dependency in the RED React Seed, but you should also take some time to review **[its GitHub repo README](https://github.com/callemall/material-ui)**  too.
 
-We will still need to write some extra CSS for our app, and to do that we'll be using [CSS modules](https://github.com/css-modules/css-modules). For all additional component-specific CSS that you need to write for your app, you'll want to follow the example set out in the `App` and `MainLayout` components in the RED React Seed.
-
 ### Code
 
 The remainder of today's lab will be spend roughing-out the component structure for the REDit app. Ultimately, we will need to create the following component structure for our app:
 
 ```bash
-<MainLayout />           # /layouts (already exists)
-|- <HeaderBar />         # /components
-|- <App />               # /containers (already exists)
-   |- <Categories />     # /containers
-      |- <Week />        # /components
-   |- <CreatePost />     # /containers
-   |- <Welcome />        # /containers
-   |- <Login />          # /containers
-   |- <PostList />       # /containers
-      |- <PostToolbar /> # /components
-      |- <Post />        # /components
-   |- <NotFound />       # /containers
+<Boomtown />                 # top-level component
+|- <Layout />                # /components
+   |- <HeaderBar />          # /components
+   |- <Routes />             # /router
+      |- <Login />           # /containers
+      |- <Profile />         # /containers
+      |- <Share />           # /containers
+      |- <Items />           # /containers
+         |- <ItemCardList /> # /components
+         |- <ItemCard />     # /components
+      |- <NotFound />        # /containers
 ```
 
-Any components you place in the `/containers` directory should be class-based components, while any components you place in the `/components` directory should be functional stateless components.
+Any components you place in the `/containers` directory should typically be class-based components, while any components you place in the `/components` directory should typically be functional stateless components.
 
 Knowing this, rough-out the directory/component structure for all of the required components for this app.
 

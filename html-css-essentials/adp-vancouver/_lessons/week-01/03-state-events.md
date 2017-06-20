@@ -98,26 +98,18 @@ To do that, we'll need to use one of React's lifecycle methods. It's up to you t
 
 ## Lab Activity
 
-Today's lab will be spent building out our stateful `PostList` container component.
+Today's lab will be spent building out your stateful `Items` container component.
 
 There are two properties we'll want to keep track of in our app state:
 
-- `posts`: the list of posts (imported from `mock-data.js`)
-- `orderBy`: whether they are sorted by date (`newest`, the default) or popularity (`popular`)
+- `isLoading`: whether the app is currently fetching data
+- `itemsData`: the list of items fetched from Firebase (with relevant user data points merged in)
 
-The `PostList` component will also require three event handlers to pass as props to child components:
+You'll need to fetch the data from the Firebase endpoints in the `componentDidMount` lifecycle method. Because we will need to simultaneously fetch data from the `items.json` and `users.json` endpoints to populate the item cards with all required data, we'll need to use `Promise.all` for that. **[This post on Stackoverflow](https://stackoverflow.com/questions/31710768/how-can-i-fetch-an-array-of-urls-with-promise-all?answertab=votes#tab-top)** will point you in the right direction.
 
-- `sortPopular()` passed to a Material UI `FlatButton`
-- `sortNewest()` passed to another Material UI `FlatButton`
-- `updateVote()` passed to our `Post` component
+Be sure to keep you're UI components as modular possible. At a minimum, you'll need to create `ItemCardList` and `ItemCard` presentational components.
 
-We will also use `sortPopular()` and `sortNewest()` to re-sort the posts in the `componentDidUpdate()` React lifecycle method so our component knows to re-render itself after either of the buttons are clicked. Note that both of these methods will need to have `posts` as a parameter.
-
-Lastly, we ill create one helper method to render the posts:
-
-- `renderPosts()` (will take `posts` as a parameter, and map over the results as individual `<Post />` components)
-
-But first, we'll need to fully build out our `Post` component so we can render it as a child of the `PostList`, or course!
+**Tip!** In addition to the Material UI componenets, use the **[react-masonry-component](https://github.com/eiriklv/react-masonry-component)** and **[react-gravatar](https://github.com/KyleAMathews/react-gravatar)** to assist with building out the layout for the `Items` component.
 
 ---
 
