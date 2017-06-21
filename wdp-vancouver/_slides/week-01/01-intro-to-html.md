@@ -25,6 +25,8 @@ layout: false
 4. Doctypes, meta tags and comments
 5. Structuring a webpage
 5. Other essential elements
+6. Form Element
+
 
 ---
 template: inverse
@@ -539,6 +541,153 @@ Jot some idea out on your own, then you'll pair up to discuss your approach with
 Finally, you and your partner will share your insights with the class.
 
 ---
+template: inverse
+
+# Common Form Elements
+
+---
+
+# The Form Element
+
+All forms on the web use the `<form>` element:
+
+```html
+<form action="submit.php" method="get">
+   <!-- The form inputs go here... -->
+</form>
+```
+
+The `action` attribute defines the location (an URL) where the form's collected data should be sent.
+
+The `method` attribute defines which HTTP method to use to send the data (can be `get` or `post`).
+
+---
+
+# Input Element
+
+We can use the `<input>` element inside a form to create a variety of different form controls:
+
+```html
+<form action="submit.php" method="post">
+   <input type="text" name="username" size="12" maxlength="12" />
+   <input type="checkbox" name="registered" checked="checked" />
+</form>
+```
+
+By specifying the `type` attribute, the browser will know **what kind of input to display**.
+
+Common input types include `text`, `checkbox`, `radio`, and `submit`. HTML5 introduced a number of [more specific form input types](http://html5doctor.com/html5-forms-input-types/) as well.
+
+---
+
+# Input Element
+
+To create radio inputs, we simply create multiple `<input>` elements with a type of `radio`:
+
+```html
+<form action="submit.php" method="post">
+   <input type="radio" name="gender" value="male" id="male" />Male
+   <input type="radio" name="gender" value="female" id="female" />Female
+</form>
+```
+
+Radio buttons that have the same value for the `name` attribute are in the same **radio button group**.
+
+Only one radio button in a group can be selected at a time.
+
+---
+
+# Input Element
+
+The `password` input type will obfuscate the characters that a user types into it:
+
+```html
+<input type="password" name="password" size="8" minlength="6" maxlength="8" />
+```
+
+Note that while the characters are hidden this doesn't mean that the entered data is secure when sent to the server!
+
+It's best to use [SSL/TLS certificates](https://letsencrypt.org/) to send requests securely.
+
+---
+
+# Textarea Element
+
+A `<textarea>` element will create a multi-line text input:
+
+```html
+<form action="submit.php" method="post">
+   <textarea name="message" cols="10" rows="4">
+      Enter your message...
+   </textarea>
+</form>
+```
+
+Using the `cols` and `rows` attributes you can specify the size of the `<textarea>` box.
+
+---
+
+# Select Element
+
+The `<select>` element is a special form element that will create a drop-down menu based on the `<option>` elements nested inside:
+
+```html
+<form action="submit.php" method="get">
+   <select>
+      <option value="mac" selected="selected">Mac</option>
+      <option value="pc">PC</option>
+   </select>
+</form>
+```
+
+The `selected` attribute will set a option to be selected by default.
+
+---
+
+# Label Element
+
+The `<label>` tag is used to describe what an input is for, and helps with accessibility for vision-impaired users.
+
+It can be used by either wrapping the `<input>` element it pertains to, or by giving it a `for` attribute that matches the `id` of the input it's labeling:
+
+```html
+<label>
+   First Name: <input type="text" name="first_name" />
+</label>
+
+<label for="terms">I agree to the terms and conditions</label>
+<input type="checkbox" name="terms" id="terms" />
+```
+
+---
+
+# Button Element
+
+Last but not least, you're probably going to want some way for the user to submit the data in your form.
+
+For that, we have the `<button>` element:
+
+```html
+<button type="submit">Submit Form</button>
+```
+
+It's optional to specify `type="submit"` because this is the default. Other types for the `<button>` element include `reset` and `button`.
+
+---
+
+# Button vs. Input
+
+In lieu of a `<button>` element, you can may also see an `<input>` element with `type="submit"`:
+
+```html
+<input type="submit" name="submit" value="Submit Form" />
+```
+
+The main difference between `<button>` and `<input type="submit" />` is that the input element is self-closing, while the button can contain content.
+
+*Functionally they are the same if their types are the same.*
+
+---
 
 # What We've Learned
 
@@ -546,6 +695,7 @@ Finally, you and your partner will share your insights with the class.
 - How to create a webpage on your computer
 - New HTML5 elements
 - How to create links and add images
+- How to create HTML form elements
 
 ---
 template: inverse
