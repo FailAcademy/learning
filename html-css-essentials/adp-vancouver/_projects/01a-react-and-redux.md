@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 1 / Part 1 - REDit
-due: Monday, April 24th (beginning of class)
+due: Monday, July 17th (beginning of class)
 class: gh-check
 ---
 

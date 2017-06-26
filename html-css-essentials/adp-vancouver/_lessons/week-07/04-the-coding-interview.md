@@ -2,7 +2,7 @@
 layout: lesson
 title: Coding Interview Workday
 slides: []
-lesson_date: 2017-05-26
+lesson_date: 2017-08-17
 ---
 
 ## Learning Objectives
