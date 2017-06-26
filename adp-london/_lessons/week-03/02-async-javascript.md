@@ -85,12 +85,10 @@ To the moon-beholders
 If you finish, here are some additional challenges:
 
 1. Write the function using Async/Await and Promises
-1. Using Promises, find a way to request all three files concurrently
-1. Using Promises, find a way to request all three concurrently along with a file that does not exist. (Hint: there is no Promise API method that allows for this)
+2. Using Promises, find a way to request all three files concurrently
+3. Using Promises, find a way to request all three concurrently along with a file that does not exist. (Hint: there is no Promise API method that allows for this)
 
 ---
-
-
 
 ## Additional Resources
 
