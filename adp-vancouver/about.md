@@ -9,14 +9,6 @@ The App Developer Professional program has been designed to teach our students t
 
 You’ll also learn how to interpret functional specifications and UX documentation, deploy different types of databases, write maintainable and testable code, use industry-standard practices for working collaboratively in teams, and deploy your applications to the cloud.
 
-## Pre-course Work
-
-For students entering this course being familiar with JavaScript and specifically, React, is a must.
-Students should complete the following introductory course, provided by Codeacademy.
-
-- [React 101](https://www.codecademy.com/lrn/react-101)
-- [React 102](https://www.codecademy.com/lrn/react-102)
-
 ## Course Structure
 
 The Application Developer Professional Program picks up where the Web Developer program ends off. This program explores full-stack web development based on Node.js and React. Students in this program will build complex web applications requiring databases and user account management, as well as contemporary mobile application development using React Native and progressive web apps.
@@ -24,4 +16,4 @@ The Application Developer Professional Program picks up where the Web Developer 
 ## Your Instructors
 
 [Mackenzie Kieran](https://github.com/10thfloor) <br/>
-[Shawn McKay](https://github.com/ShMcK)
+[Mandi Wise](https://github.com/mandiwise)
