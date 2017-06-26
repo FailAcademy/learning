@@ -2,49 +2,49 @@
    {
       "title": "Project 1 Check-in",
       "allDay": true,
-      "start": "2017-04-19",
+      "start": "2017-07-11",
       "url": "/project/project-1-aloha-homepage/"
    },
    {
       "title": "Project 1 Due",
       "allDay": true,
-      "start": "2017-04-25",
+      "start": "2017-07-18",
       "url": "/project/project-1-aloha-homepage/"
    },
    {
       "title": "Project 2 Due",
       "allDay": true,
-      "start": "2017-05-02",
+      "start": "2017-07-25",
       "url": "/project/project-2-instanews-app/"
    },
    {
       "title": "Project 3 Due",
       "allDay": true,
-      "start": "2017-05-15",
+      "start": "2017-08-08",
       "url": "/project/project-3-pong-game/"
    },
    {
       "title": "Project 4 Due",
       "allDay": true,
-      "start": "2017-05-29",
+      "start": "2017-08-21",
       "url": "/project/project-4-inhabitent-site/"
    },
    {
       "title": "Project 5 Due",
       "allDay": true,
-      "start": "2017-06-05",
+      "start": "2017-08-28",
       "url": "/project/project-5-mars-colony-app/"
    },
    {
       "title": "GitHub Portfolio Due",
       "allDay": true,
-      "start": "2017-06-12",
+      "start": "2017-09-05",
       "url": "/project/project-6-github-portfolio/"
    },
    {
       "title": "Community Project Due",
       "allDay": true,
-      "start": "2017-06-30",
+      "start": "2017-09-22",
       "url": "/project/project-7-community-project/"
    }
 ]

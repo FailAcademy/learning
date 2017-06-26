@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to jQuery
 slides: ['_slides/week-02/04a-intro-to-jquery.md']
-lesson_date: 2017-04-21
+lesson_date: 2017-07-13
 ---
 
 ## Pre-Work
