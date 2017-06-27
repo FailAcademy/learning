@@ -22,10 +22,9 @@ layout: false
 1. What CSS is and how to use it
 2. The box model and block vs. inline elements
 3. Classes and IDs
-4. Position and float
-5. Color and backgrounds
-6. CSS "resets"
-7. Developer tools
+4. Color and backgrounds
+5. CSS "resets"
+6. Developer tools
 
 ---
 template: inverse
@@ -568,6 +567,24 @@ Some tips for naming the classes and IDs in your HTML:
 - Remember that ID names must be unique to the element!
 
 ---
+# Attibute Selector 
+
+We can always target form inputs by their `id` or `class`, but we can also target entire types of form elements using the [attribute selector](https://developer.mozilla.org/en/docs/Web/CSS/Attribute_selectors) in our CSS:
+
+```css
+input {
+   margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="search"] {
+   color: #111;
+   font-family: Helvetica, sans-serif;
+   padding: 2px 5px;
+}
+```
+
+---
 class: center, middle
 
 .large[
@@ -594,6 +611,17 @@ a:hover {
 
 You can use the `:link` and `:visited` pseudo-classes for links, and `:hover`, `:active`, and `:focus` pseudo-classes for a broader array of elements.
 
+???
+
+- Explain pseudo-classes are useful when styling forms.
+
+Question to ask:
+
+- What should happen to an individual form input when a user **focuses** it?
+- How should buttons react when hovered or clicked?
+- How should the form display on a mobile device to assist with usability?
+
+
 ---
 
 # Pseudo-classes
@@ -618,7 +646,38 @@ li:last-child {
    border-right: 0;
 }
 ```
+---
 
+# Pseudo-classes & Forms
+
+The `:focus` pseudo-class also helps us target special styles toward the field that the user has currently activated.
+
+```css
+input {
+   border: 1px solid #969696;
+}
+
+input:focus {
+   border: 1px solid #464646;
+}
+```
+
+---
+
+# Pseudo-classes & Forms
+
+And the `:active` pseudo-class allows to provide feedback to a user to let them know that a button has been activated:
+
+```css
+button {
+   background-color: blue;
+}
+
+button:hover,
+button:active {
+   background-color: navy;
+}
+```
 ---
 
 # Exercise 3
@@ -743,187 +802,6 @@ header h1 {
 	z-index: 100;
 }
 ```
-
----
-
-template: inverse
-
-# Floats
-
----
-
-# What's a Float?
-
-Floats are another handy layout tool in CSS.
-
-They also take elements **out of the normal flow** and place them to the **far left** or **far right** side of their *container element*.
-
-Text and other inline elements will then **wrap around** the floated element.
-
----
-class: center, middle
-
-.inline-images[
-   ![An unfloated element](/public/img/slide-assets/css-float-none.svg)
-]
-
----
-class: center, middle
-
-.inline-images[
-   ![A left-floated element](/public/img/slide-assets/css-float-left.svg)
-]
-
----
-class: center, middle
-
-.inline-images[
-   ![A right-floated element](/public/img/slide-assets/css-float-right.svg)
-]
-
----
-class: middle, center
-
-.large[
-	Floats are the key* to creating multi-column layouts.
-]
-<br />
-
-.small[&#42; Unless we use Flexbox...more on that next week.]
-
----
-class: center, middle
-
-.inline-images[
-   ![Two-column website layout](/public/img/slide-assets/css-column-layout.svg)
-]
-
----
-
-# Using Floats
-
-To float elements in CSS, we use the `float` property:
-
-```css
-article {
-	width: 67%;
-	float: left;
-}
-
-aside {
-	width: 33%;
-	float: right;
-}
-```
-
-We can also stop a previously floated element from floating:
-
-```css
-aside {
-	float: none;
-}
-```
----
-class: center, middle
-
-.large[
-	Important caveat alert!
-]
-
----
-
-# Float Weirdness
-
-The `float` property was originally meant to allow content to flow around images, not for layout and positioning purposes.
-
-When using floats to position groups of elements, we often must intentionally **cancel out** the floating behaviour to prevent subsequent elements from floating unintentionally.
-
----
-
-# Clearing Floats
-
-The `clear` property is how we cancel out floating behaviour.
-
-You can clear a float on the `left`, `right`, or `both`:
-
-```css
-article {
-	width: 67%;
-	float: left;
-}
-
-aside {
-	width: 33%;
-	float: right;
-}
-
-footer {
-	clear: both;
-}
-```
-
----
-class: center, middle
-
-.large[
-	Why do we clear floats?
-]
-
----
-class: center, middle
-
-.inline-images[
-   ![Floats not cleared](/public/img/slide-assets/css-floats-not-cleared.svg)
-]
-
----
-class: center, middle
-
-.inline-images[
-   ![Cleared floats](/public/img/slide-assets/css-floats-cleared.svg)
-]
-
----
-
-# Even Better
-
-We can also abstract our float-clearning behaviour into a special class so it can be re-used on other elements too:
-
-```html
-<footer class="clear"><!-- footer content --></footer>
-```
-
-```css
-.clear {
-	clear: both;
-}
-```
-
----
-
-# Mini-Exercise
-
-There are two other methods we can use to clear floats:
-
-1. using `overflow: auto` or `overflow: hidden`
-2. using the **clearfix** hack with a pseudo-element
-
-With the class split into groups, your group will be assigned one of these methods to investigate and you will put together a **working demo** to explain your method to the class.
-
-Also determine the key way these methods differ from the initial float-clearing approach we explored, and why this is a more future-friendly way to clear floats.
-
----
-
-# Exercise 4
-
-Time to start floating some content!
-
-Team up with a partner and go through the design comp to figure out where you'll need to apply floats to execute the design.
-
-Work together to rough out the CSS that will float these elements. We'll reconvene as a class and share our solutions.
-
-And don't forget to add a clearfix class!
-
 ---
 template: inverse
 
