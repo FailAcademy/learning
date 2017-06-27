@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: CSS Best Practices
-slides: ['_slides/week-01/03c-css-best-practices.md']
+slides: ['_slides/week-02/01-css-best-practices.md']
 lesson_date: 2017-07-10
 ---
 
