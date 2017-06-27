@@ -24,10 +24,9 @@ Also ensure that you have completed yesterday's lab activity before class&mdash;
 ## Learning Objectives
 
 - Define what CSS is in relation to HTML.
-- Demonstrate competency with CSS layout principles and box model properties.
+- Demonstrate competency with CSS box model properties.
 - Adjust the default appearance of HTML elements using a variety of selectors, including classes, IDs, pseudo-elements, and pseudo-classes.
 - Leverage how inheritance and specificity function in CSS.
-- Use CSS positioning and floats to layout elements on a webpage.
 - Use hexadecimal and RGBa to change the colours of HTML elements.
 - Use CSS background properties to set background colors and images.
 - Define what a CSS "reset" is, why it's needed, and demonstrate how to use one.

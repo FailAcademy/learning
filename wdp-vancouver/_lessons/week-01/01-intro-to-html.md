@@ -16,6 +16,7 @@ Readings from *Learn to Code HTML & CSS*:
 - [Building Your First Web Page](http://learn.shayhowe.com/html-css/building-your-first-web-page/)
 - [Getting to Know HTML](http://learn.shayhowe.com/html-css/getting-to-know-html/)
 - [Creating Lists](http://learn.shayhowe.com/html-css/creating-lists/) (HTML section only)
+- [Building Forms](http://learn.shayhowe.com/html-css/building-forms/)
 
 Before the first class, also be sure to work through all of the free modules in Codeacademy's [HTML & CSS](https://www.codecademy.com/learn/web) tutorial.
 
@@ -36,7 +37,7 @@ __HTML__
 
 - Define what a mark-up language is and the function of HTML on the web.
 - Write well-structured HTML by properly nesting elements and applying appropriate attributes to them.
-- Use basic HTML elements including headings, paragraphs, links, and lists.
+- Use basic HTML elements including headings, paragraphs, links, lists and forms.
 - Use the HTML5 doctype and elements to semantically structure a web page.
 
 ---
@@ -132,3 +133,7 @@ A free online version of Jeremy Keith's "HTML5 for Web Designers" book:
 All about HTML5, in relatively plain English:
 
 - [What Is HTML5?](https://code.tutsplus.com/tutorials/what-is-html5--cms-25803)
+
+An intro to building HTML forms and styling them with CSS:
+
+- [My first HTML form](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form)
