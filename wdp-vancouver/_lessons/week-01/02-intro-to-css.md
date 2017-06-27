@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Intro to CSS
-slides: ['_slides/week-01/02a-intro-to-css.md']
+slides: ['_slides/week-01/02-intro-to-css.md']
 lesson_date: 2017-07-06
 ---
 

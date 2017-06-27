@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Flexbox
-slides: ['_slides/week-02/01b-flexbox.md']
+slides: ['_slides/week-01/03-flexbox.md']
 lesson_date: 2017-07-07
 ---
 
