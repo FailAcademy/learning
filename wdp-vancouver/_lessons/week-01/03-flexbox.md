@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Flexbox
+title: CSS Positioning, Flexbox & Responsive Web Design
 slides: ['_slides/week-01/03-flexbox.md']
 lesson_date: 2017-07-07
 ---
