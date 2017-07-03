@@ -126,7 +126,7 @@ const PostList = ({ posts }) => (
 
 # Exercise 1
 
-Review the components that you have created for the REDit app so far. What should be classified as a container component, and what should be classified as a presentational component?
+Review the components that you have created for the Boomtown app so far. What should be classified as a container component, and what should be classified as a presentational component?
 
 Do some project reorganization based on these observations. Remember that your `import` file paths will likely break when you do this and you'll need to fix them!
 

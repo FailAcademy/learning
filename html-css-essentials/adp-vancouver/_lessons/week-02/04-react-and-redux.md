@@ -57,7 +57,7 @@ Draw a table with **Dumb Presentational** on one side, and **Smart Container** o
 In the example tree file structure below, which components should be presentational and which should be container components:
 
 ```
-- REDitApp
+- BoomtownApp
  |- Weeks
     |- Week
         |- Header
@@ -77,19 +77,13 @@ In the example tree file structure below, which components should be presentatio
 
 ## Exercise 4
 
-Refactor your "Worst Pokemon" app to use React.
-
----
-
-## Exercise 5
-
 Use the `<Provider>` tag from ["react-redux"](https://github.com/reactjs/react-redux) to connect the Redux store to the React app in your "Worst Pokemon" app.
 
 **Hint:** Check the [docs](https://github.com/reactjs/react-redux/blob/master/docs/api.md#provider-store)!
 
 ---
 
-## Exercise 6
+## Exercise 5
 
 First, write `mapStateToProps` to connect a "container" component using "react-redux" & `connect` in your "Worst Pokemon" app.
 
@@ -99,7 +93,7 @@ Next, use `mapDispatchToProps` second parameter to connect dispatched events in 
 
 ---
 
-## Exercise 7
+## Exercise 6
 
 Let's implement sorting a list of data using React Router. We'll use a query string to trigger the sort in our component.
 Here's what we'll have to do:
@@ -113,9 +107,9 @@ the list based on the value.
 
 ## Lab Activity
 
-In today's lab, you're going to set-up `react-redux` in your project. Map out your components as "presentational" or "container" components.
+In today's lab, you're going to set-up `react-redux` in your Boomtown project. Map out your components as "presentational" or "container" components.
 
-When you're finished, add [react-router-redux](https://github.com/reactjs/react-router-redux) to your REDit application.
+When you're finished, add [react-router-redux](https://github.com/reactjs/react-router-redux).
 
 ---
 

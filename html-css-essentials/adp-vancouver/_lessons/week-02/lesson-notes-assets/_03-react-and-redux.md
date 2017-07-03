@@ -29,7 +29,7 @@ D) events
 An example:
 
 ```
-- REDitApp
+- App
  |- Weeks
     |- Week
         |- Header

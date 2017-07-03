@@ -47,10 +47,7 @@ Be prepared to give an example of:
 
 ## Lab Activity
 
-1. Setup Redux in your REDit app. Your app should include:
-  - store
-  - `combineReducers` with a "posts" reducer passed in
-  - a VOTE_UP action that increments the vote on a post
+Setup Redux in your Boomtown app!
 
 ---
 
