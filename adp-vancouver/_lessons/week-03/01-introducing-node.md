@@ -2,12 +2,12 @@
 layout: lesson
 title: Introducing Node
 slides: ['_slides/week-03/01-introducing-node.md']
-lesson_date: 2017-04-24
+lesson_date: 2017-07-17
 ---
 
 ## Pre-Work
 
-Watch [this video](https://www.youtube.com/watch?v=8aGhZQkoFbQ) for a primer on Node's Event Loop!
+Watch [this video](https://www.youtube.com/watch?v=8aGhZQkoFbQ) for a primer on Node's Event Loop.
 
 ---
 
@@ -47,7 +47,7 @@ Review the documentation here before you begin: [https://nodejs.org/api/net.html
 
 ---
 
-# Exercise 2
+## Exercise 2
 
 Use the debugger and set a breakpoint in your `data` event handler. Intercept the incoming data, and use the debugger's console to change the value
 of the data parameter (the incoming data) before it's logged.
@@ -60,7 +60,7 @@ When you're finished, watch this video from Google I/O!
 
 ---
 
-# Exercise 3
+## Exercise 3
 
 Run some load tests on your TCP Server and observe the following:
 - System memory and CPU usage
@@ -72,9 +72,9 @@ run the command: <br/>
 
 ---
 
-# Exercise 4
+## Exercise 4
 
-**Create a minimal Chat Server**
+**Create a minimal chat server**
 
 Change your TCP service to deliver any incoming data to all connected clients.
 
@@ -83,7 +83,7 @@ Change your TCP service to deliver any incoming data to all connected clients.
 
 ---
 
-# Lab Activity
+## Lab Activity
 
 **Option 1**
 

@@ -2,7 +2,7 @@
 layout: lesson
 title: Pub-Sub and Security in Meteor
 slides: ['_slides/week-05/03-pubsub-security.md']
-lesson_date: 2017-05-10
+lesson_date: 2017-08-02
 ---
 
 ## Pre-Work
@@ -35,18 +35,6 @@ lesson_date: 2017-05-10
 Your turn! Add Meteor Methods for `addToDo`, `removeToDo`, and `removeCompleted` now.
 
 Call these new Methods in your `App` component where appropriate. When you're done, all of your `App` component's methods should work again as they did before.
-
----
-
-## Exercise 2
-
-*Exercise details TBA.*
-
----
-
-## Exercise 3
-
-*Exercise details TBA.*
 
 ---
 
