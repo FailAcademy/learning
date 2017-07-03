@@ -469,10 +469,10 @@ Or used inside a `Switch` component:
 
 Based on what you just learned in the preceding examples, apply this to your project now. You will need to create routes that point users to:
 
-- The Welcome page (`/`)
+- The Items List page (`/`)
 - The Login page (`/login`)
-- The New Post page (`/posts/new`)
-- The posts topic pages (`/posts/[ID_HERE]`, but note that this should just load the default `PostList` for now)
+- The Share an Item page (`/share`)
+- The individual User Profile pages (`/profile/[ID_HERE]`)
 - A 404 page
 
 ---

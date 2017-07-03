@@ -1,48 +1,38 @@
 [
 	{
-		"title": "REDit (Part 1) Due",
+		"title": "Boomtown Pt. 1 Due",
 		"allDay": true,
-		"start": "2017-04-24",
+		"start": "2017-07-17",
 		"url": "/project/01a-react-and-redux"
-   }, {
-		"title": "REDit (Part 2) Due",
+	},
+	{
+		"title": "Boomtown Pt. 2 Due",
 		"allDay": true,
-		"start": "2017-05-08",
+		"start": "2017-07-31",
 		"url": "/project/01b-node-and-db/"
-   },
-    {
-		"title": "REDit Code Review",
-		"allDay": true,
-		"start": "2017-05-11",
-		"url": ""
-   },
-    {
+	},
+	{
 		"title": "React + Meteor Project Due",
 		"allDay": true,
-		"start": "2017-02-20",
+		"start": "2017-08-14",
 		"url": "/project/02-meteor/"
-   },
-   {
+	},
+	{
 		"title": "Coding Interview Due",
 		"allDay": true,
-		"start": "2017-05-29",
+		"start": "2017-08-21",
 		"url": "/project/03-coding-interview/"
-   },
-   {
+	},
+	{
 		"title": "r10 Due",
 		"allDay": true,
-		"start": "2017-06-05",
+		"start": "2017-08-28",
 		"url": "/project/05-mobile"
-   },
-    {
-		"title": "Portfolio Evaluations",
-		"allDay": true,
-		"start": "2017-06-12",
-		"url": ""
-   }, {
+	},
+	{
 		"title": "Community Project Due",
 		"allDay": true,
-		"start": "2017-06-30",
+		"start": "2017-09-22",
 		"url": "/project/05-mobile"
-   }
+	}
 ]

@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Introducing PostgreSQL II
-lesson_date: 2017-05-02
+lesson_date: 2017-07-25
 ---
 
 ## Pre-work

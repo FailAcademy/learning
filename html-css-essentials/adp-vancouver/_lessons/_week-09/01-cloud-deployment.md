@@ -1,20 +1,14 @@
 ---
 layout: lesson
 title: Cloud Deployment
-lesson_date: 2017-06-05
+lesson_date: 
 ---
 
 ## Pre-work
 
-Deploying applications "in the Cloud" is a fact of life for developers building Internet connected software.
-Over the next 2 days we'll learn about a number of Cloud Computing providers and how to start using them to deploy
-Websites and Web Servers.
-
-Before we dive in, have a look at this primer on Cloud Computing provided by Amazon Web Services,
-the leading Cloud Computing provider today:
+Deploying applications "in the cloud" is a fact of life for developers building Internet connected software. Before we dive in, have a look at this primer on Cloud Computing provided by Amazon Web Services, the leading Cloud Computing provider today:
 
 [What is Cloud Computing?](https://aws.amazon.com/what-is-cloud-computing/)
-
 
 ---
 
@@ -22,16 +16,13 @@ the leading Cloud Computing provider today:
 
 We're not going to jump into AWS today. Instead we'll start from the simplest, and most convenient Cloud deployment tools.
 
-- Define Cloud Computing
-- Distinguish the differences between popular Cloud Hosting providers
-- Deploy a static Website using `surge.sh`
-- Deploy a Node / Express site using `now`
-- Deploy a Meteor app using Meteor Galaxy
-- Introduce SSH & review public / private key encryption
-- Deploy a Node / Express / Mongo app using Heroku
-- Install Ubuntu 16.04 on Digital Ocean
-- Install Ubuntu 16.04 on AWS EC2
-- Install Ubuntu 16.04 on Microsoft Azure
+- Define cloud computing.
+- Distinguish the differences between popular cloud Hosting providers.
+- Deploy a static Website using `surge.sh`.
+- Deploy a Node / Express site using `now`.
+- Deploy a Meteor app using Meteor Galaxy.
+- Explain how public / private key encryption works with SSH.
+- Deploy a Node / Express / Mongo app using Heroku.
 
 ---
 
@@ -44,8 +35,6 @@ We're not going to jump into AWS today. Instead we'll start from the simplest, a
 - Static site
 - ENV
 - SSH
-- Instance
-- Droplet
 
 ---
 
@@ -55,10 +44,6 @@ To complete todays exercises we'll need to create accounts on the Cloud Hosting 
 
 - [Heroku](https://signup.heroku.com/?c=70130000001x9jFAAQ)
 - [Meteor Developer account](https://www.meteor.com/sign-up)
-- [Digital Ocean](https://cloud.digitalocean.com/registrations/new)
-- [Amazon Web Services](https://aws.amazon.com/)
-- [Microsoft Azure](https://azure.microsoft.com/en-us/)
-- [IBM Bluemix](https://www.ibm.com/cloud-computing/bluemix/what-is-bluemix)
 
 ---
 
