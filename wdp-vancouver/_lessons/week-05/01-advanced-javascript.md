@@ -2,7 +2,7 @@
 layout: lesson
 title: Advanced JavaScript
 slides: ['_slides/week-05/01-advanced-javascript.md']
-lesson_date: 2017-05-08
+lesson_date: 2017-07-31
 
 ---
 

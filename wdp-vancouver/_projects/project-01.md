@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 1 - Aloha Homepage
-due: Tuesday, April 25th (beginning of class)
+due: Tuesday, July 18th (beginning of class)
 ---
 
 **Project Check-in:** Wednesday April 19th (afternoon) 
