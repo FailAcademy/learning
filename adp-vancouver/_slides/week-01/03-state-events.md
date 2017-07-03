@@ -56,7 +56,7 @@ class: center, middle
 class: center, middle
 
 .large[
-   What are some examples of how state will change in the REDit app?
+   What are some examples of how state will change in the Boomtown app?
 ]
 
 ---

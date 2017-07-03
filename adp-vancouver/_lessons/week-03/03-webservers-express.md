@@ -112,10 +112,7 @@ Establish a connection between your project's front-end to your new Express back
 
 ## Lab Activity
 
-In today's lab, you will begin converting your REDit project to be a full-stack app&mdash;finally connecting the client and server.
-You will create a RESTful backend using Express, to communicate data to your client through endpoints.
-
-In your client application, use [Redux-Thunk](https://github.com/gaearon/redux-thunk) to help you handle async requests.
+*TBA*
 
 ---
 
