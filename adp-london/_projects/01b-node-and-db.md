@@ -1,13 +1,13 @@
 ---
 layout: project
-title: Project 1 / Part 2 - REDit
+title: Project 1 / Part 2 - Boomtown
 due: Monday, July 31st (beginning of class)
 class: gh-check
 ---
 
-Continue your Product Hunt / Reddit clone by adding the server-side components. Your project should have a user login, and allow users to create new posts.
+Continue working on your Boomtown by adding the server-side components. Once completed, your project should have a functioning user login (with protected routes) and allow users to share new items.
 
-Your project must include a server (Node/Express), a connected database (PostgreSQL), a connected client (React), and form with submit and data validation (Redux-Form), and user authentication.
+Your project must include a server (Node/Express/GraphQL), a connected database (PostgreSQL), a connected client (React), and form with submit and data validation (Redux-Form), and user authentication (Firebase).
 
 ## Requirements
 
@@ -22,9 +22,9 @@ Your project must:
 - [ ] Contain a valid [`package.json`](http://browsenpm.org/package.json) file with all appropriate fields completed
 - [ ] Contain `.gitignore` file (ignoring `node_modules` and system files)
 - [ ] Contain this self-evaluated spec checklist renamed `specs.md`
-- [X] Use ESLint with the [AirBnB style-guide](https://github.com/airbnb/javascript)
-- [X] Run without errors with `npm start`
-- [X] Have appropriate files compiled into a `build` directory
+- [ ] Use ESLint with the [AirBnB style-guide](https://github.com/airbnb/javascript)
+- [ ] Run without errors with `npm run dev` or `npm start`
+- [ ] Have appropriate files compiled into a `build` directory
 
 ### Functional
 
@@ -33,11 +33,9 @@ Your project must:
 - [ ] Contain a login form allowing users to authenticate with email and password
 - [ ] Persist logged in state on page reload
 - [ ] Contain a functioning logout button
-- [ ] Allow logged-in users to create posts
-- [ ] Require that new posts contain both a title and a description
-- [ ] Allow users to optionally supply a URL linking to the content
-- [ ] Allow users to select a post category
-- [ ] Persist new posts and up-votes after page reload
+- [ ] Containe protected routes that are only visible to logged-in users
+- [ ] Allow logged-in users to share new items
+- [ ] Require that new items contain a title, description, tags, and an image
 - [ ] Provide user feedback resulting from invalid input data
 - [ ] Disable the submit button when data in form fields are invalid
 
@@ -46,11 +44,12 @@ Your project must:
 Your project must:
 
 - [ ] Implement form validation (client-side)
-- [ ] Use JSON Web Tokens (client-side)
-- [ ] Use ES2015 Promises when communicating between client and server (server-side)
-- [ ] Use Passport to authenticate user logins and passwords (server-side)
-- [ ] Sanitize data (server-side)
-- [ ] Implement data validation using schema (server-side)
+- [ ] Use Firebase to authenticate user logins and passwords (server-side)
+- [ ] Use Apollo Server (`graphql-server-express`) to initialize a GraphQL server and define a GraphQL schema with corresponding resolvers and mutations
+- [ ] Use Apollo Client (`apollo-client`) to query data from the GraphQL server in the client and to handle mutations
+- [ ] Integrate Apollo Client in the Redux store
+- [ ] Refetch relevant GraphQL queries upon successful data mutation to keep the UI in sync
+- [ ] Use PostgreSQL to store item data
 - [ ] Make efficient database queries (server-side)
 - [ ] Save state to database (server-side)
 
@@ -58,17 +57,16 @@ Your project must:
 
 Your project must:
 
-- [ ] Contain an organized file tree separating client and server code
+- [ ] Be comprised of two repos separating client and server code
 - [ ] Be free of lint errors from ESLint
+- [ ] Use `propType` validations for all components
+- [ ] Be free of `propType` validation errors in console
 
 ### Stretch Goals
 
 Want to challenge yourself? Your project could also:
 
-- [ ] Display user [Gravatar](https://en.gravatar.com/) when logged in
-- [ ] Allow users to create new categories
-- [ ] Reload page state from [save state to localStorage](https://github.com/elgerlambert/redux-localstorage)
-- [ ] Setup OAuth2 login for GitHub, Twitter and/or Facebook
+- [ ] Allow logged-in users to request available items from other users (using a modal-style component)
 
 ## Submission Instructions
 
