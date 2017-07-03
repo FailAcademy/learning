@@ -2,7 +2,7 @@
 layout: lesson
 title: Authentication & JWT's
 slides: ['_slides/week-04/05-authentication-authorization.md']
-lesson_date: 2017-05-04
+lesson_date: 2017-07-27
 ---
 
 ## Pre-Work
