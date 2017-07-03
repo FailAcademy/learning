@@ -57,7 +57,7 @@ Draw a table with **Dumb Presentational** on one side, and **Smart Container** o
 In the example tree file structure below, which components should be presentational and which should be container components:
 
 ```
-- BoomtownApp
+- App
  |- Weeks
     |- Week
         |- Header
