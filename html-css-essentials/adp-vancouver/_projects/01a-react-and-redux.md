@@ -1,13 +1,13 @@
 ---
 layout: project
-title: Project 1 / Part 1 - REDit
+title: Project 1 / Part 1 - Boomtown
 due: Monday, July 17th (beginning of class)
 class: gh-check
 ---
 
-Create a Product Hunt / Reddit clone that transforms existing data into a view using posts and categories.
+Create the front-end UI of a web-based application to support a local sharing economy. Functionally, the app will allow users to browse all items and user profiles by the end of the first half of the project, and ultimately also share items of their own and request to borrow items from other users during the second half.
 
-Your project must include imported data (from a JSON file), use React and the Material UI library to build out the application's UI, use Redux and `react-redux` to manage application state, and React Router for routing. 
+Your project must use local mock data, React and the Material UI library to build out the application's UI, Redux and `react-redux` to manage application state, and React Router for routing.
 
 ## Requirements
 
@@ -24,20 +24,20 @@ Your project must:
 - [ ] Contain a valid [`package.json`](http://browsenpm.org/package.json) file with all appropriate fields completed
 - [ ] Contain `.gitignore` file (ignoring `node_modules` and system files)
 - [ ] Contain this self-evaluated spec checklist renamed `specs.md`
-- [X] Use ESLint with the [AirBnB style-guide](https://github.com/airbnb/javascript)
-- [X] Run without errors with `npm start`
-- [X] Have appropriate files compiled into a `build` directory
+- [ ] Use ESLint with the [AirBnB style-guide](https://github.com/airbnb/javascript)
+- [ ] Run without errors with `npm run dev`
+- [ ] Have appropriate files compiled into a `build` directory
 
 ### Functional
 
 Your project must:
 
-- [ ] Load mock data as "posts" and "weeks"
-- [ ] Display posts in a list
-- [ ] Allow post sorting (by "newest" or "popularity")
-- [ ] Allow post filtering (by post list)
-- [ ] Allow users to up-vote posts
-- [ ] Use routing to change the URL when the user sorts or filters
+- [ ] Load mock data for "items" and "users" using `json-server`
+- [ ] Display shared items in a masonry view
+- [ ] Allow item filtering (by tags)
+- [ ] Display individual user data in a profile view
+- [ ] Use Gravatar to display user avatars
+- [ ] Use routing to update the URL when the view changes
 
 ### Development
 
@@ -47,20 +47,17 @@ Your project must:
 - [ ] Use ES2015 `import` and `export`
 - [ ] Contain components created using `React.Component`, `const`, or `function` only
 - [ ] Chain transformations with array methods (`.map`, `.filter`, etc.)
-- [ ] Use CSS modules for inline styles
 - [ ] Use React Lifecycle method where appropriate
 - [ ] Implement React Router to:
   - Use nested routes with a `Layout` component
-  - Implement a top-level `IndexRoute`
-  - Use three or more other routes
-  - Pass route params for filtering and sorting
-  - Wrap the `browserHistory` object
+  - Include Items, Profile, Login, and 404 routes
+  - Use route params to display individual user profile information
+  - Use the `Switch` component and `exact` prop appropriately
+  - Use browser history
 - [ ] Implement Redux to manage application state
-- [ ] Hook up [`react-router-redux`](https://github.com/reactjs/react-router-redux) sync routing with Redux DevTools
+- [ ] Hook up [`react-router-redux`](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-redux) sync routing with Redux DevTools
 - [ ] Implement "presentational" and "container" components appropriately throughout the application
 - [ ] Use [`react-redux`](https://github.com/reactjs/react-redux) `connect` to map state to props
-- [ ] Use `connect` to map dispatch to props
-- [ ] Add [`redux-logger`](https://github.com/evgenyrodionov/redux-logger) middleware during "development" mode
 - [ ] Add and use [`redux-thunk`](https://github.com/gaearon/redux-thunk) middleware for async dispatches
 - [ ] Reflect the designer's vision for the application's UI
 
@@ -68,7 +65,7 @@ Your project must:
 
 Your project must:
 
-- [ ] Contain an organized file tree ([see an example](http://marmelab.com/blog/2015/12/17/react-directory-structure.html))
+- [ ] Contain an organized file tree (using the pattern described in class)
 - [ ] Use sub-directories to organize component files (on a per component basis)
 - [ ] Be free of lint errors from ESLint
 - [ ] Use a unique `key` for all items in lists
@@ -79,12 +76,7 @@ Your project must:
 
 Want to challenge yourself? Your project could also:
 
-- [ ] Use pure functions only (without side effects)
-- [ ] Contain components with arguments passed using "props" only (i.e. no use of `setState`)
-- [ ] Write actions using the [Flux Standard Action](https://github.com/acdlite/flux-standard-action) pattern
 - [ ] Implement localStorage to preserve state
-- [ ] Use a responsive design with a sliding drawer for the "Weeks" view
-- [ ] Allow users to only VOTE_UP a single time
 
 ## Submission Instructions
 
