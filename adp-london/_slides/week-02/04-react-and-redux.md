@@ -74,7 +74,7 @@ With a partner, fill out a table to distinguish between **Presentational** & **C
 Based on the following tree structure, discuss with a partner which components should be of each type. Justify your reasons.
 
 ```
-- REDitApp
+- App
  |- Weeks
     |- Week
         |- Header

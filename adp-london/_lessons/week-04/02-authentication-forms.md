@@ -36,7 +36,7 @@ Prior to class, read through the following documentation:
 
 ## Lab Activity
 
-Create the forms that you'll use in your REDit app, using the [Gandalf Validator](https://www.npmjs.com/package/gandalf-validator) library.
+Create the forms that you'll use in your Boomtown app, using the [Gandalf Validator](https://www.npmjs.com/package/gandalf-validator) library.
 You'll need to create both a user (login) form and a form for creating new posts.
 
 Be sure to include:

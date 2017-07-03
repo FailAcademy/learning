@@ -46,7 +46,7 @@ Write E2E tests for the Worst Pokemon app, checking that:
 
 ## Lab Activity
 
-Setup Nightwatch.js and E2E testing scenarios for your REDIt app.
+Setup Nightwatch.js and E2E testing scenarios for your Boomtown app.
 
 ---
 

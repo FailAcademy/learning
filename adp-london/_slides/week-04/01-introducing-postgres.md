@@ -97,11 +97,11 @@ Easily, the most common way to interact with Relational Databases is using SQL, 
 - Install VSCode plugins (pgsql, sql beautify)
 - Create db with user: 
     - createuser [follow prompts...]
-    - createdb redit
+    - createdb boomtown
     - alter user [user] with encrypted password '[somepassword]'
-    - grant all privileges on [redit] databasename to [user];
+    - grant all privileges on [boomtown] databasename to [user];
 
-** Take the class through reasoning about the schema and relationships they'll need to build for REDit ** <br/>
-(All the necessary SQL scripts for creating the REDit database are in the lesson-notes-and-assets folder in /_lessons/week-04) 
+** Take the class through reasoning about the schema and relationships they'll need to build for Boomtown ** <br/>
+(All the necessary SQL scripts for creating the Boomtown database are in the lesson-notes-and-assets folder in /_lessons/week-04) 
 
 {% endhighlight %}

@@ -57,10 +57,7 @@ First read through [Hashing Security](https://crackstation.net/hashing-security.
 
 ## Lab Activity
 
-In today's lab, please set up the following in your REDit app:
-
-1. Login and password authentication
-2. JWT authentication
+*TBA*
 
 ---
 

@@ -48,7 +48,7 @@ Some middleware suggestions:
 
 ## Lab Activity
 
-In todays lab we'll continue to work on our REDit project. Add Redux logger and any other useful Middleware you discover!
+In todays lab we'll continue to work on our Boomtown project. Add Redux logger and any other useful Middleware you discover!
 
 ---
 
