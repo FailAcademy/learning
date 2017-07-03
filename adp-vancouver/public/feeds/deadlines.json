@@ -1,12 +1,12 @@
 [
 	{
-		"title": "REDit (Part 1) Due",
+		"title": "Boomtown Pt. 1 Due",
 		"allDay": true,
 		"start": "2017-07-17",
 		"url": "/project/01a-react-and-redux"
 	},
 	{
-		"title": "REDit (Part 2) Due",
+		"title": "Boomtown Pt. 2 Due",
 		"allDay": true,
 		"start": "2017-07-31",
 		"url": "/project/01b-node-and-db/"
