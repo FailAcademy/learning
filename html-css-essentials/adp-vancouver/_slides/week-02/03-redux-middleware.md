@@ -340,7 +340,7 @@ if (process.env.NODE_ENV !== 'production') {
 ???
 Demonstrate how variables can be passed into a Node process using `process.env` by setting some variables
 in your `.[whatever]rc` filees using `export`, as well as running a node script with an environment variable: 
-eg: `APP_NAME='Redit' node index.js`, and `console.log(process.env.APP_NAME);` from within the script.
+eg: `APP_NAME='Boomtown' node index.js`, and `console.log(process.env.APP_NAME);` from within the script.
 
 
 

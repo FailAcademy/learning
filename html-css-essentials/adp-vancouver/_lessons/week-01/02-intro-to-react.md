@@ -152,13 +152,13 @@ Take a look at what's inside the Boomtown Starter as it's a bit more complex tha
 
 ### Styles
 
-We will primarily use **[Material UI](http://www.material-ui.com/#/)** to style our REDit app. Spend some time reviewing the Material UI docs site and jot down some notes about what components you think you'll need to use from this library in the REDit app.
+We will primarily use **[Material UI](http://www.material-ui.com/#/)** to style our Boomtown app. Spend some time reviewing the Material UI docs site and jot down some notes about what components you think you'll need to use from this library in the Boomtown app.
 
 Material UI has already been added as project dependency in the RED React Seed, but you should also take some time to review **[its GitHub repo README](https://github.com/callemall/material-ui)**  too.
 
 ### Code
 
-The remainder of today's lab will be spend roughing-out the component structure for the REDit app. Ultimately, we will need to create the following component structure for our app:
+The remainder of today's lab will be spend roughing-out the component structure for the Boomtown app. Ultimately, we will need to create the following component structure for our app:
 
 ```bash
 <Boomtown />                 # top-level component

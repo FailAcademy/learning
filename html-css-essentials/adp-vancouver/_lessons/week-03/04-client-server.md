@@ -34,7 +34,7 @@ lesson_date: 2017-07-20
 
 ## Lab Activity
 
-Adapt the API wrapper we wrote in class to integrate the REDit client & server using `redux-thunk`.
+*TBA*
 
 ---
 
