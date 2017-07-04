@@ -272,6 +272,13 @@ class: center, middle
 ]
 
 ---
+class: center, middle
+
+.large[
+  [Or this diagram...](https://bogdan-lyashenko.github.io/Under-the-hood-ReactJS/stack/book/Intro.html)
+]
+
+---
 
 # Why This Matters
 
