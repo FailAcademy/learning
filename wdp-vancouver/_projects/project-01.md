@@ -4,8 +4,6 @@ title: Project 1 - Aloha Homepage
 due: Tuesday, July 18th (beginning of class)
 ---
 
-**Project Check-in:** Wednesday April 19th (afternoon) 
-
 For Project 1, you're going to create a homepage for your client the Aloha Apparel Co. using HTML and CSS.
 
 During the second half of the project, you'll add interactivity this website with JS, and implement a mobile-first, responsive layout with flexbox (optimized for the three required screen sizes).
