@@ -198,9 +198,10 @@ Some other helpful React tutorials and ebooks:
 - [React Enlightenment](http://www.reactenlightenment.com/)
 - [Simple React Development in 2017](https://hackernoon.com/simple-react-development-in-2017-113bd563691f)
 
-Recorded talks from React.js Conf:
+Recorded talks from React Conf:
 
-- [React.js Conf 2016](https://www.youtube.com/playlist?list=PLb0IAmt7-GS0M8Q95RIc2lOM6nc77q1IY)
+- [React Conf 2016](https://www.youtube.com/playlist?list=PLb0IAmt7-GS0M8Q95RIc2lOM6nc77q1IY)
+- [React Conf 2017](https://www.youtube.com/playlist?list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0)
 
 More about CSS Modules:
 
