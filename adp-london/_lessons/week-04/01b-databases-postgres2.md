@@ -101,7 +101,7 @@ execute them all at once by loading the file from the `psql` command prompt.
 ## Lab Activity
 
 How does the Sequelize ORM handle queries and relationships. Add Sequelze to your project.
-When your project loads, create some *stub* data in your REDit database using the Sequelize API.
+When your project loads, create some *stub* data in your Boomtown database using the Sequelize API.
 
 Once you've initialized your database instance, you'll add the commands to insert data, and create relationships
 inside of the `sync` method, exposed by the instance, like this:

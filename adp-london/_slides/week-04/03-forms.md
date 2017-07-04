@@ -561,7 +561,7 @@ Feel free to create your own wrapper for any other UI library.
 
 ## Challenge
 
-Create a form in your "REDit" project. Include:
+Create a form in your Boomtown project. Include:
   - saving data to the Redux store
   - validation of fields
   - styled components
