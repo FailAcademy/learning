@@ -9,6 +9,10 @@ Create the front-end UI of a web-based application to support a local sharing ec
 
 Your project must use local mock data, React and the Material UI library to build out the application's UI, Redux and `react-redux` to manage application state, and React Router for routing.
 
+You can [download the project files here.](https://s3-us-west-2.amazonaws.com/red-adp/project-files/project-01.zip)
+
+And you can [download the starter repo here.](https://github.com/redacademy/boomtown-starter)
+
 ## Requirements
 
 To receive a “Pass” grade for this project, your submission will need to satisfy the following criteria:
