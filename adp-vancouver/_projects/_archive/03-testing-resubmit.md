@@ -5,7 +5,7 @@ due: Monday, February 27th (beginning of class)
 class: gh-check
 ---
 
-You will refactor your REDit project and resubmit it using unit and E2E tests.
+You will refactor your Boomtown project and resubmit it using unit and E2E tests.
 
 Your project must include type-checking with TypeScript, unit tests with Jest and Enzyme, and E2E testing with NightWatch.
 

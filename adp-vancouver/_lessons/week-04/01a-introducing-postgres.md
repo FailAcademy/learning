@@ -70,7 +70,7 @@ creating and authorizing a new Database on your local machine. In a real product
 
 ## Exercise 2
 
-Create Tables and set Data Types. What types of data do we need to model for our REDit application?
+Create Tables and set Data Types. What types of data do we need to model for our Boomtown application?
 
 - Use the `CREATE TABLE` command to set up some tables in our test database.
 - Set the appropriate data-types for each column in our schema.
