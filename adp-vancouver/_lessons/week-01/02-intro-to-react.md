@@ -197,6 +197,7 @@ Some other helpful React tutorials and ebooks:
 - [Plotly Academy](http://academy.plot.ly/)
 - [React Enlightenment](http://www.reactenlightenment.com/)
 - [Simple React Development in 2017](https://hackernoon.com/simple-react-development-in-2017-113bd563691f)
+- [30 Days of React](https://www.fullstackreact.com/30-days-of-react/)
 
 Recorded talks from React Conf:
 
