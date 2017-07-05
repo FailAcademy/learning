@@ -86,18 +86,6 @@ Is there anywhere that you may need to create an extra wrapping `<div>` around s
 
 ## Exercise 4
 
-Time to start floating some content!
-
-Team up with a partner and go through the design comp to figure out where you'll need to apply floats to execute the design.
-
-Work together to rough out the CSS that will float these elements. We'll reconvene as a class and share our solutions.
-
-And don't forget to add a clearfix class!
-
----
-
-## Exercise 5
-
 There are two components to this exercise&mdash;adding some colour, and beginning to add background images.
 
 Change the colour of the links and the orange headings to `#e2574c`.
