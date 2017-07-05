@@ -6,7 +6,7 @@ due: Tuesday, July 18th (beginning of class)
 
 For Project 1, you're going to create a homepage for your client the Aloha Apparel Co. using HTML and CSS.
 
-During the second half of the project, you'll add interactivity this website with JS, and implement a mobile-first, responsive layout with flexbox (optimized for the three required screen sizes).
+Then you will add interactivity to this website with JS, and implement a mobile-first, responsive layout with flexbox (optimized for the three required screen sizes).
 
 You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-01.zip).
 
