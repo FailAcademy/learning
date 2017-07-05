@@ -23,7 +23,7 @@ Debrief:
 
 Activity:
 
-Think/Pair/Shate: what is 'Syntax'?
+Think/Pair/Share: what is 'Syntax'?
 
 Debrief:
 
