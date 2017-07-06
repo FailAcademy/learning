@@ -40,7 +40,6 @@ Also ensure that you have completed yesterday's lab activity before class&mdash;
 - [Box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box_model)
 - [`class`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class)
 - [`id`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)
-- [`float`](https://developer.mozilla.org/en/docs/Web/CSS/float)
 - [`position`](https://developer.mozilla.org/en/docs/Web/CSS/position)
 - [Web/Page Inspector](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector)
 
