@@ -1,6 +1,6 @@
 # README
 
-Welcome to RED Academy's Web Developer Foundation learning materials!
+Welcome to RED Academy's Intro to Web Development learning materials!
 
 ## Development
 

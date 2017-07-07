@@ -4,9 +4,9 @@
 permalink:           pretty
 
 # Setup
-title:               Web Developer Foundation
+title:               Intro to Web Development
 tagline:             'Learning Materials'
-description:         'Learning materials for the RED Academy Web Developer Foundation course.'
+description:         'Learning materials for the RED Academy Intro to Web Development course.'
 url:                 http://red-wdf.herokuapp.com
 baseurl:             ''
 paginate:            10
