@@ -22,8 +22,9 @@ Also read through this CSS Tricks articles on using container components:
 - Explain the difference between container components and presentational components.
 - Use container components to manage data and behaviour on the front-end of an application, while using presentational components to manage the view.
 - Implement React Router on a project and configure basic application routing.
-- Use the `Switch`, `Link`, and `NavLink` components, as well as nested routes and params for a DRYer, more robust routing scheme in an application.
+- Use the `Switch`, `Link`, and `NavLink` components, as well as nested routes and params for a DRYer, more robust routing scheme in an application.{% comment %}
 - Parse URL query strings when using React Router 4 with the help of additional libraries.
+{% endcomment %}
 - Explain the difference between schemes for keeping track of browser history using different top-level router components.
 
 ---
