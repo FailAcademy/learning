@@ -465,23 +465,6 @@ Or used inside a `Switch` component:
 
 ---
 
-# Exercise 3
-
-Based on what you just learned in the preceding examples, apply this to your project now. You will need to create routes that point users to:
-
-- The Items List page (`/`)
-- The Login page (`/login`)
-- The Share an Item page (`/share`)
-- The individual User Profile pages (`/profile/[ID_HERE]`)
-- A 404 page
-
----
-template: inverse
-
-# Parameters
-
----
-
 # URL Parameters
 
 URL parameters allow us to navigate to routes with some sort of variable segment in the URL using via **route matching**:
@@ -541,6 +524,7 @@ If we were building actual Reddit in React, our specific comment URLs might look
 
 The parts that start with `:` are URL parameters whose values will be parsed out and made available in `props.match.params.PARAM_NAME` in your component.
 
+{% comment %}
 ---
 
 # Query Strings
@@ -599,6 +583,19 @@ const Posts = ({ match, location }) => {
   )
 };
 ```
+{% endcomment %}
+
+---
+
+# Exercise 3
+
+Based on what you just learned in the preceding examples, apply this to your project now. You will need to create routes that point users to:
+
+- The Items List page (`/`)
+- The Login page (`/login`)
+- The Share an Item page (`/share`)
+- The individual User Profile pages (`/profile/[ID_HERE]`)
+- A 404 page
 
 ---
 template: inverse
@@ -627,8 +624,9 @@ The `BrowserRouter` (used in our demo) uses the **[Browser History API](https://
 
 **But there's a catch!** We need a server to use this...one that will always return `index.html` at any route. (Using the Browser History API also enables us to use server-side rendering.)
 
-Luckily, there's a server already configured in RED React Seed, and Create React App.
+Luckily, there's a server already configured in Create React App.
 
+{% comment %}
 ---
 
 # Browser History Demo
@@ -650,6 +648,7 @@ history.pushState(null, null, 'hello');
 ```
 
 What do you notice? Be sure to watch the browser's address bar will you do this...
+{% endcomment %}
 
 ---
 
