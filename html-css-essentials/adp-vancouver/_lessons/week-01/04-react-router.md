@@ -7,11 +7,7 @@ lesson_date: 2017-07-07
 
 ## Pre-work
 
-Prior to class today, watch the videos in this tutorial:
-
-- [Add routing to React apps using React Router v4](https://egghead.io/courses/add-routing-to-react-apps-using-react-router-v4)
-
-Also read through this CSS Tricks articles on using container components:
+Read through this CSS Tricks articles on using container components:
 
 - [Leveling Up With React: Container Components](https://css-tricks.com/learning-react-container-components/)
 
