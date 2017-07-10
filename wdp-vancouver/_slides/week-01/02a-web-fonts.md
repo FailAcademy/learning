@@ -151,7 +151,7 @@ Go to **Font Squirrel** and download the Webfont Kit for the custom typefaces th
 
 You'll need to download both of the weights and their italic versions too for each typeface. Add the contents of your generated web font packages to your project.
 
-You’ll also want to read up on how to **[avoid faux italics and bolding](http://www.metaltoad.com/blog/how-use-font-face-avoid-faux-italic-and-bold-browser-styles)** with your `@font-face` typefaces, and adjust your CSS accordingly.
+You’ll also want to read up on **[Web Fonts – ‘Faux’ Bold and Italic](http://css-snippets.com/web-fonts-faux-bold-and-italic/)** (Another reading **[here](https://css-tricks.com/watch-your-font-weight/)**) and adjust your `@font-face` typefaces, and CSS accordingly.
 
 ---
 template: inverse
