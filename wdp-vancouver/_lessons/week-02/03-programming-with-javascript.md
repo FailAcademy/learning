@@ -7,7 +7,7 @@ lesson_date: 2017-07-12
 
 ## Pre-Work
 
-Before the first JS class, be sure to work through all of the free modules in Codeacademy's [JavaScript](https://www.codecademy.com/learn/javascript) tutorial.
+Before the first JS class, be sure to work through all of the free modules in Codeacademy's [JavaScript](https://www.codecademy.com/learn/learn-javascript) tutorial.
 
 Also read through the following page to reinforce some JS programming concepts before class:
 
