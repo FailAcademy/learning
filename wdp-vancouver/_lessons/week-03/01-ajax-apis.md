@@ -9,7 +9,7 @@ lesson_date: 2017-07-18
 
 Read this primer on APIs before class:
 
-- [What APIs Are And Why They're Important](http://readwrite.com/2013/09/19/api-defined)
+- [What is an API?](https://dev.to/aditichaudhry92/what-is-an-api)
 
 ---
 

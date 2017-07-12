@@ -1062,7 +1062,7 @@ Declaring multiple background is just like declaring a single background, but yo
 
 ---
 
-# Exercise 5
+# Exercise 4
 
 There are two components to this exercise&mdash;adding some colour, and beginning to add background images.
 

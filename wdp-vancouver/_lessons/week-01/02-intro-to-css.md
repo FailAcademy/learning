@@ -40,7 +40,6 @@ Also ensure that you have completed yesterday's lab activity before class&mdash;
 - [Box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box_model)
 - [`class`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class)
 - [`id`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)
-- [`float`](https://developer.mozilla.org/en/docs/Web/CSS/float)
 - [`position`](https://developer.mozilla.org/en/docs/Web/CSS/position)
 - [Web/Page Inspector](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector)
 
@@ -85,18 +84,6 @@ Is there anywhere that you may need to create an extra wrapping `<div>` around s
 ---
 
 ## Exercise 4
-
-Time to start floating some content!
-
-Team up with a partner and go through the design comp to figure out where you'll need to apply floats to execute the design.
-
-Work together to rough out the CSS that will float these elements. We'll reconvene as a class and share our solutions.
-
-And don't forget to add a clearfix class!
-
----
-
-## Exercise 5
 
 There are two components to this exercise&mdash;adding some colour, and beginning to add background images.
 

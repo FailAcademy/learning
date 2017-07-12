@@ -113,7 +113,7 @@ class: middle
 
 There are two types of paths: __absolute__ and __relative__.
 
-Find a partner. One of you will research __absolute paths__, and the other will research __relative paths__. Once you uderstand them, explain them to each other.
+Find a partner. One of you will research __absolute paths__, and the other will research __relative paths__. Once you understand them, explain them to each other.
 
 ???
 
