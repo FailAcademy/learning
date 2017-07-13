@@ -1,18 +1,19 @@
 ---
 layout: lesson
 title: Asynchronous JavaScript
-slides: ['_slides/week-03/02-async-javascript.md']
-lesson_date: 2017-07-18
+slides: ['_slides/week-03/01-async-javascript.md']
+lesson_date: 2017-07-17
 ---
 
 ## Pre-Work
 
-Prior to today's class, please read:
+Watch this video for a primer on Node's event loop:
 
-- [The Evolution of Async Javascript](https://blog.risingstack.com/asynchronous-javascript/).
+- [What the heck is the event loop anyway?](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 
-Also be sure to review how timers work in JS:
+Prior to today's class, please also read the following articles:
 
+- [The Evolution of Async Javascript](https://blog.risingstack.com/asynchronous-javascript/)
 - [Understanding timers: `setTimeout` and `setInterval`](http://javascript.info/tutorial/settimeout-setinterval)
 
 ---
