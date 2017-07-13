@@ -188,6 +188,8 @@ More on REST:
 
 - [REST, where’s my state?](https://ruben.verborgh.org/blog/2012/08/24/rest-wheres-my-state/)
 - [Richardson Maturity Model: steps toward the glory of REST](https://martinfowler.com/articles/richardsonMaturityModel.html)
+- [Scotch.io: Build a RESTful API with Express](https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4)
+- [Learn REST - A Tutorial](http://www.restapitutorial.com/)
 
 High-level overviews of other protocols, etc. discussed during the lesson:
 
