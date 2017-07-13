@@ -19,11 +19,10 @@ Also be sure to review how timers work in JS:
 
 ## Learning Objectives
 
-- Understand and be able to differentiate 'asynchrony', parallelism and concurrency.
-- Explain the JavaScript "event loop", and how it interprets the code we write.
-- Distinguish between blocking and non-blocking code (for example, `fs.readFile` versus `fs.readFileSync`).
-- Understand the syntactic and semantic implications of "Callback Hell"
-- Identify strategies for writing clean asynchronous code using callbacks, promises, and async/await.
+- Differentiate asynchrony, parallelism, and concurrency.
+- Explain how the JavaScript event loop works, and how it interprets the code you write.
+- Explain the syntactic and semantic implications of "callback hell."
+- Implement strategies for writing clean asynchronous code using callbacks, Promises, and `async`/`await`.
 
 ---
 
@@ -46,7 +45,73 @@ Also be sure to review how timers work in JS:
 - [`catch`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch)
 - [`then`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)
 - `pending`
-- Async/Await
+- [`async`/`await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+
+---
+
+# Exercise 1
+
+In pairs describe/diagram what is happening in the event loop when the `callbackHell` function is called.
+
+```js
+const callbackHell = (url) => {
+  get(url, (response) => {
+    get(response.url, (response) => {
+      get(response.url, (response) => {
+        console.log('third response');
+      });
+    });
+  });
+};
+```
+
+---
+
+## Exercise 2
+
+**Setup (in pairs):**
+
+Create an `async-js` branch in the `esnext-playground`, install the [Request](https://www.npmjs.com/package/request) library, and read the API docs for [this fake API](https://jsonplaceholder.typicode.com/) to GET our data.
+
+**Using callbacks, write a function that:**
+
+1. Prints the first 10 Posts
+2. Prints the first 20 Albums
+3. Prints 'Done!'
+
+---
+
+## Exercise 3
+
+Look up the docs on the **[Promise API](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise)** on MDN. How can we wrap the above in a function that returns a promise?
+
+```js
+get(url, (error, response) => {
+  console.log('response');
+});
+```
+
+---
+
+## Exercise 4
+
+In pairs, refactor the callbacks exercise using Promises.
+
+**Setup:**
+
+Install the [Request Promise](https://www.npmjs.com/package/request-promise) library.
+
+**Using promises, write a function that:**
+
+- Prints the first 10 Posts
+- Prints the first 20 Albums
+- Prints 'Done!'
+
+---
+
+## Exercise 5
+
+In pairs, refactor the Promises exercise using `async`/`await`.
 
 ---
 
@@ -71,10 +136,10 @@ To the moon-beholders
 
 Write a function that uses Node to get each of the files and concatenate them into a haiku. Maintain the appropriate line breaks.
 
-- There are sync and async versions of the Node API function you will need - use the async version
-- To get the executing path of your node process, use `process.cwd()`
+- There are sync and async versions of the Node API function you will need&mdash;use the async version.
+- To get the executing path of your node process, use `process.cwd()`.
 
-Result:
+**Result:**
 
 ```
 From time to time
@@ -84,14 +149,15 @@ To the moon-beholders
 
 If you finish, here are some additional challenges:
 
-1. Write the function using Async/Await and Promises
-2. Using Promises, find a way to request all three files concurrently
-3. Using Promises, find a way to request all three concurrently along with a file that does not exist. (Hint: there is no Promise API method that allows for this)
+1. Write the function using async/await and Promises.
+2. Using Promises, find a way to request all three files concurrently.
+3. Using Promises, find a way to request all three concurrently along with a file that does not exist. (Hint: there is no Promise API method that allows for this.)
 
 ---
 
 ## Additional Resources
 
-- [What the heck is the Event Loop anyway?](http://2014.jsconf.eu/speakers/philip-roberts-what-the-heck-is-the-event-loop-anyway.html)
+More on Promises:
+
 - [Promise Overview](http://www.1bytebeta.com/javascript-promise-overview/)
 - [Egghead.io on Promises](https://egghead.io/lessons/ecmascript-6-promises-with-es6)
