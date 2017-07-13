@@ -156,7 +156,7 @@ Don't forget to move your quotes array into `quotes.js` too!
 
 ---
 
-# Exercise 11
+## Exercise 11
 
 In small groups or pairs, you'll be assigned one of the following topics to research (with respect to how it relates to REST) and deliver a short presentation to class on your findings:
 
