@@ -1,17 +1,13 @@
 ---
 layout: lesson
 title: Introducing Node
-slides: ['_slides/week-03/01-introducing-node.md']
-lesson_date: 2017-07-17
+slides: ['_slides/week-03/02-introducing-node.md']
+lesson_date: 2017-07-18
 ---
 
 ## Pre-Work
 
-Watch this video for a primer on Node's event loop.
-
-- [What the heck is the event loop anyway?](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
-
-Also take a look at how you can debug your Node application using Chrome Dev Tools before class:
+Take a look at how you can debug your Node application using Chrome Dev Tools before class:
 
 - [DevTools in 2016: Accelerate your workflow - Google I/O 2016](https://www.youtube.com/watch?v=x8u0n4dT-WI&feature=youtu.be&t=2571)
 
@@ -112,12 +108,16 @@ What are the advantages of using an AWS Lambda function to build out TCP/UDP ser
 
 ## Additional Resources
 
+Watch the presentation where Node was introduced at JSConf 2009:
+
+- [Ryan Dahl: Original Node.js presentation](https://www.youtube.com/watch?v=ztspvPYybIY)
+
+A delightful Node.js packages and resources:
+
+- [Awesome NodeJS](https://github.com/sindresorhus/awesome-nodejs)
+
 Process monitors and testing tools for Node:
 
 - [pm2](http://pm2.keymetrics.io/)
 - [tcpkali](https://github.com/machinezone/tcpkali)
 - [htop](https://hisham.hm/htop/)
-
-A delightful Node.js packages and resources:
-
-- [Awesome NodeJS](https://github.com/sindresorhus/awesome-nodejs)
