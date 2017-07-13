@@ -765,6 +765,8 @@ class: center, middle
 
 ???
 
+- All about stateless servers and structured access to resources
+- REST itself is pretty strict, but it's widely interpreted
 - Contrast to RPC which is action-driven
 - A tale of two APIs
   - https://codex.wordpress.org/XML-RPC_WordPress_API

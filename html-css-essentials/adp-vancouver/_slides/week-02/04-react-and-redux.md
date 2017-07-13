@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: React & Redux Slides
+title: React and Redux Slides
 ---
 
 {% highlight html %}
