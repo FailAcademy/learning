@@ -777,7 +777,7 @@ class: center, middle
 A few events contributed to the rise of REST:
 
 - The ubiquity of smartphones (iPhone launched in 2007)
-- Social media platforms (Twitter API as a way to combat rogue API implementations)
+- Social media platforms (the witter sort-of-REST-ish API was a way to combat rogue API implementations)
 - Cloud computing (Amazon S3 launched in 2006 and initially didn't have a GUI, just a RESTful API)
 
 ---
