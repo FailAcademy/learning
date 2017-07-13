@@ -1,8 +1,6 @@
 ---
-
 layout: slidedeck
 title: Connecting Client & Server
-
 ---
 
 {% highlight html %}
