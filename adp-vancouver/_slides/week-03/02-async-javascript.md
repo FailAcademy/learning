@@ -20,12 +20,12 @@ layout: false
 # Agenda
 
 1. Recognizing Asynchrony
-1. Stacks & Queues
-1. The Event Loop
-1. Asynchrony, Parallelism and Concurrency
-1. Callbacks & Callback Hell
-1. Promises
-1. Async Functions
+2. Stacks & Queues
+3. The Event Loop
+4. Asynchrony, Parallelism & Concurrency
+5. Callbacks & Callback Hell
+6. Promises
+7. Async Functions
 
 ---
 
@@ -36,6 +36,8 @@ template: inverse
 ---
 
 # Example 1
+
+**What is the output here? Why?**
 
 ```js
 // setTimeout(fn, delay)
@@ -57,11 +59,9 @@ function run() {
 run();
 ```
 
-What is the output? Why?
-
 ???
 
-You can run the example directy in the console.
+You can run the example directly in the console.
 
 You will get an `undefined` response before you see `b` and `c` logged. See if they have any idea why.
 
@@ -70,6 +70,8 @@ You will get an `undefined` response before you see `b` and `c` logged. See if t
 ---
 
 # Example 2
+
+**What is the output here? Why?**
 
 ```js
 function do_a(){
@@ -87,11 +89,11 @@ do_a();
 do_b();
 ```
 
-What is the output? Why?
-
 ---
 
 # Example 3
+
+**What is the output here? Why?**
 
 ```js
 function do_a(cb) {
@@ -107,113 +109,107 @@ function do_b() {
 do_b();
 ```
 
-What is the output? Why?
-
-What is different about this example?
+*What is different about this example?*
 
 ---
-
 template: inverse
 
-# Data Structures
-
-.large[
-   Stacks & Queues
-]
+# Data Structures:<br />Stacks & Queues
 
 ---
-class: center
+class: center, middle
 
 # Stack
 
 .inline-images[
-  <img src="https://www.oddballs.co.uk/images/CathysSpinningPlateMain.jpg" width="400">
+  ![Stack of colourful plates](/public/img/slide-assets/stack-of-plates.jpg)
 ]
 
 ---
-class: middle
 
-## Stack
+# Stack
 
-.condensed[
-- L -> Last
-- I -> In
-- F -> First
-- O -> Out
-]
+```
+L -> Last
+I -> In
+F -> First
+O -> Out
+```
 
-Two methods: __Push__ & __Pop__. One reference: __Top__.
+Two methods: **Push** and **Pop**. 
 
-How would we implement it?
+One reference: **Top**.
+
+*How would we implement it?*
 
 ---
-class: center
+class: center, middle
 
 # Queue
 
 .inline-images[
-  <img src="https://davidsowden.files.wordpress.com/2012/08/the_kissing_queue.jpg" width="400">
+  ![Kissing queue](/public/img/slide-assets/queue-kissing.jpg)
 ]
 
 ---
 
-class: middle
+# Queue
 
-## Queue
-
+```
 (head) 1 <- 2 <- 3 <- 4 <- 5 (tail)
+```
 
-Two methods: __Enqueue__ & __Dequeue__. Two references: __Head__ & __Tail__.
+Two methods: **Enqueue** & **Dequeue**. 
 
-How would we implement it?
+Two references: **Head** & **Tail**.
+
+*How would we implement it?*
 
 ---
-
 template: inverse
 
 # The Event Loop
 
-[Philip Roberts: What the heck is the event loop anyway?](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+---
+class: center, middle
+
+.large[
+  So what does **asynchronous** actually mean?
+]
 
 ---
 class: center, middle
 
 .large[
-  So what does "Asynchronous" actually mean?
-]
+  **Parallelism:**
 
----
-template: inverse
-
-# Parallelism
-
-.large[
-   Picture a rollercoaster with one thirty-seat car
-]
-
----
-template: inverse
-
-# Asynchrony
-
-.large[
-   Picture a rollercoaster with thirty one-seat cars
-]
-
----
-
-template: inverse
-
-# Concurrency
-
-.large[
-   More than one person can enjoy the rollercoaster at any given time
+   Picture a roller coaster with one thirty-seat car
 ]
 
 ---
 class: center, middle
 
-## So how do we write asynchronous code?
+.large[
+  **Asynchrony:**
+
+   Picture a roller coaster with thirty one-seat cars
+]
+
+---
+class: center, middle 
+
+.large[
+  **Concurrency**
+
+  More than one person can enjoy the roller coaster at any given time
+]
+
+---
+class: center, middle
+
+.large[
+  *So how do we write asynchronous code?*
+]
 
 ---
 template: inverse
@@ -223,14 +219,13 @@ template: inverse
 ???
 
 - What is a callback?
-- What kind of function uses callbacks (Higher Order Functions)
+- What kind of function uses callbacks (higher order functions)
 
 ---
-class: middle
 
-## Callbacks
+# Callbacks
 
-AKA "Callback Functions"
+Also known as **callback functions**...
 
 ```js
 get(url, (response) => {
@@ -238,31 +233,32 @@ get(url, (response) => {
 });
 ```
 
-How does this look on the Event loop?
+*How does this look on the event loop?*
 
 ???
 
 - Make sure they factor in the 'main' method that is executing the `get` fn.
 - Make sure they understand that each function 'runs to completion' in JS.
-
-Any downsides to writing code that uses callbacks?
+- Any downsides to writing code that uses callbacks?
 
 ---
-template: inverse
+class: center, middle
 
-# Callback hell
+.large[
+  **Callback Hell!**
+]
 
 ???
 
-Callback Hell (syntactic)
-
 - Has anyone heard of callback hell?
-- Syntactic symptoms - 45 degree code, deeply nested functions
+- Syntactic symptoms: 45 degree code, deeply nested functions
 
 ---
-class: middle
 
-## Exercise: Callback Hell
+
+# Exercise 1
+
+In pairs describe/diagram what is happening in the event loop when the `callbackHell` function is called.
 
 ```js
 const callbackHell = (url) => {
@@ -276,22 +272,16 @@ const callbackHell = (url) => {
 };
 ```
 
-In pairs: describe what is happening in the Event Loop when the `callbackHell` function is called.
-
 ???
 
-- Make sure they understand that each function 'runs to completion' in JS
-
-Once they're done the exercise, ask:
-
-- What happens if/when one of these requests fails?
+- Make sure they understand that each function "runs to completion" in JS
+- Once they're done the exercise, ask: "What happens if/when one of these requests fails?"
 
 ---
-class: middle
 
-## Handling Errors in Callbacks
+# Handling Errors in Callbacks
 
-To make sure errors are properly handled, many libraries implement 'Error first' callbacks.
+To make sure errors are properly handled, many libraries implement **error first** callbacks:
 
 ```js
 get(url, (error, response) => {
@@ -302,52 +292,43 @@ get(url, (error, response) => {
 });
 ```
 
-???
+*Why do you think we put the error first?*
 
-- Why do you think we put the error first
-- How would this make callback hell more hellish?
+*How would this make callback hell more hellish?*
 
 ---
 
-## Exercise: Callbacks
+# Exercise 2
 
-In Pairs:
+**Setup (in pairs):**
 
-__Setup:__
+Create an `async-js` branch in the `esnext-playground`, install the [Request](https://www.npmjs.com/package/request) library, and read the API docs for [this fake API](https://jsonplaceholder.typicode.com/) to GET our data.
 
-.condensed[
-1. Create an `async-js` branch in the `esnext-playground`.
-2. Install the [Request](https://www.npmjs.com/package/request) library.
-3. Read the API docs for [this fake API](https://jsonplaceholder.typicode.com/) to GET our data.
-]
+**Using callbacks, write a function that:**
 
-__Using callbacks: write a function that:__
-
-.condensed[
 1. Prints the first 10 Posts
-1. Prints the first 20 Albums
-1. Prints 'Done!'
-]
+2. Prints the first 20 Albums
+3. Prints 'Done!'
 
 ---
-template: inverse
-
-# The _real_ problem with Callbacks
+class: center, middle
 
 .large[
-  (it's worse than syntax)
+  **The *real* problem with callbacks...**<br />
 ]
+
+(it's worse than syntax)
 
 ???
 
-IOC
+Inversion of Control:
 
 - Can anyone think of a bigger issue with the way we're writing code?
 - We've handled errors, but what if the response never comes?
 - We've handed control of our application to some API
 - This principle is called Inversion of Control (IOC)
 
-Reasonability
+Reasonability:
 
 - Consider the callback hell example
 - Is it easy to understand, to "Reason About"?
@@ -371,9 +352,10 @@ Pre-test:
 - The "Promise" metaphor: "I promise I'll get back to you"
 
 ---
-class: middle
 
-## Promises
+# Promises
+
+Promises use `then` and `catch` to handle success resolution or a rejection, respectively:
 
 ```js
 get(url)
@@ -381,9 +363,10 @@ get(url)
   .catch(console.log);
 ```
 
+*Where have we used this already?*
+
 ???
 
-- Promises use `then` and `catch` for success and error, respectively
 - Instead of handing control and asking a function to be called, we're calling a function and expecting a return value.
 
 Bonus:
@@ -393,9 +376,10 @@ How does this look in the event loop?
 - All `then` and `catch` methods get called, they just register callbacks effectively using closures.
 
 ---
-class: middle
 
-## Handling Errors in Promises
+# Handling Errors in Promises
+
+If any of the `then` functions fail, then the `catch` function will be called:
 
 ```js
 get(url)
@@ -405,8 +389,6 @@ get(url)
   .catch(console.log);
 ```
 
-If any of the `then` functions fail, the `catch` function will be called.
-
 ???
 
 - Unhandled promises throw an error
@@ -414,9 +396,10 @@ If any of the `then` functions fail, the `catch` function will be called.
 - You can easily add timeouts into promise calls.
 
 ---
-class: middle
 
-## Handling Errors in Promises
+# Handling Errors in Promises
+
+**GOTCHA:** Any `then` *after* a `catch` will be called!
 
 ```js
 get(url)
@@ -427,27 +410,24 @@ get(url)
   .catch(console.log);
 ```
 
-GOTCHA: Any `then` _after_ a `catch` will be called!
-
 ???
 
-This can make muliple failure flows difficult to code.
+This can make multiple failure flows difficult to code.
 
 - You can return a failed promise with a message `Promise.reject('FLAG')`
 - But there's no good control flow options
 
 ---
-class: middle
 
-## Exercise: Callback to Promise
+# Exercise 3
+
+Look up the docs on the **[Promise API](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise)** on MDN. How can we wrap the above in a function that returns a promise?
 
 ```js
 get(url, (error, response) => {
   console.log('response');
 });
 ```
-
-Look up the Promise API on MDN. How can we wrap the above in a function that returns a promise?
 
 ???
 
@@ -465,39 +445,29 @@ function getPromise = (url) => {
 ```
 
 ---
-## Exercise: Promises
 
-In Pairs, refactor the Callbacks Exercise using Promises.
+# Exercise 4
 
-__Setup:__
+In pairs, refactor the callbacks exercise using Promises.
 
-.condensed[
-1. Install the [Request Promise](https://www.npmjs.com/package/request-promise) library.
-]
+**Setup:**
 
-__Using promises, write a function that:__
+Install the [Request Promise](https://www.npmjs.com/package/request-promise) library.
 
-.condensed[
-1. Prints the first 10 Posts
-1. Prints the first 20 Albums
-1. Prints 'Done!'
-]
+**Using promises, write a function that:**
+
+- Prints the first 10 Posts
+- Prints the first 20 Albums
+- Prints 'Done!'
 
 ---
-
-
 template: inverse
 
 # Async Functions
 
-.large[
-   AKA the best thing ever
-]
-
 ---
-class: middle
 
-## Async Functions
+# Async Functions
 
 ```js
 async function getUrl(url) {
@@ -512,11 +482,9 @@ async function getUrl(url) {
 getUrl('http://www.google.ca');
 ```
 
-.condensed[
-- Any async __or sync__ function can be awaited
+- Any async **or sync** function can be awaited
 - Allows us to write async code that looks synchronous
 - We can only use the `await` keyword in an `async function`
-]
 
 ???
 
@@ -525,15 +493,26 @@ getUrl('http://www.google.ca');
 - No IE or Opera Mini support, still need a transpiler
 
 ---
-class: middle
 
-## Exercise: Async/Await
+# Exercise 5
 
-In Pairs, refactor the Promises Exercise using Async Await.
+In pairs, refactor the Promises exercise using `async`/`await`.
+
+---
+
+# What We've Learned
+
+- How to recognize asynchrony
+- What stacks and queues are
+- How the event loop relates to asynchrony in JS
+- What parallelism and concurrency are
+- What callbacks (and callback hell) are
+- How to use Promises
+- How to use `async`/`await`
 
 ---
 template: inverse
 
-# Lab
+# Questions?
 
 {% endhighlight %}
