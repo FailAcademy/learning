@@ -736,7 +736,7 @@ And move all of the `app.route()` calls `quotes.js`.
 
 Our app won't work until we refactor what we just moved into `./quotes.js`.
 
-First, we won't call `.route()` on the `app` object (it doesn't exist here), we'll call it on the instance of the router we instaniated in this file (`router`).
+First, we won't call `.route()` on the `app` object (it doesn't exist here), we'll call it on the instance of the router we instantiated in this file (`router`).
 
 Second, the path argument passed into `.route()` will be relative to where it's mounted in `index.js`. What do we need to change in the path argument to reflect this?
 
