@@ -1065,6 +1065,75 @@ function france() {
 
 ---
 
+# What Kind of Scope?
+
+Global variables can be reassigned within functions to have local-only values too:
+
+```js
+var faveColour = 'blue';
+
+function sayColour() {
+   console.log(faveColour);
+   faveColour = 'red'; // the "var" keyword is omitted!
+   console.log(faveColour);
+}
+sayColour();
+```
+
+If you use the `var` keyword inside the function, you will get an unexpected result. Try this out in CodePen...
+
+---
+
+# Why Does This Happen?
+
+This quirky behaviour happens because of **hoisting**.
+
+Hoisting will result in the first `console.log()` returning **undefined**:
+
+```js
+var faveColour = 'blue';
+
+function sayColour() {
+   console.log(faveColour); // faveColour is undefined here
+   var faveColour = 'red'; // faveColour now equals 'red'
+   console.log(faveColour);
+}
+sayColour();
+```
+
+Let's see why this happens...
+
+---
+
+# Why Does This Happen?
+
+Whenever our JavaScript parser evaluates a script, it actually **makes two passes over it**.
+
+First, it re-sorts your code and moves all of your declared variable names (aka your not-yet-filled buckets) to the top and waits for your code to fill them with something.
+
+Only then does your browser make a second pass over your script to execute it.
+
+---
+
+# Why Does This Happen?
+
+So in reality, the code your browser sees actually looks like this at the time it's executed:
+
+```js
+var faveColour; // bucket waiting to be filled
+faveColour = 'blue'; // now it's filled with blue
+
+function sayColour() {
+   var faveColour; // now it's redeclared and empty again
+   console.log(faveColour); // our bucket was empty so it's undefined
+   faveColour = 'red'; // but now we filled the bucket with red
+   console.log(faveColour); // so we log 'red' now
+}
+sayColour();
+```
+
+---
+
 # Global vs. Local Scope
 
 There are pros and cons to each type of variable scope:
