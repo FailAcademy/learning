@@ -19,6 +19,7 @@ Watch [this video](https://www.youtube.com/watch?v=8aGhZQkoFbQ) for a primer on 
 - Model JavaScript's Event Loop.
 - Build a simple TCP / UDP messaging server.
 - Install and use Node's profiling tools.
+- Understand the difference between "blocking IO" & "non-blocking IO"
 
 ---
 
@@ -30,7 +31,8 @@ Watch [this video](https://www.youtube.com/watch?v=8aGhZQkoFbQ) for a primer on 
 - TCP / UPD
 - Process Manager
 - Memory Leak
-- Back Pressure
+- Blocking / Non-blocking io
+- Core Module
 
 ---
 
@@ -62,13 +64,22 @@ When you're finished, watch this video from Google I/O!
 
 ## Exercise 3
 
-Run some load tests on your TCP Server and observe the following:
-- System memory and CPU usage
-- Node process memory and CPU usage
-- The output returned from the server process
+Use your TCP server to read from your local file system.
 
-run the command: <br/>
-`tcpkali -c 100 -d -m "$" -r 100 localhost:9000`
+When your server receives a request, use Node's build in ```fs``` module
+to read text from a ```.txt``` file and send the contents back to the connection.
+
+- Is reading from the filesystem considered an **async** or **sync** action? Why?
+- In what circumstance is it useful to use blocking operations?
+
+Modify your existing code:
+
+```js
+function handleConnection(conn) {
+  // TODO: Read a welcome message from your filesystem
+  //       and respond to the connection with the contents
+}
+```
 
 ---
 
