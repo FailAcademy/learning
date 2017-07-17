@@ -93,5 +93,6 @@ If you finish, here are some additional challenges:
 ## Additional Resources
 
 - [What the heck is the Event Loop anyway?](http://2014.jsconf.eu/speakers/philip-roberts-what-the-heck-is-the-event-loop-anyway.html)
-- [Promise Overview](http://www.1bytebeta.com/javascript-promise-overview/)
 - [Egghead.io on Promises](https://egghead.io/lessons/ecmascript-6-promises-with-es6)
+- [JavaScript Promises: an Introduction](https://developers.google.com/web/fundamentals/getting-started/primers/promises)
+- [Using Promises (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
