@@ -77,7 +77,7 @@ In the example tree file structure below, which components should be presentatio
 
 ## Exercise 4
 
-Use the `<Provider>` tag from ["react-redux"](https://github.com/reactjs/react-redux) to connect the Redux store to the React app in your "Worst Pokemon" app.
+Use the `<Provider>` tag from ["react-redux"](https://github.com/reactjs/react-redux) to connect the Redux store to a React App.
 
 **Hint:** Check the [docs](https://github.com/reactjs/react-redux/blob/master/docs/api.md#provider-store)!
 
@@ -85,11 +85,11 @@ Use the `<Provider>` tag from ["react-redux"](https://github.com/reactjs/react-r
 
 ## Exercise 5
 
-First, write `mapStateToProps` to connect a "container" component using "react-redux" & `connect` in your "Worst Pokemon" app.
+First, write `mapStateToProps` to connect a "container" component using "react-redux" & `connect` in your React app.
 
 **Hint:** Check the [docs](https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options)!
 
-Next, use `mapDispatchToProps` second parameter to connect dispatched events in your "Worst Pokemon" app.
+Next, use `mapDispatchToProps` second parameter to connect dispatched events in your React app.
 
 ---
 
