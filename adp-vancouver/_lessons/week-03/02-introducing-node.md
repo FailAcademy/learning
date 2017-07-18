@@ -38,29 +38,23 @@ Take a look at how you can debug your Node application using Chrome Dev Tools be
 
 ---
 
-# Exercise 1
+## Exercise 1
 
 Implement the following `conn` event handlers in your `handleConnection` callback:
 
-- #### 'data'
-- #### 'close'
-- #### 'error'
+- `data`
+- `close`
+- `error`
 
-Each handler should `console.log` the `remoteAddress` as well as any relevant parameters (e.g. incoming data, or error messages).
-Review the documentation here before you begin: [https://nodejs.org/api/net.html](https://nodejs.org/api/net.html)
+Each handler should `console.log` the `remoteAddress` as well as any relevant parameters (e.g. incoming data, or error messages). Review **[the documentation](https://nodejs.org/api/net.html)** here before you begin.
 
 ---
 
 ## Exercise 2
 
-Use the debugger and set a breakpoint in your `data` event handler. Intercept the incoming data, and use the debugger's console to change the value
-of the data parameter (the incoming data) before it's logged.
+Use the debugger and set a breakpoint in your `data` event handler. Intercept the incoming data, and use the debugger's console to change the value of the data parameter (the incoming data) before it's logged.
 
-(Use Netcat to send data to your new TCP service)
-
-When you're finished, watch this video from Google I/O!
-[DevTools in 2016: Accelerate your workflow - Google I/O 2016](https://www.youtube.com/watch?v=x8u0n4dT-WI&feature=youtu.be&t=2571)
-
+Use [Netcat](https://en.wikipedia.org/wiki/Netcat) to send data to your new TCP service.
 
 ---
 
