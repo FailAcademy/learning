@@ -1,7 +1,6 @@
 ---
 layout: slidedeck
 title: Introducing Node Slides
-
 ---
 
 {% highlight html %}
@@ -24,7 +23,7 @@ layout: false
 - Review TCP/UDP protocols
 - Model JavaScript's event loop
 - Build a simple TCP/UDP messaging server
-- Install and use Node's profiling tools
+- Use Node's built in modules to read from you computer's filesystem
 
 ---
 template: inverse
@@ -258,61 +257,28 @@ Now we have a friendly upper-casing service.
 ---
 template: inverse
 
-# Load Testing
-
----
-
-# Load Testing
-
-Lets try to understand what our new Node process (upper-casing service) is doing while it's running.
-
-**Install the following tools:**
-
-- [pm2](http://pm2.keymetrics.io/): `npm i -g pm2`
-  - A process manager for Node apps.
-- [tcpkali](https://github.com/machinezone/tcpkali): `brew install tcpkali`
-  - A TCP/IP load testing tool
-- [htop](https://hisham.hm/htop/): `brew install htop`
-  - A cool process/memory monitor for you OSX
----
-
-# Load Testing
-
-🔥 **Fire up your load testing suite!**
-
-Open three separate terminals and run each of the following commands in its own terminal window:
-
-- Start your node app using `pm2 start index.js` (from your project directory)
-- Start the pm2 monitor using `pm2 monit`
-- Start htop using `htop`
-
----
-class: center, middle
-
-**Open a fourth terminal so we can run the load testing tool.**
-Your screen should look something like this:
-
-.inline-images[
-  ![Node testing set-up screencap](/public/img/slide-assets/load-testing-setup.png)
-]
+# Blocking & Non-Blocking Operations
 
 ---
 
 # Exercise 3
 
-Run some load tests on your TCP Server and observe the following:
+Use your TCP server to read from your local file system. When your server receives a request, use Node's build in `fs` module to read text from a `.txt` file and send the contents back to the connection.
 
-- System memory and CPU usage
-- Node process memory and CPU usage
-- The output returned from the server process
+- Is reading from the filesystem an **async** or **sync** action?
+- In what circumstance is it useful to use blocking operations?
 
-Run the command:
+Modify your existing code:
 
-```bash
-tcpkali -c 100 -d -m "$" -r 100 localhost:9000
+```js
+function handleConnection(conn) {
+  // TODO: Read a welcome message from your filesystem
+  // And respond to the connection with the contents
+}
 ```
 
 ---
+
 template: inverse
 
 # Internet Messaging with Node
@@ -321,9 +287,9 @@ template: inverse
 
 # Exercise 4
 
-Now create a minimal chat server. Change your TCP service to deliver any incoming data to all connected clients.
+Next we'll create a minimal chat server.
 
-Functional requirements:
+Change your TCP service to deliver any incoming data to all connected clients.
 
 - Your server will need to store all connections
 - Messages you send to the server should not return to you
@@ -332,9 +298,9 @@ Functional requirements:
 
 # Process: Memory & CPU
 
-Introducing the code recommended on the previous slide may have introduced a memory leak. 
+Introducing the code recommended on the previous slide may have introduced a memory leak.
 
-Run the load tester to find out.
+Run the load tester to find out!
 
 *What do we have to do to prevent the memory leak?*
 
@@ -342,10 +308,10 @@ Run the load tester to find out.
 
 # What We've Learned
 
-- What Node is and what where it came from.
-- What the TCP/UDP protocols are.
-- What the JS event loop is.
-- How to use profiling tools.
+- What Node is and what where it came from
+- What the TCP/UDP protocols are
+- What the JS event loop is
+- How blocking versus non-blocking operations work in Node
 
 ---
 template: inverse
