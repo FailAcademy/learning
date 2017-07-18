@@ -7,19 +7,21 @@ lesson_date: 2017-07-18
 
 ## Pre-Work
 
-Watch [this video](https://www.youtube.com/watch?v=8aGhZQkoFbQ) for a primer on Node's Event Loop.
+Take a look at how you can debug your Node application using Chrome Dev Tools before class:
+  
+- [DevTools in 2016: Accelerate your workflow - Google I/O 2016](https://www.youtube.com/watch?v=x8u0n4dT-WI&feature=youtu.be&t=2571)
 
 ---
 
 ## Learning Objectives
 
-- Understand the History and beginnings of Node.
-- Review TCP / UDP protocols.
+- Understand the history and beginnings of Node.
+- Review TCP/UDP protocols.
 - Describe the Client-Server Computing Model.
-- Model JavaScript's Event Loop.
-- Build a simple TCP / UDP messaging server.
+- Model JavaScript's event loop.
+- Build a simple TCP/UDP messaging server.
 - Install and use Node's profiling tools.
-- Understand the difference between "blocking IO" & "non-blocking IO"
+- Understand the difference between *blocking IO* and *non-blocking IO*.
 
 ---
 
@@ -28,10 +30,10 @@ Watch [this video](https://www.youtube.com/watch?v=8aGhZQkoFbQ) for a primer on 
 - Node
 - Single Threaded
 - Event Loop
-- TCP / UPD
+- TCP/UPD
 - Process Manager
 - Memory Leak
-- Blocking / Non-blocking io
+- Blocking/Non-blocking IO
 - Core Module
 
 ---
@@ -117,6 +119,16 @@ What are the advantages of using an AWS Lambda function to build out TCP/UDP ser
 
 ## Additional Resources
 
-- [HTOP Explained Visually](https://codeahoy.com/2017/01/20/hhtop-explained-visually/)
-- [Awesome NodeJS](https://github.com/sindresorhus/awesome-nodejs) - List of Node resources
+Watch the presentation where Node was introduced at JSConf 2009:
 
+- [Ryan Dahl: Original Node.js presentation](https://www.youtube.com/watch?v=ztspvPYybIY)
+
+A delightful Node.js packages and resources:
+
+- [Awesome NodeJS](https://github.com/sindresorhus/awesome-nodejs)
+
+Process monitors and testing tools for Node:
+
+- [pm2](http://pm2.keymetrics.io/)
+- [tcpkali](https://github.com/machinezone/tcpkali)
+- [htop](https://hisham.hm/htop/)
