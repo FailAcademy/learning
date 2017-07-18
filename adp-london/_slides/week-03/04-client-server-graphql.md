@@ -198,7 +198,7 @@ class: center, middle
 ---
 template: inverse
 
-# How to GraphQL
+# Whats and Hows of GraphQL
 
 ---
 
@@ -793,6 +793,7 @@ export default createStore(
 - Note that we will never pull Apollo data directly from the store
 - We will use the `graphql` and `connect` HOCs as containers instead
 - So this is more for debugging purposes
+- http://dev.apollodata.com/core/how-it-works.html
 
 ---
 
