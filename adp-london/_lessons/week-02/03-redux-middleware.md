@@ -30,7 +30,7 @@ Prior to class, please read the Redux docs on [middleware](http://redux.js.org/d
 
 ## Exercise 1
 
-Setup [redux-logger](https://github.com/evgenyrodionov/redux-logger) middleware in your "Worst Pokemon" app.
+Setup [redux-logger](https://github.com/evgenyrodionov/redux-logger) middleware in a React app.
 
 ---
 

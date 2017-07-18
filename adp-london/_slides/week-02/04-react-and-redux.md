@@ -90,15 +90,6 @@ Based on the following tree structure, discuss with a partner which components s
         |- Submit
 ```
 
-
----
-
-
-## Exercise 4
-
-Convert your "Worst Pokemon" app to use React. 
-
-
 ---
 
 # Provider

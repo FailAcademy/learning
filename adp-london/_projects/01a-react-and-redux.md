@@ -27,7 +27,6 @@ Your project must:
 - [ ] Contain `README.md` with project summary and setup
 - [ ] Contain a valid [`package.json`](http://browsenpm.org/package.json) file with all appropriate fields completed
 - [ ] Contain `.gitignore` file (ignoring `node_modules` and system files)
-- [ ] Contain this self-evaluated spec checklist renamed `specs.md`
 - [ ] Use ESLint with the [AirBnB style-guide](https://github.com/airbnb/javascript)
 - [ ] Run without errors with `npm run dev`
 - [ ] Have appropriate files compiled into a `build` directory
