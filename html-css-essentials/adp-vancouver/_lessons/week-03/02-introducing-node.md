@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Introducing Node
-slides: ['_slides/week-03/01-introducing-node.md']
+slides: ['_slides/week-03/02-introducing-node.md']
 lesson_date: 2017-07-18
 ---
 
@@ -64,12 +64,9 @@ When you're finished, watch this video from Google I/O!
 
 ## Exercise 3
 
-Use your TCP server to read from your local file system.
+Use your TCP server to read from your local file system. When your server receives a request, use Node's build in `fs` module to read text from a `.txt` file and send the contents back to the connection.
 
-When your server receives a request, use Node's build in ```fs``` module
-to read text from a ```.txt``` file and send the contents back to the connection.
-
-- Is reading from the filesystem considered an **async** or **sync** action? Why?
+- Is reading from the filesystem an **async** or **sync** action?
 - In what circumstance is it useful to use blocking operations?
 
 Modify your existing code:
@@ -77,7 +74,7 @@ Modify your existing code:
 ```js
 function handleConnection(conn) {
   // TODO: Read a welcome message from your filesystem
-  //       and respond to the connection with the contents
+  // And respond to the connection with the contents
 }
 ```
 
@@ -85,7 +82,7 @@ function handleConnection(conn) {
 
 ## Exercise 4
 
-**Create a minimal chat server**
+Next we'll create a minimal chat server.
 
 Change your TCP service to deliver any incoming data to all connected clients.
 
