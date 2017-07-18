@@ -89,25 +89,15 @@ Change your TCP service to deliver any incoming data to all connected clients.
 
 ## Lab Activity
 
-**Option 1**
+Building a TCP server from scratch is not something you'll normally do. There are a wide range of behaviors and edge cases we'd have to account for, if we wanted our chat server to work in the way that we're accustomed to.
 
-Building a TCP server from scratch is not something you'll normally do.
-There are a wide range of behaviors and edge cases we'd have to account for, if we wanted our chat server to work
-in the way that we're accustomed to.
+Developers in the open source community have created a systems to help us! The most popular among them being the [Zero Message Queue](http://zguide.zeromq.org/page:all).
 
-Developers in the open source community have created a systems to help us! The most popular among them being
-the [Zero Message Queue](http://zguide.zeromq.org/page:all).
+Read the article up to the section **Fixing the World**.
 
-Read the article up to the section **Fixing the World**
+When you're done, use [zeromq.node](https://github.com/JustinTulloss/zeromq.node) to rebuild your chat server.
 
-When you're done, use [zeromq.node](https://github.com/JustinTulloss/zeromq.node) to rebuild your chat server!
-
-*Note: You wont be able to test your server using netcat.
-
-**Option 2**
-
-See if you can implement your TCP /UDP service (The string capitalization service) as an AWS Lambda function using the [serverless](https://serverless.com/) framework!
-What are the advantages of using an AWS Lambda function to build out TCP/UDP service?
+*Note: You wont be able to test your server using netcat.*
 
 ---
 
