@@ -115,16 +115,12 @@ Take some time now to capture the steps for installing and setting up PostgreSQL
 
 ## Lab activity
 
-Now that we've created our schema (table) for our project applications, user the `INSERT` command to populate
-your data base with some mock data.
+Now that we've created our schema (table) for our project applications, use the `INSERT` command to populate your data base with some mock data.
 
 Add the following mock data to your database:
 
-- 1 User
-- 1 Week
-- 1 Lesson
-- 4 Posts
-- 2 Tags
+- At least 4 Items
+- All of the Tags (Categories)
 
 Ensure that you've set up the appropriate foreign key constraints!
 
