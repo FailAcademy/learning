@@ -7,6 +7,7 @@ lesson_date: 2017-07-25
 ## Pre-work
 
 Please read over the following links:
+
 - [PostgreSQL Constraints](https://www.tutorialspoint.com/postgresql/postgresql_constraints.htm)
 - [PostgreSQL Useful Functions](https://www.tutorialspoint.com/postgresql/postgresql_useful_functions.htm)
 
@@ -47,31 +48,16 @@ When creating constraints we need to consider things like:
 Add the appropriate constraints to your project's database.
 
 ---
-
 ## Exercise 2
-
-Set up a link table called user post votes and define a **compound primary key** to ensure that ensure that users can only vote for one post once.
-
-Answer the following questions when describing foreign key constraints: </br>
-- What is the difference between `SET NULL`, `NO ACTION` & `CASCADE` when specifying 
-foreign key constraints?
-- What are some use cases for each?
-
-*Hint:*
-- If we delete users from the database, do we also want to delete records of what posts they voted for?
-
----
-
-## Exercise 3
 
 **More fun with queries**
 
 Now that we have our data and relationships set up. Let's write some SQL queries.
 
-- Write a query that returns all of the tags for a given post.
-- Write a query that returns the number of posts in the database.
-- Write a query that returns the average number of votes on posts in your database.
-- Write a query that returns the 5 newest posts.
+- Write a query that returns all of the tags for a given Item.
+- Write a query that returns the number of Items in the database.
+- Write a query that returns the average number of Items which are tagged in your database.
+- Write a query that returns the 5 newest Items.
 
 ---
 
@@ -79,7 +65,7 @@ Now that we have our data and relationships set up. Let's write some SQL queries
 
 Now that we have our data and relationships set up. Let's write some views that aggregate data from the database:
 
-- Write a View that returns all of the posts that are tagged tag with a given tag name.
+- Write a View that returns all of the Items that are tagged with a given tag name.
 
 ---
 
@@ -100,22 +86,10 @@ execute them all at once by loading the file from the `psql` command prompt.
 
 ## Lab Activity
 
-How does the Sequelize ORM handle queries and relationships. Add Sequelze to your project.
-When your project loads, create some *stub* data in your Boomtown database using the Sequelize API.
+In today's lab we'll add a JavaScript ORM (Sequelize or node-postgres) to our application. 
+We'll use this ORM library to fetch information from Postgres and return it. 
 
-Once you've initialized your database instance, you'll add the commands to insert data, and create relationships
-inside of the `sync` method, exposed by the instance, like this:
-
-```js
-db.sync({ force: true }).then(() => {
-
-  // Your Sequelize code here.
-
-});
-```
-
-The `{ force: true }` tells Sequelize to destroy and recreate the database each time `nodemon` reloads your server.
-This is ideal for development. We'll remove this code and the *stubbed data* when it comes time to deploy our app!
+We'll use the ORM in our Graphql resolvers to retrieve and to save data into Postgres!
 
 ---
 
