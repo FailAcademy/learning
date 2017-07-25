@@ -348,10 +348,16 @@ const app = express();
 Now we'll need to install the GraphQL server for Express:
 
 ```bash
-npm -i -S graphql graphql-server-express graphql-tools
+npm i -S graphql apollo-server-express graphql-tools
 ```
 
-*Note that we are using the [**Apollo Server**](http://dev.apollodata.com/tools/graphql-server/)*.
+*Note that we are using the [**Apollo Server**](http://dev.apollodata.com/tools/apollo-server/index.html)*.
+
+???
+
+- `graphql`: The JavaScript reference implementation for GraphQL, a query language for APIs created by Facebook
+- `apollo-server-express`: Apollo server is a flexible, community driven, production-ready HTTP Apollo Server plugin for Node.js
+- `graphql-tools`: This package allows you to use the GraphQL schema language to build your GraphQL.js schema, and also includes useful schema tools like per-type mockin
 
 ---
 
@@ -363,7 +369,7 @@ And create our endpoints in `index.js`:
 import { 
   graphqlExpress, 
   graphiqlExpress 
-} from 'graphql-server-express';
+} from 'apollo-server-express';
 import schema from './api/schema'; // Next step!
 
 const GQL_PORT = process.env.PORT; // Where does this come from?
@@ -731,7 +737,7 @@ Next we'll create an `ApolloClient` instance in our React app in `config/apolloC
 import ApolloClient, { createNetworkInterface } from 'react-apollo';
 
 const networkInterface = createNetworkInterface({
-    uri: 'http://localhost:5000/graphql';
+    uri: 'http://localhost:5000/graphql'
 });
 
 const client = new ApolloClient({ networkInterface });
@@ -794,6 +800,28 @@ export default createStore(
 - We will use the `graphql` and `connect` HOCs as containers instead
 - So this is more for debugging purposes
 - http://dev.apollodata.com/core/how-it-works.html
+
+
+---
+
+# Integrate with Redux
+
+Add the Apollo reducer as well!
+
+```js
+import { combineReducers } from 'redux';
+
+import client from '../config/apolloClient';
+import itemReducer from './modules/items';
+import userReducer from './modules/user';
+
+export default combineReducers({
+    apollo: client.reducer(),
+    items: itemReducer,
+    user: userReducer
+});
+
+```
 
 ---
 
