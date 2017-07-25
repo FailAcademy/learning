@@ -2,7 +2,7 @@
 layout: lesson
 title: TDD Continued
 slides: ['_slides/week-07/02-tdd-continued.md']
-lesson_date: 2017-08-15
+lesson_date: 2017-08-16
 ---
 
 ## Pre-Work
