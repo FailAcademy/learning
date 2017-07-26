@@ -20,24 +20,47 @@ layout: false
 # Agenda
 
 1. Truthiness
-1. Type coercion
-1. Logical Operators
-1. Scope
-1. Passing by value & reference
-1. What is `this`
+2. Type coercion
+3. Function scope and hoisting
+4. Functions inside conditionals
+5. Passing by value versus reference
+6. Methods, objects, `this` & `bind`
+
+---
+class: center, middle
+
+.large[
+  **[Wat](https://www.destroyallsoftware.com/talks/wat)**
+]
 
 ---
 
-template: inverse
+# Wat
 
-# Truthiness
+Your turn! Enter these into your console:
+
+```js
+1 + 2
+1 + '2'
+
+'' == false
+0 == false
+null == false
+undefined == false
+null == undefined
+
+function f() {}
+
+f + 100
+f + null
+f + [1, 2, 3, 4, 5] + undefined
+```
 
 ---
-class: middle
 
-## Let's talk about truth.
+# Let's Talk About Truth
 
-When is a BLANK not a BLANK? (Groups of two)
+When is a BLANK not a BLANK? (work in pairs)
 
 - String
 - Number
@@ -47,27 +70,26 @@ When is a BLANK not a BLANK? (Groups of two)
 - Object
 
 ---
-class: middle
 
-## Let's try it!
+# Let's Try It!
 
-If you use two "bangs" (exclamation marks), you can force Javascript
+If you use two **bangs** (exclamation marks), you can force Javascript
 to show you the true of false interpretation of a value.
 
 ```js
 var str = 'abcde';
 
-console.log(str); // 'abcde
+console.log(str); // 'abcde'
 console.log(!!str); // true
 ```
 
-In your group, test out your theories on truthiness using `!!`.
+In your pairs, test out your theories on truthiness using `!!`.
 
-PS: Why does this work?
+*Why does this work?*
 
 ---
 
-## Truthiness in action
+# Truthiness in Action
 
 ```js
 function shoutOutLoud(wordToShout) {
@@ -88,357 +110,114 @@ function talkLikeATeenager(words) {
 ```
 
 ---
-template: inverse
-
-# Type Coercion
-
----
-class: middle, center
-
-# WAT
-
-.large[[Mind. Blown.](https://www.destroyallsoftware.com/talks/wat)]
-
-.inline-images[
-  ![Mind blown](/public/img/slide-assets/mind-blown.gif)
-]
-
----
-
-## WAT
-
-Enter these into your console:
-```javacript
-1 + 2
-1 + '2'
-
-'' == false
-0 == false
-null == false
-undefined == false
-null == undefined
-
-function f() {}
-
-f + 100
-f + null
-f + [1, 2, 3, 4, 5] + undefined
-```
-
----
-
-## Exercise 1
-
-**What will the output be?**
-
-```js
-function printHi() {
-
-  var myVar = 5;
-
-  if(myVar == '5') {  // 1
-    console.log("BLOCK ONE!")
-  }
-
-  if(myVar === '5') { // 2
-    console.log("BLOCK TWO!")
-  }
-
-  switch(myVar){      // 3
-      case '5':
-      console.log("BLOCK 3");
-    }
-  }
-
-printHi();
-```
-
----
 
 # Exercise 1
 
 **Type Coercion**
 
+Please [see the lesson page](/lesson/advanced-js/) for more details.
+
+???
+
 *Explanation:*
 
 - The **if block** (#1), compares the **number** 5 with the **string** '5' with double equals (`==`). JavaScript does **coercion** when comparing "things" using `==` and due to this **coercion**, the `console.log` within the **if block** gets executed.
-- The `if` block using `===` (#2) and the `switch` statement (#3), compare the **number** 5 with the **string** '5' without doing any **coercion**. So they return `false`.
-
----
-class: middle, center
-
-## So is coercion a good thing?
-
----
-template: inverse
-
-# Review: Logical Operators
+- Coercion does not happen for **variables** within the **switch statement**. **Switch statements** use strict type checking (`===`).
 
 ---
 
-template: inverse
+# Exercise 2
 
-# Scope
+**Function Scope and Hoisting**
 
----
-class: middle
+Please [see the lesson page](/lesson/advanced-js/) for more details.
 
-## Scope
+???
 
-A variable is __in scope__ depending on where a variable is declared.
+*Explanation:*
 
-In Javascript, variables are _scoped_ to functions.
+**Hoisting**
 
----
+Hoisting takes place during the parsing phase of executing a JS code. In this phase, all **variable declarations** are taken and a default value of `undefined` is assigned to them. Note that the code is not run in this phase, so any **assignment** of a **value** to a **variable** will not be executed.
 
-## Scope Example
+**Function Scope**
 
-```js
-myVar = 'abcde';
-var yourVar = 'yourVar';
+Every **variable** in JS is scoped at a function level, so this means that **variables** which are declared inside a function is not accessible outside the function in which it is declared.
 
-function myFunc(param) {
-  var innerParam = 'hello!';
+**Scope Chaining**
 
-  return param + myVar + yourVar;
-}
+When a **variable** is not found in a **function scope**, the execution environment traverses to an outer **scope** to look for it.
 
-console.log(innerParam);
-```
+So in the code example, the **statement** `var name = "Jane"` declares a **variable** "name" which is local to the **function scope**. The outer **variable** which has the same **variable** name is ignored, and the **variable** in current **scope** is used.
 
-In another file:
-
-```js
-console.log(myVar);
-```
-
----
-
-## IIFE
-
-Immediately Invoked Function Expression
-
-```javacript
-function() {
-  myVar = 'abcde';
-  var yourVar = 'yourVar';
-
-  function myFunc(param) {
-    var innerParam = 'hello!';
-
-    return param + myVar + yourVar;
-  }
-
-  console.log(innerParam);
-}();
-```
-
-In another file:
-
-```js
-console.log(myVar);
-```
-
----
-
-## Exercise 3
-
-**What will the output be?**
-
-```js
-var name = "John";
-var lastName = "Smith";
-
-(function(){
-  console.log("The name is : " + name);
-
-  var name = "Jane";
-  var age = 32;
-
-  console.log("The name is : " + name);
-})();
-
-console.log(name);
-console.log(lastName);
-console.log(age);
-```
+Hence the second **statement** `console.log("The name is : " + name);` logs a value "Jane".
 
 ---
 
 # Exercise 3
 
-**Function Scope and Hoisting**
+**Functions Inside Conditionals**
+
+Please [see the lesson page](/lesson/advanced-js/) for more details.
+
+???
 
 *Explanation:*
 
-- **Function Scope**:  Every **variable** in JS is scoped at a function level, so this means that **variables** which are declared inside a function is not accessible outside the function in which it is declared.
-- **Scope chaining**: When a **variable** is not found in a **function scope**, the execution environment traverses to an outer **scope** to look for it.
-
----
-template: inverse
-
-# Passing by value & reference
-
----
-class: middle
-
-## On your feet!
-
-We need several primitives, and array, an object, and two variables.
-
-Let's act out how values are passed.
-
----
-class: middle
-
-## Beware Mutation
-
-```javacript
-var susan = {
-  id: 123,
-  name: 'Susan Taylor'
-}
-var newName = 'Susan Hunt';
-
-function updateStudentName(student, name) {
-  student.name = newName;
-  name = 'Susan Taylor';
-}
-
-updateStudentName(susan, newName);
-console.log('susan', susan);
-console.log('newName', newName);
-```
+- There are two types of functions inside the **if/else blocks**. The `innerFunc` is the commonly known **function declaration** and `innerFuncExpr` is the **function expression**.
+- At any point of time, only one of the if or else **block** should get executed, in this case the if **block** at #1.
+- The first `console.log` output for the invocation at #7 suggests the `innerFunc` inside the **else block** is getting executed.
+- To understand this behaviour, we have to understand how *hoisting* works in JS. The function `innerFunc` is declared within both the if and the else **block**, the JS engine **hoists** the function declarations to the top of the enclosing function!
+- There is only one **function declaration** and that is the one which JS engine encounters last during the parsing phase. So, in this case the else **block** `innerFunc` will overwrite the if **block** declaration, irrespective of where the declarations are within the **conditional blocks**. There is one `innerFunc` declaration and hence the output of the invocation at #7.
+- The `innerFuncExpr` is the **function expression**, which does not get **hoisted** to the top of the enclosing **function scope**. So, we see the proper `console.log` output for the invocation at #8.
+- Do not declare the **functions** or the **variables** within **conditional blocks** as JavaScript does not have **block scope**. In the JavaScript specs, **function declarations** are not allowed within **conditional blocks**.
+- If you must, use a **function expression**, within the **conditional blocks**.
 
 ---
 
-## Exercise 4
+# Exercise 4
 
-**What will the output be?**
+**Passing by Value versus Reference**
 
-```js
-var me = {                  // 1
-  'partOf' : 'A Team'
-};
+Please [see the lesson page](/lesson/advanced-js/) for more details.
 
-function myTeam(me) {       // 2
-  me = {                  // 3
-    'belongsTo' : 'A Group'
-  };
-}
+???
 
-function myGroup(me) {      // 4
-  me.partOf = 'A Group';  // 5
-}
+*Explanation:*
 
-myTeam(me);
-console.log(me);            // 6
+- JavaScript is neither **pass-by-value** or **pass-by-reference**! When the `myTeam` method is **invoked**, JavaScript is passing the **reference** to the `me` **object** as a **value**. The **invocation** itself creates two independent **references** to the same **object**, (though the name being same here (`me`), is misleading and gives us the impression that it is a single reference.
+- When we **assigned** a new **object** at #3, we are changing the **reference value** within the `myTeam` **function**, and it will not have any impact on the original **object** outside this **function scope**. Hence the output from #6.
+- In the case of the `myGroup` invocation, we are passing the **object** `me`. But unlike the previous scenario we described, we are not assigning this **variable** to any new **object**, This means the object **reference value** within the `myGroup` **function scope** still is the original object's **reference value** and when we are modifying the **property** within this **scope**, it is effectively modifying the original object's **property**. Hence, you get the output from #7.
 
-myGroup(me);
-console.log(me);            // 7
-```
----
-template: inverse
-
-# What is `this`
-
----
-class: middle
-
-## Who am I?
-
-Functions (and objects) in Javascript have a reference to themselves called `this`.
-
-```js
-function Student(name) {
-  this.name = name;
-}
-
-var susan = new Student(name);
-console.log(susan.name);
-```
----
-class: middle
-
-## Who am I?
-
-`this` is relative. What do you think will happen when we execute the code below?
-
-```js
-function Student(name) {
-  this.name = name;
-  this.favouriteFoods = ['pizza', 'sushi', 'apples'];
-
-  this.getName = function() {
-    return this.name;
-  }
-}
-
-var susan = new Student(name);
-console.log(susan.getName());
-```
-
----
-class: middle
-
-## Who am I?
-
-The `getName` function has access to `this`, because it is an __method__ on the `Student` object.
-Therefore they share the same scope.
-
----
-class: middle
-
-## Exercise 5
-
-`this` is relative. What do you think will happen when we execute the code below?
-
-```js
-function student(name) {
-  this.myName = name;
-
-  this.printName = function() {
-    setTimeout(function() {
-      console.log(this.myName);
-    }, 2000);
-  }
-}
-
-var scott = new student('scott');
-scott.printName();
-```
 ---
 
 # Exercise 5
 
-The `setTimeout` function takes an anonymous function as its first argument.
-That function has its own scope, so `this` becomes a different object entirely.
-In this case, it's the `Window` object.
+**Methods, Objects, `this` & `bind`**
+
+Please [see the lesson page](/lesson/advanced-js/) for more details.
+
+???
+
+*Explanation:*
+
+- The `forEach` method's callback function is **out of scope**. This means it has no reference to `this`, because it is not a method on the myself object.
+- Only methods assigned as properties of objects **have access to their parent** using `this`, otherwise `this` returns undefined. Invoking `printMyNickNames` will result in a `TypeError`!
 
 ---
 
-## How do we fix it?
+# What We've Learned
 
-```js
-function student(name) {
-  var self = this;
-  self.myName = name;
-
-  this.printName = function() {
-    setTimeout(function() {
-      console.log(self.myName);
-    }, 2000);
-  }
-}
-
-var scott = new student('scott');
-scott.printName();
-```
+- How truthiness works in JS
+- What type coercion is
+- How function scope and hoisting work
+- What happens to functions inside conditionals
+- The difference between passing by value and passing by reference
+- What `this` may refer to a JS program
 
 ---
-
 template: inverse
 
-# Lab
+# Questions?
 
 {% endhighlight %}
