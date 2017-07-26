@@ -28,7 +28,7 @@ While watching each video, open the the **[Babel online REPL](http://babeljs.io/
 
 ## Learning Objectives
 
-- Distinguish the major differences between ES.Next and ES5 syntax.
+- Distinguish the major differences between ES.next and ES5 syntax.
 - Distinguish the difference between compiling and transpiling code, and identify how use tools such as Babel and TypeScript enable more effective, modern JavaScript code.
 - Set up a basic development environment for an ES.next application using Gulp.
 - Use the block-scoped binding constructs `let` and `const` in lieu of `var` to define variables where appropriate.
