@@ -8,7 +8,7 @@ lesson_date: 2017-08-01
 
 ## Pre-work
 
-Sharpen you JS skills before class by continuing on with [Free Code Camp](http://www.freecodecamp.com/ma).
+Sharpen you JS skills before class by continuing on with [Free Code Camp](http://www.freecodecamp.com/map).
 
 Find the **Basic JavaScript (10 hours)** section, and complete as many of these exercises as you can today.
 
