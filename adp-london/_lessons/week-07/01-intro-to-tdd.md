@@ -7,7 +7,7 @@ lesson_date: 2017-08-15
 
 ## Pre-Work
 
-Read:
+Prior to class, please read:
 
 - [How to Impress in a Junior Developer Job Interview
 ](https://www.codementor.io/learn-programming/junior-developer-interview-tips-to-success)
@@ -17,13 +17,14 @@ Read:
 ---
 
 ## Learning Objectives
-- Understand the general structure and goals of coding interviews
-- Identify when code is 'complete' and 'working'
-- Take an interview question and break it into test scenarios
-- Identify common edge-cases associated with algorithms
+
+- Identify the general structure and goals of coding interviews.
+- Identify when code is *complete* and *working*.
+- Take an interview question and break it into test scenarios.
+- Identify common edge-cases associated with algorithms.
 - Convert scenarios into unit tests using [Jest](https://github.com/facebook/jest).
-- Run tests using NPM scripts
-- Use Test Driven Development (TDD) to write code that makes the tests pass
+- Run tests using npm scripts.
+- Use Test Driven Development (TDD) to write code that passes tests.
 
 ---
 
@@ -35,45 +36,66 @@ Read:
 - Red/Green/Refactor
 - TDD
 - Regression Test
-- Code Specifications AKA Code Examples
+- Code Specifications (aka Code Examples)
 
 ---
 
-## Exercise 1: Frog Jump
+## Exercise 1
 
-A small frog wants to get to the other side of the road.
-The frog is currently located at position X and wants to get to a
-position greater than or equal to Y.
-The small frog always jumps a fixed distance, D.
+In groups:
 
-Write a function to count the minimal number of jumps that the small frog must perform to reach its target.
+- Use the whiteboard to draw out some examples of the jumping frog algorithm
+- Write out a specification for the `frogJumps` function **in plain English**. Use the format:
 
-- Break the problem into test scenarios
-- Implement the tests using Jest
-- Write code to make your tests pass
+```
+[Function name]
 
----
-
-## Exercise 2: Palindrome
-
-A palindrome is a string that is equal when written forwards and backwards.
-__Mom__, __racecar__, and __never odd or even__ are all palindromes.
-
-Write a function that takes a string an returns whether it is a palindrome.
-
-- Break the problem into test scenarios
-- Implement the tests using Jest
-- Write code to make your tests pass
+When [given some input(s)] it should [return something].
+When [given some other input(s)] it should [return something else].
+...etc
+```
 
 ---
 
-## Lab Activity: String Compression
+## Exercise 2
+
+Implement unit tests for each of the specifications you wrote for `frogJumps`.
+
+Think about the **Edge Cases**
+
+- Zero Arguments
+- Perfect match
+- Maximum Match
+- No Match
+
+---
+
+## Exercise 3
+
+A palindrome is a string that is the same when written forwards and backwards.
+**Mom**, **racecar**, and **never odd or even** are all palindromes.
+
+Write a function that takes a string and returns whether it is a palindrome. Take these steps to do so:
+
+- Whiteboard the algorithm
+- Write out plain English specs
+- Convert specs to tests
+- Implement your algorithm
+
+---
+
+## Lab Activity
+
+**String Compression:**
 
 Write a function that takes a string and returns a new string that numerically indicates any repeated characters.
 
 Examples:
+
 - `'aaabbbccc'` => `'a3b3c3'`
 - `'ghjff'` => `'g1h1j2f2'`
+
+To complete this lab, you will need to:
 
 - Break the problem into test scenarios
 - Implement the tests using Jest
@@ -82,6 +104,8 @@ Examples:
 ---
 
 ## Additional Resources
+
+Some JavaScript testing frameworks to explore:
 
 - [Jest](https://facebook.github.io/jest/)
 - [Jasmine](https://jasmine.github.io/)
