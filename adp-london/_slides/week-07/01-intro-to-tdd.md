@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Coding Interview - Intro to TDD
+title: Intro to TDD Slides
 ---
 
 {% highlight html %}
@@ -10,8 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# The Coding Interview
-## (That Necessary Eval)
+# Intro to TDD
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -20,59 +19,60 @@ layout: false
 
 # Agenda
 
-1. Coding Interviews
-1. Code completion
-1. Intro to TDD
-1. Write failing tests
-1. Red Green Refactor
-1. Mocks, Stubs, Fakes
-1. Handling dependencies in unit tests
+1. Coding interviews
+2. Code completion
+3. Intro to TDD
+4. Write failing tests
+5. Red Green Refactor
+
 ---
 template: inverse
 
-## Coding Interviews
-
-__Fun Fact__: The code you'll actually be writing on the job is not at all like the code you'll be asked to write for an interview.
+# Coding Interviews
 
 ---
-class: middle
+class: center, middle
 
-## Coding Interviews
+### Coding Interviews
 
-- Often Computer Science heavy (less so for Juniors)
+**Fun Fact**: The code you'll actually be writing on the job is not at all like the code you'll be asked to write for an interview.
+
+---
+
+# Coding Interviews
+
+- Often computer science-heavy (less so for juniors)
 - Focus on devil-in-the-details problems
-- Are as much about __how you write code__ as they are about __what code you write__
+- Are as much about **how you write code** as they are about **what code you write**
 
 ---
-class: middle
 
-## Format
+# Format
 
-.condensed[
-- First interview: usually with HR or Recruitment for __Fit__
-- __Take-home programming task__, due within 1-3 days
-- Second interview, __whiteboarding/live coding__
-- _Depending on the company, might have more live coding interviews_
-- Meeting with CEO or CTO for __final decision__
-]
+- First interview: usually with HR or Recruitment for **fit**
+- **Take-home programming task**, due within 1-3 days
+- Second interview, **whiteboarding/live coding**
+- Depending on the company, they might have more live coding interviews
+- Meeting with CEO or CTO for **final decision**
 
 ---
-class: middle
+class: center, middle
 
 .large[
   This week, we're going to focus on tools to help you with the take-home and in-interview coding challenges.
 ]
+
 ---
 template: inverse
 
 # Test Driven Development
-Finally, a sane way to write code
 
 ---
-layout: false
 class: middle, center
 
-.large[How do you know when your code is "done"?]
+.large[
+  How do you know when your code is **done**?
+]
 
 ???
 
@@ -85,19 +85,24 @@ The discussing here should be around getting some way of 'testing' whether code 
 ---
 class: middle, center
 
-.large[How do you know if code that you've changed "works"?]
+.large[
+  How do you know if code that you've changed **works**?
+]
 
 ???
 
 When you refactor existing code, how do you know it works?
 
 ---
-template: inverse
+class: center, middle
 
 .inline-images[
-  ![React Native bridge diagram](/public/img/slide-assets/feedback-loop-green.png)
+  ![Feedback loop](/public/img/slide-assets/feedback-loop-green.png)
 ]
-# Feedback
+
+.large[
+  **Feedback!**
+]
 
 ???
 
@@ -110,39 +115,34 @@ Basically what we're talking about is the feedback loop.
 ---
 class: middle, center
 
-## So how do we make that loop smaller?
+.large[
+  So how do we make that feedback loop smaller?
+]
 
 ???
 
-We're going to learn how to run __Unit Tests__, which mean that we are only executing the code that we're writing, and nothing else. This makes the feedback loop tiny, we can run hundreds of tests in a couple seconds.
+We're going to learn how to run **unit tests**, which mean that we are only executing the code that we're writing, and nothing else. This makes the feedback loop tiny, we can run hundreds of tests in a couple seconds.
 
 Let's start with an exercise...
 
 ---
-class: middle
 
-## Exercise: Frog Jumps
+# Example Question
 
-_This is an example coding test question_
+*This is an example coding test question...*
 
-A frog wants to get to the other side of the road.
-The frog is currently located at position `start` and wants to get to a
-position greater than or equal to `end`.
-The frog always jumps a fixed distance, `jumpLength`.
+A frog wants to get to the other side of the road. The frog is currently located at position `start` and wants to get to a position greater than or equal to `end`. The frog always jumps a fixed distance, `jumpLength`.
 
 Write a function to count the minimal number of jumps that the frog must perform to reach its target.
 
 ---
-class: middle
 
-## Exercise: Frog Jumps
+# Exercise 1
 
-In Groups:
+In groups:
 
-.condensed[
 - Use the whiteboard to draw out some examples of the jumping frog algorithm
-- Write out a specification for the `frogJumps` function _in plain English_. Use the format:
-]
+- Write out a specification for the `frogJumps` function **in plain English**. Use the format:
 
 ```
 [Function name]
@@ -151,12 +151,14 @@ When [given some input(s)] it should [return something].
 When [given some other input(s)] it should [return something else].
 ...etc
 ```
+
 ---
-class: middle
 
-## Build a testing playground
+# Testing Playground
 
-```sh
+Build a testing playground:
+
+```bash
 mkdir tdd-playground
 cd tdd-playground
 
@@ -170,15 +172,14 @@ npm i --save-dev jest-cli
 Then, [install the RED Academy ESlint](https://www.npmjs.com/package/eslint-config-redacademy).
 
 ---
-class: middle
 
-## Our first unit test
+# Our First Unit Test
 
 We've talked about how `frogJumps` works.
 
-Let's use TDD to write it! The first step: write a test.
+Let's use TDD to write it! 
 
-Here's an example:
+Step 1 is to write a test. Here's an example:
 
 ```js
 // __tests__/frog-jumps.spec.js
@@ -202,14 +203,11 @@ This might look like a lot of syntax right off the bat, but you'll get used to t
 
 ---
 
-## Anatomy of a test
+# Anatomy of a Test
 
-We're using [Jest](https://facebook.github.io/jest/) to write tests. Read the docs!
+We're using **[Jest](https://facebook.github.io/jest/)** to write tests. Read the docs!
 
-.condensed[
-- To make our tests match our Plain English specs, we use nested `describe` blocks.
-- `describe` takes a callback function as its second argument, allowing us to group tests with a similar context.
-]
+To make our tests match our Plain English specs, we use nested `describe` blocks. The `describe` takes a callback function as its second argument, allowing us to group tests with a similar context.
 
 ```js
 describe('Outer context', () => {
@@ -226,11 +224,12 @@ describe('Outer context', () => {
 ```
 
 ---
-## Anatomy of a test
 
-Nesting callback functions is generally considered bad practice outside of writing tests, so you'll need to get used to the difference.
+# Anatomy of a Test
 
- If your code is indented properly, you should end up with a series of closing brackets/braces in a 45 degree angle at the end of a file.
+Nesting callbacks is generally considered bad practice outside of writing tests, so you'll need to get used to the difference.
+
+If your code is indented properly, you will see a series of closing parens/braces in a 45 degree angle at the end of a file.
 
  ```js
     // Good
@@ -244,9 +243,10 @@ Nesting callback functions is generally considered bad practice outside of writi
 ```
 
 ---
-## Anatomy of a test
 
-When we pass strings to `describe` - other than the outermost `describe` - we use the format "when [some context]"
+# Anatomy of a Test
+
+When we pass strings to `describe` (other than the outermost `describe`) we use the format `when [some context]`:
 
 ```js
 describe('functionName', () => {
@@ -255,13 +255,14 @@ describe('functionName', () => {
   });
 });
 ```
+
 ---
-## Anatomy of a test
 
-We write our actual tests (AKA assertions) using `it` blocks.
-It blocks are given a string of the format 'should [return something]'.
+# Anatomy of a Test
 
-Within an `it`, we use the `expect` function with various __matchers__.
+We write our actual tests (aka **assertions**) using `it` blocks. It blocks are given a string of the format `should [return something]`.
+
+Within an `it`, we use the `expect` function with various **matchers**:
 
 ```js
 it('should return true', () => {
@@ -276,9 +277,10 @@ it('should return 100', () => {
 ```
 
 ---
-class: middle
 
-## Bringing it Together
+# Anatomy of a Test
+
+Bringing it together:
 
 ```js
 // __tests__/frog-jumps.spec.js
@@ -302,14 +304,16 @@ describe('frogJumps', () => {
 ```
 
 ---
-## Running your test
 
-The test on the previous slide uses the [Jest](https://facebook.github.io/jest/) testing library.
+# Running Your Test
+
+The test on the previous slide uses the **[Jest](https://facebook.github.io/jest/)** testing library.
 
 Jest has a command line tool, but in order to execute it in the proper environment we need to execute it as a node script.
 
+In your `package.json`:
+
 ```js
-// package.json:
 {
   ...
   "scripts": {
@@ -320,12 +324,12 @@ Jest has a command line tool, but in order to execute it in the proper environme
 ```
 
 ---
-class: middle
 
-## Code-Along
+# Code Along
 
 Run your test:
-```sh
+
+```bash
 npm run test
 
 # or
@@ -335,12 +339,14 @@ npm test
 npm t
 ```
 
-The test will fail, obviously!
+*The test will fail, obviously!*
 
 ---
-template: inverse
+class: center, middle
 
-# <span style="color: red">FAIL</span> -> <span style="color: green">PASS</span>
+.large[
+  <strong><span style="color: red">FAIL</span> -> <span style="color: green">PASS</span></strong>
+]
 
 ???
 
@@ -352,9 +358,8 @@ What we need to do now is write the minimal amount of code in order to get the t
 - Write minimal code to get the scenario to pass, then run the test
 
 ---
-class: middle
 
-## Add another test
+# Add Another Test
 
 ```js
 describe('when destination is exactly one jump away', () => {
@@ -364,7 +369,7 @@ describe('when destination is exactly one jump away', () => {
 });
 ```
 
-Run tests, fix the errors.
+Run your tests, and fix the errors.
 
 ???
 
@@ -375,7 +380,8 @@ Run tests, fix the errors.
 ---
 class: center, middle
 
-## Red, Green, Refactor
+### Red, Green, Refactor
+
 .inline-images[
   ![Red Green Refactor](/public/img/slide-assets/red-green-refactor.png)
 ]
@@ -389,20 +395,17 @@ The process we've been going through is called red-green-refactor
 - We refactor the code to make it better, and run our tests to make sure it still works
 
 ---
-class: middle
 
-## Exercise: Frog Jumps
+# Exercise 2
 
 Implement unit tests for each of the specifications you wrote for `frogJumps`.
 
-Think about the __Edge Cases__
+Think about the **Edge Cases**
 
-.condensed[
 - Zero Arguments
 - Perfect match
 - Maximum Match
 - No Match
-]
 
 ???
 
@@ -413,21 +416,18 @@ Think about the __Edge Cases__
 Solution in [adp-exercise-solutions](https://github.com/redacademy/adp-exercise-solutions/blob/master/adp-testing-week/lib/frog-jump.js).
 
 ---
-class: middle
 
-## Exercise: Palindrome
+# Exercise 3
 
-A palindrome is a string that is equal when written forwards and backwards.
-__Mom__, __racecar__, and __never odd or even__ are all palindromes.
+A palindrome is a string that is the same when written forwards and backwards.
+**Mom**, **racecar**, and **never odd or even** are all palindromes.
 
-Write a function that takes a string an returns whether it is a palindrome.
+Write a function that takes a string and returns whether it is a palindrome. Take these steps to do so:
 
-.condensed[
 - Whiteboard the algorithm
-- Write out Plain English Specs
-- Convert Specs to Tests
-- Implement your Algorithm
-]
+- Write out plain English specs
+- Convert specs to tests
+- Implement your algorithm
 
 ???
 
@@ -435,34 +435,18 @@ Write a function that takes a string an returns whether it is a palindrome.
 - Get them to each read out a test scenario
 
 Once they start working, start hinting at complexity of algorithms.
+
 This is something that can be solved in `n/2` operations, but you can also use JS library functions to do it for you, at about `3n`.
 
 Naive and efficient solutions in [adp-exercise-solutions](https://github.com/redacademy/adp-exercise-solutions/blob/master/adp-testing-week/lib/palindrome.js)
 
 ---
 
-## Lab: Character Count String
+# What We've Learned
 
-Write a function that takes a string and returns a new string indicating any repeated characters. Examples:
-
-```js
-'aaabbbccc' => 'a3b3c3'
-'ghjjff' => 'g1h1j2f2'
-'ttdddbtt' => 't2d3b1t2'
-```
-
-.condensed[
-- Whiteboard the algorithm
-- Write out Plain English Specs
-- Convert Specs to Tests
-- Implement your Algorithm
-]
-
-???
-
-Don't provide any support unless they're totally struggling!
-
-[Solution](https://github.com/redacademy/adp-exercise-solutions/blob/master/adp-testing-week/lib/string-compression.js)
-
+- How a typical coding interview goes
+- What code completion is
+- What TDD is
+- How to write tests with Jest
 
 {% endhighlight %}
