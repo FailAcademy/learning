@@ -1,13 +1,13 @@
 ---
 layout: lesson
-title: TDD Continued
-slides: ['_slides/week-07/02-tdd-continued.md']
+title: More on TDD
+slides: ['_slides/week-07/02-more-on-tdd.md']
 lesson_date: 2017-08-16
 ---
 
 ## Pre-Work
 
-Read:
+Prior to class, please read:
 
 - [Big-O notation explained by a self-taught programmer](https://justin.abrah.ms/computer-science/big-o-notation-explained.html)
 - [Counting elements during iteration](https://codility.com/media/train/2-CountingElements.pdf)
@@ -16,24 +16,24 @@ Read:
 
 ## Learning Objectives
 
-- Practice whiteboarding interviews
-- Practice writing test cases
-- Identify the time complexity of a simple algorithm using Big O Notation
-- Use arrays and hash tables to solve counting problems
+- Practice white-boarding interviews.
+- Practice writing test cases.
+- Identify the time complexity of a simple algorithm using Big O Notation.
+- Use arrays and hash tables to solve counting problems.
 
 ---
 
 ## Keywords
 
+- Time complexity
 - Brute Force
 - Big O
 
 ---
 
-## Exercise 1: First Unique Character
+## Exercise 1
 
-Using TDD, write a function that returns the first unique character in a string.
-
+Using TDD, write a function that **returns the first unique character** in a string.
 
 Examples:
 
@@ -44,7 +44,19 @@ Examples:
 
 ---
 
-## Exercise 2: Missing Integer
+## Exercise 2
+
+Figure out the time complexity of your solution to Exercise 1.
+
+---
+
+## Exercise 3
+
+Refactor your Exercise 1 solution for O(n).
+
+---
+
+## Exercise 4
 
 Write a function that, given an array of `n` integers, returns the minimal positive integer (greater than 0) that does not occur in the array.
 
@@ -54,15 +66,18 @@ For example, given:
 [1, 3, 6, 4, 1, 2]
 ```
 
-The function should return 5.
+The function should return `5`.
 
 ---
 
-## Lab Activity: One Away
+## Lab Activity
+
+**One Away:**
 
 There are three types of edits that can be performed on strings: insert a character, remove a character, or replace a character. Given two strings, write a function to check if that are one (or zero) edits away.
 
 Example:
+
 ```
 pale, ple => true
 pales, pale => true
@@ -81,5 +96,11 @@ What is the time complexity of your solution? Could it be better?
 
 ## Additional Resources
 
-- [Jest](https://facebook.github.io/jest/)
-- [Jasmine](https://jasmine.github.io/)
+More resources about Big O Notation:
+
+- [Big-O Explained](https://dev.to/imjacobclark/big-o-explained)
+- [Know Thy Complexities!](http://bigocheatsheet.com/)
+
+A course on basic algorithms from Khan Academy:
+
+- [Algorithms](https://www.khanacademy.org/computing/computer-science/algorithms)

@@ -16,32 +16,38 @@ class: center, middle, inverse
 
 ---
 layout: false
-class: middle
 
 # Agenda
 
-1. TDD vs BDD
-1. Stakeholders
-1. Stories
-1. Outside-in
-1. Interface Discovery
-1. Practice!
+1. TDD versus BDD
+2. Stakeholders
+3. Stories
+4. Outside-in
+5. Interface discovery
+6. Practice!
 
 ---
 template: inverse
 
-# TDD vs BDD
-.large[Step. Away. From. Computer.]
+# TDD versus BDD
+
+---
+class: center, middle
+
+.large[
+  Step. Away. From. Computer.
+]
 
 ???
 
-BDD allows us to think about our functionality in terms of how it affects our users. It is a plain-text formalized method for describing how we expect our code to work.
+- BDD allows us to think about our functionality in terms of how it affects our users. 
+- It is a plain-text formalized method for describing how we expect our code to work.
 
 ---
-class: middle
+class: center, middle
 
 .large[
-In order for software to be meaningful, its features have to provide benefit to its stakeholders.
+  In order for software to be meaningful, its features have to provide benefit to its stakeholders.
 ]
 
 ---
@@ -49,17 +55,23 @@ In order for software to be meaningful, its features have to provide benefit to 
 template: inverse
 
 # Stakeholders
-.large[Believe it or not, programmers don't call all the shots]
+
+---
+class: center, middle
+
+.large[
+  Believe it or not, programmers don't call all the shots
+]
 
 ???
 
-CEOs, product managers, CTOs, designers, sales, marketing, etc. all have their needs, too!
+- CEOs, product managers, CTOs, designers, sales, marketing, etc. all have their needs, too!
 
 ---
 
-## BDD
+# BDD
 
-A way of writing human-readable tests in the form of _stories_.
+A way of writing human-readable tests in the form of **stories**.
 
 BDD stories have a recognizable structure:
 
@@ -69,21 +81,22 @@ BDD stories have a recognizable structure:
 
 ---
 
-## BDD
+# BDD
 
-Title:
-```sh
+**Title:**
+
+```bash
 A [stakeholder] performs some action.
 ```
 
-Narrative:
-```sh
-As a [stakeholder] I want [feature] so that [benefit].
+**Narrative:**
 
+```bash
+As a [stakeholder] I want [feature] so that [benefit].
 In order to [benefit], a [stakeholder] wants [feature].
 ```
 
-Scenario:
+**Scenario:**
 ```sh
 Given [some environment]
 When [something happens]
@@ -93,22 +106,23 @@ And [optionally more things are expected]
 ```
 
 ---
-template: inverse
+class: center, middle
 
-# Iteration _before_ coding
+.large[
+  Iteration *before* coding.
+]
 
 ???
 
 Let's practice with an example. Remember than we want to be able to understand our functionality before we start implementing.
 
 ---
-class: middle
 
-## Exercise: Student Stats
+# Exercise 1
 
 You've just been hired on as a big data consultant for a coding school called Rouge Academie. Management wants to understand more about their students!
 
-Here's their [data set](/public/exercises/bdd-dummy-data.json). Write 2 stories (each w/ at least 2 scenarios) about how you can provide them with insight.
+Here's their **[data set](/public/exercises/bdd-dummy-data.json)**. Write 2 stories (each with at least 2 scenarios) about how you can provide them with insight.
 
 For your reference:
 
@@ -124,13 +138,11 @@ For your reference:
 - Would we want to know the percentage passing each project?
 - How about the satisfaction of those who pass vs the satisfaction of those who fail?
 - We could also look at years experience vs. pass percentage to see if there's a correlation
-
-Note: The solutions are in the `adp-exercise-solutions` repo in the `bdd-student-data` directory. Solutions were written to process average age, average experience, the pass/fail percentage for each project, the satisfaction of those who passed, and the satisfaction of those who failed. Fill your boots!
+- **Note:** The solutions are in the `adp-exercise-solutions` repo in the `bdd-student-data` directory. Solutions were written to process average age, average experience, the pass/fail percentage for each project, the satisfaction of those who passed, and the satisfaction of those who failed. Fill your boots!
 
 ---
-class: middle
 
-## What now?
+# What Now?
 
 Now that we have our human-readable acceptance criteria, we can start using TDD.
 Set up environment:
@@ -155,6 +167,7 @@ npm i --save-dev jest-cli
   "test": "jest --verbose"
 }
 ```
+
 ---
 template: inverse
 
@@ -167,17 +180,16 @@ template: inverse
 - Outside in gets us to mock dependencies as we work our way in
 
 ---
-class: middle
 
-## Code Along: Outside-in
+# Code Along: Outside-in
 
 This is where TDD gets interesting. We're going to convert our BDD scenarios into unit tests, then write the _minimal possible code_ to make them pass.
 
-.condensed[
+Our process will be:
+
 - Start with unit tests
 - Mock all dependencies
 - Make the tests pass
-]
 
 ???
 
@@ -207,20 +219,19 @@ template: inverse
 - A good metaphor is the pedals and wheel of a car. Through that interface we're able to control the complex machinery of the car.
 
 ---
-class: middle
 
-## Interface discovery
+# Interface Discovery
 
-When we start our implementation by writing tests, we get to iterate on its __interface__ before having to care about its __implementation__.
+When we start our implementation by writing tests, we get to iterate on its **interface** before having to care about its **implementation**.
 
 This is considerably more flexible than iterating on an interface while writing the actual code.
 
 ---
-class: middle
+class: center, middle
 
-## Now, let's implement!
+### Now, let's implement!
 
-The trick is to write the least possible code to allow the tests to pass
+The trick is to write the smallest amount of code possible to allow the tests to pass.
 
 ???
 
@@ -245,11 +256,12 @@ const processedData = {
 Then we can make sure that the `processData` method returns that object using `jest.mock` (see solution file). After that, we write the simplest possible code to get those tests to pass.
 
 ---
-class: middle
 
-## ProcessData TDD
+# ProcessData TDD
 
-We've defined the __output__ of `processData`. Let's use TDD to start implementing that function.
+We've defined the **output** of `processData`.
+
+Let's use TDD to start implementing that function.
 
 ???
 
@@ -264,13 +276,12 @@ For the code-along:
 - Once you've written a reasonable amount of tests, do the skeleton of the actual function, and make a few tests pass. They'll do the rest in the lab.
 
 ---
-class: middle
 
-## Lab: Finish `processData`
+# What We've Learned
 
-You have a scaffold for the `processData` function.
-
-Use your tests to guide you to completing its functionality. If you finish early, think about what other insights you can get from the data!
-
+- What BDD is in relation to TDD
+- Who stakeholders are and what stories are
+- What outside-in testing is
+- What interface discovery is
 
 {% endhighlight %}
