@@ -147,7 +147,7 @@ Time to try out some PHP:
 
 We want to make sure errors are displayed in case we make a goof in our syntax (will give us a hint about the mistake and the line number).
 
-In you `php.ini` file (we'll check `phpInfo` to find it):
+In your `php.ini` file (we'll check `phpInfo` to find it):
 
 - set `error_reporting = E_ALL`
 - set `display_errors = On`
