@@ -19,7 +19,7 @@ layout: false
 
 # Agenda
 
-1. Create Meteor Methods
+1. Create Meteor Methods & DDP
 2. Set up Pub/Sub
 
 ---
@@ -28,33 +28,59 @@ template: inverse
 # Meteor Methods
 
 ---
-template: inverse
+class: center, middle
 
-# Meteor Methods
+.large[
+  Think of Meteor Methods as an **API for your server**.
+]
 
-.large[Think of Meteor Methods as an **API for your server**]
+???
+
+- Methods are Meteor’s remote procedure call (RPC) system, used to save user input events and data that come from the client
+- You can think of them like POST requests to your server, but with many nice features optimized for building a modern web application
+- At its core, a Method is an API endpoint for your server
+- Methods is usually capitalized to distinguish from JS methods
 
 ---
-class: middle
 
-## Typical client/server relationship
+# Typical Client/Server Relationship
 
 - Server implements a REST API in language X
 - Someone has to write a library for accessing that API in the client's language
 - The client uses the library to interact with the server
 
 ---
-class: middle
 
-## Meteor client/server relationship
+# Meteor Client/Server Relationship
 
 - Methods are written on the server
-- Client uses the Meteor interface to call the method
+- Client uses the Meteor interface to call the Method
 
 ---
-template: inverse
 
 # DDP
+
+- Stands for **D**istributed **D**ata **P**rotocol
+- **Server:** define a realtime queries using `Meteor.publish`
+- **Client:** you call `Meteor.subscribe` to connect to a publication endpoint
+- DDP then intelligently polls your database to pick up changes and push them down to the client
+
+???
+
+- DDP is a standard way to solve the biggest problem facing client-side JavaScript developers: querying a server-side database, sending the results down to the client, and then pushing changes to the client whenever anything changes in the database
+- Uses websockets
+- DDP messages are JSON objects
+
+---
+class: center, middle
+
+.inline-images[
+  ![Meteor pub/sub diagram](/public/img/slide-assets/meteor-pub-sub.png)
+]
+
+.footnote.right[
+  Source: [GeekyAnts](https://blog.geekyants.com/meteor-react-native-simplicity-productivity-a62559a1a570)
+]
 
 ---
 class: center, middle
@@ -134,7 +160,7 @@ template: inverse
 class: center, middle
 
 .large[
-  "Database everywhere" probably isn't a hot idea in a production app either...
+  &ldquo;Database everywhere&rdquo; probably isn't a hot idea in a production app either...
 ]
 
 ---
