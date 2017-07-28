@@ -238,6 +238,10 @@ db.students.find().forEach( (doc) => print( doc.name ) );
 
 A cursor will typically retrieve a **batch of up to 101 results** for you to iterate through before retrieving another batch (or 20 results in the shell if not assigned to a variable).
 
+???
+
+- Cursors are a control structure in a database for querying the results that we want, not the results thmeslves
+
 ---
 
 # Querying Documents
@@ -343,7 +347,7 @@ db.students.updateOne(
 );
 ```
 
-Update commands can also results in documents being created in the database. These commands are called **upserts**.
+Update commands can also result in documents being created in the database. These commands are called **upserts**.
 
 ---
 
