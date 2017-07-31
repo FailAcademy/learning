@@ -701,9 +701,9 @@ Create a simple function called `cashRegister` that uses `for...of` loop to calc
 
 Because the number of purchased items may vary, you'll want to set up your function to accept as many (or as few) grocery items as need to be passed in.
 
-The function also needs to accept an argument for the tax rate (with it's default set to 5%).
+The function also needs to accept an argument for the tax rate (assume the tax is 5%, but could change if necessary).
 
-The tax amount will needed to be added to the subtotal of the summed item prices, with the total cost logged to the console.
+The tax amount will need to be added to the subtotal of the summed item prices, with the total cost logged to the console.
 
 ---
 
