@@ -47,17 +47,12 @@ Your project must:
 - [ ] Have its file/folder structure organized based on the [Meteor Guide](https://guide.meteor.com/structure.html)
 - [ ] Be free of lint errors from ESLint
 
-### Deployment
-
-Your project must:
-
-- [ ] Be deployed to the Cloud
-
 ### Stretch Goals
 
 Want to challenge yourself? Your project could also:
 
 - [ ] Generate a hybrid app for IOS or Android using the Meteor CLI
+- [ ] Be deployed to the cloud
 
 ## Submission Instructions
 
