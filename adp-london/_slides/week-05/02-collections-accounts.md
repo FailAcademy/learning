@@ -427,7 +427,7 @@ The way we get data from the server is through Meteor's pub/sub system, and we w
 
 # Create a Collection
 
-Create a new file `api/imports/todo.js` and add this code:
+Create a new file `imports/api/todo.js` and add this code:
 
 ```js
 import { Mongo } from 'meteor/mongo';
@@ -435,11 +435,11 @@ import { Mongo } from 'meteor/mongo';
 export const ToDos = new Mongo.Collection('todos');
 ```
 
-But this isn't doing much for us yet! Create another file `api/imports/start-up/server/index.js` and import it into `server/main.js` (the main server entry point for our app).
+But this isn't doing much for us yet! Create another file `imports/start-up/server/index.js` and import it into `server/main.js` (the main server entry point for our app).
 
-Create another file in `api/imports/start-up/server/` called `register-api.js` and import your `todos.js` there.
+Create another file in `imports/start-up/server/` called `register-api.js` and import your `todos.js` there.
 
-In `api/imports/start-up/server/index.js`, now import `register-api.js`. Done, phew!
+In `imports/start-up/server/index.js`, now import `register-api.js`. Done, phew!
 
 ---
 
