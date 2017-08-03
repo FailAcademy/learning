@@ -154,7 +154,7 @@ It looks a lot like the default WP loop, with some exceptions:
 
 - A wrapper for `WP_Query`
 - However, it's a function (not an object instantiated from the `WP_Query` class) so none of the `WP_Query` methods will be available to you
-- What is does is returns an array of `WP_Post` objects that you can loop over yourself
+- What it does is returns an array of `WP_Post` objects that you can loop over yourself
 
 ---
 
@@ -300,7 +300,7 @@ class: center, middle
 
 # WP Does Most of the Heavy Lifting
 
-- We don't have to worry too much about database schema because **WP abstracts the direct database interaction away from us** (we us WP functions for that, not direct SQL queries)
+- We don't have to worry too much about database schema because **WP abstracts the direct database interaction away from us** (we use WP functions for that, not direct SQL queries)
 - You mostly just have to worry about setting the right database user and password in your `wp-config.php` file
 
 ---
