@@ -99,7 +99,7 @@ class: center, middle
 class: center, middle
 
 .large[
-  Much work has been done for you...check the docs!
+  Much work has been done for you... check the docs!
 ]
 
 ---
@@ -314,7 +314,7 @@ Check out the [explode docs](http://php.net/manual/en/function.explode.php).
 
 # Sorting by a Key's Value
 
-This is getting really fancy, but you'll need for your lab activity...
+This is getting really fancy, but you'll need it for your lab activity...
 
 To sort a multi-dimensional array based on the value of particular key, you can use `usort` with an anonymous callback function (in PHP 5.3+):
 
