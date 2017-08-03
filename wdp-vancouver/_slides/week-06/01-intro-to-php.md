@@ -154,6 +154,9 @@ In your `php.ini` file (we'll check `phpInfo` to find it):
 
 Restart Apache in MAMP for the changes to take effect. Now you will be able to see fatal errors and notices when you make a mistake in your code.
 
+???
+mamp/conf/{php version}/php.ini
+
 ---
 
 # White Screen of Death
@@ -162,6 +165,19 @@ Restart Apache in MAMP for the changes to take effect. Now you will be able to s
 - *This is why we never cowboy code on production servers!*
 - The errors appear on the screen because error reporting is turned on in the server's PHP configuration file(s)
 - We wouldn't want to display errors in a production environment though...
+
+???
+Consider showing how to use Whoops
+e.g. 
+
+`composer require filp/whoops`
+```
+require __DIR__ . "/vendor/autoload.php";
+
+$whoops = new \Whoops\Run;
+$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops->register();
+```
 
 ---
 template: inverse
@@ -950,7 +966,7 @@ include( 'header.php' );
 class: center, middle
 
 .inline-images[
-  ![Mind blown](/public/img/slide-assets/mind-blown.gif)
+  ![Mind blown](/public/img/slide-assets/mind-blown-tim-and-eric.gif)
 ]
 
 ---
