@@ -34,7 +34,18 @@ template: inverse
 # What is PHP?
 
 ???
-Based on your prework, write down the characterists of php
+Based on your prework, write down the characterists of php.
+Prework was Codeacademy, 
+- Welcome to PHP!
+- Control Flow: If/Else
+- Control Flow: Switch
+- Arrays, Loops: For and ForEach
+- Loops: While and Do-While
+
+Originally 'Personal Home Page'
+
+now stands for the recursive acronym PHP: Hypertext Preprocessor
+
 ---
 
 class: center, middle
@@ -87,6 +98,16 @@ class: center, middle
 ### Linux?
 
 Linux is a free and open-source Unix-like operating system that powers everything from personal computers to servers to super-computers.
+
+???
+
+Most servers you may work with are running on Linux.
+
+Mac OS is based on a BSD code base, while Linux is an independent development of a unix-like system. This means that these systems are similar, but not binary compatible. 
+
+We are familiar with some commands since we've been using terminal and bash.
+
+Bash is essentially an enhanced and GNU freeware version of the original Bourne shell, sh.
 
 ---
 class: center, middle
@@ -191,6 +212,12 @@ class: center, middle
 
 Statements are commands, expressions are requests (i.e. anything that has a value to be evaluated).
 
+???
+
+A “statement” is a standalone unit of execution and doesn't return anything.
+
+An “expression” is a combination of values and functions that are combined and interpreted by the compiler to create a new value.
+
 ---
 class: center, middle
 
@@ -198,12 +225,20 @@ class: center, middle
    `echo 'Hello, World!';`
 ]
 
+???
+
+Statement
+
 ---
 class: center, middle
 
 .large[
-   `$a = 1;`
+   `$a = 1 + 2;`
 ]
+
+???
+
+Expression
 
 ---
 
@@ -324,6 +359,11 @@ $total = (8 - 2) * 3;
 
 *What will the above variables equal?*
 
+???
+
+- 15
+- 18 ( order of operations matters )
+
 ---
 
 # Arithmetic Operators
@@ -346,6 +386,11 @@ $remainder_2 = 9 % 3;
 ```
 
 *What will the above variables equal?*
+
+???
+
+- 3
+- 0
 
 ---
 
@@ -639,7 +684,7 @@ For loops are great for running a block of code a specific number of times:
 
 ```php
 for ( $i = 0; $i < 10; $i++ ) {
-	echo "<p>$i</p>";
+  echo "<p>$i</p>";
 }
 ```
 
@@ -650,7 +695,7 @@ $months = array( 'January', 'February', 'March', 'April' );
 $total = count( $months );
 
 for ( $i = 0; $i < $total; $i++ ) {
-	echo '<p>' . $months[$i] . '</p>';
+  echo '<p>' . $months[$i] . '</p>';
 }
 ```
 
@@ -678,12 +723,12 @@ Foreach loops also work on more complex associative arrays:
 
 ```php
 $teachers = array(
-	'WordPress' => 'Mandi',
-	'AngularJS' => 'Mackenzie'
+  'WordPress' => 'Mandi',
+  'AngularJS' => 'Mackenzie'
 );
 
 foreach ( $teachers as $skill => $name ) {
-	echo '<p>' . $name . ' teaches ' . $skill . '</p>';
+  echo '<p>' . $name . ' teaches ' . $skill . '</p>';
 }
 ```
 
@@ -961,6 +1006,14 @@ include( 'header.php' );
   </body>
 </html>
 ```
+
+???
+Notice that we use parenthesis here.
+
+However you don't need to use parenthesis
+
+[functions-without-parentheses](http://solidlystated.com/scripting/php-functions-without-parentheses/)
+
 
 ---
 class: center, middle
