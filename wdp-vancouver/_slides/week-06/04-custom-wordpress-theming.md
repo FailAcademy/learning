@@ -352,7 +352,7 @@ class: center, middle
 
 ### Question #7:
 
-What new template can we work with as of WP v4.4? What does it do for us?
+What new template can we work use for embeds? What does it do for us?
 
 ---
 class: center, middle
