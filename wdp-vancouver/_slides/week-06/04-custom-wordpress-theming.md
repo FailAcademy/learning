@@ -366,7 +366,7 @@ class: center, middle
 
 ### Question #9:
 
-What two options do we have in the template hierarchy for creating a custom layout for a specific WP page?
+What three options do we have in the template hierarchy for creating a custom layout for a specific WP page?
 
 ---
 class: center, middle
