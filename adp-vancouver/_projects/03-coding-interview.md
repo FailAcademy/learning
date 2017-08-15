@@ -54,5 +54,4 @@ Want to challenge yourself? Your project could also:
 
 ## Submission Instructions
 
-When you’re ready to submit your project, use `codebase-review` to create a pull request of your entire repo,
-then **email a link to your pull request** to blake.turner@redacademy.com.
+When you’re ready to submit your project, **please email a link to your GitHub repository containing your project** to mackenzie@redacademy.com.
