@@ -37,7 +37,7 @@ Ajax requests in WP traditionally involved quite a bit of PHP:
 
 1. Make the Ajax call in JS
 2. Create a PHP function, which will handle the action
-3. Make sure the request should happening (security!)
+3. Make sure the request should be happening (security!)
 4. Add the function to the `wp_ajax_` hook (and the `wp_ajax_nopriv_` for logged out users)
 5. Create success handlers as needed
 
