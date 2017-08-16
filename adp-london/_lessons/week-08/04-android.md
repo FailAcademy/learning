@@ -74,9 +74,9 @@ Create your platform specific files, and read-up on the `DrawerNavigation` compo
 
 ## Lab Activity
 
-In today's lab, thoroughly review your app in an Android emulator to ensure it behaves as you would expect and adequately resembles the Splashify's prototypes.
+In today's lab, thoroughly review your app in an Android emulator to ensure it behaves as you would expect and adequately resembles the R10's prototypes.
 
-From there, the rest of class time this week may be spent on finishing building out any remaining requirements for your Splashify project. Don't forget to take a look at the stretch goals!
+From there, the rest of class time this week may be spent on finishing building out any remaining requirements for your R10 project. Don't forget to take a look at the stretch goals!
 
 ---
 
