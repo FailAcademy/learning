@@ -24,7 +24,7 @@ And if you're interested in taking a deeper dive into what's going on under the 
 - Integrate a Realm database into a React Native application.
 - Define schema within a React Native application.
 - Leverage React Component Lifecycle methods to perform CRUD operations on the database base in relation user interactions.
-- Populate a `<ListView>` component with data fetched a Realm database.
+- Populate a `<SectionList>` component with data fetched a Realm database.
 - Sync application UI state as data is added and removed from a Realm database.
 
 ---
@@ -64,7 +64,7 @@ Inside your `config/models.js` file, write three functions (which you will expor
 
 In today's lab we'll work on putting our new Fave CRUD operations to use in relevant action creators, and dispatch those actions when the "Add to Faves" or "Remove from Faves" button is tapped in the Session scene.
 
-Once you can see that data is writing to your database when the button is tapped (use the Realm Browser for this!), work on building out your Faves scene to display just the sessions that a user has faved inside a `ListView` component.
+Once you can see that data is writing to your database when the button is tapped (use the Realm Browser for this!), work on building out your Faves scene to display just the sessions that a user has faved inside a `SectionList` component.
 
 To build out the Faves scene, we'll need to filter the sessions we fetch from Firebase and check to see if they have a `session_id` that corresponds to one of the IDs in the array of Fave objects retrieved from Realm. Use this array of sessions to populate your Redux store, and pass it into your `FavesContainer` as a prop.
 
@@ -78,9 +78,10 @@ To do this, we'll need to research how **[change events](https://realm.io/docs/j
 
 ## Additional Resources
 
-Latest Realm docs for React Native:
+Latest Realm docs for React Native and related tutorials:
 
 - [Realm Mobile Database - React Native](https://realm.io/docs/react-native/latest/)
+- [Realm Academy](https://academy.realm.io/)
 
 A GUI app for working with your Realm databases:
 

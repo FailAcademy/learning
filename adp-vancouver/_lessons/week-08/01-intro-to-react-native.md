@@ -18,8 +18,8 @@ Prior to class, please install Xcode on your Mac:
 - Explain how React Native is different from other hybrid mobile application frameworks like Cordova.
 - Explore strategies for organizing React Native projects.
 - Use React Native's basic mobile UI components such as `<View>`, `<Text>`, `<TextInput>`, `<Image>`, `<TouchableOpacity>`, and `<TouchableHighlight>` in an application.
-- Use the built-in `<ListView>` UI component to display vertical scrolling lists of dynamic data in a React Native application.
-- Populate a `<ListView>` component with data fetched from third-party API.
+- Use the built-in list view UI components to display vertical scrolling lists of dynamic data in a React Native application.
+- Populate a `<FlatList>` component with data fetched from third-party API.
 - Explore the smaller subset of CSS permitted by React Native, and add styles to components with `Stylesheet.Create` and inline styles.
 - Use React Native's debugging tools to troubleshoot application errors.
 
@@ -155,11 +155,11 @@ A video series on styling components and building layouts with React Native:
 
 - [React Native - Design](https://www.youtube.com/playlist?list=PL7D-0n1z1EbhkundIsOBaN_mlLvV4_hyO)
 
-More on ListViews:
+More on list view-type components:
 
+- [Using List Views](http://facebook.github.io/react-native/docs/using-a-listview.html)
+- [How to use the FlatList Component — React Native Basics](https://medium.com/react-native-development/how-to-use-the-flatlist-component-react-native-basics-92c482816fe6)
 - [React Native Basics: How to Use the ListView Component](https://medium.com/differential/react-native-basics-how-to-use-the-listview-component-a0ec44cf1fe8#.asxki5zib)
-- [jsdf/react-native-refreshable-listview](https://github.com/jsdf/react-native-refreshable-listview)
-- [FaridSafi/react-native-gifted-listview](https://github.com/FaridSafi/react-native-gifted-listview)
 
 Miscellaneous RN resources:
 
