@@ -35,7 +35,7 @@ template: inverse
 
 # What It Is Not...
 
-RN is **not like Cordova** (PhoneGap, Ionic, etc.), which allows you to build something that looks like a native app wrapped in a headless web browser in webview inside of a native app (these are known as hybrid apps).
+RN is **not like Cordova** (PhoneGap, Ionic, etc.), which allows you to build something that looks like a native app wrapped in a chromeless web browser in webview inside of a native app (these are known as hybrid apps).
 
 RN is also **not an HTML5 app or progressive web app**.
 
@@ -318,12 +318,8 @@ We may also want users to enter text into a `<TextInput>` [(ref)](https://facebo
 
 ```js
 <TextInput
-  style={% raw %}{{
-      height: 30,
-      width: 100,
-      borderWidth: 1,
-      borderColor: "rgba(0,0,0,0.5)",
-  }}{% endraw %}
+  style={% raw %}{{ height: 30, width: 100, borderWidth: 1, 
+    borderColor: "rgba(0,0,0,0.5)"}}{% endraw %}
   placeholder={'Type here'}
   placeholderTextColor={"rgba(198,198,204,1)"}
   onChangeText={(text) => {this.setState({text})}}
@@ -518,21 +514,19 @@ template: inverse
 
 React Native provides three different components for tranforming data into lists in your app UI:
 
-- [ListView](https://facebook.github.io/react-native/docs/listview.html)
-- [FlatList](https://facebook.github.io/react-native/docs/flatlist.html)
-- [SectionList](https://facebook.github.io/react-native/docs/sectionlist.html)
-
-We will focus on the `ListView` component for now as it is the only one that currently supports sticky headers (which we will need for the project).
+- [ListView](https://facebook.github.io/react-native/docs/listview.html) (older)
+- [FlatList](https://facebook.github.io/react-native/docs/flatlist.html) (simpler)
+- [SectionList](https://facebook.github.io/react-native/docs/sectionlist.html) (more features)
 
 ---
 
-# ListView
+# FlatList & SectionList
 
-The `<ListView>` [(ref)](https://facebook.github.io/react-native/docs/listview.html) component is like a `<ScrollView>` with benefits.
+A list view (generally) is a common UI pattern in mobile apps. Think of it like a `<ScrollView>` with benefits.
 
-A `<ListView>` expects you to insert some kind of (potentially very large) data blob into it, and it will display that data much more efficiently than a basic `<ScrollView>` could. Performance FTW.
+The `<FlatList>` [(ref)](https://facebook.github.io/react-native/docs/flatlist.html) or `<SectionList>` [(ref)](https://facebook.github.io/react-native/docs/sectionlist.html) expects you to insert some kind of (potentially very large) data blob into it, and it will display that data much more efficiently than a basic `<ScrollView>` could. Performance FTW.
 
-To use a `<ListView>` component you need at least two things: `ListView.DataSource` (in array format, set as the `dataSource` prop) and a `renderRow` prop that returns a component.
+To use either, you will need some data (in array format), a component to render each list item, and way to apply a unique key to each list item.
 
 ---
 class: center, middle
@@ -541,80 +535,43 @@ class: center, middle
 
 ---
 
-# ListView
+# FlatList
 
-Setting up `<ListView>` in a component:
+Setting up `<FlatList>` in a component:
 
 ```js
 constructor() {
   super();
-
-  this.ds = 
-    new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-  this.state = {
-    dataSource: this.ds.cloneWithRows(['Thing 1', 'Thing 2']),
-  };
+  this.state = { data: ['Thing 1', 'Thing 2'] };
 }
   
 render() {
   return (
-    <ListView
-      dataSource={this.state.dataSource}
-      renderRow={(data) => <View><Text>{data}</Text></View>}
+    <FlatList
+      data={this.state.data}
+      renderItem={({ item }) => <View><Text>{item}</Text></View>}
+      keyExtractor={(item, index) => index}
     />
   );
 }
 ```
 
----
-
-# ListView
-
-What's going on with this syntax?
-
-```js
-this.ds = new ListView.DataSource({
-  rowHasChanged: (r1, r2) => r1 !== r2
-});
-
-this.state = {
-  dataSource: this.ds.cloneWithRows(['Thing 1', 'Thing 2']),
-};
-```
-
-The `rowHasChanged` change function is responsible for detecting changes in our `<ListView>`.
-
-The `cloneWithRows` method allows us to actually pass some data into our `<ListView>` for rendering.
-
----
-
-# ListView
-
-Other things we can customize in a `<ListView>`:
-
-- Add a separator (between list items, excluding the last)
-- Add a header (or sticky header) to the top of your list (a search box maybe?)
-- Add a sticky header for each section of your list (where have we seen this pattern?)
-- Add a footer (perhaps a Load More button?)
+Note that `item` is destructured out of the **[info object parameter](http://facebook.github.io/react-native/docs/flatlist.html#renderitem)** of `renderItem`.
 
 ---
 
 # Fetching Data
 
-We often want to populate a `<ListView>` with external data.
+We often want to populate a list view with external data.
 
-Let's start by creating our new `ListView`, but we won't put any data in it with `cloneWithRows` just yet...
+Let's start by setting a state property to hold the data for the `FlatList` once fetched:
 
 ```js
 constructor() {
   super();
-  
-  this.ds = new ListView.DataSource({
-    rowHasChanged: (r1, r2) => r1 !== r2
-  });
 
   this.state = {
-    dataSource: this.ds,
+    data: [],
     isLoading: true,
   };
 }
@@ -632,16 +589,16 @@ componentDidMount() {
 
   fetch(endpoint)
     // if fetch is successful, read our JSON out of the response
-    .then((response) => response.json())
-    .then((result) => {
-      this.setState({ dataSource: this.ds.cloneWithRows(result) });
+    .then(response => response.json())
+    .then(data => {
+      this.setState({ data });
     })
     .catch(error => console.log(`Error fetching JSON: ${error}`));
 }
 
 componentDidUpdate() {
-  if ( this.state.dataSource && this.state.isLoading ) {
-    this.setState({ isLoading: false, });
+  if ( this.state.data && this.state.isLoading ) {
+    this.setState({ isLoading: false });
   }
 }
 ```
@@ -654,26 +611,56 @@ Finally, we'll render our data in our component:
 
 ```js
 render() {
-  if (this.state.isLoading) {
-    return (
-      <ActivityIndicator animating={true} size="small" color="black" />
-    );
-  } else {
-    return (
-      <ListView
-        dataSource={this.state.dataSource}
-        renderRow={(data) => <View><Text>{data.name}</Text></View>} 
-      />
-    );
-  }
+ if (this.state.isLoading) {
+  return (
+   <ActivityIndicator animating={true} size="small" color="black" />
+  );
+ } else {
+  return (
+   <FlatList
+    data={this.state.data}
+    renderItem={({ item }) => <View><Text>{item.name}</Text></View>}
+    keyExtractor={item => item.id}
+   />
+  );
+ }
 }
+```
+
+---
+
+# Other Features
+
+Customizable things in a `<FlatList>` (or `<SectionList>`):
+
+- Add a separator (between list items, excluding the last)
+- Add a header (or sticky header) to the top of your list (a search box maybe?)
+- Add a footer (perhaps a Load More button?)
+- Add pull to refresh or scroll loading functionality
+- `SectionList` only: add a sticky header for each section of your list (where have we seen this pattern?)
+
+---
+
+# SectionList Data
+
+The `<SectionList>` component is very similar to the `<FlatList>`, but the data will need to be a different shape, and will be set on the `sections` prop instead:
+
+```js
+<SectionList
+  sections={[
+    {title: 'ADP', data: ['Bob', 'Alice']},
+    {title: 'WDP', data: ['Anne', 'Mary', 'Joe']},
+  ]}
+  renderItem={({ item }) => <Text>{item}</Text>}
+  renderSectionHeader={({ section }) => <Text>{section.title}</Text>}
+/>
 ```
 
 ---
 
 # Exercise 3
 
-Now you're going to build a slightly more complex `<ListView>` in your `HelloWorld` app to display a list of users.
+Now you're going to build a slightly more complex `<FlatList>` in your `HelloWorld` app to display a list of users.
 
 See the [lesson page](/lesson/01-intro-to-react-native/) for more details...
 

@@ -118,11 +118,11 @@ Repeat this pattern for all other scene container components you build for the r
 
 ### Task 2:
 
-Build out the schedule `ListView` now with session data fetched from Firebase. Use the `formatSessionData` function in the following Gist to help format your Firebase data for your `ListView` component, with time-based section headers:
+Build out the schedule `SectionList` now with session data fetched from Firebase. Use the `formatSessionData` function in the following Gist to help format your Firebase data for your `SectionList` component, with time-based section headers:
 
 **https://gist.github.com/mandiwise/bda1b921e12817373560d626970d630d**
 
-**[Check out this article](https://medium.com/@darylrowland/reactnative-listview-with-section-headers-99a6714282c3#.piq7ar67t)** for help figuring how to instantiate and populate a `ListView.DataSource` to include section headers in your Schedule list.
+Be sure to refer to the React Native docs to check out all of the options you have available for formatting your `SectionList`.
 
 ### Task 3:
 
