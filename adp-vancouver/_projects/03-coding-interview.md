@@ -27,7 +27,6 @@ Your project must:
 - [ ] Have at least 10 well-formed, passing tests
 - [ ] Contain a reasonably DRY (Don't Repeat Yourself) implementation, though the tests can be verbose
 - [ ] Have a screenshot (or screenshots) in its README of the test output in your terminal
-- [ ] Use `codebase-review` to create a pull request of the entire codebase
 
 ### Functionality
 
@@ -42,7 +41,7 @@ Your project must:
 
 ### Quality
 
-- [ ] Correctly use `describe` and `it` so that the test ouput specifically describes the behaviour of your code
+- [ ] Correctly use `describe` and `it` so that the test output specifically describes the behaviour of your code
 - [ ] The vending machine must be a JS class
 
 ### Stretch Goals
