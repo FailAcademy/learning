@@ -61,6 +61,43 @@ RN works because its **bridge** creates an interface between React and the host 
   ![React Native bridge diagram](/public/img/slide-assets/rn-bridge.jpg)  
 ]
 
+???
+
+- The bridge is all about native call JS and JS calling native
+- So an RN iOS app, the browser's DOM is replaced with UIKit
+- Characteristics of the bridge:
+  - Asynchronous
+  - Batched (the native calls)
+  - Serializable (the messages between JS and native)
+
+---
+class: center, middle
+
+.large[
+  ![React Native threads diagram](/public/img/slide-assets/rn-threads.svg)  
+]
+
+???
+
+- The main/native thread launches app and deals with native UI
+- The JS thread is where the JS VM runs entirely
+- There's also a shadow queue (GCD Queue) where some layout concerns are take care of (e.g. flexbox properties, height, width)
+- Native modules can also create their own threads
+
+- Everything always starts on the native side
+- Native decides "I want to run this application now" and sends a call across the bridge to the app entry point
+- The call is serialized via a custom protocol
+- It kicks off `AppRegistry.registerComponent()`
+- Leads to a bunch of calls in JS, which can be calls back into native, e.g. the `UIManager` module
+
+- Touch events always start in native too
+- Call goes across bridge to JS thread to run application code to handle the event and set state, render, etc.
+- The JS side then dispatches view updates
+- The UI updates then happen on the main thread (this can happen at 60fps too)
+
+- The key here is that **JS is driving all the interactions and describing the UI**...because all events are routed through JS
+- And this is the point of React! (`UI = f(data)`)
+
 ---
 
 # Rendering to the DOM
@@ -165,6 +202,12 @@ react-native run-ios
 ```
 
 You can also add the `--simulator="iPhone SE"` flag to that command to launch your app on a specific device.
+
+???
+
+- The "packager" is a Node.js server (on localhost:8081 by default)
+- It's is a local dev server that serves all of the JS you need to run your app
+- Because you don't need to rebuild the native code in your app when you make a change to your JS, this approach allows you to rebundle and refresh your app very quickly
 
 ---
 
