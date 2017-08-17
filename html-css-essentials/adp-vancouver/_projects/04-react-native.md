@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Project 4 - r10
+title: Project 4 - R10
 due: Monday, August 28th (beginning of class)
 class: gh-check
 ---
@@ -90,10 +90,6 @@ Your project must:
 ### Stretch Goals
 
 Want to challenge yourself? Your project could also:
-
-**Improve code efficiency and quality:**
-
-- [ ] Use Flow for static typechecking in the app
 
 **Enhance UX:**
 
