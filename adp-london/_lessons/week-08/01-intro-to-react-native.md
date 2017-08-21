@@ -101,13 +101,13 @@ Your app should look like the first screenshot below. After adjusting the styles
 
 ## Exercise 3
 
-Now you're going to build a slightly more complex `<ListView>` in your `HelloWorld` app to display a list of users.
+Now you're going to build a slightly more complex `<FlatList>` in your `HelloWorld` app to display a list of users.
 
 The URL below contains JSON with data for 100 robot users:
 
 https://robot-data.firebaseio.com/robots.json
 
-Your goal is to build a `<ListView>` that renders the data like this:
+Your goal is to build a `<FlatList>` that renders the data like this:
 
 <p style="display: flex; justify-content: center;" }>
   <img src="/public/exercises/rn1-e3.png" alt="Exercise screen cap" style="width: 50%; height: 50%;border: 1px solid #e2e2e2;"/>
