@@ -168,7 +168,7 @@ This method will return the value for the platform you are on.
 Using what you learned about the `Platform` modules, make two adjustments to your R10 project:
 
 1. Conditionally render the heart icon in the Schedule, Session, and Faves scenes to use the Ionicon `md-heart` instead of `ios-heart`.
-2. To get Monserrat (Regular) working on Android, you'll need to set your main font to `Monserrat-Regular` for that platform (rather than `Monserrat`, as we did on iOS). Use `Platform.select` for this.
+2. To get Montserrat (Regular) working on Android, you'll need to set your main font to `Montserrat-Regular` for that platform (rather than `Montserrat`, as we did on iOS). Use `Platform.select` for this.
 
 ---
 template: inverse
