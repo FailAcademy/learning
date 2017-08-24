@@ -30,7 +30,7 @@ Install Android Studio as per the instruction in the React Native docs:
 
 Set-up an Android emulator as per the instruction in the React Native docs:
 
-**[Starting the Android Virtual Device](https://facebook.github.io/react-native/docs/getting-started.html#starting-the-android-virtual-device)**
+**[Preparing the Android Virtual Device](https://facebook.github.io/react-native/docs/getting-started.html#preparing-the-android-device)**
 
 Please note that this must be done from within a project's interface in Android Studio, so you will need to either create an empty project in Android Studio, or open your `android` directory from your RN project in Android Studio to access the AVD Manager.
 
