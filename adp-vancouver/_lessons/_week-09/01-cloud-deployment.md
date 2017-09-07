@@ -6,23 +6,22 @@ lesson_date:
 
 ## Pre-work
 
-Deploying applications "in the cloud" is a fact of life for developers building Internet connected software. Before we dive in, have a look at this primer on Cloud Computing provided by Amazon Web Services, the leading Cloud Computing provider today:
+Web developers have a lot of convneint tools for deploying their projects.
+Take a look at the ones listed here. You might find something you can use!
 
-[What is Cloud Computing?](https://aws.amazon.com/what-is-cloud-computing/)
+[https://deploystack.io/](https://deploystack.io/)
 
 ---
 
 ## Learning Objectives
 
-We're not going to jump into AWS today. Instead we'll start from the simplest, and most convenient Cloud deployment tools.
-
-- Define cloud computing.
-- Distinguish the differences between popular cloud Hosting providers.
-- Deploy a static Website using `surge.sh`.
-- Deploy a Node / Express site using `now`.
-- Deploy a Meteor app using Meteor Galaxy.
-- Explain how public / private key encryption works with SSH.
-- Deploy a Node / Express / Mongo app using Heroku.
+- Define Cloud Hosting vs. Cloud Computing.
+- Provide a general description of how to host a website in the Cloud (Cloud Hosting).
+- Distinguish the differences between popular Cloud Hosting providers.
+- Understand the basic operation of a public website before the general availability of Cloud Hosting.
+- Define the term "Environment" in the context of Web Applications.
+- Take steps to prepare a NodeJS / Postgres / MongoDB for deployment to a Cloud Hosting provider.
+- Deploy your first project to [Heroku](https://www.heroku.com/)!
 
 ---
 
@@ -33,8 +32,9 @@ We're not going to jump into AWS today. Instead we'll start from the simplest, a
 - Single Tenant
 - Multi Tenant
 - Static site
+- Production vs. Development
+- Build task
 - ENV
-- SSH
 
 ---
 
@@ -47,27 +47,55 @@ To complete todays exercises we'll need to create accounts on the Cloud Hosting 
 
 ---
 
-## Lab Activity
+## Exercise 2
 
-Boot a copy of Ubuntu 16.04 on Digital Ocean (Droplet), Microsoft Azure, and AWS (EC2).
+**Configure your application's production environment settings**
 
-- If you don't have one already, generate an SSH key and use SSH to log into the ubuntu instance.
-- Use the apt-get package manager to install Node on both instances.
+When deploying, we'll need to make sure we've provided the correct configuration and overrides so our
+application will run in it's new environment.
 
-Make sure you can answer the following questions:
-
-- What are the main differences between a Droplet, Azure VM and EC2 Instance?
-- What are the main differences, that you can see, between Digital Ocean, Microsoft Azure and AWS?
-- Based on you experience with a basic install, which cloud hosting provider do you prefer?
-- How does Heroku differ from the other Cloud hosting providers.
+- Prepare your first project for deployment by setting all of the necessary production environment variables.
 
 ---
 
+# Exercise 3
+
+**Create a production build of your application**
+
+Create a build task to collect all of the necessary files, and output them into a seperate directory, effectively creating a new copy of your applications files that are optimized to run in a non-development environment.
+
+- Once you've generated a build, test your new build by running it locally to ensure your configuration changes are working.
+
+---
+
+## Lab Activity
+
+Deploy your new production build to [Heroku](https://www.heroku.com/)!
+
+What you'll need to do: 
+- Sign-up with Heroku
+- Create a new project using the Heroku web interface
+- Add the Postgres Heroku add-on
+- Set the correct environment variables in the Heroku Dashboard 
+- Create a copy of your local Postgres database and upload it to Heroku
+- Configure git push deploys from your production build directory
+
+---
+
+## Bonus Lab
+
+If you deployed your Node/Postgres application, see if you can use Heroku to deploy your Meteor application!
+
+**Hints:** 
+- You'll need to use the MLab Heroku add-on, it costs 5$
+- You'll also need to configure this Heroku Buildpack: [https://github.com/AdmitHub/meteor-buildpack-horse](https://github.com/AdmitHub/meteor-buildpack-horse)
+
+---
 ## Additional Resources
 
-Apps for Cloud deployment Automation:
+Heroku:
 
-- [HashiCorp](https://www.hashicorp.com/)
+- [Getting started with Heroku](https://devcenter.heroku.com/start)
 
 Digital Ocean has a number of excellent resources:
 
@@ -80,6 +108,7 @@ Amazon Web Services (AWS):
 - [AWS Homepage](https://aws.amazon.com/)
 - [Serverless framework for Node](https://serverless.com/)
 
-Heroku:
+Apps for Cloud deployment Automation:
 
-- [Getting started with Heroku](https://devcenter.heroku.com/start)
+- [HashiCorp](https://www.hashicorp.com/)
+

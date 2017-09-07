@@ -1,7 +1,6 @@
 ---
 layout: lesson
 title: Authentication with Firebase
-slides: ['_slides/week-04/05-authentication-authorization.md']
 lesson_date: 2017-07-27
 ---
 
