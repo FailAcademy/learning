@@ -1,4 +1,4 @@
-CREATE TABLE "public"."users" (
+1CREATE TABLE "public"."users" (
   "userid" serial,
   "firstname" text,
   "lastname" text,

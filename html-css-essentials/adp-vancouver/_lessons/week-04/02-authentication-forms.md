@@ -10,6 +10,7 @@ lesson_date: 2017-07-26
 Prior to class, read through the following documentation:
 
 - [React Docs on Forms](https://facebook.github.io/react/docs/forms.html)
+- [Redux-Form Documentation](http://redux-form.com/7.0.1/)
 
 ---
 
@@ -21,6 +22,7 @@ Prior to class, read through the following documentation:
 - Use a library for handling client-side form validation in an application
 - Provide error feedback on invalid input
 - Use form elements from 3rd party sources like Material-UI
+- Implement a form using Redux-Form
 
 ---
 
@@ -51,3 +53,4 @@ Be sure to include:
 
 - [Material UI](https://github.com/callemall/material-ui)
 - [Semantic UI](http://react.semantic-ui.com/)
+
