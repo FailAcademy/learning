@@ -1,4 +1,4 @@
 select tags.name as tagname 
-	from tags inner join posttags
-					  on posttags.tagid = tags.id
-			where posttags.postid = 2; 
+	from tags inner join itemtags
+					  on itemtags.tagid = tags.id
+			where itemtags.itemid = 2; 
