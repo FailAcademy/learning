@@ -9,10 +9,16 @@ lesson_date: 2017-07-12
 
 Prior to class, please read the Redux docs on [middleware](http://redux.js.org/docs/advanced/Middleware.html).
 
+Optional reading, but recommended:
+
+- [Chapter 4: Currying](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch4.md)
+- [Chapter 5: Coding by Composing](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch5.md)
+
 ---
 
 ## Learning Objectives
 
+- Explain what function currying and function composition are, and how they can be used to make code more reusable and readable.
 - Define what middleware is in relation to Redux, and its role in an application.
 - Apply Redux middleware, including `redux-logger` and `redux-thunk`.
 - Use `redux-thunk` to dispatch multiple actions from an action creator.
