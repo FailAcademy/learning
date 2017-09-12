@@ -21,9 +21,10 @@ layout: false
 
 1. Determine what a database is
 2. Introduce the various types of databases available
-3. Install and set up PostgreSQL
-4. Create a database with authentication
-5. Perform CRUD operations on our new database
+3. Introduce Codd's Rules (RDBMS)
+4. Install and set up PostgreSQL
+5. Demonstrate the SQL language
+6. Setup a Postgres user and database for use in our project application
 
 ---
 
@@ -40,28 +41,16 @@ We've used static data in the form of a JSON file, in our project already. Today
 
 ---
 
-# Types of Databases
+# Relational Databases (RDBMS)
 
-- Relational Databases
+Postgres is defined as a Relational Database, usually abreviated as RDBMS, which stands for 
+**Relational Database Management System**.
 
-- Operational Databases
+The functioning of RDBMS systems was first defined by Computer Science researcher **Edgar F. Codd**.
 
-- Database WareHouses
-
-- Distributed Databases
-
-- End-User Databases
-
-
----
-
-# Relational Database
-
-We'll be using a relational Database to store data for our project. Relational Databases store data in tables like this:
-
-![Table](/public/img/slide-assets/sql-table.png)
-
-A row represents a **record** within each table.
+???
+Pause and review Codd's 12 rules from the pre-work reading.
+[https://www.tutorialspoint.com/dbms/dbms_codds_rules.htm](https://www.tutorialspoint.com/dbms/dbms_codds_rules.htm)
 
 ---
 
@@ -69,7 +58,7 @@ A row represents a **record** within each table.
 
 Relational databases are one of the most common types.
 
-A relational database is made up of several components, of which the table is most significant.  The table is where all the data in a database is stored, and without tables, there would not be much use for relational databases.
+A relational database is made up of several components, of which the **table** is most significant.  The table is where all the data in a database is stored, and without tables, there would not be much use for relational databases.
 
 ![Table](/public/img/slide-assets/sql-table.png)
 
@@ -77,18 +66,29 @@ A relational database is made up of several components, of which the table is mo
 # Relational Database
 
 In a relational system, we create structure of **schemas** by defining relationships between tables.
-
 ![Relational-Database](/public/img/slide-assets/relational-databases.png)
 
 ---
+
 class: center, middle
 
-# SQL
+#What is Postgres?
 
-Easily, the most common way to interact with Relational Databases is using SQL, which stands for<br/>
-##**Structured Query Language**:
+---
+# What is Postgres?
 
-**Let's start using SQL & PostgreSQL!**
+"PostgreSQL is a general purpose and object-relational database management system, the most advanced open source database system. PostgreSQL was developed based on POSTGRES 4.2 at Berkeley Computer Science department, University of California."
+
+*It's Open Source!*
+
+???
+Take the opportunity to contrast Open Source technology vs proprietary tech, ie Microsoft's MySQL.
+
+---
+
+template: inverse
+
+# Lets's start using Postgres!
 
 ???
 - Install [Postgres.app](https://postgresapp.com/) 
