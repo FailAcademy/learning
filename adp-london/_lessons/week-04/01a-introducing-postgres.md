@@ -1,15 +1,15 @@
 ---
 layout: lesson
-title: Introducing PostgreSQL
+title: Intro to Databases with PostgreSQL
 slides: ['_slides/week-04/01-introducing-postgres.md']
 lesson_date: 2017-07-24
 ---
 
 ## Pre-Work
 
-Please read over the following links:
-- [Postgres Data Types](https://www.tutorialspoint.com/postgresql/postgresql_data_types.htm)
-- [PostgreSQL Schema](https://www.tutorialspoint.com/postgresql/postgresql_schema.htm)
+Please read over the following: <br/>
+[Codd's 12 Rules](https://en.wikipedia.org/wiki/Codd%27s_12_rules) (Wikipedia)<br/>
+[More on Codd's 12 Rules](https://www.tutorialspoint.com/dbms/dbms_codds_rules.htm) (Plain english explanation)
 
 To start getting familiar with SQL syntax, complete Part 1, from [these exercises](https://www.pgexercises.com/questions/basic/).
 
@@ -17,16 +17,15 @@ To start getting familiar with SQL syntax, complete Part 1, from [these exercise
 
 ## Learning Objectives
 
-- Define what role a database plays in an application.
+- Define what role a database plays in a software application.
 - Explain how a relational database is structured.
 - Install and set up an instance of PostgreSQL.
 - Explain the difference between `TABLE` and `DATABASE`.
 - Model data, and create tables to store it.
 - Distinguish different data types in a SQL database context.
 - Describe why a Schema is necessary.
-- Create a simple Schema using PostgreSQL basic syntax.
+- Create a simple Schema using SQL basic syntax.
 - Write basic SQL queries to perform CRUD operations on a database.
-- Write SQL queries in a SQL file and execute commands form the `psql` prompt.
 - Add constraints to ensure consistent data.
 - Implement an auto-incrementing id field.
 
@@ -42,6 +41,7 @@ To start getting familiar with SQL syntax, complete Part 1, from [these exercise
 - `FOREIGN KEY`
 - `INSERT`
 - Data Types
+- Scalar
 - Schema
 
 ---
