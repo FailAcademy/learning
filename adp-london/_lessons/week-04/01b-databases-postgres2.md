@@ -72,7 +72,7 @@ Now that we have our data and relationships set up. Let's write a query to aggre
 
 ## Exercise 5
 
-Let's prepare our application to use Postgres. As usual, we''ll rey on a pattern we can repeat as our 
+Let's prepare our application to use Postgres. As usual, we'll rely on a pattern we can repeat as our 
 application's list of features grows.
 
 Create a folder called 'resources', if you have not already. Add a file called ```PostgresDB.js``` (This name is just a suggestion).
@@ -104,11 +104,11 @@ In todays lab we'll connect our project to a local instance of Postgres!
 Here's what we're going to do:
 
 - Install ```node-postgres``` in our project. 
-- Add the necessary evironment variables to our Express server.
+- Add the necessary environment variables to our Express server.
 - Connect to our local instance of Postgres from our Node/Express server.
 - Test the connection by performing the ```SELECT NOW()``` query.
-- Create the necessary files & folders to hold our Postgres code. (Service parrtern).
-- Begin to write the methods for querying and retreving information from Postgres, to use in our *GraphQL resolvers.*
+- Create the necessary files & folders to hold our Postgres code. (Service pattern).
+- Begin to write the methods for querying and retrieving information from Postgres, to use in our *GraphQL resolvers.*
 
 ---
 
