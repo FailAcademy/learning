@@ -8,8 +8,10 @@ lesson_date: 2017-07-24
 ## Pre-Work
 
 Please read over the following: <br/>
-[Codd's 12 Rules](https://en.wikipedia.org/wiki/Codd%27s_12_rules) (Wikipedia)<br/>
-[More on Codd's 12 Rules](https://www.tutorialspoint.com/dbms/dbms_codds_rules.htm) (Plain english explanation)
+
+[Codd's 12 Rules](https://www.tutorialspoint.com/dbms/dbms_codds_rules.htm) (Plain english explanation)<br/>
+[Relational Database Normalization](https://www.quora.com/What-is-database-normalization-in-simple-terms-with-examples)
+
 
 To start getting familiar with SQL syntax, complete Part 1, from [these exercises](https://www.pgexercises.com/questions/basic/).
 
@@ -34,6 +36,7 @@ To start getting familiar with SQL syntax, complete Part 1, from [these exercise
 ## Keywords
 
 - Relational database
+- Normalization
 - SQL
 - CRUD
 - `CREATE TABLE`
@@ -52,8 +55,7 @@ You should have a running instance of PostgreSQL running on your computer.
 
 If you have not installed PostgreSQL yet, get the app installer here: https://postgresapp.com/
 
-In this lab activity, we'll go through the process of setting up a few new databases within it, to use throughout the rest of our
-time with PostgreSQL.
+In this exercise, we'll go through the process of setting up a few new databases within it, to use throughout the rest of our time with PostgreSQL.
 
 - Create 2 databases
 We'll use on of these databases to try out new things. Once we're comfortable, we'll apply
@@ -70,10 +72,16 @@ creating and authorizing a new Database on your local machine. In a real product
 
 ## Exercise 2
 
-Create Tables and set Data Types. What types of data do we need to model for our Boomtown application?
+Populating your Relational Database. 
 
 - Use the `CREATE TABLE` command to set up some tables in our test database.
 - Set the appropriate data-types for each column in our schema.
+
+**Data Types** <br/>
+What types of data do we need to model for our Boomtown application?
+
+**Normalization** <br/>
+How should we "Normalize" the data in our schema, according to the rules of Third Normal Form?
 
 **Handling Id's** <br/>
 Each entry into the database for each of the schema should have an id. This will be necessary for building
