@@ -1,6 +1,7 @@
 ---
 layout: lesson
-title: Introducing PostgreSQL II
+title: Intro to Databases with PostgreSQL II
+slides: ['_slides/week-04/01b-introducing-postgres2.md']
 lesson_date: 2017-07-25
 ---
 
@@ -18,10 +19,10 @@ Complete Part 2 *Joins and Subqueries*, from [these exercises](https://pgexercis
 ## Learning Objectives
 
 - Describe the difference between 'Foreign key' and 'Primary key'.
-- Create and query a 'linking table'
 - Add constraints to our Postgres schema.
+- Query a 'linking table'
 - Connect our Express app to a local Postgres database.
-- Query a local Postgres database from Node/Express using ```node-postgres```
+- Query a local Postgres database from our Express app using ```node-postgres```
 - Discover a new pattern of abstraction for dealing with methods that perform data-access.
 
 ---
@@ -44,6 +45,7 @@ When creating constraints we need to consider things like:
 
 - What fields in our tables should be unique?
 - What are the specific types of data we're storing in each column?
+- Do we need to initialize any default values in our tables?
 - How can we check if the data being sent by client applications for storage is valid?
 
 Add the appropriate constraints to your project's database.
@@ -62,7 +64,7 @@ Now that we have our data and relationships set up. Let's write some SQL queries
 
 ---
 
-## Exercise 4
+## Exercise 3
 
 Now that we have our data and relationships set up. Let's write a query to aggregate data from the database:
 
@@ -70,7 +72,7 @@ Now that we have our data and relationships set up. Let's write a query to aggre
 
 ---
 
-## Exercise 5
+## Exercise 4
 
 Let's prepare our application to use Postgres. As usual, we'll rely on a pattern we can repeat as our 
 application's list of features grows.
@@ -92,7 +94,6 @@ You should be able to answer the following questions:
 - Where does the app argument come from?
 - What will we need to import?
 - What will we need to export?
-
 
 ---
 
