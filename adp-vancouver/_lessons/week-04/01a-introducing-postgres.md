@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Intro to Databases with PostgreSQL
-slides: ['_slides/week-04/01-introducing-postgres.md']
+slides: ['_slides/week-04/01a-introducing-postgres.md']
 lesson_date: 2017-07-24
 ---
 

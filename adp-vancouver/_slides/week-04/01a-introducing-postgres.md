@@ -404,4 +404,57 @@ CREATE TABLE "public"."itemtags" (
 - How to create relationships between database tables using primary keys
 
 ---
+
+# Lab activity
+
+Now that we've created our schema (table) for our project application, use the `INSERT` command to populate your data base with some mock data.
+
+Add the following mock data to your database:
+
+- At least 4 Items
+- All of the Tags (Categories)
+
+Ensure that you've set up the appropriate foreign key constraints!
+
+???
+
+Solution
+
+```sql
+INSERT INTO items
+(
+	title,
+	imageurl,
+	description
+)
+VALUES (
+	'Camp Stove',
+	'https://firebasestorage.googleapis.com/v0/b/boomtown-dfdd8.appspot.com/o/demo-images%2Fcamp-stove.jpg?alt=media',
+	 'All you need to cook gourmet meals on your next trek into the wild.',
+);
+
+INSERT INTO tags
+(
+	title
+)
+VALUES (
+	'Household Items'
+);
+
+INSERT INTO itemtags
+(
+	tagid,
+	itemid
+)
+VALUES (
+	1,
+	1
+);
+```
+
+---
+template: inverse
+
+# Questions?
+
 {% endhighlight %}
