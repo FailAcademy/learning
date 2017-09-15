@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: Authentication & Forms
-slides: ['_slides/week-04/01b-client-side-validation.md']
+title: Webforms using React & Redux
+slides: ['_slides/week-04/02-forms-react-redux.md']
 lesson_date: 2017-07-26
 ---
 
