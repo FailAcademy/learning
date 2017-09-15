@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Forms in React Slides
+title: Webforms using React & Redux Slides
 
 ---
 
@@ -10,7 +10,7 @@ layout: true
 class: center, middle, inverse
 
 ---
-# Forms in React
+# Webforms using React & Redux
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
