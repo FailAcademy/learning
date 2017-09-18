@@ -19,7 +19,7 @@
    {
       "title": "Day 1 Orientation",
       "allDay": true,
-      "start": "2017-07-04"
+      "start": "2017-10-02"
    },
    {
       "title": "PPD Lesson",
@@ -78,39 +78,34 @@
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2017-07-14"
+      "start": "2017-10-06"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2017-07-21"
+      "start": "2017-10-20"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2017-07-28"
+      "start": "2017-10-27"
    },
    {
       "title": "Self Directed Meteor Project Work",
       "allDay": true,
-      "start": "2017-08-03",
-      "end": "2017-08-12"
-   },
-   {
-      "title": "Project Work Day",
-      "allDay": true,
-      "start": "2017-08-14"
+      "start": "2017-11-02",
+      "end": "2017-11-11"
    },
    {
       "title": "Portfolio Week",
       "allDay": true,
-      "start": "2017-08-28",
-      "end": "2017-09-02"
+      "start": "2017-11-27",
+      "end": "2017-12-02"
    },
    {
       "title": "Community Project Work",
       "allDay": true,
-      "start": "2017-09-05",
-      "end": "2017-09-22"
+      "start": "2017-12-04",
+      "end": "2017-12-22"
    }
 ]

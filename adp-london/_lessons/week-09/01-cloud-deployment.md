@@ -1,15 +1,14 @@
 ---
 layout: lesson
 title: Cloud Deployment
-lesson_date: 
+lesson_date: 2017-12-01
 ---
 
 ## Pre-work
 
-Web developers have a lot of convneint tools for deploying their projects.
-Take a look at the ones listed here. You might find something you can use!
+Web developers have a lot of convenient tools for deploying their projects. Take a look at the ones listed here. You might find something you can use.
 
-[https://deploystack.io/](https://deploystack.io/)
+- [https://deploystack.io/](https://deploystack.io/)
 
 ---
 
@@ -58,13 +57,13 @@ application will run in it's new environment.
 
 ---
 
-# Exercise 3
+## Exercise 3
 
 **Create a production build of your application**
 
 Create a build task to collect all of the necessary files, and output them into a seperate directory, effectively creating a new copy of your applications files that are optimized to run in a non-development environment.
 
-- Once you've generated a build, test your new build by running it locally to ensure your configuration changes are working.
+Once you've generated a build, test your new build by running it locally to ensure your configuration changes are working.
 
 ---
 
@@ -72,7 +71,8 @@ Create a build task to collect all of the necessary files, and output them into 
 
 Deploy your new production build to [Heroku](https://www.heroku.com/)!
 
-What you'll need to do: 
+What you'll need to do:
+
 - Sign-up with Heroku
 - Create a new project using the Heroku web interface
 - Add the Postgres Heroku add-on
@@ -87,10 +87,12 @@ What you'll need to do:
 If you deployed your Node/Postgres application, see if you can use Heroku to deploy your Meteor application!
 
 **Hints:** 
+
 - You'll need to use the MLab Heroku add-on, it costs 5$
-- You'll also need to configure this Heroku Buildpack: [https://github.com/AdmitHub/meteor-buildpack-horse](https://github.com/AdmitHub/meteor-buildpack-horse)
+- You'll also need to configure [this Heroku Buildpack](https://github.com/AdmitHub/meteor-buildpack-horse)
 
 ---
+
 ## Additional Resources
 
 Heroku:
@@ -111,4 +113,3 @@ Amazon Web Services (AWS):
 Apps for Cloud deployment Automation:
 
 - [HashiCorp](https://www.hashicorp.com/)
-

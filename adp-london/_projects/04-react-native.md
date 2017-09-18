@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 4 - R10
-due: Monday, August 28th (beginning of class)
+due: Monday, November 27th (beginning of class)
 class: gh-check
 ---
 
