@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to Databases with PostgreSQL II
 slides: ['_slides/week-04/01b-introducing-postgres2.md']
-lesson_date: 2017-07-25
+lesson_date: 2017-10-24
 ---
 
 ## Pre-work

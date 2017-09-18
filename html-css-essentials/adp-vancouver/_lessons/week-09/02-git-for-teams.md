@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Git for Teams
-lesson_date: 
+lesson_date: 2017-12-04
 ---
 
 ## Pre-work
@@ -50,24 +50,23 @@ Prior to class, please review these sections from the Atlassian Git guide:
 ## Exercise 1
 
 To warm up your git muscles, Please complete level 2 -> 4 on [learngitbranching.js.org](http://learngitbranching.js.org/)
+
 When your finished, please spend 15 minutes capturing as much of what you discovered in your notes. THis will help us have a discussion later.
 
 ---
 
 ## Exercise 2
 
-Git is a flexible tool. It has many options, but it does not force its users into any specific worlflows.
-As a result, developers use git in a variety of ways.
+Git is a flexible tool. It has many options, but it does not force its users into any specific worlflows. As a result, developers use git in a variety of ways.
 
-Flexibility is is a double edge sword, as most developers who are new to git, will use  the set of commands they
-are familiar with, and ignore other useful features.
+Flexibility is is a double edge sword, as most developers who are new to git, will use  the set of commands they are familiar with, and ignore other useful features.
 
 - What are the features you are familiar with in Git. Discuss how you currently use git, with your nearest neighbour.
 
 If you have not already, read ["A Successful Branching Model"](http://nvie.com/posts/a-successful-git-branching-model/).
 
 - Why was this model developed?
-- How is this model diffrernt from how you currently use git?
+- How is this model different from how you currently use git?
 - How does this model help developers build software?
 - Could you make this model better?
 
@@ -86,29 +85,31 @@ In your own words, explain to your neighbour why you would use the following git
 
 ## Lab Activity
 
-In today's Lab we'll set up our GitHub environment for our Community Projects, which will begin next week. 
+In today's Lab we'll set up our GitHub environment for our Community Projects, which will begin next week.
 
-### Install the ZenHub Chrome extension.
+**Install the ZenHub Chrome extension:**
 
 The ZenHub extension turns github into a project menagement platform. We'll be using the 'Boards' feature. Boardsis a simple Kanban system for 
 tracking issues as tasks in github.
 
-**Set up the following Boards:**
+**Set up the following boards:**
 
 - New issues
 - In Progress
 - Review / QA
 - Closed
 
-### Issue Lifecycle Demo
+**Issue lifecycle demo:**
 
 Once the board is set up, as a class we'll demonstrate an issue lifecycle from creation, to feature-branch to commit & merge into master.
-We'll be using the git-flow techniques to manage commits into this repository. *All commmits to master must be in the form of a pull request* 
 
+We'll be using the git-flow techniques to manage commits into this repository. *All commmits to master must be in the form of a pull request.*
 
 ---
 
 ## Additional Resources
+
+More on using Git in a team-based environment:
 
 - [Git for Teams](http://gitforteams.com/) (O'Reilly book resources)
 - [Git for Teams](https://gitlab.com/gitforteams/gitforteams) (Gitlab resource)
