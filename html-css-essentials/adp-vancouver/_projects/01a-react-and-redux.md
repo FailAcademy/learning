@@ -58,7 +58,6 @@ Your project must:
   - Use the `Switch` component and `exact` prop appropriately
   - Use browser history
 - [ ] Implement Redux to manage application state
-- [ ] Hook up [`react-router-redux`](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-redux) sync routing with Redux DevTools
 - [ ] Implement "presentational" and "container" components appropriately throughout the application
 - [ ] Use [`react-redux`](https://github.com/reactjs/react-redux) `connect` to map state to props
 - [ ] Add and use [`redux-thunk`](https://github.com/gaearon/redux-thunk) middleware for async dispatches
@@ -80,6 +79,7 @@ Your project must:
 Want to challenge yourself? Your project could also:
 
 - [ ] Implement localStorage to preserve state
+- [ ] Hook up [`react-router-redux`](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-redux) sync routing with Redux DevTools
 
 ## Submission Instructions
 
