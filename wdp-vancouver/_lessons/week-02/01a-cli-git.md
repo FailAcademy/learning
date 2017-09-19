@@ -2,7 +2,7 @@
 layout: lesson
 title: The Command Line Interface and Git
 slides: ['_slides/week-02/01a-cli.md', '_slides/week-02/01b-git.md']
-lesson_date: 2017-07-10
+lesson_date: 2017-10-06
 ---
 
 ## Pre-Work
