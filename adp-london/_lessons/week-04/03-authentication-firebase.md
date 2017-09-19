@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Authentication with Firebase
-lesson_date: 2017-07-27
+lesson_date: 2017-10-26
 ---
 
 ## Pre-Work
