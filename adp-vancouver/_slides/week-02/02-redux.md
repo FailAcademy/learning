@@ -445,6 +445,11 @@ store.dispatch(explainFruitStock());
 // try console-logging something from the store with store.getState() 
 ```
 
+???
+
+- When we want to retrieve data, we do not get it directly from the store
+- Instead, we get a snapshot of the data in the store at any point in time using `store.getState()` which gives us the “state” of the application as on the time at which we called the getState method
+
 ---
 
 # What Just Happened?
