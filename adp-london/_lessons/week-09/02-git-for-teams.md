@@ -18,7 +18,7 @@ Prior to class, please review these sections from the Atlassian Git guide:
 ## Learning Objectives
 
 - Create a feature branch and use it to work on a feature.
-- Submit a pull request to a production branch from a feature branch.
+- Submit a pull request to a develop branch from a feature branch.
 - Explore strategies for working with and maintaining repos with many branches.
 
 ---
@@ -53,7 +53,7 @@ The ZenHub extension turns github into a project management platform. We'll be u
 
 **Issue lifecycle demo:**
 
-Once the board is set up, as a class we'll demonstrate our workflow using feature branches with pull requests submitted from them to production.
+Once the board is set up, as a class we'll demonstrate our workflow using feature branches with pull requests submitted from them to the develop branch.
 
 We'll be using GitFlow techniques to manage commits into this repository. *All commits to produciton must be in the form of a pull request.*
 
