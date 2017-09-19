@@ -19,8 +19,6 @@ class: center, middle, inverse
 layout: false
 # Agenda
 
-Building forms in React
-
 1. Controlled vs. Uncontrolled components
 2. React form events
 3. Redux-Form
@@ -32,7 +30,7 @@ Building forms in React
 
 # Exercise 1
 
-Write a basic form in HTML only that alerts the value of an input.
+Write a basic form in HTML that alerts the value of an input.
 
 ---
 
@@ -223,10 +221,10 @@ render() {
 
 Add any of the following to a form of your choosing:
 
-- show an error message if the password is shorter than 5 characters
-- make it impossible for a user to type a username longer than 8 characters
-- validate that a username does not contain any capital letters
-- disable the submit button if any of the fields are invalid
+- Show an error message if the password is shorter than 5 characters
+- Make it impossible for a user to type a username longer than 8 characters
+- Validate that a username does not contain any capital letters
+- Disable the submit button if any of the fields are invalid
 
 ---
 template: inverse
@@ -238,11 +236,11 @@ template: inverse
 
 Redux form is a popular library for... well... using forms with Redux.
 
-- form state props (valid)
-- saves state to Redux store
-- validation helpers (error messages)
+- Form state props (valid)
+- Saves state to Redux store
+- Validation helpers (error messages)
 
-[Docs: Redux-Form](http://redux-form.com/6.0.1/).
+[Docs: Redux-Form](http://redux-form.com/6.0.1/)
 
 ---
 # Setup
@@ -560,11 +558,11 @@ Feel free to create your own wrapper for any other UI library.
 ## Challenge
 
 Create a form in your Boomtown project. Include:
-  - saving data to the Redux store
-  - validation of fields
-  - styled components
-  - error feedback
-  - a disabled submit button when the form is invalid
+  - Saving data to the Redux store
+  - Validation of fields
+  - Styled components
+  - Error feedback
+  - A disabled submit button when the form is invalid
 
 
 {% endhighlight %}
