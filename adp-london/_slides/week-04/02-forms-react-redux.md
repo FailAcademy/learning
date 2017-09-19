@@ -15,9 +15,22 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
-layout: false
 
-## Exercise 1
+layout: false
+# Agenda
+
+Building forms in React
+
+1. Controlled vs. Uncontrolled components
+2. React form events
+3. Redux-Form
+4. Form validation
+5. Displaying errors
+
+
+---
+
+# Exercise 1
 
 Write a basic form in HTML only that alerts the value of an input.
 
@@ -35,19 +48,6 @@ Write a basic form in HTML only that alerts the value of an input.
 ```
 
 We can capture the input value using a selector.
-
----
-
-# Agenda
-
-Building forms in React
-
-1. Controlled vs. Uncontrolled components
-2. React form events
-3. Redux-Form
-4. Form validation
-5. Displaying errors
-
 
 ---
 
@@ -100,7 +100,7 @@ React has two major form events you should know:
 
 ---
 
-# onChange
+# `onChange`
 
 `onChange` is attached to an input and called every time an input value changes.
 
@@ -112,7 +112,7 @@ React has two major form events you should know:
 
 ---
 
-# onChange
+# `onChange`
 
 `onChange` is attached to an input and called every time an input value changes.
 
@@ -156,7 +156,7 @@ Data:
 
 ---
 
-# onSubmit
+# `onSubmit`
 
 `onSubmit` is attached to a form, and called every time a "submit" event is triggered.
 
@@ -170,7 +170,7 @@ Data:
 
 ---
 
-# onSubmit
+# `onSubmit`
 
 We can trigger an `onSubmit` event by setting the type of a button or input to "submit".
 
@@ -183,7 +183,7 @@ We can trigger an `onSubmit` event by setting the type of a button or input to "
 
 ---
 
-## Exercise 3
+# Exercise 3
 
 Add an extra field to either your **controlled** or  **uncontrolled** form.
 
@@ -219,7 +219,7 @@ render() {
 
 ---
 
-## Exercise 4
+# Exercise 4
 
 Add any of the following to a form of your choosing:
 
@@ -245,7 +245,6 @@ Redux form is a popular library for... well... using forms with Redux.
 [Docs: Redux-Form](http://redux-form.com/6.0.1/).
 
 ---
-
 # Setup
 
 Add a formReducer for Redux form.
@@ -265,8 +264,7 @@ const store = createStore(reducer)
 [Docs: Getting Started](http://redux-form.com/6.0.2/docs/GettingStarted.md/)
 
 ---
-
-# reduxForm
+# `reduxForm` HOC
 
 Connect a component to reduxForm. Add a unique form name.
 
@@ -350,7 +348,7 @@ See other optional properties: [Docs: Field](http://redux-form.com/6.0.2/docs/ap
 
 ---
 
-# Custom Field's
+# Custom Fields
 
 You can create your own custom `<Field />` components.
 
@@ -369,7 +367,7 @@ const myCustomField = (field) => (
 
 ---
 
-# handleSubmit
+# `handleSubmit`
 
 Redux-Form adds a `handleSubmit` prop, which can be added to your form.
 
@@ -384,7 +382,7 @@ Redux-Form adds a `handleSubmit` prop, which can be added to your form.
 
 ---
 
-# connect
+# `connect`
 
 "react-redux" can be called after "redux-form" is applied.
 
