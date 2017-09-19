@@ -28,8 +28,6 @@ Web developers have a lot of convenient tools for deploying their projects. Take
 
 - Cloud ☁
 - Virtual Machine
-- Single Tenant
-- Multi Tenant
 - Static site
 - Production vs. Development
 - Build task
@@ -61,7 +59,7 @@ application will run in it's new environment.
 
 **Create a production build of your application**
 
-Create a build task to collect all of the necessary files, and output them into a seperate directory, effectively creating a new copy of your applications files that are optimized to run in a non-development environment.
+Create a build task to collect all of the necessary files, and output them into a separate directory, effectively creating a new copy of your applications files that are optimized to run in a non-development environment.
 
 Once you've generated a build, test your new build by running it locally to ensure your configuration changes are working.
 
