@@ -104,7 +104,7 @@ Your project must:
 
 **Additional requirements:**
 
-- Be sure to **test** your project completely in **all major browsers** (Chrome, Firefox, Safari, Opera, IE11) when you think you're finished
+- Be sure to **test** your project completely in **all major browsers** (Chrome, Firefox, Safari, Opera, Edge) when you think you're finished
 
 **Stretch goals:**
 
@@ -122,9 +122,9 @@ Want to challenge yourself? Your project could also:
 
 Once you have finished working on your site, please export your database by following these instructions:
 
-Note: Please ensure browser sync is OFF before proceeding with the steps below. VERY IMPORTANT.
+**Note:** Please ensure browser sync is OFF before proceeding with the steps below. VERY IMPORTANT.
 
-1. Add Mandi as an Administrator to your site (username: rose / password: rose / email: rose.cass@redacademy.com)
+1. Add Rose as an Administrator to your site (username: `rose` / password: `rose` / email: rose.cass@redacademy.com)
 2. Install the WP Migrate DB plugin
 3. Go to Tools > Migrate DB in the WordPress admin area
 4. Change the "Replace" fields so that the first field contains `//localhost/student` and the second contains `/Applications/MAMP/htdocs/student`
