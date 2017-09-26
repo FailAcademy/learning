@@ -15,303 +15,182 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
-class: middle
 layout: false
 
-## Exercise 1
+# Agenda
+
+1. What's React-Redux for?
+2. Set-up Redux store, etc. in Boomtown
+3. Begin refactoring state-related code into Redux modules
+
+---
+
+# Exercise 1
 
 **Redux** and **React** serve different roles. Discuss with a partner the role of each in terms of handling:
-- data
-- view
-- logic
-- events
+
+- Data
+- Views
+- Logic
+- Events
 
 ---
 
 # Redux as Global
 
-Currently, we are using "Redux" as a great big global container.
+Currently, we've been using Redux as a great big global container. Redux holds our:
 
-Redux holds our:
-  - **data**
-  - **events** that trigger **logic** and change **data**
+- **Data**
+- **Events** (that trigger logic and change data)
 
 Any component can access anything from anywhere by connecting to the `store`.
 
-- Is a "global" container a good design? Why or why not?
+*Is a "global" container a good design? Why or why not?*
 
 ---
 
-# React Redux
+# React-Redux
 
-*React-Redux* allows us to connect up components and give them access to only what they need.
-
----
-
-# Presentational vs. Container
-
-Components can be categorized as either:
-
-- **Presentational**: *dumb* components
-- **Container**: *smart* components
+- This package provides us **React bindings** for Redux
+- Allows us to connect up components and give them access to only what they need
+- We will only connect our Redux store to **container components**
+- Technically, a container component will just be a React component that uses `store.subscribe()` to read a part of the Redux state tree and **supply that as props** to a component that it renders
 
 ---
 
-## Exercise 2
+# How It Works
 
-With a partner, fill out a table to distinguish between **Presentational** & **Container** components.
+- You could write these these special container components by hand, or just use the React-Redux `connect` function
+- `connect` does not modify the component passed to it; instead, it returns a new, connected component for you
+- To use `connect`, you need to define a special function called `mapStateToProps` that tells how to transform the current Redux store state into the props you want to pass to
+- You also need to wrap your app in the `<Provider>` component to make the store available to all containers
 
-| Dumb             | Smart                |
-| Presentational   | Container            |
-| -----------------|----------------------|
-| ...              | ...                  |
-| ...              | ...                  |
+???
+
+- `connect` provides many useful optimizations to prevent unnecessary re-renders
 
 ---
 
-## Exercise 3
+# Exercise 2
 
-Based on the following tree structure, discuss with a partner which components should be of each type. Justify your reasons.
+Before we install `react-redux`, install Redux and Redux dev tools in Boomtown just like we did in the earlier exercises this week. You will want to install `redux-thunk` too.
 
-```
-- App
- |- Weeks
-    |- Week
-        |- Header
-        |- Links
- |- Posts
-    |- Post
-        |- Vote Button
-        |- Categories
- |- NewPost
-    |- Form
-        |- InputOne
-        |- InputTwo
-        |- Submit
+Create a `redux` directory, and rough out the file and sub-directory structure. Set up your `store.js` just as we did for the grocery store exercise.
+
+What kind of modules (i.e. action and reducer combos) do you think we'll need for this Boomtown?
+
+---
+
+# Exercise 3
+
+Let's build the `items` modules together so we can grab this state from the Redux store in our `ItemContainer` component instead once we add `react-redux`.
+
+---
+
+# Installation
+
+Now install React-Redux:
+
+```bash
+npm install --save react-redux
 ```
 
 ---
 
-# Provider
+# Set-up Provider
 
-Use the [`<Provider>`](https://github.com/reactjs/react-redux/blob/master/docs/api.md#provider-store) tag from "react-redux" to connect the redux store to the app.
-
-- What does `Provider` do?
-
----
-
-# Provider
-
-`Provider` acts as a wrapper to connect our `store` (data) to our React components.
-
-Any "connected" component can hookup to this store. 
-
----
-
-# Connect
-
-Use [`connect`](https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options) to create ("smart") container components.
-
-- What does `connect` do?
-
----
-
-# Connect
-
-`connect` provides a component with:
-
-- state
-- actions
-
-These are passed into the component as "props".
-
-
----
-
-# mapStateToProps
-
-Write [`mapStateToProps`](https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options) to connect a "container" component using "react-redux" & `connect`.
-
----
-
-# mapStateToProps 
-
-`this.props.votes` = `store.getState().votes`
+Then wrap your app in the `<Provider>` component:
 
 ```js
-class Component extends React.Component {
+// ...
+import { Provider } from 'react-redux'
+import store from './redux/store';
+
+class Boomtown extends Component {
   render() {
     return (
-      <button>
-        {this.props.votes}
-      </button>
+      <MuiThemeProvider muiTheme={muiTheme}>
+        <Provider store={store}>
+          <Layout>
+            <Routes />
+          </Layout>
+        </Provider>
+      </MuiThemeProvider>
     );
   }
 }
-
-const mapStateToProps = state => {
-  votes: state.votes
-};
-
-connect(mapStateToProps)(Component);
 ```
 
+???
+
+- **Check-in:** what does the `Provider` do?
+- `Provider` acts as a wrapper to connect our `store` (data) to our React components.
+- Any "connected" component can hookup to this store
+- https://github.com/reactjs/react-redux/blob/master/docs/api.md#provider-store
+
+
 ---
 
-# mapDispatchToProps
+# Use Connect
 
-Write [`mapDispatchToProps`](https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options) to connect a component actions to redux.
-
-Checkout the [shorthand notation](https://egghead.io/lessons/javascript-redux-using-mapdispatchtoprops-shorthand-notation).
-
----
-
-# mapDispatchToProps
-
-`this.props.someAction` = `store.dispatch(someAction())`
+The `connect` function provide a component with state as props.
 
 ```js
-class Component extends React.Component {
-  render() {
-    return (
-      <button onClick={this.props.someAction} />
-        {this.props.votes}
-      </button>
-    );
+// at the bottom of ItemsContainer.js
+
+const mapStateToProps = state => ({
+    isLoading: state.items.isLoading,
+    itemsData: state.items.itemsData,
+    itemFilters: state.items.itemFilters
+});
+
+export default connect(mapStateToProps)(ItemsContainer);
+```
+
+???
+
+- `connect` is the glue that attaches Redux data flow to React components
+- Ultimately, it returns a component that wraps around the component that you pass into the function that `connect` returns
+- `mapStateToProps` is a pure function that's provided state as a parameter
+- Walk-through: https://gist.github.com/gaearon/1d19088790e70ac32ea636c025ba424e
+- This function will return an object
+
+---
+
+# The dispatch Prop
+
+When we wrap component with `connect` it also give us a handy prop called `dispatch` for firing off actions to our Redux store:
+
+```js
+import { fetchItemsAndUsers } from '../../redux/modules/items';
+
+class ItemsContainer extends Component {
+  // ...
+  componentDidMount() {
+    this.props.dispatch(fetchItemsAndUsers());
   }
+  // ...
 }
-
-const mapStateToProps = state => {
-  votes: state.votes
-};
-const mapDispatchToProps = { someAction };
-
-connect(mapStateToProps, mapDispatchToProps)(Component);
 ```
 
 ---
 
+# Exercise 4
 
-## Exercises 5 & 6
+Based on what you know about `<Provider>`, `connect`, `mapStateToProps`, and the `dispatch` prop, finish wiring up your `ItemsContainer.js` component with Redux.
 
-Use `<Provider>`, `connect`, `mapStateToProps` & `mapDispatchToProps` to connect the "container" components of your app. 
-
-
----
-
-## Exercise 7
-
-Now that you've had some practice, let's return to our component architecture.
-
-Read [React with Redux](http://redux.js.org/docs/basics/UsageWithReact.html).
-
-In a group, write some guidelines for connecting React & Redux.
-
-How can we tell which components should be "presentational" or "container" components?
+Be sure to factor out all locally managed state within the component (you actually won't need a constructor function at all anymore for this component!).
 
 ---
 
-# React Redux Router
+# What We've Learned
 
-Why might we want to use [react-redux-router](https://github.com/reactjs/react-router-redux)?
-
----
-
-# React Redux Router
-
-Why might we want to use [react-redux-router](https://github.com/reactjs/react-router-redux)?
-
-- reloading user state
-- reducer logic can get access to router state
-- keeps everything in one accessible place
+- How to set-up and use Redux in a React application
+- How to refactor local state into Redux modules in a React application
 
 ---
+template: inverse
 
-# Reselect
-
-Why might you want to use [reselect](https://github.com/reactjs/reselect)?
-
----
-
-# Reselect
-
-Why might you want to use [reselect](https://github.com/reactjs/reselect)?
-
-- mapping state to props can sometimes lead to long or repeated paths
-
-```js
-const mapStateToProps = state => {
-  name: state.user.profile.name,
-  activeUsers: state.users.filter(user => user.profile.name && user.isActive)
-};
-```
-
----
-
-# Selectors
-
-When these `mapStateToProps` paths get long we can create a "selector".
-
-/src/selectors.js
-
-```js
-export const nameSelector = state => state.user.profile.name;
-
-export const activeUsersSelector = state => state.users.filter(user => user.profile.name && user.isActive);
-```
-
----
-
-# Using Selectors
-
-Import and call selectors with the state.
-
-/src/someFile.js
-
-```js
-import { nameSelector, activeUsersSelector } from '../selectors';
-
-const mapStateToProps = state => {
-  name: nameSelector(state),
-  activeUsers: activeUsersSelector(state),
-};
-```
-
----
-
-# Reselect
-
-To compose selectors together, we can use *reselect*.
-
-```js
-import { createSelector } from 'reselect';
-
-export const nameSelector = state => state.user.profile.name;
-
-export const activeUsersSelector = state => state.users.filter(user => user.profile.name && user.isActive);
-
-export const activeUserNamesSelector = createSelector(
-  activeUsers,
-  name
-);
-```
-
----
-
-## Challenge
-
-Create selectors for your `mapStateToProps` calls.
-
----
-
-# Review
-
-1. Presentational & Container Components
-2. **react-redux**
-3. `<Provider />`
-4. `connect`
-5. `mapStateToProps`
-6. `mapDispatchToProps`
-7. selectors & **reselect**
+# Questions?
 
 {% endhighlight %}

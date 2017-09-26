@@ -2,7 +2,7 @@
 layout: lesson
 title: React and Redux
 slides: ['_slides/week-02/04-react-and-redux.md']
-lesson_date: 2017-07-13
+lesson_date: 2017-10-13
 ---
 
 ## Pre-Work
@@ -14,33 +14,29 @@ lesson_date: 2017-07-13
 ## Learning Objectives
 
 - Identify the roles of React and Redux when used together to display views and store state.
-- Use Redux to write state-free code in React that relies largely on `props`.
-- Identify the difference between *presentational* and *container* components.
-- Use `react-redux`, with `<Provider>` and `connect` to map state and dispatches to `props`.
-- Use `reselect` to keep logic out of React.
-- Use `react-redux-router` to preserve application routes in state.
+- Use Redux to write state-free code in React that relies largely on props.
+- Use `react-redux`, with `<Provider>` and `connect` to map state to props.
+- Use the `dispatch` prop to send actions to the Redux store from a React component.
+- Use `react-router-redux` to preserve application routes in state.
 
 ---
 
 ## Keywords
 
-- Presentational component
 - Container component
+- Presentational component
+- `Provider`
 - `connect`
-- Provider
 - `mapStateToProps`
-- `mapDispatchToProps`
-- Selector
-- Query string
 
 ---
 
 ## Exercise 1
 
-Redux and React serve different roles. Discuss with a partner the role of each in terms of handling:
+**Redux** and **React** serve different roles. Discuss with a partner the role of each in terms of handling:
 
 - Data
-- View
+- Views
 - Logic
 - Events
 
@@ -48,68 +44,39 @@ Redux and React serve different roles. Discuss with a partner the role of each i
 
 ## Exercise 2
 
-Draw a table with **Dumb Presentational** on one side, and **Smart Container** on the other. Fill each side of the table to distinguish between these two types of components.
+Before we install `react-redux`, install Redux and Redux dev tools in Boomtown just like we did in the earlier exercises this week. You will want to install `redux-thunk` too.
+
+Create a `redux` directory, and rough out the file and sub-directory structure. Set up your `store.js` just as we did for the grocery store exercise.
+
+What kind of modules (i.e. action and reducer combos) do you think we'll need for this Boomtown?
 
 ---
 
 ## Exercise 3
 
-In the example tree file structure below, which components should be presentational and which should be container components:
-
-```
-- App
- |- Weeks
-    |- Week
-        |- Header
-        |- Links
- |- Posts
-    |- Post
-        |- Vote Button
-        |- Categories
- |- NewPost
-    |- Form
-        |- InputOne
-        |- InputTwo
-        |- Submit
-```
+Let's build the `items` modules together so we can grab this state from the Redux store in our `ItemContainer` component instead once we add `react-redux`.
 
 ---
 
 ## Exercise 4
 
-Use the `<Provider>` tag from ["react-redux"](https://github.com/reactjs/react-redux) to connect the Redux store to a React App.
+Based on what you know about `<Provider>`, `connect`, `mapStateToProps`, and the `dispatch` prop, finish wiring up your `ItemsContainer.js` component with Redux.
 
-**Hint:** Check the [docs](https://github.com/reactjs/react-redux/blob/master/docs/api.md#provider-store)!
-
----
-
-## Exercise 5
-
-First, write `mapStateToProps` to connect a "container" component using "react-redux" & `connect` in your React app.
-
-**Hint:** Check the [docs](https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options)!
-
-Next, use `mapDispatchToProps` second parameter to connect dispatched events in your React app.
-
----
-
-## Exercise 6
-
-Let's implement sorting a list of data using React Router. We'll use a query string to trigger the sort in our component.
-Here's what we'll have to do:
-
-- Implement the React Router Link component to trigger the addition of the query string to the location.
-- In your list component, you'll need to respond to the changing query string, capture the query and sort
-the list based on the value.
-
+Be sure to factor out all locally managed state within the component (you actually won't need a constructor function at all anymore for this component!).
 
 ---
 
 ## Lab Activity
 
-In today's lab, you're going to set-up `react-redux` in your Boomtown project. Map out your components as "presentational" or "container" components.
+### Task 1
 
-When you're finished, add [react-router-redux](https://github.com/reactjs/react-router-redux).
+Your primary task is to finish refactoring Boomtown to use Redux to manage all state. To do that, you will need to add a `user` module now too. You should have no need for any constructors in your class-based components when you're done.
+
+### Task 2
+
+Optionally, add 
+
+When you're finished, add [react-router-redux](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-redux) to Boomtown to keep your router in sync with your state. This can be helpful for debugging! Follow the instructions in the README to implement this.
 
 ---
 

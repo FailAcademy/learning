@@ -1,7 +1,8 @@
 ---
 layout: lesson
-title: Introducing PostgreSQL II
-lesson_date: 2017-07-25
+title: Intro to Databases with PostgreSQL II
+slides: ['_slides/week-04/01b-introducing-postgres2.md']
+lesson_date: 2017-10-24
 ---
 
 ## Pre-work
@@ -18,10 +19,11 @@ Complete Part 2 *Joins and Subqueries*, from [these exercises](https://pgexercis
 ## Learning Objectives
 
 - Describe the difference between 'Foreign key' and 'Primary key'.
-- Get familiar with PostgreSQL functions.
-- Write a simple validation function.
-- Write a simple PostgreSQL View.
-- Discover the Sequelize ORM.
+- Add constraints to our Postgres schema.
+- Query a 'linking table'
+- Connect our Express app to a local Postgres database.
+- Query a local Postgres database from our Express app using ```node-postgres```
+- Discover a new pattern of abstraction for dealing with methods that perform data-access.
 
 ---
 
@@ -43,6 +45,7 @@ When creating constraints we need to consider things like:
 
 - What fields in our tables should be unique?
 - What are the specific types of data we're storing in each column?
+- Do we need to initialize any default values in our tables?
 - How can we check if the data being sent by client applications for storage is valid?
 
 Add the appropriate constraints to your project's database.
@@ -61,41 +64,58 @@ Now that we have our data and relationships set up. Let's write some SQL queries
 
 ---
 
-## Exercise 4
+## Exercise 3
 
-Now that we have our data and relationships set up. Let's write some views that aggregate data from the database:
+Now that we have our data and relationships set up. Let's write a query to aggregate data from the database:
 
-- Write a View that returns all of the Items that are tagged with a given tag name.
+- Write a query that returns all of the Items that are tagged with a given Tag id.
 
 ---
 
-## Exercise 5
+## Exercise 4
 
-**CRUD** operations with JSON data.
+Let's prepare our application to use Postgres. As usual, we'll rely on a pattern we can repeat as our 
+application's list of features grows.
 
-In this exercise we'll store and retrieve JSON data from a local instance of PostgreSQL, by completing the following steps:
-(Use the PostgreSQL command prompt or create a SQL file).
-Using your `development` database:
+Create a folder called 'resources', if you have not already. Add a file called ```PostgresDB.js``` (This name is just a suggestion).
 
-1) Create a file name json-crud.sql. We'll use this file to add all of the commands we'll use in this exercise, and
-execute them all at once by loading the file from the `psql` command prompt.
+In that file add the following boilerplate: 
 
-2) Create a table called `jsondata`
+```
+export default function(app) {
+
+    const pg = new Pool();
+
+}
+```
+
+You should be able to answer the following questions:
+
+- Where does the app argument come from?
+- What will we need to import?
+- What will we need to export?
 
 ---
 
 ## Lab Activity
 
-In today's lab we'll add a JavaScript ORM (Sequelize or node-postgres) to our application. 
-We'll use this ORM library to fetch information from Postgres and return it. 
+Now that we know how to use Postgres, it's time to integrate it with our project application.
+In todays lab we'll connect our project to a local instance of Postgres!
 
-We'll use the ORM in our Graphql resolvers to retrieve and to save data into Postgres!
+Here's what we're going to do:
+
+- Install ```node-postgres``` in our project. 
+- Add the necessary environment variables to our Express server.
+- Connect to our local instance of Postgres from our Node/Express server.
+- Test the connection by performing the ```SELECT NOW()``` query.
+- Create the necessary files & folders to hold our Postgres code. (Service pattern).
+- Begin to write the methods for querying and retrieving information from Postgres, to use in our *GraphQL resolvers.*
 
 ---
 
 ## Additional Resources
 
 - [A Visual Explanation of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
-- [Free PostgreSQL GUI](https://github.com/web-pal/DBGlass) build with JavaScript
-- [Sequelize ORM Documenation](http://docs.sequelizejs.com/en/v3/)
-- [The Sequelize ORM in Practice](http://www.redotheweb.com/2013/02/20/sequelize-the-javascript-orm-in-practice.html)
+- [node-postgres](https://node-postgres.com/) Library
+- [Express 4 API Docs](http://expressjs.com/tr/api.html)
+
