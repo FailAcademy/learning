@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Git for teams Slides
+title: Git for Teams Slides
 
 ---
 

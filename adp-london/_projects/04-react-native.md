@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 4 - R10
-due: Monday, August 28th (beginning of class)
+due: Monday, November 27th (beginning of class)
 class: gh-check
 ---
 
@@ -64,7 +64,7 @@ Your project must:
 
 - [ ] Contain Schedule, Session, Speaker, Faves, and About scenes
 - [ ] Display a loading indicator when data is fetched by the app
-- [ ] Display the conference sessions in chronological order in a `ListView` with section headers (based on the start time) in the Schedule scene
+- [ ] Display the conference sessions in chronological order in a `SectionList` with section headers (based on the start time) in the Schedule scene
 - [ ] Display an individual conference session's details in a Session scene when a session is tapped from within the Schedule scene
 - [ ] Display information about a session's speaker in a lightbox-style Speaker scene when the speaker's name is tapped
 - [ ] Allow users to favourite and un-favourite sessions, and display saved favourites in a Faves Scene
@@ -79,7 +79,7 @@ Your project must:
 - [ ] Contain components created using `React.Component`, `const`, or `function` only
 - [ ] Implement "presentational" and "container" components appropriately throughout the application
 - [ ] Include Redux for state management in the app
-- [ ] Make appropriate use of React Native's UI components (including `<View>`, `<Text>`, `<Image>`, `<ListView>`, `<TouchableHighlight>`, etc.)
+- [ ] Make appropriate use of React Native's UI components (including `<View>`, `<Text>`, `<Image>`, `<SectionList>`, `<TouchableHighlight>`, etc.)
 - [ ] Implement styles on a per-component basis using `Stylesheet.Create`
 - [ ] Leverage code-reuse strategies across iOS and Android platforms as much as possible
 - [ ] Use [ExNavigation](https://github.com/wix/react-native-navigation) to implement a navigator (iOS/Android), tab bar (iOS only), and drawer (Android only) for scene navigation

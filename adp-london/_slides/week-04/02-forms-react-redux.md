@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Forms in React Slides
+title: Webforms using React & Redux Slides
 
 ---
 
@@ -10,16 +10,27 @@ layout: true
 class: center, middle, inverse
 
 ---
-# Forms in React
+# Webforms using React & Redux
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
+# Agenda
 
-## Exercise 1
+1. Controlled vs. Uncontrolled components
+2. React form events
+3. Redux-Form
+4. Form validation
+5. Displaying errors
 
-Write a basic form in HTML only that alerts the value of an input.
+
+---
+
+# Exercise 1
+
+Write a basic form in HTML that alerts the value of an input.
 
 ---
 
@@ -35,19 +46,6 @@ Write a basic form in HTML only that alerts the value of an input.
 ```
 
 We can capture the input value using a selector.
-
----
-
-# Agenda
-
-Building forms in React
-
-1. Controlled vs. Uncontrolled components
-2. React form events
-3. Redux-Form
-4. Form validation
-5. Displaying errors
-
 
 ---
 
@@ -100,7 +98,7 @@ React has two major form events you should know:
 
 ---
 
-# onChange
+# `onChange`
 
 `onChange` is attached to an input and called every time an input value changes.
 
@@ -112,7 +110,7 @@ React has two major form events you should know:
 
 ---
 
-# onChange
+# `onChange`
 
 `onChange` is attached to an input and called every time an input value changes.
 
@@ -156,7 +154,7 @@ Data:
 
 ---
 
-# onSubmit
+# `onSubmit`
 
 `onSubmit` is attached to a form, and called every time a "submit" event is triggered.
 
@@ -170,7 +168,7 @@ Data:
 
 ---
 
-# onSubmit
+# `onSubmit`
 
 We can trigger an `onSubmit` event by setting the type of a button or input to "submit".
 
@@ -183,7 +181,7 @@ We can trigger an `onSubmit` event by setting the type of a button or input to "
 
 ---
 
-## Exercise 3
+# Exercise 3
 
 Add an extra field to either your **controlled** or  **uncontrolled** form.
 
@@ -219,14 +217,14 @@ render() {
 
 ---
 
-## Exercise 4
+# Exercise 4
 
 Add any of the following to a form of your choosing:
 
-- show an error message if the password is shorter than 5 characters
-- make it impossible for a user to type a username longer than 8 characters
-- validate that a username does not contain any capital letters
-- disable the submit button if any of the fields are invalid
+- Show an error message if the password is shorter than 5 characters
+- Make it impossible for a user to type a username longer than 8 characters
+- Validate that a username does not contain any capital letters
+- Disable the submit button if any of the fields are invalid
 
 ---
 template: inverse
@@ -238,14 +236,13 @@ template: inverse
 
 Redux form is a popular library for... well... using forms with Redux.
 
-- form state props (valid)
-- saves state to Redux store
-- validation helpers (error messages)
+- Form state props (valid)
+- Saves state to Redux store
+- Validation helpers (error messages)
 
-[Docs: Redux-Form](http://redux-form.com/6.0.1/).
+[Docs: Redux-Form](http://redux-form.com/6.0.1/)
 
 ---
-
 # Setup
 
 Add a formReducer for Redux form.
@@ -265,8 +262,7 @@ const store = createStore(reducer)
 [Docs: Getting Started](http://redux-form.com/6.0.2/docs/GettingStarted.md/)
 
 ---
-
-# reduxForm
+# `reduxForm` HOC
 
 Connect a component to reduxForm. Add a unique form name.
 
@@ -350,7 +346,7 @@ See other optional properties: [Docs: Field](http://redux-form.com/6.0.2/docs/ap
 
 ---
 
-# Custom Field's
+# Custom Fields
 
 You can create your own custom `<Field />` components.
 
@@ -369,7 +365,7 @@ const myCustomField = (field) => (
 
 ---
 
-# handleSubmit
+# `handleSubmit`
 
 Redux-Form adds a `handleSubmit` prop, which can be added to your form.
 
@@ -384,7 +380,7 @@ Redux-Form adds a `handleSubmit` prop, which can be added to your form.
 
 ---
 
-# connect
+# `connect`
 
 "react-redux" can be called after "redux-form" is applied.
 
@@ -562,11 +558,11 @@ Feel free to create your own wrapper for any other UI library.
 ## Challenge
 
 Create a form in your Boomtown project. Include:
-  - saving data to the Redux store
-  - validation of fields
-  - styled components
-  - error feedback
-  - a disabled submit button when the form is invalid
+  - Saving data to the Redux store
+  - Validation of fields
+  - Styled components
+  - Error feedback
+  - A disabled submit button when the form is invalid
 
 
 {% endhighlight %}
