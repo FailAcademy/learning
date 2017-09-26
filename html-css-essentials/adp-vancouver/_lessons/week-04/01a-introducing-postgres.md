@@ -1,15 +1,17 @@
 ---
 layout: lesson
-title: Introducing PostgreSQL
-slides: ['_slides/week-04/01-introducing-postgres.md']
-lesson_date: 2017-07-24
+title: Intro to Databases with PostgreSQL
+slides: ['_slides/week-04/01a-introducing-postgres.md']
+lesson_date: 2017-10-23
 ---
 
 ## Pre-Work
 
-Please read over the following links:
-- [Postgres Data Types](https://www.tutorialspoint.com/postgresql/postgresql_data_types.htm)
-- [PostgreSQL Schema](https://www.tutorialspoint.com/postgresql/postgresql_schema.htm)
+Please read over the following: <br/>
+
+[Codd's 12 Rules](https://www.tutorialspoint.com/dbms/dbms_codds_rules.htm) (Plain english explanation)<br/>
+[Relational Database Normalization](https://www.quora.com/What-is-database-normalization-in-simple-terms-with-examples)
+
 
 To start getting familiar with SQL syntax, complete Part 1, from [these exercises](https://www.pgexercises.com/questions/basic/).
 
@@ -17,16 +19,15 @@ To start getting familiar with SQL syntax, complete Part 1, from [these exercise
 
 ## Learning Objectives
 
-- Define what role a database plays in an application.
+- Define what role a database plays in a software application.
 - Explain how a relational database is structured.
 - Install and set up an instance of PostgreSQL.
 - Explain the difference between `TABLE` and `DATABASE`.
 - Model data, and create tables to store it.
 - Distinguish different data types in a SQL database context.
 - Describe why a Schema is necessary.
-- Create a simple Schema using PostgreSQL basic syntax.
+- Create a simple Schema using SQL basic syntax.
 - Write basic SQL queries to perform CRUD operations on a database.
-- Write SQL queries in a SQL file and execute commands form the `psql` prompt.
 - Add constraints to ensure consistent data.
 - Implement an auto-incrementing id field.
 
@@ -35,6 +36,7 @@ To start getting familiar with SQL syntax, complete Part 1, from [these exercise
 ## Keywords
 
 - Relational database
+- Normalization
 - SQL
 - CRUD
 - `CREATE TABLE`
@@ -42,6 +44,7 @@ To start getting familiar with SQL syntax, complete Part 1, from [these exercise
 - `FOREIGN KEY`
 - `INSERT`
 - Data Types
+- Scalar
 - Schema
 
 ---
@@ -52,8 +55,7 @@ You should have a running instance of PostgreSQL running on your computer.
 
 If you have not installed PostgreSQL yet, get the app installer here: https://postgresapp.com/
 
-In this lab activity, we'll go through the process of setting up a few new databases within it, to use throughout the rest of our
-time with PostgreSQL.
+In this exercise, we'll go through the process of setting up a few new databases within it, to use throughout the rest of our time with PostgreSQL.
 
 - Create 2 databases
 We'll use on of these databases to try out new things. Once we're comfortable, we'll apply
@@ -70,10 +72,16 @@ creating and authorizing a new Database on your local machine. In a real product
 
 ## Exercise 2
 
-Create Tables and set Data Types. What types of data do we need to model for our Boomtown application?
+Populating your Relational Database. 
 
 - Use the `CREATE TABLE` command to set up some tables in our test database.
 - Set the appropriate data-types for each column in our schema.
+
+**Data Types** <br/>
+What types of data do we need to model for our Boomtown application?
+
+**Normalization** <br/>
+How should we "Normalize" the data in our schema, according to the rules of Third Normal Form?
 
 **Handling Id's** <br/>
 Each entry into the database for each of the schema should have an id. This will be necessary for building
@@ -115,7 +123,7 @@ Take some time now to capture the steps for installing and setting up PostgreSQL
 
 ## Lab activity
 
-Now that we've created our schema (table) for our project applications, use the `INSERT` command to populate your data base with some mock data.
+Now that we've created our schema (table) for our project application, use the `INSERT` command to populate your data base with some mock data.
 
 Add the following mock data to your database:
 

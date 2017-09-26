@@ -25,7 +25,7 @@ layout: false
 1. Client vs Server Validation
 1. Controlled vs Uncontrolled Components
 1. Form Validation in Redux
-1. Implement a form using the `Gandalf` library
+1. Implement a form using the `Redux Form` library
 
 ---
 
@@ -34,9 +34,7 @@ template: inverse
 # Client vs Server Validation
 
 ---
-class: middle
-
-## Exercise:
+# Exercise 1
 
 Split into two groups.
 
@@ -60,12 +58,10 @@ Essential differences:
 
 template: inverse
 
-# Controller vs Uncontrolled Components
+# Controlled vs Uncontrolled Components
 
 ---
-class: middle
-
-## Exercise:
+# Exercise 2
 
 Back into two groups.
 
@@ -87,10 +83,7 @@ template: inverse
 # Form Validation in React/Redux
 
 ---
-
-class: middle
-
-## Discuss:
+# Discuss
 
 Where should form state exist in a React/Redux application?
 
@@ -107,10 +100,7 @@ Hopefully this will lead to them understanding:
 - We don't want to be updating redux with every key stroke. That will be very inefficient, as we'll be firing our pure reducer functions to make state that might not even be valid.
 
 ---
-
-class: middle
-
-## Exercise
+# Exercise 3
 
 2 new groups!
 
@@ -123,8 +113,15 @@ You have 15 minutes.
 This is an example of where will be good to use component-level state in React/Redux. The form component should own the state for all of its inputs, but we shouldn't pass any of it to Redux (and our servers) until we know that the form is completely valid.
 
 ---
-template: inverse
+# Lab Activity
 
-# Lab
+Create the forms that you'll use in your Boomtown app, using the [Redux Form](http://redux-form.com) library.
+You'll need to create both a user (login) form and a form for adding new Items.
+
+Be sure to include:
+  - saving data to the Redux store
+  - validation of fields
+  - styled components
+  - error feedback
 
 {% endhighlight %}
