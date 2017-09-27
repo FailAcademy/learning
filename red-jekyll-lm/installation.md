@@ -35,10 +35,12 @@ Once the Heroku Toolbelt is installed, you can log into RED Academy's Heroku acc
 
 - Set-up a GitHub team for the course learners if one hasn't been set-up already. **Be sure to add yourself to the team!**
 - To configure Jekyll Auth to only allow members of that team to view the learning materials site, you'll need the team ID. To get the team's ID, generate [a personal access token](https://github.com/settings/tokens/new) with "read:org" privileges only and run:
+
 ```bash
 curl -H "Authorization: token <very-long-access-token>" https://api.github.com/orgs/redacademy/teams
 ```
-- Go to RED Academy's GitHub account and follow [these 5 steps](https://github.com/benbalter/jekyll-auth#create-a-github-application) to set up the GitHub application that we will use for authentication purposes.
+
+- Go to RED Academy's GitHub account and follow [these 5 steps](https://github.com/benbalter/jekyll-auth/blob/master/docs/getting-started.md#create-a-github-application) to set up the GitHub application that we will use for authentication purposes.
 
 *Note: If you mistakenly create the app under your personal account, be sure to transfer ownership of the app to RED Academy.*
 
@@ -74,7 +76,7 @@ git checkout --orphan production
 
 Make sure you're checked out on the new `production` orphan branch (although keep in mind that you won't be able to see the branch name in the list if you run `git branch` until you've actually committed something there).
 
-**Finally, follow [steps 1-3](https://github.com/benbalter/jekyll-auth#add-jekyll-auth-to-your-site) to install Jekyll Auth for this site.**
+**Finally, follow [steps 1-3](https://github.com/benbalter/jekyll-auth/blob/master/docs/getting-started.md#add-jekyll-auth-to-your-site) to install Jekyll Auth for this site.**
 
 You will also need to add a few additional gems to your Gemfile before running `bundler install`. Ensure your Gemfile looks like this before attempting to deploy to Heroku:
 
@@ -91,6 +93,7 @@ gem 'redcarpet'
 Next, we're going to manually configure our `production` branch for deployment and finally deploy our Heroku site (note: do not use the "auto configure" command that Jekyll Auth provides).
 
 - First we need to make an initial commit to the production branch of our repo, and we also need to force add some files that are ignored on `master` but need to included on the `production` branch. Run the following commands:
+
 ```bash
 git status
 git add -A
@@ -100,20 +103,29 @@ git add -f config.ru
 git add -f Rakefile
 git commit -m "Added necessary deployment files." # or another descriptive message
 ```
+
 - Next, create your Heroku app by running the following command from your local repo's directory:
+
 ```bash
 heroku create COURSE-NAME
 ```
+
 *Note: The course name must match the name of the GitHub application you previously created*
+
 - Using the team ID and GitHub app credentials you previously acquired, run:
+
 ```bash
 heroku config:set GITHUB_CLIENT_ID=XXX GITHUB_CLIENT_SECRET=XXX GITHUB_TEAM_ID=XXX
 ```
+
 - Push the content of your local `production` branch to the Heroku `master` branch:
+
 ```bash
 git push heroku production:master
 ```
+
 - Finally, push the content of the `production` branch to GitHub to keep things in sync, and switch back to your `master` branch:
+
 ```bash
 git push origin production
 git checkout master
@@ -125,39 +137,49 @@ Please note that if you've forgotten to add yourself to the GitHub team that has
 
 ## Ongoing Deployment
 
-Changes are you're going to want to make some changes to the site after you deploy it initially, or incorporate other contributors' pull requests.
+**Note:** The first time you attempt to run through the steps below, you will likely run into an error that says `fatal: refusing to merge unrelated histories`. To fix this, use the `--allow-unrelated-histories` flag the first time you merge `master` into `production`.
+
+Chances are you're going to want to make some changes to the site after you deploy it initially, or incorporate other contributors' pull requests.
 
 To do that, follow these steps:
 
 - Make sure you are logged into Heroku via the command line.
 - On the `master` branch in your local repo, make sure you have no uncommitted changes, then run the following command to make sure you are up-to-date with the origin:
+
 ```bash
-git checkout master
-git pull origin master
+git checkout master && git pull origin master
 ```
+
 - Make your own changes, if necessary (if you do it on a local feature branch, make sure you merge them to the `master` branch):
+
 ```bash
 git status
 git add  -A
 git commit -m "Some descriptive message."
 git push origin master
 ```
+
 - Checkout the production branch:
+
 ```bash
 git checkout production
 ```
+
 - Merge the production branch to bring it up to date with master:
+
 ```bash
 git merge master
 ```
+
 - Push the changes to the Heroku App master branch and the GitHub production branch, and then return to the master branch:
+
 ```bash
 git push heroku production:master
 git push origin production
 git checkout master
 ```
 
-*Possible future feature: Set up automatic deploys to Heroku when "production" branch is pushed to GitHub*
+**Note:** You can also configure automatic deploys based on the production branch on Heroku.
 
 ## Configuring Multiple Heroku Committers for a Site
 
