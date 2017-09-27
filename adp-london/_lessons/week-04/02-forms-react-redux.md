@@ -88,6 +88,7 @@ Create the forms that you'll use in your Boomtown app, using the [Redux Form](ht
 You'll need to create both a user (login) form and a form for adding new Items.
 
 Be sure to include:
+
   - Saving data to the Redux store
   - Validation of fields
   - Styled components
