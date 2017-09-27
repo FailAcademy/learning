@@ -2,7 +2,7 @@
 layout: lesson
 title: Introducing Node
 slides: ['_slides/week-03/02-introducing-node.md']
-lesson_date: 2017-10-17
+lesson_date: 2017-10-16
 ---
 
 ## Pre-Work

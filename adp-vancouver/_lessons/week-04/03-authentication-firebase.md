@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: Authentication with Firebase
+title: Web Authentication & Firebase
 lesson_date: 2017-10-26
 slides: ['_slides/week-04/03-authentication-firebase.md']
 
@@ -13,7 +13,7 @@ Sign up to Firebase!
 
 Prior to class, please read:
 
-- [cookies vs. tokens](https://auth0.com/blog/cookies-vs-tokens-definitive-guide/)
+- [What is Firebase?](https://howtofirebase.com/what-is-firebase-fcb8614ba442)
 
 Please create a new project to hold the code-along examples from today's lesson.
 You should create 4 folders within the project, 1 for each exercise.
@@ -144,6 +144,10 @@ You should be able to answer the following questions:
 
 ## Additional Resources
 
+- [Who invented the password? (Google Search)](https://www.google.ca/search?q=who+invented+the+password&oq=who+invented+the+password&aqs=chrome..69i57j0l4.3088j0j9&sourceid=chrome&ie=UTF-8)
+- [Is XKCD right about password strength?](https://security.stackexchange.com/questions/62832/is-the-oft-cited-xkcd-scheme-no-longer-good-advice)
+- [Let's Encrypt](https://letsencrypt.org/) 
 - [How Secure is 256 bit Encryption?](https://www.youtube.com/watch?v=S9JGmA5_unY)
+- [https://jwt.io/](https://jwt.io/)
 - [Firebase Auth](https://firebase.google.com/docs/auth/)
 - [Password Hashing](https://crackstation.net/hashing-security.htm)
