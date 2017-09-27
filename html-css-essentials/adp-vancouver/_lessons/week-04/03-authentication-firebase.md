@@ -15,16 +15,8 @@ Prior to class, please read:
 
 - [cookies vs. tokens](https://auth0.com/blog/cookies-vs-tokens-definitive-guide/)
 
-To clone the example code we'll be working with, perform the following steps after creating a new folder:
-
-```bash
-cd your_folder
-git init
-git remote add origin https://github.com/redacademy/adp-exercise-solutions.git
-git config core.sparsecheckout true
-echo "auth-*" >> .git/info/sparse-checkout
-git pull --depth=1 origin master
-```
+Please create a new project to hold the code-along examples from today's lesson.
+You should create 4 folders within the project, 1 for each exercise.
 
 ---
 
