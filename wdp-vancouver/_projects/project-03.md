@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 3 - Pong Game
-due: Tuesday, August 8th (beginning of class)
+due: Tuesday, November 6th (beginning of class)
 ---
 
 For Project 3, you're going to create a pong game. You can [clone the project starter repo here](https://github.com/redacademy/pong-starter).
