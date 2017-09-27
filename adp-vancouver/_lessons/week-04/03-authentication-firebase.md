@@ -2,6 +2,8 @@
 layout: lesson
 title: Authentication with Firebase
 lesson_date: 2017-10-26
+slides: ['_slides/week-04/03-authentication-firebase.md']
+
 ---
 
 ## Pre-Work
@@ -11,56 +13,103 @@ Sign up to Firebase!
 
 Prior to class, please read:
 
-- [Public Key Encryption Explained](https://www.youtube.com/watch?v=3QnD2c4Xovk)
 - [cookies vs. tokens](https://auth0.com/blog/cookies-vs-tokens-definitive-guide/)
+
+To clone the example code we'll be working with, perform the following steps after creating a new folder:
+
+```bash
+cd your_folder
+git init
+git remote add origin https://github.com/redacademy/adp-exercise-solutions.git
+git config core.sparsecheckout true
+echo "auth-*" >> .git/info/sparse-checkout
+git pull --depth=1 origin master
+```
 
 ---
 
 ## Learning Objectives
 
-- Explored the Diffe-Hellman key exchange algorithm
 - Outline the common approaches to authentication and security on the Web.
+- Describe the process of "Hashing", and it's related algorithms.
 - Explain what Firebase is and take a tour of its many features.
-- Use Firebase to save and authenticate users and their associated profiles.
+- Use Firebase to authenticate users in Express, using JWT
 
 ---
 
 ## Keywords
 
+- SSL
 - Authentication
-- Public key encryption
-- Sessions
+- JWT (JSON Web Tokens)
+- Session
 - Cookies
-- Tokens
 - Hashing algorithm (Hash)
 
 ---
 
 ## Exercise 1
 
-**The Diffie Hellman Key Exchange**
+**HTTP Basic Authentication**
 
-We'll examine the process of shared public key encryption, as it relates to Web security, using the Diffe-Hellman key exchange as an example!
+Your web browser comes with a default authentication mechanism known as "HTTP Basic Authentication".
+In this exercise we'll implement HTTP Basic authentication, and examine the associated HTTP requests.
 
-- You'll be required to diagram the process yourself, and perform the calculations used in this famous and very useful algorithm.    
+You should be able to answer the following questions:
+
+- Is HTTP Basic authentication encrypted?
+- How does HTTP Basic authentication maintain a session once a user has logged in?
 
 ---
 
 ## Exercise 2
 
-**Get started with Firebase**
+**Session / Cookie Based Authentication**
 
-Create a new project in your Firebase account and create 2 new users using the Firebase Console interface.
+Using browser cookies is a common way to maintain a users session information. In this exercise we'll implement 
+user sessions in Express using the `express-sessions` library.
+
+You should be able to answer the following questions:
+
+- Where is the user's session information stored?
+- What information does the user's session contain? 
+- How does HTTP Basic authentication maintain a session once a user has logged in?
+- What are the potential downsides of this approach to user sessions?
 
 ---
 
 ## Exercise 3
 
+**JWT (JSON Web-Token) Authentication**
+
+
+You should be able to answer the following questions:
+
+- In general, what makes JWT's preferable vs `express-sessions`?
+- What information does the user's session contain? 
+- Where are JWT's stored?
+- How are JWT's secured from interception and tampering?
+- When a JWT is issued, how long does it remain valid?
+
+---
+
+## Exercise 4
+
+**Authenticating users in Express with Firebase and JWT**.
+
+In this exercise we'll use the Firebase PaaS as our authentication service. 
+We'll connect to Firebase, authenticate our users, and store their session in a JWT.
+
+
+---
+
+## Exercise 5
+
 Add Firebase to our client & server applications.
 
 On the Client: 
 - Create a file name ```firebase.js``` in our ```config``` folder
-- Connect to Firebase using the apropriate configuration.
+- Connect to Firebase using the appropriate configuration.
 
 On the Server:
 - Create a new resource file in our ```resources``` directory named ```FirebaseDB.js``.
@@ -69,11 +118,11 @@ On the Server:
 
 You should be able to answer the following questions:
 
+- Can we access Firebase data from our server application?
 - Is it secure to expose the Firebase connection variables in your client code?
 - How should firebase environment variables be stored in your server code?
 - How does Firebase store information?
-- How do we acces information in Firebase rom our client application?
-- Can we access Firebase data from our server application?
+- How do we access information in Firebase rom our client application?
 
 ---
 
@@ -93,15 +142,16 @@ Here's what we're going to do:
 
 You should be able to answer the following questions:
 
-- What kind of authentication method does Firebase use to initialte and authenticated session?
+- What kind of authentication method does Firebase use to initialize an authenticated session?
 - Where can this information be found on the client?
-- How can we use Firebase to prevent un-authenticated access to user records?
-- How should we store user-profile information in Firebase?
+- How can we use Firebase to prevent un-authenticated access to your graphql api?
+- Should we store user-profile information in Firebase?
 - How do we relate users in Firebase with their items in Postgres?
 
 ---
 
 ## Additional Resources
 
+- [How Secure is 256 bit Encryption?](https://www.youtube.com/watch?v=S9JGmA5_unY)
 - [Firebase Auth](https://firebase.google.com/docs/auth/)
 - [Password Hashing](https://crackstation.net/hashing-security.htm)
