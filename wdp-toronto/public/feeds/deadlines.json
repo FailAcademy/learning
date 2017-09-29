@@ -1,6 +1,12 @@
 [
+  {
+     "title": "Project 1A Due",
+     "allDay": true,
+     "start": "2017-10-10",
+     "url": "/project/project-1-aloha-homepage/"
+   },
    {
-      "title": "Project 1 Due",
+      "title": "Project 1B Due",
       "allDay": true,
       "start": "2017-10-17",
       "url": "/project/project-1-aloha-homepage/"
