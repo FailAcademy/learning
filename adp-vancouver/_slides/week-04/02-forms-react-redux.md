@@ -19,11 +19,43 @@ class: center, middle, inverse
 layout: false
 # Agenda
 
-1. Controlled vs. Uncontrolled components
-2. React form events
-3. Redux-Form
-4. Form validation
-5. Displaying errors
+1. Client vs Server Validation
+2. Controlled vs. Uncontrolled components
+3. React form events
+4. Redux-Form
+5. Form validation
+6. Displaying errors
+
+
+---
+
+template: inverse
+
+# Client-Side Validation
+
+.title-logo[![Red logo](/public/img/red-logo-white.svg)]
+
+
+---
+
+# Types of Validation
+
+Split into two groups.
+
+- Group 1: Research client-side validation
+- Group 2: Research server-side validation
+
+You have 10 minutes, then we'll present.
+
+???
+
+Essential differences:
+
+- Client-side validation is inherently insecure
+- Client-side validation makes an app seem faster
+- Server-side validation is absolutely required
+- Client-side validation is for the user's convenience, but can also save a huge amount of resources. Ie. Picture 1,000,000 requests that are poorly formed. Client-side validation stops them from happening altogether.
+- In short,eEvery app needs both client and server-side validation
 
 
 ---
@@ -86,6 +118,13 @@ Read [React Forms](https://facebook.github.io/react/docs/forms.html).
 
 - With a partner, compare the "controlled" and "uncontrolled" input.
 - Act out the differences, one person is a "controlled" input with a component parent, and the other "uncontrolled" with a parent.
+
+
+???
+
+Controlled components are controlled by React. That means we have programatic access to their values without having to interact with the DOM.
+
+Uncontrolled components rely on the DOM to store their state. This is inefficient in the long wrong, and contrary to React/Redux principles.
 
 ---
 
@@ -229,6 +268,17 @@ Add any of the following to a form of your choosing:
 ---
 template: inverse
 # Redux Form
+
+---
+
+# Discuss
+
+Where should form state exist in a React/Redux application?
+
+- Think of the pros and cons of local state vs Redux state
+- Is invalid state still state?
+
+It might help to look up 'Ephemeral' state  
 
 ---
 
@@ -555,14 +605,17 @@ Feel free to create your own wrapper for any other UI library.
 
 ---
 
-## Challenge
+# Lab Activity
 
-Create a form in your Boomtown project. Include:
+Create the forms that you'll use in your Boomtown app, using the [Redux Form](http://redux-form.com) library.
+You'll need to create both a user (login) form and a form for adding new Items.
+
+Be sure to include:
+
   - Saving data to the Redux store
   - Validation of fields
   - Styled components
   - Error feedback
-  - A disabled submit button when the form is invalid
 
 
 {% endhighlight %}
