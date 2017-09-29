@@ -1,11 +1,5 @@
 [
    {
-      "title": "Pre-Work",
-      "allDay": true,
-      "start": "2017-09-25",
-      "end": "2017-09-30"
-   },
-   {
       "title": "ADP/WDP Mentoring",
       "allDay": false,
       "start": "2017-10-20T15:00:00+00:00",
@@ -18,9 +12,9 @@
       "end": "2017-11-17T16:15:00+00:00"
    },
    {
-      "title": "BC Family Day",
+      "title": "ON Family Day",
       "allDay": true,
-      "start": "2017-02-13"
+      "start": "2017-02-20"
    },
    {
       "title": "Good Friday",
@@ -43,7 +37,7 @@
       "start": "2017-07-03"
    },
    {
-      "title": "BC Day",
+      "title": "Civic Holiday",
       "allDay": true,
       "start": "2017-08-07"
    },
@@ -56,16 +50,6 @@
       "title": "Thanksgiving Monday",
       "allDay": true,
       "start": "2017-10-09"
-   },
-   {
-      "title": "Remembrance Day",
-      "allDay": true,
-      "start": "2017-11-11"
-   },
-   {
-    "title": "Remembrance Day Monday",
-    "allDay": true,
-    "start": "2017-11-13"
    },
    {
       "title": "Christmas Day",
