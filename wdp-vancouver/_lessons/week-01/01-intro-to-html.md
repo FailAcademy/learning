@@ -106,7 +106,7 @@ Before you get started, you should watch this video to reinforce the concepts le
 
 - [HTML - Hamburger Mark-up Language](http://www.dontfeartheinternet.com/02-html/)
 
-You're goal for the end of the first day is to have the different sections of the [Project 1](project/project-1-aloha-homepage/) website roughed-out in HTML.
+You're goal for the end of the first day is to have the different sections of the [Project 1](../../project/project-1-aloha-homepage/) website roughed-out in HTML.
 
 For help with how to get started, see the [RED HTML Wiki](https://redacademy.github.io/html-fundamentals/#setting-up-a-project).
 
