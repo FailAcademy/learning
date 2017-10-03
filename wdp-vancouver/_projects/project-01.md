@@ -102,4 +102,4 @@ Want to challenge yourself? Your project could also:
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to [mandi@redacademy.com](mailto:mandi@redacademy.com).
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to [rose.cass@redacademy.com](mailto:rose.cass@redacademy.com).
