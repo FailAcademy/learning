@@ -536,7 +536,7 @@ Today, images for the web are saved in the following formats:
 
 Let's dive right in and start thinking about how we might tackle the first project's design comp to convert it into semantic HTML elements.
 
-Jot some idea out on your own, then you'll pair up to discuss your approach with a partner. Based on this discussion, is there anything you'd revise in your approach?
+Jot some ideas on your own, then you'll pair up to discuss your approach with a partner. Based on this discussion, is there anything you'd revise in your approach?
 
 Finally, you and your partner will share your insights with the class.
 
@@ -712,6 +712,6 @@ Before you get started, you should watch these videos to reinforce the concepts 
 - [HTML - Hamburger Mark-up Language](http://www.dontfeartheinternet.com/02-html/)
 - [Don't Fear Starting from Scratch - Part 1: HTML](http://www.dontfeartheinternet.com/04-from-scratch/)
 
-You're goal for the end of the first day is to have the different sections of the Project 1 website roughed-out in HTML. It should look like [this](http://redacademy.github.io/aloha-apparel-pt1/index-day1.html)
+You're goal for the end of the first day is to have the different sections of the Project 1 website roughed-out in HTML. It should look like [this](http://redacademy.github.io/aloha-apparel/index-day1.html)
 
 {% endhighlight %}
