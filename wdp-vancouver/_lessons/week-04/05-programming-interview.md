@@ -27,15 +27,11 @@ Come prepared with your thoughts and reflections on this article (especially in 
 
 ## Lab Activity (All-Day)
 
-In today's lesson, you'll be presented with typical programming interview questions which you might encounter if you were applying for a job at a company like Facebook, Google, Amazon, or Microsoft (or even a local start-up).
+In today's lesson, you'll be presented with typical programming interview questions which you might encounter if you were applying for a developer job.
 
-The exercises today will be very difficult, but will only require using JavaScript techniques that you have already learned. You'll have the entire day to complete the questions.
+The exercises today will be challenging, but for the most part will require using JavaScript techniques that you have already learned. You'll have the entire day to complete the questions.
 
-You mission is to try to apply what you've learned, and attempt to come up with solutions to as many of the exercises as you can.
-
-You may work on the questions as a group, or as part of more than one group to solve the exercises.
-
-If you or your group comes up with a solution, we'll share it with the class, and discuss your implementation as well as discuss other potential solutions.
+Your mission is to try to apply what you've learned, and attempt to come up with solutions to as many of the exercises as you can.
 
 **Tips For Success:**
 
@@ -48,53 +44,113 @@ If you or your group comes up with a solution, we'll share it with the class, an
 
 ---
 
-## Question 1
+## Challenge 1
 
-Given a number that represents the position of the minute hand on a clock (i.e. number of minutes from 0&ndash;60) write a program that logs to the console the angle that is formed by the minute hand and 12.
+Given a number that represents the position of the minute hand on a clock (number of minutes from 0-60) write a function that returns the angle that is formed by the minute hand and 12.
 
-If the user enters a number that is above 60, your program should fail, and log a friendly message to the console, informing the user of their error.
-
-**Hint:** Create an HTML UI to capture input and display the result of running your algorithm.
+If the user enters a number that is greater than 60 or less than 1, your program should fail, and log a friendly message to the console informing the user of their error.
 
 ---
 
-## Question 2
+## Challenge 2
 
-Given a list of stock prices for a number of days, your goal is to return the maximum profit that could have been made by buying a stock at one price, and then selling the stock later on (for the sale price on that day).
+Given a list of stock prices for a number of days, your goal is to return the maximum profit that could have been made by buying a stock at one price and then selling the stock later on, (for the sale price on that day).
 
-What does this mean? For example, if given a list of stock prices per day of `[45, 24, 35, 31, 40, 38, 11]`, your program should return 16.
+What does this mean? For example, if given a list of stock prices per day: `[45, 24, 35, 31, 40, 38, 11]`, your program should return `16`.
 
-Why? For this particular list, if you had bought stock at 24 and sold it at 40, a profit of 16 was made. For this list, 16 is the largest profit you could have made buy buying and selling on specific days. If no profit could have been made, your program should `console.log()` "All is lost!".
-
-Use this list to start: `[47, 50, 22, 11, 15, 90, 88]`
+Why? For this particular list, if you had bought stock at 24 and sold it at 40, a profit of 16 was made. For this list, 16 is the largest profit you could have made buy buying and selling on specific days. If no profit could have been made, your program should return “All is lost!”.
 
 ---
 
-## Question 3
+## Challenge 3
 
-Create a function that reverses a string.
+Write a function that logs the lyrics to the [The Twelve Day of Christmas](https://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song)) line by line.
 
-Your function must be capable of reversing an entire sentence, and preserving the order of words (reverse in place).<br/>
+---
 
-For example: "Hello how are you", becomes " Olleh woh era uoy".
+## Challenge 4
+
+Create a function the reverses a string. Your function must be capable of reversing an entire sentence, and preserving the order of words (reverse in place).
+
+For example: `Hello how are you` becomes `Olleh woh era uoy`.
 
 **Extra Challenge:** Maintain capitalization of reversed words, like the example above.
 
-**Did you know?** You can reverse the direction of a string using HTML using the `<bdo>` element!<br/>
+Did you know? You can also reverse the direction of a string using HTML using the `<bdo>` element!
 
 For example:
 
-`<p><bdo dir="rtl">Sometimes things go wrong!</bdo></p>` <br/>
+```html
+<p><bdo dir="rtl">Sometimes things go wrong!</bdo></p>
+```
 
-**Results in:** !gnorw og sgnith semitemoS
+Results in: `!gnorw og sgnith semitemoS`
 
 ---
 
-## Question 4
+## Challenge 5
 
-Write a function to find the nearest link on a webpage given the mouse x,y coordinates.
+Adapting the approach you took in the last challenge, write a function that checks to see if a given string is a palindrome (e.g. "racecar" will produce the same word spelled backwards or forwards, so it is a palindrome).
 
-If your algorithm just iterates through all the links, provide a recommendation for how to make it faster.
+If the string is a palindrome, return `true`. It's not a palindrome return `false`. If an empty string is passed in as an argument, or some other data type, return a message indicating that the user needs to pass a string in.
+
+Be sure to take capitalization and spaces into account! It's still a palindrome even if some of the letters are capitalized or there are space between the letters.
+
+---
+
+## Challenge 6
+
+Pig Latin is a game of alterations played on the English language. To create the Pig Latin form of an English word, the initial consonant sound is transposed to the end of the word and an "ay" is affixed (e.g. "banana" would yield anana-bay).
+
+Write a function that converts a string into its Pig Latin equivalent. [Check out Wikipedia](https://en.wikipedia.org/wiki/Pig_Latin) for specific details on the rules of Pig Latin to figure out how you will implement your function.
+
+---
+
+## Challenge 7
+
+Write a `range` function that takes two arguments, start and end, and returns an array containing all the numbers from start up to (and including) end.
+
+Next, write a`sum` function that takes an array of numbers and returns the sum of these numbers.
+
+When used together, your functions would work like this:
+
+```js
+console.log(sum(range(1, 10))); // 55
+```
+
+**Extra Challenge:** Modify your range function to take an optional third argument that indicates the “step” value used to build up the array. If no step is given, the array elements go up by increments of one, corresponding to the old behavior. The function call `range(1, 10, 2)` should return `[1, 3, 5, 7, 9]`. Make sure it also works with negative step values so that `range(5, 2, -1)` produces `[5, 4, 3, 2]`.
+
+---
+
+## Challenge 8
+
+**Warm-up Round:** 
+
+Write a function the converts a decimal number to a string-based representation of its binary equivalent.
+
+**Convert RGB to Hex:**
+
+Write a function that takes RGB values for a particular colour as individual arguments, then converts them to a single string-based representation of the corresponding hex code for that colour. Don't forget the leading `#`!
+
+**Note:** It's very easy to obtain a solution to this challenge by heading right to Stack Overflow. Resist the urge! Before you search out a pre-fab solution, see how far you can get by looking into the `Number.prototype.toString()` method on MDN first.
+
+---
+
+## Challenge 9
+
+Write a script that fetches a random taco recipe from the Taco Fancy API Randomizer and log it out like this example:
+
+`"Asian Style Tofu or Pork Marinade with Potato Hash topped off with Chipotlé Sauce garnished with Mahi Mahi Rub and wrapped in delicious bad-ass tortillas."`
+
+This is the endpoint you will use to access a random taco recipe:
+
+http://taco-randomizer.herokuapp.com/random/
+
+Sound easy? There's a catch. This challenge must be completed with plain vanilla JavaScript only. No jQuery (or any other library) allowed!
+
+In order to make your `GET` request, look into the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) rather than using raw `XMLHTTPRequest` objects.
+
+**Extra Challenge:** Create an `index.html` file and append this string to the DOM using plain vanilla JS too.
 
 ---
 
@@ -109,3 +165,8 @@ More sample programmer interview questions:
 - [Here's a pretty big list of programming interview questions I compiled while studying for big 4 interviews. I think you guys will find it useful!](https://www.reddit.com/r/cscareerquestions/comments/20ahfq/heres_a_pretty_big_list_of_programming_interview/)
 - [Front-end Job Interview Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions) (awesome resource!)
 - [Interview Questions and Exercises About CSS](https://css-tricks.com/interview-questions-css/)
+- [Interview Cake](https://www.interviewcake.com/all-questions/javascript)
+
+An interview prep course from Udacity (it's taught in Python, but worth a look!):
+
+- [Technical Interview](https://www.udacity.com/course/technical-interview--ud513)
