@@ -6,21 +6,36 @@ due: Monday, November 27th (beginning of class)
 
 For Project 5, you will combine your JavaScript and WordPress skills together to build out the functionality for a website called Quotes on Dev using the WordPress REST API.
 
-You can [download the project files here](#).
+You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-05.zip).
 
 ## Set-up Instructions
 
 1. Download and install a fresh copy of WordPress locally
-2. Download the `quotesondev-starter` repo, move it into `wp-content/themes/`, then follow the installation instructions in the `README`
+2. Download the [`quotesondev-starter`](https://github.com/redacademy/quotesondev-starter) repo, move it into `wp-content/themes/`, then follow the installation instructions in the `README`
 3. Activate the Quotes on Dev theme
-4. [Download the project files](#)
+4. [Download the project files](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-05.zip)
 5. In WordPress, go to Tools > Import and install the WordPress importer plugin
-6. Import the provided XML file
+6. Import the provided XML file to populate the site with content
 7. Start themin'!
 
 ## Design Specifications
 
-*Design specifications TBA.*
+### Structure:
+
+- This fixed width website is `1080px` wide
+- The base spacing unit is `1.5rem`
+- The dashed border is `1px dashed #ffffff`
+
+### Typography:
+
+- The base font size is `16px` and its HEX code is `#ffffff`
+- The base line-height for the site is `1.5`
+- The main font family is Exo Web
+
+### Colors:
+
+- The main background colour is `#222222`
+- The HEX code for the green brand colour is `#00cc00`
 
 ## Requirements
 
@@ -36,7 +51,7 @@ Your project must:
 - Contain a search results page and 404 page
 - Fetch an initial random post on the front page
 - Fetch additional random posts on the front page using the WP API
-- Display one item per page for single posts, and ten items per page for category and tag archives, and search results
+- Display one item per page for the blog index and author archives, five items per page for category and tag archives, and ten items per page for search results
 - Accept new quote submissions from the front-end of the site using WP API (for logged in users only), and set those submissions to pending by default
 - Show a message to unauthenticated users on the "Submit a Quote" page that informs them they must log in to submit a new quote
 
@@ -76,7 +91,7 @@ Your project must:
 Your project must:
 
 - Make appropriate use of classes and IDs as selectors
-- Use a CSS reset (normalize.css is included with the `redstarter` theme)
+- Use a CSS reset (normalize.css is included with the `quotesondev-starter` theme)
 - Use Sass as a preprocessor, with CSS properly compiled and minified
 - Implement a layout using flexbox (no floats)
 - Demonstrate effective use of box model properties
@@ -89,6 +104,13 @@ Your project must:
 - Make a `POST` request to a WP API endpoint using Ajax to submit a new quote to the quote to the site
 - Clear the quote submission form and show an affirmative message when a quote is successfully submitted to the database
 - Show an error message when a quote is not successfully submitted to the database
+
+**RWD requirements:**
+
+Your project must:
+
+- Be responsively designed using a mobile-first approach
+- Be optimized for 3 screen sizes: mobile, `min-width: 620px` and `min-width: 1080px`
 
 **Additional requirements:**
 
