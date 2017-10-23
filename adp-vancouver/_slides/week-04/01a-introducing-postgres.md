@@ -228,19 +228,19 @@ psql -U <db-user> -d <db-name>
 Run the following **SQL** command to create your first table!
 
 ```sql
-CREATE TABLE IF NOT EXISTS "items";
+CREATE TABLE IF NOT EXISTS items();
 ```
 ---
 
 # Adding Columns
 
 ```sql
-ALTER TABLE "items" ADD COLUMN itemid TYPE serial;
-ALTER TABLE "items" ADD COLUMN title TYPE text NOT NULL;
-ALTER TABLE "items" ADD COLUMN description TYPE text NOT NULL;
-ALTER TABLE "items" ADD COLUMN imageurl TYPE text NOT NULL;
-ALTER TABLE "items" ADD COLUMN ownerid TYPE text NOT NULL;
-ALTER TABLE "items" ADD COLUMN borrowerid TYPE text NOT NULL;
+ALTER TABLE items ADD COLUMN itemid serial;
+ALTER TABLE items ADD COLUMN title text;
+ALTER TABLE items ADD COLUMN description text;
+ALTER TABLE items ADD COLUMN imageurl text;
+ALTER TABLE items ADD COLUMN ownerid text;
+ALTER TABLE items ADD COLUMN borrowerid text;
 ```
 
 Copying and pasting each line into the psql shell allows us to modify the table we created, adding columns with their appropriate data types.
@@ -351,12 +351,13 @@ CREATE TABLE "public"."items" (
   "title" text not null,
   "imageurl" text DEFAULT null,
   "description" text not null,
-  "ownerid" REFERENCES users (userid),
-  "borrowerid" REFERENCES users (userid)
+  "ownerid" text unique not null,
+  "borrowerid" text unique not null,
+  CHECK (borrowerid != ownerid) 
 );
 ```
 
-Can you spot the relationship?
+In what other table will we find the itemid?
 
 ---
 # Primary Key Constraint
@@ -368,6 +369,9 @@ Can you spot the relationship?
 These lines are telling Postgres that the values stored in these columns will be references to values stored in the `users` table, namely the userid of actual users.
 
 This is called a **Primary Key constraint**, because no other value can be stored in this column, and it's a common way of defining relationships between tables in a relational database.
+
+???
+WARNING: This is just for example, we're not creating a user table for the project!
 
 ---
 
@@ -387,8 +391,8 @@ Create a Link Table
 
 ```sql
 CREATE TABLE "public"."itemtags" (
-  "itemid" number references items (itemid),
-  "tagid" number references tags (tagid)
+  "itemid" integer references items (itemid),
+  "tagid" integer references tags (tagid),
   unique (itemid, tagid)
 )
 ```
