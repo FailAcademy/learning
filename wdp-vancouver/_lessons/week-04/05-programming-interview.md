@@ -84,7 +84,7 @@ For example:
 <p><bdo dir="rtl">Sometimes things go wrong!</bdo></p>
 ```
 
-Results in: `!gnorw og sgnith semitemoS`
+Results in: `!gnorw og sgniht semitemoS`
 
 ---
 
