@@ -14,7 +14,7 @@ brew update
 brew install mongodb
 ```
 
-Also consider installing [RoboMongo](https://robomongo.org/) for a nice GUI for navigating your Mongo databases.
+Also consider installing [Mongo Compass](https://www.mongodb.com/download-center#compass) [RoboMongo](https://robomongo.org/) for a nice GUI for navigating your Mongo databases.
 
 ---
 
