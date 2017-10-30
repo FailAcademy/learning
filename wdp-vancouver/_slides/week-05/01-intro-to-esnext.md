@@ -178,7 +178,7 @@ Conversely, `var` defines a variable globally, or locally to an entire function 
 Variables defined with `var` can lead to "name conflicts", where a coder overwrites a variable name, often unknowingly.
 
 ```js
-var teachers = [ 'Ben', 'Blake', 'Mack', 'Mandi', 'Rose' ];
+var teachers = [ 'Jim', 'Mack', 'Mandi', 'Rose' ];
 
 var teachers = ['Alice', 'Bob', 'Jane'];
 // teachers variable is redeclared
@@ -193,7 +193,7 @@ Both `let` and `const` prevent redeclaring with the same variable name (but you 
 `let` still allows reassigning of the value.
 
 ```js
-let teachers = [ 'Ben', 'Blake', 'Mack', 'Mandi', 'Rose' ];
+let teachers = [ 'Jim', 'Mack', 'Mandi', 'Rose' ];
 
 var teachers = ['Alice', 'Bob', 'Jane'];
 // teachers variable is redeclared
@@ -210,8 +210,8 @@ Both `let` and `const` prevent redeclaring with the same variable name.
 ```js
 let teachers = [
   'Mandi',
-  'Ben',
-  'Shawn',
+  'Jim',
+  'Rose',
   'Mack',
 ];
 
@@ -228,7 +228,7 @@ However, some values could benefit from being marked as unchanging.
 `const` acts like `let`, but with the addition that its values cannot be reassigned.
 
 ```js
-const teachers = [ 'Ben', 'Blake', 'Mack', 'Mandi', 'Rose' ];
+const teachers = [ 'Jim', 'Mack', 'Mandi', 'Rose' ];
 
 teachers = ['Kyle', 'Kurtis', 'Rony'];
 // TypeError: Assignment to constant variable.
