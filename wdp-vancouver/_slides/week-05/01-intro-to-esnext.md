@@ -545,7 +545,7 @@ multiply(1);
 
 # Default Parameters
 
-With ES20165, default function parameters allow us to initialize parameters with default values if no value or `undefined` is passed.
+With ES2015, default function parameters allow us to initialize parameters with default values if no value or `undefined` is passed.
 
 **ES.next:**
 
