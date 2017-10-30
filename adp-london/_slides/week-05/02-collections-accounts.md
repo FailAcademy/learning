@@ -539,9 +539,7 @@ You may also want to set `defaultProps` for `todos` as an empty array so your ap
 
 # A Default To-Do
 
-Meteor can create a default to-do on start-up if none exist.
-
-Create `imports/server/fixtures.js` and import it into `imports/server/index.js`. Add this code to `fixtures.js`:
+Meteor can create a default to-do on start-up if none exist. Create `imports/startup/server/fixtures.js` and import it into `imports/startup/server/index.js`. Add this code to `fixtures.js`:
 
 ```js
 import { Meteor } from 'meteor/meteor';
@@ -719,8 +717,8 @@ Meteor.startup(() => {
 
   if ( Meteor.users.find().count() === 0 ) {
     user = Accounts.createUser({
-      email : 'm@wise.com',
-      password : 'password',
+      email: 'm@wise.com',
+      password: 'password',
     });
   }
 
