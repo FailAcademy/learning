@@ -713,21 +713,20 @@ Now how can we use our new `currentUserId` prop to filter the to-dos so that the
 import { Accounts } from 'meteor/accounts-base';
 
 Meteor.startup(() => {
-  let user = {};
-
   if ( Meteor.users.find().count() === 0 ) {
     user = Accounts.createUser({
-      email: 'm@wise.com',
-      password: 'password',
+      email : 'm@wise.com',
+      password : 'password',
     });
-  }
 
-  if ( ToDos.find().count() === 0 ) {
-    ToDos.insert({
-      title: 'Learn React', 
-      complete: false,
-      owner: user,
-    });
+    // add data to the database
+    if ( ToDos.find().count() === 0 ) {
+      ToDos.insert({
+        title: 'Learn Meteor', 
+        complete: false,
+        owner: user
+      });
+    }
   }
 });
 ```
