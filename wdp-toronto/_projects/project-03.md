@@ -4,7 +4,7 @@ title: Project 3 - Shopping Cart
 due: Tuesday, November 6th (beginning of class)
 ---
 
-For Project 3, you're going to create a shopping cart. You can [clone the project starter repo here](https://github.com/redacademy/best-buy).
+For Project 3, you're going to create a shopping cart. You can [clone the project starter repo here](https://github.com/redacademy/bestbuy-starter).
 
 ## Requirements
 
