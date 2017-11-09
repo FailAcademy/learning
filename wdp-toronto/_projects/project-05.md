@@ -1,10 +1,10 @@
 ---
 layout: project
-layout: Mars Colony App
+title: Mars Colony App
 due: Tuesday, November 14th (beginning of class)
 ---
 
-For Project 5, you're going to create a web-based application for Earth colonists exploring Mars using Angular 2.
+For Project 5, you're going to create a web-based application for Earth colonists exploring Mars using React.
 
 ## Requirements
 
