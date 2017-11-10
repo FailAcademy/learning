@@ -122,7 +122,7 @@ Creating a new data model with Realm couldn't be easier:
 ```js
 import Realm from 'realm';
 
-const Dog = {
+const DogSchema = {
   name: 'Dog',
   properties: {
     id: 'int',
@@ -132,7 +132,7 @@ const Dog = {
   }
 };
 
-export default new Realm({schema: [Dog]});
+export default new Realm({schema: [DogSchema]});
 ```
 
 ---
@@ -169,7 +169,7 @@ template: inverse
 Writing data to your Realm database is easy too. All database writes must be wrapped in the following method:
 
 ```js
-realm = new Realm({schema: [Dog]});
+realm = new Realm({schema: [DogSchema]});
 
 realm.write(() => {
   // we create/update and delete our data here
@@ -185,7 +185,7 @@ From there, we can call the `realm.create()` and `realm.delete()` methods create
 We can use `realm.create()` to both create and update data:
 
 ```js
-realm = new Realm({schema: [Dog]});
+realm = new Realm({schema: [DogSchema]});
 
 realm.write(() => {
   // Create a dog object
@@ -242,12 +242,12 @@ let descDogs = dogs.sorted('name', true); // reverses the order
 
 # Pro Tip!
 
-You can install **[Realm Browser](https://github.com/realm/realm-browser-osx)** as a GUI for managing your Realm databases.
+You can install **[Realm Studio](https://realm.io/products/realm-studio/)** as a GUI for managing your Realm databases.
 
 To find out where your Realm database is stored locally, you can log the path to the file in your console:
 
 ```js
-realm = new Realm({schema: [Dog]});
+realm = new Realm({schema: [DogSchema]});
 console.log('the path is: ', realm.path);
 ```
 
