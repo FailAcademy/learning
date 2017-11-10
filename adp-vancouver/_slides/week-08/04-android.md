@@ -179,7 +179,7 @@ template: inverse
 
 # File Extensions
 
-We've already seen an example of this in action with `index.ios.js` and `index.android.js`, which are the main entry points of our apps on each platform.
+We can add platform-specific files using infixes like so: <br />`[FILE NAME].ios.js` and `[FILE NAME].android.js`
 
 Each platform specific-file is invisible to the other platform thanks to the infix.
 
