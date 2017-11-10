@@ -218,21 +218,20 @@ The generated directory structure for your project will include:
 ```bash
 |-- __tests__        # for Jest tests
 |-- android/         # boilerplate for Android
-|-- index.android.js # entry point for your app
-|-- index.ios.js     # entry point for your app
+|-- index.js     # entry point for your app
 |-- ios/             # boilerplate for iOS
 |-- node_modules     # yes, we can use npm packages with RN!
 |-- package.json     # obviously...don't leave home without it
 |-  # ...            # other RN config files...
 ```
 
-For now, we will work primarily in `index.ios.js`, but will talk more in depth about project organization later in the lesson.
+For now, we will work primarily in `index.js`, but will talk more in depth about project organization later in the lesson.
 
 ---
 
 # Digging Deeper
 
-But how does RN know what component to bind to the view when our app launches? In our `index.ios.js` file we have:
+But how does RN know what component to bind to the view when our app launches? In our `index.js` file we have:
 
 ```js
 AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
@@ -335,23 +334,6 @@ Be sure to supply `@2x` and `@3x` versions if possible for static image resource
 ```
 
 **[Read more on using images in RN here.](https://facebook.github.io/react-native/docs/images.html)**
-
----
-
-# Image
-
-Also note that `<Image>` components do not need to be self-closing in RN! 
-
-You wrap opening and closing `<Image>` tags around another component, then easily absolutely position the inner component on top of the image.
-
-```js
-<Image
-  style={% raw %}{{ width: 300, height: 200, }}{% endraw %}
-  source={% raw %}{{uri:'https://unsplash.it/600/400/?random'}}{% endraw %}
->
-  <Text>Some text...</Text>
-</Image>
-```
 
 ---
 
@@ -726,17 +708,17 @@ Our project organization plan of attack:
 
 # Project Folder
 
-We won't want to depend on `index.ios.js` and `index.android.js` exclusively as our app grows. Let's add a directory to house all of our RN code called `app`:
+We won't want to depend on `index.js` exclusively as our app grows. Let's add a directory to house all of our RN code called `app`:
 
 ```bash
 |-- __tests__
 |-- android/
 |-- js/ # <----------- ADD THIS DIR!
-|-- index.android.js
-|-- index.ios.js
+|-- index.js
 |-- ios/
 |-- node_modules
 |-- package.json
+|-- # ...other config files
 ```
 
 ---
@@ -757,13 +739,13 @@ Inside the `app` folder...
 |   |-- index.js   # single entry point of a cross-platform app
 ```
 
-You will import `index.js` into `index.ios.js` and `index.android.js` and pass your top-level component into `AppRegistry.registerComponent()` to register your app.
+You will import `js/index.js` into the root `index.js` of your project and pass your top-level component into `AppRegistry.registerComponent()` to register your app.
 
 ---
 
 # Example
 
-In `index.ios.js` and `index.androids.js`:
+In `index.js`:
 
 ```js
 import { AppRegistry } from 'react-native';
@@ -772,7 +754,7 @@ import HelloWorld from './app';
 AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
 ```
 
-In `app/index.js`:
+In `js/index.js`:
 
 ```js
 import React, { Component } from 'react';
