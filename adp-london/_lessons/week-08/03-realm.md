@@ -85,4 +85,4 @@ Latest Realm docs for React Native and related tutorials:
 
 A GUI app for working with your Realm databases:
 
-- [Realm Browser](https://github.com/realm/realm-browser-osx)
+- [Realm Studio](https://realm.io/products/realm-studio/)
