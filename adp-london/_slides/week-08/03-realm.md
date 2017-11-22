@@ -132,7 +132,9 @@ const DogSchema = {
   }
 };
 
-export default new Realm({schema: [DogSchema]});
+const realm = Realm({schema: [DogSchema]});
+
+export default realm;
 ```
 
 ---
@@ -169,7 +171,7 @@ template: inverse
 Writing data to your Realm database is easy too. All database writes must be wrapped in the following method:
 
 ```js
-realm = new Realm({schema: [DogSchema]});
+const realm = new Realm({schema: [DogSchema]});
 
 realm.write(() => {
   // we create/update and delete our data here
@@ -185,7 +187,7 @@ From there, we can call the `realm.create()` and `realm.delete()` methods create
 We can use `realm.create()` to both create and update data:
 
 ```js
-realm = new Realm({schema: [DogSchema]});
+const realm = new Realm({schema: [DogSchema]});
 
 realm.write(() => {
   // Create a dog object

@@ -218,7 +218,8 @@ The generated directory structure for your project will include:
 ```bash
 |-- __tests__        # for Jest tests
 |-- android/         # boilerplate for Android
-|-- index.js     # entry point for your app
+|-- App.js           # where the top-level App component lives
+|-- index.js         # entry point for your app
 |-- ios/             # boilerplate for iOS
 |-- node_modules     # yes, we can use npm packages with RN!
 |-- package.json     # obviously...don't leave home without it
@@ -713,6 +714,7 @@ We won't want to depend on `index.js` exclusively as our app grows. Let's add a 
 ```bash
 |-- __tests__
 |-- android/
+|-- App.js
 |-- js/ # <----------- ADD THIS DIR!
 |-- index.js
 |-- ios/
@@ -736,10 +738,10 @@ Inside the `app` folder...
 |   |-- redux      # store and reducers go here
 |   |-- navigation # define routes and nav components
 |   |-- scenes     # container components that render each scene
-|   |-- index.js   # single entry point of a cross-platform app
+|   |-- App.js     # move App.js here!
 ```
 
-You will import `js/index.js` into the root `index.js` of your project and pass your top-level component into `AppRegistry.registerComponent()` to register your app.
+You will import `js/App.js` into the root `index.js` of your project and pass your top-level component into `AppRegistry.registerComponent()` to register your app.
 
 ---
 
@@ -749,18 +751,18 @@ In `index.js`:
 
 ```js
 import { AppRegistry } from 'react-native';
-import HelloWorld from './app';
+import App from './js/App';
 
-AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
+AppRegistry.registerComponent('HelloWorld', () => App);
 ```
 
-In `js/index.js`:
+In `js/App.js`:
 
 ```js
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-export default class HelloWorld extends Component {
+export default class App extends Component {
   render() {
     return (
       <View><Text>Welcome to React Native!</Text></View>
