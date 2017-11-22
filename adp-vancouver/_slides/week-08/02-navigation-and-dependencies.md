@@ -192,7 +192,7 @@ Follow the [installation instructions](https://github.com/expo/ex-navigation#ins
 
 Define your routes in `navigation/routes.js`. Define `static route = {}` in each of your scene container components to configure a nav bar title for each scene.
 
-In your `js/index.js` file, add the `<NavigationProvider>` with a single `<StackNavigation>`, and set the `initialRoute` to your Schedule scene.
+In your `js/App.js` file, add the `<NavigationProvider>` with a single `<StackNavigation>`, and set the `initialRoute` to your Schedule scene.
 
 Try swapping your `initialRoute` to your About scene and see if it works also.
 
@@ -256,7 +256,7 @@ Now set up the `reducers.js` file in the `redux` directory.
 
 Be sure to import `combineReducers` into this file, as well as the named `NavigationReducer` export from ExNavigation. Export your combined reducers from this file.
 
-Next, provide the `NavigationContext`, directly to the `NavigationProvider` component in your app's main `index.js` file. You'll also need to wrap everything in the `Provider` component from `react-redux`, just like usual.
+Next, provide the `NavigationContext`, directly to the `NavigationProvider` component in your `js/App.js` file. You'll also need to wrap everything in the `Provider` component from `react-redux`, just like usual.
 
 Please refer to the **[ExNavigation docs](https://github.com/expo/ex-navigation#integrate-with-your-existing-redux-store)** for assistance completing this exercise.
 
