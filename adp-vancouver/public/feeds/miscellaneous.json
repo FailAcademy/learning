@@ -1,75 +1,75 @@
 [
   {
-      "title": "Pre-Work",
-      "allDay": true,
-      "start": "2017-09-25",
-      "end": "2017-09-30"
-   },
-   {
-      "title": "ADP/WDP Mentoring",
-      "allDay": false,
-      "start": "2017-10-20T15:00:00+00:00",
-      "end": "2017-10-20T16:15:00+00:00"
-   },
-   {
-      "title": "ADP/WDP Mentoring",
-      "allDay": false,
-      "start": "2017-11-17T15:00:00+00:00",
-      "end": "2017-11-17T16:15:00+00:00"
-   },
-   {
-      "title": "BC Family Day",
-      "allDay": true,
-      "start": "2017-02-13"
-   },
-   {
-      "title": "Good Friday",
-      "allDay": true,
-      "start": "2017-04-14"
-   },
-   {
-      "title": "Easter Monday",
-      "allDay": true,
-      "start": "2017-04-17"
-   },
-   {
-      "title": "Victoria Day",
-      "allDay": true,
-      "start": "2017-05-22"
-   },
-   {
-      "title": "Canada Day Stat",
-      "allDay": true,
-      "start": "2017-07-03"
-   },
-   {
-      "title": "BC Day",
-      "allDay": true,
-      "start": "2017-08-07"
-   },
-   {
-      "title": "Labour Day",
-      "allDay": true,
-      "start": "2017-09-04"
-   },
-   {
-      "title": "Thanksgiving Monday",
-      "allDay": true,
-      "start": "2017-10-09"
-   },
-   {
-      "title": "Remembrance Day",
-      "allDay": true,
-      "start": "2017-11-13"
-   },
-   {
-      "title": "Christmas Day",
-      "allDay": true,
-      "start": "2017-12-25"
-   },
-   {
-      "title": "New Years Day",
-      "allDay": true,
-      "start": "2018-01-01"
-   }
+    "title": "Pre-Work",
+    "allDay": true,
+    "start": "2017-12-26",
+    "end": "2018-01-07"
+  },
+  {
+    "title": "ADP/WDP Mentoring",
+    "allDay": false,
+    "start": "2018-01-26T15:00:00+00:00",
+    "end": "2018-01-26T16:15:00+00:00"
+  },
+  {
+    "title": "ADP/WDP Mentoring",
+    "allDay": false,
+    "start": "2018-02-23T15:00:00+00:00",
+    "end": "2018-02-23T16:15:00+00:00"
+  },
+  {
+    "title": "BC Family Day",
+    "allDay": true,
+    "start": "2018-02-12"
+  },
+  {
+    "title": "Good Friday",
+    "allDay": true,
+    "start": "2018-03-30"
+  },
+  {
+    "title": "Easter Monday",
+    "allDay": true,
+    "start": "2018-04-02"
+  },
+  {
+    "title": "Victoria Day",
+    "allDay": true,
+    "start": "2018-05-21"
+  },
+  {
+    "title": "Canada Day Stat",
+    "allDay": true,
+    "start": "2018-07-02"
+  },
+  {
+    "title": "BC Day",
+    "allDay": true,
+    "start": "2018-08-06"
+  },
+  {
+    "title": "Labour Day",
+    "allDay": true,
+    "start": "2018-09-03"
+  },
+  {
+    "title": "Thanksgiving Monday",
+    "allDay": true,
+    "start": "2018-10-08"
+  },
+  {
+    "title": "Remembrance Day Stat",
+    "allDay": true,
+    "start": "2018-11-12"
+  },
+  {
+    "title": "Christmas Day",
+    "allDay": true,
+    "start": "2018-12-25"
+  },
+  {
+    "title": "New Years Day",
+    "allDay": true,
+    "start": "2018-01-01"
+  }
 ]
