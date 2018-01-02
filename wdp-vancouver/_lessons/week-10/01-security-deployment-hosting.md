@@ -2,7 +2,7 @@
 layout: lesson
 title: WP Security, Deployment & Hosting
 slides: ['_slides/week-10/01-security-deployment-hosting.md']
-lesson_date: 2017-12-04
+lesson_date: 2018-03-12
 ---
 
 ## Pre-Work
