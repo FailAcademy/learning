@@ -70,7 +70,7 @@ The function should return `5`.
 
 ---
 
-## Lab Activity
+## Exercise 5
 
 **One Away:**
 
@@ -91,6 +91,18 @@ face, facts => false
 - Write code to make your tests pass
 
 What is the time complexity of your solution? Could it be better?
+
+---
+
+## Lab Activity
+
+**Reflections on testing**
+
+Now that you've gain some experience with Test-Driven-Development in JavaScipt, and the general idea of what it means to test your code, read the following article: https://8thlight.com/blog/uncle-bob/2014/05/14/TheLittleMocker.html
+
+When you're finished, write your main takeaways from wht the author has written, and be sure to mention any new insights you may have gleaned from the article. 
+
+When you're finished, we'll share our relections in a conversation, to conclude the Test-Drive_Development portion of the course. 
 
 ---
 
