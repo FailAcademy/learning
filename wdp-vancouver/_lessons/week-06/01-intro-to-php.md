@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to PHP
 slides: ['_slides/week-06/01-intro-to-php.md']
-lesson_date: 2018-02-12
+lesson_date: 2018-02-13
 ---
 
 ## Pre-Work
