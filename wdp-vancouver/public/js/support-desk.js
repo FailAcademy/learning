@@ -8,6 +8,9 @@ const BOARD_ID = "5a4a8113307deb77460b2644";
  */
 const orderCardsByTime = function(cards) {
   return cards
+    .filter(function(card) {
+      return card.members.length;
+    })
     .slice()
     .sort(function(a, b) {
       return new Date(a.due).getTime() - new Date(b.due).getTime();
@@ -163,52 +166,65 @@ $(function() {
   const labelData = getLabels(BOARD_ID);
 
   $.when(cardData, labelData).done(function(cards, labels) {
-    const filteredLabels = filterAndOrderLabels(labels[0]);
     const formattedCards = orderCardsByTime(cards[0].cards);
 
-    // Create some hidden input mark-up
-    const hiddenInputs = `<input type="hidden" name="booked_label" value="${
-      getLabelByName(labels[0], "Booked").id
-    }"><input type="hidden" name="course_label" value="${
-      getLabelByName(labels[0], "Web Dev").id
-    }">`;
+    // Hide loader
+    $loading.hide();
 
-    // Create select option mark-up
-    const typeOptions = filteredLabels.reduce(function(acc, curr) {
-      acc += `<option value="${curr.id}" data-type=${curr.name
-        .replace(/\s+/g, "-")
-        .toLowerCase()}>
+    if (formattedCards.length) {
+      const filteredLabels = filterAndOrderLabels(labels[0]);
+
+      // Create some hidden input mark-up
+      const hiddenInputs = `<input type="hidden" name="booked_label" value="${
+        getLabelByName(labels[0], "Booked").id
+      }"><input type="hidden" name="course_label" value="${
+        getLabelByName(labels[0], "Web Dev").id
+      }">`;
+
+      // Create select option mark-up
+      const typeOptions = filteredLabels.reduce(function(acc, curr) {
+        acc += `<option value="${curr.id}" data-type=${curr.name
+          .replace(/\s+/g, "-")
+          .toLowerCase()}>
             ${curr.name}
           </option>`;
-      return acc;
-    }, '<option value="">-- Select a request type --</option>');
+        return acc;
+      }, '<option value="">-- Select a request type --</option>');
 
-    // Create radio input mark-up
-    const timeInputs = formattedCards.reduce(function(acc, curr) {
-      acc += `<p class="day">${curr.title}</p>`;
+      // Create radio input mark-up
+      const timeInputs = formattedCards.reduce(function(acc, curr) {
+        acc += `<p class="day">${curr.title}</p>`;
 
-      curr.cards.forEach(function(card) {
-        const withMember = card.members.length
-          ? `with ${card.members[0].fullName}`
-          : "";
-        acc += `<label><input type="radio" name="time_slot" data-time="${
-          card.name
-        }" data-instructor="${withMember}" value="${card.id}"><span>${
-          card.name
-        } ${withMember}</span></label>`;
-      });
+        curr.cards.forEach(function(card) {
+          const withMember = card.members.length
+            ? `with ${card.members[0].fullName}`
+            : "";
+          acc += `<label><input type="radio" name="time_slot" data-time="${
+            card.name
+          }" data-instructor="${withMember}" value="${card.id}"><span>${
+            card.name
+          } ${withMember}</span></label>`;
+        });
 
-      return acc;
-    }, "");
+        return acc;
+      }, "");
 
-    // Add fields
-    $("#request_type select").append(typeOptions);
-    $("#time_slot").append(timeInputs);
-    $supportForm.prepend(hiddenInputs);
+      // Add fields
+      $("#request_type select").append(typeOptions);
+      $("#time_slot").append(timeInputs);
+      $supportForm.prepend(hiddenInputs);
 
-    // Hide loader, show form
-    $loading.hide();
-    $supportForm.fadeIn();
+      // Show form
+      $supportRequest.children("p").fadeIn();
+      $supportForm.fadeIn();
+    } else {
+      $supportRequest.children("p").hide();
+      $supportRequest
+        .append(
+          "Sorry! There are no time slots available in the next week. Please check back again soon, or talk to an instructor."
+        )
+        .fadeIn();
+    }
   });
 
   /**

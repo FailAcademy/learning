@@ -83,6 +83,9 @@ textarea {
 }
 
 .support-request {
+  > p {
+    display: none;
+  }
   form {
     display: none;
     padding: 1rem 0;
