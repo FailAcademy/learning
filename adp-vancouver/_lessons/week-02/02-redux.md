@@ -2,7 +2,7 @@
 layout: lesson
 title: Redux
 slides: ['_slides/week-02/02-redux.md']
-lesson_date: 2017-10-11
+lesson_date: 2018-01-16
 ---
 
 ## Pre-Work
@@ -11,28 +11,28 @@ Read through the sections of the [Redux Docs Introduction](http://redux.js.org/d
 
 Read [You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367). Be prepared to give an example of:
 
-- An app that doesn't need Redux
-- An app that would benefit from using Redux
+* An app that doesn't need Redux
+* An app that would benefit from using Redux
 
 ---
 
 ## Learning Objectives
 
-- Explain the benefits of using Redux to model state.
-- Identify the different roles of the Redux store, reducers, actions, action-creators, and action-types.
-- Setup a basic project using Redux in raw JavaScript.
-- Explain the results of calling `dispatch(action)` and `getState()`.
+* Explain the benefits of using Redux to model state.
+* Identify the different roles of the Redux store, reducers, actions, action-creators, and action-types.
+* Setup a basic project using Redux in raw JavaScript.
+* Explain the results of calling `dispatch(action)` and `getState()`.
 
 ---
 
 ## Keywords
 
-- [Flux](https://facebook.github.io/flux/docs/in-depth-overview.html#content)
-- [Redux](http://redux.js.org/index.html)
-- [Store](http://redux.js.org/docs/basics/Store.html)
-- [Dispatch](http://redux.js.org/docs/api/Store.html#dispatch)
-- [Reducer](http://redux.js.org/docs/basics/Reducers.html)
-- [Action](http://redux.js.org/docs/basics/Actions.html)
+* [Flux](https://facebook.github.io/flux/docs/in-depth-overview.html#content)
+* [Redux](http://redux.js.org/index.html)
+* [Store](http://redux.js.org/docs/basics/Store.html)
+* [Dispatch](http://redux.js.org/docs/api/Store.html#dispatch)
+* [Reducer](http://redux.js.org/docs/basics/Reducers.html)
+* [Action](http://redux.js.org/docs/basics/Actions.html)
 
 ---
 
@@ -64,7 +64,7 @@ Head over to `index.js` in the root of your app, import the store, import the ac
 store.dispatch(getFruitCount());
 store.dispatch(updateFruitStock(10));
 store.dispatch(explainFruitStock());
-// try console-logging something from the store with store.getState() 
+// try console-logging something from the store with store.getState()
 ```
 
 ---
@@ -93,11 +93,11 @@ After you complete the lab activity, keep working on Boomtown. We'll be adding R
 
 A Redux tutorial its creator, Dan Abramov:
 
-- [Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux)
+* [Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux)
 
 Some helpful resources for learning more about Redux:
 
-- [Scotch.io: Getting Started with Redux](https://scotch.io/bar-talk/getting-started-with-redux-an-intro)
-- [Redux Without Profanity](https://tonyhb.gitbooks.io/redux-without-profanity/content/index.html)
-- [Cartoon Guide to Redux](https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6)
-- [Learn Redux](https://learnredux.com/)
+* [Scotch.io: Getting Started with Redux](https://scotch.io/bar-talk/getting-started-with-redux-an-intro)
+* [Redux Without Profanity](https://tonyhb.gitbooks.io/redux-without-profanity/content/index.html)
+* [Cartoon Guide to Redux](https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6)
+* [Learn Redux](https://learnredux.com/)

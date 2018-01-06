@@ -2,34 +2,34 @@
 layout: lesson
 title: Navigation and Dependencies
 slides: ['_slides/week-08/02-navigation-and-dependencies.md']
-lesson_date: 2017-11-21
+lesson_date:  2018-02-27
 ---
 
 ## Pre-work
 
-*There is no pre-work for this lesson.*
+_There is no pre-work for this lesson._
 
 ---
 
 ## Learning Objectives
 
-- Distinguish how navigation in a mobile application is different from a web application.
-- Explore built-in navigation options options in React Native.
-- Add a the `ex-navigation` module to a React Native app as an all-in-one, cross-platform tab bar, drawer, and navigator solution.
-- Integrate Redux into a React Native app and use it to manage navigation state.
-- Add third-party package to a React Native app, such as `react-native-vector-icons` and `react-native-linear-gradient`.
-- Use `react-native link` to link native dependencies in a application, and manually link native dependencies where `react-native link` cannot be used.
+* Distinguish how navigation in a mobile application is different from a web application.
+* Explore built-in navigation options options in React Native.
+* Add a the `ex-navigation` module to a React Native app as an all-in-one, cross-platform tab bar, drawer, and navigator solution.
+* Integrate Redux into a React Native app and use it to manage navigation state.
+* Add third-party package to a React Native app, such as `react-native-vector-icons` and `react-native-linear-gradient`.
+* Use `react-native link` to link native dependencies in a application, and manually link native dependencies where `react-native link` cannot be used.
 
 ---
 
 ## Keywords
 
-- Navigation stack
-- Push
-- Pop
-- Navigator
-- Tab bar
-- Sliding drawer
+* Navigation stack
+* Push
+* Pop
+* Navigator
+* Tab bar
+* Sliding drawer
 
 ---
 
@@ -54,7 +54,6 @@ Be sure to import `combineReducers` into this file, as well as the named `Naviga
 Next, provide the `NavigationContext`, directly to the `NavigationProvider` component in your app's main `index.js` file. You'll also need to wrap everything in the `Provider` component from `react-redux`, just like usual.
 
 Please refer to the **[ExNavigation docs](https://github.com/expo/ex-navigation#integrate-with-your-existing-redux-store)** for assistance completing this exercise.
-
 
 ---
 
@@ -102,13 +101,13 @@ Move your project's fonts into the above directory and run `react-native link` a
 
 We've come a long way building out the navigation scheme for our iOS app, but we still haven't added the ability to push scenes onto or pop scenes off of our nested stacks inside of the tab bar.
 
-During today's lab, **focus on fully building out the Schedule scene**, as well as the related Session and Speaker scenes (in that order). 
+During today's lab, **focus on fully building out the Schedule scene**, as well as the related Session and Speaker scenes (in that order).
 
 And don't forget to **use Redux** to manage all state-related concerns when fetching data from the Firebase endpoints!
 
 ### Task 1:
 
-Before you jump into building out the Schedule, Session, and Speaker scenes, **refactor your About scene to use Redux** to manage the state of the Code of Conduct points fetched from Firebase. 
+Before you jump into building out the Schedule, Session, and Speaker scenes, **refactor your About scene to use Redux** to manage the state of the Code of Conduct points fetched from Firebase.
 
 Define your Code of Conduct actions and action creators, and add its reducer to your `reducer.js` file.
 
@@ -133,16 +132,18 @@ You will need to write **[corresponding functions for pushing and popping routes
 As an example, your helper for pushing a Session scene on top of your Schedule's stack might look like this:
 
 ```js
-import { NavigationActions } from '@expo/ex-navigation';
-import Store from '../redux/store';
-import Router from '../navigation/router';
+import { NavigationActions } from "@expo/ex-navigation";
+import Store from "../redux/store";
+import Router from "../navigation/router";
 
 export const goToSession = (currentNavigatorUID, sessionData) => {
-  Store.dispatch(NavigationActions.push(
-    currentNavigatorUID, 
-    Router.getRoute('session', { sessionData })
-  ));
-}
+  Store.dispatch(
+    NavigationActions.push(
+      currentNavigatorUID,
+      Router.getRoute("session", { sessionData })
+    )
+  );
+};
 ```
 
 Consider creating a `navigationHelpers.js` file in your project, so that your pushing and popping methods can be imported and reused throughout your app.
@@ -160,12 +161,11 @@ To work around this, we will need to **push the Speaker onto the top-level stack
 To push the Speaker on to the top-level stack, you will need to implement something that looks like this in your `navigationHelpers.js` file:
 
 ```js
-export const goToSpeaker = (speakerData) => {
-  Store.dispatch(NavigationActions.push(
-    'root', 
-    Router.getRoute('speaker', { speakerData })
-  ));
-}
+export const goToSpeaker = speakerData => {
+  Store.dispatch(
+    NavigationActions.push("root", Router.getRoute("speaker", { speakerData }))
+  );
+};
 ```
 
 It's up to you to figure out how to write a function to pop it off the stack when the "X" is tapped in the Speaker scene...
@@ -176,14 +176,14 @@ It's up to you to figure out how to write a function to pop it off the stack whe
 
 React Native docs on navigation:
 
-- [Navigation](https://facebook.github.io/react-native/docs/navigation.html)
+* [Navigation](https://facebook.github.io/react-native/docs/navigation.html)
 
 More on using the built-in navigation components in RN:
 
-- [Navigator Comparison](https://github.com/ericvicenti/navigation-rfc/blob/master/Docs/NavigationOverview.md)
-- [Routing and Navigation in React Native](http://blog.paracode.com/2016/01/05/routing-and-navigation-in-react-native/)
+* [Navigator Comparison](https://github.com/ericvicenti/navigation-rfc/blob/master/Docs/NavigationOverview.md)
+* [Routing and Navigation in React Native](http://blog.paracode.com/2016/01/05/routing-and-navigation-in-react-native/)
 
 Best practices for mobile nav on iOS or Android:
 
-- [iOS Human Interface Guidelines - Navigation](https://developer.apple.com/ios/human-interface-guidelines/interaction/navigation/)
-- [Material Design - Navigation](https://material.google.com/patterns/navigation.html)
+* [iOS Human Interface Guidelines - Navigation](https://developer.apple.com/ios/human-interface-guidelines/interaction/navigation/)
+* [Material Design - Navigation](https://material.google.com/patterns/navigation.html)
