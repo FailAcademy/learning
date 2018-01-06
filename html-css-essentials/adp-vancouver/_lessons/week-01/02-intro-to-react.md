@@ -2,39 +2,39 @@
 layout: lesson
 title: Introducing React
 slides: ['_slides/week-01/02-intro-to-react.md']
-lesson_date: 2017-10-03
+lesson_date: 2018-01-09
 ---
 
 ## Pre-work
 
-*There is no pre-work for this lesson.*
+_There is no pre-work for this lesson._
 
 ---
 
 ## Learning Objectives
 
-- Identify how a UI/IA can be broken down into a component hierarchy.
-- Define what the Virtual DOM is and explain how it helps increase browser performance.
-- Build components by extending the React.Component class.
-- Use the `ReactDOM.render()` method to render components in a web application.
-- Use JSX (JavaScriptXML) to write mark-up for React components.
-- Use ES2015 features such as class syntax, imports and exports, and arrow functions in relation to React components and project organization.
-- Describe the role of the props object in React, and pass arguments into React components using props like HTML attributes.
-- Dynamically create an array of components and their props using data stored in an array of objects along with the `.map()`, `.sort()`, and `.filter()` functions.
-- Explain why it is essential to supply a unique "key" for each item in an array containing dynamic child components.
-- Write `Proptype` declarations to catch invalid props.
+* Identify how a UI/IA can be broken down into a component hierarchy.
+* Define what the Virtual DOM is and explain how it helps increase browser performance.
+* Build components by extending the React.Component class.
+* Use the `ReactDOM.render()` method to render components in a web application.
+* Use JSX (JavaScriptXML) to write mark-up for React components.
+* Use ES2015 features such as class syntax, imports and exports, and arrow functions in relation to React components and project organization.
+* Describe the role of the props object in React, and pass arguments into React components using props like HTML attributes.
+* Dynamically create an array of components and their props using data stored in an array of objects along with the `.map()`, `.sort()`, and `.filter()` functions.
+* Explain why it is essential to supply a unique "key" for each item in an array containing dynamic child components.
+* Write `Proptype` declarations to catch invalid props.
 
 ---
 
 ## Keywords
 
-- Component
-- React node
-- Virtual DOM
-- JavaScriptXML (JSX)
-- Babel
-- Props
-- Proptype
+* Component
+* React node
+* Virtual DOM
+* JavaScriptXML (JSX)
+* Babel
+* Props
+* Proptype
 
 ---
 
@@ -154,7 +154,7 @@ Take a look at what's inside the Boomtown Starter as it's a bit more complex tha
 
 We will primarily use **[Material UI](http://www.material-ui.com/#/)** to style our Boomtown app. Spend some time reviewing the Material UI docs site and jot down some notes about what components you think you'll need to use from this library in the Boomtown app.
 
-Material UI has already been added as project dependency in the RED React Seed, but you should also take some time to review **[its GitHub repo README](https://github.com/callemall/material-ui)**  too.
+Material UI has already been added as project dependency in the RED React Seed, but you should also take some time to review **[its GitHub repo README](https://github.com/callemall/material-ui)** too.
 
 ### Code
 
@@ -184,30 +184,30 @@ Knowing this, rough-out the directory/component structure for all of the require
 
 From Facebook's official React docs:
 
-- [Official React Docs](https://facebook.github.io/react/docs/getting-started.html)
-- [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html)
+* [Official React Docs](https://facebook.github.io/react/docs/getting-started.html)
+* [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html)
 
 Patterns used in React development:
 
-- [React Patterns](http://reactpatterns.com/)
-- [React.js in patterns](http://krasimirtsonev.com/blog/article/react-js-in-design-patterns)
+* [React Patterns](http://reactpatterns.com/)
+* [React.js in patterns](http://krasimirtsonev.com/blog/article/react-js-in-design-patterns)
 
 Some other helpful React tutorials and ebooks:
 
-- [Plotly Academy](http://academy.plot.ly/)
-- [React Enlightenment](http://www.reactenlightenment.com/)
-- [Simple React Development in 2017](https://hackernoon.com/simple-react-development-in-2017-113bd563691f)
-- [30 Days of React](https://www.fullstackreact.com/30-days-of-react/)
+* [Plotly Academy](http://academy.plot.ly/)
+* [React Enlightenment](http://www.reactenlightenment.com/)
+* [Simple React Development in 2017](https://hackernoon.com/simple-react-development-in-2017-113bd563691f)
+* [30 Days of React](https://www.fullstackreact.com/30-days-of-react/)
 
 Recorded talks from React Conf:
 
-- [React Conf 2016](https://www.youtube.com/playlist?list=PLb0IAmt7-GS0M8Q95RIc2lOM6nc77q1IY)
-- [React Conf 2017](https://www.youtube.com/playlist?list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0)
+* [React Conf 2016](https://www.youtube.com/playlist?list=PLb0IAmt7-GS0M8Q95RIc2lOM6nc77q1IY)
+* [React Conf 2017](https://www.youtube.com/playlist?list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0)
 
 More about CSS Modules:
 
-- [CSS Modules: Welcome to the Future](https://glenmaddern.com/articles/css-modules)
+* [CSS Modules: Welcome to the Future](https://glenmaddern.com/articles/css-modules)
 
 Helpful resource for understanding the difference between `.map()`, `.filter()`, and `.reduce()`:
 
-- [Array Map, Filter and Reduce in JS](http://atendesigngroup.com/blog/array-map-filter-and-reduce-js)
+* [Array Map, Filter and Reduce in JS](http://atendesigngroup.com/blog/array-map-filter-and-reduce-js)

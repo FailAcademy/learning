@@ -2,37 +2,37 @@
 layout: lesson
 title: Realm Databases
 slides: ['_slides/week-08/03-realm.md']
-lesson_date: 2017-11-22
+lesson_date:  2018-02-28
 ---
 
 ## Pre-work
 
 For a heads up on what we'll be diving into with Realm, watch this video:
 
-- [Introducing Realm: A Modern, Local Database Framework for Apps (/dev/world/2015)](https://www.youtube.com/watch?v=doCOxzl8CFM)
+* [Introducing Realm: A Modern, Local Database Framework for Apps (/dev/world/2015)](https://www.youtube.com/watch?v=doCOxzl8CFM)
 
 And if you're interested in taking a deeper dive into what's going on under the hood, watch this video:
 
-- [A Look Into Realm's Core DB Engine](https://realm.io/news/jp-simard-realm-core-database-engine/)
+* [A Look Into Realm's Core DB Engine](https://realm.io/news/jp-simard-realm-core-database-engine/)
 
 ---
 
 ## Learning Objectives
 
-- Define what a mobile database is, and why one may be needed in a native mobile application.
-- Explain how Realm is different from other mobile database options.
-- Integrate a Realm database into a React Native application.
-- Define schema within a React Native application.
-- Leverage React Component Lifecycle methods to perform CRUD operations on the database base in relation user interactions.
-- Populate a `<SectionList>` component with data fetched a Realm database.
-- Sync application UI state as data is added and removed from a Realm database.
+* Define what a mobile database is, and why one may be needed in a native mobile application.
+* Explain how Realm is different from other mobile database options.
+* Integrate a Realm database into a React Native application.
+* Define schema within a React Native application.
+* Leverage React Component Lifecycle methods to perform CRUD operations on the database base in relation user interactions.
+* Populate a `<SectionList>` component with data fetched a Realm database.
+* Sync application UI state as data is added and removed from a Realm database.
 
 ---
 
 ## Keywords
 
-- Embedded database
-- [`AsyncStorage`](https://facebook.github.io/react-native/docs/asyncstorage.html)
+* Embedded database
+* [`AsyncStorage`](https://facebook.github.io/react-native/docs/asyncstorage.html)
 
 ---
 
@@ -40,7 +40,7 @@ And if you're interested in taking a deeper dive into what's going on under the 
 
 If you haven't already, create a `config/model.js` file in your project.
 
-In this file, define the model for a `Fave` object. Our `Fave` objects should have an `id` string property and a `faved_on` data property. 
+In this file, define the model for a `Fave` object. Our `Fave` objects should have an `id` string property and a `faved_on` data property.
 
 Set the `id` as the `primaryKey` for your model.
 
@@ -56,7 +56,7 @@ Inside your `config/models.js` file, write three functions (which you will expor
 2. A function that **removes a Fave object** from the database
 3. A function that **queries** the database for **all Fave objects**
 
-*Where (and how) will you use these functions?*
+_Where (and how) will you use these functions?_
 
 ---
 
@@ -80,9 +80,9 @@ To do this, we'll need to research how **[change events](https://realm.io/docs/j
 
 Latest Realm docs for React Native and related tutorials:
 
-- [Realm Mobile Database - React Native](https://realm.io/docs/react-native/latest/)
-- [Realm Academy](https://academy.realm.io/)
+* [Realm Mobile Database - React Native](https://realm.io/docs/react-native/latest/)
+* [Realm Academy](https://academy.realm.io/)
 
 A GUI app for working with your Realm databases:
 
-- [Realm Studio](https://realm.io/products/realm-studio/)
+* [Realm Studio](https://realm.io/products/realm-studio/)
