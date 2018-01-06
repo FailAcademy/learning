@@ -2,7 +2,7 @@
 layout: lesson
 title: Introducing Meteor (with React)
 slides: ['_slides/week-05/01-intro-to-meteor.md']
-lesson_date: 2017-10-30
+lesson_date: 2018-02-05
 ---
 
 ## Pre-work
@@ -13,29 +13,29 @@ Before we begin working with Meteor this week, please read over the [Meteor Guid
 
 ## Learning Objectives
 
-- Survey the history and origins of the Meteor project and the MDG.
-- Explain why a developer would want to use Meteor to build an application, and what problems it solves for developers.
-- Describe Meteor's shared client-server architecture.
-- Uncover the component parts of Meteor.
-- Install the Meteor Dev Tools Chrome Extension.
-- Use AtmosphereJS, Meteor's package system.
-- Describe some potential drawbacks of using Meteor.
-- Deploy a Meteor App using `meteor-now`.
-- Refactor our React To-Do app into a Meteor app.
+* Survey the history and origins of the Meteor project and the MDG.
+* Explain why a developer would want to use Meteor to build an application, and what problems it solves for developers.
+* Describe Meteor's shared client-server architecture.
+* Uncover the component parts of Meteor.
+* Install the Meteor Dev Tools Chrome Extension.
+* Use AtmosphereJS, Meteor's package system.
+* Describe some potential drawbacks of using Meteor.
+* Deploy a Meteor App using `meteor-now`.
+* Refactor our React To-Do app into a Meteor app.
 
 ---
 
 ## Keywords
 
-- Application platform
-- Developer experience
-- Universal JavaScript
-- Reactivity / Reactive programming
-- Fibers and the Event Loop
-- Optimistic UI
-- MDG
-- Atmosphere
-- Galaxy
+* Application platform
+* Developer experience
+* Universal JavaScript
+* Reactivity / Reactive programming
+* Fibers and the Event Loop
+* Optimistic UI
+* MDG
+* Atmosphere
+* Galaxy
 
 ---
 
@@ -43,8 +43,7 @@ Before we begin working with Meteor this week, please read over the [Meteor Guid
 
 **Design an application platform:**
 
-
-Split into two groups. Imagine you're planning an application platform for *other developers* to use. Your platform should be geared towards developers who want to create Web Apps and should include all the necessary components. Feel free to **invent or imagine technology or solutions that don't currently exist**
+Split into two groups. Imagine you're planning an application platform for _other developers_ to use. Your platform should be geared towards developers who want to create Web Apps and should include all the necessary components. Feel free to **invent or imagine technology or solutions that don't currently exist**
 
 When you've come up with a platform design, then come up with a marketing plan for your platform. When you have a marketing plan, you'll present it to the class. Your plan should highlight all of the reasons developers should choose your platform, over their own custom solution.
 
@@ -56,9 +55,9 @@ Install Meteor and run `meteor create`.
 
 See if you can add the following features to the example project that is generated:
 
-- A button that decrements the counter
-- A text input and button combination. When the user clicks the button, whatever text
-is in the input appears on screen.
+* A button that decrements the counter
+* A text input and button combination. When the user clicks the button, whatever text
+  is in the input appears on screen.
 
 Install the Meteor Dev Tools Chrome extension, and observe Meteor's DDP websocket
 transport protocol in action! Open the mongoDB shell using the `meteor mongo` command
@@ -70,8 +69,8 @@ and take a peek at your new mongoDB database.
 
 Now that we know a little bit about What Meteor does, watch the following short Video on Fibers & Futures in Node, for some insight on how it does it:
 
-- [Evented Mind, Introducing Fibers in Node](https://www.eventedmind.com/items/nodejs-introducing-fibers).
-- [Evented Mind, Using Futures](https://www.eventedmind.com/items/nodejs-using-futures).
+* [Evented Mind, Introducing Fibers in Node](https://www.eventedmind.com/items/nodejs-introducing-fibers).
+* [Evented Mind, Using Futures](https://www.eventedmind.com/items/nodejs-using-futures).
 
 ---
 
@@ -102,7 +101,7 @@ In today's lab, we'll start refactoring our React To-Do app from the the first w
 
 Now would be a good time to consider refactoring some of the 'presentational' components out of the container `App` component...
 
-1. Move your `ToDoCount`, `ToDoInput`, `ClearButton`, and `ToDoItem` components into `imports/ui/components/<COMPONENT_NAME>` directories. 
+1. Move your `ToDoCount`, `ToDoInput`, `ClearButton`, and `ToDoItem` components into `imports/ui/components/<COMPONENT_NAME>` directories.
 2. Now import these components into your main `App` component file instead.
 
 ---
@@ -111,24 +110,24 @@ Now would be a good time to consider refactoring some of the 'presentational' co
 
 From the official Meteor docs:
 
-- [Application Structure](https://guide.meteor.com/structure.html)
+* [Application Structure](https://guide.meteor.com/structure.html)
 
 A Google Chrome extension with some Meteor dev tools:
 
-- [Meteor DevTools](https://chrome.google.com/webstore/detail/meteor-devtools/ippapidnnboiophakmmhkdlchoccbgje)
+* [Meteor DevTools](https://chrome.google.com/webstore/detail/meteor-devtools/ippapidnnboiophakmmhkdlchoccbgje)
 
 The best user guide for Meteor, and one of the best Documentations projects for any software platform:
 
-- [Discover Meteor](https://www.discovermeteor.com/)
+* [Discover Meteor](https://www.discovermeteor.com/)
 
 Meteor ecosystem's own package manager. It is functionally similar to NPM:
 
-- [AtmosphereJS](https://atmospherejs.com/)
+* [AtmosphereJS](https://atmospherejs.com/)
 
 A fantastic resource for JavaScript news, with a focus on whats new with Meteor:
 
-- [Crater.io](https://crater.io/)
+* [Crater.io](https://crater.io/)
 
 Meteor's Paid Hosting Solution:
 
-- [Meteor Galaxy](https://www.meteor.com/hosting/)
+* [Meteor Galaxy](https://www.meteor.com/hosting/)
