@@ -2,7 +2,7 @@
 layout: lesson
 title: Developing with ES.next & Webpack
 slides: ['_slides/week-05/03-esnext-with-webpack.md']
-lesson_date: 2017-11-01
+lesson_date: 2018-02-07
 ---
 
 ## Pre-Work

@@ -2,7 +2,7 @@
 layout: lesson
 title: Fonts on the Web
 slides: ['_slides/week-01/02a-web-fonts.md']
-lesson_date: 2017-10-04
+lesson_date: 2018-01-10
 ---
 
 ## Pre-Work
