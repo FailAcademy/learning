@@ -2,57 +2,57 @@
  * Buttons and Forms
  */
 
- label {
-    color: $dark-grey;
-    display: block;
-    font-size: 90%;
-    font-weight: 700;
-    margin-bottom: .5em;
- }
+label {
+  color: $dark-grey;
+  display: block;
+  font-size: 90%;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
 
- button,
- input[type="button"],
- input[type="reset"],
- input[type="submit"] {
-   background: $brand-red;
-   border: $dark-red-border;
-   border-radius: 0;
-   color: white;
-   display: block;
-   @include font-size(.8);
-   line-height: 1;
-   margin-bottom: 1em;
-   padding: .5em 1em;
-   text-transform: uppercase;
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background: $brand-red;
+  border: $dark-red-border;
+  border-radius: 0;
+  color: white;
+  display: block;
+  @include font-size(0.8);
+  line-height: 1;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
 
-   &:hover {
-      background-color: lighten( $brand-red, 5% );
-      border-color: lighten( $dark-red, 5% );
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 7px;
-      cursor: pointer;
-   }
+  &:hover {
+    background-color: lighten($brand-red, 5%);
+    border-color: lighten($dark-red, 5%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 7px;
+    cursor: pointer;
+  }
 
-   &:active,
-   &:focus {
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 7px;
-   }
+  &:active,
+  &:focus {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 7px;
+  }
 }
 
 input[type="text"],
-input[type="email"],
+input[type="remail"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-   border: $med-grey-border;
-   display: block;
-   @include font-size(.8);
-   margin-bottom: 1em;
-   padding: .25em .5em;
+  border: $med-grey-border;
+  display: block;
+  @include font-size(0.8);
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.5rem;
 
-   &:focus {
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 7px;
-   }
+  &:focus {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 7px;
+  }
 }
 
 input[type="text"],
@@ -60,11 +60,115 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-   width: 50%;
+  width: 50%;
 }
 
 textarea {
-   overflow: auto; // Removes default vertical scrollbar in IE6/7/8/9
-   vertical-align: top; // Improves readability and alignment in all browsers
-   width: 98%;
+  overflow: auto; // Removes default vertical scrollbar in IE6/7/8/9
+  vertical-align: top; // Improves readability and alignment in all browsers
+  width: 98%;
+}
+
+// Office hours form
+
+.loading {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.support-request {
+  form {
+    display: none;
+    padding: 1rem 0;
+
+    & > div {
+      margin-bottom: 2rem;
+    }
+
+    label {
+      font-size: 1rem;
+    }
+
+    button {
+      border: 0;
+      padding: 0.75rem 1.5rem;
+    }
+  }
+
+  .invalid {
+    input[type="text"],
+    select,
+    textarea {
+      border: 1px solid $brand-red;
+    }
+
+    .required {
+      display: block;
+    }
+  }
+
+  .required {
+    color: $brand-red;
+    display: none;
+    font-size: 0.9rem;
+    font-weight: 100;
+    margin: 1rem 0;
+  }
+}
+
+[id="your_name"] {
+  input {
+    display: inline;
+    margin-bottom: 0;
+  }
+}
+
+[id="your_name"],
+[id="request_type"] {
+  span {
+    margin-right: 0.5rem;
+  }
+}
+
+[id="follow-up-questions"] {
+  & > div {
+    display: none;
+  }
+
+  label {
+    span {
+      font-weight: normal;
+    }
+  }
+}
+
+[id="time_slot"] {
+  .instructions {
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  .day {
+    color: $dark-grey;
+    font-weight: normal;
+    margin-top: 2rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  label {
+    font-weight: 100;
+
+    span {
+      margin-left: 0.5rem;
+    }
+  }
 }
