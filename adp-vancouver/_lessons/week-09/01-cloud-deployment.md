@@ -1,37 +1,37 @@
 ---
 layout: lesson
 title: Cloud Deployment
-lesson_date: 2017-12-01
+lesson_date: 2018-03-08
 ---
 
 ## Pre-work
 
 Web developers have a lot of convenient tools for deploying their projects. Take a look at the ones listed here. You might find something you can use.
 
-- [https://deploystack.io/](https://deploystack.io/)
+* [https://deploystack.io/](https://deploystack.io/)
 
 ---
 
 ## Learning Objectives
 
-- Define Cloud Hosting vs. Cloud Computing.
-- Provide a general description of how to host a website in the Cloud (Cloud Hosting).
-- Distinguish the differences between popular Cloud Hosting providers.
-- Understand the basic operation of a public website before the general availability of Cloud Hosting.
-- Define the term "Environment" in the context of Web Applications.
-- Take steps to prepare a NodeJS / Postgres / MongoDB for deployment to a Cloud Hosting provider.
-- Deploy your first project to [Heroku](https://www.heroku.com/)!
+* Define Cloud Hosting vs. Cloud Computing.
+* Provide a general description of how to host a website in the Cloud (Cloud Hosting).
+* Distinguish the differences between popular Cloud Hosting providers.
+* Understand the basic operation of a public website before the general availability of Cloud Hosting.
+* Define the term "Environment" in the context of Web Applications.
+* Take steps to prepare a NodeJS / Postgres / MongoDB for deployment to a Cloud Hosting provider.
+* Deploy your first project to [Heroku](https://www.heroku.com/)!
 
 ---
 
 ## Keywords
 
-- Cloud ☁
-- Virtual Machine
-- Static site
-- Production vs. Development
-- Build task
-- ENV
+* Cloud ☁
+* Virtual Machine
+* Static site
+* Production vs. Development
+* Build task
+* ENV
 
 ---
 
@@ -39,8 +39,8 @@ Web developers have a lot of convenient tools for deploying their projects. Take
 
 To complete todays exercises we'll need to create accounts on the Cloud Hosting providers.
 
-- [Heroku](https://signup.heroku.com/?c=70130000001x9jFAAQ)
-- [Meteor Developer account](https://www.meteor.com/sign-up)
+* [Heroku](https://signup.heroku.com/?c=70130000001x9jFAAQ)
+* [Meteor Developer account](https://www.meteor.com/sign-up)
 
 ---
 
@@ -51,7 +51,7 @@ To complete todays exercises we'll need to create accounts on the Cloud Hosting 
 When deploying, we'll need to make sure we've provided the correct configuration and overrides so our
 application will run in it's new environment.
 
-- Prepare your first project for deployment by setting all of the necessary production environment variables.
+* Prepare your first project for deployment by setting all of the necessary production environment variables.
 
 ---
 
@@ -71,12 +71,12 @@ Deploy your new production build to [Heroku](https://www.heroku.com/)!
 
 What you'll need to do:
 
-- Sign-up with Heroku
-- Create a new project using the Heroku web interface
-- Add the Postgres Heroku add-on
-- Set the correct environment variables in the Heroku Dashboard 
-- Create a copy of your local Postgres database and upload it to Heroku
-- Configure git push deploys from your production build directory
+* Sign-up with Heroku
+* Create a new project using the Heroku web interface
+* Add the Postgres Heroku add-on
+* Set the correct environment variables in the Heroku Dashboard
+* Create a copy of your local Postgres database and upload it to Heroku
+* Configure git push deploys from your production build directory
 
 ---
 
@@ -84,10 +84,10 @@ What you'll need to do:
 
 If you deployed your Node/Postgres application, see if you can use Heroku to deploy your Meteor application!
 
-**Hints:** 
+**Hints:**
 
-- You'll need to use the MLab Heroku add-on, it costs 5$
-- You'll also need to configure [this Heroku Buildpack](https://github.com/AdmitHub/meteor-buildpack-horse)
+* You'll need to use the MLab Heroku add-on, it costs 5$
+* You'll also need to configure [this Heroku Buildpack](https://github.com/AdmitHub/meteor-buildpack-horse)
 
 ---
 
@@ -95,19 +95,18 @@ If you deployed your Node/Postgres application, see if you can use Heroku to dep
 
 Heroku:
 
-- [Getting started with Heroku](https://devcenter.heroku.com/start)
+* [Getting started with Heroku](https://devcenter.heroku.com/start)
 
 Digital Ocean has a number of excellent resources:
 
-- [Intro to Digital Ocean](https://www.digitalocean.com/products/)
-- [Digital Ocean Community](https://www.digitalocean.com/community/)
- -[Digital Ocean Tutorials](https://www.digitalocean.com/community/tutorials)
+* [Intro to Digital Ocean](https://www.digitalocean.com/products/)
+* [Digital Ocean Community](https://www.digitalocean.com/community/) -[Digital Ocean Tutorials](https://www.digitalocean.com/community/tutorials)
 
 Amazon Web Services (AWS):
 
-- [AWS Homepage](https://aws.amazon.com/)
-- [Serverless framework for Node](https://serverless.com/)
+* [AWS Homepage](https://aws.amazon.com/)
+* [Serverless framework for Node](https://serverless.com/)
 
 Apps for Cloud deployment Automation:
 
-- [HashiCorp](https://www.hashicorp.com/)
+* [HashiCorp](https://www.hashicorp.com/)

@@ -1,7 +1,6 @@
 ---
 layout: slidedeck
 title: Intro to Databases with PostgreSQL Slides
-
 ---
 
 {% highlight html %}
@@ -10,33 +9,34 @@ layout: true
 class: center, middle, inverse
 
 ---
+
 # Intro to Databases with PostgreSQL
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
 
 1. Determine what a database is
 2. Introduce the various types of databases available
-3. Introduce Codd's Rules (RDBMS)
-4. Install and set up PostgreSQL
-5. Demonstrate the SQL language
-6. Setup a Postgres user and database for use in our project application
+3. Install and set up PostgreSQL
+4. Demonstrate the SQL language
+5. Setup a Postgres user and database for use in our project application
 
 ---
 
 #What is a Database?
 
-A database is an organized collection of data. The data is typically organized to model relevant aspects of reality. The process of describing the organization of data in your database is called *modelling*.
+A database is an organized collection of data. The data is typically organized to model relevant aspects of reality. The process of describing the organization of data in your database is called _modelling_.
 
 ---
 
 #Why we use Databases?
 
-Think of how we get the information about the weather from the newspaper. Information can be printed but it cannot be continuously updated without printing a new paper. We call this **static** data. 
+Think of how we get the information about the weather from the newspaper. Information can be printed but it cannot be continuously updated without printing a new paper. We call this **static** data.
 
 We've used static data in the form of a JSON file, in our project already. Today we're going to replace static data with a database, which will allow us to update the data in our application **dynamically**, whilst persisting that data.
 
@@ -61,11 +61,11 @@ eg. psql prompt
 
 # Relational Database
 
-A Relational Database is made up of several components, of which the **table** is most significant.  The table is where all the data in a database is stored, and without tables, there would not be much use for relational databases.
+A Relational Database is made up of several components, of which the **table** is most significant. The table is where all the data in a database is stored, and without tables, there would not be much use for relational databases.
 
 ![Table](/public/img/slide-assets/sql-table.png)
 
-*What do Codd's rules say about tables in an RDBMS?*
+_What do Codd's rules say about tables in an RDBMS?_
 
 ???
 Be sure to provide some clarity about "tables". Comparing tables in a relational database to those in common spreadsheet applications like excel is usually sufficient.
@@ -78,7 +78,7 @@ Google for a diagram of a large relational system. Find one and show the student
 
 "PostgreSQL is a general purpose and object-relational database management system, the most advanced open source database system. PostgreSQL was developed based on POSTGRES 4.2 at Berkeley Computer Science department, University of California."
 
-*It's Open Source!*
+_It's Open Source!_
 
 ???
 Take the opportunity to contrast Open Source technology vs proprietary tech, ie Microsoft's MySQL.
@@ -92,6 +92,7 @@ Once you've installed the Postgress.app, use the following command to log into t
 ```
 psql
 ```
+
 You should see a prompt with your OS username: <br/>
 ('RED' is the name of the user)
 
@@ -111,15 +112,18 @@ To learn more, type the following command into the shell:
 ```
 \?
 ```
+
 **How do you quit the shell?** (Use `\?` to find th command)
 
 ```
 \h
 ```
+
 This command will list all of the SQL commands you can use to interact with your Relational Databases!<br/>
-*To return to the shell type ctrl+c*
+_To return to the shell type ctrl+c_
 
 ---
+
 # SQL
 
 The output of the `\h` command lists all of the **SQL** commands we can use to interact with our (yet to be created)
@@ -133,17 +137,17 @@ How is SQL defined in Codd's rules?
 **How is SQL defined in Codd's rules?**<br/>
 
 Rule 5: <br/>
-*Comprehensive Data Sub-Language Rule* <br/>
+_Comprehensive Data Sub-Language Rule_ <br/>
 A database can only be accessed using a language having linear syntax that supports data definition, data manipulation, and transaction management operations. This language can be used directly or by means of some application. If the database allows access to data without any help of this language, then it is considered as a violation.
 
 ---
 
 # Exercise 1
 
-- Create 2 Postgres databases
-We'll use one of these databases to try out new things. The other one we'll use as the official database in our project.
+* Create 2 Postgres databases
+  We'll use one of these databases to try out new things. The other one we'll use as the official database in our project.
 
-- Use the `CREATE USER <name> WITH PASSWORD <pw>` command to create a new user and configure a password for each database.
+* Use the `CREATE USER <name> WITH PASSWORD <pw>` command to create a new user and configure a password for each database.
 
 This setup is meant to mock a real world database setup, and to give us the opportunity to become familiar with
 creating and authorizing a new Database on your local machine. In a real production setting, our setup would be more complicated.
@@ -152,12 +156,14 @@ creating and authorizing a new Database on your local machine. In a real product
 
 Encourage the students to use the Postgres Docs as well as the help commands to determine how to complete the exercise.
 
-Commands: 
+Commands:
 
 Start Postgres Shell
+
 ```
 psql
 ```
+
 Inside the Shell
 
 ```sql
@@ -171,19 +177,22 @@ GRANT ALL PRIVILEGES ON DATABASE <db-name> TO <db-user>;
 # More `psql` commands
 
 To list the databases we've created in the previous exercise use the following command from the psql shell:
+
 ```
 \l
 ```
+
 To list the new Postgres users we created use the following command from the psql shell:
+
 ```
 \du
 ```
 
 ---
+
 template: inverse
 
 #Adding Data to Postgres
-
 
 ---
 
@@ -199,6 +208,7 @@ template: inverse
 # Normalization
 
 ---
+
 class: center, middle
 
 #What is Normalization?
@@ -208,6 +218,7 @@ class: center, middle
 [source](https://www.quora.com/What-is-database-normalization-in-simple-terms-with-examples)
 
 ---
+
 ### Codd on Normalization
 
 1. To free the collection of relations from undesirable insertion, update and deletion dependencies.
@@ -222,14 +233,17 @@ class: center, middle
 # A Table for Items
 
 First, log into psql using a specific user & database with the following command:
+
 ```
 psql -U <db-user> -d <db-name>
 ```
+
 Run the following **SQL** command to create your first table!
 
 ```sql
 CREATE TABLE IF NOT EXISTS items();
 ```
+
 ---
 
 # Adding Columns
@@ -246,6 +260,7 @@ ALTER TABLE items ADD COLUMN borrowerid text;
 Copying and pasting each line into the psql shell allows us to modify the table we created, adding columns with their appropriate data types.
 
 ---
+
 # All At Once
 
 ```sql
@@ -258,7 +273,9 @@ CREATE TABLE "public"."items" (
   "borrowerid" text DEFAULT null
 );
 ```
+
 ### Q & A
+
 What is the function of a Primary Key? <br/>
 What does the `serial` datatype do? <br/>
 What does the DEFAULT attribute mean? <br/>
@@ -267,10 +284,10 @@ What does the DEFAULT attribute mean? <br/>
 
 Be sure to stop to talk about the following details:
 
-- serial data type
-- PRIMARY KEY
-- NOT NULL
-- DEFAULT
+* serial data type
+* PRIMARY KEY
+* NOT NULL
+* DEFAULT
 
 ---
 
@@ -286,14 +303,14 @@ DROP TABLE "public"."items";
 
 # Exercise 2
 
-Populating your Relational Database. 
+Populating your Relational Database.
 Use what you know to create the **Tags** table!
 
-*Hint: use the `\du` command to check if the table was successfully created.*
+_Hint: use the `\du` command to check if the table was successfully created._
 
 ???
 
-Solution: 
+Solution:
 
 ```sql
 CREATE TABLE "public"."tags" (
@@ -303,19 +320,22 @@ CREATE TABLE "public"."tags" (
 ```
 
 ---
+
 template: inverse
+
 # Relationships Matter
 
 ---
+
 # Relational Relationships
 
-We've created 2 tables in our database. Each table will hold information about a specific *thing* in our application.
+We've created 2 tables in our database. Each table will hold information about a specific _thing_ in our application.
 
-Now, it's time to use our Relational Database to create relationships between them! But first it's helpful to know what kind of relationships we can define. Here are the most common: 
+Now, it's time to use our Relational Database to create relationships between them! But first it's helpful to know what kind of relationships we can define. Here are the most common:
 
-- 1 to 1 (1:1)
-- 1 to many (1:n)
-- Many to many (n:n)
+* 1 to 1 (1:1)
+* 1 to many (1:n)
+* Many to many (n:n)
 
 ???
 
@@ -353,19 +373,21 @@ CREATE TABLE "public"."items" (
   "description" text not null,
   "ownerid" text unique not null,
   "borrowerid" text unique not null,
-  CHECK (borrowerid != ownerid) 
+  CHECK (borrowerid != ownerid)
 );
 ```
 
 In what other table will we find the itemid?
 
 ---
+
 # Primary Key Constraint
 
 ```sql
 "ownerid" REFERENCES users (userid),
 "borrowerid" REFERENCES users (userid)
 ```
+
 These lines are telling Postgres that the values stored in these columns will be references to values stored in the `users` table, namely the userid of actual users.
 
 This is called a **Primary Key constraint**, because no other value can be stored in this column, and it's a common way of defining relationships between tables in a relational database.
@@ -396,16 +418,18 @@ CREATE TABLE "public"."itemtags" (
   unique (itemid, tagid)
 )
 ```
+
 ---
+
 # What We've Learned
 
-- What is an RDBMS
-- How to set up and configure Postgres
-- How to use the `psql` shell
-- How to create Postgres users & databases
-- How to alter existing tables using `psql`
-- How to define column data-types for our database tables
-- How to create relationships between database tables using primary keys
+* What is an RDBMS
+* How to set up and configure Postgres
+* How to use the `psql` shell
+* How to create Postgres users & databases
+* How to alter existing tables using `psql`
+* How to define column data-types for our database tables
+* How to create relationships between database tables using primary keys
 
 ---
 
@@ -415,8 +439,8 @@ Now that we've created our schema (table) for our project application, use the `
 
 Add the following mock data to your database:
 
-- At least 4 Items
-- All of the Tags (Categories)
+* At least 4 Items
+* All of the Tags (Categories)
 
 Ensure that you've set up the appropriate foreign key constraints!
 
@@ -457,6 +481,7 @@ VALUES (
 ```
 
 ---
+
 template: inverse
 
 # Questions?

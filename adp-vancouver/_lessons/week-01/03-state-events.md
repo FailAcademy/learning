@@ -2,34 +2,34 @@
 layout: lesson
 title: React State and Events
 slides: ['_slides/week-01/03-state-events.md']
-lesson_date: 2017-10-04
+lesson_date:  2018-01-10
 ---
 
 ## Pre-work
 
-*There is no pre-work for this lesson.*
+_There is no pre-work for this lesson._
 
 ---
 
 ## Learning Objectives
 
-- Describe the difference between one-way data flow in React versus the two-way data binding approach of frameworks such as AngularJS.
-- Describe what the state object is in React, what role it serves in applications.
-- Describe what "synthetic events" are in React and use them to update a component's state based on user interaction.
-- Use the `ref` attribute to reference DOM elements after a component is rendered.
-- Explain the special role of each "lifecycle method" in a React component.
-- Use an appropriate lifecycle method to dynamically fetch data and update a component's state with that data before re-/rendering it.
+* Describe the difference between one-way data flow in React versus the two-way data binding approach of frameworks such as AngularJS.
+* Describe what the state object is in React, what role it serves in applications.
+* Describe what "synthetic events" are in React and use them to update a component's state based on user interaction.
+* Use the `ref` attribute to reference DOM elements after a component is rendered.
+* Explain the special role of each "lifecycle method" in a React component.
+* Use an appropriate lifecycle method to dynamically fetch data and update a component's state with that data before re-/rendering it.
 
 ---
 
 ## Keywords
 
-- State
-- One-way data flow
-- Two-way data binding
-- Synthetic events
-- Ref
-- Component lifecycle methods
+* State
+* One-way data flow
+* Two-way data binding
+* Synthetic events
+* Ref
+* Component lifecycle methods
 
 ---
 
@@ -73,7 +73,6 @@ To do this, you will need to add a `removeToDo` prop to your `ToDo` component, a
 
 **Hint:** To remove a to-do from the array of to-do objects stored in the state, you will need to call `.filter()` to create a new array of to-dos containing only the items **that are not the current item**, and set that new array to the value of `todos`.
 
-
 ---
 
 ## Exercise 5
@@ -102,8 +101,8 @@ Today's lab will be spent building out your stateful `Items` container component
 
 There are two properties we'll want to keep track of in our app state:
 
-- `isLoading`: whether the app is currently fetching data
-- `itemsData`: the list of items fetched from Firebase (with relevant user data points merged in)
+* `isLoading`: whether the app is currently fetching data
+* `itemsData`: the list of items fetched from Firebase (with relevant user data points merged in)
 
 You'll need to fetch the data from the Firebase endpoints in the `componentDidMount` lifecycle method. Because we will need to simultaneously fetch data from the `items.json` and `users.json` endpoints to populate the item cards with all required data, we'll need to use `Promise.all` for that. **[This post on Stackoverflow](https://stackoverflow.com/questions/31710768/how-can-i-fetch-an-array-of-urls-with-promise-all?answertab=votes#tab-top)** will point you in the right direction.
 
@@ -117,7 +116,7 @@ Be sure to keep you're UI components as modular possible. At a minimum, you'll n
 
 From the React docs:
 
-- [Interactivity and Dynamic UIs](https://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html)
-- [Refs to Components](https://facebook.github.io/react/docs/more-about-refs.html)
-- [Component Specs and Lifecycle](https://facebook.github.io/react/docs/component-specs.html)
-- [A Visual Guide to State in React](https://daveceddia.com/visual-guide-to-state-in-react/)
+* [Interactivity and Dynamic UIs](https://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html)
+* [Refs to Components](https://facebook.github.io/react/docs/more-about-refs.html)
+* [Component Specs and Lifecycle](https://facebook.github.io/react/docs/component-specs.html)
+* [A Visual Guide to State in React](https://daveceddia.com/visual-guide-to-state-in-react/)
