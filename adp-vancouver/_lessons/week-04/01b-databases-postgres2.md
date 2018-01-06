@@ -24,6 +24,7 @@ Complete Part 2 _Joins and Subqueries_, from [these exercises](https://pgexercis
 * Connect our Express app to a local Postgres database.
 * Query a local Postgres database from our Express app using `node-postgres`
 * Discover a new pattern of abstraction for dealing with methods that perform data-access.
+* Implement Full-Text search.
 
 ---
 
@@ -100,22 +101,20 @@ You should be able to answer the following questions:
 
 ## Lab Activity
 
-Now that we know how to use Postgres, it's time to integrate it with our project application.
-In todays lab we'll connect our project to a local instance of Postgres!
+Now that we know how to use PostgreSQL, it's time to integrate it with our project application.
+We'll use PosgreSQL's powerful Full Text Search capability to add the final database feature, Full Text Search!
 
-Here's what we're going to do:
+Following the patterns outlined in the excellent walkthrough, create a full-text search engine for your project.
+[Full Text Search is Good Enough - Rachid Belaid](http://rachbelaid.com/postgres-full-text-search-is-good-enough/)
 
-* Install `node-postgres` in our project.
-* Add the necessary environment variables to our Express server.
-* Connect to our local instance of Postgres from our Node/Express server.
-* Test the connection by performing the `SELECT NOW()` query.
-* Create the necessary files & folders to hold our Postgres code. (Service pattern).
-* Begin to write the methods for querying and retrieving information from Postgres, to use in our _GraphQL resolvers._
+Make sure you can talk about the following:
+
+* Why is Full-Text Search a useful feature?
 
 ---
 
 ## Additional Resources
 
 * [A Visual Explanation of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
-* [node-postgres](https://node-postgres.com/) Library
 * [Express 4 API Docs](http://expressjs.com/tr/api.html)
+* [node-postgres](https://node-postgres.com/) Library

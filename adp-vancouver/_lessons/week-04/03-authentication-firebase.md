@@ -33,7 +33,6 @@ You should create 4 folders within the project, 1 for each exercise.
 
 * SSL
 * Authentication
-* JWT (JSON Web Tokens)
 * Session
 * Cookies
 * Hashing algorithm (Hash)
