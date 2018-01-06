@@ -7,12 +7,13 @@ lesson_date: 2018-01-29
 
 ## Pre-Work
 
-Please read over the following: <br/>
+What makes RBDMS systems so useful? <br/>
+[Codd's 12 Rules](http://www.idc-online.com/technical_references/pdfs/information_technology/Codd_12_Rules.pdf)
 
-[Codd's 12 Rules](https://www.tutorialspoint.com/dbms/dbms_codds_rules.htm) (Plain english explanation)<br/>
-[Relational Database Normalization](https://www.quora.com/What-is-database-normalization-in-simple-terms-with-examples)
+How does postgres actually store you data? <br/>
+http://rachbelaid.com/introduction-to-postgres-physical-storage/
 
-To start getting familiar with SQL syntax, complete Part 1, from [these exercises](https://www.pgexercises.com/questions/basic/).
+To start, get familiar with SQL syntax. Complete Part 1, from [these exercises](https://www.pgexercises.com/questions/basic/).
 
 ---
 
@@ -54,11 +55,9 @@ You should have a running instance of PostgreSQL running on your computer.
 
 If you have not installed PostgreSQL yet, get the app installer here: https://postgresapp.com/
 
-In this exercise, we'll go through the process of setting up a few new databases within it, to use throughout the rest of our time with PostgreSQL.
+In this exercise, we'll go through the process of setting up a database within it, to use as the database for your project.
 
-* Create 2 databases
-  We'll use on of these databases to try out new things. Once we're comfortable, we'll apply
-  what works to our `production` database.
+* Create a new database using the Postgres cli.
 
 * Use the `CREATE USER <name> WITH PASSWORD <pw>` command to create a new user and configure a password for each database.
   See [documentation](https://www.postgresql.org/docs/9.6/static/sql-createuser.html).
@@ -76,7 +75,7 @@ Populating your Relational Database.
 * Set the appropriate data-types for each column in our schema.
 
 **Data Types** <br/>
-What types of data do we need to model for our Boomtown application?
+What types of data do we need to model for our application?
 
 **Normalization** <br/>
 How should we "Normalize" the data in our schema, according to the rules of Third Normal Form?
@@ -108,14 +107,7 @@ Creating many to many relationships requires the creation of a "Link table".
 
 * How are Link Tables implemented.
 * Why are link tables necessary in order to define n:n relationships between columns in our database?
-* WHat are the many to many relationships in our project application's database?
-
----
-
-## Exercise 4
-
-Installing and setting up PostgreSQL and a GUI for working with your database is complicated.
-Take some time now to capture the steps for installing and setting up PostgreSQL on your local machine.
+* What are the many to many relationships in our project application's database?
 
 ---
 
@@ -135,5 +127,4 @@ Ensure that you've set up the appropriate foreign key constraints!
 ## Additional Resources
 
 * [Learn SQL - Codeacademy](https://www.codecademy.com/learn/learn-sql)
-* [18+ Best Online Resources for Learning SQL and Database Concepts](http://www.vertabelo.com/blog/notes-from-the-lab/18-best-online-resources-for-learning-sql-and-database)
 * [PostgreSQL Docs](http://www.postgresql.org/docs/9.6)

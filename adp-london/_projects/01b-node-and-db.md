@@ -65,6 +65,7 @@ Your project must:
 
 Want to challenge yourself? Your project could also:
 
+* [ ] Implement Full-Text Search using PostgreSQL.
 * [ ] Allow logged-in users to request available items from other users (using a modal-style component)
 
 ## Submission Instructions
