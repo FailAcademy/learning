@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to Your Computer & HTML
 slides: ['_slides/week-01/01-intro-to-html.md']
-lesson_date: 2017-10-03
+lesson_date: 2018-01-09
 ---
 
 ## Pre-Work
@@ -92,7 +92,7 @@ In teams of two, research your assigned element and report back to the class:
 
 Let's dive right in and start thinking about how we might tackle the first project's design comp to convert it into semantically-appropriate HTML elements.
 
-Jot some idea out on your own, then you'll pair up to discuss your approach with a partner. Based on this discussion, is there anything you'd revise in your approach?
+Jot some ideas on your own, then you'll pair up to discuss your approach with a partner. Based on this discussion, is there anything you'd revise in your approach?
 
 Finally, you and your partner will share your insights with the class.
 
@@ -106,7 +106,7 @@ Before you get started, you should watch this video to reinforce the concepts le
 
 - [HTML - Hamburger Mark-up Language](http://www.dontfeartheinternet.com/02-html/)
 
-You're goal for the end of the first day is to have the different sections of the [Project 1](project/project-1-part-1-aloha-homepage/) website roughed-out in HTML.
+You're goal for the end of the first day is to have the different sections of the [Project 1](../../project/project-1-aloha-homepage/) website roughed-out in HTML.
 
 For help with how to get started, see the [RED HTML Wiki](https://redacademy.github.io/html-fundamentals/#setting-up-a-project).
 

@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 4 - Inhabitent Site
-due: Tuesday, November 21st (beginning of class)
+due: Tuesday, February 27th (beginning of class)
 ---
 
 For Project 4, you will create a multi-page website with a blog for a camping supply company called Inhabitent Camping Supply Co. using WordPress as a content management system.
@@ -132,4 +132,4 @@ Once you have finished working on your site, please export your database by foll
 
 **Submitting your project:**
 
-When you're ready to submit your project, **please email a link to your GitHub repository containing your project** with your **database file attached** to alimaqsood@redacademy.com.
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** with your **database file attached** to carlos@redacademy.com.

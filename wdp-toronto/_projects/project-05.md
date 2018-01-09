@@ -1,7 +1,7 @@
 ---
 layout: project
-title: Mars Colony App
-due: Tuesday, November 14th (beginning of class)
+title: Project 5 - Mars Colony App
+due: Monday, March 5th (beginning of class)
 ---
 
 For Project 5, you're going to create a web-based application for Earth colonists exploring Mars using React.

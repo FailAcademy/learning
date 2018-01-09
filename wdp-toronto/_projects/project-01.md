@@ -1,12 +1,12 @@
 ---
 layout: project
-title: Project 1 / Part 1 - Aloha Homepage
-due: Tuesday, October 10th (beginning of class)
+title: Project 1 - Aloha Homepage
+due: Tuesday, January 23rd (beginning of class)
 ---
 
-For the Project 1, you're going to create a homepage for your client the Aloha Apparel Co. The first part of this project will focus on building out the HTML and CSS components of this responsive website.
+For Project 1, you're going to create a homepage for your client the Aloha Apparel Co. using HTML and CSS.
 
-Next week, we'll work on adding interactivity to the site with JS :)
+Then you will add interactivity to this website with JS, and implement a mobile-first, responsive layout with flexbox (optimized for the three required screen sizes).
 
 You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-01.zip).
 
@@ -55,6 +55,7 @@ Your project must:
 - Use the HTML5 doctype and semantic HTML5 mark-up
 - Include all essential elements covered in class (e.g. `<meta charset="utf-8">`)
 - Make appropriate use of paragraph, heading, and list elements
+- Incorporate a list-based navigation menu
 
 **CSS requirements:**
 
@@ -63,20 +64,42 @@ Your project must:
 - Make appropriate use of classes and IDs as selectors
 - Use a CSS reset
 - Use the `background` property where appropriate
-- Use the `float` property effectively
 - Demonstrate effective use of box model properties
 - Demonstrate effective use of CSS properties for altering the visual display of text (e.g. `font-family`, `font-style`, `text-transform`, etc.)
 - Incorporate custom fonts using `@font-face`
 - Use an icon font
 - Use CSS3 properties where appropriate (e.g. `box-shadow` or `border-radius`)
+- Use flexbox layout properties (no floats!)
+
+**RWD requirements:**
+
+Your project must:
+
+- Be responsively designed using a mobile-first approach
+- Be optimized for 3 screen sizes: mobile, `min-width: 600px` and `min-width: 1240px`
+
+**JS requirements:**
+
+Your project must:
+
+- Incorporate "smooth scrolling" into the menu that navigates to specific headings in the page
+- Incorporate an image slider using a jQuery plugin for the featured product area ([Flickity](http://flickity.metafizzy.co/) is a good choice)
+- Display an alert box that says "Thanks for subscribing!" whenever a user successfully submits the newsletter form with valid email address, otherwise they should see a message in the alert box that asks them to enter a valid email address
+
+**Additional requirements:**
+
+Your project must:
+
+- Take into account all feedback you received during the project check-in
+- Be sure to **test** your project completely in **all major browsers** (Chrome, Firefox, Safari, Opera, IE11) when you think you're finished
 
 **Stretch goals:**
 
 Want to challenge yourself? Your project could also:
 
-- Be responsively designed using a mobile-first approach
-- Be optimized for 3 screen sizes: mobile and `min-width: 600px` and `min-width: 1240px`
+- Update the the cart icon in the top-right corner of the header every time the user clicks the "Add to Cart" button for a product (see the additional stretch goal design comp in the project assets folder)
+- Incorporate a fixed header at the top of the page (so that the navigation menu is always visible when the user scrolls down)
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to alimaqsood@redacademy.com.
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to [carlos@redacademy.com](mailto:carlos@redacademy.com).

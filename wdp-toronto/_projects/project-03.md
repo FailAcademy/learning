@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 3 - Shopping Cart
-due: Tuesday, November 6th (beginning of class)
+due: Monday, February 12th (beginning of class)
 ---
 
 For Project 3, you're going to create a shopping cart. You can [clone the project starter repo here](https://github.com/redacademy/bestbuy-starter).

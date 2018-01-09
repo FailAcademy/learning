@@ -2,7 +2,7 @@
 layout: lesson
 title: Object Oriented Programming in JS
 slides: ['_slides/week-05/04a-oop-with-esnext.md', '_slides/week-05/04b-pong.md']
-lesson_date: 2017-11-02
+lesson_date: 2018-02-08
 ---
 
 ## Pre-Work
