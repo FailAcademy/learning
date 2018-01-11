@@ -41,7 +41,12 @@
 @import 'sidebar';
 @import 'posts';
 @import 'forms';
+@import 'animation';
 
 // Remark-specific styles.
 
 @import 'remark';
+
+// Fullcalendar-specific styles.
+
+@import 'calendar';

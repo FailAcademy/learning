@@ -6,28 +6,20 @@ title: Home
 <div class="page">
   <p>Welcome to RED Academy's Web Developer Professional Work-Study course!</p>
 
-  <h2>Lessons</h2>
-  <p>The following lessons are available for you to view:</p>
-  <ol class="archive-list">
-    {% assign lesson_list = site.lessons %} {% assign counter = 0 %} {% for lesson in lesson_list %} {% if lesson.title != null
-    %} {% if lesson.layout == "lesson" %} {% assign counter = counter | plus:1 %}
-    <li>
-      <span class="lesson-count">{{ counter }}.</span>
-      <span class="lesson-name">
-        <a href="{{lesson.url}}">{{lesson.title}}</a>
-      </span>
-    </li>
-    {% endif %} {% endif %} {% endfor %}
-  </ol>
+  <h2>Course Schedule</h2>
+  <div id="calendar"></div>
+
+  <hr />
 
   <h2>Projects</h2>
   <p>Detailed overviews for each of the course&#8217;s projects:</p>
   <ul class="archive-list">
-    {% for project in site.projects %}
-    <li>
-      <a href="{{project.url}}">{{project.title}}</a>
-    </li>
-    {% endfor %}
+     {% for project in site.projects %}
+        <li>
+         <span class="project-name"><a href="{{project.url}}">{{project.title}}</a></span>
+         <span class="project-due"><strong>Due Date:</strong> {{ project.due }}</span>
+       </li>
+     {% endfor %}
   </ul>
 
 </div>

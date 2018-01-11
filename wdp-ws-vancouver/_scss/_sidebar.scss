@@ -14,7 +14,9 @@
  */
 
 /* Style and "hide" the sidebar */
+
 .sidebar {
+  position:relative;
    position: fixed;
    top: 0;
    bottom: 0;
@@ -25,7 +27,20 @@
    font-family: "Roboto", Helvetica, Arial, sans-serif;
    font-size: .875rem; /* 15px */
    color: rgba(255,255,255,.6);
+
+   -webkit-box-shadow: inset -9px 0px 28px -12px rgba(89,14,14,1);
+   -moz-box-shadow: inset -9px 0px 28px -12px rgba(89,14,14,1);
+   box-shadow: inset -9px 0px 28px -12px rgba(89,14,14,1);
+
    background-color: #202020;
+
+   background: linear-gradient(90deg, #e2231a, #ff4747);
+   background-size: 400% 400%;
+
+  //  -webkit-animation: sidebar 6s ease infinite;
+  //  -moz-animation: sidebar 6s ease infinite;
+  //  animation: sidebar 6s ease infinite;
+
    -webkit-transition: all .3s ease-in-out;
            transition: all .3s ease-in-out;
 }
@@ -55,6 +70,7 @@
    display: block;
    padding: .5rem 1rem;
    border-top: 1px solid rgba(255,255,255,.1);
+   transition: all 0.2s ease-out;
 }
 .sidebar-nav-item.active,
 a.sidebar-nav-item:hover,
@@ -62,6 +78,10 @@ a.sidebar-nav-item:focus {
    text-decoration: none;
    background-color: rgba(255,255,255,.1);
    border-color: transparent;
+   text-shadow: -0px 0px 10px rgba(255, 255, 255, 1);
+}
+a.sidebar-nav-item:active{
+  background-color: rgba(89,14,14,.3);
 }
 .sidebar-nav--lessons {
    .lesson-count {

@@ -1,0 +1,63 @@
+[
+  {
+    "title": "Pre-Work",
+    "allDay": true,
+    "start": "2018-01-21",
+    "end": "2018-02-05"
+  },
+  {
+    "title": "BC Family Day",
+    "allDay": true,
+    "start": "2018-02-12"
+  },
+  {
+    "title": "Good Friday",
+    "allDay": true,
+    "start": "2018-03-30"
+  },
+  {
+    "title": "Easter Monday",
+    "allDay": true,
+    "start": "2018-04-02"
+  },
+  {
+    "title": "Victoria Day",
+    "allDay": true,
+    "start": "2018-05-21"
+  },
+  {
+    "title": "Canada Day Stat",
+    "allDay": true,
+    "start": "2018-07-02"
+  },
+  {
+    "title": "BC Day",
+    "allDay": true,
+    "start": "2018-08-06"
+  },
+  {
+    "title": "Labour Day",
+    "allDay": true,
+    "start": "2018-09-03"
+  },
+  {
+    "title": "Thanksgiving Monday",
+    "allDay": true,
+    "start": "2018-10-08"
+  },
+  {
+    "title": "Remembrance Day Stat",
+    "allDay": true,
+    "start": "2018-11-12"
+  },
+  {
+    "title": "Christmas Day",
+    "allDay": true,
+    "start": "2018-12-25"
+  },
+  {
+    "title": "New Years Day",
+    "allDay": true,
+    "start": "2018-01-01"
+  }
+]
