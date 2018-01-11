@@ -1,13 +1,13 @@
 # README
 
-Welcome to RED Academy's [COURSE NAME] learning materials!
+Welcome to RED Academy's Web Developer Professional Work-Study Program learning materials!
 
 ## Development
 
 Every learning materials repo will have two branches, but only one is used for active development.
 
-- `master` for development. **All pull requests should be to submitted against `master`.**
-- `production` for the Heroku-hosted site. **This branch is for deployment purposes only.**
+* `master` for development. **All pull requests should be to submitted against `master`.**
+* `production` for the Heroku-hosted site. **This branch is for deployment purposes only.**
 
 ## Contributing
 
