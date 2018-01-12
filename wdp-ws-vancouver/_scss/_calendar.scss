@@ -39,6 +39,35 @@
     background-color: #fafafa;
   }
 
+  .fc-month-view {
+    > table:before,
+    > table:after {
+      background: repeating-linear-gradient(
+        45deg,
+        #868686,
+        #868686 2px,
+        #464646 2px,
+        #464646 4px
+      );
+      bottom: 0;
+      content: " ";
+      left: 0;
+      opacity: 0.1;
+      position: absolute;
+      top: 0;
+      width: 1/7*100%;
+      z-index: 10000;
+    }
+
+    > table:before {
+      left: 0;
+    }
+
+    > table:after {
+      left: 1/7*100*5%;
+    }
+  }
+
   .fc-content-skeleton {
     height: 100%;
 
