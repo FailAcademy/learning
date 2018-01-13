@@ -1,26 +1,27 @@
 ---
 layout: lesson
-title: Intro to HTML
-slides: ['_slides/01-lesson-slides.md']
+title: OOP, Plugin Dev & Widget API
+slides: ['_slides/week-15/01-oop-widgets-plugins-slides.md']
+lesson_date: 2018-05-16
 ---
 
 ## Pre-work
 
 From the HTML & CSS textbook:
 
-- A Closer Look at Tags (pp. 23-24)
+* A Closer Look at Tags (pp. 23-24)
 
 ---
 
 ## Learning Objectives
 
-- Learn how to use HTML elements and attributes.
+* Learn how to use HTML elements and attributes.
 
 ---
 
 ## Keywords
 
-- [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+* [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
 
 ---
 
@@ -38,7 +39,6 @@ Do this activity!
 This is how you add highlighted syntax to a lesson page:
 
 ```html
-
 <!-- A bit of sample HTML with syntax highlighting-->
 
 <html>
@@ -50,7 +50,6 @@ This is how you add highlighted syntax to a lesson page:
       <p class="my-class">Just a little bit of sample code.</p>
    </body>
 </html>
-
 ```
 
 Or include an image:
@@ -67,4 +66,4 @@ This is a link to the lab activity...
 
 ## Additional Resources
 
-- [Code Academy](http://www.codecademy.com/learn)
+* [Code Academy](http://www.codecademy.com/learn)

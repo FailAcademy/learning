@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: The Slide Deck Title (used for the URL slug, and must be unique)
+title: Custom Post Loops Slides
 ---
 
 {% highlight html %}
@@ -10,11 +10,12 @@ class: center, middle, inverse
 
 ---
 
-# Slideshow Title
+# Custom Post Loops
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
@@ -26,7 +27,9 @@ layout: false
 ---
 
 .left-column[
-  ## Column Layout
+
+## Column Layout
+
 ]
 
 .right-column[
@@ -34,9 +37,9 @@ You can make two-column layouts as well.red[*] in a slideshow!
 
 A sample unordered list:
 
-- List item 1
-- List item 2
-- List item 3
+* List item 1
+* List item 2
+* List item 3
 
 .footnote[.red[*] And add footnotes too]
 ]
@@ -62,19 +65,22 @@ A sample unordered list:
 ---
 
 .left-column[
-  ## Remark How-tos
+
+## Remark How-tos
+
 ]
 
 .right-column[
-   This slideshow is based on [remark.js](https://github.com/gnab/remark).
+This slideshow is based on [remark.js](https://github.com/gnab/remark).
 
-   To learn more about building a slideshow with remark, check out:
+To learn more about building a slideshow with remark, check out:
 
-   - [The remark formatting guide](https://github.com/gnab/remark/wiki/Formatting)
-   - [The remark Markdown guide](https://github.com/gnab/remark/wiki/Markdown)
-]
+* [The remark formatting guide](https://github.com/gnab/remark/wiki/Formatting)
+* [The remark Markdown guide](https://github.com/gnab/remark/wiki/Markdown)
+  ]
 
 ---
+
 template: inverse
 
 # Fin!

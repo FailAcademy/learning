@@ -14,4 +14,4 @@ It is important that you **attend class everyday** during the final project lab 
 
 All Community Projects are **due on July 28th**. You will showcase your completed work with your team in a project demo to your community partner and instructors on that day.
 
-More details will be supplied regarding your assigned community partners and teammates at the end of Week 7.
+More details will be supplied regarding your assigned community partners and teammates at the end of Week 19.
