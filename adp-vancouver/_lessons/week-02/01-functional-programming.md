@@ -251,3 +251,4 @@ Other helpful JS functional programming readings:
 * [Master the JavaScript Interview: What is Functional Programming?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0)
 * [Lambda Calculus - Computerphile](https://youtu.be/eis11j_iGMs)
 * [Array Map, Filter and Reduce in JS](https://atendesigngroup.com/blog/array-map-filter-and-reduce-js)
+* [Functional Programming Jargon](https://functional.works-hub.com/learn/Functional-Programming-Jargon)
