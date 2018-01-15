@@ -7,15 +7,14 @@ lesson_date: 2018-04-26
 
 ## Pre-work
 
-From the HTML & CSS textbook:
-
-* A Closer Look at Tags (pp. 23-24)
+_There is no pre-work for this lesson._
 
 ---
 
 ## Learning Objectives
 
-* Learn how to use HTML elements and attributes.
+* Implement a strategy for version-controlling a WordPress project with Git.
+* Use developer-focused plugins for debugging purposes and to improve development workflows.
 
 ---
 
@@ -27,43 +26,34 @@ From the HTML & CSS textbook:
 
 ## Exercise 1
 
-Do this activity!
+Install Theme Check and Debug Bar.
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+Try running Theme Check now. What message do you see?
+
+If the Debug Bar link in the Admin bar is orange or red, be sure to investigate those warnings.
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+Time to add some version control to your project.
 
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+Initialize a Git repository in your project's `wp-content` directory in MAMP, add the `.gitignore` file as recommended, stage your files, make your commit, add a remote from GitHub, and push your code!
 
 ---
 
 ## Homework
 
-This is a link to the lab activity...
+For homework over the break week, please continue to work on Project 4.
+
+Specifically, you'll want to ensure the the blog index and single post page templates are fully implemented and styled with CSS before you return.
+
+**Be sure to make regular commits to your project repo as you work!**
 
 ---
 
-## Additional Resources
+Some WordPress plugins that are helpful for debugging:
 
-* [Code Academy](http://www.codecademy.com/learn)
+* [Debug Bar](https://wordpress.org/plugins/debug-bar/)
+* [Query Monitor](https://wordpress.org/plugins/query-monitor/)
+* [Theme Check](https://wordpress.org/plugins/theme-check/)
