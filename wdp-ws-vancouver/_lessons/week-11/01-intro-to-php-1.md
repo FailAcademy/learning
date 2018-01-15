@@ -5,65 +5,71 @@ slides: ['_slides/week-11/01-intro-to-php-1-slides.md']
 lesson_date: 2018-04-16
 ---
 
-## Pre-work
+## Pre-Work
 
-From the HTML & CSS textbook:
+Ensure you have MAMP successfully installed on your computer:
 
-* A Closer Look at Tags (pp. 23-24)
+* [MAMP](https://www.mamp.info/en/)
+
+Work through the following sections of the [Codeacademy PHP tutorial](https://www.codecademy.com/en/tracks/php):
+
+* Welcome to PHP!
+* Control Flow: If/Else
+* Control Flow: Switch
+* Arrays
 
 ---
 
 ## Learning Objectives
 
-* Learn how to use HTML elements and attributes.
+* Distinguish the difference between a server-side and client-side programming language.
+* Identify the fundamental components of PHP syntax.
+* Use statements, variables, operators, conditionals, and arrays in PHP.
 
 ---
 
 ## Keywords
 
-* [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+* localhost
+* Statement
+* Variable
+* Boolean
+* Conditional
+* Operator
+* Concatenate
+* Array
 
 ---
 
 ## Exercise 1
 
-Do this activity!
+Time to try out some PHP:
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
----
-
-## Exercise 2
-
-This is how you add highlighted syntax to a lesson page:
-
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+* Create an `index.php` file in a sub-directory of the `htdocs` folder in your MAMP installation (e.g. `sandbox`, etc.)
+* In that file type `<?php ?>`
+* Between your opening and closing PHP tags type `echo "Hello, world!";`
+* Go to http://localhost:8888/[SUB_DIR_NAME]/ (or if you're on port 80, http://localhost/[SUB_DIR_NAME]/)
+* Also try running `php index.php` in your CLI...
 
 ---
 
 ## Homework
 
-This is a link to the lab activity...
+_Be sure to complete the pre-work for tomorrow's class!_
 
 ---
 
 ## Additional Resources
 
-* [Code Academy](http://www.codecademy.com/learn)
+PHP is a well-documented language and you can find its docs here:
+
+* [Documentation](http://php.net/docs.php)
+
+An awesome, well-written PHP resource:
+
+* [PHP the Right Way](http://www.phptherightway.com/)
+* At the very least, [read this chapter](http://www.phptherightway.com/pages/The-Basics.html)
+
+This online book is a bit dated, but the following chapter is still relevant and very explanatory:
+
+* [Hacking with PHP - How PHP is Written](http://www.hackingwithphp.com/2/6/0/how-php-is-written)

@@ -5,65 +5,98 @@ slides: ['_slides/week-11/03-intro-to-php-3-slides.md']
 lesson_date: 2018-04-19
 ---
 
-## Pre-work
+## Pre-Work
 
-From the HTML & CSS textbook:
+Finish up the following section of the [Codeacademy PHP tutorial](https://www.codecademy.com/en/tracks/php):
 
-* A Closer Look at Tags (pp. 23-24)
+* Advanced Arrays and Maps
 
 ---
 
 ## Learning Objectives
 
-* Learn how to use HTML elements and attributes.
+* Build and interact with multi-dimensional arrays.
+* Explore PHP functions such as `rand()`, `range()`, and `date()`.
+* Implement advanced techniques for dealing with arrays of data.
+* Explore alternative syntax for conditional statements and loops.
 
 ---
 
 ## Keywords
 
-* [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+* Built-in function
+* Multi-dimensional arrays
+* Ternary operators
 
 ---
 
 ## Exercise 1
 
-Do this activity!
-
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+Let's use the PHP `date()` function to convert the dates as they appear in the JSON file to be formatted as pictured in the design comp on our blog.
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+[Time for an array scavenger hunt!](/public/files/exercises/php-array-scavenger-hunt.pdf)
 
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
+Below we have two arrays containing similarly formatted data representing two movies.
 
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
+Your task is to search the [PHP documentation](http://php.net/manual/en/ref.array.php) for array functions and figure out what built-in function (or combination of functions) will return the data formatted as required by each of the challenges.
+
+Paste this code into an `index.php` file (between `<?php ?>` tags of course!) to get started...
+￼
+
+```php
+$movies_1 = array(
+   array(
+      'ID'    => 1,
+      'title' => 'Jurassic Park',
+      'genre' => 'Adventure',
+      'year'  => '1993',
+      'stars' => array( 'Sam Neill', 'Laura Dern', 'Jeff Goldblum' )
+   ),
+   array(
+      'ID'    => 2,
+      'title' => 'Back to the Future',
+      'genre' => 'Sci-fi',
+      'year'  => '1985',
+      'stars' => array( 'Michael J. Fox', 'Christopher Lloyd' )
+   )
+);
+
+$movies_2 = array(
+  array(
+       'ID'    => 3,
+       'title' => 'Die Hard',
+       'genre' => 'Action',
+       'year'  => '1988',
+       'stars' => array( 'Bruce Willis', 'Alan Rickman' )
+  ),
+  array(
+       'ID'    => 4,
+       'title' => 'The Breakfast Club',
+       'genre' => 'Drama',
+       'year'  => '1985',
+       'stars' => array( 'Emilio Estevez', 'Judd Nelson', 'Molly Ringwald' )
+  ),
+);
 ```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
 
 ---
 
 ## Homework
 
-This is a link to the lab activity...
+For homework, please wrap up all work on your Space Blog site.
+
+Incorporate some of what you learned in class today about PHP's **built-in functions**, **alternative syntax**, and **built-in array functions** when putting the finishing touches on the blog.
+
+You'll have a chance to demo your solution at the beginning of the next class.
 
 ---
 
 ## Additional Resources
 
-* [Code Academy](http://www.codecademy.com/learn)
+A short screencast series on what's new in PHP7:
+
+* [PHP7 Up and Running](https://laracasts.com/series/php7-up-and-running)
