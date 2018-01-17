@@ -5,65 +5,73 @@ slides: ['_slides/week-15/01-oop-widgets-plugins-slides.md']
 lesson_date: 2018-05-16
 ---
 
-## Pre-work
+## Pre-Work
 
-From the HTML & CSS textbook:
+Work through the following sections of the [Codeacademy PHP tutorial](https://www.codecademy.com/en/tracks/php):
 
-* A Closer Look at Tags (pp. 23-24)
+* Object-oriented Programming, Part I
+* Object-oriented Programming, Part II
+
+Some pre-reading on creating WordPress widget plugins:
+
+* [Introduction to Creating Your First WordPress Widget](https://code.tutsplus.com/series/introduction-to-creating-your-first-wordpress-widget--cms-721)
 
 ---
 
 ## Learning Objectives
 
-* Learn how to use HTML elements and attributes.
+* Explain what object-oriented programming is in the PHP context and use it to create classes.
+* Distinguish the difference between public, private, and protected visibility markers and how they apply to properties and methods.
+* Describe how inheritance works between parent classes and subclasses.
+* Identify use cases for developing WordPress plugins, as well as their basic architecture.
+* Build a custom WordPress widget plugin using the Widget API and OOP coding practices.
 
 ---
 
 ## Keywords
 
-* [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+* Object-oriented programming
+* Class
+* Object
+* Parent / Base Class
+* Child / Sub-class
+* Constructor
+* Property
+* Method
+* Extend
+* Scope
+* Widget API
 
 ---
 
 ## Exercise 1
 
-Do this activity!
+Let's build a widget together!
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+To do this, you'll need to download and unzip a copy of the **[RED Widget Boilerplate](https://github.com/redacademy/red-widget-boilerplate/archive/master.zip)**.
 
----
+Once you've downloaded and unzipped it, move the directory to `wp-content/plugins/` and rename both the directory and the main plugin file `business-hours-widget`.
 
-## Exercise 2
-
-This is how you add highlighted syntax to a lesson page:
-
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+The rest of the exercise will be a code-along...
 
 ---
 
 ## Homework
 
-This is a link to the lab activity...
+Tie up the loose ends on your custom business hours widget, and keep plugging away at the rest of the project!
 
 ---
 
 ## Additional Resources
 
-* [Code Academy](http://www.codecademy.com/learn)
+WP Codex entry for the Widgets API:
+
+* [Widgets API](https://codex.wordpress.org/Widget_API)
+
+An in-depth intro on OOP in PHP:
+
+* [Object-Oriented PHP for Beginners](https://code.tutsplus.com/tutorials/object-oriented-php-for-beginners--net-12762)
+
+Wondering what all the comments are about in the widget boilerplate repo? Read more about WP's take on PHP documentation:
+
+* [PHP Documentation Standards](https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/php/)
