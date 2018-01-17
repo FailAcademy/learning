@@ -6,6 +6,12 @@
     "end": "2018-02-05"
   },
   {
+    "title": "Break Week",
+    "allDay": true,
+    "start": "2018-04-29",
+    "end": "2018-05-07"
+  },
+  {
     "title": "BC Family Day",
     "allDay": true,
     "start": "2018-02-12"

@@ -7,63 +7,49 @@ lesson_date: 2018-05-10
 
 ## Pre-work
 
-From the HTML & CSS textbook:
+Some pre-reading on creating customized post loops in WordPress:
 
-* A Closer Look at Tags (pp. 23-24)
+* [4 Ways to Loop with WordPress](https://digwp.com/2011/05/loops/)
+* [Mastering WP Query](http://code.tutsplus.com/series/mastering-wp_query--cms-818)
 
 ---
 
 ## Learning Objectives
 
-* Learn how to use HTML elements and attributes.
+* Distinguish between the four different methods for getting posts in WordPress&mdash;the default loop, `query_posts`, `WP_Query`, and `get_posts`.
+* Identify additional development concerns related to custom loops, including setting up and resetting post data, and pagination quirks.
 
 ---
 
 ## Keywords
 
-* [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+* [`WP_Query`](https://codex.wordpress.org/Class_Reference/WP_Query)
+* [`get_posts`](https://developer.wordpress.org/reference/functions/get_posts/)
 
 ---
 
 ## Exercise 1
 
-Do this activity!
+Let's try building a custom post loop for Project 4 by building the news feed on the homepage.
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+You'll need to decide whether to use `WP_Query` or `get_posts` first, then you need to create and pass in an array of the appropriate arguments, and finally figure out how to display the returned data on your homepage.
 
----
-
-## Exercise 2
-
-This is how you add highlighted syntax to a lesson page:
-
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+Don't worry about styling yet, just grab the data!
 
 ---
 
 ## Homework
 
-This is a link to the lab activity...
+Based on what you learned today, you can create and finish styling the custom post loop to show the latest posts on the homepage (and the latest Adventures if you're going for the stretch goal).
 
 ---
 
 ## Additional Resources
 
-* [Code Academy](http://www.codecademy.com/learn)
+A tool to help you generate the required code for creating custom loop queries:
+
+* [GenerateWP: WP_Query Generator](https://generatewp.com/wp_query/)
+
+Everything you wanted to know about `WP_Query` and didn't know to ask:
+
+* [Mastering WP_Query](https://code.tutsplus.com/series/mastering-wp_query--cms-818)

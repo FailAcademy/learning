@@ -76,7 +76,7 @@ Let's head over the `/inc/extras.php` file in our starter theme and add two func
 
 ## Homework
 
-Continue working on Project 4 based on what you've learned about WordPress so far.
+Continue working on Project 4 based on what you've learned so far.
 
 ---
 

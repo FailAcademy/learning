@@ -7,63 +7,58 @@ lesson_date: 2018-05-12
 
 ## Pre-work
 
-From the HTML & CSS textbook:
+Some pre-reading on the WordPress database:
 
-* A Closer Look at Tags (pp. 23-24)
+* [Tour of the WordPress Database](https://deliciousbrains.com/tour-wordpress-database/)
+* [Beginner’s Guide to WordPress Database Management with phpMyAdmin](http://www.wpbeginner.com/beginners-guide/beginners-guide-to-wordpress-database-management-with-phpmyadmin/)
 
 ---
 
 ## Learning Objectives
 
-* Learn how to use HTML elements and attributes.
+* Navigate the WordPress database with confidence and understand how certain actions in WordPress add, update, and delete this data.
 
 ---
 
 ## Keywords
 
-* [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+* Relational database
+* MySQL
+* Table
 
 ---
 
 ## Exercise 1
 
-Do this activity!
+Let's explore WP's database tables in greater depth. You'll be assigned a table, and it's your job to figure out:
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+* what it's for
+* what data is stored in there (the columns!)
+* what other tables it's linked to
 
----
+You will **create a poster** to illustrate what you've discovered.
 
-## Exercise 2
-
-This is how you add highlighted syntax to a lesson page:
-
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+After you're done researching your table and creating your visual explanation of it, we'll share our findings as a group.
 
 ---
 
 ## Homework
 
-This is a link to the lab activity...
+Continue working on Project 4 based on what you've learned so far.
 
 ---
 
 ## Additional Resources
 
-* [Code Academy](http://www.codecademy.com/learn)
+Easily manage your MySQL databases using a GUI-based app:
+
+* [Sequel Pro](http://www.sequelpro.com/) (Mac only)
+* [MySQL Workbench](http://www.mysql.com/products/workbench/)
+
+More info on the WP database:
+
+* [Understanding and Working with Data in WordPress](https://code.tutsplus.com/series/understanding-and-working-with-data-in-wordpress--cms-670)
+
+More on the new `wp_termmeta` database table:
+
+* [Introducing Term Meta Data In WordPress And How To Use Them](https://www.smashingmagazine.com/2015/12/how-to-use-term-meta-data-in-wordpress/)
