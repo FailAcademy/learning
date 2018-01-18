@@ -21,7 +21,7 @@ layout: false
 # Agenda
 
 * Practice OOP programming and logic in JavaScript
-* Build a "Pong" game using SVGs dynamically generated from ES.next classes
+* Build a "Pong" game using SVGs dynamically generated from ES2015 classes
 * Have some fun with this :)
 
 ---

@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Webpack Slides
+title: Developing with ES2015 and Webpack Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Webpack
+# Developing with ES2015 & Webpack
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -20,69 +20,154 @@ layout: false
 
 # Agenda
 
-1. Introduction
-2. Deep-dive
-3. ...
-
----
-
-.left-column[
-
-## Column Layout
-
-]
-
-.right-column[
-You can make two-column layouts as well.red[*] in a slideshow!
-
-A sample unordered list:
-
-* List item 1
-* List item 2
-* List item 3
-
-.footnote[.red[*] And add footnotes too]
-]
-
----
-
-# Syntax Highlighting
-
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
-
----
-
-.left-column[
-
-## Remark How-tos
-
-]
-
-.right-column[
-This slideshow is based on [remark.js](https://github.com/gnab/remark).
-
-To learn more about building a slideshow with remark, check out:
-
-* [The remark formatting guide](https://github.com/gnab/remark/wiki/Formatting)
-* [The remark Markdown guide](https://github.com/gnab/remark/wiki/Markdown)
-  ]
+1. ES2015 Modules
+2. What is Webpack?
+3. How to use Webpack
 
 ---
 
 template: inverse
 
-# Fin!
+# ES2015 Modules
+
+---
+
+class: center, middle
+
+### Why Modules?
+
+For the same reason an author divides a books into chapters. (Helps us keep things organized!)
+
+---
+
+# Problem: Global Vars
+
+Modularizing code in ES5 often meant polluting the global namespace. For example, here the jQuery library is added to the global namespace:
+
+```html
+<!DOCTYPE html>
+<body>
+	<p>Hello, world!</p>
+	<script src="./jquery.js"></script>
+	<script src="./my-script.js"></script>
+</body>
+```
+
+`$` is now a global variable, which can cause naming conflicts:
+
+```js
+// in my-script.js...
+
+let hello = $("p").css("color", "red");
+```
+
+---
+
+# Modules in ES5
+
+No native or agreed upon solution in ES5:
+
+* CommonJS
+* SystemJS
+* RequireJS (AMD)
+* ...and more!
+
+---
+
+# ES2015 Modules
+
+ES2015 standardizes modules!
+
+Run: `npm install --save jquery`
+
+```html
+<!DOCTYPE html>
+<body>
+	<p>Hello, world!</p>
+	<script src="./my-script.js"></script>
+</body>
+```
+
+```js
+// in my-script.js...
+import $ from "jquery";
+
+let hello = $("p").css("color", "red");
+```
+
+All the code in the jQuery package is completely trapped inside of this module and does not pollute the global namespace.
+
+---
+
+# ES2015 Modules
+
+Using modules requires using `import`/`export` keywords:
+
+`import`
+
+```js
+import { a } from "module";
+import b from "module"; // default
+import * as c from "module"; // alias
+```
+
+`export`
+
+```js
+export function a() {}
+export default function b() {}
+```
+
+---
+
+template: inverse
+
+# Webpack
+
+---
+
+# What is Webpack?
+
+Webpack is a JavaScript **module bundler**.
+
+It's an open-source project released by Facebook.
+
+Before we begin to use Webpack, we need to put it in context. To understand why it was created, how it compares to Gulp and other build tools, read the [Getting Started](https://webpack.github.io/docs/motivation.html) section of the Webpack documentation.
+
+---
+
+# What is Webpack?
+
+Now that we have some context for what Webpack is and what it does vs. other tools, follow the [Getting Started](http://webpack.github.io/docs/tutorials/getting-started/)
+tutorial. Once completed we should be able to explain the following terms:
+
+* Module loader
+* Module bundler
+
+How does Webpack treat CSS files? How is this different from the more traditional inclusion techniques we've seen so far in the course?
+
+---
+
+# Exercises 1-4
+
+Now, we're ready to install Webpack in a new project.
+
+Follow the exercise instructions found on the [lesson page](/lesson/developing-with-esnext-webpack/).
+
+---
+
+# What We've Learned
+
+* How to use `import` and `export` with ES2015 modules
+* How to set-up Webpack in a project
+* How to bundle our JS and use Webpack
+* How to compile Sass with Webpack
+* How to make our code easier to debug with source maps in Webpack
+
+---
+
+template: inverse
+
+# Questions?
 
 {% endhighlight %}

@@ -5,6 +5,11 @@
     "start": "2018-02-15"
   },
   {
+    "title": "Lab Work Day",
+    "allDay": true,
+    "start": "2018-04-05"
+  },
+  {
     "title": "Project Work Day",
     "allDay": true,
     "start": "2018-04-14"
@@ -53,6 +58,46 @@
     "title": "Project Work Day",
     "allDay": true,
     "start": "2018-05-22"
+  },
+  {
+    "title": "Project Work Day",
+    "allDay": true,
+    "start": "2018-05-24"
+  },
+  {
+    "title": "Project Work Day",
+    "allDay": true,
+    "start": "2018-05-26"
+  },
+  {
+    "title": "Project Work Day",
+    "allDay": true,
+    "start": "2018-05-28"
+  },
+  {
+    "title": "Project Work Day",
+    "allDay": true,
+    "start": "2018-05-29"
+  },
+  {
+    "title": "Project Work Day",
+    "allDay": true,
+    "start": "2018-05-30"
+  },
+  {
+    "title": "Project Work Day",
+    "allDay": true,
+    "start": "2018-05-31"
+  },
+  {
+    "title": "Project Work Day",
+    "allDay": true,
+    "start": "2018-06-02"
+  },
+  {
+    "title": "Project Work Day",
+    "allDay": true,
+    "start": "2018-06-04"
   },
   {
     "title": "GitHub Portfolio Development",
