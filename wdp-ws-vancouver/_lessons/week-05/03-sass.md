@@ -2,68 +2,98 @@
 layout: lesson
 title: Sass
 slides: ['_slides/week-05/03-sass-slides.md']
-lesson_date: 2018-03-08
+lesson_date: 2018-03-10
 ---
 
-## Pre-work
+## Pre-Work
 
-From the HTML & CSS textbook:
+Visit the Sass homepage and take a look around:
 
-* A Closer Look at Tags (pp. 23-24)
+* [Sass Homepage](http://sass-lang.com/guide)
+
+Please read through this introductory article on Sass before the lesson:
+
+* [Intro to Sass | SCSS101](https://codepen.io/sasstantrum/post/intro-to-sass)
 
 ---
 
 ## Learning Objectives
 
-* Learn how to use HTML elements and attributes.
+* Define what a CSS preprocessor is, and how it can speed up development.
+* Structure Sass files according to best practices.
+* Implement basic Sass techniques like nesting, variables, mixins, and operations.
+* Apply Sass language skills to writing Sass for responsive websites.
+* Install Sass locally and compile it into plain vanilla CSS.
+* Create and use source maps to assist with Sass debugging.
+* Distinguish between different CSS preprocessors such as Sass, SCSS, and Less.
 
 ---
 
 ## Keywords
 
-* [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+* Preprocessor
+* Compiler
+* Sass/SCSS
+* Directives
+* Variable
+* Nesting
+* Operation
+* Partial
+* `@mixin`
+* `@extend`
+* `@content`
 
 ---
 
 ## Exercise 1
 
-Do this activity!
+In this exercise, we'll refactor some CSS into SCSS, using the basic functionality we've learned.
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+To do that, fork this Codepen:
+
+**https://codepen.io/redacademy/pen/JNbrxQ**
+
+Take a look at the code in the Codepen, and refactor it as SCSS by doing the following:
+
+* **Nest** selectors where appropriate (but be careful not to over-nest them!)
+* Abstract repeated styles (colours, spacing units, etc.) into **variables** (hint: make these go at the top of the stylesheet)
+* Use a **math operator** to adjust the size of the base spacing unit on elements where applicable
+
+Be sure to take a look at the compiled CSS as you go! You can toggle the SCSS/CSS view using the arrow in the top-right corner of the CSS panel.
+
+You'll know you're done when the compiled CSS looks exactly the same as when you started.
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+In this exercise we'll create media query helpers using Sass mixins and the `@content` directive, for common breakpoints.
 
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+We'll then discuss, how this techniques saves time when developing responsive websites.
 
 ---
 
-## Homework
+## Lab Activity (Today)
 
-This is a link to the lab activity...
+This afternoon, we’ll implement the following Sass enhancements in your Project 2 websites:
+
+* Media query helpers
+* Basic theme-ability, using Sass variables
+* Separating your styles into Sass partials
+* Sass compilation, minification, and auto-prefixing using Gulp
 
 ---
 
 ## Additional Resources
 
-* [Code Academy](http://www.codecademy.com/learn)
+Excellent online Sass Tutorials:
+
+* [The Sass way](http://thesassway.com/)
+
+Get to know the other major CSS pre-processor, LESS:
+
+* [LESS (CSS preprocessor)](http://lesscss.org/)
+
+Challenge yourself with this Sass tutorial:
+
+* [Fun with Sass and Icon Fonts](http://jaydenseric.com/blog/fun-with-sass-and-font-icons)
