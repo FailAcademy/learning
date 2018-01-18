@@ -79,22 +79,19 @@ This is a concise and authoritative summary of the various grid properties and h
 
 - [CSS Tricks - A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
-Get a sense of why flexbox is a substantial improvement over traditional layout methods and hacks in CSS:
+Relationship of Grid Layout to other Layout Methods: 
 
-- [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/)
+- [Relationship of Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
 
-Another great flexbox reference page:
+Wes Bos Video Series on Grid:
 
-- [The Ultimate Flexbox Cheat Sheet](http://www.sketchingwithcss.com/samplechapter/cheatsheet.html)
+- [Wes Bos CSS Grid](https://cssgrid.io/)
 
-Try out flexbox properties using this point-and-click interface:
+Rachel Andrew - Grid by Example:
 
-- [Flexbox playground](http://codepen.io/enxaneta/full/adLPwv/)
+- [Grid by Example](https://gridbyexample.com/)
 
-How to add flexbox support to really old versions of IE:
+Rachel Andrew - CSS Grid Ask Me Anything
 
-- [Flexibility](https://github.com/10up/flexibility)
+- [CSS Grid AMA](https://github.com/rachelandrew/cssgrid-ama)
 
-Want to play tower defence but need to learn flexbox...
-
-- [Flexbox defence](http://www.flexboxdefense.com/)
