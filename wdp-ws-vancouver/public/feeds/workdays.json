@@ -5,6 +5,11 @@
     "start": "2018-02-15"
   },
   {
+    "title": "Project Work Day",
+    "allDay": true,
+    "start": "2018-04-14"
+  },
+  {
     "title": "Lab Work Day",
     "allDay": true,
     "start": "2018-04-18"
