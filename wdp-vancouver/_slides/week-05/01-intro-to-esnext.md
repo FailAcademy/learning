@@ -15,6 +15,7 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
@@ -31,13 +32,13 @@ layout: false
 
 Ecma International is the standards organization in charge of publishing each new specification of JavaScript:
 
-| Year | Release    |
-| ---- |------------|
-| 1997 | ES         |
-| 1998 | ES2        |
-| 1999 | ES3        |
-| ?    | ES4        |
-| 2009 | ES5        |
+| Year | Release     |
+| ---- | ----------- |
+| 1997 | ES          |
+| 1998 | ES2         |
+| 1999 | ES3         |
+| ?    | ES4         |
+| 2009 | ES5         |
 | 2015 | ES6/ES.next |
 
 ---
@@ -46,11 +47,11 @@ Ecma International is the standards organization in charge of publishing each ne
 
 How well does ES5 work in browsers today?
 
-- [ECMAScript 5 compatibility table](http://kangax.github.io/compat-table/es5/)
+* [ECMAScript 5 compatibility table](http://kangax.github.io/compat-table/es5/)
 
 How about ES6?
 
-- [ECMAScript 6 compatibility table](http://kangax.github.io/compat-table/es6/)
+* [ECMAScript 6 compatibility table](http://kangax.github.io/compat-table/es6/)
 
 ---
 
@@ -62,9 +63,10 @@ Answer: **Transpiling**
 
 Try to change your ES.next code to ES5 using the [Babel online REPL](https://babeljs.io/repl/).
 
-*We'll also need to transpile our code when we use TypeScript with Angular later in the course.*
+_We'll also need to transpile our code when we use TypeScript with Angular later in the course._
 
 ---
+
 template: inverse
 
 # Dev Environment Setup
@@ -76,22 +78,21 @@ template: inverse
 We'll need to use a Gulp plugin to transpile our ES.next code to ES5 during our build process. We can use [**Gulp-Babel**](https://www.npmjs.com/package/gulp-babel) for that:
 
 ```js
-const gulp = require('gulp');
-const babel = require('gulp-babel');
+const gulp = require("gulp");
+const babel = require("gulp-babel");
 
-const input = 'src/index.js';
-const output = 'dist';
+const input = "src/index.js";
+const output = "dist";
 
-gulp.task('babel', () => {
-	return gulp.src(input)
-		.pipe(babel())
-		.pipe(gulp.dest(output));
+gulp.task("babel", () => {
+  return gulp
+    .src(input)
+    .pipe(babel())
+    .pipe(gulp.dest(output));
 });
 ```
 
-*Note the `=>` and `const` syntax...more on that to come!*
-
-**[See a complete example.](https://github.com/redacademy/red-gulp-babel)**
+_Note the `=>` and `const` syntax...more on that to come!_
 
 ---
 
@@ -116,7 +117,9 @@ To use a preset, you'll need to create a `.babelrc` file include the following c
   "presets": ["es2015"]
 }
 ```
+
 ---
+
 template: inverse
 
 # let & const
@@ -127,9 +130,9 @@ template: inverse
 
 There are now three ways to declare variables in JavaScript:
 
-- `var`
-- `let`
-- `const`
+* `var`
+* `let`
+* `const`
 
 These new solutions solve some common problems with variable declarations.
 
@@ -149,9 +152,9 @@ The variable `i` is hoisted to the top of the function and shared across each it
 
 ```js
 for (var i = 1; i < 6; i++) {
-	$("#" + i).click(function() {
-		alert(i);
-	});
+  $("#" + i).click(function() {
+    alert(i);
+  });
 }
 ```
 
@@ -178,9 +181,9 @@ Conversely, `var` defines a variable globally, or locally to an entire function 
 Variables defined with `var` can lead to "name conflicts", where a coder overwrites a variable name, often unknowingly.
 
 ```js
-var teachers = [ 'Jim', 'Mack', 'Mandi', 'Rose' ];
+var teachers = ["Jim", "Mack", "Mandi", "Rose"];
 
-var teachers = ['Alice', 'Bob', 'Jane'];
+var teachers = ["Alice", "Bob", "Jane"];
 // teachers variable is redeclared
 ```
 
@@ -193,9 +196,9 @@ Both `let` and `const` prevent redeclaring with the same variable name (but you 
 `let` still allows reassigning of the value.
 
 ```js
-let teachers = [ 'Jim', 'Mack', 'Mandi', 'Rose' ];
+let teachers = ["Jim", "Mack", "Mandi", "Rose"];
 
-var teachers = ['Alice', 'Bob', 'Jane'];
+var teachers = ["Alice", "Bob", "Jane"];
 // teachers variable is redeclared
 ```
 
@@ -208,14 +211,9 @@ Both `let` and `const` prevent redeclaring with the same variable name.
 `let` still allows reassigning of the value.
 
 ```js
-let teachers = [
-  'Mandi',
-  'Jim',
-  'Rose',
-  'Mack',
-];
+let teachers = ["Mandi", "Jim", "Rose", "Mack"];
 
-teachers = ['Alice', 'Bob', 'Jane'];
+teachers = ["Alice", "Bob", "Jane"];
 // note: not redeclared, only changing the value
 ```
 
@@ -228,9 +226,9 @@ However, some values could benefit from being marked as unchanging.
 `const` acts like `let`, but with the addition that its values cannot be reassigned.
 
 ```js
-const teachers = [ 'Jim', 'Mack', 'Mandi', 'Rose' ];
+const teachers = ["Jim", "Mack", "Mandi", "Rose"];
 
-teachers = ['Kyle', 'Kurtis', 'Rony'];
+teachers = ["Kyle", "Kurtis", "Rony"];
 // TypeError: Assignment to constant variable.
 ```
 
@@ -238,7 +236,7 @@ teachers = ['Kyle', 'Kurtis', 'Rony'];
 
 # Using const
 
-*What happens when you try running the following code?*
+_What happens when you try running the following code?_
 
 **1. Reassigning a primitive value**
 
@@ -256,8 +254,8 @@ numbers = [4, 5, 6];
 const array = [1, 2, 3];
 array.push(4);
 
-const object = {a: 1, b: 2};
-object['c'] = 3;
+const object = { a: 1, b: 2 };
+object["c"] = 3;
 ```
 
 ---
@@ -280,22 +278,22 @@ template: inverse
 
 Anonymous functions passed as callbacks to other functions **create their own scope**.
 
-*What this means...*
+_What this means..._
 
 ```js
 function counterES5() {
-	// the value of "this" out here
-	this.seconds = 0;
+  // the value of "this" out here
+  this.seconds = 0;
 
-	window.setInterval(function() {
-		// will be different from "this" in here
-		this.seconds++;
-		console.log(this.seconds); // WILL NOT WORK!
-	}, 1000);
+  window.setInterval(function() {
+    // will be different from "this" in here
+    this.seconds++;
+    console.log(this.seconds); // WILL NOT WORK!
+  }, 1000);
 }
 
 var counterA = new counterES5();
-window.setTimeout( counterA, 1000 );
+window.setTimeout(counterA, 1000);
 ```
 
 ---
@@ -308,13 +306,13 @@ Store the outer function's `this` value in a variable:
 
 ```js
 function counterES5() {
-	this.seconds = 0;
-	var that = this;
+  this.seconds = 0;
+  var that = this;
 
-	window.setInterval(function() {
-		that.seconds++;
-		console.log(that.seconds);
-	}, 1000);
+  window.setInterval(function() {
+    that.seconds++;
+    console.log(that.seconds);
+  }, 1000);
 }
 ```
 
@@ -328,12 +326,15 @@ Use the `bind` method and pass `this` as an argument:
 
 ```js
 function counterES5() {
-	this.seconds = 0;
+  this.seconds = 0;
 
-	window.setInterval(function() {
-		this.seconds++;
-		console.log(this.seconds);
-	}.bind(this), 1000);
+  window.setInterval(
+    function() {
+      this.seconds++;
+      console.log(this.seconds);
+    }.bind(this),
+    1000
+  );
 }
 ```
 
@@ -347,12 +348,12 @@ This is also know as **lexical binding**.
 
 ```js
 function counterESnext() {
-	this.seconds = 0;
+  this.seconds = 0;
 
-	window.setInterval(() => {
-		this.seconds++;
-		console.log(this.seconds);
-	}, 1000);
+  window.setInterval(() => {
+    this.seconds++;
+    console.log(this.seconds);
+  }, 1000);
 }
 ```
 
@@ -363,19 +364,33 @@ function counterESnext() {
 **ES5 `function`:**
 
 ```js
-function sayHi() { console.log('hi'); }
-function addOne(x) { return x + 1; }
-function multiply(a, b) { return a * b; }
-var multiply = function(a, b) { return a * b; }
+function sayHi() {
+  console.log("hi");
+}
+function addOne(x) {
+  return x + 1;
+}
+function multiply(a, b) {
+  return a * b;
+}
+var multiply = function(a, b) {
+  return a * b;
+};
 ```
+
+---
+
+# More Arrow Functions
 
 **ES.next `=>`:**
 
 ```js
-const sayHi = () => console.log('hi');
+const sayHi = () => console.log("hi");
 const addOne = x => x + 1;
-const multiply = (a, b) => { return a * b; }
-const multiply = (a, b) => a * b
+const multiply = (a, b) => {
+  return a * b;
+};
+const multiply = (a, b) => a * b;
 ```
 
 ---
@@ -405,6 +420,7 @@ function hasError() {
 Use arrow functions to fix [this CodePen](http://codepen.io/redacademy/pen/mPjXVW).
 
 ---
+
 template: inverse
 
 # ES.next Shorthand
@@ -418,9 +434,9 @@ Template literals (or template strings) are string literals that allow **string 
 **ES5:**
 
 ```js
-var name = 'Bob';
-var city = 'Vancouver';
-var description = name + ' lives in ' + city;
+var name = "Bob";
+var city = "Vancouver";
+var description = name + " lives in " + city;
 ```
 
 **ES.next:**
@@ -440,7 +456,7 @@ Template literals also preserve white space:
 **ES5:**
 
 ```js
-var funkyArrows = '\n-->\n    -->\n        ->\n';
+var funkyArrows = "\n-->\n    -->\n        ->\n";
 ```
 
 **ES.next:**
@@ -461,12 +477,11 @@ Use a template literal to refactor the following code.
 
 ```js
 function fullName(first, last, birthYear) {
-  return first + ' ' + last + ',\nage: ' + 2016 - birthYear + '.';
+  return first + " " + last + ",\nage: " + 2016 - birthYear + ".";
 }
 
-fullName('Emma', 'Morano', 1900);
+fullName("Emma", "Morano", 1900);
 ```
-
 
 ---
 
@@ -478,13 +493,13 @@ With ES5, if we want to define object properties with names that match their cor
 
 ```js
 function makePerson(name, city) {
-	return {
-		name: name,
-		city: city
-	};
+  return {
+    name: name,
+    city: city
+  };
 }
 
-makePerson( 'Mandi', 'Vancouver' );
+makePerson("Mandi", "Vancouver");
 ```
 
 ---
@@ -497,13 +512,13 @@ The new property value shorthand allows us to abbreviate the initialization of a
 
 ```js
 function makePerson(name, city) {
-	return {
-		name,
-		city
-	};
+  return {
+    name,
+    city
+  };
 }
 
-makePerson( 'Mandi', 'Vancouver' );
+makePerson("Mandi", "Vancouver");
 ```
 
 ---
@@ -514,13 +529,13 @@ With ES5, there's no way to set up default parameter values for a function, whic
 
 ```js
 function multiply(a, b) {
-	return a * b;
+  return a * b;
 }
 
 multiply(1);
 ```
 
-*Try this out in Codepen...*
+_Try this out in Codepen..._
 
 ---
 
@@ -532,11 +547,11 @@ Previously, we would work around this issue by testing parameter values in the b
 
 ```js
 function multiply(a, b) {
-	if (typeof b === 'undefined') {
-		b = 1;
-	}
+  if (typeof b === "undefined") {
+    b = 1;
+  }
 
-	return a * b;
+  return a * b;
 }
 multiply(1);
 ```
@@ -551,11 +566,11 @@ With ES2015, default function parameters allow us to initialize parameters with 
 
 ```js
 function multiply(a, b = 1) {
-	return a * b;
+  return a * b;
 }
 ```
 
-*Less typing FTW!*
+_Less typing FTW!_
 
 ---
 
@@ -592,7 +607,7 @@ let point = {
   y: 2
 };
 
-let {x, y} = point;
+let { x, y } = point;
 
 console.log(x); // 1
 console.log(y); // 2
@@ -608,20 +623,20 @@ Another example using destructuring on an object:
 
 ```js
 var person = {
-	name: 'Mandi',
-	city: 'Vancouver',
+  name: "Mandi",
+  city: "Vancouver"
 };
 
 function getName(person) {
-	return person.name;
+  return person.name;
 }
 ```
 
 **ES.next:**
 
 ```js
-function getName({name}) {
-	return name;
+function getName({ name }) {
+  return name;
 }
 ```
 
@@ -634,7 +649,7 @@ We can also use destructuring on items in an array:
 **ES5:**
 
 ```js
-var winners = ['Bob', 'Alice', 'Jane'];
+var winners = ["Bob", "Alice", "Jane"];
 var first = winners[0];
 var second = winners[1];
 var third = winners[2];
@@ -654,15 +669,15 @@ The rest parameter syntax allows us to represent an **indefinite number of argum
 
 ```js
 function sum(...numbers) {
-	var result = 0;
-	numbers.forEach(function (number) {
-		result += number;
-	});
+  var result = 0;
+  numbers.forEach(function(number) {
+    result += number;
+  });
 
-	return result;
+  return result;
 }
-console.log( sum(1) ); // 1
-console.log( sum(1, 2, 3, 4, 5) ); // 15
+console.log(sum(1)); // 1
+console.log(sum(1, 2, 3, 4, 5)); // 15
 ```
 
 **Note:** No other named parameters can follow the spread parameter in the function declaration.
@@ -681,20 +696,22 @@ function sum(a, b, c) {
 var args = [1, 2, 3];
 var moreArgs = [4, 5];
 
-console.log( sum(...args) ); // 6
-console.log( sum(...moreArgs, 6) ); // 15
+console.log(sum(...args)); // 6
+console.log(sum(...moreArgs, 6)); // 15
 ```
 
 ---
+
 template: inverse
 
 # for...of Loops
 
 ---
+
 class: center, middle
 
 .large[
-	What kinds of loops have we used in JS so far?
+What kinds of loops have we used in JS so far?
 ]
 
 ---
@@ -705,12 +722,12 @@ The `for...of` is a better way to loop over arrays and other iterable objects:
 
 ```js
 function groceryList(...items) {
-  for ( let i of items) {
+  for (let i of items) {
     console.log(i);
   }
 }
 
-groceryList('apples', 'oranges');
+groceryList("apples", "oranges");
 ```
 
 ---
@@ -729,12 +746,13 @@ The tax amount will need to be added to the subtotal of the summed item prices, 
 
 # What We've Learned
 
-- Syntactical differences between ES5 and ES.next
-- How and where to replace `var` with `let` or `const`
-- How to use arrow functions
-- How to write more efficient JS with template literals, enhanced object literals, rest parameters, spread operators, and default parameters
+* Syntactical differences between ES5 and ES.next
+* How and where to replace `var` with `let` or `const`
+* How to use arrow functions
+* How to write more efficient JS with template literals, enhanced object literals, rest parameters, spread operators, and default parameters
 
 ---
+
 template: inverse
 
 # Questions?
