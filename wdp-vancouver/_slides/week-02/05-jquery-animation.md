@@ -39,7 +39,7 @@ class: center, middle
 class: center, middle
 
 .large[
-   What method allows you to select a sibling element?
+   What method allows you to select sibling elements?
 ]
 
 ---
@@ -106,7 +106,7 @@ jQuery makes it easy to bring a webpage to life with animation. It offers many a
 - `.hide()`
 - `.fadeIn()`
 - `.fadeOut()`
-- ...and many more!
+- ...<a href="https://api.jquery.com/category/effects/" target="_blank">and many more!</a>
 
 ---
 
@@ -127,6 +127,8 @@ $('a').on('click', function(event) {
 ```
 
 We can pass in `fast`, `slow`, or a speed in milliseconds an argument for this method.
+
+<a href="https://codepen.io/jimRedAcad/pen/YYOwrK" target="_blank">Codepen example</a>
 
 ---
 
@@ -151,7 +153,148 @@ $('a').on('click', function(event) {
 });
 ```
 
+<a href="https://codepen.io/REDwdp/pen/MrqKVG" target="_blank">Codepen example</a>
+
 ---
+
+# .animate() Complete
+
+You may have noticed that you can run functions once .animate() has completed.
+
+The basic structure looks like this.
+
+```javascript
+$(".box").animate(){
+  // animation runs
+}, 2000, function(){
+  //  function run after animation finished, e.g. after 2000ms
+});
+```
+
+---
+
+## Multiple animation completes
+
+```javascript
+$(".box").animate(
+  {
+    width: "10rem",
+    height: "10rem"
+  },
+  1000, // after 1 second run function
+  function() {
+    $(".box").animate(
+      {
+        width: "8rem",
+        height: "8rem"
+      },
+      3000, // after 3 run another function
+      function() {
+        alert("animations complete");
+      }
+    );
+  }
+);
+```
+
+---
+
+class: center, middle
+
+<iframe height='500' scrolling='no' title='jQuery animation complete function' src='//codepen.io/REDwdp/embed/preview/Gywmvq/?height=500&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/REDwdp/pen/Gywmvq/'>jQuery animation complete function</a> by REDwdp (<a href='https://codepen.io/REDwdp'>@REDwdp</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+
+template: inverse
+
+## Possible use case of running a function after an animation?
+
+---
+
+## Content reveal animation
+
+<iframe height='400' scrolling='no' title='jQuery chaining animation' src='//codepen.io/REDwdp/embed/preview/dJQWgY/?height=400&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/REDwdp/pen/dJQWgY/'>jQuery chaining animation</a> by REDwdp (<a href='https://codepen.io/REDwdp'>@REDwdp</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+
+template: inverse
+
+## Adding interest with easing
+
+---
+
+# Easing
+
+Easing helps to bring animations to life.
+Without easing animations run from point A to B with no speeding up or slowing down.
+This is ok, however it lacks momentum and in some cases interest.
+
+jQuery doesn't support easing by default, however there are two options to add easing.
+
+- <a href="http://jqueryui.com/themeroller/" target="_blank">jQuery UI</a>
+- <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">jQuery easing plugin</a>
+
+---
+
+# jQuery Easing Plugin
+
+When you need to add easing most of the time the easing plugin is the best option.
+jQuery UI is great however it provides a lot of things we don't need e.g. accordions, date pickers, drag and drop etc...
+
+We can either <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">download the plugin</a> or use a <a href="https://cdnjs.com/libraries/jquery-easing" target="_blank">cdn</a>.
+
+---
+
+## Script order matters 🤓
+
+The script order should be something like:
+
+- **jQuery**
+- **jQuery plugins**
+- **Your Scripts**
+
+---
+
+Let's see some examples of easing
+
+<iframe height='500' scrolling='no' title='jQuery animation: spaceship' src='//codepen.io/REDwdp/embed/preview/qpQjqN/?height=500&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/REDwdp/pen/qpQjqN/'>jQuery animation: spaceship</a> by REDwdp (<a href='https://codepen.io/REDwdp'>@REDwdp</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+
+template: inverse
+
+## Another content reveal animation with some style and easing
+
+
+---
+
+class: middle, center
+
+<iframe height='500' scrolling='no' title='jQuery, animate in Flexbox' src='//codepen.io/Onomicon/embed/preview/ZvqLYz/?height=500&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/ZvqLYz/'>jQuery, animate in Flexbox</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+
+---
+
+# Mini Exercise
+
+We've seen quite a few things we can do with jQuery to animate.
+Let's spend a bit of time trying out animating a box.
+
+A codepen starting file has been setup for you.
+It has jQuery and jQuery easing added.
+There is also a small amount of css to create a box.
+The box is using position absolute so that we can animate properties like left and top.
+
+Try out some animation, e.g. try to make the box move from the left and other things like adjusting width, height. You could also try different timings, easing, and using functions which run once the animation is complete.
+
+<a href="https://codepen.io/REDwdp/pen/wpQYdg" target="_blank">Codepen animation practice</a>
+
+---
+
 template: inverse
 
 # HTML Forms & jQuery
@@ -289,6 +432,8 @@ $('#my-form').submit(function(event) {
 
 However, using `submit` with the `.on()` method permits the use of event delegation.
 
+What the? Let's take a closer look <a href="https://codepen.io/REDwdp/pen/qpQrbp" target="_blank">Codepen example</a>
+
 ---
 # The .change() Method
 
@@ -354,6 +499,8 @@ $('#hamburger').on('change', function() {
 });
 ```
 
+<a href="https://codepen.io/REDwdp/pen/MvjdzE?editors=1010" target="_blank">Codepen example</a>
+
 ---
 
 # Exercise 1
@@ -385,6 +532,26 @@ Plugins allow you to create re-usable components for your webpages, and makes it
 
 ---
 
+# How to make a plugin
+
+We can create "plugin" (some reusable code) by creating a function starting with **$.fn.yourFunctionName**
+
+```javascript
+$.fn.animateFadeIn = function(speed) {
+  this.hide().fadeIn(speed);
+};
+
+$.fn.animateFadeOut = function(speed) {
+  this.fadeOut(speed, function() {
+    $(this).animateFadeIn("slow");
+  });
+};
+```
+
+<a href="https://codepen.io/REDwdp/pen/MrzpRE?editors=1010" target="_blank">Codepen example</a>
+
+---
+
 # Exercise 2
 
 We're not going to build a slider from scratch for Project 1 (phew!).
@@ -398,12 +565,15 @@ Do this on your project now!
 # What We've Learned
 
 - How we can bring our websites to life with jQuery's animation methods
+- jQuery easing
 - How to add interactivity to forms with jQuery
-- What jQuery plugins are
+- What jQuery plugins
+- How to create a plugin for reusable code
 
 ---
 template: inverse
 
-# Questions?
+<iframe height='500' scrolling='no' title='OzagxE' src='//codepen.io/REDwdp/embed/preview/OzagxE/?height=500&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/REDwdp/pen/OzagxE/'>OzagxE</a> by REDwdp (<a href='https://codepen.io/REDwdp'>@REDwdp</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 {% endhighlight %}
