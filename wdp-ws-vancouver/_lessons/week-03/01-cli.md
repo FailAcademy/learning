@@ -21,13 +21,9 @@ Download iTerm2, which is a much better app than the default Terminal app.
 
 * [Download iTerm2](https://www.iterm2.com/downloads.html) (Make sure you download the _stable_ version)
 
-We will be using Homebrew to install some command-line tools. If you're feeling adventurous, you can install it before class.
-
-* [Install Homebrew](https://brew.sh/)
-
 **Windows users:**
 
-Install Git:
+Install Git and Git Bash:
 
 1. [Download Git for Windows.](https://git-scm.com/download/win)
 2. Double-click the `.exe` file you just downloaded to install Git on your system.

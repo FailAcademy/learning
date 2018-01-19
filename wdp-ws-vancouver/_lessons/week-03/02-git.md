@@ -7,9 +7,29 @@ lesson_date: 2018-02-20
 
 ## Pre-work
 
+### Tutorials
+
 Complete the following Code School Git tutorial before class:
 
 * [Try Git](https://try.github.io/)
+
+### Software Installation
+
+**Mac users:**
+
+Install Homebrew:
+
+* [Install Homebrew](https://brew.sh/)
+
+Then use Homebrew to install Git:
+
+```
+brew install git
+```
+
+**Windows users:**
+
+You already installed Git last class :)
 
 ---
 
