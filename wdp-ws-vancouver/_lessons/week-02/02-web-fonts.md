@@ -5,65 +5,78 @@ slides: ['_slides/week-02/02-web-fonts-slides.md']
 lesson_date: 2018-02-14
 ---
 
-## Pre-work
+## Pre-Work
 
-From the HTML & CSS textbook:
+Readings from _Learn to Code HTML & CSS_:
 
-* A Closer Look at Tags (pp. 23-24)
+* [Working with Typography - Embedding Web Fonts](http://learn.shayhowe.com/html-css/working-with-typography/#embedding-web-fonts)
 
 ---
 
 ## Learning Objectives
 
-* Learn how to use HTML elements and attributes.
+* Use `@font-face` to incorporate custom typefaces into a webpage.
+* Explore third-party services that incorporate custom typefaces on a webpage.
+* Learn how to implement an icon font on a website using Font Awesome.
 
 ---
 
 ## Keywords
 
-* [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+* [`@font-face`](https://developer.mozilla.org/en/docs/Web/CSS/@font-face)
+* Icon font
+* SVG
 
 ---
 
 ## Exercise 1
 
-Do this activity!
+Go to **Font Squirrel** and download the Webfont Kit for the custom typefaces that we'll be using for Project 1: **[Playfair Display](http://www.fontsquirrel.com/fonts/playfair-display)** (Regular and Bold) and **[Raleway](http://www.fontsquirrel.com/fonts/raleway)** (Light and Medium).
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+You'll need to download both of the weights and their italic versions too for each typeface. Add the contents of your generated web font packages to your project.
+
+You’ll also want to read up on how to **[avoid faux italics and bolding](http://www.metaltoad.com/blog/how-use-font-face-avoid-faux-italic-and-bold-browser-styles)** with your `@font-face` typefaces, and adjust your CSS accordingly.
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+We're going to use Font Awesome to add the social media icons in the footer of the Project 1 website.
 
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
+Download Font Awesome and add the font files and minified CSS file to your project, or load it from the Font Awesome CDN using a generated embed code instead.
 
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+To add the social media icons, check out Font Awesome's [Brand Icons](https://fortawesome.github.io/Font-Awesome/icons/#brand).
 
 ---
 
 ## Homework
 
-This is a link to the lab activity...
+Continue working on your Project 1 based on what you've learned so far.
 
 ---
 
 ## Additional Resources
 
-* [Code Academy](http://www.codecademy.com/learn)
+Open-source font resources:
+
+* [fontsquirrel.com](http://www.fontsquirrel.com/)
+* [fontex.org](http://www.fontex.org/)
+* [openfontlibrary.org](http://openfontlibrary.org/)
+* [Google Fonts](https://www.google.com/fonts#)
+
+Avoiding faux italics and bolding with your `@font-face` fonts:
+
+* [Stack Overflow - How to add multiple font files for the same font?](http://stackoverflow.com/questions/2436749/how-to-add-multiple-font-files-for-the-same-font)
+
+Some Google Font design inspiration:
+
+* [Google Font Pairing](http://femmebot.github.io/google-type/)
+
+Free icon fonts to use on your websites:
+
+* [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+* [Icomoon](https://icomoon.io/)
+
+Feeling ambitous? You can create your own icons fonts too:
+
+* [Creating and Using a Custom Icon Font - CSS Tricks Video](https://css-tricks.com/video-screencasts/113-creating-and-using-a-custom-icon-font/)

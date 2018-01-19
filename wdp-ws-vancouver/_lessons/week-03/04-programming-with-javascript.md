@@ -79,7 +79,7 @@ One you've created your object, **create a loop** to log to the console all of t
 
 ---
 
-## Homework
+## Lab Activity (Today)
 
 Spend some time working through the "Basic JavaScript" tutorials on [Free Code Camp](http://www.freecodecamp.com/map).
 
