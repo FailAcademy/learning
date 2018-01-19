@@ -5,65 +5,143 @@ slides: ['_slides/week-03/01-cli-slides.md']
 lesson_date: 2018-02-19
 ---
 
-## Pre-work
+## Pre-Work
 
-From the HTML & CSS textbook:
+### Tutorials
 
-* A Closer Look at Tags (pp. 23-24)
+Complete the following Udacity bash shell tutorial:
+
+* [Shell Workshop](https://www.udacity.com/course/shell-workshop--ud206)
+
+### Software Installation
+
+**Mac users:**
+
+Download iTerm2, which is a much better app than the default Terminal app.
+
+* [Download iTerm2](https://www.iterm2.com/downloads.html) (Make sure you download the _stable_ version)
+
+We will be using Homebrew to install some command-line tools. If you're feeling adventurous, you can install it before class.
+
+* [Install Homebrew](https://brew.sh/)
+
+**Windows users:**
+
+Install Git:
+
+1. [Download Git for Windows.](https://git-scm.com/download/win)
+2. Double-click the `.exe` file you just downloaded to install Git on your system.
+
+The installation process will also install Git Bash on your computer, which you can use to run most of the commands in the lesson.
 
 ---
 
 ## Learning Objectives
 
-* Learn how to use HTML elements and attributes.
+* Explore computer's command-line interface (CLI).
+* Use basic built-in commands to navigate and manipulate files and folders on your computer.
 
 ---
 
 ## Keywords
 
-* [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+* Command-Line Interface (CLI)
+* Graphical User Interface (GUI)
+* Directory
+* Working directory
+* Command flag/option
+
+**Command line instructions:**
+
+* `pwd`
+* `cd`
+* `ls`
+* `touch`
+* `mkdir`
+* `rm`
 
 ---
 
-## Exercise 1
+## Exericse 1
 
-Do this activity!
+There are two types of paths: **absolute** and **relative**.
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+Find a partner. One of you will research **absolute paths**, and the other will research **relative paths**. Once you understand them, explain them to each other.
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+There are three common aliases that we use to navigate our file tree:
 
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
+* `.`
+* `..`
+* `~`
 
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
+Split into three groups (one per alias). Research the alias, and describe a situation where you would use it.
+
+---
+
+## Exercise 3
+
+Given the following file tree:
+
+```
+                          Root
+                            |
+                          Users
+                            |
+             |----------------------------|
+             |                            |
+           Annie                        Bobby
+             |                            |
+    |------------------|           |----------------|
+    |        |         |           |      |         |
+Desktop  Documents  Pictures    Movies  Music  Applications
 ```
 
-Or include an image:
+* How would you `cd` from `Users` to `Music`?
+* How would you `cd` from `Documents` to `Root`?
 
-![My helpful screenshot](/public/img/human-to-machine.png)
+---
+
+## Exercise 4
+
+1. Navigate to your Desktop
+2. Create a directory called `my_site`
+3. Rename the `my_site` directory `website`
+4. Create an `index.html` file inside of your new directory
+5. Create an `assets` sub-directory in there too
+6. Add a `style.css` file to `assets`
+7. Delete the `assets` folder and its contents
+8. Delete the `index.html` in the root of your `website` directory
+9. Delete the `website` directory
 
 ---
 
 ## Homework
 
-This is a link to the lab activity...
+Continue work on Project 1 based on what you've learned so far.
 
 ---
 
 ## Additional Resources
 
-* [Code Academy](http://www.codecademy.com/learn)
+Handy command line resources for beginners:
+
+* [The Command Line Crash Course](http://cli.learncodethehardway.org/book/)
+* [Command Line Cheat Sheet](http://www.git-tower.com/blog/command-line-cheat-sheet/)
+* [Explain Shell](https://explainshell.com/)
+* [The Bash Guide](http://www.bash.academy/)
+
+Generate your bash prompt easily using this drop-and-drop interface:
+
+* [PS1 Generator](http://bashrcgenerator.com/)
+
+Some commands you'll want to steer clear of on the CLI:
+
+* [9 Lethal Linux Commands You Should Never Run](http://www.makeuseof.com/tag/9-lethal-linux-commands-never-run/)
+
+Have some fun with the CLI:
+
+* [Fun at the UNIX Terminal Part 1](https://blog.regehr.org/archives/1483)

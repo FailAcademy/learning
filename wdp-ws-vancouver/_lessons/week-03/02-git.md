@@ -7,63 +7,90 @@ lesson_date: 2018-02-20
 
 ## Pre-work
 
-From the HTML & CSS textbook:
+Complete the following Code School Git tutorial before class:
 
-* A Closer Look at Tags (pp. 23-24)
+* [Try Git](https://try.github.io/)
 
 ---
 
 ## Learning Objectives
 
-* Learn how to use HTML elements and attributes.
+* Use the Git CLI to perform common Git tasks.
+* Explore GitHub and the Git workflows we'll be using for the remainder of the course.
+* Create a Git repository locally, commit code, and push the code to remote repo on GitHub.
 
 ---
 
 ## Keywords
 
-* [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+* Git
+* Distributed version control system (DVCS)
+* GitHub
+* Repository (repo)
+* Staging area
+* Commit
+* Branch
+* Push/Pull
+
+**Git commands:**
+
+* `status`
+* `add`
+* `commit`
+* `push`
+* `pull`
+* `log`
 
 ---
 
 ## Exercise 1
 
-Do this activity!
-
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+Init a repo in your Project 1, make a `.gitignore` file, and make you first commit.
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
-
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
-
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
-
-Or include an image:
-
-![My helpful screenshot](/public/img/human-to-machine.png)
+Create a repo on GitHub for your Project 1, add the remote to your local repo as instructed, and push your project up to GitHub.
 
 ---
 
 ## Homework
 
-This is a link to the lab activity...
+Continue work on Project 1 based on what you've learned so far.
+
+Don't forget to make regular commits to your project repo now, and push those commits up to GitHub.
 
 ---
 
 ## Additional Resources
 
-* [Code Academy](http://www.codecademy.com/learn)
+Some Git resources and tutorials:
+
+* [Visualizing Git Concepts with D3](https://onlywei.github.io/explain-git-with-d3/)
+* [Getting Git Right](https://www.atlassian.com/git/)
+* [Pro Git ebook](http://git-scm.com/book/en/v2)
+* [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)
+
+Need help with a Git problem? Try:
+
+* [First Aid Git](http://firstaidgit.io/#/)
+
+Tips for writing great Git commit messages:
+
+* [The Art of the Commit](http://alistapart.com/article/the-art-of-the-commit)
+
+Make your command prompt Git-aware:
+
+* [Git Aware Prompt](https://github.com/jimeh/git-aware-prompt)
+* [Snippet for customizing your bash profile](https://gist.github.com/mandiwise/8112fb0668f4801cc3f9)
+
+Different ways to undo things using Git:
+
+* [How to undo (almost) anything with Git](https://github.com/blog/2019-how-to-undo-almost-anything-with-git)
+
+Some GitHub Pages resources:
+
+* [GitHub Pages](https://pages.github.com/)
+* [GitHub Help - GitHub Pages Basics](https://help.github.com/categories/github-pages-basics/)
+* [Using GitHub Pages To Host Your Website](http://blog.teamtreehouse.com/using-github-pages-to-host-your-website)

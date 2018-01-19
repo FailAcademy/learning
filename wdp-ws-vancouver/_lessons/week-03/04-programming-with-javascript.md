@@ -5,65 +5,92 @@ slides: ['_slides/week-03/04-programming-with-javascript-slides.md']
 lesson_date: 2018-02-24
 ---
 
-## Pre-work
+## Pre-Work
 
-From the HTML & CSS textbook:
+Before the first JS class, be sure to work through all of the free modules in Codeacademy's [JavaScript](https://www.codecademy.com/learn/learn-javascript) tutorial.
 
-* A Closer Look at Tags (pp. 23-24)
+Also read through the following page to reinforce some JS programming concepts before class:
+
+* [JavaScript for Cats](http://jsforcats.com/)
 
 ---
 
 ## Learning Objectives
 
-* Learn how to use HTML elements and attributes.
+* Define basic programming concepts such as statements, booleans, conditionals, loops, and variables (in relation to JavaScript).
+* Distinguish how JavaScript differs from other "server-side" programming languages.
+* Use the development tools essential for writing and debugging JavaScript code.
+* Create and use basic JavaScript functions.
+* Build basic JavaScript objects and manipulate their properties and methods.
+* Create JavaScript arrays and iterate over them.
 
 ---
 
 ## Keywords
 
-* [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+* Syntax
+* Variable
+* Concatenation
+* Comments
+* [`document`](https://developer.mozilla.org/en-US/docs/Web/API/document)
+* [`window`](https://developer.mozilla.org/en-US/docs/Web/API/Window)
+* [`alert`](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert)
+* [`prompt`](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt)
+* Operators
+* Conditionals
+* Loops
+* [`console`](https://developer.mozilla.org/en-US/docs/Tools/Web_Console)
 
 ---
 
 ## Exercise 1
 
-Do this activity!
+Open a new browser tab and open the console, and type in each line one at a time:
 
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+```js
+alert("Hello World!");
+var yourName = prompt("What's your name?");
+console.log(yourName);
+```
+
+If we wanted to store the value inputted into the `prompt` and print it out in an `alert` afterward, how might we do that?
+
+And what would we do if wanted to output the value that was entered in the `prompt` with the string `Hello,` in front of it in the subsequent `alert`?
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+Using what you just learned about conditional statements and loops, write a program that uses `console.log()` to print all the numbers from 1 to 100, with two exceptions.
 
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
+For numbers divisible by 3, print **Fizz** instead of the number, and for numbers divisible by 5 (and not 3), print **Buzz** instead.
 
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
+When you have that working, modify your program to print **FizzBuzz**, for numbers that are divisible by both 3 and 5 (and still print **Fizz** or **Buzz** for numbers divisible by only one of those).
 
-Or include an image:
+---
 
-![My helpful screenshot](/public/img/human-to-machine.png)
+## Exercise 3
+
+In this exercise, you're going to build a JS object of your own to represent a **hotel**.
+
+Properties of the hotel object should include the **name** of the hotel (The Quay), the **total number of rooms** (40), the current number of **rooms booked** (25), an array of the **types of rooms** (twin, double, suite), and function to **check the availability**.
+
+One you've created your object, **create a loop** to log to the console all of the room types one-by-one. Then, **update the booked rooms** to 30, check the new availability, and display that in an **alert box**.
 
 ---
 
 ## Homework
 
-This is a link to the lab activity...
+Spend some time working through the "Basic JavaScript" tutorials on [Free Code Camp](http://www.freecodecamp.com/map).
 
 ---
 
 ## Additional Resources
 
-* [Code Academy](http://www.codecademy.com/learn)
+Free JS-related books online:
+
+* [JSbooks](http://jsbooks.revolunet.com/)
+
+A popular JS styleguide:
+
+* [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
