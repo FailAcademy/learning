@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: jQuery Animation Slides
+title: Animation with jQuery Slides
 ---
 
 {% highlight html %}
@@ -15,6 +15,7 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
@@ -24,74 +25,85 @@ layout: false
 3. Putting it all together...
 
 ---
+
 template: inverse
 
 # Review Time!
 
 ---
+
 class: center, middle
 
 .large[
-   **Name that jQuery method!**
+**Name that jQuery method!**
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   What method allows you to select sibling elements?
+What method allows you to select sibling elements?
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   What method allows you to change a CSS property for an element?
+What method allows you to change a CSS property for an element?
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   What method allows you to change the text inside an element?
+What method allows you to change the text inside an element?
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   What method allows you to remove a class from an element?
+What method allows you to remove a class from an element?
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   What method allows you to add content just inside an element's closing tag?
+What method allows you to add content just inside an element's closing tag?
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   What method allows you to add content just before an element's opening tag?
+What method allows you to add content just before an element's opening tag?
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   What method allows you to change an element's ID name?
+What method allows you to change an element's ID name?
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   What method allows us to execute code only when a user clicks on an element?
+What method allows us to execute code only when a user clicks on an element?
 ]
 
 ---
+
 template: inverse
 
 # Animating Elements
@@ -102,11 +114,11 @@ template: inverse
 
 jQuery makes it easy to bring a webpage to life with animation. It offers many animation methods out of the box, including:
 
-- `.show()`
-- `.hide()`
-- `.fadeIn()`
-- `.fadeOut()`
-- ...<a href="https://api.jquery.com/category/effects/" target="_blank">and many more!</a>
+* `.show()`
+* `.hide()`
+* `.fadeIn()`
+* `.fadeOut()`
+* ...<a href="https://api.jquery.com/category/effects/" target="_blank">and many more!</a>
 
 ---
 
@@ -120,15 +132,15 @@ One of the most basic uses of animation in jQuery is to toggle the visibility of
 ```
 
 ```javascript
-$('a').on('click', function(event) {
-   event.preventDefault();
-   $('#my-div').toggle('fast');
+$("a").on("click", function(event) {
+  event.preventDefault();
+  $("#my-div").toggle("fast");
 });
 ```
 
 We can pass in `fast`, `slow`, or a speed in milliseconds an argument for this method.
 
-<a href="https://codepen.io/jimRedAcad/pen/YYOwrK" target="_blank">Codepen example</a>
+<a href="https://codepen.io/jimRedAcad/pen/YYOwrK" target="_blank">Try the Codepen example.</a>
 
 ---
 
@@ -142,18 +154,16 @@ jQuery also offers an `.animate()` method, which will give you finer-grained con
 ```
 
 ```javascript
-$('a').on('click', function(event) {
-   event.preventDefault();
+$("a").on("click", function(event) {
+  event.preventDefault();
 
-   $('#my-div').animate({
-      fontSize: '2em'
-   }, 1000, function() {
-      $(this).css( 'font-size', '1em' );
-   });
+  $("#my-div").animate({ fontSize: "2em" }, 1000, function() {
+    $(this).css("font-size", "1em");
+  });
 });
 ```
 
-<a href="https://codepen.io/REDwdp/pen/MrqKVG" target="_blank">Codepen example</a>
+<a href="https://codepen.io/REDwdp/pen/MrqKVG" target="_blank">Try the Codepen example.</a>
 
 ---
 
@@ -164,16 +174,16 @@ You may have noticed that you can run functions once .animate() has completed.
 The basic structure looks like this.
 
 ```javascript
-$(".box").animate(){
+$(".box").animate() {
   // animation runs
-}, 2000, function(){
-  //  function run after animation finished, e.g. after 2000ms
+}, 2000, function() {
+  // function run after animation finished, e.g. after 2000ms
 });
 ```
 
 ---
 
-## Multiple animation completes
+# Repeating Animation
 
 ```javascript
 $(".box").animate(
@@ -206,35 +216,29 @@ class: center, middle
 
 ---
 
-template: inverse
+class: center, middle
 
-## Possible use case of running a function after an animation?
+.large[
+Possible use case of running a function after an animation?
+]
 
 ---
 
-## Content reveal animation
+# Reveal Animation
 
 <iframe height='400' scrolling='no' title='jQuery chaining animation' src='//codepen.io/REDwdp/embed/preview/dJQWgY/?height=400&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/REDwdp/pen/dJQWgY/'>jQuery chaining animation</a> by REDwdp (<a href='https://codepen.io/REDwdp'>@REDwdp</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 ---
 
-template: inverse
-
-## Adding interest with easing
-
----
-
 # Easing
 
-Easing helps to bring animations to life.
-Without easing animations run from point A to B with no speeding up or slowing down.
-This is ok, however it lacks momentum and in some cases interest.
+Easing helps to bring animations to life. Without easing animations run from point A to B with no speeding up or slowing down. This is ok, however it lacks momentum and in some cases interest.
 
-jQuery doesn't support easing by default, however there are two options to add easing.
+jQuery doesn't support easing by default, however there are two options to add easing:
 
-- <a href="http://jqueryui.com/themeroller/" target="_blank">jQuery UI</a>
-- <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">jQuery easing plugin</a>
+* <a href="http://jqueryui.com/themeroller/" target="_blank">jQuery UI</a>
+* <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">jQuery easing plugin</a>
 
 ---
 
@@ -243,31 +247,32 @@ jQuery doesn't support easing by default, however there are two options to add e
 When you need to add easing most of the time the easing plugin is the best option.
 jQuery UI is great however it provides a lot of things we don't need e.g. accordions, date pickers, drag and drop etc...
 
-We can either <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">download the plugin</a> or use a <a href="https://cdnjs.com/libraries/jquery-easing" target="_blank">cdn</a>.
+We can either <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">download the plugin</a> or use a <a href="https://cdnjs.com/libraries/jquery-easing" target="_blank">CDN link</a>.
 
 ---
 
-## Script order matters 🤓
+# Script Order Matters 🤓
 
-The script order should be something like:
+The order that you load scripts in your HTML document should be:
 
-- **jQuery**
-- **jQuery plugins**
-- **Your Scripts**
+* **jQuery**
+* **jQuery plugins**
+* **Your Scripts**
 
 ---
 
-Let's see some examples of easing
+class: center, middle
+
+.large[
+Let's see some examples of easing with jQuery...
+]
+
+---
+
+class: center, middle
 
 <iframe height='500' scrolling='no' title='jQuery animation: spaceship' src='//codepen.io/REDwdp/embed/preview/qpQjqN/?height=500&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/REDwdp/pen/qpQjqN/'>jQuery animation: spaceship</a> by REDwdp (<a href='https://codepen.io/REDwdp'>@REDwdp</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-
----
-
-template: inverse
-
-## Another content reveal animation with some style and easing
-
 
 ---
 
@@ -276,22 +281,15 @@ class: middle, center
 <iframe height='500' scrolling='no' title='jQuery, animate in Flexbox' src='//codepen.io/Onomicon/embed/preview/ZvqLYz/?height=500&theme-id=0&default-tab=js,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/ZvqLYz/'>jQuery, animate in Flexbox</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-
 ---
 
 # Mini Exercise
 
-We've seen quite a few things we can do with jQuery to animate.
-Let's spend a bit of time trying out animating a box.
+We've seen quite a few things we can do with jQuery to animate. Let's spend a bit of time trying out animating a box.
 
-A codepen starting file has been setup for you.
-It has jQuery and jQuery easing added.
-There is also a small amount of css to create a box.
-The box is using position absolute so that we can animate properties like left and top.
+A **[starter Codepen](https://codepen.io/REDwdp/pen/wpQYdg)** has been setup for you with jQuery and jQuery easing added. There is also a small amount of CSS to create a box. The box is using absolute positioning so that we can animate properties like `left` and `top`.
 
-Try out some animation, e.g. try to make the box move from the left and other things like adjusting width, height. You could also try different timings, easing, and using functions which run once the animation is complete.
-
-<a href="https://codepen.io/REDwdp/pen/wpQYdg" target="_blank">Codepen animation practice</a>
+Try making the box move from the lef or adjusting width and height with animation. You could also try different timings, easing, and using functions which run once the animation is complete.
 
 ---
 
@@ -300,6 +298,7 @@ template: inverse
 # HTML Forms & jQuery
 
 ---
+
 class: center, middle
 
 ### Souping Up Your Forms with jQuery
@@ -312,11 +311,11 @@ jQuery has some special features that make it much easier to work with and enhan
 
 jQuery has special selectors that allow you to easily grab onto form elements, some of which include:
 
-- `:checkbox`
-- `:input`
-- `:focus`
-- `:selected`
-- `:submit`
+* `:checkbox`
+* `:input`
+* `:focus`
+* `:selected`
+* `:submit`
 
 ---
 
@@ -326,13 +325,13 @@ The `.val()` method allows you get or set the value entered into a form element:
 
 ```javascript
 // Get the text string currently entered into the input:
-$('input:text').val();
+$("input:text").val();
 
 // Set a new value for the input by passing in a string:
-$('input:text').val('A new value');
+$("input:text").val("A new value");
 
 // Clear out an input by passing empty quotes into .val():
-$('input:text').val('');
+$("input:text").val("");
 ```
 
 ---
@@ -342,10 +341,10 @@ $('input:text').val('');
 You can also use jQuery to figure out if a checkbox is checked:
 
 ```javascript
-if ( $('input:checkbox').is(':checked') ) {
-   console.log('The checkbox is checked.');
+if ($("input:checkbox").is(":checked")) {
+  console.log("The checkbox is checked.");
 } else {
-   console.log('The checkbox is not checked.');
+  console.log("The checkbox is not checked.");
 }
 ```
 
@@ -355,11 +354,11 @@ if ( $('input:checkbox').is(':checked') ) {
 
 We can also use jQuery's `.on()` method to handle a variety of other HTML form-related events:
 
-- `blur`
-- `change`
-- `focus`
-- `selected`
-- `submit`
+* `blur`
+* `change`
+* `focus`
+* `selected`
+* `submit`
 
 ---
 
@@ -376,14 +375,14 @@ Keep in mind that the former are for **finding** the focused element or submit e
 You select the submit element like this:
 
 ```javascript
-$('input:submit');
+$("input:submit");
 ```
 
 You detect when the form has been submitted like this:
 
 ```javascript
-$('#my-form').on('submit', function() {
-   // Do things on submit here...
+$("#my-form").on("submit", function() {
+  // Do things on submit here...
 });
 ```
 
@@ -401,14 +400,14 @@ Let's take a closer look at how we can use the `submit` event:
 ```
 
 ```javascript
-$('#my-form').on('submit', function(event) {
-   event.preventDefault();
+$("#my-form").on("submit", function(event) {
+  event.preventDefault();
 
-   if ( $('#my-text-input').val() == '' ) {
-      alert('You missed the field.');
-   } else {
-      alert('Thanks for filling the field!');
-   }
+  if ($("#my-text-input").val() == "") {
+    alert("You missed the field.");
+  } else {
+    alert("Thanks for filling the field!");
+  }
 });
 ```
 
@@ -419,22 +418,23 @@ $('#my-form').on('submit', function(event) {
 Note that you can also write the previous code using `submit` as the actual method as follows:
 
 ```javascript
-$('#my-form').submit(function(event) {
-   event.preventDefault();
+$("#my-form").submit(function(event) {
+  event.preventDefault();
 
-   if ( $('#my-text-input').val() == '' ) {
-      alert('You missed the field.');
-   } else {
-      alert('Thanks for filling the field!');
-   }
+  if ($("#my-text-input").val() == "") {
+    alert("You missed the field.");
+  } else {
+    alert("Thanks for filling the field!");
+  }
 });
 ```
 
 However, using `submit` with the `.on()` method permits the use of event delegation.
 
-What the? Let's take a closer look <a href="https://codepen.io/REDwdp/pen/qpQrbp" target="_blank">Codepen example</a>
+What the? Let's take a closer look <a href="https://codepen.io/REDwdp/pen/qpQrbp" target="_blank">Codepen example.</a>
 
 ---
+
 # The .change() Method
 
 Similarly, we can also detect when a user chooses an `<option>` in a `<select>` menu using the change event:
@@ -448,12 +448,12 @@ Similarly, we can also detect when a user chooses an `<option>` in a `<select>` 
 ```
 
 ```javascript
-$('#my-select-menu').on('change', function() {
-   var selected = $(this).val();
+$("#my-select-menu").on("change", function() {
+  var selected = $(this).val();
 
-   if ( selected !== '' ) {
-      console.log('The value you picked is: ' + selected);
-   }
+  if (selected !== "") {
+    console.log("The value you picked is: " + selected);
+  }
 });
 ```
 
@@ -488,14 +488,14 @@ You can hide inputs by setting them to `display: none`:
 And then conditionally show those elements when the user changes another form field:
 
 ```javascript
-$('#hamburger').on('change', function() {
-   if ( $(this).is(':checked') ) {
-      $('label[for="fixins"]').show('slow');
-      $('#fixins').show('slow');
-   } else {
-      $('label[for="fixins"]').hide('slow');
-      $('#fixins').hide('slow');
-   }
+$("#hamburger").on("change", function() {
+  if ($(this).is(":checked")) {
+    $('label[for="fixins"]').show("slow");
+    $("#fixins").show("slow");
+  } else {
+    $('label[for="fixins"]').hide("slow");
+    $("#fixins").hide("slow");
+  }
 });
 ```
 
@@ -510,11 +510,13 @@ In this exercise, you're going to use jQuery to create an accordian-style show/h
 [See the lesson page](/lesson/animation-with-jquery/) for further instructions.
 
 ---
+
 template: inverse
 
 # jQuery Plugins
 
 ---
+
 class: center, middle
 
 ### What's a plugin?
@@ -524,6 +526,7 @@ Plugins allow us to extend jQuery to add additional functionality to suit needs 
 In other words, they allow us to easily do more cool stuff on our sites with jQuery, and with minimal effort on our parts!
 
 ---
+
 class: center, middle
 
 ### Why create a plugin?
@@ -534,7 +537,7 @@ Plugins allow you to create re-usable components for your webpages, and makes it
 
 # How to make a plugin
 
-We can create "plugin" (some reusable code) by creating a function starting with **$.fn.yourFunctionName**
+We can create "plugin" (some reusable code) by creating a function starting with `$.fn.yourFunctionName`:
 
 ```javascript
 $.fn.animateFadeIn = function(speed) {
@@ -548,7 +551,7 @@ $.fn.animateFadeOut = function(speed) {
 };
 ```
 
-<a href="https://codepen.io/REDwdp/pen/MrzpRE?editors=1010" target="_blank">Codepen example</a>
+<a href="https://codepen.io/REDwdp/pen/MrzpRE?editors=1010" target="_blank">Try the Codepen example.</a>
 
 ---
 
@@ -564,13 +567,14 @@ Do this on your project now!
 
 # What We've Learned
 
-- How we can bring our websites to life with jQuery's animation methods
-- jQuery easing
-- How to add interactivity to forms with jQuery
-- What jQuery plugins
-- How to create a plugin for reusable code
+* How we can bring our websites to life with jQuery's animation methods
+* jQuery easing
+* How to add interactivity to forms with jQuery
+* What jQuery plugins
+* How to create a plugin for reusable code
 
 ---
+
 template: inverse
 
 <iframe height='500' scrolling='no' title='OzagxE' src='//codepen.io/REDwdp/embed/preview/OzagxE/?height=500&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/REDwdp/pen/OzagxE/'>OzagxE</a> by REDwdp (<a href='https://codepen.io/REDwdp'>@REDwdp</a>) on <a href='https://codepen.io'>CodePen</a>.
