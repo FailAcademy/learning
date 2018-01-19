@@ -1,13 +1,16 @@
 ---
 layout: lesson
 title: CSS Grid
-slides: ['_slides/week-04/03-css-grid.md']
+slides: ['_slides/week-04/01-css-grid.md']
 lesson_date: 2018-01-30
 ---
 
 ## Pre-Work
 
-*There is no pre-work for this lesson.*
+Prior to class, download and install Firefox Developer Edition:
+
+- [Firefox Developer Edition
+](https://www.mozilla.org/en-US/firefox/developer/)
 
 ---
 
