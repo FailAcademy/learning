@@ -49,7 +49,7 @@ To receive a "Pass" grade for this project, you will need to revisit your Projec
 **Functional requirements:**
 
 - Projects must function as indicated in the "functional requirements" section of each project page (i.e. they should function exactly like the demo sites do)
-- Be sure to **test** your project completely in **all major browsers** (Chrome, Firefox, Safari, Opera, IE10/11) when you think you're finished
+- Be sure to **test** your project completely in **all major browsers** (Chrome, Firefox, Safari, Opera, Edge) when you think you're finished
 
 ## Submission Instructions
 
