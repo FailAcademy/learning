@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: The Command Line Interface and Git
-slides: ['_slides/week-02/01a-cli.md', '_slides/week-02/01b-git.md']
+title: The Command Line Interface
+slides: ['_slides/week-02/01a-cli.md']
 lesson_date: 2018-01-12
 ---
 
