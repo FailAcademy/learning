@@ -15,6 +15,7 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
@@ -27,11 +28,13 @@ layout: false
 7. Collaborating with others
 
 ---
+
 template: inverse
 
 # Version Control:<br /> Whys and Hows
 
 ---
+
 class: center, middle
 
 ### What is Version Control?
@@ -42,35 +45,36 @@ Version control is a system that records changes to a file or set of files over 
 
 # What is Git?
 
-- Traditional version control system are **centralized** where a single central copy of a project lives on server, and developers **commit** their changes to it
-- But there are some downsides to this approach...
+* Traditional version control system are **centralized** where a single central copy of a project lives on server, and developers **commit** their changes to it
+* But there are some downsides to this approach...
 
 ---
 
 # What is Git?
 
-- Git is a **distributed version control system (DVCS)**
-- Developers **clone** copies of the **repository** locally with all of its previous history intact
-- There can still be an "authoritative" repository that team members push to and pull from
+* Git is a **distributed version control system (DVCS)**
+* Developers **clone** copies of the **repository** locally with all of its previous history intact
+* There can still be an "authoritative" repository that team members push to and pull from
 
 ---
 
 # Git vs. GitHub
 
-- Git is the **version control system**
-- GitHub is a **web-based app** where you can create and account and then store and share your Git repositories
-- This website is an example of a private GitHub repository!
+* Git is the **version control system**
+* GitHub is a **web-based app** where you can create and account and then store and share your Git repositories
+* This website is an example of a private GitHub repository!
 
 .inline-images[
-   ![Git logo](/public/img/slide-assets/git-logo.png)
-   ![GitHub logo](/public/img/slide-assets/octocat-logo.png)
+![Git logo](/public/img/slide-assets/git-logo.png)
+![GitHub logo](/public/img/slide-assets/octocat-logo.png)
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   Let's dive in! Open your CLI...
+Let's dive in! Open your CLI...
 ]
 
 ---
@@ -101,14 +105,15 @@ Creating a new Git **repository** (or **repo** for short) for a project only req
 If you view the hidden files in the directory where you just ran `git init`, you would now see an `.git` sub-directory there.
 
 .inline-images[
-   ![hidden git folder](/public/img/slide-assets/git-hidden-folder.png)
+![hidden git folder](/public/img/slide-assets/git-hidden-folder.png)
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   Welcome to the world of version control with Git!
+Welcome to the world of version control with Git!
 ]
 
 ---
@@ -155,9 +160,10 @@ ehthumbs.db
 node_modules/
 ```
 
-*Save this file and return to your command line...*
+_Save this file and return to your command line..._
 
 ---
+
 class: center, middle
 
 ### The Staging Area
@@ -180,9 +186,9 @@ Let's tell Git that we want to keep track of the files that are currently untrac
 
 The `git add -A` command we just saw will stage all files that have been **added**, **updated** and **deleted**. However, we can be more nuanced about the changes we choose to add to a given commit:
 
-- `git add index.html` will stage that file only
-- `git add .` stages new and modified, without deleted
-- `git add -u` stages modified and deleted, without new
+* `git add index.html` will stage that file only
+* `git add .` stages new and modified, without deleted
+* `git add -u` stages modified and deleted, without new
 
 But in most cases, you'll likely use `git add -A`.
 
@@ -195,10 +201,11 @@ Now it's actually time to **commit** our changes. To do that, run `git commit -m
 ![git commit command](/public/img/slide-assets/git-commit.gif)
 
 ---
+
 class: center, middle
 
 .large[
-   Congrats! You've now made your first commit :)
+Congrats! You've now made your first commit :)
 ]
 
 ---
@@ -221,9 +228,10 @@ Make sure your commit messages are **short** (50 characters max.) and **descript
 
 Most developers start their commit messages with **present tense** verbs.
 
-**Most importantly:** The commit message should explain what the committed code *does*.
+**Most importantly:** The commit message should explain what the committed code _does_.
 
 ---
+
 class: center, middle
 
 ### Awesome!
@@ -233,13 +241,15 @@ Let's check the `log` and take a look at your first `commit`.
 Run the following command: `git log`
 
 ---
+
 class: center, middle
 
 .large[
-   So, umm what?
+So, umm what?
 ]
 
 ---
+
 class: center, middle
 
 ### Delete a folder in your project. <br />Go ahead, I'll wait.
@@ -247,7 +257,7 @@ class: center, middle
 **Hint:** use `ls` to list the folders in your project directory, and then `rm -r` one of them.
 
 .red[
-   **DANGER:** Don't use `rm -r` outside your project directory, you won't be able to recover your files!
+**DANGER:** Don't use `rm -r` outside your project directory, you won't be able to recover your files!
 ]
 
 ---
@@ -265,13 +275,21 @@ This will return our **working directory** to the state it was in at the time of
 Read more on **[undoing various types of changes](https://github.com/blog/2019-how-to-undo-almost-anything-with-git)** with Git.
 
 ---
+
 class: center, middle
 
 .large[
-   Phew.
+Phew.
 ]
 
 ---
+
+# Exercise 1
+
+Init a repo in your Project 1, make a `.gitignore` file, and make you first commit.
+
+---
+
 template: inverse
 
 # A Basic Git Workflow with GitHub
@@ -315,6 +333,12 @@ git push -u origin master
 ```
 
 You will likely need to authenticate with your GH credentials to complete this.
+
+---
+
+# Exercise 2
+
+Create a repo on GitHub for your Project 1, add the remote to your local repo as instructed, and push your project up to GitHub.
 
 ---
 
@@ -367,6 +391,7 @@ git push origin master
 Now check your repo on GitHub to make sure your readme file is in your repo and that it displays there!
 
 ---
+
 template: inverse
 
 # Deploying your site with GitHub Pages
@@ -394,10 +419,10 @@ It's important to note that there are two different kinds of sites you can deplo
 
 GitHub pages have a few limitations:
 
-- Static sites only (no database!)
-- Form submissions are tricky
-- Size limitations (1GB for a repo, 100MB max. per file)
-- Bandwidth, up-time, support (you get what you pay for...)
+* Static sites only (no database!)
+* Form submissions are tricky
+* Size limitations (1GB for a repo, 100MB max. per file)
+* Bandwidth, up-time, support (you get what you pay for...)
 
 ---
 
@@ -405,9 +430,9 @@ GitHub pages have a few limitations:
 
 Github does most of the work for us! Here's how to get it working:
 
-- Visit your Repo Settings
-- Scroll down to the __Github Pages__ section
-- In __Source__, choose `master branch`
+* Visit your Repo Settings
+* Scroll down to the **Github Pages** section
+* In **Source**, choose `master branch`
 
 ---
 
@@ -439,13 +464,14 @@ If you prefer to `pull` without a merge commit, you can run `git pull --rebase` 
 
 # What We've Learned
 
-- What the command line is and how to use it to navigate your file system
-- What version control is
-- The difference between Git and GitHub
-- How to push code to GitHub
-- How to host a site as a GitHub page
+* What the command line is and how to use it to navigate your file system
+* What version control is
+* The difference between Git and GitHub
+* How to push code to GitHub
+* How to host a site as a GitHub page
 
 ---
+
 template: inverse
 
 # Questions?

@@ -7,37 +7,37 @@ lesson_date: 2018-01-11
 
 ## Pre-Work
 
-*There is no pre-work for this lesson.*
+_There is no pre-work for this lesson._
 
 ---
 
 ## Learning Objectives
 
-- Distinguish the major differences between traditional CSS layout techniques and flexbox.
-- Describe the most significant challenges in creating layouts with CSS that flexbox was designed to overcome.
-- Use the following flexbox CSS properties: `flex-direction`, `flex`, `justify-content`, `order`, and `align-items`.
-- Refactor floats and positioning on a website to use flexbox-based layouts instead.
+* Distinguish the major differences between traditional CSS layout techniques and flexbox.
+* Describe the most significant challenges in creating layouts with CSS that flexbox was designed to overcome.
+* Use the following flexbox CSS properties: `flex-direction`, `flex`, `justify-content`, `order`, and `align-items`.
+* Refactor floats and positioning on a website to use flexbox-based layouts instead.
 
 ---
 
 ## Keywords
 
-- Flex container
-- Flex item
-- Main axis
-- Cross axis
-- [`align-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)
-- [`align-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
-- [`align-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)
-- [`flex`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex)
-- [`flex-basis`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis)
-- [`flex-direction`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction)
-- [`flex-flow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow)
-- [`flex-grow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow)
-- [`flex-shrink`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink)
-- [`flex-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)
-- [`justify-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)
-- [`order`](https://developer.mozilla.org/en-US/docs/Web/CSS/order)
+* Flex container
+* Flex item
+* Main axis
+* Cross axis
+* [`align-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)
+* [`align-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
+* [`align-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)
+* [`flex`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex)
+* [`flex-basis`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis)
+* [`flex-direction`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction)
+* [`flex-flow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow)
+* [`flex-grow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow)
+* [`flex-shrink`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink)
+* [`flex-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)
+* [`justify-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)
+* [`order`](https://developer.mozilla.org/en-US/docs/Web/CSS/order)
 
 ---
 
@@ -45,11 +45,10 @@ lesson_date: 2018-01-11
 
 Let's apply these flexbox concepts to Project 1.
 
-We'll start by refactoring the floats in the site `<footer>` into flexbox properties following these steps:
+We'll start adding flexbox properties into the `<footer>` with following these steps:
 
-1. Remove your floats
-2. Apply `display: flex` to the appropriate element
-3. Figure out how to get the address and the social links aligned to the left and right sides as they were with your floats (for screen widths `600px` and up only, of course!)
+1. Apply `display: flex` to the appropriate element
+2. Figure out how to get the address and the social links aligned to the left and right sides of the footer
 
 ---
 
@@ -57,9 +56,8 @@ We'll start by refactoring the floats in the site `<footer>` into flexbox proper
 
 Let's use some of the flex-item related properties in our project, within the site `<header>`. Follow these steps:
 
-1. Remove all floats from your `<header>` elements
-2. Apply `display: flex` to the appropriate container
-3. Use a combination of flex item properties to set the logo back to the left edge and the cart icon set to right edge of the page (and make sure they are the right size!)
+1. Apply `display: flex` to the appropriate container in your `<header>`
+2. Use a combination of flex item properties to set the logo back to the left edge and the cart icon set to right edge of the page (and make sure they are the right size!)
 
 ---
 
@@ -79,7 +77,7 @@ See the [CSS3 & Responsive Web Design lesson](/lesson/css3-responsive-web-design
 
 If you'd like to get more practice on flexbox before you begin incorporating it into your project, take what you've learned today and apply it to solving the 24 challenges in **[Flexbox Froggy](http://flexboxfroggy.com/)**.
 
-Then you can spend any remaining time today removing all floats from your project and replace them with flexbox properties.
+Then you can spend any remaining time today continuing to build out the layout Project 1.
 
 ---
 
@@ -87,24 +85,24 @@ Then you can spend any remaining time today removing all floats from your projec
 
 This is a concise and authoritative summary of the various flexbox properties and how they work:
 
-- [CSS Tricks - A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [CSS Tricks - A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 Get a sense of why flexbox is a substantial improvement over traditional layout methods and hacks in CSS:
 
-- [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/)
+* [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/)
 
 Another great flexbox reference page:
 
-- [The Ultimate Flexbox Cheat Sheet](http://www.sketchingwithcss.com/samplechapter/cheatsheet.html)
+* [The Ultimate Flexbox Cheat Sheet](http://www.sketchingwithcss.com/samplechapter/cheatsheet.html)
 
 Try out flexbox properties using this point-and-click interface:
 
-- [Flexbox playground](http://codepen.io/enxaneta/full/adLPwv/)
+* [Flexbox playground](http://codepen.io/enxaneta/full/adLPwv/)
 
 How to add flexbox support to really old versions of IE:
 
-- [Flexibility](https://github.com/10up/flexibility)
+* [Flexibility](https://github.com/10up/flexibility)
 
 Want to play tower defence but need to learn flexbox...
 
-- [Flexbox defence](http://www.flexboxdefense.com/)
+* [Flexbox defence](http://www.flexboxdefense.com/)

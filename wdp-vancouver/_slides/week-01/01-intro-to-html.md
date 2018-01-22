@@ -15,6 +15,7 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
@@ -24,42 +25,47 @@ layout: false
 3. Creating a webpage
 4. Doctypes, meta tags and comments
 5. Structuring a webpage
-5. Other essential elements
-6. Form Element
-
+6. Other essential elements
+7. Form Element
 
 ---
+
 template: inverse
 
 # What is the Web?
 
 ---
+
 class: center, middle
 
 ![HTTP request diagram](/public/img/slide-assets/http-request-diagram.svg)
 
 ---
+
 class: center, middle
 
 .large[
-   What does "HTML" mean?
+What does "HTML" mean?
 ]
 
 ---
+
 class: center, middle
 
 .inline-images[
-   ![Traditional documents](/public/img/slide-assets/html-traditional-doc.svg)
+![Traditional documents](/public/img/slide-assets/html-traditional-doc.svg)
 ]
 
 ---
+
 class: center, middle
 
 .inline-images[
-   ![HyperText documents](/public/img/slide-assets/html-hypertext-doc.svg)
+![HyperText documents](/public/img/slide-assets/html-hypertext-doc.svg)
 ]
 
 ---
+
 template: inverse
 
 # Elements & Attributes
@@ -112,20 +118,23 @@ We can also **nest** elements in HTML. For example, to add emphasis to our parag
    <em>The quick brown fox jumps over the lazy dog.</em>
 </p>
 ```
+
 Open up a [CodePen](https://codepen.io/pen/) and try this for yourself.
 
-**Tip:** Think of nested elements like Russian *Matryoshka* dolls.
+**Tip:** Think of nested elements like Russian _Matryoshka_ dolls.
 
 ---
+
 template: inverse
 
 # Creating a Webpage
 
 ---
+
 class: center, middle
 
 .large[
-   What three things do we need to make a webpage?
+What three things do we need to make a webpage?
 ]
 
 ---
@@ -164,10 +173,11 @@ Virtually all websites share the same basic structure. They contain a `<head>` a
 ```
 
 ---
+
 class: center, middle
 
 .large[
-   Why call it `index.html`?
+Why call it `index.html`?
 ]
 
 ---
@@ -176,16 +186,17 @@ class: center, middle
 
 We want to keep our project files organized in a **root folder/directory**:
 
-- Stick to lowercase names consistently
-- Don't use spaces in your file names, instead use hyphens or underscores to separate words
-- Don't use special characters in your file names
-- Choose logical and descriptive names for files and folders
+* Stick to lowercase names consistently
+* Don't use spaces in your file names, instead use hyphens or underscores to separate words
+* Don't use special characters in your file names
+* Choose logical and descriptive names for files and folders
 
 ---
+
 class: center, middle
 
 .inline-images[
-   ![Root folders](/public/img/slide-assets/html-folder-structure.png)
+![Root folders](/public/img/slide-assets/html-folder-structure.png)
 ]
 
 ---
@@ -203,6 +214,7 @@ Then open that folder and create a simple webpage containing `<html>`, `<head>`,
 Lastly, save and view your new website in a browser.
 
 ---
+
 template: inverse
 
 # A Few More Important Components...
@@ -271,6 +283,7 @@ Adding comments to our HTML is a good practice to help us **document** our code 
 ```
 
 ---
+
 template: inverse
 
 # Let's Add More Structure
@@ -405,10 +418,11 @@ In groups of 4 (or so) have a quick discussion about:
 2. Why is semantic code important?
 
 ---
+
 class: center, middle
 
 .inline-images[
-   ![HTML5 example layout](/public/img/slide-assets/html5-semantic-tags.png)
+![HTML5 example layout](/public/img/slide-assets/html5-semantic-tags.png)
 ]
 
 ---
@@ -419,11 +433,12 @@ Let's explore what these HTML5 elements are good for.
 
 In teams of two, research your assigned element and report back to the class:
 
-- What the semantically appropriate usage of the element is
-- Any potential sources of confusion about this element's usage
-- Where you think this element may be used in this week's project (if at all)
+* What the semantically appropriate usage of the element is
+* Any potential sources of confusion about this element's usage
+* Where you think this element may be used in this week's project (if at all)
 
 ---
+
 template: inverse
 
 # Other Essential Elements
@@ -458,6 +473,7 @@ And if a page is in a sub-folder:
 ```
 
 ---
+
 # Link Elemnts
 
 Links can be internal
@@ -484,8 +500,8 @@ And of course, images!
 
 An `<img>` element has two important attributes:
 
-- `src` tells the browser where to find the image
-- `alt` provides a description of the image so the content can be understood by screenreader software and search engines
+* `src` tells the browser where to find the image
+* `alt` provides a description of the image so the content can be understood by screenreader software and search engines
 
 ---
 
@@ -505,30 +521,30 @@ The `title` of the image will appear as a **tooltip** in most browsers when you 
 
 Today, images for the web are saved in the following formats:
 
-- **JPG/JPEG** (Joint Photographers Group)
-- **GIF** (Graphics Interchange Format)
-- **PNG** (Portable Network Graphics)
-- **SVG** (Scalable Vector Graphics)
+* **JPG/JPEG** (Joint Photographers Group)
+* **GIF** (Graphics Interchange Format)
+* **PNG** (Portable Network Graphics)
+* **SVG** (Scalable Vector Graphics)
 
 ---
 
 # Format Cheatsheet
 
-- Use **PNG-8** over **GIF** for graphics with simple colours
-- Use **PNG-24** over **JPEG** when using alpha transparency
-- Use **JPEG** over **PNG** for photographic images
-- Use **GIF** for simple animated graphics
-- Use **SVG** for icons and logos that need to scale
+* Use **PNG-8** over **GIF** for graphics with simple colours
+* Use **PNG-24** over **JPEG** when using alpha transparency
+* Use **JPEG** over **PNG** for photographic images
+* Use **GIF** for simple animated graphics
+* Use **SVG** for icons and logos that need to scale
 
 ---
 
 # Formatting Pro Tips
 
-- **Scale down images** to the appropriate size for your webpage (or use responsive images to deliver different image sizes to different screen sizes)
-- **Choose the correct** image format
-- **Optimize images** to be the best possible quality at the smallest possible size
-- **Save** image names with relevant names (that will help with SEO later)
-- **Keep a copy** of the original image before optimizing it
+* **Scale down images** to the appropriate size for your webpage (or use responsive images to deliver different image sizes to different screen sizes)
+* **Choose the correct** image format
+* **Optimize images** to be the best possible quality at the smallest possible size
+* **Save** image names with relevant names (that will help with SEO later)
+* **Keep a copy** of the original image before optimizing it
 
 ---
 
@@ -541,6 +557,7 @@ Jot some ideas on your own, then you'll pair up to discuss your approach with a 
 Finally, you and your partner will share your insights with the class.
 
 ---
+
 template: inverse
 
 # Common Form Elements
@@ -685,33 +702,22 @@ In lieu of a `<button>` element, you can may also see an `<input>` element with 
 
 The main difference between `<button>` and `<input type="submit" />` is that the input element is self-closing, while the button can contain content.
 
-*Functionally they are the same if their types are the same.*
+_Functionally they are the same if their types are the same._
 
 ---
 
 # What We've Learned
 
-- What HTML is and it's basic elements
-- How to create a webpage on your computer
-- New HTML5 elements
-- How to create links and add images
-- How to create HTML form elements
+* What HTML is and it's basic elements
+* How to create a webpage on your computer
+* New HTML5 elements
+* How to create links and add images
+* How to create HTML form elements
 
 ---
+
 template: inverse
 
 # Questions?
-
----
-# Project
-
-Today's lab time will be dedicated to Project 1.
-
-Before you get started, you should watch these videos to reinforce the concepts learned in class:
-
-- [HTML - Hamburger Mark-up Language](http://www.dontfeartheinternet.com/02-html/)
-- [Don't Fear Starting from Scratch - Part 1: HTML](http://www.dontfeartheinternet.com/04-from-scratch/)
-
-You're goal for the end of the first day is to have the different sections of the Project 1 website roughed-out in HTML. It should look like [this](http://redacademy.github.io/aloha-apparel/index-day1.html)
 
 {% endhighlight %}
