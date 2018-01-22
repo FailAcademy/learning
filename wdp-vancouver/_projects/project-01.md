@@ -91,7 +91,7 @@ Your project must:
 Your project must:
 
 - Take into account all feedback you received during the project check-in
-- Be sure to **test** your project completely in **all major browsers** (Chrome, Firefox, Safari, Opera, IE11) when you think you're finished
+- Be sure to **test** your project completely in **all major browsers** (Chrome, Firefox, Safari, Opera, Edge) when you think you're finished
 
 **Stretch goals:**
 
