@@ -7,63 +7,81 @@ lesson_date: 2018-02-08
 
 ## Pre-work
 
-From the HTML & CSS textbook:
+Readings from _Learn to Code HTML & CSS_:
 
-* A Closer Look at Tags (pp. 23-24)
+* [Positioning Content](http://learn.shayhowe.com/html-css/positioning-content/)
+* [Working with Typography](http://learn.shayhowe.com/html-css/working-with-typography/)
+* [Setting Backgrounds and Gradients](http://learn.shayhowe.com/html-css/setting-backgrounds-and-gradients/)
+* [Creating Lists](http://learn.shayhowe.com/html-css/creating-lists/) (the CSS section now)
 
 ---
 
 ## Learning Objectives
 
-* Learn how to use HTML elements and attributes.
+* Use CSS positioning properties to help implement page layouts.
+* Use hexadecimal and RGBa to change the colours of HTML elements.
+* Use CSS background properties to set background colors and images.
+* Use code validators and browser developer tools to assist with debugging.
 
 ---
 
 ## Keywords
 
-* [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+* [Web/Page Inspector](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector)
+* [`position`](https://developer.mozilla.org/en/docs/Web/CSS/position)
+* [`background`](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
 
 ---
 
-## Exercise 1
+## Exericse 1
 
-Do this activity!
-
-<p data-height="268" data-theme-id="0" data-slug-hash="rVVYEG" data-default-tab="result" data-user="nehasharma" class='codepen'>See the Pen <a href='http://codepen.io/nehasharma/pen/rVVYEG/'>Music Player</a> by Neha Sharma (<a href='http://codepen.io/nehasharma'>@nehasharma</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+Add the [Eric Meyer reset](http://meyerweb.com/eric/tools/css/reset/) to your Project 1. Do you notice anything different when you refresh your browser?
 
 ---
 
 ## Exercise 2
 
-This is how you add highlighted syntax to a lesson page:
+Both of the stretch goals for Project 1 will require positioning properties to style it. With a partner, discuss how you would implement the cart icon stretch goal in CSS. Draw it out on paper if it helps!
 
-```html
-<!-- A bit of sample HTML with syntax highlighting-->
+<p>
+  <img src="/public/img/slide-assets/css-cart-positioning.jpg" alt="Aloha cart icon screenshot" style="margin: 0 auto" />
+</p>
 
-<html>
-   <head>
-      <title>An Awesome Website</title>
-   </head>
-   <body>
-      <h1>Hello world again!</h1>
-      <p class="my-class">Just a little bit of sample code.</p>
-   </body>
-</html>
-```
+---
 
-Or include an image:
+## Exercise 3
 
-![My helpful screenshot](/public/img/human-to-machine.png)
+There are two components to this exercise&mdash;adding some colour, and beginning to add background images.
+
+Change the colour of the links and the orange headings to `#e2574c`.
+
+Also add the floral background image to the banner area.
+
+**Challenge!** How could we get the partially transparent background layer and the photo of the girl to sit on top of this image (also as a background)?
 
 ---
 
 ## Homework
 
-This is a link to the lab activity...
+Continue working on your Project 1 based on what you've learned so far.
+
+Also, one more video to watch to help reinforce the concepts learned in class:
+
+* [Don't Fear Layout](http://www.dontfeartheinternet.com/08-layout/)
+
+By the end of the second CSS lesson you should have a enough CSS written to begin approximating the rough layout of your Project 1 website.
 
 ---
 
 ## Additional Resources
 
-* [Code Academy](http://www.codecademy.com/learn)
+Master your browser's dev tools:
+
+* [discover-devtools.codeschool.com](http://discover-devtools.codeschool.com/)
+* [DevTools Digest: DevTools in 2016 and Beyond](https://developers.google.com/web/updates/2016/06/devtools-digest)
+
+Tools to help you validate your code:
+
+* [W3C Mark-up Validation Service](https://validator.w3.org/)
+* [W3C Mark-up CSS Service](https://jigsaw.w3.org/css-validator/)
+* [Validity Chrome Extension](https://chrome.google.com/webstore/detail/validity/bbicmjjbohdfglopkidebfccilipgeif)
