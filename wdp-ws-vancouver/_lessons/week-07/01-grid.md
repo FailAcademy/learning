@@ -46,3 +46,7 @@ _Lab Activity TBA._
 A great (free!) tutorial by Wes Bos on CSS Grid:
 
 * [CSS Grid](https://cssgrid.io/)
+
+Another helpful grid resource (like Flexbox Froggy):
+
+* [Grid Garden](http://cssgridgarden.com/)
