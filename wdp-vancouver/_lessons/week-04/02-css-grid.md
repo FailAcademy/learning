@@ -98,3 +98,8 @@ Rachel Andrew - CSS Grid Ask Me Anything
 
 - [CSS Grid AMA](https://github.com/rachelandrew/cssgrid-ama)
 
+- [Sitepoint CSS Grid intro, recreate a Slack layout!](https://www.sitepoint.com/introduction-css-grid-layout-module/)
+
+- [Codepen example, difference between auto and fr](https://codepen.io/cssgrid/pen/ALQjAj)
+
+- [Grid Playground](https://www.cssgridplayground.com/)
