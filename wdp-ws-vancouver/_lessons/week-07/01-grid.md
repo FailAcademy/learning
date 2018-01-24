@@ -43,4 +43,6 @@ _Lab Activity TBA._
 
 ## Additional Resources
 
-_Additional Resources TBA._
+A great (free!) tutorial by Wes Bos on CSS Grid:
+
+* [CSS Grid](https://cssgrid.io/)
