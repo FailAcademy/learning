@@ -31,11 +31,9 @@ Readings from _Learn to Code HTML & CSS_:
 
 ## Exercise 1
 
-Go to **Font Squirrel** and download the Webfont Kit for the custom typefaces that we'll be using for Project 1: **[Playfair Display](http://www.fontsquirrel.com/fonts/playfair-display)** (Regular and Bold) and **[Raleway](http://www.fontsquirrel.com/fonts/raleway)** (Light and Medium).
+Go to **Transfonter** and download the Webfont Kit for the custom typefaces that we'll be using for Project 1: **[Playfair Display](http://www.fontsquirrel.com/fonts/playfair-display)** (Regular and Bold) and **[Raleway](http://www.fontsquirrel.com/fonts/raleway)** (Light and Medium).
 
 You'll need to download both of the weights and their italic versions too for each typeface. Add the contents of your generated web font packages to your project.
-
-You’ll also want to read up on how to **[avoid faux italics and bolding](http://www.metaltoad.com/blog/how-use-font-face-avoid-faux-italic-and-bold-browser-styles)** with your `@font-face` typefaces, and adjust your CSS accordingly.
 
 ---
 
@@ -57,9 +55,9 @@ Continue working on your Project 1 based on what you've learned so far.
 
 ## Additional Resources
 
-Open-source font resources:
+Helpful web font resources:
 
-* [fontsquirrel.com](http://www.fontsquirrel.com/)
+* [Transfonter](https://transfonter.org/)
 * [fontex.org](http://www.fontex.org/)
 * [openfontlibrary.org](http://openfontlibrary.org/)
 * [Google Fonts](https://www.google.com/fonts#)

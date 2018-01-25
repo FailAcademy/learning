@@ -134,12 +134,12 @@ Order matters! You'll want to include the `src` files for your fonts in this ord
 
 ---
 
-# Font Squirrel
+# Transfonter
 
-The website [Font Squirrel](http://www.fontsquirrel.com/) is a great resource for finding and creating `@font-face` font packages:
+The website [Transfonter](https://transfonter.org/) is a great resource for creating `@font-face` font packages:
 
 .inline-images[
-![Font Squirrel Webfont Generator](/public/img/slide-assets/font-squirrel-generator.jpg)
+![Transfonter screenshot](/public/img/slide-assets/transfonter-screenshot.jpg)
 ]
 
 ---
@@ -154,11 +154,9 @@ Before you embed a font on your website using `@font-face` you need to be sure t
 
 # Exercise 1
 
-Go to **Font Squirrel** and download the Webfont Kit for the custom typefaces that we'll be using for Project 1: **[Playfair Display](http://www.fontsquirrel.com/fonts/playfair-display)** (Regular and Bold) and **[Raleway](http://www.fontsquirrel.com/fonts/raleway)** (Light and Medium).
+Go to **Transfonter** and download the Webfont Kit for the custom typefaces that we'll be using for Project 1: **[Playfair Display](http://www.fontsquirrel.com/fonts/playfair-display)** (Regular and Bold) and **[Raleway](http://www.fontsquirrel.com/fonts/raleway)** (Light and Medium).
 
 You'll need to download both of the weights and their italic versions too for each typeface. Add the contents of your generated web font packages to your project.
-
-You’ll also want to read up on **[Web Fonts – ‘Faux’ Bold and Italic](http://css-snippets.com/web-fonts-faux-bold-and-italic/)** (Another reading **[here](https://css-tricks.com/watch-your-font-weight/)**) and adjust your `@font-face` typefaces, and CSS accordingly.
 
 ---
 
