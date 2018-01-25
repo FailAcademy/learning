@@ -484,7 +484,7 @@ But with great power...
 
 In this exercise, we'll refactor some CSS into SCSS, using the basic functionality we've learned.
 
-See the [lesson page](/lesson/sass-css-pre-processors/) for more details.
+See the [lesson page](/lesson/sass-css-preprocessors/) for more details.
 
 ---
 
