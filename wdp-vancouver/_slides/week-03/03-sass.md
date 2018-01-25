@@ -566,7 +566,7 @@ var sass = require("gulp-sass"),
   rename = require("gulp-rename");
 
 gulp.task("sass", function() {
-  gulp
+  return gulp
     .src("./sass/style.scss")
     .pipe(sass())
     .pipe(
@@ -589,7 +589,7 @@ We can add easier-to-read error messages into our Gulp set-up to let us know whe
 
 ```js
 gulp.task("sass", function() {
-  gulp
+  return gulp
     .src("./sass/style.scss")
     .pipe(prettyError()) // ADD THIS LINE
     .pipe(sass())
