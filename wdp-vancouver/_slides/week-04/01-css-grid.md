@@ -218,7 +218,7 @@ But what just happend? 😔
   ### Grid Tracks
   A grid is similar to a piece of graph paper.
 
-  You can define **'tracks'** with **grid-template-columns**
+  You can define **'tracks'** with **grid-template-columns** & rows
 
 ]
 .right-column[
@@ -233,9 +233,9 @@ But what just happend? 😔
   ### Grid Tracks
   A grid is similar to a piece of graph paper.
 
-  You can define **'tracks'** with **grid-template-columns**
+  You can define **'tracks'** with **grid-template-columns** & rows
 
-  & fill areas with track lines e.g. **grid-column**
+  Fill tracks using line numbers e.g. **grid-column**
 
 ]
 .right-column[
@@ -324,7 +324,7 @@ You should see something like this. Try inspecting the grid.
 Take a look at some of the grid examples at <a href="https://gridbyexample.com/examples/" target="_blank">GridByExample.com</a>
 
 Inspect the site with Firefox Dev Tools.
-See if you notice anything intersting.
+See if you notice anything interesting.
 
 Discuss the findings with your table.
 
@@ -351,9 +351,16 @@ The property for this is **grid-template-rows**
 }
 ```
 
-<a href="https://codepen.io/redacademy/pen/NyWyQY" target="_blank">Codepen example</a>
+---
+
+**grid-template-rows**
+
+<iframe height='500' scrolling='no' title='Intro to CSS Grid: 1.2' src='//codepen.io/redacademy/embed/NyWyQY/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/redacademy/pen/NyWyQY/'>Intro to CSS Grid: 1.2</a> by RED Academy (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
 
 ---
+
 # Implicit & Explicit
 
 
@@ -373,6 +380,31 @@ class: center, middle
 ]
 
 ---
+
+# Setting Auto Rows
+
+We can adjust how implicit tracks by setting an auto value.
+
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+}
+```
+
+<a href="https://codepen.io/redacademy/pen/oENMbL" target="_blank">Codepen example</a>
+
+---
+
+class: center, middle
+
+# We've learned the basics
+
+### Next let's up our grid game.
+
+---
+
 
 class: center, middle
 
