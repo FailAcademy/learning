@@ -49,49 +49,276 @@ template: inverse
 
 # Enable CSS Grid
 
-To use the new CSS Grid feautures, we start by setting the **display** property to **grid**.
+To use the new CSS Grid 'layout module'... <br>
+Start by setting an elements **display** property to **grid**.
 
 ```css
+/* Html element that will be the 'parent' of our grid items */
 .grid-container {
   display: grid;
 }
 ```
 
-Ok that's easy however nothing changed visually?
-That's because we haven't set our columns or rows yet.
+---
 
-Next we will setup our **grid columns**.
+<iframe height='500' scrolling='no' title='Grid 1' src='//codepen.io/Onomicon/embed/yvBwmO/?height=500&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/yvBwmO/'>Grid 1</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 
-# Grid Columns
+class: center, middle
 
-To set grid columns we use the property 
+**Our job is done** 😎
 
-**grid-template-columns**
+.inline-images[
+  ![Good News](/public/img/slide-assets/css-grid/tron-sunset.gif)
+]
 
-Each value will create a column, and the column size can be different units of measurement e.g. **px**, **rem**, **%**, **auto**, and a newer unit specific to grid **fr**.
+---
+
+### Exciting... Kinda?
+
+We enabled grid and ended up with rows?<br>
+That's because we haven't set any columns yet.
+
+The CSS property is **grid-template-columns**
 
 ```css
 .grid-container {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 100px 200px 100px;
 }
 ```
-Try it out <a href="https://codepen.io/Onomicon/pen/5211db77b1ccabe811673cb75ba29869/?editors=1100" target="_blank">Codepen example</a>
+
 
 ---
 
-## Notice anything interesting?
 
-The first thing you may notice is that for each unit of measurement we enter we get a new column, that's pretty neat!
+<iframe height='500' scrolling='no' title='Grid 1: grid-template-columns' src='//codepen.io/Onomicon/embed/PQYgXP/?height=500&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/PQYgXP/'>Grid 1: grid-template-columns</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
-Ok but what's the difference between **auto** and **fr**?
 
-**Auto** basically trys to fill the available space based on the content
-**fr** fills a fraction of the column width e.g. if each column is set to 1fr then each is 1/3rd of the available space.
+---
 
-Try changing the middle column to 1fr and the outer columsn to auto.
+# Responsive Units
+
+We can use responsive units such as:<br> **%, em, rem, auto, vw, vh, vmin, vmax**<br>
+
+However there's a new unit specific to grid. Which is **fr**
+
+**fr** is basically a fraction.
+
+
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 1 / 3rd */
+}
+```
+
+---
+
+
+<iframe height='500' scrolling='no' title='Grid 1: grid-template-columns fr' src='//codepen.io/Onomicon/embed/qxWwwg/?height=500&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/qxWwwg/'>Grid 1: grid-template-columns fr</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+
+
+---
+
+# Element Placement
+
+Until now our example html has been just for visual purposes.
+
+Let's update our html to look more like a website.
+
+```html
+<div class="grid-container">
+  <header>Header</header>
+  <main>Main</main>
+  <aside>Aside</aside>
+  <footer>Footer</footer>
+</div>
+```
+
+---
+
+<iframe height='500' scrolling='no' title='Grid 1: grid-template-columns fr element placement start' src='//codepen.io/Onomicon/embed/YeKMbm/?height=500&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/YeKMbm/'>Grid 1: grid-template-columns fr element placement start</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+
+### Let's place our elements
+
+Using a new property **grid-column** we can have our elements span columns e.g.
+
+```css
+header {
+  grid-column: 1 / 4;
+}
+
+main {
+  grid-column: 1 / 3;
+}
+
+aside {
+  grid-column: 3 / 4;
+}
+
+footer {
+  grid-column: 1 / 4;
+}
+```
+
+---
+
+
+<iframe height='500' scrolling='no' title='Grid 1: grid-template-columns fr element placement end' src='//codepen.io/Onomicon/embed/xYKNKm/?height=500&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/xYKNKm/'>Grid 1: grid-template-columns fr element placement end</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+
+---
+
+class: center, middle
+
+### You've made a CSS Grid website!
+
+.inline-images[
+  ![Good News](/public/img/slide-assets/css-grid/tron-lightbike.gif)
+]
+
+But what just happend? 😔
+
+---
+
+.left-column[
+  ### Grid Tracks
+  A grid is similar to a piece of graph paper.
+]
+.right-column[
+.inline-images[
+  ![Grid Tracks](/public/img/slide-assets/css-grid/graphpaper.jpg)
+]
+]
+
+---
+
+.left-column[
+  ### Grid Tracks
+  A grid is similar to a piece of graph paper.
+
+  You can define **'tracks'** with **grid-template-columns**
+
+]
+.right-column[
+.inline-images[
+  ![Grid Tracks](/public/img/slide-assets/css-grid/graphpaper-example-filled.jpg)
+]
+]
+
+---
+
+.left-column[
+  ### Grid Tracks
+  A grid is similar to a piece of graph paper.
+
+  You can define **'tracks'** with **grid-template-columns**
+
+  & fill areas with track lines e.g. **grid-column**
+
+]
+.right-column[
+.inline-images[
+  ![Grid Tracks](/public/img/slide-assets/css-grid/graphpaper-example-lines.jpg)
+]
+]
+
+---
+
+
+### Grid Tracks
+
+Tracks are lines created with **grid-template-columns & rows**
+
+<iframe height='365' scrolling='no' title='Grid 1: grid tracks' src='//codepen.io/Onomicon/embed/LQPKER/?height=365&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/LQPKER/'>Grid 1: grid tracks</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+
+
+---
+### Grid Lines
+
+Are the tracks lines & what we use to position elements.
+
+
+<iframe height='365' scrolling='no' title='Grid 1: grid tracks: lines' src='//codepen.io/Onomicon/embed/NyKZxO/?height365&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/NyKZxO/'>Grid 1: grid tracks: lines</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+
+---
+
+# Grid Dev Tools
+
+Let's take a look at the following link in Firefox:
+**<a href="https://codepen.io/Onomicon/full/LQPKER/" target="_blank">Grid Example</a>**
+
+If you dont' have the developer version
+
+<a href="https://www.mozilla.org/en-US/firefox/developer/" target="_blank">
+![Firefox Developer](/public/img/slide-assets/css-grid/firefox-dev.png)
+</a>
+
+---
+
+# Grid Dev Tools
+
+Open dev tools by right clicking or **command option i**
+
+Inspect, like you would with chrome, and look for the class **grid-container**
+
+![Firefox Grid Container](/public/img/slide-assets/css-grid/firefox-grid-container.jpg)
+
+---
+
+# Grid Dev Tools
+
+Now look in the **rules** panel for the selected element.
+
+Click on the **waffle looking icon** in between **display grid**.
+
+![Firefox Grid Container](/public/img/slide-assets/css-grid/firefox-grid-waffle.jpg)
+
+
+
+---
+
+# Grid Dev Tools
+
+Select the layout tab and check the following boxes.
+
+![Firefox Grid Layout](/public/img/slide-assets/css-grid/firefox-layout.jpg)
+
+
+---
+
+# Grid Dev Tools
+
+You should see something like this. Try inspecting the grid.
+
+![Firefox Grid Screenshot](/public/img/slide-assets/css-grid/firefox-grid-screenshot.jpg)
+
+
+
+---
+
+# Exercise 1
+
+Take a look at some of the grid examples at <a href="https://gridbyexample.com/examples/" target="_blank">GridByExample.com</a>
+
+Inspect the site with Firefox Dev Tools.
+See if you notice anything intersting.
+
+Discuss the findings with your table.
 
 ---
 
@@ -101,23 +328,38 @@ Now that we have some columns let's try adding some rows.
 
 The property for this is **grid-template-rows**
 
-Let's also change the columns to 2 and set their value to 1fr.
-
 ```css
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 200px 1fr 200px;
 }
 ```
 
-<a href="https://codepen.io/Onomicon/pen/cd058fd2bd5422818ca70b7d831c6134?editors=1100" target="_blank">Codepen example</a>
+<a href="https://codepen.io/Onomicon/pen/cd058fd2bd5422818ca70b7d831c6134?editors=0100" target="_blank">Codepen example</a>
+
+---
+# Implicit & Explicit
+
+When you set **grid-template-rows** even when you only set a few values the grid still continues.
+
+If you add more items to your grid they will be placed in the column tracks and in the default **implied** rows.
+
+This is a confusing thing to try to explain. Let's see an example.
+
 
 ---
 class: center, middle
+
+<iframe height='565' scrolling='no' title='grid unsplash' src='//codepen.io/Onomicon/embed/2b0928031b0a3662740229ee30275fc2/?height=565&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/2b0928031b0a3662740229ee30275fc2/'>grid unsplash</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+
+class: center, middle
 ### Feel like you're repeating yourself?
 
-Maybe we enjoy typing but it seems that writing the same value over and over isn't the best. 
+Maybe we enjoy typing but it seems that writing the same value over and over isn't the best.
 
 ---
 class: center, middle
@@ -131,7 +373,7 @@ class: center, middle
 
 Good News, Everyone! there's a handy property **repeat()**
 
-The syntax is basically... 
+The syntax is basically...
 
 **repeat( number of times to repeat , unit of measurement )**
 
@@ -145,7 +387,7 @@ Here is same css using repeat()
 }
 ```
 
-<a href="https://codepen.io/Onomicon/pen/5ccd5b9c24e8abe81cb39733995090f8?editors=1100" target="_blank">Codepen example</a>
+<a href="https://codepen.io/Onomicon/pen/5ccd5b9c24e8abe81cb39733995090f8?editors=0100" target="_blank">Codepen example</a>
 
 ---
 
@@ -164,7 +406,7 @@ Let's try placing an element at a specific section of our grid. There are a coup
 }
 ```
 
-<a href="https://codepen.io/Onomicon/pen/c18911b2854e5fa2b34340e8f7a1598f?editors=1100" target="_blank">Codepen example</a>
+<a href="https://codepen.io/Onomicon/pen/c18911b2854e5fa2b34340e8f7a1598f?editors=0100" target="_blank">Codepen example</a>
 
 ---
 
@@ -177,8 +419,6 @@ This is because we are actually refering to what's called a **grid line**
 Fear not if this is confusing, Mozilla has create a very useful grid inspector.
 
 Let's try it out <a href="https://www.mozilla.org/en-US/firefox/developer/" target="_blank">Firefox Developer edition</a> to dig deeper.
-
-
 
 ---
 
