@@ -123,7 +123,7 @@ Once you have finished working on your site, please export your database by foll
 
 **Note:** Please ensure browser sync is OFF before proceeding with the steps below. VERY IMPORTANT.
 
-1. Add Rose as an Administrator to your site (username: `instructor` / password: `instructor` / email: rose.cass@redacademy.com)
+1. Add Iris as an Administrator to your site (username: `instructor` / password: `instructor` / email: iris@redacademy.com)
 2. Install the WP Migrate DB plugin
 3. Go to Tools > Migrate DB in the WordPress admin area
 4. Change the "Replace" fields so that the first field contains `//localhost/student` and the second contains `/Applications/MAMP/htdocs/student`
@@ -131,4 +131,4 @@ Once you have finished working on your site, please export your database by foll
 
 **Submitting your project:**
 
-When you're ready to submit your project, **please email a link to your GitHub repository containing your project** with your **database file attached** to [mandi@redacademy.com](mailto:mandi@redacademy.com).
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** with your **database file attached** to [iris@redacademy.com](mailto:iris@redacademy.com).
