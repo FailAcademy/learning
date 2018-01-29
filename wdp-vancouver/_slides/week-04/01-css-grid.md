@@ -61,7 +61,7 @@ Start by setting an elements **display** property to **grid**.
 
 ---
 
-<iframe height='500' scrolling='no' title='Grid 1' src='//codepen.io/Onomicon/embed/yvBwmO/?height=500&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/yvBwmO/'>Grid 1</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='500' scrolling='no' title='Grid 1' src='//codepen.io/redacademy/embed/yvLPRL/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/redacademy/pen/yvLPRL/'>Grid 1</a> by RED Academy (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 ---
@@ -90,11 +90,12 @@ The CSS property is **grid-template-columns**
 }
 ```
 
-
 ---
 
+**grid-template-columns** 
 
-<iframe height='500' scrolling='no' title='Grid 1: grid-template-columns' src='//codepen.io/Onomicon/embed/PQYgXP/?height=500&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/PQYgXP/'>Grid 1: grid-template-columns</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+
+<iframe height='500' scrolling='no' title='Grid 1: grid-template-columns' src='//codepen.io/redacademy/embed/WMNXYW/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/redacademy/pen/WMNXYW/'>Grid 1: grid-template-columns</a> by RED Academy (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 
@@ -118,11 +119,18 @@ However there's a new unit specific to grid. Which is **fr**
 
 ---
 
+# Mini Exercise
 
-<iframe height='500' scrolling='no' title='Grid 1: grid-template-columns fr' src='//codepen.io/Onomicon/embed/qxWwwg/?height=500&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/qxWwwg/'>Grid 1: grid-template-columns fr</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+After seeing these resonsive units again, let's take a few minutes and discuss what we know about them and research what we don't.
+
+At your tables discuss with each other your findings. After a few minutes we can take a further look at some examples.
+
+---
+
+**Responsive Units Example**
+
+<iframe height='500' scrolling='no' title='Grid 1: grid-template-columns fr' src='//codepen.io/redacademy/embed/QQWOzX/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/redacademy/pen/QQWOzX/'>Grid 1: grid-template-columns fr</a> by RED Academy (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-
-
 
 ---
 
@@ -143,7 +151,9 @@ Let's update our html to look more like a website.
 
 ---
 
-<iframe height='500' scrolling='no' title='Grid 1: grid-template-columns fr element placement start' src='//codepen.io/Onomicon/embed/YeKMbm/?height=500&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/YeKMbm/'>Grid 1: grid-template-columns fr element placement start</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+**Element Placement**
+
+<iframe height='500' scrolling='no' title='Grid 1: grid-template-columns fr element placement start' src='//codepen.io/redacademy/embed/MQWQzP/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/redacademy/pen/MQWQzP/'>Grid 1: grid-template-columns fr element placement start</a> by RED Academy (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 ---
@@ -172,8 +182,9 @@ footer {
 
 ---
 
+**Element Placement grid-column**
 
-<iframe height='500' scrolling='no' title='Grid 1: grid-template-columns fr element placement end' src='//codepen.io/Onomicon/embed/xYKNKm/?height=500&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/xYKNKm/'>Grid 1: grid-template-columns fr element placement end</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='500' scrolling='no' title='Grid 1: grid-template-columns fr element placement end' src='//codepen.io/redacademy/embed/eVYVbx/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/redacademy/pen/eVYVbx/'>Grid 1: grid-template-columns fr element placement end</a> by RED Academy (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 
@@ -240,18 +251,17 @@ But what just happend? 😔
 
 Tracks are lines created with **grid-template-columns & rows**
 
-<iframe height='365' scrolling='no' title='Grid 1: grid tracks' src='//codepen.io/Onomicon/embed/LQPKER/?height=365&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/LQPKER/'>Grid 1: grid tracks</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='365' scrolling='no' title='Grid 1: grid tracks' src='//codepen.io/redacademy/embed/jZOZJK/?height=365&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/redacademy/pen/jZOZJK/'>Grid 1: grid tracks</a> by RED Academy (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-
-
 ---
+
 ### Grid Lines
 
 Are the tracks lines & what we use to position elements.
 
 
-<iframe height='365' scrolling='no' title='Grid 1: grid tracks: lines' src='//codepen.io/Onomicon/embed/NyKZxO/?height365&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/NyKZxO/'>Grid 1: grid tracks: lines</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='365' scrolling='no' title='Grid 1: grid tracks: lines' src='//codepen.io/redacademy/embed/VQwQNa/?height=365&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/redacademy/pen/VQwQNa/'>Grid 1: grid tracks: lines</a> by RED Academy (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 
@@ -260,7 +270,7 @@ Are the tracks lines & what we use to position elements.
 # Grid Dev Tools
 
 Let's take a look at the following link in Firefox:
-**<a href="https://codepen.io/Onomicon/full/LQPKER/" target="_blank">Grid Example</a>**
+**<a href="https://codepen.io/redacademy/full/jZOZJK/" target="_blank">Grid Example</a>**
 
 If you dont' have the developer version
 
@@ -286,8 +296,7 @@ Now look in the **rules** panel for the selected element.
 
 Click on the **waffle looking icon** in between **display grid**.
 
-![Firefox Grid Container](/public/img/slide-assets/css-grid/firefox-grid-waffle.jpg)
-
+![Firefox Grid Waffle](/public/img/slide-assets/css-grid/firefox-grid-waffle.jpg)
 
 
 ---
@@ -308,7 +317,6 @@ You should see something like this. Try inspecting the grid.
 ![Firefox Grid Screenshot](/public/img/slide-assets/css-grid/firefox-grid-screenshot.jpg)
 
 
-
 ---
 
 # Exercise 1
@@ -319,6 +327,13 @@ Inspect the site with Firefox Dev Tools.
 See if you notice anything intersting.
 
 Discuss the findings with your table.
+
+---
+
+template: inverse
+
+# Up next Grid Rows
+
 
 ---
 
@@ -336,23 +351,18 @@ The property for this is **grid-template-rows**
 }
 ```
 
-<a href="https://codepen.io/Onomicon/pen/cd058fd2bd5422818ca70b7d831c6134?editors=0100" target="_blank">Codepen example</a>
+<a href="https://codepen.io/redacademy/pen/NyWyQY" target="_blank">Codepen example</a>
 
 ---
 # Implicit & Explicit
 
-When you set **grid-template-rows** even when you only set a few values the grid still continues.
 
-If you add more items to your grid they will be placed in the column tracks and in the default **implied** rows.
+Setting **grid-template-rows** or **grid-template-columns** creates what are called **Explicit** tracks.
 
-This is a confusing thing to try to explain. Let's see an example.
+If more elements are added than you have grid rows, they will be placed in what's called **implicit** (*implied*) tracks.
 
+![The Grid, tron](/public/img/slide-assets/css-grid/tron-lightcycle-original.gif)
 
----
-class: center, middle
-
-<iframe height='565' scrolling='no' title='grid unsplash' src='//codepen.io/Onomicon/embed/2b0928031b0a3662740229ee30275fc2/?height=565&theme-id=light&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/2b0928031b0a3662740229ee30275fc2/'>grid unsplash</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
 
 ---
 
@@ -387,14 +397,14 @@ Here is same css using repeat()
 }
 ```
 
-<a href="https://codepen.io/Onomicon/pen/5ccd5b9c24e8abe81cb39733995090f8?editors=0100" target="_blank">Codepen example</a>
+<a href="https://codepen.io/redacademy/pen/XZWEJv?editors=0100" target="_blank">Codepen example</a>
 
 ---
 
 # Placing Grid Items
 
-So far we've just been working with setting up rows and columns.
-Let's try placing an element at a specific section of our grid. There are a couple of properties we can try:
+We've seen how we can place elements using **grid-column**
+However it's shorthand for ...
 
 - `grid-column-start`
 - `grid-column-end`
@@ -406,67 +416,7 @@ Let's try placing an element at a specific section of our grid. There are a coup
 }
 ```
 
-<a href="https://codepen.io/Onomicon/pen/c18911b2854e5fa2b34340e8f7a1598f?editors=0100" target="_blank">Codepen example</a>
-
----
-
-# Grid Lines
-
-You may be wondering why we set grid-column-end to 3 when we only have 2 columns.
-
-This is because we are actually refering to what's called a **grid line**
-
-Fear not if this is confusing, Mozilla has create a very useful grid inspector.
-
-Let's try it out <a href="https://www.mozilla.org/en-US/firefox/developer/" target="_blank">Firefox Developer edition</a> to dig deeper.
-
----
-
-class: center, middle
-
-### CSS Grid Slide
-
-This is where some text would go.
-
----
-class: center, middle
-
-.large[
-   This is a large text slide
-]
-
----
-
-# Exercise 1
-
-An example of an exercise slide.
-
-
----
-template: inverse
-
-# CSS Grid Developer Tools
-
----
-
-# CSS Grid
-
-Well aside from our brains there's really only one new dev tool at the moment worth using...
-
-- <a href="https://www.mozilla.org/en-US/firefox/developer/" target="_blank">Firefox Quantum Developer Edition</a>
-
----
-
-# CSS Grid
-
-- Another slide here
-- This is a bulleted list
-
----
-
-# Exercise 2
-
-Another exercise.
+<a href="https://codepen.io/redacademy/pen/YezayN?editors=0100" target="_blank">Codepen example</a>
 
 ---
 template: inverse
