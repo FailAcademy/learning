@@ -357,16 +357,25 @@ The property for this is **grid-template-rows**
 # Implicit & Explicit
 
 
-Setting **grid-template-rows** or **grid-template-columns** creates what are called **Explicit** tracks.
+Setting **grid-template-rows** & **grid-template-columns** creates **Explicit** tracks.
 
-If more elements are added than you have grid rows, they will be placed in what's called **implicit** (*implied*) tracks.
+We **explicity define** the **row and column tracks**.
 
+If more elements are added than you have grid rows defined, they will be placed in what's called **implicit** or *(implied) tracks*.
+
+---
+class: center, middle
+
+**Implied tracks allow the grid to expand beyond the defined grid e.g. rows. That way content can continue to flow without hitting any walls.**
+
+.inline-images[
 ![The Grid, tron](/public/img/slide-assets/css-grid/tron-lightcycle-original.gif)
-
+]
 
 ---
 
 class: center, middle
+
 ### Feel like you're repeating yourself?
 
 Maybe we enjoy typing but it seems that writing the same value over and over isn't the best.
@@ -419,11 +428,6 @@ However it's shorthand for ...
 <a href="https://codepen.io/redacademy/pen/YezayN?editors=0100" target="_blank">Codepen example</a>
 
 ---
-template: inverse
-
-# Explict & Inplicit Grid
-
----
 
 # What We've Learned
 
@@ -434,6 +438,19 @@ template: inverse
 
 
 ---
+
+# Honourable Mentions
+
+Because CSS Grid is massive, we have lot's of options to work with.
+We've seen some ways of getting started but to take it further check out the following...
+
+- <a href="https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/" target="_blank">auto-fit & auto-fill</a>
+- <a href="https://www.smashingmagazine.com/2017/09/css-grid-gotchas-stumbling-blocks/" target="_blank">Gotchas And Stumbling Blocks</a>
+- <a href="https://cssgrid.io/" target="_blank">Free Video Course, some review and some new concepts</a>
+
+
+---
+
 template: inverse
 
 # Questions?

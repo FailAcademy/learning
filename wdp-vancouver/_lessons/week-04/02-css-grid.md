@@ -72,8 +72,31 @@ These would be the steps of the exercise:
 
 ## Lab Activity
 
-Placeholder for the lab activity
+Choose your own adventure! 
 
+Practice using CSS Grid to recreate a layout, or layouts, of your choosing.
+
+
+### Grid Garden
+
+Play a game...
+
+
+### Create your own Grid Art
+
+Try creating your own grid
+
+
+### Mondrian Grid
+
+<a href="/public/img/slide-assets/css-grid/mondrian-grid.jpg" taget="_blank">
+![Mondrian](/public/img/slide-assets/css-grid/mondrian-grid.jpg)
+</a>
+
+Try mocking the Nasa Website
+<a href="" target="_blank">
+- [Try mocking the Nasa Website](https://www.nasa.gov/)
+</a>
 ---
 
 ## Additional Resources
@@ -82,24 +105,24 @@ This is a concise and authoritative summary of the various grid properties and h
 
 - [CSS Tricks - A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
-Relationship of Grid Layout to other Layout Methods: 
+- [MDN CSS Grid Playground](https://mozilladevelopers.github.io/playground/css-grid/)
 
-- [Relationship of Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+- [Game, CSS Grid Garden](http://cssgridgarden.com/)
 
-Wes Bos Video Series on Grid:
+- Relationship of Grid Layout to other Layout Methods: [MDN Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
 
-- [Wes Bos CSS Grid](https://cssgrid.io/)
+- Wes Bos Video Series on Grid: [Wes Bos CSS Grid](https://cssgrid.io/)
 
-Rachel Andrew - Grid by Example:
+- Rachel Andrew - [Grid by Example](https://gridbyexample.com/)
 
-- [Grid by Example](https://gridbyexample.com/)
-
-Rachel Andrew - CSS Grid Ask Me Anything
-
-- [CSS Grid AMA](https://github.com/rachelandrew/cssgrid-ama)
+- Rachel Andrew - CSS Grid Ask Me Anything [AMA](https://github.com/rachelandrew/cssgrid-ama)
 
 - [Sitepoint CSS Grid intro, recreate a Slack layout!](https://www.sitepoint.com/introduction-css-grid-layout-module/)
 
 - [Codepen example, difference between auto and fr](https://codepen.io/cssgrid/pen/ALQjAj)
 
 - [Grid Playground](https://www.cssgridplayground.com/)
+
+- Paid but worth every penny [Modern CSS Layout](https://www.leveluptutorials.com/tutorials/modern-css-layouts)
+
+- Expensive but if you liked flexbox zombies... [Grid Critters](https://geddski.teachable.com/p/gridcritters)
