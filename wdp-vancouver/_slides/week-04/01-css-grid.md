@@ -461,7 +461,7 @@ class: center, middle
 }
 ```
 
-<iframe height='265' scrolling='no' title='Grid 1: minmax()' src='//codepen.io/Onomicon/embed/eVYarL/?height=265&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/eVYarL/'>Grid 1: minmax()</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='265' scrolling='no' title='Grid 1: minmax()' src='//codepen.io/redacademy/embed/oEgoJZ/?height=265&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/redacademy/pen/oEgoJZ/'>Grid 1: minmax()</a> by RED Academy (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 ---
@@ -480,7 +480,7 @@ class: center, middle
 }
 ```
 
-<iframe height='265' scrolling='no' title='Grid 1: repeat() & minmax()' src='//codepen.io/Onomicon/embed/ZrENRM/?height=265&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/ZrENRM/'>Grid 1: repeat() & minmax()</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='265' scrolling='no' title='Grid 1: repeat() & minmax()' src='//codepen.io/redacademy/embed/mXypyL/?height=265&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/redacademy/pen/mXypyL/'>Grid 1: repeat() & minmax()</a> by RED Academy (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 ---
@@ -542,7 +542,7 @@ Let's revisit the site we created earlier and use grid areas.
 
 **grid-template-areas**
 
-<iframe height='500' scrolling='no' title='Grid 1: grid-template-areas' src='//codepen.io/Onomicon/embed/WMNqry/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/WMNqry/'>Grid 1: grid-template-areas</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='500' scrolling='no' title='Grid 1: grid-template-areas' src='//codepen.io/redacademy/embed/BYyJNG/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/redacademy/pen/BYyJNG/'>Grid 1: grid-template-areas</a> by RED Academy (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 ---
@@ -568,7 +568,7 @@ Now we can start creating some interesting layouts with **@media queries**.
 
 **grid-template-areas with @media**
 
-<iframe height='500' scrolling='no' title='Grid 1: grid-template-areas @media' src='//codepen.io/Onomicon/embed/PQorda/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/PQorda/'>Grid 1: grid-template-areas @media</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='500' scrolling='no' title='Grid 1: grid-template-areas @media' src='//codepen.io/redacademy/embed/QQwapL/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/redacademy/pen/QQwapL/'>Grid 1: grid-template-areas @media</a> by RED Academy (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 ---
