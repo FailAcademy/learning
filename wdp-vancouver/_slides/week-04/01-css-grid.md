@@ -249,7 +249,7 @@ But what just happend? 😔
 
 ### Grid Tracks
 
-Tracks are lines created with **grid-template-columns & rows**
+A grid track is the space between any two lines on the grid.
 
 <iframe height='365' scrolling='no' title='Grid 1: grid tracks' src='//codepen.io/redacademy/embed/jZOZJK/?height=365&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/redacademy/pen/jZOZJK/'>Grid 1: grid tracks</a> by RED Academy (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -258,8 +258,7 @@ Tracks are lines created with **grid-template-columns & rows**
 
 ### Grid Lines
 
-Are the tracks lines & what we use to position elements.
-
+We use grid lines as anchor points.
 
 <iframe height='365' scrolling='no' title='Grid 1: grid tracks: lines' src='//codepen.io/redacademy/embed/VQwQNa/?height=365&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/redacademy/pen/VQwQNa/'>Grid 1: grid tracks: lines</a> by RED Academy (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -573,6 +572,39 @@ Now we can start creating some interesting layouts with **@media queries**.
 
 ---
 class: center, middle
+
+# One Last Thing
+
+### Grid Gap
+
+---
+
+# Grid Gap
+
+
+**grid-gap** is used to set the gutters between grid rows and columns.
+
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  /* shorthand property for grid-row-gap and grid-column-gap */
+  grid-gap: 1rem;
+}
+```
+
+Let's take a look at what our demo looks like with grid-gap
+
+---
+
+**grid-gap**
+
+<iframe height='500' scrolling='no' title='Grid 1: grid-template-areas @media grid-gap' src='//codepen.io/redacademy/embed/MQYQYo/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/redacademy/pen/MQYQYo/'>Grid 1: grid-template-areas @media grid-gap</a> by RED Academy (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+
+class: center, middle
 ### You now know how to navigate The Grid
 
 .inline-images[
@@ -586,7 +618,6 @@ class: center, middle
 Because CSS Grid is massive, we have lot's of options to work with.
 We've seen some ways of getting started but to take it further check out the following...
 
-- <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap" target="_blank">Grid Gap</a>
 - <a href="https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/" target="_blank">auto-fit & auto-fill</a>
 - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout" target="_blank">Box alignment in CSS Grid Layout</a>
 
