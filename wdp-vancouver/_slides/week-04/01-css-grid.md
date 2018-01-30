@@ -19,12 +19,13 @@ layout: false
 
 # Agenda
 
-1. What is CSS Grid?
-2. CSS Grid Basics
-3. Grid Developer Tools
-4. Explict & Inplicit Grid
-5. Basic Layouts
-6. Advanced Grid
+1. CSS Grid Basics
+2. Columns & Placement
+3. Tracks & Lines
+4. Developer Tools
+5. Rows & Implicit tracks
+6. repeat() & minMax()
+7. grid-area
 
 ---
 template: inverse
@@ -92,10 +93,9 @@ The CSS property is **grid-template-columns**
 
 ---
 
-**grid-template-columns** 
+### grid-template-columns
 
-
-<iframe height='500' scrolling='no' title='Grid 1: grid-template-columns' src='//codepen.io/redacademy/embed/WMNXYW/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/redacademy/pen/WMNXYW/'>Grid 1: grid-template-columns</a> by RED Academy (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='365' scrolling='no' title='Grid 1: grid-template-columns' src='//codepen.io/redacademy/embed/WMNXYW/?height=365&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/redacademy/pen/WMNXYW/'>Grid 1: grid-template-columns</a> by RED Academy (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 
@@ -121,7 +121,7 @@ However there's a new unit specific to grid. Which is **fr**
 
 # Mini Exercise
 
-After seeing these resonsive units again, let's take a few minutes and discuss what we know about them and research what we don't.
+After seeing these **responsive units** again, let's take a few minutes and discuss what we know about them and research what we don't.
 
 At your tables discuss with each other your findings. After a few minutes we can take a further look at some examples.
 
@@ -371,6 +371,7 @@ We **explicity define** the **row and column tracks**.
 If more elements are added than you have grid rows defined, they will be placed in what's called **implicit** or *(implied) tracks*.
 
 ---
+
 class: center, middle
 
 **Implied tracks allow the grid to expand beyond the defined grid e.g. rows. That way content can continue to flow without hitting any walls.**
@@ -380,6 +381,7 @@ class: center, middle
 ]
 
 ---
+
 
 # Setting Auto Rows
 
@@ -401,14 +403,13 @@ class: center, middle
 
 # We've learned the basics
 
-### Next let's up our grid game.
+### Next up let's make our lives easier
 
 ---
 
-
 class: center, middle
 
-### Feel like you're repeating yourself?
+### Tired of repeating yourself?
 
 Maybe we enjoy typing but it seems that writing the same value over and over isn't the best.
 
@@ -441,33 +442,56 @@ Here is same css using repeat()
 <a href="https://codepen.io/redacademy/pen/XZWEJv?editors=0100" target="_blank">Codepen example</a>
 
 ---
+class: center, middle
 
-# Placing Grid Items
+# Next Up, minMax
 
-We've seen how we can place elements using **grid-column**
-However it's shorthand for ...
-
-- `grid-column-start`
-- `grid-column-end`
-
-```css
-.grid-item:nth-of-type(1) {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-```
-
-<a href="https://codepen.io/redacademy/pen/YezayN?editors=0100" target="_blank">Codepen example</a>
+.inline-images[
+  ![Cat Min Max](/public/img/slide-assets/css-grid/cats-min-max.jpg)
+]
 
 ---
 
-# What We've Learned
+# minMax()
 
-- PLACEHOLDER: Recap goes here
-- PLACEHOLDER: Recap goes here
-- PLACEHOLDER: Recap goes here
-- PLACEHOLDER: Recap goes here
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
+}
+```
 
+<iframe height='265' scrolling='no' title='Grid 1: minmax()' src='//codepen.io/Onomicon/embed/eVYarL/?height=265&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/eVYarL/'>Grid 1: minmax()</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+class: center, middle
+
+### minMax & repeat 😎
+
+---
+
+### minMax & Repeat
+
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+}
+```
+
+<iframe height='265' scrolling='no' title='Grid 1: repeat() & minmax()' src='//codepen.io/Onomicon/embed/ZrENRM/?height=265&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/ZrENRM/'>Grid 1: repeat() & minmax()</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+class: center, middle
+### Phew, let's take a break
+
+After we will see the **piece de resistance** of CSS Grid
+
+.inline-images[
+  ![Retro Grid](/public/img/slide-assets/css-grid/retro-grid.png)
+]
 
 ---
 
@@ -477,8 +501,7 @@ Because CSS Grid is massive, we have lot's of options to work with.
 We've seen some ways of getting started but to take it further check out the following...
 
 - <a href="https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/" target="_blank">auto-fit & auto-fill</a>
-- <a href="https://www.smashingmagazine.com/2017/09/css-grid-gotchas-stumbling-blocks/" target="_blank">Gotchas And Stumbling Blocks</a>
-- <a href="https://cssgrid.io/" target="_blank">Free Video Course, some review and some new concepts</a>
+- **grid-column-start** & **grid-column-end** we used the shorthand version grid-column.
 
 
 ---

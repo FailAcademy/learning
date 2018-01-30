@@ -16,7 +16,9 @@ Prior to class, download and install Firefox Developer Edition:
 
 ## Learning Objectives
 
-- 
+- Learn to build a website using CSS Grid
+- Understand the basics of CSS Grid
+- Introduction to some CSS Grid methods
 
 ---
 
@@ -34,52 +36,34 @@ Prior to class, download and install Firefox Developer Edition:
 
 ---
 
+## Mini Exercise
+
+**%, em, rem, auto, vw, vh, vmin, vmax**
+
+Research these responsive units & at your table discuss your findings.
+
+---
+
 ## Exercise 1
 
-Placeholder for an exercise
+Take a look at some of the grid examples at <a href="https://gridbyexample.com/examples/" target="_blank">GridByExample.com</a>
 
-These would be the steps of the exercise:
+Inspect the site with Firefox Dev Tools.
+See if you notice anything interesting.
 
-1. Remove your floats
-2. Apply `display: flex` to the appropriate element
-3. Figure out how to get the address and the social links aligned to the left and right sides as they were with your floats (for screen widths `600px` and up only, of course!)
-
----
-
-## Exercise 2
-
-Placeholder for an exercise
-
-These would be the steps of the exercise:
-
-1. Remove your floats
-2. Apply `display: flex` to the appropriate element
-3. Figure out how to get the address and the social links aligned to the left and right sides as they were with your floats (for screen widths `600px` and up only, of course!)
-
----
-
-## Exercise 3
-
-Placeholder for an exercise
-
-These would be the steps of the exercise:
-
-1. Remove your floats
-2. Apply `display: flex` to the appropriate element
-3. Figure out how to get the address and the social links aligned to the left and right sides as they were with your floats (for screen widths `600px` and up only, of course!)
+Discuss the findings with your table.
 
 ---
 
 ## Lab Activity
 
-Choose your own adventure! 
+Choose your own adventure!
 
 Practice using CSS Grid to recreate a layout, or layouts, of your choosing.
 
+### Play a Game
 
-### Grid Garden
-
-Play a game...
+**[GRID GARDEN](http://cssgridgarden.com/)**
 
 
 ### Create your own Grid Art
@@ -87,7 +71,7 @@ Play a game...
 Try creating your own grid
 
 
-### Mondrian Grid
+### Create a Mondrian Inspired Grid
 
 <a href="/public/img/slide-assets/css-grid/mondrian-grid.jpg" taget="_blank">
 ![Mondrian](/public/img/slide-assets/css-grid/mondrian-grid.jpg)
@@ -122,6 +106,8 @@ This is a concise and authoritative summary of the various grid properties and h
 - [Codepen example, difference between auto and fr](https://codepen.io/cssgrid/pen/ALQjAj)
 
 - [Grid Playground](https://www.cssgridplayground.com/)
+
+- [Gotchas And Stumbling Blocks](https://www.smashingmagazine.com/2017/09/css-grid-gotchas-stumbling-blocks/)
 
 - Paid but worth every penny [Modern CSS Layout](https://www.leveluptutorials.com/tutorials/modern-css-layouts)
 
