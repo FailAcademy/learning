@@ -495,13 +495,99 @@ After we will see the **piece de resistance** of CSS Grid
 
 ---
 
+# Named Grid Areas
+
+grid-template-areas CSS property specifies named grid areas.
+
+```css
+.grid-container {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "header header header"
+                       "main main main"
+                       "footer footer footer";
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+```
+
+---
+# Named Grid Areas
+
+The way we write template areas is also referred to as the **ascii-art method**
+
+```text
+ ___________________          _-_
+ \==============_=_/ ____.---'---`---.____
+             \_ \    \----._________.----/
+               \ \   /  /    `-_-'
+           __,--`.`-'..'-_
+          /____          ||
+               `--.____,-'
+```
+
+<br>
+Let's revisit the site we created earlier and use grid areas.
+
+---
+
+**grid-template-areas**
+
+<iframe height='500' scrolling='no' title='Grid 1: grid-template-areas' src='//codepen.io/Onomicon/embed/WMNqry/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/WMNqry/'>Grid 1: grid-template-areas</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+
+# Responsive Grid Areas
+
+We've updated our site to use **named grid areas**.
+
+Now we can start creating some interesting layouts with **@media queries**.
+
+```css
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template-areas:
+      "header header aside"
+      "main main aside"
+      "main main aside"
+      ". footer footer";
+  }
+}
+```
+---
+
+**grid-template-areas with @media**
+
+<iframe height='500' scrolling='no' title='Grid 1: grid-template-areas @media' src='//codepen.io/Onomicon/embed/PQorda/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/PQorda/'>Grid 1: grid-template-areas @media</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+class: center, middle
+### You now know how to navigate The Grid
+
+.inline-images[
+  ![Navigate The Grid](/public/img/slide-assets/css-grid/navigate-the-grid.gif)
+]
+
+---
+
 # Honourable Mentions
 
 Because CSS Grid is massive, we have lot's of options to work with.
 We've seen some ways of getting started but to take it further check out the following...
 
 - <a href="https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/" target="_blank">auto-fit & auto-fill</a>
-- **grid-column-start** & **grid-column-end** we used the shorthand version grid-column.
+- <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout" target="_blank">Box alignment in CSS Grid Layout</a>
 
 
 ---
