@@ -586,6 +586,7 @@ class: center, middle
 Because CSS Grid is massive, we have lot's of options to work with.
 We've seen some ways of getting started but to take it further check out the following...
 
+- <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-gap" target="_blank">Grid Gap</a>
 - <a href="https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/" target="_blank">auto-fit & auto-fill</a>
 - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout" target="_blank">Box alignment in CSS Grid Layout</a>
 

@@ -63,12 +63,15 @@ Practice using CSS Grid to recreate a layout, or layouts, of your choosing.
 
 ### Play a Game
 
-**[GRID GARDEN](http://cssgridgarden.com/)**
+<a href="http://cssgridgarden.com/" taget="_blank">
+![Grid Garden](/public/img/slide-assets/css-grid/grid-garden.png)
+</a>
 
 
 ### Create your own Grid Art
 
-Try creating your own grid
+<iframe height='340' scrolling='no' title='aqbeQY' src='//codepen.io/Onomicon/embed/aqbeQY/?height=340&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/aqbeQY/'>aqbeQY</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 
 ### Create a Mondrian Inspired Grid
@@ -77,9 +80,9 @@ Try creating your own grid
 ![Mondrian](/public/img/slide-assets/css-grid/mondrian-grid.jpg)
 </a>
 
-Try mocking the Nasa Website
-<a href="" target="_blank">
-- [Try mocking the Nasa Website](https://www.nasa.gov/)
+### Try mocking the Nasa Website
+<a href="https://www.nasa.gov/" target="_blank">
+![Nasa Website](/public/img/slide-assets/css-grid/website-nasa.png)
 </a>
 ---
 
