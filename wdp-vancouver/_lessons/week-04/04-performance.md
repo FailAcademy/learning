@@ -47,7 +47,7 @@ Before today's class, ensure that you have deployed your Project 1 (Aloha homepa
 Go to one of your favourite websites and do the following:
 
 - Use the Network tab in your dev tools to determine how many requests are made, its page weight, how long it takes to load, and whether its CRP appears to be optimized.
-- Use the Timeline tab in your dev tools to identify possible source of jank on the page.
+- Use the Performance tab in your dev tools to identify possible source of jank on the page.
 - Run its URL through Google PageSpeed Insights and see what recommendations for desktop and mobile.
 
 Be prepared to share your insights with the class!
