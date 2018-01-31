@@ -175,7 +175,7 @@ Improving the speed with which a page loads boils down to two (seemingly) simple
 - [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 - [WebPageTest](http://www.webpagetest.org/)
 - [YSlow](http://yslow.org/) browser extension
-- Your Chrome dev tools! (use the Network and Timeline tabs)
+- Your Chrome dev tools! (use the Network and Performance tabs)
 
 ---
 class: center, middle
@@ -184,12 +184,14 @@ class: center, middle
    ![Network tab in Chrome dev tools](/public/img/slide-assets/chrome-dev-tools-network.png)
 ]
 
+**Timeline is now in the Performance tab**
+
 ---
 class: center, middle
 
 
 .inline-images[
-   ![Timeline tab in Chrome dev tools](/public/img/slide-assets/chrome-dev-tools-timeline.png)
+   ![Performance tab in Chrome dev tools](/public/img/slide-assets/chrome-dev-tools-timeline.png)
 ]
 
 ---
@@ -199,7 +201,7 @@ class: center, middle
 Go to one of your favourite websites and do the following:
 
 - Use the Network tab in your dev tools to determine how many requests are made, its page weight, how long it takes to load, and whether its CRP appears to be optimized.
-- Use the Timeline tab in your dev tools to identify possible source of jank on the page.
+- Use the Performance tab in your dev tools to identify possible source of jank on the page.
 - Run its URL through Google PageSpeed Insights and see what recommendations for desktop and mobile.
 
 Be prepared to share your insights with the class!
@@ -527,7 +529,7 @@ template: inverse
 
 # Aesthetics versus Performance
 
-Modern HTML/CSS/JS and web browsers are very powerful, but we must always be sure to ask **what impact a give choice** has on page weight, additional HTTP requests, and perceived performance.
+Modern HTML/CSS/JS and web browsers are very powerful, but we must always be sure to ask **what impact a given choice** has on page weight, additional HTTP requests, and perceived performance.
 
 For example, what is the performance cost of adding a hero image, a hi-res video, another font file, an image slider, etc.?
 
