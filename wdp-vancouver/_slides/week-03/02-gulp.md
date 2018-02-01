@@ -81,7 +81,15 @@ class: center, middle
 
 Run `npm init` from your project directory to start using it.
 
-This commant will help us generate a `package.json` file for our project.
+This command will help us generate a `package.json` file for our project.
+
+???
+
+#### Code along: 
+* Emphsize that you need to be located within at the root of the Project 2 folder.
+
+If you don't have a P2 demo folder set up: 
+* Get the class to help you make a new folder, index.html, and scripts.js. (command line review)
 
 ---
 template: inverse
@@ -107,6 +115,13 @@ It's important that you keep this file up to date; npm does most of this automat
 
 Every time we install a new dependency for our project, it will be added to this file automatically.
 
+???
+
+##### bonus info/if students ask:
+*package-lock.json* is automatically generated for any operations where npm modifies either the node_modules tree, or package.json. 
+
+It describes the exact tree that was generated, such that subsequent installs are able to generate identical trees, regardless of intermediate dependency updates.
+
 ---
 
 # Why Is This Awesome?
@@ -130,6 +145,15 @@ class: center, middle
 ### Install Gulp in your Project 2 directory:
 
 Visit [Gulp's Getting Started page](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) and follow the instructions.
+
+???
+
+#### Code Along
+Walk through getting started documentation with students. 
+
+Ensure that they are finding the answers. If stuck or incorrect, then provide direction.
+
+`npm install --save-dev gulp@next` grabs the latest version FYI.
 
 ---
 template: inverse
@@ -183,7 +207,7 @@ var uglify = require('gulp-uglify'),
     rename = require('gulp-rename');
 
 gulp.task('default', function(){
-  gulp.src('./js/*.js') // What files do we want gulp to consume?
+  return gulp.src('./js/*.js') // What files do we want gulp to consume?
     .pipe(uglify()) // Call the uglify function on these files
     .pipe(rename({ extname: '.min.js' })) // Rename the uglified file
     .pipe(gulp.dest('./build/js')) // Where do we put the result?
@@ -191,6 +215,14 @@ gulp.task('default', function(){
 ```
 
 In this simple example we can see the magic of Gulp at work: `gulp.task`, `gulp.src`, `.pipe`, and `gulp.dest`!
+
+???
+#### Syntax Note
+When requiring node modules at the top, that the syntax can be comma seperated variable declaration (as seen in example) or each module as it's own statement (var statement with semi colon after each). 
+
+Diff plugin docs write it different and students tend to get confused.
+
+
 
 ---
 template: inverse
@@ -221,7 +253,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename');
 
 gulp.task('scripts', function(){
-  gulp.src('./js/*.js')
+  return gulp.src('./js/*.js')
     .pipe(uglify())
     .pipe(rename({ extname: '.min.js' }))
     .pipe(gulp.dest('./build/js'))
@@ -232,10 +264,19 @@ gulp.task('say_hello', function(){
 });
 
 // Modify our default task method by passing an array of task names
-gulp.task('default', ['say_hello', 'scripts']);
+gulp.task('default', gulp.parallel('say_hello', 'scripts');
 ```
 
 Running `gulp` will execute both tasks in sequence. To run an individual task, use the task name: e.g. `gulp scripts`.
+
+???
+
+`gulp.parallel` which executes multiple tasks at the same time.
+
+The other option `gulp.series` runs multiple tasks in sequence.
+
+
+See documentation for further details.
 
 ---
 
@@ -244,6 +285,12 @@ Running `gulp` will execute both tasks in sequence. To run an individual task, u
 Create a new folder in your project called `build` to store the uglified version of your files, then add Gulp to your project and implement the `gulp-uglify` task as demonstrated.
 
 Run the task and see what happens...
+
+???
+
+They do not need to create the `build` folder for this to work.
+
+It is worth noting, the `build` folder will be created by gulp if it doesn't exist.
 
 ---
 template: inverse
@@ -265,7 +312,7 @@ We can create a `watch` task and call `gulp.watch()` within it to have Gulp watc
 
 ```js
 gulp.task('watch', function() {
-   gulp.watch('js/*.js', ['scripts']);
+   gulp.watch('js/*.js', gulp.series('scripts');
 });
 ```
 
@@ -319,6 +366,12 @@ Essentially, it's a way for you to set-up some rules about **how you want your c
 *And we have control over exactly what to check!*
 
 Once we set our styleguide/rules, ESLint will help us find potential issues in our JS code without needing to execute that code first.
+
+???
+
+*Important* Examples ahead are using the `gulp-eslint` node module NOT `eslint` node module.
+
+Gulp will not work if they install the incorrect node module.
 
 ---
 
@@ -425,6 +478,14 @@ We have already created our `.eslintrc` files as part of the lesson, so now it's
 
 1. Create a named `lint` task in your `gulpfile.js`
 2. Add the `lint` task as a dependency for the `scripts` task
+
+???
+
+Remind them to test the `lint` task.
+
+Show an example of the `link` task throwing an error and warning.
+
+Note, lint errors means the task is stopped and will not make it to the minified file.
 
 
 ---
