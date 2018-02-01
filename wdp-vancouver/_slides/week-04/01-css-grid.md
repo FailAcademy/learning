@@ -76,6 +76,12 @@ class: center, middle
 ]
 
 ---
+template: inverse
+
+# Columns & Placement
+
+---
+
 
 ### Exciting... Kinda?
 
@@ -200,7 +206,13 @@ class: center, middle
 
 But what just happend? 😔
 
+
 ---
+template: inverse
+
+# Tracks & Lines
+---
+
 
 .left-column[
   ### Grid Tracks
@@ -263,6 +275,10 @@ We use grid lines as anchor points.
 <iframe height='365' scrolling='no' title='Grid 1: grid tracks: lines' src='//codepen.io/redacademy/embed/VQwQNa/?height=365&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/redacademy/pen/VQwQNa/'>Grid 1: grid tracks: lines</a> by RED Academy (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
+---
+template: inverse
+
+# Developer Tools
 
 ---
 
@@ -331,7 +347,7 @@ Discuss the findings with your table.
 
 template: inverse
 
-# Up next Grid Rows
+# Rows & Tracks
 
 
 ---
@@ -395,6 +411,11 @@ We can adjust how implicit tracks by setting an auto value.
 ```
 
 <a href="https://codepen.io/redacademy/pen/oENMbL" target="_blank">Codepen example</a>
+
+---
+template: inverse
+
+# Repeat & minMax
 
 ---
 
@@ -492,6 +513,10 @@ After we will see the **piece de resistance** of CSS Grid
   ![Retro Grid](/public/img/slide-assets/css-grid/retro-grid.png)
 ]
 
+---
+template: inverse
+
+# Grid Area
 ---
 
 # Named Grid Areas
