@@ -16,7 +16,7 @@ class: center, middle, inverse
 
 ???
 
-**Gulp Review:**
+##### Gulp Review:
 
 In groups, discuss the function of each:
 
@@ -484,7 +484,7 @@ But with great power...
 
 In this exercise, we'll refactor some CSS into SCSS, using the basic functionality we've learned.
 
-See the [lesson page](/lesson/sass-css-pre-processors/) for more details.
+See the [lesson page](/lesson/sass-css-preprocessors/) for more details.
 
 ---
 
@@ -557,7 +557,7 @@ When you compile code, you convert it from one form (that you have written) to a
 
 # How to Compile Sass
 
-Let's create a Gulp task to compile Sass for our project. Here's an example of a basic Gulp task for compiling Sass:
+Let's create a Gulp task to compile Sass for our project:
 
 ```js
 var sass = require("gulp-sass"),
@@ -566,7 +566,7 @@ var sass = require("gulp-sass"),
   rename = require("gulp-rename");
 
 gulp.task("sass", function() {
-  gulp
+  return gulp
     .src("./sass/style.scss")
     .pipe(sass())
     .pipe(
@@ -589,7 +589,7 @@ We can add easier-to-read error messages into our Gulp set-up to let us know whe
 
 ```js
 gulp.task("sass", function() {
-  gulp
+  return gulp
     .src("./sass/style.scss")
     .pipe(prettyError()) // ADD THIS LINE
     .pipe(sass())
