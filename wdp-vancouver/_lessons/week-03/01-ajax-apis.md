@@ -129,7 +129,7 @@ You'll use the `$.ajax()` method just as you did the GitHub API example, but app
 **Additional hints:**
 
 - The iTunes API requires that you use `+` signs and not spaces to occupy whitespace in the artist name...investigate a jQuery method called `.replace()` to figure out how to format the text entered into the `<input>`
-- You'll likely need to set the `dataType` property to `jsonp` when using the `$.ajax()` method to get this to work
+- You'll likely need to set the `dataType` property.
 - You can find additional info about the [iTunes API here](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
 
 This is all the mark-up you will need to complete this assignment:
