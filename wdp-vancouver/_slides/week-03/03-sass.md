@@ -557,7 +557,7 @@ When you compile code, you convert it from one form (that you have written) to a
 
 # How to Compile Sass
 
-Let's create a Gulp task to compile Sass for our project. Here's an example of a basic Gulp task for compiling Sass:
+Let's create a Gulp task to compile Sass for our project:
 
 ```js
 var sass = require("gulp-sass"),
