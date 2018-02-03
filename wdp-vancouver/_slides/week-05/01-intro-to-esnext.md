@@ -100,7 +100,7 @@ _Note the `=>` and `const` syntax...more on that to come!_
 
 You'll need to install `gulp-babel` as a development dependency too. To do that, run:
 
-`npm install -D gulp-babel babel-preset-es2015`
+`npm install -D gulp-babel babel-core babel-preset-es2015`
 
 What is the `babel-preset-es2015` package for?
 
