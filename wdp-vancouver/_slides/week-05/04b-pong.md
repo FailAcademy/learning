@@ -181,6 +181,14 @@ Take a look through the directory structure of your start Pong game. What do we 
 
 What do you think we'll need to create?
 
+???
+
+Draw 4 boxes on a Whiteboard and engage the class in a discussion as to what to put in each box.
+
+e.g. what properties and methods will each Class have.
+
+The 4 Boxes are: Ball, Board, Game, Paddle
+
 ---
 
 # Challenge 1
@@ -219,6 +227,10 @@ Plan out your project on paper with a partner.
 2. What **properties** and **methods** will these classes have? For example, a class representing the ball may need a `wallBounce` method, etc. Write these inside your class boxes.
 
 3. Compare your classes with another group.
+
+???
+
+You can skip this challenge if already discussed the 4 classes, e.g. already white-boarded the 4 classes
 
 ---
 
@@ -276,6 +288,10 @@ rect.setAttributeNS(null, 'height', 10);
 rect.setAttributeNS(null, 'x', 5);
 rect.setAttributeNS(null, 'y', 5);
 ```
+
+???
+
+[MDN setAttributeNS](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNS)
 
 ---
 
@@ -1553,6 +1569,12 @@ class: center, middle
   When is a goal scored? What should happen in the game when a goal is scored?
 ]
 
+???
+
+Engage in conversation about how we might keep score.
+
+Next slide is the challenge to codify this.
+
 ---
 
 # Challenge 13
@@ -1564,6 +1586,36 @@ Time to start keeping score:
 
 For now, just call `console.log()` to view the score after each goal is score to make sure that it's working.
 
+???
+
+add to **Ball.js**
+
+before the render method...
+
+```
+goal(player) {
+  player.score++;
+  this.reset();
+  console.log(player.score);
+}
+```
+
+at the end inside the render method
+
+```
+// Detect goal
+const rightGoal = this.x + this.radius >= this.boardWidth;
+const leftGoal = this.x - this.radius <= 0;
+
+if (rightGoal) {
+	this.goal(player1);
+  this.direction = 1;
+} else if (leftGoal) {
+	this.goal(player2);
+  this.direction = -1;
+}
+```
+
 ---
 
 # Score Board
@@ -1571,6 +1623,21 @@ For now, just call `console.log()` to view the score after each goal is score to
 It will be helpful if the players can actually see their scores! Create a `Score.js` file, and set up a new `Score` class in it:
 
 ```js
+export default class Score {
+  constructor(x, y, size) {
+    this.x = x;
+    this.y = y;
+    this.size = size;
+  }
+  //...
+}
+```
+
+???
+
+create a new file **Score.js**
+
+```
 export default class Score {
   constructor(x, y, size) {
     this.x = x;
@@ -1593,6 +1660,42 @@ Be sure to append it to the game `<svg>` just like we have with the other game c
 
 Lastly, how will we feed our player scores properties in their respective score components? Where will we do this?
 
+
+???
+
+finished **Score.js** and **Game.js**
+
+```
+import { SVG_NS } from '../settings';
+
+export default class Score {
+
+  constructor(x, y, size) {
+    this.x = x;
+    this.y = y;
+    this.size = size;
+  }
+
+  render(svg, score) {
+    let text = document.createElementNS(SVG_NS, 'text');
+    text.setAttributeNS(null, 'x', this.x);
+    text.setAttributeNS(null, 'y', this.y);
+    text.setAttributeNS(null, 'font-family', '"Silkscreen Web", monotype');
+    text.setAttributeNS(null, 'font-size', this.size);
+    text.setAttributeNS(null, 'fill', 'white');
+    text.textContent = score;
+    svg.appendChild(text);
+  }
+
+}
+```
+
+add to render method in **Game.js**
+```
+// render and update the score component based on player score
+this.score1.render(svg, this.player1.score);
+this.score2.render(svg, this.player2.score);
+```
 ---
 
 # Finishing Touches
@@ -1607,12 +1710,34 @@ this.ping = new Audio('public/sounds/pong-01.wav');
 
 This [`HTMLAudioElement`](https://developer.mozilla.org/en/docs/Web/API/HTMLAudioElement) provides a number of methods we can call to actually do something with this sound. How do we play it? Where should we call the appropriate method on it to make the "ping" sound?
 
+???
+
+add to the constructor in **Ball.js**
+
+```
+this.ping = new Audio('public/sounds/pong-01.wav');
+```
+
+add to **paddleCollision** should be there just uncomment
+
+```
+this.ping.play();
+```
+
+Talk about other sounds they could use etc...
+
 ---
 class: center, middle
 
 .inline-images[
   ![Applause!](/public/img/slide-assets/applause.gif)
 ]
+
+???
+
+We made it!!!? 😎 😌
+
+![image](https://placekitten.com/g/300/300)
 
 ---
 
