@@ -66,7 +66,7 @@ Node programs are **single threaded** and **highly parallel**.
 # OSI Model
 
 Let's talk about how internet works!
-[![OSI Layers](/public/img/OSI_model.png)]
+![OSI Layers](/public/img/OSI_model.png)
 
 ---
 
