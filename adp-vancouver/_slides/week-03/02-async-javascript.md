@@ -239,8 +239,8 @@ template: inverse
 Also known as **callback functions**...
 
 ```js
-get(url, response => {
-  console.log("response");
+request(url, (error, response, body) => {
+  console.log("body:", body);
 });
 ```
 
@@ -248,7 +248,7 @@ _How does this look on the event loop?_
 
 ???
 
-* Make sure they factor in the 'main' method that is executing the `get` fn.
+* Create a Node app for this exercise and npm install request.
 * Make sure they understand that each function 'runs to completion' in JS.
 * Any downsides to writing code that uses callbacks?
 
@@ -273,9 +273,9 @@ In pairs describe/diagram what is happening in the event loop when the `callback
 
 ```js
 const callbackHell = url => {
-  get(url, response => {
-    get(response.url, response => {
-      get(response.url, response => {
+  request(url, (error, response, body) => {
+    request(url, (error, response, body) => {
+      request(url, (error, response, body) => {
         console.log("third response");
       });
     });
@@ -295,11 +295,11 @@ const callbackHell = url => {
 To make sure errors are properly handled, many libraries implement **error first** callbacks:
 
 ```js
-get(url, (error, response) => {
+request(url, (error, response, body) => {
   if (error) {
     return console.log(error);
   }
-  console.log("response");
+  console.log("body ", body);
 });
 ```
 
@@ -320,45 +320,6 @@ Create an app, install the [Request](https://www.npmjs.com/package/request) libr
 1. Prints the first 10 Posts
 2. Prints the first 20 Albums
 3. Prints 'Done!'
-
-???
-
-Give the students this snippet for their Webpack config:
-
-```js
-const webpack = require("webpack");
-const resolve = require("path").resolve;
-const src = resolve(__dirname, "src");
-const dist = resolve(__dirname, "dist");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-
-module.exports = {
-  entry: {
-    app: "./src/index.js"
-  },
-
-  output: {
-    path: dist,
-    filename: "bundle.js"
-  },
-
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        loader: "babel-loader",
-        include: [src],
-        exclude: /node_modules/,
-        query: {
-          presets: ["stage-0"]
-        }
-      }
-    ]
-  },
-
-  plugins: [new HtmlWebpackPlugin()]
-};
-```
 
 ---
 
@@ -410,7 +371,8 @@ Pre-test:
 Promises use `then` and `catch` to handle success resolution or a rejection, respectively:
 
 ```js
-get(url)
+var rp = require('request-promise');
+rp(url)
   .then(response => console.log(response));
   .catch(console.log);
 ```
@@ -434,7 +396,8 @@ How does this look in the event loop?
 If any of the `then` functions fail, then the `catch` function will be called:
 
 ```js
-get(url)
+var rp = require('request-promise');
+rp(url)
   .then(response => console.log(response));
   .then(response => console.log(response));
   .then(response => console.log(response));
@@ -454,7 +417,8 @@ get(url)
 **GOTCHA:** Any `then` _after_ a `catch` will be called!
 
 ```js
-get(url)
+var rp = require('request-promise');
+rp(url)
   .then(response => console.log(response));
   .then(response => console.log(response));
   .catch(error => console.log('STOP!'));
@@ -476,8 +440,8 @@ This can make multiple failure flows difficult to code.
 Look up the docs on the **[Promise API](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise)** on MDN. How can we wrap the above in a function that returns a promise?
 
 ```js
-get(url, (error, response) => {
-  console.log("response");
+request(url, (error, response, body) => {
+  console.log("body", body);
 });
 ```
 
@@ -488,9 +452,9 @@ Solution:
 ```js
 function getPromise = (url) => {
   return new Promise((resolve, reject) => {
-    get(url, (error, response) => {
+    request(url, (error, response, body) => {
       if (error) return reject(error);
-      resolve(response);
+      resolve(body);
     });
   });
 };
@@ -523,9 +487,10 @@ template: inverse
 # Async Functions
 
 ```js
+var rp = require("request-promise");
 async function getUrl(url) {
   try {
-    const response = await get(url);
+    const response = await rp(url);
     console.log(response);
   } catch (e) {
     console.log("uh oh!");
