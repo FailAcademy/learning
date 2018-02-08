@@ -15,6 +15,7 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
@@ -26,39 +27,42 @@ layout: false
 5. Adding props to components
 
 ---
+
 template: inverse
 
 # What is React?
 
 ---
+
 class: center, middle
 
 .large[
-   React is a JavaScript **library** for building user interfaces.
+React is a JavaScript **library** for building user interfaces.
 ]
 
 ---
 
 # Why Use React?
 
-React makes it easier to reason about, construct, and maintain *stateless* and *stateful* UIs. Specifically, it is:
+React makes it easier to reason about, construct, and maintain _stateless_ and _stateful_ UIs. Specifically, it is:
 
-- **Declarative:** We program the *what* not the *how*
-- **Component-Based:** We build encapsulated pieces of UI to build larger more complex UIs
-- **Learn Once, Write Everywhere:** React makes no assumption about how it will ultimately rendered, so we can use it for SSR with Node or to build mobile apps with React Native too
+* **Declarative:** We program the _what_ not the _how_
+* **Component-Based:** We build encapsulated pieces of UI to build larger more complex UIs
+* **Learn Once, Write Everywhere:** React makes no assumption about how it will ultimately rendered, so we can use it for SSR with Node or to build mobile apps with React Native too
 
 ---
 
 # Who Uses React?
 
-- Facebook (created it)
-- Instagram
-- Netflix
-- Alibaba
-- Atlassian
-- [...and many more!](https://github.com/facebook/react/wiki/Sites-Using-React)
+* Facebook (created it)
+* Instagram
+* Netflix
+* Alibaba
+* Atlassian
+* [...and many more!](https://github.com/facebook/react/wiki/Sites-Using-React)
 
 ---
+
 template: inverse
 
 # Key Concepts: Components, JSX & the Virtual DOM
@@ -67,26 +71,28 @@ template: inverse
 
 # Components
 
-Because React is a **component-based view abstraction**, we need to start thinking about our UIs in terms of *components*.
+Because React is a **component-based view abstraction**, we need to start thinking about our UIs in terms of _components_.
 
 A component may be an input, a button, a list item, etc. It can also be anything wrapping a number of components to create a more complex piece of UI.
 
 We have to think carefully about how we will **manage state** in our components. (Redux will help with this next week.)
 
 ---
+
 class: center, middle
 
 .inline-images-border[
-   ![React mock-up](/public/img/slide-assets/thinking-in-react-mock.png)
+![React mock-up](/public/img/slide-assets/thinking-in-react-mock.png)
 ]
 
 .footnote.right[Image source: [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html)]
 
 ---
+
 class: center, middle
 
 .inline-images-border[
-   ![React components](/public/img/slide-assets/thinking-in-react-components.png)
+![React components](/public/img/slide-assets/thinking-in-react-components.png)
 ]
 
 .footnote.right[Image source: [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html)]
@@ -100,10 +106,11 @@ We're going to build a to-do app together with React...
 See the [lesson page](/lesson/react-components-and-props/) for more details.
 
 ---
+
 class: center, middle
 
 .large[
-   **Insight:** React components are the programatic abstraction that makes it possible to create these chunks of UI.
+**Insight:** React components are the programatic abstraction that makes it possible to create these chunks of UI.
 ]
 
 ---
@@ -126,11 +133,7 @@ What a React element looks like:
 
 ```js
 // Without JSX
-let helloWorld = React.createElement(
-  "div",
-  null,
-  "Hello World!"
-);
+let helloWorld = React.createElement("div", null, "Hello World!");
 
 // Using JSX
 let helloWorld = <div>Hello World!</div>;
@@ -147,6 +150,7 @@ let helloWorld = {
 ```
 
 ---
+
 class: center, middle
 
 ### JSX?
@@ -156,10 +160,11 @@ JSX is an XML syntax that can be used to construct the markup in React component
 JSX makes it **easier to read and write** React components in our code, but React does work without JSX too.
 
 ---
+
 class: center, middle
 
 .large[
-   Let's take a closer look at how we would create a React component both ways...
+Let's take a closer look at how we would create a React component both ways...
 ]
 
 ---
@@ -201,50 +206,48 @@ With JSX now...
 ```
 
 ```js
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 class App extends Component {
-   render() {
-      return (
-         <h1 id="title">Hello, world!</h1>
-      );
-   }
+  render() {
+    return <h1 id="title">Hello, world!</h1>;
+  }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
-*More readable, less typing!*
+_More readable, less typing!_
 
 ---
 
 # Other Things to Note
 
-- We must import the `React` and `ReactDOM` libraries before we can create React components
-- `React` provides us with a `Component` class to extend and create our own components (we can also create *functional stateless components* without the `Component` class)
-- `render` method comes from `Component`, and is required
-- If you want to return React elements on more than one line, you must wrap your return value in `()`
-- Look ma, no quotes! (...because JSX isn't a string)
+* We must import the `React` and `ReactDOM` libraries before we can create React components
+* `React` provides us with a `Component` class to extend and create our own components (we can also create _functional stateless components_ without the `Component` class)
+* `render` method comes from `Component`, and is required
+* If you want to return React elements on more than one line, you must wrap your return value in `()`
+* Look ma, no quotes! (...because JSX isn't a string)
 
 ---
 
 # JSX Gotchas
 
-- There must be **exactly one outer-most element returned** with your JSX (so you can't return sibling elements, only a parent with children)
-- To add a comment in JSX use: `{/* a comment */}`
-- If you need to add a `class` to an element, you must use `className`
-- If you need to add a `for` attribute, you must use `htmlFor`
+* There must be **exactly one outer-most element returned** with your JSX (so you can't return sibling elements, only a parent with children)
+* To add a comment in JSX use: `{/* a comment */}`
+* If you need to add a `class` to an element, you must use `className`
+* If you need to add a `for` attribute, you must use `htmlFor`
 
-*Conintued...*
+_Conintued..._
 
 ---
 
 # More JSX Gotchas
 
-- Self-closing tags must have a `/` before the `>`
-- Event listener names must be camel case (e.g. `onClick`)
-- JSX must be transformed into real JS to be parsed by ES5 JS engines (we'll use Babel for that)
+* Self-closing tags must have a `/` before the `>`
+* Event listener names must be camel case (e.g. `onClick`)
+* JSX must be transformed into real JS to be parsed by ES5 JS engines (we'll use Babel for that)
 
 ---
 
@@ -260,49 +263,53 @@ Note that in Codepen, you don't explicitly import `React` or `ReactDOM`, but you
 
 # The Virtual DOM
 
-- The virtual DOM is an **in-memory representation of real DOM elements** generated by React components before any changes are made to the page
-- It exists on the top of the DOM or some other render target
-- When changes are made to the virtual DOM, React figures out the best way to **batch those changes** to the underlying DOM structure
+* The virtual DOM is an **in-memory representation of real DOM elements** generated by React components before any changes are made to the page
+* It exists on the top of the DOM or some other render target
+* When changes are made to the virtual DOM, React figures out the best way to **batch those changes** to the underlying DOM structure
 
 ---
+
 class: center, middle
 
 .inline-images[
-   ![Virtual DOM Diff](/public/img/slide-assets/virtual-dom-diff.png)
+![Virtual DOM Diff](/public/img/slide-assets/virtual-dom-diff.png)
 ]
 
 ---
+
 class: center, middle
 
 .large[
-  [Or this diagram...](https://bogdan-lyashenko.github.io/Under-the-hood-ReactJS/stack/book/Intro.html)
+[Or this diagram...](https://bogdan-lyashenko.github.io/Under-the-hood-ReactJS/stack/book/Intro.html)
 ]
 
 ---
 
 # Why This Matters
 
-- The DOM wasn't designed for creating dynamic UIs
-- Web apps exist so that users can interact with them in a task-oriented way&mdash;this means that users can/will influence the state of the app, and we need some way to render those changes to the DOM
-- The virtual DOM helps with performance in this regard (versus directly manipulating the DOM)
+* The DOM wasn't designed for creating dynamic UIs
+* Web apps exist so that users can interact with them in a task-oriented way&mdash;this means that users can/will influence the state of the app, and we need some way to render those changes to the DOM
+* The virtual DOM helps with performance in this regard (versus directly manipulating the DOM)
 
 ---
+
 template: inverse
 
 # Creating a React App
 
-
 ---
+
 class: center, middle
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Marc was almost ready to implement his &quot;hello world&quot; React app <a href="https://t.co/ptdg4yteF1">pic.twitter.com/ptdg4yteF1</a></p>&mdash; Thomas Fuchs (@thomasfuchs) <a href="https://twitter.com/thomasfuchs/status/708675139253174273">March 12, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ---
+
 class: center, middle
 
 .large[
-   Some initial steps...
+Some initial steps...
 ]
 
 ---
@@ -335,14 +342,15 @@ You should now be able to access the app on **http://localhost:3000**.
 
 A boilerplate React app with:
 
-- Babel transpiling (so we can use ES2015 and JSX)
-- Webpack for bundling
-- ESLint for catching mistakes
-- A development server
+* Babel transpiling (so we can use ES2015 and JSX)
+* Webpack for bundling
+* ESLint for catching mistakes
+* A development server
 
-*All with zero configuration!!*
+_All with zero configuration!!_
 
 ---
+
 template: inverse
 
 # Working with Components
@@ -468,13 +476,9 @@ We will often want to create components that display data by iterating over a li
 ```js
 class App extends Component {
   render() {
-    const skills = ['React', 'Angular 2', 'Vue.js'];
+    const skills = ["React", "Angular 2", "Vue.js"];
 
-    return (
-      <ul>
-        {skills.map((skill, i) => (<li key={i}>{skill}</li>))}
-      </ul>
-    );
+    return <ul>{skills.map((skill, i) => <li key={i}>{skill}</li>)}</ul>;
   }
 }
 ```
@@ -522,11 +526,9 @@ We've already seen an example of a React component built using an ES2015 class:
 
 ```js
 class App extends Component {
-   render() {
-      return (
-         <h1 id="title">Hello, world!</h1>
-      );
-   }
+  render() {
+    return <h1 id="title">Hello, world!</h1>;
+  }
 }
 ```
 
@@ -538,10 +540,8 @@ In more recent versions of React, we can also build components using this syntax
 
 ```js
 const App = () => {
-  return (
-    <h1 id="title">Hello, world!</h1>
-  );
-}
+  return <h1 id="title">Hello, world!</h1>;
+};
 
 // Or more succinctly...
 const App = () => <h1 id="title">Hello, world!</h1>;
@@ -551,10 +551,10 @@ const App = () => <h1 id="title">Hello, world!</h1>;
 
 # What's the Diff?
 
-- Stateless functional components allow us to create components that are meant to be **pure functions of their props** (more on props in a moment!)
-- They **do not retain internal state**
-- They do not have the **component lifecycle methods** (i.e. no `render()`, etc.)
-- Later this week we will use ES2015 classes to create **Container Components** and the stateless functional approach to create **Presentational Components**...
+* Stateless functional components allow us to create components that are meant to be **pure functions of their props** (more on props in a moment!)
+* They **do not retain internal state**
+* They do not have the **component lifecycle methods** (i.e. no `render()`, etc.)
+* Later this week we will use ES2015 classes to create **Container Components** and the stateless functional approach to create **Presentational Components**...
 
 ---
 
@@ -568,7 +568,7 @@ The key is to **be descriptive**, and start with a **base noun** so components c
 <PostsContainer />  ->  <Posts />
 <Posts />           ->  <PostList />, <Post />
 <Post />            ->  <PostListItem />, <PostDetails/>
-``` 
+```
 
 ---
 
@@ -581,33 +581,36 @@ Finally, create a stateless functional component called `ToDo` and move your lis
 Be sure to move the `key` attribute from your `<li>` onto the `<ToDo />` inside the `.map()` function. Your app will be broken now but we'll find out why in a minute!
 
 ---
+
 template: inverse
 
 # Adding Props
 
 ---
+
 class: center, middle
 
 .large[
-   **Problem:**<br />We have a reference error in the `<ToDo />` component.
+**Problem:**<br />We have a reference error in the `<ToDo />` component.
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   **Solution:**<br />Fix it with props!
+**Solution:**<br />Fix it with props!
 ]
 
 ---
 
 # Props
 
-- **Arguments passed to React components** are called props
-- Props allow us to provide **configuration values** for a given component
-- They look a lot like plain ol' HTML attributes
-- **ES2015 Components:** Arguments passed as props can be accessed using the `this.props` object
-- **Functional Stateless Components:** `props` should be passed in as an argument to the arrow function (or destructuring may be used to access specific props directly)
+* **Arguments passed to React components** are called props
+* Props allow us to provide **configuration values** for a given component
+* They look a lot like plain ol' HTML attributes
+* **ES2015 Components:** Arguments passed as props can be accessed using the `this.props` object
+* **Functional Stateless Components:** `props` should be passed in as an argument to the arrow function (or destructuring may be used to access specific props directly)
 
 ---
 
@@ -616,9 +619,7 @@ class: center, middle
 Using a prop allows us to specify a unique greeting for each `<HelloWorld />` component:
 
 ```js
-const HelloWorld = (props) => (
-   <h1>{props.greeting}</h1>
-);
+const HelloWorld = props => <h1>{props.greeting}</h1>;
 
 // Or with destructuring...
 // const HelloWorld = ({ greeting }) => (
@@ -628,11 +629,9 @@ const HelloWorld = (props) => (
 
 ```js
 class App extends Component {
-   render() {
-      return (
-         <HelloWorld greeting="Hello world, of course!" />
-      );
-   }
+  render() {
+    return <HelloWorld greeting="Hello world, of course!" />;
+  }
 }
 ```
 
@@ -699,11 +698,7 @@ We can also render components inside of other components:
 ```js
 class HelloWorld extends React.Component {
   render() {
-    return (
-      <div>
-        {this.props.children}
-      </div>
-    );
+    return <div>{this.props.children}</div>;
   }
 }
 
@@ -724,12 +719,12 @@ class App extends React.Component {
 
 Proptypes are a feature of React that allow us validate whether props were set on a component as expected, e.g. if a prop:
 
-- is required
-- contains a primitive type
-- is an array containing only items of a specified type
-- is an object with a specific shape
-- satisfies a condition set out in a custom validator
-- **[...etc.](https://facebook.github.io/react/docs/typechecking-with-proptypes.html)**
+* is required
+* contains a primitive type
+* is an array containing only items of a specified type
+* is an object with a specific shape
+* satisfies a condition set out in a custom validator
+* **[...etc.](https://facebook.github.io/react/docs/typechecking-with-proptypes.html)**
 
 ---
 
@@ -742,15 +737,15 @@ npm install --save prop-types
 ```
 
 ```js
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class HelloWorld extends Component {
-   // the component's code...
+  // the component's code...
 }
 
 HelloWorld.propTypes = {
-   greeting: PropTypes.string.isRequired
+  greeting: PropTypes.string.isRequired
 };
 ```
 
@@ -763,19 +758,19 @@ What do you think this `propType` necessitates when using the component?
 We can also set defaults for our components props, which will take effect if no prop is set where the component is used:
 
 ```js
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class HelloWorld extends Component {
-   // the component's code...
+  // the component's code...
 }
 
 HelloWorld.propTypes = {
-   greeting: PropTypes.string
+  greeting: PropTypes.string
 };
 
 HelloWorld.defaultProps = {
-  greeting: 'Hello, world!'
+  greeting: "Hello, world!"
 };
 ```
 
@@ -798,17 +793,15 @@ Make all of the props for all components **required**.
 Preparing for tomorrow's exercises, our `ToDo` component will need to be more than a simple list item&mdash;it will need to include a checkbox input as well. Make the following adjustment to the mark-up rendered by the `ToDo` component:
 
 ```js
-const ToDo = ({item}) => (
-   <li>{item.title}
-      <input
-         type="checkbox"
-         id={item.id}
-         checked={item.complete} />
-      <label htmlFor={item.id}></label>
-      <button>
-         <i className="fa fa-trash"></i>
-      </button>
-   </li>
+const ToDo = ({ item }) => (
+  <li>
+    {item.title}
+    <input type="checkbox" id={item.id} checked={item.complete} />
+    <label htmlFor={item.id} />
+    <button>
+      <i className="fa fa-trash" />
+    </button>
+  </li>
 );
 ```
 
@@ -818,22 +811,23 @@ const ToDo = ({item}) => (
 
 Tomorrow we will need to:
 
-- Create an input for adding new to-do items
-- Add functions to add and remove to-do items
-- Add a function for marking a to-do as complete
-- Add a function to clear all of the completed to-dos from the list at once
+* Create an input for adding new to-do items
+* Add functions to add and remove to-do items
+* Add a function for marking a to-do as complete
+* Add a function to clear all of the completed to-dos from the list at once
 
 ---
 
 # What We've Learned
 
-- What React is
-- How to use it in a project and how to use the "Create React App" tool
-- What JSX and the Virtual DOM are
-- How to create React components
-- How to add props to React components
+* What React is
+* How to use it in a project and how to use the "Create React App" tool
+* What JSX and the Virtual DOM are
+* How to create React components
+* How to add props to React components
 
 ---
+
 template: inverse
 
 # Questions?
