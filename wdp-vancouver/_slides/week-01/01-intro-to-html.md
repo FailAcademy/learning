@@ -479,13 +479,13 @@ And if a page is in a sub-folder:
 Links can be internal
 
 ```html
-<a href="assets/images/funnyImage.png">Click here for a funny image</a>
+<a href="about.html">Click here for a funny image</a>
 ```
 
 or they can be external
 
 ```html
-<a href="http://www.bodyrock.tv/wp-content/uploads/2013/06/Funny-Picture-Spirit-of-Baby.jpg">Click here for a funny image</a>
+<a href="http://www.google.com">Click here for a funny image</a>
 ```
 
 ---
