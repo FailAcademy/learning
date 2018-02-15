@@ -26,6 +26,15 @@ layout: false
 4. The WordPress Template Hierarchy
 5. Comments, Sidebars and Menus
 
+
+???
+
+#### Prework Review/Warm Up Activity
+
+In groups, get the teams to match wp jargon with the correct description. Once a team is complete, instructor will verfiy. 
+
+Additions: Make it competitive, racing to be the first team to have it correctly sorted.
+
 ---
 
 template: inverse
@@ -582,6 +591,16 @@ Explore the site and using the WordPress template hierarchy, try to identify the
 
 Write down these template files and how they correspond with the pages of the site.
 
+???
+
+#### Exercise Notes
+
+Give them lots of time on this ( ~30-50mins ) and then review as a class.
+
+While reviewing the solution, write down the pages and corresponding template files needed on the white board.
+
+It will be a good reference point for students through out the project. 
+
 ---
 
 # What We've Learned
@@ -593,10 +612,26 @@ Write down these template files and how they correspond with the pages of the si
 * How the WordPress template hierarchy works
 * How to add comments, sidebars, and menus
 
+
 ---
 
 template: inverse
 
 # Questions?
+
+
+???
+
+Components the students should complete before next lesson:
+* new WP installation (project setup)
+* npm install in the root of the theme directory
+* Add blog post content with featured images
+* Create About page and add content
+* Create Contact page and add content
+* Add menu
+* Add sidebar
+
+Daily checklist can be found on the [inhabitent solution repo](https://github.com/redacademy/inhabitent)
+
 
 {% endhighlight %}
