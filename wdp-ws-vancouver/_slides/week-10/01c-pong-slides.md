@@ -840,7 +840,6 @@ class: center, middle
 
 # Stretch Goals
 
-* Make it prettier
 * Trigger multiple balls
 * Create balls with special effects (different speeds, sizes, effects, etc.)
 * Trigger speed changes or size changes of paddles

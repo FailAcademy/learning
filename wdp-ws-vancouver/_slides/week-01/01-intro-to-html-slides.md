@@ -474,18 +474,18 @@ And if a page is in a sub-folder:
 
 ---
 
-# Link Elemnts
+# Link Elements
 
 Links can be internal
 
 ```html
-<a href="assets/images/funnyImage.png">Click here for a funny image</a>
+<a href="contact.html">Go to our contact page</a>
 ```
 
 or they can be external
 
 ```html
-<a href="http://www.bodyrock.tv/wp-content/uploads/2013/06/Funny-Picture-Spirit-of-Baby.jpg">Click here for a funny image</a>
+<a href="http://www.google.com">Click here to go to Google</a>
 ```
 
 ---

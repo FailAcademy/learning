@@ -53,12 +53,11 @@ Your project must:
 
 Want to challenge yourself? Your project could also:
 
-* Make it prettier.
-* Trigger multiple balls.
-* Create balls with special effects (different speeds, sizes, effects, etc.).
-* Trigger speed changes or size changes of paddles.
-* Fire a shot from a paddle on key press.
-* Declare a winner at a final score.
+* Trigger multiple balls
+* Create balls with special effects (different speeds, sizes, effects, etc.)
+* Trigger speed changes or size changes of paddles
+* Fire a shot from a paddle on key press
+* Declare a winner at a final score
 
 ## Submission Instructions
 

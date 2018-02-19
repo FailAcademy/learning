@@ -43,7 +43,7 @@ We're going to use Font Awesome to add the social media icons in the footer of t
 
 Download Font Awesome and add the font files and minified CSS file to your project, or load it from the Font Awesome CDN using a generated embed code instead.
 
-To add the social media icons, check out Font Awesome's [Brand Icons](https://fortawesome.github.io/Font-Awesome/icons/#brand).
+To add the social media icons, check out Font Awesome's [Brand Icons](https://fontawesome.com/icons?d=gallery&s=brands).
 
 ---
 

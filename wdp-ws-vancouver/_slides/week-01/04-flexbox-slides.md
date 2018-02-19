@@ -50,6 +50,10 @@ class: center, middle
 NO MORE FLOAT BASED LAYOUTS!
 ]
 
+???
+
+* Explain what these were and why they were problematic
+
 ---
 
 class: center, middle
@@ -486,7 +490,7 @@ Think about whether you need to make any adjustments to the mark-up to make this
 
 # What We've Learned
 
-1. How (and why!) to use flexbox in lieu of floats and positioning
+1. How (and why!) to use flexbox in lieu of older layout techniques
 2. The difference between flex containers vs. items, and the main vs. cross axis
 3. What a vendor prefix is and why we need them
 

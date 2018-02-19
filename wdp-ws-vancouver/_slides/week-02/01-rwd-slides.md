@@ -95,17 +95,16 @@ What needs to be done to make this layout flexible?
 
 ```css
 .container {
+  display: flex;
   width: 960px;
 }
 
 article {
   width: 640px;
-  float: left;
 }
 
 aside {
   width: 320px;
-  float: right;
 }
 ```
 
@@ -345,7 +344,7 @@ You'll be optimizing for two breakpoints: `480px` and `720px`
 
 Screenshots of what the website should look like at mobile, tablet, and desktop width have been included in the following package:
 
-**[Download the exercise &rarr;](/public/files/exercises/rwd-review-e2.zip)**
+**[Download the exercise &rarr;](/public/files/exercises/rwd-refactor.zip)**
 
 ---
 
