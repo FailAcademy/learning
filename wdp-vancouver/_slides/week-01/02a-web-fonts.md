@@ -211,7 +211,6 @@ Some of these services include:
 * [Typekit](https://typekit.com/)
 * [Hoefler & Co.](http://www.typography.com/cloud/welcome/)
 * [Webtype](http://www.webtype.com/)
-* [Fontdeck](http://fontdeck.com/)
 
 ---
 
@@ -372,7 +371,7 @@ Download Font Awesome and add the font files and minified CSS file to your proje
 
 Be sure to hook up the stylesheet in the `<head>` of your website too!
 
-To add the social media icons, check out Font Awesome's [Brand Icons](https://fortawesome.github.io/Font-Awesome/icons/#brand).
+To add the social media icons, check out Font Awesome's [Brand Icons](https://fontawesome.com/icons?d=gallery&s=brands).
 
 ---
 

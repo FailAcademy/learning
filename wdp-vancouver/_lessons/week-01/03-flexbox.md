@@ -16,7 +16,6 @@ _There is no pre-work for this lesson._
 * Distinguish the major differences between traditional CSS layout techniques and flexbox.
 * Describe the most significant challenges in creating layouts with CSS that flexbox was designed to overcome.
 * Use the following flexbox CSS properties: `flex-direction`, `flex`, `justify-content`, `order`, and `align-items`.
-* Refactor floats and positioning on a website to use flexbox-based layouts instead.
 
 ---
 

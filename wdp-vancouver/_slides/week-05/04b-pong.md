@@ -15,45 +15,48 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
 
-- Learn how to build SVGs from scratch
-- Practice OOP programming and logic in JavaScript
-- Build a "Pong" game using SVGs dynamically generated from ES.next classes
-- Have some fun with this :)
+* Learn how to build SVGs from scratch
+* Practice OOP programming and logic in JavaScript
+* Build a "Pong" game using SVGs dynamically generated from ES.next classes
+* Have some fun with this :)
 
 ---
+
 template: inverse
 
 # SVGs
 
 ---
+
 class: center, middle
 
 .large[
-  **Review time!**
+**Review time!**
 
-  What is an SVG?<br /> What do they do for us?
+What is an SVG?<br /> What do they do for us?
 ]
 
 ---
 
 # SVG Features
 
-- **Solid browser support** (standard was developed in 1999)
-- **Scales like a champ**, so SVGs look great on high-density pixel displays...but they're small! (best of both worlds)
-- You can **embed them directly in an HTML document** (as inline SVGs) and target CSS or JS at them just like normal DOM elements (and animate them!)
-- You can include them in the `src` attribute of an `<img>` element (as we have done), but you won't be able to target CSS or JS directly at them
+* **Solid browser support** (standard was developed in 1999)
+* **Scales like a champ**, so SVGs look great on high-density pixel displays...but they're small! (best of both worlds)
+* You can **embed them directly in an HTML document** (as inline SVGs) and target CSS or JS at them just like normal DOM elements (and animate them!)
+* You can include them in the `src` attribute of an `<img>` element (as we have done), but you won't be able to target CSS or JS directly at them
 
 ---
 
 # SVG vs. HTML5 Canvas?
 
-- SVG is for rendering vector graphics, while canvas renders raster graphics
-- Canvas requires a single DOM element, `<canvas>`, that we draw a picture into (using JS)
-- After canvas draws the picture, it has no memory of what the pixels represent (so to create animations, you clear out the canvas element, then re-draw it)
+* SVG is for rendering vector graphics, while canvas renders raster graphics
+* Canvas requires a single DOM element, `<canvas>`, that we draw a picture into (using JS)
+* After canvas draws the picture, it has no memory of what the pixels represent (so to create animations, you clear out the canvas element, then re-draw it)
 
 ---
 
@@ -75,8 +78,8 @@ The `version="1.1"` attribute refers to the version of the SVG spec we're using.
 
 # SVG Workspace
 
-- **Viewport**: The viewport **defines visible area of the SVG**.The canvas where an SVG is drawn is conceptually infinite in both dimensions, but parts of the SVG that lie beyond the viewport are clipped off. The `width` and `height` attributes on an `<svg>` define the viewport dimenions.
-- **Viewbox**: The `viewBox` defines the coordinate system we will use to draw SVGs onto the canvas. Think of it as a **nested coordinate system** that can be larger or smaller than the viewport. The first two coordinates define the top/left `x` and `y` values of the `viewBox`, the last two define the height and width.
+* **Viewport**: The viewport **defines visible area of the SVG**.The canvas where an SVG is drawn is conceptually infinite in both dimensions, but parts of the SVG that lie beyond the viewport are clipped off. The `width` and `height` attributes on an `<svg>` define the viewport dimenions.
+* **Viewbox**: The `viewBox` defines the coordinate system we will use to draw SVGs onto the canvas. Think of it as a **nested coordinate system** that can be larger or smaller than the viewport. The first two coordinates define the top/left `x` and `y` values of the `viewBox`, the last two define the height and width.
 
 ---
 
@@ -84,10 +87,10 @@ The `version="1.1"` attribute refers to the version of the SVG spec we're using.
 
 Paste the SVG example (two slides back) into a Codepen...
 
-- Change the `viewBox` to `0 0 50 50`. What happens?
-- Now try `0 0 200 200`. What do you observe?
-- Next, try `25 25 100 100`. What happens to the rectangle now? Is this what you expect?
-- Finally, add `preserveAspectRatio="none"` as a new attribute on the SVG element, and change the `viewBox` value to `0 0 100 200`. How do you explain this behaviour?
+* Change the `viewBox` to `0 0 50 50`. What happens?
+* Now try `0 0 200 200`. What do you observe?
+* Next, try `25 25 100 100`. What happens to the rectangle now? Is this what you expect?
+* Finally, add `preserveAspectRatio="none"` as a new attribute on the SVG element, and change the `viewBox` value to `0 0 100 200`. How do you explain this behaviour?
 
 ---
 
@@ -159,6 +162,7 @@ Use `<circle>`, `<rect>`, and `<line>` elements to draw an old-timey radio. The 
 <img src="/public/files/exercises/svg-radio-mockup.jpg" alt="SVG radio mock-up" style="display: block; margin: 0 auto;" />
 
 ---
+
 template: inverse
 
 # Getting Started
@@ -197,14 +201,14 @@ We will generate our game board SVG with JS in this project, but before we do, l
 
 Your SVG should include:
 
-- A board (512 x 256 pixels, `#353535` background)
-- 2 paddles (56 x 8 pixels)
-- A ball in the center of the board (8 pixels radius)
-- A dividing line down the middle of the board (look into the `stroke-dasharray` attribute)
-
+* A board (512 x 256 pixels, `#353535` background)
+* 2 paddles (56 x 8 pixels)
+* A ball in the center of the board (8 pixels radius)
+* A dividing line down the middle of the board (look into the `stroke-dasharray` attribute)
 
 ???
 in **index.html** add
+
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="256" width="512" >
   <rect height="256" width="512" fill="#353535" />
@@ -214,7 +218,6 @@ in **index.html** add
   <circle id="ball" r="8" cx="256" cy="128" fill="white" />
 </svg>
 ```
-
 
 ---
 
@@ -251,11 +254,11 @@ And how will we **set attributes/values** on those elements?
 So far we have only used jQuery to select DOM elements, be we can (of course!) do this with regular JS too:
 
 ```js
-document.querySelector('div.game-wrapper');
-document.querySelectorAll('h1');
-document.getElementById('game');
-document.getElementsByTagName('div');
-document.getElementsByClassName('game-wrapper');
+document.querySelector("div.game-wrapper");
+document.querySelectorAll("h1");
+document.getElementById("game");
+document.getElementsByTagName("div");
+document.getElementsByClassName("game-wrapper");
 ```
 
 Try running these lines of code in your browser console to see what you get back.
@@ -267,11 +270,11 @@ Try running these lines of code in your browser console to see what you get back
 Just like with jQuery, we can create and append new elements to the DOM, and set/change their attributes:
 
 ```js
-let el = document.getElementById('game');
-el.setAttribute('width', '512');
+let el = document.getElementById("game");
+el.setAttribute("width", "512");
 
-let newPara = document.createElement('p');
-el.appendChild(newPara).innerHTML = 'Hello, world!';
+let newPara = document.createElement("p");
+el.appendChild(newPara).innerHTML = "Hello, world!";
 ```
 
 ---
@@ -281,12 +284,12 @@ el.appendChild(newPara).innerHTML = 'Hello, world!';
 Note that when we create and set attributes of an SVG element, we must call slightly different methods so we can declare the necessary XML namespace when we create the element:
 
 ```js
-const SVG_NS = 'http://www.w3.org/2000/svg';
-const rect = document.createElementNS(SVG_NS, 'rect');
-rect.setAttributeNS(null, 'width', 10);
-rect.setAttributeNS(null, 'height', 10);
-rect.setAttributeNS(null, 'x', 5);
-rect.setAttributeNS(null, 'y', 5);
+const SVG_NS = "http://www.w3.org/2000/svg";
+const rect = document.createElementNS(SVG_NS, "rect");
+rect.setAttributeNS(null, "width", 10);
+rect.setAttributeNS(null, "height", 10);
+rect.setAttributeNS(null, "x", 5);
+rect.setAttributeNS(null, "y", 5);
 ```
 
 ???
@@ -301,7 +304,7 @@ It's a good idea to store values that are used throughout our game in the `setti
 
 ```js
 // settings.js
-export const SVG_NS = 'http://www.w3.org/2000/svg';
+export const SVG_NS = "http://www.w3.org/2000/svg";
 ```
 
 We also need to store a reference to the game `element` DOM node in the `constructor` for our `Game` class so we can append our SVG mark-up to it next. How would we do this?
@@ -310,10 +313,11 @@ We also need to store a reference to the game `element` DOM node in the `constru
 add to **settings.js**
 
 ```js
-export const SVG_NS = 'http://www.w3.org/2000/svg';
+export const SVG_NS = "http://www.w3.org/2000/svg";
 ```
 
 add to constructor of Game.js
+
 ```js
 this.gameElement = document.getElementById(this.element);
 ```
@@ -321,7 +325,7 @@ this.gameElement = document.getElementById(this.element);
 also add the import to Game.js
 
 ```js
-import { SVG_NS } from '../settings';
+import { SVG_NS } from "../settings";
 ```
 
 ---
@@ -333,10 +337,10 @@ We already have a `Game` object instantiated and game loop running in `index.js`
 Comment-out the SVG mark-up in `index.html` (but keep it for reference for now!), and use JS to create the `<svg>` element that will wrap the game components in the `Game` class `render` method:
 
 ```js
-let svg = document.createElementNS(SVG_NS, 'svg');
-svg.setAttributeNS(null, 'width', this.width);
-svg.setAttributeNS(null, 'height', this.height);
-svg.setAttributeNS(null, 'viewBox', `0 0 ${this.width} ${this.height}`);
+let svg = document.createElementNS(SVG_NS, "svg");
+svg.setAttributeNS(null, "width", this.width);
+svg.setAttributeNS(null, "height", this.height);
+svg.setAttributeNS(null, "viewBox", `0 0 ${this.width} ${this.height}`);
 this.gameElement.appendChild(svg);
 ```
 
@@ -371,6 +375,7 @@ this.gameElement.innerHTML = '';
 ```
 
 ---
+
 template: inverse
 
 # The Board
@@ -383,7 +388,6 @@ Next, we'll create a `Board` class:
 
 ```js
 export default class Board {
-
   constructor(width, height) {
     this.width = width;
     this.height = height;
@@ -392,7 +396,6 @@ export default class Board {
   render() {
     //...
   }
-
 }
 ```
 
@@ -415,6 +418,7 @@ export default class Board {
 ```
 
 also add SVG_NS
+
 ```
 import { SVG_NS } from '../settings';
 ```
@@ -436,7 +440,6 @@ Lastly, how will you append the `<rect>` and `<line>` inside the `<svg>` rendere
 Update the render method in **Board.js**
 
 ```
-
 render(svg) {
     let rect = document.createElementNS(SVG_NS, 'rect');
     rect.setAttributeNS(null, 'fill', '#353535');
@@ -501,6 +504,7 @@ this.board.render(svg);
 ```
 
 ---
+
 template: inverse
 
 # Paddles (Players)
@@ -513,7 +517,6 @@ Create a `Paddle` class in a `Paddle.js` file:
 
 ```js
 export default class Paddle {
-
   constructor(boardHeight, width, height, x, y) {
     this.boardHeight = boardHeight;
     this.width = width;
@@ -548,7 +551,6 @@ export default class Paddle {
   //...
 }
 ```
-
 
 ---
 
@@ -620,20 +622,21 @@ export const KEYS = {
 Run the following code to in your **browser console**:
 
 ```js
-document.addEventListener('keydown', event => {
+document.addEventListener("keydown", event => {
   console.log(event);
 });
 ```
 
-- What does a **key event** look like?
-- Write down the `key` for `a`, `z`, `↑`, `↓`, and `SPACE`.
-- Try replacing `keydown` with `keyup`
+* What does a **key event** look like?
+* Write down the `key` for `a`, `z`, `↑`, `↓`, and `SPACE`.
+* Try replacing `keydown` with `keyup`
 
 Fill in the key names in `settings.js`, then import your `KEYS` export into `Game.js`.
 
 ???
 
 Try this in console to get the key
+
 ```
 document.addEventListener('keydown', event => {
   console.log(event);
@@ -659,13 +662,15 @@ import { SVG_NS, KEYS } from '../settings';
 ```
 
 ---
+
 class: center, middle
 
 .large[
-  Initial paddle positions...
+Initial paddle positions...
 ]
 
 ---
+
 class: center, middle
 
 ![Player 1 position](/public/img/slide-assets/pong/basic-p1-position.png)
@@ -720,6 +725,7 @@ this.player1 = new Paddle(
 ```
 
 ---
+
 class: center, middle
 
 ![Player 2 position](/public/img/slide-assets/pong/basic-p2-position.png)
@@ -739,6 +745,7 @@ this.player2 = new Paddle(
   KEYS.down
 );
 ```
+
 ---
 
 # Challenge 5
@@ -776,7 +783,7 @@ Make a listener to handle the key events that move each of the paddles:
 export default class Paddle {
   constructor(boardHeight, width, height, x, y) {
     //...
-    document.addEventListener('keydown', event => {
+    document.addEventListener("keydown", event => {
       console.log(event);
     });
   }
@@ -801,17 +808,16 @@ Let's expand our listener to `console.log()` different messages depending on wha
 
 ```js
 export default class Paddle {
-
   // ADD "up" and "down" parameters to the constructor
   constructor(boardHeight, width, height, x, y, up, down) {
     //...
-    document.addEventListener('keydown', event => {
+    document.addEventListener("keydown", event => {
       switch (event.key) {
         case up:
-          console.log('up');
+          console.log("up");
           break;
         case down:
-          console.log('down');
+          console.log("down");
           break;
       }
     });
@@ -845,10 +851,11 @@ constructor(boardHeight, width, height, x, y, up, down) {
 ```
 
 ---
+
 class: center, middle
 
 .large[
-  Now how do we actually move the paddles on `keydown`?
+Now how do we actually move the paddles on `keydown`?
 ]
 
 ???
@@ -870,11 +877,13 @@ up() {
 update the case break, remove console.log and use the methods e.g. **this.up()**
 
 ---
+
 class: center, middle
 
 ![Paddle up](/public/img/slide-assets/pong/paddle-move-up.png)
 
 ---
+
 class: center, middle
 
 ![Paddle down](/public/img/slide-assets/pong/paddle-move-max-min.png)
@@ -903,10 +912,10 @@ This will be our next challenge, Challenge 6
 
 Complete the following requirements for the paddles:
 
-- Instantiate paddles with their up/down keys
-- Write paddle methods that move the paddle **up** and **down**
-- Use `Math.max` and `Math.min` to prevent moving the paddle off the board
-- Replace your `console.log()` calls in the event listener callback with your new `up` and `down` methods
+* Instantiate paddles with their up/down keys
+* Write paddle methods that move the paddle **up** and **down**
+* Use `Math.max` and `Math.min` to prevent moving the paddle off the board
+* Replace your `console.log()` calls in the event listener callback with your new `up` and `down` methods
 
 ???
 
@@ -947,6 +956,7 @@ Make sure at least the **KEYS** and **SVG_NS** are in **settings.js**
 The rest is a stretch goal? Since it's not in the finished project version?
 
 ---
+
 template: inverse
 
 # The Ball
@@ -974,6 +984,7 @@ What do you think `this.direction` is for?
 ???
 
 Create **Ball.js** in partials
+
 ```
 import { SVG_NS } from '../settings';
 
@@ -986,6 +997,7 @@ export default class Ball {
   }
 }
 ```
+
 ---
 
 # Challenge 8
@@ -1030,7 +1042,6 @@ render(svg, player1, player2) {
 }
 ```
 
-
 ---
 
 # The Ball Reset
@@ -1059,6 +1070,7 @@ reset() {
 ```
 
 **update** the **render** method **cx, cy**
+
 ```
 circle.setAttributeNS(null, 'cx', this.x);
 circle.setAttributeNS(null, 'cy', this.y);
@@ -1071,10 +1083,11 @@ this.reset();
 ```
 
 ---
+
 class: center, middle
 
 .large[
-  Now how do we move the ball?
+Now how do we move the ball?
 ]
 
 ???
@@ -1082,23 +1095,23 @@ class: center, middle
 Vectors! next slide
 
 ---
+
 class: center, middle
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fNk_zzaMoSs?rel=0" frameborder="0" allowfullscreen></iframe>
 
 ???
 
-[Despicable Me Vector :)](https://www.youtube.com/watch?v=bOIe0DIMbI8)
----
+## [Despicable Me Vector :)](https://www.youtube.com/watch?v=bOIe0DIMbI8)
 
 # Physics!
 
 **Direction + Magnitude = Vector**
 
-- **Magnitude:** Quantities that have only a magnitude are called scalars (i.e. it's an amount)
-- **Direction:** Give an scalar magnitude direction, and you've made a vector
+* **Magnitude:** Quantities that have only a magnitude are called scalars (i.e. it's an amount)
+* **Direction:** Give an scalar magnitude direction, and you've made a vector
 
-In other words, it's a *numeric value in a specific direction*.
+In other words, it's a _numeric value in a specific direction_.
 
 What numeric value and what direction are we dealing with when we think about the ball's movement?
 
@@ -1108,8 +1121,8 @@ What numeric value and what direction are we dealing with when we think about th
 
 [Another Vector Calculator](http://thecraftycanvas.com/library/online-learning-tools/physics-homework-helpers/vector-calculator-component-resolver/)
 
-
 ---
+
 class: center, middle
 
 ![Ball moving down and right](/public/img/slide-assets/pong/ball-move-down-right.png)
@@ -1123,6 +1136,7 @@ How might we change **vx** and **vy** to make the ball move in the **opposite** 
 **Note:** This is the same way we make the ball "bounce".
 
 ---
+
 class: center, middle
 
 ![Ball moving up and left](/public/img/slide-assets/pong/ball-move-up-left.png)
@@ -1154,7 +1168,7 @@ They can try to code from the slide first.
 // generates random number between -5 and 5 that isn't 0
 this.vy = 0;
 while( this.vy === 0 ) {
-  this.vy = Math.floor(Math.random() * 10 - 5);   
+  this.vy = Math.floor(Math.random() * 10 - 5);
 }
 // a number between -5 and 5, based on this.vy
 // this guarantees that if vy is large, vx is small (and vice versa)
@@ -1162,10 +1176,11 @@ this.vx = this.direction * (6 - Math.abs(this.vy));
 ```
 
 ---
+
 class: center, middle
 
 .large[
-  Lastly, how do we use these vectors to move the ball along the board surface with each call to `render` on the `Ball`?
+Lastly, how do we use these vectors to move the ball along the board surface with each call to `render` on the `Ball`?
 ]
 
 ???
@@ -1195,7 +1210,7 @@ Again this goes in the **reset** method of **Ball.js**
 // generates random number between -5 and 5 that isn't 0
 this.vy = 0;
 while( this.vy === 0 ) {
-  this.vy = Math.floor(Math.random() * 10 - 5);   
+  this.vy = Math.floor(Math.random() * 10 - 5);
 }
 // a number between -5 and 5, based on this.vy
 // this guarantees that if vy is large, vx is small (and vice versa)
@@ -1203,10 +1218,11 @@ this.vx = this.direction * (6 - Math.abs(this.vy));
 ```
 
 ---
+
 class: center, middle
 
 .large[
-  Which game object should detect the wall/ball collision?
+Which game object should detect the wall/ball collision?
 ]
 
 ???
@@ -1253,6 +1269,7 @@ this.wallCollision();
 ```
 
 ---
+
 class: center, middle
 
 ![Ball wall bounce](/public/img/slide-assets/pong/ball-wall-bounce.png)
@@ -1261,7 +1278,7 @@ class: center, middle
 
 Flip that vector
 
-*= -1
+\*= -1
 
 ---
 
@@ -1285,6 +1302,7 @@ if (hitLeft || hitRight) {
 ```
 
 ---
+
 template: inverse
 
 # Pause!
@@ -1295,7 +1313,7 @@ template: inverse
 
 Now that our paddles and ball move, let's figure out a way to pause the game.
 
-What would *pausing the game* mean in this context?
+What would _pausing the game_ mean in this context?
 
 Do you remember which key we're going to use to initiate this?
 
@@ -1344,6 +1362,7 @@ if (this.pause) {
 ```
 
 ---
+
 template: inverse
 
 # Paddle Collision
@@ -1354,17 +1373,18 @@ template: inverse
 
 In order to detect paddle/ball collision, we will need to know:
 
-- What space on the board's grid the `player1` and `player2` paddles occupy
-- The location of the ball's outermost horizontal edges
-- Whether any of the ball and paddle coordinates overlap
+* What space on the board's grid the `player1` and `player2` paddles occupy
+* The location of the ball's outermost horizontal edges
+* Whether any of the ball and paddle coordinates overlap
 
-*What game object should be detecting these collisions?*
+_What game object should be detecting these collisions?_
 
 ???
 
 **Paddle.js**
 
 ---
+
 class: center, middle
 
 ![Paddle bounce detect X](/public/img/slide-assets/pong/paddle-bounce-detect-x.png)
@@ -1374,6 +1394,7 @@ class: center, middle
 example of the **'math'** to solve for **left & right** of **paddles**
 
 ---
+
 class: center, middle
 
 ![Paddle bounce detect Y](/public/img/slide-assets/pong/paddle-bounce-detect-y.png)
@@ -1481,9 +1502,9 @@ paddleCollision(player1, player2) {
 
 Detect the right paddle collision. We need to test if:
 
-- The right edge of the ball is touching or beyond the left edge of the paddle
-- The right edge of the ball is touching or beyond the right edge of the paddle
-- The ball `cy` is between the top edge of the paddle and bottom edge of the paddle
+* The right edge of the ball is touching or beyond the left edge of the paddle
+* The right edge of the ball is touching or beyond the right edge of the paddle
+* The ball `cy` is between the top edge of the paddle and bottom edge of the paddle
 
 If all of these conditions are true, the paddle has been struck and we need to reverse the horizontal direction of the ball.
 
@@ -1528,9 +1549,9 @@ paddleCollision(player1, player2) {
 
 Now detect the left paddle collision. We need to test if:
 
-- The left edge of the ball is touching or beyond the right edge of the paddle
-- The left edge of the ball is touching or beyond the left edge of the paddle
-- The ball `cy` is between the top edge of the paddle and bottom edge of the paddle
+* The left edge of the ball is touching or beyond the right edge of the paddle
+* The left edge of the ball is touching or beyond the left edge of the paddle
+* The ball `cy` is between the top edge of the paddle and bottom edge of the paddle
 
 If true, again, we will reverse the ball. Be sure to call `paddleCollision` in your ball's `render` method now.
 
@@ -1557,16 +1578,19 @@ else {
   }
 }
 ```
+
 ---
+
 template: inverse
 
 # Keeping Score
 
 ---
+
 class: center, middle
 
 .large[
-  When is a goal scored? What should happen in the game when a goal is scored?
+When is a goal scored? What should happen in the game when a goal is scored?
 ]
 
 ???
@@ -1581,8 +1605,8 @@ Next slide is the challenge to codify this.
 
 Time to start keeping score:
 
-- Write a `goal` method that increments a player's score **and** resets the ball to the middle of the board after a goal is scored
-- Call this method when the ball goes too far too the left or right side (...so where will you need to call this method?)
+* Write a `goal` method that increments a player's score **and** resets the ball to the middle of the board after a goal is scored
+* Call this method when the ball goes too far too the left or right side (...so where will you need to call this method?)
 
 For now, just call `console.log()` to view the score after each goal is score to make sure that it's working.
 
@@ -1660,7 +1684,6 @@ Be sure to append it to the game `<svg>` just like we have with the other game c
 
 Lastly, how will we feed our player scores properties in their respective score components? Where will we do this?
 
-
 ???
 
 finished **Score.js** and **Game.js**
@@ -1691,11 +1714,13 @@ export default class Score {
 ```
 
 add to render method in **Game.js**
+
 ```
 // render and update the score component based on player score
 this.score1.render(svg, this.player1.score);
 this.score2.render(svg, this.player2.score);
 ```
+
 ---
 
 # Finishing Touches
@@ -1705,7 +1730,7 @@ Our pong game wouldn't be complete without sound effects!
 The Pong Starter comes with a few sound effects in the `public` directory. Let's instantiate a new `Audio` object inside of our `Ball` class `constructor`:
 
 ```js
-this.ping = new Audio('public/sounds/pong-01.wav');
+this.ping = new Audio("public/sounds/pong-01.wav");
 ```
 
 This [`HTMLAudioElement`](https://developer.mozilla.org/en/docs/Web/API/HTMLAudioElement) provides a number of methods we can call to actually do something with this sound. How do we play it? Where should we call the appropriate method on it to make the "ping" sound?
@@ -1727,10 +1752,11 @@ this.ping.play();
 Talk about other sounds they could use etc...
 
 ---
+
 class: center, middle
 
 .inline-images[
-  ![Applause!](/public/img/slide-assets/applause.gif)
+![Applause!](/public/img/slide-assets/applause.gif)
 ]
 
 ???
@@ -1743,12 +1769,11 @@ We made it!!!? 😎 😌
 
 # Stretch Goals
 
-- Make it prettier
-- Trigger multiple balls
-- Create balls with special effects (different speeds, sizes, effects, etc.)
-- Trigger speed changes or size changes of paddles
-- Fire a shot from a paddle on key press
-- Declare a winner at a final score
+* Trigger multiple balls
+* Create balls with special effects (different speeds, sizes, effects, etc.)
+* Trigger speed changes or size changes of paddles
+* Fire a shot from a paddle on key press
+* Declare a winner at a final score
 
 ---
 

@@ -15,6 +15,7 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
@@ -25,50 +26,56 @@ layout: false
 4. CSS3 properties
 
 ---
+
 template: inverse
 
 # What is RWD?
 
 ---
+
 class: center, middle
 
 .inline-images-border[
-   ![RED desktop view](/public/img/slide-assets/red-screenshot-desktop.jpg)
+![RED desktop view](/public/img/slide-assets/red-screenshot-desktop.jpg)
 ]
 
 ---
+
 class: center, middle
 
 .inline-images-border[
-   ![RED mobile view](/public/img/slide-assets/red-screenshot-phone.jpg)
+![RED mobile view](/public/img/slide-assets/red-screenshot-phone.jpg)
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   Fixed vs. Fluid vs. Adaptive vs. Responsive ... GO!
+Fixed vs. Fluid vs. Adaptive vs. Responsive ... GO!
 ]
 
 ---
 
 # vs. Mobile-Only
 
-- Mobile-only websites are designed specifically to be viewed on mobile devices
-- They are not the same the website as the desktop version
-- Usually require "browser sniffing" (not foolproof)
-- You often find them on "m." sub-domains
-- Check out: https://m.facebook.com/
-- This is becoming less common today...
+* Mobile-only websites are designed specifically to be viewed on mobile devices
+* They are not the same the website as the desktop version
+* Usually require "browser sniffing" (not foolproof)
+* You often find them on "m." sub-domains
+* Check out: https://m.facebook.com/
+* This is becoming less common today...
 
 ---
+
 class: center, middle
 
 .large[
-   What are the 3 components of responsively designed websites?
+What are the 3 components of responsively designed websites?
 ]
 
 ---
+
 template: inverse
 
 # 1) Flexible Grids & Layouts
@@ -88,41 +95,42 @@ What needs to be done to make this layout flexible?
 
 ```css
 .container {
-   width: 960px;
+  display: flex;
+  width: 960px;
 }
 
 article {
-   width: 640px;
-   float: left;
+  width: 640px;
 }
 
 aside {
-   width: 320px;
-   float: right;
+  width: 320px;
 }
 ```
 
 ---
+
 class: center, middle
 
 .large[
-   And how do we make font and box model units flexible?
+And how do we make font and box model units flexible?
 ]
 
 ---
 
 # EM vs. REM
 
-*What's the difference?*
+_What's the difference?_
 
-- `em` units change the size relative to the **parent element**
-- `rem` units are always relative to the `font-size` set on the `<html>` element
+* `em` units change the size relative to the **parent element**
+* `rem` units are always relative to the `font-size` set on the `<html>` element
 
 Using `rem` units can make proportionally scaling font sizes a little much more manageable.
 
-*Let see a quick demo of how this works...*
+_Let see a quick demo of how this works..._
 
 ---
+
 template: inverse
 
 # 2) Flexible Images & Media
@@ -135,10 +143,10 @@ Flexible layouts are great, but images and other media require special attention
 
 CSS offers some helpers to assist with this wrangling:
 
-- `max-width`
-- `min-width`
-- `max-height`
-- `min-height`
+* `max-width`
+* `min-width`
+* `max-height`
+* `min-height`
 
 ---
 
@@ -147,9 +155,10 @@ CSS offers some helpers to assist with this wrangling:
 Using `max-width` is a handy way scale your media:
 
 ```css
-img, video {
-   max-width: 100%; /* adhere to container width */
-   height: auto; /* make sure height scales correctly */
+img,
+video {
+  max-width: 100%; /* adhere to container width */
+  height: auto; /* make sure height scales correctly */
 }
 ```
 
@@ -163,12 +172,13 @@ Conversely, `min-width` can ensure that a particular element never shrinks below
 
 ```css
 .logo {
-   width: 20%; /* scale the logo */
-   min-width: 200px; /* but make sure it's at least 200px */
+  width: 20%; /* scale the logo */
+  min-width: 200px; /* but make sure it's at least 200px */
 }
 ```
 
 ---
+
 template: inverse
 
 # 3) Media Queries
@@ -219,7 +229,7 @@ We can target entire stylesheets or just parts of them at particular screen size
 /* In a .css file... */
 
 @media all and (max-width: 960px) {
-   /* Targeted CSS goes here... */
+  /* Targeted CSS goes here... */
 }
 ```
 
@@ -245,15 +255,13 @@ The code you stick inside your media query rules works just like any other CSS:
 
 ```css
 @media screen and (max-width: 960px) {
-
-   body {
-      color: red;
-   }
-
+  body {
+    color: red;
+  }
 }
 ```
 
-*Who can explain what this media query does in plain English?*
+_Who can explain what this media query does in plain English?_
 
 ---
 
@@ -263,16 +271,13 @@ You can specify the screen orientation:
 
 ```css
 @media screen and (max-width: 960px) and (orientation: landscape) {
-
 }
 ```
 
 Or target high-density pixel displays, like the Retina screens on Apple devices:
 
 ```css
-@media (-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 }
 ```
 
@@ -282,30 +287,33 @@ Or target high-density pixel displays, like the Retina screens on Apple devices:
 
 Your task is to find an example of a responsively-designed website. Take notes on:
 
-- Where are the main breakpoints? What happens at these breakpoints?
-- What happens to the navigation for mobile widths?
-- Are there ads on the site? How are they handled?
-- Does anything seem to be not-quite-right at any width?
+* Where are the main breakpoints? What happens at these breakpoints?
+* What happens to the navigation for mobile widths?
+* Are there ads on the site? How are they handled?
+* Does anything seem to be not-quite-right at any width?
 
 Afterward, we'll pair up and share our findings.
 
 ---
+
 template: inverse
 
 # Mobile First
 
 ---
+
 class: center, middle
 
 .large[
-   What does it mean to take a mobile-first approach to RWD?
+What does it mean to take a mobile-first approach to RWD?
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   [Improving Smashing Magazine’s Performance: <br />A Case Study](http://www.smashingmagazine.com/2014/09/improving-smashing-magazine-performance-case-study/)
+[Improving Smashing Magazine’s Performance: <br />A Case Study](http://www.smashingmagazine.com/2014/09/improving-smashing-magazine-performance-case-study/)
 ]
 
 ---
@@ -316,11 +324,9 @@ There's nothing particularly fancy about writing media queries to be mobile-firs
 
 ```css
 @media screen and (min-width: 480px) {
-
 }
 
 @media screen and (min-width: 600px) {
-
 }
 
 /* and so on... */
@@ -338,7 +344,7 @@ You'll be optimizing for two breakpoints: `480px` and `720px`
 
 Screenshots of what the website should look like at mobile, tablet, and desktop width have been included in the following package:
 
-**[Download the exercise &rarr;](/public/files/exercises/rwd-review-e2.zip)**
+**[Download the exercise &rarr;](/public/files/exercises/rwd-refactor.zip)**
 
 ---
 
@@ -351,6 +357,7 @@ Take a few moments to review the two narrower design comps and think about what 
 Jot some idea out on your own, then you'll team up to discuss this with a partner. We'll then reconvene to discuss each other's findings, as well as any questions or concerns before starting with the lab work.
 
 ---
+
 template: inverse
 
 # CSS3 Properties
@@ -363,10 +370,10 @@ The `@media` syntax for media queries comes to us courtesy of CSS3.
 
 CSS3 provides us with these additional properties too:
 
-- `border-radius`
-- `box-shadow`
-- `opacity`
-- gradients
+* `border-radius`
+* `box-shadow`
+* `opacity`
+* gradients
 
 ---
 
@@ -382,13 +389,14 @@ Also take a look at Project 1, and see if you can recommend where it this proper
 
 # What We've Learned
 
-- The difference between, fixed, fluid, adaptive, responsive, and mobile-only websites
-- The 3 components of RWD
-- How to write mobile-first media queries
-- Other mobile-first considerations
-- How to use `border-radius`, `box-shadow`, `opacity`, and gradients
+* The difference between, fixed, fluid, adaptive, responsive, and mobile-only websites
+* The 3 components of RWD
+* How to write mobile-first media queries
+* Other mobile-first considerations
+* How to use `border-radius`, `box-shadow`, `opacity`, and gradients
 
 ---
+
 template: inverse
 
 # Questions?
