@@ -57,33 +57,37 @@ Discuss the findings with your table.
 
 ## Lab Activity
 
-Choose your own adventure!
+### Task 1: CSS Grid Garden!
 
-Practice using CSS Grid to recreate a layout, or layouts, of your choosing.
+Today's lab is primarily dedicated to getting comfortable with the CSS Grid and then get creative with it.
 
-### Play a Game
+To begin, click below & play CSS Grid Garden:
 
 <a href="http://cssgridgarden.com/" taget="_blank">
 ![Grid Garden](/public/img/slide-assets/css-grid/grid-garden.png)
 </a>
 
 
-### Create your own Grid Art
+### Task 2: Create your own Grid Art
 
+Practice using CSS Grid to recreate a layout, or layouts, of your choosing.
+
+Below are a few examples of creative uses of grid. Choose one or two to recreate. Or use these as inspiration and create your own.
+
+Create at least one CSS Grid creation.
+
+##### CSS Grid Avatar
 <iframe height='340' scrolling='no' title='aqbeQY' src='//codepen.io/Onomicon/embed/aqbeQY/?height=340&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/aqbeQY/'>aqbeQY</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 
-### Create a Mondrian Inspired Grid
+##### Mondrian Inspired Grid
 
 <a href="/public/img/slide-assets/css-grid/mondrian-grid.jpg" taget="_blank">
 ![Mondrian](/public/img/slide-assets/css-grid/mondrian-grid.jpg)
 </a>
 
-### Try mocking the Nasa Website
-<a href="https://www.nasa.gov/" target="_blank">
-![Nasa Website](/public/img/slide-assets/css-grid/website-nasa.png)
-</a>
+
 ---
 
 ## Additional Resources
