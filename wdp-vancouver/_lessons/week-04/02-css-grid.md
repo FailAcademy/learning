@@ -16,9 +16,12 @@ Prior to class, download and install Firefox Developer Edition:
 
 ## Learning Objectives
 
-- Learn to build a website using CSS Grid
-- Understand the basics of CSS Grid
-- Introduction to some CSS Grid methods
+- Construct a simple layout using CSS Grid
+- Describe CSS Grid keywords
+- Grasp the basics of CSS Grid
+- Use Developer Tools in the construction of CSS Grid layouts
+- Apply CSS Grid measurement units such as fr
+- Illustrate the use of CSS Grid Methods such as minmax() and repeat()
 
 ---
 
