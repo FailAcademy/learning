@@ -9,116 +9,107 @@ lesson_date: 2018-01-30
 
 Prior to class, download and install Firefox Developer Edition:
 
-- [Firefox Developer Edition
-](https://www.mozilla.org/en-US/firefox/developer/)
+* [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
 
 ---
 
 ## Learning Objectives
 
-- Construct a simple layout using CSS Grid
-- Describe CSS Grid keywords
-- Grasp the basics of CSS Grid
-- Use Developer Tools in the construction of CSS Grid layouts
-- Apply CSS Grid measurement units such as fr
-- Illustrate the use of CSS Grid Methods such as minmax() and repeat()
+* Construct a simple layout using CSS Grid container properties and values such `display: grid | inline-grid | subgrid;`, `grid-template-columns`, and `grid-template-rows`.
+* Explain the difference between grid tracks and lines.
+* Use grid-specific developer tools to help build and debug of CSS Grid layouts.
+* Apply flexible measurement units such as `fr` to a grid-based layout.
+* Use CSS Grid methods such as `minmax()` and `repeat()` in a grid-based layout.
+* Use `grid-template-areas` to fine-tune a grid-based layout.
 
 ---
 
 ## Keywords
 
-- Implicit Grid
-- Explicit Grid
-- Grid Container
-- Grid Item
-- fr
-- [repeat()](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat)
-- [minmax()](https://developer.mozilla.org/en-US/docs/Web/CSS/minmax)
-- Grid Lines
-- Grid Track
-
----
-
-## Mini Exercise
-
-**%, em, rem, auto, vw, vh, vmin, vmax**
-
-Research these responsive units & at your table discuss your findings.
+* Implicit grid
+* Explicit grid
+* Grid container
+* Grid item
+* `fr`
+* [`repeat()`](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat)
+* [`minmax()`](https://developer.mozilla.org/en-US/docs/Web/CSS/minmax)
+* Grid lines
+* Grid track
 
 ---
 
 ## Exercise 1
 
-Take a look at some of the grid examples at <a href="https://gridbyexample.com/examples/" target="_blank">GridByExample.com</a>
+`%`, `em`, `rem`, `auto`, `vw`, `vh`, `vmin`, and `vmax`
 
-Inspect the site with Firefox Dev Tools.
-See if you notice anything interesting.
+After seeing these **responsive units** again, let's take a few minutes and discuss what we know about them and research what we don't.
 
-Discuss the findings with your table.
+At your tables discuss with each other your findings. After a few minutes we can take a further look at some examples.Research these responsive units & at your table discuss your findings.
+
+---
+
+## Exercise 2
+
+Take a look at some of the grid examples on [GridByExample.com](https://gridbyexample.com/examples/).
+
+Inspect the site with Firefox dev tools. See if you notice anything interesting. How could you apply what you see here to previous project you've worked on?
+
+Discuss your findings with a partner or in small groups.
 
 ---
 
 ## Lab Activity
 
-### Task 1: CSS Grid Garden!
+### Task 1: CSS Grid Garden
 
-Today's lab is primarily dedicated to getting comfortable with the CSS Grid and then get creative with it.
+Today's lab is primarily dedicated to getting comfortable with the CSS Grid properties and values, and then get creative with it.
 
-To begin, click below & play CSS Grid Garden:
+Start by reinforcing what you just learned in class by completing this tutorial:
 
-<a href="http://cssgridgarden.com/" taget="_blank">
-![Grid Garden](/public/img/slide-assets/css-grid/grid-garden.png)
-</a>
+* [CSS Grid Garden](http://cssgridgarden.com/)
 
+### Task 2: Create your own grid art!
 
-### Task 2: Create your own Grid Art
+Practice using CSS Grid to create a layout (or layouts) of your choosing.
 
-Practice using CSS Grid to recreate a layout, or layouts, of your choosing.
+As an example, here's creative use of CSS Grid:
 
-Below are a few examples of creative uses of grid. Choose one or two to recreate. Or use these as inspiration and create your own.
-
-Create at least one CSS Grid creation.
-
-##### CSS Grid Avatar
 <iframe height='340' scrolling='no' title='aqbeQY' src='//codepen.io/Onomicon/embed/aqbeQY/?height=340&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Onomicon/pen/aqbeQY/'>aqbeQY</a> by Onomicon (<a href='https://codepen.io/Onomicon'>@Onomicon</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
+<br />And here's an example of a Mondrian-inspired grid you could attempt to recreate:
 
-##### Mondrian Inspired Grid
-
-<a href="/public/img/slide-assets/css-grid/mondrian-grid.jpg" taget="_blank">
 ![Mondrian](/public/img/slide-assets/css-grid/mondrian-grid.jpg)
-</a>
 
+Come with an idea, sketch it out on paper and have some fun with this!
+
+_We will demo our grid creations for the class at the end of day._
 
 ---
 
 ## Additional Resources
 
-This is a concise and authoritative summary of the various grid properties and how they work:
+This is a concise, authoritative summaries of the various grid properties and how they work:
 
-- [CSS Tricks - A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+* [CSS Tricks - A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+* Relationship of Grid Layout to other Layout Methods: [MDN Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
 
-- [MDN CSS Grid Playground](https://mozilladevelopers.github.io/playground/css-grid/)
+Practice your grid skills with these online resources:
 
-- [Game, CSS Grid Garden](http://cssgridgarden.com/)
+* [MDN CSS Grid Playground](https://mozilladevelopers.github.io/playground/css-grid/)
+* [Game, CSS Grid Garden](http://cssgridgarden.com/)
+* [Wes Bos CSS Grid](https://cssgrid.io/)
+* [Grid by Example](https://gridbyexample.com/)
+* [Grid Playground](https://www.cssgridplayground.com/)
 
-- Relationship of Grid Layout to other Layout Methods: [MDN Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+More grid resources:
 
-- Wes Bos Video Series on Grid: [Wes Bos CSS Grid](https://cssgrid.io/)
+* [Rachel Andrew - CSS Grid Ask Me Anything](https://github.com/rachelandrew/cssgrid-ama)
+* [An Introduction to the CSS Grid Layout Module](https://www.sitepoint.com/introduction-css-grid-layout-module/)
+* [Codepen example, difference between auto and fr](https://codepen.io/cssgrid/pen/ALQjAj)
+* [CSS Grid Gotchas And Stumbling Blocks](https://www.smashingmagazine.com/2017/09/css-grid-gotchas-stumbling-blocks/)
 
-- Rachel Andrew - [Grid by Example](https://gridbyexample.com/)
+Paid (but worth it!) grid resources:
 
-- Rachel Andrew - CSS Grid Ask Me Anything [AMA](https://github.com/rachelandrew/cssgrid-ama)
-
-- [Sitepoint CSS Grid intro, recreate a Slack layout!](https://www.sitepoint.com/introduction-css-grid-layout-module/)
-
-- [Codepen example, difference between auto and fr](https://codepen.io/cssgrid/pen/ALQjAj)
-
-- [Grid Playground](https://www.cssgridplayground.com/)
-
-- [Gotchas And Stumbling Blocks](https://www.smashingmagazine.com/2017/09/css-grid-gotchas-stumbling-blocks/)
-
-- Paid but worth every penny [Modern CSS Layout](https://www.leveluptutorials.com/tutorials/modern-css-layouts)
-
-- Expensive but if you liked flexbox zombies... [Grid Critters](https://geddski.teachable.com/p/gridcritters)
+* [Modern CSS Layout](https://www.leveluptutorials.com/tutorials/modern-css-layouts)
+* [Grid Critters](https://geddski.teachable.com/p/gridcritters)
