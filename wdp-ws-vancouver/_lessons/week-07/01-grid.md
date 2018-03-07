@@ -58,7 +58,7 @@ Discuss your findings with a partner or in small groups.
 
 ---
 
-## Lab Activity
+## Lab Activity (Next Class)
 
 ### Task 1: CSS Grid Garden
 

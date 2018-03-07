@@ -20,9 +20,9 @@ layout: false
 
 # Agenda
 
-1. Creating animation effects with jQuery
-2. Working with HTML forms with jQuery
-3. Putting it all together...
+1.  Creating animation effects with jQuery
+2.  Working with HTML forms with jQuery
+3.  Putting it all together...
 
 ---
 
@@ -507,7 +507,7 @@ $("#hamburger").on("change", function() {
 
 In this exercise, you're going to use jQuery to create an accordian-style show/hide effect for a basic FAQ list.
 
-[See the lesson page](/lesson/animation-with-jquery/) for further instructions.
+[See the lesson page](/lesson/02-jquery-animation//) for further instructions.
 
 ---
 

@@ -20,13 +20,13 @@ layout: false
 
 # Agenda
 
-1. JavaScript and the web
-1. What is jQuery? What is it for?
-1. The "Document Object Model" (DOM)
-1. jQuery basics (traversing and chaining)
-1. Working HTML elements and attributes
-1. Working with CSS in jQuery
-1. Creating click events
+1.  JavaScript and the web
+1.  What is jQuery? What is it for?
+1.  The "Document Object Model" (DOM)
+1.  jQuery basics (traversing and chaining)
+1.  Working HTML elements and attributes
+1.  Working with CSS in jQuery
+1.  Creating click events
 
 ---
 
@@ -604,7 +604,7 @@ $("p").css({ "font-size": "18px", "font-weight": "bold" });
 
 Using what you just learned about traversing the DOM and jQuery methods, come up with at least three unique solutions for changing the color of the text to red in the second `<p>` inside the `<article>` using jQuery only (no CSS!).
 
-[See the lesson page](/lesson/intro-to-jquery/) for further instructions.
+[See the lesson page](/lesson//01-intro-to-jquery/) for further instructions.
 
 ---
 
@@ -750,7 +750,7 @@ $("div").on("click", "button", function(event) {
 
 In this exercise, you're going create two click events&mdash;one that **adds another list item** to the list below, and one that **crosses off an item** in the list when its "done" link is clicked.
 
-[See the lesson page](/lesson/intro-to-jquery/) for further instructions.
+[See the lesson page](/lesson/01-intro-to-jquery/) for further instructions.
 
 ---
 
