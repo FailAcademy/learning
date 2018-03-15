@@ -467,7 +467,7 @@ We might enjoy typing, but writing the same value over and over isn't the best u
 class: center, middle
 
 .inline-images[
-![Good News](/public/img/slide-assets/goodnews.webp)
+![Good News](/public/img/slide-assets/css-grid/goodnews.webp)
 ]
 
 ---
