@@ -15,17 +15,19 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
 
-- Understand the history and beginnings of Node
-- Review TCP/UDP protocols
-- Model JavaScript's event loop
-- Build a simple TCP/UDP messaging server
-- Use Node's built in modules to read from you computer's filesystem
+* Understand the history and beginnings of Node
+* Review TCP/UDP protocols
+* Model JavaScript's event loop
+* Build a simple TCP/UDP messaging server
+* Use Node's built in modules to read from you computer's filesystem
 
 ---
+
 template: inverse
 
 # What is Node?
@@ -34,18 +36,18 @@ template: inverse
 
 # What is Node?
 
-- Node was created in **2009**
-- It has become the driving force behind the widespread adoption of the JS programming language as a tool for developing sophisticated software applications
-- Provides the **minimum viable foundation** to support the main Internet protocols, and OS interface
-- Given its low-level API, any reasonably complex application needs to make extensive use of libraries (npm!)
+* Node was created in **2009**
+* It has become the driving force behind the widespread adoption of the JS programming language as a tool for developing sophisticated software applications
+* Provides the **minimum viable foundation** to support the main Internet protocols, and OS interface
+* Given its low-level API, any reasonably complex application needs to make extensive use of libraries (npm!)
 
 ---
 
 # Experienced Node Developers Know...
 
-- How to structure an application using multiple third-party modules, and how to reliably judge the quality of a third-party module
-- How to leverage the **event loop** and Node's **async**, single-threaded nature (more on this to come...)
-- How to use various networking protocols
+* How to structure an application using multiple third-party modules, and how to reliably judge the quality of a third-party module
+* How to leverage the **event loop** and Node's **async**, single-threaded nature (more on this to come...)
+* How to use various networking protocols
 
 ---
 
@@ -53,14 +55,21 @@ class: center, middle
 
 ### What Makes It So Special?
 
-*Node's most useful features are...*
+_Node's most useful features are..._
 
 The **event loop** and **non-blocking I/O**.
 
 Node programs are **single threaded** and **highly parallel**.
 
+---
+
+# OSI Model
+
+Let's talk about how internet works!
+![OSI Layers](/public/img/slide-assets/OSI_model.png)
 
 ---
+
 template: inverse
 
 # A Simple Node App
@@ -105,13 +114,13 @@ Your `package.json` should look like this:
 Create a file called `index.js`. Use Node's [built-in `net` module](https://nodejs.org/api/net.html) to create a server which will handle incoming network connections (TCP/UDP):
 
 ```js
-const net = require('net')
+const net = require("net");
 const server = net.createServer();
 
-server.on('connection', handleConnection);
+server.on("connection", handleConnection);
 
 server.listen(9000, function() {
-  console.log('server listening to %j', server.address());
+  console.log("server listening to %j", server.address());
 });
 
 function handleConnection() {
@@ -136,7 +145,7 @@ function handleConnection(conn) {
 
 Add the `conn` parameter and `console.log` connection details when a connection happens.
 
-*Where is the client?*
+_Where is the client?_
 
 **Note:** Socket in this context is not WebSocket.
 
@@ -161,6 +170,7 @@ new client connection from ::1:63342
 Take a few minutes and read about the [Netcat](http://nc110.sourceforge.net/) tool now.
 
 ---
+
 class: center, middle
 
 ### Congratulations, you've successfully created a new network 'node' and connected it to the internet!
@@ -178,9 +188,9 @@ Before we can start sending and receiving data, we'll need to add a few more thi
 
 Implement the following `conn` event handlers in your `handleConnection` callback:
 
-- `data`
-- `close`
-- `error`
+* `data`
+* `close`
+* `error`
 
 Each handler should `console.log` the `remoteAddress` as well as any relevant parameters (e.g. incoming data, or error messages). Review **[the documentation](https://nodejs.org/api/net.html)** here before you begin.
 
@@ -192,9 +202,10 @@ If you're sending incoming data to the server console, you may have noticed somt
 
 This happens because TCP sends **streams of bytes** across the network, and it's up to our application to decode them properly.
 
-*But what is UTF-8?*
+_But what is UTF-8?_
 
 ---
+
 template: inverse
 
 # Debugging a Node Application
@@ -221,12 +232,13 @@ To start debugging, open the following URL in Chrome:
 Copy and paste the `chrome-devtools://` url into a new chrome tab to start your debugging session.
 
 ---
+
 class: center, middle
 
 Open your debugger and set a breakpoint somewhere in your code. Send a message to your server using Netcat to trigger it.
 
 .inline-images[
-  ![Chrome dev tools for debugging Node](/public/img/slide-assets/node-debugger-breakpoint.png)
+![Chrome dev tools for debugging Node](/public/img/slide-assets/node-debugger-breakpoint.png)
 ]
 
 ---
@@ -247,14 +259,13 @@ Add the following code to your `data` handler to complete the service:
 
 ```js
 // console.log ...
-conn.write(
-  `Got "${d.trim()}". Let me uppercase: "${d.toUpperCase()}"`
-)
+conn.write(`Got "${d.trim()}". Let me uppercase: "${d.toUpperCase()}"`);
 ```
 
 Now we have a friendly upper-casing service.
 
 ---
+
 template: inverse
 
 # Blocking & Non-Blocking Operations
@@ -265,8 +276,8 @@ template: inverse
 
 Use your TCP server to read from your local file system. When your server receives a request, use Node's build in `fs` module to read text from a `.txt` file and send the contents back to the connection.
 
-- Is reading from the filesystem an **async** or **sync** action?
-- In what circumstance is it useful to use blocking operations?
+* Is reading from the filesystem an **async** or **sync** action?
+* In what circumstance is it useful to use blocking operations?
 
 Modify your existing code:
 
@@ -291,8 +302,8 @@ Next we'll create a minimal chat server.
 
 Change your TCP service to deliver any incoming data to all connected clients.
 
-- Your server will need to store all connections
-- Messages you send to the server should not return to you
+* Your server will need to store all connections
+* Messages you send to the server should not return to you
 
 ---
 
@@ -302,18 +313,19 @@ Introducing the code recommended on the previous slide may have introduced a mem
 
 Run the load tester to find out!
 
-*What do we have to do to prevent the memory leak?*
+_What do we have to do to prevent the memory leak?_
 
 ---
 
 # What We've Learned
 
-- What Node is and what where it came from
-- What the TCP/UDP protocols are
-- What the JS event loop is
-- How blocking versus non-blocking operations work in Node
+* What Node is and what where it came from
+* What the TCP/UDP protocols are
+* What the JS event loop is
+* How blocking versus non-blocking operations work in Node
 
 ---
+
 template: inverse
 
 # Questions?
