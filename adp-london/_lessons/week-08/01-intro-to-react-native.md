@@ -10,6 +10,10 @@ lesson_date: 2018-02-26
 Prior to class, please install Xcode on your Mac:
 
 * [Xcode](https://developer.apple.com/xcode/)
+  * After installation, start Xcode and accept the terms and conditions agreement
+* Run "xcode-select --install" in your terminal
+  * Start your Xcode again and accept any terms and conditions required to get to the welcome screen of your Xcode.
+* Install [HomeBrew](https://brew.sh/)
 
 ---
 
