@@ -120,3 +120,7 @@ From the React docs:
 * [Refs to Components](https://facebook.github.io/react/docs/more-about-refs.html)
 * [Component Specs and Lifecycle](https://facebook.github.io/react/docs/component-specs.html)
 * [A Visual Guide to State in React](https://daveceddia.com/visual-guide-to-state-in-react/)
+
+A thorough explanation of how method binding works:
+
+* [Why and how to bind methods in your React component classes?](http://reactkungfu.com/2015/07/why-and-how-to-bind-methods-in-your-react-component-classes/)
