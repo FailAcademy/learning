@@ -13,127 +13,73 @@
    {
       "title": "Day 1 Orientation",
       "allDay": true,
-      "start": "2018-01-08"
+      "start": "2018-04-09"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-01-19"
+      "start": "2018-04-20"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-01-22"
+      "start": "2018-04-27"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-01-29"
-   },
-   {
-      "title": "Project Work Day",
-      "allDay": true,
-      "start": "2018-02-09"
+      "start": "2018-05-11"
    },
     {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-02-23"
+      "start": "2018-05-24"
    },
    {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-02-26"
+    "start": "2018-05-25"
    },
    {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-02-28"
+    "start": "2018-05-30"
    },
    {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-03-01"
+    "start": "2018-05-31"
    },
    {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-03-02"
+    "start": "2018-06-01"
    },
    {
-      "title": "UX Guest Lecture",
+      "title": "Intro to UX (Guest Lecture)",
       "allDay": true,
-      "start": "2018-01-30"
+      "start": "2018-04-30"
    },
    {
-      "title": "Invision and Inspect (UX)",
-      "allDay": false,
-      "start": "2018-03-080T09:15:00+00:00",
-      "end": "2018-03-08T10:15:00+00:00"
-   },
-   {
-      "title": "Analytics & SEO Lesson (DM)",
-      "allDay": false,
-      "start": "2018-03-07T09:00:00+00:00",
-      "end": "2018-03-07T12:00:00+00:00"
+      "title": "Invision & Inspect Lesson (UX)",
+      "allDay": true,
+      "start": "2018-06-07"
    },
    {
       "title": "Design Presentations",
       "allDay": true,
-      "start": "2018-03-09"
+      "start": "2018-06-08"
    },
    {
       "title": "GitHub Portfolio Development",
       "allDay": true,
-      "start": "2018-03-05",
-      "end": "2018-03-09"
+      "start": "2018-06-04",
+      "end": "2018-06-09"
    },
    {
       "title": "Community Project Work",
       "allDay": true,
-      "start": "2018-03-12",
-      "end": "2018-03-29"
-   },
-   {
-      "title": "PPD Lesson",
-      "allDay": false,
-      "start": "2018-10-12T13:00:00+00:00",
-      "end": "2018-10-12T15:00:00+00:00"
-  },
-  {
-      "title": "PPD Lesson",
-      "allDay": false,
-      "start": "2018-01-18T13:00:00+00:00",
-      "end": "2018-01-18T15:00:00+00:00"
-  },
-  {
-      "title": "PPD Lesson",
-      "allDay": false,
-      "start": "2018-02-01T13:00:00+00:00",
-      "end": "2018-02-01T15:00:00+00:00"
-  },
-  {
-      "title": "PPD Lesson",
-      "allDay": false,
-      "start": "2018-02-15T13:00:00+00:00",
-      "end": "2018-02-15T15:00:00+00:00"
-  },
-  {
-      "title": "PPD Lesson",
-      "allDay": false,
-      "start": "2018-03-01T13:00:00+00:00",
-      "end": "2018-03-01T15:00:00+00:00"
-  },
-  {
-      "title": "PPD Lesson",
-      "allDay": false,
-      "start": "2018-03-15T13:00:00+00:00",
-      "end": "2018-03-15T15:00:00+00:00"
-  },
-  {
-    "title": "PPD Lesson",
-    "allDay": false,
-    "start": "2018-03-22T18:00:00+00:00",
-    "end": "2018-03-22T20:00:00+00:00"
-  }
+      "start": "2018-06-12",
+      "end": "2018-06-29"
+   }
 ]

@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 3 - Pong Game
-due: Monday, February 12th (beginning of class)
+due: Monday, May 14th (beginning of class)
 ---
 
 For Project 3, you're going to create a pong game. You can [clone the project starter repo here](https://github.com/redacademy/pong-starter).
@@ -61,4 +61,4 @@ Want to challenge yourself? Your project could also:
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to [mandi@redacademy.com](mailto:mandi@redacademy.com).
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to [carlos@redacademy.com](mailto:carlos@redacademy.com).
