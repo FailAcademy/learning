@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: The Programming Interview
-lesson_date: 2018-02-02
+lesson_date: 2018-05-03
 ---
 
 ## Pre-Work
@@ -12,7 +12,7 @@ Well-rounded front-end developers will be able to write great code while also ju
 
 To put these myriad job responsibilities (and others!) into perspective, please read this article prior to class:
 
-- [A Front End Developer is Aware](https://css-tricks.com/front-end-developer-aware/)
+* [A Front End Developer is Aware](https://css-tricks.com/front-end-developer-aware/)
 
 Come prepared with your thoughts and reflections on this article (especially in relation to your journey so far over the first month of the course). We will discuss it as a class, and then jump into our programming interview questions.
 
@@ -20,8 +20,8 @@ Come prepared with your thoughts and reflections on this article (especially in 
 
 ## Learning Objectives
 
-- Apply logic in conjunction with previously-acquired front-end development skills to solve a series of abstract programming challenges.
-- Practice for a technical interview by completing a sample set of programming interview challenges.
+* Apply logic in conjunction with previously-acquired front-end development skills to solve a series of abstract programming challenges.
+* Practice for a technical interview by completing a sample set of programming interview challenges.
 
 ---
 
@@ -35,12 +35,12 @@ Your mission is to try to apply what you've learned, and attempt to come up with
 
 **Tips For Success:**
 
-1. Take your time
-2. Break down the problems into small steps
-3. Think about what variables/values you'll need
-4. Ask others for help if you're stuck!
+1.  Take your time
+2.  Break down the problems into small steps
+3.  Think about what variables/values you'll need
+4.  Ask others for help if you're stuck!
 
-*Good luck and have fun!*
+_Good luck and have fun!_
 
 ---
 
@@ -64,7 +64,7 @@ Why? For this particular list, if you had bought stock at 24 and sold it at 40, 
 
 ## Challenge 3
 
-Write a function that logs the lyrics to the [The Twelve Day of Christmas](https://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song)) line by line.
+Write a function that logs the lyrics to the [The Twelve Day of Christmas](<https://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song)>) line by line.
 
 ---
 
@@ -124,7 +124,7 @@ console.log(sum(range(1, 10))); // 55
 
 ## Challenge 8
 
-**Warm-up Round:** 
+**Warm-up Round:**
 
 Write a function the converts a decimal number to a string-based representation of its binary equivalent.
 
@@ -158,15 +158,15 @@ In order to make your `GET` request, look into the [Fetch API](https://developer
 
 Knowledge goals to strive for throughout your career:
 
-- [Programmer Competency Matrix](http://sijinjoseph.com/programmer-competency-matrix/)
+* [Programmer Competency Matrix](http://sijinjoseph.com/programmer-competency-matrix/)
 
 More sample programmer interview questions:
 
-- [Here's a pretty big list of programming interview questions I compiled while studying for big 4 interviews. I think you guys will find it useful!](https://www.reddit.com/r/cscareerquestions/comments/20ahfq/heres_a_pretty_big_list_of_programming_interview/)
-- [Front-end Job Interview Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions) (awesome resource!)
-- [Interview Questions and Exercises About CSS](https://css-tricks.com/interview-questions-css/)
-- [Interview Cake](https://www.interviewcake.com/all-questions/javascript)
+* [Here's a pretty big list of programming interview questions I compiled while studying for big 4 interviews. I think you guys will find it useful!](https://www.reddit.com/r/cscareerquestions/comments/20ahfq/heres_a_pretty_big_list_of_programming_interview/)
+* [Front-end Job Interview Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions) (awesome resource!)
+* [Interview Questions and Exercises About CSS](https://css-tricks.com/interview-questions-css/)
+* [Interview Cake](https://www.interviewcake.com/all-questions/javascript)
 
 An interview prep course from Udacity (it's taught in Python, but worth a look!):
 
-- [Technical Interview](https://www.udacity.com/course/technical-interview--ud513)
+* [Technical Interview](https://www.udacity.com/course/technical-interview--ud513)

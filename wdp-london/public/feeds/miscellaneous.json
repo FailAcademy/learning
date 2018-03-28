@@ -1,26 +1,8 @@
 [
   {
-    "title": "Pre-Work",
+    "title": "New Years Day",
     "allDay": true,
-    "start": "2017-12-26",
-    "end": "2018-01-07"
-  },
-  {
-    "title": "ADP/WDP Mentoring",
-    "allDay": false,
-    "start": "2018-01-26T15:00:00+00:00",
-    "end": "2018-01-26T16:15:00+00:00"
-  },
-  {
-    "title": "ADP/WDP Mentoring",
-    "allDay": false,
-    "start": "2018-02-23T15:00:00+00:00",
-    "end": "2018-02-23T16:15:00+00:00"
-  },
-  {
-    "title": "BC Family Day",
-    "allDay": true,
-    "start": "2018-02-12"
+    "start": "2018-01-01"
   },
   {
     "title": "Good Friday",
@@ -33,34 +15,19 @@
     "start": "2018-04-02"
   },
   {
-    "title": "Victoria Day",
+    "title": "Bank Holiday",
     "allDay": true,
-    "start": "2018-05-21"
+    "start": "2018-05-07"
   },
   {
-    "title": "Canada Day Stat",
+    "title": "Bank Holiday",
     "allDay": true,
-    "start": "2018-07-02"
+    "start": "2018-05-28"
   },
   {
-    "title": "BC Day",
+    "title": "Bank Holiday",
     "allDay": true,
-    "start": "2018-08-06"
-  },
-  {
-    "title": "Labour Day",
-    "allDay": true,
-    "start": "2018-09-03"
-  },
-  {
-    "title": "Thanksgiving Monday",
-    "allDay": true,
-    "start": "2018-10-08"
-  },
-  {
-    "title": "Remembrance Day Stat",
-    "allDay": true,
-    "start": "2018-11-12"
+    "start": "2018-08-27"
   },
   {
     "title": "Christmas Day",
@@ -70,12 +37,6 @@
   {
     "title": "New Years Day",
     "allDay": true,
-    "start": "2018-01-01"
-  },
-  {
-    "title": "Realty Butler Field Trip",
-    "allDay": false,
-    "start": "2018-03-05T15:00:00+00:00",
-    "end": "2018-03-05T16:30:00+00:00"
+    "start": "2019-01-01"
   }
 ]

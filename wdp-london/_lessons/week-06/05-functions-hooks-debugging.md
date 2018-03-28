@@ -2,7 +2,7 @@
 layout: lesson
 title: WordPress Functions, Hooks & Debugging
 slides: ['_slides/week-06/05-functions-hooks-debugging.md']
-lesson_date: 2018-02-19
+lesson_date: 2018-05-18
 ---
 
 ## Pre-Work
@@ -70,8 +70,8 @@ Provide an example of it's usage too!
 
 Let's head over the `/inc/extras.php` file in our starter theme and add two functions (with the appropriate hooks) to do the following:
 
-1. Change the logo on the WP login screen to be Inhabitent's logo
-2. Update the URL that the logo points to be the site's homepage URL (instead of wordpress.org).
+1.  Change the logo on the WP login screen to be Inhabitent's logo
+2.  Update the URL that the logo points to be the site's homepage URL (instead of wordpress.org).
 
 ---
 

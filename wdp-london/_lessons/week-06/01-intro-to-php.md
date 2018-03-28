@@ -2,49 +2,49 @@
 layout: lesson
 title: Intro to PHP
 slides: ['_slides/week-06/01-intro-to-php.md']
-lesson_date: 2018-02-13
+lesson_date: 2018-05-14
 ---
 
 ## Pre-Work
 
 Ensure you have MAMP successfully installed on your computer:
 
-- [MAMP](https://www.mamp.info/en/)
+* [MAMP](https://www.mamp.info/en/)
 
 Work through the following sections of the [Codeacademy PHP tutorial](https://www.codecademy.com/en/tracks/php):
 
-- Welcome to PHP!
-- Control Flow: If/Else
-- Control Flow: Switch
-- Arrays
-- Loops: For and ForEach
-- Loops: While and Do-While
+* Welcome to PHP!
+* Control Flow: If/Else
+* Control Flow: Switch
+* Arrays
+* Loops: For and ForEach
+* Loops: While and Do-While
 
 ---
 
 ## Learning Objectives
 
-- Distinguish the difference between a server-side and client-side programming language.
-- Identify the fundamental components of PHP syntax.
-- Use statements, variables, loops, operators, conditionals, and arrays in PHP.
-- Use functions to create reusable blocks of DRY code.
-- Distinguish the difference between indexed and associative arrays.
-- Dynamically generate a webpage using `include()` or `require()`.
+* Distinguish the difference between a server-side and client-side programming language.
+* Identify the fundamental components of PHP syntax.
+* Use statements, variables, loops, operators, conditionals, and arrays in PHP.
+* Use functions to create reusable blocks of DRY code.
+* Distinguish the difference between indexed and associative arrays.
+* Dynamically generate a webpage using `include()` or `require()`.
 
 ---
 
 ## Keywords
 
-- Statement
-- Variable
-- Boolean
-- Loop
-- Conditional
-- Operator
-- Concatenate
-- Array
-- Function
-- localhost
+* Statement
+* Variable
+* Boolean
+* Loop
+* Conditional
+* Operator
+* Concatenate
+* Array
+* Function
+* localhost
 
 ---
 
@@ -52,11 +52,11 @@ Work through the following sections of the [Codeacademy PHP tutorial](https://ww
 
 Time to try out some PHP:
 
-- Create an `index.php` file in a sub-directory of the `htdocs` folder in your MAMP installation (e.g. `sandbox`, etc.)
-- In that file type `<?php  ?>`
-- Between your opening and closing PHP tags type `echo "Hello, world!";`
-- Go to http://localhost:8888/[SUB_DIR_NAME]/ (or if you're on port 80, http://localhost/[SUB_DIR_NAME]/)
-- Also try running `php index.php` in your CLI...
+* Create an `index.php` file in a sub-directory of the `htdocs` folder in your MAMP installation (e.g. `sandbox`, etc.)
+* In that file type `<?php ?>`
+* Between your opening and closing PHP tags type `echo "Hello, world!";`
+* Go to http://localhost:8888/[SUB_DIR_NAME]/ (or if you're on port 80, http://localhost/[SUB_DIR_NAME]/)
+* Also try running `php index.php` in your CLI...
 
 ---
 
@@ -96,12 +96,12 @@ The only file in the boilerplate that contains any code is the `posts.json` file
 
 What you need to do to complete this lab:
 
-- Create a blog index page to display all the posts (by parsing the JSON data in PHP)
-- Create an About page for the blog
-- Dynamically include a `header.php`, `sidebar.php`, and `footer.php` file in each of the site's pages (instead of including this mark-up statically on each page)
-- Format the post data as per the design comp (e.g. posts will be displayed in reverse chronological order, categories name will be capitalized, and dates will be converted from Unix time to human-readble time)
-- Abstract the functions you create into a `functions.php` file, and `require` it where needed (views are dumb...we don't want any logic in our views!)
-- Adequately reflect the designer's vision for this site
+* Create a blog index page to display all the posts (by parsing the JSON data in PHP)
+* Create an About page for the blog
+* Dynamically include a `header.php`, `sidebar.php`, and `footer.php` file in each of the site's pages (instead of including this mark-up statically on each page)
+* Format the post data as per the design comp (e.g. posts will be displayed in reverse chronological order, categories name will be capitalized, and dates will be converted from Unix time to human-readble time)
+* Abstract the functions you create into a `functions.php` file, and `require` it where needed (views are dumb...we don't want any logic in our views!)
+* Adequately reflect the designer's vision for this site
 
 **Hint!** You can include the Roboto font on your site by adding this snippet to the `<head>` element:
 
@@ -117,17 +117,17 @@ What you need to do to complete this lab:
 
 PHP is a well-documented language and you can find its docs here:
 
-- [Documentation](http://php.net/docs.php)
+* [Documentation](http://php.net/docs.php)
 
 An awesome, well-written PHP resource:
 
-- [PHP the Right Way](http://www.phptherightway.com/)
-- At the very least, [read this chapter](http://www.phptherightway.com/pages/The-Basics.html)
+* [PHP the Right Way](http://www.phptherightway.com/)
+* At the very least, [read this chapter](http://www.phptherightway.com/pages/The-Basics.html)
 
 This online book is a bit dated, but the following chapter is still relevant and very explanatory:
 
-- [Hacking with PHP - How PHP is Written](http://www.hackingwithphp.com/2/6/0/how-php-is-written)
+* [Hacking with PHP - How PHP is Written](http://www.hackingwithphp.com/2/6/0/how-php-is-written)
 
 Another PHP resource, written with WP devs in mind:
 
-- [WordPress Development for Beginners: Learning PHP](http://premium.wpmudev.org/blog/wordpress-development-beginners-php/)
+* [WordPress Development for Beginners: Learning PHP](http://premium.wpmudev.org/blog/wordpress-development-beginners-php/)

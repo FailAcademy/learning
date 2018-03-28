@@ -2,7 +2,7 @@
 layout: lesson
 title: Flexbox
 slides: ['_slides/week-01/03-flexbox.md']
-lesson_date: 2018-01-11
+lesson_date: 2018-04-12
 ---
 
 ## Pre-Work
@@ -46,8 +46,8 @@ Let's apply these flexbox concepts to Project 1.
 
 We'll start adding flexbox properties into the `<footer>` with following these steps:
 
-1. Apply `display: flex` to the appropriate element
-2. Figure out how to get the address and the social links aligned to the left and right sides of the footer
+1.  Apply `display: flex` to the appropriate element
+2.  Figure out how to get the address and the social links aligned to the left and right sides of the footer
 
 ---
 
@@ -55,8 +55,8 @@ We'll start adding flexbox properties into the `<footer>` with following these s
 
 Let's use some of the flex-item related properties in our project, within the site `<header>`. Follow these steps:
 
-1. Apply `display: flex` to the appropriate container in your `<header>`
-2. Use a combination of flex item properties to set the logo back to the left edge and the cart icon set to right edge of the page (and make sure they are the right size!)
+1.  Apply `display: flex` to the appropriate container in your `<header>`
+2.  Use a combination of flex item properties to set the logo back to the left edge and the cart icon set to right edge of the page (and make sure they are the right size!)
 
 ---
 
