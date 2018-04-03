@@ -76,16 +76,6 @@ For example: `Hello how are you` becomes `Olleh woh era uoy`.
 
 **Extra Challenge:** Maintain capitalization of reversed words, like the example above.
 
-Did you know? You can also reverse the direction of a string using HTML using the `<bdo>` element!
-
-For example:
-
-```html
-<p><bdo dir="rtl">Sometimes things go wrong!</bdo></p>
-```
-
-Results in: `!gnorw og sgniht semitemoS`
-
 ---
 
 ## Challenge 5
