@@ -20,11 +20,11 @@ layout: false
 
 # Agenda
 
-1. What is React, and why use it?
-2. Key concepts in React
-3. Creating a React app
-4. Working with components
-5. Adding props to components
+1.  What is React, and why use it?
+2.  Key concepts in React
+3.  Creating a React app
+4.  Working with components
+5.  Adding props to components
 
 ---
 
@@ -103,7 +103,7 @@ class: center, middle
 
 We're going to build a to-do app together with React...
 
-See the [lesson page](/lesson/react-components-and-props/) for more details.
+See the [lesson page](/lesson/02-intro-to-react/) for more details.
 
 ---
 
@@ -344,7 +344,6 @@ A boilerplate React app with:
 
 * Babel transpiling (so we can use ES2015 and JSX)
 * Webpack for bundling
-* ESLint for catching mistakes
 * A development server
 
 _All with zero configuration!!_
@@ -515,8 +514,8 @@ You can also remove the default logo `import` and delete the file too.
 
 There are two way we will create components:
 
-1. Using ES2015 classes
-2. Using stateless functions
+1.  Using ES2015 classes
+2.  Using stateless functions
 
 ---
 
