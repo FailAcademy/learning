@@ -35,10 +35,10 @@ Your mission is to try to apply what you've learned, and attempt to come up with
 
 **Tips For Success:**
 
-1. Take your time
-2. Break down the problems into small steps
-3. Think about what variables/values you'll need
-4. Ask others for help if you're stuck!
+1.  Take your time
+2.  Break down the problems into small steps
+3.  Think about what variables/values you'll need
+4.  Ask others for help if you're stuck!
 
 _Good luck and have fun!_
 
@@ -75,16 +75,6 @@ Create a function the reverses a string. Your function must be capable of revers
 For example: `Hello how are you` becomes `Olleh woh era uoy`.
 
 **Extra Challenge:** Maintain capitalization of reversed words, like the example above.
-
-Did you know? You can also reverse the direction of a string using HTML using the `<bdo>` element!
-
-For example:
-
-```html
-<p><bdo dir="rtl">Sometimes things go wrong!</bdo></p>
-```
-
-Results in: `!gnorw og sgniht semitemoS`
 
 ---
 
