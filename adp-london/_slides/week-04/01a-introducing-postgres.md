@@ -20,11 +20,11 @@ layout: false
 
 # Agenda
 
-1. Determine what a database is
-2. Introduce the various types of databases available
-3. Install and set up PostgreSQL
-4. Demonstrate the SQL language
-5. Setup a Postgres user and database for use in our project application
+1.  Determine what a database is
+2.  Introduce the various types of databases available
+3.  Install and set up PostgreSQL
+4.  Demonstrate the SQL language
+5.  Setup a Postgres user and database for use in our project application
 
 ---
 
@@ -82,6 +82,13 @@ _It's Open Source!_
 
 ???
 Take the opportunity to contrast Open Source technology vs proprietary tech, ie Microsoft's MySQL.
+
+---
+
+# Install Postgres
+
+[Download and install Postgres](https://postgresapp.com/)
+![Postgres](/public/img/slide-assets/PostgresAppHomePage.png)
 
 ---
 
@@ -221,10 +228,10 @@ class: center, middle
 
 ### Codd on Normalization
 
-1. To free the collection of relations from undesirable insertion, update and deletion dependencies.
-2. To reduce the need for restructuring the collection of relations as new types of data are introduced, and thus increase the life span of application programs.
-3. To make the relational model more informative to users.
-4. To make the collection of relations neutral to the query statistics, where these statistics are liable to change as time goes by.
+1.  To free the collection of relations from undesirable insertion, update and deletion dependencies.
+2.  To reduce the need for restructuring the collection of relations as new types of data are introduced, and thus increase the life span of application programs.
+3.  To make the relational model more informative to users.
+4.  To make the collection of relations neutral to the query statistics, where these statistics are liable to change as time goes by.
 
 [source](https://www.quora.com/What-is-database-normalization-in-simple-terms-with-examples)
 
