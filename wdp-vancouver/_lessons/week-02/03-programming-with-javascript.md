@@ -2,7 +2,7 @@
 layout: lesson
 title: Programming with JavaScript
 slides: ['_slides/week-02/03-programming-with-javascript.md']
-lesson_date: 2018-01-16
+lesson_date: 2018-04-17
 ---
 
 ## Pre-Work
@@ -11,35 +11,35 @@ Before the first JS class, be sure to work through all of the free modules in Co
 
 Also read through the following page to reinforce some JS programming concepts before class:
 
-- [JavaScript for Cats](http://jsforcats.com/)
+* [JavaScript for Cats](http://jsforcats.com/)
 
 ---
 
 ## Learning Objectives
 
-- Define basic programming concepts such as statements, booleans, conditionals, loops, and variables (in relation to JavaScript).
-- Distinguish how JavaScript differs from other "server-side" programming languages.
-- Use the development tools essential for writing and debugging JavaScript code.
-- Create and use basic JavaScript functions.
-- Build basic JavaScript objects and manipulate their properties and methods.
-- Create JavaScript arrays and iterate over them.
+* Define basic programming concepts such as statements, booleans, conditionals, loops, and variables (in relation to JavaScript).
+* Distinguish how JavaScript differs from other "server-side" programming languages.
+* Use the development tools essential for writing and debugging JavaScript code.
+* Create and use basic JavaScript functions.
+* Build basic JavaScript objects and manipulate their properties and methods.
+* Create JavaScript arrays and iterate over them.
 
 ---
 
 ## Keywords
 
-- Syntax
-- Variable
-- Concatenation
-- Comments
-- [`document`](https://developer.mozilla.org/en-US/docs/Web/API/document)
-- [`window`](https://developer.mozilla.org/en-US/docs/Web/API/Window)
-- [`alert`](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert)
-- [`prompt`](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt)
-- Operators
-- Conditionals
-- Loops
-- [`console`](https://developer.mozilla.org/en-US/docs/Tools/Web_Console)
+* Syntax
+* Variable
+* Concatenation
+* Comments
+* [`document`](https://developer.mozilla.org/en-US/docs/Web/API/document)
+* [`window`](https://developer.mozilla.org/en-US/docs/Web/API/Window)
+* [`alert`](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert)
+* [`prompt`](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt)
+* Operators
+* Conditionals
+* Loops
+* [`console`](https://developer.mozilla.org/en-US/docs/Tools/Web_Console)
 
 ---
 
@@ -48,16 +48,14 @@ Also read through the following page to reinforce some JS programming concepts b
 Open a new browser tab and open the console, and type in each line one at a time:
 
 ```js
-
-alert('Hello World!');
-var yourName = prompt('What\'s your name?');
+alert("Hello World!");
+var yourName = prompt("What's your name?");
 console.log(yourName);
-
 ```
 
 If we wanted to store the value inputted into the `prompt` and print it out in an `alert` afterward, how might we do that?
 
-And what would we do if wanted to output the value that was entered in the `prompt` with the string `Hello, ` in front of it in the subsequent `alert`?
+And what would we do if wanted to output the value that was entered in the `prompt` with the string `Hello,` in front of it in the subsequent `alert`?
 
 ---
 
@@ -91,8 +89,8 @@ With any remaining time after the lesson today, spend some time working through 
 
 Free JS-related books online:
 
-- [JSbooks](http://jsbooks.revolunet.com/)
+* [JSbooks](http://jsbooks.revolunet.com/)
 
 A popular JS styleguide:
 
-- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+* [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)

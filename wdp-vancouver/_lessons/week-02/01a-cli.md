@@ -2,7 +2,7 @@
 layout: lesson
 title: The Command Line Interface
 slides: ['_slides/week-02/01a-cli.md']
-lesson_date: 2018-01-12
+lesson_date: 2018-04-13
 ---
 
 ## Pre-Work
@@ -29,8 +29,8 @@ We will be using Homebrew to install some command-line tools. If you're feeling 
 
 Install Git and Git Bash:
 
-1. [Download Git for Windows.](https://git-scm.com/download/win)
-2. Double-click the `.exe` file you just downloaded to install Git on your system.
+1.  [Download Git for Windows.](https://git-scm.com/download/win)
+2.  Double-click the `.exe` file you just downloaded to install Git on your system.
 
 The installation process will also install Git Bash on your computer, which you can use to run most of the commands in the lesson.
 
@@ -107,15 +107,15 @@ Desktop  Documents  Pictures    Movies  Music  Applications
 
 ## Exercise 4
 
-1. Navigate to your Desktop
-2. Create a directory called `my_site`
-3. Rename the `my_site` directory `website`
-4. Create an `index.html` file inside of your new directory
-5. Create an `assets` sub-directory in there too
-6. Add a `style.css` file to `assets`
-7. Delete the `assets` folder and its contents
-8. Delete the `index.html` in the root of your `website` directory
-9. Delete the `website` directory
+1.  Navigate to your Desktop
+2.  Create a directory called `my_site`
+3.  Rename the `my_site` directory `website`
+4.  Create an `index.html` file inside of your new directory
+5.  Create an `assets` sub-directory in there too
+6.  Add a `style.css` file to `assets`
+7.  Delete the `assets` folder and its contents
+8.  Delete the `index.html` in the root of your `website` directory
+9.  Delete the `website` directory
 
 ---
 

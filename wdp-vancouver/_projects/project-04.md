@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 4 - Inhabitent Site
-due: Tuesday, February 27th (beginning of class)
+due: Tuesday, May 29th (beginning of class)
 ---
 
 For Project 4, you will create a multi-page website with a blog for a camping supply company called Inhabitent Camping Supply Co. using WordPress as a content management system.
@@ -123,11 +123,11 @@ Once you have finished working on your site, please export your database by foll
 
 **Note:** Please ensure browser sync is OFF before proceeding with the steps below. VERY IMPORTANT.
 
-1. Add Rose as an Administrator to your site (username: `rose` / password: `rose` / email: rose.cass@redacademy.com)
-2. Install the WP Migrate DB plugin
-3. Go to Tools > Migrate DB in the WordPress admin area
-4. Change the "Replace" fields so that the first field contains `//localhost/student` and the second contains `/Applications/MAMP/htdocs/student`
-5. Click the Migrate button to export your DB
+1.  Add Rose as an Administrator to your site (username: `rose` / password: `rose` / email: rose.cass@redacademy.com)
+2.  Install the WP Migrate DB plugin
+3.  Go to Tools > Migrate DB in the WordPress admin area
+4.  Change the "Replace" fields so that the first field contains `//localhost/student` and the second contains `/Applications/MAMP/htdocs/student`
+5.  Click the Migrate button to export your DB
 
 **Submitting your project:**
 

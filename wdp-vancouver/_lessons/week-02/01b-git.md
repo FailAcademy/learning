@@ -2,7 +2,7 @@
 layout: lesson
 title: Git
 slides: ['_slides/week-02/01b-git.md']
-lesson_date: 2018-01-12
+lesson_date: 2018-04-13
 ---
 
 ## Pre-work

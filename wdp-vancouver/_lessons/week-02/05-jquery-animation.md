@@ -2,7 +2,7 @@
 layout: lesson
 title: Animation with jQuery
 slides: ['_slides/week-02/05-jquery-animation.md']
-lesson_date: 2018-01-18
+lesson_date: 2018-04-19
 ---
 
 ## Pre-Work
@@ -13,16 +13,16 @@ Provided you finished the readings and Code School tutorial assigned in the prev
 
 ## Learning Objectives
 
-- Use jQuery animation methods to add dynamic behaviours to a webpage.
-- Identify what jQuery plugins are for, and add one to a webpage.
+* Use jQuery animation methods to add dynamic behaviours to a webpage.
+* Identify what jQuery plugins are for, and add one to a webpage.
 
 ---
 
 ## Keywords
 
-- Effect methods
-- Form methods
-- Select menu
+* Effect methods
+* Form methods
+* Select menu
 
 ---
 
@@ -53,8 +53,8 @@ Using the mark-up below, write a jQuery script to selectively show or hide a par
 
 Try executing this effect in **two different ways**:
 
-1. The user must click the question to show the answer, and manually click it again to hide the answer (so multiple answers can be viewed at once)
-2. When the user clicks on a particular question to reveal the answer, all of the other questions' answers will be automatically re-hidden.
+1.  The user must click the question to show the answer, and manually click it again to hide the answer (so multiple answers can be viewed at once)
+2.  When the user clicks on a particular question to reveal the answer, all of the other questions' answers will be automatically re-hidden.
 
 **Hint:** You'll want to use CSS to initially hide all of the answers.
 
@@ -80,12 +80,12 @@ See the [Intro to jQuery](/lesson/intro-to-jquery/) for lab activity details.
 
 Another great jQuery resource to read through:
 
-- [jQuery Fundamentals](http://jqfundamentals.com/)
+* [jQuery Fundamentals](http://jqfundamentals.com/)
 
 More on custom animation with jQuery:
 
-- [A Guide to the jQuery animate() Method](http://www.sitepoint.com/guide-jquery-animate-method/)
+* [A Guide to the jQuery animate() Method](http://www.sitepoint.com/guide-jquery-animate-method/)
 
 Feeling ambitious? Try creating your own jQuery plugin:
 
-- [Writing Your Own jQuery Plugins](http://blog.teamtreehouse.com/writing-your-own-jquery-plugins)
+* [Writing Your Own jQuery Plugins](http://blog.teamtreehouse.com/writing-your-own-jquery-plugins)
