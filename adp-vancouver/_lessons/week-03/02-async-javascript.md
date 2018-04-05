@@ -2,7 +2,7 @@
 layout: lesson
 title: Asynchronous JavaScript
 slides: ['_slides/week-03/02-async-javascript.md']
-lesson_date: 2018-01-23
+lesson_date: 2018-04-24
 ---
 
 ## Pre-Work
@@ -84,9 +84,9 @@ To the moon-beholders
 
 If you finish, here are some additional challenges:
 
-1. Write the function using Async/Await and Promises
-2. Using Promises, find a way to request all three files concurrently
-3. Using Promises, find a way to request all three concurrently along with a file that does not exist. (Hint: there is no Promise API method that allows for this)
+1.  Write the function using Async/Await and Promises
+2.  Using Promises, find a way to request all three files concurrently
+3.  Using Promises, find a way to request all three concurrently along with a file that does not exist. (Hint: there is no Promise API method that allows for this)
 
 ---
 
