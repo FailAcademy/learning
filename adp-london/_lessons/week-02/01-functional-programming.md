@@ -2,7 +2,7 @@
 layout: lesson
 title: Functional Programming
 slides: ['_slides/week-02/01-functional-programming.md']
-lesson_date: 2018-01-15
+lesson_date: 2018-04-16
 ---
 
 ## Pre-Work
@@ -60,9 +60,9 @@ Also read the following chapters from "Professor Frisby's Mostly Adequate Guide 
 
 Create examples of pure functions in JavaScript for each of the following cases:
 
-1. A function used as an input to another function
-2. A function created as an output from another function
-3. A function that calls itself
+1.  A function used as an input to another function
+2.  A function created as an output from another function
+3.  A function that calls itself
 
 Be prepared to demo your functions for the class.
 
@@ -117,9 +117,9 @@ Then this:
 
 In small groups, you'll have 15 minutes to understand your assigned topic (in relation to avoiding mutating object data) and teach it to the class using examples:
 
-1. `Object.assign`
-2. `...` spread operator
-3. `Object.freeze`
+1.  `Object.assign`
+2.  `...` spread operator
+3.  `Object.freeze`
 
 ---
 

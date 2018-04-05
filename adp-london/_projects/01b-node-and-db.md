@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 1 / Part 2 - Boomtown
-due: Monday, February 5th (beginning of class)
+due: Monday, May 7th (beginning of class)
 class: gh-check
 ---
 
@@ -32,7 +32,7 @@ Your project must:
 * [ ] Contain a login form allowing users to authenticate with email and password
 * [ ] Persist logged in state on page reload
 * [ ] Contain a functioning logout button
-* [ ] Containe protected routes that are only visible to logged-in users
+* [ ] Contain protected routes that are only visible to logged-in users
 * [ ] Allow logged-in users to share new items
 * [ ] Require that new items contain a title, description, tags, and an image
 * [ ] Provide user feedback resulting from invalid input data
