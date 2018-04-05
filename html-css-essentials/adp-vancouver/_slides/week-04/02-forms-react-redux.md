@@ -1,7 +1,6 @@
 ---
 layout: slidedeck
 title: Webforms using React & Redux Slides
-
 ---
 
 {% highlight html %}
@@ -10,6 +9,7 @@ layout: true
 class: center, middle, inverse
 
 ---
+
 # Webforms using React & Redux
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
@@ -17,6 +17,7 @@ class: center, middle, inverse
 ---
 
 layout: false
+
 # Agenda
 
 1. Client vs Server Validation
@@ -26,7 +27,6 @@ layout: false
 5. Form validation
 6. Displaying errors
 
-
 ---
 
 template: inverse
@@ -35,28 +35,23 @@ template: inverse
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
-
 ---
+
+class: center, middle
 
 # Types of Validation
 
-Split into two groups.
-
-- Group 1: Research client-side validation
-- Group 2: Research server-side validation
-
-You have 10 minutes, then we'll present.
+## Client vs. Server
 
 ???
 
 Essential differences:
 
-- Client-side validation is inherently insecure
-- Client-side validation makes an app seem faster
-- Server-side validation is absolutely required
-- Client-side validation is for the user's convenience, but can also save a huge amount of resources. Ie. Picture 1,000,000 requests that are poorly formed. Client-side validation stops them from happening altogether.
-- In short,eEvery app needs both client and server-side validation
-
+* Client-side validation is inherently insecure
+* Client-side validation makes an app seem faster
+* Server-side validation is absolutely required
+* Client-side validation is for the user's convenience, but can also save a huge amount of resources. Ie. Picture 1,000,000 requests that are poorly formed. Client-side validation stops them from happening altogether.
+* In short,eEvery app needs both client and server-side validation
 
 ---
 
@@ -107,7 +102,7 @@ Try the following input.
   />
 ```
 
-- What happens? Why?
+* What happens? Why?
 
 ---
 
@@ -116,9 +111,8 @@ Try the following input.
 In React, form elements are considered "controlled" or "uncontrolled".
 Read [React Forms](https://facebook.github.io/react/docs/forms.html).
 
-- With a partner, compare the "controlled" and "uncontrolled" input.
-- Act out the differences, one person is a "controlled" input with a component parent, and the other "uncontrolled" with a parent.
-
+* With a partner, compare the "controlled" and "uncontrolled" input.
+* Act out the differences, one person is a "controlled" input with a component parent, and the other "uncontrolled" with a parent.
 
 ???
 
@@ -132,8 +126,8 @@ Uncontrolled components rely on the DOM to store their state. This is inefficien
 
 React has two major form events you should know:
 
-- `onChange`
-- `onSubmit`
+* `onChange`
+* `onSubmit`
 
 ---
 
@@ -145,7 +139,7 @@ React has two major form events you should know:
 <input onChange={(value) => console.log(value)} />
 ```
 
-- What might we use `onChange` for?
+* What might we use `onChange` for?
 
 ---
 
@@ -157,7 +151,7 @@ React has two major form events you should know:
 <input onChange={(value) => console.log(value)} />
 ```
 
-- What might we use `onChange` for?
+* What might we use `onChange` for?
 
 Updating an input's value every time the value changes.
 
@@ -203,7 +197,7 @@ Data:
 </form>
 ```
 
-- How can we trigger an `onSubmit` event?
+* How can we trigger an `onSubmit` event?
 
 ---
 
@@ -222,7 +216,7 @@ We can trigger an `onSubmit` event by setting the type of a button or input to "
 
 # Exercise 3
 
-Add an extra field to either your **controlled** or  **uncontrolled** form.
+Add an extra field to either your **controlled** or **uncontrolled** form.
 
 The output data should be in JSON, like the following:
 
@@ -260,13 +254,15 @@ render() {
 
 Add any of the following to a form of your choosing:
 
-- Show an error message if the password is shorter than 5 characters
-- Make it impossible for a user to type a username longer than 8 characters
-- Validate that a username does not contain any capital letters
-- Disable the submit button if any of the fields are invalid
+* Show an error message if the password is shorter than 5 characters
+* Make it impossible for a user to type a username longer than 8 characters
+* Validate that a username does not contain any capital letters
+* Disable the submit button if any of the fields are invalid
 
 ---
+
 template: inverse
+
 # Redux Form
 
 ---
@@ -275,10 +271,10 @@ template: inverse
 
 Where should form state exist in a React/Redux application?
 
-- Think of the pros and cons of local state vs Redux state
-- Is invalid state still state?
+* Think of the pros and cons of local state vs Redux state
+* Is invalid state still state?
 
-It might help to look up 'Ephemeral' state  
+It might help to look up 'Ephemeral' state
 
 ---
 
@@ -286,41 +282,45 @@ It might help to look up 'Ephemeral' state
 
 Redux form is a popular library for... well... using forms with Redux.
 
-- Form state props (valid)
-- Saves state to Redux store
-- Validation helpers (error messages)
+* Form state props (valid)
+* Saves state to Redux store
+* Validation helpers (error messages)
 
 [Docs: Redux-Form](http://redux-form.com/6.0.1/)
 
 ---
+
 # Setup
 
 Add a formReducer for Redux form.
 
 ```js
-import { createStore, combineReducers } from 'redux'
-import { reducer as formReducer } from 'redux-form'
+import { createStore, combineReducers } from "redux";
+import { reducer as formReducer } from "redux-form";
 
 const reducers = {
   // ... your other reducers here ...
-  form: formReducer     // <---- Mounted at 'form'
-}
-const reducer = combineReducers(reducers)
-const store = createStore(reducer)
+  form: formReducer // <---- Mounted at 'form'
+};
+const reducer = combineReducers(reducers);
+const store = createStore(reducer);
 ```
 
 [Docs: Getting Started](http://redux-form.com/6.0.2/docs/GettingStarted.md/)
 
 ---
+
 # `reduxForm` HOC
 
 Connect a component to reduxForm. Add a unique form name.
 
 ```js
-class FormComponent extends React.Component {/* ... */}
+class FormComponent extends React.Component {
+  /* ... */
+}
 
 FormComponent = reduxForm({
-  form: 'form1'
+  form: "form1"
 })(FormComponent);
 ```
 
@@ -356,12 +356,12 @@ A component connected with `reduxForm` passes in several props.
 class FormComponent extends React.Component {
   render() {
     console.log(this.props);
-    return <form></form>
+    return <form />;
   }
 }
 ```
 
-- Which props are added by Redux Form?
+* Which props are added by Redux Form?
 
 ---
 
@@ -369,11 +369,11 @@ class FormComponent extends React.Component {
 
 What might we use each of these props for?
 
-- dispatch
-- pristine / dirty
-- valid / invalid
-- submitting
-- error
+* dispatch
+* pristine / dirty
+* valid / invalid
+* submitting
+* error
 
 [Docs: Props](http://redux-form.com/6.0.2/docs/api/Props.md)
 
@@ -402,13 +402,11 @@ You can create your own custom `<Field />` components.
 
 ```js
 // outside your render() method
-const myCustomField = (field) => (
+const myCustomField = field => (
   <div className="input-row">
-    <input {...field.input} type="text"/>
-    { field.meta.touched &&
-      field.meta.error &&
-      <span className="error">{field.meta.error}</span>
-    }
+    <input {...field.input} type="text" />
+    {field.meta.touched &&
+      field.meta.error && <span className="error">{field.meta.error}</span>}
   </div>
 );
 ```
@@ -420,7 +418,6 @@ const myCustomField = (field) => (
 Redux-Form adds a `handleSubmit` prop, which can be added to your form.
 
 ```html
-
 <form onSubmit={
   this.props.handleSubmit((values) => console.log(values))
 }>
@@ -435,11 +432,8 @@ Redux-Form adds a `handleSubmit` prop, which can be added to your form.
 "react-redux" can be called after "redux-form" is applied.
 
 ```js
-FormComponent = reduxForm({ form: 'form1' })(FormComponent);
-FormComponent = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(FormComponent);
+FormComponent = reduxForm({ form: "form1" })(FormComponent);
+FormComponent = connect(mapStateToProps, mapDispatchToProps)(FormComponent);
 ```
 
 `connect` connects the redux **state** and **dispatch** to the component.
@@ -466,7 +460,7 @@ import submit from './submit';
 The submit function can be used to update the state.
 
 ```js
-import store from '../store';
+import store from "../store";
 
 function submit(values) {
   // save!
@@ -482,17 +476,17 @@ export default submit;
 Validation errors can be handled with `SubmissionError`.
 
 ```js
-import { SubmissionError } from 'redux-form';
+import { SubmissionError } from "redux-form";
 
 function submit(values) {
-   if (!values.length) {
-     throw new SubmissionError({
-       name: 'Name does not exist',
-       _error: 'Must include a name'
-     });
-   } else {
-     store.dispatch(saveForm(values));
-   }
+  if (!values.length) {
+    throw new SubmissionError({
+      name: "Name does not exist",
+      _error: "Must include a name"
+    });
+  } else {
+    store.dispatch(saveForm(values));
+  }
 }
 export default submit;
 ```
@@ -512,11 +506,11 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => (
   <div>
     <label>{label}</label>
     <div>
-      <input {...input} placeholder={label} type={type}/>
+      <input {...input} placeholder={label} type={type} />
       {touched && error && <span>{error}</span>}
     </div>
   </div>
-)
+);
 ```
 
 ---
@@ -529,17 +523,16 @@ We know how to disable a button in HTML.
 <button type="submit" disabled={true}>Submit</button>
 ```
 
-- How can we *disable* the submit button when the form is **invalid** or is **submitting**?
+* How can we _disable_ the submit button when the form is **invalid** or is **submitting**?
 
 ---
-
 
 # Using Meta Props
 
 We can use the "meta" props to specify our disable property.
 
-- invalid: true
-- submitting: true
+* invalid: true
+* submitting: true
 
 ```html
 <button
@@ -552,7 +545,7 @@ We can use the "meta" props to specify our disable property.
 
 # Performance Experiment
 
-- How often do you think your form component is re-rendered?
+* How often do you think your form component is re-rendered?
 
 ---
 
@@ -565,21 +558,21 @@ render() {
   console.log('rendered');
 }
 ```
-- When is a form re-render triggered?
 
+* When is a form re-render triggered?
 
 ---
 
 # Material-UI
 
-We can use "material-ui" form components easily by using [redux-form-material-ui](http://erikras.github.io/redux-form-material-ui/).
+We can use "material-ui" form components easily!
 
 ```html
  <Field
-  name="name"
-  component={TextField}
-  hintText="Name"
-  floatingLabelText="Name"
+  name="bio"
+  render={({ input, meta }) => (
+    <TextField type="text"/>
+  )}
 />
 ```
 
@@ -612,10 +605,9 @@ You'll need to create both a user (login) form and a form for adding new Items.
 
 Be sure to include:
 
-  - Saving data to the Redux store
-  - Validation of fields
-  - Styled components
-  - Error feedback
-
+* Saving data to the Redux store
+* Validation of fields
+* Styled components
+* Error feedback
 
 {% endhighlight %}
