@@ -74,7 +74,7 @@ Once everything is set up we'll observe what happens when we run the following C
 * `webpack -d` to include source maps
 
 We'll experiment with the other CLI command options documented here:
-https://webpack.github.io/docs/cli.html
+https://webpack.js.org/api/cli
 
 ---
 
