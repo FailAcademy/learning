@@ -15,25 +15,27 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
 
 1. What is JavaScript?
 2. JavaScript Syntax
-4. Values, Type and Operators
-5. Loops
-6. Functions
-7. Arrays
-8. Objects
-
+3. Values, Type and Operators
+4. Loops
+5. Functions
+6. Arrays
+7. Objects
 
 ---
+
 template: inverse
 
 # What is JavaScript?
 
 ---
+
 class: center, middle
 
 ### JavaScript is a programming language
@@ -41,6 +43,7 @@ class: center, middle
 Computers need you to tell them what to do.
 
 ---
+
 class: center, middle
 
 ### JavaScript is not "Java"
@@ -48,21 +51,23 @@ class: center, middle
 The shared name is a long story...
 
 ---
+
 class: center, middle
 
 .large[
-   **HTML** &rarr; the content layer
+**HTML** &rarr; the content layer
 
-   **CSS** &rarr; the presentation layer
+**CSS** &rarr; the presentation layer
 
-   **JS** &rarr; the behaviour layer
+**JS** &rarr; the behaviour layer
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   Client-side vs. server-side?
+Client-side vs. server-side?
 ]
 
 ---
@@ -71,11 +76,11 @@ class: center, middle
 
 **Most programming languages share similar concepts.** <br/>
 
-- Variables
-- Expressions (math / truth checking)
-- Functions
-- Objects
-- Loops
+* Variables
+* Expressions (math / truth checking)
+* Functions
+* Objects
+* Loops
 
 ---
 
@@ -84,16 +89,17 @@ class: center, middle
 Because JS is "client-side" you can see it in your browser:
 
 .border[
-   ![Scripts in page source](../../public/img/slide-assets/elements-screenshot.png)
+![Scripts in page source](../../public/img/slide-assets/elements-screenshot.png)
 ]
 
 ---
+
 class: center, middle
 
 ### Open your browser console:
 
 .large[
-   <strong>⌥ + ⌘ + i</strong>
+<strong>⌥ + ⌘ + i</strong>
 ]
 
 ---
@@ -103,13 +109,13 @@ class: center, middle
 You can write it right in your browser too using the **console**:
 
 .inline-images-border[
-   ![Writing scripts in the console](../../public/img/slide-assets/console-screenshot.png)
+![Writing scripts in the console](../../public/img/slide-assets/console-screenshot.png)
 ]
 
 You can also use the console to identify bugs in your JS code.
 
 .inline-images-border[
-   ![Error in the console](../../public/img/slide-assets/js-error-screenshot.png)
+![Error in the console](../../public/img/slide-assets/js-error-screenshot.png)
 ]
 
 ---
@@ -121,7 +127,7 @@ In JavaScript, we can use `console.log()` to print values into the **browser con
 This helps us understand what particular values may be at specific points in your programs execution flow:
 
 ```js
-console.log('hello!');
+console.log("hello!");
 ```
 
 ---
@@ -147,9 +153,9 @@ Comments are always hidden from execution in the script, and do not affect the o
 
 # What Is Syntax?
 
-- Syntax is the set of rules or **grammar** of a particular programming language
-- It sets the rules that determine how your code should be structured so computers can understand it
-- A text-based language's syntax will permit specific combinations of letter, numbers, and symbols
+* Syntax is the set of rules or **grammar** of a particular programming language
+* It sets the rules that determine how your code should be structured so computers can understand it
+* A text-based language's syntax will permit specific combinations of letter, numbers, and symbols
 
 ---
 
@@ -186,8 +192,8 @@ An expression is any reference to a **variable** or **value**, (or a set of **va
 Here is an example of an **if statement**:
 
 ```js
-if ( a > 21 || (a * 4) === 32 ) {
-  console.log('Got a result!');
+if (a > 21 || a * 4 === 32) {
+  console.log("Got a result!");
 }
 ```
 
@@ -200,9 +206,9 @@ The **var** keyword defines a variable in JavaScript.
 This is what a **variable declaration** looks like:
 
 ```js
-var color = 'red';
+var color = "red";
 var amount = 100;
-var list = ['first', 'second', 'third'];
+var list = ["first", "second", "third"];
 var result = amount * 10;
 ```
 
@@ -226,10 +232,10 @@ console.log(a); // logs "undefined"
 
 # Variable Pro Tips
 
-- Variables can hold *any* JavaScript value!
-- Make sure your variable names are descriptive
-- Use `camelCase` for defining JS variables
-- You can only use the dollar sign and underscore special characters in variable names
+* Variables can hold _any_ JavaScript value!
+* Make sure your variable names are descriptive
+* Use `camelCase` for defining JS variables
+* You can only use the dollar sign and underscore special characters in variable names
 
 ---
 
@@ -238,14 +244,14 @@ console.log(a); // logs "undefined"
 Who can name what the **statements** and **variables** are in the following script?
 
 ```js
-var today = new Date;
+var today = new Date();
 var dayOfWeek = today.getDay();
 var greeting;
 
-if ( dayOfWeek === 2 ) {
-   greeting = 'Today is Tuesday';
+if (dayOfWeek === 2) {
+  greeting = "Today is Tuesday";
 } else {
-   greeting = 'Nope, not Tuesday!';
+  greeting = "Nope, not Tuesday!";
 }
 
 console.log(greeting);
@@ -258,16 +264,17 @@ console.log(greeting);
 Copy and paste this code into the browser console:
 
 ```js
-console.log('Hello World!');
-var yourName = prompt('What\'s your name?');
+console.log("Hello World!");
+var yourName = prompt("What's your name?");
 console.log(yourName);
 ```
 
 If we wanted to store the value inputted into the `prompt` and print it out in an `console.log` afterward, how might we do that?
 
-And what would we do if wanted to output the value that was entered in the `prompt` with the string `Hello, ` in front of it in the subsequent `console.log`?
+And what would we do if wanted to output the value that was entered in the `prompt` with the string `Hello,` in front of it in the subsequent `console.log`?
 
 ---
+
 template: inverse
 
 # Values, Types & Operators
@@ -284,7 +291,7 @@ Primitive values include:
 
 ```js
 "I am a String"; // string
-'I am another string'; // string
+"I am another string"; // string
 42; // number
 true; // boolean
 false; // boolean
@@ -305,11 +312,11 @@ In use:
 ```js
 var quantity = 3 + 2;
 var total = (4 - 1) * 3;
-var totalAndOne = total ++;
-var totalMinusOne = total --;
+var totalAndOne = total++;
+var totalMinusOne = total--;
 ```
 
-*What will the above variables return?*
+_What will the above variables return?_
 
 ---
 
@@ -334,7 +341,7 @@ var remainderOne = 10 % 3;
 var remainderTwo = 6 % 2;
 ```
 
-*What will the above variables return?*
+_What will the above variables return?_
 
 ---
 
@@ -351,14 +358,14 @@ We can also compare values and evaluate their result:
 
 3 == 2;
 
-3 === '3';
+3 === "3";
 
-3 != '3';
+3 != "3";
 
 3 !== 2;
 ```
 
-*What will the above expressions return?*
+_What will the above expressions return?_
 
 ---
 
@@ -367,16 +374,16 @@ We can also compare values and evaluate their result:
 Comparison operators are helpful when paired with conditional statements:
 
 ```js
-var score = prompt('What\'s your score?');
+var score = prompt("What's your score?");
 
-if ( score >= 50 ) {
-   console.log('You passed!');
+if (score >= 50) {
+  console.log("You passed!");
 } else {
-   console.log('Keep trying...');
+  console.log("Keep trying...");
 }
 ```
 
-*What will happen when this script runs?*
+_What will happen when this script runs?_
 
 ---
 
@@ -390,13 +397,14 @@ Try this:
 
 ```js
 var a = "42";
-var b = Number( a );
+var b = Number(a);
 
-console.log( a );   // "42"
-console.log( b );   // 42
+console.log(a); // "42"
+console.log(b); // 42
 ```
 
 ---
+
 class: center, middle
 
 ### When is a number not a number?
@@ -412,8 +420,8 @@ JavaScript is weird.
 **More Type Coercion:**
 
 ```js
-"2" === 2 // false
-"2" == 2 // true, wtf?
+"2" === 2; // false
+"2" == 2; // true, wtf?
 ```
 
 **Operator Overloading:**
@@ -436,12 +444,12 @@ template: inverse
 
 The following values are always `false`:
 
-- `false`
-- `undefined`
-- `""` (an empty string)
-- `null`
-- `0`
-- `NaN` (a special Number value meaning Not-a-Number!)
+* `false`
+* `undefined`
+* `""` (an empty string)
+* `null`
+* `0`
+* `NaN` (a special Number value meaning Not-a-Number!)
 
 ---
 
@@ -453,7 +461,7 @@ For example, we can write an **if statement** like this:
 
 ```js
 if (a < b || b > c) {
-  console.log('Got a result');
+  console.log("Got a result");
 }
 ```
 
@@ -483,6 +491,7 @@ var a = b < 21 ? b : c;
 This statement reads: "If `b` is less than `21`, then the value of `a` will be `b`, otherwise `a` will have the value of `c` ... "
 
 ---
+
 template: inverse
 
 # Loops
@@ -504,26 +513,7 @@ while (i < 5) {
 }
 ```
 
-*What do you think the final score will be after this loop runs?*
-
----
-
-# Do While Loops
-
-Do while loops are similar to while loops, but they always run at least once:
-
-```js
-var i = 2;
-var score = 0;
-
-do {
-  score = i;
-  console.log("Your score : " + score);
-  i++;
-} while (i < 1);
-```
-
-*What do you think the loop will return this time?*
+_What do you think the final score will be after this loop runs?_
 
 ---
 
@@ -552,28 +542,28 @@ For numbers divisible by 3, print **Fizz** instead of the number, and for number
 
 When you have that working, modify your program to print **FizzBuzz**, for numbers that are divisible by both 3 and 5 (and still print **Fizz** or **Buzz** for numbers divisible by only one of those).
 
-
 ---
+
 template: inverse
 
 # Arrays
 
 ---
+
 class: center, middle
 
 ### What are arrays?
 
 Arrays are special object in JavaScript that store a list of values, but the key for each value is an **index number**.
 
-
 ---
 
 # Index Numbers?
 
-- Index numbers in an array are like the property key names in regular objects
-- But instead of choosing the names, they are always set to numbers in ascending order
-- **Weirdness alert!** In JavaScript, counting always starts at 0
-- Index numbers allow us to assign and access values in arrays
+* Index numbers in an array are like the property key names in regular objects
+* But instead of choosing the names, they are always set to numbers in ascending order
+* **Weirdness alert!** In JavaScript, counting always starts at 0
+* Index numbers allow us to assign and access values in arrays
 
 ---
 
@@ -584,8 +574,8 @@ Like normal objects, there's a special way to define arrays as variables.
 For arrays, we use square brackets (instead of curly braces):
 
 ```js
-var shoppingList  = [
-   // your array items will go here...
+var shoppingList = [
+  // your array items will go here...
 ];
 ```
 
@@ -596,7 +586,7 @@ var shoppingList  = [
 Add values to an array by separating them with commas:
 
 ```js
-var shoppingList = ['coffee', 'peppers', 'apple juice'];
+var shoppingList = ["coffee", "peppers", "apple juice"];
 ```
 
 Access them by their index number:
@@ -609,17 +599,17 @@ var itemTwo = shoppingList[1]; // will equal "peppers"
 And even add new values to the end of the array:
 
 ```js
-shoppingList.push('oranges');
+shoppingList.push("oranges");
 ```
 
-*How do we find out how many items are in the above array?*
+_How do we find out how many items are in the above array?_
 
 ---
 
 class: center, middle
 
 .large[
-   And lastly, back to loops...
+And lastly, back to loops...
 ]
 
 ---
@@ -627,7 +617,7 @@ class: center, middle
 class: center, middle
 
 .large[
-   What kinds of loops can we create in JS?
+What kinds of loops can we create in JS?
 ]
 
 ---
@@ -637,7 +627,7 @@ class: center, middle
 Let's take our shopping list array and print it out in a list:
 
 ```js
-var shoppingList  = ['coffee', 'peppers', 'apple juice'];
+var shoppingList = ["coffee", "peppers", "apple juice"];
 
 // Remember how we manually set the max. number of loops before?
 // We can use the array "length" to get the number automatically:
@@ -645,7 +635,7 @@ var shoppingList  = ['coffee', 'peppers', 'apple juice'];
 var totalItems = shoppingList.length;
 
 for (var i = 0; i < totalItems; i++) {
-   console.log( shoppingList[i] );
+  console.log(shoppingList[i]);
 }
 ```
 
@@ -657,9 +647,9 @@ We can also store arrays as properties in objects:
 
 ```js
 var errands = {
-   date: new Date(),
-   complete: false,
-   locations: ['Post Office', 'Grocery Store', 'Hardware Store']
+  date: new Date(),
+  complete: false,
+  locations: ["Post Office", "Grocery Store", "Hardware Store"]
 };
 
 var firstStop = errands.locations[0]; // will equal "Post Office"
@@ -687,9 +677,9 @@ var myObject = {};
 
 # How Objects Help
 
-- Like functions, objects help us **better organize our code** and make it more reusable
-- When we define a variable in an object, we call it a **property**
-- When we create a function in an object, we call it a **method**
+* Like functions, objects help us **better organize our code** and make it more reusable
+* When we define a variable in an object, we call it a **property**
+* When we create a function in an object, we call it a **method**
 
 ---
 
@@ -698,8 +688,8 @@ var myObject = {};
 We define objects in JS just like we define any other variables, but they are wrapped in curly braces:
 
 ```js
-var person  = {
-   // your properties and methods will go here...
+var person = {
+  // your properties and methods will go here...
 };
 ```
 
@@ -712,11 +702,11 @@ var person  = {
 This simply means that instead of writing `var firstName =` we write `firstName:` and separate multiple properties with commas instead of semi-colons.
 
 ```js
-var person  = {
-   firstName: 'Silent',
-   lastName: 'Bob',
-   height: 1.75,
-   beard: true
+var person = {
+  firstName: "Silent",
+  lastName: "Bob",
+  height: 1.75,
+  beard: true
 };
 ```
 
@@ -729,14 +719,14 @@ And the same goes for creating methods.
 For object methods, we write `getName: function() {...}` instead of `function getName() {...}`:
 
 ```js
-var person  = {
-   firstName: 'Silent',
-   lastName: 'Bob',
-   height: 1.75,
-   beard: true,
-   getName: function() {
-      return this.firstName + ' ' + this.lastName;
-   }
+var person = {
+  firstName: "Silent",
+  lastName: "Bob",
+  height: 1.75,
+  beard: true,
+  getName: function() {
+    return this.firstName + " " + this.lastName;
+  }
 };
 ```
 
@@ -748,9 +738,9 @@ To access one of the object's properties or methods, we can use **dot notation**
 
 ```js
 var person = {
-   // ...
-   beard: true,
-   //...
+  // ...
+  beard: true
+  //...
 };
 
 var hasBeard = person.beard; // will equal true
@@ -759,7 +749,7 @@ var hasBeard = person.beard; // will equal true
 Or use square brackets with the property key in quotes:
 
 ```js
-var hasBeard = person['beard']; // will equal true
+var hasBeard = person["beard"]; // will equal true
 ```
 
 ---
@@ -770,9 +760,9 @@ And just like variables, we can update object property values after they've been
 
 ```js
 var person = {
-   // ...
-   beard: true,
-   //...
+  // ...
+  beard: true
+  //...
 };
 
 person.beard = false;
@@ -792,10 +782,10 @@ We can also use dot notation to access object methods:
 
 ```js
 var person = {
-   // ...
-   getName: function() {
-      return this.firstName + ' ' + this.lastName;
-   }
+  // ...
+  getName: function() {
+    return this.firstName + " " + this.lastName;
+  }
 };
 
 var fullName = person.getName(); // will return "Silent Bob"
@@ -811,17 +801,17 @@ Inside of an object's method, it refers to the object itself:
 
 ```js
 var person = {
-   firstName: 'Silent',
-   lastName: 'Bob',
-   // ...
-   getName: function() {
+  firstName: "Silent",
+  lastName: "Bob",
+  // ...
+  getName: function() {
+    // use "this" to get properties of the object inside of a method
 
-      // use "this" to get properties of the object inside of a method
-
-      return this.firstName + ' ' + this.lastName;
-   }
+    return this.firstName + " " + this.lastName;
+  }
 };
 ```
+
 ---
 
 # Objects and Loops
@@ -830,10 +820,10 @@ We use slightly different syntax to loop through properties in an object:
 
 ```js
 var bob = {
-    firstName: 'Bob',
-    lastName: 'Smith',
-    phoneNumber: '604-604-6040',
-    email: 'bob@redacademy.com'
+  firstName: "Bob",
+  lastName: "Smith",
+  phoneNumber: "604-604-6040",
+  email: "bob@redacademy.com"
 };
 
 for (var prop in bob) {
@@ -841,14 +831,16 @@ for (var prop in bob) {
 }
 ```
 
-*Any guesses as to what the following loop will output?*
+_Any guesses as to what the following loop will output?_
 
 ---
+
 template: inverse
 
 # Functions
 
 ---
+
 class: center, middle
 
 ### What is a function?
@@ -859,16 +851,17 @@ Functions are specific chunks code that you can use to **repeat a set of instruc
 
 # What Are They For?
 
-- Functions help us better organize our code
-- Functions allow us to group together statements
-- Functions allow us to only run certain steps in code when they are needed
-- Functions can perform very complex work for us and provide us with a single value or multiple values afterword
+* Functions help us better organize our code
+* Functions allow us to group together statements
+* Functions allow us to only run certain steps in code when they are needed
+* Functions can perform very complex work for us and provide us with a single value or multiple values afterword
 
 ---
+
 class: center, middle
 
 .large[
-   What's the basic syntax for a function in JS?
+What's the basic syntax for a function in JS?
 ]
 
 ---
@@ -879,7 +872,7 @@ We can store our function using a **variable name** in order to re-use later too
 
 ```js
 function add(a, b) {
-   return a + b;
+  return a + b;
 }
 ```
 
@@ -899,7 +892,7 @@ We need to **call**, or **invoke** (we can use either of these terms) it for it 
 // This is called "declaring" the function:
 
 function add(a, b) {
-   return a + b;
+  return a + b;
 }
 
 // This is called "calling", or "invoking" the function:
@@ -917,7 +910,7 @@ Let's store the return value in a variable now, and write it out to the console:
 
 ```js
 function add(a, b) {
-   return a + b;
+  return a + b;
 }
 
 var twoPlusTwo = add(2, 2);
@@ -933,8 +926,8 @@ Notice that we don't explicitly "return" anything from this function, we just wr
 
 ```js
 function fullName() {
-   var yourName = prompt('What\'s your name?');
-   console.log(yourName);
+  var yourName = prompt("What's your name?");
+  console.log(yourName);
 }
 
 fullName();
@@ -950,7 +943,7 @@ This is an example of a JavaScript function in action
 
 ```js
 function fullName() {
-  var yourName = prompt('What\'s your name?')
+  var yourName = prompt("What's your name?");
   console.log(yourName);
 }
 ```
@@ -968,9 +961,9 @@ var name = fullName();
 
 In JavaScript, you can create different kinds of functions:
 
-- Function declarations
-- Function expressions
-- Immediately invoked function expressions .red[* ]
+* Function declarations
+* Function expressions
+* Immediately invoked function expressions .red[* ]
 
 .footnote[.red[* ]More on these later with jQuery...]
 
@@ -988,7 +981,7 @@ var size = volume(3, 4, 5);
 console.log(size);
 
 function volume(width, height, depth) {
-   return width * height * depth;
+  return width * height * depth;
 }
 ```
 
@@ -1002,8 +995,8 @@ This function expression is stored in a variable called `volume`:
 
 ```js
 var volume = function(width, height, depth) {
-   return width * height * depth;
-}
+  return width * height * depth;
+};
 
 var size = volume(3, 4, 5);
 
@@ -1018,16 +1011,14 @@ Unlike function declarations, this function **won't be available to use** until 
 
 Where you define a variable will determine how you can use it:
 
-- A variable defined inside a function has **local scope**
-- A variable defined outside a function has **global scope**
+* A variable defined inside a function has **local scope**
+* A variable defined outside a function has **global scope**
 
 ```js
 // global scope up here...
 
 function myFunction() {
-
-   // local scope in here...
-
+  // local scope in here...
 }
 ```
 
@@ -1069,14 +1060,14 @@ function france() {
 
 There are pros and cons to each type of variable scope:
 
-- **Global variables** can be **reused** throughout your code, but they **use more memory** and you may run into **naming collisions** with other scripts. (Don't use global scope!)
-- **Local variables** are more efficient because they **use less memory** and their **names are protected** within the function that they are defined, but they **can't be re-used** elsewhere in your code
+* **Global variables** can be **reused** throughout your code, but they **use more memory** and you may run into **naming collisions** with other scripts. (Don't use global scope!)
+* **Local variables** are more efficient because they **use less memory** and their **names are protected** within the function that they are defined, but they **can't be re-used** elsewhere in your code
 
 ---
 
 # Final Note on Style
 
-JavaScript is a *flexible* language, and the concept of *coding style* is important. Coding with a conventional style will help other programmers understand your code.
+JavaScript is a _flexible_ language, and the concept of _coding style_ is important. Coding with a conventional style will help other programmers understand your code.
 
 In this course we'll be sticking as closely as possible to AirBnB's style guide, lets take a look now: **[AirBnB Style Guide](https://github.com/airbnb/javascript)**
 
@@ -1094,12 +1085,12 @@ One you've created your object, **create a loop** to log to the console all of t
 
 # What We've Learned
 
-- What JavaScript is and what it's used for
-- How we can create variables, conditionals, and loops in JS
-- How to create function in JS
-- How variable scope works with function in JS
-- How to create objects that contain properties and methods
-- How to create arrays and loop over them
+* What JavaScript is and what it's used for
+* How we can create variables, conditionals, and loops in JS
+* How to create function in JS
+* How variable scope works with function in JS
+* How to create objects that contain properties and methods
+* How to create arrays and loop over them
 
 ---
 

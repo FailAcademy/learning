@@ -2,37 +2,37 @@
 layout: lesson
 title: Custom WordPress Theming
 slides: ['_slides/week-06/04-custom-wordpress-theming.md']
-lesson_date: 2018-02-16
+lesson_date: 2018-05-17
 ---
 
 ## Pre-Work
 
 Prior to jumping into the theming class, you'll want to make sure you've wrapped your head around some important WordPress jargon:
 
-- [WordPress Semantics](https://codex.wordpress.org/WordPress_Semantics)
+* [WordPress Semantics](https://codex.wordpress.org/WordPress_Semantics)
 
-*Explore the links within that Codex entry for further clarification where needed!*
+_Explore the links within that Codex entry for further clarification where needed!_
 
 ---
 
 ## Learning Objectives
 
-- Distinguish the difference between a child theme, parent theme, and starter theme.
-- Use a variety of templates to dynamically construct a website in WordPress.
-- Leverage the WordPress template hierarchy to customize page layouts.
-- Develop custom page templates and apply them to pages via the WordPress admin area.
-- Customize comment display, widgetized areas, and navigation menus in a theme.
+* Distinguish the difference between a child theme, parent theme, and starter theme.
+* Use a variety of templates to dynamically construct a website in WordPress.
+* Leverage the WordPress template hierarchy to customize page layouts.
+* Develop custom page templates and apply them to pages via the WordPress admin area.
+* Customize comment display, widgetized areas, and navigation menus in a theme.
 
 ---
 
 ## Keywords
 
-- [Child theme](https://codex.wordpress.org/Child_Themes)
-- Parent theme
-- Starter theme
-- [Templates](https://codex.wordpress.org/Templates)
-- [Template tags](https://codex.wordpress.org/Template_Tags)
-- [Template hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/)
+* [Child theme](https://codex.wordpress.org/Child_Themes)
+* Parent theme
+* Starter theme
+* [Templates](https://codex.wordpress.org/Templates)
+* [Template tags](https://codex.wordpress.org/Template_Tags)
+* [Template hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/)
 
 ---
 
@@ -46,13 +46,13 @@ Based on the questions posed, determine what will be the correct template file t
 
 ## Exercise 2
 
-Let's explore the inhabitent site demo site and apply our knowledge of the template hierarchy.
+Let's explore the Inhabitent site demo site and apply our knowledge of the template hierarchy.
 
-Visit the inhabitent demo site at [tent.academy.red](http://tent.academy.red/).
+Visit the Inhabitent demo site at [tent.academy.red](http://tent.academy.red/).
 
-Explore the site and using the WordPress template heiarchy, try to idenitfy the template files needed to build this theme. 
+Explore the site and using the WordPress template hierarchy, try to identify the template files needed to build this theme.
 
-Write down these template files and how they correspond with the site. 
+Write down these template files and how they correspond with the pages of the site.
 
 ---
 
@@ -74,8 +74,8 @@ We'll learn how to create a custom post type for the product content next week.
 
 The basic components of a WordPress theme, visualized:
 
-- [The anatomy of a WordPress theme](https://yoast.com/wordpress-theme-anatomy/)
+* [The anatomy of a WordPress theme](https://yoast.com/wordpress-theme-anatomy/)
 
 An interactive visual representation of the WordPress template hierarchy:
 
-- [The WordPress Template Hierarchy](http://wphierarchy.com/)
+* [The WordPress Template Hierarchy](http://wphierarchy.com/)

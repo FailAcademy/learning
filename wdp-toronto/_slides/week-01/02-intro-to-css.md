@@ -15,6 +15,7 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
@@ -27,11 +28,13 @@ layout: false
 6. Developer tools
 
 ---
+
 template: inverse
 
 # What Is CSS?
 
 ---
+
 class: center, middle
 
 ### What does "CSS" mean?
@@ -57,26 +60,29 @@ In the old days, we used to add styles to our websites like this:
 Now imagine a large website with dozens of pages...can you see a major flaw in styling a website this way?
 
 ---
+
 class: center, middle
 
 .large[
-   **HTML** &rarr; the content layer
+**HTML** &rarr; the content layer
 
-   **CSS** &rarr; the presentation layer
+**CSS** &rarr; the presentation layer
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   What does CSS look like?
+What does CSS look like?
 ]
 
 ---
+
 class: center, middle
 
 .inline-images[
-   ![CSS selector and declaration](/public/img/slide-assets/css-declaration-diagram.svg)
+![CSS selector and declaration](/public/img/slide-assets/css-declaration-diagram.svg)
 ]
 
 ---
@@ -87,10 +93,10 @@ But you can do a lot more than just change the background colour behind some par
 
 ```css
 p {
-   color: red;
-   font-family: Helvetica, Arial, sans-serif;
-   font-style: italic;
-   line-height: 1.25;
+  color: red;
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: italic;
+  line-height: 1.25;
 }
 
 /* Comments in CSS also look a little different from HTML */
@@ -106,20 +112,21 @@ Beyond the example we just saw, CSS provides us with many more powerful properti
 
 ```css
 p {
-   color: black;
-   font-size: 24px;
-   font-style: italic;
-   font-weight: bold;
-   letter-spacing: 2px;
-   line-height: 1.5;
-   text-align: center;
-   text-decoration: underline;
-   text-transform: uppercase;
-   word-spacing: 15px;
+  color: black;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+  word-spacing: 15px;
 }
 ```
 
 ---
+
 template: inverse
 
 # Adding CSS to Your Website
@@ -173,6 +180,7 @@ Using internal CSS means that you include your CSS inside `<style>` tags in the 
 ```
 
 ---
+
 class: center, middle
 
 ### Internal vs. External Stylesheets
@@ -201,25 +209,26 @@ With external CSS, you put all of your CSS in a separate `.css` file, and link t
 ```css
 /* Inside your style.css file... */
 p {
-   font-size: 16px;
-   font-style: italic;
+  font-size: 16px;
+  font-style: italic;
 }
 ```
 
 ---
+
 class: center, middle
 
 .inline-images[
-   ![Linking to an external stylesheet](/public/img/slide-assets/css-folder-structure.png)
+![Linking to an external stylesheet](/public/img/slide-assets/css-folder-structure.png)
 ]
 
 ---
 
 # External Advantages
 
-- It's easy to link the same stylesheet to multiple pages across your website
-- It's much easier to make global changes to your CSS that are immediately picked up throughout the website
-- Your website's content is clearly separated from your website's style
+* It's easy to link the same stylesheet to multiple pages across your website
+* It's much easier to make global changes to your CSS that are immediately picked up throughout the website
+* Your website's content is clearly separated from your website's style
 
 ---
 
@@ -234,6 +243,7 @@ Next, just like in the last example, add a `<link>` tag to the `<head>` of your 
 Now try adding a style declaration for the `p` selector (e.g. change the `font-size`), and see if it works.
 
 ---
+
 template: inverse
 
 # Boxes and Blocks
@@ -245,14 +255,15 @@ template: inverse
 When writing CSS, it's helpful to think of every HTML element in your document being wrapped in an invisible box.
 
 .inline-images[
-   ![CSS Box Concept](/public/img/slide-assets/css-box-concept.svg)
+![CSS Box Concept](/public/img/slide-assets/css-box-concept.svg)
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   This is called the **box model**.<br />It's an important CSS concept.
+This is called the **box model**.<br />It's an important CSS concept.
 ]
 
 ---
@@ -261,17 +272,18 @@ class: center, middle
 
 The box model gives additional properties that we can adjust for each HTML too. These properties include:
 
-- `margin`
-- `border`
-- `padding`
-- `width`
-- `height`
+* `margin`
+* `border`
+* `padding`
+* `width`
+* `height`
 
 ---
+
 class: center, middle
 
 .inline-images[
-   ![CSS Box Model](/public/img/slide-assets/css-box-model.svg)
+![CSS Box Model](/public/img/slide-assets/css-box-model.svg)
 ]
 
 ---
@@ -282,11 +294,11 @@ Using the box model to style our HTML elements, we can use CSS properties such a
 
 ```css
 p {
-   margin: 15px;
-   border-top: 1px solid black;
-   border-bottom: 3px dotted blue;
-   padding-left: 30px;
-   width: 300px;
+  margin: 15px;
+  border-top: 1px solid black;
+  border-bottom: 3px dotted blue;
+  padding-left: 30px;
+  width: 300px;
 }
 ```
 
@@ -300,8 +312,8 @@ Or instead of writing out all the properties for each side, we can use shorthand
 
 ```css
 header {
-   margin: 0 auto; /* this is horizontal centering trick in CSS */
-   padding: 5px 0 5px 10px;
+  margin: 0 auto; /* this is horizontal centering trick in CSS */
+  padding: 5px 0 5px 10px;
 }
 ```
 
@@ -318,23 +330,25 @@ class: center, middle
 HTML elements will either be **block-level** or **inline**.
 
 ---
+
 class: center, middle
 
 Block elements will always appear to start on a new line.
 
 .inline-images[
-   ![Block-level element](/public/img/slide-assets/css-block-element.svg)
+![Block-level element](/public/img/slide-assets/css-block-element.svg)
 ]
 
 Some block level elements include `<h1>`, `<p>`, and `<ul>`.
 
 ---
+
 class: center, middle
 
 Inline elements will appear on the same line and flow with their neighbouring elements.
 
 .inline-images[
-   ![Inline element](/public/img/slide-assets/css-inline-element.svg)
+![Inline element](/public/img/slide-assets/css-inline-element.svg)
 ]
 
 Some inline elements include `<img>`, `<a>`, and `<strong>`.
@@ -349,7 +363,7 @@ For example:
 
 ```css
 li {
-	display: inline;
+  display: inline;
 }
 ```
 
@@ -357,11 +371,12 @@ Or:
 
 ```css
 span {
-	display: block;
+  display: block;
 }
 ```
 
 ---
+
 class: center, middle
 
 ### Not that simple!
@@ -372,26 +387,29 @@ But there's another distinction to be made...<br />an element can also be **inli
 
 # Display Differences
 
-Block                                 | Inline-block                    | Inline
-------------------------------------- | --------------------------------|---------------------------------
-Has top/bottom margin & padding       | Has top/bottom margin & padding | No top/bottom margin or padding
-Has left/right margin & padding       | Has left/right margin & padding | Has left/right margin & padding
-Can have set height and width         | Can have set height and width   | Cannot have set width or height
-Forces a line break after the element | Does not a force a line break   | Does not force a line break
+| Block                                 | Inline-block                    | Inline                          |
+| ------------------------------------- | ------------------------------- | ------------------------------- |
+| Has top/bottom margin & padding       | Has top/bottom margin & padding | No top/bottom margin or padding |
+| Has left/right margin & padding       | Has left/right margin & padding | Has left/right margin & padding |
+| Can have set height and width         | Can have set height and width   | Cannot have set width or height |
+| Forces a line break after the element | Does not a force a line break   | Does not force a line break     |
 
 ---
+
 class: center, middle
 
 .inline-images[
-   ![CSS display properties](/public/img/slide-assets/css-display-props.svg)
+![CSS display properties](/public/img/slide-assets/css-display-props.svg)
 ]
 
 ---
+
 template: inverse
 
 # How CSS Cascades
 
 ---
+
 class: center, middle
 
 ### The "C" in "CSS"
@@ -425,7 +443,7 @@ So given this example:
 
 ```css
 header {
-   font-family: Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 ```
 
@@ -446,11 +464,11 @@ And what would we expect to happen in this example?
 
 ```css
 header h1 {
-   font-family: Georgia, serif;
+  font-family: Georgia, serif;
 }
 
 header {
-   font-family: Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 ```
 
@@ -471,13 +489,14 @@ Let's start styling our project website using what we just learned about CSS tex
 
 If you haven't done so already, wrap the hero image banner area in a `<section>` element. Your goal is to then write CSS that will:
 
-- **center** the text
-- adjust the **size of the text**
-- add adequate **margin** above and below it
+* **center** the text
+* adjust the **size of the text**
+* add adequate **margin** above and below it
 
 Don't worry about the background image yet, we'll get to that.
 
 ---
+
 template: inverse
 
 # Class & IDs
@@ -516,7 +535,7 @@ To target a class, use a **dot** plus the class name:
 
 ```css
 .site-title {
-   font-weight: bold;
+  font-weight: bold;
 }
 ```
 
@@ -524,7 +543,7 @@ To target an ID, use a **pound sign** plus the ID name:
 
 ```css
 #masthead {
-   color: red;
+  color: red;
 }
 ```
 
@@ -542,7 +561,7 @@ And if you wanted to target an element that had **both of those classes**, your 
 
 ```css
 .site-title.home-title {
-   font-size: 32px;
+  font-size: 32px;
 }
 ```
 
@@ -562,33 +581,35 @@ Classes are also reusable, which can help make your CSS more efficient.
 
 Some tips for naming the classes and IDs in your HTML:
 
-- Class and ID names must start with a letter or an underscore character
-- Choose semantic class and ID names
-- Remember that ID names must be unique to the element!
+* Class and ID names must start with a letter or an underscore character
+* Choose semantic class and ID names
+* Remember that ID names must be unique to the element!
 
 ---
-# Attibute Selector 
+
+# Attibute Selector
 
 We can always target form inputs by their `id` or `class`, but we can also target entire types of form elements using the [attribute selector](https://developer.mozilla.org/en/docs/Web/CSS/Attribute_selectors) in our CSS:
 
 ```css
 input {
-   margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 input[type="text"],
 input[type="search"] {
-   color: #111;
-   font-family: Helvetica, sans-serif;
-   padding: 2px 5px;
+  color: #111;
+  font-family: Helvetica, sans-serif;
+  padding: 2px 5px;
 }
 ```
 
 ---
+
 class: center, middle
 
 .large[
-   Sidebar!
+Sidebar!
 ]
 
 ---
@@ -599,13 +620,13 @@ class: center, middle
 
 ```css
 a {
-   color: red;
-   text-decoration: none;
+  color: red;
+  text-decoration: none;
 }
 
 a:hover {
-   color: blue;
-   text-decoration: underline;
+  color: blue;
+  text-decoration: underline;
 }
 ```
 
@@ -613,14 +634,13 @@ You can use the `:link` and `:visited` pseudo-classes for links, and `:hover`, `
 
 ???
 
-- Explain pseudo-classes are useful when styling forms.
+* Explain pseudo-classes are useful when styling forms.
 
 Question to ask:
 
-- What should happen to an individual form input when a user **focuses** it?
-- How should buttons react when hovered or clicked?
-- How should the form display on a mobile device to assist with usability?
-
+* What should happen to an individual form input when a user **focuses** it?
+* How should buttons react when hovered or clicked?
+* How should the form display on a mobile device to assist with usability?
 
 ---
 
@@ -630,22 +650,23 @@ Pseudo-classes also allow us to select very specific child elements inside of a 
 
 ```css
 li:first-child {
-   border-left: 0;
+  border-left: 0;
 }
 
 li:nth-child(2),
 li:nth-child(odd) {
-   color: blue;
+  color: blue;
 }
 
-li:nth-child(3n+4) {
-   text-transform: uppercase; /* match children 4, 7, 10, etc. */
+li:nth-child(3n + 4) {
+  text-transform: uppercase; /* match children 4, 7, 10, etc. */
 }
 
 li:last-child {
-   border-right: 0;
+  border-right: 0;
 }
 ```
+
 ---
 
 # Pseudo-classes & Forms
@@ -654,11 +675,11 @@ The `:focus` pseudo-class also helps us target special styles toward the field t
 
 ```css
 input {
-   border: 1px solid #969696;
+  border: 1px solid #969696;
 }
 
 input:focus {
-   border: 1px solid #464646;
+  border: 1px solid #464646;
 }
 ```
 
@@ -670,14 +691,15 @@ And the `:active` pseudo-class allows to provide feedback to a user to let them 
 
 ```css
 button {
-   background-color: blue;
+  background-color: blue;
 }
 
 button:hover,
 button:active {
-   background-color: navy;
+  background-color: navy;
 }
 ```
+
 ---
 
 # Exercise 3
@@ -691,15 +713,17 @@ We want our `container` class to keep everything inside of it at a width of `124
 Is there anywhere that you may need to create an extra wrapping `<div>` around some of your content to contain it without conflicting with a full-width background treatment?
 
 ---
+
 template: inverse
 
 # Position
 
 ---
+
 class: center, middle
 
 .inline-images[
-   ![CSS Box Concept](/public/img/slide-assets/css-box-concept.svg)
+![CSS Box Concept](/public/img/slide-assets/css-box-concept.svg)
 ]
 
 ---
@@ -708,10 +732,10 @@ class: center, middle
 
 We can take even more control over our layouts using the CSS `position` property. The `position` property can take a specific array of values:
 
-- `static` (the default behaviour, aka **normal flow**)
-- `relative`
-- `absolute`
-- `fixed`
+* `static` (the default behaviour, aka **normal flow**)
+* `relative`
+* `absolute`
+* `fixed`
 
 ---
 
@@ -721,9 +745,9 @@ Relative positioning moves an element in relation to where it would have been in
 
 ```css
 header h1 {
-	position: relative;
-	top: 5%;
-	right: 200px;
+  position: relative;
+  top: 5%;
+  right: 200px;
 }
 ```
 
@@ -739,10 +763,10 @@ With absolute positioning, it's like the other elements on the page suddenly for
 
 ```css
 header h1 {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 200px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
 }
 ```
 
@@ -754,14 +778,14 @@ An element will be absolutely positioned to the **HTML document** unless you set
 
 ```css
 .page-wrapper {
-	position: relative;
+  position: relative;
 }
 
 header h1 {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 200px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
 }
 ```
 
@@ -775,11 +799,11 @@ This means that the element will stay put in one place on the screen as you scro
 
 ```css
 header h1 {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background: #c8c8c8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #c8c8c8;
 }
 ```
 
@@ -795,14 +819,16 @@ Elements with a higher z-index will appear on top:
 
 ```css
 header h1 {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 200px;
-	z-index: 100;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  z-index: 100;
 }
 ```
+
 ---
+
 template: inverse
 
 # Colour on the Web
@@ -813,10 +839,10 @@ template: inverse
 
 On the web, we have four options for specifying the colours of our HTML elements:
 
-- Colour names
-- HEX codes
-- RGB/RGBa values
-- HSL/HSLa values
+* Colour names
+* HEX codes
+* RGB/RGBa values
+* HSL/HSLa values
 
 ---
 
@@ -826,11 +852,11 @@ There are 147 predefined colour names supported by browsers, which we can use li
 
 ```css
 p {
-   color: maroon;
+  color: maroon;
 }
 
 a {
-   color: MediumSlateBlue;
+  color: MediumSlateBlue;
 }
 ```
 
@@ -848,7 +874,7 @@ In your CSS, a HEX code would be used like this:
 
 ```css
 p {
-   color: #111111; /* very dark grey */
+  color: #111111; /* very dark grey */
 }
 ```
 
@@ -859,7 +885,7 @@ p {
 To get a HEX code, you can use an [online colour picker tool](http://www.colorpicker.com/), or use the colour palette in an image editing program.
 
 .inline-images[
-   ![PS colour picker](../../public/img/slide-assets/color-picker-screenshot.png)
+![PS colour picker](../../public/img/slide-assets/color-picker-screenshot.png)
 ]
 
 ---
@@ -870,7 +896,7 @@ We can also use RGB (red, green, blue) values to specify colours in our CSS:
 
 ```css
 a {
-   color: rgb(237,67,67);
+  color: rgb(237, 67, 67);
 }
 ```
 
@@ -884,7 +910,7 @@ RGBa values allow us to also specify the **opacity** of the colour:
 
 ```css
 header {
-   background-color: rgba(237,67,67,0.5);
+  background-color: rgba(237, 67, 67, 0.5);
 }
 ```
 
@@ -900,7 +926,7 @@ However, instead of giving coordinates for the amount of red, blue, or green to 
 
 ```css
 header {
-   background-color: hsla(360, 83%, 60%, 0.5);
+  background-color: hsla(360, 83%, 60%, 0.5);
 }
 ```
 
@@ -915,17 +941,19 @@ Hues can be **chromatic** or **achromatic**.
 Hues can be **neutral** (white, black, or grey) or **near-neutral** (beige or off-white).
 
 ---
+
 class: center, middle
 
 .inline-images[
-   ![Hue](/public/img/slide-assets/color-hue.png)  
+![Hue](/public/img/slide-assets/color-hue.png)  
 ]
 
 .footnote.right[
-   *Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)*
+_Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)_
 ]
 
 ---
+
 # Value
 
 Value is the potential for a colour to be light or dark.
@@ -935,18 +963,19 @@ Value is the potential for a colour to be light or dark.
 **Low value** colours have black added to them.
 
 ---
+
 class: center, middle
 
 .inline-images[
-   ![High value](/public/img/slide-assets/color-value-high.png)  
+![High value](/public/img/slide-assets/color-value-high.png)  
 ]
 
 .inline-images[
-   ![Low value](/public/img/slide-assets/color-value-low.png)
+![Low value](/public/img/slide-assets/color-value-low.png)
 ]
 
 .footnote.right[
-   *Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)*
+_Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)_
 ]
 
 ---
@@ -964,25 +993,27 @@ Colours can be **low chroma** (made dull by adding a complement).
 class: center, middle
 
 .inline-images[
-   ![Saturation](/public/img/slide-assets/color-saturation.png)  
+![Saturation](/public/img/slide-assets/color-saturation.png)  
 ]
 
 .footnote.right[
-   *Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)*
+_Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)_
 ]
 
 ---
+
 class: center, middle
 
 .inline-images[
-   ![Hue saturation value model](/public/img/slide-assets/color-hue-sat-val.png)  
+![Hue saturation value model](/public/img/slide-assets/color-hue-sat-val.png)  
 ]
 
 .footnote.right[
-   *Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)*
+_Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)_
 ]
 
 ---
+
 template: inverse
 
 # Backgrounds
@@ -995,8 +1026,8 @@ CSS gives us a number of tools for controlling the backgrounds of our HTML eleme
 
 We can specify:
 
-- `background-color`: an RGBa, HSLa, hexadecimal, or named color code
-- `background-image`: an URL of a background image (in parantheses)
+* `background-color`: an RGBa, HSLa, hexadecimal, or named color code
+* `background-image`: an URL of a background image (in parantheses)
 
 ---
 
@@ -1004,9 +1035,9 @@ We can specify:
 
 And if we specify a `background-image` URL, we can also set these properties for it:
 
-- `background-repeat`: whether to repeat an image across the X or Y axis, or both
-- `background-attachment`: whether the image should **scroll** with the browser or remain **fixed** in place
-- `background-position`: for non-repeated images, specify if it should be anchored at the **left**, **center**, or **right**, and the **top**, **center**, or **bottom**
+* `background-repeat`: whether to repeat an image across the X or Y axis, or both
+* `background-attachment`: whether the image should **scroll** with the browser or remain **fixed** in place
+* `background-position`: for non-repeated images, specify if it should be anchored at the **left**, **center**, or **right**, and the **top**, **center**, or **bottom**
 
 ---
 
@@ -1016,7 +1047,7 @@ To clean up our code a bit we can also use the `background` shorthand property t
 
 ```css
 body {
-    background: #969696 url('images/bkgd.png') no-repeat center top;
+  background: #969696 url("images/bkgd.png") no-repeat center top;
 }
 ```
 
@@ -1024,7 +1055,7 @@ If you don't need to change all of the properties from their defaults, you can l
 
 ```css
 body {
-    background: url('images/bkgd-tile.png') fixed;
+  background: url("images/bkgd-tile.png") fixed;
 }
 ```
 
@@ -1036,8 +1067,8 @@ We can also use the `background-size` property to control the size of our backgr
 
 ```css
 body {
-	background: #969696 url('images/bkgd.png') no-repeat center top;
-	background-size: 80% 80%; /* width, height */
+  background: #969696 url("images/bkgd.png") no-repeat center top;
+  background-size: 80% 80%; /* width, height */
 }
 ```
 
@@ -1051,10 +1082,7 @@ CSS3 lets you set multiple background images for an element:
 
 ```css
 header {
-   background:
-      url(watermark.png),  /* on top */
-      url(overlay.png),    /* in the middle */
-      url(texture.png);    /* on the bottom */
+  background: url(watermark.png), url(overlay.png), url(texture.png); /* on the bottom */
 }
 ```
 
@@ -1073,16 +1101,18 @@ Also add the floral background image to the banner area.
 **Challenge!** How could we get the partially transparent background layer and the photo of the girl to sit on top of this image (also as a background)?
 
 ---
+
 template: inverse
 
 # CSS Resets, Developer Tools & Resources
 
 ---
+
 class: center, middle
 
 .large[
-   What's a CSS reset?<br />
-   Why do we need one?
+What's a CSS reset?<br />
+Why do we need one?
 ]
 
 ---
@@ -1091,23 +1121,25 @@ class: center, middle
 
 There are a few popular CSS resets used today:
 
-- [Eric Meyer reset](http://meyerweb.com/eric/tools/css/reset/)
-- [normalize.css](http://necolas.github.io/normalize.css/)
+* [Eric Meyer reset](http://meyerweb.com/eric/tools/css/reset/)
+* [normalize.css](http://necolas.github.io/normalize.css/)
 
 ---
+
 class: center, middle
 
 .large[
-   As a developer, what's the most important feature of your browser?
+As a developer, what's the most important feature of your browser?
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   Learn your dev tools:
+Learn your dev tools:
 
-   **[discover-devtools.codeschool.com](http://discover-devtools.codeschool.com/)**
+**[discover-devtools.codeschool.com](http://discover-devtools.codeschool.com/)**
 ]
 
 ---
@@ -1116,8 +1148,8 @@ class: center, middle
 
 To make sure our code is **valid** we can use these services:
 
-- [W3C Mark-up Validation Service](https://validator.w3.org/)
-- [W3C Mark-up CSS Service](https://jigsaw.w3.org/css-validator/)
+* [W3C Mark-up Validation Service](https://validator.w3.org/)
+* [W3C Mark-up CSS Service](https://jigsaw.w3.org/css-validator/)
 
 ---
 
@@ -1128,35 +1160,37 @@ Time to put your own project under the microscope!
 Try running your project's HTML through the W3C validator. Are there any errors or warnings? How can you address them?
 
 ---
+
 class: center, middle
 
 .large[
-   I still need help!<br />Where do I go?
+I still need help!<br />Where do I go?
 ]
 
 ---
 
 # Go-to Resources
 
-- [Mozilla Developer Network](https://developer.mozilla.org/en-US/)
-- [Stack Overflow](http://stackoverflow.com/)
-- [CSS Tricks](https://css-tricks.com/)
-- [Smashing Magazine](http://www.smashingmagazine.com/)
-- Each other!
+* [Mozilla Developer Network](https://developer.mozilla.org/en-US/)
+* [Stack Overflow](http://stackoverflow.com/)
+* [CSS Tricks](https://css-tricks.com/)
+* [Smashing Magazine](http://www.smashingmagazine.com/)
+* Each other!
 
 ---
 
 # What We've Learned
 
-- Different ways to include CSS in our webpage
-- What the box model is
-- How specificity and inheritance work
-- How to use classes and IDs to target our styles
-- How to layout a webpage using position and floats
-- How to add colour and background images via CSS
-- How to use a CSS reset, code validators, and a browser's developer tools
+* Different ways to include CSS in our webpage
+* What the box model is
+* How specificity and inheritance work
+* How to use classes and IDs to target our styles
+* How to layout a webpage using position
+* How to add colour and background images via CSS
+* How to use a CSS reset, code validators, and a browser's developer tools
 
 ---
+
 template: inverse
 
 # Questions?

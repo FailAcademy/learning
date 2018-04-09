@@ -2,45 +2,45 @@
 layout: lesson
 title: OOP, Plugin Dev & Widget API
 slides: ['_slides/week-07/03-oop-plugins-widgets.md']
-lesson_date: 2018-02-22
+lesson_date: 2018-05-23
 ---
 
 ## Pre-Work
 
 Work through the following sections of the [Codeacademy PHP tutorial](https://www.codecademy.com/en/tracks/php):
 
-- Object-oriented Programming, Part I
-- Object-oriented Programming, Part II
+* Object-oriented Programming, Part I
+* Object-oriented Programming, Part II
 
 Some pre-reading on creating WordPress widget plugins:
 
-- [Introduction to Creating Your First WordPress Widget](https://code.tutsplus.com/series/introduction-to-creating-your-first-wordpress-widget--cms-721)
+* [Introduction to Creating Your First WordPress Widget](https://code.tutsplus.com/series/introduction-to-creating-your-first-wordpress-widget--cms-721)
 
 ---
 
 ## Learning Objectives
 
-- Explain what object-oriented programming is in the PHP context and use it to create classes.
-- Distinguish the difference between public, private, and protected visibility markers and how they apply to properties and methods.
-- Describe how inheritance works between parent classes and subclasses.
-- Identify use cases for developing WordPress plugins, as well as their basic architecture.
-- Build a custom WordPress widget plugin using the Widget API and OOP coding practices.
+* Explain what object-oriented programming is in the PHP context and use it to create classes.
+* Distinguish the difference between public, private, and protected visibility markers and how they apply to properties and methods.
+* Describe how inheritance works between parent classes and subclasses.
+* Identify use cases for developing WordPress plugins, as well as their basic architecture.
+* Build a custom WordPress widget plugin using the Widget API and OOP coding practices.
 
 ---
 
 ## Keywords
 
-- Object-oriented programming
-- Class
-- Object
-- Parent / Base Class
-- Child / Sub-class
-- Constructor
-- Property
-- Method
-- Extend
-- Scope
-- Widget API
+* Object-oriented programming
+* Class
+* Object
+* Parent / Base Class
+* Child / Sub-class
+* Constructor
+* Property
+* Method
+* Extend
+* Scope
+* Widget API
 
 ---
 
@@ -66,12 +66,12 @@ Today's lab time will be spent working on Project 4. Tie up the loose ends on yo
 
 WP Codex entry for the Widgets API:
 
-- [Widgets API](https://codex.wordpress.org/Widget_API)
+* [Widgets API](https://codex.wordpress.org/Widget_API)
 
 An in-depth intro on OOP in PHP:
 
-- [Object-Oriented PHP for Beginners](https://code.tutsplus.com/tutorials/object-oriented-php-for-beginners--net-12762)
+* [Object-Oriented PHP for Beginners](https://code.tutsplus.com/tutorials/object-oriented-php-for-beginners--net-12762)
 
 Wondering what all the comments are about in the widget boilerplate repo? Read more about WP's take on PHP documentation:
 
-- [PHP Documentation Standards](https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/php/)
+* [PHP Documentation Standards](https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/php/)

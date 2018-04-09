@@ -47,6 +47,10 @@ class: center, middle
 - Backward compatibility
 - The back-end UI does not suck
 
+???
+
+WordPress percentage changes often and is displayed on wordpress.org
+
 ---
 
 # Just for Blogs?
@@ -88,6 +92,15 @@ We can also install WP locally using MAMP:
 4. Rename `wp-config-sample.php` to `wp-config.php` and fill in your database name and MAMP credentials
 5. Go to http://localhost:8888/YOUR-FOLDER/wp-admin/install.php and complete your install
 
+???
+
+#### Exercise Suggestion: 
+Students independently try the local install. Then do a fresh install walk through together. Even if individuals figured it out, get everyone to start new.
+
+Note that there other slightly different ways to do the local install.
+
+*Note for students:* where to find database credentials, change default installation values (admin, wp_)
+
 ---
 template: inverse
 
@@ -104,6 +117,15 @@ class: center, middle
 .inline-images[
    ![WP Front and Back Ends](/public/img/slide-assets/wp-front-back-concept.svg)
 ]
+
+???
+
+#### Exercise Suggestion
+WP Basics Handout - Get students to walk thought the UI components on the site and make notes on the worksheet. Tell them to note hidden gotchas and features that have not seem before ( ~10-15 mins).
+
+After, get them to share highlights with tablemates ( ~5-8 mins).
+
+As a class, get each table to share their top highlights (~5 mins).
 
 ---
 class: center, middle
@@ -123,6 +145,10 @@ class: center, middle
 - The **MySQL database** contains all of the data (content and saved settings) for your WP site
 - The **PHP** files generate your site on the server (with the help of the **Apache** web server) so it can be rendered as HTML in the browser
 - You can use PHP to get data our your database and populate your website with it&mdash;this is the difference between **dynamic sites** and static sites
+
+???
+
+For visual aid, I draw out the components and how they connect on the board with explaination. 
 
 ---
 
@@ -160,6 +186,11 @@ This is where you'll keep all of the code and content that's specific to your si
 - `wp-config.php`
 - database
 
+???
+
+#### Recap Exercise Suggestion
+With a partner, fill out the side with the 'Internal Components' as a cheat sheet.
+
 ---
 
 # WordPress Dashboard
@@ -171,12 +202,20 @@ This is where you'll keep all of the code and content that's specific to your si
    - Themes, Customize, Widgets, and Menus
 - **Plugins**
 
+???
+
+If not mentioned yet, point out the customizer.
+
 ---
 class: center, middle
 
 .large[
    Don't edit your theme or plugin files with the built-in Editor...
 ]
+
+???
+
+Show editor. As of WP 4.9.1. they have added an editor warning, syntax highlighting and CSS editor (in the customizer). 
 
 ---
 class: center, middle
@@ -312,6 +351,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 ```
 
+???
+
+[Theme Handbook](https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/)
+
 ---
 
 # The WordPress Loop
@@ -338,6 +381,10 @@ A basic implementation of the famous **WordPress loop**:
 ```
 
 You will likely (and should!) see something very similar to this in any theme's `index.php` file.
+
+???
+
+Before proceeding a head, get them to try to make sense of the code above with a partner.
 
 ---
 
@@ -379,6 +426,10 @@ In your `header.php` files, you may see something like this:
 The `bloginfo()` tag retrieves data you saved on in the WP admin area.
 
 In the example here, the word `name` inside of the single quotes instructs the tag to **get the blog's site name**. This is called a parameter.
+
+???
+
+[Theme Handbook: Template Tags](https://developer.wordpress.org/themes/basics/template-tags/)
 
 ---
 
@@ -443,6 +494,13 @@ Take the **[provided HTML template](/public/files/exercises/wp-first-theme.zip)*
 
 But whoops! How can we link up the `style.css` file now that it's path is broken? Try adding the loop too!
 
+???
+
+Give class ( ~20-30 mins) to try the exercise. 
+
+Recommend students come up and share their answer and correct as a class if necessary.
+
+
 ---
 
 # What We've Learned
@@ -451,6 +509,11 @@ But whoops! How can we link up the `style.css` file now that it's path is broken
 - The ins and outs of the WP admin area
 - How to install plugins and themes
 - The basic anatomy of a WordPress theme
+
+???
+
+#### Review Activity
+Before end of day standup (after lab time), in groups of 3 - 4 take the components 
 
 ---
 template: inverse

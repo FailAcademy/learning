@@ -15,6 +15,7 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
@@ -24,11 +25,13 @@ layout: false
 3. Widget API 101 (and inheritance in OOP)
 
 ---
+
 template: inverse
 
 # Objects and Classes
 
 ---
+
 class: center, middle
 
 ### OOP Vocabulary Refresher: Objects
@@ -36,6 +39,7 @@ class: center, middle
 A **general model** for something we see in the world,<br />but using code constructs.
 
 ---
+
 class: center, middle
 
 ### OOP Vocabulary Refresher: Classes
@@ -45,6 +49,7 @@ A class is a **blueprint** for creating an object.<br />(And your computer is th
 ---
 
 .half-left-column[
+
 ### A Class in PHP
 
 Classes are the blueprints...
@@ -64,6 +69,7 @@ class Dog {
    }
 }
 ```
+
 ]
 
 .half-right-column[
@@ -73,49 +79,31 @@ class Dog {
 
 ---
 
-.half-left-column[
-### An Object in PHP
+# Objects in PHP
 
-We can create an object from a class...
+We can create an object from a class:
 
 ```php
 $dog_1 = new Dog();
 
-$dog_1->name = 'Gomez';
-$dog_1->breed = 'Mixed';
+$dog_1->name = 'Rex';
+$dog_1->breed = 'Poodle';
 $dog_1->colour = 'white';
 
 echo $dog_1->bark();
 ```
-]
-
-.half-right-column[
-<br /><br />
-![Gomez object](/public/img/slide-assets/oop-object-gomez.jpg)
-]
-
----
-
-.half-left-column[
-### Another Object
 
 We can create more than one object from a class too!
 
 ```php
 $dog_2 = new Dog();
 
-$dog_2->name = 'Dexter';
-$dog_2->breed = 'Boston Terrier';
-$dog_2->colour = 'tuxedo';
+$dog_2->name = 'Buster';
+$dog_2->breed = 'Great Dane';
+$dog_2->colour = 'grey';
 
 echo $dog_2->walk();
 ```
-]
-
-.half-right-column[
-<br /><br />
-![Dexter object](/public/img/slide-assets/oop-object-dexter.jpg)
-]
 
 ---
 
@@ -160,35 +148,37 @@ $first_post->publish();
 
 When you have a class, you can have **multiple instances** of objects based on it, and the new objects will have the publicly-available class properties and methods available to it.
 
-
 ---
+
 class: center, middle
 
 .large[
-   What objects do we already know and love in WP?
+What objects do we already know and love in WP?
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   **[Check out the class!](https://github.com/WordPress/WordPress/blob/af885f45cf0f16e2c8c609786991c0fe2c148af5/wp-includes/class-wp-query.php#L18)**
+**[Check out the class!](https://github.com/WordPress/WordPress/blob/af885f45cf0f16e2c8c609786991c0fe2c148af5/wp-includes/class-wp-query.php#L18)**
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   **[See it in action...](https://github.com/WordPress/WordPress/blob/fe0b8a2aaf49ff5f33a866309ed8730fd7675674/wp-includes/post.php#L1661)**
+**[See it in action...](https://github.com/WordPress/WordPress/blob/fe0b8a2aaf49ff5f33a866309ed8730fd7675674/wp-includes/post.php#L1661)**
 ]
 
 ---
 
 # Properties in Classes
 
-- Properties exist at the **class level**
-- They can be used in any of the functions defined in the class (and don't have to be passed as arguments)
-- We can set our property values on the **class definition** or in a special function known as a **constructor**
+* Properties exist at the **class level**
+* They can be used in any of the functions defined in the class (and don't have to be passed as arguments)
+* We can set our property values on the **class definition** or in a special function known as a **constructor**
 
 ---
 
@@ -223,11 +213,13 @@ Using the `$this` keyword is what differentiates properties from other variables
 Just like in JS, `$this` is a **reference to the current object**.
 
 ---
+
 template: inverse
 
 # Scope
 
 ---
+
 class: center, middle
 
 ### Scope
@@ -236,17 +228,16 @@ Scope refers to how properties and methods can be accessed from third-party obje
 
 We can deliberately set the scope of properties and methods in our classes using **visibility markers**.
 
-
 ---
 
 # Scope in PHP
 
 We can have `public`, `protected`, or `private` scope:
 
-`public`                      | `private`                        | `protected`
------------------------------ | ---------------------------------|---------------------------------
-Visible to the outside world  | Not visible to the outside world | Not visible to the outside world
-Available to child classes    | Not accessible to child classes  | Accessible to child classes
+| `public`                     | `private`                        | `protected`                      |
+| ---------------------------- | -------------------------------- | -------------------------------- |
+| Visible to the outside world | Not visible to the outside world | Not visible to the outside world |
+| Available to child classes   | Not accessible to child classes  | Accessible to child classes      |
 
 **Note:** If you leave off the visibility marker for a property or method it will be `public`.
 
@@ -256,9 +247,9 @@ Available to child classes    | Not accessible to child classes  | Accessible to
 
 Why would you want to hide properties and methods from the outside world (i.e. objects instantiated from from the class)?
 
-- To **encapsulate the data handling** within your objects
-- An **object should be a black box** where you feed arguments into your object and you get a response in return
-- This pattern makes your object **more independent** from the rest of your application, so you can change all of the internals of the object and it won't break your application
+* To **encapsulate the data handling** within your objects
+* An **object should be a black box** where you feed arguments into your object and you get a response in return
+* This pattern makes your object **more independent** from the rest of your application, so you can change all of the internals of the object and it won't break your application
 
 ---
 
@@ -292,7 +283,7 @@ We can see why marking all properties as `public` may not be ideal here.
 
 You are likely to see them marked `protected` so they may also be used by subclasses, or `private` so that they may only be accessed internally.
 
-*These are simple concepts on the surface, but can often be difficult to strategically implement!*
+_These are simple concepts on the surface, but can often be difficult to strategically implement!_
 
 ---
 
@@ -300,11 +291,12 @@ You are likely to see them marked `protected` so they may also be used by subcla
 
 Classes should organize information so that:
 
-- information that should only be accessible and relevant to it should remain `private`
-- information that should be accessible by itself and its subclasses should be `protected`
-- information that should be accessible by third-party objects and subclasses should be `public`
+* information that should only be accessible and relevant to it should remain `private`
+* information that should be accessible by itself and its subclasses should be `protected`
+* information that should be accessible by third-party objects and subclasses should be `public`
 
 ---
+
 template: inverse
 
 # Widget API 101
@@ -313,17 +305,17 @@ template: inverse
 
 # Plugin Refresher
 
-- A theme controls the **presentation** of content
-- A plugin is used to control the **behaviour and features** of your WordPress site
-- Themes should not add critical functionality to your site
+* A theme controls the **presentation** of content
+* A plugin is used to control the **behaviour and features** of your WordPress site
+* Themes should not add critical functionality to your site
 
 ---
 
 # Plugin Refresher
 
-- Plugins are found in `wp-content/plugins/`
-- Can be a single file or a directory with multiple files (where the main plugin file and the directory will usually share the same name)
-- Plugin names should be unique
+* Plugins are found in `wp-content/plugins/`
+* Can be a single file or a directory with multiple files (where the main plugin file and the directory will usually share the same name)
+* Plugin names should be unique
 
 ---
 
@@ -355,18 +347,20 @@ WordPress provides us with [many APIs](https://codex.wordpress.org/WordPress_API
 One of those APIs is the **[Widgets API](https://codex.wordpress.org/Widgets_API)**, which allows us to create custom widgets for our sites by **extending** the `WP_Widget` class.
 
 ---
+
 class: center, middle
 
 .large[
-   Extending?
+Extending?
 ]
 
 ---
+
 class: center, middle
 
 ### Another Key OOP Concept: Inheritance
 
-*When one class acts as parent for another child class.*
+_When one class acts as parent for another child class._
 
 In OOP, as with people, children inherit from their parents, but parents do not inherit traits back from their children!
 
@@ -374,15 +368,15 @@ In OOP, as with people, children inherit from their parents, but parents do not 
 
 # About Inheritance
 
-- When you create a child class from parent class, the child class inherits all the properties and methods of the parent class
-- Child classes cannot access `private` properties or methods of the parent
-- When we use the `protected` keyword that means that the given property or method is not available to the outside world, but it is available to child classes
+* When you create a child class from parent class, the child class inherits all the properties and methods of the parent class
+* Child classes cannot access `private` properties or methods of the parent
+* When we use the `protected` keyword that means that the given property or method is not available to the outside world, but it is available to child classes
 
 ---
 
 # Why Do We Bother?
 
-*Why bother extending a class in the first place?*
+_Why bother extending a class in the first place?_
 
 Creating a child class allows us to **extend** the properties and methods of the parent class.
 
@@ -444,7 +438,7 @@ class My_Plugin {
 }
 ```
 
-*There are two things to note here...*
+_There are two things to note here..._
 
 ---
 
@@ -516,10 +510,11 @@ The rest of the exercise will be a code-along...
 
 # What We've Learned
 
-- Some basic OOP concepts in relation to PHP
-- How to build a basic custom widget plugin using the WP Widget API
+* Some basic OOP concepts in relation to PHP
+* How to build a basic custom widget plugin using the WP Widget API
 
 ---
+
 template: inverse
 
 # Questions?

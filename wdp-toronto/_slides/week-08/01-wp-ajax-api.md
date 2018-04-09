@@ -153,7 +153,7 @@ Let's imagine we want to add a button to our blog posts on the front-end of the 
 
 # The Setup
 
-First we'll add a bit mark-up to `single.php`:
+First we'll add a bit of mark-up to `single.php`:
 
 ```html
 <button type="button" id="close-comments">Close Comments</button>
@@ -268,7 +268,7 @@ That's where the [WP REST API](http://v2.wp-api.org/) comes in!
 
 # A REST API?
 
-- REST stands for REpresentational State Transfer
+- REST stands for [REpresentational State Transfer](https://medium.com/@sagar.mane006/understanding-rest-representational-state-transfer-85256b9424aa)
 - Uses HTTP methods explicitly (e.g. GET, POST, PUT, DELETE)
 - Is stateless (the client includes any state information needed in the request sent to the server and vice versa)
 - Transfers XML or JSON
@@ -331,20 +331,28 @@ A **resource** is a discrete entity within WordPress (e.g. post, page, comment, 
 
 ---
 
-# Filter Syntax
-
-We can filter the results we get back in our response using the `WP_Query()` variables the WP REST API exposes for us using the `filter[]` syntax. For example...
+# Endpoint Parameters
 
 Get 3 posts per pages (instead of the default 10):
 
 ```bash
-GET /wp/v2/posts?filter[posts_per_page]=3
+GET /wp/v2/posts?per_page=3
 ```
 
-Get all posts published on August 17, 2016:
+Get all posts after Jan 2nd 2017 8:30am
 
 ```bash
-GET /wp/v2/posts?filter[year]=2016&filter[monthnum]=08&filter[day]=17
+GET /wp/v2/posts?after=2017-01-02T08:30:00
+```
+
+Get posts in categories, can be multiple using *&*
+```bash
+GET /wp/v2/posts?categories=1&categories=3
+```
+
+Search posts
+```bash
+GET /wp/v2/posts?search=hello%20world
 ```
 
 ---

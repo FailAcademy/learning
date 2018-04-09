@@ -15,6 +15,7 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
@@ -24,6 +25,7 @@ layout: false
 3. Try some flexbox layouts
 
 ---
+
 template: inverse
 
 # Why Flexbox?
@@ -34,46 +36,56 @@ template: inverse
 
 Flexbox makes common web-page layout requirements easy to code:
 
-- Equal height columns
-- Evenly spaced containers
-- Vertical centering
-- Sticky footers
-- ...and more!
+* Equal height columns
+* Evenly spaced containers
+* Vertical centering
+* Sticky footers
+* ...and more!
 
 ---
+
 class: center, middle
 
 .large[
-   NO MORE FLOAT BASED LAYOUTS!
+NO MORE FLOAT BASED LAYOUTS!
 ]
 
+???
+
+* Explain what these were and why they were problematic
+
 ---
+
 class: center, middle
 
 .large[
-   NO MORE POSITIONING HACKS!
+NO MORE POSITIONING HACKS!
 ]
 
 ---
+
 class: center, middle
 
 .inline-images[
-   ![Flexbox everywhere](/public/img/slide-assets/flexbox-everywhere.jpg)
+![Flexbox everywhere](/public/img/slide-assets/flexbox-everywhere.jpg)
 ]
 
 ---
+
 class: center, middle
 
 .inline-images[
-   ![Flexbox tears of joy](/public/img/slide-assets/flexbox-tears.jpg)
+![Flexbox tears of joy](/public/img/slide-assets/flexbox-tears.jpg)
 ]
 
 ---
+
 template: inverse
 
 # Using Flexbox
 
 ---
+
 class: center, middle
 
 ### Bookmark this resource right now:
@@ -96,17 +108,19 @@ Here is how we create a horizontally/vertically-centered element using flexbox:
 ```
 
 ---
+
 class: center, middle
 
 .large[
-   Wait, what?
+Wait, what?
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   Once again, CSS has found a way to make things less obvious than they should be.
+Once again, CSS has found a way to make things less obvious than they should be.
 ]
 
 ---
@@ -120,9 +134,10 @@ When creating flexbox-based layouts, you need to keep a few things in mind:
 3. The flex items follow each other along the **main axis**
 4. The **cross axis** is perpendicular to the main axis
 
-*Let's clarify this by taking a closer look...*
+_Let's clarify this by taking a closer look..._
 
 ---
+
 class: center, middle
 
 ### Code-along time!
@@ -130,6 +145,7 @@ class: center, middle
 Open this CodePen and code along with me: **[codepen.io/redacademy/pen/eJyXPy](http://codepen.io/redacademy/pen/eJyXPy?editors=1100)**
 
 ---
+
 template: inverse
 
 # Flex Container Properties
@@ -149,7 +165,7 @@ Creating a flex container is accomplished simply using the `display` property in
 
 ```css
 .parent {
-   display: flex;
+  display: flex;
 }
 ```
 
@@ -169,8 +185,8 @@ The `flex-direction` property determines the **main axis**:
 
 How it works:
 
-- `row` (default) / `row-reverse` makes the main axis horizontal
-- `column` / `column-reverse` makes the main axis vertical
+* `row` (default) / `row-reverse` makes the main axis horizontal
+* `column` / `column-reverse` makes the main axis vertical
 
 ---
 
@@ -194,7 +210,7 @@ The `flex-flow` property is short-hand for `flex-direction` and `flex-wrap` toge
 
 ```css
 .parent {
-   flex-flow: <‘flex-direction’> || <‘flex-wrap’>
+  flex-flow: <‘flex-direction’> || <‘flex-wrap’>;
 }
 ```
 
@@ -208,8 +224,7 @@ Controls how flex items are laid out along the **main axis**
 
 ```css
 .parent {
-   justify-content: flex-start | flex-end | center | space-between
-                    | space-around;
+  justify-content: flex-start | flex-end | center | space-between | space-around;
 }
 ```
 
@@ -225,13 +240,13 @@ Controls how flex items are laid out along the **cross axis**:
 
 ```css
 .parent {
-   align-items: flex-start | flex-end | center | baseline | stretch;
+  align-items: flex-start | flex-end | center | baseline | stretch;
 }
 ```
 
 The first 3 behave like `justify-content` for the cross axis.
 
-The  `baseline` value aligns the baselines of the items, while `stretch` (default) stretches the items along the cross axis to fill the container.
+The `baseline` value aligns the baselines of the items, while `stretch` (default) stretches the items along the cross axis to fill the container.
 
 .footnote[.red[* ] The flex container must have a height set for this to work!]
 
@@ -243,8 +258,8 @@ This property aligns the line(s) of flex items where there is extra space along 
 
 ```css
 .container {
-   align-content: flex-start | flex-end | center | space-between
-                  | space-around | stretch;
+  align-content: flex-start | flex-end | center | space-between | space-around |
+    stretch;
 }
 ```
 
@@ -258,13 +273,13 @@ The default value is `stretch` (so that items take up remaining space along the 
 
 Let's apply these flexbox concepts to Project 1.
 
-We'll start by refactoring the floats in the site `<footer>` into flexbox properties following these steps:
+We'll start adding flexbox properties into the `<footer>` with following these steps:
 
-1. Remove your floats
-2. Apply `display: flex` to the appropriate element
-3. Figure out how to get the address and the social links aligned to the left and right sides as they were with your floats (for screen widths `600px` and up only, of course!)
+1. Apply `display: flex` to the appropriate element
+2. Figure out how to get the address and the social links aligned to the left and right sides of the footer
 
 ---
+
 template: inverse
 
 # Flex Items Properties
@@ -277,11 +292,11 @@ The `order` property allows you to manipulate the order of the items to be diffe
 
 ```css
 .child {
-   order: <integer>;
+  order: <integer>;
 }
 ```
 
-*Remember this one, it's a life-saver with RWD!*
+_Remember this one, it's a life-saver with RWD!_
 
 ---
 
@@ -291,7 +306,7 @@ This property determines whether an item can grow, if necessary. The value must 
 
 ```css
 .item {
-   flex-grow: <number>; /* default 0 */
+  flex-grow: <number>; /* default 0 */
 }
 ```
 
@@ -307,7 +322,7 @@ Opposite to `flex-grow`, `flex-shrink` determines the ability for an item to shr
 
 ```css
 .child {
-   flex-shrink: <number>; /* default 1 */
+  flex-shrink: <number>; /* default 1 */
 }
 ```
 
@@ -339,7 +354,7 @@ The `flex` property gives us a shorthand method for `flex-grow`, `flex-shrink` a
 
 ```css
 .child {
-   flex: none | [ <`flex-grow`> <`flex-shrink`> || <`flex-basis`> ]
+  flex: none | [ <`flex-grow`> <`flex-shrink`> || <`flex-basis`> ];
 }
 ```
 
@@ -355,8 +370,7 @@ The `align-self` property allows you to override the default alignment for an in
 
 ```css
 .item {
-   align-self: auto | flex-start | flex-end | center
-               | baseline | stretch;
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
 }
 ```
 
@@ -366,29 +380,31 @@ The values for `align-self` behave as they do for the `align-items`.
 
 # Exercise 2
 
-Let's try out some of the flex item-related properties in project within the site `<header>` now following these steps:
+Let's use some of the flex-item related properties in our project, within the site `<header>`. Follow these steps:
 
-1. Remove all floats from your `<header>` elements
-2. Apply `display: flex` to the appropriate container
-3. Use a combination of flex item properties to set the logo back to the left edge and the cart icon set to right edge of the page (and make sure they are the right size!)
+1. Apply `display: flex` to the appropriate container in your `<header>`
+2. Use a combination of flex item properties to set the logo back to the left edge and the cart icon set to right edge of the page (and make sure they are the right size!)
 
 ---
+
 template: inverse
 
 # A Few More Things...
 
 ---
+
 class: center, middle
 
 .large[
-   You can nest `display: flex` elements inside of one another.
+You can nest `display: flex` elements inside of one another.
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   Flexbox works well in modern browsers, but you may require **vendor prefixes** to support older browsers.
+Flexbox works well in modern browsers, but you may require **vendor prefixes** to support older browsers.
 ]
 
 ---
@@ -408,10 +424,10 @@ One of two things makes a property experimental:
 
 Different browsers have their own unique vendor prefixes:
 
-- Webkit: `-webkit-`
-- Firefox: `-moz-`
-- Opera: `-o-`
-- IE: `-ms-`
+* Webkit: `-webkit-`
+* Firefox: `-moz-`
+* Opera: `-o-`
+* IE: `-ms-`
 
 ---
 
@@ -421,27 +437,28 @@ To use vendor prefixes, you simply put each required prefix in front of the expe
 
 ```css
 .container {
-   -webkit-box-align: center;
-   -webkit-align-items: center;
-        -ms-flex-align: center;
-           align-items: center;
-   display: -webkit-box;
-   display: -webkit-flex;
-   display: -ms-flexbox;
-   display: flex;
-   height: 300px;
-   -webkit-box-pack: center;
-   -webkit-justify-content: center;
-             -ms-flex-pack: center;
-           justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 300px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 ```
 
 ---
+
 class: center, middle
 
 .large[
-   But how do you know what needs to be prefixed?
+But how do you know what needs to be prefixed?
 ]
 
 ---
@@ -450,10 +467,10 @@ class: center, middle
 
 **[Autoprefixer](https://github.com/postcss/autoprefixer) to the rescue!**
 
-- Use an app for that...[Codekit](https://incident57.com/codekit/)
-- Use a [text editor plugin](https://github.com/postcss/autoprefixer#text-editors-and-ide)
-- Use an [online tool](https://autoprefixer.github.io/)
-- Learn a JS taskrunner like [Gulp](http://gulpjs.com/) or [Grunt](http://gruntjs.com/)
+* Use an app for that...[Codekit](https://incident57.com/codekit/)
+* Use a [text editor plugin](https://github.com/postcss/autoprefixer#text-editors-and-ide)
+* Use an [online tool](https://autoprefixer.github.io/)
+* Learn a JS taskrunner like [Gulp](http://gulpjs.com/) or [Grunt](http://gruntjs.com/)
 
 ---
 
@@ -469,11 +486,12 @@ Think about whether you need to make any adjustments to the mark-up to make this
 
 # What We've Learned
 
-1. How (and why!) to use flexbox in lieu of floats and positioning
+1. How (and why!) to use flexbox in lieu of older layout techniques
 2. The difference between flex containers vs. items, and the main vs. cross axis
 3. What a vendor prefix is and why we need them
 
 ---
+
 template: inverse
 
 # Questions?

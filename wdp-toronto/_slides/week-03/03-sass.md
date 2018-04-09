@@ -15,19 +15,26 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ???
+
 ##### Gulp Review:
+
 In groups, discuss the function of each:
-  - package.json
-  - node_modules folder
-  - gulpjs.file
+
+* package.json
+* node_modules folder
+* gulpjs.file
 
 Gulpjs.file:
-  - Where are the required modules?
-  - What are the tasks?
-  
+
+* Where are the required modules?
+* What are the tasks?
+
 How does the 'scripts' task work?
-  - In groups get them to draw out from working file to production file.
+
+* In groups get them to draw out from working file to production file.
+
 ---
+
 layout: false
 
 # Agenda
@@ -40,12 +47,15 @@ layout: false
 
 ???
 Slide 2 Notes
+
 ---
+
 template: inverse
 
 # Preprocessors
 
 ---
+
 class: center, middle
 
 ### What is a preprocessor?
@@ -60,10 +70,10 @@ CSS preprocessors allow you to write CSS in a unconventional (but usually more i
 
 Today, there are a few CSS preprocessors in popular use:
 
-- [Sass / SCSS](http://sass-lang.com/)
-- [Less](http://lesscss.org/)
-- [Stylus](https://learnboost.github.io/stylus/)
-- [Myth](http://www.myth.io/)
+* [Sass / SCSS](http://sass-lang.com/)
+* [Less](http://lesscss.org/)
+* [Stylus](https://learnboost.github.io/stylus/)
+* [Myth](http://www.myth.io/)
 
 ---
 
@@ -76,6 +86,7 @@ The main differences between these two preprocessor options are their **installa
 Both libraries offer similar essential features that you would want in a CSS preprocessor though.
 
 ---
+
 class: center, middle
 
 ### But how do I pick one!?!
@@ -83,13 +94,15 @@ class: center, middle
 It depends...sometimes it's a matter of taste, other times it's what your team is most accustomed to using.
 
 ---
+
 class: center, middle
 
 .inline-images[
-   ![Sass logo](/public/img/slide-assets/sass-lang.png)
+![Sass logo](/public/img/slide-assets/sass-lang.png)
 ]
 
 ---
+
 template: inverse
 
 # Sass Features
@@ -100,12 +113,12 @@ template: inverse
 
 Sass has some cool features compared to plain vanilla CSS:
 
-- Nested rules
-- Variables
-- JS-style comments
-- Mixins
-- Operations
-- Functions
+* Nested rules
+* Variables
+* JS-style comments
+* Mixins
+* Operations
+* Functions
 
 ---
 
@@ -234,6 +247,7 @@ select {
    margin-bottom: $base-margin + (2 * 3); /* will equal 7.5 */
 }
 ```
+
 ---
 
 # Functions
@@ -383,6 +397,7 @@ p { @include dashed-border(1px, #000); }
 ```
 
 ---
+
 class: center, middle
 
 ### When to use @extend or @mixin?
@@ -416,6 +431,7 @@ li {
 ```
 
 ---
+
 class: center, middle
 
 ### Why does this work?
@@ -455,10 +471,11 @@ li {
 ```
 
 ---
+
 class: center, middle
 
 .large[
-   But with great power...
+But with great power...
 ]
 
 ---
@@ -467,9 +484,10 @@ class: center, middle
 
 In this exercise, we'll refactor some CSS into SCSS, using the basic functionality we've learned.
 
-See the [lesson page](/lesson/sass-css-pre-processors/) for more details.
+See the [lesson page](/lesson/sass-css-preprocessors/) for more details.
 
 ---
+
 template: inverse
 
 # Using Sass/SCSS
@@ -522,11 +540,13 @@ Using an underscore tells the Sass compiler that the file is a partial, and shou
 Without the underscore, Sass would compile that file into a stand-alone `typography.css` file, rather than importing it into the compiled `style.css` file.
 
 ---
+
 template: inverse
 
 # Compiling SCSS <br />(the easy way)
 
 ---
+
 class: center, middle
 
 ### What does it mean to compile code?
@@ -537,24 +557,27 @@ When you compile code, you convert it from one form (that you have written) to a
 
 # How to Compile Sass
 
-Let's create a Gulp task to compile Sass for our project. Here's an example of a basic Gulp task for compiling Sass:
+Let's create a Gulp task to compile Sass for our project:
 
 ```js
-var sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    cssnano = require('gulp-cssnano'),
-    rename = require('gulp-rename');
+var sass = require("gulp-sass"),
+  autoprefixer = require("gulp-autoprefixer"),
+  cssnano = require("gulp-cssnano"),
+  rename = require("gulp-rename");
 
-gulp.task('sass', function() {
-   gulp.src('./sass/style.scss')
-      .pipe(sass())
-      .pipe(autoprefixer({
-         browsers: ['last 2 versions']
-      }))
-      .pipe(gulp.dest('./build/css'))
-      .pipe(cssnano())
-      .pipe(rename('style.min.css'))
-      .pipe(gulp.dest('./build/css'));
+gulp.task("sass", function() {
+  return gulp
+    .src("./sass/style.scss")
+    .pipe(sass())
+    .pipe(
+      autoprefixer({
+        browsers: ["last 2 versions"]
+      })
+    )
+    .pipe(gulp.dest("./build/css"))
+    .pipe(cssnano())
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("./build/css"));
 });
 ```
 
@@ -562,22 +585,23 @@ gulp.task('sass', function() {
 
 # Nicer Error Reporting
 
-We can add easier-to-read error messages into our Gulp set-up to let us know when we have syntax error in our Sass.
-
-To do that, we'll have [install and add](https://www.npmjs.com/package/gulp-prettyerror) `gulp-prettyerror`:
+We can add easier-to-read error messages into our Gulp set-up to let us know when we have syntax error in our Sass. To do that, we'll have [install and add](https://www.npmjs.com/package/gulp-prettyerror) `gulp-prettyerror`:
 
 ```js
-gulp.task('sass', function() {
-   gulp.src('./sass/style.scss')
-      .pipe(prettyError()) // ADD THIS LINE
-      .pipe(sass())
-      .pipe(autoprefixer({
-         browsers: ['last 2 versions']
-      }))
-      .pipe(gulp.dest('./build/css'))
-      .pipe(cssnano())
-      .pipe(rename('style.min.css'))
-      .pipe(gulp.dest('./build/css'));
+gulp.task("sass", function() {
+  return gulp
+    .src("./sass/style.scss")
+    .pipe(prettyError()) // ADD THIS LINE
+    .pipe(sass())
+    .pipe(
+      autoprefixer({
+        browsers: ["last 2 versions"]
+      })
+    )
+    .pipe(gulp.dest("./build/css"))
+    .pipe(cssnano())
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("./build/css"));
 });
 ```
 
@@ -591,11 +615,12 @@ In this exercise we’ll create media query helpers inside your project using Sa
 
 # What We've Learned
 
-- What a preprocessor is and how to use one
-- How to use Sass to turbo-charge (and organize!) your CSS development
-- How to compile Sass with Gulp
+* What a preprocessor is and how to use one
+* How to use Sass to turbo-charge (and organize!) your CSS development
+* How to compile Sass with Gulp
 
 ---
+
 template: inverse
 
 # Questions?
