@@ -31,49 +31,9 @@ template: inverse
 ---
 class: center, middle
 
-.inline-images[
-   ![Programming like a boss](/public/img/slide-assets/programming-moms-basement.jpg)
-]
-
----
-class: center, middle
-
-.inline-images[
-   ![You didn't say the magic word](/public/img/slide-assets/programming-nedry.jpg)
-]
-
----
-class: center, middle
-
-.large[
-   There's [subreddit](https://www.reddit.com/r/itsaunixsystem/comments/4rvcuw/white_collar_paint_the_best_spreadsheet_editor_in/) for that...
-]
-
----
-class: center, middle
-
-.inline-images[
-   ![Not sure...](/public/img/slide-assets/programming-not-sure.jpg)
-]
-
----
-class: center, middle
-
-.inline-images[
-   ![Two states of every programmer](/public/img/slide-assets/programming-two-states.jpg)
-]
-
----
-class: center, middle
-
 ### Programming, Demystified
 
 When we **program** we are simply writing a list of **instructions** for our computer to follow, in a language it will understand.
-
----
-class: center, middle
-
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/QaTx1J7ZeLY" frameborder="0" allowfullscreen></iframe>
 
 ---
 class: center, middle
@@ -206,28 +166,6 @@ template: inverse
 # Thinking Like a Programmer
 
 ---
-class: center, middle
-
-.inline-images[
-   ![Guide to software developer job advertisements](/public/img/slide-assets/dev-job-ads.jpg)
-]
-
----
-class: center, middle
-
-### But hey, computer science?
-
-(The answer is yes.)
-
----
-class: center, middle
-
-.inline-images[
-   ![Mid-century IBM Computer](/public/img/slide-assets/ibm-old-comp.jpg)
-]
-
----
-
 # Using "High-Technology"
 
 "There is a body of knowledge about algorithms, data structures, mathematics, and other gee-whiz stuff that most programmers know about but rarely use. In practice, this wonderful stuff is too complicated and generally unnecessary."
@@ -235,20 +173,6 @@ class: center, middle
 **What are some scenarios where knowledge of the inner workings of computers would be helpful, as a web developer?**
 
 .footnote[.red[* ]Source: [How To Be A Programmer](https://github.com/braydie/HowToBeAProgrammer/)]
-
----
-class: center, middle
-
-.inline-images[
-   ![WordPress - Code is Poetry](/public/img/slide-assets/code-is-poetry.svg)
-]
-
----
-class: center, middle
-
-.inline-images[
-   ![Code is Poetry tattoo](/public/img/slide-assets/code-is-poetry-tattoo.jpg)
-]
 
 ---
 class: center, middle
@@ -284,13 +208,6 @@ class: center, middle
 ### Pre-requisite:
 
 Learn to type.
-
----
-class: center, middle
-
-.inline-images[
-   ![Typing like a boss](/public/img/slide-assets/typing.gif)
-]
 
 ---
 
