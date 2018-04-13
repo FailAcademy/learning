@@ -34,14 +34,6 @@ Time for a [specificity showdown!](http://codepen.io/redacademy/pen/VvmwoQ?edito
 
 ---
 
-## Lab Activity
-
-See the [HTML Forms](/lesson/html-forms/) for lab activity details.
-
-Be sure to apply the best practices you just learned to your project while continuing work on it this weekend.
-
----
-
 ## Additional Resources
 
 An online guide for writing scalable, maintainable, modular CSS:
