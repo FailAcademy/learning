@@ -136,7 +136,7 @@ From the command line, run:
 
 ```bash
 touch .gitignore
-atom .gitignore # open the new file in Atom
+code .gitignore # open the new file in VSCode
 ```
 
 ---
@@ -464,7 +464,6 @@ If you prefer to `pull` without a merge commit, you can run `git pull --rebase` 
 
 # What We've Learned
 
-* What the command line is and how to use it to navigate your file system
 * What version control is
 * The difference between Git and GitHub
 * How to push code to GitHub
