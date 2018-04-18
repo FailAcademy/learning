@@ -507,7 +507,7 @@ $("#hamburger").on("change", function() {
 
 In this exercise, you're going to use jQuery to create an accordian-style show/hide effect for a basic FAQ list.
 
-[See the lesson page](/lesson/animation-with-jquery/) for further instructions.
+[See the lesson page](/lesson/05-jquery-animation/) for further instructions.
 
 ---
 
