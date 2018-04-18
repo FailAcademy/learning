@@ -115,7 +115,7 @@ function talkLikeATeenager(words) {
 
 **Type Coercion**
 
-Please [see the lesson page](/lesson/advanced-javascript/) for more details.
+Please [see the lesson page](/lesson/01-advanced-javascript/) for more details.
 
 ???
 
@@ -130,7 +130,7 @@ Please [see the lesson page](/lesson/advanced-javascript/) for more details.
 
 **Function Scope and Hoisting**
 
-Please [see the lesson page](/lesson/advanced-javascript/) for more details.
+Please [see the lesson page](/lesson/01-advanced-javascript/) for more details.
 
 ???
 
@@ -158,7 +158,7 @@ Hence the second **statement** `console.log("The name is : " + name);` logs a va
 
 **Functions Inside Conditionals**
 
-Please [see the lesson page](/lesson/advanced-javascript/) for more details.
+Please [see the lesson page](/lesson/01-advanced-javascript/) for more details.
 
 ???
 
@@ -179,7 +179,7 @@ Please [see the lesson page](/lesson/advanced-javascript/) for more details.
 
 **Passing by Value versus Reference**
 
-Please [see the lesson page](/lesson/advanced-javascript/) for more details.
+Please [see the lesson page](/lesson/01-advanced-javascript/) for more details.
 
 ???
 
@@ -195,7 +195,7 @@ Please [see the lesson page](/lesson/advanced-javascript/) for more details.
 
 **Methods, Objects, `this` & `bind`**
 
-Please [see the lesson page](/lesson/advanced-javascript/) for more details.
+Please [see the lesson page](/lesson/01-advanced-javascript/) for more details.
 
 ???
 
