@@ -54,5 +54,10 @@
       		jQuery('.fluid-video-wrapper').fitVids();
       	});
    	</script>
+    {% if page.title == "Home" %}
+      <script src="{{ site.baseurl }}/public/js/moment.min.js"></script>
+      <script src="{{ site.baseurl }}/public/js/fullcalendar.min.js"></script>
+      <script src="{{ site.baseurl }}/public/js/course-calendar.js"></script> 
+    {% endif %}
    </body>
 </html>

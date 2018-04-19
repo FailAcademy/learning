@@ -1,0 +1,42 @@
+[
+  {
+    "title": "New Years Day",
+    "allDay": true,
+    "start": "2018-01-01"
+  },
+  {
+    "title": "Good Friday",
+    "allDay": true,
+    "start": "2018-03-30"
+  },
+  {
+    "title": "Easter Monday",
+    "allDay": true,
+    "start": "2018-04-02"
+  },
+  {
+    "title": "Bank Holiday",
+    "allDay": true,
+    "start": "2018-05-07"
+  },
+  {
+    "title": "Bank Holiday",
+    "allDay": true,
+    "start": "2018-05-28"
+  },
+  {
+    "title": "Bank Holiday",
+    "allDay": true,
+    "start": "2018-08-27"
+  },
+  {
+    "title": "Christmas Day",
+    "allDay": true,
+    "start": "2018-12-25"
+  },
+  {
+    "title": "New Years Day",
+    "allDay": true,
+    "start": "2019-01-01"
+  }
+]
