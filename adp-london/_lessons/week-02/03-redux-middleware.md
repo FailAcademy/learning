@@ -2,7 +2,7 @@
 layout: lesson
 title: Redux Middleware
 slides: ['_slides/week-02/03-redux-middleware.md']
-lesson_date: 2018-01-17
+lesson_date: 2018-04-18
 ---
 
 ## Pre-Work

@@ -2,7 +2,7 @@
 layout: lesson
 title: Realm Databases
 slides: ['_slides/week-08/03-realm.md']
-lesson_date:  2018-02-28
+lesson_date:  2018-05-30
 ---
 
 ## Pre-work
@@ -52,9 +52,9 @@ Be sure to initialize your new Realm with its `Fave` model, and export it so its
 
 Inside your `config/models.js` file, write three functions (which you will export) to perform CRUD operations in related "faves" action creators later:
 
-1. A function that **adds a Fave object** to the database
-2. A function that **removes a Fave object** from the database
-3. A function that **queries** the database for **all Fave objects**
+1.  A function that **adds a Fave object** to the database
+2.  A function that **removes a Fave object** from the database
+3.  A function that **queries** the database for **all Fave objects**
 
 _Where (and how) will you use these functions?_
 

@@ -15,6 +15,7 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
@@ -28,84 +29,92 @@ layout: false
 7. Clean-up and optimize data fetching
 
 ---
+
 template: inverse
 
 # REST Pain Points
 
 ---
+
 class: center, middle
 
 .large[
-  Over-fetching data
+Over-fetching data
 ]
 
 ???
 
-- More data is sent over the wire than what you typically need with REST
-- Let's say we want to hit the GitHub API to fetch all of the names of our repos and list them on the RED Academy website...this is the response we get back from hitting that endpoint: https://api.github.com/orgs/redacademy/repos?client_id=a37c6077034750f953fc&client_secret=8ff75658b21aa8c5830b7efeae85f559b4d36a02
+* More data is sent over the wire than what you typically need with REST
+* Let's say we want to hit the GitHub API to fetch all of the names of our repos and list them on the RED Academy website...this is the response we get back from hitting that endpoint: https://api.github.com/orgs/redacademy/repos?client_id=a37c6077034750f953fc&client_secret=8ff75658b21aa8c5830b7efeae85f559b4d36a02
 
 ---
+
 class: center, middle
 
 .large[
-  Under-fetching data
+Under-fetching data
 ]
 
 ???
 
-- **n+1 problem:** when a request to load one item turns into n+1 requests since the item has "n" associated items
-- how many requests are need to populate all of the information into this user profile: https://boom.academy.red/profile/LAi9TYWxgGhbjgHu1Sm6ZvB1tRP2
+* **n+1 problem:** when a request to load one item turns into n+1 requests since the item has "n" associated items
+* how many requests are need to populate all of the information into this user profile: https://boom.academy.red/profile/LAi9TYWxgGhbjgHu1Sm6ZvB1tRP2
 
 ---
+
 class: center, middle
 
 .large[
-  The server decides the shape of the data, but the client decides the structure of the UI
+The server decides the shape of the data, but the client decides the structure of the UI
 ]
 
 ???
 
-- i.e. how data needs to be displayed
-- relates to under-fetching and over-fetching, but also illustrates how REST makes it difficult for us to rapidly iterate the UI of an app
-- Designing a REST API endpoint around views makes it harder it iterate on a product
+* i.e. how data needs to be displayed
+* relates to under-fetching and over-fetching, but also illustrates how REST makes it difficult for us to rapidly iterate the UI of an app
+* Designing a REST API endpoint around views makes it harder it iterate on a product
 
 ---
+
 class: center, middle
 
 .large[
-  API versioning
+API versioning
 ]
 
 ???
 
-- We didn't talk about API versioning yesterday (and how this gets incorporated into the path of an URL)
-- What happens when you get feedback that the `createdOn` time for Boomtown should no longer be a Unix timestamp, but a human-readable time instead...how could you change this in the response without breaking things for other clients using this API?
-- You have two choices...break things for clients who don't update, or version your API
+* We didn't talk about API versioning yesterday (and how this gets incorporated into the path of an URL)
+* What happens when you get feedback that the `createdOn` time for Boomtown should no longer be a Unix timestamp, but a human-readable time instead...how could you change this in the response without breaking things for other clients using this API?
+* You have two choices...break things for clients who don't update, or version your API
 
 ---
+
 class: center, middle
 
 .large[
-  REST APIs are (usually) tied to a single data source
+REST APIs are (usually) tied to a single data source
 ]
 
 ???
 
-- What happens when we want to get data from multiple services, etc.?
+* What happens when we want to get data from multiple services, etc.?
 
 ---
+
 class: center, middle
 
 .large[
-  This is why Facebook <br />invented GraphQL!
+This is why Facebook <br />invented GraphQL!
 ]
 
 ???
 
-- REST APIs can be problematic when it comes to keeping up with all the ways clients want to access data from them (inflexible)
-- GraphQL gives us more flexibility and efficiency when it comes to query data from the client and getting it back in exactly the shape that we want it
+* REST APIs can be problematic when it comes to keeping up with all the ways clients want to access data from them (inflexible)
+* GraphQL gives us more flexibility and efficiency when it comes to query data from the client and getting it back in exactly the shape that we want it
 
 ---
+
 template: inverse
 
 # But First, <br />Some Graph Theory
@@ -114,88 +123,95 @@ template: inverse
 
 # Graph Theory 101
 
-- Graphs help us represent networks (i.e. collections of interconnected things)
-- Graphs have **nodes** and **edges**
-- In math, a graph can be expressed as `G = (V, E)` where `V`is a set of nodes (vertices), and `E` is the set of edges between them (links)
+* Graphs help us represent networks (i.e. collections of interconnected things)
+* Graphs have **nodes** and **edges**
+* In math, a graph can be expressed as `G = (V, E)` where `V`is a set of nodes (vertices), and `E` is the set of edges between them (links)
 
 ---
+
 class: center, middle
 
 ![Trees and graphs](/public/img/slide-assets/graphs-trees.jpg)
 
 .footnote.right[
-  Source: [The Practical Dev](https://dev.to/vaidehijoshi/a-gentle-introduction-to-graph-theory)
+Source: [The Practical Dev](https://dev.to/vaidehijoshi/a-gentle-introduction-to-graph-theory)
 ]
 
 ???
 
-- All trees are graphs, but not all graphs are trees
-- A graph can have one node (a singleton graph)
+* All trees are graphs, but not all graphs are trees
+* A graph can have one node (a singleton graph)
 
 ---
+
 class: center, middle
 
 ![Nodes and edges](/public/img/slide-assets/graph-nodes-edges.jpg)
 
 .footnote.right[
-  Source: [The Practical Dev](https://dev.to/vaidehijoshi/a-gentle-introduction-to-graph-theory)
+Source: [The Practical Dev](https://dev.to/vaidehijoshi/a-gentle-introduction-to-graph-theory)
 ]
 
 ???
 
-- Edges are the links between nodes
+* Edges are the links between nodes
 
 ---
+
 class: center, middle
 
 ![Directed verus undirected](/public/img/slide-assets/graph-directed-undirected.jpg)
 
 .footnote.right[
-  Source: [The Practical Dev](https://dev.to/vaidehijoshi/a-gentle-introduction-to-graph-theory)
+Source: [The Practical Dev](https://dev.to/vaidehijoshi/a-gentle-introduction-to-graph-theory)
 ]
 
 ???
 
-- An edge can be directed (one-way; origin and destination are fixed) 
-- Or undirected (bidirectional; origin and destination nodes are not fixed)
-- directed graphs are also called digraphs
+* An edge can be directed (one-way; origin and destination are fixed)
+* Or undirected (bidirectional; origin and destination nodes are not fixed)
+* directed graphs are also called digraphs
 
 ---
+
 class: center, middle
 
 .large[
- Is Facebook a directed or undirected graph?
+Is Facebook a directed or undirected graph?
 ]
 
 ???
 
-- Undirected, because friendships are mutual
+* Undirected, because friendships are mutual
 
 ---
+
 class: center, middle
 
 .large[
- How about Twitter?
+How about Twitter?
 ]
 
 ???
 
-- Undirected, because I can follow you but you don't have to follow me
+* Undirected, because I can follow you but you don't have to follow me
 
 ---
+
 class: center, middle
 
 .large[
- And the web?
+And the web?
 ]
 
 ???
 
-- Undirected
-- Webpages are nodes, directed edge is the link, the relationship of links is not mutual
-- Web crawling is just graph traversal (i.e. visiting all nodes in a graph)
+* Undirected
+* Webpages are nodes, directed edge is the link, the relationship of links is not mutual
+* Web crawling is just graph traversal (i.e. visiting all nodes in a graph)
 
 ---
+
 template: inverse
 
 # Whats and Hows of GraphQL
@@ -204,32 +220,33 @@ template: inverse
 
 # What Is GraphQL?
 
-- It's a [specification](http://facebook.github.io/graphql/)
-- It's a query language for APIs
-- It's transport layer-agnostic
-- It's an application layer (i.e. an abstraction)
-- It's introspective
-- It's hiearchical
-- It's driven by the requirements of the view
+* It's a [specification](http://facebook.github.io/graphql/)
+* It's a query language for APIs
+* It's transport layer-agnostic
+* It's an application layer (i.e. an abstraction)
+* It's introspective
+* It's hierarchical
+* It's driven by the requirements of the view
 
 ???
 
-- The specification is just a document describing how a GraphQL server should behave
-- The spec determines the validity of the schema on the API server and the schema determines the validity of client calls
-- Because it's just a spec, if you want to use it, you need to build your own GQL server or use a service like Graphcool (this is where Express will come in for us)
-- "Introspective" means that client can query the schema for details about the schema
-- Re: hierarchy, the shape of a GraphQL call mirrors the shape of the JSON data it returns, and nested fields let you query for and receive only the data you specify in a single round trip.
+* The specification is just a document describing how a GraphQL server should behave
+* The spec determines the validity of the schema on the API server and the schema determines the validity of client calls
+* Because it's just a spec, if you want to use it, you need to build your own GQL server or use a service like Graphcool (this is where Express will come in for us)
+* "Introspective" means that client can query the schema for details about the schema
+* Re: hierarchy, the shape of a GraphQL call mirrors the shape of the JSON data it returns, and nested fields let you query for and receive only the data you specify in a single round trip.
 
 ---
+
 class: center, middle
 
 .large[
-  **[Try it out!](https://developer.github.com/v4/)**
+**[Try it out!](https://developer.github.com/v4/)**
 ]
 
 ???
 
-*Go to the Live Explorer...*
+_Go to the Live Explorer..._
 
 **Premise:**
 
@@ -251,42 +268,44 @@ query {
 }
 ```
 
-- Be sure to take a look in the dev tools in the Network tab. What kind of request is being sent? Where does it go? What's in the body?
-- You just send a single POST request to the server with a query and it responds with all the data you need, packaged up a JSON object returned to the client
-- Also be sure to take a look at the documentation explore in GraphiQL. Introspection!
-- The root field is always called `data`
+* Be sure to take a look in the dev tools in the Network tab. What kind of request is being sent? Where does it go? What's in the body?
+* You just send a single POST request to the server with a query and it responds with all the data you need, packaged up a JSON object returned to the client
+* Also be sure to take a look at the documentation explore in GraphiQL. Introspection!
+* The root field is always called `data`
 
 ---
+
 class: center, middle
 
 .large[
-  Remember:<br />
-  It's not a database.
+Remember:<br />
+It's not a database.
 ]
 
 ???
 
-- GraphQL is not a storage model or a database query language
-- This is something completely different from graph-based databases
-- The graph refers to graph structures defined in the schema, where nodes define objects and edges define relationships between objects
-- The API traverses and returns application data based on the schema definitions, **independent of how the data is stored**
+* GraphQL is not a storage model or a database query language
+* This is something completely different from graph-based databases
+* The graph refers to graph structures defined in the schema, where nodes define objects and edges define relationships between objects
+* The API traverses and returns application data based on the schema definitions, **independent of how the data is stored**
 
 ---
 
 # How Else Is It Different?
 
-- **The identity of an object is separate from how you fetch it**
-- It only defines a single endpoint on the server
-- The client defines the shape and size of a resource
-- All the data you need for your view is **retrieved in one round-trip to the server**
-- It doesn't use HTTP verbs to indicate writes in requests (it changes a word in the query instead)
-- It's easier evolve your API without versioning, and not adjust your API when product requirements change slightly
+* **The identity of an object is separate from how you fetch it**
+* It only defines a single endpoint on the server
+* The client defines the shape and size of a resource
+* All the data you need for your view is **retrieved in one round-trip to the server**
+* It doesn't use HTTP verbs to indicate writes in requests (it changes a word in the query instead)
+* It's easier evolve your API without versioning, and not adjust your API when product requirements change slightly
 
 ???
 
-- GraphQL typically tunnels everything through a `POST` request (GraphiQL may use `GET` requests and query string through)
+* GraphQL typically tunnels everything through a `POST` request (GraphiQL may use `GET` requests and query string through)
 
 ---
+
 template: inverse
 
 # A Basic GraphQL Server
@@ -335,8 +354,8 @@ Create a `.babelrc` file with the **same config as yesterday**, and then add the
 Now create an `index.js` file and instantiate your new Express app:
 
 ```js
-import express from 'express';
-import bodyParser from 'body-parser';
+import express from "express";
+import bodyParser from "body-parser";
 
 const app = express();
 ```
@@ -351,13 +370,13 @@ Now we'll need to install the GraphQL server for Express:
 npm i -S graphql apollo-server-express graphql-tools
 ```
 
-*Note that we are using the [**Apollo Server**](http://dev.apollodata.com/tools/apollo-server/index.html)*.
+_Note that we are using the [**Apollo Server**](http://dev.apollodata.com/tools/apollo-server/index.html)_.
 
 ???
 
-- `graphql`: The JavaScript reference implementation for GraphQL, a query language for APIs created by Facebook
-- `apollo-server-express`: Apollo server is a flexible, community driven, production-ready HTTP Apollo Server plugin for Node.js
-- `graphql-tools`: This package allows you to use the GraphQL schema language to build your GraphQL.js schema, and also includes useful schema tools like per-type mockin
+* `graphql`: The JavaScript reference implementation for GraphQL, a query language for APIs created by Facebook
+* `apollo-server-express`: Apollo server is a flexible, community driven, production-ready HTTP Apollo Server plugin for Node.js
+* `graphql-tools`: This package allows you to use the GraphQL schema language to build your GraphQL.js schema, and also includes useful schema tools like per-type mocking
 
 ---
 
@@ -366,25 +385,25 @@ npm i -S graphql apollo-server-express graphql-tools
 And create our endpoints in `index.js`:
 
 ```js
-import { 
-  graphqlExpress, 
-  graphiqlExpress 
-} from 'apollo-server-express';
-import schema from './api/schema'; // Next step!
+import { graphqlExpress, graphiqlExpress } from "apollo-server-express";
+import schema from "./api/schema"; // Next step!
 
 const GQL_PORT = process.env.PORT; // Where does this come from?
 
 // Where we will send all of our GraphQL requests
-app.use('/graphql', bodyParser.json(), graphqlExpress({ schema }));
+app.use("/graphql", bodyParser.json(), graphqlExpress({ schema }));
 
 // A route for accessing the GraphiQL tool
-app.use('/graphiql', graphiqlExpress({
-  endpointURL: '/graphql',
-}));
+app.use(
+  "/graphiql",
+  graphiqlExpress({
+    endpointURL: "/graphql"
+  })
+);
 
-app.listen(GQL_PORT, () => console.log(
-  `GraphQL is now running on http://localhost:${GQL_PORT}/graphql`
-));
+app.listen(GQL_PORT, () =>
+  console.log(`GraphQL is now running on http://localhost:${GQL_PORT}/graphql`)
+);
 ```
 
 ???
@@ -396,6 +415,7 @@ GQL_PORT=4000
 ```
 
 ---
+
 template: inverse
 
 # Querying Data
@@ -406,25 +426,25 @@ template: inverse
 
 Before we define our schema we'll need to cover some core GraphQL concepts:
 
-- **Schema** (and root types)
-- Queries
-- Mutations
+* **Schema** (and root types)
+* Queries
+* Mutations
 
 ???
 
-- The schema is one of the most important concepts in GraphQL
-- The schema is where we will define what queries, mutations, and subscriptions are available in the API, and what the **root types** of the schema are
-- These are the **main entry points for the API**
-- Mutations allow us to create, update, and delete data
-- We won't be creating subscriptions in Boomtown
+* The schema is one of the most important concepts in GraphQL
+* The schema is where we will define what queries, mutations, and subscriptions are available in the API, and what the **root types** of the schema are
+* These are the **main entry points for the API**
+* Mutations allow us to create, update, and delete data
+* We won't be creating subscriptions in Boomtown
 
 ---
 
 # Schema
 
-- With GraphQL, the schema serves as the **contract defined between the client and the server**
-- We use a **Schema Definition** to write our schemas in GraphQL, which allows us to express our API's type system and the relationships between the types with relations
-- Schema Definitions **types** and **fields**
+* With GraphQL, the schema serves as the **contract defined between the client and the server**
+* We use a **Schema Definition** to write our schemas in GraphQL, which allows us to express our API's type system and the relationships between the types with relations
+* Schema Definitions **types** and **fields**
 
 ---
 
@@ -432,11 +452,11 @@ Before we define our schema we'll need to cover some core GraphQL concepts:
 
 GraphQL has five built-in scalar types:
 
-- `Int`
-- `Float`
-- `String`
-- `Boolean`
-- `ID`
+* `Int`
+* `Float`
+* `String`
+* `Boolean`
+* `ID`
 
 ---
 
@@ -505,9 +525,9 @@ type Query {
 Create a `graphql/schema.js` file in your app:
 
 ```js
-import { makeExecutableSchema } from 'graphql-tools';
+import { makeExecutableSchema } from "graphql-tools";
 
-import resolvers from './resolvers'; // Next step!
+import resolvers from "./resolvers"; // Next step!
 
 const typeDefs = `
   # Your schema goes here...
@@ -515,7 +535,7 @@ const typeDefs = `
 
 export default makeExecutableSchema({
   typeDefs,
-  resolvers,
+  resolvers
 });
 ```
 
@@ -537,14 +557,14 @@ The role of a resolver function is to fetch the data for its corresponding field
 
 Resolvers can't be included directly in the schema language, so they need to be added separately.
 
-You define a resolver as a nested object that maps type and field names to resolver functions. 
+You define a resolver as a nested object that maps type and field names to resolver functions.
 
 Resolvers can return Promises too (woot!).
 
 ???
 
-- Every field can have a resolve function, which tells the GraphQL server how to return data for that field, if it appears in a query
-- At the minimum, we need to define a resolve function for each field that either returns a non-scalar type or takes any arguments
+* Every field can have a resolve function, which tells the GraphQL server how to return data for that field, if it appears in a query
+* At the minimum, we need to define a resolve function for each field that either returns a non-scalar type or takes any arguments
 
 ---
 
@@ -553,7 +573,7 @@ Resolvers can return Promises too (woot!).
 Create a `graphql/resolvers.js` file in your app:
 
 ```js
-import fetch from 'node-fetch';
+import fetch from "node-fetch";
 
 const resolveFunctions = {
   // Resolvers go here...
@@ -576,17 +596,17 @@ const resolveFunctions = {
     },
     movie(root, { id }) {
       return data.movies.find(movie => movie.id === parseInt(id));
-    },
-  },
+    }
+  }
   // ...other resolvers
 };
 ```
 
 ???
 
-- We should define a resolver for each of our types so GraphQL knows where to get the data from
-- The first argument is the object that contains the result returned from the resolver on the parent field, or, in the case of a top-level Query field, the rootValue passed from the server configuration (this argument enables the nested nature of GraphQL queries)
-- An object with the arguments passed into the field in the query
+* We should define a resolver for each of our types so GraphQL knows where to get the data from
+* The first argument is the object that contains the result returned from the resolver on the parent field, or, in the case of a top-level Query field, the rootValue passed from the server configuration (this argument enables the nested nature of GraphQL queries)
+* An object with the arguments passed into the field in the query
 
 ---
 
@@ -607,20 +627,21 @@ const resolveFunctions = {
         .then(response => response.json())
         .catch(errors => console.log(errors));
     }
-  },
+  }
   // ...other resolvers
 };
 ```
 
 ???
 
-- Cool! GraphQL pushes the complexity of fetching data to the server (where ideally more powerful machines are taking care of this computing work)
+* Cool! GraphQL pushes the complexity of fetching data to the server (where ideally more powerful machines are taking care of this computing work)
 
 ---
+
 class: center, middle
 
 .large[
-  Problem: Where do the actors and directors come from in relation to our movie type?
+Problem: Where do the actors and directors come from in relation to our movie type?
 ]
 
 ---
@@ -671,13 +692,13 @@ query {
 }
 ```
 
-*Try this out in GraphiQL now.*
+_Try this out in GraphiQL now._
 
 ---
 
 # Query Variables
 
-We often need to dynamically pass data in as the query argument. To do that, give your query a name and give an `$id` argument, then pass that ID into the `movie` query. 
+We often need to dynamically pass data in as the query argument. To do that, give your query a name and give an `$id` argument, then pass that ID into the `movie` query.
 
 ```js
 query fetchMovie($id: ID!) {
@@ -697,9 +718,9 @@ You can set the value of `$id` in GraphiQL like this in the **Query Variables pa
 
 ???
 
-- As a best practice, we'll name all of our queries when we send them from the front-end of Boomtown
-- Names queries allow us to name multiple queries per document, and actually send query variables along with our request
-- Query variables will be very useful to use when we want to use props (like route params) to query for specific data
+* As a best practice, we'll name all of our queries when we send them from the front-end of Boomtown
+* Names queries allow us to name multiple queries per document, and actually send query variables along with our request
+* Query variables will be very useful to use when we want to use props (like route params) to query for specific data
 
 ---
 
@@ -716,12 +737,14 @@ npm i -S react-apollo graphql-tag
 Apollo client will allow us to shift from imperative to declarative data fetching in the client. Data fetching logic be gone!
 
 Imperative data fetching:
+
 1. construct and send the HTTP request
 2. receive and parse data response
 3. store data locally
 4. display the inforamiton in the UI
 
 Declarative data fetching:
+
 1. describe its data requirements
 2. display the information in the UI
 
@@ -734,13 +757,14 @@ Declarative data fetching:
 Next we'll create an `ApolloClient` instance in our React app in `config/apolloClient.js`:
 
 ```js
-import ApolloClient, { createNetworkInterface } from 'react-apollo';
+import { ApolloClient } from "apollo-client";
+import { createHttpLink } from "apollo-link-http";
+import { InMemoryCache } from "apollo-cache-inmemory";
 
-const networkInterface = createNetworkInterface({
-    uri: 'http://localhost:5000/graphql'
+const client = new ApolloClient({
+  link: createHttpLink({ uri: "http://localhost:3000" }),
+  cache: new InMemoryCache()
 });
-
-const client = new ApolloClient({ networkInterface });
 
 export default client;
 ```
@@ -752,75 +776,22 @@ export default client;
 Next we'll wrap our entire app in an `<ApolloProvider>` component to make the client instance available to our React component hierarchy in `index.js`:
 
 ```js
-import { ApolloProvider } from 'react-apollo';
-import client from './config/apolloClient';
+import { ApolloProvider } from "react-apollo";
+import client from "./config/apolloClient";
 ```
 
 ```js
 <MuiThemeProvider muiTheme={muiTheme}>
-    <ApolloProvider client={client} store={store}>
-        <ConnectedRouter history={history}>
-            <Layout>
-                <Routes />
-            </Layout>
-        </ConnectedRouter>
-    </ApolloProvider>
+  <ApolloProvider client={client}>
+    <Provider store={store}>
+      <ConnectedRouter history={history}>
+        <Layout>
+          <Routes />
+        </Layout>
+      </ConnectedRouter>
+    </Provider>
+  </ApolloProvider>
 </MuiThemeProvider>
-```
-
----
-
-# Integrate with Redux
-
-`ApolloClient` has its own Redux store, but we can integrate into our existing store instead in `redux/store.js`:
-
-```js
-// ...other imports
-import rootReducer from './reducers';
-import client from '../config/apolloClient';
-import { history } from '../index';
-```
-
-```js
-export default createStore(
-    rootReducer,
-    composeWithDevTools(
-        applyMiddleware(
-            client.middleware(),
-            thunk,
-            routerMiddleware(history)
-        )
-    )
-);
-```
-
-???
-
-- Note that we will never pull Apollo data directly from the store
-- We will use the `graphql` and `connect` HOCs as containers instead
-- So this is more for debugging purposes
-- http://dev.apollodata.com/core/how-it-works.html
-
-
----
-
-# Integrate with Redux
-
-Add the Apollo reducer as well!
-
-```js
-import { combineReducers } from 'redux';
-
-import client from '../config/apolloClient';
-import itemReducer from './modules/items';
-import userReducer from './modules/user';
-
-export default combineReducers({
-    apollo: client.reducer(),
-    items: itemReducer,
-    user: userReducer
-});
-
 ```
 
 ---
@@ -838,16 +809,16 @@ npm install cors --save
 In `index.js` of our server:
 
 ```js
-import cors from 'cors';
+import cors from "cors";
 
-app.use('*', cors());
+app.use("*", cors());
 ```
 
 ???
 
-- Enabling CORS will allow JavaScript to make requests across domain boundaries
-- This will add the `Access-Control-Allow-Origin:*` header to the response
-- This will allow Ajax requests that would otherwise have been forbidden by the same-origin policy (because it wouldn't be very secure if we could use JS to make requests across domains any place and any time...)
+* Enabling CORS will allow JavaScript to make requests across domain boundaries
+* This will add the `Access-Control-Allow-Origin:*` header to the response
+* This will allow Ajax requests that would otherwise have been forbidden by the same-origin policy (because it wouldn't be very secure if we could use JS to make requests across domains any place and any time...)
 
 ---
 
@@ -856,12 +827,12 @@ app.use('*', cors());
 Just as Redux `connect` allows us to create HOCs, Apollo has a `graphql` function to create HOCs to pass data as props:
 
 ```js
-import React from 'react';
-import { graphql } from 'react-apollo';
-import gql from 'graphql-tag';
+import React from "react";
+import { graphql } from "react-apollo";
+import gql from "graphql-tag";
 
 const MoviesList = ({ data }) => (
-  <ul>{data.movies.map(({title}, i) => <li key={i}>{title}</li>)}</ul>
+  <ul>{data.movies.map(({ title }, i) => <li key={i}>{title}</li>)}</ul>
 );
 
 const fetchMovies = gql`
@@ -877,10 +848,10 @@ export default graphql(fetchMovies)(MoviesList);
 
 ???
 
-- When we use graphql with a GraphQL query document, two things happen:
+* When we use graphql with a GraphQL query document, two things happen:
   1. The query is loaded from the Apollo client-side data store, or the server if the data is not in the store
   2. Our component subscribes to the store, so that it is updated if the data changes as the result of a mutation or some other response from the server
-- `gql` is a function, and using in front of template string creates a tagged template literal (tags allow you to parse template literals with a function)
+* `gql` is a function, and using in front of template string creates a tagged template literal (tags allow you to parse template literals with a function)
 
 ---
 
@@ -912,7 +883,7 @@ export default connect(mapStateToProps)(MoviesListWithData);
 
 ???
 
-- This means you can easily pass variables into your queries that come from Redux state, or dispatch actions that rely on server-side data
+* This means you can easily pass variables into your queries that come from Redux state, or dispatch actions that rely on server-side data
 
 ---
 
@@ -924,7 +895,7 @@ There are a few things to consider...will you need to explicitly keep your items
 
 What shape will your query be? How will your proptypes need to change as a result?
 
-*Remember to leverage the power of nested queries!*
+_Remember to leverage the power of nested queries!_
 
 ---
 
@@ -965,6 +936,7 @@ Again, how will your proptypes change? Do you still need your Redux actions and 
 Additionally, can GraphQL help you filter items by user in advance with a nested query (instead of monkeying around with this on the client)? What about the other users that a user has borrowed items from?
 
 ---
+
 template: inverse
 
 # Mutating Data
@@ -1052,6 +1024,7 @@ Your resolver will need to make a `POST` request to the JSON server's `/items` e
 For now, just test out your new mutation in GraphiQL, as we won't wire this up to the front-end of Boomtown until we add Redux Form next week.
 
 ---
+
 template: inverse
 
 # Cleaning Up and Optimizing Data Fetching
@@ -1088,7 +1061,7 @@ query {
 }
 ```
 
-*Take a look at requests to the JSON server logged in your Terminal. What do you see?*
+_Take a look at requests to the JSON server logged in your Terminal. What do you see?_
 
 ---
 
@@ -1102,9 +1075,9 @@ npm install --save dataloader
 
 ???
 
-- DataLoader is a utility that supports query batching and caching out of the box
-- Caching is a process of storing data in a temporary storage area
-- Batching is a way to coalesce all individual loads which occur within a single frame of execution and then calling a batch function with all requested keys
+* DataLoader is a utility that supports query batching and caching out of the box
+* Caching is a process of storing data in a temporary storage area
+* Batching is a way to coalesce all individual loads which occur within a single frame of execution and then calling a batch function with all requested keys
 
 ---
 
@@ -1130,7 +1103,7 @@ export default function() {
 
 ???
 
-- In our case, the individual item and user loaders should take a list of resource IDs and return the fetched data from each of their related endpoints (we'll use our helper functions for that)
+* In our case, the individual item and user loaders should take a list of resource IDs and return the fetched data from each of their related endpoints (we'll use our helper functions for that)
 
 ---
 
@@ -1139,18 +1112,22 @@ export default function() {
 This isn't enough by itself though! We'll need to set our data loaders as a `context` for our GraphQL server in `index.js`:
 
 ```js
-import createLoaders from './api/loaders';
+import createLoaders from "./api/loaders";
 
-app.use('/graphql', bodyParser.json(), graphqlExpress({
-  schema,
-  context: { loaders: createLoaders() }
-}));
+app.use(
+  "/graphql",
+  bodyParser.json(),
+  graphqlExpress({
+    schema,
+    context: { loaders: createLoaders() }
+  })
+);
 ```
 
 ???
 
-- The `context` property simply allows us to set some context to any of our resolvers
-- In this case, it will be the data loaders, but we could also use it for something like setting API keys for all requests to a third-party service
+* The `context` property simply allows us to set some context to any of our resolvers
+* In this case, it will be the data loaders, but we could also use it for something like setting API keys for all requests to a third-party service
 
 ---
 
@@ -1181,54 +1158,55 @@ Use your data loaders in your resolvers, and test your app to make sure everythi
 
 Some more advanced topics in GraphQL you may want to look into
 
-- [Subscriptions](http://dev.apollodata.com/tools/graphql-subscriptions/subscriptions-to-schema.html)
-- [Fragments](http://graphql.org/learn/queries/#fragments)
-- [Enums](http://graphql.org/learn/schema/#enumeration-types)
-- [Unions](http://graphql.org/learn/schema/#enumeration-types)
-- [Interfaces](http://graphql.org/learn/schema/#interfaces)
-- [Inputs](http://graphql.org/learn/schema/#input-types)
+* [Subscriptions](http://dev.apollodata.com/tools/graphql-subscriptions/subscriptions-to-schema.html)
+* [Fragments](http://graphql.org/learn/queries/#fragments)
+* [Enums](http://graphql.org/learn/schema/#enumeration-types)
+* [Unions](http://graphql.org/learn/schema/#enumeration-types)
+* [Interfaces](http://graphql.org/learn/schema/#interfaces)
+* [Inputs](http://graphql.org/learn/schema/#input-types)
 
 ???
 
 **Subscriptions:**
 
-- when a client subscribes to an event, it Create and holds a steady connection to the server to be informed about events
-- the server will push the corresponding data to the client when an event fires
-- queries and mutations follow a typical request response cycle
-- subscriptions are sustained
+* when a client subscribes to an event, it Create and holds a steady connection to the server to be informed about events
+* the server will push the corresponding data to the client when an event fires
+* queries and mutations follow a typical request response cycle
+* subscriptions are sustained
 
 **Fragments:**
 
-- ways to reuse chunks of queries
+* ways to reuse chunks of queries
 
 **Enums:**
 
-- enums to express the sematics of a type that has a fixed set of values
+* enums to express the sematics of a type that has a fixed set of values
 
 **Interfaces:**
 
-- an interface can be used to describe a type in an abstract way
+* an interface can be used to describe a type in an abstract way
 
 **Unions:**
 
-- a union type is a type that should be either of a collection of types (with conditional fragments)
+* a union type is a type that should be either of a collection of types (with conditional fragments)
 
 **Inputs:**
 
-- allow us to pass complex objects as arguments into a field (helpful for mutations where you might want to pass a whole object as an argument)
+* allow us to pass complex objects as arguments into a field (helpful for mutations where you might want to pass a whole object as an argument)
 
 ---
 
 # What We've Learned
 
-- Why GraphQL is awesome
-- Graph theory and GraphQL core concepts
-- How to set-up a GraphQL server
-- How to define queries and mutations
-- How to use Apollo client in a React app
-- How to optimize data fetching in a GraphQL API
+* Why GraphQL is awesome
+* Graph theory and GraphQL core concepts
+* How to set-up a GraphQL server
+* How to define queries and mutations
+* How to use Apollo client in a React app
+* How to optimize data fetching in a GraphQL API
 
 ---
+
 template: inverse
 
 # Questions?
