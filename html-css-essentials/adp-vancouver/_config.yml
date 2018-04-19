@@ -7,7 +7,7 @@ permalink:           pretty
 title:               App Developer
 tagline:             'Learning Materials'
 description:         'Learning materials for the RED Academy App Developer Professional Program.'
-url:                 http://red-adp.herokuapp.com
+url:                 https://red-adp.herokuapp.com
 baseurl:             ''
 paginate:            10
 paginate_path:       '/news/page:num/'
@@ -34,6 +34,9 @@ collections:
    projects:
       output: true
       permalink: /project/:title/
+
+jekyll_auth:
+  ssl: true
 
 # Set the Sass partials directory, as we're using @imports
 sass:

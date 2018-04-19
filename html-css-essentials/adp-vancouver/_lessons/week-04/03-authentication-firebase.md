@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Web Authentication & Firebase
-lesson_date: 2018-02-01
+lesson_date: 2018-05-03
 slides: ['_slides/week-04/03-authentication-firebase.md']
 ---
 
