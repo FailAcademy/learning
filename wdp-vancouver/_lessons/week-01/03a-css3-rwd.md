@@ -61,7 +61,7 @@ You'll be optimizing for two breakpoints: `480px` and `720px`
 
 Screenshots of what the website should look like at mobile, tablet, and desktop width have been included in the following package:
 
-**[Download the exercise &rarr;](/public/files/exercises/rwd-factor.zip)**
+**[Download the exercise files &rarr;](/public/files/exercises/rwd-refactor.zip)**
 
 ---
 
