@@ -51,7 +51,7 @@ You are encouraged to save these cheatsheets for your own reference.
 
 ## Exercise 1
 
-Create a new folder in your project called `build` to store the uglified version of your files, then add Gulp to your project and implement the `gulp-uglify` task as demonstrated.
+Add Gulp to your project and implement the `gulp-uglify` task as demonstrated.
 
 Run the task and see what happens...
 
@@ -75,8 +75,8 @@ Add ESLint as a part of your build process with Gulp. Begin by installing `gulp-
 
 We have alread created our `.eslintrc` files as part of the lesson, so now it's up to you to:
 
-1. Create a named `lint` task in your `gulpfile.js`
-2. Add the `lint` task as a dependency for the `scripts` task
+1.  Create a named `lint` task in your `gulpfile.js`
+2.  Add the `lint` task as a dependency for the `scripts` task
 
 ---
 
