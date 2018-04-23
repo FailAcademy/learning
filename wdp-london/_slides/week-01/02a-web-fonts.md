@@ -122,9 +122,10 @@ A full example:
 @font-face {
   font-family: "Roboto Regular Web";
   src: url("Roboto-webfont.eot");
-  src: url("Roboto-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-webfont.woff")
-      format("woff"), url("Roboto-webfont.ttf") format("truetype"), url("Roboto-webfont.svg#robotoregular")
-      format("svg");
+  src: url("Roboto-webfont.eot?#iefix") format("embedded-opentype"), 
+  url("Roboto-webfont.woff") format("woff"), 
+  url("Roboto-webfont.ttf") format("truetype"), 
+  url("Roboto-webfont.svg#robotoregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
