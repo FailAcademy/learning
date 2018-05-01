@@ -54,17 +54,20 @@ Set up a **new project** with Webpack:
 In `webpack.config.js` add the following code:
 
 ```js
+const path = require("path");
 module.exports = {
   entry: "./src/main.js",
   output: {
-    filename: "./build/bundle.js"
+    path: path.resolve(__dirname, "build"),
+    filename: "./bundle.js"
   }
 };
 ```
 
 Important: All of your `webpack.config.js` code will be inside of the above object separated by commas.
 
-Run `npm install -g webpack`
+Run `npm install -g webpack` and then
+run `npm install -g webpack-cli`
 
 Once everything is set up we'll observe what happens when we run the following CLI commands:
 
@@ -86,11 +89,44 @@ With Webpack, this is simple! Run: `npm install -g webpack-dev-server`
 
 Once this command is finished, from the terminal in the root of your project run: `webpack-dev-server`
 
-Congratulations, you have a development server that will reload your browser when you change the files in the `src` directory.
+Now that you have a `webpack-dev-server` installed, let's add some configuration in our `webpack.config.js` file for our server.
+
+```js
+devServer: {
+    contentBase: path.join(__dirname, "build"),
+    compress: true,
+    port: 9000
+  }
+```
+
+Hold on, we are not done yet.
 
 ---
 
 ## Exercise 3
+
+Now that we have our webpack server working, we should use `html-webpack-plugin` to dynamically generate an index.html file that can import our bundle.js file from the build dir.
+
+With Webpack, this is simple! Run: `npm install --save-dev html-webpack-plugin`
+
+Now, add this snippet to our `webpack.config.js` file to autogenerate `index.html` file in our `build` dir.
+
+```js
+// generate default index.html file in build dir
+plugins: [new HtmlWebpackPlugin()];
+```
+
+Once this command is finished, from the terminal in the root of your project run: `webpack`
+
+Great! you can check your `build` dir and you should be able to see two files, `index.html` file and `bundle.js` file.
+
+Let's run start our server from terminal (in the roof of your project): `webpack-dev-server`
+
+Congratulations, you have a development server that will reload your browser when you change the files in the `src` directory
+
+---
+
+## Exercise 4
 
 Webpack can be used to bundle almost every kind of asset for the web. It's very flexible in this regard.
 
@@ -135,7 +171,7 @@ Once you've added your loaders, `import` your `.scss` file into `main.js`, resta
 
 ---
 
-## Exercise 4
+## Exercise 5
 
 Webpack can also be used to handle files, such as fonts and images.
 
@@ -145,10 +181,15 @@ Add the following loader to your list of loaders in "webpack.config.js":
 
 ```js
 {
-  test: /\.(eot|svg|ttf|woff|woff2)$/,
-  use: [{
-    loader: 'file?name=public/fonts/[name].[ext]'
-  }]
+  test: /\.(woff|woff2|eot|ttf|otf)$/,
+  use: [
+        {
+          loader: "file-loader",
+          options: {
+          name: "[path][name].[ext]"
+          }
+        }
+  ]
 }
 ```
 
