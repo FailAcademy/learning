@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Intro to ES.next
-slides: ['_slides/week-05/01-intro-to-esnext.md']
-lesson_date: 2018-05-07
+slides: ['_slides/week-05/02-intro-to-esnext.md']
+lesson_date: 2018-05-08
 ---
 
 ## Pre-Work
