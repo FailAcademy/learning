@@ -59,6 +59,24 @@ Your project must:
 * Implement some SASS functions to darken hoverable elements
 * Use @import to help organize your code into multiple files
 
+HEX Codes for pH levels:
+
+< 4.6  
+
+**#FBBA00**
+
+4.6 - 5.0  
+
+**#DF932C**
+
+5.4 - 5.8  
+
+**#D96A38**
+
+5.8 - 6.2
+
+**#9E2C1D**
+
 **Stretch goals:**
 
 Want to challenge yourself? Your project could also:
