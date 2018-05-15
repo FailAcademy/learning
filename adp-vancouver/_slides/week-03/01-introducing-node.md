@@ -63,7 +63,11 @@ Node programs are **single threaded** and **highly parallel**.
 
 ---
 
+template: inverse
+
 # OSI Model
+
+---
 
 Let's talk about how internet works!
 ![OSI Layers](/public/img/slide-assets/OSI_model.png)
@@ -220,16 +224,14 @@ To debug a Node application, start the node process using the following command:
 node --debug --inspect index.js
 ```
 
-You should see output in your terminal:
+You should see something like this in your terminal:
 
 ```bash
-Debugger listening on port 9229.
-Warning: This is an experimental feature and could change at any time.
-To start debugging, open the following URL in Chrome:
-    chrome-devtools://devtools/bundled/inspector.html?experiments=true&v8only=true&ws=127.0.0.1:9229/3b270900-1c51-460c-a7a4-d593f462b2d7
+Debugger listening on ws://127.0.0.1:9229/f3473fed-3805-4de1-939d-12491536cb4a
+For help see https://nodejs.org/en/docs/inspector
 ```
 
-Copy and paste the `chrome-devtools://` url into a new chrome tab to start your debugging session.
+Copy and paste the `chrome://inspect/` url into a new chrome tab to start your debugging session by clicking on your `Remote Target`.
 
 ---
 
@@ -314,6 +316,8 @@ Introducing the code recommended on the previous slide may have introduced a mem
 Run the load tester to find out!
 
 _What do we have to do to prevent the memory leak?_
+
+checkout this [post](https://www.nearform.com/blog/self-detect-memory-leak-node/) to find out.
 
 ---
 

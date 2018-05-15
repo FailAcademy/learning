@@ -116,3 +116,7 @@ Process monitors and testing tools for Node:
 * [pm2](http://pm2.keymetrics.io/)
 * [tcpkali](https://github.com/machinezone/tcpkali)
 * [htop](https://hisham.hm/htop/)
+
+How to self detect a memory leak in Node:
+
+* [Findout here](https://www.nearform.com/blog/self-detect-memory-leak-node/)
