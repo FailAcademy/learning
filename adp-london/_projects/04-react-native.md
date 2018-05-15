@@ -13,21 +13,15 @@ You can [download the project assets here](https://s3-us-west-2.amazonaws.com/re
 
 ## Configuaration
 
-### API Endpoints
+### API Endpoint
 
-You can fetch content for this app at the following endpoints:
+You can fetch content for this app at the following GraphQL endpoint:
 
-**Sessions:**
-https://r10app-95fea.firebaseio.com/sessions.json
+**https://api.graph.cool/simple/v1/cjh2hph6n6njl0108f6n59j3j**
 
-**Speakers:**
-https://r10app-95fea.firebaseio.com/speakers.json
+To explore the schema for this GraphQL API, visit **[graphqlbin.com](https://www.graphqlbin.com/)** and paste in the above endpoint URL to launch the GraphQL Playground.
 
-**Single Speaker:**
-[https://r10app-95fea.firebaseio.com/speakers.json?orderBy="speaker_id"&equalTo="-KZ2o1CzG5GOfmURNSUB"](https://r10app-95fea.firebaseio.com/speakers.json?orderBy=%22speaker_id%22&equalTo=%22-KZ2o1CzG5GOfmURNSUB%22) (`speaker_id` is different for each speaker)
-
-**Code of Conduct:**
-https://r10app-95fea.firebaseio.com/code_of_conduct.json
+Please note that this API is read-only for unauthenticated users, so no mutation operations are permitted.
 
 ### Design specs
 
@@ -78,7 +72,8 @@ Your project must:
 * [ ] Use ES2015 `import` and `export`
 * [ ] Contain components created using `React.Component`, `const`, or `function` only
 * [ ] Implement "presentational" and "container" components appropriately throughout the application
-* [ ] Include Redux for state management in the app
+* [ ] Use Apollo Client to request data from the provided GraphQL endpoint
+* [ ] Include Redux for state management of favourites in the app
 * [ ] Make appropriate use of React Native's UI components (including `<View>`, `<Text>`, `<Image>`, `<SectionList>`, `<TouchableHighlight>`, etc.)
 * [ ] Implement styles on a per-component basis using `Stylesheet.Create`
 * [ ] Leverage code-reuse strategies across iOS and Android platforms as much as possible
@@ -93,7 +88,6 @@ Want to challenge yourself? Your project could also:
 
 **Enhance UX:**
 
-* [ ] Cache requests made to the Firebase app to improve performance
 * [ ] Add a custom splash screen and app icon for iOS and Android
 
 **Include a Map scene:**
