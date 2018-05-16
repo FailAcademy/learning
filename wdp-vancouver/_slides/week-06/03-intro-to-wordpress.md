@@ -41,7 +41,7 @@ class: center, middle
 
 # Why WordPress?
 
-- It powers ~25% of the top 10 million websites
+- It powers ~30% of the top 10 million websites
 - More non-English than English downloads of WP
 - Very extendible via many different APIs
 - Backward compatibility
