@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to Databases with PostgreSQL II Slides
+title: Intro to Databases with Postgres II Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Intro to Databases with PostgreSQL II
+# Intro to Databases with Postgres II
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -110,7 +110,7 @@ A Foreign Key is defined by adding the PRIMARY KEY constraint to a specific colu
 class: center, middle
 
 Get to know Constraints. Take a moment and review the Postgres documentation on constraints:
-### [Postgres 9.6 Docs: Constraints](https://www.postgresql.org/docs/9.6/static/ddl-constraints.html)
+### [Postgres 9.6 Docs: Constraints](https://www.Postgres.org/docs/9.6/static/ddl-constraints.html)
 
 ---
 template: inverse

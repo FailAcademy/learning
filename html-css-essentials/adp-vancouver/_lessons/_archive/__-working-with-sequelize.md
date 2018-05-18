@@ -16,18 +16,18 @@ Specificall the section on `express.Router`.
 
 ## Learning Objectives
 
-- Install the Sequelize ORM and connect to a local PostgreSQL database
+- Install the Sequelize ORM and connect to a local Postgres database
 - Define REST and CRUD
 - Sanitize data submitted through a form
-- Check for valid data in PostgreSQL when inserting!
+- Check for valid data in Postgres when inserting!
 - Hash a password before it is stored in PostgeSQL.
 - Use the `fetch` API
 - Use the Express router to create routes that will serve JSON
-data from PostgreSQL via Sequelize to your client application.
+data from Postgres via Sequelize to your client application.
 - Write GET requests using fetch, as Redux Actions; get JSON from your Express server
 and display it in your project
-- Write POST requests using fetch to save data into a local PostgreSQL database
-- Perform a SQL injection attack on your local PostgreSQL database
+- Write POST requests using fetch to save data into a local Postgres database
+- Perform a SQL injection attack on your local Postgres database
 
 ---
 
@@ -48,7 +48,7 @@ and display it in your project
 Install the Sequelize ORM into your project using npm. Once you have it installed:
 
 - Create a sub-directory called `database` inside your server folder.
-- Create a file called `index.js` within the `database` directory and connect to a local PostgreSQL database
+- Create a file called `index.js` within the `database` directory and connect to a local Postgres database
 using the username and password you configured. **This database should be 'empty'. It must not have any schema (tables).** 
 
 ---
@@ -94,7 +94,7 @@ const router = express.Router({
 
 ## Exercise 4
 
-Now that you have some experience using both PostgreSQL queries to create your database, and Sequelize,
+Now that you have some experience using both Postgres queries to create your database, and Sequelize,
 Discuss with your neighbour some of the benefits and drawbacks of each approach.
 
 Specifically:
@@ -130,4 +130,4 @@ Ensure that the proper validation checks are in place in all layers of the stack
 
 ## Additional Resources
 
-- [PostgreSQL Constraints](https://www.postgresql.org/docs/9.6/static/ddl-constraints.html) documentation.
+- [Postgres Constraints](https://www.Postgres.org/docs/9.6/static/ddl-constraints.html) documentation.

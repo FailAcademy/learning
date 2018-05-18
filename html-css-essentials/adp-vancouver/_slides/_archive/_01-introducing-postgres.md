@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to Databases with PostgreSQL Slides
+title: Intro to Databases with Postgres Slides
 
 ---
 
@@ -10,7 +10,7 @@ layout: true
 class: center, middle, inverse
 
 ---
-# Intro to Databases with PostgreSQL
+# Intro to Databases with Postgres
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -21,7 +21,7 @@ layout: false
 
 1. Determine what a database is
 2. Introduce the various types of databases available
-3. Install and set up PostgreSQL
+3. Install and set up Postgres
 4. Create a database with authentication
 5. Perform CRUD operations on our new database
 
@@ -88,7 +88,7 @@ class: center, middle
 Easily, the most common way to interact with Relational Databases is using SQL, which stands for<br/>
 ##**Structured Query Language**:
 
-**Let's start using SQL & PostgreSQL!**
+**Let's start using SQL & Postgres!**
 
 
 ---
@@ -168,13 +168,13 @@ CREATE TABLE people
 
 # What?
 * **bigserial** (or serial8) - an integer that automatically increments from 1 to 9223372036854775807 with each new row 
-* **varchar**(n) - a string with n characters - called a varchar because its length is _variable_ (http://www.postgresql.org/docs/9.2/static/datatype-character.html)
-* **date** - http://www.postgresql.org/docs/9.1/static/datatype-datetime.html#DATATYPE-DATETIME-DATE-TABLE
+* **varchar**(n) - a string with n characters - called a varchar because its length is _variable_ (http://www.Postgres.org/docs/9.2/static/datatype-character.html)
+* **date** - http://www.Postgres.org/docs/9.1/static/datatype-datetime.html#DATATYPE-DATETIME-DATE-TABLE
 
 ---
 
 # What continued...
-* **int2** (or smallint) - integer between -32768 and 32767 inclusive. (http://www.postgresql.org/docs/9.2/static/datatype-numeric.html)
+* **int2** (or smallint) - integer between -32768 and 32767 inclusive. (http://www.Postgres.org/docs/9.2/static/datatype-numeric.html)
 
 Data types limit the kind of info that can be stored in a table, but only very broadly.  For example, a column containing product prices should only have positive values, but there is no datatype for numbers greater than 0. _Constraints_ allow us to limit the data a table will accept and raise an error if a user tries to input invalid data.
 
