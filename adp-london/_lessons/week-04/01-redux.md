@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Redux
-slides: ['_slides/week-02/02-redux.md']
+slides: ['_slides/week-04/01-redux.md']
 lesson_date: 2018-04-17
 ---
 

@@ -1,16 +1,18 @@
 ---
 layout: lesson
-title: Intro to Databases with PostgreSQL
-slides: ['_slides/week-04/01a-introducing-postgres.md']
+title: Intro to Databases with Postgres
+slides: ['_slides/week-01/01-introducing-postgres.md']
 lesson_date: 2018-04-30
 ---
 
 ## Pre-Work
 
+Install Postgres, get the app installer here: https://postgresapp.com/ <br/>
+
 What makes RBDMS systems so useful? <br/>
 [Codd's 12 Rules](http://www.idc-online.com/technical_references/pdfs/information_technology/Codd_12_Rules.pdf)
 
-How does postgres actually store you data? <br/>
+How does Postgres actually store you data? <br/>
 http://rachbelaid.com/introduction-to-postgres-physical-storage/
 
 To start, get familiar with SQL syntax. Complete Part 1, from [these exercises](https://www.pgexercises.com/questions/basic/).
@@ -21,7 +23,7 @@ To start, get familiar with SQL syntax. Complete Part 1, from [these exercises](
 
 * Define what role a database plays in a software application.
 * Explain how a relational database is structured.
-* Install and set up an instance of PostgreSQL.
+* Install and set up an instance of Postgres.
 * Explain the difference between `TABLE` and `DATABASE`.
 * Model data, and create tables to store it.
 * Distinguish different data types in a SQL database context.
@@ -51,16 +53,12 @@ To start, get familiar with SQL syntax. Complete Part 1, from [these exercises](
 
 ## Exercise 1
 
-You should have a running instance of PostgreSQL running on your computer.
-
-If you have not installed PostgreSQL yet, get the app installer here: https://postgresapp.com/
-
 In this exercise, we'll go through the process of setting up a database within it, to use as the database for your project.
 
 * Create a new database using the Postgres cli.
 
 * Use the `CREATE USER <name> WITH PASSWORD <pw>` command to create a new user and configure a password for each database.
-  See [documentation](https://www.postgresql.org/docs/9.6/static/sql-createuser.html).
+  See [documentation](https://www.Postgres.org/docs/9.6/static/sql-createuser.html).
 
 (This setup is meant to mock a real world database setup, and to give us the opportunity to become familiar with
 creating and authorizing a new Database on your local machine. In a real production setting, our setup would be more complicated).
@@ -80,7 +78,7 @@ What types of data do we need to model for our application?
 **Normalization** <br/>
 How should we "Normalize" the data in our schema, according to the rules of Third Normal Form?
 
-**Handling Id's** <br/>
+**Handling Ids** <br/>
 Each entry into the database for each of the schema should have an id. This will be necessary for building
 the relationships between data in out database.
 
@@ -91,7 +89,7 @@ the relationships between data in out database.
 
 ## Exercise 3
 
-PostgreSQL is a 'Relational Database'. So far we have not specified any relationships between our data models.
+Postgres is a 'Relational Database'. So far we have not specified any relationships between our tables.
 Let's create relationships between the tables we created in the last lesson.
 
 The relationships we'll create are defined as follows:
@@ -100,7 +98,7 @@ The relationships we'll create are defined as follows:
 * 1 to many (1:n)
 * Many to many (n:n)
 
-To do this we'll need to add Foreign Key Constraints to some columns.
+To do this we'll need to add "foreign key constraints" to some columns.
 
 **Many to many relationships** :<br/>
 Creating many to many relationships requires the creation of a "Link table".
@@ -113,7 +111,7 @@ Creating many to many relationships requires the creation of a "Link table".
 
 ## Lab activity
 
-Now that we've created our schema (table) for our project application, use the `INSERT` command to populate your data base with some mock data.
+Now that we've created the database tables for our project application, use the `INSERT` command to populate your tables with some mock data.
 
 Add the following mock data to your database:
 
@@ -127,4 +125,4 @@ Ensure that you've set up the appropriate foreign key constraints!
 ## Additional Resources
 
 * [Learn SQL - Codeacademy](https://www.codecademy.com/learn/learn-sql)
-* [PostgreSQL Docs](http://www.postgresql.org/docs/9.6)
+* [Postgres Docs](http://www.Postgres.org/docs/9.6)
