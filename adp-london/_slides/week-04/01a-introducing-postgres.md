@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to Databases with PostgreSQL Slides
+title: Intro to Databases with Postgres Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Intro to Databases with PostgreSQL
+# Intro to Databases with Postgres
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -22,7 +22,7 @@ layout: false
 
 1.  Determine what a database is
 2.  Introduce the various types of databases available
-3.  Install and set up PostgreSQL
+3.  Install and set up Postgres
 4.  Demonstrate the SQL language
 5.  Setup a Postgres user and database for use in our project application
 
@@ -76,7 +76,7 @@ Google for a diagram of a large relational system. Find one and show the student
 
 # Who is Postgres?
 
-"PostgreSQL is a general purpose and object-relational database management system, the most advanced open source database system. PostgreSQL was developed based on POSTGRES 4.2 at Berkeley Computer Science department, University of California."
+"Postgres is a general purpose and object-relational database management system, the most advanced open source database system. Postgres was developed based on POSTGRES 4.2 at Berkeley Computer Science department, University of California."
 
 _It's Open Source!_
 

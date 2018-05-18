@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Introducing Node
-slides: ['_slides/week-03/01-introducing-node.md']
+slides: ['_slides/week-02/01-introducing-node.md']
 lesson_date: 2018-04-23
 ---
 
@@ -89,7 +89,7 @@ Change your TCP service to deliver any incoming data to all connected clients.
 
 ## Lab Activity
 
-Building a TCP server from scratch is not something you'll normally do. There are a wide range of behaviors and edge cases we'd have to account for, if we wanted our chat server to work in the way that we're accustomed to.
+Building a TCP server from scratch is not something you'll normally do. There are a wide range of behaviors and edge cases we have not accounted for.
 
 Developers in the open source community have created a systems to help us! The most popular among them being the [Zero Message Queue](http://zguide.zeromq.org/page:all).
 

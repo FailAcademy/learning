@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Connecting Client and Server with GraphQL
-slides: ['_slides/week-03/04-client-server-graphql.md']
+slides: ['_slides/week-02/03-client-server-graphql.md']
 lesson_date:  2018-04-26
 ---
 

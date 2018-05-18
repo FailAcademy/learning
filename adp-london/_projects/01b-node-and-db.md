@@ -7,7 +7,7 @@ class: gh-check
 
 Continue working on your Boomtown by adding the server-side components. Once completed, your project should have a functioning user login (with protected routes) and allow users to share new items.
 
-Your project must include a server (Node/Express/GraphQL), a connected database (PostgreSQL), a connected client (React), and form with submit and data validation (Redux-Form), and user authentication (Firebase).
+Your project must include a server (Node/Express/GraphQL), a connected database (Postgres), a connected client (React), and form with submit and data validation (Redux-Form), and user authentication (Firebase).
 
 ## Requirements
 
@@ -48,7 +48,7 @@ Your project must:
 * [ ] Use Apollo Client (`apollo-client`) to query data from the GraphQL server in the client and to handle mutations
 * [ ] Integrate Apollo Client in the Redux store
 * [ ] Refetch relevant GraphQL queries upon successful data mutation to keep the UI in sync
-* [ ] Use PostgreSQL to store item data
+* [ ] Use Postgres to store item data
 * [ ] Make efficient database queries (server-side)
 * [ ] Save state to database (server-side)
 
@@ -65,7 +65,7 @@ Your project must:
 
 Want to challenge yourself? Your project could also:
 
-* [ ] Implement Full-Text Search using PostgreSQL.
+* [ ] Implement Full-Text Search using Postgres.
 * [ ] Allow logged-in users to request available items from other users (using a modal-style component)
 
 ## Submission Instructions
