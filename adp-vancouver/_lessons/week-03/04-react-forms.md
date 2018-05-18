@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Webforms using React & Redux
-slides: ['_slides/week-04/02-forms-react-redux.md']
+slides: ['_slides/week-03/04-react-forms.md']
 lesson_date: 2018-05-02
 ---
 
@@ -22,7 +22,7 @@ Prior to class, read through the following documentation:
 * Use a library for handling client-side form validation in an application
 * Provide error feedback on invalid input
 * Use form elements from 3rd party sources like Material-UI
-* Implement a form using Redux-Form
+* Implement a form using React-Final-Form
 
 ---
 
@@ -83,12 +83,11 @@ Add any of the following to a form of your choosing:
 
 ## Lab Activity
 
-Create the forms that you'll use in your Boomtown app, using the [Redux Form](http://redux-form.com) library.
+Create the forms that you'll use in your Boomtown app, using the [React Final Form](https://github.com/final-form/react-final-form) library.
 You'll need to create both a user (login) form and a form for adding new Items.
 
 Be sure to include:
 
-* Saving data to the Redux store
 * Validation of fields
 * Styled components
 * Error feedback

@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Creating a Web Server with Express
-slides: ['_slides/week-03/03-web-servers-express.md']
+slides: ['_slides/week-02/02-web-servers-express.md']
 lesson_date:  2018-04-25
 ---
 
@@ -9,8 +9,8 @@ lesson_date:  2018-04-25
 
 Please review the [Express documentation](http://expressjs.com/) in preparation for this lesson.
 
-Set up Chrome's developer tools Network tb to help us debug our application:
-Make sure you have the following 6 columns visible:
+Set up Chrome's developer tools to help us debug our application:
+Make sure you have the following 6 columns visible in the network tab of Chrome's dev tools:
 
 | Name | Method | Status | Type | Size | Time |
 | ---- | :----- | :----- | :--- | :--- | :--- |
@@ -36,7 +36,7 @@ _Right click on the column headers to modify which ones are visible._
 ## Keywords
 
 * HTTP
-* REpresentational State Transfer (REST)
+* Representational State Transfer (REST)
 * Route
 * Endpoint
 * fetch
@@ -75,7 +75,7 @@ function diyLogger(request, response, next) {
   const { url, method } = request;
   const { statusCode } = response;
 
-  response.on("finish", function() {
+  response.on('finish', function() {
     // ...what goes here?
   });
 
