@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: Intro to Databases with PostgreSQL II
-slides: ['_slides/week-04/01b-introducing-postgres2.md']
+title: Intro to Databases with Postgres II
+slides: ['_slides/week-01/02-introducing-postgres2.md']
 lesson_date: 2018-05-01
 ---
 
@@ -9,8 +9,8 @@ lesson_date: 2018-05-01
 
 Please read over the following links:
 
-* [PostgreSQL Constraints](https://www.tutorialspoint.com/postgresql/postgresql_constraints.htm)
-* [PostgreSQL Useful Functions](https://www.tutorialspoint.com/postgresql/postgresql_useful_functions.htm)
+* [Postgres Constraints](https://www.tutorialspoint.com/Postgres/Postgres_constraints.htm)
+* [Postgres Useful Functions](https://www.tutorialspoint.com/Postgres/Postgres_useful_functions.htm)
 
 Complete Part 2 _Joins and Subqueries_, from [these exercises](https://pgexercises.com/questions/joins/).
 
@@ -18,12 +18,11 @@ Complete Part 2 _Joins and Subqueries_, from [these exercises](https://pgexercis
 
 ## Learning Objectives
 
-* Describe the difference between 'Foreign key' and 'Primary key'.
+* Describe the difference between "foreign key" and "primary key".
 * Add constraints to our Postgres schema.
-* Query a 'linking table'
+* Query a "link table"
 * Connect our Express app to a local Postgres database.
 * Query a local Postgres database from our Express app using `node-postgres`
-* Discover a new pattern of abstraction for dealing with methods that perform data-access.
 * Implement Full-Text search.
 
 ---
@@ -41,10 +40,10 @@ Complete Part 2 _Joins and Subqueries_, from [these exercises](https://pgexercis
 
 ## Exercise 1
 
-We're nearly done setting up our database. The final aspect of creating our schema is adding constraints.
+We're nearly done setting up our database. To finish, we'll need to add constraints.
 When creating constraints we need to consider things like:
 
-* What fields in our tables should be unique?
+* Which fields in our tables should be unique?
 * What are the specific types of data we're storing in each column?
 * Do we need to initialize any default values in our tables?
 * How can we check if the data being sent by client applications for storage is valid?
@@ -68,53 +67,25 @@ Now that we have our data and relationships set up. Let's write some SQL queries
 
 ## Exercise 3
 
-Now that we have our data and relationships set up. Let's write a query to aggregate data from the database:
+Let's write a query to aggregate data from the database:
 
 * Write a query that returns all of the Items that are tagged with a given Tag id.
 
 ---
 
-## Exercise 4
-
-Let's prepare our application to use Postgres. As usual, we'll rely on a pattern we can repeat as our
-application's list of features grows.
-
-Create a folder called 'resources', if you have not already. Add a file called `PostgresDB.js` (This name is just a suggestion).
-
-In that file add the following boilerplate:
-
-```
-export default function(app) {
-
-    const pg = new Pool();
-
-}
-```
-
-You should be able to answer the following questions:
-
-* Where does the app argument come from?
-* What will we need to import?
-* What will we need to export?
-
----
-
 ## Lab Activity
 
-Now that we know how to use PostgreSQL, it's time to integrate it with our project application.
-We'll use PosgreSQL's powerful Full Text Search capability to add the final database feature, Full Text Search!
+Write the necessary query to perform a "full-text search" of your database.
 
 Following the patterns outlined in the excellent walkthrough, create a full-text search engine for your project.
 [Full Text Search is Good Enough - Rachid Belaid](http://rachbelaid.com/postgres-full-text-search-is-good-enough/)
 
 Make sure you can talk about the following:
 
-* Why is Full-Text Search a useful feature?
+* Why is full-text search a useful feature?
 
 ---
 
 ## Additional Resources
 
 * [A Visual Explanation of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
-* [Express 4 API Docs](http://expressjs.com/tr/api.html)
-* [node-postgres](https://node-postgres.com/) Library

@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Redux Middleware
-slides: ['_slides/week-02/03-redux-middleware.md']
+slides: ['_slides/week-04/02b-redux-middleware.md']
 lesson_date: 2018-04-18
 ---
 
@@ -72,9 +72,9 @@ Let's implement a simple logger. In your grocery store app, put the following co
 
 ```js
 console.group(action.type);
-console.info("dispatching", action);
+console.info('dispatching', action);
 let result = next(action);
-console.log("next state", store.getState());
+console.log('next state', store.getState());
 console.groupEnd(action.type);
 return result;
 ```
