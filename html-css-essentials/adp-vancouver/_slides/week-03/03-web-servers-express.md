@@ -47,7 +47,7 @@ Before we begin creating an Express web server, in pairs draw a diagram of a cli
 ```
 [View]  <--  [Data]   <--->   [Server]   <--->   [Database]
 
-(React)  (Redux/GraphQL)    (Express.js)        (PostgreSQL)
+(React)  (Redux/GraphQL)    (Express.js)        (Postgres)
 ```
 
 ---

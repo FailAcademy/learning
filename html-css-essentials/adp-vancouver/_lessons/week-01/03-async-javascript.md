@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Asynchronous JavaScript
-slides: ['_slides/week-03/02-async-javascript.md']
+slides: ['_slides/week-01/03-async-javascript.md']
 lesson_date: 2018-04-24
 ---
 
@@ -19,7 +19,7 @@ Also be sure to review how timers work in JS:
 
 ## Learning Objectives
 
-* Understand and be able to differentiate 'asynchrony', parallelism and concurrency.
+* Understand and be able to differentiate async, parallel and concurrent code.
 * Explain the JavaScript "event loop", and how it interprets the code we write.
 * Distinguish between blocking and non-blocking code (for example, `fs.readFile` versus `fs.readFileSync`).
 * Understand the syntactic and semantic implications of "Callback Hell"
