@@ -127,6 +127,8 @@ In today's lab, we're going to start working on the R10 project.
 
 Begin by creating a new React Native app name `R10`. Working from the project's design comps, plan out the directory structure for your app.
 
+You will need to **[install Apollo Client](https://www.apollographql.com/docs/react/essentials/get-started.html)** to access the GraphQL API data in your app.
+
 Your goal for today is to build out and style the `About` scene for your app. Don't worry about adding the toggling animation on the Code of Conduct points yet (we'll work on that at the end of the week). For now, just display all of the Code of Conduct content statically.
 
 Be sure to **add a loading state** to your screen while content is being fetched...in other words, display an `ActivityIndicator` component in the screen until the request to the GraphQL API for the Code of Conduct points is complete.
@@ -172,7 +174,9 @@ Miscellaneous RN resources:
 
 Resources for adding custom app splash screens and icons:
 
-* [iOS Human Interface Guidelines - Launch Screen](https://developer.apple.com/ios/human-interface-guidelines/graphics/launch-screen/)
 * [iOS Human Interface Guidelines - App Icon](https://developer.apple.com/ios/human-interface-guidelines/graphics/app-icon/)
-* [How to Add a Splash Screen to a React Native App (iOS and Android)](https://medium.com/handlebar-labs/how-to-add-a-splash-screen-to-a-react-native-app-ios-and-android-30a3cec835ae)
+* [iOS Human Interface Guidelines - Launch Screen](https://developer.apple.com/ios/human-interface-guidelines/graphics/launch-screen/)
 * [MapAppIcon](https://makeappicon.com/)
+* [iPhone X Launch Image Sizes (+ other sizes)](http://www.steventso.com/posts/iphone-x-app-icon-size-other-sizes/)
+* [How to Add a Splash Screen to a React Native App (iOS and Android)](https://medium.com/handlebar-labs/how-to-add-a-splash-screen-to-a-react-native-app-ios-and-android-30a3cec835ae)
+* [Splash Screen Pro](https://splashscreen.pro/) (a paid resource, but worth it!)
