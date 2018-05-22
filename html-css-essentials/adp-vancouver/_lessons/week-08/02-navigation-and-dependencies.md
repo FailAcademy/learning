@@ -15,8 +15,7 @@ _There is no pre-work for this lesson._
 
 * Distinguish how navigation in a mobile application is different from a web application.
 * Explore built-in navigation options options in React Native.
-* Add a the `ex-navigation` module to a React Native app as an all-in-one, cross-platform tab bar, drawer, and navigator solution.
-* Integrate Redux into a React Native app and use it to manage navigation state.
+* Add a the `react-navigation` module to a React Native app as an all-in-one, cross-platform tab bar, drawer, and navigator solution.
 * Add third-party package to a React Native app, such as `react-native-vector-icons` and `react-native-linear-gradient`.
 * Use `react-native link` to link native dependencies in a application, and manually link native dependencies where `react-native link` cannot be used.
 
@@ -35,47 +34,45 @@ _There is no pre-work for this lesson._
 
 ## Exercise 1
 
-Follow the [installation instructions](https://github.com/expo/ex-navigation#installation) for ExNavigation and add it to your project.
+First, install `react-navigation` in your R10 project. Next, create a `navigation` sub-directory in the `js` directory of R10. Add a file called `RootStackNavigator.js` to it.
 
-Define your routes in `navigation/routes.js`. Define `static route = {}` in each of your scene container components to configure a nav bar title for each scene.
+Import `createStackNavigator` from `react-navigation` in this new file, and use it to create a stack navigator with your About screen as it's only route (you will need to import it!). Make this your default export from `RootStackNavigator.js`.
 
-In your `app/index.js` file, add the `<NavigationProvider>` with a single `<StackNavigation>`, and set the `initialRoute` to your Schedule scene.
-
-Try swapping your `initialRoute` to your About scene and see if it works also.
+Finally, import your new `RootStackNavigator` component into `App.js`, and nest it inside your `ApolloProvider` (removing the`About` component now). Does it work? How do you add a title to the navigation bar?
 
 ---
 
 ## Exercise 2
 
-Now set up the `reducers.js` file in the `redux` directory.
+Read through the **[Tab navigation docs](https://reactnavigation.org/docs/en/tab-based-navigation.html)** learn how to add your new About stack to your `createBottomTabNavigator`. If you have created other screens already, create stacks for those those as well and add them to the tab navigator.
 
-Be sure to import `combineReducers` into this file, as well as the named `NavigationReducer` export from ExNavigation. Export your combined reducers from this file.
+Next, instead of using your About screen directly inside your `RootStackNavigator`, use `NavigationLayout` instead.
 
-Next, provide the `NavigationContext`, directly to the `NavigationProvider` component in your app's main `index.js` file. You'll also need to wrap everything in the `Provider` component from `react-redux`, just like usual.
-
-Please refer to the **[ExNavigation docs](https://github.com/expo/ex-navigation#integrate-with-your-existing-redux-store)** for assistance completing this exercise.
+But we have a problem now! There are two navigation bars at the top of the app (one for the root stack, the other for the nested stack). You can find a hint for hiding the nav bar for the `RootStackNavigator` **[in this example in the docs](https://reactnavigation.org/docs/en/stack-navigator.html#modal-stacknavigator-with-custom-screen-transitions)**.
 
 ---
 
 ## Exercise 3
 
-Time to add a tab bar to our iOS app. Create a file called `NavigationLayout.js` in your `js/navigation` directory. Use this file to build out a component where the `render` function returns ExNavigator's `<TabNavigation>` component.
+Add **[some tab bar options](https://reactnavigation.org/docs/en/tab-navigator.html#tabbaroptions-for-tabbarbottom-default-tab-bar-on-ios)** to configure its style.
 
-Create a `<TabNavigationItem>` for your About and Schedule routes. What do you need to change in your top-level `initialRoute` now?
+Tab bar options are passed into `createBottomTabNavigator` as its second argument, e.g.:
 
-Thinking ahead, each `<TabNavigationItem>` should have its own `<StackNavigation>` component nested inside of it too.
+`{ tabBarOptions: { /* your options here... */ } }`
+
+Set the `activeTintColor` (white), `inactiveTintColor` (medium grey), the font size to `10` using `labelStyle`, and the background color (black) using `style`.
+
+We'll add the icons next!
 
 ---
 
 ## Exercise 4
 
-Our app is going to need some icons, so for that we're going to add the **[React Native Vector Icons package](https://github.com/oblador/react-native-vector-icons)**.
+Our app is going to need some icons, so for that we're going to add the **[React Native Vector Icons package](https://github.com/oblador/react-native-vector-icons)**. Note that this package's native dependencies can be automatically linked with `react-native link`.
 
-Note that this package's native dependencies can be automatically linked with `react-native link`.
+Next, import Ionicons into `NavigationLayout.js`. Add a `navigationOptions` key to your tab bar config object, and render the correct icon for each tab. An icon should be `white` if selected, and medium grey if not.
 
-Once this is done, write yourself a helper `renderIcon` function in your `NavigationLayout.js` to render the appropriate Octicon icon for each of the tabs in your tab bar. An icon should be `white` if selected, and `#999999` if not.
-
-Add your helper function as the `renderIcon` prop on each `<TabNavigationItem>`.
+**[Use this example from the React Navigation docs](https://reactnavigation.org/docs/en/tab-based-navigation.html#customizing-the-appearance)** to help complete this exercise.
 
 ---
 
@@ -87,13 +84,13 @@ Inside of the app's `package.json` file, add the following:
 
 ```js
 "rnpm": {
-  "assets": [
-    "js/assets/fonts"
-  ]
+  "assets": [ "js/assets/fonts" ]
 }
 ```
 
-Move your project's fonts into the above directory and run `react-native link` again. You should now be able to set the `fontFamily` to `Montserrat` and `Montserrat-Light` in your app...without crashing it :)
+Move your project's fonts into the above directory and run `react-native link` again, then restart your app.
+
+Use Montserrat as the `fontFamily` for the tab bar labels now to test it out.
 
 ---
 
@@ -103,72 +100,35 @@ We've come a long way building out the navigation scheme for our iOS app, but we
 
 During today's lab, **focus on fully building out the Schedule scene**, as well as the related Session and Speaker scenes (in that order).
 
-And don't forget to **use Redux** to manage all state-related concerns when fetching data from the Firebase endpoints!
-
 ### Task 1:
 
-Before you jump into building out the Schedule, Session, and Speaker scenes, **refactor your About scene to use Redux** to manage the state of the Code of Conduct points fetched from Firebase.
-
-Define your Code of Conduct actions and action creators, and add its reducer to your `reducer.js` file.
-
-Next, wrap your `AboutContainer` component in the `connect` HOC and pass the appropriate state information into your `AboutContainer` as props.
-
-Repeat this pattern for all other scene container components you build for the rest of the week.
-
-### Task 2:
-
-Build out the schedule `SectionList` now with session data fetched from Firebase. Use the `formatSessionData` function in the following Gist to help format your Firebase data for your `SectionList` component, with time-based section headers:
+Build out the Schedule's `SectionList` now with session data fetched from the GraphQL API. Use the `formatSessionData` function in the following Gist to help format your data for your `SectionList` component, with time-based section headers:
 
 **https://gist.github.com/mandiwise/bda1b921e12817373560d626970d630d**
 
 Be sure to refer to the React Native docs to check out all of the options you have available for formatting your `SectionList`.
 
+### Task 2:
+
+Now tackle the Session screen. When a session item is tapped in the Schedule screen, you'll want to push the Session screen (populated with the session's specific details) on top of that nested stack navigator.
+
+For each `TouchableHighlight` component you use to wrap each item in your Schedule list, you will need to pass its `onPress` prop **[a function that will push the Session screen on top](https://reactnavigation.org/docs/en/navigating.html)**. You will also need to add the Session screen to Schedule stack navigator config for this to work first!
+
+Wondering how will you get access to these navigation props within presentational components (or any component that DOES NOT directly correspond to the screen in the stack navigator)? Look into the **[`withNavigation` higher-order component.](https://reactnavigation.org/docs/en/with-navigation.html)**.
+
+Lastly, because you have already fetched the data for each individual session in the Schedule list, you don't need to query it again for the next screen. Rather, **[use route params](https://reactnavigation.org/docs/en/params.html)** to pass that already-retrieved data along to the Session screen, and only query the API for the additional data you need there (i.e. the speaker data!).
+
 ### Task 3:
-
-Now tackle the Session scene. When a session item is tapped in the Schedule scene, you'll want to pop the Session scene (populated with the session's specific details) on top of that nested stack.
-
-You will need to write **[corresponding functions for pushing and popping routes](https://github.com/expo/ex-navigation#perform-navigation-actions-from-outside-of-a-component)** when storing navigation state in your Redux store, and **[pass some params into your route](https://github.com/expo/ex-navigation#passing-params-to-a-route)** in order for this to work.
-
-As an example, your helper for pushing a Session scene on top of your Schedule's stack might look like this:
-
-```js
-import { NavigationActions } from "@expo/ex-navigation";
-import Store from "../redux/store";
-import Router from "../navigation/router";
-
-export const goToSession = (currentNavigatorUID, sessionData) => {
-  Store.dispatch(
-    NavigationActions.push(
-      currentNavigatorUID,
-      Router.getRoute("session", { sessionData })
-    )
-  );
-};
-```
-
-Consider creating a `navigationHelpers.js` file in your project, so that your pushing and popping methods can be imported and reused throughout your app.
-
-Using the params you pass into the Session route, you'll be able to populate this data into the scene from the component's props.
-
-### Task 4:
 
 Lastly (if there's still time!), work on the Speaker scene.
 
-But there's a catch with how you will pop this scene onto a navigation stack...if we pop it onto a stack nested within the tab bar, the Speaker scene will have the tab bar over it (as there is currently no way to selectively hide a tab bar on an individual scene within a tab bar-enabled stack in ExNavigation). This doesn't match up with what's in the prototypes.
+But there's a catch with where you will push this scene onto a navigation stack...if we push it onto a stack nested within the tab bar, the Speaker scene will have the tab bar over it (as there is currently no way to selectively hide a tab bar on an individual scene within a tab bar-enabled stack in React Navigation). This doesn't match up with what's in the prototypes.
 
-To work around this, we will need to **push the Speaker onto the top-level stack**.
+To work around this, we will need to **push the Speaker on the top-level root stack**.
 
-To push the Speaker on to the top-level stack, you will need to implement something that looks like this in your `navigationHelpers.js` file:
+Remember, you already have the Speaker data at this point, so you don't need to re-fetch it. Pass it along as a route param.
 
-```js
-export const goToSpeaker = speakerData => {
-  Store.dispatch(
-    NavigationActions.push("root", Router.getRoute("speaker", { speakerData }))
-  );
-};
-```
-
-It's up to you to figure out how to write a function to pop it off the stack when the "X" is tapped in the Speaker scene...
+You will also need to figure out how to pop the Speaker modal off the root stack when the "X" is tapped in the Speaker screen...
 
 ---
 
@@ -178,10 +138,9 @@ React Native docs on navigation:
 
 * [Navigation](https://facebook.github.io/react-native/docs/navigation.html)
 
-More on using the built-in navigation components in RN:
+React Navigation documentation:
 
-* [Navigator Comparison](https://github.com/ericvicenti/navigation-rfc/blob/master/Docs/NavigationOverview.md)
-* [Routing and Navigation in React Native](http://blog.paracode.com/2016/01/05/routing-and-navigation-in-react-native/)
+* [React Navigation (v2)](https://reactnavigation.org/)
 
 Best practices for mobile nav on iOS or Android:
 
