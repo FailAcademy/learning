@@ -24,7 +24,7 @@ And if you're interested in taking a deeper dive into what's going on under the 
 * Integrate a Realm database into a React Native application.
 * Define schema within a React Native application.
 * Leverage React Component Lifecycle methods to perform CRUD operations on the database base in relation user interactions.
-* Populate a `<SectionList>` component with data fetched a Realm database.
+* Integrate Redux into a React Native app and use it to manage navigation state.
 * Sync application UI state as data is added and removed from a Realm database.
 
 ---
@@ -60,11 +60,19 @@ _Where (and how) will you use these functions?_
 
 ---
 
+## Exercise 3
+
+Now set up the `reducers.js` file in the `redux` directory. Be sure to import `combineReducers` into this file. Export your combined reducers from this file (you will only have one!).
+
+You will need to create a faves module with relevant actions (`GET_FAVED_SESSION_IDS`, `CREATE_FAVE_SESSION`, and `DELETE_FAVE_SESSION`), action creators, and a reducer for managing your faves. You'll use the CRUD helpers you just created here.
+
+Lastly, nest a `Provider` inside your `ApolloProvider` from `react-redux` and pass it your store.
+
+---
+
 ## Lab Activity
 
-In today's lab we'll work on putting our new Fave CRUD operations to use in relevant action creators, and dispatch those actions when the "Add to Faves" or "Remove from Faves" button is tapped in the Session scene.
-
-Once you can see that data is writing to your database when the button is tapped (use the Realm Browser for this!), work on building out your Faves scene to display just the sessions that a user has faved inside a `SectionList` component.
+Once you can see that data is writing to your database when the "Add to / Remove from Faves" button is tapped in a Session (use the Realm Browser for this!), work on building out your Faves scene to display just the sessions that a user has faved inside a `SectionList` component.
 
 To build out the Faves scene, we'll need to filter the sessions we fetch from Firebase and check to see if they have a `session_id` that corresponds to one of the IDs in the array of Fave objects retrieved from Realm. Use this array of sessions to populate your Redux store, and pass it into your `FavesContainer` as a prop.
 
