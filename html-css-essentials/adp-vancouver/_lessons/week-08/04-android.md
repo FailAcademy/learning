@@ -76,9 +76,9 @@ Using what you learned about the `Platform` modules, make two adjustments to you
 
 Time to make R10's navigation UI more platform-appropriate for Android.
 
-To do that, you're going to use platform-specific file extensions for the `NavigationLayout` component, and implement `DrawerNavigation` (from the ExNavigation module) for Android in lieu of the `TabNavigation` component that we've used for the iOS app.
+To do that, you're going to use platform-specific file extensions for the `NavigationLayout` component, and implement `createDrawerNavigator` for Android in lieu of the `createBottomTabNavigator` component that we've used for the iOS app.
 
-Create your platform specific files, and read-up on the `DrawerNavigation` component in the **[ExNavigation docs](https://github.com/exponentjs/ex-navigation#drawernavigation)** to implement this for Android only.
+Create your platform specific files, and read-up on the `DrawerNavigation` component in the **[React Navigation docs](https://reactnavigation.org/docs/en/drawer-based-navigation.html)** to implement this for Android only.
 
 ---
 
