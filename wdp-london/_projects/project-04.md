@@ -121,7 +121,7 @@ Want to challenge yourself? Your project could also:
 
 Once you have finished working on your site, please export your database by following these instructions:
 
-1.  Add Rose as an Administrator to your site (username: `ashleigh` / password: `ashleigh` / email: ashleigh@redacademy.com)
+1.  Add Ashleigh as an Administrator to your site (username: `ashleigh` / password: `ashleigh` / email: ashleigh@redacademy.com)
 2.  Install the Duplicator
 3.  Go to Dulpicator -> Packages in the WordPress admin area and select 'Create New'
 4.  In the 'Name' field, replace the auto generated name with '20180530_inhabitent_[your-name]'
