@@ -117,11 +117,9 @@ Want to challenge yourself? Your project could also:
 
 ## Submission Instructions
 
-**How to export your database:**
+**How to export your site:**
 
 Once you have finished working on your site, please export your database by following these instructions:
-
-**Note:** Please ensure browser sync is OFF before proceeding with the steps below. VERY IMPORTANT.
 
 1.  Add Rose as an Administrator to your site (username: `ashleigh` / password: `ashleigh` / email: ashleigh@redacademy.com)
 2.  Install the Duplicator
