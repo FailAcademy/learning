@@ -13,9 +13,9 @@ Complete the following reading from Eloquent JavaScript before class:
 
 Also read the following chapters from "Professor Frisby's Mostly Adequate Guide to Functional Programming":
 
-* [Chapter 1: What ever are we doing?](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch1.md)
-* [Chapter 2: First Class Functions](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch2.md)
-* [Chapter 3: Pure Happiness with Pure Functions](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch3.md)
+* [Chapter 1: What ever are we doing?](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch01.md)
+* [Chapter 2: First Class Functions](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch02.md)
+* [Chapter 3: Pure Happiness with Pure Functions](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch03.md)
 
 ---
 
@@ -244,7 +244,7 @@ A great video on series on functional programming in JS:
 The full-text of this lesson's pre-work readings:
 
 * [Eloquent JavaScript - Second Edition](http://eloquentjavascript.net/)
-* [Professor Frisby's Mostly Adequate Guide to Functional Programming](https://github.com/MostlyAdequate/mostly-adequate-guide)
+* [Professor Frisby's Mostly Adequate Guide to Functional Programming](https://github.com/MostlyAdequate/mostly-adequate-guide#readme)
 
 Other helpful JS functional programming readings:
 
