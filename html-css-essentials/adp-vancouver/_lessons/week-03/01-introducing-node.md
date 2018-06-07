@@ -30,7 +30,7 @@ Take a look at how you can debug your Node application using Chrome Dev Tools be
 * Node
 * Single Threaded
 * Event Loop
-* TCP/UPD
+* TCP/UDP
 * Process Manager
 * Memory Leak
 * Blocking/Non-blocking IO
