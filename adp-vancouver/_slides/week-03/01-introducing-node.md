@@ -86,7 +86,7 @@ TCP and UDP are the basic protocols of the internet.
 
 **All network communication on the internet is carried out by these two protocols (for the most part).**
 
-Take a minute to **[read this link](http://www.diffen.com/difference/TCP_vs_UDP)**, for a good description of the differences between TCP & UPD, and how they are used.
+Take a minute to **[read this link](http://www.diffen.com/difference/TCP_vs_UDP)**, for a good description of the differences between TCP & UDP, and how they are used.
 
 When you're finished, create a folder called `TCP_Service`. Inside the folder run the command `npm init`.
 
@@ -255,7 +255,7 @@ Use [Netcat](https://en.wikipedia.org/wiki/Netcat) to send data to your new TCP 
 
 # Completed TCP Service
 
-Finally, lets return some data from our service. At the moment does not send any information back to the client.
+Finally, let's return some data from our service. At the moment does not send any information back to the client.
 
 Add the following code to your `data` handler to complete the service:
 
