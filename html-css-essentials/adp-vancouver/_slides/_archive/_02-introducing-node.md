@@ -80,7 +80,7 @@ template: inverse
 
 **TCP & UDP** are the basic protocols of the internet. (nearly ) **All network communication on the internet is carried out by these 2 protocols.**
 
-### Take a minute to [read this link](http://www.diffen.com/difference/TCP_vs_UDP), for a good description of the differences between TCP & UPD, and how they are used.
+### Take a minute to [read this link](http://www.diffen.com/difference/TCP_vs_UDP), for a good description of the differences between TCP & UDP, and how they are used.
 
 When you're finished, create a folder called `TCP_Service`. Inside the folder run the command `npm init`.
 

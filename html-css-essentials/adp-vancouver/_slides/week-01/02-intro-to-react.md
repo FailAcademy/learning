@@ -239,7 +239,7 @@ _More readable, less typing!_
 * If you need to add a `class` to an element, you must use `className`
 * If you need to add a `for` attribute, you must use `htmlFor`
 
-_Conintued..._
+_Continued..._
 
 ---
 
