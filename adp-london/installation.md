@@ -26,7 +26,7 @@ Next, you'll also need to have [Heroku Toolbelt](https://toolbelt.heroku.com/) i
 Please note that you can install the Heroku Toolbelt package directly from the link above, or use [Homebrew](http://brew.sh) to install it with the following command:
 
 ```bash
-brew install heroku-toolbelt
+brew install heroku/brew/heroku
 ```
 
 Once the Heroku Toolbelt is installed, you can log into RED Academy's Heroku account using `heroku login` provided you have the appropriate credentials.
@@ -35,12 +35,14 @@ Once the Heroku Toolbelt is installed, you can log into RED Academy's Heroku acc
 
 - Set-up a GitHub team for the course learners if one hasn't been set-up already. **Be sure to add yourself to the team!**
 - To configure Jekyll Auth to only allow members of that team to view the learning materials site, you'll need the team ID. To get the team's ID, generate [a personal access token](https://github.com/settings/tokens/new) with "read:org" privileges only and run:
+
 ```bash
 curl -H "Authorization: token <very-long-access-token>" https://api.github.com/orgs/redacademy/teams
 ```
+
 - Go to RED Academy's GitHub account and follow [these 5 steps](https://github.com/benbalter/jekyll-auth#create-a-github-application) to set up the GitHub application that we will use for authentication purposes.
 
-*Note: If you mistakenly create the app under your personal account, be sure to transfer ownership of the app to RED Academy.*
+_Note: If you mistakenly create the app under your personal account, be sure to transfer ownership of the app to RED Academy._
 
 ### Step 2: Local & GitHub Repo Set-up
 
@@ -64,7 +66,7 @@ git push -u origin master
 
 #### Auto-compiling Project pages
 
-- compile resources from lessons by running node _scripts/addResources.js
+- compile resources from lessons by running node \_scripts/addResources.js
 
 ### Step 3: Jekyll Auth Configuration
 
@@ -95,6 +97,7 @@ gem 'redcarpet'
 Next, we're going to manually configure our `production` branch for deployment and finally deploy our Heroku site (note: do not use the "auto configure" command that Jekyll Auth provides).
 
 - First we need to make an initial commit to the production branch of our repo, and we also need to force add some files that are ignored on `master` but need to included on the `production` branch. Run the following commands:
+
 ```bash
 git status
 git add -A
@@ -104,20 +107,29 @@ git add -f config.ru
 git add -f Rakefile
 git commit -m "Added necessary deployment files." # or another descriptive message
 ```
+
 - Next, create your Heroku app by running the following command from your local repo's directory:
+
 ```bash
 heroku create COURSE-NAME
 ```
-*Note: The course name must match the name of the GitHub application you previously created*
+
+_Note: The course name must match the name of the GitHub application you previously created_
+
 - Using the team ID and GitHub app credentials you previously acquired, run:
+
 ```bash
 heroku config:set GITHUB_CLIENT_ID=XXX GITHUB_CLIENT_SECRET=XXX GITHUB_TEAM_ID=XXX
 ```
+
 - Push the content of your local `production` branch to the Heroku `master` branch:
+
 ```bash
 git push heroku production:master
 ```
+
 - Finally, push the content of the `production` branch to GitHub to keep things in sync, and switch back to your `master` branch:
+
 ```bash
 git push origin production
 git checkout master
@@ -135,34 +147,43 @@ To do that, follow these steps:
 
 - Make sure you are logged into Heroku via the command line.
 - On the `master` branch in your local repo, make sure you have no uncommitted changes, then run the following command to make sure you are up-to-date with the origin:
+
 ```bash
 git checkout master
 git pull origin master
 ```
+
 - Make your own changes, if necessary (if you do it on a local feature branch, make sure you merge them to the `master` branch):
+
 ```bash
 git status
 git add  -A
 git commit -m "Some descriptive message."
 git push origin master
 ```
+
 - Checkout the production branch:
+
 ```bash
 git checkout production
 ```
+
 - Merge the production branch to bring it up to date with master:
+
 ```bash
 git merge master
 ```
+
 - Push the changes to the Heroku App master branch and the GitHub production branch, and then return to the master branch:
+
 ```bash
 git push heroku production:master
 git push origin production
 git checkout master
 ```
 
-*Possible future feature: Set up automatic deploys to Heroku when "production" branch is pushed to GitHub*
+_Possible future feature: Set up automatic deploys to Heroku when "production" branch is pushed to GitHub_
 
 ## Configuring Multiple Heroku Committers for a Site
 
-*Coming soon!*
+_Coming soon!_
