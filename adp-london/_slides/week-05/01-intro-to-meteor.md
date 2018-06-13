@@ -156,7 +156,7 @@ Let's review the Awesome Meteor API Documentation and discuss the finer points o
 
 In 2011 NPM had not yet established itself as the de-facto package manager for Node applications.
 
-Because of Meteor unique architecture , and in order to preserve it's simple developer experience, while allowing
+Because of Meteor's unique architecture, and in order to preserve its simple developer experience, while allowing
 3rd party developers to contribute useful packages for use with Meteor, MDG built a proprietary packaging system.
 
 The community responded by building a package hub called:
@@ -166,8 +166,8 @@ The community responded by building a package hub called:
 
 ## Meteor, Atmosphere & NPM
 
-As Meteor grew in popularity, the benefits of this system were soon overshadowed, by the demand from the JavaScript
-community at large, for NPM integration. Most JavaScript developers, especially those building software with Node,
+As Meteor grew in popularity, the benefits of this system were soon overshadowed by the demand from the JavaScript
+community at large for NPM integration. Most JavaScript developers, especially those building software with Node,
 use NPM.
 
 The result is that there are 2 ways of acquiring packages to use with your Meteor Project.
@@ -179,8 +179,8 @@ that come built into Meteor.
 
 # Deploying Meteor Apps
 
-Historically, Meteor has been difficult to deploy, because of it's unique architecture.
-This is no longer the case. MDG has created [Galaxy](https://www.meteor.com/hosting). An all in one paid hosting
+Historically, Meteor has been difficult to deploy, because of its unique architecture.
+This is no longer the case. MDG has created [Galaxy](https://www.meteor.com/hosting), an all in one paid hosting
 solution for Meteor apps.
 
 The Open Source community has also built deployment solutions. The 2 most popular are:
