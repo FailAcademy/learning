@@ -199,7 +199,7 @@ More on [Express installation instructions here](https://expressjs.com/en/starte
 Let's also use Babel with our app:
 
 ```bash
-npm i -D babel-cli babel-preset-env nodemon
+npm i -D babel-cli babel-preset-es2015 babel-preset-stage-2 nodemon
 ```
 
 The [nodemon](https://github.com/remy/nodemon) package will allow us to watch files in the directory in which nodemon was started, and if any files change, it will automatically restart our Node application.
@@ -220,7 +220,7 @@ Add to `.babelrc`:
 
 ```
 {
-  "presets": ["env"],
+  "presets": ["es2015", "stage-2"],
   "plugins": []
 }
 ```
@@ -419,20 +419,6 @@ Lastly, append all the quotes and their authors to the DOM after the `fetch` Pro
 Probably want to share this with the students to save time...
 
 ```js
-<<<<<<< HEAD
-function appendQuote(quote) {
-  const blockquote = document.createElement("blockquote");
-  const deleteButton = document.createElement("button");
-  deleteButton.setAttribute(
-    "data-quote",
-    quote.name.replace(/\s+/g, "-").toLowerCase()
-  );
-  deleteButton.textContent = "Delete";
-  blockquote.textContent = `"${quote.text}" — ${quote.name} `;
-  blockquote.appendChild(deleteButton);
-  container.appendChild(blockquote);
-}
-=======
 const container = document.getElementById("quotes");
 
 fetch("http://localhost:4000/quotes")
@@ -449,7 +435,6 @@ fetch("http://localhost:4000/quotes")
     })
   )
   .catch(err => console.log(err));
->>>>>>> express lesson updated
 ```
 
 ---
@@ -570,38 +555,6 @@ First, we'll need a form to send `POST` requests to our server from the client:
 
 ---
 
-# Event Handler
-
-In our client-side JS, you'll also need to listen for the `submit` event on the form:
-
-```js
-const createQuoteForm = document.getElementById("create-quote");
-
-createQuoteForm.addEventListener("submit", function(event) {
-  event.preventDefault();
-  const formData = new FormData(createQuoteForm);
-  const newQuote = {};
-
-  for ([key, value] of formData.entries()) {
-    newQuote[key] = value;
-  }
-
-  // Now use fetch to send a post request to finish the job...
-});
-```
-
----
-
-# Exercise 6
-
-Before we handle the `POST` request in Express, we'll need a way to send that request from the client to our server.
-
-Inside of the submit event handler, use `fetch` to send a `POST` request. You'll need to send it to the `/quotes` route.
-
-**Note**: You will also need to supply some request options in the form of an object as a second argument to `fetch`. You'll want to specify that the `method` is `POST`, set `headers` for the `Content-Type` (JSON), and set the `newQuote` object as the `body` (use `JSON.stringify()`).
-
----
-
 # POST Requests
 
 Now we finally get to handle the `POST` request we're sending from the client. First, we'll need some middleware to parse the JSON body of the incoming request:
@@ -615,14 +568,6 @@ Now add this to your Express app:
 ```js
 import bodyParser from "body-parser";
 
-<<<<<<< HEAD
-app.post("/quotes", bodyParser.json(), function(request, response) {
-  const newQuote = request.body;
-  // Add your new quote to the quotes array
-  // Then send back a 201 status
-  // And also send the new quote as JSON in the response
-});
-=======
 app.post(
   "/quotes",
   bodyParser.urlencoded({ extended: true }),
@@ -633,7 +578,6 @@ app.post(
     // And also send the new quote as JSON in the response
   }
 );
->>>>>>> express lesson updated
 ```
 
 ---
@@ -670,17 +614,9 @@ const container = document.getElementById("quotes");
 
 container.addEventListener("click", function(event) {
   const clickedEl = event.target;
-<<<<<<< HEAD
-
-  if (clickedEl.tagName === "BUTTON") {
-    const name = clickedEl.getAttribute("data-quote");
-
-    fetch(`http://localhost:3300/quotes/${name}`, {
-=======
   if (clickedEl.tagName === "BUTTON") {
     const name = clickedEl.getAttribute("name");
     fetch(`http://localhost:4000/quotes/${name}`, {
->>>>>>> express lesson updated
       method: "DELETE"
     }).then(() => {
       const blockquote = clickedEl.parentNode;
@@ -921,24 +857,13 @@ In small groups or pairs, you'll be assigned one of the following topics to rese
 
 **State in REST:**
 
-<<<<<<< HEAD
-
 - Statelessness: request happen in isolation of each other and contain all the info they necessary to get what's needed from the server
 - The client doesn't need to coax the server into some state for the server to be receptive to a request
 - HTTP sessions on the server can break statelessness
 - Statelessness makes it easier to cache and scale a distributed app
 - Application state should be managed in the client, and reflects interactions
 - Resource state should be managed on the server, and reflects the semi-permanent state of data
-- # Resource state is the same for every client
-
-* Statelessness: request happen in isolation of each other and contain all the info they necessary to get what's needed from the server
-* The client doesn't need to coax the server into some state for the server to be receptive to a request
-* HTTP sessions on the server can break statelessness
-* Statelessness makes it easier to cache and scale a distributed app
-* Application state should be managed in the client, and reflects interactions
-* Resource state should be managed on the server, and reflects the semi-permanent state of data
-* Resource state is the same for every client
-  > > > > > > > express lesson updated
+- Resource state is the same for every client
 
 **RMM & HATEOAS:**
 
