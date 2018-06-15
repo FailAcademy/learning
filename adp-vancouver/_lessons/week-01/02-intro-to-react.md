@@ -68,7 +68,7 @@ Note that in Codepen, you don't explicitly import `React` or `ReactDOM`, but you
 
 Open `App.js` in your React app and delete the default content in the `render()`.
 
-In it's place, set up an array as a constant called `todos` and add 'Learn React' as the only item.
+In its place, set up an array as a constant called `todos` and add 'Learn React' as the only item.
 
 Next, use what you just learned about `.map()` and iterating over arrays in a component to list the to-do array item inside an unordered list element.
 

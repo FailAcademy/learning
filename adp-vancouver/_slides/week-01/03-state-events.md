@@ -287,7 +287,7 @@ class: center, middle
 # Props vs. State
 
 - `props` are set by parent components
-- A component **cannot** change it's own props (it can set a child component's `props` though)
+- A component **cannot** change its own props (it can set a child component's `props` though)
 - `props` are only set at element definition time
 - A component's state can change from within (and when it does, the virtual DOM is re-rendered)
 - State can be used to define props for child components
