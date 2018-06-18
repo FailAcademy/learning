@@ -135,7 +135,7 @@ Be sure to **add a loading state** to your screen while content is being fetched
 
 In preparation for tomorrow's lesson on navigation, you may also want to rough out container components for the app's other scenes (i.e. `Schedule`, `Session`, `Speaker`, and `Faves`).
 
-Be sure to set-up all of the colors for you app in an object exported from `config/styles.js` too.
+Be sure to set-up all of the colors for your app in an object exported from `config/styles.js` too.
 
 ---
 
