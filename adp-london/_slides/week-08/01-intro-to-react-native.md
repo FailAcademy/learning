@@ -240,7 +240,7 @@ But how does RN know what component to bind to the view when our app launches? I
 AppRegistry.registerComponent("HelloWorld", () => HelloWorld);
 ```
 
-And if we look in `ios/AppDelegate.m` we'll see:
+And if we look in `ios/HelloWorld/AppDelegate.m` we'll see:
 
 ```objective-c
 RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
