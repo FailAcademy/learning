@@ -40,9 +40,9 @@ Please note that this must be done from within a project's interface in Android 
 
 ### Step 4:
 
-Run your `AwesomeProject` with your android emmulator `react-native run-android` from the project directory.
+Run your `AwesomeProject` with your android emulator `react-native run-android` from the project directory.
 
-(Note: Do not start working on your R10 project right away, first, try running `AwesomeProject` with your Android emmulator. Do not Update Gradle or Maven for your RN project from Android Stidio.)
+(Note: Do not start working on your R10 project right away, first, try running `AwesomeProject` with your Android emulator. Do not Update Gradle or Maven for your RN project from Android Studio.)
 
 ---
 
