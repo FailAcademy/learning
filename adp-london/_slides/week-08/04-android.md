@@ -96,7 +96,7 @@ React Native makes very easy to build cross-platform apps, basically by default.
 
 With that in mind, we'll want to **re-use as much code as possible** when building a cross-platform app.
 
-When we view the [React Native docs](https://facebook.github.io/react-native/docs/getting-started.html) we can see that most of the components and APIs listed there are inherently cross-platform.
+When we view the [React Native Components and APIs](https://facebook.github.io/react-native/docs/components-and-apis.html) we can see that most of the components and APIs listed there are inherently cross-platform.
 
 ---
 
