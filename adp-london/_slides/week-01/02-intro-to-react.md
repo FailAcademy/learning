@@ -117,7 +117,7 @@ class: center, middle
 
 # Elements & Components
 
-React elements are simply **JS objects used to describe how the HTML for the component should look **, i.e. it is an object-based representation of a DOM note. There are no methods on the object, just data.
+React elements are simply **JS objects used to describe how the HTML for the component should look **, i.e. it is an object-based representation of a DOM node. There are no methods on the object, just data.
 
 They can be created with plain JS or **JavaScript XML (JSX)**.
 
