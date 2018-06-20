@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to Databases with Postgres
 slides: ['_slides/week-01/01-introducing-postgres.md']
-lesson_date: 2018-07-04
+lesson_date: 2018-04-30
 ---
 
 ## Pre-Work
@@ -21,33 +21,33 @@ To start, get familiar with SQL syntax. Complete Part 1, from [these exercises](
 
 ## Learning Objectives
 
-- Define what role a database plays in a software application.
-- Explain how a relational database is structured.
-- Install and set up an instance of Postgres.
-- Explain the difference between `TABLE` and `DATABASE`.
-- Model data, and create tables to store it.
-- Distinguish different data types in a SQL database context.
-- Describe why a Schema is necessary.
-- Create a simple Schema using SQL basic syntax.
-- Write basic SQL queries to perform CRUD operations on a database.
-- Add constraints to ensure consistent data.
-- Implement an auto-incrementing id field.
+* Define what role a database plays in a software application.
+* Explain how a relational database is structured.
+* Install and set up an instance of Postgres.
+* Explain the difference between `TABLE` and `DATABASE`.
+* Model data, and create tables to store it.
+* Distinguish different data types in a SQL database context.
+* Describe why a Schema is necessary.
+* Create a simple Schema using SQL basic syntax.
+* Write basic SQL queries to perform CRUD operations on a database.
+* Add constraints to ensure consistent data.
+* Implement an auto-incrementing id field.
 
 ---
 
 ## Keywords
 
-- Relational database
-- Normalization
-- SQL
-- CRUD
-- `CREATE TABLE`
-- `ALTER TABLE`
-- `FOREIGN KEY`
-- `INSERT`
-- Data Types
-- Scalar
-- Schema
+* Relational database
+* Normalization
+* SQL
+* CRUD
+* `CREATE TABLE`
+* `ALTER TABLE`
+* `FOREIGN KEY`
+* `INSERT`
+* Data Types
+* Scalar
+* Schema
 
 ---
 
@@ -55,9 +55,9 @@ To start, get familiar with SQL syntax. Complete Part 1, from [these exercises](
 
 In this exercise, we'll go through the process of setting up a database within it, to use as the database for your project.
 
-- Create a new database using the Postgres cli.
+* Create a new database using the Postgres cli.
 
-- Use the `CREATE USER <name> WITH PASSWORD <pw>` command to create a new user and configure a password for each database.
+* Use the `CREATE USER <name> WITH PASSWORD <pw>` command to create a new user and configure a password for each database.
   See [documentation](https://www.Postgres.org/docs/9.6/static/sql-createuser.html).
 
 (This setup is meant to mock a real world database setup, and to give us the opportunity to become familiar with
@@ -69,8 +69,8 @@ creating and authorizing a new Database on your local machine. In a real product
 
 Populating your Relational Database.
 
-- Use the `CREATE TABLE` command to set up some tables in our test database.
-- Set the appropriate data-types for each column in our schema.
+* Use the `CREATE TABLE` command to set up some tables in our test database.
+* Set the appropriate data-types for each column in our schema.
 
 **Data Types** <br/>
 What types of data do we need to model for our application?
@@ -82,8 +82,8 @@ How should we "Normalize" the data in our schema, according to the rules of Thir
 Each entry into the database for each of the schema should have an id. This will be necessary for building
 the relationships between data in out database.
 
-- What data type is provided to implement and auto-incrementing id column?
-- What are some important behaviors of an auto-incrementing column?
+* What data type is provided to implement and auto-incrementing id column?
+* What are some important behaviors of an auto-incrementing column?
 
 ---
 
@@ -94,18 +94,18 @@ Let's create relationships between the tables we created in the last lesson.
 
 The relationships we'll create are defined as follows:
 
-- 1 to 1 (1:1)
-- 1 to many (1:n)
-- Many to many (n:n)
+* 1 to 1 (1:1)
+* 1 to many (1:n)
+* Many to many (n:n)
 
 To do this we'll need to add "foreign key constraints" to some columns.
 
 **Many to many relationships** :<br/>
 Creating many to many relationships requires the creation of a "Link table".
 
-- How are Link Tables implemented.
-- Why are link tables necessary in order to define n:n relationships between columns in our database?
-- What are the many to many relationships in our project application's database?
+* How are Link Tables implemented.
+* Why are link tables necessary in order to define n:n relationships between columns in our database?
+* What are the many to many relationships in our project application's database?
 
 ---
 
@@ -115,8 +115,8 @@ Now that we've created the database tables for our project application, use the 
 
 Add the following mock data to your database:
 
-- At least 4 Items
-- All of the Tags (Categories)
+* At least 4 Items
+* All of the Tags (Categories)
 
 Ensure that you've set up the appropriate foreign key constraints!
 
@@ -124,5 +124,5 @@ Ensure that you've set up the appropriate foreign key constraints!
 
 ## Additional Resources
 
-- [Learn SQL - Codeacademy](https://www.codecademy.com/learn/learn-sql)
-- [Postgres Docs](http://www.Postgres.org/docs/9.6)
+* [Learn SQL - Codeacademy](https://www.codecademy.com/learn/learn-sql)
+* [Postgres Docs](http://www.Postgres.org/docs/9.6)
