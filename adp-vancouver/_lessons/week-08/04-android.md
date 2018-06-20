@@ -2,7 +2,7 @@
 layout: lesson
 title: Android Apps with React Native
 slides: ['_slides/week-08/04-android.md']
-lesson_date:  2018-05-31
+lesson_date:  2018-08-23
 ---
 
 ## Pre-work
@@ -48,18 +48,18 @@ Run your `AwesomeProject` with your android emulator `react-native run-android` 
 
 ## Learning Objectives
 
-* Configure an Android development environment for use with React Native.
-* Build a cross-platform app for iOS and Android designed for maximum code-reuse.
-* Use the `Platform` modules to detect platforms and conditionally configure components accordingly.
-* Use platform-specific file extensions to split more complex code into multiple files.
+- Configure an Android development environment for use with React Native.
+- Build a cross-platform app for iOS and Android designed for maximum code-reuse.
+- Use the `Platform` modules to detect platforms and conditionally configure components accordingly.
+- Use platform-specific file extensions to split more complex code into multiple files.
 
 ---
 
 ## Keywords
 
-* Android SDK
-* Android Studio
-* `Platform`
+- Android SDK
+- Android Studio
+- `Platform`
 
 ---
 
@@ -94,12 +94,12 @@ From there, the rest of class time this week may be spent on finishing building 
 
 User guide for Android Studio:
 
-* [Meet Android Studio](https://developer.android.com/studio/intro/index.html)
+- [Meet Android Studio](https://developer.android.com/studio/intro/index.html)
 
 More on building cross-platform components:
 
-* [Better Cross-Platform React Native Components](https://medium.com/differential/better-cross-platform-react-native-components-cb8aadeba472#.jyrww11oo)
+- [Better Cross-Platform React Native Components](https://medium.com/differential/better-cross-platform-react-native-components-cb8aadeba472#.jyrww11oo)
 
 UX and Android navigation:
 
-* [Bye, Bye Burger!](https://medium.com/startup-grind/bye-bye-burger-5bd963806015#.rbncat6ic)
+- [Bye, Bye Burger!](https://medium.com/startup-grind/bye-bye-burger-5bd963806015#.rbncat6ic)

@@ -2,7 +2,7 @@
 layout: lesson
 title: React Native Animation
 slides: ['_slides/week-08/05-animation.md']
-lesson_date:  2018-06-01
+lesson_date:  2018-08-24
 ---
 
 ## Pre-work
@@ -13,17 +13,17 @@ _There is no pre-work for this lesson._
 
 ## Learning Objectives
 
-* Use React Native's `LayoutAnimation` module to add basic animation to an app's UI, including animated toggling of a component's visibility.
-* Use React Native's `Animated` module to add more complex animation to an app's UI by targeting specific style properties and adding custom interpolation between key frames.
+- Use React Native's `LayoutAnimation` module to add basic animation to an app's UI, including animated toggling of a component's visibility.
+- Use React Native's `Animated` module to add more complex animation to an app's UI by targeting specific style properties and adding custom interpolation between key frames.
 
 ---
 
 ## Keywords
 
-* `LayoutAnimation`
-* `Animated`
-* `UIManager`
-* Interpolation
+- `LayoutAnimation`
+- `Animated`
+- `UIManager`
+- Interpolation
 
 ---
 
@@ -55,15 +55,15 @@ In today's lab, you'll continue work on Project 4.
 
 Official React Native documentation:
 
-* [LayoutAnimation](https://facebook.github.io/react-native/docs/layoutanimation.html)
-* [Animated](https://facebook.github.io/react-native/docs/animated.html)
-* [Animations](https://facebook.github.io/react-native/docs/animations.html)
+- [LayoutAnimation](https://facebook.github.io/react-native/docs/layoutanimation.html)
+- [Animated](https://facebook.github.io/react-native/docs/animated.html)
+- [Animations](https://facebook.github.io/react-native/docs/animations.html)
 
 A few helpful examples of how to add animation to a React Native app:
 
-* React Native animations revisited:
-  * [ Part I: Simple and pretty LayoutAnimation](https://blog.callstack.io/react-native-animations-revisited-part-i-783143d4884#.z360di9va)
-  * [ Part II: Amazing Animated API](https://blog.callstack.io/react-native-animations-revisited-part-ii-8314a97162b0#.z6mmo24o8)
-  * [Part III: How to handle gestures with PanResponder](https://blog.callstack.io/react-native-animations-revisited-part-iii-41ed43d1ce2e#.dzx6snym1)
-* [React Native’s LayoutAnimation is Awesome](https://medium.com/@Jpoliachik/react-native-s-layoutanimation-is-awesome-4a4d317afd3e#.cbt1y3a1w)
-* [Animate Your React Native App](https://code.tutsplus.com/tutorials/working-with-animations-in-react-native--cms-27328)
+- React Native animations revisited:
+  - [ Part I: Simple and pretty LayoutAnimation](https://blog.callstack.io/react-native-animations-revisited-part-i-783143d4884#.z360di9va)
+  - [ Part II: Amazing Animated API](https://blog.callstack.io/react-native-animations-revisited-part-ii-8314a97162b0#.z6mmo24o8)
+  - [Part III: How to handle gestures with PanResponder](https://blog.callstack.io/react-native-animations-revisited-part-iii-41ed43d1ce2e#.dzx6snym1)
+- [React Native’s LayoutAnimation is Awesome](https://medium.com/@Jpoliachik/react-native-s-layoutanimation-is-awesome-4a4d317afd3e#.cbt1y3a1w)
+- [Animate Your React Native App](https://code.tutsplus.com/tutorials/working-with-animations-in-react-native--cms-27328)

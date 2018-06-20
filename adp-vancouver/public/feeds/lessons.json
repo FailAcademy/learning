@@ -29,49 +29,44 @@
    {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-04-20"
+    "start": "2018-07-20"
     },
     {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-04-27"
+      "start": "2018-07-27"
     },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-05-04"
+      "start": "2018-08-02"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-01-27"
+      "start": "2018-08-03"
    },
   {
      "title": "Project Work Day",
      "allDay": true,
-     "start": "2018-05-11"
+     "start": "2018-08-17"
   },
-  {
-    "title": "Project Work Day",
-    "allDay": true,
-    "start": "2018-05-10"
- },
    {
       "title": "Self Directed Meteor Project Work",
       "allDay": true,
-      "start": "2018-05-14",
-      "end": "2018-05-19"
+      "start": "2018-08-07",
+      "end": "2018-08-11"
    },
    {
       "title": "Portfolio Week",
       "allDay": true,
-      "start": "2018-06-04",
-      "end": "2018-06-09"
+      "start": "2018-08-27",
+      "end": "2018-09-01"
    },
    {
       "title": "Community Project Work",
       "allDay": true,
-      "start": "2018-06-11",
-      "end": "2018-06-29"
+      "start": "2018-09-04",
+      "end": "2018-09-21"
    }
 ]

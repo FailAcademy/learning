@@ -1,38 +1,38 @@
 ---
 layout: lesson
 title: Git for Teams
-lesson_date: 2018-06-11
+lesson_date: 2018-08-30
 ---
 
 ## Pre-work
 
 Prior to class, please review these sections from the Atlassian Git guide:
 
-* [Merging vs. Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing/conceptual-overview)
-* [Branching](https://www.atlassian.com/git/tutorials/using-branches)
-* [Comparing workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
-* [Syncing](https://www.atlassian.com/git/tutorials/syncing)
+- [Merging vs. Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing/conceptual-overview)
+- [Branching](https://www.atlassian.com/git/tutorials/using-branches)
+- [Comparing workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
+- [Syncing](https://www.atlassian.com/git/tutorials/syncing)
 
 ---
 
 ## Learning Objectives
 
-* Create a feature branch and use it to work on a feature.
-* Submit a pull request to a develop branch from a feature branch.
-* Explore strategies for working with and maintaining repos with many branches.
+- Create a feature branch and use it to work on a feature.
+- Submit a pull request to a develop branch from a feature branch.
+- Explore strategies for working with and maintaining repos with many branches.
 
 ---
 
 ## Keywords
 
-* GitFlow
-* Pull request
-* Merge
-* Rebase
-* Release
-* Feature
-* Feature branch
-* Development branch
+- GitFlow
+- Pull request
+- Merge
+- Rebase
+- Release
+- Feature
+- Feature branch
+- Development branch
 
 ---
 
@@ -46,10 +46,10 @@ The ZenHub extension turns github into a project management platform. We'll be u
 
 **Set up the following boards:**
 
-* New issues
-* In Progress
-* Review / QA
-* Closed
+- New issues
+- In Progress
+- Review / QA
+- Closed
 
 **Issue lifecycle demo:**
 
@@ -63,5 +63,5 @@ We'll be using GitFlow techniques to manage commits into this repository. _All c
 
 More on using Git in a team-based environment:
 
-* [Git for Teams](http://gitforteams.com/) (O'Reilly book resources)
-* [Git for Teams](https://gitlab.com/gitforteams/gitforteams) (Gitlab resource)
+- [Git for Teams](http://gitforteams.com/) (O'Reilly book resources)
+- [Git for Teams](https://gitlab.com/gitforteams/gitforteams) (Gitlab resource)

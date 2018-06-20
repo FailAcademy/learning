@@ -2,7 +2,7 @@
 layout: lesson
 title: Navigation and Dependencies
 slides: ['_slides/week-08/02-navigation-and-dependencies.md']
-lesson_date:  2018-05-29
+lesson_date:  2018-08-21
 ---
 
 ## Pre-work
@@ -13,22 +13,22 @@ _There is no pre-work for this lesson._
 
 ## Learning Objectives
 
-* Distinguish how navigation in a mobile application is different from a web application.
-* Explore built-in navigation options options in React Native.
-* Add a the `react-navigation` module to a React Native app as an all-in-one, cross-platform tab bar, drawer, and navigator solution.
-* Add third-party package to a React Native app, such as `react-native-vector-icons` and `react-native-linear-gradient`.
-* Use `react-native link` to link native dependencies in a application, and manually link native dependencies where `react-native link` cannot be used.
+- Distinguish how navigation in a mobile application is different from a web application.
+- Explore built-in navigation options options in React Native.
+- Add a the `react-navigation` module to a React Native app as an all-in-one, cross-platform tab bar, drawer, and navigator solution.
+- Add third-party package to a React Native app, such as `react-native-vector-icons` and `react-native-linear-gradient`.
+- Use `react-native link` to link native dependencies in a application, and manually link native dependencies where `react-native link` cannot be used.
 
 ---
 
 ## Keywords
 
-* Navigation stack
-* Push
-* Pop
-* Navigator
-* Tab bar
-* Sliding drawer
+- Navigation stack
+- Push
+- Pop
+- Navigator
+- Tab bar
+- Sliding drawer
 
 ---
 
@@ -136,13 +136,13 @@ You will also need to figure out how to pop the Speaker modal off the root stack
 
 React Native docs on navigation:
 
-* [Navigation](https://facebook.github.io/react-native/docs/navigation.html)
+- [Navigation](https://facebook.github.io/react-native/docs/navigation.html)
 
 React Navigation documentation:
 
-* [React Navigation (v2)](https://reactnavigation.org/)
+- [React Navigation (v2)](https://reactnavigation.org/)
 
 Best practices for mobile nav on iOS or Android:
 
-* [iOS Human Interface Guidelines - Navigation](https://developer.apple.com/ios/human-interface-guidelines/interaction/navigation/)
-* [Material Design - Navigation](https://material.google.com/patterns/navigation.html)
+- [iOS Human Interface Guidelines - Navigation](https://developer.apple.com/ios/human-interface-guidelines/interaction/navigation/)
+- [Material Design - Navigation](https://material.google.com/patterns/navigation.html)

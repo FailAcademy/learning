@@ -2,32 +2,32 @@
 layout: lesson
 title: React and Redux
 slides: ['_slides/week-04/02a-react-and-redux.md']
-lesson_date: 2018-04-19
+lesson_date: 2018-07-24
 ---
 
 ## Pre-Work
 
-* Read the [Redux docs on React](http://redux.js.org/docs/basics/UsageWithReact.html)
+- Read the [Redux docs on React](http://redux.js.org/docs/basics/UsageWithReact.html)
 
 ---
 
 ## Learning Objectives
 
-* Identify the roles of React and Redux when used together to display views and store state.
-* Use Redux to write state-free code in React that relies largely on props.
-* Use `react-redux`, with `<Provider>` and `connect` to map state to props.
-* Use the `dispatch` prop to send actions to the Redux store from a React component.
-* Use `react-router-redux` to preserve application routes in state.
+- Identify the roles of React and Redux when used together to display views and store state.
+- Use Redux to write state-free code in React that relies largely on props.
+- Use `react-redux`, with `<Provider>` and `connect` to map state to props.
+- Use the `dispatch` prop to send actions to the Redux store from a React component.
+- Use `react-router-redux` to preserve application routes in state.
 
 ---
 
 ## Keywords
 
-* Container component
-* Presentational component
-* `Provider`
-* `connect`
-* `mapStateToProps`
+- Container component
+- Presentational component
+- `Provider`
+- `connect`
+- `mapStateToProps`
 
 ---
 
@@ -35,10 +35,10 @@ lesson_date: 2018-04-19
 
 **Redux** and **React** serve different roles. Discuss with a partner the role of each in terms of handling:
 
-* Data
-* Views
-* Logic
-* Events
+- Data
+- Views
+- Logic
+- Events
 
 ---
 
@@ -82,6 +82,6 @@ When you're finished, add [react-router-redux](https://github.com/ReactTraining/
 
 ## Additional Resources
 
-* [React-Redux Docs](https://github.com/reactjs/react-redux)
-* [Egghead.io React-Redux Tutorial](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)
-* [Quick Guide to React & Redux](https://www.reax.io/blog/2016/07/07/quick-guide-to-react-and-redux/)
+- [React-Redux Docs](https://github.com/reactjs/react-redux)
+- [Egghead.io React-Redux Tutorial](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)
+- [Quick Guide to React & Redux](https://www.reax.io/blog/2016/07/07/quick-guide-to-react-and-redux/)
