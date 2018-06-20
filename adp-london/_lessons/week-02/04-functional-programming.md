@@ -2,57 +2,57 @@
 layout: lesson
 title: Functional Programming
 slides: ['_slides/week-02/04-functional-programming.md']
-lesson_date: 2018-04-16
+lesson_date: 2018-07-12
 ---
 
 ## Pre-Work
 
 Complete the following reading from Eloquent JavaScript before class:
 
-* [Higher Order Functions](http://eloquentjavascript.net/05_higher_order.html)
+- [Higher Order Functions](http://eloquentjavascript.net/05_higher_order.html)
 
 Also read the following chapters from "Professor Frisby's Mostly Adequate Guide to Functional Programming":
 
-* [Chapter 1: What ever are we doing?](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch01.md)
-* [Chapter 2: First Class Functions](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch02.md)
-* [Chapter 3: Pure Happiness with Pure Functions](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch03.md)
+- [Chapter 1: What ever are we doing?](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch01.md)
+- [Chapter 2: First Class Functions](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch02.md)
+- [Chapter 3: Pure Happiness with Pure Functions](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch03.md)
 
 ---
 
 ## Learning Objectives
 
-* Explain the origins of functional programming and how it differs from object-oriented programming.
-* Distinguish between imperative and declarative programming, and their relative pros and cons.
-* Explain what it means to have "first-class functions" in JavaScript.
-* Explain what higher-order functions are and create them.
-* Identify the differences between pure and impure functions, and write code that avoids side effects.
-* Explain the difference between mutable and immutable objects.
-* Demonstrate the different outcomes from calling methods such as `.forEach()` and `.map()`, `.push()` and `.concat()`, and `.splice()` and `.slice()`
-* Practice using common array methods (such as `.map()`, `.filter()`, and `.reduce()`) to transform data.
-* Use the spread operator `...` and `Object.assign()` to avoid array mutation.
+- Explain the origins of functional programming and how it differs from object-oriented programming.
+- Distinguish between imperative and declarative programming, and their relative pros and cons.
+- Explain what it means to have "first-class functions" in JavaScript.
+- Explain what higher-order functions are and create them.
+- Identify the differences between pure and impure functions, and write code that avoids side effects.
+- Explain the difference between mutable and immutable objects.
+- Demonstrate the different outcomes from calling methods such as `.forEach()` and `.map()`, `.push()` and `.concat()`, and `.splice()` and `.slice()`
+- Practice using common array methods (such as `.map()`, `.filter()`, and `.reduce()`) to transform data.
+- Use the spread operator `...` and `Object.assign()` to avoid array mutation.
 
 ---
 
 ## Keywords
 
-* Imperative
-* Declarative
-* First class function
-* Higher-order function
-* Pure function
-* Side effect
-* Mutability
-* [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-* [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-* [push](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
-* [concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
-* [splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
-* [slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
-* [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-* [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-* [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
-* [Spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
-* [Object.freeze](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)
+- Imperative
+- Declarative
+- First class function
+- Higher-order function
+- Pure function
+- Side effect
+- Mutability
+- [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+- [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+- [push](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+- [concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
+- [splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+- [slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+- [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+- [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+- [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+- [Spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+- [Object.freeze](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)
 
 ---
 
@@ -72,12 +72,12 @@ Be prepared to demo your functions for the class.
 
 With a partner, **compare** and **categorize** the following array methods. How are they different? When should each be used?
 
-* `forEach`
-* `map`
-* `concat`
-* `push`
-* `slice`
-* `splice`
+- `forEach`
+- `map`
+- `concat`
+- `push`
+- `slice`
+- `splice`
 
 ---
 
@@ -239,16 +239,16 @@ Object.prototype.stockUp = function(count) {
 
 A great video on series on functional programming in JS:
 
-* [Fun Fun Function: Functional programming in JavaScript (playlist)](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84)
+- [Fun Fun Function: Functional programming in JavaScript (playlist)](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84)
 
 The full-text of this lesson's pre-work readings:
 
-* [Eloquent JavaScript - Second Edition](http://eloquentjavascript.net/)
-* [Professor Frisby's Mostly Adequate Guide to Functional Programming](https://github.com/MostlyAdequate/mostly-adequate-guide#readme)
+- [Eloquent JavaScript - Second Edition](http://eloquentjavascript.net/)
+- [Professor Frisby's Mostly Adequate Guide to Functional Programming](https://github.com/MostlyAdequate/mostly-adequate-guide#readme)
 
 Other helpful JS functional programming readings:
 
-* [Master the JavaScript Interview: What is Functional Programming?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0)
-* [Lambda Calculus - Computerphile](https://youtu.be/eis11j_iGMs)
-* [Array Map, Filter and Reduce in JS](https://atendesigngroup.com/blog/array-map-filter-and-reduce-js)
-* [Functional Programming Jargon](https://functional.works-hub.com/learn/Functional-Programming-Jargon)
+- [Master the JavaScript Interview: What is Functional Programming?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0)
+- [Lambda Calculus - Computerphile](https://youtu.be/eis11j_iGMs)
+- [Array Map, Filter and Reduce in JS](https://atendesigngroup.com/blog/array-map-filter-and-reduce-js)
+- [Functional Programming Jargon](https://functional.works-hub.com/learn/Functional-Programming-Jargon)

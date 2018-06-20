@@ -2,39 +2,39 @@
 layout: lesson
 title: Introducing Node
 slides: ['_slides/week-02/01-introducing-node.md']
-lesson_date: 2018-04-23
+lesson_date: 2018-07-09
 ---
 
 ## Pre-Work
 
 Take a look at how you can debug your Node application using Chrome Dev Tools before class:
 
-* [DevTools in 2016: Accelerate your workflow - Google I/O 2016](https://www.youtube.com/watch?v=x8u0n4dT-WI&feature=youtu.be&t=2571)
+- [DevTools in 2016: Accelerate your workflow - Google I/O 2016](https://www.youtube.com/watch?v=x8u0n4dT-WI&feature=youtu.be&t=2571)
 
 ---
 
 ## Learning Objectives
 
-* Understand the history and beginnings of Node.
-* Review TCP/UDP protocols.
-* Describe the Client-Server Computing Model.
-* Model JavaScript's event loop.
-* Build a simple TCP/UDP messaging server.
-* Install and use Node's profiling tools.
-* Understand the difference between _blocking IO_ and _non-blocking IO_.
+- Understand the history and beginnings of Node.
+- Review TCP/UDP protocols.
+- Describe the Client-Server Computing Model.
+- Model JavaScript's event loop.
+- Build a simple TCP/UDP messaging server.
+- Install and use Node's profiling tools.
+- Understand the difference between _blocking IO_ and _non-blocking IO_.
 
 ---
 
 ## Keywords
 
-* Node
-* Single Threaded
-* Event Loop
-* TCP/UDP
-* Process Manager
-* Memory Leak
-* Blocking/Non-blocking IO
-* Core Module
+- Node
+- Single Threaded
+- Event Loop
+- TCP/UDP
+- Process Manager
+- Memory Leak
+- Blocking/Non-blocking IO
+- Core Module
 
 ---
 
@@ -42,9 +42,9 @@ Take a look at how you can debug your Node application using Chrome Dev Tools be
 
 Implement the following `conn` event handlers in your `handleConnection` callback:
 
-* `data`
-* `close`
-* `error`
+- `data`
+- `close`
+- `error`
 
 Each handler should `console.log` the `remoteAddress` as well as any relevant parameters (e.g. incoming data, or error messages). Review **[the documentation](https://nodejs.org/api/net.html)** here before you begin.
 
@@ -62,8 +62,8 @@ Use [Netcat](https://en.wikipedia.org/wiki/Netcat) to send data to your new TCP 
 
 Use your TCP server to read from your local file system. When your server receives a request, use Node's build in `fs` module to read text from a `.txt` file and send the contents back to the connection.
 
-* Is reading from the filesystem an **async** or **sync** action?
-* In what circumstance is it useful to use blocking operations?
+- Is reading from the filesystem an **async** or **sync** action?
+- In what circumstance is it useful to use blocking operations?
 
 Modify your existing code:
 
@@ -82,8 +82,8 @@ Next we'll create a minimal chat server.
 
 Change your TCP service to deliver any incoming data to all connected clients.
 
-* Your server will need to store all connections
-* Messages you send to the server should not return to you
+- Your server will need to store all connections
+- Messages you send to the server should not return to you
 
 ---
 
@@ -105,18 +105,18 @@ _Note: You wont be able to test your server using netcat._
 
 Watch the presentation where Node was introduced at JSConf 2009:
 
-* [Ryan Dahl: Original Node.js presentation](https://www.youtube.com/watch?v=ztspvPYybIY)
+- [Ryan Dahl: Original Node.js presentation](https://www.youtube.com/watch?v=ztspvPYybIY)
 
 A delightful Node.js packages and resources:
 
-* [Awesome NodeJS](https://github.com/sindresorhus/awesome-nodejs)
+- [Awesome NodeJS](https://github.com/sindresorhus/awesome-nodejs)
 
 Process monitors and testing tools for Node:
 
-* [pm2](http://pm2.keymetrics.io/)
-* [tcpkali](https://github.com/machinezone/tcpkali)
-* [htop](https://hisham.hm/htop/)
+- [pm2](http://pm2.keymetrics.io/)
+- [tcpkali](https://github.com/machinezone/tcpkali)
+- [htop](https://hisham.hm/htop/)
 
 How to self detect a memory leak in Node:
 
-* [Findout here](https://www.nearform.com/blog/self-detect-memory-leak-node/)
+- [Findout here](https://www.nearform.com/blog/self-detect-memory-leak-node/)

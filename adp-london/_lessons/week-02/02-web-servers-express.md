@@ -2,7 +2,7 @@
 layout: lesson
 title: Creating a Web Server with Express
 slides: ['_slides/week-02/02-web-servers-express.md']
-lesson_date:  2018-04-25
+lesson_date:  2018-07-10
 ---
 
 ## Pre-Work
@@ -22,29 +22,29 @@ _Right click on the column headers to modify which ones are visible._
 
 ## Learning Objectives
 
-* Serve an `index.html` file to a web browser from Express
-* Use Chrome's network tab to inspect HTTP request/response.
-* Define what a "RESTful" architectural style is application development.
-* Use RESTful methods to communicate between an Express server and a web browser.
-* Use the HTTP verbs `GET`, `POST`, and `DELETE` in the context of REST.
-* Setup RESTful endpoints using Express.
-* Send and receive JSON from a client to Express, using `fetch`.
-* Use Express middleware for logging and processing requests.
+- Serve an `index.html` file to a web browser from Express
+- Use Chrome's network tab to inspect HTTP request/response.
+- Define what a "RESTful" architectural style is application development.
+- Use RESTful methods to communicate between an Express server and a web browser.
+- Use the HTTP verbs `GET`, `POST`, and `DELETE` in the context of REST.
+- Setup RESTful endpoints using Express.
+- Send and receive JSON from a client to Express, using `fetch`.
+- Use Express middleware for logging and processing requests.
 
 ---
 
 ## Keywords
 
-* HTTP
-* Representational State Transfer (REST)
-* Route
-* Endpoint
-* fetch
-* Cross-Origin Resource Sharing (CORS)
-* Status code
-* Middleware
-* Response
-* Request
+- HTTP
+- Representational State Transfer (REST)
+- Route
+- Endpoint
+- fetch
+- Cross-Origin Resource Sharing (CORS)
+- Status code
+- Middleware
+- Response
+- Request
 
 ---
 
@@ -161,10 +161,10 @@ Don't forget to move your quotes array into `quotes.js` too!
 
 In small groups or pairs, you'll be assigned one of the following topics to research (with respect to how it relates to REST) and deliver a short presentation to class on your findings:
 
-* Data versus Resources versus Representations in REST
-* State in REST: The idea of "statelessness" and the difference between resource state and application state
-* The Richardson Maturity Model and where "hypermedia as an engine of application state" (HATEOAS) comes into play
-* Safety and idempotence of HTTP verbs used in REST APIs
+- Data versus Resources versus Representations in REST
+- State in REST: The idea of "statelessness" and the difference between resource state and application state
+- The Richardson Maturity Model and where "hypermedia as an engine of application state" (HATEOAS) comes into play
+- Safety and idempotence of HTTP verbs used in REST APIs
 
 ---
 
@@ -178,21 +178,21 @@ Remaining lab time today will be spent working on the second half of Project 1.
 
 HTTP resources on MDN:
 
-* [HTTP request methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
-* [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+- [HTTP request methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+- [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
 Roy Fielding's original dissertation on REST:
 
-* [Architectural Styles and the Design of Network-based Software Architectures](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
+- [Architectural Styles and the Design of Network-based Software Architectures](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
 
 More on REST:
 
-* [REST, where’s my state?](https://ruben.verborgh.org/blog/2012/08/24/rest-wheres-my-state/)
-* [Richardson Maturity Model: steps toward the glory of REST](https://martinfowler.com/articles/richardsonMaturityModel.html)
-* [Scotch.io: Build a RESTful API with Express](https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4)
-* [Learn REST - A Tutorial](http://www.restapitutorial.com/)
+- [REST, where’s my state?](https://ruben.verborgh.org/blog/2012/08/24/rest-wheres-my-state/)
+- [Richardson Maturity Model: steps toward the glory of REST](https://martinfowler.com/articles/richardsonMaturityModel.html)
+- [Scotch.io: Build a RESTful API with Express](https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4)
+- [Learn REST - A Tutorial](http://www.restapitutorial.com/)
 
 High-level overviews of other protocols, etc. discussed during the lesson:
 
-* [Understanding RPC Vs REST For HTTP APIs](https://www.smashingmagazine.com/2016/09/understanding-rest-and-rpc-for-http-apis/)
-* [An Introduction to WebSockets](http://blog.teamtreehouse.com/an-introduction-to-websockets)
+- [Understanding RPC Vs REST For HTTP APIs](https://www.smashingmagazine.com/2016/09/understanding-rest-and-rpc-for-http-apis/)
+- [An Introduction to WebSockets](http://blog.teamtreehouse.com/an-introduction-to-websockets)
