@@ -2,35 +2,35 @@
 layout: lesson
 title: Behaviour Driven Development
 slides: ['_slides/week-07/03-intro-to-bdd.md']
-lesson_date: 2018-05-24
+lesson_date: 2018-08-15
 ---
 
 ## Pre-Work
 
 Prior to class, please read:
 
-* [Manual Mocks - Jest](https://facebook.github.io/jest/docs/manual-mocks.html)
+- [Manual Mocks - Jest](https://facebook.github.io/jest/docs/manual-mocks.html)
 
 ---
 
 ## Learning Objectives
 
-* Describe the differences between test driven development (TDD) and behaviour driven development (BDD).
-* Convert real-world problems into BDD stories/scenarios.
-* Practice outside-in testing using mocks.
-* Use minimal implementation to get tests to pass.
+- Describe the differences between test driven development (TDD) and behaviour driven development (BDD).
+- Convert real-world problems into BDD stories/scenarios.
+- Practice outside-in testing using mocks.
+- Use minimal implementation to get tests to pass.
 
 ---
 
 ## Keywords
 
-* Behaviour driven development (BDD)
-* Stakeholders
-* Narrative
-* Scenario
-* Interface
-* Interface discovery
-* Outside-in
+- Behaviour driven development (BDD)
+- Stakeholders
+- Narrative
+- Scenario
+- Interface
+- Interface discovery
+- Outside-in
 
 ---
 
@@ -42,8 +42,8 @@ Here's their **[data set](/public/exercises/bdd-dummy-data.json)**. Write 2 stor
 
 For your reference:
 
-* [What's in a Story?](https://dannorth.net/whats-in-a-story/)
-* [A practical blog on how to write Scenarios using BDD](https://elabor8.com.au/a-practical-blog-on-how-to-write-scenarios-using-bdd/)
+- [What's in a Story?](https://dannorth.net/whats-in-a-story/)
+- [A practical blog on how to write Scenarios using BDD](https://elabor8.com.au/a-practical-blog-on-how-to-write-scenarios-using-bdd/)
 
 ---
 
@@ -59,4 +59,4 @@ Use your tests to guide you to completing its functionality. If you finish early
 
 More on BDD:
 
-* [What is BDD anyway?](https://dev.to/theodesp/what-is-bddanyway)
+- [What is BDD anyway?](https://dev.to/theodesp/what-is-bddanyway)

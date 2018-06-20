@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 2 - React & Meteor
-due: Tuesday, May 22nd (beginning of class)
+due: Monday August 13th (beginning of class)
 class: gh-check
 ---
 
@@ -17,42 +17,42 @@ Your group must submit your project proposal to your instructor **by the end Wee
 
 Your project must:
 
-* [ ] Be pushed to Github
-* [ ] Use [descriptive Git commits](http://chris.beams.io/posts/git-commit/)
-* [ ] Use small, single purpose Git commits
-* [ ] Contain `README.md` with project summary and setup
-* [ ] Contain a valid [`package.json`](http://browsenpm.org/package.json) file with all appropriate fields completed
-* [ ] Contain `.gitignore` file (ignoring `node_modules` and system files)
-* [ ] Use ESLint with the [AirBnB style-guide](https://github.com/airbnb/javascript)
+- [ ] Be pushed to Github
+- [ ] Use [descriptive Git commits](http://chris.beams.io/posts/git-commit/)
+- [ ] Use small, single purpose Git commits
+- [ ] Contain `README.md` with project summary and setup
+- [ ] Contain a valid [`package.json`](http://browsenpm.org/package.json) file with all appropriate fields completed
+- [ ] Contain `.gitignore` file (ignoring `node_modules` and system files)
+- [ ] Use ESLint with the [AirBnB style-guide](https://github.com/airbnb/javascript)
 
 ### Functional
 
 Your project must:
 
-* [ ] Update application data in real-time
-* [ ] Persist data across reloads
-* [ ] Route between two or more pages
+- [ ] Update application data in real-time
+- [ ] Persist data across reloads
+- [ ] Route between two or more pages
 
 ### Development
 
 Your project must:
 
-* [ ] Validate database using schema
-* [ ] Remove “autopublish” and “insecure” packages
+- [ ] Validate database using schema
+- [ ] Remove “autopublish” and “insecure” packages
 
 ### Quality
 
 Your project must:
 
-* [ ] Have its file/folder structure organized based on the [Meteor Guide](https://guide.meteor.com/structure.html)
-* [ ] Be free of lint errors from ESLint
+- [ ] Have its file/folder structure organized based on the [Meteor Guide](https://guide.meteor.com/structure.html)
+- [ ] Be free of lint errors from ESLint
 
 ### Stretch Goals
 
 Want to challenge yourself? Your project could also:
 
-* [ ] Generate a hybrid app for IOS or Android using the Meteor CLI
-* [ ] Be deployed to the cloud
+- [ ] Generate a hybrid app for IOS or Android using the Meteor CLI
+- [ ] Be deployed to the cloud
 
 ## Submission Instructions
 
