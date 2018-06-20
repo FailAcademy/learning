@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: Redux Middleware
+title: Client-Side Authentication 
 slides: ['_slides/week-04/04-auth-client.md']
-lesson_date: 2018-04-18
+lesson_date: 2018-07-26
 ---
 
 ## Pre-Work

@@ -2,7 +2,7 @@
 layout: lesson
 title: Collections and Accounts
 slides: ['_slides/week-05/02-collections-accounts.md']
-lesson_date: 2018-05-08
+lesson_date: 2018-07-31
 ---
 
 ## Pre-Work
@@ -20,27 +20,27 @@ Also consider installing [Mongo Compass](https://www.mongodb.com/download-center
 
 ## Learning Objectives
 
-* Explore MongoDB as a popular option for NoSQL databases.
-* Explain the difference between JSON and BSON, and their relevance to MongoDB.
-* Explain the difference between a database, collection, and document.
-* Use the Mongo Shell to the MongoDB query language to perform basic CRUD operations on a data set.
-* Explore MongoDB collections as a way to persist data in a Meteor application.
-* Explain Minimongo's relation to MongoDB in Meteor.
-* Create collections and user accounts using MongoDB in a Meteor application.
-* Perform basic CRUD operations on data in a Meteor application.
+- Explore MongoDB as a popular option for NoSQL databases.
+- Explain the difference between JSON and BSON, and their relevance to MongoDB.
+- Explain the difference between a database, collection, and document.
+- Use the Mongo Shell to the MongoDB query language to perform basic CRUD operations on a data set.
+- Explore MongoDB collections as a way to persist data in a Meteor application.
+- Explain Minimongo's relation to MongoDB in Meteor.
+- Create collections and user accounts using MongoDB in a Meteor application.
+- Perform basic CRUD operations on data in a Meteor application.
 
 ---
 
 ## Keywords
 
-* MongoDB
-* NoSQL
-* CRUD
-* Normalization
-* Collection
-* Document
-* Embedded document
-* Minimongo
+- MongoDB
+- NoSQL
+- CRUD
+- Normalization
+- Collection
+- Document
+- Embedded document
+- Minimongo
 
 ---
 
@@ -48,11 +48,11 @@ Also consider installing [Mongo Compass](https://www.mongodb.com/download-center
 
 Let's practice importing and querying data in MongoDB. Outside of the Mongo shell, import the **[sample data set](/public//exercises/people.json).**
 
-* How many people are humans from Tatooine?
-* How many people appear in The Empire Strikes Back?
-* How many people are taller than than 170cm?
-* How many people fly some form of X-Wing?
-* Return the names and masses of humans, ordered in descending order by known mass. Skip the first two results and limit your results to only four people.
+- How many people are humans from Tatooine?
+- How many people appear in The Empire Strikes Back?
+- How many people are taller than than 170cm?
+- How many people fly some form of X-Wing?
+- Return the names and masses of humans, ordered in descending order by known mass. Skip the first two results and limit your results to only four people.
 
 ---
 
@@ -112,11 +112,11 @@ In today's lab, continue working with your group members to plan your self-direc
 
 Official MongoDB docs worth bookmarking:
 
-* [MongoDB CRUD Operations](https://docs.mongodb.com/manual/crud/#write-operations-overview)
+- [MongoDB CRUD Operations](https://docs.mongodb.com/manual/crud/#write-operations-overview)
 
 Official Meteor documentation on collections and accounts:
 
-* [Collections - Meteor Docs](https://docs.meteor.com/api/collections.html)
-* [Collections - Meteor Guide](http://guide.meteor.com/collections.html)
-* [Accounts - Meteor Docs](https://docs.meteor.com/api/accounts.html)
-* [Users and Accounts - Meteor Guide](https://guide.meteor.com/accounts.html)
+- [Collections - Meteor Docs](https://docs.meteor.com/api/collections.html)
+- [Collections - Meteor Guide](http://guide.meteor.com/collections.html)
+- [Accounts - Meteor Docs](https://docs.meteor.com/api/accounts.html)
+- [Users and Accounts - Meteor Guide](https://guide.meteor.com/accounts.html)

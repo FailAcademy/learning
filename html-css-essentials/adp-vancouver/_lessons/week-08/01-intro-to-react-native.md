@@ -2,45 +2,45 @@
 layout: lesson
 title: Introducing React Native
 slides: ['_slides/week-08/01-intro-to-react-native.md']
-lesson_date: 2018-05-28
+lesson_date: 2018-08-20
 ---
 
 ## Pre-work
 
 Prior to class, please install Xcode on your Mac:
 
-* [Xcode](https://developer.apple.com/xcode/)
-  * After installation, start Xcode and accept the terms and conditions agreement
-* Run "xcode-select --install" in your terminal
-  * Start your Xcode again and accept any terms and conditions required to get to the welcome screen of your Xcode.
-* Install [HomeBrew](https://brew.sh/)
+- [Xcode](https://developer.apple.com/xcode/)
+  - After installation, start Xcode and accept the terms and conditions agreement
+- Run "xcode-select --install" in your terminal
+  - Start your Xcode again and accept any terms and conditions required to get to the welcome screen of your Xcode.
+- Install [HomeBrew](https://brew.sh/)
 
 ---
 
 ## Learning Objectives
 
-* Explain how React Native is different from other hybrid mobile application frameworks like Cordova.
-* Explore strategies for organizing React Native projects.
-* Use React Native's basic mobile UI components such as `<View>`, `<Text>`, `<TextInput>`, `<Image>`, `<TouchableOpacity>`, and `<TouchableHighlight>` in an application.
-* Use the built-in list view UI components to display vertical scrolling lists of dynamic data in a React Native application.
-* Populate a `<FlatList>` component with data fetched from third-party API.
-* Explore the smaller subset of CSS permitted by React Native, and add styles to components with `Stylesheet.Create` and inline styles.
-* Use React Native's debugging tools to troubleshoot application errors.
+- Explain how React Native is different from other hybrid mobile application frameworks like Cordova.
+- Explore strategies for organizing React Native projects.
+- Use React Native's basic mobile UI components such as `<View>`, `<Text>`, `<TextInput>`, `<Image>`, `<TouchableOpacity>`, and `<TouchableHighlight>` in an application.
+- Use the built-in list view UI components to display vertical scrolling lists of dynamic data in a React Native application.
+- Populate a `<FlatList>` component with data fetched from third-party API.
+- Explore the smaller subset of CSS permitted by React Native, and add styles to components with `Stylesheet.Create` and inline styles.
+- Use React Native's debugging tools to troubleshoot application errors.
 
 ---
 
 ## Keywords
 
-* Native application
-* Hybrid mobile application
-* Progressive web application
-* `View`
-* `Text`
-* `Image`
-* `ScrollView`
-* `ListView`
-* `FlatList`
-* `SectionList`
+- Native application
+- Hybrid mobile application
+- Progressive web application
+- `View`
+- `Text`
+- `Image`
+- `ScrollView`
+- `ListView`
+- `FlatList`
+- `SectionList`
 
 ---
 
@@ -71,24 +71,24 @@ Start with this code in your RN app:
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F5FCFF"
+    backgroundColor: '#F5FCFF',
   },
   box: {
     width: 50,
-    height: 50
+    height: 50,
   },
   box1: {
-    backgroundColor: "powderblue"
+    backgroundColor: 'powderblue',
   },
   box2: {
-    backgroundColor: "skyblue"
+    backgroundColor: 'skyblue',
   },
   box3: {
-    backgroundColor: "steelblue"
+    backgroundColor: 'steelblue',
   },
   box4: {
-    backgroundColor: "midnightblue"
-  }
+    backgroundColor: 'midnightblue',
+  },
 });
 ```
 
@@ -143,40 +143,40 @@ Be sure to set-up all of the colors for your app in an object exported from `con
 
 Some general React Native resources:
 
-* [React Native Docs](https://facebook.github.io/react-native/docs/getting-started.html)
-* [JS Coach - React Native](https://js.coach/react-native)
-* [Awesome React Native](https://github.com/jondot/awesome-react-native)
-* [Spencer Carli on Medium](https://medium.com/@spencer_carli)
+- [React Native Docs](https://facebook.github.io/react-native/docs/getting-started.html)
+- [JS Coach - React Native](https://js.coach/react-native)
+- [Awesome React Native](https://github.com/jondot/awesome-react-native)
+- [Spencer Carli on Medium](https://medium.com/@spencer_carli)
 
 Extra RN tools:
 
-* [React Native Tools (for VS Code)](https://github.com/Microsoft/vscode-react-native).
-* [React Native Debugger](https://github.com/jhen0409/react-native-debugger)
+- [React Native Tools (for VS Code)](https://github.com/Microsoft/vscode-react-native).
+- [React Native Debugger](https://github.com/jhen0409/react-native-debugger)
 
 Tips for configuring eslint with React Native:
 
-* [Getting eslint right in React Native](https://medium.com/the-react-native-log/getting-eslint-right-in-react-native-bd27524cc77b#.g7alsqenx)
+- [Getting eslint right in React Native](https://medium.com/the-react-native-log/getting-eslint-right-in-react-native-bd27524cc77b#.g7alsqenx)
 
 A video series on styling components and building layouts with React Native:
 
-* [React Native - Design](https://www.youtube.com/playlist?list=PL7D-0n1z1EbhkundIsOBaN_mlLvV4_hyO)
+- [React Native - Design](https://www.youtube.com/playlist?list=PL7D-0n1z1EbhkundIsOBaN_mlLvV4_hyO)
 
 More on list view-type components:
 
-* [Using List Views](http://facebook.github.io/react-native/docs/using-a-listview.html)
-* [How to use the FlatList Component — React Native Basics](https://medium.com/react-native-development/how-to-use-the-flatlist-component-react-native-basics-92c482816fe6)
-* [React Native Basics: How to Use the ListView Component](https://medium.com/differential/react-native-basics-how-to-use-the-listview-component-a0ec44cf1fe8#.asxki5zib)
+- [Using List Views](http://facebook.github.io/react-native/docs/using-a-listview.html)
+- [How to use the FlatList Component — React Native Basics](https://medium.com/react-native-development/how-to-use-the-flatlist-component-react-native-basics-92c482816fe6)
+- [React Native Basics: How to Use the ListView Component](https://medium.com/differential/react-native-basics-how-to-use-the-listview-component-a0ec44cf1fe8#.asxki5zib)
 
 Miscellaneous RN resources:
 
-* [React Native: Idea to Product in One Week](https://medium.com/adjust-creative/prototyping-with-react-native-an-idea-to-production-in-one-week-3a6b4f474897#.ysexqnc13)
-* [Building the F8 2016 App](http://makeitopen.com/tutorials/building-the-f8-app/planning/)
+- [React Native: Idea to Product in One Week](https://medium.com/adjust-creative/prototyping-with-react-native-an-idea-to-production-in-one-week-3a6b4f474897#.ysexqnc13)
+- [Building the F8 2016 App](http://makeitopen.com/tutorials/building-the-f8-app/planning/)
 
 Resources for adding custom app splash screens and icons:
 
-* [iOS Human Interface Guidelines - App Icon](https://developer.apple.com/ios/human-interface-guidelines/graphics/app-icon/)
-* [iOS Human Interface Guidelines - Launch Screen](https://developer.apple.com/ios/human-interface-guidelines/graphics/launch-screen/)
-* [MapAppIcon](https://makeappicon.com/)
-* [iPhone X Launch Image Sizes (+ other sizes)](http://www.steventso.com/posts/iphone-x-app-icon-size-other-sizes/)
-* [How to Add a Splash Screen to a React Native App (iOS and Android)](https://medium.com/handlebar-labs/how-to-add-a-splash-screen-to-a-react-native-app-ios-and-android-30a3cec835ae)
-* [Splash Screen Pro](https://splashscreen.pro/) (a paid resource, but worth it!)
+- [iOS Human Interface Guidelines - App Icon](https://developer.apple.com/ios/human-interface-guidelines/graphics/app-icon/)
+- [iOS Human Interface Guidelines - Launch Screen](https://developer.apple.com/ios/human-interface-guidelines/graphics/launch-screen/)
+- [MapAppIcon](https://makeappicon.com/)
+- [iPhone X Launch Image Sizes (+ other sizes)](http://www.steventso.com/posts/iphone-x-app-icon-size-other-sizes/)
+- [How to Add a Splash Screen to a React Native App (iOS and Android)](https://medium.com/handlebar-labs/how-to-add-a-splash-screen-to-a-react-native-app-ios-and-android-30a3cec835ae)
+- [Splash Screen Pro](https://splashscreen.pro/) (a paid resource, but worth it!)

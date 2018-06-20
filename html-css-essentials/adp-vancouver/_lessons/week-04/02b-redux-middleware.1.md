@@ -2,7 +2,7 @@
 layout: lesson
 title: Redux Middleware
 slides: ['_slides/week-04/02b-redux-middleware.md']
-lesson_date: 2018-04-18
+lesson_date: 2018-07-24
 ---
 
 ## Pre-Work
@@ -11,28 +11,28 @@ Prior to class, please read the Redux docs on [middleware](http://redux.js.org/d
 
 Optional reading, but recommended:
 
-* [Chapter 4: Currying](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch4.md)
-* [Chapter 5: Coding by Composing](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch5.md)
+- [Chapter 4: Currying](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch4.md)
+- [Chapter 5: Coding by Composing](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch5.md)
 
 ---
 
 ## Learning Objectives
 
-* Explain what function currying and function composition are, and how they can be used to make code more reusable and readable.
-* Define what middleware is in relation to Redux, and its role in an application.
-* Apply Redux middleware, including a bespoke logger and `redux-thunk`.
-* Use `redux-thunk` to dispatch multiple actions from an action creator.
-* Learn how to setup middleware in your project, depending on environments.
+- Explain what function currying and function composition are, and how they can be used to make code more reusable and readable.
+- Define what middleware is in relation to Redux, and its role in an application.
+- Apply Redux middleware, including a bespoke logger and `redux-thunk`.
+- Use `redux-thunk` to dispatch multiple actions from an action creator.
+- Learn how to setup middleware in your project, depending on environments.
 
 ---
 
 ## Keywords
 
-* Middleware
-* Currying
-* Composition
-* Logger
-* Thunk
+- Middleware
+- Currying
+- Composition
+- Logger
+- Thunk
 
 ---
 
@@ -103,7 +103,7 @@ We'll learn how to access state managed the Redux store in our React components 
 
 More on middleware:
 
-* [Understanding Redux Middleware](https://medium.com/@meagle/understanding-87566abcfb7a)
-* [Egghead.io: Redux Middleware Chain](https://egghead.io/lessons/javascript-redux-the-middleware-chain?course=building-react-applications-with-idiomatic-redux)
-* [Stack Overflow: How to Dispatch Async Actions](http://stackoverflow.com/questions/35411423/how-to-dispatch-a-redux-action-with-a-timeout/35415559#35415559)
-* [A Dummy's Guide to Redux and Thunk in React](https://codepen.io/stowball/post/a-dummy-s-guide-to-redux-and-thunk-in-react)
+- [Understanding Redux Middleware](https://medium.com/@meagle/understanding-87566abcfb7a)
+- [Egghead.io: Redux Middleware Chain](https://egghead.io/lessons/javascript-redux-the-middleware-chain?course=building-react-applications-with-idiomatic-redux)
+- [Stack Overflow: How to Dispatch Async Actions](http://stackoverflow.com/questions/35411423/how-to-dispatch-a-redux-action-with-a-timeout/35415559#35415559)
+- [A Dummy's Guide to Redux and Thunk in React](https://codepen.io/stowball/post/a-dummy-s-guide-to-redux-and-thunk-in-react)
