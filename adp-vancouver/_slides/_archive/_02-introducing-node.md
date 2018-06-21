@@ -286,7 +286,7 @@ Lets try to understand what our new Node process (uppercasing service) is doing 
 
 ### 🔥 Fire up your load testing suite
 
-Open 3 separate terminals & run each of the following commands in it's own terminal window.
+Open 3 separate terminals & run each of the following commands in its own terminal window.
 
 - **Start your node app using :** `pm2 start index.js` <br/> (from your project directory)
 - **Start the pm2 monitor :** `pm2 monit`

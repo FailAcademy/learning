@@ -150,9 +150,9 @@ In other words, routing allows us to take a path and use it to generate the corr
 
 **Note!**
 
-We're building a SPA, so our application uses **a single static HTML file** to display all of it's content.
+We're building a SPA, so our application uses **a single static HTML file** to display all of its content.
 
-**When routes changes** in our application, we must ensure that:
+**When the route changes** in our application, we must ensure that:
 
 - The URL in the address bar reflects what is being shown
 - Forward and back nav work in the browser
@@ -177,11 +177,11 @@ Visit **[Reddit](http://reddit.com)**. Click on several links and map out how th
 
 Let's create a new React app to test out some of React Router's features. First run:
 
-`create-react-app router-demo`
+`create-react-app router-demo && cd router-demo`
 
 Then install React Router:
 
-`npm install react-router-dom --save`
+`yarn add react-router-dom --save`
 
 *Remember that React is a library, not a framework. Installing `react-router-dom` gives it more framework-like capabilities.*
 
@@ -622,7 +622,7 @@ The `BrowserRouter` (used in our demo) uses the **[Browser History API](https://
 - **Home:** http://localhost:3000/
 - **Contact:** http://localhost:3000/contact
 
-**But there's a catch!** We need a server to use this...one that will always return `index.html` at any route. (Using the Browser History API also enables us to use server-side rendering.)
+**But there's a catch!** We need a server to use this... one that will always return `index.html` at any route. (Using the Browser History API also enables us to use server-side rendering.)
 
 Luckily, there's a server already configured in Create React App.
 
