@@ -66,10 +66,12 @@ Your project must:
 * Use the `redstarter` WordPress theme as a base for building your project
 * Support default Posts, Pages, and Comments (one-level deep only)
 * Use a WordPress menu (configured through the admin interface) for the main site navigation
-* Use a custom page template for the "About" page where a hero image can be dynamically added through a custom field
+* Use a custom page template for the "About" page
+* Use the provided custom block plugin to add a hero image header to the "About" page
 * Include a custom post type for "Products" inside of a functionality plugin (not the theme files)
 * Include a custom taxonomy for "Product Type" inside of a functionality plugin (not the theme files)
 * Include applicable custom fields for additional metadata where required (using the Custom Field Suite plugin)
+* Include a locked block template for the "Products" custom post type
 * Include a custom widget plugin to allow business hours to easily be edited in the sidebar by the client
 * Include a widgetized area in the sidebar
 * Properly enqueue CSS and JS files in the theme's `functions.php` file
