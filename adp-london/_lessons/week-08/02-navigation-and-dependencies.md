@@ -36,7 +36,7 @@ _There is no pre-work for this lesson._
 
 First, install `react-navigation` in your R10 project. Next, create a `navigation` sub-directory in the `js` directory of R10. Add a file called `RootStackNavigator.js` to it.
 
-Import `createStackNavigator` from `react-navigation` in this new file, and use it to create a stack navigator with your About screen as it's only route (you will need to import it!). Make this your default export from `RootStackNavigator.js`.
+Import `createStackNavigator` from `react-navigation` in this new file, and use it to create a stack navigator with your About screen as its only route (you will need to import it!). Make this your default export from `RootStackNavigator.js`.
 
 Finally, import your new `RootStackNavigator` component into `App.js`, and nest it inside your `ApolloProvider` (removing the`About` component now). Does it work? How do you add a title to the navigation bar?
 
