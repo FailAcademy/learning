@@ -122,13 +122,13 @@ template: inverse
 We can use the `Platform` modules to conditionally render components or styles for our components. For example:
 
 ```js
-import { Platform, Text, View } from "react-native";
+import { Platform, Text, View } from 'react-native';
 
 const App = () => {
   return (
     <View>
       <Text>I can be seen an all platforms.</Text>
-      {Platform.OS === "ios" && <Text>You'll only see me on iOS devices.</Text>}
+      {Platform.OS === 'ios' && <Text>You'll only see me on iOS devices.</Text>}
       {Platform.Version === 24 && (
         <Text>And I'm only on Android devices running Nougat.</Text>
       )}
@@ -144,17 +144,17 @@ const App = () => {
 We also have access to a `Platform.select` method:
 
 ```js
-import { Platform, StyleSheet } from "react-native";
+import { Platform, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     ...Platform.select({
       ios: {
-        backgroundColor: "red"
+        backgroundColor: 'red'
       },
       android: {
-        backgroundColor: "blue"
+        backgroundColor: 'blue'
       }
     })
   }
@@ -207,7 +207,7 @@ And in `index.js`:
 
 ```js
 // automatically imports the right file!
-import Widget from "./Widget";
+import Widget from './Widget';
 
 export default Widget;
 ```

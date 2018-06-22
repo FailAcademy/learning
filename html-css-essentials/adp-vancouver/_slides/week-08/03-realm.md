@@ -125,15 +125,15 @@ Realm supports the following basic types: **bool**, **int**, **float**, **double
 Creating a new data model with Realm couldn't be easier:
 
 ```js
-import Realm from "realm";
+import Realm from 'realm';
 
 const DogSchema = {
-  name: "Dog",
+  name: 'Dog',
   properties: {
-    id: "int",
-    name: "string",
-    breed: "string",
-    birthday: { type: "date", optional: true }
+    id: 'int',
+    name: 'string',
+    breed: 'string',
+    birthday: { type: 'date', optional: true }
   }
 };
 
@@ -197,10 +197,10 @@ const realm = new Realm({ schema: [DogSchema] });
 
 realm.write(() => {
   // Create a dog object
-  realm.create("Dog", { id: 1, name: "Gomez", breed: "Shih Tzu" });
+  realm.create('Dog', { id: 1, name: 'Gomez', breed: 'Shih Tzu' });
 
   // Passing "true" intelligently updates the object keyed off the id
-  realm.create("Dog", { id: 1, name: "Gomer Pile" }, true);
+  realm.create('Dog', { id: 1, name: 'Gomer Pile' }, true);
 });
 ```
 
@@ -212,11 +212,11 @@ And use `realm.delete()` to remove data:
 
 ```js
 realm.write(() => {
-  let dog = realm.create("Dog", { id: 2, name: "Dexter", breed: "Boston" });
+  let dog = realm.create('Dog', { id: 2, name: 'Dexter', breed: 'Boston' });
 
   realm.delete(dog); // delete Dexter :(
 
-  let allDogs = realm.objects("Dog");
+  let allDogs = realm.objects('Dog');
   realm.delete(allDogs); // delete all dogs :( :( :(
 });
 ```
@@ -228,22 +228,22 @@ realm.write(() => {
 The final piece of the CRUD puzzle is reading data from the database.
 
 ```js
-let dogs = realm.objects("Dog"); // get all the dog objects
+let dogs = realm.objects('Dog'); // get all the dog objects
 ```
 
 Get specific dog objects with filtering:
 
 ```js
 let dogId = 1;
-let gomez = dogs.filtered("id == $0", dogId);
+let gomez = dogs.filtered('id == $0', dogId);
 let dexter = dogs.filtered('breed = "Boston" AND name BEGINSWITH "D"');
 ```
 
 And sort our results too:
 
 ```js
-let ascDogs = dogs.sorted("name");
-let descDogs = dogs.sorted("name", true); // reverses the order
+let ascDogs = dogs.sorted('name');
+let descDogs = dogs.sorted('name', true); // reverses the order
 ```
 
 ---
@@ -256,7 +256,7 @@ To find out where your Realm database is stored locally, you can log the path to
 
 ```js
 realm = new Realm({ schema: [DogSchema] });
-console.log("the path is: ", realm.path);
+console.log('the path is:', realm.path);
 ```
 
 ---
@@ -300,10 +300,10 @@ Next, we'll create our `store.js` file in a `redux` directory...
 Your `store.js` file:
 
 ```js
-import { compose, createStore, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
+import { compose, createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 
-import rootReducer from "./reducers";
+import rootReducer from './reducers';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
