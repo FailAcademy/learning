@@ -209,13 +209,13 @@ If we were to simply push this screen onto the stack inside the tab bar, we woul
 Create a `NavigationLayout.js` file your `navigation` directory. Add this code to it:
 
 ```js
-import React from "react";
+import React from 'react';
 import {
   createStackNavigator,
   createBottomTabNavigator
-} from "react-navigation";
+} from 'react-navigation';
 
-import AboutScreen from "../screens/About";
+import AboutScreen from '../screens/About';
 
 const AboutStack = createStackNavigator({
   About: AboutScreen
@@ -342,10 +342,10 @@ Install `react-native-linear-gradient`, then `react-native link`, and restart yo
 Add a `config.js` file to the `navigation` directory with this:
 
 ```js
-import React from "react";
-import { StyleSheet, View } from "react-native";
-import { Header } from "react-navigation";
-import LinearGradient from "react-native-linear-gradient";
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import { Header } from 'react-navigation';
+import LinearGradient from 'react-native-linear-gradient';
 
 // ...more to come here!
 ```
@@ -360,12 +360,12 @@ Next, in `config.js` create the component that we will use as the navigation bar
 // ...
 
 const GradientHeader = props => (
-  <View style={% raw %}{{ backgroundColor: "white", overflow: "hidden" }}{% endraw %}>
+  <View style={% raw %}{{ backgroundColor: 'white', overflow: 'hidden' }}{% endraw %}>
     <LinearGradient
-      colors={["#cf392a", "#9963ea"]}
+      colors={['#cf392a', '#9963ea']}
       start={% raw %}{{ x: 0.0, y: 1.0 }}{% endraw %}
       end={% raw %}{{ x: 1.0, y: 0.0 }}{% endraw %}
-      style={[StyleSheet.absoluteFill, { height: 64, width: "100%" }]}
+      style={[StyleSheet.absoluteFill, { height: 64, width: '100%' }]}
     />
     <Header {...props} />
   </View>
@@ -385,7 +385,7 @@ export const sharedNavigationOptions = navigation => ({
   headerBackTitle: null,
   header: props => <GradientHeader {...props} />,
   headerStyle: {
-    backgroundColor: "transparent"
+    backgroundColor: 'transparent'
   }
 });
 ```
@@ -400,7 +400,7 @@ Finally, use your `sharedNavigationOptions` in `NavigationLayout.js`:
 
 ```js
 // ADD THIS!
-import { sharedNavigationOptions } from "./config";
+import { sharedNavigationOptions } from './config';
 
 const AboutStack = createStackNavigator(
   {
