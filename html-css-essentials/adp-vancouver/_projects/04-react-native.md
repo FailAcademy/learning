@@ -56,13 +56,13 @@ Your project must:
 
 Your project must:
 
-* [ ] Contain Schedule, Session, Speaker, Faves, and About scenes
+* [ ] Contain Schedule, Session, Speaker, Faves, and About screens
 * [ ] Display a loading indicator when data is fetched by the app
-* [ ] Display the conference sessions in chronological order in a `SectionList` with section headers (based on the start time) in the Schedule scene
-* [ ] Display an individual conference session's details in a Session scene when a session is tapped from within the Schedule scene
-* [ ] Display information about a session's speaker in a lightbox-style Speaker scene when the speaker's name is tapped
+* [ ] Display the conference sessions in chronological order in a `SectionList` with section headers (based on the start time) in the Schedule screen
+* [ ] Display an individual conference session's details in a Session screen when a session is tapped from within the Schedule screen
+* [ ] Display information about a session's speaker in a lightbox-style Speaker screen when the speaker's name is tapped
 * [ ] Allow users to favourite and un-favourite sessions, and display saved favourites in a Faves Scene
-* [ ] Implement animated show/hide functionality for the Code of Conduct sections in the About scene (using React Native's `Animated` module)
+* [ ] Implement animated show/hide functionality for the Code of Conduct sections in the About screen (using React Native's `Animated` module)
 
 ### Development
 
@@ -77,7 +77,7 @@ Your project must:
 * [ ] Make appropriate use of React Native's UI components (including `<View>`, `<Text>`, `<Image>`, `<SectionList>`, `<TouchableHighlight>`, etc.)
 * [ ] Implement styles on a per-component basis using `Stylesheet.Create`
 * [ ] Leverage code-reuse strategies across iOS and Android platforms as much as possible
-* [ ] Use [ExNavigation](https://github.com/wix/react-native-navigation) to implement a navigator (iOS/Android), tab bar (iOS only), and drawer (Android only) for scene navigation
+* [ ] Use [ExNavigation](https://github.com/wix/react-native-navigation) to implement a navigator (iOS/Android), tab bar (iOS only), and drawer (Android only) for screen navigation
 * [ ] Use [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons) for icon assets throughout the app (specifically, the Octicon library)
 * [ ] Use [React Native Linear Gradient](https://github.com/react-native-community/react-native-linear-gradient) to generate the gradient background
 * [ ] Use [Realm React Native](https://realm.io/docs/react-native/latest/) as an embedded database
@@ -90,9 +90,9 @@ Want to challenge yourself? Your project could also:
 
 * [ ] Add a custom splash screen and app icon for iOS and Android
 
-**Include a Map scene:**
+**Include a Map screen:**
 
-* [ ] Add an additional scene containing a map using [React Native Maps](https://github.com/airbnb/react-native-maps) with a custom image pin to show the conference location
+* [ ] Add an additional screen containing a map using [React Native Maps](https://github.com/airbnb/react-native-maps) with a custom image pin to show the conference location
 
 ## Submission Instructions
 

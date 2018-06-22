@@ -162,7 +162,7 @@ In this file, define the model for a `Fave` object. Our `Fave` objects should ha
 
 Set the `id` as the `primaryKey` for your model.
 
-Be sure to initialize your new Realm with its `Fave` model, and export it so its available in your Faves scene later.
+Be sure to initialize your new Realm with its `Fave` model, and export it so its available in your Faves screen later.
 
 ---
 

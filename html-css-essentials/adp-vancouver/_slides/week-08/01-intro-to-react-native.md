@@ -742,7 +742,7 @@ Inside the `js` folder...
 |   |-- lib        # general functions (code re-use FTW!)
 |   |-- redux      # store and reducers go here
 |   |-- navigation # define routes and nav components
-|   |-- screens    # container components that render each scene
+|   |-- screens    # container components that render each screen
 |   |-- App.js     # move App.js here!
 ```
 
@@ -799,10 +799,10 @@ However, it usually make sense to set some base styles for our colours and typog
 
 # Scenes
 
-Each scene of your app will be a container/presentational component combo:
+Each screen of your app will be a container/presentational component combo:
 
 ```bash
-|-- scences/
+|-- screens/
 |   |-- User
 |   |   |-- index.js
 |   |   |-- styles.js
