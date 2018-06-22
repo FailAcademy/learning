@@ -96,9 +96,9 @@ Use Montserrat as the `fontFamily` for the tab bar labels now to test it out.
 
 ## Lab Activity
 
-We've come a long way building out the navigation scheme for our iOS app, but we still haven't added the ability to push scenes onto or pop scenes off of our nested stacks inside of the tab bar.
+We've come a long way building out the navigation scheme for our iOS app, but we still haven't added the ability to push screens onto or pop screens off of our nested stacks inside of the tab bar.
 
-During today's lab, **focus on fully building out the Schedule scene**, as well as the related Session and Speaker scenes (in that order).
+During today's lab, **focus on fully building out the Schedule screen**, as well as the related Session and Speaker screens (in that order).
 
 ### Task 1:
 
@@ -120,9 +120,9 @@ Lastly, because you have already fetched the data for each individual session in
 
 ### Task 3:
 
-Lastly (if there's still time!), work on the Speaker scene.
+Lastly (if there's still time!), work on the Speaker screen.
 
-But there's a catch with where you will push this scene onto a navigation stack...if we push it onto a stack nested within the tab bar, the Speaker scene will have the tab bar over it (as there is currently no way to selectively hide a tab bar on an individual scene within a tab bar-enabled stack in React Navigation). This doesn't match up with what's in the prototypes.
+But there's a catch with where you will push this screen onto a navigation stack...if we push it onto a stack nested within the tab bar, the Speaker screen will have the tab bar over it (as there is currently no way to selectively hide a tab bar on an individual screen within a tab bar-enabled stack in React Navigation). This doesn't match up with what's in the prototypes.
 
 To work around this, we will need to **push the Speaker on the top-level root stack**.
 
