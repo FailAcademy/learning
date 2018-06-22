@@ -113,7 +113,7 @@ See the docs: [NavigatorIOS](https://facebook.github.io/react-native/docs/naviga
 
 * Integrated with UIKit (leverages its animation)
 * Built on top of `UINavigationController`
-* Uses routes to represent scenes
+* Uses routes to represent screens
 * Very stateful
 * No Android support
 
@@ -198,7 +198,7 @@ Finally, import your new `RootStackNavigator` component into `App.js`, and nest 
 
 For our purposes it will be best to leave this navigator defined at the highest level of our app, and then **nest our tab bar navigation within it** (or drawer navigation for Android).
 
-Why do it this way? Eventually, when we add our lightbox-style Speaker screen, we will need to **push this scene onto our top-level stack navigator.**
+Why do it this way? Eventually, when we add our lightbox-style Speaker screen, we will need to **push this screen onto our top-level stack navigator.**
 
 If we were to simply push this screen onto the stack inside the tab bar, we would have tab fixed on top of the lightbox (which does not adhere to the prototype).
 

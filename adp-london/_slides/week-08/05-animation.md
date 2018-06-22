@@ -170,7 +170,7 @@ constructor() {
 
 # Exercise 1
 
-Using what you just learned about `LayoutAnimation`, add animation to your About scene to toggle of the visibility of each Code of Conduct item when they are tapped.
+Using what you just learned about `LayoutAnimation`, add animation to your About screen to toggle of the visibility of each Code of Conduct item when they are tapped.
 
 Each Code of Conduct item should be closed by default.
 
