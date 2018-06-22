@@ -824,7 +824,7 @@ export default UserContainer;
 
 # Components
 
-Use can use a similar directory structure for our reusable, stateless UI components:
+We can use a similar directory structure for our reusable, stateless UI components:
 
 ```bash
 |-- components/

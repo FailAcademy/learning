@@ -157,7 +157,7 @@ So what do we use...?
 Ideally, we want an all-in-one navigation solution with:
 
 * Support for **Android back button**
-* Integration with the a (potentially cross-platform) **tab bar**
+* Integration with a (potentially cross-platform) **tab bar**
 * Support for **nested nav stacks** without creating state management headaches for ourselves
 * Good **performance** (uses native animation)
 
