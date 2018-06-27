@@ -54,8 +54,8 @@ Before we begin creating an Express web server, in pairs draw a diagram of a cli
 
 # Communication
 
-* How do servers and clients communicate with each other?
-* What language (i.e. protocols) can they use?
+- How do servers and clients communicate with each other?
+- What language (i.e. protocols) can they use?
 
 ---
 
@@ -70,9 +70,9 @@ _Explain the following analogies:_
 
 ???
 
-* Web sockets...a way to receive event-driven response without polling (set up a persistent connection so either client or server can send data at anytime)
-* i.e. bidirectional, low latency real-time communication
-* How? Send an HTTP request with `Connection: Upgrade` header to URL with `ws://` scheme
+- Web sockets...a way to receive event-driven response without polling (set up a persistent connection so either client or server can send data at anytime)
+- i.e. bidirectional, low latency real-time communication
+- How? Send an HTTP request with `Connection: Upgrade` header to URL with `ws://` scheme
 
 ---
 
@@ -95,9 +95,9 @@ class: center, middle
 
 ???
 
-* HTTP is a "glue" protocol
-* Inter-operability because it is weak, relatively uncoordinated, and imperfectly implemented
-* HTTP kills all other protocols BECAUSE OF the simplicity of its labelling system
+- HTTP is a "glue" protocol
+- Inter-operability because it is weak, relatively uncoordinated, and imperfectly implemented
+- HTTP kills all other protocols BECAUSE OF the simplicity of its labelling system
 
 ---
 
@@ -119,22 +119,22 @@ What are the first three things you see listed under General?
 
 ???
 
-* Request URL, Request Method, Status Code
-* These are some of the essential components of HTTP requests and responses
+- Request URL, Request Method, Status Code
+- These are some of the essential components of HTTP requests and responses
 
 ---
 
 # URIs
 
-* Every resource on the web must be exposed with **at least one unique identifier** (but possible many unique identifiers)
-* If a resource doesn't have URI then it's not a resource (it's likely just information about another resource)
-* An **addressable** application exposes interesting aspects of its data set as resources, and exposes URIs for all of the resources it may conceivably serve
+- Every resource on the web must be exposed with **at least one unique identifier** (but possible many unique identifiers)
+- If a resource doesn't have URI then it's not a resource (it's likely just information about another resource)
+- An **addressable** application exposes interesting aspects of its data set as resources, and exposes URIs for all of the resources it may conceivably serve
 
 ???
 
-* URIs don't belong specifically to HTTP, but HTTP uses them
-* Uniform Resource Identifier vs. Locator: every URL is URI, every URI on the web is a URL, but not all URI are URLs
-* URLs don't just identify resources like URIs do, they also indicate where to find them (like describing a person by their name instead of resident of their physical address)
+- URIs don't belong specifically to HTTP, but HTTP uses them
+- Uniform Resource Identifier vs. Locator: every URL is URI, every URI on the web is a URL, but not all URI are URLs
+- URLs don't just identify resources like URIs do, they also indicate where to find them (like describing a person by their name instead of resident of their physical address)
 
 ---
 
@@ -142,16 +142,16 @@ What are the first three things you see listed under General?
 
 What do we use the following **[HTTP verbs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)** for?
 
-* `GET`
-* `POST`
-* `PUT`
-* `PATCH`
-* `DELETE`
+- `GET`
+- `POST`
+- `PUT`
+- `PATCH`
+- `DELETE`
 
 ???
 
-* It's up to you to choose the right verb when you send your request, and the verb that you choose will have consequences!
-* HTTP verbs provide us with a uniform interface when structuring our applications (as in there aren't many of these verbs and we know what they do in advance)
+- It's up to you to choose the right verb when you send your request, and the verb that you choose will have consequences!
+- HTTP verbs provide us with a uniform interface when structuring our applications (as in there aren't many of these verbs and we know what they do in advance)
 
 ---
 
@@ -159,24 +159,24 @@ What do we use the following **[HTTP verbs](https://developer.mozilla.org/en-US/
 
 How would we describe these **[status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)** in non-colloquial terms?
 
-* `100`: Hold on
-* `200`: Here you go
-* `300`: Go away
-* `400`: You messed up
-* `500`: I messed up
+- `100`: Hold on
+- `200`: Here you go
+- `300`: Go away
+- `400`: You messed up
+- `500`: I messed up
 
 ???
 
-* Responding appropriately (i.e. correct status code / message) when a request comes into our Express server will be our job
+- Responding appropriately (i.e. correct status code / message) when a request comes into our Express server will be our job
 
 ---
 
 # What is Express?
 
-* It's minimal, flexible abstraction layer on top of Node
-* Handy framework for creating web APIs
-* [Other frameworks](https://expressjs.com/en/resources/frameworks.html) are written on top of it too
-* Allows us to do routing, create/use middleware, and use template engines to generate HTML pages
+- It's minimal, flexible abstraction layer on top of Node
+- Handy framework for creating web APIs
+- [Other frameworks](https://expressjs.com/en/resources/frameworks.html) are written on top of it too
+- Allows us to do routing, create/use middleware, and use template engines to generate HTML pages
 
 ---
 
@@ -199,7 +199,7 @@ More on [Express installation instructions here](https://expressjs.com/en/starte
 Let's also use Babel with our app:
 
 ```bash
-npm i -D babel-cli babel-preset-env nodemon
+npm i -D babel-cli babel-preset-es2015 babel-preset-stage-2 nodemon
 ```
 
 The [nodemon](https://github.com/remy/nodemon) package will allow us to watch files in the directory in which nodemon was started, and if any files change, it will automatically restart our Node application.
@@ -220,7 +220,7 @@ Add to `.babelrc`:
 
 ```
 {
-  "presets": ["env"],
+  "presets": ["es2015", "stage-2"],
   "plugins": []
 }
 ```
@@ -248,7 +248,7 @@ Below, the `app.get()` method create a route that accepts GET requests:
 ```js
 import express from "express";
 const app = express();
-const port = 3300;
+const port = 4000;
 
 app.get("/", function(request, response) {
   response.send("Hello, world!");
@@ -266,15 +266,15 @@ app.listen(port, function() {
 Run the following in your Terminal:
 
 ```bash
-curl -i http://localhost:3300
+curl -i http://localhost:4000
 ```
 
 _What do you see?_
 
 ???
 
-* `ETag`: can be used for web cache validation
-* `Connection: keep-alive`: Persist connection to improve performance of multiple requests
+- `ETag`: can be used for web cache validation
+- `Connection: keep-alive`: Persist connection to improve performance of multiple requests
 
 ---
 
@@ -295,7 +295,7 @@ app.get("/", function(request, response) {
 
 ???
 
-* If you were to dig into the Express code you would see that the `request` and `response` objects have prototypes that are based on objects from the Node `http` library.
+- If you were to dig into the Express code you would see that the `request` and `response` objects have prototypes that are based on objects from the Node `http` library.
 
 ---
 
@@ -350,16 +350,16 @@ Middleware are simply **functions added to the call stack that have access to th
 
 Express middleware can perform the following tasks:
 
-* Execute any code
-* Make changes to the request and the response objects
-* End the request-response cycle
-* Call the next middleware in the stack
+- Execute any code
+- Make changes to the request and the response objects
+- End the request-response cycle
+- Call the next middleware in the stack
 
 ???
 
-* Redux middleware solves different problems than Express middleware, but in a conceptually similar way
-* In Redux, middleware provides a third-party extension point between dispatching an action, and the moment it reaches the reducer
-* In Express, middleware provides a third-party extenion point between the raw request and the final request handler.
+- Redux middleware solves different problems than Express middleware, but in a conceptually similar way
+- In Redux, middleware provides a third-party extension point between dispatching an action, and the moment it reaches the reducer
+- In Express, middleware provides a third-party extenion point between the raw request and the final request handler.
 
 ---
 
@@ -384,8 +384,8 @@ The call to `next()` is how we move onto the next piece of middleware, until we'
 
 ???
 
-* Once `response.send()` is called you can’t apply more middleware
-* You can also specify a route for a first argument of `.use()` to only run the middleware function on that route, otherwise it will run on for all requests
+- Once `response.send()` is called you can’t apply more middleware
+- You can also specify a route for a first argument of `.use()` to only run the middleware function on that route, otherwise it will run on for all requests
 
 ---
 
@@ -402,13 +402,13 @@ Try replacing your call to `app.get('/', ...)` with this in your Express app. Be
 
 ???
 
-* The static middleware will serve everything under the public folder
+- The static middleware will serve everything under the public folder
 
 ---
 
 # Exercise 2
 
-Before we go further with middleware, let's pause an build out the client side of our app. In your `index.html` file, add a button (which you will use to asynchronously retrieve quotes).
+Before we go further with middleware, let's pause and build out the client side of our app. In your `index.html` file, add a button (which you will use to asynchronously retrieve quotes).
 
 Also create `main.js` file in your `public` directory and include it in your `index.html` file. Inside of `main.js`, use `fetch` to grab your quotes on JSON when the button is clicked.
 
@@ -419,18 +419,22 @@ Lastly, append all the quotes and their authors to the DOM after the `fetch` Pro
 Probably want to share this with the students to save time...
 
 ```js
-function appendQuote(quote) {
-  const blockquote = document.createElement("blockquote");
-  const deleteButton = document.createElement("button");
-  deleteButton.setAttribute(
-    "data-quote",
-    quote.name.replace(/\s+/g, "-").toLowerCase()
-  );
-  deleteButton.textContent = "Delete";
-  blockquote.textContent = `"${quote.text}" — ${quote.name} `;
-  blockquote.appendChild(deleteButton);
-  container.appendChild(blockquote);
-}
+const container = document.getElementById("quotes");
+
+fetch("http://localhost:4000/quotes")
+  .then(res => res.json())
+  .then(quotes =>
+    quotes.map((quote, index) => {
+      const div = document.createElement("div");
+      div.innerHTML = `<p> ${quote.name} ${
+        quote.text
+      } </p> <button id='${index}' name=${quote.name
+        .replace(/\s+/g, "-")
+        .toLowerCase()}>Delete</button>`;
+      container.appendChild(div);
+    })
+  )
+  .catch(err => console.log(err));
 ```
 
 ---
@@ -466,7 +470,7 @@ Call `app.use()` with your logger in the appropriate place too.
 
 ???
 
-* The response object has event listeners: `response.on()`
+- The response object has event listeners: `response.on()`
 
 ---
 
@@ -498,7 +502,7 @@ What do you see in your browser now when you navigate to `/quotes/someone`?
 
 ???
 
-* Query string parameters are added to `request.query` object as properties too
+- Query string parameters are added to `request.query` object as properties too
 
 ---
 
@@ -540,7 +544,7 @@ First, we'll need a form to send `POST` requests to our server from the client:
 
 ```html
 <h2>Submit a Quote</h2>
-<form id="create-quote">
+<form id="create-quote" method="POST" action="/quotes">
   <label for="text">Quote Text</label>
   <input type="text" id="text" name="text">
   <label for="name">Speaker Name</label>
@@ -548,38 +552,6 @@ First, we'll need a form to send `POST` requests to our server from the client:
   <button type="submit">Create Quote</button>
 </form>
 ```
-
----
-
-# Event Handler
-
-In our client-side JS, you'll also need to listen for the `submit` event on the form:
-
-```js
-const createQuoteForm = document.getElementById("create-quote");
-
-createQuoteForm.addEventListener("submit", function(event) {
-  event.preventDefault();
-  const formData = new FormData(createQuoteForm);
-  const newQuote = {};
-
-  for ([key, value] of formData.entries()) {
-    newQuote[key] = value;
-  }
-
-  // Now use fetch to send a post request to finish the job...
-});
-```
-
----
-
-# Exercise 6
-
-Before we handle the `POST` request in Express, we'll need a way to send that request from the client to our server.
-
-Inside of the submit event handler, use `fetch` to send a `POST` request. You'll need to send it to the `/quotes` route.
-
-**Note**: You will also need to supply some request options in the form of an object as a second argument to `fetch`. You'll want to specify that the `method` is `POST`, set `headers` for the `Content-Type` (JSON), and set the `newQuote` object as the `body` (use `JSON.stringify()`).
 
 ---
 
@@ -596,23 +568,40 @@ Now add this to your Express app:
 ```js
 import bodyParser from "body-parser";
 
-app.post("/quotes", bodyParser.json(), function(request, response) {
-  const newQuote = request.body;
-  // Add your new quote to the quotes array
-  // Then send back a 201 status
-  // And also send the new quote as JSON in the response
-});
+app.post(
+  '/quotes',
+  bodyParser.urlencoded({ extended: true }),
+  (request, response) => {
+    const newQuote = request.body;
+    // Add your new quote to the quotes array
+    // Then send back a 201 status
+    // And also send the new quote as JSON in the response
+  }
+);
 ```
 
 ---
 
-# Exercise 7
+# Exercise 6
 
 Now figure out how to finish writing the route handler for the `POST` request.
 
 Once you've finished that, jump back to your client-side JS and take the JSON response you get back from the server to append your new quote to the DOM.
 
 Improve UX by clearing out the form inputs after the response comes back too!
+
+???
+
+```js
+app.post(
+  '/quotes',
+  bodyParser.urlencoded({ extended: true }),
+  (request, response) => {
+    quotes.push(request.body);
+    response.statusCode(201).send(quotes);
+  }
+);
+```
 
 ---
 
@@ -625,11 +614,9 @@ const container = document.getElementById("quotes");
 
 container.addEventListener("click", function(event) {
   const clickedEl = event.target;
-
   if (clickedEl.tagName === "BUTTON") {
-    const name = clickedEl.getAttribute("data-quote");
-
-    fetch(`http://localhost:3300/quotes/${name}`, {
+    const name = clickedEl.getAttribute("name");
+    fetch(`http://localhost:4000/quotes/${name}`, {
       method: "DELETE"
     }).then(() => {
       const blockquote = clickedEl.parentNode;
@@ -654,9 +641,21 @@ app.delete(function(request, response) {
 
 ---
 
-# Exercise 8
+# Exercise 7
 
 Finish writing the route handler for the `DELETE` request.
+
+???
+
+```js
+app.delete('/quotes/:name', (request, response) => {
+  const { name } = request.params;
+  const newQuotes = quotes.filter(
+    quote => quote.name.replace(/\s+/g, "-").toLowerCase() !== name
+  );
+  response.status(200).send(newQuotes);
+});
+```
 
 ---
 
@@ -697,7 +696,7 @@ app
 
 ---
 
-# Exercise 9
+# Exercise 8
 
 Refactor your route-related code to use `app.route()`.
 
@@ -722,8 +721,8 @@ export default router;
 
 ???
 
-* Creates modular, mountable route handlers
-* A Router instance is a complete middleware and routing system; for this reason, it is often referred to as a “mini-app”
+- Creates modular, mountable route handlers
+- A Router instance is a complete middleware and routing system; for this reason, it is often referred to as a “mini-app”
 
 ---
 
@@ -743,7 +742,7 @@ And move all of the `app.route()` calls `quotes.js`.
 
 ---
 
-# Exercise 10
+# Exercise 9
 
 Our app won't work until we refactor what we just moved into `./quotes.js`.
 
@@ -771,19 +770,19 @@ Surprise! We've been building up a REST API this whole time.
 
 # What Is REST?
 
-* **RE**presentational **S**tate **T**ransfer
-* Conceived of by Roy Fielding in 2000 in his [doctoral dissertation](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
-* REST isn't an architecture, it's meant to be a way to judge architectures (i.e. it's a set of design criteria)
-* It's resource-driven, like the web
+- **RE**presentational **S**tate **T**ransfer
+- Conceived of by Roy Fielding in 2000 in his [doctoral dissertation](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
+- REST isn't an architecture, it's meant to be a way to judge architectures (i.e. it's a set of design criteria)
+- It's resource-driven, like the web
 
 ???
 
-* All about stateless servers and structured access to resources
-* REST itself is pretty strict, but it's widely interpreted
-* Contrast to RPC which is action-driven
-* A tale of two APIs
-  * https://codex.wordpress.org/XML-RPC_WordPress_API
-  * https://developer.wordpress.org/rest-api/reference/
+- All about stateless servers and structured access to resources
+- REST itself is pretty strict, but it's widely interpreted
+- Contrast to RPC which is action-driven
+- A tale of two APIs
+  - https://codex.wordpress.org/XML-RPC_WordPress_API
+  - https://developer.wordpress.org/rest-api/reference/
 
 ---
 
@@ -791,9 +790,9 @@ Surprise! We've been building up a REST API this whole time.
 
 A few events contributed to the rise of REST:
 
-* The ubiquity of smartphones (iPhone launched in 2007)
-* Social media platforms (the witter sort-of-REST-ish API was a way to combat rogue API implementations)
-* Cloud computing (Amazon S3 launched in 2006 and initially didn't have a GUI, just a RESTful API)
+- The ubiquity of smartphones (iPhone launched in 2007)
+- Social media platforms (the witter sort-of-REST-ish API was a way to combat rogue API implementations)
+- Cloud computing (Amazon S3 launched in 2006 and initially didn't have a GUI, just a RESTful API)
 
 ---
 
@@ -811,9 +810,9 @@ Taken together, REST enabled us to use the web as a **distributed application pl
 
 Thinking about the quotes app we just built...
 
-* What resources did we identify in our quotes app?
-* How did we structure the URIs?
-* What HTTP verbs did we use to send requests from the client?
+- What resources did we identify in our quotes app?
+- How did we structure the URIs?
+- What HTTP verbs did we use to send requests from the client?
 
 ---
 
@@ -831,69 +830,69 @@ How a data set splits into resources:
 
 And we describe our resources with URI structure:
 
-* Use path variables to denote hierarchy (e.g. `/parent/child`)
-* Use punctuation to avoid implying hierarchy where one doesn't exist (e.g. `lat,long` or `lat;long`)
-* Use a query string as a input to an algorithm (e.g. `?search=`)
+- Use path variables to denote hierarchy (e.g. `/parent/child`)
+- Use punctuation to avoid implying hierarchy where one doesn't exist (e.g. `lat,long` or `lat;long`)
+- Use a query string as a input to an algorithm (e.g. `?search=`)
 
 ---
 
-# Exercise 11
+# Exercise 10
 
 In small groups or pairs, you'll be assigned one of the following topics to research (with respect to how it relates to REST) and deliver a short presentation to class on your findings:
 
-* Data versus Resources versus Representations in REST
-* State in REST: The idea of "statelessness" and the difference between resource state and application state
-* The Richardson Maturity Model and where "hypermedia as an engine of application state" (HATEOAS) comes into play
-* Safety and idempotence of HTTP verbs used in REST APIs
+- Data versus Resources versus Representations in REST
+- State in REST: The idea of "statelessness" and the difference between resource state and application state
+- The Richardson Maturity Model and where "hypermedia as an engine of application state" (HATEOAS) comes into play
+- Safety and idempotence of HTTP verbs used in REST APIs
 
 ???
 
 **Data v. Resources v. Representations:**
 
-* Resource: a document, a row in a database, the results of running an algorithm, etc. (anything that can be streamed as bits)
-* Splitting an app into resources increases its surface area
-* Representation: any useful information about the state of the resource
-* Representations also provide levers of state (the next possible state)
-* Representations help capture the current or intended sate of a resource (with metadata) (we represent with JSON)
+- Resource: a document, a row in a database, the results of running an algorithm, etc. (anything that can be streamed as bits)
+- Splitting an app into resources increases its surface area
+- Representation: any useful information about the state of the resource
+- Representations also provide levers of state (the next possible state)
+- Representations help capture the current or intended sate of a resource (with metadata) (we represent with JSON)
 
 **State in REST:**
 
-* Statelessness: request happen in isolation of each other and contain all the info they necessary to get what's needed from the server
-* The client doesn't need to coax the server into some state for the server to be receptive to a request
-* HTTP sessions on the server can break statelessness
-* Statelessness makes it easier to cache and scale a distributed app
-* Application state should be managed in the client, and reflects interactions
-* Resource state should be managed on the server, and reflects the semi-permanent state of data
-* Resource state is the same for every client
+- Statelessness: request happen in isolation of each other and contain all the info they necessary to get what's needed from the server
+- The client doesn't need to coax the server into some state for the server to be receptive to a request
+- HTTP sessions on the server can break statelessness
+- Statelessness makes it easier to cache and scale a distributed app
+- Application state should be managed in the client, and reflects interactions
+- Resource state should be managed on the server, and reflects the semi-permanent state of data
+- Resource state is the same for every client
 
 **RMM & HATEOAS:**
 
-* Level 0: URI tunneling
-* Level 1: Resources
-* Level 2: HTTP verbs
-* Level 3: Hypermedia
-* HATEOAS: App state tracked by the client on its path through the web (the server guides it along the path through links and forms)
-* As an app reaches a new state, the next possible states are discovered (like a treasure hunt for nearby resources)
+- Level 0: URI tunneling
+- Level 1: Resources
+- Level 2: HTTP verbs
+- Level 3: Hypermedia
+- HATEOAS: App state tracked by the client on its path through the web (the server guides it along the path through links and forms)
+- As an app reaches a new state, the next possible states are discovered (like a treasure hunt for nearby resources)
 
 **Safety & Idempotence:**
 
-* Safe: no server-side effects for which the client can be held responsible
-* Idempotent: generates absolute side effects
-* GET is safe and idempotent
-* PUT and DELETE are not safe but idempotent
-* PATCH and POST are not safe and not idempotent
-* POST overload in RPC
-* POST is often used as the wildcard operation of the web
-* In REST, POST is for creating subordinate resources
+- Safe: no server-side effects for which the client can be held responsible
+- Idempotent: generates absolute side effects
+- GET is safe and idempotent
+- PUT and DELETE are not safe but idempotent
+- PATCH and POST are not safe and not idempotent
+- POST overload in RPC
+- POST is often used as the wildcard operation of the web
+- In REST, POST is for creating subordinate resources
 
 ---
 
 # What We've Learned
 
-* How to set up a basic Express app
-* How to add middleware to Express
-* How to parse HTTP requests set to the Express server
-* What REST is, and why it's important
+- How to set up a basic Express app
+- How to add middleware to Express
+- How to parse HTTP requests set to the Express server
+- What REST is, and why it's important
 
 ---
 
