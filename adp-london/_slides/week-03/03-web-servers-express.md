@@ -569,7 +569,7 @@ Now add this to your Express app:
 import bodyParser from "body-parser";
 
 app.post(
-  "/quotes",
+  '/quotes',
   bodyParser.urlencoded({ extended: true }),
   (request, response) => {
     const newQuote = request.body;
@@ -594,7 +594,7 @@ Improve UX by clearing out the form inputs after the response comes back too!
 
 ```js
 app.post(
-  "/quotes",
+  '/quotes',
   bodyParser.urlencoded({ extended: true }),
   (request, response) => {
     quotes.push(request.body);
@@ -648,7 +648,7 @@ Finish writing the route handler for the `DELETE` request.
 ???
 
 ```js
-app.delete("/quotes/:name", (request, response) => {
+app.delete('/quotes/:name', (request, response) => {
   const { name } = request.params;
   const newQuotes = quotes.filter(
     quote => quote.name.replace(/\s+/g, "-").toLowerCase() !== name
