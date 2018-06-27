@@ -445,7 +445,7 @@ In `imports/start-up/server/index.js`, now import `register-api.js`. Done, phew!
 
 # Meteor Mongo Shell
 
-Meteor has it's own implementation of the Mongo shell. To enter it, run:
+Meteor has its own implementation of the Mongo shell. To enter it, run:
 
 ```bash
 meteor mongo

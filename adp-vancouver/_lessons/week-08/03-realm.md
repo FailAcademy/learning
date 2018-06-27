@@ -44,7 +44,7 @@ In this file, define the model for a `Fave` object. Our `Fave` objects should ha
 
 Set the `id` as the `primaryKey` for your model.
 
-Be sure to initialize your new Realm with its `Fave` model, and export it so its available in your Faves scene later.
+Be sure to initialize your new Realm with its `Fave` model, and export it so its available in your Faves screen later.
 
 ---
 
@@ -72,13 +72,13 @@ Lastly, nest a `Provider` inside your `ApolloProvider` from `react-redux` and pa
 
 ## Lab Activity
 
-Once you can see that data is writing to your database when the "Add to / Remove from Faves" button is tapped in a Session (use the Realm Browser for this!), work on building out your Faves scene to display just the sessions that a user has faved inside a `SectionList` component.
+Once you can see that data is writing to your database when the "Add to / Remove from Faves" button is tapped in a Session (use the Realm Browser for this!), work on building out your Faves screen to display just the sessions that a user has faved inside a `SectionList` component.
 
-To build out the Faves scene, we'll need to filter the sessions we fetch from Firebase and check to see if they have a `session_id` that corresponds to one of the IDs in the array of Fave objects retrieved from Realm. Use this array of sessions to populate your Redux store, and pass it into your `FavesContainer` as a prop.
+To build out the Faves screen, we'll need to filter the sessions we fetch from Firebase and check to see if they have a `session_id` that corresponds to one of the IDs in the array of Fave objects retrieved from Realm. Use this array of sessions to populate your Redux store, and pass it into your `FavesContainer` as a prop.
 
-The rest of the Faves scene will be built similarly to the Schedule scene. Reuse presentational components between the two wherever possible!
+The rest of the Faves screen will be built similarly to the Schedule screen. Reuse presentational components between the two wherever possible!
 
-One gotcha is that we'll need to keep the UI state of our Faves scene in sync with the writes we make to the database from the Session scene (i.e. when tapping the button to fave or unfave a session).
+One gotcha is that we'll need to keep the UI state of our Faves screen in sync with the writes we make to the database from the Session screen (i.e. when tapping the button to fave or unfave a session).
 
 To do this, we'll need to research how **[change events](https://realm.io/docs/javascript/latest/#realm-notifications)** work in Realm, and add one of these to our Faves and Session container component constructors, and update our UI whenever a session is added or removed as a fave.
 

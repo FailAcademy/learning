@@ -23,7 +23,7 @@ You should create 4 folders within the project, 1 for each exercise.
 ## Learning Objectives
 
 * Outline the common approaches to authentication and security on the Web.
-* Describe the process of "Hashing", and it's related algorithms.
+* Describe the process of "Hashing", and its related algorithms.
 * Explain what Firebase is and take a tour of its many features.
 * Use Firebase to authenticate users in Express, using JWT
 

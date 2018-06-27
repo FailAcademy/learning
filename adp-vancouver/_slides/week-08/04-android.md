@@ -96,7 +96,7 @@ React Native makes very easy to build cross-platform apps, basically by default.
 
 With that in mind, we'll want to **re-use as much code as possible** when building a cross-platform app.
 
-When we view the [React Native docs](https://facebook.github.io/react-native/docs/getting-started.html) we can see that most of the components and APIs listed there are inherently cross-platform.
+When we view the [React Native Components and APIs](https://facebook.github.io/react-native/docs/components-and-apis.html) we can see that most of the components and APIs listed there are inherently cross-platform.
 
 ---
 
@@ -122,13 +122,13 @@ template: inverse
 We can use the `Platform` modules to conditionally render components or styles for our components. For example:
 
 ```js
-import { Platform, Text, View } from "react-native";
+import { Platform, Text, View } from 'react-native';
 
 const App = () => {
   return (
     <View>
       <Text>I can be seen an all platforms.</Text>
-      {Platform.OS === "ios" && <Text>You'll only see me on iOS devices.</Text>}
+      {Platform.OS === 'ios' && <Text>You'll only see me on iOS devices.</Text>}
       {Platform.Version === 24 && (
         <Text>And I'm only on Android devices running Nougat.</Text>
       )}
@@ -144,17 +144,17 @@ const App = () => {
 We also have access to a `Platform.select` method:
 
 ```js
-import { Platform, StyleSheet } from "react-native";
+import { Platform, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     ...Platform.select({
       ios: {
-        backgroundColor: "red"
+        backgroundColor: 'red'
       },
       android: {
-        backgroundColor: "blue"
+        backgroundColor: 'blue'
       }
     })
   }
@@ -169,7 +169,7 @@ This method will return the value for the platform you are on.
 
 Using what you learned about the `Platform` modules, make two adjustments to your R10 project:
 
-1.  Conditionally render the heart icon in the Schedule, Session, and Faves scenes to use the Ionicon `md-heart` instead of `ios-heart`.
+1.  Conditionally render the heart icon in the Schedule, Session, and Faves screens to use the Ionicon `md-heart` instead of `ios-heart`.
 2.  To get Montserrat (Regular) working on Android, you'll need to set your main font to `Montserrat-Regular` for that platform (rather than `Montserrat`, as we did on iOS). Use `Platform.select` for this.
 
 ---
@@ -207,7 +207,7 @@ And in `index.js`:
 
 ```js
 // automatically imports the right file!
-import Widget from "./Widget";
+import Widget from './Widget';
 
 export default Widget;
 ```

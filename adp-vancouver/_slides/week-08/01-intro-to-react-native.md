@@ -108,8 +108,8 @@ class: center, middle
 Recall that when we use React, we also need to include the `ReactDOM` module to render our components to the DOM:
 
 ```js
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
 class App extends Component {
   render() {
@@ -117,7 +117,7 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
 ---
@@ -127,8 +127,8 @@ ReactDOM.render(<App />, document.getElementById("root"));
 Our approach to building a React Native components is noticeably similar, but we import the `AppRegistry` module instead of `ReactDOM`:
 
 ```js
-import React, { Component } from "react";
-import { AppRegistry, View, Text } from "react-native";
+import React, { Component } from 'react';
+import { AppRegistry, View, Text } from 'react-native';
 
 class App extends Component {
   render() {
@@ -140,7 +140,7 @@ class App extends Component {
   }
 }
 
-AppRegistry.registerComponent("App", () => App);
+AppRegistry.registerComponent('App', () => App);
 ```
 
 ---
@@ -237,7 +237,7 @@ For now, we will work primarily in `index.js`, but will talk more in depth about
 But how does RN know what component to bind to the view when our app launches? In our `index.js` file we have:
 
 ```js
-AppRegistry.registerComponent("HelloWorld", () => HelloWorld);
+AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
 ```
 
 And if we look in `ios/HelloWorld/AppDelegate.m` we'll see:
@@ -300,8 +300,8 @@ _Before we proceed..._
 Unlike HTML elements, RN's built-in mobile UI components are modules we must selectively import from `react-native` wherever we want to use them in our own components:
 
 ```js
-import React, { Component } from "react";
-import { Image, Text, View } from "react-native";
+import React, { Component } from 'react';
+import { Image, Text, View } from 'react-native';
 
 // ...your component goes here
 ```
@@ -331,7 +331,7 @@ Be sure to supply `@2x` and `@3x` versions if possible for static image resource
 ```js
 <Image
   style={% raw %}{{ width: 300, height: 200, }}{% endraw %}
-  resizeMode={"contain"}
+  resizeMode={'contain'}
   source={% raw %}{{uri:'https://unsplash.it/600/400/?random'}}{% endraw %}
   // source={require('./img/puppies.png')} A LOCAL IMAGE!
 />
@@ -348,9 +348,9 @@ We may also want users to enter text into a `<TextInput>` [(ref)](https://facebo
 ```js
 <TextInput
   style={% raw %}{{ height: 30, width: 100, borderWidth: 1,
-    borderColor: "rgba(0,0,0,0.5)"}}{% endraw %}
+    borderColor: 'rgba(0,0,0,0.5)'}}{% endraw %}
   placeholder={'Type here'}
-  placeholderTextColor={"rgba(198,198,204,1)"}
+  placeholderTextColor={'rgba(198,198,204,1)'}
   onChangeText={(text) => {this.setState({text})}}
   onSubmitEditing={() => {this.setState({text: ''})}}
   value={(this.state && this.state.text) || ''}
@@ -381,7 +381,7 @@ To highlight an element on press, use `<TouchableHighlight>` [(ref)](https://fac
 <TouchableHighlight
   onPress={() => {}}
   activeOpacity={75 / 100}
-  underlayColor={"rgb(210,210,210)"}
+  underlayColor={'rgb(210,210,210)'}
 >
   <Text>Press me!</Text>
 </TouchableHighlight>
@@ -488,8 +488,8 @@ The previous style objects occasionally offer an advantage over the `StyleSheet.
 **Example:**
 
 ```js
-import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { Component } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default class HelloWorld extends Component {
   render() {
@@ -504,7 +504,7 @@ export default class HelloWorld extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center"
+    alignItems: 'center'
   }
 });
 ```
@@ -678,8 +678,8 @@ The `<SectionList>` component is very similar to the `<FlatList>`, but the data 
 ```js
 <SectionList
   sections={[
-    { title: "ADP", data: ["Bob", "Alice"] },
-    { title: "WDP", data: ["Anne", "Mary", "Joe"] }
+    { title: 'ADP', data: ['Bob', 'Alice'] },
+    { title: 'WDP', data: ['Anne', 'Mary', 'Joe'] }
   ]}
   renderItem={({ item }) => <Text>{item}</Text>}
   renderSectionHeader={({ section }) => <Text>{section.title}</Text>}
@@ -742,7 +742,7 @@ Inside the `js` folder...
 |   |-- lib        # general functions (code re-use FTW!)
 |   |-- redux      # store and reducers go here
 |   |-- navigation # define routes and nav components
-|   |-- screens    # container components that render each scene
+|   |-- screens    # container components that render each screen
 |   |-- App.js     # move App.js here!
 ```
 
@@ -755,17 +755,17 @@ You will import `js/App.js` into the root `index.js` of your project and pass yo
 In `index.js`:
 
 ```js
-import { AppRegistry } from "react-native";
-import App from "./js/App";
+import { AppRegistry } from 'react-native';
+import App from './js/App';
 
-AppRegistry.registerComponent("HelloWorld", () => App);
+AppRegistry.registerComponent('HelloWorld', () => App);
 ```
 
 In `js/App.js`:
 
 ```js
-import React, { Component } from "react";
-import { View, Text } from "react-native";
+import React, { Component } from 'react';
+import { View, Text } from 'react-native';
 
 export default class App extends Component {
   render() {
@@ -799,10 +799,10 @@ However, it usually make sense to set some base styles for our colours and typog
 
 # Scenes
 
-Each scene of your app will be a container/presentational component combo:
+Each screen of your app will be a container/presentational component combo:
 
 ```bash
-|-- scences/
+|-- screens/
 |   |-- User
 |   |   |-- index.js
 |   |   |-- styles.js
@@ -813,8 +813,8 @@ Each scene of your app will be a container/presentational component combo:
 And in the `index.js` we follow this pattern:
 
 ```js
-import UserContainer from "./UserContainer";
-import User from "./User";
+import UserContainer from './UserContainer';
+import User from './User';
 
 export { User };
 export default UserContainer;
@@ -824,7 +824,7 @@ export default UserContainer;
 
 # Components
 
-Use can use a similar directory structure for our reusable, stateless UI components:
+We can use a similar directory structure for our reusable, stateless UI components:
 
 ```bash
 |-- components/
@@ -837,7 +837,7 @@ Use can use a similar directory structure for our reusable, stateless UI compone
 In `index.js`:
 
 ```js
-import UserAvatar from "./UserAvatar";
+import UserAvatar from './UserAvatar';
 
 export default UserAvatar;
 ```

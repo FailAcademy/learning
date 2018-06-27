@@ -21,7 +21,7 @@ Use the metaphor on a chef and a server
 Build out a Node.js Server
 
 What is Node? Why is it important?
-- Explain the history of Node and recount it's popularity.
+- Explain the history of Node and recount its popularity.
 - Show famous sites built using node.
 
 
