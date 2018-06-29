@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: Webforms using React & Redux
-slides: ['_slides/week-03/04-react-forms.md']
+title: Connecting Client & Server
+slides: ['_slides/week-03/04-connecting-client-server.md']
 lesson_date: 2018-07-19
 ---
 
@@ -9,19 +9,20 @@ lesson_date: 2018-07-19
 
 Prior to class, read through the following documentation:
 
+- [Apollo Client Docs (Intro and Essentials sections)](https://www.apollographql.com/docs/react/)
 - [React Docs on Forms](https://facebook.github.io/react/docs/forms.html)
 
 ---
 
 ## Learning Objectives
 
-- Understand the key differences between client- and server-side validation
-- Understand UX best practices for implementing client-side validation
-- Compare and contrast controlled and uncontrolled components.
-- Use a library for handling client-side form validation in an application
-- Provide error feedback on invalid input
-- Use form elements from 3rd party sources like Material-UI
-- Implement a form using React-Final-Form
+- Install and Apollo Client in a project and use it to make queries to a GraphQL API that populate data in React components.
+- Describe UX best practices for implementing client-side validation.
+- Provide error feedback on invalid input.
+- Distinguish between controlled and uncontrolled components.
+- Use a library for handling form validation and submission in an application.
+- Use form components from third-party libraries including React Final Form and Material UI.
+- Use Apollo Client to request mutations from the client side of an application via a form.
 
 ---
 
