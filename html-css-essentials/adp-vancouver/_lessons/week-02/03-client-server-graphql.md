@@ -138,8 +138,7 @@ Great introductory GraphQL tutorials:
 
 Official Apollo docs:
 
-- [Apollo React Docs](http://dev.apollodata.com/react/)
-- [Apollo Tools Guide](http://dev.apollodata.com/tools/)
+- [Apollo Server Guide](https://www.apollographql.com/docs/apollo-server/v2/)
 
 A backgrounder on why and how to optimize what's happening in GraphQL resolvers:
 
