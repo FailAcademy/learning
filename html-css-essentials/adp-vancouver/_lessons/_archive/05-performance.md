@@ -19,7 +19,7 @@ Read this [Google Developer article on Performance](https://developers.google.co
 - Estimate the scalability of functions using Big O.
 - Become familiar with browser performance measuring tools such as Timeline and Sources. 
 - Calculate time to first paint and re-render time for your site or app.
-- Describe the **critical render path** and it's role in **render blocking**.
+- Describe the **critical render path** and its role in **render blocking**.
 - Understand **jank** and how it can be prevented.
 - Explain the benefits of using HTTP/2.
 

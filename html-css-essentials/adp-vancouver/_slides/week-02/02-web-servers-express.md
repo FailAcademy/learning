@@ -228,7 +228,7 @@ Below, the `app.get()` method create a route that accepts GET requests:
 const express = require("express");
 
 const app = express();
-const port = 3300;
+const port = 4000;
 
 app.get("/", function(request, response) {
   response.send("Hello, world!");
@@ -246,7 +246,7 @@ app.listen(port, function() {
 Run the following in your Terminal:
 
 ```bash
-curl -i http://localhost:3300
+curl -i http://localhost:4000
 ```
 
 _What do you see?_
@@ -388,7 +388,7 @@ Try replacing your call to `app.get('/', ...)` with this in your Express app. Be
 
 # Exercise 2
 
-Before we go further with middleware, let's pause an build out the client side of our app. In your `index.html` file, add a button (which you will use to asynchronously retrieve quotes).
+Before we go further with middleware, let's pause and build out the client side of our app. In your `index.html` file, add a button (which you will use to asynchronously retrieve quotes).
 
 Also create `main.js` file in your `public` directory and include it in your `index.html` file. Inside of `main.js`, use `fetch` to grab your quotes on JSON when the button is clicked.
 
@@ -399,18 +399,22 @@ Lastly, append all the quotes and their authors to the DOM after the `fetch` Pro
 Probably want to share this with the students to save time...
 
 ```js
-function appendQuote(quote) {
-  const blockquote = document.createElement("blockquote");
-  const deleteButton = document.createElement("button");
-  deleteButton.setAttribute(
-    "data-quote",
-    quote.name.replace(/\s+/g, "-").toLowerCase()
-  );
-  deleteButton.textContent = "Delete";
-  blockquote.textContent = `"${quote.text}" — ${quote.name} `;
-  blockquote.appendChild(deleteButton);
-  container.appendChild(blockquote);
-}
+const container = document.getElementById("quotes");
+
+fetch("http://localhost:4000/quotes")
+  .then(res => res.json())
+  .then(quotes =>
+    quotes.map((quote, index) => {
+      const div = document.createElement("div");
+      div.innerHTML = `<p> ${quote.name} ${
+        quote.text
+      } </p> <button id='${index}' name=${quote.name
+        .replace(/\s+/g, "-")
+        .toLowerCase()}>Delete</button>`;
+      container.appendChild(div);
+    })
+  )
+  .catch(err => console.log(err));
 ```
 
 ---
@@ -520,7 +524,7 @@ First, we'll need a form to send `POST` requests to our server from the client:
 
 ```html
 <h2>Submit a Quote</h2>
-<form id="create-quote">
+<form id="create-quote" method="POST" action="/quotes">
   <label for="text">Quote Text</label>
   <input type="text" id="text" name="text">
   <label for="name">Speaker Name</label>
@@ -528,38 +532,6 @@ First, we'll need a form to send `POST` requests to our server from the client:
   <button type="submit">Create Quote</button>
 </form>
 ```
-
----
-
-# Event Handler
-
-In our client-side JS, you'll also need to listen for the `submit` event on the form:
-
-```js
-const createQuoteForm = document.getElementById("create-quote");
-
-createQuoteForm.addEventListener("submit", function(event) {
-  event.preventDefault();
-  const formData = new FormData(createQuoteForm);
-  const newQuote = {};
-
-  for ([key, value] of formData.entries()) {
-    newQuote[key] = value;
-  }
-
-  // Now use fetch to send a post request to finish the job...
-});
-```
-
----
-
-# Exercise 6
-
-Before we handle the `POST` request in Express, we'll need a way to send that request from the client to our server.
-
-Inside of the submit event handler, use `fetch` to send a `POST` request. You'll need to send it to the `/quotes` route.
-
-**Note**: You will also need to supply some request options in the form of an object as a second argument to `fetch`. You'll want to specify that the `method` is `POST`, set `headers` for the `Content-Type` (JSON), and set the `newQuote` object as the `body` (use `JSON.stringify()`).
 
 ---
 
@@ -576,23 +548,40 @@ Now add this to your Express app:
 ```js
 const bodyParser = require("body-parser");
 
-app.post("/quotes", bodyParser.json(), function(request, response) {
-  const newQuote = request.body;
-  // Add your new quote to the quotes array
-  // Then send back a 201 status
-  // And also send the new quote as JSON in the response
-});
+app.post(
+  '/quotes',
+  bodyParser.urlencoded({ extended: true }),
+  (request, response) => {
+    const newQuote = request.body;
+    // Add your new quote to the quotes array
+    // Then send back a 201 status
+    // And also send the new quote as JSON in the response
+  }
+);
 ```
 
 ---
 
-# Exercise 7
+# Exercise 6
 
 Now figure out how to finish writing the route handler for the `POST` request.
 
 Once you've finished that, jump back to your client-side JS and take the JSON response you get back from the server to append your new quote to the DOM.
 
 Improve UX by clearing out the form inputs after the response comes back too!
+
+???
+
+```js
+app.post(
+  '/quotes',
+  bodyParser.urlencoded({ extended: true }),
+  (request, response) => {
+    quotes.push(request.body);
+    response.statusCode(201).send(quotes);
+  }
+);
+```
 
 ---
 
@@ -605,11 +594,9 @@ const container = document.getElementById("quotes");
 
 container.addEventListener("click", function(event) {
   const clickedEl = event.target;
-
   if (clickedEl.tagName === "BUTTON") {
-    const name = clickedEl.getAttribute("data-quote");
-
-    fetch(`http://localhost:3300/quotes/${name}`, {
+    const name = clickedEl.getAttribute("name");
+    fetch(`http://localhost:4000/quotes/${name}`, {
       method: "DELETE"
     }).then(() => {
       const blockquote = clickedEl.parentNode;
@@ -634,9 +621,21 @@ app.delete(function(request, response) {
 
 ---
 
-# Exercise 8
+# Exercise 7
 
 Finish writing the route handler for the `DELETE` request.
+
+???
+
+```js
+app.delete('/quotes/:name', (request, response) => {
+  const { name } = request.params;
+  const newQuotes = quotes.filter(
+    quote => quote.name.replace(/\s+/g, "-").toLowerCase() !== name
+  );
+  response.status(200).send(newQuotes);
+});
+```
 
 ---
 
@@ -677,7 +676,7 @@ app
 
 ---
 
-# Exercise 9
+# Exercise 8
 
 Refactor your route-related code to use `app.route()`.
 
@@ -723,7 +722,7 @@ And move all of the `app.route()` calls `quotes.js`.
 
 ---
 
-# Exercise 10
+# Exercise 9
 
 Our app won't work until we refactor what we just moved into `./quotes.js`.
 
@@ -817,7 +816,7 @@ And we describe our resources with URI structure:
 
 ---
 
-# Exercise 11
+# Exercise 10
 
 In small groups or pairs, you'll be assigned one of the following topics to research (with respect to how it relates to REST) and deliver a short presentation to class on your findings:
 
