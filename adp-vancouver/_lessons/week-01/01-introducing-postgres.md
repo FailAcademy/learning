@@ -7,7 +7,8 @@ lesson_date: 2018-07-04
 
 ## Pre-Work
 
-Install Postgres, get the app installer here: https://postgresapp.com/ <br/>
+Install Postgres, get the app installer here: [https://postgresapp.com/](https://postgresapp.com/) <br/>
+Install the Postico Free Postgres GUI form here: [https://eggerapps.at/postico/](https://eggerapps.at/postico/) <br/>
 
 What makes RBDMS systems so useful? <br/>
 [Codd's 12 Rules](http://www.idc-online.com/technical_references/pdfs/information_technology/Codd_12_Rules.pdf)
@@ -109,6 +110,19 @@ Creating many to many relationships requires the creation of a "Link table".
 
 ---
 
+## Exercise 4
+
+Finish up your database by adding the Users table. <br/>
+Here are the columns we'll need to add:
+
+- id
+- email
+- password
+- fullname
+- bio
+
+---
+
 ## Lab activity
 
 Now that we've created the database tables for our project application, use the `INSERT` command to populate your tables with some mock data.
@@ -116,9 +130,14 @@ Now that we've created the database tables for our project application, use the 
 Add the following mock data to your database:
 
 - At least 4 Items
-- All of the Tags (Categories)
-
-Ensure that you've set up the appropriate foreign key constraints!
+- All of the Tags we'll use in the project (Categories)
+  - Household Items
+  - Tools
+  - Electronics
+  - Physical Media
+  - Sporting Goods
+  - Musical Instruments
+  - Recreational Equipment
 
 ---
 
