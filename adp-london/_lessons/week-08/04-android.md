@@ -67,7 +67,7 @@ Run your `AwesomeProject` with your android emulator `react-native run-android` 
 
 Using what you learned about the `Platform` modules, make two adjustments to your R10 project:
 
-1.  Conditionally render the heart icon in the Schedule, Session, and Faves scenes to use `md-heart` instead of `ios-heart`.
+1.  Conditionally render the heart icon in the Schedule, Session, and Faves screens to use `md-heart` instead of `ios-heart`.
 2.  Render fonts by platform. To get Montserrat (Regular) working on Android, you'll need to set your main font to `Montserrat-Regular` for that platform (rather than `Montserrat`, as we did on iOS). Use `Platform.select` for this.
 
 ---

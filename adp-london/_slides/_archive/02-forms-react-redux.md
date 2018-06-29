@@ -159,7 +159,7 @@ Updating an input's value every time the value changes.
 
 # Controlled
 
-A controlled components handles it's own component state.
+A controlled component handles its own component state.
 
 1. `onChange` calls `handleChange` method
 2. `handleChange` updates component `state`

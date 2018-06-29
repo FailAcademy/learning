@@ -49,7 +49,7 @@ To complete todays exercises we'll need to create accounts on the Cloud Hosting 
 **Configure your application's production environment settings**
 
 When deploying, we'll need to make sure we've provided the correct configuration and overrides so our
-application will run in it's new environment.
+application will run in its new environment.
 
 - Prepare your first project for deployment by setting all of the necessary production environment variables.
 

@@ -120,7 +120,7 @@ To learn more, type the following command into the shell:
 \?
 ```
 
-**How do you quit the shell?** (Use `\?` to find th command)
+**How do you quit the shell?** (Use `\?` to find the command)
 
 ```
 \h
@@ -323,7 +323,7 @@ Solution:
 CREATE TABLE "public"."tags" (
   "tagid" serial PRIMARY KEY,
   "title" text NOT NULL
-)
+);
 ```
 
 ---
@@ -362,7 +362,7 @@ Imagine we're storing Users in our Database (We're going to put users in a separ
 ```sql
 CREATE TABLE "public"."users" (
   "userid" serial primary key,
-  "name" text not null,
+  "name" text not null
 );
 ```
 
@@ -391,8 +391,8 @@ In what other table will we find the itemid?
 # Primary Key Constraint
 
 ```sql
-"ownerid" REFERENCES users (userid),
-"borrowerid" REFERENCES users (userid)
+"ownerid" integer REFERENCES users (userid),
+"borrowerid" integer REFERENCES users (userid)
 ```
 
 These lines are telling Postgres that the values stored in these columns will be references to values stored in the `users` table, namely the userid of actual users.
@@ -423,7 +423,7 @@ CREATE TABLE "public"."itemtags" (
   "itemid" integer references items (itemid),
   "tagid" integer references tags (tagid),
   unique (itemid, tagid)
-)
+);
 ```
 
 ---
@@ -465,7 +465,7 @@ INSERT INTO items
 VALUES (
 	'Camp Stove',
 	'https://firebasestorage.googleapis.com/v0/b/boomtown-dfdd8.appspot.com/o/demo-images%2Fcamp-stove.jpg?alt=media',
-	 'All you need to cook gourmet meals on your next trek into the wild.',
+	 'All you need to cook gourmet meals on your next trek into the wild.'
 );
 
 INSERT INTO tags
