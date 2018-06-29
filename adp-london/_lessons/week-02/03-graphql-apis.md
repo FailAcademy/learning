@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: Connecting Client and Server with GraphQL
-slides: ['_slides/week-02/03-client-server-graphql.md']
+title: GraphQL APIs
+slides: ['_slides/week-02/03-graphql-apis.md']
 lesson_date:  2018-07-11
 ---
 
@@ -24,7 +24,8 @@ Please read the following article prior to class:
 - Identify the six different scalar types in GraphQL.
 - Write data server-side using mutations.
 - Name three different ways to keep the client and server in sync with GraphQL.
-- Install and use Apollo Client and Apollo Server in a project.
+- Install and use Apollo Server in a project.
+- Use GraphQL Playground as a client to explore a GraphQL API.
 
 ---
 
@@ -43,6 +44,36 @@ Please read the following article prior to class:
 - Root type
 - Scalar
 - Resolver
+
+---
+
+## Exercise 1
+
+Write the resolvers for the `people` and `person` queries.
+
+Be sure to resolve a person's `filmography` field as well.
+
+Once you've done this, see if your GraphQL server will start by running `npm start`.
+
+Are you able to query your movie API for data?
+
+---
+
+# Exercise 2
+
+User your new `addPerson` mutation in the GraphQL explorer to add at least one new person to your movie database.
+
+---
+
+# Exercise 3
+
+Refactor your data-fetching logic into `api/helpers.js`
+
+As you do this, check to see if all of your resolvers actually need their own unique helper function now&mdash;can you re-use any of the helpers for multiple resolvers?
+
+Require your new data helpers in `resolvers.js`, replace your existing code in each resolver with a helper function, and test your app to make sure everything still works as it did before.
+
+---
 
 ---
 
@@ -103,14 +134,6 @@ As a best practice, it would be better to remove our data fetching code directly
 Create a `api/jsonServer.js`, refactor your data-fetching logic in there now as exported functions. Do all of your resolvers need their own helper functions?
 
 Import your new data fetching functions into `resolvers.js`, replace your existing `fetch` requests, and test your app to make sure everything still works.
-
----
-
-## Exercise 7
-
-Now that we've created one data loader together, create three more for batching requests for items that a user has borrowed, individual items, and individual users.
-
-Use your data loaders in your resolvers, and test your app to make sure everything still works.
 
 ---
 
