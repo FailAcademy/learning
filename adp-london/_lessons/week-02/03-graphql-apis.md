@@ -44,6 +44,7 @@ Please read the following article prior to class:
 - Root type
 - Scalar
 - Resolver
+- Input type
 
 ---
 
@@ -59,13 +60,13 @@ Are you able to query your movie API for data?
 
 ---
 
-# Exercise 2
+## Exercise 2
 
 User your new `addPerson` mutation in the GraphQL explorer to add at least one new person to your movie database.
 
 ---
 
-# Exercise 3
+## Exercise 3
 
 Refactor your data-fetching logic into `api/helpers.js`
 
@@ -75,71 +76,74 @@ Require your new data helpers in `resolvers.js`, replace your existing code in e
 
 ---
 
----
-
-## Exercise 1
-
-Define the types and fields for items and users in Boomtown.
-
-Be sure to use type modifiers where needed.
-
----
-
-## Exercise 2
-
-Write the resolvers for your Boomtown items and users now.
-
-You will need to write extra resolvers to provide data to the `itemOwner` and `borrower` fields for `Item` type, and `items` and `borrowed` fields for the `User` type.
-
-When you're done, try querying items and users using the GraphiQL interface.
-
----
-
-## Exercise 3
-
-Take what you've just learned and use it refactor your `<ItemsContainer>` component to fetch data from your GraphQL server.
-
-There are a few things to consider...will you need to explicitly keep your items in your store (and dispatch an action to fetch them), or will Apollo handle that? If you're not using your old items actions, [how do we know if the data is loading](http://dev.apollodata.com/react/queries.html#default-result-props)?
-
-What shape will your query be? How will your proptypes need to change as a result?
-
-_Remember to leverage the power of nested queries!_
-
----
-
-## Exercise 4
-
-Now using what you just learned about query variables, refactor your `<ProfileContainer>` component to fetch data from your GraphQL server for a specific user on a `profile/:id` route.
-
-Again, how will your proptypes change? Do you still need your Redux actions and reducer for user data anymore?
-
-Additionally, can GraphQL help you filter items by user in advance with a nested query (instead of monkeying around with this on the client)? What about the other users that a user has borrowed items from?
-
----
-
-## Exercise 5
-
-Now define a mutation in your Boomtown schema to add an item. You will need to set it up with `title`, `imageUrl`, `itemOwner`, `description`, and `tags` parameters. The JSON server will auto-generate the `id`, but you will statically set the `createdOn`, `available`, and `borrower` properties in the resolver.
-
-Your resolver will need to make a `POST` request to the JSON server's `/items` endpoint, and return the response as JSON.
-
-For now, just test out your new mutation in GraphiQL, as we won't wire this up to the front-end of Boomtown until we add Redux Form next week.
-
----
-
-## Exercise 6
-
-As a best practice, it would be better to remove our data fetching code directly from our resolver code blocks, and instead abstract this away into helper functions.
-
-Create a `api/jsonServer.js`, refactor your data-fetching logic in there now as exported functions. Do all of your resolvers need their own helper functions?
-
-Import your new data fetching functions into `resolvers.js`, replace your existing `fetch` requests, and test your app to make sure everything still works.
-
----
-
 ## Lab Activity
 
-You now have everything you need in place to retrieve data client-side from your GraphQL server in Project 1. Continue working on refactoring your client-side code to make use of Apollo Client, instead of hitting REST API endpoints in your async Redux action creators.
+### Task 1:
+
+_Define your schema!_
+
+- The `Item` type has the following fields:
+
+  - `id` (its type is `ID` and it's required)
+  - `title` (its type `String` and it's required)
+  - `imageurl` (its type is `String`)
+  - `description` (its type `String` and it's required)
+  - `itemowner` (its type is `User` and it's required)
+  - `tags` (its type is a list of `Tag`s)
+  - `created` (its type is the custom `Date` scalar and it's required)
+  - `borrower` (its type is `User`)
+
+- The `User` type has the following fields:
+
+  - `id` (its type is `ID` and it's required)
+  - `email` (its type is `String` and it's required)
+  - `fullname` (its type is `String` and it's required)
+  - `bio` (its type is `String`)
+  - `items` (its type is a list of `Item`s)
+  - `borrowed` (its type is a list of `Item`s)
+
+- The `Tag` type has the following fields:
+
+  - `id` (its type is `ID` and it's required)
+  - `title` (its type is `String` and it's required)
+
+- The `File` type has the following fields:
+
+  - `id` (its type is `ID` and it's required)
+  - `filename` (its type is `String` and it's required)
+  - `mimetype` (its type is `String` and it's required)
+  - `encoding` (its type is `String` and it's required)
+  - `itemid` (its type is `ID` and it's required)
+
+- The `AssignedTag` input has the following fields:
+
+  - `id` (its type is `ID` and it's required)
+  - `title` (its type is `String` and it's required)
+
+- The `AssigneBorrower` input has the following fields:
+
+  - `id` (its type is `ID` and it's required)
+
+- The `NewItemInput` input has the following fields:
+
+  - `title` (its type is `String` and it's required)
+  - `description` (its type is `String`)
+  - `tags` (its type is a list of `AssignedTag`s and it's required)
+
+- The `addItem` mutation has the following variables and returns an `Item`:
+
+  - `item` (its type is `NewInputType` and it's required)
+  - `image` (its type is `Upload` and it's required)
+
+### Task 2:
+
+_Now that you have a schema, create your resolvers._
+
+You'll start by transferring the SQL queries you wrote in Postico last week to the `server/api/pg-resource.js` file and completing all `@TODO` tasks in this file.
+
+As you create your helpers in `pg-resource.js`, use them in your resolvers in `server/api/resolvers/index.js`. Start with the queries, and work your way up to the mutation.
+
+Test them out in the GraphQL playground! You'll know you're done when running the queries returns the data you're expecting.
 
 ---
 
@@ -166,9 +170,3 @@ Official Apollo docs:
 A backgrounder on why and how to optimize what's happening in GraphQL resolvers:
 
 - [Optimizing Your GraphQL Request Waterfalls](https://dev-blog.apollodata.com/optimizing-your-graphql-request-waterfalls-7c3f3360b051)
-
-More on using the DataLoader library:
-
-- [DataLoader and caching - One dataloader per request (Apollo docs)](http://dev.apollodata.com/tools/graphql-tools/connectors.html#One-dataloader-per-request)
-- [Optimizing GraphQL Queries with DataLoader](https://spin.atomicobject.com/2017/05/15/optimize-graphql-queries/)
-- [Using Facebook’s Dataloader with GraphQL server](http://www.eloquentwebapp.com/using-facebooks-dataloader-graphql/)
