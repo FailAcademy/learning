@@ -228,16 +228,24 @@ Below, the `app.get()` method create a route that accepts GET requests:
 const express = require("express");
 
 const app = express();
-const port = 4000;
+
+app.set("PORT", process.env.PORT || 3300);
+const port = app.get("PORT");
 
 app.get("/", function(request, response) {
   response.send("Hello, world!");
 });
 
 app.listen(port, function() {
-  console.log(`Server running @ localhost:${port}`);
+  console.log(`Server running @ http://localhost:${port}`);
 });
 ```
+
+???
+
+Talk through every line of this code snippet with the students before you move on!
+
+Don't forget to address what `process.env.PORT` is in this context. Tie it back to what they saw in the node lesson.
 
 ---
 
@@ -246,7 +254,7 @@ app.listen(port, function() {
 Run the following in your Terminal:
 
 ```bash
-curl -i http://localhost:4000
+curl -i http://localhost:3300
 ```
 
 _What do you see?_
@@ -398,23 +406,58 @@ Lastly, append all the quotes and their authors to the DOM after the `fetch` Pro
 
 Probably want to share this with the students to save time...
 
+`index.html`:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Dev Quotes R Us</title>
+  </head>
+  <body>
+    <h1>Dev Quotes R Us</h1>
+
+    <button type="button" id="get-quotes">Get Some Quotes</button>
+    <div id="quotes"></div>
+
+    <h2>Submit a Quote</h2>
+    <form id="create-quote">
+      <label for="text">Quote Text</label>
+      <input type="text" id="text" name="text">
+      <label for="name">Speaker Name</label>
+      <input type="text" id="name" name="name">
+      <button type="submit">Create Quote</button>
+    </form>
+
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
+```
+
+`main.js`:
+
 ```js
 const container = document.getElementById("quotes");
+const getQuotesButton = document.getElementById("get-quotes");
 
-fetch("http://localhost:4000/quotes")
-  .then(res => res.json())
-  .then(quotes =>
-    quotes.map((quote, index) => {
-      const div = document.createElement("div");
-      div.innerHTML = `<p> ${quote.name} ${
-        quote.text
-      } </p> <button id='${index}' name=${quote.name
-        .replace(/\s+/g, "-")
-        .toLowerCase()}>Delete</button>`;
-      container.appendChild(div);
-    })
-  )
-  .catch(err => console.log(err));
+function appendQuote(quote) {
+  const blockquote = document.createElement("blockquote");
+  const deleteButton = document.createElement("button");
+  deleteButton.setAttribute(
+    "data-quote",
+    quote.name.replace(/\s+/g, "-").toLowerCase()
+  );
+  deleteButton.textContent = "Delete";
+  blockquote.textContent = `"${quote.text}" — ${quote.name} `;
+  blockquote.appendChild(deleteButton);
+  container.appendChild(blockquote);
+}
+
+getQuotesButton.addEventListener("click", function() {
+  // Fetch the quotes from http://localhost:3300/quotes here!
+  // Use the appendQuote function in the promise/then callback
+});
 ```
 
 ---
@@ -524,7 +567,7 @@ First, we'll need a form to send `POST` requests to our server from the client:
 
 ```html
 <h2>Submit a Quote</h2>
-<form id="create-quote" method="POST" action="/quotes">
+<form id="create-quote">
   <label for="text">Quote Text</label>
   <input type="text" id="text" name="text">
   <label for="name">Speaker Name</label>
@@ -548,16 +591,12 @@ Now add this to your Express app:
 ```js
 const bodyParser = require("body-parser");
 
-app.post(
-  '/quotes',
-  bodyParser.urlencoded({ extended: true }),
-  (request, response) => {
-    const newQuote = request.body;
-    // Add your new quote to the quotes array
-    // Then send back a 201 status
-    // And also send the new quote as JSON in the response
-  }
-);
+app.post("/quotes", bodyParser.json(), function(request, response) {
+  const newQuote = request.body;
+  // Add your new quote to the quotes array
+  // Then send back a 201 status
+  // And also send the new quote as JSON in the response
+});
 ```
 
 ---
@@ -569,19 +608,6 @@ Now figure out how to finish writing the route handler for the `POST` request.
 Once you've finished that, jump back to your client-side JS and take the JSON response you get back from the server to append your new quote to the DOM.
 
 Improve UX by clearing out the form inputs after the response comes back too!
-
-???
-
-```js
-app.post(
-  '/quotes',
-  bodyParser.urlencoded({ extended: true }),
-  (request, response) => {
-    quotes.push(request.body);
-    response.statusCode(201).send(quotes);
-  }
-);
-```
 
 ---
 
@@ -596,7 +622,7 @@ container.addEventListener("click", function(event) {
   const clickedEl = event.target;
   if (clickedEl.tagName === "BUTTON") {
     const name = clickedEl.getAttribute("name");
-    fetch(`http://localhost:4000/quotes/${name}`, {
+    fetch(`http://localhost:3300/quotes/${name}`, {
       method: "DELETE"
     }).then(() => {
       const blockquote = clickedEl.parentNode;
@@ -628,7 +654,7 @@ Finish writing the route handler for the `DELETE` request.
 ???
 
 ```js
-app.delete('/quotes/:name', (request, response) => {
+app.delete("/quotes/:name", (request, response) => {
   const { name } = request.params;
   const newQuotes = quotes.filter(
     quote => quote.name.replace(/\s+/g, "-").toLowerCase() !== name
@@ -660,7 +686,7 @@ app.get("/quotes/:name" /* handler */);
 app.delete("/quotes/:name" /* handler */);
 ```
 
-But we can use `app.route()` to consolidate our route handling with chaining:
+We can use `app.route()` to consolidate route handling:
 
 ```js
 app
