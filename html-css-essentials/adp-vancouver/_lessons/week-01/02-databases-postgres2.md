@@ -75,14 +75,23 @@ Let's write a query to aggregate data from the database:
 
 ## Lab Activity
 
-Write the necessary query to perform a "full-text search" of your database.
+To ensure we're ready to take the next step building our application,
+we'll need to ensure we have written all of the SQL queries we'll use in 
+our project application: 
 
-Following the patterns outlined in the excellent walkthrough, create a full-text search engine for your project.
-[Full Text Search is Good Enough - Rachid Belaid](http://rachbelaid.com/postgres-full-text-search-is-good-enough/)
+We've written some already. Here are the queries we'll need to write: 
 
-Make sure you can talk about the following:
-
-- Why is full-text search a useful feature?
+- Insert a user
+- Insert a tag
+- Insert an item with tags
+- Get a user with a given email
+- Get a user with a given ID
+- Get all the items
+- Get all the items owned by a specific user (ID)
+- Get all the items for a specific user (ID) that are not borrowed
+- Get all the items borrowed by a given user (ID)
+- Get all the tags
+- Get all tags for a given item (ID)
 
 ---
 
