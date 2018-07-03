@@ -21,7 +21,7 @@ Also be sure to review how timers work in JS:
 
 - Understand and be able to differentiate async, parallel and concurrent code.
 - Explain the JavaScript "event loop", and how it interprets the code we write.
-- Distinguish between blocking and non-blocking code (for example, `fs.readFile` versus `fs.readFileSync`).
+- Distinguish between blocking and non-blocking code.
 - Understand the syntactic and semantic implications of "Callback Hell"
 - Identify strategies for writing clean asynchronous code using callbacks, promises, and async/await.
 
