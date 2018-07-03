@@ -1,8 +1,26 @@
 [
   {
-    "title": "New Years Day",
+    "title": "Pre-Work",
     "allDay": true,
-    "start": "2018-01-01"
+    "start": "2018-06-25",
+    "end": "2018-07-02"
+  },
+  {
+    "title": "ADP/WDP Mentoring",
+    "allDay": false,
+    "start": "2018-07-20T15:00:00+00:00",
+    "end": "2018-07-20T16:15:00+00:00"
+  },
+  {
+    "title": "ADP/WDP Mentoring",
+    "allDay": false,
+    "start": "2018-08-17T15:00:00+00:00",
+    "end": "2018-08-17T16:15:00+00:00"
+  },
+  {
+    "title": "BC Family Day",
+    "allDay": true,
+    "start": "2018-02-12"
   },
   {
     "title": "Good Friday",
@@ -15,19 +33,34 @@
     "start": "2018-04-02"
   },
   {
-    "title": "Bank Holiday",
+    "title": "Victoria Day",
     "allDay": true,
-    "start": "2018-05-07"
+    "start": "2018-05-21"
   },
   {
-    "title": "Bank Holiday",
+    "title": "Canada Day Stat",
     "allDay": true,
-    "start": "2018-05-28"
+    "start": "2018-07-02"
   },
   {
-    "title": "Bank Holiday",
+    "title": "BC Day",
     "allDay": true,
-    "start": "2018-08-27"
+    "start": "2018-08-06"
+  },
+  {
+    "title": "Labour Day",
+    "allDay": true,
+    "start": "2018-09-03"
+  },
+  {
+    "title": "Thanksgiving Monday",
+    "allDay": true,
+    "start": "2018-10-08"
+  },
+  {
+    "title": "Remembrance Day Stat",
+    "allDay": true,
+    "start": "2018-11-12"
   },
   {
     "title": "Christmas Day",
@@ -37,6 +70,6 @@
   {
     "title": "New Years Day",
     "allDay": true,
-    "start": "2019-01-01"
+    "start": "2018-01-01"
   }
 ]

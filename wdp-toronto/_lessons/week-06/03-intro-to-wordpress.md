@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to WordPress
 slides: ['_slides/week-06/03-intro-to-wordpress.md']
-lesson_date: 2018-05-16
+lesson_date: 2018-08-09
 ---
 
 ## Pre-Work
@@ -52,6 +52,8 @@ We can also install WP locally using MAMP:
 Let's start customizing our WordPress installation.
 
 Install the [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) plugin and try creating a form. Follow the instructions it provides for including a form in a page (feel free to create a special page for this if you like).
+
+**Hint:** You'll need to use a shortcode block to add the form to the page.
 
 Also try browsing for a new theme to install on your site and activate it. Take a look at the front end of your site to see what effect it had. Did anything weird or unexpected happen?
 

@@ -2,7 +2,7 @@
 layout: lesson
 title: Custom Post Types, Taxonomies & Fields
 slides: ['_slides/week-07/01a-ia-for-wp.md', '_slides/week-07/01b-post-types-taxonomies-fields.md']
-lesson_date: 2018-05-21
+lesson_date: 2018-08-14
 ---
 
 ## Pre-Work
@@ -17,6 +17,7 @@ Pre-reading on custom post types, taxonomies, and fields:
 ## Learning Objectives
 
 * Distinguish the difference between custom post types, custom taxonomies, and custom fields, as well as the particular use cases for each.
+* Determine when a Gutenberg block or a custom field should be implemented to effectively model content and its related metadata in WordPress.
 * Create custom post types and taxonomies using WordPress functions.
 * Create theme files specific for displaying custom post type posts and archives, and custom taxonomy archives.
 * Create custom fields using a plugin, and display their data in theme files.
@@ -96,6 +97,8 @@ When done, you will present your rationale to the class.
 
 Time to create a custom post type for our projects...let's build the **Product** custom post type together, and add it to our functionality plugin.
 
+Don't forget to flush your permalinks!
+
 Once we have created our Product custom post type, how we will add its archive page as the "Shop" menu item in the navigation menu?
 
 ---
@@ -104,11 +107,35 @@ Once we have created our Product custom post type, how we will add its archive p
 
 Now let's add a custom taxonomy called **Product Type** to our project. We generate the code together, and add it our functionality plugin as well.
 
+Be sure to flush your permalinks again!
+
 ---
 
 ## CPT/CT: Exercise 3
 
-Let's install the [Custom Field Suite](https://en-ca.wordpress.org/plugins/custom-field-suite/) together, take a tour, and try creating a field group.
+Let's install the [**Custom Field Suite**](https://en-ca.wordpress.org/plugins/custom-field-suite/) together, take a tour, and try creating a field group store the price of a product.
+
+Once we've created the price custom field, how do we get it to display in a template specific to single product posts? Check the [**WordPress Template Hierarchy**](https://wphierarchy.com/) to find out what template you'll need to create first.
+
+Next, check the [**Custom Field Suite docs**](http://customfieldsuite.com/) to figure out how display your price metadata in the template.
+
+---
+
+## CPT/CT: Exercise 4
+
+Gutenberg allows us to create [**Block Templates**](https://wordpress.org/gutenberg/handbook/templates/) to automatically add predetermined sets of blocks to custom post types (and "lock" the templates so no other blocks can be added, if this is required).
+
+Read the Gutenberg docs to create a block template for products. This template should have one `core/paragraph` block to add the product description. Be sure to add helpful placeholder text for the client in this block.
+
+Also be sure to set `'template_lock' => 'all'` in your product custom post type args so that no additional blocks can be added to the template.
+
+---
+
+## CPT/CT: Exercise 5
+
+We will use our first custom block for the hero image header on the About page.
+
+Download and install the [**Inhabitent Blocks plugin**](https://github.com/redacademy/inhabitent-blocks). Once activated, you can add the Hero Image Block to your About page content. Will you need to make any adjustments to your About page custom template now?
 
 ---
 

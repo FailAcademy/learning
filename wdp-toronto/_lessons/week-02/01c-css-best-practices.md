@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: CSS Best Practices
-slides: ['_slides/week-02/01-css-best-practices.md']
-lesson_date: 2018-04-16
+slides: ['_slides/week-02/01c-css-best-practices.md']
+lesson_date: 2018-07-09
 ---
 
 ## Pre-Work
@@ -31,14 +31,6 @@ _There is no pre-work for this lesson._
 ## Exercise 1
 
 Time for a [specificity showdown!](http://codepen.io/redacademy/pen/VvmwoQ?editors=110).
-
----
-
-## Lab Activity
-
-See the [HTML Forms](/lesson/html-forms/) for lab activity details.
-
-Be sure to apply the best practices you just learned to your project while continuing work on it this weekend.
 
 ---
 
