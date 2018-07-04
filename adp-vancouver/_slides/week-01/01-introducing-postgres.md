@@ -151,13 +151,15 @@ A database can only be accessed using a language having linear syntax that suppo
 
 # Exercise 1
 
-* Create 2 Postgres databases
-  We'll use one of these databases to try out new things. The other one we'll use as the official database in our project.
+In this exercise, we'll go through the process of setting up a database for your project.
 
-* Use the `CREATE USER <name> WITH PASSWORD <pw>` command to create a new user and configure a password for each database.
+- Create a new database using the Postgres cli.
 
-This setup is meant to mock a real world database setup, and to give us the opportunity to become familiar with
-creating and authorizing a new Database on your local machine. In a real production setting, our setup would be more complicated.
+- Use the `CREATE USER <name> WITH PASSWORD <pw>;` command to create a new user and configure a password for each database.
+  See [documentation](https://www.Postgres.org/docs/9.6/static/sql-createuser.html).
+
+(This setup is meant to mock a real world database setup, and to give us the opportunity to become familiar with
+creating and authorizing a new Database on your local machine. In a real production setting, our setup would be more complicated).
 
 ???
 
@@ -256,7 +258,7 @@ CREATE TABLE IF NOT EXISTS items();
 # Adding Columns
 
 ```sql
-ALTER TABLE items ADD COLUMN itemid serial;
+ALTER TABLE items ADD COLUMN id serial;
 ALTER TABLE items ADD COLUMN title text;
 ALTER TABLE items ADD COLUMN description text;
 ALTER TABLE items ADD COLUMN imageurl text;
@@ -272,7 +274,7 @@ Copying and pasting each line into the psql shell allows us to modify the table 
 
 ```sql
 CREATE TABLE "public"."items" (
-  "itemid" serial primary key,
+  "id" serial primary key,
   "title" text not null,
   "imageurl" text DEFAULT null,
   "description" text not null,
@@ -291,10 +293,10 @@ What does the DEFAULT attribute mean? <br/>
 
 Be sure to stop to talk about the following details:
 
-* serial data type
-* PRIMARY KEY
-* NOT NULL
-* DEFAULT
+- serial data type
+- PRIMARY KEY
+- NOT NULL
+- DEFAULT
 
 ---
 
@@ -311,7 +313,7 @@ DROP TABLE "public"."items";
 # Exercise 2
 
 Populating your Relational Database.
-Use what you know to create the **Tags** table!
+Use what you know to create the **Tags** & **Users**, table!
 
 _Hint: use the `\du` command to check if the table was successfully created._
 
@@ -321,8 +323,15 @@ Solution:
 
 ```sql
 CREATE TABLE "public"."tags" (
-  "tagid" serial PRIMARY KEY,
+  "id" serial PRIMARY KEY,
   "title" text NOT NULL
+);
+
+CREATE TABLE "public"."users" (
+  "id" serial PRIMARY KEY,
+  "email" text NOT NULL,
+  "fullname" text NOT NULL,
+  "bio" text
 );
 ```
 
@@ -340,9 +349,9 @@ We've created 2 tables in our database. Each table will hold information about a
 
 Now, it's time to use our Relational Database to create relationships between them! But first it's helpful to know what kind of relationships we can define. Here are the most common:
 
-* 1 to 1 (1:1)
-* 1 to many (1:n)
-* Many to many (n:n)
+- 1 to 1 (1:1)
+- 1 to many (1:n)
+- Many to many (n:n)
 
 ???
 
@@ -361,8 +370,10 @@ Imagine we're storing Users in our Database (We're going to put users in a separ
 
 ```sql
 CREATE TABLE "public"."users" (
-  "userid" serial primary key,
-  "name" text not null
+  "id" serial primary key,
+  "email" text NOT NULL,
+  "fullname" TEXT NOT NULL,
+  "bio" TEXT
 );
 ```
 
@@ -374,7 +385,7 @@ In Relational Databases, the PRIMARY KEY is used to define relationships between
 
 ```sql
 CREATE TABLE "public"."items" (
-  "itemid" serial primary key,
+  "id" serial primary key,
   "title" text not null,
   "imageurl" text DEFAULT null,
   "description" text not null,
@@ -391,8 +402,8 @@ In what other table will we find the itemid?
 # Primary Key Constraint
 
 ```sql
-"ownerid" integer REFERENCES users (userid),
-"borrowerid" integer REFERENCES users (userid)
+"ownerid" integer REFERENCES users (id),
+"borrowerid" integer REFERENCES users (id)
 ```
 
 These lines are telling Postgres that the values stored in these columns will be references to values stored in the `users` table, namely the userid of actual users.
@@ -420,8 +431,8 @@ Create a Link Table
 
 ```sql
 CREATE TABLE "public"."itemtags" (
-  "itemid" integer references items (itemid),
-  "tagid" integer references tags (tagid),
+  "itemid" integer references items (id),
+  "tagid" integer references tags (id),
   unique (itemid, tagid)
 );
 ```
@@ -430,13 +441,13 @@ CREATE TABLE "public"."itemtags" (
 
 # What We've Learned
 
-* What is an RDBMS
-* How to set up and configure Postgres
-* How to use the `psql` shell
-* How to create Postgres users & databases
-* How to alter existing tables using `psql`
-* How to define column data-types for our database tables
-* How to create relationships between database tables using primary keys
+- What is an RDBMS
+- How to set up and configure Postgres
+- How to use the `psql` shell
+- How to create Postgres users & databases
+- How to alter existing tables using `psql`
+- How to define column data-types for our database tables
+- How to create relationships between database tables using primary keys
 
 ---
 
@@ -446,14 +457,14 @@ Now that we've created our schema (table) for our project application, use the `
 
 Add the following mock data to your database:
 
-* At least 4 Items
-* All of the Tags (Categories)
+- At least 4 Items
+- All of the Tags (Categories)
 
 Ensure that you've set up the appropriate foreign key constraints!
 
 ???
 
-Solution
+Solution (Partial)
 
 ```sql
 INSERT INTO items
