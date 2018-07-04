@@ -3,13 +3,13 @@
     "title": "Boomtown Pt. 1 Due",
     "allDay": true,
     "start": "2018-07-16",
-    "url": "/project/01b-node-and-db/"
+    "url": "/project/01a-node-and-db/"
   },
   {
     "title": "Boomtown Pt. 2 Due",
     "allDay": true,
     "start": "2018-07-30",
-    "url": "/project/01a-react-and-redux"
+    "url": "/project/01b-react-and-redux"
   },
   {
     "title": "React + Meteor Project Due",
