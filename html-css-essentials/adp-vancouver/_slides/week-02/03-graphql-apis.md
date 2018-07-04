@@ -21,12 +21,12 @@ layout: false
 # Agenda
 
 1.  REST pain points
-2.  Graph theory basics
-3.  GraphQL basics
-4.  Set-up a GraphQL server
-5.  Define queries and run them in a client
-6.  Define mutations and run them in a client
-7.  Bonus round: clean-up
+2.  Graph theory & GraphQL basics
+3.  Set-up a GraphQL server
+4.  Define queries and run them in a client
+5.  Define mutations and run them in a client
+6.  Bonus round: clean-up
+7.  Set-up Boomtown
 
 ---
 
@@ -314,10 +314,10 @@ template: inverse
 
 # Fake IMDB Set-up
 
-We'll need to set-up a basic Apollo server and create an endpoint for our web client to send queries to. Create a new directory for your server, `npm init`, and then:
+We'll use Express to set-up an Apollo server for our web client to send queries to. Create a new directory for your server, `npm init`, and then:
 
 ```bash
-npm i -S apollo-server@rc graphql
+npm install --save apollo-server-express@rc graphql express
 ```
 
 Let's also use Babel with our app again:
@@ -346,22 +346,30 @@ And add a start script to `package.json`:
 Now create an `main.js` file and instantiate your new GraphQL server:
 
 ```js
-const { ApolloServer } = require("apollo-server");
+const express = require("express");
+const { ApolloServer } = require("apollo-server-express");
+const typeDefs = require("./api/schema");
+const resolvers = require("./api/resolvers");
 
-// We'll need to create these next...
-const { typeDefs } = require("./api/schema");
-
-// And then these
-const { resolvers } = require("./api/resolvers");
-
-// Instantiate the server
+const app = express();
 const server = new ApolloServer({ typeDefs, resolvers });
+server.applyMiddleware({ app });
 
-// Start it up!
-server.listen().then(({ url }) => {
-  console.log(`🚀  Server ready at ${url}`);
-});
+app.set("PORT", process.env.PORT || 5000);
+const port = app.get("PORT");
+
+app.listen({ port }, () =>
+  console.log(
+    `🚀 Server ready at http://localhost:${port}${server.graphqlPath}`
+  )
+);
 ```
+
+???
+
+Talk through every line of this code snippet with the students before you move on!
+
+Don't forget to address what `process.env.PORT` is in this context. Tie it back to what they saw in the node lesson.
 
 ---
 
@@ -746,6 +754,10 @@ mutation createPerson(
 
 We can also **specify a payload** for the mutation (like getting the response back from a POST request).
 
+???
+
+- Show students how to add query variables for mutations in the GraphQL playground
+
 ---
 
 # Exercise 2
@@ -760,7 +772,61 @@ template: inverse
 
 ---
 
-# Best Practice
+# Best Practice: Inputs
+
+Use **[input types](https://graphql.org/learn/schema/#input-types)** to pass complex objects to your mutations. Add this new input to your schema and modify your mutation to use it. What have we changed here exactly?
+
+```js
+const typeDefs = gql`
+  # Other types defined above...
+
+  input PersonInput {
+    name: String!
+    birthday: String
+    placeOfBirth: String
+    bio: String
+    filmography: [ID]
+  }
+
+  type Mutation {
+    addPerson(person: PersonInput!): Person
+  }
+`;
+```
+
+???
+
+- Be sure that students understand that input types are helpful for mutations where you might want to pass a whole object as an argument.
+
+---
+
+# Best Practice: Inputs
+
+You'll use your modified mutation and new input like this:
+
+```js
+mutation createPerson(
+  $person: PersonInput!
+) {
+  addPerson(
+    person: $person
+  ) {
+    name
+    placeOfBirth
+  }
+}
+```
+
+There will be problem with the query variables and resolver we created for our mutation now. What do we need to fix these issues?
+
+???
+
+- The query var is now an object `person` with `name`, etc. nested inside as properties.
+- Adjust the resolver to pull the values out of the `person` object to fix this.
+
+---
+
+# Best Practice: Helpers
 
 As a best practice, it would be better to remove our data fetching code directly from our resolver code blocks, and instead abstract this away into helper functions.
 
@@ -794,14 +860,13 @@ Require your new data helpers in `resolvers.js`, replace your existing code in e
 
 # Bonus Topics
 
-Some more advanced topics in GraphQL you may want to look into
+Some more advanced topics in GraphQL worth researching:
 
 - [Subscriptions](http://dev.apollodata.com/tools/graphql-subscriptions/subscriptions-to-schema.html)
 - [Fragments](http://graphql.org/learn/queries/#fragments)
 - [Enums](http://graphql.org/learn/schema/#enumeration-types)
 - [Unions](http://graphql.org/learn/schema/#enumeration-types)
 - [Interfaces](http://graphql.org/learn/schema/#interfaces)
-- [Inputs](http://graphql.org/learn/schema/#input-types)
 
 ???
 
@@ -828,9 +893,75 @@ Some more advanced topics in GraphQL you may want to look into
 
 - a union type is a type that should be either of a collection of types (with conditional fragments)
 
-**Inputs:**
+---
 
-- allow us to pass complex objects as arguments into a field (helpful for mutations where you might want to pass a whole object as an argument)
+template: inverse
+
+# Boomtown Set-up
+
+---
+
+# Get Starter Files
+
+Grab the starter files for Boomtown here:
+
+**[https://github.com/redacademy/boomtown-starter](https://github.com/redacademy/boomtown-starter)**
+
+Download the files (don't clone!). You will `init` your own new repo in it. Now would be a good time to do that.
+
+We'll only work in the `server` directory this week, so `cd` in there and install the dependencies:
+
+```bash
+cd server && npm install
+```
+
+???
+
+- Give students a quick tour of the `server` directory, and explain what's what.
+
+---
+
+# Set Config Vars
+
+Start in `server/config/application.js`. Set these config variables, as instructed by the `@TODO`:
+
+- `PORT`
+- `PG_HOST`
+- `PG_USER`
+- `PG_PASSWORD`
+- `PG_DB`
+
+---
+
+# Hook-up Postgres
+
+Now move to `server/config/postgres.js`. Set the `host`, `user`, `password`, and `database` keys in the object passed into the instantiated `Pool` using the config variables you set.
+
+Use `app.get()` to retrieve these variables (as instructed in the `@TODO`).
+
+Set `idleTimeoutMillis` and `connectionTimeoutMillis` keys in this objects to `30000` and `2000` respectively as well.
+
+_Congrats! Your app is connected to your database and you should be able to start your server now!_
+
+???
+
+- At this point, students should attempt starting their app with `npm run start:dev`
+
+---
+
+# Hook-up Apollo
+
+Now switch to `server/config/apollo-server.js`.
+
+Pass your `typeDefs` and `resolvers` into `makeExecutableSchema`. Pass `pgResource` into your Apollo context.
+
+At this point, you can uncomment the lines line `main.js` to start Apollo if you like, but we still have some work to do before our GraphQL server will give us the data we want.
+
+_Please see the Lab Activity for this lesson for instructions to define your schema..._
+
+???
+
+- Make connection to `pgResource` and `helpers` from earlier, if this hasn't been explained yet.
 
 ---
 
