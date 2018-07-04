@@ -75,7 +75,7 @@ function diyLogger(request, response, next) {
   const { url, method } = request;
   const { statusCode } = response;
 
-  response.on('finish', function() {
+  response.on("finish", function() {
     // ...what goes here?
   });
 
@@ -170,7 +170,7 @@ In small groups or pairs, you'll be assigned one of the following topics to rese
 
 ## Lab Activity
 
-Remaining lab time today will be spent working on the second half of Project 1.
+Remaining lab time today will be spent working on Project 1.
 
 ---
 
