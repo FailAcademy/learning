@@ -47,18 +47,17 @@ To start, get familiar with SQL syntax. Complete Part 1, from [these exercises](
 - `FOREIGN KEY`
 - `INSERT`
 - Data Types
-- Scalar
 - Schema
 
 ---
 
 ## Exercise 1
 
-In this exercise, we'll go through the process of setting up a database within it, to use as the database for your project.
+In this exercise, we'll go through the process of setting up a database for your project.
 
 - Create a new database using the Postgres cli.
 
-- Use the `CREATE USER <name> WITH PASSWORD <pw>` command to create a new user and configure a password for each database.
+- Use the `CREATE USER <name> WITH PASSWORD <pw>;` command to create a new user and configure a password for each database.
   See [documentation](https://www.Postgres.org/docs/9.6/static/sql-createuser.html).
 
 (This setup is meant to mock a real world database setup, and to give us the opportunity to become familiar with
@@ -117,7 +116,6 @@ Here are the columns we'll need to add:
 
 - id
 - email
-- password
 - fullname
 - bio
 

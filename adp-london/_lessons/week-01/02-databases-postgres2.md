@@ -7,11 +7,6 @@ lesson_date: 2018-07-05
 
 ## Pre-work
 
-Please read over the following links:
-
-- [Postgres Constraints](https://www.tutorialspoint.com/Postgres/Postgres_constraints.htm)
-- [Postgres Useful Functions](https://www.tutorialspoint.com/Postgres/Postgres_useful_functions.htm)
-
 Complete Part 2 _Joins and Subqueries_, from [these exercises](https://pgexercises.com/questions/joins/).
 
 ---
@@ -76,10 +71,10 @@ Let's write a query to aggregate data from the database:
 ## Lab Activity
 
 To ensure we're ready to take the next step building our application,
-we'll need to ensure we have written all of the SQL queries we'll use in 
-our project application: 
+we'll need to ensure we have written all of the SQL queries we'll use in
+our project application:
 
-We've written some already. Here are the queries we'll need to write: 
+We've written some already. Here are the queries we'll need to write:
 
 - Insert a user
 - Insert a tag
