@@ -29,17 +29,21 @@ Your project must:
 
 Your project must:
 
-- [ ] 
+- [ ] Start without errors
+- [ ] Be configured for development and production using app.set / app.get
+- [ ] Connect to Postgres using the `node-postgres` library
+- [ ] Execute all of the required SQL queries using the `node-postgres` library
+- [ ] Use Apollo Server to initialize a GraphQL server
+- [ ] Define the necessary GraphQL schema
+- [ ] Use GraphQL Explorer to save all the necessary queries and mutations required for the project
+- [ ] Implement the necessary GraphQL resolvers
+- [ ] Return the appropriate data from all required GraphQL queries and mutations
 
 ### Development
 
 Your project must:
 
-- [ ] Use Postgres to store item data
-- [ ] Make efficient database queries
-- [ ] Save state to database
-- [ ] Use Apollo Server to initialize a GraphQL server and define a GraphQL schema with corresponding resolvers and mutations
-- [ ] Use GraphQL Explorer to save all the necessary queries and mutations required for the project
+- [ ] Conform to the file / folder patterns established by the starter project
 
 ### Quality
 
