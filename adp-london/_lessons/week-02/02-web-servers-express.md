@@ -75,7 +75,7 @@ function diyLogger(request, response, next) {
   const { url, method } = request;
   const { statusCode } = response;
 
-  response.on("finish", function() {
+  response.on('finish', function() {
     // ...what goes here?
   });
 
@@ -170,7 +170,13 @@ In small groups or pairs, you'll be assigned one of the following topics to rese
 
 ## Lab Activity
 
-Remaining lab time today will be spent working on Project 1.
+Remaining lab time today we will spend setting up the codebase for our first project (Boomtown)!
+
+Obtain the source code for the starter project and begin by adding the appropriate configuration variables to get our
+app up and running: Start with `config/application.js` and complete all of the `@TODO` tasks.
+
+Once you've added the appropriate configs you should be able to start the project without errors.
+Check with your instructor if you need help getting started!
 
 ---
 

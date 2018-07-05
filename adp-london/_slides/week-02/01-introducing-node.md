@@ -20,11 +20,11 @@ layout: false
 
 # Agenda
 
-* Understand the history and beginnings of Node
-* Review TCP/UDP protocols
-* Model JavaScript's event loop
-* Build a simple TCP/UDP messaging server
-* Use Node's built in modules to read from you computer's filesystem
+- Understand the history and beginnings of Node
+- Review TCP/UDP protocols
+- Model JavaScript's event loop
+- Build a simple TCP/UDP messaging server
+- Use Node's built in modules to read from you computer's filesystem
 
 ---
 
@@ -36,18 +36,18 @@ template: inverse
 
 # What is Node?
 
-* Node was created in **2009**
-* It has become the driving force behind the widespread adoption of the JS programming language as a tool for developing sophisticated software applications
-* Provides the **minimum viable foundation** to support the main Internet protocols, and OS interface
-* Given its low-level API, any reasonably complex application needs to make extensive use of libraries (npm!)
+- Node was created in **2009**
+- It has become the driving force behind the widespread adoption of the JS programming language as a tool for developing sophisticated software applications
+- Provides the **minimum viable foundation** to support the main Internet protocols, and OS interface
+- Given its low-level API, any reasonably complex application needs to make extensive use of libraries (npm!)
 
 ---
 
 # Experienced Node Developers Know...
 
-* How to structure an application using multiple third-party modules, and how to reliably judge the quality of a third-party module
-* How to leverage the **event loop** and Node's **async**, single-threaded nature (more on this to come...)
-* How to use various networking protocols
+- How to structure an application using multiple third-party modules, and how to reliably judge the quality of a third-party module
+- How to leverage the **event loop** and Node's **async**, single-threaded nature (more on this to come...)
+- How to use various networking protocols
 
 ---
 
@@ -118,13 +118,13 @@ Your `package.json` should look like this:
 Create a file called `index.js`. Use Node's [built-in `net` module](https://nodejs.org/api/net.html) to create a server which will handle incoming network connections (TCP/UDP):
 
 ```js
-const net = require("net");
+const net = require('net');
 const server = net.createServer();
 
-server.on("connection", handleConnection);
+server.on('connection', handleConnection);
 
 server.listen(9000, function() {
-  console.log("server listening to %j", server.address());
+  console.log('server listening to %j', server.address());
 });
 
 function handleConnection() {
@@ -192,9 +192,9 @@ Before we can start sending and receiving data, we'll need to add a few more thi
 
 Implement the following `conn` event handlers in your `handleConnection` callback:
 
-* `data`
-* `close`
-* `error`
+- `data`
+- `close`
+- `error`
 
 Each handler should `console.log` the `remoteAddress` as well as any relevant parameters (e.g. incoming data, or error messages). Review **[the documentation](https://nodejs.org/api/net.html)** here before you begin.
 
@@ -278,8 +278,8 @@ template: inverse
 
 Use your TCP server to read from your local file system. When your server receives a request, use Node's build in `fs` module to read text from a `.txt` file and send the contents back to the connection.
 
-* Is reading from the filesystem an **async** or **sync** action?
-* In what circumstance is it useful to use blocking operations?
+- Is reading from the filesystem an **async** or **sync** action?
+- In what circumstance is it useful to use blocking operations?
 
 Modify your existing code:
 
@@ -304,8 +304,8 @@ Next we'll create a minimal chat server.
 
 Change your TCP service to deliver any incoming data to all connected clients.
 
-* Your server will need to store all connections
-* Messages you send to the server should not return to you
+- Your server will need to store all connections
+- Messages you send to the server should not return to you
 
 ---
 
@@ -321,12 +321,77 @@ checkout this [post](https://www.nearform.com/blog/self-detect-memory-leak-node/
 
 ---
 
+template: inverse
+
+# Environment Variables
+
+---
+
+# Environment Variables
+
+Environment variables are:
+
+.large[...values available to a process, defined by the system where the process is executing. ]
+
+---
+
+# Environment Variables
+
+In Express, we'll need to provide values to our application that will be used at runtime.
+
+.large[
+Environment variables should be *dynamic* depending on the 'Environment' where your app is running.
+]
+
+???
+
+Explanation:
+
+We don't want to have to manually specify specific variables for each environment, in out application code.
+
+---
+
+# Defining Environments
+
+**Development** (Your computer)
+
+- Connections to Express ingress from `localhost` (localhost:3000).
+- Postgres is also running on `localhost` (localhost:5432)
+
+**Production** (On a server computer)
+
+- Connections to Express ingress via some domain, eg _boom.academy.red_
+- Postgres could be running on a separate domain.
+
+---
+
+# Local Environment
+
+To view your local environment run the following command:
+
+```bash
+env
+```
+
+.large[What do you see?]
+
+---
+
+# Learn to Use Environment Variables
+
+Take a moment and read through this tutorial from DigitalOcean: <br/>
+
+[How To Read and Set Environmental and Shell Variables](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps)
+
+---
+
 # What We've Learned
 
-* What Node is and what where it came from
-* What the TCP/UDP protocols are
-* What the JS event loop is
-* How blocking versus non-blocking operations work in Node
+- How to set up and use environment variables
+- What Node is and what where it came from
+- What the TCP/UDP protocols are
+- What the JS event loop is
+- How blocking versus non-blocking operations work in Node
 
 ---
 
