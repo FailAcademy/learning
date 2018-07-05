@@ -15,10 +15,8 @@ Complete Part 2 _Joins and Subqueries_, from [these exercises](https://pgexercis
 
 - Describe the difference between "foreign key" and "primary key".
 - Add constraints to our Postgres schema.
+- Add `ON DELETE` rules to our foreign keys.
 - Query a "link table"
-- Connect our Express app to a local Postgres database.
-- Query a local Postgres database from our Express app using `node-postgres`
-- Implement Full-Text search.
 
 ---
 
@@ -29,7 +27,6 @@ Complete Part 2 _Joins and Subqueries_, from [these exercises](https://pgexercis
 - `UNIQUE`
 - Compound constraint
 - `CASCADE`
-- ORM
 
 ---
 
@@ -56,15 +53,16 @@ Now that we have our data and relationships set up. Let's write some SQL queries
 - Write a query that returns all of the tags for a given Item.
 - Write a query that returns the number of Items in the database.
 - Write a query that returns the average number of Items which are tagged in your database.
-- Write a query that returns the 5 newest Items.
+- Write a query that returns all of the Items in your database sorted by most recently created.
 
 ---
 
-## Exercise 3
+# Exercise 3
 
-Let's write a query to aggregate data from the database:
+What happens if we remove a row from our database that is referenced by it's foreign key?
+Add the appropriate `ON DELETE` behavior for all of the foreign keys you defined.
 
-- Write a query that returns all of the Items that are tagged with a given Tag id.
+Hint: Using the Postico GUI will prove much easier that the `psql` shell.
 
 ---
 
@@ -87,6 +85,11 @@ We've written some already. Here are the queries we'll need to write:
 - Get all the items borrowed by a given user (ID)
 - Get all the tags
 - Get all tags for a given item (ID)
+
+Use the _Postico_ app to connect to your local instance of Postgres. Once connected, use the
+SQL query interface to test your queries. Once you've completed a query, save it to a `.sql` file.
+
+At the end of today you should have `.sql` files containing all of the queries necessary for your project.
 
 ---
 
