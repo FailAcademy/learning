@@ -27,7 +27,7 @@ Your project must:
 - [ ] Contain `README.md` with project summary and setup
 - [ ] Contain a valid [`package.json`](http://browsenpm.org/package.json) file with all appropriate fields completed
 - [ ] Contain `.gitignore` file (ignoring `node_modules` and system files)
-- [ ] Use ESLint with the [AirBnB style-guide](https://github.com/airbnb/javascript)
+- [ ] Use ESLint
 - [ ] Run without errors with `npm run dev`
 - [ ] Have appropriate files compiled into a `build` directory
 
@@ -35,12 +35,17 @@ Your project must:
 
 Your project must:
 
-- [ ] Load mock data for "items" and "users" using `json-server`
-- [ ] Display shared items in a masonry view
-- [ ] Allow item filtering (by tags)
+- [ ] Contain a login form allowing users to authenticate with email and password
+- [ ] Implement form validation & provide user feedback resulting from invalid input data
+- [ ] Persist logged in state on page reload
+- [ ] Contain a functioning logout button
+- [ ] Contain protected routes that are only visible to logged-in users
+- [ ] Allow logged-in users to share new items
+- [ ] Display shared items in a list view
 - [ ] Display individual user data in a profile view
 - [ ] Use Gravatar to display user avatars
 - [ ] Use routing to update the URL when the view changes
+- [ ] Refetch relevant GraphQL queries upon successful data mutation to keep the UI in sync
 
 ### Development
 
@@ -51,16 +56,12 @@ Your project must:
 - [ ] Contain components created using `React.Component`, `const`, or `function` only
 - [ ] Chain transformations with array methods (`.map`, `.filter`, etc.)
 - [ ] Use React Lifecycle method where appropriate
-- [ ] Implement React Router to:
-  - Use nested routes with a `Layout` component
-  - Include Items, Profile, Login, and 404 routes
-  - Use route params to display individual user profile information
-  - Use the `Switch` component and `exact` prop appropriately
-  - Use browser history
-- [ ] Implement Redux to manage application state
-- [ ] Implement "presentational" and "container" components appropriately throughout the application
+- [ ] Implement React Router
+- [ ] Implement Redux to manage application state (incl. Redux Dev Tools)
+- [ ] Implement "presentational" and "container" patterns appropriately throughout the application
 - [ ] Use [`react-redux`](https://github.com/reactjs/react-redux) `connect` to map state to props
-- [ ] Add and use [`redux-thunk`](https://github.com/gaearon/redux-thunk) middleware for async dispatches
+- [ ] Use Apollo Client (`apollo-client`) to query data from the GraphQL server
+- [ ] Use Apollo [Query](https://www.apollographql.com/docs/react/essentials/queries.html) and [Mutation](https://www.apollographql.com/docs/react/essentials/mutations.html) components to manage application data
 - [ ] Reflect the designer's vision for the application's UI
 
 ### Quality
@@ -70,16 +71,15 @@ Your project must:
 - [ ] Contain an organized file tree (using the pattern described in class)
 - [ ] Use sub-directories to organize component files (on a per component basis)
 - [ ] Be free of lint errors from ESLint
-- [ ] Use a unique `key` for all items in lists
 - [ ] Use `propType` validations for all components
 - [ ] Be free of `propType` validation errors in console
+- [ ] Be free of console warnings and errors
 
 ### Stretch Goals
 
 Want to challenge yourself? Your project could also:
 
-- [ ] Implement localStorage to preserve state
-- [ ] Hook up [`react-router-redux`](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-redux) sync routing with Redux DevTools
+- [ ] Implement Borrow and Return functionality
 
 ## Submission Instructions
 
