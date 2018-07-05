@@ -225,15 +225,14 @@ template: inverse
 Below, the `app.get()` method create a route that accepts GET requests:
 
 ```js
-const express = require("express");
+const express = require('express');
 
 const app = express();
 
-app.set("PORT", process.env.PORT || 3300);
-const port = app.get("PORT");
+const PORT = 3300;
 
-app.get("/", function(request, response) {
-  response.send("Hello, world!");
+app.get('/', function(request, response) {
+  response.send('Hello, world!');
 });
 
 app.listen(port, function() {
@@ -271,12 +270,12 @@ _What do you see?_
 Remember that Express is just providing an abstraction layer on top of Node, so we can still use the Node API in our route handlers too:
 
 ```js
-app.get("/", function(request, response) {
+app.get('/', function(request, response) {
   // Express method:
   // response.send('Hello, world!');
 
   // Almost-equivalent code with regular Node:
-  response.write("Hello, world!");
+  response.write('Hello, world!');
   response.end();
 });
 ```
@@ -294,20 +293,20 @@ The `.send()` method converts an array or object to JSON:
 ```js
 const quotes = [
   {
-    name: "Fred Brooks",
-    text: "Nine people can’t make a baby in a month."
+    name: 'Fred Brooks',
+    text: 'Nine people can’t make a baby in a month.',
   },
   {
-    name: "Paul Ford",
-    text: "A computer is a clock with benefits."
+    name: 'Paul Ford',
+    text: 'A computer is a clock with benefits.',
   },
   {
-    name: "Linus Torvalds",
-    text: "Talk is cheap. Show me the code."
-  }
+    name: 'Linus Torvalds',
+    text: 'Talk is cheap. Show me the code.',
+  },
 ];
 
-app.get("/", function(request, response) {
+app.get('/', function(request, response) {
   response.send(quotes);
 }); // ...now run `curl -i` again
 ```
@@ -319,7 +318,7 @@ app.get("/", function(request, response) {
 We can respond to request on more than just the root-level URI too (thankfully!). Create a dedicated route to send our quotes JSON back on:
 
 ```js
-app.get("/quotes", function(request, response) {
+app.get('/quotes', function(request, response) {
   response.send(quotes);
 });
 ```
@@ -383,7 +382,7 @@ The only middleware function that ships with Express 4.x+ is `static()`. This fu
 
 ```js
 // Serve files from the "public" dir:
-app.use(express.static("public"));
+app.use(express.static('public'));
 ```
 
 Try replacing your call to `app.get('/', ...)` with this in your Express app. Be sure to add a `public` directory with an `index.html` file in it. What do you see in your browser now?
@@ -438,23 +437,23 @@ Probably want to share this with the students to save time...
 `main.js`:
 
 ```js
-const container = document.getElementById("quotes");
-const getQuotesButton = document.getElementById("get-quotes");
+const container = document.getElementById('quotes');
+const getQuotesButton = document.getElementById('get-quotes');
 
 function appendQuote(quote) {
-  const blockquote = document.createElement("blockquote");
-  const deleteButton = document.createElement("button");
+  const blockquote = document.createElement('blockquote');
+  const deleteButton = document.createElement('button');
   deleteButton.setAttribute(
-    "data-quote",
-    quote.name.replace(/\s+/g, "-").toLowerCase()
+    'data-quote',
+    quote.name.replace(/\s+/g, '-').toLowerCase()
   );
-  deleteButton.textContent = "Delete";
+  deleteButton.textContent = 'Delete';
   blockquote.textContent = `"${quote.text}" — ${quote.name} `;
   blockquote.appendChild(deleteButton);
   container.appendChild(blockquote);
 }
 
-getQuotesButton.addEventListener("click", function() {
+getQuotesButton.addEventListener('click', function() {
   // Fetch the quotes from http://localhost:3300/quotes here!
   // Use the appendQuote function in the promise/then callback
 });
@@ -481,7 +480,7 @@ function diyLogger(request, response, next) {
   const { url, method } = request;
   const { statusCode } = response;
 
-  response.on("finish", function() {
+  response.on('finish', function() {
     // ...what goes here?
   });
 
@@ -497,11 +496,33 @@ Call `app.use()` with your logger in the appropriate place too.
 
 ---
 
-# Exercise 4
+## Exercise 4
 
-Now let's try adding a third-party (more fully-featured!) logger.
+Setting application configuration variables.
 
-Install **[morgan](https://github.com/expressjs/morgan)**, add the middleware to your app, and try some different log formats.
+Refactor:
+
+```
+const PORT = 3300;
+```
+
+To be:
+
+```
+app.set('PORT', process.env.PORT || 3300);
+const port = app.get('PORT');
+```
+
+- Why is it useful to set configuration values like this?
+- What is `process.env` ?
+
+???
+
+Discussion:
+
+What are the other vaues we'll need to cconfigure for boomtown.
+Lead the discussion towards: 'How do you think we're going to store / connect to postgres from node?'
+ie. We'll need to use the app singleton to retrieve / store values from process.env
 
 ---
 
@@ -516,7 +537,7 @@ template: inverse
 Like with React Router, we can add route parameters:
 
 ```js
-app.get("/quotes/:name", function(request, response) {
+app.get('/quotes/:name', function(request, response) {
   response.send(request.params.name);
 });
 ```
@@ -589,9 +610,9 @@ npm install --save body-parser
 Now add this to your Express app:
 
 ```js
-const bodyParser = require("body-parser");
+const bodyParser = require('body-parser');
 
-app.post("/quotes", bodyParser.json(), function(request, response) {
+app.post('/quotes', bodyParser.json(), function(request, response) {
   const newQuote = request.body;
   // Add your new quote to the quotes array
   // Then send back a 201 status
@@ -616,14 +637,14 @@ Improve UX by clearing out the form inputs after the response comes back too!
 The last bit of functionality will be to delete individual quote from the list. We'll submit our request from the client like this:
 
 ```js
-const container = document.getElementById("quotes");
+const container = document.getElementById('quotes');
 
-container.addEventListener("click", function(event) {
+container.addEventListener('click', function(event) {
   const clickedEl = event.target;
-  if (clickedEl.tagName === "BUTTON") {
-    const name = clickedEl.getAttribute("name");
+  if (clickedEl.tagName === 'BUTTON') {
+    const name = clickedEl.getAttribute('name');
     fetch(`http://localhost:3300/quotes/${name}`, {
-      method: "DELETE"
+      method: 'DELETE',
     }).then(() => {
       const blockquote = clickedEl.parentNode;
       blockquote.parentNode.removeChild(blockquote);
@@ -654,10 +675,10 @@ Finish writing the route handler for the `DELETE` request.
 ???
 
 ```js
-app.delete("/quotes/:name", (request, response) => {
+app.delete('/quotes/:name', (request, response) => {
   const { name } = request.params;
   const newQuotes = quotes.filter(
-    quote => quote.name.replace(/\s+/g, "-").toLowerCase() !== name
+    quote => quote.name.replace(/\s+/g, '-').toLowerCase() !== name
   );
   response.status(200).send(newQuotes);
 });
@@ -680,22 +701,22 @@ _Let's do some refactoring..._
 Right now we have this in our app:
 
 ```js
-app.get("/quotes" /* handler */);
-app.post("/quotes" /* handler */);
-app.get("/quotes/:name" /* handler */);
-app.delete("/quotes/:name" /* handler */);
+app.get('/quotes' /* handler */);
+app.post('/quotes' /* handler */);
+app.get('/quotes/:name' /* handler */);
+app.delete('/quotes/:name' /* handler */);
 ```
 
 We can use `app.route()` to consolidate route handling:
 
 ```js
 app
-  .route("/quotes")
+  .route('/quotes')
   .get(/* handler */)
   .post(/* handler */);
 
 app
-  .route("/quotes/:name")
+  .route('/quotes/:name')
   .get(/* handler */)
   .delete(/* handler */);
 ```
@@ -715,8 +736,8 @@ It would also be nice to get all of the route handling code out of `index.js` in
 Create a `quotes.js` file in your Express app and add:
 
 ```js
-const express = require("express");
-const bodyParser = require("body-parser");
+const express = require('express');
+const bodyParser = require('body-parser');
 
 const router = express.Router();
 
@@ -737,11 +758,11 @@ export default router;
 Now mount your router in your app:
 
 ```js
-const quoteRoutes = require("./quotes");
+const quoteRoutes = require('./quotes');
 
 // ...
 
-app.use("/quotes", quoteRoutes);
+app.use('/quotes', quoteRoutes);
 ```
 
 And move all of the `app.route()` calls `quotes.js`.

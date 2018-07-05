@@ -89,9 +89,23 @@ Call `app.use()` with your logger in the appropriate place too.
 
 ## Exercise 4
 
-Now let's try adding a third-party (more fully-featured!) logger.
+Setting application configuration variables.
 
-Install **[morgan](https://github.com/expressjs/morgan)**, add the middleware to your app, and try some different log formats.
+Refactor:
+
+```
+const PORT = 3300;
+```
+
+To be:
+
+```
+app.set('PORT', process.env.PORT || 3300);
+const port = app.get('PORT');
+```
+
+- Why is it useful to set configuration values like this?
+- What is `process.env` ?
 
 ---
 
@@ -165,18 +179,6 @@ In small groups or pairs, you'll be assigned one of the following topics to rese
 - State in REST: The idea of "statelessness" and the difference between resource state and application state
 - The Richardson Maturity Model and where "hypermedia as an engine of application state" (HATEOAS) comes into play
 - Safety and idempotence of HTTP verbs used in REST APIs
-
----
-
-## Lab Activity
-
-Remaining lab time today we will spend setting up the codebase for our first project (Boomtown)!
-
-Obtain the source code for the starter project and begin by adding the appropriate configuration variables to get our
-app up and running: Start with `config/application.js` and complete all of the `@TODO` tasks.
-
-Once you've added the appropriate configs you should be able to start the project without errors.
-Check with your instructor if you need help getting started!
 
 ---
 
