@@ -903,11 +903,11 @@ template: inverse
 
 # Get Starter Files
 
-Grab the starter files for Boomtown here:
+Your instructor will provide you with a ZIP file containing all the files you need to get started.
 
-**[https://github.com/redacademy/boomtown-starter](https://github.com/redacademy/boomtown-starter)**
+On GitHub, create a new repository called `adp-boomtown`, and clone it to your local machine.
 
-Download the files (don't clone!). You will `init` your own new repo in it. Now would be a good time to do that.
+Unzip the ZIP file you received from your instructor into this directory.
 
 We'll only work in the `server` directory this week, so `cd` in there and install the dependencies:
 
@@ -917,7 +917,15 @@ cd server && npm install
 
 ???
 
+- Before this lesson:
+  - Clone the Boomtown starter repo: [https://github.com/redacademy/boomtown-starter](https://github.com/redacademy/boomtown-starter)
+  - Change directory to `boomtown-starter`, and create a ZIP file of its contents: `git archive master -o /tmp/boomtown-starter.zip`
+  - Type `open /tmp`, which will open Finder in the `/tmp` directory
+- Send the `/tmp/boomtown-starter.zip` file to students (via Slack, email, etc)
 - Give students a quick tour of the `server` directory, and explain what's what.
+- Remind them to:
+  - remove the ZIP file
+  - commit immediately and push to `origin`
 
 ---
 
