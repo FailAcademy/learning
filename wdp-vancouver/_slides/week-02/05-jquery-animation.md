@@ -198,7 +198,7 @@ $(".box").animate(
         width: "8rem",
         height: "8rem"
       },
-      3000, // after 3 run another function
+      3000, // after 3 seconds run another function
       function() {
         alert("animations complete");
       }
@@ -289,7 +289,7 @@ We've seen quite a few things we can do with jQuery to animate. Let's spend a bi
 
 A **[starter Codepen](https://codepen.io/REDwdp/pen/wpQYdg)** has been setup for you with jQuery and jQuery easing added. There is also a small amount of CSS to create a box. The box is using absolute positioning so that we can animate properties like `left` and `top`.
 
-Try making the box move from the lef or adjusting width and height with animation. You could also try different timings, easing, and using functions which run once the animation is complete.
+Try making the box move from the left or adjusting width and height with animation. You could also try different timings, easing, and using functions which run once the animation is complete.
 
 ---
 
