@@ -81,7 +81,7 @@ Google for a diagram of a large relational system. Find one and show the student
 _It's Open Source!_
 
 ???
-Take the opportunity to contrast Open Source technology vs proprietary tech, ie Microsoft's MySQL.
+Take the opportunity to contrast Open Source technology vs proprietary tech, ie Microsoft's MSSQL.
 
 ---
 
@@ -155,7 +155,7 @@ In this exercise, we'll go through the process of setting up a database for your
 
 - Create a new database using the Postgres cli.
 
-- Use the `CREATE USER <name> WITH PASSWORD <pw>;` command to create a new user and configure a password for each database.
+- Use the `CREATE USER <name> WITH PASSWORD '<pw>';` command to create a new user and configure a password for each database.
   See [documentation](https://www.Postgres.org/docs/9.6/static/sql-createuser.html).
 
 (This setup is meant to mock a real world database setup, and to give us the opportunity to become familiar with
@@ -207,7 +207,7 @@ template: inverse
 
 # Relational Database
 
-In a relational system, we create an **schema** by defining relationships between the data stored in various of tables.
+In a relational system, we create a **schema** by defining relationships between the data stored in various of tables.
 ![Relational-Database](/public/img/slide-assets/relational-databases.png)
 
 ---
@@ -381,7 +381,7 @@ CREATE TABLE "public"."users" (
 
 # Primary Keys in Action
 
-In Relational Databases, the PRIMARY KEY is used to define relationships between tables. To relate users to their items,we would use the PRIMARY KEY as follows, when creating the items table:
+In Relational Databases, the PRIMARY KEY is used to define relationships between tables. To relate users to their items, we would use the PRIMARY KEY as follows, when creating the items table:
 
 ```sql
 CREATE TABLE "public"."items" (
