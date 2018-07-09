@@ -158,8 +158,12 @@ In this exercise, we'll go through the process of setting up a database for your
 - Use the `CREATE USER <name> WITH PASSWORD <pw>;` command to create a new user and configure a password for each database.
   See [documentation](https://www.Postgres.org/docs/9.6/static/sql-createuser.html).
 
+For ""boomtown
+
 (This setup is meant to mock a real world database setup, and to give us the opportunity to become familiar with
 creating and authorizing a new Database on your local machine. In a real production setting, our setup would be more complicated).
+
+- For the project, use 'boomtown' for the user, name, and password to make things simple to remember.
 
 ???
 
@@ -180,6 +184,10 @@ CREATE USER <db-user> WITH PASSWORD '<new-password>'
 CREATE DATABASE <db-name>;
 GRANT ALL PRIVILEGES ON DATABASE <db-name> TO <db-user>;
 ```
+
+???
+
+- For the project, use 'boomtown' for the user, name, and password to make things simple to remember.
 
 ---
 
@@ -252,6 +260,8 @@ Run the following **SQL** command to create your first table!
 ```sql
 CREATE TABLE IF NOT EXISTS items();
 ```
+
+- For the project, use 'boomtown' for the user, name, and password to make things simple to remember.
 
 ---
 
