@@ -92,6 +92,25 @@ class: center, middle
 ---
 class: center, middle
 
+.inline-images[
+   ![Al Gore Rhythm](/public/img/slide-assets/al-gore-rhythm.jpg)
+]
+
+**Al Gore Rhythm?**
+
+---
+class: center, middle
+
+**Actually it's a set of instructions**
+
+.inline-images[
+   ![Simple Algorithm FlowChart](/public/img/slide-assets/algorithm-simple-flowchart.png)
+]
+
+---
+
+class: center, middle
+
 ### Fancy Word, Simple Meaning
 
 An algorithm is a **self-contained set of instructions** to be followed in order to complete a task.
@@ -102,6 +121,8 @@ Much of programming is writing very simple algorithms.
 class: center, middle
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/CvSOaYi89B4" frameborder="0" allowfullscreen></iframe>
+
+<a href="https://visualgo.net/en" target="_blank">Visualising Algorithms</a>
 
 ---
 template: inverse
@@ -212,12 +233,25 @@ class: center, middle
    ![Guide to software developer job advertisements](/public/img/slide-assets/dev-job-ads.jpg)
 ]
 
+???
+
+Now that we are starting to think like a programmer our perception of everything may change.
+
+It's a little silly but here are some terms you may see in job postings and their 'programmer' interpretations.
+
 ---
 class: center, middle
 
-### But hey, computer science?
+### What about the term computer science?
 
-(The answer is yes.)
+???
+
+Ok that's silly but what about real terms like "Computer Science"?
+
+Is the bar too high for new developers to enter the field without years of comp sci?
+
+Are we going to be locked in a large room full of giant computers that we need to know all the inner workings of?
+
 
 ---
 class: center, middle
@@ -225,6 +259,12 @@ class: center, middle
 .inline-images[
    ![Mid-century IBM Computer](/public/img/slide-assets/ibm-old-comp.jpg)
 ]
+
+???
+
+Although this may have been the case in the early days of computing, we now have lots of tools available to make writing complex programs easier.
+
+You may hear a term often called **abstraction**, this basically just means there's some more complex code going on behind the scenes that has been abstracted to make writing programs quicker and easier.
 
 ---
 
@@ -236,12 +276,24 @@ class: center, middle
 
 .footnote[.red[* ]Source: [How To Be A Programmer](https://github.com/braydie/HowToBeAProgrammer/)]
 
+???
+
+**Q:** What are some scenarios where knowledge of the inner workings of computers would be helpful, as a web developer?
+
+**A:** Could be many reasons... Debugging, understanding how variables are stored in memory, navigating and performing operations on a server, performance optimization e.g. c++ vs c#
+
 ---
 class: center, middle
 
 .inline-images[
    ![WordPress - Code is Poetry](/public/img/slide-assets/code-is-poetry.svg)
 ]
+
+???
+
+Speaking of abstracted code, WordPress has a ton of functionality built in that we can use to build websites quickly.
+
+We won't need to reinvent the wheel since WordPress solves a lot of common puzzles for us.
 
 ---
 class: center, middle
@@ -250,12 +302,25 @@ class: center, middle
    ![Code is Poetry tattoo](/public/img/slide-assets/code-is-poetry-tattoo.jpg)
 ]
 
+???
+
+Some people are very passionate about their development tools.
+Guess what they are not alone, you will likely find meetups, subreddits, linkedin groups dedicated to different topics e.g. WordPress, PHP, JavaScript, CSS etc...
+
 ---
 class: center, middle
 
 ### Culture:
 
 Could you be that person?
+
+???
+
+Could you be that person?
+
+It doesn't mean you need to get a bad tattoo!
+
+You may end up using some tools so much that they become part of your daily routines, e.g. checking out what's new in the world of WordPress, React, etc...
 
 ---
 
@@ -269,6 +334,15 @@ Stereotypes are being broken down as more people learn how to do it, and as the 
 
 **All good software goes through iterations.**
 
+???
+
+Again iterations, meaning you will be constantly improving on your dev journey.
+
+Don't worry if things seem overwhelming with large code bases such as WordPress.
+Over time with projects and practice you will get familiar with common WordPress functions and overall structures.
+
+Are you that person? Just meaning do you have the passion to go on a deep dive into a subject, borderline obsession, hence the bad tattoos.
+
 ---
 class: center, middle
 
@@ -276,7 +350,11 @@ class: center, middle
 
 Check out the [WordPress Trac](https://core.trac.wordpress.org/tickets/latest) to see how people around the world are contributing to this piece of software right now.
 
-Their contributions (and potentially yours one day!) will impact how over 27% of of the top 10 million sites on the web run.
+Their contributions (and potentially yours one day!) will impact how over 30% of of the top 10 million sites on the web run.
+
+???
+
+Speaking of passion, WordPress is open source and passionate devs are contributing to the codebase daily!
 
 ---
 class: center, middle
@@ -284,6 +362,10 @@ class: center, middle
 ### Pre-requisite:
 
 Learn to type.
+
+???
+
+Ok, enough hype about WordPress, before we dig in we need to make sure we have some basics down.
 
 ---
 class: center, middle
@@ -321,6 +403,14 @@ class: center, middle
    Now take some shortcuts...
 ]
 
+???
+
+Emmet 😁
+
+<a href="https://docs.emmet.io/cheat-sheet/" target="_blank">Emmet Cheat Sheet</a>
+
+e.g. `ul>li.item{item $}*5`
+
 ---
 
 # Your Code Editor is Your New Best Friend
@@ -331,6 +421,14 @@ Your code editor has a wealth of functionality designed to save you time. Take a
 - Snippets are a great way to write **boilerplate** code quickly
 - Editor plugins like [**Emmet**](http://docs.emmet.io/) provide dozens of keyboard shortcuts that can help you write repetitive code faster
 
+???
+
+Show emmet cheat sheet and example...
+
+Show how to make snippets in VSCode?
+
+Show how to find in VSCode and other tips/tricks e.g. find/replace
+
 ---
 class: center, middle
 
@@ -338,12 +436,23 @@ class: center, middle
    Optimize your development environment.
 ]
 
+???
+
+Show user settings...
+
+Talk again about extensions.
+
 ---
+
 class: center, middle
 
 .large[
    Stay organized.
 ]
+
+???
+
+When in doubt `pwd`
 
 ---
 class: center, middle
@@ -389,12 +498,25 @@ Embrace the process. As a programmer 50% or more of your time will be spent debu
 
 There are all scenarios you'll encounter if you're destined to work as a full-time programmer.
 
+???
+
+Ok is it really fun?
+
+Well I think so, just approach everything as a puzzle that you want to solve, and debugging can help you to solve the puzzle quicker and in a more logical way.
+
 ---
 class: center, middle
 
 .large[
    Take a break when you're stumped!
 ]
+
+???
+
+Too much fun?
+
+Take a break, also you could try practicing coding using a timer and the Pomodoro technique.
+e.g. every 25 mins take a 5 min break.
 
 ---
 
@@ -408,6 +530,16 @@ How to improve your coding chops:
 4. Learn to love your IDE/debugger
 
 Programming is a challenging creative activity, and looking at how others have solved problems will help you improve your own repertoire.
+
+???
+
+Codepen can be a very intersting playground to explore and find inspiration.
+
+Also github of course, so much code online to explore!!!
+Did you know you can inspect the code for Apollo 11?
+<a href="https://github.com/chrislgarry/Apollo-11" target="_blank">Apollo 11 source code</a>
+
+I don't understand the code but it's pretty neat that it's publicly available.
 
 ---
 class: center, middle
@@ -425,6 +557,11 @@ Learning is both rewarding and challenging.
 The love of learning, and making a conscious effort to improve how you learn is an essential skill of any successful programmer.
 
 (This is my favourite part of the job.)
+
+???
+
+Need more inspiration, podcasts can be helpful.
+Some good ones, Syntax, The Debug Log, Breaking Math.
 
 ---
 
