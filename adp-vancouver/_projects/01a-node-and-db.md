@@ -7,6 +7,8 @@ class: gh-check
 
 ## Requirements
 
+You can [download the starter repo here.](https://github.com/redacademy/boomtown-starter)
+
 ### Common
 
 Your project must:
