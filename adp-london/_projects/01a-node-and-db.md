@@ -5,10 +5,6 @@ due: Monday, July 16th (beginning of class)
 class: gh-check
 ---
 
-Continue working on your Boomtown by adding the server-side components. Once completed, your project should have a functioning user login (with protected routes) and allow users to share new items.
-
-Your project must include a server (Node/Express/GraphQL), a connected database (Postgres), a connected client (React), and form with submit and data validation (Redux-Form), and user authentication (Firebase).
-
 ## Requirements
 
 ### Common
