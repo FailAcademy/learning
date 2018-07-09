@@ -45,14 +45,14 @@ Your project must:
 
 Your project must:
 
-- [ ] Be comprised of two repos separating client and server code
-- [ ] Be free of lint errors from ESLint
+- [ ] Be comprised of two repos separating client and server code (only server code required for this part)
+- [ ] Be formatted with Prettier
 
 ### Stretch Goals
 
 Want to challenge yourself? Your project could also:
 
-- [ ] Implement Full-Text Search using Postgres
+- [ ] Implement full-text search using Postgres
 
 ## Submission Instructions
 
