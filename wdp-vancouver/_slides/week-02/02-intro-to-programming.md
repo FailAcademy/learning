@@ -28,12 +28,20 @@ template: inverse
 
 # What is Programming?
 
+???
+
+When you think about programming, what comes to mind, what do you think of?
+
 ---
 class: center, middle
 
 .inline-images[
    ![Programming like a boss](/public/img/slide-assets/programming-moms-basement.jpg)
 ]
+
+???
+
+Dark basement, forever alone?
 
 ---
 class: center, middle
@@ -42,12 +50,20 @@ class: center, middle
    ![You didn't say the magic word](/public/img/slide-assets/programming-nedry.jpg)
 ]
 
+???
+
+Jurassic park haxors?
+
 ---
 class: center, middle
 
 .large[
    There's [subreddit](https://www.reddit.com/r/itsaunixsystem/comments/4rvcuw/white_collar_paint_the_best_spreadsheet_editor_in/) for that...
 ]
+
+???
+
+Well that's not quite an accurate representation however there is a subreddit for that!
 
 ---
 class: center, middle
@@ -56,6 +72,10 @@ class: center, middle
    ![Not sure...](/public/img/slide-assets/programming-not-sure.jpg)
 ]
 
+???
+
+Programmers are real people, and most of us suffer from Imposter Syndrome.
+
 ---
 class: center, middle
 
@@ -63,12 +83,24 @@ class: center, middle
    ![Two states of every programmer](/public/img/slide-assets/programming-two-states.jpg)
 ]
 
+???
+
+This leads to 2 common states of dev...
+
+When things work the first time, we feel like Gods!
+
+When things don't work, we feel like we know nothing.
+
 ---
 class: center, middle
 
 ### Programming, Demystified
 
 When we **program** we are simply writing a list of **instructions** for our computer to follow, in a language it will understand.
+
+???
+
+But what are we actually doing, what is programming?
 
 ---
 class: center, middle
@@ -496,7 +528,7 @@ Debugging begins with a mystery, and finding solutions to bugs will often lead y
 
 Embrace the process. As a programmer 50% or more of your time will be spent debugging. More so in different circumstances, like working with older codebases, or code you don't initially understand, but you've been tasked to improve.
 
-There are all scenarios you'll encounter if you're destined to work as a full-time programmer.
+There are all kinds of scenarios you'll encounter if you're destined to work as a full-time programmer.
 
 ???
 
