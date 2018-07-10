@@ -133,7 +133,7 @@ _Define your schema!_
 - The `addItem` mutation has the following variables and returns an `Item`:
 
   - `item` (its type is `NewInputType` and it's required)
-  - `image` (its type is `Upload` and it's required)
+  - `image` (its type is `Upload`)
 
 ### Task 2:
 
