@@ -86,7 +86,7 @@ Lambda calculus essentially consists of three things:
 2.  A way of building functions
 3.  A way of applying functions
 
-Any Turning Machine program can be translated into Lambda calculus, and vice versa (potential inefficiency aside).
+Any Turing Machine program can be translated into Lambda calculus, and vice versa (potential inefficiency aside).
 
 ---
 
