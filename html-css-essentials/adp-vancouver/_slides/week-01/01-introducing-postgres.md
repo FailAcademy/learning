@@ -418,7 +418,7 @@ In what other table will we find the itemid?
 
 These lines are telling Postgres that the values stored in these columns will be references to values stored in the `users` table, namely the userid of actual users.
 
-This is called a **Primary Key constraint**, because no other value can be stored in this column, and it's a common way of defining relationships between tables in a relational database.
+This is called a **Foreign Key constraint**, because no other value can be stored in this column, and it's a common way of defining relationships between tables in a relational database.
 
 ???
 WARNING: This is just for example, we're not creating a user table for the project!
