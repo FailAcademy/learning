@@ -15,127 +15,21 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
 
-1. Container vs. Presentational Components
-2. Using React Router
-
----
-template: inverse
-
-# Container vs. Presentational Components
+1.  Using React Router
 
 ---
 
-# Why the Diff?
-
-In React, it's very easy to mix code that controls the behaviour of our app with code that renders the view.
-
-As a result, our code will become more **tightly coupled** than it should be. This makes our components less modular and harder to reuse.
-
-To avoid this, we will organize our project into **Container Components** and **Presentational Components**.
-
----
-
-# In Use
-
-We've already seen an approximate example of this pattern in the to-do app&mdash;where the stateful `App` component **passes down props** to a stateless child component.
-
-We have also seen how a stateful parent component **can pass down an event handler too** to a stateless child component. The child component then uses that event handler to update the parent's state.
-
----
-class: center, middle
-
-.large[
-   Container components are concerned with **how things work**.
-]
-
-
----
-class: center, middle
-
-.large[
-   Presentational components are concerned with **how things look**.
-]
-
----
-
-# Cheatsheet #1
-
-*Container components:*
-
-- Should be responsible for **fetching data**
-- Should **define event handlers** and pass them down as props
-
-*Presentational components:*
-
-- Should **never change prop data** (only receive it)
-- Should **format the data** for the view only
-
----
-class: center, middle
-
-.large[
-  Knowing this, what type of components should we use for presentational and container components?
-]
-
----
-
-# Cheatsheet #2
-
-Container | Presentational
-----------|---------------
-Stateful  | Stateless
-Classes   | Functions
-Impure    | Pure
-
-**Note:** Container and presentational components can be represented on either side of these dichotomies, however, presentational components tend to be **stateless, pure functions** while container components tend to be **stateful classes** that **may or may not be pure**.
-
----
-
-# In Practice
-
-```js
-// CONTAINER COMPONENT
-
-class Posts extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      posts: [{ title: 'Hello, world!' }]
-    };
-  }
-
-  render() {
-    return <PostList posts={this.state.posts} />;
-  }
-}
-
-// PRESENTATIONAL COMPONENT
-
-const PostList = ({ posts }) => (
-  <ul>
-    { posts.map((post) => <li>{post.title}</li>) }
-  </ul>
-);
-```
-
----
-
-# Exercise 1
-
-Review the components that you have created for the Boomtown app so far. What should be classified as a container component, and what should be classified as a presentational component?
-
-Do some project reorganization based on these observations. Remember that your `import` file paths will likely break when you do this and you'll need to fix them!
-
----
 template: inverse
 
 # Routing with React
 
 ---
+
 class: center, middle
 
 ### What is routing?
@@ -160,7 +54,7 @@ We're building a SPA, so our application uses **a single static HTML file** to d
 
 ---
 
-# Exercise 2
+# Exercise 1
 
 Visit **[Reddit](http://reddit.com)**. Click on several links and map out how the urls are structured:
 
@@ -183,24 +77,24 @@ Then install React Router:
 
 `yarn add react-router-dom --save`
 
-*Remember that React is a library, not a framework. Installing `react-router-dom` gives it more framework-like capabilities.*
+_Remember that React is a library, not a framework. Installing `react-router-dom` gives it more framework-like capabilities._
 
 ---
 
 # Adding the Router
 
-To use React Router, we'll need to import it into our app. 
+To use React Router, we'll need to import it into our app.
 
 Add this code to your `App.js` file:
 
 ```js
-import { 
-  BrowserRouter as Router, 
+import {
+  BrowserRouter as Router,
   Route,
   Switch,
   Link,
   Redirect
-} from 'react-router-dom';
+} from "react-router-dom";
 ```
 
 ---
@@ -243,7 +137,7 @@ class App extends Component {
 
 # Adding the Router
 
-*Things to note...*
+_Things to note..._
 
 `Router` and `Route` **don't render anything by themselves**. They just define rules for our app. Each `Route` renders its `component`.
 
@@ -318,10 +212,7 @@ We can also use the `render` prop and pass it a function:
 Lastly, we can use the `children` prop:
 
 ```js
-<Route 
-  path ="/match-me" 
-  children={({ match }) => match && <p>It matched!</p>} 
-/>
+<Route path="/match-me" children={({ match }) => match && <p>It matched!</p>} />
 ```
 
 The difference between `render` and `children` is that the function passed into `children` will always run (regardless of whether there is a match), **unless** you explicitly check for a match using the `match` parameter in the function.
@@ -335,7 +226,7 @@ The `Link` component allows you to link directly to the routes you have defined.
 ```js
 const NavBar = () => (
   <div>
-    <Link to="/">Home</Link> 
+    <Link to="/">Home</Link>
     <Link to="/contact">Contact</Link> {/* include forward slash! */}
   </div>
 );
@@ -366,7 +257,7 @@ Let's' use the `NavLink` instead. First, import the component from `react-router
 import {
   // ...other imports
   NavLink
-} from 'react-router-dom';
+} from "react-router-dom";
 ```
 
 ---
@@ -384,8 +275,12 @@ Note that if you added any qualifiers to your route you need to add the same one
 ```js
 const NavBar = () => (
   <div>
-    <NavLink to="/" exact activeClassName="selected">Home</NavLink>
-    <NavLink to="/contact" activeClassName="selected">Contact</NavLink>
+    <NavLink to="/" exact activeClassName="selected">
+      Home
+    </NavLink>
+    <NavLink to="/contact" activeClassName="selected">
+      Contact
+    </NavLink>
   </div>
 );
 ```
@@ -424,11 +319,11 @@ Now create your `Posts` component with its nested routes:
 const Posts = ({ match }) => (
   <div>
     <h1>Blog</h1>
-    <Route 
+    <Route
       path={`${match.url}/hello-world`}
       render={({ match }) => <h2>Hello, World!</h2>}
     />
-    <Route 
+    <Route
       path={`${match.url}/scram-world`}
       render={({ match }) => <h2>Scram, World!</h2>}
     />
@@ -458,8 +353,8 @@ Or used inside a `Switch` component:
 
 ```js
 <Switch>
-  <Redirect from ="/old" to="/new" />
-  <Route path='/new' component={New} />
+  <Redirect from="/old" to="/new" />
+  <Route path="/new" component={New} />
 </Switch>
 ```
 
@@ -473,7 +368,7 @@ URL parameters allow us to navigate to routes with some sort of variable segment
 const Posts = ({ match }) => (
   <div>
     <h1>Blog</h1>
-    <Route 
+    <Route
       path={`${match.url}/:name`}
       render={({ match }) => <h2>{match.params.name}</h2>}
     />
@@ -481,7 +376,7 @@ const Posts = ({ match }) => (
 );
 ```
 
-*Much DRYer!*
+_Much DRYer!_
 
 ---
 
@@ -524,80 +419,22 @@ If we were building actual Reddit in React, our specific comment URLs might look
 
 The parts that start with `:` are URL parameters whose values will be parsed out and made available in `props.match.params.PARAM_NAME` in your component.
 
-{% comment %}
 ---
 
-# Query Strings
+# Exercise 2
 
-React Router 4 **does not have a built-in way to parse query strings** at the end of an URL (e.g. `?sort=popular`).
+Add routes to your project in `client/routes/Layout.js`:
 
-You can, however, link to an URL with a query string in the `to` props of a `Link` component like this:
+- The Items List page (`/items`)
+- The Home page (`/welcome`)
+- The Share page (`/share`)
+- The current viewer Profile page (`/profile`)
+- The user Profile pages (`/profile/[ID_HERE]`)
 
-```js
-<Link to={% raw %}{{pathname: `${match.url}`, search: '?sort=popular'}}{% endraw %}>
-  Sort by Popularity
-</Link>
-```
-
-Add this to your `Posts` component. You can then access the query string for the route in `props.location.search`.
+Also, provide a wildcard redirect to `/items` for any undefined route using `<Redirect />`.
 
 ---
 
-# Query String Example
-
-We can then use the emerging [`URLSearchParams`](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) standard to parse the query string, but we will need to add a polyfill to ensure support for older browsers:
-
-```bash
-npm install url-search-params-polyfill --save
-```
-
-Then import the polyfill wherever you plan on instantiaing a new `URLSearchParams`:
-
-```js
-import 'url-search-params-polyfill';
-```
-
----
-
-# Query String Example
-
-You can then parse your query string `id` param like this:
-
-```js
-const Posts = ({ match, location }) => {
-  const searchParams = new URLSearchParams(location.search);
-  const sortValue = searchParams.get('sort');
-
-  return (
-    <div>
-      <h1>Blog</h1>
-      <Link to={% raw %}{{pathname: `${match.url}`, search: '?sort=popular'}}{% endraw %}>
-        Sort by Popularity
-      </Link>
-      <Route 
-        path={`${match.url}/:name`}
-        render={({ match }) => <h2>{match.params.name}</h2>}
-      />
-      {sortValue && <p>You are sorting by "{sortValue}" right now.</p>}
-    </div>
-  )
-};
-```
-{% endcomment %}
-
----
-
-# Exercise 3
-
-Based on what you just learned in the preceding examples, apply this to your project now. You will need to create routes that point users to:
-
-- The Items List page (`/`)
-- The Login page (`/login`)
-- The Share an Item page (`/share`)
-- The individual User Profile pages (`/profile/[ID_HERE]`)
-- A 404 page
-
----
 template: inverse
 
 # History and URLs
@@ -626,8 +463,7 @@ The `BrowserRouter` (used in our demo) uses the **[Browser History API](https://
 
 Luckily, there's a server already configured in Create React App.
 
-{% comment %}
----
+## {% comment %}
 
 # Browser History Demo
 
@@ -638,13 +474,13 @@ Try visiting this article about the Browser History API:
 Open your dev tools console, and run this code, line by line:
 
 ```js
-window.history
+window.history;
 
 // Run this, then try navigating back and forth
-history.replaceState(null, null, 'hello');
+history.replaceState(null, null, "hello");
 
 // Run this, now try navigating back and forth again
-history.pushState(null, null, 'hello');
+history.pushState(null, null, "hello");
 ```
 
 What do you notice? Be sure to watch the browser's address bar will you do this...
@@ -654,7 +490,7 @@ What do you notice? Be sure to watch the browser's address bar will you do this.
 
 # Hash vs. Browser
 
-*Some further clarification...*
+_Some further clarification..._
 
 - Hashes in URLs were meant to refer to a specific place in the document, so adding/changing a hash was a way to update the URL with `window.location` without refreshing the page (in a SPA)
 - `hashHistory` works on the client side alone
@@ -664,12 +500,11 @@ What do you notice? Be sure to watch the browser's address bar will you do this.
 
 # Hash vs. Browser
 
-*Why bother with `hashHistory` at all?*
+_Why bother with `hashHistory` at all?_
 
 You would use `hashHistory` if you're worried about supporting <IE9 (without full page re-loads). Or perhaps if you're deploying a site on GitHub Pages...
 
 It's also helpful it you're building a quick and dirty React app and don't want to go to the trouble of setting up a server to handle `browserHistory` right away.
-
 
 ---
 
@@ -692,7 +527,7 @@ It's also helpful it you're building a quick and dirty React app and don't want 
 
 # withRouter
 
-Sometimes you need to access to the `history` object’s properties (or the `match` or `location` props) outside of named route in your app. 
+Sometimes you need to access to the `history` object’s properties (or the `match` or `location` props) outside of named route in your app.
 
 To do this, you can wrap the component that needs access to these props in the `withRouter` **higher-order component (HOC)** from React Router.
 
@@ -703,32 +538,32 @@ To do this, you can wrap the component that needs access to these props in the `
 Example of `withRouter` in use:
 
 ```js
-import React, { PropTypes } from 'react';
-import { withRouter } from 'react-router-dom';
+import React, { PropTypes } from "react";
+import { withRouter } from "react-router-dom";
 
 const Header = ({ history }) => (
-  <button onClick={() => history.push('/')}>Go Home</button>
+  <button onClick={() => history.push("/")}>Go Home</button>
 );
 
 Header.propTypes = {
   match: PropTypes.object.isRequired,
   location: PropTypes.object.isRequired,
   history: PropTypes.object.isRequired
-}
+};
 
 export default withRouter(Header); // THIS IS HOW WE USE IT!
 ```
 
-*We'll do a lot more with HOCs in our app when we add Redux next week...*
+_We'll do a lot more with HOCs in our app when we add Redux next week..._
 
 ---
 
 # What We've Learned
 
-- What container components and presentational components are for, and how to use them to make components more reusable
 - How to use the `react-router` to set up SPA-style routing in a React app
 
 ---
+
 template: inverse
 
 # Questions?
