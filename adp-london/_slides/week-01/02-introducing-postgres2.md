@@ -106,7 +106,7 @@ There are other ways of defining Primary Keys
 
 #### A Foreign Key Constraint is a column which references (usually) the Primary Key of another table.
 
-A Foreign Key is defined by adding the PRIMARY KEY constraint to a specific column in your table.
+A Foreign Key is defined by adding the FOREIGN KEY constraint to a specific column in your table.
 
 - Can a table have more than one Foreign Key?
 - Does a Foreign Key have to be unique for each record (row) in your table?
