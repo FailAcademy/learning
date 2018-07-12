@@ -555,6 +555,24 @@ All required Apollo packages were added to your project with `npm install`, you 
 
 The first stop will be `client/src/apollo/index.js` to make our client application aware of our GraphQL API by defining a `uri` for the API, and adding the `httpWithUploads` to the newly instantiated Apollo client.
 
+???
+
+Apollo client will allow us to shift from imperative to declarative data fetching in the client. Data fetching logic be gone!
+
+Imperative data fetching:
+
+1.  construct and send the HTTP request
+2.  receive and parse data response
+3.  store data locally
+4.  display the inforamiton in the UI
+
+Declarative data fetching:
+
+1.  describe its data requirements
+2.  display the information in the UI
+
+(All of the lower level networking tasks should be abstracted away by Apollo Client.)
+
 ---
 
 # Hook-up Apollo

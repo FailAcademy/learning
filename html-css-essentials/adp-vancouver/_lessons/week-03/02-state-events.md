@@ -7,7 +7,9 @@ lesson_date:  2018-07-17
 
 ## Pre-work
 
-_There is no pre-work for this lesson._
+Prior to class, read through the following documentation:
+
+- [Apollo Client Docs (Intro and Essentials sections)](https://www.apollographql.com/docs/react/)
 
 ---
 
