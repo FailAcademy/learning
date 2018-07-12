@@ -16,6 +16,8 @@ Also read the following chapters from "Professor Frisby's Mostly Adequate Guide 
 - [Chapter 1: What ever are we doing?](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch01.md)
 - [Chapter 2: First Class Functions](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch02.md)
 - [Chapter 3: Pure Happiness with Pure Functions](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch03.md)
+- [Chapter 4: Currying](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch4.md)
+- [Chapter 5: Coding by Composing](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch5.md)
 
 ---
 
@@ -30,6 +32,7 @@ Also read the following chapters from "Professor Frisby's Mostly Adequate Guide 
 - Demonstrate the different outcomes from calling methods such as `.forEach()` and `.map()`, `.push()` and `.concat()`, and `.splice()` and `.slice()`
 - Practice using common array methods (such as `.map()`, `.filter()`, and `.reduce()`) to transform data.
 - Use the spread operator `...` and `Object.assign()` to avoid array mutation.
+- Explain what function currying and function composition are, and how they can be used to make code more reusable and readable.
 
 ---
 
@@ -53,6 +56,8 @@ Also read the following chapters from "Professor Frisby's Mostly Adequate Guide 
 - [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 - [Spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
 - [Object.freeze](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)
+- Currying
+- Composition
 
 ---
 
@@ -123,6 +128,36 @@ In small groups, you'll have 15 minutes to understand your assigned topic (in re
 
 ---
 
+## Exercise 6
+
+Re-write this function as a curried function:
+
+```js
+const greeting = (greeting, name) => {
+  return `${greeting}, ${name}`;
+};
+```
+
+Try using partial application with your curried function too.
+
+---
+
+## Exercise 7
+
+Create a `compose` function that accepts any number of functions as arguments to compose these functions together. Try emoting multiple times and see what happens.
+
+```js
+const greet = name => {
+  return `Hello ${name}`;
+};
+
+const emote = sentence => {
+  return `${sentence}!!!`;
+};
+```
+
+---
+
 ## Lab Activity
 
 ### Functional Produce
@@ -164,7 +199,7 @@ const fruit = {
   pears: 45,
   oranges: 183,
   grapes: 498,
-  kiwis: 201,
+  kiwis: 201
 };
 
 // stockUp is called with '5'
@@ -176,7 +211,7 @@ const fruit = {
   pears: 50,
   oranges: 188,
   grapes: 503,
-  kiwis: 206,
+  kiwis: 206
 };
 ```
 
@@ -190,7 +225,7 @@ const fruit = {
   pears: 45,
   oranges: 183,
   grapes: 498,
-  kiwis: 201,
+  kiwis: 201
 };
 ```
 
@@ -224,7 +259,7 @@ These functions must be **pure**. In order to assure purity, use [Deep Freeze](h
 
 ```js
 // Make sure to run in strict mode
-'use strict';
+"use strict";
 
 Object.prototype.stockUp = function(count) {
   deepFreeze(this);
@@ -245,6 +280,10 @@ The full-text of this lesson's pre-work readings:
 
 - [Eloquent JavaScript - Second Edition](http://eloquentjavascript.net/)
 - [Professor Frisby's Mostly Adequate Guide to Functional Programming](https://github.com/MostlyAdequate/mostly-adequate-guide#readme)
+
+Helpful resource for understanding the difference between `.map()`, `.filter()`, and `.reduce()`:
+
+- [Array Map, Filter and Reduce in JS](http://atendesigngroup.com/blog/array-map-filter-and-reduce-js)
 
 Other helpful JS functional programming readings:
 

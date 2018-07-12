@@ -15,14 +15,16 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
 
-1. Setting a component's initial state
-2. Changing state in response to events
-3. Working with component refs
-4. Using React's "lifecycle methods"
+1.  Set a component's initial state
+2.  Change state in response to events
+3.  Work with component refs
+4.  Use React's "lifecycle methods"
+5.  Use Apollo Client with React
 
 ---
 
@@ -34,11 +36,13 @@ layout: false
 - Add a function to clear all of the completed to-dos from the list at once
 
 ---
+
 template: inverse
 
 # Setting Initial Component State
 
 ---
+
 class: center, middle
 
 ### What is application state?
@@ -46,17 +50,19 @@ class: center, middle
 **State** is where we store data that will change over time.
 
 ---
+
 class: center, middle
 
 .large[
-   What are some examples of how state will change in the to-do app?
+What are some examples of how state will change in the to-do app?
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   What are some examples of how state will change in the Boomtown app?
+What are some examples of how state will change in the Boomtown app?
 ]
 
 ---
@@ -90,16 +96,14 @@ class App extends Component {
   // other code...
 
   render() {
-    let mood = this.state.happy ? 'Hello, world!' : 'Scram, world!';
+    let mood = this.state.happy ? "Hello, world!" : "Scram, world!";
 
-    return (
-      <h1 id="title">{mood}</h1>
-   );
+    return <h1 id="title">{mood}</h1>;
   }
 }
 ```
 
-*But where do we set our `happy` state?*
+_But where do we set our `happy` state?_
 
 ---
 
@@ -112,15 +116,13 @@ class App extends Component {
   constructor() {
     super();
     // set state here...
-   }
+  }
 
   // render things here...
 }
 ```
 
-**Note:** In ES2015 class constructors, `this` cannot be used until `super` is called.
-
-**Also Note:** When writing React in ES5 you set state in the `getInitialState` method instead of a class `constructor`.
+**Note:** In ES2015 child class constructors, `this` cannot be used until `super` is called.
 
 ---
 
@@ -135,24 +137,23 @@ class App extends Component {
 
     this.state = {
       happy: true
-    }
+    };
   }
 
   render() {
-    let mood = this.state.happy ? 'Hello, world!' : 'Scram, world!';
+    let mood = this.state.happy ? "Hello, world!" : "Scram, world!";
 
-    return (
-      <h1 id="title">{mood}</h1>
-    );
+    return <h1 id="title">{mood}</h1>;
   }
 }
 ```
 
 ---
+
 class: center, middle
 
 .large[
-   **Insight:** Components are just state machines.
+**Insight:** Components are just state machines.
 ]
 
 ---
@@ -178,13 +179,15 @@ To do that, we will need to get the length of the array in `this.state.todos` an
 Try implementing this now.
 
 ---
+
 class: center, middle
 
 .large[
-   **Important!** We can't set state in **stateless** functional components (of course).
+**Important!** We can't set state in **stateless** functional components (of course).
 ]
 
 ---
+
 template: inverse
 
 # Events in React
@@ -237,13 +240,13 @@ class App extends Component {
 
     this.state = {
       happy: true
-    }
+    };
   }
 
-  toggleMood() {
+  toggleMood = () => {
     // this.state.happy = false; DO NOT DO!
-    this.setState({ happy: ! this.state.happy }); // DO DO!!
-  }
+    this.setState({ happy: !this.state.happy }); // DO DO!!
+  };
 
   // other code...
 }
@@ -251,11 +254,24 @@ class App extends Component {
 
 **Where might we call `toggleMood()`?**
 
+???
+
+Point out the use of the arrow function here (and why it's used):
+
+**Binding**
+
+Methods don't automatically bind `this` to an instance in ES2015. This means we need to explicitly use `.bind()` or an arrow function to bind event handlers.
+
+Using an arrow function or calling `.bind()` with the `toggleMood` method and allows us to maintain the appropriate scope context for the current instance.
+
+It may help to relate this back to experience with working with `$(this)` in jQuery callbacks.
+
 ---
+
 class: center, middle
 
 .large[
-   **Insight:** Whenever state changes in a component, React will re-render the component for us.
+**Insight:** Whenever state changes in a component, React will re-render the component for us.
 ]
 
 ---
@@ -269,17 +285,19 @@ Whether a to-do is complete is determined by whether the `complete` property in 
 Using `.map()` on `this.state.todos`, you will need to selectively set the toggled to-do's `complete` property to the alternative, and then update the component state with the newly mapped array of objects in `todos`.
 
 ---
+
 class: center, middle
 
 .large[
-   Our `toggleComplete` method doesn't do much for us yet...
+Our `toggleComplete` method doesn't do much for us yet...
 ]
 
 ---
+
 class: center, middle
 
 .large[
-   **Challenge:** How do we use `App`'s `toggleComplete` method to update a `ToDo`'s state based on some event?
+**Challenge:** How do we use `App`'s `toggleComplete` method to update a `ToDo`'s state based on some event?
 ]
 
 ---
@@ -304,11 +322,11 @@ render() {
    return (
       // ...
       <ul>
-      { this.state.todos.map((todo) => (
+      {this.state.todos.map((todo) => (
          <ToDo
             key={todo.id}
             item={todo}
-            toggleComplete={this.toggleComplete.bind(this, todo)} 
+            toggleComplete={() => this.toggleComplete(todo)}
           />
       ))}
       </ul>
@@ -319,34 +337,26 @@ render() {
 
 ---
 
-# Binding?
-
-Methods don't automatically bind `this` to an instance in ES2015. This means we need to explicitly use `.bind()` or an arrow function to bind event handlers.
-
-Calling `.bind()` on the `toggleComplete` method and passing in `this` as the first argument allows us to maintain the appropriate scope context for the current instance.
-
-And why do we pass `todo` as a second argument after supplying the context of `this` as the first argument? Because `.bind()` will pass the value of `todo` as an argument **where the bound function is called**.
-
----
-
 # Using the Method
 
 Now that our parent `App` component has set `toggleComplete` as a prop on `ToDo`, we will use it within our `ToDo` component on the `onChange` attribute:
 
 ```js
-const ToDo = ({item, toggleComplete}) => (
-   <li>{item.title}
-      <input
-         type="checkbox"
-         id={item.id}
-         checked={item.complete}
-         onChange={toggleComplete} />
-      {/* other code... */}
-   </li>
+const ToDo = ({ item, toggleComplete }) => (
+  <li>
+    {item.title}
+    <input
+      type="checkbox"
+      id={item.id}
+      checked={item.complete}
+      onChange={toggleComplete}
+    />
+    {/* other code... */}
+  </li>
 );
 ```
 
-*Be sure to update your `ToDo` proptypes with the new prop too!*
+_Be sure to update your `ToDo` proptypes with the new prop too!_
 
 ---
 
@@ -360,40 +370,20 @@ To do this, you will need to add a `removeToDo` prop to your `ToDo` component, a
 
 ---
 
-# Binding Event Handlers in the Constructor
-
-We have seen how we can bind event handlers directly where component prop is set.
-
-However, where we don't need to pass in a specific `todo` item as a second argument to `.bind()`, we can simply bind the event handler in the constructor so they are only bound once for every instance.
-
-This is good for performance!
-
----
-
-# In Practice
+# Removing Completed
 
 Let's add an `removeCompleted` method to our `App` component to clear all completed to-do items when the "Clear completed" button is clicked:
 
 ```js
-removeCompleted() {
-   let todos = this.state.todos.filter((todo) => !todo.complete);
-   this.setState({ todos });
-}
-```
-
-Now we will bind it in our `App` constructor:
-
-```js
-constructor() {
-   super();
-   // other code...
-   this.removeCompleted = this.removeCompleted.bind(this);
-}
+removeCompleted = () => {
+  let todos = this.state.todos.filter(todo => !todo.complete);
+  this.setState({ todos });
+};
 ```
 
 ---
 
-# In Practice
+# Removing Completed
 
 And finally, we will pass it as a prop to the `ClearButton` component:
 
@@ -416,6 +406,7 @@ How can you use this new method to conditionally render the `ClearButton` compon
 **Note:** The `hasCompleted` method isn't an event handler, so it doesn't need to be bound in the constructor (or elsewhere).
 
 ---
+
 template: inverse
 
 # Working with Refs
@@ -430,10 +421,10 @@ Start by adding this mark-up in-between the `<h1>` and `<ul>` rendered in your `
 
 ```js
 <div className="add-todo">
-   <form name="addTodo" onSubmit={this.addToDo}>
-      <input type="text" ref={(input) => (this.toDoInput = input)} />
-      <span>(press enter to add)</span>
-   </form>
+  <form name="addTodo" onSubmit={this.addToDo}>
+    <input type="text" ref={this.toDoInput} />
+    <span>(press enter to add)</span>
+  </form>
 </div>
 ```
 
@@ -443,48 +434,43 @@ Look at the mark-up for this form...what new event handler will we need to add? 
 
 # Refs to Components
 
-React gives us a special attribute that can be attached to any component called `ref`.
-
-The `ref` attribute can be a callback function where the referenced component will be passed in as a parameter:
+React gives us a special attribute that can be attached to any component called `ref`. Before we can assign `ref` to a component, we must create the `ref` in its `constructor`:
 
 ```js
-<input type="text" ref={(input) => (this.toDoInput = input)} />
-
-// What's actually happening here...
-
-<input type="text"
-   ref={ function(input) { this.toDoInput = input }.bind(this) } />
-
+constructor() {
+    // ...other code
+    this.toDoInput = React.createRef();
+  }
 ```
 
-**Why does this matter?** We need refs to access values from within a specific input element.
+We can then access the current value of the `ref` as `this.toDoInput.current`.
 
 ---
 
 # Using a Ref
 
-Add this method to your `App` and bind it in the constructor:
+Add this method to your `App`:
 
 ```js
-addToDo(event){
-   event.preventDefault();
-   const id = this.state.lastId + 1;
+addToDo = event => {
+  event.preventDefault();
+  let toDoInput = this.toDoInput.current;
 
-   if (this.toDoInput.value) {
-      let newToDos = this.state.todos.concat({
-         id,
-         title: this.toDoInput.value,
-         complete: false
-      });
+  if (toDoInput) {
+    const id = this.state.lastId + 1; // update id
+    const newTodos = [
+      ...this.state.todos,
+      { id, title: toDoInput.value, complete: false }
+    ];
 
-      this.setState({
-         todos: newToDos,
-         lastId: id
-      });
+    this.setState({
+      todos: newTodos,
+      lastId: id
+    });
 
-      this.toDoInput.value = '';
-   }
-}
+    toDoInput.value = "";
+  }
+};
 ```
 
 ---
@@ -497,12 +483,26 @@ Adding the `ref` to the input in our `App` component allow us to reference the v
 
 Without the `ref` we would not be able to get this value because JSX doesn't actually return a component instance (just a lightweight representation of what the mounted component should look like).
 
+???
+
+**When to Use Refs**
+
+There are a few good use cases for refs:
+
+- Managing focus, text selection, or media playback.
+- Triggering imperative animations.
+- Integrating with third-party DOM libraries.
+
+Avoid using refs for anything that can be done declaratively.
+
 ---
+
 template: inverse
 
 # Component Lifecycle Methods
 
 ---
+
 class: center, middle
 
 ### Component Lifecycle?
@@ -543,14 +543,138 @@ To do that, we'll need to use one of React's lifecycle methods. It's up to you t
 
 ---
 
+template: inverse
+
+# Using Apollo Client with Boomtown
+
+---
+
+# Hook-up Apollo
+
+All required Apollo packages were added to your project with `npm install`, you just need to use them now :)
+
+The first stop will be `client/src/apollo/index.js` to make our client application aware of our GraphQL API by defining a `uri` for the API, and adding the `httpWithUploads` to the newly instantiated Apollo client.
+
+---
+
+# Hook-up Apollo
+
+Next, head to `client/src/index.js` and import the Apollo client.
+
+Now wrap you pages in an `<ApolloProvider />` component and pass it `client` as the `client` prop value so they will have access to data exposed by your GraphQL API.
+
+_Congrats! Your React app is now aware of your GraphQL API!_
+
+---
+
+# The Query Component
+
+Take a look at the [**docs on the Query component**](https://www.apollographql.com/docs/react/essentials/queries.html#basic). Look specifically at the provided code snippet.
+
+Based on what you know about GraphQL and React so far, with a neighbour, try to explain line-by-line the code that you see there.
+
+What looks familiar? What looks new?
+
+---
+
+# Write a Query
+
+Before we can use `<Query />` we'll need to write a query to pass it as prop.
+
+In `client/src/queries.js` we will:
+
+- Create the `ItemFields` [**fragment**](https://www.apollographql.com/docs/angular/features/fragments.html)
+- Use that fragment to create the `ALL_ITEMS_QUERY`
+
+---
+
+class: center, middle
+
+.large[
+**New Pattern Alert!**<br />
+Container Components
+]
+
+---
+
+# Why the Diff?
+
+In React, it's very easy to mix code that controls the behaviour of our app with code that renders the view.
+
+As a result, our code will become more **tightly coupled** than it should be. This makes our components less modular and harder to reuse.
+
+To avoid this, we will organize our project into **container components** (how things work) and **presentational components** (how things look).
+
+---
+
+# Cheatsheet
+
+_Container components:_
+
+- Should be responsible for **fetching data**
+- Should **define event handlers** and pass them as props
+
+_Presentational components:_
+
+- Should **never change prop data** (only receive it)
+- Should **format the data** for the view only
+
+---
+
+# Create a Container
+
+We will use a more advanced pattern with `<Query />` in `client/src/containers/ItemsContainer.js`.
+
+Ultimately, we will **combine multiple queries together** using `react-adopt` to make all of the data we need available in a single `<ItemsContainer />` component:
+
+```js
+const itemsData = ({ render }) => {
+  return (
+    <Query query={ALL_ITEMS_QUERY} variables={% raw %}{{ filter: null }}{% endraw %}>
+      {({ data: { items }, loading }) => /* what will we return? */}
+    </Query>
+  );
+};
+```
+
+???
+
+- Leave the filter `null` for now
+- This will be populated with `viewer.id` when auth is added next week
+- Return value: `render({ items, loading })`
+
+---
+
+# Use the Container
+
+We can now use our `<ItemsContainer />` in `client/pages/Items.js`:
+
+```js
+<ItemsContainer>
+  {({ itemsData: { items, loading } }) => {
+    return loading
+      ? (
+          /* Display a loading component */
+      )
+      : (
+          /* Display the items */
+      );
+  }}
+</ItemsContainer>
+```
+
+---
+
 # What We've Learned
 
 - How to set an component's initial state in a `constructor`
 - How to alter state in response to some event
 - How to use the `ref` attribute on a component
 - What React's lifecycle methods can do
+- How to add Apollo Client to a React app and fetch data from a GraphQL API
 
 ---
+
 template: inverse
 
 # Questions?
