@@ -7,16 +7,12 @@ lesson_date:  2018-07-18
 
 ## Pre-work
 
-Read through this CSS Tricks articles on using container components:
-
-- [Leveling Up With React: Container Components](https://css-tricks.com/learning-react-container-components/)
+_There is no pre-work for this lesson._
 
 ---
 
 ## Learning Objectives
 
-- Explain the difference between container components and presentational components.
-- Use container components to manage data and behaviour on the front-end of an application, while using presentational components to manage the view.
 - Implement React Router on a project and configure basic application routing.
 - Use the `Switch`, `Link`, and `NavLink` components, as well as nested routes and params for a DRYer, more robust routing scheme in an application.{% comment %}
 - Parse URL query strings when using React Router 4 with the help of additional libraries.
@@ -27,24 +23,12 @@ Read through this CSS Tricks articles on using container components:
 
 ## Keywords
 
-- Container component
-- Presentational component
 - Routing
-- Query string
-- [`URLSearchParams`](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams)
 - Browser History API
 
 ---
 
 ## Exercise 1
-
-Review the components that you have created for the Boomtown app so far. What should be classified as a container component, and what should be classified as a presentational component?
-
-Do some project reorganization based on these observations. Remember that your `import` file paths will likely break when you do this and you'll need to fix them!
-
----
-
-## Exercise 2
 
 Visit **[Reddit](http://reddit.com)**. Click on several links and map out how the urls are structured:
 
@@ -57,15 +41,17 @@ Visit **[Reddit](http://reddit.com)**. Click on several links and map out how th
 
 ---
 
-## Exercise 3
+## Exercise 2
 
-Based on what you just learned in the preceding examples, apply this to your project now. You will need to create routes that point users to:
+Add routes to your project in `client/routes/Layout.js`:
 
-- The Items List page (`/`)
-- The Login page (`/login`)
-- The Share an Item page (`/share`)
-- The individual User Profile pages (`/profile/[ID_HERE]`)
-- A 404 page
+- The Items List page (`/items`)
+- The Home page (`/welcome`)
+- The Share page (`/share`)
+- The current viewer Profile page (`/profile`)
+- The user Profile pages (`/profile/[ID_HERE]`)
+
+Also, provide a wildcard redirect to `/items` for any undefined route using `<Redirect />`.
 
 ---
 

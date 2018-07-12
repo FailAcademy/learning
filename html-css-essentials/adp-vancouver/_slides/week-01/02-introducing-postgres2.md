@@ -37,7 +37,7 @@ Here are the main takeaways from yesterday's lesson.
 Can you think of any other important points?
 
 - Data is stored in tables
-- Data in tables in normalized
+- Data in tables is normalized
 - Data is accessed using SQL
 - Data consistency / integrity is maintained by Constraints
 - Relationships between tables are defined by
@@ -106,7 +106,7 @@ There are other ways of defining Primary Keys
 
 #### A Foreign Key Constraint is a column which references (usually) the Primary Key of another table.
 
-A Foreign Key is defined by adding the PRIMARY KEY constraint to a specific column in your table.
+A Foreign Key is defined by adding the FOREIGN KEY constraint to a specific column in your table.
 
 - Can a table have more than one Foreign Key?
 - Does a Foreign Key have to be unique for each record (row) in your table?
@@ -129,7 +129,7 @@ template: inverse
 
 # Exercise 2
 
-Now that we have our data and relationships set up. Let's write some SQL queries.
+Now that we have our data and relationships set up, let's write some SQL queries.
 
 - Write a query that returns all of the tags for a given Item.
 - Write a query that returns the number of Items in the database.
@@ -140,7 +140,7 @@ Now that we have our data and relationships set up. Let's write some SQL queries
 
 # Exercise 3
 
-What happens if we remove a row from our database that is referenced by it's foreign key?
+What happens if we remove a row from our database that is referenced by its foreign key?
 Add the appropriate `ON DELETE` behavior for all of the foreign keys you defined.
 
 Hint: Using the Postico GUI will prove much easier that the `psql` shell.
@@ -149,10 +149,12 @@ Hint: Using the Postico GUI will prove much easier that the `psql` shell.
 
 Solution
 
+```
 ownerid (items): ON DELETE CASCADE, ON UPDATE CASCADE
 borrowerid (items): ON DELETE SET NULL, ON UPDATE CASCADE
 itemid (itemTags): ON DELETE CASCADE, ON UPDATE CASCADE
 tagid (itemTags): ON DELETE NO ACTION, ON UPDATE CASCADE
+```
 
 ---
 

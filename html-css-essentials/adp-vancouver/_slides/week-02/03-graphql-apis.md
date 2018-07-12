@@ -951,7 +951,7 @@ _Congrats! Your app is connected to your database and you should be able to star
 
 # Hook-up Apollo
 
-Now switch to `server/config/apollo-server.js`.
+Now switch to `server/config/apollo.js`.
 
 Pass your `typeDefs` and `resolvers` into `makeExecutableSchema`. Pass `pgResource` into your Apollo context.
 
