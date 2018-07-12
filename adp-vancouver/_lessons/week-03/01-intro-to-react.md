@@ -7,7 +7,13 @@ lesson_date: 2018-07-16
 
 ## Pre-work
 
-_There is no pre-work for this lesson._
+Prior to class, please familiarize yourself with some React fundamentals by watching this short tutorial series:
+
+- [Building a chat app with React.js and Chatkit](https://scrimba.com/g/greactchatkit)
+
+You can pause the video and interact directly with the code editor in the video screen, so please be sure to experiment with the code in the tutorial along the way.
+
+Come to class prepared to share your **top 3 takeaways about React** that you learn by watching this tutorial series.
 
 ---
 
@@ -140,43 +146,30 @@ Make all of the props for all components **required**.
 
 ## Lab Activity
 
-In today's lab we will begin working on the the Boomtown application.
+In today's lab we will begin working on the client side of the Boomtown application.
 
-### Set-up
+### Stater Project
 
-We'll use a `create-react-app` for Boomtown as well, but rather than initializing it from scratch we'll use the **[Boomtown Starter](https://github.com/redacademy/boomtown-starter)** as it has a bit of extra boilerplate roughed out for us. Be sure to start with an `npm install`.
+We'll use a `create-react-app` for Boomtown as well, but rather than initializing it from scratch we'll use what's been adapted in the `client` directory of the **[Boomtown Starter](https://github.com/redacademy/boomtown-starter)** as it has some extra boilerplate roughed out for us. Be sure to start with an `npm install` in the `client` directory.
 
 Take a look at what's inside the Boomtown Starter as it's a bit more complex than what we've seen with the to-do app. However, it models the component organizational pattern we'll want to use throughout this entire project, so please take the time to familiarize yourself with what's there.
 
-**Note:** Boomtown Starter has sub-directories for **components** and **containers**. You can organize your components in these directories based on notes on the component hierarchy below. We will talk more about the role of presentational versus container components in the coming days.
+**Tasks to complete:**
+
+1.  Ensure you can `npm start` in the `client` directory.<br /><br />
+2.  Try swapping out the component imported from `./pages/Home` for the one in `./pages/Items`. Practice adding some additional JSX to the `Items.js` component file to see what happens. (Remember that you can always use Git to reset the changes in this file if you end up doing anything too destructive!)<br /><br />
+3.  Continue exploring the folder/file structure in `client` directory. Make notes of any questions you have about what you see in there. What patterns do you notice in how the folders and files are organized?
+
+We will reconvene at the end of class to facilitate a discussion around your questions about the starter project.
 
 ### Styles
 
-We will primarily use **[Material UI](http://www.material-ui.com/#/)** to style our Boomtown app. Spend some time reviewing the Material UI docs site and jot down some notes about what components you think you'll need to use from this library in the Boomtown app.
+We will primarily use **[Material UI](https://material-ui.com/)** to style our Boomtown app. Material UI has already been added as project dependency in the Boomtown Starter, but you should also take some time to review **[its GitHub repo README](https://github.com/callemall/material-ui)** too.
 
-Material UI has already been added as project dependency in the RED React Seed, but you should also take some time to review **[its GitHub repo README](https://github.com/callemall/material-ui)** too.
+**Tasks to complete:**
 
-### Code
-
-The remainder of today's lab will be spend roughing-out the component structure for the Boomtown app. Ultimately, we will need to create the following component structure for our app:
-
-```bash
-<Boomtown />                 # top-level component
-|- <Layout />                # /components
-   |- <HeaderBar />          # /components
-   |- <Routes />             # /router
-      |- <Login />           # /containers
-      |- <Profile />         # /containers
-      |- <Share />           # /containers
-      |- <Items />           # /containers
-         |- <ItemCardList /> # /components
-         |- <ItemCard />     # /components
-      |- <NotFound />        # /containers
-```
-
-Any components you place in the `/containers` directory should typically be class-based components, while any components you place in the `/components` directory should typically be functional stateless components.
-
-Knowing this, rough-out the directory/component structure for all of the required components for this app.
+1.  Review the Material UI docs.<br /><br />
+2.  Make a list of the Material UI components you think you'll need to use based on what you see on the demo Boomtown site.
 
 ---
 
@@ -199,15 +192,8 @@ Some other helpful React tutorials and ebooks:
 - [Simple React Development in 2017](https://hackernoon.com/simple-react-development-in-2017-113bd563691f)
 - [30 Days of React](https://www.fullstackreact.com/30-days-of-react/)
 
-Recorded talks from React Conf:
+Recorded talks from React conferences:
 
-- [React Conf 2016](https://www.youtube.com/playlist?list=PLb0IAmt7-GS0M8Q95RIc2lOM6nc77q1IY)
 - [React Conf 2017](https://www.youtube.com/playlist?list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0)
-
-More about CSS Modules:
-
-- [CSS Modules: Welcome to the Future](https://glenmaddern.com/articles/css-modules)
-
-Helpful resource for understanding the difference between `.map()`, `.filter()`, and `.reduce()`:
-
-- [Array Map, Filter and Reduce in JS](http://atendesigngroup.com/blog/array-map-filter-and-reduce-js)
+- [ReactEurope 2018 - Day 1](https://www.youtube.com/playlist?list=PLCC436JpVnK3xH_ArpIjdkYDGwWNkVa73)
+- [ReactEurope 2018 - Day 2](hhttps://www.youtube.com/playlist?list=PLCC436JpVnK1X7atG6EIz467Evs4TMX_5)
