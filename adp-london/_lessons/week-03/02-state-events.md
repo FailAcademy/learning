@@ -7,7 +7,9 @@ lesson_date:  2018-07-17
 
 ## Pre-work
 
-_There is no pre-work for this lesson._
+Prior to class, read through the following documentation:
+
+- [Apollo Client Docs (Intro and Essentials sections)](https://www.apollographql.com/docs/react/)
 
 ---
 
@@ -18,7 +20,8 @@ _There is no pre-work for this lesson._
 - Describe what "synthetic events" are in React and use them to update a component's state based on user interaction.
 - Use the `ref` attribute to reference DOM elements after a component is rendered.
 - Explain the special role of each "lifecycle method" in a React component.
-- Use an appropriate lifecycle method to dynamically fetch data and update a component's state with that data before re-/rendering it.
+- Explain the difference between container components and presentational components.
+- Add Apollo Client to a React application to fetch data from a GraphQL API.
 
 ---
 
@@ -97,18 +100,9 @@ To do that, we'll need to use one of React's lifecycle methods. It's up to you t
 
 ## Lab Activity
 
-Today's lab will be spent building out your stateful `Items` container component.
+Continue working on the client side of your Boomtown application now that you are able to load data from your server in it.
 
-There are two properties we'll want to keep track of in our app state:
-
-- `isLoading`: whether the app is currently fetching data
-- `itemsData`: the list of items fetched from Firebase (with relevant user data points merged in)
-
-You'll need to fetch the data from the Firebase endpoints in the `componentDidMount` lifecycle method. Because we will need to simultaneously fetch data from the `items.json` and `users.json` endpoints to populate the item cards with all required data, we'll need to use `Promise.all` for that. **[This post on Stackoverflow](https://stackoverflow.com/questions/31710768/how-can-i-fetch-an-array-of-urls-with-promise-all?answertab=votes#tab-top)** will point you in the right direction.
-
-Be sure to keep you're UI components as modular possible. At a minimum, you'll need to create `ItemCardList` and `ItemCard` presentational components.
-
-**Tip!** In addition to the Material UI componenets, use the **[react-masonry-component](https://github.com/eiriklv/react-masonry-component)** and **[react-gravatar](https://github.com/KyleAMathews/react-gravatar)** to assist with building out the layout for the `Items` component.
+**Tip!** In addition to the Material UI components, **[react-gravatar](https://github.com/KyleAMathews/react-gravatar)** to load user profile images based on their email addresses. This package is already installed in the Boomtown Stater&mdash;you simply need to read its docs and use it.
 
 ---
 
@@ -116,11 +110,19 @@ Be sure to keep you're UI components as modular possible. At a minimum, you'll n
 
 From the React docs:
 
-- [Interactivity and Dynamic UIs](https://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html)
-- [Refs to Components](https://facebook.github.io/react/docs/more-about-refs.html)
-- [Component Specs and Lifecycle](https://facebook.github.io/react/docs/component-specs.html)
-- [A Visual Guide to State in React](https://daveceddia.com/visual-guide-to-state-in-react/)
+- [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
+- [Refs and the DOM](https://reactjs.org/docs/refs-and-the-dom.html)
+- [The Component Lifecycle](https://reactjs.org/docs/react-component.html#the-component-lifecycle)
 
 A thorough explanation of how method binding works:
 
 - [Why and how to bind methods in your React component classes?](http://reactkungfu.com/2015/07/why-and-how-to-bind-methods-in-your-react-component-classes/)
+
+The Apollo Client docs for React:
+
+- [Apollo Client - React & React Native](https://www.apollographql.com/docs/react/)
+
+More on the "render props" pattern used by Apollo Client:
+
+- [React Docs - Render Props](https://reactjs.org/docs/render-props.html)
+- [Tutorial: Render Props in React Apollo 2.1](https://www.prisma.io/blog/tutorial-render-props-in-react-apollo-2-1-199e9e2bd01e/)
