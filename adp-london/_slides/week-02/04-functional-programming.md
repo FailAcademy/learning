@@ -213,7 +213,7 @@ class: middle
 
 ```js
 function addOne(x) {
-  return x + 1;
+  return x + 1
 }
 ```
 
@@ -229,7 +229,7 @@ class: middle
 
 ```js
 function addOne(x) {
-  console.log(x + 1);
+  console.log(x + 1)
 }
 ```
 
@@ -244,10 +244,10 @@ class: middle
 # 5.
 
 ```js
-let x = 0;
+let x = 0
 function addOne() {
-  x += 1;
-  return x;
+  x += 1
+  return x
 }
 ```
 
@@ -263,11 +263,11 @@ class: middle
 
 ```js
 const addOne = (function() {
-  let x = 0;
+  let x = 0
   return function() {
-    return (x += 1);
-  };
-})();
+    return (x += 1)
+  }
+})()
 ```
 
 ???
@@ -321,18 +321,18 @@ Why do we care?
 Tell the computer **how** to do it, step by step.
 
 ```js
-let list = [1, 2, 3];
+let list = [1, 2, 3]
 
 // loop over each item
 for (let i = 0; i < list.length; i++) {
   // add 1 to each item
-  list[i] = list[i] + 1;
+  list[i] = list[i] + 1
   // remove even numbers
   if (list[i] % 2 === 0) {
-    list.splice(i + 1, 1);
+    list.splice(i + 1, 1)
   }
   // multiply the number by 10
-  list[i] = list[i] * 10;
+  list[i] = list[i] * 10
 }
 ```
 
@@ -343,12 +343,12 @@ for (let i = 0; i < list.length; i++) {
 Describe the "transformation", i.e. **what** should happen.
 
 ```js
-const list = [1, 2, 3];
+const list = [1, 2, 3]
 
 list
   .map(addOne)
   .filter(isOdd)
-  .map(multiplyTen);
+  .map(multiplyTen)
 ```
 
 ---
@@ -391,9 +391,9 @@ class: center, middle
 Slice fruit in JavaScript:
 
 ```js
-const fruits = ["apple", "orange", "banana"];
+const fruits = ['apple', 'orange', 'banana']
 
-const fruitSlices = fruits.map(fruit => fruit.substring(0, 2));
+const fruitSlices = fruits.map(fruit => fruit.substring(0, 2))
 
 // ["ap", "or", "ba"]
 ```
@@ -417,9 +417,9 @@ class: center, middle
 Pick only oranges in JavaScript:
 
 ```js
-const fruits = ["apple", "orange", "banana"];
+const fruits = ['apple', 'orange', 'banana']
 
-const orangesOnly = fruits.filter(fruit => fruit === "orange");
+const orangesOnly = fruits.filter(fruit => fruit === 'orange')
 
 // ["orange"]
 ```
@@ -443,9 +443,9 @@ class: center, middle
 Make fruit salad in JS:
 
 ```js
-const fruits = ["apple", "orange", "banana"];
+const fruits = ['apple', 'orange', 'banana']
 
-const fruitSalad = fruits.reduce((prev, curr) => prev + curr);
+const fruitSalad = fruits.reduce((prev, curr) => prev + curr)
 
 // "appleorangebanana"
 ```
@@ -457,7 +457,7 @@ const fruitSalad = fruits.reduce((prev, curr) => prev + curr);
 Turn this list:
 
 ```js
-const list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 Into `[8, 6, 4, 2]` using array methods and **only one line of code**. Do not mutate the original `list` array!
@@ -545,9 +545,9 @@ Non-curried function:
 const madLibs = (ingVerb, number, nameOfPerson) =>
   `When people begin ${ingVerb} in outer space,
   they will have to spend ${number} years just getting
-  to the nearest solar system, called ${nameOfPerson}.`;
+  to the nearest solar system, called ${nameOfPerson}.`
 
-madLibs("hitch-hiking", "42", "Arthur Dent");
+madLibs('hitch-hiking', '42', 'Arthur Dent')
 ```
 
 Curried version:
@@ -556,9 +556,9 @@ Curried version:
 const curriedMadLibs = ingVerb => number => nameOfPerson =>
   `When people begin ${ingVerb} in outer space,
   they will have to spend ${number} years just getting
-  to the nearest solar system, called ${nameOfPerson}.`;
+  to the nearest solar system, called ${nameOfPerson}.`
 
-curriedMadLibs("hitch-hiking")("42")("Arthur Dent");
+curriedMadLibs('hitch-hiking')('42')('Arthur Dent')
 ```
 
 ---
@@ -573,12 +573,12 @@ const curriedMadLibsNoArrows = function(ingVerb) {
     return function(nameOfPerson) {
       return `When people begin ${ingVerb} in outer space,
         they will have to spend ${number} years just getting
-        to the nearest solar system, called ${nameOfPerson}.`;
-    };
-  };
-};
+        to the nearest solar system, called ${nameOfPerson}.`
+    }
+  }
+}
 
-curriedMadLibsNoArrows("hitch-hiking")("42")("Arthur Dent");
+curriedMadLibsNoArrows('hitch-hiking')('42')('Arthur Dent')
 ```
 
 ---
@@ -591,11 +591,11 @@ You can partially apply a curried function too:
 const curriedMadLibs = ingVerb => number => nameOfPerson =>
   `When people begin ${ingVerb} in outer space,
   they will have to spend ${number} years just getting
-  to the nearest solar system, called ${nameOfPerson}.`;
+  to the nearest solar system, called ${nameOfPerson}.`
 
-const how = curriedMadLibs("hitch-hiking");
-const timeTo = how("42");
-const where = timeTo("Arthur Dent");
+const how = curriedMadLibs('hitch-hiking')
+const timeTo = how('42')
+const where = timeTo('Arthur Dent')
 ```
 
 ???
@@ -613,24 +613,11 @@ Re-write this function as a curried function:
 
 ```js
 const greeting = (greeting, name) => {
-  return `${greeting}, ${name}`;
-};
+  return `${greeting}, ${name}`
+}
 ```
 
 Try using partial application with your curried function too.
-
----
-
-class: center, middle
-
-.large[
-Middleware is created by **composing** functionality that wraps separate cross-cutting concerns which are not part of your main execution task.
-]
-
-???
-
-- In the case of Redux middleware the main execution task is the store’s dispatch function
-- What might be an example of a "cross-cutting" concern?
 
 ---
 
@@ -646,14 +633,14 @@ Middleware is created by **composing** functionality that wraps separate cross-c
 Demonstrate associativity:
 
 ```js
-const comp = f => g => x => f(g(x));
+const comp = f => g => x => f(g(x))
 
-const inc = x => x + 1;
-const dec = x => x - 1;
-const sqr = x => x * x;
+const inc = x => x + 1
+const dec = x => x - 1
+const sqr = x => x * x
 
-comp(comp(dec)(sqr))(inc)(2); // 8
-comp(dec)(comp(sqr)(inc))(2); // 8
+comp(comp(dec)(sqr))(inc)(2) // 8
+comp(dec)(comp(sqr)(inc))(2) // 8
 ```
 
 ---
@@ -669,9 +656,9 @@ And in JavaScript:
 ```js
 var compose = function(f, g) {
   return function(x) {
-    return g(f(x));
-  };
-};
+    return g(f(x))
+  }
+}
 
 // ES2015!
 // const compose = (f, g) => x => g(f(x));
@@ -702,17 +689,17 @@ Using a rest parameter and a `reduce`, we can compose together multiple function
 
 ```js
 const compose = (...funcs) => {
-  return funcs.reduce((acc, func) => (...args) => acc(func(...args)));
-};
+  return funcs.reduce((acc, func) => (...args) => acc(func(...args)))
+}
 
 // no arrows
 const composeNoArrows = function(...funcs) {
   return funcs.reduce(function(acc, func) {
     return function(...args) {
-      return acc(func(...args));
-    };
-  });
-};
+      return acc(func(...args))
+    }
+  })
+}
 ```
 
 Check this out in action in the [Redux source code](https://github.com/reactjs/redux/blob/master/src/compose.js).
@@ -729,12 +716,12 @@ Create a `compose` function that accepts any number of functions as arguments to
 
 ```js
 const greet = name => {
-  return `Hello ${name}`;
-};
+  return `Hello ${name}`
+}
 
 const emote = sentence => {
-  return `${sentence}!!!`;
-};
+  return `${sentence}!!!`
+}
 ```
 
 ---
