@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: Connecting Client & Server
-slides: ['_slides/week-03/04-connecting-client-server.md']
+title: Forms with React
+slides: ['_slides/week-03/04-forms-with-react.md']
 lesson_date: 2018-07-19
 ---
 
@@ -9,28 +9,25 @@ lesson_date: 2018-07-19
 
 Prior to class, read through the following documentation:
 
-- [Apollo Client Docs (Intro and Essentials sections)](https://www.apollographql.com/docs/react/)
 - [React Docs on Forms](https://facebook.github.io/react/docs/forms.html)
 
 ---
 
 ## Learning Objectives
 
-- Install and Apollo Client in a project and use it to make queries to a GraphQL API that populate data in React components.
+- Use form components from third-party libraries including React Final Form and Material UI.
 - Describe UX best practices for implementing client-side validation.
+- Use a library for handling form validation and submission in an application.
 - Provide error feedback on invalid input.
 - Distinguish between controlled and uncontrolled components.
-- Use a library for handling form validation and submission in an application.
-- Use form components from third-party libraries including React Final Form and Material UI.
-- Use Apollo Client to request mutations from the client side of an application via a form.
 
 ---
 
 ## Keywords
 
+- Client-side validation
 - Controlled component
 - Uncontrolled component
-- Client-side validation
 
 ---
 
@@ -82,6 +79,7 @@ Add any of the following to a form of your choosing:
 ## Lab Activity
 
 Create the forms that you'll use in your Boomtown app, using the [React Final Form](https://github.com/final-form/react-final-form) library.
+
 You'll need to create both a user (login) form and a form for adding new Items.
 
 Be sure to include:
@@ -94,5 +92,4 @@ Be sure to include:
 
 ## Additional Resources
 
-- [Material UI](https://github.com/callemall/material-ui)
-- [Semantic UI](http://react.semantic-ui.com/)
+_Additional resources TBA._
