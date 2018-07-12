@@ -103,11 +103,11 @@ class: center, middle
 
 # HTTP Conceptually
 
-Think of every HTTP request or response as an **envelop**.
+Think of every HTTP request or response as an **envelope**.
 
-What's on the envelop is information about where it should go (the **path**), a description of what's inside (some **headers**), what we want done to the contents of the envelop when it gets to its destination (the **HTTP verb**), or what happened to during its trip (the **status code**).
+What's on the envelope is information about where it should go (the **path**), a description of what's inside (some **headers**), what we want done to the contents of the envelope when it gets to its destination (the **HTTP verb**), or what happened to it during its trip (the **status code**).
 
-What's inside the envelop is the actual message/document (the **body**).
+What's inside the envelope is the actual message/document (the **body**).
 
 ---
 
@@ -127,13 +127,13 @@ What are the first three things you see listed under General?
 # URIs
 
 - Every resource on the web must be exposed with **at least one unique identifier** (but possible many unique identifiers)
-- If a resource doesn't have URI then it's not a resource (it's likely just information about another resource)
+- If a resource doesn't have a URI then it's not a resource (it's likely just information about another resource)
 - An **addressable** application exposes interesting aspects of its data set as resources, and exposes URIs for all of the resources it may conceivably serve
 
 ???
 
 - URIs don't belong specifically to HTTP, but HTTP uses them
-- Uniform Resource Identifier vs. Locator: every URL is URI, every URI on the web is a URL, but not all URI are URLs
+- Uniform Resource Identifier vs. Locator: every URL is URI, every URI on the web is a URL, but not all URIs are URLs
 - URLs don't just identify resources like URIs do, they also indicate where to find them (like describing a person by their name instead of resident of their physical address)
 
 ---
@@ -765,7 +765,7 @@ const quoteRoutes = require('./quotes');
 app.use('/quotes', quoteRoutes);
 ```
 
-And move all of the `app.route()` calls `quotes.js`.
+And move all of the `app.route()` calls into `quotes.js`.
 
 ---
 
@@ -829,7 +829,7 @@ REST defines a type of architecture where **resources**, **identifiers** (URIs),
 
 In other words, HTTP verbs provide semantic intention for the actions we want to take on resources, and URIs help us know where to find them.
 
-Taken together, REST enabled us to use the web as a **distributed application plaform** whose **linked resources** communicate by **exchanging representations of resource state**.
+Taken together, REST enabled us to use the web as a **distributed application platform** whose **linked resources** communicate by **exchanging representations of resource state**.
 
 ---
 
@@ -880,7 +880,7 @@ In small groups or pairs, you'll be assigned one of the following topics to rese
 - Splitting an app into resources increases its surface area
 - Representation: any useful information about the state of the resource
 - Representations also provide levers of state (the next possible state)
-- Representations help capture the current or intended sate of a resource (with metadata) (we represent with JSON)
+- Representations help capture the current or intended state of a resource (with metadata) (we represent with JSON)
 
 **State in REST:**
 
