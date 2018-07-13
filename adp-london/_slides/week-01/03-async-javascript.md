@@ -357,7 +357,7 @@ template: inverse
 Promises
 
 * The next generation in async code after callbacks
-* Allow us to write code that we can reason abount, and maintain control over
+* Allow us to write code that we can reason about, and maintain control over
 
 Pre-test:
 
@@ -373,7 +373,7 @@ Promises use `then` and `catch` to handle success resolution or a rejection, res
 ```js
 var rp = require('request-promise');
 rp(url)
-  .then(response => console.log(response));
+  .then(response => console.log(response))
   .catch(console.log);
 ```
 
@@ -398,9 +398,9 @@ If any of the `then` functions fail, then the `catch` function will be called:
 ```js
 var rp = require('request-promise');
 rp(url)
-  .then(response => console.log(response));
-  .then(response => console.log(response));
-  .then(response => console.log(response));
+  .then(response => console.log(response))
+  .then(response => console.log(response))
+  .then(response => console.log(response))
   .catch(console.log);
 ```
 
@@ -409,24 +409,6 @@ rp(url)
 * Unhandled promises throw an error
 * What about timeouts? Is this fixed? How might you fix it?
 * You can easily add timeouts into promise calls.
-
----
-
-# Handling Errors in Promises
-
-**GOTCHA:** Any `then` _after_ a `catch` will be called!
-
-```js
-var rp = require('request-promise');
-rp(url)
-  .then(response => console.log(response));
-  .then(response => console.log(response));
-  .catch(error => console.log('STOP!'));
-  .then(response => console.log(response)); // This will get called!
-  .catch(console.log);
-```
-
-???
 
 This can make multiple failure flows difficult to code.
 
@@ -437,11 +419,11 @@ This can make multiple failure flows difficult to code.
 
 # Exercise 3
 
-Look up the docs on the **[Promise API](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise)** on MDN. How can we wrap the above in a function that returns a promise?
+Look up the docs on the **[Promise API](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise)** on MDN. How can we wrap the below in a function that returns a promise?
 
 ```js
 request(url, (error, response, body) => {
-  console.log("body", body);
+  console.log('body:', body);
 });
 ```
 
@@ -464,7 +446,7 @@ function getPromise = (url) => {
 
 # Exercise 4
 
-In pairs, refactor the callbacks exercise using Promises.
+In pairs, refactor the callbacks exercise 2 using Promises.
 
 **Setup:**
 
