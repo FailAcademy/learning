@@ -15,23 +15,26 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
 
-1. Whys, whats, and hows Redux
-2. Setup a basic project using Redux in plain vanilla JS
+1.  Whys, whats, and hows Redux
+2.  Setup a basic project using Redux in plain vanilla JS
 
 ---
+
 template: inverse
 
 # What Problem Does Redux Solve?
 
 ---
+
 class: center, middle
 
 .large[
-  Redux is a predictable state container for JavaScript apps.
+Redux is a predictable state container for JavaScript apps.
 ]
 
 ???
@@ -56,10 +59,11 @@ Challenges:
 - Passing callbacks down the tree
 
 ---
+
 class: center, middle
 
 .large[
-  How can we fix these issues?
+How can we fix these issues?
 ]
 
 ---
@@ -75,10 +79,11 @@ class: center, middle
 class: center, middle
 
 .large[
-  How would that change the design of our app?
+How would that change the design of our app?
 ]
 
 ---
+
 template: inverse
 
 # Using Redux
@@ -87,9 +92,9 @@ template: inverse
 
 # Three Principles of Redux
 
-1. There's a **single source of truth** for all application state
-2. That state is **read-only**
-3. Changes to application state are made with **pure functions**
+1.  There's a **single source of truth** for all application state
+2.  That state is **read-only**
+3.  Changes to application state are made with **pure functions**
 
 ???
 
@@ -126,21 +131,23 @@ Redux, in a nutshell:
 - To specify how the actions transform the state tree, you write pure reducers
 
 ---
+
 class: center, middle
 
 .inline-images[
-  ![Redux diagram](/public/img/slide-assets/redux.png)
+![Redux diagram](/public/img/slide-assets/redux.png)
 ]
 
 .footnote.right[Image source: [Scotch.io](https://scotch.io/bar-talk/getting-started-with-redux-an-intro)]
 
 ---
+
 class: center, middle
 
 Before we start, **[install Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)**:
 
 .inline-images[
-  ![Redux Devtools](/public/img/slide-assets/reduxdevtools.gif)
+![Redux Devtools](/public/img/slide-assets/reduxdevtools.gif)
 ]
 
 ---
@@ -203,14 +210,14 @@ module.exports = {
         include: [src],
         exclude: /node_modules/,
         query: {
-          presets: ['stage-0']
-        }
+          presets: ['stage-0'],
+        },
       },
-    ]
+    ],
   },
 
-  plugins: [new HtmlWebpackPlugin()]
-}
+  plugins: [new HtmlWebpackPlugin()],
+};
 ```
 
 ---
@@ -231,10 +238,11 @@ npm start
 ```
 
 ---
+
 class: center, middle
 
 .large[
-  What kind of actions do you think our store will need?
+What kind of actions do you think our store will need?
 ]
 
 ???
@@ -282,7 +290,7 @@ Now we need an **action creator** to actually create the corresponding action ob
 
 ```js
 export const getFruitCount = () => ({
-  type: GET_FRUIT_COUNT
+  type: GET_FRUIT_COUNT,
 });
 ```
 
@@ -318,12 +326,12 @@ export default (state = {}, action) => {
     case SOME_ACTION_CONSTANT: {
       return {
         ...state, // not mutating state!
-        someData: action.payload
+        someData: action.payload,
       };
     }
     default:
       return state;
-    }
+  }
 };
 ```
 
@@ -344,10 +352,11 @@ Things you should never do inside a reducer:
 - Call non-pure functions, e.g. Date.now() or Math.random()
 
 ---
+
 class: center, middle
 
 .large[
-  Given the same arguments, it should calculate the next state and return it. No surprises. No side effects. No API calls. No mutations. Just a calculation.
+Given the same arguments, it should calculate the next state and return it. No surprises. No side effects. No API calls. No mutations. Just a calculation.
 ]
 
 (From the [Redux docs](http://redux.js.org/docs/basics/Reducers.html))
@@ -406,7 +415,7 @@ import { combineReducers } from 'redux';
 import produceReducer from './modules/produce';
 
 export default combineReducers({
- produce: produceReducer
+  produce: produceReducer,
 });
 ```
 
@@ -442,7 +451,7 @@ Head over to `index.js` in the root of your app, import the store, import the ac
 store.dispatch(getFruitCount());
 store.dispatch(updateFruitStock(10));
 store.dispatch(explainFruitStock());
-// try console-logging something from the store with store.getState() 
+// try console-logging something from the store with store.getState()
 ```
 
 ???
@@ -456,10 +465,10 @@ store.dispatch(explainFruitStock());
 
 The data lifecycle in any Redux app follows these 4 steps:
 
-1. You called `store.dispatch(action)`
-2. The Redux store called the reducer function you gave it
-3. The root reducer combined the output of all reducers into a single state tree
-4. The Redux store saved the complete state tree returned by the root reducer
+1.  You called `store.dispatch(action)`
+2.  The Redux store called the reducer function you gave it
+3.  The root reducer combined the output of all reducers into a single state tree
+4.  The Redux store saved the complete state tree returned by the root reducer
 
 ---
 
@@ -468,9 +477,7 @@ The data lifecycle in any Redux app follows these 4 steps:
 To see each consecutive change made to the store, add the following code above your dispatches:
 
 ```js
-let unsubscribe = store.subscribe(() =>
-  console.log(store.getState())
-);
+let unsubscribe = store.subscribe(() => console.log(store.getState()));
 ```
 
 Then add this after the dispatches:
@@ -500,6 +507,7 @@ You'll know it's working when you can see the contents of your store in your bro
 - How to set-up Redux in a simple app
 
 ---
+
 template: inverse
 
 # Questions?
