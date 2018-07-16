@@ -40,7 +40,7 @@ Read [You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-ne
 
 Now create action string constants for stocking up fruit and explaining the current fruit stock.
 
-Note that the action creator for stocking up fruit will need to be set-up with a parameter of `count` so we can pass some information along in the action's payload about how much to update the inventory in our grocery store state.
+Note that the action creator for stocking up fruit will need to be set-up with a parameter of `count` so we can pass some information along in the action's payload about how much to update the inventory in the grocery store state.
 
 You can set the value of `count` on a `payload` property in this action object.
 
@@ -83,7 +83,7 @@ You'll know it's working when you can see the contents of your store in your bro
 
 If you're still a bit fuzzy on Redux when the lab starts, take some time to watch Dan Abramov's [Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux) video series.
 
-Following that, try adding a second module to your grocery store app. Add a module for the bakery or deli department, along with some corresponding actions for reconciling, adjusting, and explaining the stock for that department. Be creative!
+Following that, try adding a second module to the grocery store app. Add a module for the bakery or deli department, along with some corresponding actions for reconciling, adjusting, and explaining the stock for that department. Be creative!
 
 After you complete the lab activity, keep working on Boomtown. We'll be adding Redux to it shortly.
 

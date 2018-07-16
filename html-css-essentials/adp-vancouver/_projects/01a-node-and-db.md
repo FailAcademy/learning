@@ -29,7 +29,6 @@ Your project must:
 
 Your project must:
 
-- [ ] Start without errors
 - [ ] Be configured for development and production using `app.set` / `app.get`
 - [ ] Connect to PostgreSQL using the `node-postgres` library
 - [ ] Execute all of the required SQL queries using the `node-postgres` library
