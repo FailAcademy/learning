@@ -133,8 +133,8 @@ It's **asynchronous** because Ajax doesn’t block other events from happening w
 
 # Working with Ajax
 
-- You can use Ajax with plain vanilla JavaScript, but it can be a bit onerous
-- Luckily, jQuery provide several methods that make undertaking Ajax-related tasks much easier
+- You can use Ajax with plain vanilla JavaScript, but it can be a bit tedious.
+- Luckily, jQuery provides several methods that make undertaking Ajax-related tasks much easier
 
 ---
 
@@ -258,7 +258,7 @@ JSON will look very familiar, because it's encoded similarly to how JS objects a
 
 But it's important to remember that this isn't an actual object, it's just text that looks like an object.
 
-To convert JSON into a JS object, use `JSON.parse()`.
+*Sidenote: You can convert JSON into a JS object, using `JSON.parse()`*
 
 ---
 
@@ -298,7 +298,7 @@ That entire response was passed in as the `data` object parameter in the `.done(
 });
 ```
 
-Because the JSON data is pre-processed by jQuery based on the response `Content-Type`, it is passed in as a JS object, we are able to access it's properties (such as the `login`) using the JavaScript dot notation we're already familiar with.
+ We are now able to access properties within the data object (such as the `login`) using the JavaScript dot notation.
 
 ---
 
