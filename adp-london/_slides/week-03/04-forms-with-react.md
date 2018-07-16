@@ -285,9 +285,11 @@ template: inverse
 
 # What We've Learned
 
-- Thing 1
-- Thing 2
-- Thing 3
+- UX Ground Rules for Web Forms
+- How to use Controlled vs. Uncontrolled Inputs in React
+- THe basics of Material UI Input Components
+- The basics of using React Final-Form
+- How to Validate & Submit a form (Final-Form / MaterialUI)
 
 ---
 
