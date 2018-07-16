@@ -130,6 +130,27 @@ Ajax is often used when **submitting web forms** and **fetching data** from a se
 It's **asynchronous** because Ajax doesn’t block other events from happening when the request is sent and the client is waiting for a response.
 
 ---
+class: center, middle
+
+.large[
+  But wait!? Isn't JavaScript single-threaded?
+]
+
+---
+class: center, middle
+
+.inline-images[
+  ![JS Runtime](/public/img/slide-assets/js-runtime.png)
+]
+
+---
+class: center, middle
+
+.large[
+  [A visualization...](http://latentflip.com/loupe/)
+]
+
+---
 
 # Working with Ajax
 
