@@ -27,7 +27,6 @@ Read [You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-ne
 
 ## Keywords
 
-- [Flux](https://facebook.github.io/flux/docs/in-depth-overview.html#content)
 - [Redux](http://redux.js.org/index.html)
 - [Store](http://redux.js.org/docs/basics/Store.html)
 - [Dispatch](http://redux.js.org/docs/api/Store.html#dispatch)

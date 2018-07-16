@@ -48,4 +48,4 @@ lesson_date: 2018-07-26
 
 ## Additional Resources
 
-- [Apollo Client Authentication Docs](https://www.apollographql.com/docs/react/recipes/authentication.html)
+- [Apollo Authentication Docs](https://www.apollographql.com/docs/react/recipes/authentication.html)
