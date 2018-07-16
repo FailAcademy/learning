@@ -6,23 +6,6 @@
     "end": "2018-07-02"
   },
   {
-    "title": "ADP/WDP Mentoring",
-    "allDay": false,
-    "start": "2018-07-20T15:00:00+00:00",
-    "end": "2018-07-20T16:15:00+00:00"
-  },
-  {
-    "title": "ADP/WDP Mentoring",
-    "allDay": false,
-    "start": "2018-08-17T15:00:00+00:00",
-    "end": "2018-08-17T16:15:00+00:00"
-  },
-  {
-    "title": "BC Family Day",
-    "allDay": true,
-    "start": "2018-02-12"
-  },
-  {
     "title": "Good Friday",
     "allDay": true,
     "start": "2018-03-30"
@@ -42,12 +25,7 @@
     "allDay": true,
     "start": "2018-07-02"
   },
-  {
-    "title": "BC Day",
-    "allDay": true,
-    "start": "2018-08-06"
-  },
-  {
+    {
     "title": "Labour Day",
     "allDay": true,
     "start": "2018-09-03"
