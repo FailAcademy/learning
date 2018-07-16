@@ -233,7 +233,7 @@ Possible use case of running a function after an animation?
 
 # Easing
 
-Easing helps to bring animations to life. Without easing animations run from point A to B without speeding up or slowing down. This is ok, however by adding easing you can create more intersting animations.
+Easing helps to bring animations to life. Without easing animations run from point A to B without speeding up or slowing down. This is ok, however by adding easing you can create more interesting animations.
 
 jQuery doesn't support easing by default, however there are two options to add easing:
 
@@ -250,7 +250,7 @@ jQuery UI is great however it provides a lot of things we may not need e.g. acco
 **Gotcha alert!** Animating background colors requires jQuery UI.
 
 - Easing Plugin: <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">Download</a> 
-- Easing Plugin: <a href="https://cdnjs.com/libraries/jquery-easing" target="_blank">CDN</a>.
+- Easing Plugin: <a href="https://cdnjs.com/libraries/jquery-easing" target="_blank">CDN</a>
 
 - jQuery UI: <a href="https://jqueryui.com/" target="_blank">Download</a>
 - jQuery UI: <a href="https://developers.google.com/speed/libraries/#jquery-ui" target="_blank">CDN</a>
