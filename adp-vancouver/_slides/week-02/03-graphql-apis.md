@@ -526,7 +526,7 @@ Resolvers can return Promises too (woot!).
 Create a `api/resolvers.js` file in your app:
 
 ```js
-const { data } = require('./data');
+const data = require('./data');
 
 const resolvers = {
   // Resolvers go here...
@@ -831,7 +831,7 @@ As a best practice, it would be better to remove our data fetching code directly
 Create a `api/helpers.js`:
 
 ```js
-const { data } = require('./data');
+const data = require('./data');
 
 const helpers = {
   // An example to get you started...
@@ -937,7 +937,7 @@ Now move to `server/config/postgres.js`. Set the `host`, `user`, `password`, and
 
 Use `app.get()` to retrieve these variables (as instructed in the `@TODO`).
 
-Set `idleTimeoutMillis` and `connectionTimeoutMillis` keys in this objects to `30000` and `2000` respectively as well.
+Set `idleTimeoutMillis` and `connectionTimeoutMillis` keys in this object to `30000` and `2000` respectively as well.
 
 _Congrats! Your app is connected to your database and you should be able to start your server now!_
 
