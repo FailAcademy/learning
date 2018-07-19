@@ -586,7 +586,6 @@ Finish writing the route handler for `/quotes/:name`:
 ```js
 app.get('/quotes/:name', (request, response) => {
   const { name } = request.params;
-  const slug = name.replace(/\s+/g, '-').toLowerCase();
 
   // What array method can you use on the quotes array to return
   // the first object in the array with a matching name?
@@ -595,6 +594,23 @@ app.get('/quotes/:name', (request, response) => {
     response.status(404).json('That person isn\'t quote-worthy.');
   } else {
     response.send(/* the quote object */);
+  }
+});
+```
+
+???
+
+Solution:
+
+```js
+app.get('/quotes/:name', (request, response) => {
+  const { name } = request.params;
+  const matchedQuote = quotes.find((quote) => name === quote.name);
+
+  if (!matchedQuote) {
+    response.status(404).json('That person isn\'t quote-worthy.');
+  } else {
+    response.json(matchedQuote.text);
   }
 });
 ```
@@ -689,7 +705,7 @@ container.addEventListener('click', (event) => {
 Not surprisingly, you'll handle a `DELETE` request like this in Express:
 
 ```js
-app.delete((request, response) => {
+app.delete('/quotes/:name', (request, response) => {
   // Remove the quote from the quotes array
   // Send back the 200 status with the response
 });
