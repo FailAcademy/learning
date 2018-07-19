@@ -116,7 +116,6 @@ Finish writing the route handler for `/quotes/:name`:
 ```js
 app.get('/quotes/:name', function(request, response) {
   const { name } = request.params;
-  const slug = name.replace(/\s+/g, '-').toLowerCase();
 
   // What array method can you use on the quotes array to return
   // the first object in the array with a matching name?
