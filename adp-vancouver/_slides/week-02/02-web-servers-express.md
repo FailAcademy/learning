@@ -698,6 +698,12 @@ container.addEventListener('click', (event) => {
 });
 ```
 
+???
+
+Explain to students that the URL for the `fetch()` command actually goes to `localhost:3300` – replace `/quotes/${name}` with `http://localhost:3300/quotes/${name}` to demonstrate this.
+
+However, it is best practice to not commit code that contains the FQDN, so revert it after demonstrating this.
+
 ---
 
 # DELETE Requests
