@@ -24,7 +24,7 @@ layout: false
 - Review TCP/UDP protocols
 - Model JavaScript's event loop
 - Build a simple TCP/UDP messaging server
-- Use Node's built in modules to read from you computer's filesystem
+- Use Node's built-in modules to read from your computer's filesystem
 
 ---
 
@@ -88,7 +88,7 @@ TCP and UDP are the basic protocols of the internet.
 
 Take a minute to **[read this link](http://www.diffen.com/difference/TCP_vs_UDP)**, for a good description of the differences between TCP & UDP, and how they are used.
 
-When you're finished, create a folder called `TCP_Service`. Inside the folder run the command `npm init`.
+When you're finished, create a folder called `TCP_Service`. Inside the folder run the command `npm init -y`.
 
 ---
 
@@ -98,18 +98,24 @@ Your `package.json` should look like this:
 
 ```json
 {
-  "name": "intro-to-node-exercises",
+  "name": "TCP_Service",
   "version": "1.0.0",
-  "description": "Learning Node @ Red Academy",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "MK <mackenzie@redacademy.com>",
+  "keywords": [],
+  "author": "",
   "license": "ISC"
 }
 ```
 
 **Why do we need this?**
+
+???
+
+Describe the purpose of the `package.json` file.
 
 ---
 
@@ -123,7 +129,7 @@ const server = net.createServer();
 
 server.on('connection', handleConnection);
 
-server.listen(9000, function() {
+server.listen(9000, () => {
   console.log('server listening to %j', server.address());
 });
 
@@ -134,6 +140,10 @@ function handleConnection() {
 
 Run this code by typing `node index.js`.
 
+???
+
+Note that you can also just run `node index` &ndash; the `.js` suffix is not required.
+
 ---
 
 # Building a TCP Service
@@ -142,8 +152,8 @@ In order to show when the **server** has received a connection from a **client**
 
 ```js
 function handleConnection(conn) {
-  const remoteAddress = `${conn.remoteAddress}:${conn.remotePort}`;
-  console.log(`new client connection from ${remoteAddress}`);
+  const remoteAddressAndPort = `${conn.remoteAddress}:${conn.remotePort}`;
+  console.log(`new client connection from ${remoteAddressAndPort}`);
 }
 ```
 
@@ -157,7 +167,7 @@ _Where is the client?_
 
 # Simple Netcat Client
 
-**We'll use Netcat to test our nre TCP/UDP server.**
+**We'll use Netcat to test our new TCP/UDP server.**
 
 Start your server new TCP Server, and from your command line in a separate terminal window, run:
 
@@ -196,13 +206,13 @@ Implement the following `conn` event handlers in your `handleConnection` callbac
 - `close`
 - `error`
 
-Each handler should `console.log` the `remoteAddress` as well as any relevant parameters (e.g. incoming data, or error messages). Review **[the documentation](https://nodejs.org/api/net.html)** here before you begin.
+Each handler should `console.log` the `remoteAddressAndPort` as well as any relevant parameters (e.g. incoming data, or error messages). Review **[the documentation](https://nodejs.org/api/net.html)** here before you begin.
 
 ---
 
 # UTF-8
 
-If you're sending incoming data to the server console, you may have noticed somthing like this `<Buffer 9c 4f 4f 4f>` in the output.
+If you're sending incoming data to the server console, you may have noticed something like this `<Buffer 9c 4f 4f 4f>` in the output.
 
 This happens because TCP sends **streams of bytes** across the network, and it's up to our application to decode them properly.
 
@@ -276,7 +286,7 @@ template: inverse
 
 # Exercise 3
 
-Use your TCP server to read from your local file system. When your server receives a request, use Node's build in `fs` module to read text from a `.txt` file and send the contents back to the connection.
+Use your TCP server to read from your local file system. When your server receives a request, use Node's built-in `fs` module to read text from a `.txt` file and send the contents back to the connection.
 
 - Is reading from the filesystem an **async** or **sync** action?
 - In what circumstance is it useful to use blocking operations?
@@ -305,7 +315,8 @@ Next we'll create a minimal chat server.
 Change your TCP service to deliver any incoming data to all connected clients.
 
 - Your server will need to store all connections
-- Messages you send to the server should not return to you
+- Messages a client sends to the server should not return to that client
+- But all other clients should receive that message
 
 ---
 
@@ -347,7 +358,7 @@ Environment variables should be *dynamic* depending on the 'Environment' where y
 
 Explanation:
 
-We don't want to have to manually specify specific variables for each environment, in out application code.
+We don't want to have to manually specify specific variables for each environment, in our application code.
 
 ---
 
