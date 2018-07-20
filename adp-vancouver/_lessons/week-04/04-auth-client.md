@@ -11,9 +11,18 @@ lesson_date: 2018-07-26
 
 ## Learning Objectives
 
+- Understand CORS (Client-Side)
+- Send Login and Logout requests from React/GraphQL
+- Authorize Client-Side Routes using Apollo & React Router
+
 ---
 
 ## Keywords
+
+- CORS
+- Refetch Queries
+- Credentials
+- Redirect
 
 ---
 
@@ -38,3 +47,5 @@ lesson_date: 2018-07-26
 ---
 
 ## Additional Resources
+
+- [Apollo Authentication Docs](https://www.apollographql.com/docs/react/recipes/authentication.html)

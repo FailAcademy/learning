@@ -28,68 +28,54 @@ Prior to class, read through the following documentation:
 - Client-side validation
 - Controlled component
 - Uncontrolled component
+- Render prop
 
 ---
 
 ## Exercise 1
 
-Write a basic form in HTML that alerts the value of an input.
+### Think Outside the Box.
+
+Typeform built a business out of exceptional form UX. How did they do it?
+
+Partner up and come up with at least 5 ways Typeform breaks with the typical conventions we're used to, when it comes to the design of Web Forms.
+
+In 15 minutes we'll discuss what you came up with.
 
 ---
 
 ## Exercise 2
 
-Install a repo of React-Form demos.
+### Controlled vs. Uncontrolled Inputs
 
-```shell
-git clone https://github.com/redacademy/adp-react-forms.git
-cd adp-react-form-demos
-npm install
-npm start
-```
+In this course we'll learn how to build amazing Web Forms using React. Before we start there a few
+basics we'll need to understand when it comes to working with forms in React.
+
+[![CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/y3vv68m9j9)
+Click the button above and follow the instructions in the `@TODO` to learn the basics of how React handles form inputs.
 
 ---
 
 ## Exercise 3
 
-Add an extra field to either your **controlled** or **uncontrolled** form.
+### A "Final" Rebuild
 
-The output data should be in JSON, like the following:
+Now that you know how to build forms using React and React Final-Form, return to the
+form you built in _Exercise 2_ and rebuild it using React Final-Form and Material UI input components.
 
-```json
-{
-  "username": "name",
-  "password": "pass"
-}
-```
-
----
-
-## Exercise 4
-
-Add any of the following to a form of your choosing:
-
-- Show an error message if the password is shorter than 5 characters
-- Make it impossible for a user to type a username longer than 8 characters
-- Validate that a username does not contain any capital letters
-- Disable the submit button if any of the fields are invalid
+- Validate all inputs and display an error messages (on submit only. Hint: add a submit button)
+- Remove error messages when the user begins to type in the invalid input (Hint: `meta` prop of the `Field` component)
+- _Only_ if the form is valid, display the resulting input values in the UI
 
 ---
 
 ## Lab Activity
 
-Create the forms that you'll use in your Boomtown app, using the [React Final Form](https://github.com/final-form/react-final-form) library.
-
-You'll need to create both a user (login) form and a form for adding new Items.
-
-Be sure to include:
-
-- Validation of fields
-- Styled components
-- Error feedback
+Start to write share Item form that you'll use in your Boomtown app, using the [React Final Form](https://github.com/final-form/react-final-form) library.
 
 ---
 
 ## Additional Resources
 
-_Additional resources TBA._
+- [In Search of the Ultimate User Experience](https://www.typeform.com/blog/human-experience/in-search-of-the-ultimate-user-experience/) (Typeform blog)
+- [React Final Form Examples](https://github.com/final-form/react-final-form#examples
