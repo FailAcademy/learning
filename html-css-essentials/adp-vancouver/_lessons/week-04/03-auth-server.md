@@ -11,9 +11,24 @@ lesson_date: 2018-07-25
 
 ## Learning Objectives
 
+- Distinguish Authentication vs. Authorization.
+- Understand CORS (Server-Side).
+- Create a secure cookie using Express.
+- Build a stateless session using JWT.
+- Authenticate HTTP requests using JWT.
+- Authorize GraphQL queries using Apollo.
+
 ---
 
 ## Keywords
+
+- Authentication
+- Authorization
+- CORS
+- JWT
+- Stateless Session
+- Context
+- Custom Directives
 
 ---
 
@@ -38,3 +53,6 @@ lesson_date: 2018-07-25
 ---
 
 ## Additional Resources
+
+- [JSON Web Token Homepage (jwt.io)](https://jwt.io/)
+- [Apollo Authentication Docs](https://www.apollographql.com/docs/react/recipes/authentication.html)
