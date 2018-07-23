@@ -58,7 +58,6 @@ Under-fetching data
 ???
 
 - **n+1 problem:** when a request to load one item turns into n+1 requests since the item has "n" associated items
-- how many requests are need to populate all of the information into this user profile: https://boom.academy.red/profile/LAi9TYWxgGhbjgHu1Sm6ZvB1tRP2
 
 ---
 
@@ -314,16 +313,16 @@ template: inverse
 
 # Fake IMDB Set-up
 
-We'll use Express to set-up an Apollo server for our web client to send queries to. Create a new directory for your server, `npm init`, and then:
+We'll use Express to set up an Apollo server for our web client to send queries to. Create a new directory for your server, `npm init -y`, and then:
 
 ```bash
 npm install --save apollo-server-express@rc graphql express
 ```
 
-Let's also use Babel with our app again:
+Let's also use nodemon with our app again:
 
 ```bash
-npm i -D nodemon
+npm install --save-dev nodemon
 ```
 
 And add a start script to `package.json`:
@@ -336,27 +335,27 @@ And add a start script to `package.json`:
 
 ???
 
-- `apollo-server`: The Apollo server library which allows you to focus on defining the shape of your data and how to fetch it.
+- `apollo-server-express`: The Apollo server library which allows you to focus on defining the shape of your data and how to fetch it.
 - `graphql`: The library used to build a schema and to execute queries on that schema.
 
 ---
 
 # Fake IMDB Set-up
 
-Now create an `main.js` file and instantiate your new GraphQL server:
+Now create an `index.js` file and instantiate your new GraphQL server:
 
 ```js
-const express = require("express");
-const { ApolloServer } = require("apollo-server-express");
-const typeDefs = require("./api/schema");
-const resolvers = require("./api/resolvers");
+const express = require('express');
+const { ApolloServer } = require('apollo-server-express');
+const typeDefs = require('./api/schema');
+const resolvers = require('./api/resolvers');
 
 const app = express();
 const server = new ApolloServer({ typeDefs, resolvers });
 server.applyMiddleware({ app });
 
-app.set("PORT", process.env.PORT || 5000);
-const port = app.get("PORT");
+app.set('PORT', process.env.PORT || 5000);
+const port = app.get('PORT');
 
 app.listen({ port }, () =>
   console.log(
@@ -488,7 +487,7 @@ type Query {
 Create a `api/schema.js` file in your app:
 
 ```js
-const { gql } = require("apollo-server");
+const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
   # Add the Person type here...
@@ -498,7 +497,7 @@ const typeDefs = gql`
   # Add the root Query type here...
 `;
 
-module.exports = { typeDefs };
+module.exports = typeDefs;
 ```
 
 ---
@@ -527,13 +526,13 @@ Resolvers can return Promises too (woot!).
 Create a `api/resolvers.js` file in your app:
 
 ```js
-const { data } = require("./data");
+const data = require('./data');
 
 const resolvers = {
   // Resolvers go here...
 };
 
-module.exports = { resolvers };
+module.exports = resolvers;
 ```
 
 ---
@@ -595,7 +594,7 @@ const resolvers = {
 class: center, middle
 
 .large[
-Problem: Where do the actors and directors come from in relation to our movie type?
+Problem: Where do the actors (stars) and directors come from in relation to our movie type?
 ]
 
 ---
@@ -606,11 +605,6 @@ We have to tell GraphQL where to find the director and stars with another resolv
 
 ```js
 Movie: {
-  director(movie) {
-    if (!movie.director) return null;
-    return data.people.find(person => person.id === movie.director);
-  }
-
   stars(movie) {
     return data.people.filter(person => (
       person.filmography.find(credit => (
@@ -618,6 +612,10 @@ Movie: {
       ))
     ));
   },
+  director(movie) {
+    if (!movie.director) return null;
+    return data.people.find(person => person.id === movie.director);
+  }
 },
 ```
 
@@ -629,7 +627,7 @@ Write the resolvers for the `people` and `person` queries.
 
 Be sure to resolve a person's `filmography` field as well.
 
-Once you've done this, see if your GraphQL server will start by running `npm start`. Visit `localhost:4000/graphql` to open the GraphQL Playground.
+Once you've done this, see if your GraphQL server will start by running `npm start`. Visit `localhost:5000/graphql` to open the GraphQL Playground.
 
 Do you see your schema there. Are you able to query your movie API for data?
 
@@ -833,7 +831,7 @@ As a best practice, it would be better to remove our data fetching code directly
 Create a `api/helpers.js`:
 
 ```js
-const { data } = require("./data");
+const data = require('./data');
 
 const helpers = {
   // An example to get you started...
@@ -843,7 +841,7 @@ const helpers = {
 
   // All of your other helpers will go here...
 };
-module.exports = { helpers };
+module.exports = helpers;
 ```
 
 ---
@@ -903,11 +901,11 @@ template: inverse
 
 # Get Starter Files
 
-Grab the starter files for Boomtown here:
+You can see the starter files for Boomtown here:
 
 **[https://github.com/redacademy/boomtown-starter](https://github.com/redacademy/boomtown-starter)**
 
-Download the files (don't clone!). You will `init` your own new repo in it. Now would be a good time to do that.
+Download them [from here](https://github.com/redacademy/boomtown-starter/archive/master.zip) (don't clone the repo!). You will create your own new repo that contains these starter files. Now would be a good time to do that.
 
 We'll only work in the `server` directory this week, so `cd` in there and install the dependencies:
 
@@ -939,7 +937,7 @@ Now move to `server/config/postgres.js`. Set the `host`, `user`, `password`, and
 
 Use `app.get()` to retrieve these variables (as instructed in the `@TODO`).
 
-Set `idleTimeoutMillis` and `connectionTimeoutMillis` keys in this objects to `30000` and `2000` respectively as well.
+Set `idleTimeoutMillis` and `connectionTimeoutMillis` keys in this object to `30000` and `2000` respectively as well.
 
 _Congrats! Your app is connected to your database and you should be able to start your server now!_
 
