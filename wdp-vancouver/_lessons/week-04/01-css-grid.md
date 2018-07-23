@@ -40,7 +40,7 @@ Prior to class, download and install Firefox Developer Edition:
 
 ## Exercise 1
 
-`%`, `em`, `rem`, `auto`, `vw`, `vh`, `vmin`, and `vmax`
+`%`, `em`, `rem`, `auto`, `vw`, and `vh`
 
 After seeing these **responsive units** again, let's take a few minutes and discuss what we know about them and research what we don't.
 
