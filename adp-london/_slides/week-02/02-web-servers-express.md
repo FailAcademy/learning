@@ -182,12 +182,12 @@ How would we describe these **[status codes](https://developer.mozilla.org/en-US
 
 # Initial Set-up
 
-Create a new directory with an `index.js` file, and then run through `npm init -y` in that directory.
+Create a new directory with an `index.js` file, and then run through `npm init` in that directory.
 
 Once that's done, run:
 
 ```bash
-npm install --save express
+npm i -S express
 ```
 
 More on [Express installation instructions here](https://expressjs.com/en/starter/installing.html).
@@ -199,7 +199,7 @@ More on [Express installation instructions here](https://expressjs.com/en/starte
 Let's also use nodemon with our app too:
 
 ```bash
-npm install --save-dev nodemon
+npm i -D nodemon
 ```
 
 The [nodemon](https://github.com/remy/nodemon) package will allow us to watch files in the directory in which nodemon was started, and if any files change, it will automatically restart our Node application.
@@ -226,15 +226,17 @@ Below, the `app.get()` method create a route that accepts GET requests:
 
 ```js
 const express = require('express');
+
 const app = express();
+
 const PORT = 3300;
 
-app.get('/', (request, response) => {
+app.get('/', function(request, response) {
   response.send('Hello, world!');
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+app.listen(port, function() {
+  console.log(`Server running @ http://localhost:${port}`);
 });
 ```
 
@@ -248,13 +250,7 @@ Don't forget to address what `process.env.PORT` is in this context. Tie it back 
 
 # Does It Work?
 
-Start the server in one Terminal tab:
-
-```bash
-npm start
-```
-
-Then run the following in another Terminal tab:
+Run the following in your Terminal:
 
 ```bash
 curl -i http://localhost:3300
@@ -274,7 +270,7 @@ _What do you see?_
 Remember that Express is just providing an abstraction layer on top of Node, so we can still use the Node API in our route handlers too:
 
 ```js
-app.get('/', (request, response) => {
+app.get('/', function(request, response) {
   // Express method:
   // response.send('Hello, world!');
 
@@ -310,7 +306,7 @@ const quotes = [
   },
 ];
 
-app.get('/', (request, response) => {
+app.get('/', function(request, response) {
   response.send(quotes);
 }); // ...now run `curl -i` again
 ```
@@ -322,7 +318,7 @@ app.get('/', (request, response) => {
 We can respond to request on more than just the root-level URI too (thankfully!). Create a dedicated route to send our quotes JSON back on:
 
 ```js
-app.get('/quotes', (request, response) => {
+app.get('/quotes', function(request, response) {
   response.send(quotes);
 });
 ```
@@ -359,13 +355,13 @@ Express middleware can perform the following tasks:
 We can apply middleware in Express as follows:
 
 ```js
-app.use((request, response, next) => {
+app.use(function(request, response, next) {
   // Do something here...
   // then move to next middleware...
   next();
 });
 
-app.use((request, response, next) => {
+app.use(function(request, response, next) {
   // ...
   response.send();
 });
@@ -401,7 +397,7 @@ Try replacing your call to `app.get('/', ...)` with this in your Express app. Be
 
 Before we go further with middleware, let's pause and build out the client side of our app. In your `index.html` file, add a button (which you will use to asynchronously retrieve quotes).
 
-Also create `main.js` file in your `public` directory and include it in your `index.html` file. Inside of `main.js`, use `fetch` to grab your quotes in JSON format when the button is clicked.
+Also create `main.js` file in your `public` directory and include it in your `index.html` file. Inside of `main.js`, use `fetch` to grab your quotes on JSON when the button is clicked.
 
 Lastly, append all the quotes and their authors to the DOM after the `fetch` Promise resolves successfully.
 
@@ -457,12 +453,9 @@ function appendQuote(quote) {
   container.appendChild(blockquote);
 }
 
-getQuotesButton.addEventListener('click', () => {
-  fetch('/quotes').then(
-    (response) => response.json()
-  ).then((quotes) => {
-    quotes.map(appendQuote);
-  });
+getQuotesButton.addEventListener('click', function() {
+  // Fetch the quotes from http://localhost:3300/quotes here!
+  // Use the appendQuote function in the promise/then callback
 });
 ```
 
@@ -482,12 +475,12 @@ Finish writing this middleware knowing that we want to log in this format: `GET 
 
 ```js
 function diyLogger(request, response, next) {
-  const startDate = new Date();
-  const startTime = startDate.getTime();
+  const start = +new Date();
+  const stream = process.stdout;
   const { url, method } = request;
   const { statusCode } = response;
 
-  response.on('finish', () => {
+  response.on('finish', function() {
     // ...what goes here?
   });
 
@@ -500,28 +493,6 @@ Call `app.use()` with your logger in the appropriate place too.
 ???
 
 - The response object has event listeners: `response.on()`
-
-Solution:
-
-```js
-function diyLogger(request, response, next) {
-  const startDate = new Date();
-  const startTime = startDate.getTime();
-  const { url, method } = request;
-  const { statusCode } = response;
-
-  response.on('finish', () => {
-    const finishDate = new Date();
-    const finishTime = finishDate.getTime();
-    const timeDelta = finishTime - startTime;
-
-    console.log(`${method} ${url} ${statusCode} ${timeDelta}ms`);
-  });
-  next();
-}
-
-app.use(diyLogger);
-```
 
 ---
 
@@ -549,7 +520,7 @@ const port = app.get('PORT');
 
 Discussion:
 
-What are the other values we'll need to configure for boomtown?
+What are the other vaues we'll need to cconfigure for boomtown.
 Lead the discussion towards: 'How do you think we're going to store / connect to postgres from node?'
 ie. We'll need to use the app singleton to retrieve / store values from process.env
 
@@ -566,7 +537,7 @@ template: inverse
 Like with React Router, we can add route parameters:
 
 ```js
-app.get('/quotes/:name', (request, response) => {
+app.get('/quotes/:name', function(request, response) {
   response.send(request.params.name);
 });
 ```
@@ -584,8 +555,9 @@ What do you see in your browser now when you navigate to `/quotes/someone`?
 Finish writing the route handler for `/quotes/:name`:
 
 ```js
-app.get('/quotes/:name', (request, response) => {
+app.get('/quotes/:name', function(request, response) {
   const { name } = request.params;
+  const slug = name.replace(/\s+/g, '-').toLowerCase();
 
   // What array method can you use on the quotes array to return
   // the first object in the array with a matching name?
@@ -594,23 +566,6 @@ app.get('/quotes/:name', (request, response) => {
     response.status(404).json('That person isn\'t quote-worthy.');
   } else {
     response.send(/* the quote object */);
-  }
-});
-```
-
-???
-
-Solution:
-
-```js
-app.get('/quotes/:name', (request, response) => {
-  const { name } = request.params;
-  const matchedQuote = quotes.find((quote) => name === quote.name);
-
-  if (!matchedQuote) {
-    response.status(404).json('That person isn\'t quote-worthy.');
-  } else {
-    response.json(matchedQuote.text);
   }
 });
 ```
@@ -657,7 +612,7 @@ Now add this to your Express app:
 ```js
 const bodyParser = require('body-parser');
 
-app.post('/quotes', bodyParser.json(), (request, response) => {
+app.post('/quotes', bodyParser.json(), function(request, response) {
   const newQuote = request.body;
   // Add your new quote to the quotes array
   // Then send back a 201 status
@@ -679,16 +634,16 @@ Improve UX by clearing out the form inputs after the response comes back too!
 
 # Remove a Quote
 
-The last bit of functionality will be to delete an individual quote from the list. We'll submit our request from the client like this:
+The last bit of functionality will be to delete individual quote from the list. We'll submit our request from the client like this:
 
 ```js
 const container = document.getElementById('quotes');
 
-container.addEventListener('click', (event) => {
+container.addEventListener('click', function(event) {
   const clickedEl = event.target;
   if (clickedEl.tagName === 'BUTTON') {
     const name = clickedEl.getAttribute('name');
-    fetch(`/quotes/${name}`, {
+    fetch(`http://localhost:3300/quotes/${name}`, {
       method: 'DELETE',
     }).then(() => {
       const blockquote = clickedEl.parentNode;
@@ -698,12 +653,6 @@ container.addEventListener('click', (event) => {
 });
 ```
 
-???
-
-Explain to students that the URL for the `fetch()` command actually goes to `localhost:3300` – replace `/quotes/${name}` with `http://localhost:3300/quotes/${name}` to demonstrate this.
-
-However, it is best practice to not commit code that contains the FQDN, so revert it after demonstrating this.
-
 ---
 
 # DELETE Requests
@@ -711,7 +660,7 @@ However, it is best practice to not commit code that contains the FQDN, so rever
 Not surprisingly, you'll handle a `DELETE` request like this in Express:
 
 ```js
-app.delete('/quotes/:name', (request, response) => {
+app.delete(function(request, response) {
   // Remove the quote from the quotes array
   // Send back the 200 status with the response
 });
@@ -869,7 +818,7 @@ Surprise! We've been building up a REST API this whole time.
 A few events contributed to the rise of REST:
 
 - The ubiquity of smartphones (iPhone launched in 2007)
-- Social media platforms (the Twitter sort-of-REST-ish API was a way to combat rogue API implementations)
+- Social media platforms (the witter sort-of-REST-ish API was a way to combat rogue API implementations)
 - Cloud computing (Amazon S3 launched in 2006 and initially didn't have a GUI, just a RESTful API)
 
 ---
@@ -920,7 +869,7 @@ In small groups or pairs, you'll be assigned one of the following topics to rese
 
 - Data versus Resources versus Representations in REST
 - State in REST: The idea of "statelessness" and the difference between resource state and application state
-- The Richardson Maturity Model and where "hypermedia as the engine of application state" (HATEOAS) comes into play
+- The Richardson Maturity Model and where "hypermedia as an engine of application state" (HATEOAS) comes into play
 - Safety and idempotence of HTTP verbs used in REST APIs
 
 ???
@@ -935,7 +884,7 @@ In small groups or pairs, you'll be assigned one of the following topics to rese
 
 **State in REST:**
 
-- Statelessness: requests happen in isolation of each other and contain all the info they necessary to get what's needed from the server
+- Statelessness: request happen in isolation of each other and contain all the info they necessary to get what's needed from the server
 - The client doesn't need to coax the server into some state for the server to be receptive to a request
 - HTTP sessions on the server can break statelessness
 - Statelessness makes it easier to cache and scale a distributed app
