@@ -22,7 +22,8 @@ layout: false
 
 1.  What's React-Redux for?
 2.  Set-up Redux store, etc. in Boomtown
-3.  Begin refactoring state-related code into Redux modules
+3.  Refactor state-related code into Redux modules
+4.  Write all of the code for adding an item from the UI of Boomtown!
 
 ---
 
