@@ -116,22 +116,6 @@ Once complete, you should be able to sign up users from the GraphQL explorer.
 
 ---
 
-# Authenticating your Schema
-
-To authenticate our GraphQL schema, we'l use a GraphQL custom directive.
-Open `server/api/custom-directives.js` and follow along for the implementation.
-
-When were done writing the logic for our directive, we'll apply it to the schema
-as detailed in the `@TODO`
-
-???
-
-CODE ALONG
-
-[Solution Code](https://github.com/redacademy/boomtown/blob/master/server/api/custom-directives.js)
-
----
-
 ## Lab Activity
 
 In today's lab, we'll complete our auth resolvers. By the end of this lab you should:
