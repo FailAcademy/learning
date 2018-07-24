@@ -65,7 +65,7 @@ Also read the following chapters from "Professor Frisby's Mostly Adequate Guide 
 
 Create examples of pure functions in JavaScript for each of the following cases:
 
-1.  A function that uses a function as an input parameter
+1.  A function used as an input to another function
 2.  A function created as an output from another function
 3.  A function that calls itself
 

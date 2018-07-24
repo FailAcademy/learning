@@ -280,43 +280,11 @@ const addOne = (function() {
 
 Create examples of pure functions in JavaScript for each of the following cases:
 
-1.  A function that uses a function as an input parameter
+1.  A function used as an input to another function
 2.  A function created as an output from another function
 3.  A function that calls itself
 
 Be prepared to demo your functions for the class.
-
-???
-```
-// A function that uses a function as an input parameter
-function displayMessage(printFunction, message) {
-    printFunction(message);
-}
-displayMessage(console.log, 'Happy new year everyone!');
-
-// A function created as an output from another function
-function createHelloWorldFunction(printFunction) {
-    return () => {
-        printFunction('Hello world!');
-    };
-}
-const helloWorldFunction = createHelloWorldFunction(console.log);
-helloWorldFunction();
-
-// A function that calls itself
-// Fibonacci sequence: 1, 1, 2, 3, 5, 8, 13, 21, ...
-// Index:              1, 2, 3, 4, 5, 6,  7,  8, ...
-// Parameter: index - calculate the nth number (1-based, not zero-based)
-// So: fibonacci(1) => 1; fibonacci(6) => 8, etc
-function fibonacci(index) {
-    if (index < 3) {
-        return 1;
-    }
-    return fibonacci(index - 1) + fibonacci(index - 2);
-}
-console.log('Fibonacci index 6:', fibonacci(6));
-console.log('Fibonacci index 8:', fibonacci(8));
-```
 
 ---
 

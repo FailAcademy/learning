@@ -27,6 +27,7 @@ Read [You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-ne
 
 ## Keywords
 
+- [Flux](https://facebook.github.io/flux/docs/in-depth-overview.html#content)
 - [Redux](http://redux.js.org/index.html)
 - [Store](http://redux.js.org/docs/basics/Store.html)
 - [Dispatch](http://redux.js.org/docs/api/Store.html#dispatch)
@@ -37,13 +38,19 @@ Read [You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-ne
 
 ## Exercise 1
 
-Now create an action for decrementing the count, as well as its corresponding action creator.
+Now create action string constants for stocking up fruit and explaining the current fruit stock.
+
+Note that the action creator for stocking up fruit will need to be set-up with a parameter of `count` so we can pass some information along in the action's payload about how much to update the inventory in the grocery store state.
+
+You can set the value of `count` on a `payload` property in this action object.
 
 ---
 
 ## Exercise 2
 
-Now write the case for `DECREMENT_COUNT` in your reducer.
+Now that you've take care of the `GET_FRUIT_COUNT` action in the produce reducer, finish off building out the cases for the `UPDATE_FRUIT_STOCK` and `EXPLAIN_FRUIT_STOCK` action types.
+
+How will you ensure that the original and current lists of fruit stocks are added to the store even if the user doesn't fire off the `GET_FRUIT_COUNT` action first?
 
 ---
 
@@ -51,11 +58,12 @@ Now write the case for `DECREMENT_COUNT` in your reducer.
 
 Now that you have your actions, reducers, and store created, you can actually dispatch actions to your store and get state from your store.
 
-Head over to `src/main.js` in the root of your app, import the `store`, import the action creator functions, then try dispatching the actions and get something from the store:
+Head over to `index.js` in the root of your app, import the store, import the action creator functions, then try dispatching the three actions and get something from the store:
 
 ```js
-store.dispatch(incrementCount());
-store.dispatch(decrementCount());
+store.dispatch(getFruitCount());
+store.dispatch(updateFruitStock(10));
+store.dispatch(explainFruitStock());
 // try console-logging something from the store with store.getState()
 ```
 
@@ -63,48 +71,11 @@ store.dispatch(decrementCount());
 
 ## Exercise 4
 
-Let's add information from the store to the UI. Add the following code to `src/main.js` and fill in the blanks:
+Console logs are fine, but there's a better way! Integrate your store with the [Redux Dev Tools extension now](https://github.com/zalmoxisus/redux-devtools-extension).
 
-```js
-const incrementButton = document.getElementById("increment");
-const decrementButton = document.getElementById("decrement");
-const count = document.getElementById("count");
+To do that you'll need to import `devToolsEnhancer` from `redux-devtools-extension` into `store.js` and then pass `devToolsEnhancer()` as a second argument to `createStore`.
 
-// How will we initially populate this span with content?
-count.textContent = null;
-
-incrementButton.addEventListener("click", () => {
-  // Dispatch an action
-  // Update the count span text
-});
-
-decrementButton.addEventListener("click", () => {
-  // Dispatch an action
-  // Update the count span text
-});
-```
-
----
-
-## Exercise 5
-
-Time to finish the counter app! You will need to:
-
-1.  Add your name reducer to `src/redux/modules/name.js`
-2.  Combine that reducer in `src/redux/reducers.js`
-3.  Update the UI by adding/completing this in `src/main.js`:
-
-```js
-// Import the appropriate action creator
-
-const nameInput = document.getElementById("name");
-const countedName = document.getElementById("counted-name");
-
-nameInput.addEventListener("input", event => {
-  // Dispatch an action (with the input value as an argument)
-  // Update the name span text
-});
-```
+You'll know it's working when you can see the contents of your store in your browser's Redux dev tools.
 
 ---
 
@@ -112,7 +83,9 @@ nameInput.addEventListener("input", event => {
 
 If you're still a bit fuzzy on Redux when the lab starts, take some time to watch Dan Abramov's [Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux) video series.
 
-Once you comfortable with Redux's foundational concepts, keep working on Boomtown. We'll be adding Redux to it shortly.
+Following that, try adding a second module to the grocery store app. Add a module for the bakery or deli department, along with some corresponding actions for reconciling, adjusting, and explaining the stock for that department. Be creative!
+
+After you complete the lab activity, keep working on Boomtown. We'll be adding Redux to it shortly.
 
 ---
 

@@ -32,4 +32,4 @@ when a user is not signed in. This will be the final day of in-class work on boo
 
 ## Additional Resources
 
-- [Apollo Authentication Docs](https://www.apollographql.com/docs/react/recipes/authentication.html)
+- [Apollo Client Authentication Docs](https://www.apollographql.com/docs/react/recipes/authentication.html)

@@ -58,7 +58,7 @@ Before we begin creating an Express web server, in pairs draw a diagram of a cli
 
 Before we go further with middleware, let's pause an build out the client side of our app. In your `index.html` file, add a button (which you will use to asynchronously retrieve quotes).
 
-Also create `main.js` file in your `public` directory and include it in your `index.html` file. Inside of `main.js`, use `fetch` to grab your quotes on JSON when the button is clicked.
+Also create `main.js` file in your `public` directory and include it in your `index.html` file. Inside of `main.js`, use `fetch` to grab your quotes in JSON format when the button is clicked.
 
 Lastly, append all the quotes and their authors to the DOM after the `fetch` Promise resolves successfully.
 
@@ -116,7 +116,6 @@ Finish writing the route handler for `/quotes/:name`:
 ```js
 app.get('/quotes/:name', function(request, response) {
   const { name } = request.params;
-  const slug = name.replace(/\s+/g, '-').toLowerCase();
 
   // What array method can you use on the quotes array to return
   // the first object in the array with a matching name?
@@ -177,7 +176,7 @@ In small groups or pairs, you'll be assigned one of the following topics to rese
 
 - Data versus Resources versus Representations in REST
 - State in REST: The idea of "statelessness" and the difference between resource state and application state
-- The Richardson Maturity Model and where "hypermedia as an engine of application state" (HATEOAS) comes into play
+- The Richardson Maturity Model and where "hypermedia as the engine of application state" (HATEOAS) comes into play
 - Safety and idempotence of HTTP verbs used in REST APIs
 
 ---
