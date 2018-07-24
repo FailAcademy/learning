@@ -361,6 +361,7 @@ Once complete, you should be able to sign up users from the GraphQL explorer!
 3.  How to use cookies with Express
 4.  Rules for storing passwords in your database
 5.  How to generate stateless sessions using JWT
+6.  How to authenticate GraphQL endpoints with JWT and Express
 
 ---
 
