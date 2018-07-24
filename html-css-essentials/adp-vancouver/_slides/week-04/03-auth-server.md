@@ -248,8 +248,10 @@ To do this we'll need to pass the request object from express to our resolvers u
 ```js
 const apolloServer = new ApolloServer({
   context: ({ req }) => {
+    // .. etc
     return {
-      req,
+      req, //<- Add this!
+      // ... etc
       pgResource,
     };
   },
@@ -322,6 +324,22 @@ Why is this information important for security? <br/>
 1.  **Tokens are stateless**. No need for backend records. Each token contains all the data necessary to validate users.
 2.  Cookies can be accessed by other domains. These can be used by other sites to identify who you are.
 3.  JWT's can store any valid JSON, For example, storing the users role "admin", etc.
+
+---
+
+## Authenticating your Schema
+
+To authenticate our GraphQL schema, we'l use a GraphQL custom directive.
+Open `server/api/custom-directives.js` and follow along for the implementation.
+
+When were done writing the logic for our directive, we'll apply it to the schema
+as detailed in the `@TODO`
+
+???
+
+CODE ALONG
+
+[Solution Code](https://github.com/redacademy/boomtown/blob/master/server/api/custom-directives.js)
 
 ---
 
