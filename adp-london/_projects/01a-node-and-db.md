@@ -30,8 +30,8 @@ Your project must:
 Your project must:
 
 - [ ] Be configured for development and production using `app.set` / `app.get`
-- [ ] Connect to PostgreSQL using the `node-postgres` library
-- [ ] Execute all of the required SQL queries using the `node-postgres` library
+- [ ] Connect to PostgreSQL using the `pg` library
+- [ ] Execute all of the required SQL queries using the `pg` library
 - [ ] Use Apollo Server to initialize a GraphQL server
 - [ ] Define the necessary GraphQL schema
 - [ ] Use GraphQL Explorer to save all the necessary queries and mutations required for the project
