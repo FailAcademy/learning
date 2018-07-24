@@ -43,52 +43,25 @@ lesson_date: 2018-07-24
 
 ## Exercise 2
 
-Before we install `react-redux`, install Redux and Redux dev tools in Boomtown just like we did in the earlier exercises this week.
-
-Create a `redux` directory, and rough out the file and sub-directory structure. Set up your `store.js` just as we did for the grocery store exercise.
-
-What kind of modules (i.e. action and reducer combos) do you think we'll need for this Boomtown?
+<!-- @TODO -->
 
 ---
 
 ## Exercise 3
 
-Let's build the `shareItemPreview` module together so we can grab this state from the Redux store in our `ShareItemPreview` component instead once we add `react-redux`.
+<!-- @TODO -->
 
 ---
 
 ## Exercise 4
 
-Wire up the `FormSpy` component. It should send the values from the form to the store, but some of the values may be missing.
-Are you able to send the right tags to the store? What about the image preview, how does that work?
-
-In this exercise, we'll use a class method to do the following:
-
-- If the user has selected a a file using the file input, generate a `base64` url of that file.
-  (Hint: you'll need to investigate the `btoa` JavaScript global function).
-- Dispatch all of the fields you'll need for the addItem mutation to the redux store, including the `base64` url.
-- include actions for reseting the form image preview, and reseting the form to it's `initialState`
+<!-- @TODO -->
 
 ---
 
 ## Lab Activity
 
-### Finishing up with the addItem Mutation
-
-Now that you've wired up your store and have the necessary information to add an item to your database
-stored there, complete the `addItem` mutation (Server-Side).
-
-By the end of the lab you should be able to create items from your UI!
-Also, the `ShareItemPreview` should update as the user adds information to the form.
-
-Be sure to include:
-
-- Form validation messages
-- Upload input should only accept images, under 10mb
-- Data validation (Server & Client side)
-- Reset the Redux Store and the form when the Mutation is successful
-- Redirect to the Items page on complete
-- Refetch the `ALL_USER_ITEMS` query with the updated item (Client-Side)
+<!-- @TODO -->
 
 ---
 
