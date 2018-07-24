@@ -42,6 +42,7 @@ Your project must:
 - [ ] Use Gravatar to display user avatars
 - [ ] Use routing to update the URL when the view changes
 - [ ] Refetch relevant GraphQL queries upon successful data mutation to keep the UI in sync
+- [ ] Use the container pattern using `react-adopt`
 
 ### Development
 
