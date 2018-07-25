@@ -94,7 +94,7 @@ import {
   Switch,
   Link,
   Redirect
-} from "react-router-dom";
+} from 'react-router-dom';
 ```
 
 ---
@@ -170,7 +170,7 @@ Look ma, no path! But now there's a bug we need to fix...
 `Switch` allows us to render a route **exclusively**, i.e. it allows us to pick only one `Route` to render at a given path:
 
 ```js
-<Router history={history}>
+<Router>
   <div>
     <Switch>
       <Route exact path="/" component={Home} />
@@ -251,13 +251,13 @@ The `NavLink` component is like a `Link`, but with special feature that makes it
 
 Ultimately, it allows us to add style-related attributes to the rendered element when it matches the current URL.
 
-Let's' use the `NavLink` instead. First, import the component from `react-router-dom`:
+Let's use the `NavLink` instead. First, import the component from `react-router-dom`:
 
 ```js
 import {
   // ...other imports
   NavLink
-} from "react-router-dom";
+} from 'react-router-dom';
 ```
 
 ---
@@ -337,7 +337,7 @@ Note the use of `match` to dynamically grab the path of the `Posts` component ro
 
 # Redirects
 
-Redirects, as they suggest take the user to a different route. They can be rendered for or nested in a route:
+Redirects, as they suggest take the user to a different route. They can be rendered for, or nested in, a route:
 
 ```js
 <Route render={() => (
@@ -477,10 +477,10 @@ Open your dev tools console, and run this code, line by line:
 window.history;
 
 // Run this, then try navigating back and forth
-history.replaceState(null, null, "hello");
+history.replaceState(null, null, 'hello');
 
 // Run this, now try navigating back and forth again
-history.pushState(null, null, "hello");
+history.pushState(null, null, 'hello');
 ```
 
 What do you notice? Be sure to watch the browser's address bar will you do this...
@@ -527,7 +527,7 @@ It's also helpful it you're building a quick and dirty React app and don't want 
 
 # withRouter
 
-Sometimes you need to access to the `history` object’s properties (or the `match` or `location` props) outside of named route in your app.
+Sometimes you need to access to the `history` object’s properties (or the `match` or `location` props) outside of the named route in your app.
 
 To do this, you can wrap the component that needs access to these props in the `withRouter` **higher-order component (HOC)** from React Router.
 
@@ -538,11 +538,11 @@ To do this, you can wrap the component that needs access to these props in the `
 Example of `withRouter` in use:
 
 ```js
-import React, { PropTypes } from "react";
-import { withRouter } from "react-router-dom";
+import React, { PropTypes } from 'react';
+import { withRouter } from 'react-router-dom';
 
 const Header = ({ history }) => (
-  <button onClick={() => history.push("/")}>Go Home</button>
+  <button onClick={() => history.push('/')}>Go Home</button>
 );
 
 Header.propTypes = {
