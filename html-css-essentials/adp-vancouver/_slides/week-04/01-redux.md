@@ -298,9 +298,9 @@ export const getFruitCount = () => ({
 
 # Exercise 1
 
-Now create action string constants for stocking up fruit and explaining the current fruit stock.
+Now create an action for decrementing the count, as well as its corresponding action creator.
 
-Note that the action creator for stocking up fruit will need to be set-up with a parameter of `count` so we can pass some information along in the action's payload about how much to update the inventory in our grocery store state.
+Note that the action creator for stocking up fruit will need to be set-up with a parameter of `count` so we can pass some information along in the action's payload about how much to update the inventory in the grocery store state.
 
 You can set the value of `count` on a `payload` property in this action object.
 
