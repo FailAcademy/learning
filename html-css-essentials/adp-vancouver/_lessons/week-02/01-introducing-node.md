@@ -46,7 +46,7 @@ Implement the following `conn` event handlers in your `handleConnection` callbac
 - `close`
 - `error`
 
-Each handler should `console.log` the `remoteAddress` as well as any relevant parameters (e.g. incoming data, or error messages). Review **[the documentation](https://nodejs.org/api/net.html)** here before you begin.
+Each handler should `console.log` the `remoteAddressAndPort` as well as any relevant parameters (e.g. incoming data, or error messages). Review **[the documentation](https://nodejs.org/api/net.html)** here before you begin.
 
 ---
 
@@ -60,7 +60,7 @@ Use [Netcat](https://en.wikipedia.org/wiki/Netcat) to send data to your new TCP 
 
 ## Exercise 3
 
-Use your TCP server to read from your local file system. When your server receives a request, use Node's build in `fs` module to read text from a `.txt` file and send the contents back to the connection.
+Use your TCP server to read from your local file system. When your server receives a request, use Node's built-in `fs` module to read text from a `.txt` file and send the contents back to the connection.
 
 - Is reading from the filesystem an **async** or **sync** action?
 - In what circumstance is it useful to use blocking operations?
@@ -83,7 +83,8 @@ Next we'll create a minimal chat server.
 Change your TCP service to deliver any incoming data to all connected clients.
 
 - Your server will need to store all connections
-- Messages you send to the server should not return to you
+- Messages a client sends to the server should not return to that client
+- But all other clients should receive that message
 
 ---
 

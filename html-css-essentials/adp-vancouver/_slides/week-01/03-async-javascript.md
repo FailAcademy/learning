@@ -437,11 +437,11 @@ This can make multiple failure flows difficult to code.
 
 # Exercise 3
 
-Look up the docs on the **[Promise API](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise)** on MDN. How can we wrap the above in a function that returns a promise?
+Look up the docs on the **[Promise API](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise)** on MDN. How can we wrap the below in a function that returns a promise?
 
 ```js
 request(url, (error, response, body) => {
-  console.log("body", body);
+  console.log('body:', body);
 });
 ```
 
@@ -464,7 +464,7 @@ function getPromise = (url) => {
 
 # Exercise 4
 
-In pairs, refactor the callbacks exercise using Promises.
+In pairs, refactor the callbacks exercise 2 using Promises.
 
 **Setup:**
 
