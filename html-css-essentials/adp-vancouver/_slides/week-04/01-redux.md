@@ -48,7 +48,7 @@ class: center, middle
 
 ### Recall...
 
-How did state management and data flow work in the todo app last week? Did this feel like the best solution?
+How did state management and data flow work in the to-do app last week? Did this feel like the best solution?
 
 ???
 
@@ -72,7 +72,7 @@ How can we fix these issues?
 
 - All app state was stored in a single immutable object?
 - That state was was available anywhere within our app?
-- Actions were decoupled from component hierarchy?
+- Actions that respond to events were decoupled from component hierarchy?
 
 ---
 
@@ -154,9 +154,11 @@ Before we start, **[install Redux DevTools](https://chrome.google.com/webstore/d
 
 # Premise & Set-up
 
-Before we learn how to integrate Redux with React, we're going learn the basics of Redux by improving fruit inventory state management in our grocery store from yesterday.
+Before we learn how to integrate Redux with React, we're going learn the basics of Redux by creating a simple counter.
 
-We'll be rebuilding our grocery store from scratch with Redux, so **begin by creating a new directory** for this lesson with an `src/index.js` file in it, create an empty `dist` directory, and then `npm init` in the root directory.
+There will be a button to increment the count, a button to decrement the count, and a string of text displaying the current count.
+
+**Begin by creating a new directory** for this lesson with empty `dist/index.html` and `src/main.js` files, and then `npm init` in the root directory.
 
 ---
 
@@ -165,7 +167,7 @@ We'll be rebuilding our grocery store from scratch with Redux, so **begin by cre
 Install Webpack and its dependencies in your project:
 
 ```bash
-npm install --save-dev babel-loader babel-core babel-preset-stage-0 webpack webpack-dev-server html-webpack-plugin
+npm install --save-dev webpack webpack-dev-server webpack-cli
 ```
 
 Add scripts to your `package.json`:
@@ -173,51 +175,31 @@ Add scripts to your `package.json`:
 ```js
 // ...
 "scripts": {
-  "start": "webpack && webpack-dev-server",
-  "build": "webpack -p",
-},
+    "dev": "webpack-dev-server --mode development ./src/main.js --output ./dist/bundle.js --content-base dist/ --hot"
+  },
 // ...
 ```
 
-Also include a `webpack.config.js` file to your project root director too and add the provided snippet.
+---
 
-???
+# Add HTML
 
-Give the students this snippet for their Webpack config:
+Add this HTML to your `dist/index.html` file:
 
-```js
-const webpack = require('webpack');
-const resolve = require('path').resolve;
-const src = resolve(__dirname, 'src');
-const dist = resolve(__dirname, 'dist');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-module.exports = {
-  entry: {
-    app: './src/index.js',
-  },
-
-  output: {
-    path: dist,
-    filename: 'bundle.js',
-  },
-
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        include: [src],
-        exclude: /node_modules/,
-        query: {
-          presets: ['stage-0'],
-        },
-      },
-    ],
-  },
-
-  plugins: [new HtmlWebpackPlugin()],
-};
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redux Exercise</title>
+</head>
+<body>
+  <button id="increment">Increment</button>
+  <button id="decrement">Decrement</button>
+  <p>The count is now: <span id="count"></span></p>
+  <script src="bundle.js"></script>
+</body>
+</html>
 ```
 
 ---
@@ -231,10 +213,10 @@ npm install --save redux
 npm install --save-dev redux-devtools-extension
 ```
 
-Now start your Webpack dev server:
+Now start a local server in your exercise directory:
 
 ```
-npm start
+npm run dev
 ```
 
 ---
@@ -242,14 +224,13 @@ npm start
 class: center, middle
 
 .large[
-What kind of actions do you think our store will need?
+What kind of actions do you think our counter will need?
 ]
 
 ???
 
-- one to count fruit
-- one to stock up
-- one to explain
+- one to increase the count by 1
+- one to decrease the count by 1
 
 ---
 
@@ -257,11 +238,11 @@ What kind of actions do you think our store will need?
 
 We will co-locate our related Redux actions, action creators, and reducers in appropriately named files.
 
-Create a new directory in `src` called `redux`, and another directory called `modules` within it, and a `fruit.js` module file within that:
+Create a new directory called `redux`, and another directory called `modules` within it, and a `counter.js` module file within that:
 
 ```bash
 mkdir -p src/redux/modules
-touch src/redux/modules/fruit.js
+touch src/redux/modules/counter.js
 ```
 
 ???
@@ -276,21 +257,21 @@ Remember that actions plain JS objects that contain payloads of information that
 
 As a best practice, we define string constants to use as the values for our action object `type` property.
 
-So in `fruit.js` add:
+So in `counter.js` add:
 
 ```js
-const GET_FRUIT_COUNT = 'GET_FRUIT_COUNT';
+const INCREMENT_COUNT = "INCREMENT_COUNT";
 ```
 
 ---
 
 # The Action Creator
 
-Now we need an **action creator** to actually create the corresponding action object in `fruit.js`:
+Now we need an **action creator** to actually create the corresponding action object in `counter.js`:
 
 ```js
-export const getFruitCount = () => ({
-  type: GET_FRUIT_COUNT,
+export const incrementCount = () => ({
+  type: INCREMENT_COUNT
 });
 ```
 
@@ -300,25 +281,11 @@ export const getFruitCount = () => ({
 
 Now create an action for decrementing the count, as well as its corresponding action creator.
 
-Note that the action creator for stocking up fruit will need to be set-up with a parameter of `count` so we can pass some information along in the action's payload about how much to update the inventory in the grocery store state.
-
-You can set the value of `count` on a `payload` property in this action object.
-
----
-
-# A Bit More Set-up...
-
-Before we create our reducer, we'll need to add our initial fruit inventory data to our app, and abstract our prototype methods into helper functions.
-
-Create `inventory.js` and add your fruit data as a named export, then add `helpers.js` and add `countFruit`, `stockUp`, and `explain` functions to this file as named exports (based on the work you did yesterday).
-
-What modifications will you need to make to these functions to make them into more generic helpers?
-
 ---
 
 # What's in a Reducer?
 
-Actions describe the fact that something happened, but don't specify how the application's state changes in response&mdash;that's where reducers come in. The basic function signature of a reducer is:
+Actions describe the fact that something happened, but don't specify how the application's state changes in response&mdash;**that's where reducers come in**. The basic function signature of a reducer is:
 
 ```js
 export default (state = {}, action) => {
@@ -326,7 +293,7 @@ export default (state = {}, action) => {
     case SOME_ACTION_CONSTANT: {
       return {
         ...state, // not mutating state!
-        someData: action.payload,
+        someData: "new value"
       };
     }
     default:
@@ -366,27 +333,23 @@ Given the same arguments, it should calculate the next state and return it. No s
 # The Reducer
 
 ```js
-import { fruit } from '../../inventory';
-import { countFruit, stockUp, explain } from '../../helpers';
-
 // action, action creators here...
 
-export default (state = {
-  inventory: fruit,
-  originalList: {},
-  currentList: {},
-  counted: false
-}, action) => {
+export default (
+  state = {
+    count: 0
+  },
+  action
+) => {
   switch (action.type) {
-    case GET_FRUIT_COUNT: {
-      const originalList = ???; // how to define this?
-      const currentList = ???; // and this?
-      return { ...state, originalList, currentList, counted: true };
+    case INCREMENT_COUNT: {
+      // When this action fires off, how do we take what's currently
+      // in state and combine it with the count+1 in a new object?
     }
-    // check for other types here...
+    // check for other types here as needed...
     default:
       return state;
-    }
+  }
 };
 ```
 
@@ -398,9 +361,7 @@ export default (state = {
 
 # Exercise 2
 
-Now that you've take care of the `GET_FRUIT_COUNT` action in the produce reducer, finish off building out the cases for the `UPDATE_FRUIT_STOCK` and `EXPLAIN_FRUIT_STOCK` action types.
-
-How will you ensure that the original and current lists of fruit stocks are added to the store even if the user doesn't fire off the `GET_FRUIT_COUNT` action first?
+Now write the case for `DECREMENT_COUNT` in your reducer.
 
 ---
 
@@ -411,11 +372,11 @@ Before we create our store, we'll use the `combineReducers` function to combine 
 Add this to `src/redux/reducers.js`:
 
 ```js
-import { combineReducers } from 'redux';
-import produceReducer from './modules/produce';
+import { combineReducers } from "redux";
+import counterReducer from "./modules/counter";
 
 export default combineReducers({
-  produce: produceReducer,
+  counter: counterReducer
 });
 ```
 
@@ -423,11 +384,11 @@ export default combineReducers({
 
 # Creating the Store
 
-Create a `src/redux/store.js` file now, the import redux into the file:
+Create a `src/redux/store.js` file now, the import redux into the file with the combined reducer:
 
 ```js
-import { createStore } from 'redux';
-import rootReducer from './reducers';
+import { createStore } from "redux";
+import rootReducer from "./reducers";
 
 export default createStore(rootReducer);
 ```
@@ -445,12 +406,11 @@ export default createStore(rootReducer);
 
 Now that you have your actions, reducers, and store created, you can actually dispatch actions to your store and get state from your store.
 
-Head over to `index.js` in the root of your app, import the store, import the action creator functions, then try dispatching the three actions and get something from the store:
+Head over to `src/main.js` in the root of your app, import the `store`, import the action creator functions, then try dispatching the actions and get something from the store:
 
 ```js
-store.dispatch(getFruitCount());
-store.dispatch(updateFruitStock(10));
-store.dispatch(explainFruitStock());
+store.dispatch(incrementCount());
+store.dispatch(decrementCount());
 // try console-logging something from the store with store.getState()
 ```
 
@@ -490,13 +450,130 @@ Check out your console once your app refreshes.
 
 ---
 
+# Redux Dev Tools
+
+Console-logging is fine, but dev tools are better!
+
+As per the **[Redux Dev Tools usage instructions](https://github.com/zalmoxisus/redux-devtools-extension#11-basic-store)**, add the dev tools to your counter app by adding an additional argument to `createStore`:
+
+```js
+export default createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+```
+
+_What do you see in the Redux tab of your dev tools now?_
+
+---
+
 # Exercise 4
 
-Console logs are fine, but there's a better way! Integrate your store with the [Redux Dev Tools extension now](https://github.com/zalmoxisus/redux-devtools-extension).
+Let's add information from the store to the UI. Add the following code to `src/main.js` and fill in the blanks:
 
-To do that you'll need to import `devToolsEnhancer` from `redux-devtools-extension` into `store.js` and then pass `devToolsEnhancer()` as a second argument to `createStore`.
+```js
+const incrementButton = document.getElementById("increment");
+const decrementButton = document.getElementById("decrement");
+const count = document.getElementById("count");
 
-You'll know it's working when you can see the contents of your store in your browser's Redux dev tools.
+// How will we initially populate this span with content?
+count.textContent = null;
+
+incrementButton.addEventListener("click", () => {
+  // Dispatch an action
+  // Update the count span text
+});
+
+decrementButton.addEventListener("click", () => {
+  // Dispatch an action
+  // Update the count span text
+});
+```
+
+---
+
+template: inverse
+
+# Bonus Round:<br />Working with Inputs
+
+---
+
+# Set-up
+
+Let's see how we can capture the state of an input's value in our Redux store, and use that value to update another part of the app's UI.
+
+Add the following HTML to `dist/index.html`:
+
+```html
+<label for="name">What are you counting</label>
+<input type="text" id="name" placeholder="Enter the name..." />
+<p>I am counting: <span id="counted-name"></span></p>
+```
+
+---
+
+# New Module
+
+Create a new module in `src/redux/modules` called `name.js` and add an `UPDATE_COUNT_NAME` action to it.
+
+Create the corresponding action creator too.
+
+**Challenge:** We will need to send the value of the input into this action creator so it can be used to update the app state in the reducer. How can we do this?
+
+---
+
+# Actions with Parameters
+
+Action creators are just functions that return objects, so we can set them up with parameters and use the values of the arguments passed in as a "payload" to send with the action type to the reducer:
+
+```js
+export const someActionCreator = value => ({
+  type: SOME_ACTION_CONSTANT,
+  payload: value
+});
+```
+
+_Knowing this, what will your `updateCounterName` action creator look like now?_
+
+---
+
+# Payloads in Reducers
+
+It's easy to grab the payload from the action object to update your store in the reducer:
+
+```js
+export default (state = {}, action) => {
+  switch (action.type) {
+    case SOME_ACTION_CONSTANT: {
+      return { ...state, someData: action.payload };
+    }
+    default:
+      return state;
+  }
+};
+```
+
+---
+
+# Exercise 5
+
+Time to finish the counter app! You will need to:
+
+1.  Add your name reducer to `src/redux/modules/name.js`
+2.  Combine that reducer in `src/redux/reducers.js`
+3.  Update the UI by adding/completing this in `src/main.js`:
+
+```js
+// Import the appropriate action creator
+
+const nameInput = document.getElementById("name");
+const countedName = document.getElementById("counted-name");
+
+nameInput.addEventListener("input", event => {
+  // Dispatch an action (with the input value as an argument)
+  // Update the name span text
+});
+```
 
 ---
 
