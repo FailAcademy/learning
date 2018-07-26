@@ -142,8 +142,8 @@ In order to show when the **server** has received a connection from a **client**
 
 ```js
 function handleConnection(conn) {
-  const remoteAddress = `${conn.remoteAddress}:${conn.remotePort}`;
-  console.log(`new client connection from ${remoteAddress}`);
+  const remoteAddressAndPort = `${conn.remoteAddress}:${conn.remotePort}`;
+  console.log(`new client connection from ${remoteAddressAndPort}`);
 }
 ```
 
@@ -305,7 +305,8 @@ Next we'll create a minimal chat server.
 Change your TCP service to deliver any incoming data to all connected clients.
 
 - Your server will need to store all connections
-- Messages you send to the server should not return to you
+- Messages a client sends to the server should not return to that client
+- But all other clients should receive that message
 
 ---
 
