@@ -373,7 +373,7 @@ Promises use `then` and `catch` to handle success resolution or a rejection, res
 ```js
 var rp = require('request-promise');
 rp(url)
-  .then(response => console.log(response));
+  .then(response => console.log(response))
   .catch(console.log);
 ```
 
@@ -409,24 +409,6 @@ rp(url)
 * Unhandled promises throw an error
 * What about timeouts? Is this fixed? How might you fix it?
 * You can easily add timeouts into promise calls.
-
----
-
-# Handling Errors in Promises
-
-**GOTCHA:** Any `then` _after_ a `catch` will be called!
-
-```js
-var rp = require('request-promise');
-rp(url)
-  .then(response => console.log(response))
-  .then(response => console.log(response))
-  .catch(error => console.log('STOP!'))
-  .then(response => console.log(response)) // This will get called!
-  .catch(console.log);
-```
-
-???
 
 This can make multiple failure flows difficult to code.
 
