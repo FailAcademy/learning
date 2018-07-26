@@ -357,7 +357,7 @@ template: inverse
 Promises
 
 * The next generation in async code after callbacks
-* Allow us to write code that we can reason abount, and maintain control over
+* Allow us to write code that we can reason about, and maintain control over
 
 Pre-test:
 
@@ -398,9 +398,9 @@ If any of the `then` functions fail, then the `catch` function will be called:
 ```js
 var rp = require('request-promise');
 rp(url)
-  .then(response => console.log(response));
-  .then(response => console.log(response));
-  .then(response => console.log(response));
+  .then(response => console.log(response))
+  .then(response => console.log(response))
+  .then(response => console.log(response))
   .catch(console.log);
 ```
 
@@ -419,10 +419,10 @@ rp(url)
 ```js
 var rp = require('request-promise');
 rp(url)
-  .then(response => console.log(response));
-  .then(response => console.log(response));
-  .catch(error => console.log('STOP!'));
-  .then(response => console.log(response)); // This will get called!
+  .then(response => console.log(response))
+  .then(response => console.log(response))
+  .catch(error => console.log('STOP!'))
+  .then(response => console.log(response)) // This will get called!
   .catch(console.log);
 ```
 
