@@ -16,24 +16,27 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
 
-1. Intro to MongoDB
-2. Using Collections in Meteor
-3. Adding user accounts to a Meteor app
+1.  Intro to MongoDB
+2.  Using Collections in Meteor
+3.  Adding user accounts to a Meteor app
 
 ---
+
 template: inverse
 
 # Intro to MongoDB
 
 ---
+
 class: center, middle
 
 .large[
-  What do we know about MongoDB already?
+What do we know about MongoDB already?
 ]
 
 ---
@@ -47,10 +50,11 @@ class: center, middle
 - Makes it way easier to shard data across servers (scale out instead of up!)
 
 ---
+
 class: center, middle
 
 .large[
-  ...versus SQL
+...versus SQL
 ]
 
 ---
@@ -123,7 +127,7 @@ Recall that these value types are supported by JSON (and MongoDB!):
 
 # BSON?
 
-Any valid JSON can be easily imported and queried in MongoDB. It also **[supports additional data types too](https://docs.mongodb.com/manual/reference/operator/query/type/#available-types)**, like a date field. 
+Any valid JSON can be easily imported and queried in MongoDB. It also **[supports additional data types too](https://docs.mongodb.com/manual/reference/operator/query/type/#available-types)**, like a date field.
 
 But ultimately, MongoDB stores data as **BSON** (binary JSON).
 
@@ -228,7 +232,7 @@ In MongoDB, the first argument passed to `.find()` is known as the **query docum
 
 # Sidebar: Cursors
 
-Note that what `.find()` returns isn't actually an array of documents, it's a **cursor**. The cursor is **what we use to extract results** from the database (because loading all results into memory right away wouldn't be efficient). 
+Note that what `.find()` returns isn't actually an array of documents, it's a **cursor**. The cursor is **what we use to extract results** from the database (because loading all results into memory right away wouldn't be efficient).
 
 We **[call methods on our cursor](https://docs.mongodb.com/manual/reference/method/js-cursor/)** to actually extract results and do things with those results. Try one out:
 
@@ -258,7 +262,7 @@ db.students.find({ cohort: { $in: [5, 6] } });
 
 Note that `db.students.find({ cohort: { $eq: 6 } });` is the same as `db.students.find({ cohort: 6 });`.
 
-Also note the `$in` operator selects the documents where the value of a field equals any value in the specified array. 
+Also note the `$in` operator selects the documents where the value of a field equals any value in the specified array.
 
 ---
 
@@ -401,6 +405,7 @@ Let's practice importing and querying data in MongoDB. Outside of the Mongo shel
 - Return the names and masses of humans, ordered in descending order by known mass. Skip the first two results and limit your results to only four people.
 
 ---
+
 template: inverse
 
 # Using Mongo Collections in Meteor
@@ -430,9 +435,9 @@ The way we get data from the server is through Meteor's pub/sub system, and we w
 Create a new file `imports/api/todo.js` and add this code:
 
 ```js
-import { Mongo } from 'meteor/mongo';
+import { Mongo } from "meteor/mongo";
 
-export const ToDos = new Mongo.Collection('todos');
+export const ToDos = new Mongo.Collection("todos");
 ```
 
 But this isn't doing much for us yet! Create another file `imports/start-up/server/index.js` and import it into `server/main.js` (the main server entry point for our app).
@@ -484,32 +489,29 @@ Run `db.todos.find()` to confirm everything is OK.
 
 # Meteor/React Set-up
 
-In order to use our `ToDos` collection data inside of a React component and take advantage of Meteor's reactivity, we need to install a couple new packages:
+In order to use our `ToDos` collection data inside of a React component and take advantage of Meteor's reactivity, we need to install a new package:
 
 ```bash
 # magical reactive pixie dust for our components
 meteor add react-meteor-data
-
-# dep of react-meteor-data
-meteor npm install --save react-addons-pure-render-mixin 
 ```
- 
+
 ---
 
 # Using Collection Data
 
-Next, we need to import our `ToDos` collection into our `App` component, and wrap `App` in the `createContainer` HOC:
+Next, we need to import our `ToDos` collection into our `App` component, and wrap `App` in the `withTracker` HOC:
 
 ```js
-import { ToDos } from '../../../api/todos';
+import { ToDos } from "../../../api/todos";
 
 // ...other code
 
-export default createContainer(() => {
+export default withTracker(() => {
   return {
     todos: ToDos.find({}).fetch()
   };
-}, App);
+})(App);
 ```
 
 Notice **[the method](https://docs.meteor.com/api/collections.html#Mongo-Cursor-fetch)** we are calling on our cursor.
@@ -542,14 +544,14 @@ You may also want to set `defaultProps` for `todos` as an empty array so your ap
 Meteor can create a default to-do on start-up if none exist. Create `imports/startup/server/fixtures.js` and import it into `imports/startup/server/index.js`. Add this code to `fixtures.js`:
 
 ```js
-import { Meteor } from 'meteor/meteor';
-import { ToDos } from '../../api/todos';
+import { Meteor } from "meteor/meteor";
+import { ToDos } from "../../api/todos";
 
 Meteor.startup(() => {
-  if ( ToDos.find().count() === 0 ) {
+  if (ToDos.find().count() === 0) {
     ToDos.insert({
-      title: 'Learn React', 
-      complete: false,
+      title: "Learn React",
+      complete: false
     });
   }
 });
@@ -572,8 +574,8 @@ What Meteor collection CRUD methods will we need to call to take the appropriate
 Our `insert` method will look like this:
 
 ```js
-ToDos.insert({		
-  title: this.state.inputValue,		
+ToDos.insert({
+  title: this.state.inputValue,
   complete: false
 });
 ```
@@ -589,6 +591,7 @@ Now refactor the `toggleComplete()`, `removeToDo()`, and `removeCompleted()` met
 The `removeCompleted()` method will be the trickiest...how will you check to see which to-dos are marked as complete now, and then remove those to-dos from the database based on their `_id`?
 
 ---
+
 template: inverse
 
 # User Accounts in Meteor
@@ -624,16 +627,18 @@ meteor add accounts-ui-unstyled accounts-password
 In `ui/components/AccountsWrapper/index.js` add:
 
 ```js
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { Template } from 'meteor/templating';
-import { Blaze } from 'meteor/blaze';
- 
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import { Template } from "meteor/templating";
+import { Blaze } from "meteor/blaze";
+
 export default class AccountsUIWrapper extends Component {
   componentDidMount() {
     // Use Meteor Blaze to render login buttons
-    this.view = Blaze.render(Template.loginButtons,
-      ReactDOM.findDOMNode(this.refs.container));
+    this.view = Blaze.render(
+      Template.loginButtons,
+      ReactDOM.findDOMNode(this.refs.container)
+    );
   }
   componentWillUnmount() {
     Blaze.remove(this.view); // Clean up Blaze view
@@ -648,9 +653,9 @@ export default class AccountsUIWrapper extends Component {
 
 # Exercise 4
 
-Import the `<AccountsUIWrapper />` component into `App.js`. 
+Import the `<AccountsUIWrapper />` component into `App.js`.
 
-Add this component to the top of your `App` `render` method. Wrap it in a `<div>` with a class of `login-wrapper`. 
+Add this component to the top of your `App` `render` method. Wrap it in a `<div>` with a class of `login-wrapper`.
 
 Now wrap your existing to-do list `<div>` and your new accounts component in a new parent `<div>` will a class of `app-wrapper` (we'll need this for the CSS...).
 
@@ -663,13 +668,13 @@ Now **[add this CSS](https://gist.github.com/mandiwise/29e4be3fbb737b883042ce7c9
 To access information about our current user, we'll need to pass some new props from our HOC to `App`:
 
 ```js
-export default createContainer(() => {
+export default withTracker(() => {
   return {
     currentUser: Meteor.user(), // NEW!
     currentUserId: Meteor.userId(), // NEW!
-    todos: ToDos.find({}).fetch() 
+    todos: ToDos.find({}).fetch()
   };
-}, App);
+})(App);
 ```
 
 Update your `propTypes` too!
@@ -698,7 +703,7 @@ From now on when we add a new to-do, we'll want to assign it to a user:
 ToDos.insert({
   title: this.state.inputValue,
   complete: false,
-  owner: currentUserId, // NEW!
+  owner: currentUserId // NEW!
 });
 ```
 
@@ -710,19 +715,19 @@ Now how can we use our new `currentUserId` prop to filter the to-dos so that the
 
 ```js
 // In fixtures.js...other imports above here
-import { Accounts } from 'meteor/accounts-base';
+import { Accounts } from "meteor/accounts-base";
 
 Meteor.startup(() => {
-  if ( Meteor.users.find().count() === 0 ) {
+  if (Meteor.users.find().count() === 0) {
     user = Accounts.createUser({
-      email : 'm@wise.com',
-      password : 'password',
+      email: "m@wise.com",
+      password: "password"
     });
 
     // add data to the database
-    if ( ToDos.find().count() === 0 ) {
+    if (ToDos.find().count() === 0) {
       ToDos.insert({
-        title: 'Learn Meteor', 
+        title: "Learn Meteor",
         complete: false,
         owner: user
       });
@@ -748,6 +753,7 @@ Try logging, add new to-dos, log out, and create new user. Is everything working
 - How to easily add user accounts to a Meteor app
 
 ---
+
 template: inverse
 
 # Questions?
