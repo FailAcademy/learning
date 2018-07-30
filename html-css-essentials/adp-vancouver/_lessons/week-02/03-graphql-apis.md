@@ -120,7 +120,7 @@ _Define your schema!_
   - `id` (its type is `ID` and it's required)
   - `title` (its type is `String` and it's required)
 
-- The `AssigneBorrower` input has the following fields:
+- The `AssignedBorrower` input has the following fields:
 
   - `id` (its type is `ID` and it's required)
 
@@ -132,7 +132,7 @@ _Define your schema!_
 
 - The `addItem` mutation has the following variables and returns an `Item`:
 
-  - `item` (its type is `NewInputType` and it's required)
+  - `item` (its type is `NewItemInput` and it's required)
   - `image` (its type is `Upload`)
 
 ### Task 2:

@@ -7,8 +7,6 @@ class: gh-check
 
 Create a back-end application to support a local sharing economy. The app must use PostgreSQL as a relational database to store shareable items and user info, Node.js/Express as its web server, and GraphQL for its client-facing API.
 
-You can [download the starter repo here.](https://github.com/redacademy/boomtown-starter)
-
 ## Requirements
 
 You can [download the starter repo here.](https://github.com/redacademy/boomtown-starter)
@@ -30,8 +28,8 @@ Your project must:
 Your project must:
 
 - [ ] Be configured for development and production using `app.set` / `app.get`
-- [ ] Connect to PostgreSQL using the `node-postgres` library
-- [ ] Execute all of the required SQL queries using the `node-postgres` library
+- [ ] Connect to PostgreSQL using the `pg` library
+- [ ] Execute all of the required SQL queries using the `pg` library
 - [ ] Use Apollo Server to initialize a GraphQL server
 - [ ] Define the necessary GraphQL schema
 - [ ] Use GraphQL Explorer to save all the necessary queries and mutations required for the project
