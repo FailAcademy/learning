@@ -456,7 +456,7 @@ addToDo = event => {
   event.preventDefault();
   let toDoInput = this.toDoInput.current;
 
-  if (toDoInput) {
+  if (toDoInput.value) {
     const id = this.state.lastId + 1; // update id
     const newTodos = [
       ...this.state.todos,

@@ -88,10 +88,11 @@ In today's lab, we'll start refactoring our React To-Do app from the the first w
 
 1.  Copy your existing `index.js` code to `client/main.js`.
 2.  Copy your existing `index.css` to `client/main.css`.
-3.  Copy `registerServiceWorker.js` to the same destination directory.
+3.  Copy `registerServiceWorker.js` to the same destination directory (if you have this in your React To-Do app).
 4.  Refactor the content in `client/main.html` to only contain the single `<div>` you'll use to render your React app.
 5.  Create an `imports/ui/containers/App` directory in your Meteor app and move `App.js` and `App.css` there. Considering following component naming/organization best practices and rename `App.js` to `index.js` and `App.css` to `styles.css` too.
-6.  Update all broken file import paths/names everywhere!
+6.  Import `./main.html` into 'client/main.js`.
+7.  Update all broken file import paths/names everywhere!
 
 ### Step 3: Meteor/React Initialization
 
