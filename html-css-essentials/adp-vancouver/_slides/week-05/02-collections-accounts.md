@@ -100,6 +100,13 @@ So with a MongoDB you think about what pieces of data are **used together**, wha
 - **Third Normal Form:** Says that every non-key attribute in the table must provide a fact about the key, the whole key, and nothing but the key (not as worried about this in MongoDB)
 - Must consider if data have a **1:1**, **1:Many**, or **Many:Many** (or **1:Few** or **Few:Few**) relationship
 
+???
+
+- 1 NF: Values in cells must be atomic (means values are stand-alone, not repeated in cells)
+- 2 NF: Must be in 1NF and each row must be identifiable by a unique value, or set of values (aka the "primary key"; tables should focus on a single concept)
+- 3NF: Must be 2NF and non-keys describe primary keys and nothing else (need to elect a primary key...the noun that is described by the other data)
+- Referential integrity: Making your relational database relational (adding foreign key constraints, and any foreign key field must agree with the primary key that is referenced by the foreign key
+
 ---
 
 # Other Differences
