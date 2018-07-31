@@ -83,12 +83,6 @@ In today's lab, we'll start refactoring our React To-Do app from the the first w
 1.  Create new Meteor app by running `meteor create meteor-react-todo`.
 2.  Change directory: `cd meteor-react-todo`.
 3.  Install React: `meteor npm install react react-dom prop-types --save`.
-4.  Remove Blaze HTML templates, and use static HTML templates instead:
-
-```sh
-$ meteor remove blaze-html-templates
-$ meteor add static-html
-```
 
 ### Step 2: Copy-Pasta
 
