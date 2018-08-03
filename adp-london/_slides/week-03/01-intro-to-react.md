@@ -121,11 +121,11 @@ class: center, middle
 
 # Elements & Components
 
-React elements are simply **JS objects used to describe how the HTML for the component should look **, i.e. it is an object-based representation of a DOM node. There are no methods on the object, just data.
+React _elements_ are simply **JS objects used to describe how the HTML for the component should look **, i.e. it is an object-based representation of a DOM node. There are no methods on the object, just data.
 
 They can be created with plain JS or **JavaScript XML (JSX)**.
 
-Components, on the other hand, are **functions or classes that return React elements.**
+React _components_, on the other hand, are **functions or classes that return React elements**.
 
 We use `ReactDOM.render()` to render a React element into a particular DOM element, and the return value of this method is the React component instance.
 
@@ -137,7 +137,7 @@ What a React element looks like:
 
 ```js
 // Without JSX
-let helloWorld = React.createElement("div", null, "Hello World!");
+let helloWorld = React.createElement('div', null, 'Hello World!');
 
 // Using JSX
 let helloWorld = <div>Hello World!</div>;
@@ -146,10 +146,10 @@ let helloWorld = <div>Hello World!</div>;
 let helloWorld = {
   key: null,
   props: {
-    children: "Hello World!"
+    children: 'Hello World!'
   },
   ref: null,
-  type: "div"
+  type: 'div'
 };
 ```
 
@@ -210,8 +210,8 @@ With JSX now...
 ```
 
 ```js
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
 class App extends Component {
   render() {
@@ -219,7 +219,7 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
 _More readable, less typing!_
@@ -479,7 +479,7 @@ We will often want to create components that display data by iterating over a li
 ```js
 class App extends Component {
   render() {
-    const skills = ["React", "Angular 2", "Vue.js"];
+    const skills = ['React', 'Angular 2', 'Vue.js'];
 
     return <ul>{skills.map((skill, i) => <li key={i}>{skill}</li>)}</ul>;
   }
@@ -638,6 +638,16 @@ class App extends Component {
 }
 ```
 
+???
+
+It can be helpful to relate `props` to something that the students are already familiar with.
+
+For example, demonstrate how the `value` attribute works in an HTML `input` attribute:
+
+```html
+<input value="default input text">
+```
+
 ---
 
 # Exercise 5
@@ -740,8 +750,8 @@ npm install --save prop-types
 ```
 
 ```js
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class HelloWorld extends Component {
   // the component's code...
@@ -761,8 +771,8 @@ What do you think this `propType` necessitates when using the component?
 We can also set defaults for our components props, which will take effect if no prop is set where the component is used:
 
 ```js
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class HelloWorld extends Component {
   // the component's code...
@@ -773,7 +783,7 @@ HelloWorld.propTypes = {
 };
 
 HelloWorld.defaultProps = {
-  greeting: "Hello, world!"
+  greeting: 'Hello, world!'
 };
 ```
 

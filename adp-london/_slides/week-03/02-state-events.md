@@ -456,7 +456,7 @@ addToDo = event => {
   event.preventDefault();
   let toDoInput = this.toDoInput.current;
 
-  if (toDoInput) {
+  if (toDoInput.value) {
     const id = this.state.lastId + 1; // update id
     const newTodos = [
       ...this.state.todos,
@@ -599,7 +599,7 @@ What looks familiar? What looks new?
 
 Before we can use `<Query />` we'll need to write a query to pass it as prop.
 
-In `client/src/queries.js` we will:
+In `client/src/apollo/queries.js` we will:
 
 - Create the `ItemFields` [**fragment**](https://www.apollographql.com/docs/angular/features/fragments.html)
 - Use that fragment to create the `ALL_ITEMS_QUERY`
