@@ -1,34 +1,30 @@
 ---
 layout: lesson
 title: More on PHP
-slides: ['_slides/week-06/02-php-cont.md']
+slides: ["_slides/week-06/02-php-cont.md"]
 lesson_date: 2018-05-15
 ---
 
 ## Pre-Work
 
-Work through the following sections of the [Codeacademy PHP tutorial](https://www.codecademy.com/en/tracks/php):
-
-* Functions in PHP, Part I
-* Functions in PHP, Part II
-* Advanced Arrays and Maps
+_If you already finished watching all of the videos about arrays from the PHP Practitioner series, there's no additional pre-work for this lesson._
 
 ---
 
 ## Learning Objectives
 
-* Build and interact with multi-dimensional arrays.
-* Explore PHP functions such as `rand()`, `range()`, and `date()`.
-* Implement advanced techniques for dealing with arrays of data.
-* Explore alternative syntax for conditional statements and loops.
+- Build and interact with multi-dimensional arrays.
+- Explore PHP functions such as `rand()`, `range()`, and `date()`.
+- Implement advanced techniques for dealing with arrays of data.
+- Explore alternative syntax for conditional statements and loops.
 
 ---
 
 ## Keywords
 
-* Built-in function
-* Multi-dimensional arrays
-* Ternary operators
+- Built-in function
+- Multi-dimensional arrays
+- Ternary operators
 
 ---
 
@@ -99,4 +95,4 @@ Incorporate some of what you learned in class today about PHP's **built-in funct
 
 A short screencast series on what's new in PHP7:
 
-* [PHP7 Up and Running](https://laracasts.com/series/php7-up-and-running)
+- [PHP7 Up and Running](https://laracasts.com/series/php7-up-and-running)
