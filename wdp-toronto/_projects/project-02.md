@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 2 - Instanews App
-due: Monday, April 30th (beginning of class)
+due: Monday, July 23 (beginning of class)
 ---
 
 For Project 2, you're going to create a one-page, responsive website that allows a user to filter top news story categories via the [New York Times API](http://developer.nytimes.com/docs/top_stories_api/).

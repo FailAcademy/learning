@@ -1,8 +1,9 @@
 [
   {
-    "title": "New Years Day",
+    "title": "Pre-Work",
     "allDay": true,
-    "start": "2018-01-01"
+    "start": "2018-06-25",
+    "end": "2018-07-02"
   },
   {
     "title": "Good Friday",
@@ -15,19 +16,29 @@
     "start": "2018-04-02"
   },
   {
-    "title": "Bank Holiday",
+    "title": "Victoria Day",
     "allDay": true,
-    "start": "2018-05-07"
+    "start": "2018-05-21"
   },
   {
-    "title": "Bank Holiday",
+    "title": "Canada Day Stat",
     "allDay": true,
-    "start": "2018-05-28"
+    "start": "2018-07-02"
+  },
+    {
+    "title": "Labour Day",
+    "allDay": true,
+    "start": "2018-09-03"
   },
   {
-    "title": "Bank Holiday",
+    "title": "Thanksgiving Monday",
     "allDay": true,
-    "start": "2018-08-27"
+    "start": "2018-10-08"
+  },
+  {
+    "title": "Remembrance Day Stat",
+    "allDay": true,
+    "start": "2018-11-12"
   },
   {
     "title": "Christmas Day",
@@ -37,6 +48,6 @@
   {
     "title": "New Years Day",
     "allDay": true,
-    "start": "2019-01-01"
+    "start": "2018-01-01"
   }
 ]
