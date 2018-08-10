@@ -1,34 +1,29 @@
 ---
 layout: lesson
 title: Intro to PHP - Loops and Functions
-slides: ['_slides/week-11/02-intro-to-php-2-slides.md']
+slides: ["_slides/week-11/02-intro-to-php-2-slides.md"]
 lesson_date: 2018-04-17
 ---
 
 ## Pre-work
 
-Work through the following sections of the [Codeacademy PHP tutorial](https://www.codecademy.com/en/tracks/php):
-
-* Loops: For and ForEach
-* Loops: While and Do-While
-* Functions in PHP, Part I
-* Functions in PHP, Part II
+_If you already finished watching all of the videos about arrays from the PHP Practitioner series, there's no additional pre-work for this lesson._
 
 ---
 
 ## Learning Objectives
 
-* Use different types of loops in PHP.
-* Use functions to create reusable blocks of DRY code.
-* Distinguish the difference between indexed and associative arrays.
-* Dynamically generate a webpage using `include()` or `require()`.
+- Use different types of loops in PHP.
+- Use functions to create reusable blocks of DRY code.
+- Distinguish the difference between indexed and associative arrays.
+- Dynamically generate a webpage using `include()` or `require()`.
 
 ---
 
 ## Keywords
 
-* Loop
-* Function
+- Loop
+- Function
 
 ---
 
@@ -68,12 +63,12 @@ The only file in the boilerplate that contains any code is the `posts.json` file
 
 What you need to do to complete this lab:
 
-* Create a blog index page to display all the posts (by parsing the JSON data in PHP)
-* Create an About page for the blog
-* Dynamically include a `header.php`, `sidebar.php`, and `footer.php` file in each of the site's pages (instead of including this mark-up statically on each page)
-* Format the post data as per the design comp (e.g. posts will be displayed in reverse chronological order, categories name will be capitalized, and dates will be converted from Unix time to human-readble time)
-* Abstract the functions you create into a `functions.php` file, and `require` it where needed (views are dumb...we don't want any logic in our views!)
-* Adequately reflect the designer's vision for this site
+- Create a blog index page to display all the posts (by parsing the JSON data in PHP)
+- Create an About page for the blog
+- Dynamically include a `header.php`, `sidebar.php`, and `footer.php` file in each of the site's pages (instead of including this mark-up statically on each page)
+- Format the post data as per the design comp (e.g. posts will be displayed in reverse chronological order, categories name will be capitalized, and dates will be converted from Unix time to human-readble time)
+- Abstract the functions you create into a `functions.php` file, and `require` it where needed (views are dumb...we don't want any logic in our views!)
+- Adequately reflect the designer's vision for this site
 
 **Hint!** You can include the Roboto font on your site by adding this snippet to the `<head>` element:
 
@@ -89,4 +84,4 @@ What you need to do to complete this lab:
 
 Another PHP resource, written with WP devs in mind:
 
-* [WordPress Development for Beginners: Learning PHP](http://premium.wpmudev.org/blog/wordpress-development-beginners-php/)
+- [WordPress Development for Beginners: Learning PHP](http://premium.wpmudev.org/blog/wordpress-development-beginners-php/)
