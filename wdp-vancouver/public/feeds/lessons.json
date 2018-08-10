@@ -13,121 +13,110 @@
    {
       "title": "Day 1 Orientation",
       "allDay": true,
-      "start": "2018-04-09"
+      "start": "2018-07-03"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-04-20"
+      "start": "2018-07-20"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-04-27"
+      "start": "2018-07-23"
    },
+   {
+    "title": "Pong Code Along",
+    "allDay": true,
+    "start": "2018-08-03"
+ },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-04-30"
-   },
-   {
-      "title": "Project Work Day",
-      "allDay": true,
-      "start": "2018-05-11"
+      "start": "2018-08-17"
    },
     {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-05-25"
+      "start": "2018-08-20"
    },
    {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-05-28"
+    "start": "2018-08-22"
    },
    {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-05-30"
+    "start": "2018-08-23"
    },
    {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-05-31"
-   },
-   {
-    "title": "Project Work Day",
-    "allDay": true,
-    "start": "2018-06-01"
+    "start": "2018-08-24"
    },
    {
       "title": "UX Guest Lecture",
       "allDay": true,
-      "start": "2018-05-01"
-   },
-   {
-      "title": "Invision and Inspect (UX)",
-      "allDay": false,
-      "start": "2018-06-070T09:15:00+00:00",
-      "end": "2018-06-07T10:15:00+00:00"
+      "start": "2018-08-22"
    },
    {
       "title": "Analytics & SEO Lesson (DM)",
       "allDay": false,
-      "start": "2018-06-06T09:00:00+00:00",
-      "end": "2018-06-06T12:00:00+00:00"
+      "start": "2018-08-29T09:00:00+00:00",
+      "end": "2018-08-29T12:00:00+00:00"
    },
    {
       "title": "Design Presentations",
       "allDay": true,
-      "start": "2018-06-08"
+      "start": "2018-08-31"
    },
    {
       "title": "GitHub Portfolio Development",
       "allDay": true,
-      "start": "2018-06-04",
-      "end": "2018-06-09"
+      "start": "2018-08-27",
+      "end": "2018-08-31"
    },
    {
       "title": "Community Project Work",
       "allDay": true,
-      "start": "2018-06-11",
-      "end": "2018-06-29"
+      "start": "2018-09-04",
+      "end": "2018-09-21"
    },
   {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2018-04-19T13:00:00+00:00",
-      "end": "2018-04-19T15:00:00+00:00"
+      "start": "2018-07-12T13:00:00+00:00",
+      "end": "2018-07-12T15:00:00+00:00"
   },
   {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2018-05-03T13:00:00+00:00",
-      "end": "2018-05-03T15:00:00+00:00"
+      "start": "2018-07-26T13:00:00+00:00",
+      "end": "2018-07-26T15:00:00+00:00"
   },
   {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2018-05-17T13:00:00+00:00",
-      "end": "2018-05-17T15:00:00+00:00"
+      "start": "2018-08-09T13:00:00+00:00",
+      "end": "2018-08-09T15:00:00+00:00"
   },
   {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2018-05-31T13:00:00+00:00",
-      "end": "2018-05-31T15:00:00+00:00"
+      "start": "2018-08-23T13:00:00+00:00",
+      "end": "2018-08-23T15:00:00+00:00"
   },
   {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2018-06-13T13:00:00+00:00",
-      "end": "2018-06-13T15:00:00+00:00"
+      "start": "2018-09-06T13:00:00+00:00",
+      "end": "2018-09-06T15:00:00+00:00"
   },
   {
     "title": "PPD Lesson",
     "allDay": false,
-    "start": "2018-06-21T13:00:00+00:00",
-      "end": "2018-06-21T15:00:00+00:00"
+    "start": "2018-09-12T13:00:00+00:00",
+      "end": "2018-09-12T15:00:00+00:00"
   }
 ]

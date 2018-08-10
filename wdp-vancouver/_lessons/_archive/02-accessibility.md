@@ -23,6 +23,7 @@ Also, be sure to **bring headphones** to class today as we will be using screen 
 * Identify various assistive technologies and use them along with other accessibility evaluation tools to audit the accessibility of a website.
 * Describe best practices around semantic mark-up to improve the accessibility of a website.
 * Use the `tabindex` attribute to optimize the tab order for logical keyboard navigation of a website.
+* Use ARIA attributes to augment the accessibility of an HTML element.
 * Describe best practices when writing CSS to prevent styles and layout from hampering the accessibility of a website.
 
 ---
@@ -84,6 +85,38 @@ Implement a skip link as previously instructed, test it, and add a bit of extra 
 
 ---
 
+## Exercise 5
+
+You will be assigned an ARIA role to investigate. Refer to the W3C's documentation (linked on the previous slide) on ARIA roles to determine:
+
+* What your element is for
+* How it can and cannot be used
+
+You will then share your findings with the class.
+
+---
+
+## Exercise 6
+
+Refactor the following code to use the appropriate ARIA role for the tooltip text and appropriate ARIA property to relate that tooltip text to its sibling `<input>`.
+
+```html
+<form action="">
+   <div>
+      <label for="username">Your username</label>
+      <input type="text" id="username" required />
+      <div id="username-tip">Your username is your email address</div>
+   </div>
+   <div>
+      <label for="password">Your password</label>
+      <input type="text" id="password" required />
+      <div id="password-tip">If you forgot your password, you may reset it</div>
+   </div>
+</form>
+```
+
+---
+
 ## Lab Activity
 
 **Task 1:**
@@ -142,6 +175,10 @@ From Udacity, an incredibly thorough (free!) course on web accessibility:
 A community-driven effort to make web accessibility easier:
 
 * [The A11Y Project](http://a11yproject.com/)
+
+More on ARIA:
+
+* [Getting started with ARIA](http://a11yproject.com/posts/getting-started-aria)
 
 Extend accessibility best practices to your SVG mark-up:
 

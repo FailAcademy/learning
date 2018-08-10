@@ -2,7 +2,7 @@
 layout: lesson
 title: Animation with jQuery
 slides: ['_slides/week-02/05-jquery-animation.md']
-lesson_date: 2018-04-19
+lesson_date: 2018-07-13
 ---
 
 ## Pre-Work
@@ -89,3 +89,11 @@ More on custom animation with jQuery:
 Feeling ambitious? Try creating your own jQuery plugin:
 
 * [Writing Your Own jQuery Plugins](http://blog.teamtreehouse.com/writing-your-own-jquery-plugins)
+
+A more powerful animation tool which is almost identical to jQuery in terms of how you use it:
+
+* [Velocity.js](http://velocityjs.org/)
+
+Another animation tool worth bookmarking:
+
+* [Greensock or GSAP](https://greensock.com/)

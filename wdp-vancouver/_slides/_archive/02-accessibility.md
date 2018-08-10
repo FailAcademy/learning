@@ -23,7 +23,8 @@ layout: false
 2. Exploring assistive technologies and testing tools
 3. Leveraging semantics
 4. Optimizing focus
-5. CSS considerations
+5. ARIA attributes
+6. CSS considerations
 
 ---
 template: inverse
@@ -559,6 +560,7 @@ When you need to modify your tab order you can use the `tabindex` attribute for 
 
 # Focus Best Practices
 
+- ARIA design patterns can help you add keyboard support to your custom components (more on that to come...)
 - Watch out for keyboard traps (i.e. when an element becomes focused and there's no way to advance)
 - Handle off-screen content appropriately (remember that `display:none` or `visibility:hidden` will stop focus from moving into an element)
 
@@ -627,6 +629,178 @@ Implement a skip link as previously instructed, test it, and add a bit of extra 
 ---
 template: inverse
 
+# ARIA
+
+---
+
+# What is ARIA?
+
+- ARIA stands for **Accessible Rich Internet Applications**.
+- ARIA is meant to provide a set of tools for developers creating custom web components that will make web content and application functionality more accessible.
+- Note that ARIA **does not** add new functionality to a webpage&mdash;it's simply meant to act as an additional descriptive layer for assistive technologies.
+
+---
+
+# Why ARIA?
+
+- Native HTML give us a lot of built-in semantics for free, but it's not always enough (especially when building modern JS-based web applications)
+- ARIA helps us **modify the accessibility tree**
+- ARIA also allows us to **express more complex relationships** in our code than the typical parent/child/sibling relationships we're used to with HTML
+
+---
+
+# ARIA Attributes
+
+ARIA ultimately consists of **a set of attribute names and values** that allow us to add a descriptive layer to our webpages. Specifically, we have:
+
+- **[Role attributes](http://www.w3.org/TR/wai-aria/roles)**
+- **[State and property attributes](http://www.w3.org/TR/wai-aria/states_and_properties)**
+
+---
+
+# Roles
+
+Put plainly, these roles are shorthand for a particular UI pattern. These roles fall into four categories:
+
+- **[Abstract](https://www.w3.org/TR/wai-aria/roles#abstract_roles)** (not used in webpage content)
+- **[Widget](https://www.w3.org/TR/wai-aria/roles#widget_roles)** (for naming UI "widgets")
+- **[Document Structure](https://www.w3.org/TR/wai-aria/roles#document_structure_roles)** (describe content, and are not usually interactive)
+- **[Landmark](https://www.w3.org/TR/wai-aria/roles#landmark_roles)** (for navigational landmarks in the page)
+
+*But we can't invent the roles ourselves&mdash;we have to pick from a finite, set vocabulary...*
+
+---
+
+# Exercise 5
+
+You will be assigned an ARIA role to investigate. Refer to the W3C's documentation (linked in the lesson slides) on ARIA roles to determine:
+
+- What your element is for
+- How it can and cannot be used
+
+You will then share your findings with the class.
+
+---
+
+# Using Roles
+
+If we wanted to show a banner on a webpage to let the user know what they are logged in, we could use this code:
+
+```html
+<div id="status" role="alert" class="logged-in">
+   <p>You are logged in.</p>
+</div>
+```
+
+Note that we **do not use ARIA roles redundantly** by redefining default semantics. For example:
+
+```html
+<!-- DO NOT DO! -->
+<main role="main">Main content...</main>
+
+<nav role="navigation">
+   <a href="/prev-posts">&larr; Previous Posts</a>
+</nav>
+```
+
+---
+
+# Properties and States
+
+ARIA properties describe and element's **relationships** with other elements (e.g. `aria-labelledby`). States describe some **dynamic quality** of an element (e.g. `aria-disabled`).
+
+States and properties attributes can be categorized as:
+
+- **[Widget](https://www.w3.org/TR/wai-aria/states_and_properties#aria-expanded)** (attributes specific to common UI elements)
+- **[Live Region](https://www.w3.org/TR/wai-aria/states_and_properties#attrs_liveregions)** (used where content may change in real time)
+- **[Drag-and-Drop](https://www.w3.org/TR/wai-aria/states_and_properties#attrs_dragdrop)** (for drag and drop interfaces)
+- **[Relationship](https://www.w3.org/TR/wai-aria/states_and_properties#attrs_relationships)** (expresses relationships not easily deduced from the document structure)
+
+---
+
+# Using Properties/States
+
+If we wanted to create an accessible hamburger menu icon (from Font Awesome) for a responsively designed website, we could do something like this:
+
+```html
+<button aria-label="menu">
+   <i class="fa fa-bars" aria-hidden="true"></i>
+</button>
+```
+
+In this example, what functions do you think `aria-label` and `aria-hidden` serve for us?
+
+---
+
+# Using Properties/States
+
+Another cool feature of ARIA is the ability to "live regions" to our documents so that assistive technology will know to provide an update to the user when its content changes:
+
+```html
+<div id="status" role="alert" aria-live="polite" class="online">
+	<p>You are online.</p>
+</div>
+```
+
+You can set the `aria-live` property to be `off`, `polite`, or `assertive`.
+
+---
+
+# Roles and Properties
+
+Roles and properties in action together (from [Bootstrap](http://getbootstrap.com/javascript/#tabs)):
+
+```html
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+   <li role="presentation" class="active">
+      <a href="#home" aria-controls="home" role="tab">Home</a>
+   </li>
+   <li role="presentation">
+      <a href="#profile" aria-controls="profile" role="tab">Profile</a>
+   </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+   <div role="tabpanel" class="tab-pane active" id="home">...</div>
+   <div role="tabpanel" class="tab-pane" id="profile">...</div>
+</div>
+```
+
+*Describe in words what you think this code does...*
+
+---
+class: center, middle
+
+### ARIA Pro Tip
+
+We only need to add ARIA attributes to the parts of the page that actually need to be exposed by accessibility APIs!
+
+---
+
+# Exercise 6
+
+Refactor the following code to use the appropriate ARIA role for the tooltip text and appropriate ARIA property to relate that tooltip text to its sibling `<input>`.
+
+```html
+<form action="">
+   <div>
+      <label for="username">Your username</label>
+      <input type="text" id="username" required />
+      <div id="username-tip">Your username is your email address</div>
+   </div>
+   <div>
+      <label for="password">Your password</label>
+      <input type="text" id="password" required />
+      <div id="password-tip">If you forgot your password, you may reset it</div>
+   </div>
+</form>
+```
+
+---
+template: inverse
+
 # Styling for Accessibility
 
 ---
@@ -637,7 +811,8 @@ Beyond what we've already discussed, there are a few things we'll want to keep i
 
 1. Colour and contrast
 2. Optimizing `:focus` styles
-3. Optimizing for mobile
+3. Using CSS attribute selectors with ARIA
+4. Optimizing for mobile
 
 ---
 
@@ -661,6 +836,32 @@ By default we can override a browser's default focus style with:
 ```
 
 But if we do this we **must write CSS to add alternative focus styles** that match the branding of the website.
+
+We also need to make sure that we write focus style rules for our various **ARIA states**, and ensure that our custom focus styles are visible to those who are colour blind.
+
+---
+
+# Attribute Selectors
+
+Use attribute selectors to write CSS specific to ARIA attributes:
+
+```css
+[role=tab] {
+	display: inline-block;
+}
+[role=tab][aria-selected=true] {
+	background: tomato;
+}
+[role=tabpanel] {
+	display: none;
+}
+[role=tabpanel][aria-expanded=true] {
+	display: block;
+}
+```
+
+Doing so makes for **more semantic CSS rules**, and **cuts down on mark-up bloat** by saving us from adding unnecessary classes or IDs to target the same styles at these elements.
+
 
 ---
 
@@ -696,6 +897,7 @@ Also, never set `user-scalable=no` in the `content` attribute. This is bad for a
 - How to evaluate the accessibility of our websites
 - How to write semantic mark-up with an eye for accessibility
 - How to optimize for keyboard tabbing and focus
+- What ARIA is and how it works
 - How to write CSS with accessibility in mind
 
 ---

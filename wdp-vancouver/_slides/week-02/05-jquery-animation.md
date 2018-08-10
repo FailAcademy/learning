@@ -198,7 +198,7 @@ $(".box").animate(
         width: "8rem",
         height: "8rem"
       },
-      3000, // after 3 run another function
+      3000, // after 3 seconds run another function
       function() {
         alert("animations complete");
       }
@@ -233,7 +233,7 @@ Possible use case of running a function after an animation?
 
 # Easing
 
-Easing helps to bring animations to life. Without easing animations run from point A to B with no speeding up or slowing down. This is ok, however it lacks momentum and in some cases interest.
+Easing helps to bring animations to life. Without easing animations run from point A to B without speeding up or slowing down. This is ok, however by adding easing you can create more interesting animations.
 
 jQuery doesn't support easing by default, however there are two options to add easing:
 
@@ -244,10 +244,16 @@ jQuery doesn't support easing by default, however there are two options to add e
 
 # jQuery Easing Plugin
 
-When you need to add easing most of the time the easing plugin is the best option.
-jQuery UI is great however it provides a lot of things we don't need e.g. accordions, date pickers, drag and drop etc...
+To add easing most of the time the easing plugin is the best option.
+jQuery UI is great however it provides a lot of things we may not need e.g. accordions, date pickers, drag and drop etc...
 
-We can either <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">download the plugin</a> or use a <a href="https://cdnjs.com/libraries/jquery-easing" target="_blank">CDN link</a>.
+**Gotcha alert!** Animating background colors requires jQuery UI.
+
+- Easing Plugin: <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">Download</a> 
+- Easing Plugin: <a href="https://cdnjs.com/libraries/jquery-easing" target="_blank">CDN</a>
+
+- jQuery UI: <a href="https://jqueryui.com/" target="_blank">Download</a>
+- jQuery UI: <a href="https://developers.google.com/speed/libraries/#jquery-ui" target="_blank">CDN</a>
 
 ---
 
@@ -287,9 +293,11 @@ class: middle, center
 
 We've seen quite a few things we can do with jQuery to animate. Let's spend a bit of time trying out animating a box.
 
-A **[starter Codepen](https://codepen.io/REDwdp/pen/wpQYdg)** has been setup for you with jQuery and jQuery easing added. There is also a small amount of CSS to create a box. The box is using absolute positioning so that we can animate properties like `left` and `top`.
+A **<a href="https://codepen.io/REDwdp/pen/wpQYdg" target="_blank">Codepen Starter</a>** has been setup for you with jQuery and jQuery UI added, so you can animate easing and background colors. 
 
-Try making the box move from the lef or adjusting width and height with animation. You could also try different timings, easing, and using functions which run once the animation is complete.
+There is also a small amount of CSS to create a box. The box is using absolute positioning which enables us to animate properties like `left` and `top`.
+
+**TLDR, Try animating different properties.**
 
 ---
 
