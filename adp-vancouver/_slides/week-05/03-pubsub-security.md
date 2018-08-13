@@ -39,7 +39,7 @@ class: center, middle
 - Methods are Meteor’s remote procedure call (RPC) system, used to save user input events and data that come from the client
 - You can think of them like POST requests to your server, but with many nice features optimized for building a modern web application
 - At its core, a Method is an API endpoint for your server
-- Methods is usually capitalized to distinguish from JS methods
+- Methods are usually capitalized to distinguish from JS methods
 
 ---
 
@@ -61,7 +61,7 @@ class: center, middle
 # DDP
 
 - Stands for **D**istributed **D**ata **P**rotocol
-- **Server:** define a realtime queries using `Meteor.publish`
+- **Server:** define realtime queries using `Meteor.publish`
 - **Client:** you call `Meteor.subscribe` to connect to a publication endpoint
 - DDP then intelligently polls your database to pick up changes and push them down to the client
 
@@ -99,7 +99,7 @@ The first step toward securing our app is to remove the default `insecure` packa
 meteor remove insecure
 ```
 
-Congrats! You have now revoked the client-side permissions from your app, and will no longer be able to update your to-dos, or add new ones...let's fix that.
+Congrats! You have now revoked the client-side permissions from your app, and will no longer be able to update your to-dos, or add new ones... let's fix that.
 
 ---
 
@@ -195,7 +195,7 @@ if (Meteor.isServer) {
 
 # Simple Fix: Part 2
 
-One last step...we must subscribe to our publication within our the HOC wrapping the `App` component:
+One last step... we must subscribe to our publication within our the HOC wrapping the `App` component:
 
 ```js
 export default createContainer(() => {
@@ -209,14 +209,14 @@ export default createContainer(() => {
 }, App);
 ```
 
-**Note:** We can now remove the call to `filter()` in our `App` component's render method as the server will only provide us with the to-do documents for the currently logged-in user now.
+**Note:** We can now remove the call to `filter()` in our `App` component's `render()` method as the server will only provide us with the to-do documents for the currently logged-in user now.
 
 ---
 
 # What We've Learned
 
 - How Methods allow us to securely create endpoints on our server to complete various actions in our app
-- How to use publications and subscriptions in Meteor to selectively choose what data is made available to the the client, and then import that data into a React component as props
+- How to use publications and subscriptions in Meteor to selectively choose what data is made available to the client, and then import that data into a React component as props
 
 ---
 template: inverse

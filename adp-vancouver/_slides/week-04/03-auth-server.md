@@ -57,7 +57,7 @@ template: inverse
 # Encryption
 
 The main tool for information security on the web is encryption. There are many different encryption
-algorithms each with it's own set of tradeoffs.
+algorithms, each with its own set of tradeoffs.
 
 **Vocabulary:**
 
@@ -70,7 +70,7 @@ algorithms each with it's own set of tradeoffs.
 # Turing and the Enigma
 
 Alan Turing's famous real-world Turing machine, that eventually became the basis for all modern
-computer systems was designed to undo the work of German cryptographers!
+computer systems, was designed to undo the work of German cryptographers!
 
 ---
 
@@ -88,8 +88,8 @@ Diffie–Hellman key exchange.
 
 # Exercise 2
 
-HTTPS uses encryption to secure communication over the internet, How does it work.
-Team up visit a site and use chrome's dev tools to find the Encryption algorithm being used.
+HTTPS uses encryption to secure communication over the internet. How does it work?
+Team up, visit a site and use Chrome's dev tools to find the Encryption algorithm being used.
 
 Answer the following:
 
@@ -193,7 +193,7 @@ template: inverse
 
 # Cookies
 
-Our project will use the browsers built-in mechanism for sending cookies to help us authenticate our users, once they are signed in.
+Our project will use the browser's built-in mechanism for sending cookies to help us authenticate our users, once they are signed in.
 
 Let's find out where cookies are stored by using your browser's dev-tools.
 
@@ -211,7 +211,7 @@ Answers:
 
 ---
 
-#Sending Cookies with Express
+# Sending Cookies with Express
 
 To configure Express to be able to read and send cookies with HTTP request/response, you'll
 need to install the `cookie-parser` middleware. This has been done for you in the project starter.
@@ -227,7 +227,7 @@ Look in `config/application.js`.
 
 #Cookies and CORS
 
-CORS stands for _Cross-Origin Resource Sharing_
+CORS stands for _Cross-Origin Resource Sharing_.
 
 For our purposes, we'll need to configure Express to accept requests from domains other than the one where our Express server is running, while in development. This has been done for you in the project starter.
 Look in `config/application.js`.
@@ -243,7 +243,7 @@ What domains are we sharing our Express endpoints with?
 **Update the signup resolver**
 
 Now that we know how to send cookies, update the signup resolver to set a cookie on the response object.
-To do this we'll need to pass the request object from express to our resolvers using the the context object provided by Apollo:
+To do this we'll need to pass the request object from Express to our resolvers using the context object provided by Apollo:
 
 ```js
 const apolloServer = new ApolloServer({
@@ -276,7 +276,7 @@ template: inverse
 # JSON Web Tokens (JWT)
 
 Like many technologies we've used in the course so far JWT is a specification, and it's up
-to the develop how closely their implementation will follow the spec.
+to the developer how closely their implementation will follow the spec.
 
 The Web Token system we're going to create is a very minimal implementation of the overall JWT spec.
 
@@ -319,21 +319,21 @@ Why is this information important for security? <br/>
 
 ---
 
-#JWT Advantages
+# JWT Advantages
 
 1.  **Tokens are stateless**. No need for backend records. Each token contains all the data necessary to validate users.
 2.  Cookies can be accessed by other domains. These can be used by other sites to identify who you are.
-3.  JWT's can store any valid JSON, For example, storing the users role "admin", etc.
+3.  JWTs can store any valid JSON, for example, storing the user's role &ndash; "admin", etc.
 
 ---
 
 ## Authenticating your Schema
 
-To authenticate our GraphQL schema, we'l use a GraphQL custom directive.
+To authenticate our GraphQL schema, we'll use a GraphQL custom directive.
 Open `server/api/custom-directives.js` and follow along for the implementation.
 
 When were done writing the logic for our directive, we'll apply it to the schema
-as detailed in the `@TODO`
+as detailed in the `@TODO`.
 
 ???
 
@@ -347,7 +347,7 @@ CODE ALONG
 
 **Complete the signup resolver**
 
-Now that we know how to send an receive an encrypted session token (JWT)
+Now that we know how to send and receive an encrypted session token (JWT)
 using cookies, finish coding the signup resolver.
 
 Once complete, you should be able to sign up users from the GraphQL explorer!

@@ -47,7 +47,7 @@ And it's JavaScript all the way down!
 
 <img width="200px" style="display:block; margin:0 auto;" src="/public/img/slide-assets/swiss-army-knife.jpg" />
 
-An **Application Platform** is an *integrated set useful of programs*.
+An **Application Platform** is an *integrated set of useful programs*.
 
 Meteor comes with everything a JavaScript developer might need to build a fully functioning application, out of the box.
 
@@ -59,13 +59,13 @@ class: center, middle
 Meteor simplifies and improves the *Developer Experience* of building Client-Server applications:
 
 - It's a complete and fully integrated suite of programs.
-- It's simple and powerful set of JavaScript API's for working with those programs.
+- It's simple and powerful set of JavaScript APIs for working with those programs.
 
 ---
 
 # Exercise 1
 
-Split into two groups. Imagine you're planning an application platform for *other developers* to use. Your platform should be geared towards developers who want to create Web Apps and should include all the necessary components. Feel free to **invent or imagine technology or solutions that don't currently exist**
+Split into two groups. Imagine you're planning an application platform for *other developers* to use. Your platform should be geared towards developers who want to create Web Apps and should include all the necessary components. Feel free to **invent or imagine technology or solutions that don't currently exist**.
 
 When you've come up with a platform design, then come up with a marketing plan for your platform. When you have a marketing plan, you'll present it to the class. Your plan should highlight all of the reasons developers should choose your platform, over their own custom solution.
 
@@ -82,7 +82,7 @@ Under the hood, Meteor applications are typical Client-Server applications, like
 
 The Meteor platform includes:
 
-- Front-End tools for building a user interface: **Blaze/React/Angular**
+- Front-End tools for building a user interface: **Blaze / React / Angular**
 - Back-End tools for developing your database and Server-Side logic: **Node / MongoDB**
 
 ---
@@ -92,11 +92,11 @@ The Meteor platform includes:
 **So far in the course we've built a typical RESTful style Client-Server application.**
 
 This architecture has been in use for a long time. For experienced developers, the
-shortcomings of this type of application have become obvious, here are a few:
+shortcomings of this type of application have become obvious; here are a few:
 
 - HTTP is a slow and bloated transport protocol
 - Client-Server applications don't share code!
-- UI's built over RESTful applications will need loading states everywhere!
+- UIs built over RESTful applications will need loading states everywhere!
 
 ---
 class: center, middle
@@ -252,7 +252,7 @@ template: inverse
 
 # Drawbacks of Meteor
 
-- Black box magical API's
+- Black box magical APIs
 - JS Ecosystem interop
 - mongoDB by default
 - Performance gotchas

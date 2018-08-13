@@ -89,7 +89,7 @@ MongoDB favours an **application-driven schema**.
 
 Compare this to relational schema design where you try to structure the data in a way that's agnostic to the application.
 
-So with a MongoDB you think about what pieces of data are **used together**, what pieces of data **are read-only**, what pieces of data need to be **written all the time** (and match the data access patterns of your application!)
+So with MongoDB you think about what pieces of data are **used together**, what pieces of data **are read-only**, what pieces of data need to be **written all the time** (and match the data access patterns of your application!).
 
 ---
 
@@ -102,8 +102,8 @@ So with a MongoDB you think about what pieces of data are **used together**, wha
 
 ???
 
-- 1 NF: Values in cells must be atomic (means values are stand-alone, not repeated in cells)
-- 2 NF: Must be in 1NF and each row must be identifiable by a unique value, or set of values (aka the "primary key"; tables should focus on a single concept)
+- 1NF: Values in cells must be atomic (means values are stand-alone, not repeated in cells)
+- 2NF: Must be in 1NF and each row must be identifiable by a unique value, or set of values (aka the "primary key"; tables should focus on a single concept)
 - 3NF: Must be 2NF and non-keys describe primary keys and nothing else (need to elect a primary key...the noun that is described by the other data)
 - Referential integrity: Making your relational database relational (adding foreign key constraints, and any foreign key field must agree with the primary key that is referenced by the foreign key
 
@@ -174,7 +174,7 @@ use <DB_NAME>
 
 The database will now be accessible through the `db` variable.
 
-We can even `use` a database that doesn't exist yet, and MongoDB will lazily create it when we insert our first document in there.
+We can even `use` a database that doesn't exist yet, and MongoDB will lazily create it when we insert our first document in a collection in there.
 
 ---
 
@@ -429,9 +429,9 @@ The cool thing about Meteor though is that collections are available on both the
 
 # Minimongo?
 
-While Meteor gives **the database everywhere**, on the client side of an app you actually interacting with a cache of the database.
+While Meteor gives **the database everywhere**, on the client side of an app, you are actually interacting with a cache of the database.
 
-This is made possible by **Minimongo**, which is an in-memory, all JS implementation of the MongoDB API.
+This is made possible by **Minimongo**, which is an in-memory, all-JS implementation of the MongoDB API.
 
 The way we get data from the server is through Meteor's pub/sub system, and we write it back with Meteor methods (more on that tomorrow).
 
@@ -595,7 +595,7 @@ Where do we put this code? What are we replacing?
 
 Now refactor the `toggleComplete()`, `removeToDo()`, and `removeCompleted()` methods to contain the `update()` and `remove()` methods, however appropriate.
 
-The `removeCompleted()` method will be the trickiest...how will you check to see which to-dos are marked as complete now, and then remove those to-dos from the database based on their `_id`?
+The `removeCompleted()` method will be the trickiest... how will you check to see which to-dos are marked as complete now, and then remove those to-dos from the database based on their `_id`?
 
 ---
 

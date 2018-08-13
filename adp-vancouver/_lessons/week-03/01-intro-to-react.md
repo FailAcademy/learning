@@ -96,7 +96,7 @@ Be sure to move the `key` attribute from your `<li>` onto the `<ToDo />` inside 
 
 Based on what you just learned about props, fix the reference error in the `ToDo` component.
 
-Specifically, think about how you will pass the `todo` item from the the `App` component to the `ToDo` component as a prop called `item`.
+Specifically, think about how you will pass the `todo` item from the `App` component to the `ToDo` component as a prop called `item`.
 
 Try using the **destructuring approach** when accessing the `item` prop in the `ToDo` component.
 

@@ -259,7 +259,7 @@ Solution files:
 # Exercise 5
 
 Let's add the uploads table to our Postgres database. We'll need to ensure we have
-created the appropriate constraints and queries for adding and retrieving images associated with Items in out database.
+created the appropriate constraints and queries for adding and retrieving images associated with Items in our database.
 
 ???
 
