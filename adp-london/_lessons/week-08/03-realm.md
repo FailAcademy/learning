@@ -58,7 +58,7 @@ _Where (and how) will you use these functions?_
 
 ---
 
-# Exercise 3
+## Exercise 3
 
 Our `FavesProvider` component doesn't do much for us yet except give us access to an empty array of `faveIds`.
 
@@ -70,7 +70,7 @@ Lastly, wrap your app in your `FavesProvider` in `App.js`.
 
 ---
 
-# Exercise 4
+## Exercise 4
 
 Add `addFaveSession` and `removeFaveSession` methods to the `FavesProvider` component now. These methods should each have a `sessionId` parameter.
 
