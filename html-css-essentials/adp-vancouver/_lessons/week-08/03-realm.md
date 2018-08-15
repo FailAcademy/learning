@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Realm Databases
-slides: ['_slides/week-08/03-realm.md']
-lesson_date:  2018-08-22
+slides: ["_slides/week-08/03-realm.md"]
+lesson_date: 2018-08-22
 ---
 
 ## Pre-work
@@ -23,9 +23,7 @@ And if you're interested in taking a deeper dive into what's going on under the 
 - Explain how Realm is different from other mobile database options.
 - Integrate a Realm database into a React Native application.
 - Define schema within a React Native application.
-- Leverage React Component Lifecycle methods to perform CRUD operations on the database base in relation user interactions.
-- Integrate Redux into a React Native app and use it to manage navigation state.
-- Sync application UI state as data is added and removed from a Realm database.
+- Manage application UI state with React's context API as data is queried, added, and removed from a Realm database.
 
 ---
 
@@ -60,27 +58,43 @@ _Where (and how) will you use these functions?_
 
 ---
 
-## Exercise 3
+# Exercise 3
 
-Now set up the `reducers.js` file in the `redux` directory. Be sure to import `combineReducers` into this file. Export your combined reducers from this file (you will only have one!).
+Our `FavesProvider` component doesn't do much for us yet except give us access to an empty array of `faveIds`.
 
-You will need to create a faves module with relevant actions (`GET_FAVED_SESSION_IDS`, `CREATE_FAVE_SESSION`, and `DELETE_FAVE_SESSION`), action creators, and a reducer for managing your faves. You'll use the CRUD helpers you just created here.
+Write a `getFavedSessionIds` method for this class that uses one of your Realm helpers to get the current faves from the database, and then subsequently update the state of the `FavesProvider` with an array of the faved session IDs.
 
-Lastly, nest a `Provider` inside your `ApolloProvider` from `react-redux` and pass it your store.
+Call this method in `componentDidMount` so that we fetch this data initially as the component mounts.
+
+Lastly, wrap your app in your `FavesProvider` in `App.js`.
+
+---
+
+# Exercise 4
+
+Add `addFaveSession` and `removeFaveSession` methods to the `FavesProvider` component now. These methods should each have a `sessionId` parameter.
+
+Pass these methods along in the `value` prop of `FavesContext.Provider` (along with the `faveIds`).
+
+You will now be able to update your context where you use a `FavesContext.Consumer` component in your app.
 
 ---
 
 ## Lab Activity
 
+You'll need to use a `FavesContext.Consumer` component anywhere you need to have access to `faveIds`, `addFaveSession`, or `removeFaveSession` from the faves context in your app. Specifically, you will want to add the consumer to your Schedule, Faves, and Session container components (nest them right inside your `Query` components for these screens).
+
+Once you've set this up for the Session screen and you've added a button component to toggle faving for given particular session, you can wire the button up with the `addFaveSession` and `removeFaveSession` functions to test out if your Realm helpers and faves context are actually writing data to your database (finally!).
+
 Once you can see that data is writing to your database when the "Add to / Remove from Faves" button is tapped in a Session (use the Realm Browser for this!), work on building out your Faves screen to display just the sessions that a user has faved inside a `SectionList` component.
 
-To build out the Faves screen, we'll need to filter the sessions we fetch from Firebase and check to see if they have a `session_id` that corresponds to one of the IDs in the array of Fave objects retrieved from Realm. Use this array of sessions to populate your Redux store, and pass it into your `FavesContainer` as a prop.
+To build out the Faves screen, we'll need to filter the sessions we fetch from the API and check to see if they have a `session_id` that corresponds to one of the IDs in the array of Fave objects retrieved from Realm before we pass them to the schedule list for this screen.
 
-The rest of the Faves screen will be built similarly to the Schedule screen. Reuse presentational components between the two wherever possible!
+The Faves screen will be built similarly to the Schedule screen. Reuse presentational components between the two wherever possible!
 
 One gotcha is that we'll need to keep the UI state of our Faves screen in sync with the writes we make to the database from the Session screen (i.e. when tapping the button to fave or unfave a session).
 
-To do this, we'll need to research how **[change events](https://realm.io/docs/javascript/latest/#realm-notifications)** work in Realm, and add one of these to our Faves and Session container component constructors, and update our UI whenever a session is added or removed as a fave.
+To do this, we'll need to research how **[change events](https://realm.io/docs/javascript/latest/#realm-notifications)** work in Realm, and add one of these to our `FavesProvider` constructor, so it will update our UI whenever a session is added or removed as a fave.
 
 ---
 
