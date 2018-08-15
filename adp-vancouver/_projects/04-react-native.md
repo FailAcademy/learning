@@ -50,7 +50,7 @@ Your project must:
 - [ ] Contain `README.md` with project summary and setup
 - [ ] Contain a valid [`package.json`](http://browsenpm.org/package.json) file with all appropriate fields completed
 - [ ] Contain `.gitignore` file (ignoring `node_modules` and system files)
-- [ ] Use ESLint with the [AirBnB style-guide](https://github.com/airbnb/javascript)
+- [ ] Use Prettier to format your code
 
 ### Functional
 
@@ -73,7 +73,7 @@ Your project must:
 - [ ] Contain components created using `React.Component`, `const`, or `function` only
 - [ ] Implement "presentational" and "container" components appropriately throughout the application
 - [ ] Use Apollo Client to request data from the provided GraphQL endpoint
-- [ ] Include Redux for state management of favourites in the app
+- [ ] Include React's context API for state management of faves in the app
 - [ ] Make appropriate use of React Native's UI components (including `<View>`, `<Text>`, `<Image>`, `<SectionList>`, `<TouchableHighlight>`, etc.)
 - [ ] Implement styles on a per-component basis using `Stylesheet.Create`
 - [ ] Leverage code-reuse strategies across iOS and Android platforms as much as possible
@@ -81,6 +81,11 @@ Your project must:
 - [ ] Use [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons) for icon assets throughout the app (specifically, the Octicon library)
 - [ ] Use [React Native Linear Gradient](https://github.com/react-native-community/react-native-linear-gradient) to generate the gradient background
 - [ ] Use [Realm React Native](https://realm.io/docs/react-native/latest/) as an embedded database
+
+### Quality
+
+- [ ] Contain an organized file tree separating stateless components from stateful scenes, as well as sub-directories for organizing files with configuration code reusable functions
+- [ ] Contains prop-types validation and be free of prop-type validation errors and warnings
 
 ### Stretch Goals
 
