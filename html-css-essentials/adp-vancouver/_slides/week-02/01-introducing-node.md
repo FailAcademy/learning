@@ -98,24 +98,18 @@ Your `package.json` should look like this:
 
 ```json
 {
-  "name": "TCP_Service",
+  "name": "intro-to-node-exercises",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Learning Node @ Red Academy",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "author": "MK <mackenzie@redacademy.com>",
   "license": "ISC"
 }
 ```
 
 **Why do we need this?**
-
-???
-
-Describe the purpose of the `package.json` file.
 
 ---
 
@@ -139,10 +133,6 @@ function handleConnection() {
 ```
 
 Run this code by typing `node index.js`.
-
-???
-
-Note that you can also just run `node index` &ndash; the `.js` suffix is not required.
 
 ---
 
