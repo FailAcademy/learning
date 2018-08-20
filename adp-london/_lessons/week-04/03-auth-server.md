@@ -89,7 +89,7 @@ passwords. This code will be a basic demonstration of the technique we'll use in
 **Update the signup resolver**
 
 Now that we know how to send cookies, update the signup resolver to set a cookie on the response object.
-To do this we'll need to pass the request object from express to our resolvers using the the context object provided by Apollo:
+To do this we'll need to pass the request object from express to our resolvers using the context object provided by Apollo:
 
 ```js
 const apolloServer = new ApolloServer({

@@ -253,7 +253,7 @@ touch src/redux/modules/counter.js
 
 # Our First Action
 
-Remember that actions plain JS objects that contain payloads of information that send data from your application to your store. Action objects must have a `type` property to indicate the type of action being performed.
+Remember that actions are plain JS objects that contain payloads of information that send data from your application to your store. Action objects must have a `type` property to indicate the type of action being performed.
 
 As a best practice, we define string constants to use as the values for our action object `type` property.
 
