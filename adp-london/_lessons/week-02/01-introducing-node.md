@@ -46,7 +46,7 @@ Implement the following `conn` event handlers in your `handleConnection` callbac
 - `close`
 - `error`
 
-Each handler should `console.log` the `remoteAddress` as well as any relevant parameters (e.g. incoming data, or error messages). Review **[the documentation](https://nodejs.org/api/net.html)** here before you begin.
+Each handler should `console.log` the `remoteAddressAndPort` as well as any relevant parameters (e.g. incoming data, or error messages). Review **[the documentation](https://nodejs.org/api/net.html)** here before you begin.
 
 ---
 
