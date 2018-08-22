@@ -166,7 +166,7 @@ mkdir lib
 mkdir __tests__
 
 npm init -y
-npm i --save-dev jest-cli
+npm install --save-dev jest-cli
 ```
 
 Then, [install the RED Academy ESlint](https://www.npmjs.com/package/eslint-config-redacademy).
