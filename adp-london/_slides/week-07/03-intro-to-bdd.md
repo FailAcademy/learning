@@ -114,7 +114,7 @@ class: center, middle
 
 ???
 
-Let's practice with an example. Remember than we want to be able to understand our functionality before we start implementing.
+Let's practice with an example. Remember that we want to be able to understand our functionality before we start implementing.
 
 ---
 
@@ -138,7 +138,7 @@ For your reference:
 - Would we want to know the percentage passing each project?
 - How about the satisfaction of those who pass vs the satisfaction of those who fail?
 - We could also look at years experience vs. pass percentage to see if there's a correlation
-- **Note:** The solutions are in the `adp-exercise-solutions` repo in the `bdd-student-data` directory. Solutions were written to process average age, average experience, the pass/fail percentage for each project, the satisfaction of those who passed, and the satisfaction of those who failed. Fill your boots!
+- **Note:** The solutions are in the `adp-exercise-solutions` repo in the [`bdd-student-stats`](https://github.com/redacademy/adp-exercise-solutions/tree/master/bdd-student-stats) directory. Solutions were written to process average age, average experience, the pass/fail percentage for each project, the satisfaction of those who passed, and the satisfaction of those who failed. Fill your boots!
 
 ---
 
@@ -158,7 +158,7 @@ mkdir __tests__
 touch __tests__/student-stats.spec.js
 
 npm init -y
-npm i --save-dev jest-cli
+npm install --save-dev jest-cli
 ```
 
 ```js
