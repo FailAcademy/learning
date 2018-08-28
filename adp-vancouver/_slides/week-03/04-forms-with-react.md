@@ -265,7 +265,7 @@ template: inverse
 
 #The `Form` Component
 
-First, wrap your HTML form in the `From` component:
+First, wrap your HTML form in the `Form` component:
 
 ```jsx
 <Form
@@ -288,7 +288,7 @@ React final form makes use of the **Render Prop** pattern. Where else have we se
 
 #The `Form` Component
 
-Now, ddd the necessary props:
+Now, add the necessary props:
 
 ```js
 <Form
@@ -362,7 +362,7 @@ render={({ input, meta }) => (
 // ...
 ```
 
-The `input` argument passed to the `Field` render prop contains all the necessary props for controlling the input its wrapping.
+The `input` argument passed to the `Field` render prop contains all the necessary props for controlling the input it's wrapping.
 Don't forget to pass these to your wrapped inputs, or your form will not track input values like you expect. Using the
 **Object Spread** operator is a convenient way of transferring all props.
 
@@ -381,11 +381,11 @@ Be sure to [check the documentation](https://github.com/final-form/react-final-f
 
 #Submitting
 
-Final-Form is controlling your HTML form, be sure to remove the `action` attribute from your HTML `form` tag. <br/>
-Much like validation, Final-Form let's you determine how to submit data from your form, using the `onSubmit` function you defined earlier.
+Final-Form is controlling your HTML form. Be sure to remove the `action` attribute from your HTML `form` tag. <br/>
+Much like validation, Final-Form lets you determine how to submit data from your form using the `onSubmit` function you defined earlier.
 This usually means you'll need to make an AJAX request with the form data as JSON.
 
-- Will the `onSubmit` function get called if you're validation function returns an object containing error messages?
+- Will the `onSubmit` function get called if your validation function returns an object containing error messages?
 
 ---
 
@@ -407,7 +407,7 @@ technique we described earlier.
 Now that you know how to build forms using React and React Final-Form, return to the
 form you built in _Exercise 2_ and rebuild it using React Final-Form and Material UI input components.
 
-- Validate all inputs and display an error messages (on submit only. Hint: add a submit button)
+- Validate all inputs and display error messages (on submit only. Hint: add a submit button)
 - Remove error messages when the user begins to type in the invalid input (Hint: `meta` prop of the `Field` component)
 - _Only_ if the form is valid, display the resulting input values in the UI
 
