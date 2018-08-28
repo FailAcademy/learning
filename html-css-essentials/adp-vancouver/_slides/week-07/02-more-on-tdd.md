@@ -47,7 +47,7 @@ Examples:
 - `'dddeeefggghhh'` => `'f'`
 - `'terfg'` => `'t'`
 - `'frof'` => `'r'`
-- `'ttttt'` => `undefined'`
+- `'ttttt'` => `undefined`
 
 ???
 
@@ -192,7 +192,7 @@ The function should return `5`.
 
 **Using data structures for counting:**
 
-- Iterate over array, counting the occurence of each integer
+- Iterate over array, counting the occurrence of each integer
 - Store the count in an array
 - The index of the array element is the number being counted
 
