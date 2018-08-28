@@ -51,7 +51,7 @@ In 15 minutes we'll discuss what you came up with.
 In this course we'll learn how to build amazing Web Forms using React. Before we start there a few
 basics we'll need to understand when it comes to working with forms in React.
 
-[![CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/y3vv68m9j9)
+[![Edit jnz04y6q1w](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/jnz04y6q1w?moduleview=1&view=editor)
 Click the button above and follow the instructions in the `@TODO` to learn the basics of how React handles form inputs.
 
 ---
