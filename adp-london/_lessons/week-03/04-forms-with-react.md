@@ -34,7 +34,7 @@ Prior to class, read through the following documentation:
 
 ## Exercise 1
 
-### Think Outside the Box.
+#### Think Outside the Box.
 
 Typeform built a business out of exceptional form UX. How did they do it?
 
