@@ -40,7 +40,7 @@ Examples:
 - `'dddeeefggghhh'` => `'f'`
 - `'terfg'` => `'t'`
 - `'frof'` => `'r'`
-- `'ttttt'` => `undefined'`
+- `'ttttt'` => `undefined`
 
 ---
 
