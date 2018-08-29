@@ -135,7 +135,7 @@ In ES5, we use `Function.prototype` to simulate classes:
 // We call this type of function a constructor...
 // It's job is to initialize new objects:
 
-var Person = function(firstName, lastName) {
+const Person = function(firstName, lastName) {
   this.firstName = firstName;
   this.lastName = lastName;
 }
@@ -148,7 +148,7 @@ Person.prototype.fullName = function() {
 
 // Create a new object with the Person() constructor:
 
-var joe = new Person('Joe', 'Schmo');
+const joe = new Person('Joe', 'Schmo');
 
 console.log(joe.fullName());
 ```

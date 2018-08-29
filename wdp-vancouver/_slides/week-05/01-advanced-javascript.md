@@ -77,7 +77,7 @@ If you use two **bangs** (exclamation marks), you can force Javascript
 to show you the true of false interpretation of a value.
 
 ```js
-var str = 'abcde';
+const str = 'abcde';
 
 console.log(str); // 'abcde'
 console.log(!!str); // true
@@ -148,7 +148,7 @@ Every **variable** in JS is scoped at a function level, so this means that **var
 
 When a **variable** is not found in a **function scope**, the execution environment traverses to an outer **scope** to look for it.
 
-So in the code example, the **statement** `var name = "Jane"` declares a **variable** "name" which is local to the **function scope**. The outer **variable** which has the same **variable** name is ignored, and the **variable** in current **scope** is used.
+So in the code example, the **statement** `const name = "Jane"` declares a **variable** "name" which is local to the **function scope**. The outer **variable** which has the same **variable** name is ignored, and the **variable** in current **scope** is used.
 
 Hence the second **statement** `console.log("The name is : " + name);` logs a value "Jane".
 

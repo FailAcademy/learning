@@ -191,7 +191,7 @@ Using `if` and `else` you can decide what code your program will run, depending 
 
 ```javascript
 // ...
-var hungry = 9000;
+const hungry = 9000;
 
 if (hungry) {
   eat();
@@ -222,29 +222,29 @@ if (a > 21 || a * 4 === 32) {
 
 # Variables
 
-The **var** keyword defines a variable in JavaScript.
+The **const** keyword defines a variable in JavaScript.
 
 This is what a **variable declaration** looks like:
 
 ```js
-var color = 'red';
-var amount = 100;
-var list = ['first', 'second', 'third'];
-var result = amount * 10;
+const color = 'red';
+const amount = 100;
+const list = ['first', 'second', 'third'];
+const result = amount * 10;
 ```
 
 ---
 
 # Uninitialized Variables
 
-We can **declare** variables, without assigning a value.
+We can **declare** variables, without assigning a value using `let`.
 
 Unassigned variables automatically get the JavaScript value `undefined`.
 
 ```js
-var a;
-var b;
-var c;
+let a;
+let b;
+let c;
 
 console.log(a); // logs "undefined"
 ```
@@ -265,9 +265,9 @@ console.log(a); // logs "undefined"
 Who can name what the **statements** and **variables** are in the following script?
 
 ```js
-var today = new Date();
-var dayOfWeek = today.getDay();
-var greeting;
+const today = new Date();
+const dayOfWeek = today.getDay();
+let greeting;
 
 if (dayOfWeek === 2) {
   greeting = 'Today is Tuesday';
@@ -286,7 +286,7 @@ Copy and paste this code into the browser console:
 
 ```js
 console.log('Hello World!');
-var yourName = prompt("What's your name?");
+const yourName = prompt("What's your name?");
 console.log(yourName);
 ```
 
@@ -331,10 +331,10 @@ JavaScript has basic arithmetic operators:
 In use:
 
 ```js
-var quantity = 3 + 2;
-var total = (4 - 1) * 3;
-var totalAndOne = total++;
-var totalMinusOne = total--;
+const quantity = 3 + 2;
+const total = (4 - 1) * 3;
+let totalAndOne = total++;
+let totalMinusOne = total--;
 ```
 
 _What will the above variables return?_
@@ -346,20 +346,20 @@ _What will the above variables return?_
 There are also special operators that allow us to **increment** or **decrement** a value:
 
 ```js
-var i = 5;
+let i = 5;
 i++;
 ```
 
 ```js
-var i = 5;
+let i = 5;
 i--;
 ```
 
 Or find the remainder of an expression:
 
 ```js
-var remainderOne = 10 % 3;
-var remainderTwo = 6 % 2;
+const remainderOne = 10 % 3;
+const remainderTwo = 6 % 2;
 ```
 
 _What will the above variables return?_
@@ -395,7 +395,7 @@ _What will the above expressions return?_
 Comparison operators are helpful when paired with conditional statements:
 
 ```js
-var score = prompt("What's your score?");
+const score = prompt("What's your score?");
 
 if (score >= 50) {
   console.log('You passed!');
@@ -417,8 +417,8 @@ Getting used to how JavaScript handles primitives is an important part of using 
 Try this:
 
 ```js
-var a = '42';
-var b = Number(a);
+const a = '42';
+const b = Number(a);
 
 console.log(a); // "42"
 console.log(b); // 42
@@ -496,7 +496,7 @@ We can use **comparison operators** and **assignment** to get a value depending 
 // The value of a will either be true or false
 // depending on the truthiness of b & c ...
 
-var a = b && c;
+const a = b && c;
 ```
 
 ---
@@ -506,7 +506,7 @@ var a = b && c;
 We can reduce the number of line in simple **conditionals** by using the ternary operator.
 
 ```js
-var a = b < 21 ? b : c;
+const a = b < 21 ? b : c;
 ```
 
 This statement reads: "If `b` is less than `21`, then the value of `a` will be `b`, otherwise `a` will have the value of `c` ... "
@@ -543,7 +543,7 @@ Like normal objects, there's a special way to define arrays as variables.
 For arrays, we use square brackets (instead of curly braces):
 
 ```js
-var shoppingList = [
+const shoppingList = [
   // your array items will go here...
 ];
 ```
@@ -555,14 +555,14 @@ var shoppingList = [
 Add values to an array by separating them with commas:
 
 ```js
-var shoppingList = ['coffee', 'peppers', 'apple juice'];
+const shoppingList = ['coffee', 'peppers', 'apple juice'];
 ```
 
 Access them by their index number:
 
 ```js
 // Item 2 is available at index number 1:
-var itemTwo = shoppingList[1]; // will equal "peppers"
+const itemTwo = shoppingList[1]; // will equal "peppers"
 ```
 
 And even add new values to the end of the array:
@@ -586,7 +586,7 @@ template: inverse
 **Objects** are like containers that hold groups of related variables and functions to create an organized **model** of something in your code.
 
 ```js
-var myObject = {};
+const myObject = {};
 
 // An object literal!
 ```
@@ -606,7 +606,7 @@ var myObject = {};
 We define objects in JS just like we define any other variables, but they are wrapped in curly braces:
 
 ```js
-var person = {
+const person = {
   // your properties and methods will go here...
 };
 ```
@@ -617,10 +617,10 @@ var person = {
 
 **Properties** and **methods** are defined for the object using **key/value pairs**.
 
-This simply means that instead of writing `var firstName =` we write `firstName:` and separate multiple properties with commas instead of semi-colons.
+This simply means that instead of writing `const firstName =` we write `firstName:` and separate multiple properties with commas instead of semi-colons.
 
 ```js
-var person = {
+const person = {
   firstName: 'Silent',
   lastName: 'Bob',
   height: 1.75,
@@ -635,19 +635,19 @@ var person = {
 To access one of the object's properties or methods, we can use **dot notation**:
 
 ```js
-var person = {
+const person = {
   // ...
   beard: true,
   //...
 };
 
-var hasBeard = person.beard; // will equal true
+const hasBeard = person.beard; // will equal true
 ```
 
 Or use square brackets with the property key in quotes:
 
 ```js
-var hasBeard = person['beard']; // will equal true
+const hasBeard = person['beard']; // will equal true
 ```
 
 ---
@@ -657,7 +657,7 @@ var hasBeard = person['beard']; // will equal true
 And just like variables, we can update object property values after they've been initially defined:
 
 ```js
-var person = {
+const person = {
   // ...
   beard: true,
   //...
@@ -679,13 +679,13 @@ person.justShaved = true;
 We can also store arrays as properties in objects:
 
 ```js
-var errands = {
+const errands = {
   date: new Date(),
   complete: false,
   locations: ['Post Office', 'Grocery Store', 'Hardware Store'],
 };
 
-var firstStop = errands.locations[0]; // will equal "Post Office"
+const firstStop = errands.locations[0]; // will equal "Post Office"
 ```
 
 ---
@@ -768,7 +768,7 @@ function add(a, b) {
   return a + b;
 }
 
-var twoPlusTwo = add(2, 2);
+const twoPlusTwo = add(2, 2);
 
 console.log(twoPlusTwo);
 ```
@@ -781,7 +781,7 @@ Notice that we don't explicitly "return" anything from this function, we just wr
 
 ```js
 function fullName() {
-  var yourName = prompt("What's your name?");
+  const yourName = prompt("What's your name?");
   console.log(yourName);
 }
 
@@ -798,7 +798,7 @@ This is an example of a JavaScript function in action
 
 ```js
 function fullName() {
-  var yourName = prompt("What's your name?");
+  const yourName = prompt("What's your name?");
   console.log(yourName);
 }
 ```
@@ -807,7 +807,7 @@ The function is called later on in our code.
 
 ```js
 // name will have the value that the user entered..
-var name = fullName();
+const name = fullName();
 ```
 
 ---
@@ -831,7 +831,7 @@ Function declarations are exactly what we've seen so far.
 These functions can be called before they are even declared in your code (due to a concept in JS known as **hoisting**):
 
 ```js
-var size = volume(3, 4, 5);
+const size = volume(3, 4, 5);
 
 console.log(size);
 
@@ -849,11 +849,11 @@ Function expressions usually don't have a name. Functions without names are know
 This function expression is stored in a variable called `volume`:
 
 ```js
-var volume = function(width, height, depth) {
+const volume = function(width, height, depth) {
   return width * height * depth;
 };
 
-var size = volume(3, 4, 5);
+const size = volume(3, 4, 5);
 
 console.log(size);
 ```
@@ -884,10 +884,10 @@ function myFunction() {
 Let’s look at some variables and figure out if they will have local or global scope...
 
 ```js
-var fille = “Monique”;
+const fille = “Monique”;
 
 function france() {
-  var garcon = “Henri”;
+  const garcon = “Henri”;
 }
 ```
 
@@ -898,13 +898,13 @@ function france() {
 A more complex example:
 
 ```js
-var fille = “Monique”;
+const fille = “Monique”;
 
 function france() {
-  var garcon = “Henri”;
+  const garcon = “Henri”;
 
   function paris() {
-    var femme = “Marie”;
+    const femme = “Marie”;
   }
 }
 ```
@@ -925,7 +925,7 @@ There are pros and cons to each type of variable scope:
 For object methods, we write `getName: function() {...}` instead of `function getName() {...}`:
 
 ```js
-var person = {
+const person = {
   firstName: 'Silent',
   lastName: 'Bob',
   height: 1.75,
@@ -943,7 +943,7 @@ var person = {
 We use dot notation to access object methods:
 
 ```js
-var person = {
+const person = {
   firstName: 'Silent',
   lastName: 'Bob',
   // ...
@@ -952,7 +952,7 @@ var person = {
   },
 };
 
-var fullName = person.getName(); // will return "Silent Bob"
+const fullName = person.getName(); // will return "Silent Bob"
 ```
 
 ---
@@ -964,7 +964,7 @@ In JS, `this` is a special word and it always refers to one object (which object
 Inside of an object's method, it refers to the object itself:
 
 ```js
-var person = {
+const person = {
   firstName: 'Silent',
   lastName: 'Bob',
   // ...
@@ -989,8 +989,8 @@ template: inverse
 While loops are helpful when you don't know how many times it needs to run:
 
 ```js
-var i = 0;
-var score = 0;
+const i = 0;
+const score = 0;
 
 while (i < 5) {
   score = i;
@@ -1008,9 +1008,9 @@ _What do you think the final score will be after this loop runs?_
 For loops allow you to set a specific number of times that the loop will run:
 
 ```js
-var count = 0;
+const count = 0;
 
-for (var i = 1; i < 5; i++) {
+for (let i = 1; i < 5; i++) {
   count = i;
   console.log('Current count: ' + count);
 }
@@ -1025,14 +1025,14 @@ You will likely find yourself using for loops most often with "arrays" (we'll ge
 Let's take our shopping list array and print it out in a list:
 
 ```js
-var shoppingList = ['coffee', 'peppers', 'apple juice'];
+const shoppingList = ['coffee', 'peppers', 'apple juice'];
 
 // Remember how we manually set the max. number of loops before?
 // We can use the array "length" to get the number automatically:
 
-var totalItems = shoppingList.length;
+const totalItems = shoppingList.length;
 
-for (var i = 0; i < totalItems; i++) {
+for (const i = 0; i < totalItems; i++) {
   console.log(shoppingList[i]);
 }
 ```
@@ -1044,14 +1044,14 @@ for (var i = 0; i < totalItems; i++) {
 We use slightly different syntax to loop through properties in an object:
 
 ```js
-var bob = {
+const bob = {
   firstName: 'Bob',
   lastName: 'Smith',
   phoneNumber: '604-604-6040',
   email: 'bob@redacademy.com',
 };
 
-for (var prop in bob) {
+for (let prop in bob) {
   console.log(bob[prop]);
 }
 ```

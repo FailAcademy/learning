@@ -47,11 +47,11 @@ Ecma International is the standards organization in charge of publishing each ne
 
 How well does ES5 work in browsers today?
 
-* [ECMAScript 5 compatibility table](http://kangax.github.io/compat-table/es5/)
+- [ECMAScript 5 compatibility table](http://kangax.github.io/compat-table/es5/)
 
 How about ES6?
 
-* [ECMAScript 6 compatibility table](http://kangax.github.io/compat-table/es6/)
+- [ECMAScript 6 compatibility table](http://kangax.github.io/compat-table/es6/)
 
 ---
 
@@ -78,13 +78,13 @@ template: inverse
 We'll need to use a Gulp plugin to transpile our ES.next code to ES5 during our build process. We can use [**Gulp-Babel**](https://www.npmjs.com/package/gulp-babel) for that:
 
 ```js
-const gulp = require("gulp");
-const babel = require("gulp-babel");
+const gulp = require('gulp');
+const babel = require('gulp-babel');
 
-const input = "src/index.js";
-const output = "dist";
+const input = 'src/index.js';
+const output = 'dist';
 
-gulp.task("babel", () => {
+gulp.task('babel', () => {
   return gulp
     .src(input)
     .pipe(babel())
@@ -130,9 +130,9 @@ template: inverse
 
 There are now three ways to declare variables in JavaScript:
 
-* `var`
-* `let`
-* `const`
+- `var`
+- `let`
+- `const`
 
 These new solutions solve some common problems with variable declarations.
 
@@ -151,8 +151,8 @@ The variable `i` is hoisted to the top of the function and shared across each it
 ```
 
 ```js
-for (var i = 1; i < 6; i++) {
-  $("#" + i).click(function() {
+for (let i = 1; i < 6; i++) {
+  $('#' + i).click(function() {
     alert(i);
   });
 }
@@ -181,9 +181,9 @@ Conversely, `var` defines a variable globally, or locally to an entire function 
 Variables defined with `var` can lead to "name conflicts", where a coder overwrites a variable name, often unknowingly.
 
 ```js
-var teachers = ["Jim", "Mack", "Mandi", "Rose", "Sid"];
+var teachers = ['Jim', 'Mack', 'Mandi', 'Rose', 'Sid'];
 
-var teachers = ["Alice", "Bob", "Jane"];
+var teachers = ['Alice', 'Bob', 'Jane'];
 // teachers variable is redeclared
 ```
 
@@ -196,24 +196,9 @@ Both `let` and `const` prevent redeclaring with the same variable name (but you 
 `let` still allows reassigning of the value.
 
 ```js
-let teachers = ["Jim", "Mack", "Mandi", "Rose", "Sid"];
+let teachers = ['Mandi', 'Jim', 'Rose', 'Mack', 'Sid'];
 
-var teachers = ["Alice", "Bob", "Jane"];
-// teachers variable is redeclared
-```
-
-Both `let` and `const` prevent redeclaring with the same variable name.
-
----
-
-# Problem 3: Avoiding Change
-
-`let` still allows reassigning of the value.
-
-```js
-let teachers = ["Mandi", "Jim", "Rose", "Mack", "Sid"];
-
-teachers = ["Alice", "Bob", "Jane"];
+teachers = ['Alice', 'Bob', 'Jane'];
 // note: not redeclared, only changing the value
 ```
 
@@ -226,9 +211,9 @@ However, some values could benefit from being marked as unchanging.
 `const` acts like `let`, but with the addition that its values cannot be reassigned.
 
 ```js
-const teachers = ["Jim", "Mack", "Mandi", "Rose", "Sid"];
+const teachers = ['Jim', 'Mack', 'Mandi', 'Rose', 'Sid'];
 
-teachers = ["Kyle", "Kurtis", "Rony"];
+teachers = ['Kyle', 'Kurtis', 'Rony'];
 // TypeError: Assignment to constant variable.
 ```
 
@@ -255,7 +240,7 @@ const array = [1, 2, 3];
 array.push(4);
 
 const object = { a: 1, b: 2 };
-object["c"] = 3;
+object['c'] = 3;
 ```
 
 ---
@@ -292,7 +277,7 @@ function counterES5() {
   }, 1000);
 }
 
-var counterA = new counterES5();
+const counterA = new counterES5();
 window.setTimeout(counterA, 1000);
 ```
 
@@ -307,7 +292,7 @@ Store the outer function's `this` value in a variable:
 ```js
 function counterES5() {
   this.seconds = 0;
-  var that = this;
+  const that = this;
 
   window.setInterval(function() {
     that.seconds++;
@@ -333,7 +318,7 @@ function counterES5() {
       this.seconds++;
       console.log(this.seconds);
     }.bind(this),
-    1000
+    1000,
   );
 }
 ```
@@ -365,7 +350,7 @@ function counterESnext() {
 
 ```js
 function sayHi() {
-  console.log("hi");
+  console.log('hi');
 }
 function addOne(x) {
   return x + 1;
@@ -385,7 +370,7 @@ var multiply = function(a, b) {
 **ES.next `=>`:**
 
 ```js
-const sayHi = () => console.log("hi");
+const sayHi = () => console.log('hi');
 const addOne = x => x + 1;
 const multiply = (a, b) => {
   return a * b;
@@ -434,15 +419,15 @@ Template literals (or template strings) are string literals that allow **string 
 **ES5:**
 
 ```js
-var name = "Bob";
-var city = "Vancouver";
-var description = name + " lives in " + city;
+const name = 'Bob';
+var city = 'Vancouver';
+var description = name + ' lives in ' + city;
 ```
 
 **ES.next:**
 
 ```js
-let description = `${name} lives in ${city}`;
+const description = `${name} lives in ${city}`;
 ```
 
 Note that the template literal is surrounded by **back-ticks** (not single quotes).
@@ -456,13 +441,13 @@ Template literals also preserve white space:
 **ES5:**
 
 ```js
-var funkyArrows = "\n-->\n    -->\n        ->\n";
+var funkyArrows = '\n-->\n    -->\n        ->\n';
 ```
 
 **ES.next:**
 
 ```js
-let funkyArrows = `
+const funkyArrows = `
 ->
 	->
 		->
@@ -477,10 +462,10 @@ Use a template literal to refactor the following code.
 
 ```js
 function fullName(first, last, birthYear) {
-  return first + " " + last + ",\nage: " + 2016 - birthYear + ".";
+  return first + ' ' + last + ',\nage: ' + 2016 - birthYear + '.';
 }
 
-fullName("Emma", "Morano", 1900);
+fullName('Emma', 'Morano', 1900);
 ```
 
 ---
@@ -495,11 +480,11 @@ With ES5, if we want to define object properties with names that match their cor
 function makePerson(name, city) {
   return {
     name: name,
-    city: city
+    city: city,
   };
 }
 
-makePerson("Mandi", "Vancouver");
+makePerson('Mandi', 'Vancouver');
 ```
 
 ---
@@ -514,11 +499,11 @@ The new property value shorthand allows us to abbreviate the initialization of a
 function makePerson(name, city) {
   return {
     name,
-    city
+    city,
   };
 }
 
-makePerson("Mandi", "Vancouver");
+makePerson('Mandi', 'Vancouver');
 ```
 
 ---
@@ -547,7 +532,7 @@ Previously, we would work around this issue by testing parameter values in the b
 
 ```js
 function multiply(a, b) {
-  if (typeof b === "undefined") {
+  if (typeof b === 'undefined') {
     b = 1;
   }
 
@@ -583,7 +568,7 @@ Assigning object properties to individual variables is a bit tedious with ES5:
 ```js
 var point = {
   x: 1,
-  y: 2
+  y: 2,
 };
 
 var x = point.x;
@@ -602,12 +587,12 @@ Destructuring allows us to assign properties from objects to individual variable
 **ES.next:**
 
 ```js
-let point = {
+const point = {
   x: 1,
-  y: 2
+  y: 2,
 };
 
-let { x, y } = point;
+const { x, y } = point;
 
 console.log(x); // 1
 console.log(y); // 2
@@ -623,8 +608,8 @@ Another example using destructuring on an object:
 
 ```js
 var person = {
-  name: "Mandi",
-  city: "Vancouver"
+  name: 'Mandi',
+  city: 'Vancouver',
 };
 
 function getName(person) {
@@ -649,7 +634,7 @@ We can also use destructuring on items in an array:
 **ES5:**
 
 ```js
-var winners = ["Bob", "Alice", "Jane"];
+var winners = ['Bob', 'Alice', 'Jane'];
 var first = winners[0];
 var second = winners[1];
 var third = winners[2];
@@ -658,7 +643,7 @@ var third = winners[2];
 **ES.next:**
 
 ```js
-let [first, second, third] = winners;
+const [first, second, third] = winners;
 ```
 
 ---
@@ -669,7 +654,7 @@ The rest parameter syntax allows us to represent an **indefinite number of argum
 
 ```js
 function sum(...numbers) {
-  var result = 0;
+  let result = 0;
   numbers.forEach(function(number) {
     result += number;
   });
@@ -693,8 +678,8 @@ function sum(a, b, c) {
   return a + b + c;
 }
 
-var args = [1, 2, 3];
-var moreArgs = [4, 5];
+const args = [1, 2, 3];
+const moreArgs = [4, 5];
 
 console.log(sum(...args)); // 6
 console.log(sum(...moreArgs, 6)); // 15
@@ -727,7 +712,7 @@ function groceryList(...items) {
   }
 }
 
-groceryList("apples", "oranges");
+groceryList('apples', 'oranges');
 ```
 
 ---
@@ -746,10 +731,10 @@ The tax amount will need to be added to the subtotal of the summed item prices, 
 
 # What We've Learned
 
-* Syntactical differences between ES5 and ES.next
-* How and where to replace `var` with `let` or `const`
-* How to use arrow functions
-* How to write more efficient JS with template literals, enhanced object literals, rest parameters, spread operators, and default parameters
+- Syntactical differences between ES5 and ES.next
+- How and where to replace `var` with `let` or `const`
+- How to use arrow functions
+- How to write more efficient JS with template literals, enhanced object literals, rest parameters, spread operators, and default parameters
 
 ---
 

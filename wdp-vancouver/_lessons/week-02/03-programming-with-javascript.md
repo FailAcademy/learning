@@ -49,7 +49,7 @@ Open a new browser tab and open the console, and type in each line one at a time
 
 ```js
 alert("Hello World!");
-var yourName = prompt("What's your name?");
+const yourName = prompt("What's your name?");
 console.log(yourName);
 ```
 

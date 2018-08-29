@@ -19,25 +19,25 @@ Remember to use your instructors and your fellow students as a resource if you'r
 
 ## Learning Objectives
 
-* Describe the circumstances where JavaScript will explicitly change the canonical type of a value.
-* Describe the behaviour of the loose (`==`) versus strict (`===`) comparison operators.
-* Explain how function scope works in JavaScript
-* Define the purpose of an immediately-invoked function expression (IIFE).
-* Describe the behaviour of function expressions versus function declarations written inside conditional blocks.
-* Describe what is meant by the difference between _passing by value_ and _passing by reference_.
-* Explain why JavaScript provides a `bind` method.
-* Describe ways to influence the value of `this` when extracting methods from objects.
+- Describe the circumstances where JavaScript will explicitly change the canonical type of a value.
+- Describe the behaviour of the loose (`==`) versus strict (`===`) comparison operators.
+- Explain how function scope works in JavaScript
+- Define the purpose of an immediately-invoked function expression (IIFE).
+- Describe the behaviour of function expressions versus function declarations written inside conditional blocks.
+- Describe what is meant by the difference between _passing by value_ and _passing by reference_.
+- Explain why JavaScript provides a `bind` method.
+- Describe ways to influence the value of `this` when extracting methods from objects.
 
 ---
 
 ## Keywords
 
-* Truthy, Truthiness, Falsey, Falseyness
-* [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
-* [Immediately-invoked function expression (IIFE)](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
-* Global variables
-* [`this`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/this)
-* [`bind`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
+- Truthy, Truthiness, Falsey, Falseyness
+- [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
+- [Immediately-invoked function expression (IIFE)](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
+- Global variables
+- [`this`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/this)
+- [`bind`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
 
 ---
 
@@ -49,16 +49,18 @@ Remember to use your instructors and your fellow students as a resource if you'r
 
 ```js
 function printHi() {
-  var myVar = 5;
+  const myVar = 5;
 
-  if (myVar == "5") {
+  if (myVar == '5') {
     // 1
-    console.log("Hi, from if block");
+    console.log('Hi, from if block');
   }
 
-  switch (myVar) { // 2
-    case "5":
-      console.log("Hi, from switch case block");
+  switch (
+    myVar // 2
+  ) {
+    case '5':
+      console.log('Hi, from switch case block');
   }
 }
 
@@ -69,9 +71,9 @@ printHi();
 
 ```js
 (function() {
-  falseString = "false"; // 1
+  falseString = 'false'; // 1
   if (true) {
-    var falseString; // 2
+    let falseString; // 2
     if (falseString) {
       // 3
       console.log(falseString == true); // 4
@@ -90,14 +92,14 @@ printHi();
 **What will the output be?**
 
 ```js
-var name = "John";
+const name = 'John';
 
 (function() {
-  console.log("The name is : " + name);
+  console.log('The name is : ' + name);
 
-  var name = "Jane";
+  const name = 'Jane';
 
-  console.log("The name is : " + name);
+  console.log('The name is : ' + name);
 })();
 ```
 
@@ -117,25 +119,25 @@ var name = "John";
     function innerFunc() {
       // 2
 
-      console.log("innerFunc: Inside if");
+      console.log('innerFunc: Inside if');
     }
 
-    var innerFuncExpr = function() {
+    const innerFuncExpr = function() {
       // 3
 
-      console.log("innerFuncExpr: Inside if");
+      console.log('innerFuncExpr: Inside if');
     };
   } else {
     // 4
 
     function innerFunc() {
       // 5
-      console.log("innerFunc: Inside else");
+      console.log('innerFunc: Inside else');
     }
-    var innerFuncExpr = function() {
+    const innerFuncExpr = function() {
       // 6
 
-      console.log("innerFuncExpr: Inside else");
+      console.log('innerFuncExpr: Inside else');
     };
   }
 
@@ -153,9 +155,9 @@ var name = "John";
 **What will the output be?**
 
 ```js
-var me = {
+const me = {
   // 1
-  partOf: "A Team"
+  partOf: 'A Team',
 };
 
 function myTeam(me) {
@@ -163,13 +165,13 @@ function myTeam(me) {
 
   me = {
     // 3
-    belongsTo: "A Group"
+    belongsTo: 'A Group',
   };
 }
 
 function myGroup(me) {
   // 4
-  me.partOf = "A Group"; // 5
+  me.partOf = 'A Group'; // 5
 }
 
 myTeam(me);
@@ -188,16 +190,16 @@ console.log(me); // 7
 **What will the output be?**
 
 ```js
-var myself = {
-  myName: "Tom",
-  myNickNames: ["T-Dog", "TotalTom"],
+const myself = {
+  myName: 'Tom',
+  myNickNames: ['T-Dog', 'TotalTom'],
   printMyNickNames: function() {
-    "use strict";
+    'use strict';
     this.myNickNames.forEach(function(nickName) {
       // 1
-      console.log(this.myName + ", nick: " + nickName); // 2
+      console.log(this.myName + ', nick: ' + nickName); // 2
     });
-  }
+  },
 };
 
 myself.printMyNickNames();
@@ -209,9 +211,9 @@ myself.printMyNickNames();
 
 In pairs, you're going to write a "Choose Your Own Adventure" story. It will need:
 
-* At least 3 yes or no questions using logical operators
-* At least 1 multiple choice question
-* At least 1 loop (something needs to repeat in order to complete)
+- At least 3 yes or no questions using logical operators
+- At least 1 multiple choice question
+- At least 1 loop (something needs to repeat in order to complete)
 
 The lab task is to:
 
@@ -225,4 +227,4 @@ The lab task is to:
 
 A book series exploring the core mechanisms of the JS language:
 
-* [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
+- [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
