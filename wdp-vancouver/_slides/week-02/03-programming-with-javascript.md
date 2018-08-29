@@ -23,10 +23,10 @@ layout: false
 1. What is JavaScript?
 2. JavaScript Syntax
 3. Values, Type and Operators
-4. Loops
-5. Functions
-6. Arrays
-7. Objects
+4. Arrays
+5. Objects
+6. Functions
+7. Loops
 
 ---
 
@@ -76,11 +76,12 @@ Client-side vs. server-side?
 
 **Most programming languages share similar concepts.** <br/>
 
-* Variables
-* Expressions (math / truth checking)
-* Functions
-* Objects
-* Loops
+- Variables
+- Expressions (Math & truth checking)
+- Arrays (Sometimes called Lists)
+- Objects (Sometimes called classes)
+- Functions
+- Loops
 
 ---
 
@@ -127,7 +128,7 @@ In JavaScript, we can use `console.log()` to print values into the **browser con
 This helps us understand what particular values may be at specific points in your programs execution flow:
 
 ```js
-console.log("hello!");
+console.log('hello!');
 ```
 
 ---
@@ -153,9 +154,9 @@ Comments are always hidden from execution in the script, and do not affect the o
 
 # What Is Syntax?
 
-* Syntax is the set of rules or **grammar** of a particular programming language
-* It sets the rules that determine how your code should be structured so computers can understand it
-* A text-based language's syntax will permit specific combinations of letter, numbers, and symbols
+- Syntax is the set of rules or **grammar** of a particular programming language
+- It sets the rules that determine how your code should be structured so computers can understand it
+- A text-based language's syntax will permit specific combinations of letter, numbers, and symbols
 
 ---
 
@@ -183,6 +184,26 @@ Statements are any combination of **variables**, **values**, and **operators**.
 
 ---
 
+# Control Flow
+
+The most common control flow statement is the `if else` statement:
+Using `if` and `else` you can decide what code your program will run, depending on the **Truthyness** or **Falsiness** of a given statement, for example:
+
+```javascript
+// ...
+var hungry = 9000;
+
+if (hungry) {
+  eat();
+} else {
+  doWork();
+}
+```
+
+**What function will get called in this case?**
+
+---
+
 # Expressions
 
 A statement is made up of one or more **expressions**.
@@ -193,7 +214,7 @@ Here is an example of an **if statement**:
 
 ```js
 if (a > 21 || a * 4 === 32) {
-  console.log("Got a result!");
+  console.log('Got a result!');
 }
 ```
 
@@ -206,9 +227,9 @@ The **var** keyword defines a variable in JavaScript.
 This is what a **variable declaration** looks like:
 
 ```js
-var color = "red";
+var color = 'red';
 var amount = 100;
-var list = ["first", "second", "third"];
+var list = ['first', 'second', 'third'];
 var result = amount * 10;
 ```
 
@@ -232,10 +253,10 @@ console.log(a); // logs "undefined"
 
 # Variable Pro Tips
 
-* Variables can hold _any_ JavaScript value!
-* Make sure your variable names are descriptive
-* Use `camelCase` for defining JS variables
-* You can only use the dollar sign and underscore special characters in variable names
+- Variables can hold _any_ JavaScript value!
+- Make sure your variable names are descriptive
+- Use `camelCase` for defining JS variables
+- You can only use the dollar sign and underscore special characters in variable names
 
 ---
 
@@ -249,9 +270,9 @@ var dayOfWeek = today.getDay();
 var greeting;
 
 if (dayOfWeek === 2) {
-  greeting = "Today is Tuesday";
+  greeting = 'Today is Tuesday';
 } else {
-  greeting = "Nope, not Tuesday!";
+  greeting = 'Nope, not Tuesday!';
 }
 
 console.log(greeting);
@@ -264,7 +285,7 @@ console.log(greeting);
 Copy and paste this code into the browser console:
 
 ```js
-console.log("Hello World!");
+console.log('Hello World!');
 var yourName = prompt("What's your name?");
 console.log(yourName);
 ```
@@ -290,8 +311,8 @@ That means numbers for math, strings for creating text, etc.
 Primitive values include:
 
 ```js
-"I am a String"; // string
-"I am another string"; // string
+'I am a String'; // string
+'I am another string'; // string
 42; // number
 true; // boolean
 false; // boolean
@@ -358,9 +379,9 @@ We can also compare values and evaluate their result:
 
 3 == 2;
 
-3 === "3";
+3 === '3';
 
-3 != "3";
+3 != '3';
 
 3 !== 2;
 ```
@@ -377,9 +398,9 @@ Comparison operators are helpful when paired with conditional statements:
 var score = prompt("What's your score?");
 
 if (score >= 50) {
-  console.log("You passed!");
+  console.log('You passed!');
 } else {
-  console.log("Keep trying...");
+  console.log('Keep trying...');
 }
 ```
 
@@ -396,7 +417,7 @@ Getting used to how JavaScript handles primitives is an important part of using 
 Try this:
 
 ```js
-var a = "42";
+var a = '42';
 var b = Number(a);
 
 console.log(a); // "42"
@@ -420,14 +441,14 @@ JavaScript is weird.
 **More Type Coercion:**
 
 ```js
-"2" === 2; // false
-"2" == 2; // true, wtf?
+'2' === 2; // false
+'2' == 2; // true, wtf?
 ```
 
 **Operator Overloading:**
 
 ```js
-"42" + 5; // "425" ... ok that makes sense?!
+'42' + 5; // "425" ... ok that makes sense?!
 ```
 
 Because of this unique behavior, it's a best practice to **always use `===` (triple equals)** when doing value comparisons in JavaScript.
@@ -444,12 +465,12 @@ template: inverse
 
 The following values are always `false`:
 
-* `false`
-* `undefined`
-* `""` (an empty string)
-* `null`
-* `0`
-* `NaN` (a special Number value meaning Not-a-Number!)
+- `false`
+- `undefined`
+- `""` (an empty string)
+- `null`
+- `0`
+- `NaN` (a special Number value meaning Not-a-Number!)
 
 ---
 
@@ -461,7 +482,7 @@ For example, we can write an **if statement** like this:
 
 ```js
 if (a < b || b > c) {
-  console.log("Got a result");
+  console.log('Got a result');
 }
 ```
 
@@ -494,58 +515,6 @@ This statement reads: "If `b` is less than `21`, then the value of `a` will be `
 
 template: inverse
 
-# Loops
-
----
-
-# While Loops
-
-While loops are helpful when you don't know how many times it needs to run:
-
-```js
-var i = 0;
-var score = 0;
-
-while (i < 5) {
-  score = i;
-  console.log("Your score : " + score);
-  i++;
-}
-```
-
-_What do you think the final score will be after this loop runs?_
-
----
-
-# For Loops
-
-For loops allow you to set a specific number of times that the loop will run:
-
-```js
-var count = 0;
-
-for (var i = 1; i < 5; i++) {
-  count = i;
-  console.log("Current count: " + count);
-}
-```
-
-You will likely find yourself using for loops most often with "arrays" (we'll get to those shortly...).
-
----
-
-# Exercise 2
-
-Using what you just learned about conditional statements and loops, write a program that uses `console.log()` to print all the numbers from 1 to 100, with two exceptions.
-
-For numbers divisible by 3, print **Fizz** instead of the number, and for numbers divisible by 5 (and not 3), print **Buzz** instead.
-
-When you have that working, modify your program to print **FizzBuzz**, for numbers that are divisible by both 3 and 5 (and still print **Fizz** or **Buzz** for numbers divisible by only one of those).
-
----
-
-template: inverse
-
 # Arrays
 
 ---
@@ -560,10 +529,10 @@ Arrays are special object in JavaScript that store a list of values, but the key
 
 # Index Numbers?
 
-* Index numbers in an array are like the property key names in regular objects
-* But instead of choosing the names, they are always set to numbers in ascending order
-* **Weirdness alert!** In JavaScript, counting always starts at 0
-* Index numbers allow us to assign and access values in arrays
+- Index numbers in an array are like the property key names in regular objects
+- But instead of choosing the names, they are always set to numbers in ascending order
+- **Weirdness alert!** In JavaScript, counting always starts at 0
+- Index numbers allow us to assign and access values in arrays
 
 ---
 
@@ -586,7 +555,7 @@ var shoppingList = [
 Add values to an array by separating them with commas:
 
 ```js
-var shoppingList = ["coffee", "peppers", "apple juice"];
+var shoppingList = ['coffee', 'peppers', 'apple juice'];
 ```
 
 Access them by their index number:
@@ -599,61 +568,10 @@ var itemTwo = shoppingList[1]; // will equal "peppers"
 And even add new values to the end of the array:
 
 ```js
-shoppingList.push("oranges");
+shoppingList.push('oranges');
 ```
 
 _How do we find out how many items are in the above array?_
-
----
-
-class: center, middle
-
-.large[
-And lastly, back to loops...
-]
-
----
-
-class: center, middle
-
-.large[
-What kinds of loops can we create in JS?
-]
-
----
-
-# Arrays and Loops
-
-Let's take our shopping list array and print it out in a list:
-
-```js
-var shoppingList = ["coffee", "peppers", "apple juice"];
-
-// Remember how we manually set the max. number of loops before?
-// We can use the array "length" to get the number automatically:
-
-var totalItems = shoppingList.length;
-
-for (var i = 0; i < totalItems; i++) {
-  console.log(shoppingList[i]);
-}
-```
-
----
-
-# Arrays in Objects
-
-We can also store arrays as properties in objects:
-
-```js
-var errands = {
-  date: new Date(),
-  complete: false,
-  locations: ["Post Office", "Grocery Store", "Hardware Store"]
-};
-
-var firstStop = errands.locations[0]; // will equal "Post Office"
-```
 
 ---
 
@@ -677,9 +595,9 @@ var myObject = {};
 
 # How Objects Help
 
-* Like functions, objects help us **better organize our code** and make it more reusable
-* When we define a variable in an object, we call it a **property**
-* When we create a function in an object, we call it a **method**
+- Like functions, objects help us **better organize our code** and make it more reusable
+- When we define a variable in an object, we call it a **property**
+- When we create a function in an object, we call it a **method**
 
 ---
 
@@ -703,30 +621,10 @@ This simply means that instead of writing `var firstName =` we write `firstName:
 
 ```js
 var person = {
-  firstName: "Silent",
-  lastName: "Bob",
-  height: 1.75,
-  beard: true
-};
-```
-
----
-
-# The Syntax of Objects
-
-And the same goes for creating methods.
-
-For object methods, we write `getName: function() {...}` instead of `function getName() {...}`:
-
-```js
-var person = {
-  firstName: "Silent",
-  lastName: "Bob",
+  firstName: 'Silent',
+  lastName: 'Bob',
   height: 1.75,
   beard: true,
-  getName: function() {
-    return this.firstName + " " + this.lastName;
-  }
 };
 ```
 
@@ -739,7 +637,7 @@ To access one of the object's properties or methods, we can use **dot notation**
 ```js
 var person = {
   // ...
-  beard: true
+  beard: true,
   //...
 };
 
@@ -749,7 +647,7 @@ var hasBeard = person.beard; // will equal true
 Or use square brackets with the property key in quotes:
 
 ```js
-var hasBeard = person["beard"]; // will equal true
+var hasBeard = person['beard']; // will equal true
 ```
 
 ---
@@ -761,7 +659,7 @@ And just like variables, we can update object property values after they've been
 ```js
 var person = {
   // ...
-  beard: true
+  beard: true,
   //...
 };
 
@@ -776,62 +674,19 @@ person.justShaved = true;
 
 ---
 
-# Using Object Methods
+# Arrays in Objects
 
-We can also use dot notation to access object methods:
-
-```js
-var person = {
-  // ...
-  getName: function() {
-    return this.firstName + " " + this.lastName;
-  }
-};
-
-var fullName = person.getName(); // will return "Silent Bob"
-```
-
----
-
-# What Is `this` ?
-
-In JS, `this` is a special word and it always refers to one object (which object it refers to will depend on the context).
-
-Inside of an object's method, it refers to the object itself:
+We can also store arrays as properties in objects:
 
 ```js
-var person = {
-  firstName: "Silent",
-  lastName: "Bob",
-  // ...
-  getName: function() {
-    // use "this" to get properties of the object inside of a method
-
-    return this.firstName + " " + this.lastName;
-  }
-};
-```
-
----
-
-# Objects and Loops
-
-We use slightly different syntax to loop through properties in an object:
-
-```js
-var bob = {
-  firstName: "Bob",
-  lastName: "Smith",
-  phoneNumber: "604-604-6040",
-  email: "bob@redacademy.com"
+var errands = {
+  date: new Date(),
+  complete: false,
+  locations: ['Post Office', 'Grocery Store', 'Hardware Store'],
 };
 
-for (var prop in bob) {
-  console.log(bob[prop]);
-}
+var firstStop = errands.locations[0]; // will equal "Post Office"
 ```
-
-_Any guesses as to what the following loop will output?_
 
 ---
 
@@ -851,10 +706,10 @@ Functions are specific chunks code that you can use to **repeat a set of instruc
 
 # What Are They For?
 
-* Functions help us better organize our code
-* Functions allow us to group together statements
-* Functions allow us to only run certain steps in code when they are needed
-* Functions can perform very complex work for us and provide us with a single value or multiple values afterword
+- Functions help us better organize our code
+- Functions allow us to group together statements
+- Functions allow us to only run certain steps in code when they are needed
+- Functions can perform very complex work for us and provide us with a single value or multiple values afterword
 
 ---
 
@@ -961,9 +816,9 @@ var name = fullName();
 
 In JavaScript, you can create different kinds of functions:
 
-* Function declarations
-* Function expressions
-* Immediately invoked function expressions .red[* ]
+- Function declarations
+- Function expressions
+- Immediately invoked function expressions .red[* ]
 
 .footnote[.red[* ]More on these later with jQuery...]
 
@@ -1011,8 +866,8 @@ Unlike function declarations, this function **won't be available to use** until 
 
 Where you define a variable will determine how you can use it:
 
-* A variable defined inside a function has **local scope**
-* A variable defined outside a function has **global scope**
+- A variable defined inside a function has **local scope**
+- A variable defined outside a function has **global scope**
 
 ```js
 // global scope up here...
@@ -1060,8 +915,158 @@ function france() {
 
 There are pros and cons to each type of variable scope:
 
-* **Global variables** can be **reused** throughout your code, but they **use more memory** and you may run into **naming collisions** with other scripts. (Don't use global scope!)
-* **Local variables** are more efficient because they **use less memory** and their **names are protected** within the function that they are defined, but they **can't be re-used** elsewhere in your code
+- **Global variables** can be **reused** throughout your code, but they **use more memory** and you may run into **naming collisions** with other scripts. (Don't use global scope!)
+- **Local variables** are more efficient because they **use less memory** and their **names are protected** within the function that they are defined, but they **can't be re-used** elsewhere in your code
+
+---
+
+# Methods (Functions as Object Properties)
+
+For object methods, we write `getName: function() {...}` instead of `function getName() {...}`:
+
+```js
+var person = {
+  firstName: 'Silent',
+  lastName: 'Bob',
+  height: 1.75,
+  beard: true,
+  getName: function() {
+    return this.firstName + ' ' + this.lastName;
+  },
+};
+```
+
+---
+
+# Using Object Methods
+
+We use dot notation to access object methods:
+
+```js
+var person = {
+  firstName: 'Silent',
+  lastName: 'Bob',
+  // ...
+  getName: function() {
+    return this.firstName + ' ' + this.lastName;
+  },
+};
+
+var fullName = person.getName(); // will return "Silent Bob"
+```
+
+---
+
+# What Is `this` ?
+
+In JS, `this` is a special word and it always refers to one object (which object it refers to will depend on the context).
+
+Inside of an object's method, it refers to the object itself:
+
+```js
+var person = {
+  firstName: 'Silent',
+  lastName: 'Bob',
+  // ...
+  getName: function() {
+    // use "this" to get properties of the object inside of a method
+
+    return this.firstName + ' ' + this.lastName;
+  },
+};
+```
+
+---
+
+template: inverse
+
+# Loops
+
+---
+
+# While Loops
+
+While loops are helpful when you don't know how many times it needs to run:
+
+```js
+var i = 0;
+var score = 0;
+
+while (i < 5) {
+  score = i;
+  console.log('Your score : ' + score);
+  i++;
+}
+```
+
+_What do you think the final score will be after this loop runs?_
+
+---
+
+# For Loops
+
+For loops allow you to set a specific number of times that the loop will run:
+
+```js
+var count = 0;
+
+for (var i = 1; i < 5; i++) {
+  count = i;
+  console.log('Current count: ' + count);
+}
+```
+
+You will likely find yourself using for loops most often with "arrays" (we'll get to those shortly...).
+
+---
+
+# Arrays and Loops
+
+Let's take our shopping list array and print it out in a list:
+
+```js
+var shoppingList = ['coffee', 'peppers', 'apple juice'];
+
+// Remember how we manually set the max. number of loops before?
+// We can use the array "length" to get the number automatically:
+
+var totalItems = shoppingList.length;
+
+for (var i = 0; i < totalItems; i++) {
+  console.log(shoppingList[i]);
+}
+```
+
+---
+
+# Objects and Loops
+
+We use slightly different syntax to loop through properties in an object:
+
+```js
+var bob = {
+  firstName: 'Bob',
+  lastName: 'Smith',
+  phoneNumber: '604-604-6040',
+  email: 'bob@redacademy.com',
+};
+
+for (var prop in bob) {
+  console.log(bob[prop]);
+}
+```
+
+_Any guesses as to what the following loop will output?_
+
+---
+
+# Exercise 2
+
+Using what you just learned about conditional statements and loops, write a program that uses `console.log()` to print all the numbers from 1 to 100, with two exceptions.
+
+For numbers divisible by 3, print **Fizz** instead of the number, and for numbers divisible by 5 (and not 3), print **Buzz** instead.
+
+When you have that working, modify your program to print **FizzBuzz**, for numbers that are divisible by both 3 and 5 (and still print **Fizz** or **Buzz** for numbers divisible by only one of those).
 
 ---
 
@@ -1085,12 +1090,12 @@ One you've created your object, **create a loop** to log to the console all of t
 
 # What We've Learned
 
-* What JavaScript is and what it's used for
-* How we can create variables, conditionals, and loops in JS
-* How to create function in JS
-* How variable scope works with function in JS
-* How to create objects that contain properties and methods
-* How to create arrays and loop over them
+- What JavaScript is and what it's used for
+- How we can create variables, conditionals, and loops in JS
+- How to create function in JS
+- How variable scope works with function in JS
+- How to create objects that contain properties and methods
+- How to create arrays and loop over them
 
 ---
 
