@@ -70,7 +70,7 @@ printHi();
 **What will the output be?**
 
 ```js
-(function() {
+function trueOrFalse() {
   falseString = 'false'; // 1
   if (true) {
     let falseString; // 2
@@ -80,27 +80,32 @@ printHi();
       console.log(falseString == false); // 5
     }
   }
-})();
+}
+
+trueOrFalse();
 ```
 
 ---
 
 ## Exercise 2
 
-### Function Scope and Hoisting
+### Function Scope
 
-**What will the output be?**
+**What will the output be?** <br/>
+**What happens if you change `const` to `let`?**
 
 ```js
 const name = 'John';
 
-(function() {
+function assignName() {
   console.log('The name is : ' + name);
 
   const name = 'Jane';
 
   console.log('The name is : ' + name);
-})();
+}
+
+assignName();
 ```
 
 ---
@@ -112,38 +117,35 @@ const name = 'John';
 **What will the output be?**
 
 ```js
-(function() {
+function functionsInsideConditionals() {
   if (true) {
     // 1
-
     function innerFunc() {
       // 2
-
       console.log('innerFunc: Inside if');
     }
 
     const innerFuncExpr = function() {
       // 3
-
       console.log('innerFuncExpr: Inside if');
     };
   } else {
     // 4
-
     function innerFunc() {
       // 5
       console.log('innerFunc: Inside else');
     }
     const innerFuncExpr = function() {
       // 6
-
       console.log('innerFuncExpr: Inside else');
     };
   }
 
   innerFunc(); // 7
   innerFuncExpr(); // 8
-})();
+}
+
+functionsInsideConditionals();
 ```
 
 ---
@@ -162,7 +164,6 @@ const me = {
 
 function myTeam(me) {
   // 2
-
   me = {
     // 3
     belongsTo: 'A Group',
