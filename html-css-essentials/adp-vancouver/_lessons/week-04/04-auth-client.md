@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: Client-Side Authentication 
-# slides: ['_slides/week-04/04-auth-client.md']
+title: Client-Side Authentication
+slides: ['_slides/week-04/04-auth-client.md']
 lesson_date: 2018-07-26
 ---
 
@@ -22,11 +22,37 @@ lesson_date: 2018-07-26
 
 ---
 
+## Exercise 1
+
+You have been provided with the initial React component for the login & signup forms in `AccountForm.js`.
+In this exercise use `react-final-form` to add field validation and error handling. You'll also need to write a stub
+method for submitting user credentials. We'll complete the login and signup requests in the next exercise.
+
+---
+
+## Exercise 2
+
+Composing queries
+
+---
+
+## Exercise 3
+
+Setting up the Viewer context
+
+---
+
+## Exercise 4
+
+Protecting routes using the Viewer context & refetching on login
+
+---
+
 ## Lab Activity
 
-In todays Lab, we'll spend the day writing the necessary code to perform login and signup from our
+In todays Lab, we'll spend the day completing the necessary code to perform login and signup from our
 client application, as well as write the necessary (client-side) code to restrict the display of pages
-when a user is not signed in. This will be the final day of in-class work on boomtown. We can also make use of this time to address any concerns you might have and tie up loose ends with your project before the weekend.
+when a user is not signed in. This will be the final day of in-class work on boomtown. We can also make use of this time to address any concerns you might have and tie up loose ends with your project.
 
 ---
 
