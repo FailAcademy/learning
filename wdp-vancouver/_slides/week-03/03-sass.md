@@ -566,7 +566,7 @@ When you compile code, you convert it from one form (that you have written) to a
 Let's create a Gulp task to compile Sass for our project:
 
 ```js
-var sass = require("gulp-sass"),
+const sass = require("gulp-sass"),
   autoprefixer = require("gulp-autoprefixer"),
   cssnano = require("gulp-cssnano"),
   rename = require("gulp-rename");
