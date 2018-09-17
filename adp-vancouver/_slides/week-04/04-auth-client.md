@@ -28,7 +28,9 @@ layout: false
 
 # Exercise 1
 
-You have been provided with the initial React component for the login & signup forms in AccountForm.js. In this exercise use react-final-form to add field validation and error handling. You'll also need to write a "method stub" for submitting user credentials. We'll complete the login and signup requests in the next exercise.
+You have been provided with the initial React component for the login & signup forms in `AccountForm.js`.
+In this exercise use `react-final-form` to add field validation and error handling. You'll also need to write a "method stub"
+for submitting user credentials. We'll complete the login and signup requests in the next exercise.
 
 ---
 
@@ -103,22 +105,21 @@ Using a context consumer!
 
 # Creating Context
 
-Both the Context consumer and Provider are created from a single context object.
+Both the context `Consumer` and `Provider` are created from a single context object.
 
 ```js
 import React from 'react';
 
-const AuthContext = React.createContext();
+const Context = React.createContext();
 ```
 
-We're creating a context to hold information about the user (viewer) of our app, including
-if there is a user logged in or not.
+Looking ahead: _We'll need a context to hold information about the user (viewer) of our app, including if the user logged in or not_.
 
 ---
 
 # Context Provider
 
-The context provider is a component. We can use this component to store information.
+The context `Provider` is a component. We can use this component to store information.
 
 ```js
 import React from 'react';
@@ -164,7 +165,7 @@ export const ViewerProvider = ({ children }) => {
 
 # Context Consumer
 
-To use the `value` provided by the context, import the context and used it's consumer component!
+To use the `value` provided by the context, import the context and used it's `Consumer` component!
 
 ```js
 import React from 'react';
@@ -193,9 +194,11 @@ template: inverse
 
 # Viewer Provider
 
-This is the completed Viewer context provider for our app.
+This is the completed "viewer" (logged in user) context `Provider` for our app.
 
 ```js
+const ViewerContext = React.createContext();
+
 export const ViewerProvider = ({ children }) => {
   return (
     <Query query={VIEWER_QUERY}>
@@ -216,11 +219,11 @@ export const ViewerProvider = ({ children }) => {
 
 # Exercise 3
 
-We'll need a way to expose the current logged in user to various components in our app.
+We'll need a way to expose the current logged-in user to various components in our app.
 
-Create a React Context to hold information about the current user of your app (the Viewer).
-We'll use this context's provider later to help us render our layout,
-and choose which components to show in our app.
+Create a React context to hold information about the current user of your app (the viewer).
+We'll use this context's `Provider` later to help us render our layout,
+and choose which components are visible to users.
 
 ---
 
@@ -232,7 +235,7 @@ template: inverse
 
 # Rendering the Layout
 
-Refactor your routes to render 2 root components, depending is the user is logged in. Start by wrapping the component in `Layout.js` with the `<ViewerContext.Consumer/>`
+Refactor your routes to render two root components. One for logged-in and one for logged-out users. Start by wrapping the component in `Layout.js` with the `<ViewerContext.Consumer/>`
 
 ```jsx
 export default () => (
@@ -255,7 +258,7 @@ export default () => (
 
 Now that you've added the `<ViewerContext.Consumer>` to your `Layout.js` file, write some code to check for the existence of `viewer`. If there is no `viewer` your router should only render the welcome page, and redirect all other routes to `/welcome`.
 
-If there is a `viewer`, render the complete set of routes for your app, but _not_ the `/welcome` route. (Users should only have access to the login screen when logged out).
+If there is a `viewer`, render the complete set of routes for your app, but _not_ the `/welcome` route. (Users should only have access to the login screen when logged-out).
 
 _Use the value of loading to conditionally render a loading component._
 
@@ -271,13 +274,13 @@ template: inverse
 
 In React **When a component's props or state change, the component and it's children re-render themselves.**
 
-When the `LOGIN_MUTATION` or `SIGNUP_MUTATION` is finished, we'll refetch the `VIEWER_QUERY`. Any components that are wrpapped in the `<ViewerContext.Consumer>` will re-render, because the Provider component's props will update when the results from the query are returned!
+When the `LOGIN_MUTATION` or `SIGNUP_MUTATION` is finished, we'll refetch the `VIEWER_QUERY`. Any components that are wrpapped in the `<ViewerContext.Consumer>` will re-render, because the `Provider` component's props will update when the results from the query are returned!
 
 We'll also refetch the `VIEWER_QUERY` on logout.
 
 ---
 
-To re-fetch the `VIEWER_QUERY`, modify the `AccountForm`
+To re-fetch the `VIEWER_QUERY`, modify `AccountForm.js`
 
 ```js
 const refetchQueries = [
@@ -309,7 +312,7 @@ export default compose(
 
 In todays Lab, we'll spend the day completing the necessary code to perform login and signup from our
 client application, including completing the necessary (client-side) code to restrict the display of pages
-when a user is not signed in. This will be the final day of in-class work on boomtown. We can also make use of this time to address any concerns you might have and tie up loose ends with your project.
+when a user is not signed in. This will be the final day of in-class work. Be sure to make use of this time to address any concerns you might have and tie up loose ends with your project.
 
 ---
 

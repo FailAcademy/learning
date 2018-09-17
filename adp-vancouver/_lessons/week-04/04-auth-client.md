@@ -37,12 +37,11 @@ Now that you know how to compose query components. Add the signup and login muta
 
 ## Exercise 3
 
-We'll need a way to expose the current logged in user to various components in our app.
+We'll need a way to expose the current logged-in user to various components in our app.
 
-Create a React Context to hold information about the current user of your app (the Viewer).
-
-We'll use this context's provider later to help us render our layout,
-and choose which components to show in our app.
+Create a React context to hold information about the current user of your app (the viewer).
+We'll use this context's `Provider` later to help us render our layout,
+and choose which components are visible to users.
 
 ---
 
@@ -60,13 +59,12 @@ _Use the value of loading to conditionally render a loading component._
 
 In todays Lab, we'll spend the day completing the necessary code to perform login and signup from our
 client application, including completing the necessary (client-side) code to restrict the display of pages
-when a user is not signed in. This will be the final day of in-class work on boomtown. We can also make use of this time to address any concerns you might have and tie up loose ends with your project.
+when a user is not signed in. This will be the final day of in-class work. Be sure to make use of this time to address any concerns you might have and tie up loose ends with your project.
 
 ---
 
 ## Additional Resources
 
-- [Apollo Client Authentication Docs](https://www.apollographql.com/docs/react/recipes/authentication.html)
-
 - [React Context Docs](https://reactjs.org/docs/context.html)
-  loading
+
+- [Apollo Client Authentication Docs](https://www.apollographql.com/docs/react/recipes/authentication.html)
