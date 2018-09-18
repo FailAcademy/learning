@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Advanced JavaScript
-slides: ['_slides/week-05/01-advanced-javascript.md']
-lesson_date: 2018-07-30
+slides: ["_slides/week-05/01-advanced-javascript.md"]
+lesson_date: 2018-10-29
 ---
 
 ## Pre-work
@@ -51,16 +51,16 @@ Remember to use your instructors and your fellow students as a resource if you'r
 function printHi() {
   const myVar = 5;
 
-  if (myVar == '5') {
+  if (myVar == "5") {
     // 1
-    console.log('Hi, from if block');
+    console.log("Hi, from if block");
   }
 
   switch (
     myVar // 2
   ) {
-    case '5':
-      console.log('Hi, from switch case block');
+    case "5":
+      console.log("Hi, from switch case block");
   }
 }
 
@@ -71,7 +71,7 @@ printHi();
 
 ```js
 function trueOrFalse() {
-  falseString = 'false'; // 1
+  falseString = "false"; // 1
   if (true) {
     let falseString; // 2
     if (falseString) {
@@ -95,14 +95,14 @@ trueOrFalse();
 **What happens if you change `const` to `let`?**
 
 ```js
-const name = 'John';
+const name = "John";
 
 function assignName() {
-  console.log('The name is : ' + name);
+  console.log("The name is : " + name);
 
-  const name = 'Jane';
+  const name = "Jane";
 
-  console.log('The name is : ' + name);
+  console.log("The name is : " + name);
 }
 
 assignName();
@@ -122,22 +122,22 @@ function functionsInsideConditionals() {
     // 1
     function innerFunc() {
       // 2
-      console.log('innerFunc: Inside if');
+      console.log("innerFunc: Inside if");
     }
 
     const innerFuncExpr = function() {
       // 3
-      console.log('innerFuncExpr: Inside if');
+      console.log("innerFuncExpr: Inside if");
     };
   } else {
     // 4
     function innerFunc() {
       // 5
-      console.log('innerFunc: Inside else');
+      console.log("innerFunc: Inside else");
     }
     const innerFuncExpr = function() {
       // 6
-      console.log('innerFuncExpr: Inside else');
+      console.log("innerFuncExpr: Inside else");
     };
   }
 
@@ -159,20 +159,20 @@ functionsInsideConditionals();
 ```js
 const me = {
   // 1
-  partOf: 'A Team',
+  partOf: "A Team"
 };
 
 function myTeam(me) {
   // 2
   me = {
     // 3
-    belongsTo: 'A Group',
+    belongsTo: "A Group"
   };
 }
 
 function myGroup(me) {
   // 4
-  me.partOf = 'A Group'; // 5
+  me.partOf = "A Group"; // 5
 }
 
 myTeam(me);
@@ -192,15 +192,15 @@ console.log(me); // 7
 
 ```js
 const myself = {
-  myName: 'Tom',
-  myNickNames: ['T-Dog', 'TotalTom'],
+  myName: "Tom",
+  myNickNames: ["T-Dog", "TotalTom"],
   printMyNickNames: function() {
-    'use strict';
+    "use strict";
     this.myNickNames.forEach(function(nickName) {
       // 1
-      console.log(this.myName + ', nick: ' + nickName); // 2
+      console.log(this.myName + ", nick: " + nickName); // 2
     });
-  },
+  }
 };
 
 myself.printMyNickNames();

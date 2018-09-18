@@ -1,33 +1,33 @@
 ---
 layout: lesson
 title: CSS3 Transitions & Transforms
-slides: ['_slides/week-03/04-css-transitions-transforms.md']
-lesson_date: 2018-07-19
+slides: ["_slides/week-03/04-css-transitions-transforms.md"]
+lesson_date: 2018-10-19
 ---
 
 ## Pre-Work
 
 Readings from _Learn to Code Advanced HTML & CSS_:
 
-* [Lesson 7: Transforms](http://learn.shayhowe.com/advanced-html-css/css-transforms/)
-* [Lesson 8: Transitions & Animations](http://learn.shayhowe.com/advanced-html-css/transitions-animations/)
+- [Lesson 7: Transforms](http://learn.shayhowe.com/advanced-html-css/css-transforms/)
+- [Lesson 8: Transitions & Animations](http://learn.shayhowe.com/advanced-html-css/transitions-animations/)
 
 ---
 
 ## Learning Objectives
 
-* Use CSS transitions to add simple animation to elements.
-* Use CSS transforms to change the position of elements.
-* Distinguish which properties are animatable (and which are not) using CSS3.
-* Create keyframe animations in CSS.
+- Use CSS transitions to add simple animation to elements.
+- Use CSS transforms to change the position of elements.
+- Distinguish which properties are animatable (and which are not) using CSS3.
+- Create keyframe animations in CSS.
 
 ---
 
 ## Keywords
 
-* [`transform`](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
-* [`transition`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
-* [`@keyframe`](https://developer.mozilla.org/en/docs/Web/CSS/@keyframes)
+- [`transform`](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
+- [`transition`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
+- [`@keyframe`](https://developer.mozilla.org/en/docs/Web/CSS/@keyframes)
 
 ---
 
@@ -98,24 +98,24 @@ As you're working on your project this afternoon, keep in mind that you'll need 
 
 A list of all transition-able CSS properties:
 
-* [Animatable Properties](http://www.w3.org/TR/css3-transitions/#animatable-properties-)
+- [Animatable Properties](http://www.w3.org/TR/css3-transitions/#animatable-properties-)
 
 Some excellent tutorials and demos for learning about CSS transitions, transforms, animations:
 
-* [CSS3 = Awesome](http://css3.bradshawenterprises.com/)
-* [3D Transforms](https://desandro.github.io/3dtransforms/)
-* [Keyframe Animation Syntax](https://css-tricks.com/snippets/css/keyframe-animation-syntax/)
-* [Up and Running With CSS Keyframe Animations](https://webdesign.tutsplus.com/courses/up-and-running-with-css-keyframe-animations)
-* [Using CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_transitions)
+- [CSS3 = Awesome](http://css3.bradshawenterprises.com/)
+- [3D Transforms](https://desandro.github.io/3dtransforms/)
+- [Keyframe Animation Syntax](https://css-tricks.com/snippets/css/keyframe-animation-syntax/)
+- [Up and Running With CSS Keyframe Animations](https://webdesign.tutsplus.com/courses/up-and-running-with-css-keyframe-animations)
+- [Using CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_transitions)
 
 Some CSS transition inspiration:
 
-* [Animatable (by Lea Verou)](http://leaverou.github.io/animatable/)
+- [Animatable (by Lea Verou)](http://leaverou.github.io/animatable/)
 
 A free ebook on CSS animations:
 
-* [The CSS Animations Pocket Guide](http://valhead.com/book/)
+- [The CSS Animations Pocket Guide](http://valhead.com/book/)
 
 A cool GUI for generating CSS animations:
 
-* [Animista](http://animista.net/)
+- [Animista](http://animista.net/)

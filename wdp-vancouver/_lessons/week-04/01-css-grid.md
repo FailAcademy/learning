@@ -1,40 +1,40 @@
 ---
 layout: lesson
 title: CSS Grid
-slides: ['_slides/week-04/01-css-grid.md']
-lesson_date: 2018-07-24
+slides: ["_slides/week-04/01-css-grid.md"]
+lesson_date: 2018-10-23
 ---
 
 ## Pre-Work
 
 Prior to class, download and install Firefox Developer Edition:
 
-* [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
+- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
 
 ---
 
 ## Learning Objectives
 
-* Construct a simple layout using CSS Grid container properties and values such `display: grid | inline-grid | subgrid;`, `grid-template-columns`, and `grid-template-rows`.
-* Explain the difference between grid tracks and lines.
-* Use grid-specific developer tools to help build and debug of CSS Grid layouts.
-* Apply flexible measurement units such as `fr` to a grid-based layout.
-* Use CSS Grid methods such as `minmax()` and `repeat()` in a grid-based layout.
-* Use `grid-template-areas` to fine-tune a grid-based layout.
+- Construct a simple layout using CSS Grid container properties and values such `display: grid | inline-grid | subgrid;`, `grid-template-columns`, and `grid-template-rows`.
+- Explain the difference between grid tracks and lines.
+- Use grid-specific developer tools to help build and debug of CSS Grid layouts.
+- Apply flexible measurement units such as `fr` to a grid-based layout.
+- Use CSS Grid methods such as `minmax()` and `repeat()` in a grid-based layout.
+- Use `grid-template-areas` to fine-tune a grid-based layout.
 
 ---
 
 ## Keywords
 
-* Implicit grid
-* Explicit grid
-* Grid container
-* Grid item
-* `fr`
-* [`repeat()`](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat)
-* [`minmax()`](https://developer.mozilla.org/en-US/docs/Web/CSS/minmax)
-* Grid lines
-* Grid track
+- Implicit grid
+- Explicit grid
+- Grid container
+- Grid item
+- `fr`
+- [`repeat()`](https://developer.mozilla.org/en-US/docs/Web/CSS/repeat)
+- [`minmax()`](https://developer.mozilla.org/en-US/docs/Web/CSS/minmax)
+- Grid lines
+- Grid track
 
 ---
 
@@ -66,7 +66,7 @@ Today's lab is primarily dedicated to getting comfortable with the CSS Grid prop
 
 Start by reinforcing what you just learned in class by completing this tutorial:
 
-* [CSS Grid Garden](http://cssgridgarden.com/)
+- [CSS Grid Garden](http://cssgridgarden.com/)
 
 ### Task 2: Create your own grid art!
 
@@ -91,25 +91,25 @@ _We will demo our grid creations for the class at the end of day._
 
 This is a concise, authoritative summaries of the various grid properties and how they work:
 
-* [CSS Tricks - A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
-* Relationship of Grid Layout to other Layout Methods: [MDN Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
+- [CSS Tricks - A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- Relationship of Grid Layout to other Layout Methods: [MDN Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
 
 Practice your grid skills with these online resources:
 
-* [MDN CSS Grid Playground](https://mozilladevelopers.github.io/playground/css-grid/)
-* [Game, CSS Grid Garden](http://cssgridgarden.com/)
-* [Wes Bos CSS Grid](https://cssgrid.io/)
-* [Grid by Example](https://gridbyexample.com/)
-* [Grid Playground](https://www.cssgridplayground.com/)
+- [MDN CSS Grid Playground](https://mozilladevelopers.github.io/playground/css-grid/)
+- [Game, CSS Grid Garden](http://cssgridgarden.com/)
+- [Wes Bos CSS Grid](https://cssgrid.io/)
+- [Grid by Example](https://gridbyexample.com/)
+- [Grid Playground](https://www.cssgridplayground.com/)
 
 More grid resources:
 
-* [Rachel Andrew - CSS Grid Ask Me Anything](https://github.com/rachelandrew/cssgrid-ama)
-* [An Introduction to the CSS Grid Layout Module](https://www.sitepoint.com/introduction-css-grid-layout-module/)
-* [Codepen example, difference between auto and fr](https://codepen.io/cssgrid/pen/ALQjAj)
-* [CSS Grid Gotchas And Stumbling Blocks](https://www.smashingmagazine.com/2017/09/css-grid-gotchas-stumbling-blocks/)
+- [Rachel Andrew - CSS Grid Ask Me Anything](https://github.com/rachelandrew/cssgrid-ama)
+- [An Introduction to the CSS Grid Layout Module](https://www.sitepoint.com/introduction-css-grid-layout-module/)
+- [Codepen example, difference between auto and fr](https://codepen.io/cssgrid/pen/ALQjAj)
+- [CSS Grid Gotchas And Stumbling Blocks](https://www.smashingmagazine.com/2017/09/css-grid-gotchas-stumbling-blocks/)
 
 Paid (but worth it!) grid resources:
 
-* [Modern CSS Layout](https://www.leveluptutorials.com/tutorials/modern-css-layouts)
-* [Grid Critters](https://geddski.teachable.com/p/gridcritters)
+- [Modern CSS Layout](https://www.leveluptutorials.com/tutorials/modern-css-layouts)
+- [Grid Critters](https://geddski.teachable.com/p/gridcritters)
