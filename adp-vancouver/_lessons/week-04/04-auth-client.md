@@ -5,6 +5,14 @@ slides: ['_slides/week-04/04-auth-client.md']
 lesson_date: 2018-07-26
 ---
 
+## Pre-Work
+
+Please look at the following:
+
+- What is [React Context](https://reactjs.org/docs/context.html)
+
+---
+
 ## Learning Objectives
 
 - Send Login and Logout requests using React/GraphQL
