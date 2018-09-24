@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Flexbox
-slides: ['_slides/week-01/04-flexbox-slides.md']
-lesson_date: 2018-02-10
+slides: ["_slides/week-01/04-flexbox-slides.md"]
+lesson_date: 2018-10-09
 ---
 
 ## Pre-Work
@@ -13,30 +13,30 @@ _There is no pre-work for this lesson._
 
 ## Learning Objectives
 
-* Distinguish the major differences between traditional CSS layout techniques and flexbox.
-* Describe the most significant challenges in creating layouts with CSS that flexbox was designed to overcome.
-* Use the following flexbox CSS properties: `flex-direction`, `flex`, `justify-content`, `order`, and `align-items`.
+- Distinguish the major differences between traditional CSS layout techniques and flexbox.
+- Describe the most significant challenges in creating layouts with CSS that flexbox was designed to overcome.
+- Use the following flexbox CSS properties: `flex-direction`, `flex`, `justify-content`, `order`, and `align-items`.
 
 ---
 
 ## Keywords
 
-* Flex container
-* Flex item
-* Main axis
-* Cross axis
-* [`align-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)
-* [`align-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
-* [`align-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)
-* [`flex`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex)
-* [`flex-basis`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis)
-* [`flex-direction`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction)
-* [`flex-flow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow)
-* [`flex-grow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow)
-* [`flex-shrink`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink)
-* [`flex-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)
-* [`justify-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)
-* [`order`](https://developer.mozilla.org/en-US/docs/Web/CSS/order)
+- Flex container
+- Flex item
+- Main axis
+- Cross axis
+- [`align-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)
+- [`align-items`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
+- [`align-self`](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)
+- [`flex`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex)
+- [`flex-basis`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis)
+- [`flex-direction`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction)
+- [`flex-flow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow)
+- [`flex-grow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow)
+- [`flex-shrink`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink)
+- [`flex-wrap`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)
+- [`justify-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)
+- [`order`](https://developer.mozilla.org/en-US/docs/Web/CSS/order)
 
 ---
 
@@ -82,24 +82,24 @@ If you'd like to get more practice on flexbox before you begin incorporating it 
 
 This is a concise and authoritative summary of the various flexbox properties and how they work:
 
-* [CSS Tricks - A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [CSS Tricks - A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 Get a sense of why flexbox is a substantial improvement over traditional layout methods and hacks in CSS:
 
-* [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/)
+- [Solved by Flexbox](https://philipwalton.github.io/solved-by-flexbox/)
 
 Another great flexbox reference page:
 
-* [The Ultimate Flexbox Cheat Sheet](http://www.sketchingwithcss.com/samplechapter/cheatsheet.html)
+- [The Ultimate Flexbox Cheat Sheet](http://www.sketchingwithcss.com/samplechapter/cheatsheet.html)
 
 Try out flexbox properties using this point-and-click interface:
 
-* [Flexbox playground](http://codepen.io/enxaneta/full/adLPwv/)
+- [Flexbox playground](http://codepen.io/enxaneta/full/adLPwv/)
 
 How to add flexbox support to really old versions of IE:
 
-* [Flexibility](https://github.com/10up/flexibility)
+- [Flexibility](https://github.com/10up/flexibility)
 
 Want to play tower defence but need to learn flexbox...
 
-* [Flexbox defence](http://www.flexboxdefense.com/)
+- [Flexbox defence](http://www.flexboxdefense.com/)

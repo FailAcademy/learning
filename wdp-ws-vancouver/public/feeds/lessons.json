@@ -13,32 +13,42 @@
     {
       "title": "Day 1 Orientation",
       "allDay": true,
-      "start": "2018-02-05"
+      "start": "2018-09-29"
+    },
+    {
+      "title": "Visa/Co-op Orientation",
+      "allDay": true,
+      "start": "2018-10-01"
     },
     {
       "title": "CSS Drills",
       "allDay": true,
-      "start": "2018-03-19"
+      "start": "2018-11-14"
     },
     {
       "title": "UX Guest Lecture",
       "allDay": true,
-      "start": "2018-03-24"
+      "start": "2018-11-17"
     },
     {
       "title": "Pong Code-Along",
       "allDay": true,
-      "start": "2018-04-10"
+      "start": "2018-12-03"
     },
     {
       "title": "Pong Code-Along",
       "allDay": true,
-      "start": "2018-04-11"
+      "start": "2018-12-04"
     },
     {
       "title": "Pong Code-Along",
       "allDay": true,
-      "start": "2018-04-12"
+      "start": "2018-12-05"
+    },
+    {
+      "title": "Pong Code-Along",
+      "allDay": true,
+      "start": "2018-12-06"
     },
     {
       "title": "Analytics & SEO Lesson (DM)",
@@ -58,37 +68,37 @@
       "start": "2018-06-14"
     },
     {
-      "title": "PPD Lesson",
+      "title": "Townhall/PPD",
       "allDay": false,
       "start": "2018-02-17T10:00:00+00:00",
       "end": "2018-02-17T12:00:00+00:00"
     },
     {
-      "title": "PPD Lesson",
+      "title": "Townhall/PPD",
       "allDay": false,
       "start": "2018-03-17T10:00:00+00:00",
       "end": "2018-03-17T12:00:00+00:00"
     },
     {
-      "title": "PPD Lesson",
+      "title": "Townhall/PPD",
       "allDay": false,
       "start": "2018-04-14T10:00:00+00:00",
       "end": "2018-04-14T12:00:00+00:00"
     },
     {
-      "title": "PPD Lesson",
+      "title": "Townhall/PPD",
       "allDay": false,
       "start": "2018-05-12T10:00:00+00:00",
       "end": "2018-05-12T12:00:00+00:00"
     },
     {
-      "title": "PPD Lesson",
+      "title": "Townhall/PPD",
       "allDay": false,
       "start": "2018-06-09T10:00:00+00:00",
       "end": "2018-06-09T12:00:00+00:00"
     },
     {
-      "title": "PPD Lesson",
+      "title": "Townhall/PPD",
       "allDay": false,
       "start": "2018-07-14T10:00:00+00:00",
       "end": "2018-07-14T12:00:00+00:00"

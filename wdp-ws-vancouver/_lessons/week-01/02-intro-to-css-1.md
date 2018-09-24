@@ -1,16 +1,16 @@
 ---
 layout: lesson
 title: Intro to CSS - Box Model and Selectors
-slides: ['_slides/week-01/02-intro-to-css-1-slides.md']
-lesson_date: 2018-02-07
+slides: ["_slides/week-01/02-intro-to-css-1-slides.md"]
+lesson_date: 2018-10-03
 ---
 
 ## Pre-Work
 
 Readings from _Learn to Code HTML & CSS_:
 
-* [Getting to Know CSS](http://learn.shayhowe.com/html-css/getting-to-know-css/)
-* [Opening the Box Model](http://learn.shayhowe.com/html-css/opening-the-box-model/)
+- [Getting to Know CSS](http://learn.shayhowe.com/html-css/getting-to-know-css/)
+- [Opening the Box Model](http://learn.shayhowe.com/html-css/opening-the-box-model/)
 
 Also ensure that you have completed yesterday's lab activity before class&mdash;you will need the draft mark-up for your project to work on today's exercises.
 
@@ -18,20 +18,20 @@ Also ensure that you have completed yesterday's lab activity before class&mdash;
 
 ## Learning Objectives
 
-* Define what CSS is in relation to HTML.
-* Demonstrate competency with CSS box model properties.
-* Adjust the default appearance of HTML elements using a variety of selectors, including classes, IDs, pseudo-elements, and pseudo-classes.
-* Leverage how inheritance and specificity function in CSS.
-* Define what a CSS "reset" is, why it's needed, and demonstrate how to use one.
+- Define what CSS is in relation to HTML.
+- Demonstrate competency with CSS box model properties.
+- Adjust the default appearance of HTML elements using a variety of selectors, including classes, IDs, pseudo-elements, and pseudo-classes.
+- Leverage how inheritance and specificity function in CSS.
+- Define what a CSS "reset" is, why it's needed, and demonstrate how to use one.
 
 ---
 
 ## Keywords
 
-* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [Box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box_model)
-* [`class`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class)
-* [`id`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box_model)
+- [`class`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class)
+- [`id`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)
 
 ---
 
@@ -53,9 +53,9 @@ Let's start styling our project website using what we just learned about CSS tex
 
 If you haven't done so already, wrap the hero image banner area in a `<section>` element. Your goal is to then write CSS that will:
 
-* **center** the text
-* adjust the **size of the text**
-* add adequate **margin** above and below it
+- **center** the text
+- adjust the **size of the text**
+- add adequate **margin** above and below it
 
 Don't worry about the background image yet, we'll get to that.
 
@@ -79,8 +79,8 @@ Continue working on your Project 1 based on what you've learned so far.
 
 Before you get started, you should watch these videos to reinforce the concepts learned in class:
 
-* [Don't Fear the Browser](http://www.dontfeartheinternet.com/03-the-browser/)
-* [Don't Fear Starting from Scratch - Part 2: CSS](http://www.dontfeartheinternet.com/05-from-scratch/)
+- [Don't Fear the Browser](http://www.dontfeartheinternet.com/03-the-browser/)
+- [Don't Fear Starting from Scratch - Part 2: CSS](http://www.dontfeartheinternet.com/05-from-scratch/)
 
 ---
 
@@ -88,12 +88,12 @@ Before you get started, you should watch these videos to reinforce the concepts 
 
 One of the best websites on CSS out there...bookmark this one!
 
-* [CSS Tricks](https://css-tricks.com/)
+- [CSS Tricks](https://css-tricks.com/)
 
 A quick reference guide for understanding CSS:
 
-* [Syntax - CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax)
+- [Syntax - CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax)
 
 Some CSS FAQs:
 
-* [Common CSS questions](https://developer.mozilla.org/en-US/docs/Web/CSS/Common_CSS_Questions)
+- [Common CSS questions](https://developer.mozilla.org/en-US/docs/Web/CSS/Common_CSS_Questions)

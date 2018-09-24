@@ -1,33 +1,33 @@
 ---
 layout: lesson
 title: Ajax, JSON, and APIs
-slides: ['_slides/week-05/01-ajax-apis-slides.md']
-lesson_date: 2018-03-05
+slides: ["_slides/week-05/01-ajax-apis-slides.md"]
+lesson_date: 2018-10-29
 ---
 
 ## Pre-Work
 
 Read this primer on APIs before class:
 
-* [What is an API?](https://dev.to/aditichaudhry92/what-is-an-api)
+- [What is an API?](https://dev.to/aditichaudhry92/what-is-an-api)
 
 ---
 
 ## Learning Objectives
 
-* Define what Ajax and JSON are, particularly in relation to jQuery.
-* Define what an API is and explore popular social media/network APIs.
-* Use jQuery Ajax methods to load content a webpage.
-* Handle Ajax errors with jQuery and provide user feedback.
-* Create authentication credentials and use them to access data within a third-party API.
+- Define what Ajax and JSON are, particularly in relation to jQuery.
+- Define what an API is and explore popular social media/network APIs.
+- Use jQuery Ajax methods to load content a webpage.
+- Handle Ajax errors with jQuery and provide user feedback.
+- Create authentication credentials and use them to access data within a third-party API.
 
 ---
 
 ## Keywords
 
-* Ajax
-* JavaScript Object Notation (JSON)
-* Application Programming Interface (API)
+- Ajax
+- JavaScript Object Notation (JSON)
+- Application Programming Interface (API)
 
 ---
 
@@ -128,9 +128,9 @@ You'll use the `$.ajax()` method just as you did the GitHub API example, but app
 
 **Additional hints:**
 
-* The iTunes API requires that you use `+` signs and not spaces to occupy whitespace in the artist name...investigate a jQuery method called `.replace()` to figure out how to format the text entered into the `<input>`
-* You'll likely need to set the `dataType` property.
-* You can find additional info about the [iTunes API here](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
+- The iTunes API requires that you use `+` signs and not spaces to occupy whitespace in the artist name...investigate a jQuery method called `.replace()` to figure out how to format the text entered into the `<input>`
+- You'll likely need to set the `dataType` property.
+- You can find additional info about the [iTunes API here](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
 
 This is all the mark-up you will need to complete this assignment:
 
@@ -154,13 +154,13 @@ Again, writing the CSS and jQuery is up to you. Good luck!
 
 An older article, but still good background reading on APIs:
 
-* [The Increasing Importance of APIs in Web Development](https://code.tutsplus.com/articles/the-increasing-importance-of-apis-in-web-development--net-22368)
+- [The Increasing Importance of APIs in Web Development](https://code.tutsplus.com/articles/the-increasing-importance-of-apis-in-web-development--net-22368)
 
 A handy tool for making a JSON string more readable by adding whitespace back into it if it has been removed:
 
-* [JSON Pretty Print](http://jsonprettyprint.com/)
+- [JSON Pretty Print](http://jsonprettyprint.com/)
 
 And some Chrome extensions that will automatically do the same thing when viewing JSON in the browser:
 
-* [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)
-* [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc)
+- [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)
+- [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc)

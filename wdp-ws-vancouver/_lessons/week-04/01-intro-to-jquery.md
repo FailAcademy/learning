@@ -1,15 +1,15 @@
 ---
 layout: lesson
 title: Intro to jQuery
-slides: ['_slides/week-04/01-intro-to-jquery-slides.md']
-lesson_date: 2018-02-26
+slides: ["_slides/week-04/01-intro-to-jquery-slides.md"]
+lesson_date: 2018-10-22
 ---
 
 ## Pre-Work
 
 Readings from _Learn to Code Advanced HTML & CSS_:
 
-* [jQuery](http://learn.shayhowe.com/advanced-html-css/jquery/)
+- [jQuery](http://learn.shayhowe.com/advanced-html-css/jquery/)
 
 Also before class, familiarize yourself with jQuery by completing the free **[Try jQuery](http://try.jquery.com/)** course on Code School.
 
@@ -17,20 +17,20 @@ Also before class, familiarize yourself with jQuery by completing the free **[Tr
 
 ## Learning Objectives
 
-* Write JavaScript in a `.js` file and add it to a webpage.
-* Distinguish what jQuery is in relation to JavaScript.
-* Define what the browser’s Document Object Model (DOM) is, and traverse it using jQuery methods.
-* Manipulate the appearance of DOM elements using jQuery.
+- Write JavaScript in a `.js` file and add it to a webpage.
+- Distinguish what jQuery is in relation to JavaScript.
+- Define what the browser’s Document Object Model (DOM) is, and traverse it using jQuery methods.
+- Manipulate the appearance of DOM elements using jQuery.
 
 ---
 
 ## Keywords
 
-* Document Object Model (DOM)
-* Method
-* Traverse
-* Chaining
-* Events
+- Document Object Model (DOM)
+- Method
+- Traverse
+- Chaining
+- Events
 
 ---
 
@@ -102,4 +102,4 @@ Your goal for today is to implement the required interactive elements to the web
 
 A bookmark-worthy jQuery cheatsheet:
 
-* [jQuery API Quick Reference](http://oscarotero.com/jquery/)
+- [jQuery API Quick Reference](http://oscarotero.com/jquery/)

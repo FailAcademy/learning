@@ -1,189 +1,174 @@
 [
   {
-    "title": "Project Work Day",
-    "allDay": true,
-    "start": "2018-02-15"
-  },
-  {
     "title": "P1 Check-ins",
     "allDay": true,
-    "start": "2018-02-17"
+    "start": "2018-10-13"
   },
   {
     "title": "Lab Work Day",
     "allDay": true,
-    "start": "2018-02-22"
+    "start": "2018-10-18"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-02-27"
+    "start": "2018-10-23"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-03-01"
+    "start": "2018-10-25"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-03-03"
+    "start": "2018-10-27"
   },
   {
     "title": "Lab Work Day",
     "allDay": true,
-    "start": "2018-03-06"
+    "start": "2018-10-30"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-03-08"
+    "start": "2018-11-01"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-03-12"
+    "start": "2018-11-05"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-03-14"
+    "start": "2018-11-07"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-03-15"
-  },
-  {
-    "title": "Project Work Day",
-    "allDay": true,
-    "start": "2018-03-17"
+    "start": "2018-11-08"
   },
   {
     "title": "P2 Peer Review",
     "allDay": true,
-    "start": "2018-03-20"
+    "start": "2018-11-13"
   },
   {
     "title": "Lab Work Day",
     "allDay": true,
-    "start": "2018-03-22"
+    "start": "2018-11-17"
   },
   {
     "title": "Lab Work Day",
     "allDay": true,
-    "start": "2018-03-27"
+    "start": "2018-11-20"
   },
   {
     "title": "Lab Work Day",
     "allDay": true,
-    "start": "2018-03-29"
+    "start": "2018-11-22"
   },
   {
     "title": "Lab Work Day",
     "allDay": true,
-    "start": "2018-04-05"
+    "start": "2018-11-28"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-04-14"
+    "start": "2018-12-08"
   },
   {
     "title": "Lab Work Day",
     "allDay": true,
-    "start": "2018-04-18"
+    "start": "2018-12-12"
+  },
+  {
+    "title": "Lab Work Day",
+    "allDay": true,
+    "start": "2018-12-18"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-04-24"
+    "start": "2018-12-22"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-04-28"
+    "start": "2019-01-08"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-05-09"
+    "start": "2019-01-09"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-05-14"
+    "start": "2019-01-12"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-05-15"
+    "start": "2019-01-14"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-05-17"
+    "start": "2019-01-16"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-05-19"
+    "start": "2019-01-17"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-05-22"
+    "start": "2019-01-19"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-05-24"
+    "start": "2019-01-21"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-05-26"
+    "start": "2019-01-22"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-05-28"
+    "start": "2019-01-23"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-05-29"
+    "start": "2019-01-24"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-05-30"
+    "start": "2019-01-26"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-05-31"
-  },
-  {
-    "title": "Project Work Day",
-    "allDay": true,
-    "start": "2018-06-02"
-  },
-  {
-    "title": "Project Work Day",
-    "allDay": true,
-    "start": "2018-06-04"
+    "start": "2019-01-28"
   },
   {
     "title": "GitHub Portfolio Development",
     "allDay": true,
-    "start": "2018-06-06",
-    "end": "2018-06-20"
+    "start": "2019-01-29",
+    "end": "2019-02-13"
   },
   {
     "title": "Community Project Work",
     "allDay": true,
-    "start": "2018-06-23",
-    "end": "2018-07-28"
+    "start": "2019-02-14",
+    "end": "2019-03-21"
   }
 ]

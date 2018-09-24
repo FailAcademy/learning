@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to PHP - Loops and Functions
 slides: ["_slides/week-11/02-intro-to-php-2-slides.md"]
-lesson_date: 2018-04-17
+lesson_date: 2018-12-11
 ---
 
 ## Pre-work

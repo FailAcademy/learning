@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: The Command Line Interface
-slides: ['_slides/week-03/01-cli-slides.md']
-lesson_date: 2018-02-19
+slides: ["_slides/week-03/01-cli-slides.md"]
+lesson_date: 2018-10-15
 ---
 
 ## Pre-Work
@@ -11,7 +11,7 @@ lesson_date: 2018-02-19
 
 Complete the following Udacity bash shell tutorial:
 
-* [Shell Workshop](https://www.udacity.com/course/shell-workshop--ud206)
+- [Shell Workshop](https://www.udacity.com/course/shell-workshop--ud206)
 
 ### Software Installation
 
@@ -19,7 +19,7 @@ Complete the following Udacity bash shell tutorial:
 
 Download iTerm2, which is a much better app than the default Terminal app.
 
-* [Download iTerm2](https://www.iterm2.com/downloads.html) (Make sure you download the _stable_ version)
+- [Download iTerm2](https://www.iterm2.com/downloads.html) (Make sure you download the _stable_ version)
 
 **Windows users:**
 
@@ -34,27 +34,27 @@ The installation process will also install Git Bash on your computer, which you 
 
 ## Learning Objectives
 
-* Explore computer's command-line interface (CLI).
-* Use basic built-in commands to navigate and manipulate files and folders on your computer.
+- Explore computer's command-line interface (CLI).
+- Use basic built-in commands to navigate and manipulate files and folders on your computer.
 
 ---
 
 ## Keywords
 
-* Command-Line Interface (CLI)
-* Graphical User Interface (GUI)
-* Directory
-* Working directory
-* Command flag/option
+- Command-Line Interface (CLI)
+- Graphical User Interface (GUI)
+- Directory
+- Working directory
+- Command flag/option
 
 **Command line instructions:**
 
-* `pwd`
-* `cd`
-* `ls`
-* `touch`
-* `mkdir`
-* `rm`
+- `pwd`
+- `cd`
+- `ls`
+- `touch`
+- `mkdir`
+- `rm`
 
 ---
 
@@ -70,9 +70,9 @@ Find a partner. One of you will research **absolute paths**, and the other will 
 
 There are three common aliases that we use to navigate our file tree:
 
-* `.`
-* `..`
-* `~`
+- `.`
+- `..`
+- `~`
 
 Split into three groups (one per alias). Research the alias, and describe a situation where you would use it.
 
@@ -96,8 +96,8 @@ Given the following file tree:
 Desktop  Documents  Pictures    Movies  Music  Applications
 ```
 
-* How would you `cd` from `Users` to `Music`?
-* How would you `cd` from `Documents` to `Root`?
+- How would you `cd` from `Users` to `Music`?
+- How would you `cd` from `Documents` to `Root`?
 
 ---
 
@@ -125,19 +125,19 @@ Continue work on Project 1 based on what you've learned so far.
 
 Handy command line resources for beginners:
 
-* [The Command Line Crash Course](http://cli.learncodethehardway.org/book/)
-* [Command Line Cheat Sheet](http://www.git-tower.com/blog/command-line-cheat-sheet/)
-* [Explain Shell](https://explainshell.com/)
-* [The Bash Guide](http://www.bash.academy/)
+- [The Command Line Crash Course](http://cli.learncodethehardway.org/book/)
+- [Command Line Cheat Sheet](http://www.git-tower.com/blog/command-line-cheat-sheet/)
+- [Explain Shell](https://explainshell.com/)
+- [The Bash Guide](http://www.bash.academy/)
 
 Generate your bash prompt easily using this drop-and-drop interface:
 
-* [PS1 Generator](http://bashrcgenerator.com/)
+- [PS1 Generator](http://bashrcgenerator.com/)
 
 Some commands you'll want to steer clear of on the CLI:
 
-* [9 Lethal Linux Commands You Should Never Run](http://www.makeuseof.com/tag/9-lethal-linux-commands-never-run/)
+- [9 Lethal Linux Commands You Should Never Run](http://www.makeuseof.com/tag/9-lethal-linux-commands-never-run/)
 
 Have some fun with the CLI:
 
-* [Fun at the UNIX Terminal Part 1](https://blog.regehr.org/archives/1483)
+- [Fun at the UNIX Terminal Part 1](https://blog.regehr.org/archives/1483)

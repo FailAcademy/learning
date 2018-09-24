@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Debugging and Version Control in WordPress
-slides: ['_slides/week-12/03-debugging-git-wordpress-slides.md']
-lesson_date: 2018-04-26
+slides: ["_slides/week-12/03-debugging-git-wordpress-slides.md"]
+lesson_date: 2018-12-20
 ---
 
 ## Pre-work
@@ -13,14 +13,14 @@ _There is no pre-work for this lesson._
 
 ## Learning Objectives
 
-* Implement a strategy for version-controlling a WordPress project with Git.
-* Use developer-focused plugins for debugging purposes and to improve development workflows.
+- Implement a strategy for version-controlling a WordPress project with Git.
+- Use developer-focused plugins for debugging purposes and to improve development workflows.
 
 ---
 
 ## Keywords
 
-* [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
 
 ---
 
@@ -54,6 +54,6 @@ Specifically, you'll want to ensure the the blog index and single post page temp
 
 Some WordPress plugins that are helpful for debugging:
 
-* [Debug Bar](https://wordpress.org/plugins/debug-bar/)
-* [Query Monitor](https://wordpress.org/plugins/query-monitor/)
-* [Theme Check](https://wordpress.org/plugins/theme-check/)
+- [Debug Bar](https://wordpress.org/plugins/debug-bar/)
+- [Query Monitor](https://wordpress.org/plugins/query-monitor/)
+- [Theme Check](https://wordpress.org/plugins/theme-check/)

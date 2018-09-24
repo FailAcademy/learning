@@ -2,24 +2,44 @@
   {
     "title": "Pre-Work",
     "allDay": true,
-    "start": "2018-01-21",
-    "end": "2018-02-05"
+    "start": "2018-09-17",
+    "end": "2018-10-01"
+  },
+  {
+    "title": "No Class",
+    "allDay": true,
+    "start": "2018-10-06"
+  },
+  {
+    "title": "No Class",
+    "allDay": true,
+    "start": "2018-11-10"
+  },
+  {
+    "title": "Meet the Talent",
+    "allDay": true,
+    "start": "2019-02-13"
+  },
+  {
+    "title": "No Class",
+    "allDay": true,
+    "start": "2019-02-16"
   },
   {
     "title": "Celebration!",
     "allDay": true,
-    "start": "2018-07-28"
+    "start": "2019-03-23"
   },
   {
     "title": "Break Week",
     "allDay": true,
-    "start": "2018-04-29",
-    "end": "2018-05-07"
+    "start": "2018-12-24",
+    "end": "2019-01-01"
   },
   {
     "title": "BC Family Day",
     "allDay": true,
-    "start": "2018-02-12"
+    "start": "2019-02-18"
   },
   {
     "title": "Good Friday",
@@ -69,6 +89,6 @@
   {
     "title": "New Years Day",
     "allDay": true,
-    "start": "2018-01-01"
+    "start": "2019-01-01"
   }
 ]

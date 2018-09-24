@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Git
-slides: ['_slides/week-03/02-git-slides.md']
-lesson_date: 2018-02-20
+slides: ["_slides/week-03/02-git-slides.md"]
+lesson_date: 2018-10-16
 ---
 
 ## Pre-work
@@ -11,7 +11,7 @@ lesson_date: 2018-02-20
 
 Complete the following Code School Git tutorial before class:
 
-* [Try Git](https://try.github.io/)
+- [Try Git](https://try.github.io/)
 
 ### Software Installation
 
@@ -19,7 +19,7 @@ Complete the following Code School Git tutorial before class:
 
 Install Homebrew:
 
-* [Install Homebrew](https://brew.sh/)
+- [Install Homebrew](https://brew.sh/)
 
 Then use Homebrew to install Git:
 
@@ -35,31 +35,31 @@ You already installed Git last class :)
 
 ## Learning Objectives
 
-* Use the Git CLI to perform common Git tasks.
-* Explore GitHub and the Git workflows we'll be using for the remainder of the course.
-* Create a Git repository locally, commit code, and push the code to remote repo on GitHub.
+- Use the Git CLI to perform common Git tasks.
+- Explore GitHub and the Git workflows we'll be using for the remainder of the course.
+- Create a Git repository locally, commit code, and push the code to remote repo on GitHub.
 
 ---
 
 ## Keywords
 
-* Git
-* Distributed version control system (DVCS)
-* GitHub
-* Repository (repo)
-* Staging area
-* Commit
-* Branch
-* Push/Pull
+- Git
+- Distributed version control system (DVCS)
+- GitHub
+- Repository (repo)
+- Staging area
+- Commit
+- Branch
+- Push/Pull
 
 **Git commands:**
 
-* `status`
-* `add`
-* `commit`
-* `push`
-* `pull`
-* `log`
+- `status`
+- `add`
+- `commit`
+- `push`
+- `pull`
+- `log`
 
 ---
 
@@ -87,30 +87,30 @@ Don't forget to make regular commits to your project repo now, and push those co
 
 Some Git resources and tutorials:
 
-* [Visualizing Git Concepts with D3](https://onlywei.github.io/explain-git-with-d3/)
-* [Getting Git Right](https://www.atlassian.com/git/)
-* [Pro Git ebook](http://git-scm.com/book/en/v2)
-* [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)
+- [Visualizing Git Concepts with D3](https://onlywei.github.io/explain-git-with-d3/)
+- [Getting Git Right](https://www.atlassian.com/git/)
+- [Pro Git ebook](http://git-scm.com/book/en/v2)
+- [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)
 
 Need help with a Git problem? Try:
 
-* [First Aid Git](http://firstaidgit.io/#/)
+- [First Aid Git](http://firstaidgit.io/#/)
 
 Tips for writing great Git commit messages:
 
-* [The Art of the Commit](http://alistapart.com/article/the-art-of-the-commit)
+- [The Art of the Commit](http://alistapart.com/article/the-art-of-the-commit)
 
 Make your command prompt Git-aware:
 
-* [Git Aware Prompt](https://github.com/jimeh/git-aware-prompt)
-* [Snippet for customizing your bash profile](https://gist.github.com/mandiwise/8112fb0668f4801cc3f9)
+- [Git Aware Prompt](https://github.com/jimeh/git-aware-prompt)
+- [Snippet for customizing your bash profile](https://gist.github.com/mandiwise/8112fb0668f4801cc3f9)
 
 Different ways to undo things using Git:
 
-* [How to undo (almost) anything with Git](https://github.com/blog/2019-how-to-undo-almost-anything-with-git)
+- [How to undo (almost) anything with Git](https://github.com/blog/2019-how-to-undo-almost-anything-with-git)
 
 Some GitHub Pages resources:
 
-* [GitHub Pages](https://pages.github.com/)
-* [GitHub Help - GitHub Pages Basics](https://help.github.com/categories/github-pages-basics/)
-* [Using GitHub Pages To Host Your Website](http://blog.teamtreehouse.com/using-github-pages-to-host-your-website)
+- [GitHub Pages](https://pages.github.com/)
+- [GitHub Help - GitHub Pages Basics](https://help.github.com/categories/github-pages-basics/)
+- [Using GitHub Pages To Host Your Website](http://blog.teamtreehouse.com/using-github-pages-to-host-your-website)

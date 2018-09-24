@@ -1,43 +1,48 @@
 ---
 layout: lesson
 title: Object-Oriented Programming in JS
-slides: ['_slides/week-10/01a-oop-with-es2015-slides.md', '_slides/week-10/01b-intro-to-svgs.md', '_slides/week-10/01c-pong-slides.md']
-lesson_date: 2018-04-09
+slides:
+  [
+    "_slides/week-10/01a-oop-with-es2015-slides.md",
+    "_slides/week-10/01b-intro-to-svgs.md",
+    "_slides/week-10/01c-pong-slides.md",
+  ]
+lesson_date: 2018-12-01
 ---
 
 ## Pre-Work
 
 Watch these videos from Laracast's [ES2015 Crash Course](https://laracasts.com/series/es6-cliffsnotes):
 
-* [09: Classes](https://laracasts.com/series/es6-cliffsnotes/episodes/9)
-* [10: ES6 Modules](https://laracasts.com/series/es6-cliffsnotes/episodes/10)
+- [09: Classes](https://laracasts.com/series/es6-cliffsnotes/episodes/9)
+- [10: ES6 Modules](https://laracasts.com/series/es6-cliffsnotes/episodes/10)
 
 We'll be creating SVGs to build the Pong game in Project 3, so you'll want to take a look through this guide before class:
 
-* [Pocket Guide to Writing SVG](http://svgpocketguide.com/book/)
+- [Pocket Guide to Writing SVG](http://svgpocketguide.com/book/)
 
 ---
 
 ## Learning Objectives
 
-* Explain what object-oriented programming is in the JavaScript context.
-* Describe and instantiate objects using the new `class` syntax.
-* Describe and use the elements of a `class`, including the `constructor` and 'methods'.
-* Describe how the scope of `this` works within classes.
-* Use `import` and `export` to import and export ES2015 classes to modules (as `default` or named exports).
-* Code scalable vector graphics (SVGs) and add them inline to the DOM with JavaScript using OOP code.
+- Explain what object-oriented programming is in the JavaScript context.
+- Describe and instantiate objects using the new `class` syntax.
+- Describe and use the elements of a `class`, including the `constructor` and 'methods'.
+- Describe how the scope of `this` works within classes.
+- Use `import` and `export` to import and export ES2015 classes to modules (as `default` or named exports).
+- Code scalable vector graphics (SVGs) and add them inline to the DOM with JavaScript using OOP code.
 
 ---
 
 ## Keywords
 
-* [`class`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes)
-* [`constructor`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
-* [`this`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
-* [`new`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)
-* [`extends`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends)
-* [`super`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super)
-* [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG)
+- [`class`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes)
+- [`constructor`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
+- [`this`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
+- [`new`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)
+- [`extends`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends)
+- [`super`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super)
+- [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG)
 
 ---
 
@@ -89,8 +94,8 @@ Refer to the [project requirements page](/project/project-3-pong-game/) and the 
 
 More reading on classes in ES2015:
 
-* [Object-Oriented JavaScript — A Deep Dive into ES6 Classes](https://www.sitepoint.com/object-oriented-javascript-deep-dive-es6-classes/)
+- [Object-Oriented JavaScript — A Deep Dive into ES6 Classes](https://www.sitepoint.com/object-oriented-javascript-deep-dive-es6-classes/)
 
 A CSS Tricks video tutorial on SVGs:
 
-* [Everything You Need To Know About SVG](https://css-tricks.com/lodge/svg/)
+- [Everything You Need To Know About SVG](https://css-tricks.com/lodge/svg/)

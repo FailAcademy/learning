@@ -1,35 +1,35 @@
 ---
 layout: lesson
 title: Intro to CSS - Positioning, Background Images and Colour
-slides: ['_slides/week-01/03-intro-to-css-2-slides.md']
-lesson_date: 2018-02-08
+slides: ["_slides/week-01/03-intro-to-css-2-slides.md"]
+lesson_date: 2018-10-04
 ---
 
 ## Pre-work
 
 Readings from _Learn to Code HTML & CSS_:
 
-* [Positioning Content](http://learn.shayhowe.com/html-css/positioning-content/)
-* [Working with Typography](http://learn.shayhowe.com/html-css/working-with-typography/)
-* [Setting Backgrounds and Gradients](http://learn.shayhowe.com/html-css/setting-backgrounds-and-gradients/)
-* [Creating Lists](http://learn.shayhowe.com/html-css/creating-lists/) (the CSS section now)
+- [Positioning Content](http://learn.shayhowe.com/html-css/positioning-content/)
+- [Working with Typography](http://learn.shayhowe.com/html-css/working-with-typography/)
+- [Setting Backgrounds and Gradients](http://learn.shayhowe.com/html-css/setting-backgrounds-and-gradients/)
+- [Creating Lists](http://learn.shayhowe.com/html-css/creating-lists/) (the CSS section now)
 
 ---
 
 ## Learning Objectives
 
-* Use CSS positioning properties to help implement page layouts.
-* Use hexadecimal and RGBa to change the colours of HTML elements.
-* Use CSS background properties to set background colors and images.
-* Use code validators and browser developer tools to assist with debugging.
+- Use CSS positioning properties to help implement page layouts.
+- Use hexadecimal and RGBa to change the colours of HTML elements.
+- Use CSS background properties to set background colors and images.
+- Use code validators and browser developer tools to assist with debugging.
 
 ---
 
 ## Keywords
 
-* [Web/Page Inspector](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector)
-* [`position`](https://developer.mozilla.org/en/docs/Web/CSS/position)
-* [`background`](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
+- [Web/Page Inspector](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector)
+- [`position`](https://developer.mozilla.org/en/docs/Web/CSS/position)
+- [`background`](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
 
 ---
 
@@ -67,7 +67,7 @@ Continue working on your Project 1 based on what you've learned so far.
 
 Also, one more video to watch to help reinforce the concepts learned in class:
 
-* [Don't Fear Layout](http://www.dontfeartheinternet.com/08-layout/)
+- [Don't Fear Layout](http://www.dontfeartheinternet.com/08-layout/)
 
 By the end of the second CSS lesson you should have a enough CSS written to begin approximating the rough layout of your Project 1 website.
 
@@ -77,11 +77,11 @@ By the end of the second CSS lesson you should have a enough CSS written to begi
 
 Master your browser's dev tools:
 
-* [discover-devtools.codeschool.com](http://discover-devtools.codeschool.com/)
-* [DevTools Digest: DevTools in 2016 and Beyond](https://developers.google.com/web/updates/2016/06/devtools-digest)
+- [discover-devtools.codeschool.com](http://discover-devtools.codeschool.com/)
+- [DevTools Digest: DevTools in 2016 and Beyond](https://developers.google.com/web/updates/2016/06/devtools-digest)
 
 Tools to help you validate your code:
 
-* [W3C Mark-up Validation Service](https://validator.w3.org/)
-* [W3C Mark-up CSS Service](https://jigsaw.w3.org/css-validator/)
-* [Validity Chrome Extension](https://chrome.google.com/webstore/detail/validity/bbicmjjbohdfglopkidebfccilipgeif)
+- [W3C Mark-up Validation Service](https://validator.w3.org/)
+- [W3C Mark-up CSS Service](https://jigsaw.w3.org/css-validator/)
+- [Validity Chrome Extension](https://chrome.google.com/webstore/detail/validity/bbicmjjbohdfglopkidebfccilipgeif)
