@@ -11,43 +11,56 @@ The vending machine itself should be a Javascript class. You do not need to writ
 
 ## Requirements
 
-### Common
+To receive a “Complete” for this project, your submission will need to satisfy the following criteria:
+
+### Development Workflow Requirements
 
 Your project must:
 
-- [ ] Be pushed to Github
-- [ ] Use [descriptive Git commits](http://chris.beams.io/posts/git-commit/)
-- [ ] Contain `README.md` with project summary and setup
-- [ ] Contain `.gitignore` file (ignoring `node_modules` and system files)
+- [ ] Demonstrate effective organization of the project's root directory
+- [ ] Have a Git repository initialized in its root directory which is pushed to GitHub
+- [ ] Use a `.gitignore` to exclude unnecessary files/folders, and ensure that no unnecessary files/folders are erroneously committed to the repository
+- [ ] Contain an appropriate number of commits for the scope of the project
+- [ ] Use properly-formatted commit messages
+- [ ] Contain a `README.md` file describing the project (e.g. technologies used, personal learnings, installation instructions, etc.) and is appropriately formatted with Markdown
+- [ ] Remove extraneous code and comments from files
+- [ ] Contain a `package.json` with all applicable fields completed
+- [ ] Run app without errors
+- [ ] Contain a build directory with code correctly compiled/transpiled and minified for production
+- [ ] Use Prettier to format code
 
-### Development
+### JavaScript / Node.js Requirements
 
 Your project must:
 
-- [ ] Have at least 10 well-formed, passing tests
-- [ ] Contain a reasonably DRY (Don't Repeat Yourself) implementation, though the tests can be verbose
-- [ ] Have a screenshot (or screenshots) in its README of the test output in your terminal
+- [ ] Define variables where needed with `let` and `const`
+- [ ] Use functions to effectively organize code
+- [ ] Use consistent, descriptive variable and function names
+- [ ] Check for strict equality with comparison operators
+- [ ] Demonstrate effective use of control flow (loops, conditionals, etc.)
+- [ ] Use objects and arrays (and their built-in methods) to effectively work with data
+- [ ] Use `require`/`module.exports` where appropriate
 
-### Functionality
+### Functional Requirements
 
 Your project must:
 
-- [ ] Have functionality for printing inventory
-- [ ] Have functionality for refilling inventory
-- [ ] Have functionality for re-supplying change
-- [ ] Have functionality for dispensing inventory based on payment
-- [ ] Have functionality for returning change as coins (eg. $0.35 is 1 quarter and 1 dime)
-
-### Quality
-
-- [ ] Correctly use `describe` and `it` so that the test output specifically describes the behaviour of your code
-- [ ] The vending machine must be a JS class
+- [ ] Contain at least 10 well-formed, passing tests
+- [ ] Contain a reasonably DRY (don't repeat yourself) implementation, though the tests can be verbose
+- [ ] Use `describe` and `it` correctly so the test output specifically describes the behaviour of the code
+- [ ] Have a screenshot in the repository's `README.md` of the test output from the terminal
+- [ ] Use a ES2015 `class` to build the vending machine
+- [ ] Print vending machine inventory
+- [ ] Refill vending machine inventory
+- [ ] Re-supply vending machine change
+- [ ] Dispense inventory based on payment
+- [ ] Return change as coins (e.g. $0.35 is 1 quarter and 1 dime)
 
 ### Stretch Goals
 
 Want to challenge yourself? Your project could also:
 
-- [ ] Dispense the smallest amount of coins when returning change
+- [ ] Dispense the fewest number of coins possible when returning change
 - [ ] Allow variable products in any slot
 
 ## Submission Instructions

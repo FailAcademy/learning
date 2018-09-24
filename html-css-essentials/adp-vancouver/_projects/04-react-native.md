@@ -23,9 +23,9 @@ To explore the schema for this GraphQL API, visit **[graphqlbin.com](https://www
 
 Please note that this API is read-only for unauthenticated users, so no mutation operations are permitted.
 
-### Design specs
+## Design Specs
 
-**Colours:**
+### Colours
 
 - Medium Grey: `#999999`
 - Light Grey: `#e6e6e6`
@@ -33,71 +33,97 @@ Please note that this API is read-only for unauthenticated users, so no mutation
 - Purple: `#9963ea`
 - Red: `#cf392a`
 
-**Fonts:**
+### Fonts
 
 - Montserrat Regular
 - Montserrat Light
 
 ## Requirements
 
-### Common
+To receive a “Complete” for this project, your submission will need to satisfy the following criteria:
+
+### Development Workflow Requirements
 
 Your project must:
 
-- [ ] Be pushed to Github
-- [ ] Use [descriptive Git commits](http://chris.beams.io/posts/git-commit/)
-- [ ] Use small, single purpose Git commits
-- [ ] Contain `README.md` with project summary and setup
-- [ ] Contain a valid [`package.json`](http://browsenpm.org/package.json) file with all appropriate fields completed
-- [ ] Contain `.gitignore` file (ignoring `node_modules` and system files)
-- [ ] Use Prettier to format your code
+- [ ] Demonstrate effective organization of the project's root directory
+- [ ] Have a Git repository initialized in its root directory which is pushed to GitHub
+- [ ] Use a `.gitignore` to exclude unnecessary files/folders, and ensure that no unnecessary files/folders are erroneously committed to the repository
+- [ ] Contain an appropriate number of commits for the scope of the project
+- [ ] Use properly-formatted commit messages
+- [ ] Contain a `README.md` file describing the project (e.g. technologies used, personal learnings, installation instructions, etc.) and is appropriately formatted with Markdown
+- [ ] Remove extraneous code and comments from files
+- [ ] Contain a `package.json` with all applicable fields completed
+- [ ] Run app without errors
+- [ ] Resolve all errors and warnings that appear in developer tools console
+- [ ] Contain a build directory with code correctly compiled/transpiled and minified for production
+- [ ] Use Prettier to format code
 
-### Functional
+### JavaScript / Node.js Requirements
 
 Your project must:
 
-- [ ] Contain Schedule, Session, Speaker, Faves, and About screens
+- [ ] Define variables where needed with `let` and `const`
+- [ ] Use functions to effectively organize code
+- [ ] Use consistent, descriptive variable and function names
+- [ ] Check for strict equality with comparison operators
+- [ ] Demonstrate effective use of control flow (loops, conditionals, etc.)
+- [ ] Use objects and arrays (and their built-in methods) to effectively work with data
+- [ ] Use default and named exports where appropriate
+- [ ] Use ES2015 modules with `import` and `export` keywords where appropriate
+- [ ] Demonstrate effective use of async control flow patterns
+
+### Server-side Requirements
+
+Your project must:
+
+- [ ] Create and manage a database using CLI/GUI tools
+- [ ] Implement a database schema effectively
+- [ ] Write queries to efficiently retrieve data from a database
+
+### React Requirements
+
+Your project must:
+
+- [ ] Separate UI into components with correct level of abstraction
+- [ ] Use sub-directories to organize component files on a per component basis
+- [ ] Reflect the designer's vision for the application UI
+- [ ] Use functional stateless components (implement class components only when necessary)
+- [ ] Use `propTypes` to document all component props (with no validation errors)
+- [ ] Name components and component files/directories using Pascal case
+- [ ] Use component lifecycle methods only where required
+- [ ] Use React's Context API for state management where appropriate
+- [ ] Use Apollo Client's Query and Mutation components to manage data
+
+### React Native Requirements
+
+Your project must:
+
+- [ ] Make appropriate use of React Native's UI components (including `<View>`, `<Text>`, `<Image>`, `<SectionList`>`,`<TouchableHighlight>`, etc.)
+- [ ] Implement styles on a per-component basis using Stylesheet.Create
+- [ ] Leverage code reuse strategies across iOS and Android
+- [ ] Use React Navigation to implement a navigator (iOS/Android), tab bar (iOS only), and drawer (Android only) for screen navigation
+
+### Functional Requirements
+
+Your project must:
+
+- [ ] Contain a Schedule scene where conference sessions are displayed in chronological order in a SectionList with section headers (based on the start time), styled appropriately
+- [ ] Contain a Session scene where an individual conference session's details are displayed with the ability to fave/unfave the session, styled appropriately
+- [ ] Contain a Speaker scene with information about a session speaker displayed light-box style, styled appropriately
+- [ ] Contain a Faves scene where only conference sessions that have been faved are displayed in chronological order in a SectionList with section header (based on the start time), styled appropriately
+- [ ] Contain an About scene with a list of code of conduct items that can be toggled open and closed (with animation added), styled appropriately
 - [ ] Display a loading indicator when data is fetched by the app
-- [ ] Display the conference sessions in chronological order in a `SectionList` with section headers (based on the start time) in the Schedule screen
-- [ ] Display an individual conference session's details in a Session screen when a session is tapped from within the Schedule screen
-- [ ] Display information about a session's speaker in a lightbox-style Speaker screen when the speaker's name is tapped
-- [ ] Allow users to favourite and un-favourite sessions, and display saved favourites in a Faves Scene
-- [ ] Implement animated show/hide functionality for the Code of Conduct sections in the About screen (using React Native's `Animated` module)
-
-### Development
-
-Your project must:
-
-- [ ] Contain components built using valid JSX
-- [ ] Use ES2015 `import` and `export`
-- [ ] Contain components created using `React.Component`, `const`, or `function` only
-- [ ] Implement "presentational" and "container" components appropriately throughout the application
-- [ ] Use Apollo Client to request data from the provided GraphQL endpoint
-- [ ] Include React's context API for state management of faves in the app
-- [ ] Make appropriate use of React Native's UI components (including `<View>`, `<Text>`, `<Image>`, `<SectionList>`, `<TouchableHighlight>`, etc.)
-- [ ] Implement styles on a per-component basis using `Stylesheet.Create`
-- [ ] Leverage code-reuse strategies across iOS and Android platforms as much as possible
-- [ ] Use [ExNavigation](https://github.com/wix/react-native-navigation) to implement a navigator (iOS/Android), tab bar (iOS only), and drawer (Android only) for screen navigation
-- [ ] Use [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons) for icon assets throughout the app (specifically, the Octicon library)
-- [ ] Use [React Native Linear Gradient](https://github.com/react-native-community/react-native-linear-gradient) to generate the gradient background
-- [ ] Use [Realm React Native](https://realm.io/docs/react-native/latest/) as an embedded database
-
-### Quality
-
-- [ ] Contain an organized file tree separating stateless components from stateful scenes, as well as sub-directories for organizing files with configuration code reusable functions
-- [ ] Contains prop-types validation and be free of prop-type validation errors and warnings
+- [ ] Use React Native Vector Icons for icon assets throughout the app (specifically, use the Ionicon library)
+- [ ] Use React Native Linear Gradient to generate the gradient backgrounds in the app
+- [ ] Use React Native Realm as the embedded database
 
 ### Stretch Goals
 
 Want to challenge yourself? Your project could also:
 
-**Enhance UX:**
-
 - [ ] Add a custom splash screen and app icon for iOS and Android
-
-**Include a Map screen:**
-
-- [ ] Add an additional screen containing a map using [React Native Maps](https://github.com/airbnb/react-native-maps) with a custom image pin to show the conference location
+- [ ] Add an additional scene containing a map using React Native Maps with a custom image pin to show the conference location
 
 ## Submission Instructions
 
