@@ -31,8 +31,8 @@ You must:
 Your project must:
 
 - Demonstrate effective organization of the project's root directory
-- Have a Git respository initialized in its root directory which is pushed to GitHub
-- Use a `.gitignore` to exclude unnecessary files/folders, and ensure that no unnecessary files/folders are erroneously commited to the respository
+- Have a Git repository initialized in its root directory which is pushed to GitHub
+- Use a `.gitignore` to exclude unnecessary files/folders, and ensure that no unnecessary files/folders are erroneously committed to the repository
 - Contain an appropriate number of commits for the scope of the project
 - Contain a `README.md` file describing the project (e.g. technologies used, personal learnings, installation instructions, etc.) and is appropriately formatted with Markdown
 - Remove extraneous code and comments from files
