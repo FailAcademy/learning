@@ -10,81 +10,98 @@ You can [download the project files here](https://s3-us-west-2.amazonaws.com/red
 
 ## Design Specifications:
 
-* The base font size is `16px` and it HEX code is `#ffffff`
-* The body font family is Open Sans Light
-* The medium grey colour of the text in the footer is `#c2c2c2`
+- The base font size is `16px` and it HEX code is `#ffffff`
+- The body font family is Open Sans Light
+- The medium grey colour of the text in the footer is `#c2c2c2`
 
 ## Requirements
 
-To receive a "Pass" grade for this project, your submission will need to satisfy the following criteria:
+To receive a “Complete” for this project, your submission will need to satisfy the following criteria:
 
-**Functional requirements:**
+### Peer Review Requirements
 
-Your project must:
+You must:
 
-* Dynamically fetch story data and populate it in a webpage via the Top Stories API based a user's selection from a `<select>` field
-* Resize the header area (i.e. logo plus `<select>`) so that it transitions from occupying the entire screen on page load to only `auto` height after the `<select>` field is changed (you will need jQuery for this)
-* Link each returned image to its URL on the NYT website
+- Complete peer evaluation form
+- Post at least three issues on partner's repo
+- Submit one specific pull request where appropriate to patch an issue
 
-**General requirements:**
-
-Your project must:
-
-* Contain a single `.html` file and an external, minified `.css` file
-* Adequately reflect the designer's vision for the website when built out using HTML and CSS
-* Demonstrate effective organization of the project's root directory
-* Have a Git repository initialized in its root directory with an appropriately customized `.gitignore` file
-* Be pushed to GitHub (with all of your commits synced to it)
-* Contain a `README.md` file describing the project (e.g. technologies used, personal learnings, etc.)
-* Use Gulp for running build tasks, such as minification, Sass compilation, and error checking
-
-**HTML requirements:**
+### Development Workflow Requirements
 
 Your project must:
 
-* Uses the HTML5 doctype and semantic, syntactically-correct HTML5
-* Include all essential elements covered in class (e.g. `<meta charset="utf-8">`)
+- Demonstrate effective organization of the project's root directory
+- Have a Git repository initialized in its root directory which is pushed to GitHub
+- Use a `.gitignore` to exclude unnecessary files/folders, and ensure that no unnecessary files/folders are erroneously committed to the repository
+- Contain an appropriate number of commits for the scope of the project
+- Contain a `README.md` file describing the project (e.g. technologies used, personal learnings, installation instructions, etc.) and is appropriately formatted with Markdown
+- Remove extraneous code and comments from files
+- Resolve all errors and warnings that appear in the browser console
+- Use Gulp for running build tasks such as minification, Sass compilation, and error checking
+- Contain a build directory with CSS and JS correctly compiled/transpiled and minified for production
+- Contain a `package.json` with all applicable fields completed
 
-**CSS/Sass requirements:**
-
-Your project must:
-
-* Make appropriate use of classes and IDs as selectors
-* Use a CSS reset
-* Use Sass as a preprocessor, with CSS properly compiled and minified
-* Use the `background` property where appropriate
-* Implement a mobile-first responsive layout using flexbox (no floats)
-* Demonstrate effective use of box model properties
-* Demonstrate effective use of CSS properties for altering the visual display of text (e.g. `font-family`, `font-style`, `text-transform`, etc.)
-* Incorporate custom fonts using `@font-face`
-
-**JS requirements:**
+### HTML Requirements
 
 Your project must:
 
-* Use Ajax to fetch data from the NYT Top Stories endpoint
-* Only display a maximum of 12 stories in the grid, and only display a story if it has a photo associated with it
-* Transition users between UI states, starting where no stories have been returned, and then subsequently transitioning where stories populate the grid (by incorporating a loading gif)
+- Contain syntactically-valid HTML5 code
+- Include all essential elements in the `<head>` of the document (e.g. doctype, title, charset, etc.)
+- Use semantically-appropriate HTML elements
 
-**RWD requirements:**
+### CSS Requirements
 
 Your project must:
 
-* Be responsively designed using a mobile-first approach
-* Be optimized for 3 screen sizes: mobile, `min-width: 600px`, and `min-width: 1000px`
+- Translate the designer's overall vision for the website into code
+- Use Sass a pre-processor and make effective use of variables, mixins, and partials
+- Use appropriate CSS selectors (e.g. classes instead of IDs, no overly-specific selectors, etc.)
+- Use a CSS reset
+- Demonstrate effective use of box model properties and values
+- Demonstrate effective use of typographic properties and values (e.g. `font-family`, `font-style`, `text-transform`, etc.)
+- Demonstrate effective use of flexbox properties and values for layout
+- Incorporate custom fonts using `@font-face`
+- Implement a mobile-first responsive layout
+- Optimize layout for all required breakpoints
 
-**Additional requirements:**
+### JavaScript Requirements
 
-* Be sure to **test** your project completely in **all major browsers** (Chrome, Firefox, Safari, Opera, Edge) when you think you're finished
+Your project must:
 
-**Stretch goals:**
+- Define variables where needed with `let` and `const`
+- Use functions to effectively organize code
+- Use consistent, descriptive variable and function names
+- Check for strict equality with comparison operators
+- Demonstrate effective use of control flow (loops, conditionals, etc.)
+- Use objects and arrays (and their built-in methods) to effectively work with data
+
+### jQuery Requirements
+
+Your project must:
+
+- Wrap jQuery code in document-ready (use short-hand)
+- Use variables to store references to DOM elements wrapped in the jQuery object that are accessed more than once
+- Add event listeners with jQuery and respond to events appropriately in callbacks
+- Use jQuery to selectively add/remove or show/hide DOM elements
+- Use jQuery's `ajax` method to make asynchronous requests to APIs and handle success/failure responses appropriately
+
+### Functional Requirements
+
+Your project must:
+
+- Contain a single `.html` file and an external `.css` file (CSS reset may be included in a separate file)
+- Fetch data from the Top Stories v2 NYT API endpoint
+- Only display a maximum of 12 stories in the grid and only display a story if it has a photo associated with it
+- Transition users between UI states, beginning where no stories have been returned, and then subsequently appending stories to populate the grid (incorporate a loader GIF)
+
+### Stretch Goals
 
 Want to challenge yourself? Your project could also:
 
-* Incorporate a `<select>` field with custom styles applied (you will need a jQuery plugin for this such as [Selectric](http://selectric.js.org/))
-* Incorporate a combination of jQuery and CSS3-based animation to animate the movement of the header on the `<select>` change
-* Use CSS3 transitions to show and hide the article abstract on hover
+- Incorporate a select element with custom styles applied (you will need a jQuery plugin for this)
+- Incorporate a combination of jQuery and CSS3-based animation to animate the movement of the header on search submit
+- Use CSS3 transitions to show and hide the article abstract on hover
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to [iris@redacademy.com](iris@redacademy.com).
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to [zareef.baksh@redacademy.com](zareef.baksh@redacademy.com).
