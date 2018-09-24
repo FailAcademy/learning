@@ -10,21 +10,21 @@ You can [download the project files here](https://s3-us-west-2.amazonaws.com/red
 
 ## Design Specifications
 
-### Structure:
+### Structure
 
 - This fixed width website is `1120px` wide
 - The base spacing unit is `1.5rem`
 - The solid border is `1px solid #e1e1e1`
 - The dashed border is `1px dashed #c8c8c8`
 
-### Typography:
+### Typography
 
 - The base font size is `16px` and its HEX code is `#404040`
 - The base line-height for the site is `1.75`
 - The main font family is Merriweather
 - The accent font family is Novovento Sans Web (for headings, etc.)
 
-### Colors:
+### Colors
 
 - The main background colour is `#ffffff`
 - The HEX code for the green brand colour is `#248A83`
