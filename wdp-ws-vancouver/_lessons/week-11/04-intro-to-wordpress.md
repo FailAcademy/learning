@@ -39,11 +39,11 @@ If you've never seen the WordPress admin interface before, watch this series of 
 
 We can also install WP locally using MAMP:
 
-1. [Download WordPress](https://wordpress.org/download/)
-2. Unzip your download and move it to your `htdocs` folder (rename the unzipped folder if you like)
-3. Go to phpMyAdmin (via MAMP) and create a new database
-4. Rename `wp-config-sample.php` to `wp-config.php` and fill in your database name and MAMP credentials
-5. Go to http://localhost:8888/YOUR-FOLDER/wp-admin/install.php and complete your install
+1.  [Download WordPress](https://wordpress.org/download/)
+2.  Unzip your download and move it to your `htdocs` folder (rename the unzipped folder if you like)
+3.  Go to phpMyAdmin (via MAMP) and create a new database
+4.  Rename `wp-config-sample.php` to `wp-config.php` and fill in your database name and MAMP credentials
+5.  Go to http://localhost:8888/YOUR-FOLDER/wp-admin/install.php and complete your install
 
 ---
 
@@ -52,6 +52,8 @@ We can also install WP locally using MAMP:
 Let's start customizing our WordPress installation.
 
 Install the [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) plugin and try creating a form. Follow the instructions it provides for including a form in a page (feel free to create a special page for this if you like).
+
+**Hint:** You'll need to use a shortcode block to add the form to the page.
 
 Also try browsing for a new theme to install on your site and activate it. Take a look at the front end of your site to see what effect it had. Did anything weird or unexpected happen?
 
@@ -69,9 +71,7 @@ But whoops! How can we link up the `style.css` file now that it's path is broken
 
 ---
 
-## Lab Activity (Today)
-
-**Complete all incomplete lab activity tasks for homework before the next class!**
+## Lab Activity
 
 ### Task 1:
 
