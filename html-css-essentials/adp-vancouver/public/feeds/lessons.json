@@ -19,54 +19,39 @@
    {
       "title": "Day 1 Orientation",
       "allDay": true,
-      "start": "2018-07-03"
+      "start": "2018-10-01"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-07-12"
+      "start": "2018-10-11"
    },
    {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-07-20"
+    "start": "2018-10-19"
     },
     {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-07-27"
+      "start": "2018-10-26"
     },
-   {
-      "title": "Project Work Day",
-      "allDay": true,
-      "start": "2018-08-02"
-   },
-   {
-      "title": "Project Work Day",
-      "allDay": true,
-      "start": "2018-08-03"
-   },
   {
-     "title": "Interview Prep",
-     "allDay": true,
-     "start": "2018-08-13"
-  },
-   {
-      "title": "Self Directed Meteor Project Work",
-      "allDay": true,
-      "start": "2018-08-07",
-      "end": "2018-08-11"
-   },
+    "title": "Self Directed Meteor Project Work",
+    "allDay": true,
+    "start": "2018-11-01",
+    "end": "2018-11-10"
+ },
    {
       "title": "Portfolio Week",
       "allDay": true,
-      "start": "2018-08-27",
-      "end": "2018-09-01"
+      "start": "2018-11-26",
+      "end": "2018-12-01"
    },
    {
       "title": "Community Project Work",
       "allDay": true,
-      "start": "2018-09-04",
-      "end": "2018-09-21"
+      "start": "2018-12-03",
+      "end": "2018-12-21"
    }
 ]

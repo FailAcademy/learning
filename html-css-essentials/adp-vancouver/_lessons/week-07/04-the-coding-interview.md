@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: The Coding Interview
-lesson_date: 2018-08-17
+lesson_date: 2018-11-16
 ---
 
 ## Learning Objectives

@@ -2,7 +2,7 @@
 layout: lesson
 title: Functional Programming
 slides: ['_slides/week-02/04-functional-programming.md']
-lesson_date: 2018-07-13
+lesson_date: 2018-10-12
 ---
 
 ## Pre-Work
@@ -199,7 +199,7 @@ const fruit = {
   pears: 45,
   oranges: 183,
   grapes: 498,
-  kiwis: 201
+  kiwis: 201,
 };
 
 // stockUp is called with '5'
@@ -211,7 +211,7 @@ const fruit = {
   pears: 50,
   oranges: 188,
   grapes: 503,
-  kiwis: 206
+  kiwis: 206,
 };
 ```
 
@@ -225,7 +225,7 @@ const fruit = {
   pears: 45,
   oranges: 183,
   grapes: 498,
-  kiwis: 201
+  kiwis: 201,
 };
 ```
 
@@ -259,7 +259,7 @@ These functions must be **pure**. In order to assure purity, use [Deep Freeze](h
 
 ```js
 // Make sure to run in strict mode
-"use strict";
+'use strict';
 
 Object.prototype.stockUp = function(count) {
   deepFreeze(this);
