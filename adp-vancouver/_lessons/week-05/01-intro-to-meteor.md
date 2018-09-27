@@ -2,7 +2,7 @@
 layout: lesson
 title: Introducing Meteor (with React)
 slides: ['_slides/week-05/01-intro-to-meteor.md']
-lesson_date: 2018-07-30
+lesson_date: 2018-10-29
 ---
 
 ## Pre-work
