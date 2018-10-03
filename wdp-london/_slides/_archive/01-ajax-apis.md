@@ -130,11 +130,32 @@ Ajax is often used when **submitting web forms** and **fetching data** from a se
 It's **asynchronous** because Ajax doesn’t block other events from happening when the request is sent and the client is waiting for a response.
 
 ---
+class: center, middle
+
+.large[
+  But wait!? Isn't JavaScript single-threaded?
+]
+
+---
+class: center, middle
+
+.inline-images[
+  ![JS Runtime](/public/img/slide-assets/js-runtime.png)
+]
+
+---
+class: center, middle
+
+.large[
+  [A visualization...](http://latentflip.com/loupe/)
+]
+
+---
 
 # Working with Ajax
 
-- You can use Ajax with plain vanilla JavaScript, but it can be a bit tedious.
-- Luckily, jQuery provides several methods that make undertaking Ajax-related tasks much easier
+- You can use Ajax with plain vanilla JavaScript, but it can be a bit onerous
+- Luckily, jQuery provide several methods that make undertaking Ajax-related tasks much easier
 
 ---
 
@@ -258,7 +279,7 @@ JSON will look very familiar, because it's encoded similarly to how JS objects a
 
 But it's important to remember that this isn't an actual object, it's just text that looks like an object.
 
-*Sidenote: You can convert JSON into a JS object, using `JSON.parse()`*
+To convert JSON into a JS object, use `JSON.parse()`.
 
 ---
 
@@ -298,7 +319,7 @@ That entire response was passed in as the `data` object parameter in the `.done(
 });
 ```
 
- We are now able to access properties within the data object (such as the `login`) using the JavaScript dot notation.
+Because the JSON data is pre-processed by jQuery based on the response `Content-Type`, it is passed in as a JS object, we are able to access it's properties (such as the `login`) using the JavaScript dot notation we're already familiar with.
 
 ---
 

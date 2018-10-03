@@ -15,33 +15,36 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
 
-1. What is WordPress?
-2. Installing WordPress
-3. The admin area
-4. Plugins
-5. Themes
+1.  What is WordPress?
+2.  Installing WordPress
+3.  The admin area
+4.  Plugins
+5.  Themes
 
 ---
+
 template: inverse
 
 # What is WordPress?
 
 ---
+
 class: center, middle
 
 .large[
-   What is a CMS for?
+What is a CMS for?
 ]
 
 ---
 
 # Why WordPress?
 
-- It powers ~25% of the top 10 million websites
+- It powers ~30% of the top 10 million websites
 - More non-English than English downloads of WP
 - Very extendible via many different APIs
 - Backward compatibility
@@ -68,6 +71,7 @@ WordPress percentage changes often and is displayed on wordpress.org
 - .org sites are entirely customizable via plugins and themes
 
 ---
+
 template: inverse
 
 # Installing WordPress
@@ -86,22 +90,24 @@ template: inverse
 
 We can also install WP locally using MAMP:
 
-1. [Download WordPress](https://wordpress.org/download/)
-2. Unzip your download and move it to your `htdocs` folder (rename the unzipped folder if you like)
-3. Go to phpMyAdmin (via MAMP) and create a new database
-4. Rename `wp-config-sample.php` to `wp-config.php` and fill in your database name and MAMP credentials
-5. Go to http://localhost:8888/YOUR-FOLDER/wp-admin/install.php and complete your install
+1.  [Download WordPress](https://wordpress.org/download/)
+2.  Unzip your download and move it to your `htdocs` folder (rename the unzipped folder if you like)
+3.  Go to phpMyAdmin (via MAMP) and create a new database
+4.  Rename `wp-config-sample.php` to `wp-config.php` and fill in your database name and MAMP credentials
+5.  Go to http://localhost:8888/YOUR-FOLDER/wp-admin/install.php and complete your install
 
 ???
 
-#### Exercise Suggestion: 
+#### Exercise Suggestion:
+
 Students independently try the local install. Then do a fresh install walk through together. Even if individuals figured it out, get everyone to start new.
 
 Note that there other slightly different ways to do the local install.
 
-*Note for students:* where to find database credentials, change default installation values (admin, wp_)
+_Note for students:_ where to find database credentials, change default installation values (admin, wp\_)
 
 ---
+
 template: inverse
 
 # WordPress Tour
@@ -111,16 +117,17 @@ template: inverse
 class: center, middle
 
 .large[
-   **WP UI Components**
+**WP UI Components**
 ]
 <br /><br />
 .inline-images[
-   ![WP Front and Back Ends](/public/img/slide-assets/wp-front-back-concept.svg)
+![WP Front and Back Ends](/public/img/slide-assets/wp-front-back-concept.svg)
 ]
 
 ???
 
 #### Exercise Suggestion
+
 WP Basics Handout - Get students to walk thought the UI components on the site and make notes on the worksheet. Tell them to note hidden gotchas and features that have not seem before ( ~10-15 mins).
 
 After, get them to share highlights with tablemates ( ~5-8 mins).
@@ -128,14 +135,15 @@ After, get them to share highlights with tablemates ( ~5-8 mins).
 As a class, get each table to share their top highlights (~5 mins).
 
 ---
+
 class: center, middle
 
 .large[
-   **WP Internal Components**
+**WP Internal Components**
 ]
 <br /><br />
 .inline-images[
-   ![WP Database and Core](/public/img/slide-assets/wp-db-core-concept.svg)
+![WP Database and Core](/public/img/slide-assets/wp-db-core-concept.svg)
 ]
 
 ---
@@ -148,7 +156,7 @@ class: center, middle
 
 ???
 
-For visual aid, I draw out the components and how they connect on the board with explaination. 
+For visual aid, I draw out the components and how they connect on the board with explaination.
 
 ---
 
@@ -170,9 +178,9 @@ Inside your WP installation directory...
 
 - `wp-admin/`
 - `wp-content/`
-   - `plugins` - each plugin usually has its own directory
-   - `themes` - each theme as its own directory
-   - `uploads` - created on first media file upload
+  - `plugins` - each plugin usually has its own directory
+  - `themes` - each theme as its own directory
+  - `uploads` - created on first media file upload
 - `wp-includes/`
 - `wp-config.php`
 
@@ -189,6 +197,7 @@ This is where you'll keep all of the code and content that's specific to your si
 ???
 
 #### Recap Exercise Suggestion
+
 With a partner, fill out the side with the 'Internal Components' as a cheat sheet.
 
 ---
@@ -196,10 +205,10 @@ With a partner, fill out the side with the 'Internal Components' as a cheat shee
 # WordPress Dashboard
 
 - **Settings**
-   - General, Reading, Discussion, and Permalinks
+  - General, Reading, Discussion, and Permalinks
 - **Users** ([Roles and Capabilities](https://codex.wordpress.org/Roles_and_Capabilities))
 - **Appearance**
-   - Themes, Customize, Widgets, and Menus
+  - Themes, Customize, Widgets, and Menus
 - **Plugins**
 
 ???
@@ -207,21 +216,23 @@ With a partner, fill out the side with the 'Internal Components' as a cheat shee
 If not mentioned yet, point out the customizer.
 
 ---
+
 class: center, middle
 
 .large[
-   Don't edit your theme or plugin files with the built-in Editor...
+Don't edit your theme or plugin files with the built-in Editor...
 ]
 
 ???
 
-Show editor. As of WP 4.9.1. they have added an editor warning, syntax highlighting and CSS editor (in the customizer). 
+Show editor. As of WP 4.9.1. they have added an editor warning, syntax highlighting and CSS editor (in the customizer).
 
 ---
+
 class: center, middle
 
 .large[
-   And don't let other people do that either!!!
+And don't let other people do that either!!!
 ]
 
 ---
@@ -235,10 +246,21 @@ class: center, middle
 - Media
 
 ---
+
+# Gutenberg Editor
+
+- Implemented in core in WordPress 5.0+
+- A new way to add content to the WP admin interface
+- Uses "blocks" to structure your content
+- You can create custom blocks (use React for this!)
+- Now we must think about what should live in a content block versus what is separate metadata about the content (more on this to come!)
+
+---
+
 class: center, middle
 
 .large[
-   Single vs. Multisite
+Single vs. Multisite
 ]
 
 ---
@@ -247,11 +269,14 @@ class: center, middle
 
 Log into the WordPress site you just created (if you haven't already) and try creating a **new post and page** of your own.
 
+Experiment with various configurations of **blocks** in the Gutenberg editor.
+
 Create some **categories and tags** too, and apply them to your new post.
 
 Now check out the front end of your site...do you see your new content?
 
 ---
+
 template: inverse
 
 # Plugins & Themes
@@ -276,10 +301,11 @@ template: inverse
 - Google XML Sitemaps
 
 ---
+
 class: center, middle
 
 .large[
-   Disabling vs. Uninstalling?
+Disabling vs. Uninstalling?
 ]
 
 ---
@@ -291,13 +317,15 @@ class: center, middle
 - There's also a [theme repository](https://wordpress.org/themes/) on wordpress.org
 
 ---
+
 class: center, middle
 
 .large[
-   Every theme is different!
+Every theme is different!
 ]
 
 ---
+
 class: center, middle
 
 ### Themes & Plugins PSA
@@ -305,10 +333,11 @@ class: center, middle
 Quality matters! Poorly-written code in plugins and themes in one of the biggest ways WP gets hacked
 
 ---
+
 class: center, middle
 
 .inline-images[
-   ![WordPress security](/public/img/slide-assets/wp-secure.jpg)
+![WordPress security](/public/img/slide-assets/wp-secure.jpg)
 ]
 
 ---
@@ -318,6 +347,8 @@ class: center, middle
 Let's start customizing our WordPress installation.
 
 Install the [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) plugin and try creating a form. Follow the instructions it provides for including a form in a page (feel free to create a special page for this if you like).
+
+**Hint:** You'll need to use a shortcode block to add the form to the page.
 
 Also try browsing for a new theme to install on your site and activate it. Take a look at the front end of your site to see what effect it had. Did anything weird or unexpected happen?
 
@@ -390,7 +421,7 @@ Before proceeding a head, get them to try to make sense of the code above with a
 
 # In Plain English
 
-*What's happening in the loop...*
+_What's happening in the loop..._
 
 - First we check to makes sure we have posts
 - Then we begin the loop (it will cycle however many times we've set in **Settings > Reading**)
@@ -409,7 +440,7 @@ Before proceeding a head, get them to try to make sense of the code above with a
 - `the_author()` displays the author name for each post
 - `the_content()` display the content of the post
 
-*These are examples of template tags in WordPress.*
+_These are examples of template tags in WordPress._
 
 ---
 
@@ -496,26 +527,28 @@ But whoops! How can we link up the `style.css` file now that it's path is broken
 
 ???
 
-Give class ( ~20-30 mins) to try the exercise. 
+Give class ( ~20-30 mins) to try the exercise.
 
 Recommend students come up and share their answer and correct as a class if necessary.
-
 
 ---
 
 # What We've Learned
 
 - How to install a self-hosted copy of WordPress
-- The ins and outs of the WP admin area
+- The ins and outs of the WordPress admin area
+- How to add content to WordPress
 - How to install plugins and themes
 - The basic anatomy of a WordPress theme
 
 ???
 
-#### Review Activity
-Before end of day standup (after lab time), in groups of 3 - 4 take the components 
+**Review Activity**
+
+Before end-of-day standup (after lab time), in groups of 3-4 talk about the components
 
 ---
+
 template: inverse
 
 # Questions?

@@ -365,7 +365,7 @@ class: center, middle
 
 Now try experimenting with CSS transforms and keyframe animations.
 
-See the [lesson page](/lesson/04-css-transitions-transforms/) for more details.
+See the [lesson page](/lesson/css3-transitions-transforms/) for more details.
 
 ---
 

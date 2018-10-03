@@ -15,22 +15,24 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
 
 1. Truthiness
 2. Type coercion
-3. Function scope and hoisting
+3. Function scope
 4. Functions inside conditionals
 5. Passing by value versus reference
 6. Methods, objects, `this` & `bind`
 
 ---
+
 class: center, middle
 
 .large[
-  **[Wat](https://www.destroyallsoftware.com/talks/wat)**
+**[Wat](https://www.destroyallsoftware.com/talks/wat)**
 ]
 
 ---
@@ -40,20 +42,20 @@ class: center, middle
 Your turn! Enter these into your console:
 
 ```js
-1 + 2
-1 + '2'
+1 + 2;
+1 + '2';
 
-'' == false
-0 == false
-null == false
-undefined == false
-null == undefined
+'' == false;
+0 == false;
+null == false;
+undefined == false;
+null == undefined;
 
 function f() {}
 
-f + 100
-f + null
-f + [1, 2, 3, 4, 5] + undefined
+f + 100;
+f + null;
+f + [1, 2, 3, 4, 5] + undefined;
 ```
 
 ---
@@ -77,7 +79,7 @@ If you use two **bangs** (exclamation marks), you can force Javascript
 to show you the true of false interpretation of a value.
 
 ```js
-var str = 'abcde';
+const str = 'abcde';
 
 console.log(str); // 'abcde'
 console.log(!!str); // true
@@ -85,7 +87,7 @@ console.log(!!str); // true
 
 In your pairs, test out your theories on truthiness using `!!`.
 
-*Why does this work?*
+_Why does this work?_
 
 ---
 
@@ -119,7 +121,7 @@ Please [see the lesson page](/lesson/01-advanced-javascript/) for more details.
 
 ???
 
-*Explanation:*
+_Explanation:_
 
 - The **if block** (#1), compares the **number** 5 with the **string** '5' with double equals (`==`). JavaScript does **coercion** when comparing "things" using `==` and due to this **coercion**, the `console.log` within the **if block** gets executed.
 - Coercion does not happen for **variables** within the **switch statement**. **Switch statements** use strict type checking (`===`).
@@ -128,13 +130,13 @@ Please [see the lesson page](/lesson/01-advanced-javascript/) for more details.
 
 # Exercise 2
 
-**Function Scope and Hoisting**
+**Function Scope**
 
 Please [see the lesson page](/lesson/01-advanced-javascript/) for more details.
 
 ???
 
-*Explanation:*
+_Explanation:_
 
 **Hoisting**
 
@@ -148,7 +150,7 @@ Every **variable** in JS is scoped at a function level, so this means that **var
 
 When a **variable** is not found in a **function scope**, the execution environment traverses to an outer **scope** to look for it.
 
-So in the code example, the **statement** `var name = "Jane"` declares a **variable** "name" which is local to the **function scope**. The outer **variable** which has the same **variable** name is ignored, and the **variable** in current **scope** is used.
+So in the code example, the **statement** `const name = "Jane"` declares a **variable** "name" which is local to the **function scope**. The outer **variable** which has the same **variable** name is ignored, and the **variable** in current **scope** is used.
 
 Hence the second **statement** `console.log("The name is : " + name);` logs a value "Jane".
 
@@ -162,12 +164,12 @@ Please [see the lesson page](/lesson/01-advanced-javascript/) for more details.
 
 ???
 
-*Explanation:*
+_Explanation:_
 
 - There are two types of functions inside the **if/else blocks**. The `innerFunc` is the commonly known **function declaration** and `innerFuncExpr` is the **function expression**.
 - At any point of time, only one of the if or else **block** should get executed, in this case the if **block** at #1.
 - The first `console.log` output for the invocation at #7 suggests the `innerFunc` inside the **else block** is getting executed.
-- To understand this behaviour, we have to understand how *hoisting* works in JS. The function `innerFunc` is declared within both the if and the else **block**, the JS engine **hoists** the function declarations to the top of the enclosing function!
+- To understand this behaviour, we have to understand how _hoisting_ works in JS. The function `innerFunc` is declared within both the if and the else **block**, the JS engine **hoists** the function declarations to the top of the enclosing function!
 - There is only one **function declaration** and that is the one which JS engine encounters last during the parsing phase. So, in this case the else **block** `innerFunc` will overwrite the if **block** declaration, irrespective of where the declarations are within the **conditional blocks**. There is one `innerFunc` declaration and hence the output of the invocation at #7.
 - The `innerFuncExpr` is the **function expression**, which does not get **hoisted** to the top of the enclosing **function scope**. So, we see the proper `console.log` output for the invocation at #8.
 - Do not declare the **functions** or the **variables** within **conditional blocks** as JavaScript does not have **block scope**. In the JavaScript specs, **function declarations** are not allowed within **conditional blocks**.
@@ -183,7 +185,7 @@ Please [see the lesson page](/lesson/01-advanced-javascript/) for more details.
 
 ???
 
-*Explanation:*
+_Explanation:_
 
 - JavaScript is neither **pass-by-value** or **pass-by-reference**! When the `myTeam` method is **invoked**, JavaScript is passing the **reference** to the `me` **object** as a **value**. The **invocation** itself creates two independent **references** to the same **object**, (though the name being same here (`me`), is misleading and gives us the impression that it is a single reference.
 - When we **assigned** a new **object** at #3, we are changing the **reference value** within the `myTeam` **function**, and it will not have any impact on the original **object** outside this **function scope**. Hence the output from #6.
@@ -199,7 +201,7 @@ Please [see the lesson page](/lesson/01-advanced-javascript/) for more details.
 
 ???
 
-*Explanation:*
+_Explanation:_
 
 - The `forEach` method's callback function is **out of scope**. This means it has no reference to `this`, because it is not a method on the myself object.
 - Only methods assigned as properties of objects **have access to their parent** using `this`, otherwise `this` returns undefined. Invoking `printMyNickNames` will result in a `TypeError`!
@@ -216,6 +218,7 @@ Please [see the lesson page](/lesson/01-advanced-javascript/) for more details.
 - What `this` may refer to a JS program
 
 ---
+
 template: inverse
 
 # Questions?

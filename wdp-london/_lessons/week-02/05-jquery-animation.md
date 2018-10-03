@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Animation with jQuery
-slides: ['_slides/week-02/05-jquery-animation.md']
-lesson_date: 2018-04-19
+slides: ["_slides/week-02/05-jquery-animation.md"]
+lesson_date: 2018-10-12
 ---
 
 ## Pre-Work
@@ -13,16 +13,16 @@ Provided you finished the readings and Code School tutorial assigned in the prev
 
 ## Learning Objectives
 
-* Use jQuery animation methods to add dynamic behaviours to a webpage.
-* Identify what jQuery plugins are for, and add one to a webpage.
+- Use jQuery animation methods to add dynamic behaviours to a webpage.
+- Identify what jQuery plugins are for, and add one to a webpage.
 
 ---
 
 ## Keywords
 
-* Effect methods
-* Form methods
-* Select menu
+- Effect methods
+- Form methods
+- Select menu
 
 ---
 
@@ -80,12 +80,20 @@ See the [Intro to jQuery](/lesson/intro-to-jquery/) for lab activity details.
 
 Another great jQuery resource to read through:
 
-* [jQuery Fundamentals](http://jqfundamentals.com/)
+- [jQuery Fundamentals](http://jqfundamentals.com/)
 
 More on custom animation with jQuery:
 
-* [A Guide to the jQuery animate() Method](http://www.sitepoint.com/guide-jquery-animate-method/)
+- [A Guide to the jQuery animate() Method](http://www.sitepoint.com/guide-jquery-animate-method/)
 
 Feeling ambitious? Try creating your own jQuery plugin:
 
-* [Writing Your Own jQuery Plugins](http://blog.teamtreehouse.com/writing-your-own-jquery-plugins)
+- [Writing Your Own jQuery Plugins](http://blog.teamtreehouse.com/writing-your-own-jquery-plugins)
+
+A more powerful animation tool which is almost identical to jQuery in terms of how you use it:
+
+- [Velocity.js](http://velocityjs.org/)
+
+Another animation tool worth bookmarking:
+
+- [Greensock or GSAP](https://greensock.com/)

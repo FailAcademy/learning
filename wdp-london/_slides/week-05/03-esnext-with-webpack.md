@@ -15,13 +15,14 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
 
-1. ES.next Modules
-2. What is Webpack?
-3. How to use Webpack
+1.  ES.next Modules
+2.  What is Webpack?
+3.  How to use Webpack
 
 ---
 
@@ -30,6 +31,7 @@ template: inverse
 # ES.next Modules
 
 ---
+
 class: center, middle
 
 ### Why Modules?
@@ -56,7 +58,7 @@ Modularizing code in ES5 often meant polluting the global namespace. For example
 ```js
 // in my-script.js...
 
-let hello = $('p').css('color', 'red');
+let hello = $("p").css("color", "red");
 ```
 
 ---
@@ -65,10 +67,10 @@ let hello = $('p').css('color', 'red');
 
 No native or agreed upon solution in ES5:
 
-- CommonJS
-- SystemJS
-- RequireJS (AMD)
-- ...and more!
+* CommonJS
+* SystemJS
+* RequireJS (AMD)
+* ...and more!
 
 ---
 
@@ -88,9 +90,9 @@ Run: `npm install --save jquery`
 
 ```js
 // in my-script.js...
-import $ from 'jquery';
+import $ from "jquery";
 
-let hello = $('p').css('color', 'red');
+let hello = $("p").css("color", "red");
 ```
 
 All the code in the jQuery package is completely trapped inside of this module and does not pollute the global namespace.
@@ -104,9 +106,9 @@ Using modules requires using `import`/`export` keywords:
 `import`
 
 ```js
-import {a} from 'module';
-import b from 'module'; // default
-import * as c from 'module'; // alias
+import { a } from "module";
+import b from "module"; // default
+import * as c from "module"; // alias
 ```
 
 `export`
@@ -117,6 +119,7 @@ export default function b() {}
 ```
 
 ---
+
 template: inverse
 
 # Webpack
@@ -129,37 +132,37 @@ Webpack is a JavaScript **module bundler**.
 
 It's an open-source project released by Facebook.
 
-Before we begin to use Webpack, we need to put it in context. To understand why it was created, how it compares to Gulp and other build tools, read the [Getting Started](https://webpack.github.io/docs/motivation.html) section of the Webpack documentation.
+Before we begin to use Webpack, we need to put it in context. To understand why it was created and how it works, read the [Getting Started](https://webpack.js.org/concepts/) section of the Webpack documentation.
 
 ---
 
 # What is Webpack?
 
-Now that we have some context for what Webpack is and what it does vs. other tools, follow the [Getting Started](http://webpack.github.io/docs/tutorials/getting-started/)
+Now that we have some context for what Webpack is and what it does vs. other tools, follow the [Getting Started](https://webpack.js.org/concepts/)
 tutorial. Once completed we should be able to explain the following terms:
 
-- Module loader
-- Module bundler
+* Module loader
+* Module bundler
 
 How does Webpack treat CSS files? How is this different from the more traditional inclusion techniques we've seen so far in the course?
 
 ---
 
-# Exercises 1-4
+# Exercises 1-5
 
 Now, we're ready to install Webpack in a new project.
 
-Follow the exercise instructions found on the [lesson page](/lesson/developing-with-esnext-webpack/).
+Follow the exercise instructions found on the [lesson page](/lesson/developing-with-es-next-webpack/).
 
 ---
 
 # What We've Learned
 
-- How to use `import` and `export` with ES.next modules
-- How to set-up Webpack in a project
-- How to bundle our JS and use Webpack
-- How to compile Sass with Webpack
-- How to make our code easier to debug with source maps in Webpack
+* How to use `import` and `export` with ES.next modules
+* How to set-up Webpack in a project
+* How to bundle our JS and use Webpack
+* How to compile Sass with Webpack
+* How to make our code easier to debug with source maps in Webpack
 
 ---
 

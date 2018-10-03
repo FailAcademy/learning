@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: CSS Best Practices
-slides: ['_slides/week-02/01c-css-best-practices.md']
-lesson_date: 2018-04-16
+slides: ["_slides/week-02/01c-css-best-practices.md"]
+lesson_date: 2018-10-09
 ---
 
 ## Pre-Work
@@ -13,18 +13,18 @@ _There is no pre-work for this lesson._
 
 ## Learning Objectives
 
-* Apply the rules of CSS specificity in an informed, strategic way in a stylesheet.
-* Implement CSS rules in a way that allow them to scale easily.
+- Apply the rules of CSS specificity in an informed, strategic way in a stylesheet.
+- Implement CSS rules in a way that allow them to scale easily.
 
 ---
 
 ## Keywords
 
-* [Specificity](https://developer.mozilla.org/en/docs/Web/CSS/Specificity)
-* [Inheritance](https://developer.mozilla.org/en/docs/Web/CSS/Inheritance)
-* Scalability
-* Maintainability
-* Modularity
+- [Specificity](https://developer.mozilla.org/en/docs/Web/CSS/Specificity)
+- [Inheritance](https://developer.mozilla.org/en/docs/Web/CSS/Inheritance)
+- Scalability
+- Maintainability
+- Modularity
 
 ---
 
@@ -34,39 +34,31 @@ Time for a [specificity showdown!](http://codepen.io/redacademy/pen/VvmwoQ?edito
 
 ---
 
-## Lab Activity
-
-See the [HTML Forms](/lesson/html-forms/) for lab activity details.
-
-Be sure to apply the best practices you just learned to your project while continuing work on it this weekend.
-
----
-
 ## Additional Resources
 
 An online guide for writing scalable, maintainable, modular CSS:
 
-* [MaintainableCSS](http://maintainablecss.com/)
+- [MaintainableCSS](http://maintainablecss.com/)
 
 Great CSS Tricks articles on CSS specificity:
 
-* [Specifics on CSS Specificity](https://css-tricks.com/specifics-on-css-specificity/)
-* [A Specificity Battle!](https://css-tricks.com/a-specificity-battle/)
+- [Specifics on CSS Specificity](https://css-tricks.com/specifics-on-css-specificity/)
+- [A Specificity Battle!](https://css-tricks.com/a-specificity-battle/)
 
 A tool for evaluating the CSS on your websites:
 
-* [CSS Stats](http://www.cssstats.com/)
+- [CSS Stats](http://www.cssstats.com/)
 
 And an interesting implementation of CSS Stats:
 
-* [CSS Purge](http://www.csspurge.com/)
+- [CSS Purge](http://www.csspurge.com/)
 
 Some well-known CSS frameworks for helping you organize your CSS:
 
-* [Object-Oriented CSS (OOCSS)](http://oocss.org/)
-* [Block Element Modifier (BEM)](http://getbem.com/)
-* [Scalable and Modular Architecture for CSS (SMACSS)](https://smacss.com/)
+- [Object-Oriented CSS (OOCSS)](http://oocss.org/)
+- [Block Element Modifier (BEM)](http://getbem.com/)
+- [Scalable and Modular Architecture for CSS (SMACSS)](https://smacss.com/)
 
 Do you really need that class? Some tips on using ARIA roles and element selectors to write more meaningful CSS:
 
-* [Meaningful CSS: Style Like You Mean It](http://alistapart.com/article/meaningful-css-style-like-you-mean-it)
+- [Meaningful CSS: Style Like You Mean It](http://alistapart.com/article/meaningful-css-style-like-you-mean-it)

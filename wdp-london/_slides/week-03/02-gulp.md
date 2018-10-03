@@ -194,7 +194,7 @@ template: inverse
 ```js
 // Require Gulp first!
 
-var gulp = require("gulp");
+const gulp = require("gulp");
 
 // This is a very basic Gulp task,
 // with a name and some code to run
@@ -234,10 +234,10 @@ We can add Gulp plugins to our project using npm...
 `npm install --save-dev gulp-uglify gulp-rename`
 
 ```js
-var gulp = require("gulp"); // Load Gulp!
+const gulp = require("gulp"); // Load Gulp!
 
 // Now that we've installed the uglify package we can require it:
-var uglify = require("gulp-uglify"),
+const uglify = require("gulp-uglify"),
   rename = require("gulp-rename");
 
 gulp.task("default", function() {
@@ -255,7 +255,7 @@ In this simple example we can see the magic of Gulp at work: `gulp.task`, `gulp.
 
 **Syntax Note:**
 
-When requiring node modules at the top, that the syntax can be comma seperated variable declaration (as seen in example) or each module as it's own statement (var statement with semi colon after each).
+When requiring node modules at the top, that the syntax can be comma seperated variable declaration (as seen in example) or each module as it's own statement (const statement with semi colon after each).
 
 Different plugin docs write it different and students tend to get confused.
 
@@ -294,7 +294,7 @@ Why? Because you may not want to run all of the tasks you define at the same tim
 # Creating a Named Task
 
 ```js
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename');
 

@@ -172,7 +172,7 @@ Using internal CSS means that you include your CSS inside `<style>` tags in the 
             font-style: italic;
          }
       </style>
-   </head>
+   <head>
    <body>
       <p>Hello, world!</p>
    </body>
@@ -587,7 +587,7 @@ Some tips for naming the classes and IDs in your HTML:
 
 ---
 
-# Attribute Selector
+# Attibute Selector
 
 We can always target form inputs by their `id` or `class`, but we can also target entire types of form elements using the [attribute selector](https://developer.mozilla.org/en/docs/Web/CSS/Attribute_selectors) in our CSS:
 
