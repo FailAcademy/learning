@@ -278,7 +278,7 @@ You would include this code in the `<head>` tag of your website:
 
 ```html
 <!-- Option 1: CDN Link -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 <!-- Option 2: Direct Include -->
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
@@ -295,7 +295,7 @@ Let's say we want to include a [bicycle icon](http://fortawesome.github.io/Font-
 All we would need to do is include an `<i>` tag with some special classes applied:
 
 ```html
-<i class="fa fa-bicycle"></i>
+<i class="fas fa-bicycle"></i>
 ```
 
 And the result will look like this:
@@ -309,10 +309,10 @@ And the result will look like this:
 We can adjust the size of the icons with extra classes:
 
 ```html
-<i class="fa fa-bicycle fa-lg"></i> fa-lg
-<i class="fa fa-bicycle fa-2x"></i> fa-2x
-<i class="fa fa-bicycle fa-3x"></i> fa-3x
-<i class="fa fa-bicycle fa-4x"></i> fa-4x
+<i class="fas fa-bicycle fa-lg"></i> fa-lg
+<i class="fas fa-bicycle fa-2x"></i> fa-2x
+<i class="fas fa-bicycle fa-3x"></i> fa-3x
+<i class="fas fa-bicycle fa-4x"></i> fa-4x
 ```
 
 <i class="fa fa-bicycle fa-lg"></i> fa-lg<br />
@@ -327,9 +327,9 @@ We can adjust the size of the icons with extra classes:
 And animate the icons:
 
 ```html
-<i class="fa fa-circle-o-notch fa-spin fa-3x"></i>
-<i class="fa fa-spinner fa-pulse fa-3x"></i>
-<i class="fa fa-bicycle fa-spin fa-3x"></i>
+<i class="fas fa-circle-o-notch fa-spin fa-3x"></i>
+<i class="fas fa-spinner fa-pulse fa-3x"></i>
+<i class="fas fa-bicycle fa-spin fa-3x"></i>
 ```
 
 .inline-images[
@@ -357,6 +357,8 @@ Every Font Awesome icon also has a [Unicode value](http://fortawesome.github.io/
 }
 
 .menu-toggle:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   content: "\f0c9";
 }
 ```
