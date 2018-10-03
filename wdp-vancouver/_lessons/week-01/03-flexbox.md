@@ -78,6 +78,9 @@ If you'd like to get more practice on flexbox before you begin incorporating it 
 
 Then you can spend any remaining time today continuing to build out the layout Project 1.
 
+Or if you prefer to work through a much longer game which has zombies you can play:
+[Flexbox Zombies](https://mastery.games/p/flexbox-zombies)
+
 ---
 
 ## Additional Resources
