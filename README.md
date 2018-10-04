@@ -39,7 +39,7 @@ Create a branch for your proposed updates, and commit code as usual.
 
 **Step 2:**
 
-When finished, push your branch to origin and create a pull request against `master`. After your code has been reviewed and approved, it will be merged into `master`.
+When finished, push your branch to `origin`, eg. `git push origin adp-london-update-slides` and create a pull request against `master`. After your code has been reviewed and approved, it will be merged into `master`.
 
 
 ### Deploying your LMS
