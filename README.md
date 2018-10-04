@@ -25,6 +25,12 @@ To add another LMS simply:
  git pull --depth=1 origin master
 ```
 
+### Updating your LMS
+
+``git pull --depth=1 origin master``
+
+⚠️ Be sure to use `--depth=1` flag, or you'll pull in more than you need! ⚠️
+
 ### Submitting updates
 
 **Step 1:**
