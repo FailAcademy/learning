@@ -72,7 +72,7 @@ Think about whether you need to make any adjustments to the mark-up to make this
 
 ## Lab Activity
 
-See the [CSS3 & Responsive Web Design lesson](/lesson/css3-responsive-web-design/) for additional lab activity details.
+See the [CSS3 & Responsive Web Design lesson](/lesson/03a-css3-rwd/) for additional lab activity details.
 
 If you'd like to get more practice on flexbox before you begin incorporating it into your project, take what you've learned today and apply it to solving the 24 challenges in **[Flexbox Froggy](http://flexboxfroggy.com/)**.
 
