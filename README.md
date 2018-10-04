@@ -15,7 +15,7 @@ Heavy-lifting done to create this repo thanks to [https://github.com/redacademy/
  git init
  git remote add origin https://github.com/redacademy/LMS.git
  git config core.sparsecheckout true
- echo "adp-london/*" >> .git/info/sparse-checkout
+ echo "adp-london/*" >> .git/info/sparse-checkout # <- Edit this line with the subfolder you need.
  git pull --depth=1 origin master
 ```
 
@@ -23,7 +23,7 @@ To add another LMS simply:
 
 ```bash
  cd LMS
- echo "adp-vancouver/*" >> .git/info/sparse-checkout
+ echo "adp-vancouver/*" >> .git/info/sparse-checkout # <- Edit this line with the subfolder you need.
  git pull --depth=1 origin master
 ```
 
