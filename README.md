@@ -2,6 +2,8 @@
 
 This is the official RED Academy LMS Monorepo.
 
+Heavy-lifting done to create this repo thanks to [https://github.com/redacademy/monorepo-tools](https://github.com/redacademy/monorepo-tools)
+
 ## How To Use
 
 ---
