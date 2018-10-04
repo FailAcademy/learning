@@ -1,0 +1,57 @@
+---
+---
+
+{% assign lesson_events = site.lessons %}
+
+[{% for lesson in lesson_events %}
+   {% if lesson.lesson_date != null %}
+    {% assign start = lesson.lesson_date %}
+   {% else %}
+    {% assign start = '1970-01-01' %}
+  {% endif %}
+   {
+      "title": {{lesson.title | jsonify}},
+      "allDay": true,
+      "start": {{start | jsonify}},
+      "url": {{lesson.url | jsonify}}
+   },
+   {% endfor %}
+   {
+      "title": "Day 1 Orientation",
+      "allDay": true,
+      "start": "2018-10-01"
+   },
+   {
+      "title": "Project Work Day",
+      "allDay": true,
+      "start": "2018-10-11"
+   },
+   {
+    "title": "Project Work Day",
+    "allDay": true,
+    "start": "2018-10-19"
+    },
+    {
+      "title": "Project Work Day",
+      "allDay": true,
+      "start": "2018-10-26"
+    },
+  {
+    "title": "Self Directed Meteor Project Work",
+    "allDay": true,
+    "start": "2018-11-01",
+    "end": "2018-11-10"
+ },
+   {
+      "title": "Portfolio Week",
+      "allDay": true,
+      "start": "2018-11-26",
+      "end": "2018-12-01"
+   },
+   {
+      "title": "Community Project Work",
+      "allDay": true,
+      "start": "2018-12-03",
+      "end": "2018-12-21"
+   }
+]

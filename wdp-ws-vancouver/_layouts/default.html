@@ -1,0 +1,64 @@
+{% include head.html %}
+
+   <body class="theme-base-red">
+
+      {% include sidebar.html %}
+
+      <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+           content to avoid any CSS collisions with our real content. -->
+      <div class="wrap">
+         <div class="masthead">
+            <div class="container">
+               <h3 class="masthead-title">
+                  <a href="{{ site.baseurl }}/" title="Home">
+                     <img src="{{ site.baseurl }}/public/img/red-logo.svg" width="268" height="45" alt="Red Academy logo" />
+                  </a>
+                  <div class="course-name">
+                     {{ site.title }}
+                     <small>{{ site.tagline }}</small>
+                  </div>
+               </h3>
+            </div>
+         </div>
+
+         <div class="container content{% if page.class %} {{ page.class }}{% endif %}">
+            {{ content }}
+         </div>
+      </div>
+
+      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+      <!-- Scripts -->
+      <script>
+         (function(document) {
+            var toggle = document.querySelector('.sidebar-toggle');
+            var sidebar = document.querySelector('#sidebar');
+            var checkbox = document.querySelector('#sidebar-checkbox');
+
+            document.addEventListener('click', function(e) {
+               var target = e.target;
+
+               if(!checkbox.checked ||
+                  sidebar.contains(target) ||
+                  (target === checkbox || target === toggle)) return;
+
+               checkbox.checked = false;
+            }, false);
+         })(document);
+      </script>
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script src="{{ site.baseurl }}/public/js/jquery.fitvids.js"></script>
+      <script>
+        $(function () {
+          $('.fluid-video-wrapper').fitVids();
+        });
+      </script>
+
+      <!-- Homepage scripts -->
+      {% if page.title == "Home" %}
+      <script src="{{ site.baseurl }}/public/js/moment.min.js"></script>
+      <script src="{{ site.baseurl }}/public/js/fullcalendar.min.js"></script>
+      <script src="{{ site.baseurl }}/public/js/course-calendar.js"></script> {% endif %}
+   </body>
+</html>

@@ -1,0 +1,85 @@
+---
+---
+
+{% assign lesson_events = site.lessons %}
+[{% for lesson in lesson_events %}
+   {% if lesson.lesson_date != null %}{% assign start = lesson.lesson_date %}{% else %}{% assign start = '1970-01-01' %}{% endif %}
+   {
+      "title": {{lesson.title | jsonify}},
+      "allDay": true,
+      "start": {{start | jsonify}},
+      "url": {{lesson.url | jsonify}}
+   },{% endfor %}
+   {
+      "title": "Day 1 Orientation",
+      "allDay": true,
+      "start": "2018-04-09"
+   },
+   {
+      "title": "Project Work Day",
+      "allDay": true,
+      "start": "2018-04-20"
+   },
+   {
+      "title": "Project Work Day",
+      "allDay": true,
+      "start": "2018-04-27"
+   },
+   {
+      "title": "Project Work Day",
+      "allDay": true,
+      "start": "2018-05-11"
+   },
+    {
+      "title": "Project Work Day",
+      "allDay": true,
+      "start": "2018-05-24"
+   },
+   {
+    "title": "Project Work Day",
+    "allDay": true,
+    "start": "2018-05-25"
+   },
+   {
+    "title": "Project Work Day",
+    "allDay": true,
+    "start": "2018-05-30"
+   },
+   {
+    "title": "Project Work Day",
+    "allDay": true,
+    "start": "2018-05-31"
+   },
+   {
+    "title": "Project Work Day",
+    "allDay": true,
+    "start": "2018-06-01"
+   },
+   {
+      "title": "Intro to UX (Guest Lecture)",
+      "allDay": true,
+      "start": "2018-04-30"
+   },
+   {
+      "title": "Invision & Inspect Lesson (UX)",
+      "allDay": true,
+      "start": "2018-06-07"
+   },
+   {
+      "title": "Design Presentations",
+      "allDay": true,
+      "start": "2018-06-08"
+   },
+   {
+      "title": "GitHub Portfolio Development",
+      "allDay": true,
+      "start": "2018-06-04",
+      "end": "2018-06-09"
+   },
+   {
+      "title": "Community Project Work",
+      "allDay": true,
+      "start": "2018-06-12",
+      "end": "2018-06-29"
+   }
+]

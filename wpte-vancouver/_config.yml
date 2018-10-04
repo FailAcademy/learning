@@ -1,0 +1,51 @@
+# Permalinks
+permalink:           pretty
+
+# Setup
+title:               WordPress Theming Essentials
+tagline:             'Learning Materials'
+description:         'Learning materials for the RED Academy WordPress Theming Essentials course.'
+url:                 http://red-XYZ.herokuapp.com
+baseurl:             ''
+paginate:            10
+paginate_path:       '/news/page:num/'
+
+# About/contact
+author:              
+  name:              Rose Cass (forked from Mark Otto)
+  url:               https://twitter.com/rcass
+  email:             rose.cass@redacademy.com
+
+# Custom vars
+version:             1.0.0
+github:
+  repo:              https://github.com/redacademy/wpte-vancouver
+
+# Collections
+collections:
+   lessons:
+      output: true
+      permalink: /lesson/:title/
+   slides:
+      output: true
+      permalink: /slides/:title/
+   projects:
+      output: true
+      permalink: /project/:title/
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  sass_dir: _scss
+  style: :compressed # You might prefer to un-minify using :expanded
+
+# Markdown Processors
+markdown: redcarpet
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
+redcarpet:
+  extensions: ['smart', 'tables', 'autolink']
+
+# Plugins
+gems: ['jekyll-paginate', 'redcarpet']
+
+# Exclusions
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'README.md', 'LICENSE.md', 'CONTRIBUTING.md', 'installation.md']

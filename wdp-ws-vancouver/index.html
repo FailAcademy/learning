@@ -1,0 +1,27 @@
+--- 
+layout: default 
+title: Home 
+---
+
+<div class="page">
+  <p>Welcome to RED Academy's Web Developer Professional Work-Study course!</p>
+
+  <hr />
+
+  <h2>Course Schedule</h2>
+  <div id="calendar"></div>
+
+  <hr />
+
+  <h2>Projects</h2>
+  <p>Detailed overviews for each of the course&#8217;s projects:</p>
+  <ul class="archive-list">
+     {% for project in site.projects %}
+        <li>
+         <span class="project-name"><a href="{{project.url}}">{{project.title}}</a></span>
+         <span class="project-due"><strong>Due Date:</strong> {{ project.due }}</span>
+       </li>
+     {% endfor %}
+  </ul>
+
+</div>

@@ -1,0 +1,203 @@
+/*
+ * Slideshows
+ *
+ * Styles for remark.js slideshows.
+ */
+
+.remark-slide {
+
+   // Layouts
+
+   .remark-slide-content:not(.inverse) {
+      background: #fff url('../public/img/red-logo.svg') no-repeat left 20px bottom 16px;
+      background-size: 180px 30px;
+      border-bottom: 5px solid $brand-red;
+   }
+
+   .inverse {
+      background: #272822;
+      color: #777872;
+      text-shadow: 0 0 20px #333;
+
+      h1,
+      h2 {
+         color: #f3f3f3;
+         line-height: 1.15em;
+      }
+
+      .title-logo {
+         display: block;
+         width: 360px;
+         position: absolute;
+         bottom: 5%;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+   }
+}
+
+.remark-slide-content {
+
+   // Typography
+
+   font-size: 26px;
+
+   h1, h2, h3, h4, h5, h6 {
+      font-family: "Roboto", Helvetica, Arial, sans-serif;
+      margin-bottom: .5em
+   }
+
+   h1 {
+      font-size: 2.4em;
+      font-weight: 700;
+   }
+
+   h2 {
+      font-size: 1.8em;
+      font-weight: 700;
+      color: $brand-red;
+   }
+
+   h3 {
+      font-size: 1.5em;
+      font-weight: 700;
+      color: #313131;
+   }
+
+   h4 {
+      font-size: 1.2em;
+      font-weight: 100;
+      color: $brand-red;
+   }
+
+   h5 {
+      font-size: 1em;
+      font-weight: 100;
+   }
+
+   h6 {
+      font-size: .9em;
+      font-weight: 100;
+   }
+
+   ol, ul {
+      margin-left: 1em;
+   }
+
+   p, li {
+      margin-bottom: 1em;
+   }
+
+   blockquote {
+      font-size: 1.2em;
+      color: $brand-red;
+      font-weight: 400;
+      text-align: center;
+      border-left: 0;
+      padding: 0;
+   }
+
+   .footnote {
+      position: absolute;
+      bottom: 3em;
+      font-size: 80%;
+
+      &.right {
+         right: 104px;
+      }
+   }
+
+   pre {
+      padding: 0;
+   }
+
+   img {
+      border-radius: 0;
+   }
+
+   // Helper classes
+
+   .red { color: $brand-red; }
+   .white, .white a { color: #fff; }
+   .large { font-size: 2em; }
+   .border { border: 1px solid #e6e6e6; }
+
+   .inline-images,
+   .inline-images-border {
+      text-align: center;
+
+      img {
+         display: inline-block;
+         margin: 0 1em 1em;
+
+         &:first-child {
+            margin-left: 0;
+         }
+
+         &:last-child {
+            margin-right: 0;
+         }
+      }
+   }
+
+   .inline-images-border {
+      img {
+         border: 1px solid #e6e6e6;
+      }
+   }
+
+   .pull-left {
+      float: left;
+      width: 47%;
+   }
+
+   .pull-right {
+      float: right;
+      width: 47%;
+   }
+
+   .pull-right ~ p {
+      clear: both;
+   }
+
+   // Two-column layout
+
+   .left-column {
+      color: #777;
+      width: 30%;
+      height: 92%;
+      float: left;
+
+      // h2:last-of-type,
+      // h3:last-child {
+      //    color: #000;
+      // }
+   }
+
+   .right-column {
+      width: 65%;
+      float: right;
+      padding-top: 1em;
+   }
+}
+
+// Code blocks
+
+.remark-code,
+.remark-inline-code {
+   font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+.remark-code {
+   font-size: 16px;
+}
+
+.remark-code-line-highlighted {
+   background-color: #373832;
+}
+
+// Embeds
+
+.twitter-tweet {
+   margin: 10px auto !important;
+}
