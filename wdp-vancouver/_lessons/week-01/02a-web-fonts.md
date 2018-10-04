@@ -49,7 +49,7 @@ To add the social media icons, check out Font Awesome's [Brand Icons](https://fo
 
 ## Lab Activity
 
-See the [Intro to CSS lesson](/lesson/intro-to-css/) for lab activity details.
+See the [Intro to CSS lesson](/lesson/02-intro-to-css/) for lab activity details.
 
 ---
 
