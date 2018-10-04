@@ -27,12 +27,17 @@ To add another LMS simply:
 
 ### Submitting updates
 
-Updates are submittied as usual. Make commits and push to master
+**Step 1:**
+
+Create a branch for your proposed updates, and commit code as usual. 
+
+**Step 2:**
+
+When finished, push your branch to origin and create a pull request against `master`. After your code has been reviewed and approved, it will be merged into `master`.
+
 
 ### Deploying your LMS
 
-```bash
-
-```
+Once the changes have been merged into master, a pull request will be created against `[your-lms]-production`. For example: `adp-london-production`. A final review will be performed, and once the branch is merged, a Heroku deploy is triggered!
 
 ---
