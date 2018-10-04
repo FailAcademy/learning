@@ -1,0 +1,44 @@
+---
+layout: default
+title: Home
+---
+
+<div class="page">
+   <h2>Hello there!</h2>
+   <p><strong>Welcome to RED Academy's HTML &amp; CSS Essentials course.</strong></p>
+   <p>The following course schedules are currently available:</p>
+   <ul>
+      <li><strong><a href="/hce-to-winter-2018/">Toronto - Winter 2018</a></strong></li>
+      <li><strong><a href="/hce-van-fall-2017/">Vancouver - Fall 2017</a></strong></li>
+   </ul>
+   <hr />
+
+   <h2>Lessons</h2>
+   <p>The following lessons are available for you to view:</p>
+   <ol class="archive-list">
+      {% assign lesson_list = site.lessons %}
+      {% assign counter = 0 %}
+
+      {% for lesson in lesson_list %}
+         {% if lesson.title != null %}
+            {% if lesson.layout == "lesson" %}
+               {% assign counter = counter | plus:1 %}
+               <li>
+                  <span class="lesson-count">{{ counter }}.</span> <span class="lesson-name"><a href="{{lesson.url}}">{{lesson.title}}</a></span>
+               </li>
+            {% endif %}
+         {% endif %}
+      {% endfor %}
+   </ol>
+
+   <h2>Projects</h2>
+   <p>Detailed overview of the course project(s):</p>
+   <ul class="archive-list">
+      {% for project in site.projects %}
+         <li>
+            <a href="{{project.url}}">{{project.title}}</a>
+         </li>
+      {% endfor %}
+   </ul>
+
+</div>

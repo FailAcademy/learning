@@ -7,7 +7,7 @@ Welcome to RED Academy's Web Developer Professional Program learning materials!
 Every learning materials repo will have two branches, but only one is used for active development.
 
 - `master` for development. **All pull requests should be to submitted against `master`.**
-- `production` for the Heroku-hosted site. **This branch is for deployment purposes only.**
+- `wdp-vancouver-production` for the Heroku-hosted site. **This branch is for deployment purposes only.**
 
 ## Contributing
 
