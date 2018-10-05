@@ -19,11 +19,18 @@ Heavy-lifting done to create this repo thanks to [https://github.com/redacademy/
  git pull --depth=1 origin master
 ```
 
-To add another LMS simply:
+To add another LMS simply append an entry to the `sparse-checkout` file:
 
 ```bash
  cd LMS
  echo "adp-vancouver/*" >> .git/info/sparse-checkout # <- Edit this line with the subfolder you need.
+ git read-tree -mu HEAD
+```
+
+### Removing an LMS locally
+
+To remove a checked-out LMS, remove the subfolder from the `sparse-checkout` file, and run:
+```bash
  git read-tree -mu HEAD
 ```
 
