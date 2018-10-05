@@ -24,14 +24,8 @@ To add another LMS simply:
 ```bash
  cd LMS
  echo "adp-vancouver/*" >> .git/info/sparse-checkout # <- Edit this line with the subfolder you need.
- git pull --depth=1 origin master
+ git read-tree -mu HEAD
 ```
-
-### Updating your LMS
-
-``git pull --depth=1 origin master``
-
-⚠️ Be sure to use `--depth=1` flag, or you'll pull in more than you need! ⚠️
 
 ### Submitting updates
 
