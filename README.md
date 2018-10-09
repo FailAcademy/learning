@@ -25,6 +25,8 @@ To add another LMS simply append an entry to the `sparse-checkout` file:
  cd LMS
  echo "adp-vancouver/*" >> .git/info/sparse-checkout # <- Edit this line with the subfolder you need.
  git read-tree -mu HEAD
+ cd adp-vancouver
+ git fetch
 ```
 
 ### Removing an LMS locally
