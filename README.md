@@ -44,7 +44,7 @@ Create a branch for your proposed updates, and commit code as usual.
 
 When finished, push your branch to `origin`, eg. `git push origin adp-london-update-slides` and create a pull request against `master`. After your code has been reviewed and approved, it will be merged into `master`.
 
-⚠️ If you see the `(shallow update not allowed)` error, run `git fetch` to update all refs, and try pushing again.⚠️
+⚠️ If you receive the `(shallow update not allowed)` error, run `git fetch` to update all refs, and try pushing again.⚠️
 
 ### Deploying your LMS
 
