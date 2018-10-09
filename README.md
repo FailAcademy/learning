@@ -22,7 +22,7 @@ Heavy-lifting done to create this repo thanks to [https://github.com/redacademy/
 
 **Step 1:**
 
-Create a branch for your proposed updates, and commit code as usual. 
+Ensure you have the latest code from master; create a branch for your proposed updates, and commit code as usual. 
 
 **Step 2:**
 
