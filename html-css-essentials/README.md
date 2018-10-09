@@ -7,7 +7,7 @@ Welcome to RED Academy's [COURSE NAME] learning materials!
 Every learning materials repo will have two branches, but only one is used for active development.
 
 - `master` for development. **All pull requests should be to submitted against `master`.**
-- `production` for the Heroku-hosted site. **This branch is for deployment purposes only.**
+- `html-css-essentials-production` for the Heroku-hosted site. **This branch is for deployment purposes only.**
 
 ## Contributing
 

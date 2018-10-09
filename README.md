@@ -15,23 +15,26 @@ Heavy-lifting done to create this repo thanks to [https://github.com/redacademy/
  git init
  git remote add origin https://github.com/redacademy/LMS.git
  git config core.sparsecheckout true
- echo "adp-london/*" >> .git/info/sparse-checkout
+ echo "adp-london/*" >> .git/info/sparse-checkout # <- Edit this line with the subfolder you need.
  git pull --depth=1 origin master
 ```
 
-To add another LMS simply:
+To add another LMS simply append an entry to the `sparse-checkout` file:
 
 ```bash
  cd LMS
- echo "adp-vancouver/*" >> .git/info/sparse-checkout
- git pull --depth=1 origin master
+ echo "adp-vancouver/*" >> .git/info/sparse-checkout # <- Edit this line with the subfolder you need.
+ git read-tree -mu HEAD
+ cd adp-vancouver
+ git fetch
 ```
 
-### Updating your LMS
+### Removing an LMS locally
 
-``git pull --depth=1 origin master``
-
-⚠️ Be sure to use `--depth=1` flag, or you'll pull in more than you need! ⚠️
+To remove a checked-out LMS, remove the subfolder from the `sparse-checkout` file, and run:
+```bash
+ git read-tree -mu HEAD
+```
 
 ### Submitting updates
 
@@ -43,6 +46,7 @@ Create a branch for your proposed updates, and commit code as usual.
 
 When finished, push your branch to `origin`, eg. `git push origin adp-london-update-slides` and create a pull request against `master`. After your code has been reviewed and approved, it will be merged into `master`.
 
+⚠️ If you receive the `(shallow update not allowed)` error, run `git fetch` to update all refs, and try pushing again.⚠️
 
 ### Deploying your LMS
 
