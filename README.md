@@ -28,10 +28,10 @@ Ensure you have the latest code from master; create a branch for your proposed u
 
 When finished, push your update branch to `origin`, eg. `git push origin adp-london-update-slides` and create a pull request against `master`. After your code has been reviewed and approved, it will be merged into `master`.
 
-⚠️ If you receive the `(shallow update not allowed)` error, run `git fetch` to update all refs, and try pushing again.⚠️
+⚠️ If you receive the `(shallow update not allowed)` error, run `git fetch` to update all refs, and try pushing again. ⚠️
 
 ### Deploying your LMS
 
-Once the changes have been merged into master, a pull request will be created against `[your-lms]-production`. For example: `adp-london-production`. A final review will be performed, and once the branch is merged, a Heroku deploy is triggered!
+Deploys will be done manually. Once the changes have been merged into master, create a second pull-request against `[your-lms]-production`. For example: `adp-london-production`. A merge into this branch will trigger a deploy. Merging will be restricted to deployers only.
 
 ---
