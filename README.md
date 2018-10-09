@@ -16,7 +16,7 @@ Heavy-lifting done to create this repo thanks to [https://github.com/redacademy/
  echo "adp-london/*" >> .git/info/sparse-checkout # <- Edit this line with the LMS subfolder you need from this repo.
  git pull --depth=1 origin master
 ```
-⚠️ If you need to work on more than one LMS at the same time, create a seperate folder and repeat the steps above. ⚠️
+⚠️ Need more than one LMS? **Create a new folder** and repeat the steps above. ⚠️
 
 ### Submitting updates
 
