@@ -74,13 +74,13 @@ HTTP is just the language that web servers and clients use to talk to each other
 
 A URL is **an address for a resource** on the network:
 
-**https://red-wdp.herokuapp.com/lesson/ajax-json-and-apis/**
+**https://red-wdp.herokuapp.com/lesson/01-ajax-apis/**
 
 This one has three visible parts:
 
   - `https://` is the protocol
   - `red-wdp.herokuapp.com` is the hostname
-  - `/lesson/ajax-json-and-apis/` is the path
+  - `/lesson/01-ajax-apis/` is the path
 
 ---
 
@@ -306,7 +306,7 @@ That entire response was passed in as the `data` object parameter in the `.done(
 
 In this exercise, we're going to make a request to the GitHub API using some of jQuery's Ajax methods.
 
-[See the lesson page](/lesson/ajax-json-and-apis/) for further instructions.
+[See the lesson page](/lesson/01-ajax-apis/) for further instructions.
 
 ---
 template: inverse
@@ -386,7 +386,7 @@ $('button').on('click', function() {
 
 Let's try chaining another Ajax method to our previous example to ensure we take care of error handling.
 
-[See the lesson page](/lesson/ajax-json-and-apis/) for further instructions.
+[See the lesson page](/lesson/01-ajax-apis/) for further instructions.
 
 ---
 template: inverse
