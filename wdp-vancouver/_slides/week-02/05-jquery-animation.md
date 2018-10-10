@@ -178,7 +178,7 @@ You may have noticed that you can run functions once .animate() has completed.
 The basic structure looks like this.
 
 ```javascript
-$(".box").animate() {
+$(".box").animate ({
   // animation runs
 }, 2000, function() {
   // function run after animation finished, e.g. after 2000ms
