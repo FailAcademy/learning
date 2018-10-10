@@ -6,7 +6,9 @@ Heavy-lifting done to create this repo thanks to [https://github.com/redacademy/
 
 ## Rationale
 
-Sharing changes between repos is cumbersome, error prone and highly restrictive. The monorepo and the code review tools that come with gihub replace restriction.
+More attention = better quality.
+
+Sharing changes between repos is cumbersome and error prone. Strict sharing is unrealistic and highly restrictive. Using the monorepo and github's code review tools will help us share code and ideas with the whole team, and manage divergence in a sane way (multiple code-reviews) without being restrictive.
 
 
 ## How To Use
