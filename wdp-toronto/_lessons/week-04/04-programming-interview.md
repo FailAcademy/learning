@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: The Programming Interview
-lesson_date: 2018-07-27
+lesson_date: 2018-10-22
 ---
 
 ## Pre-Work
