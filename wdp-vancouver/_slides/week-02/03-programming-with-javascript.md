@@ -884,10 +884,10 @@ function myFunction() {
 Let’s look at some variables and figure out if they will have local or global scope...
 
 ```js
-const fille = “Monique”;
+const fille = "Monique";
 
 function france() {
-  const garcon = “Henri”;
+  const garcon = "Henri";
 }
 ```
 
@@ -898,13 +898,13 @@ function france() {
 A more complex example:
 
 ```js
-const fille = “Monique”;
+const fille = "Monique";
 
 function france() {
-  const garcon = “Henri”;
+  const garcon = "Henri";
 
   function paris() {
-    const femme = “Marie”;
+    const femme = "Marie";
   }
 }
 ```
@@ -989,8 +989,8 @@ template: inverse
 While loops are helpful when you don't know how many times it needs to run:
 
 ```js
-const i = 0;
-const score = 0;
+let i = 0;
+let score = 0;
 
 while (i < 5) {
   score = i;
@@ -1008,7 +1008,7 @@ _What do you think the final score will be after this loop runs?_
 For loops allow you to set a specific number of times that the loop will run:
 
 ```js
-const count = 0;
+let count = 0;
 
 for (let i = 1; i < 5; i++) {
   count = i;
@@ -1032,7 +1032,7 @@ const shoppingList = ['coffee', 'peppers', 'apple juice'];
 
 const totalItems = shoppingList.length;
 
-for (const i = 0; i < totalItems; i++) {
+for (let i = 0; i < totalItems; i++) {
   console.log(shoppingList[i]);
 }
 ```
