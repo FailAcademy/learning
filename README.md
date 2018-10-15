@@ -14,33 +14,42 @@ Sharing changes between repos is cumbersome and error prone. Strict sharing is u
 
 ---
 
-### Cloning the LMS you need
+### Cloning the LMS Monorepo
 
 ```bash
  git init
  git remote add origin https://github.com/redacademy/LMS.git
- git config core.sparsecheckout true
- echo "adp-london/*" >> .git/info/sparse-checkout # <- Edit this line with the LMS subfolder you need from this repo.
- git pull --depth=1 origin master
+ git pull origin master
 ```
-
-⚠️ Need more than one LMS? **Create a new folder** and repeat the steps above. ⚠️
 
 ### Submitting updates
 
 **Step 1:**
 
-Get the latest code from `master` branch; create a branch for your proposed updates, and commit code as usual.
+Get the latest code from `master` branch; **create a branch for your proposed updates**, and commit code as usual.
 
-**Done?**
+**Step 2:**
 
 When finished, push your update branch to `origin` and create a pull request against `master`.
 The PR is where we can see changes and review / discuss.
 
-⚠️ If you receive the `(shallow update not allowed)` error, run `git fetch` to update all refs. ⚠️
+**Step 3: (Deploying)**
 
-### Deploying an LMS
+Heroku is watching specific branches for changes, and will deploy your LMS when it's specific branch is updated. Here are the branches:
 
-Deploys are done manually. Once the changes are merged into `master`, create a _second pull-request_ against `[your-lms]-production`. For example: `adp-london-production`. A merge into this branch will trigger a deploy and merging PRs here will eventually be restricted, and this step should probabaly be automated somehow...
+adp-london-production <br/>
+adp-toronto-production<br/>
+adp-vancouver-production<br/>
+wdp-london-production<br/>
+wdp-toronto-production<br/>
+wdp-vancouver-production<br/>
+web-dev-foundation-production<br/>
+
+To deploy, after your changes are merged into master:
+
+`git pull origin master` to update your local master branch.<br/>
+`git checkout [your production branch]`<br/>
+`git merge master`<br/>
+`git push origin [your production branch]`<br/>
 
 ✌️
