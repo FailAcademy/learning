@@ -49,14 +49,14 @@ web-dev-foundation-production<br/>
 
 To deploy, after your changes are merged into master:
 
-`git fetch all` (Do this every time for sanity)
+`git fetch all` (Do this every time for sanity) <br/>
 `git pull origin master` to update your local master branch with the merged code.<br/>
-`git log --oneline` To find the *commit hash* of the merge commit from your approved PR.
+`git log --oneline` To find the *commit hash* of the merge commit from your approved PR. <br/>
 `git checkout [your production branch]`<br/>
 `git cherry-pick [merge commit hash]`<br/>
 `git push origin [your production branch]`<br/>
 
-⚠️For maximum flexibility, there are no checks on your production branches. FOr this to work smoothly, we'll all need to agree to keep things sane by following this workflow. ⚠️
+⚠️For maximum flexibility, there are no checks on your production branches. For this to work smoothly, we'll all need to agree to keep things sane by following this workflow. ⚠️
 
 
 ✌️
