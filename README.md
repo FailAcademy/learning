@@ -33,6 +33,8 @@ Get the latest code from `master` branch; **create a branch for your proposed up
 When finished, push your update branch to `origin` and create a pull request against `master`.
 The PR is where we can see changes and review / discuss.
 
+⚠️Squash all commits in your update branch before creating a PR. If you forget to squash, use the "Squash and Merge" option when merging a PR, from the Github UI. If not squashed, updating production becomes more difficult. ⚠️
+
 **Step 3: (Deploying)**
 
 Heroku is watching specific branches for changes, and will deploy your LMS when it's specific branch is updated. Here are the branches:
@@ -47,9 +49,14 @@ web-dev-foundation-production<br/>
 
 To deploy, after your changes are merged into master:
 
-`git pull origin master` to update your local master branch.<br/>
+`git fetch all` (Do this every time for sanity)
+`git pull origin master` to update your local master branch with the merged code.<br/>
+`git log --oneline` To find the *commit hash* of the merge commit from your approved PR.
 `git checkout [your production branch]`<br/>
-`git merge master`<br/>
+`git cherry-pick [merge commit hash]`<br/>
 `git push origin [your production branch]`<br/>
+
+⚠️For maximum flexibility, there are no checks on your production branches. FOr this to work smoothly, we'll all need to agree to keep things sane by following this workflow. ⚠️
+
 
 ✌️
