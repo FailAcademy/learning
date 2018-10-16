@@ -51,12 +51,14 @@ To deploy, after your changes are merged into master:
 
 `git fetch all` (Do this every time for sanity) <br/>
 `git pull origin master` to update your local master branch with the merged code.<br/>
-`git log --oneline` To find the *commit hash* of the merge commit from your approved PR. <br/>
+`git log --oneline` To find the *commit hash* of the squashed commit (From your apporved PR).  <br/>
+⚠️Don't use the merge commit hash, use the hash of the squashed commit from your PR, or you'll have a bad time.⚠️<br/>
 `git checkout [your production branch]`<br/>
-`git cherry-pick -m 1 [merge commit hash]`<br/> 
+`git cherry-pick [commit hash]`<br/> 
+(If you do want to merge a *merge commit* you can use `git cherry-pick -m 1 [merge commit hash]`, but don't).<br/>
 `git push origin [your production branch]`<br/>
 
-⚠️For maximum flexibility, there are no checks on your production branches. For this to work smoothly, we'll all need to agree to keep things sane by following this workflow. ⚠️
+For maximum flexibility, there are no checks on your production branches. For this to work smoothly, we'll all need to agree to keep things sane by following this workflow.
 
 
 ✌️
