@@ -96,7 +96,7 @@ class App extends Component {
   // other code...
 
   render() {
-    let mood = this.state.happy ? "Hello, world!" : "Scram, world!";
+    let mood = this.state.happy ? 'Hello, world!' : 'Scram, world!';
 
     return <h1 id="title">{mood}</h1>;
   }
@@ -136,12 +136,12 @@ class App extends Component {
     super();
 
     this.state = {
-      happy: true
+      happy: true,
     };
   }
 
   render() {
-    let mood = this.state.happy ? "Hello, world!" : "Scram, world!";
+    let mood = this.state.happy ? 'Hello, world!' : 'Scram, world!';
 
     return <h1 id="title">{mood}</h1>;
   }
@@ -239,7 +239,7 @@ class App extends Component {
     super();
 
     this.state = {
-      happy: true
+      happy: true,
     };
   }
 
@@ -460,15 +460,15 @@ addToDo = event => {
     const id = this.state.lastId + 1; // update id
     const newTodos = [
       ...this.state.todos,
-      { id, title: toDoInput.value, complete: false }
+      { id, title: toDoInput.value, complete: false },
     ];
 
     this.setState({
       todos: newTodos,
-      lastId: id
+      lastId: id,
     });
 
-    toDoInput.value = "";
+    toDoInput.value = '';
   }
 };
 ```
@@ -641,45 +641,28 @@ _Presentational components:_
 
 # Create a Container
 
-We will use a more advanced pattern with `<Query />` in `client/src/containers/ItemsContainer.js`.
-
-Ultimately, we will **combine multiple queries together** using `react-adopt` to make all of the data we need available in a single `<ItemsContainer />` component:
+We will use a more advanced pattern with `<Query />` in `client/src/pages/Items/ItemsContainer.js`.
 
 ```js
-const itemsData = ({ render }) => {
-  return (
-    <Query query={ALL_ITEMS_QUERY} variables={% raw %}{{ filter: null }}{% endraw %}>
-      {({ data: { items }, loading }) => /* what will we return? */}
-    </Query>
-  );
-};
+class ItemsContainer extends Component {
+  render() {
+    return (
+      <Query query={ALL_ITEMS_QUERY}>
+        {({ loading, error, data }) => {
+          if (loading) return <FullScreenLoader inverted />;
+          if (error) return <p>{`Error! ${error.message}`}</p>;
+          return <Items classes={this.props.classes} items={data.items} />;
+        }}
+      </Query>
+    );
+  }
+}
+
+export default withStyles(styles)(ItemsContainer);
 ```
 
 ???
-
-- Leave the filter `null` for now
-- This will be populated with `viewer.id` when auth is added next week
-- Return value: `render({ items, loading })`
-
----
-
-# Use the Container
-
-We can now use our `<ItemsContainer />` in `client/pages/Items.js`:
-
-```js
-<ItemsContainer>
-  {({ itemsData: { items, loading } }) => {
-    return loading
-      ? (
-          /* Display a loading component */
-      )
-      : (
-          /* Display the items */
-      );
-  }}
-</ItemsContainer>
-```
+Challenge students to create a custom Error component instead of using a `<p>` tag.
 
 ---
 
