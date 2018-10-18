@@ -7,6 +7,8 @@ lesson_date: 2018-10-23
 
 ## Pre-Work
 
+- Finish mark up for the `shareItemForm` and `shareItemPreview`. From your `Share.js` file call these two components to render on the share page.
+
 - Read the [Redux docs on React](http://redux.js.org/docs/basics/UsageWithReact.html)
 
 ---
