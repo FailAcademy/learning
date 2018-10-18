@@ -35,11 +35,11 @@
     "allDay": true,
     "start": "2018-09-03"
   },
-  {
-    "title": "Remembrance Day Stat",
-    "allDay": true,
-    "start": "2018-11-12"
-  },
+  // {
+  //   "title": "Remembrance Day Stat",
+  //   "allDay": true,
+  //   "start": "2018-11-12"
+  // },
   {
     "title": "Christmas Day",
     "allDay": true,
