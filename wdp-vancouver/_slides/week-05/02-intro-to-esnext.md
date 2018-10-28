@@ -30,20 +30,31 @@ layout: false
 
 # JavaScript Changes
 
-Ecma International is the standards organization in charge of publishing each new specification of JavaScript:
+Ecma International is the standards organization in charge of publishing each new specification of ECMAScript:
 
-| Year | Release     |
-| ---- | ----------- |
-| 1997 | ES          |
-| 1998 | ES2         |
-| 1999 | ES3         |
-| ?    | ES4         |
-| 2009 | ES5         |
-| 2015 | ES6/ES.next |
+| Year | Release         |
+| ---- | --------------- |
+| 1997 | ES              |
+| 1998 | ES2             |
+| 1999 | ES3             |
+| -    | ES4 (abandoned) |
+| 2009 | ES5             |
+| 2015 | ES6 / ES2015    |
+| 2016 | ES7 / ES2016    |
+| 2017 | ES8 / ES2017    |
+| 2018 | ES9 / ES2018    |
 
 ---
 
-# ES.next Compatibility
+# So what is ECMAScript / ES.next?
+
+The "ES" in ES6, ES2015 etc. stands for ECMAScript, named after the standards oganization Ecma International. JavaScript is the most popular implementation of ECMAScript, and is what we'll be using. 
+
+ES.next is a dynamic label used to reference the **next** version of ECMAScript coming out - the intention is that these updates will be made annually. 
+
+---
+
+# ES5 / ES6 Compatibility
 
 How well does ES5 work in browsers today?
 
@@ -63,7 +74,7 @@ Answer: **Transpiling**
 
 Try to change your ES.next code to ES5 using the [Babel online REPL](https://babeljs.io/repl/).
 
-_We'll also need to transpile our code when we use TypeScript with Angular later in the course._
+We can use Babel to transpile our code, allowing us to use the latest JavaScript features even if they aren't yet supported by browsers. 
 
 ---
 
@@ -151,13 +162,13 @@ The variable `i` is hoisted to the top of the function and shared across each it
 ```
 
 ```js
-for (let i = 1; i < 6; i++) {
+for (var i = 1; i < 6; i++) {
   $('#' + i).click(function() {
     alert(i);
   });
 }
 ```
-
+  
 **[Open this example in Codepen](http://codepen.io/redacademy/pen/pyZpqV)** to see this gotcha in action.
 
 ---
@@ -324,15 +335,14 @@ function counterES5() {
 ```
 
 ---
-
-# ES.next Solution
+# ES2015 Solution
 
 Use an **arrow function** to bind the scope of the function where it is defined, rather than where it is called.
 
 This is also know as **lexical binding**.
 
 ```js
-function counterESnext() {
+function counterES2015() {
   this.seconds = 0;
 
   window.setInterval(() => {
@@ -367,7 +377,7 @@ var multiply = function(a, b) {
 
 # More Arrow Functions
 
-**ES.next `=>`:**
+**ES2015 `=>`:**
 
 ```js
 const sayHi = () => console.log('hi');
@@ -408,7 +418,7 @@ Use arrow functions to fix [this CodePen](http://codepen.io/redacademy/pen/mPjXV
 
 template: inverse
 
-# ES.next Shorthand
+# ES2015 Shorthand
 
 ---
 
@@ -424,7 +434,7 @@ var city = 'Vancouver';
 var description = name + ' lives in ' + city;
 ```
 
-**ES.next:**
+**ES2015:**
 
 ```js
 const description = `${name} lives in ${city}`;
@@ -444,7 +454,7 @@ Template literals also preserve white space:
 var funkyArrows = '\n-->\n    -->\n        ->\n';
 ```
 
-**ES.next:**
+**ES2015:**
 
 ```js
 const funkyArrows = `
@@ -493,7 +503,7 @@ makePerson('Mandi', 'Vancouver');
 
 The new property value shorthand allows us to abbreviate the initialization of a property within an object literal, provided that the property key matches an existing variable name.
 
-**ES.next:**
+**ES2015:**
 
 ```js
 function makePerson(name, city) {
@@ -547,7 +557,7 @@ multiply(1);
 
 With ES2015, default function parameters allow us to initialize parameters with default values if no value or `undefined` is passed.
 
-**ES.next:**
+**ES2015:**
 
 ```js
 function multiply(a, b = 1) {
@@ -584,7 +594,7 @@ console.log(y); // 2
 
 Destructuring allows us to assign properties from objects to individual variables with the same name:
 
-**ES.next:**
+**ES2015:**
 
 ```js
 const point = {
@@ -617,7 +627,7 @@ function getName(person) {
 }
 ```
 
-**ES.next:**
+**ES2015:**
 
 ```js
 function getName({ name }) {
@@ -640,7 +650,7 @@ var second = winners[1];
 var third = winners[2];
 ```
 
-**ES.next:**
+**ES2015:**
 
 ```js
 const [first, second, third] = winners;
@@ -665,7 +675,7 @@ console.log(sum(1)); // 1
 console.log(sum(1, 2, 3, 4, 5)); // 15
 ```
 
-**Note:** No other named parameters can follow the spread parameter in the function declaration.
+**Note:** No other named parameters can follow the rest parameter in the function declaration.
 
 ---
 
@@ -731,7 +741,8 @@ The tax amount will need to be added to the subtotal of the summed item prices, 
 
 # What We've Learned
 
-- Syntactical differences between ES5 and ES.next
+- History of JavaScript and what ES.next means
+- Syntactical differences between ES5 and ES2015
 - How and where to replace `var` with `let` or `const`
 - How to use arrow functions
 - How to write more efficient JS with template literals, enhanced object literals, rest parameters, spread operators, and default parameters
