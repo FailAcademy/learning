@@ -67,7 +67,7 @@ class: center, middle
 
 ### Perceived Performance?
 
-Perceive performance is how fast a user *thinks* a site loads.
+Perceived performance is how fast a user *thinks* a site loads.
 
 ---
 
@@ -155,7 +155,7 @@ class: center, middle
 
 # Loading Pages Faster
 
-Improving the speed with which a page loads boils down to two (seemingly) simple tasks:
+Improving the loading speed of a page boils down to two (seemingly) simple tasks:
 
 - Reducing the number of requested resources and optimizing how they are loaded
 - Reducing file sizes (of files containing code, images, etc.)
