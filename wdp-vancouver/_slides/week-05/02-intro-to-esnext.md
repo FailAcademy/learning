@@ -39,10 +39,19 @@ Ecma International is the standards organization in charge of publishing each ne
 | 1999 | ES3             |
 | -    | ES4 (abandoned) |
 | 2009 | ES5             |
-| 2015 | ES6 / ES2015    |
-| 2016 | ES7 / ES2016    |
-| 2017 | ES8 / ES2017    |
-| 2018 | ES9 / ES2018    |
+
+---
+
+# JavaScript Changes
+
+From 2015 Ecma International changed the naming convention and release schedule, there will be a new release every year named after the year
+
+| Year | Release         |
+| ---- | --------------- |
+| 2015 | ES2015 (ES6)    |
+| 2016 | ES2016 (ES7)    |
+| 2017 | ES2017 (ES8)    |
+| 2018 | ES2018 (ES9)    |
 
 ---
 
