@@ -79,24 +79,6 @@ _Instantiate your classmates using_ `new WebDevStudent()`.
 
 ---
 
-## Lab Activity
-
-In today's lab, you'll commence work on Project 3 using what you've now learned about ES.next syntactical features and Webpack to build a Pong game.
-
-Clone the "Pong Starter" to get started.
-
-```bash
-git clone https://github.com/redacademy/pong-starter
-cd pong-starter
-npm install
-webpack
-npm start
-```
-
-Refer to the [project requirements page](/project/project-3-pong-game/) and the [building a Pong game slide deck](/slides/building-a-pong-game/) for further instructions.
-
----
-
 ## Additional Resources
 
 More reading on classes in ES.next:
