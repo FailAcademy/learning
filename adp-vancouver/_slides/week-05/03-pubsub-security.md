@@ -15,6 +15,7 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
@@ -23,15 +24,17 @@ layout: false
 2. Set up Pub/Sub
 
 ---
+
 template: inverse
 
 # Meteor Methods
 
 ---
+
 class: center, middle
 
 .large[
-  Think of Meteor Methods as an **API for your server**.
+Think of Meteor Methods as an **API for your server**.
 ]
 
 ???
@@ -72,21 +75,23 @@ class: center, middle
 - DDP messages are JSON objects
 
 ---
+
 class: center, middle
 
 .inline-images[
-  ![Meteor pub/sub diagram](/public/img/slide-assets/meteor-pub-sub.png)
+![Meteor pub/sub diagram](/public/img/slide-assets/meteor-pub-sub.png)
 ]
 
 .footnote.right[
-  Source: [GeekyAnts](https://blog.geekyants.com/meteor-react-native-simplicity-productivity-a62559a1a570)
+Source: [GeekyAnts](https://blog.geekyants.com/meteor-react-native-simplicity-productivity-a62559a1a570)
 ]
 
 ---
+
 class: center, middle
 
 .large[
-  Our app is insecure right now. Why?
+Our app is insecure right now. Why?
 ]
 
 ---
@@ -111,10 +116,12 @@ In our `imports/api/todos.js` we'll make a call to `Meteor.methods()`. Add a Met
 // in todos.js...
 
 Meteor.methods({
-  'todos.toggleComplete' (todo) {
+  'todos.toggleComplete'(todo) {
     if (todo.owner !== this.userId) {
-      throw new Meteor.Error('todos.toggleComplete.not-authorized',
-        'You are not allowed to update to-dos for other users.');
+      throw new Meteor.Error(
+        'todos.toggleComplete.not-authorized',
+        'You are not allowed to update to-dos for other users.',
+      );
     }
 
     ToDos.update(todo._id, {
@@ -136,7 +143,7 @@ To use the new toggling Method, we'll use `Meteor.call()` in our component:
 toggleComplete(todo) {
   // REMOVE THIS!
   // ToDos.update(todo._id, {
-  //   $set: { complete: !todo.complete },		
+  //   $set: { complete: !todo.complete },
   // });
 
   Meteor.call('todos.toggleComplete', todo); // NEW!
@@ -152,15 +159,17 @@ Your turn! Add Meteor Methods for `addToDo`, `removeToDo`, and `removeCompleted`
 Call these new Methods in your `App` component where appropriate. When you're done, all of your `App` component's methods should work again as they did before.
 
 ---
+
 template: inverse
 
 # Publications and Subscriptions in Meteor
 
 ---
+
 class: center, middle
 
 .large[
-  &ldquo;Database everywhere&rdquo; probably isn't a hot idea in a production app either...
+&ldquo;Database everywhere&rdquo; probably isn't a hot idea in a production app either...
 ]
 
 ---
@@ -198,13 +207,13 @@ if (Meteor.isServer) {
 One last step... we must subscribe to our publication within our the HOC wrapping the `App` component:
 
 ```js
-export default createContainer(() => {
+export default withTracker(() => {
   Meteor.subscribe('todos'); // NEW!
 
   return {
     currentUser: Meteor.user(),
     currentUserId: Meteor.userId(),
-    todos: ToDos.find({}).fetch()
+    todos: ToDos.find({}).fetch(),
   };
 }, App);
 ```
@@ -219,6 +228,7 @@ export default createContainer(() => {
 - How to use publications and subscriptions in Meteor to selectively choose what data is made available to the client, and then import that data into a React component as props
 
 ---
+
 template: inverse
 
 # Questions?
