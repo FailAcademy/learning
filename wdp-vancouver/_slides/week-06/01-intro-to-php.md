@@ -176,7 +176,7 @@ In your `php.ini` file (we'll check `phpInfo` to find it):
 Restart Apache in MAMP for the changes to take effect. Now you will be able to see fatal errors and notices when you make a mistake in your code.
 
 ???
-mamp/conf/{php version}/php.ini
+mamp/bin/php/{php version}/conf/php.ini
 
 ---
 

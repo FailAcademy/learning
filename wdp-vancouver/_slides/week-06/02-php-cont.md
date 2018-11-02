@@ -330,7 +330,7 @@ usort($blog_posts, function($a, $b) {
 
 Time for an array scavenger hunt!
 
-See the [lesson page](/lesson/more-on-php/) for more details.
+See the [lesson page](/lesson/02-php-cont/) for more details.
 
 ---
 
