@@ -51,7 +51,7 @@ You are encouraged to save these cheatsheets for your own reference.
 
 ## Exercise 1
 
-Add Gulp to your project and implement the `gulp-uglify` task as demonstrated.
+Add Gulp to your project and implement the `gulp-terser` task as demonstrated.
 
 Run the task and see what happens...
 

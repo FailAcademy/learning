@@ -15,26 +15,29 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
 
 1. Introduce Node.js and npm
 1. Introduce and install Gulp
-2. Set up Gulp in your project
-3. Create named tasks
-4. Add ESLint to our project
+1. Set up Gulp in your project
+1. Create named tasks
+1. Add ESLint to our project
 
 ---
+
 template: inverse
 
 # Node.js and npm
 
 ---
+
 class: center, middle
 
 .large[
-    Node is a cross-platform JavaScript runtime environment built on Chrome's V8 JavaScript engine. 
+Node is a cross-platform JavaScript runtime environment built on Chrome's V8 JavaScript engine.
 ]
 
 ---
@@ -48,6 +51,7 @@ Some vocabulary words:
 - **V8**: This is Google's open-source JS engine that is used in Google Chrome (written in C++).
 
 ---
+
 class: center, middle
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/ztspvPYybIY?rel=0" frameborder="0" allowfullscreen></iframe>
@@ -75,6 +79,7 @@ Initially npm was only useful to developers working in Node.js (i.e. not in the 
 However, since it's release, npm has become widely used to distribute modules for all JavaScript environments, thanks to tools like **[Browserify](http://browserify.org/)** and **[webpack](https://webpack.github.io/)** (more on those later).
 
 ---
+
 class: center, middle
 
 ### Using npm
@@ -85,18 +90,22 @@ This command will help us generate a `package.json` file for our project.
 
 ???
 
-#### Code along: 
-* Emphsize that you need to be located within at the root of the Project 2 folder.
+#### Code along:
 
-If you don't have a P2 demo folder set up: 
-* Get the class to help you make a new folder, index.html, and scripts.js. (command line review)
+- Emphsize that you need to be located within at the root of the Project 2 folder.
+
+If you don't have a P2 demo folder set up:
+
+- Get the class to help you make a new folder, index.html, and scripts.js. (command line review)
 
 ---
+
 template: inverse
 
 # Installing Gulp
 
 ---
+
 class: center, middle
 
 ### Installing npm Modules
@@ -118,7 +127,8 @@ Every time we install a new dependency for our project, it will be added to this
 ???
 
 ##### bonus info/if students ask:
-*package-lock.json* is automatically generated for any operations where npm modifies either the node_modules tree, or package.json. 
+
+_package-lock.json_ is automatically generated for any operations where npm modifies either the node_modules tree, or package.json.
 
 It describes the exact tree that was generated, such that subsequent installs are able to generate identical trees, regardless of intermediate dependency updates.
 
@@ -133,6 +143,7 @@ We'll see that our `node_modules` directory can get quite large, and there's als
 With an up-to-date `package.json` file, another dev can simply download our project files, run `npm install`, and automatically install all of the project dependencies from the npm plugin repository. Magic!
 
 ---
+
 class: center, middle
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">If at first you don&#39;t succeed, try `rm -rf node_modules &amp;&amp; npm install`</p>&mdash; I Am Devloper (@iamdevloper) <a href="https://twitter.com/iamdevloper/status/733581051440697344">May 20, 2016</a></blockquote>
@@ -149,13 +160,15 @@ Visit [Gulp's Getting Started page](https://github.com/gulpjs/gulp/blob/master/d
 ???
 
 #### Code Along
-Walk through getting started documentation with students. 
+
+Walk through getting started documentation with students.
 
 Ensure that they are finding the answers. If stuck or incorrect, then provide direction.
 
 `npm install --save-dev gulp@next` grabs the latest version FYI.
 
 ---
+
 template: inverse
 
 # Set Up Gulp
@@ -166,23 +179,24 @@ template: inverse
 
 1. Require the Gulp module
 2. Define a **Gulp Task**
-3.  Write some code to run when that task is called
+3. Write some code to run when that task is called
 
 ```js
 // Require Gulp first!
 
-var gulp = require('gulp');
+var gulp = require("gulp");
 
 // This is a very basic Gulp task,
 // with a name and some code to run
 // when this task is called:
 
-gulp.task('default', function() {
-	console.log('Hello world');
+gulp.task("default", function() {
+  console.log("Hello world");
 });
 ```
 
 ---
+
 class: center, middle
 
 ### Gulp is better with plugins!
@@ -195,41 +209,44 @@ We can add Gulp plugins to our project using npm...
 
 ---
 
-# gulp-uglify
+# gulp-terser
 
-`npm install --save-dev gulp-uglify gulp-rename`
+`npm install --save-dev gulp-terser gulp-rename`
 
 ```js
-var gulp = require('gulp'); // Load Gulp!
+var gulp = require("gulp"); // Load Gulp!
 
-// Now that we've installed the uglify package we can require it:
-var uglify = require('gulp-uglify'),
-    rename = require('gulp-rename');
+// Now that we've installed the terser package we can require it:
+var terser = require("gulp-terser"),
+  rename = require("gulp-rename");
 
-gulp.task('default', function(){
-  return gulp.src('./js/*.js') // What files do we want gulp to consume?
-    .pipe(uglify()) // Call the uglify function on these files
-    .pipe(rename({ extname: '.min.js' })) // Rename the uglified file
-    .pipe(gulp.dest('./build/js')) // Where do we put the result?
+gulp.task("default", function() {
+  return gulp
+    .src("./js/*.js") // What files do we want gulp to consume?
+    .pipe(terser()) // Call the terser function on these files
+    .pipe(rename({ extname: ".min.js" })) // Rename the uglified file
+    .pipe(gulp.dest("./build/js")); // Where do we put the result?
 });
 ```
 
 In this simple example we can see the magic of Gulp at work: `gulp.task`, `gulp.src`, `.pipe`, and `gulp.dest`!
 
 ???
+
 #### Syntax Note
-When requiring node modules at the top, that the syntax can be comma seperated variable declaration (as seen in example) or each module as it's own statement (var statement with semi colon after each). 
+
+When requiring node modules at the top, that the syntax can be comma seperated variable declaration (as seen in example) or each module as it's own statement (var statement with semi colon after each).
 
 Diff plugin docs write it different and students tend to get confused.
 
-
-
 ---
+
 template: inverse
 
 # Named Gulp Tasks
 
 ---
+
 class: center, middle
 
 ### Best Practice:
@@ -237,10 +254,11 @@ class: center, middle
 You're `default` Gulp task should contain a reference to other specific **named tasks**.
 
 ---
+
 class: center, middle
 
 .large[
-	Why? Because you may not want to run all of the tasks you define at the same time!
+Why? Because you may not want to run all of the tasks you define at the same time!
 ]
 
 ---
@@ -249,12 +267,12 @@ class: center, middle
 
 ```js
 var gulp = require('gulp'),
-    uglify = require('gulp-uglify'),
+    terser = require('gulp-terser'),
     rename = require('gulp-rename');
 
 gulp.task('scripts', function(){
   return gulp.src('./js/*.js')
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(rename({ extname: '.min.js' }))
     .pipe(gulp.dest('./build/js'))
 });
@@ -275,14 +293,13 @@ Running `gulp` will execute both tasks in sequence. To run an individual task, u
 
 The other option `gulp.series` runs multiple tasks in sequence.
 
-
 See documentation for further details.
 
 ---
 
 # Exercise 1
 
-Create a new folder in your project called `build` to store the uglified version of your files, then add Gulp to your project and implement the `gulp-uglify` task as demonstrated.
+Create a new folder in your project called `build` to store the uglified version of your files, then add Gulp to your project and implement the `gulp-terser` task as demonstrated.
 
 Run the task and see what happens...
 
@@ -293,11 +310,13 @@ They do not need to create the `build` folder for this to work.
 It is worth noting, the `build` folder will be created by gulp if it doesn't exist.
 
 ---
+
 template: inverse
 
 # More Gulp Tasks
 
 ---
+
 class: center, middle
 
 ### Have our computers do the work...
@@ -319,13 +338,15 @@ gulp.task('watch', function() {
 The first argument is a string or array of files we want to watch, and the second is the named Gulp task that we want to run when Gulp sees a change made to one of those files.
 
 ---
+
 class: center, middle
 
 .large[
-	Better still...how about automatically reloading our webpage in the browser?
+Better still...how about automatically reloading our webpage in the browser?
 ]
 
 ---
+
 class: center, middle
 
 ### Browsersync to the rescue!
@@ -343,6 +364,7 @@ Learn how to do that here: **[www.browsersync.io/docs/gulp/](http://www.browsers
 **Hint:** We're already watching our JS source files, uglifying them, and moving the newly minified files into the `build` directory. Think about what file will we want to watch for changes on, and subsequently reload the browser afterward.
 
 ---
+
 template: inverse
 
 # ESLint
@@ -355,7 +377,7 @@ Linting is a way for us to **check problematic patterns** in our code and make s
 
 Essentially, it's a way for you to set-up some rules about **how you want your code to always look**. You can then check your code again these rules, and ensure that you're following them.
 
-*Why should we care about doing this?*
+_Why should we care about doing this?_
 
 ---
 
@@ -363,13 +385,13 @@ Essentially, it's a way for you to set-up some rules about **how you want your c
 
 **[ESLint](http://eslint.org/)** is a popular tool for checking our JS code against whatever styleguide/rules we choose.
 
-*And we have control over exactly what to check!*
+_And we have control over exactly what to check!_
 
 Once we set our styleguide/rules, ESLint will help us find potential issues in our JS code without needing to execute that code first.
 
 ???
 
-*Important* Examples ahead are using the `gulp-eslint` node module NOT `eslint` node module.
+_Important_ Examples ahead are using the `gulp-eslint` node module NOT `eslint` node module.
 
 Gulp will not work if they install the incorrect node module.
 
@@ -377,7 +399,7 @@ Gulp will not work if they install the incorrect node module.
 
 # How It Works
 
-First, we need an `.eslintrc` file to **configure** the rules against which to check our code. 
+First, we need an `.eslintrc` file to **configure** the rules against which to check our code.
 
 Create that file now in the root of your project directory:
 
@@ -420,7 +442,7 @@ How rules work in ESLint:
 - `warn` or `1`: turn the rule on as a warning
 - `error` or `2`: turn the rule on as an error
 
-*In other words:*
+_In other words:_
 
 ```js
 "no-alert": 0 // This is totally OK!
@@ -487,7 +509,6 @@ Show an example of the `link` task throwing an error and warning.
 
 Note, lint errors means the task is stopped and will not make it to the minified file.
 
-
 ---
 
 # What We've Learned
@@ -499,6 +520,7 @@ Note, lint errors means the task is stopped and will not make it to the minified
 5. Why automation is important
 
 ---
+
 template: inverse
 
 # Questions?
