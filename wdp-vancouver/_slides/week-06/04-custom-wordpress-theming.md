@@ -344,6 +344,10 @@ class: center, middle
 
 What template file is used to customize search results?
 
+???
+
+search.php
+
 ---
 
 class: center, middle
@@ -351,6 +355,10 @@ class: center, middle
 ### Question #2:
 
 If you want to create a template for the single posts of a custom post type called _Products_, what will the template file name be?
+
+???
+
+single-products.php
 
 ---
 
@@ -360,6 +368,10 @@ class: center, middle
 
 What template file can we use for a static home page?
 
+???
+
+front-page.php
+
 ---
 
 class: center, middle
@@ -367,6 +379,10 @@ class: center, middle
 ### Question #4:
 
 What template files can be used for displaying blog posts on the home page?
+
+???
+
+home.php
 
 ---
 
@@ -376,6 +392,10 @@ class: center, middle
 
 What template file can we customize to show users when the URL they entered cannot be found?
 
+???
+
+404.php
+
 ---
 
 class: center, middle
@@ -383,6 +403,10 @@ class: center, middle
 ### Question #6:
 
 If we don't provide a template file for `single.php` (single blog posts) or `page.php` (single pages), what new-ish template file can we use as a fallback for both?
+
+???
+
+singular.php
 
 ---
 
@@ -392,6 +416,10 @@ class: center, middle
 
 What new template can we use for embeds? What does it do for us?
 
+???
+
+embed.php - used to render a post which is being embedded, can add post-type and post-format on the end
+
 ---
 
 class: center, middle
@@ -399,6 +427,10 @@ class: center, middle
 ### Question #8:
 
 How could we create a custom archive template for our _Product Type_ taxonomy?
+
+???
+
+taxonomy-product-type.php
 
 ---
 
@@ -408,6 +440,10 @@ class: center, middle
 
 What three options do we have in the template hierarchy for creating a custom layout for a specific WP page?
 
+???
+
+page-$id.php, page-$slug.php, $custom.php
+
 ---
 
 class: center, middle
@@ -415,6 +451,10 @@ class: center, middle
 ### Question #10:
 
 What template file can we use to display single attachment pages for attachments that are images?
+
+???
+
+image.php
 
 ---
 
