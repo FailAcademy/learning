@@ -57,7 +57,7 @@ In doing, we can easily keep our custom post types, taxonomies, and fields separ
 
 # How Do I Use One?
 
-You'll have to create a custom plugin to contain all of the code that needs to be theme independently.
+You'll have to create a custom plugin to contain all of the code that needs to be theme independent.
 
 We'll learn more about plugin development later this week, but for now you can download this template and we'll work through installing it together.
 

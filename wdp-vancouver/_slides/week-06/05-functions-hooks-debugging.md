@@ -212,7 +212,7 @@ The **priority number** is an optional integer value on a scale of `1` to `999` 
 
 Time to learn more about WP actions and filters!
 
-You'll be assigned one of the following hooks to investigate... see the [lesson page](/lesson/wordpress-functions-hooks-debugging/) for more details.
+You'll be assigned one of the following hooks to investigate... see the [lesson page](/lesson/05-functions-hooks-debugging/) for more details.
 
 Specifically, figure out if your assigned hooks is an action or filter. What does it do? When does it fire or what does it modify? What is it good for?
 
