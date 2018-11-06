@@ -186,7 +186,7 @@ Time to create a custom post type for our projects...let's build the **Product**
 
 Don't forget to flush your permalinks!
 
-Once we have created our Product custom post type, how we will add its archive page as the "Shop" menu item in the navigation menu?
+Once we have created our Product custom post type, how can we add its archive page as the "Shop" menu item in the navigation menu?
 
 ---
 
