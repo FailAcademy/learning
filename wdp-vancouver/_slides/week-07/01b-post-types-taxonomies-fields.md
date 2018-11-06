@@ -57,7 +57,7 @@ In doing, we can easily keep our custom post types, taxonomies, and fields separ
 
 # How Do I Use One?
 
-You'll have to create a custom plugin to contain all of the code that needs to be theme independent.
+You'll have to create a custom plugin to contain all of the code that needs to be theme independently.
 
 We'll learn more about plugin development later this week, but for now you can download this template and we'll work through installing it together.
 
@@ -186,7 +186,7 @@ Time to create a custom post type for our projects...let's build the **Product**
 
 Don't forget to flush your permalinks!
 
-Once we have created our Product custom post type, how can we add its archive page as the "Shop" menu item in the navigation menu?
+Once we have created our Product custom post type, how we will add its archive page as the "Shop" menu item in the navigation menu?
 
 ---
 
@@ -337,11 +337,9 @@ Important sidebar!
 
 ---
 
-class: center, middle
+template: inverse
 
-.large[
-Blobs vs. Chunks
-]
+# Blobs vs. Chunks
 
 ---
 
