@@ -368,7 +368,7 @@ template: inverse
 
 class: center, middle
 
-### What's functionality plugin?
+### What's a functionality plugin?
 
 A functionality plugin is just a plugin like any other plugin, but the main difference is that it's **not publicly distributed** and it's meant to be one custom plugin to **encompass all of the custom functionality** for your site.
 
@@ -425,12 +425,11 @@ Many schools of thoughts...
 
 ---
 
-# My Approach
+# Our Approach
 
 1.  Initialize a Git repo at the root of your `wp-content` folder
-2.  **Ignore everything**...then **selectively unignore** what you want in your repository (e.g. your specific custom theme, a functionality plugin, other bespoke plugins)
-3.  ...?
-4.  Profit!
+2.  **Ignore everything**...then **selectively unignore** what you want in your repository (e.g. your specific custom theme, a functionality plugin, other plugins)
+3.  Profit!
 
 ---
 
