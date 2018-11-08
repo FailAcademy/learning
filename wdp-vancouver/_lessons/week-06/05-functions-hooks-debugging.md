@@ -11,6 +11,8 @@ Some pre-reading on using "hooks" in WordPress:
 
 - [WordPress Hooks: Actions, Filters, and Examples](http://blog.teamtreehouse.com/hooks-wordpress-actions-filters-examples)
 
+- [WordPress Hooks: Actions, Filters, 2min video that explains this well](https://wpshout.com/wordpress-hooks-actions-filters-work/)
+
 Some pre-reading on adding CSS and JS files to a WordPress theme:
 
 - [Adding Scripts and Styles to WordPress the Right Way With Enqueueing](http://premium.wpmudev.org/blog/adding-scripts-and-styles-wordpress-enqueueing/)
@@ -96,6 +98,8 @@ Some WordPress plugins that are helpful for debugging:
 - [Debug Bar](https://wordpress.org/plugins/debug-bar/)
 - [Query Monitor](https://wordpress.org/plugins/query-monitor/)
 - [Theme Check](https://wordpress.org/plugins/theme-check/)
+- [Show Current Template](https://wordpress.org/plugins/show-current-template/)
+- [Kint Debugger](https://wordpress.org/plugins/kint-debugger/)
 
 Two very readable articles on WP's event-driven architecture:
 
