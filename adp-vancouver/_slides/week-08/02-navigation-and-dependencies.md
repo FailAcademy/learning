@@ -408,7 +408,7 @@ const AboutStack = createStackNavigator(
   },
   // AND THIS!
   {
-    navigationOptions: ({ navigation }) => ({
+    defaultNavigationOptions: ({ navigation }) => ({
       ...sharedNavigationOptions(navigation)
     })
   }
