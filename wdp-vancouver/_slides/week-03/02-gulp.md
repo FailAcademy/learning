@@ -229,21 +229,21 @@ We can add Gulp plugins to our project using npm...
 
 ---
 
-# gulp-uglify
+# gulp-terser
 
-`npm install --save-dev gulp-uglify gulp-rename`
+`npm install --save-dev gulp-terser gulp-rename`
 
 ```js
 const gulp = require("gulp"); // Load Gulp!
 
-// Now that we've installed the uglify package we can require it:
-const uglify = require("gulp-uglify"),
+// Now that we've installed the terser package we can require it:
+const terser = require("gulp-terser"),
   rename = require("gulp-rename");
 
 gulp.task("default", function() {
   return gulp
     .src("./js/*.js") // What files do we want gulp to consume?
-    .pipe(uglify()) // Call the uglify function on these files
+    .pipe(terser()) // Call the terser function on these files
     .pipe(rename({ extname: ".min.js" })) // Rename the uglified file
     .pipe(gulp.dest("./build/js")); // Where do we put the result?
 });
@@ -295,12 +295,12 @@ Why? Because you may not want to run all of the tasks you define at the same tim
 
 ```js
 const gulp = require('gulp'),
-    uglify = require('gulp-uglify'),
+    terser = require('gulp-terser'),
     rename = require('gulp-rename');
 
 gulp.task('scripts', function(){
   return gulp.src('./js/*.js')
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(rename({ extname: '.min.js' }))
     .pipe(gulp.dest('./build/js'))
 });
@@ -327,7 +327,7 @@ See documentation for further details.
 
 # Exercise 1
 
-Add Gulp to your project and implement the `gulp-uglify` task as demonstrated.
+Add Gulp to your project and implement the `gulp-terser` task as demonstrated.
 
 Run the task and see what happens...
 

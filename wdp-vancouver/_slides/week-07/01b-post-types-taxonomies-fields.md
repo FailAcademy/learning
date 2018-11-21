@@ -337,11 +337,9 @@ Important sidebar!
 
 ---
 
-class: center, middle
+template: inverse
 
-.large[
-Blobs vs. Chunks
-]
+# Blobs vs. Chunks
 
 ---
 

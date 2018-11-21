@@ -289,11 +289,11 @@ Again, if we use double quotes to wrap a string variable, we can embed another v
 $salutation_1 = "Ms.";
 $addressee_1 = "Dear $salutation_1 Sunshine:";
 
-$salutation_2 = "Mr";
-$addressee_2 = "Dear {$salutation_2}. Sunshine";
+$salutation_2 = "Mr.";
+$addressee_2 = "Dear {$salutation_2} Sunshine";
 ```
 
-The second approach is called **interpolation**.
+This is called **interpolation**. The second approach allows us to use complex syntax (like expressions).
 
 ---
 
@@ -326,7 +326,7 @@ Try out a variable in your PHP file:
 We can also write comments in our PHP just like we do in JS:
 
 ```php
-$foo = "Hello World;"
+$foo = "Hello World";
 
 // Add a single line comment with 2 forward slashes
 
@@ -587,7 +587,7 @@ unset( $months[2] );
 class: center, middle
 
 .large[
-  There are DOZENS of functions related to arrays in PHP...you don't need to memorize them all.
+  There are DOZENS of functions related to arrays in PHP... you don't need to memorize them all.
 ]
 
 ---
