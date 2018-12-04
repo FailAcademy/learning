@@ -122,7 +122,7 @@ Your project must:
 - Contain a "Journal" page assigned as the blog post index, styled appropriately (`home.php`)
 - Contain a single blog post view with a comments form and list, styled appropriately (`single.php`)
 - Contain a product archive called "Shop" that displays 16 posts per page in descending order by title, styled appropriately (`archive-product.php`)
-- Contain a product type archive that displays 16 posts per page in descending order by title, styled appropriately (`product_type-taxononomy.php`)
+- Contain a product type archive that displays 16 posts per page in descending order by title, styled appropriately (`taxononomy-product_type.php`)
 - Contain a single product view, styled appropriately (`single-product.php`)
 - Contain a general archive (for authors, categories, etc.), styled appropriately (`archive.php`)
 - Contain a search results page, styled appropriately (`search.php`)
