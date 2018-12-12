@@ -13,80 +13,75 @@
    {
       "title": "Day 1 Orientation",
       "allDay": true,
-      "start": "2018-10-01"
+      "start": "2019-01-07"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-10-15"
+      "start": "2019-01-21"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-10-16"
-   },
-   {
-      "title": "Project Work Day",
-      "allDay": true,
-      "start": "2018-10-22"
-   },
-   {
-      "title": "Project Work Day",
-      "allDay": true,
-      "start": "2018-10-23"
+      "start": "2019-01-28"
    },
    {
       "title": "Pong Code Along",
       "allDay": true,
-      "start": "2018-11-02"
+      "start": "2019-02-07"
+   },
+   {
+    "title": "Pong Code Along",
+    "allDay": true,
+    "start": "2019-02-08"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-11-16"
+      "start": "2019-02-22"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-11-19"
+      "start": "2019-02-25"
    },
     {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-11-21"
+      "start": "2019-02-27"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-11-22"
+      "start": "2019-02-28"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-11-23"
+      "start": "2019-03-01"
    },
    {
       "title": "Analytics & SEO Lesson (DM)",
       "allDay": false,
-      "start": "2018-11-28T09:00:00+00:00",
-      "end": "2018-11-28T12:00:00+00:00"
+      "start": "2019-03-06T09:00:00+00:00",
+      "end": "2019-03-06T12:00:00+00:00"
    },
    {
       "title": "Design Presentations",
       "allDay": true,
-      "start": "2018-11-30"
+      "start": "2019-03-08"
    },
    {
       "title": "GitHub Portfolio Development",
       "allDay": true,
-      "start": "2018-11-26",
-      "end": "2018-12-01"
+      "start": "2019-03-04",
+      "end": "2019-03-09"
    },
    {
       "title": "Community Project Work",
       "allDay": true,
-      "start": "2018-12-03",
-      "end": "2018-12-21"
+      "start": "2019-03-12",
+      "end": "2019-03-29"
    },
    {
       "title": "PPD Lesson",

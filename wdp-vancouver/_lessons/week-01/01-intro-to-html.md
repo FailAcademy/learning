@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to Your Computer & HTML
 slides: ["_slides/week-01/01-intro-to-html.md"]
-lesson_date: 2018-10-02
+lesson_date: 2019-01-08
 ---
 
 ## Pre-Work

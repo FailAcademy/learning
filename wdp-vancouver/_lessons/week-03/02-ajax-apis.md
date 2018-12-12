@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Ajax, JSON, and APIs
-slides: ["_slides/week-03/01-ajax-apis.md"]
-lesson_date: 2018-10-17
+slides: ["_slides/week-03/02-ajax-apis.md"]
+lesson_date: 2019-01-23
 ---
 
 ## Pre-Work
@@ -107,7 +107,9 @@ This is all the mark-up you will need to complete this assignment:
 ```html
 <div class="weather-widget">
   <h1>Vancouver Weather</h1>
-  <div class="results"><p>Click the button to get the current weather conditions...</p></div>
+  <div class="results">
+    <p>Click the button to get the current weather conditions...</p>
+  </div>
   <button id="get-weather">Get Weather</button>
 </div>
 ```
@@ -136,13 +138,18 @@ This is all the mark-up you will need to complete this assignment:
 
 ```html
 <div class="itunes-widget">
-   <form action="#" id="album-search">
-      <div class="artist-search">
-         <input type="text" name="artist_name" id="artist-name" placeholder="Enter artist first and last name" />
-         <input type="submit" value="Get Albums" />
-      </div>
-   </form>
-   <ul class="album-list"></ul>
+  <form action="#" id="album-search">
+    <div class="artist-search">
+      <input
+        type="text"
+        name="artist_name"
+        id="artist-name"
+        placeholder="Enter artist first and last name"
+      />
+      <input type="submit" value="Get Albums" />
+    </div>
+  </form>
+  <ul class="album-list"></ul>
 </div>
 ```
 

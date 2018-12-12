@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: OOP with ES.next
+title: OOP with ES2015
 ---
 
 {% highlight html %}
@@ -10,25 +10,28 @@ class: center, middle, inverse
 
 ---
 
-# OOP with ES.next
+# OOP with ES2015
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
 
 1. What is OOP?
-2. ES.next class syntax
-{% comment %}3. Inheritance{% endcomment %} 
+2. ES2015 class syntax
+   {% comment %}3. Inheritance{% endcomment %}
 
 ---
+
 template: inverse
 
 # What is OOP?
 
 ---
+
 class: center, middle
 
 ### What is object-oriented programming?
@@ -36,6 +39,7 @@ class: center, middle
 **Object-oriented programming** (OOP) is a style of programming where you group code into **encapsulated** and **reusable** objects.
 
 ---
+
 class: center, middle
 
 ### Objects, in Plain English
@@ -53,6 +57,7 @@ We already know that objects can have properties (variables) and methods (functi
 - A method is a **verb**
 
 ---
+
 class: center, middle
 
 ### Classes, in Plain English
@@ -68,8 +73,8 @@ A class is a **blueprint** for creating an object.<br />(And your computer is th
 ```js
 // Without an object:
 
-let firstName = 'Joe';
-let lastName = 'Schmo';
+let firstName = "Joe";
+let lastName = "Schmo";
 function fullName() {
   return `${firstName} ${lastName}`;
 }
@@ -77,19 +82,20 @@ function fullName() {
 // With an object:
 
 let Person = {
-  firstName: 'Joe',
-  lastName: 'Schmo',
-  fullName: function () { 
-    return `${this.firstName} ${this.lastName}`; 
+  firstName: "Joe",
+  lastName: "Schmo",
+  fullName: function() {
+    return `${this.firstName} ${this.lastName}`;
   }
-}
+};
 ```
 
 ---
+
 class: center, middle
 
 .large[
-   **Insight:** Classes will help us easily bundle this related code into reusable objects.
+**Insight:** Classes will help us easily bundle this related code into reusable objects.
 ]
 
 ---
@@ -103,9 +109,10 @@ What kinds of **properties** (i.e. adjectives/traits) would be needed to describ
 Work in groups to create a **poster-based representation** your object-oriented soccer game, and present your work to the class.
 
 ---
+
 template: inverse
 
-# ES.next Classes
+# ES2015 Classes
 
 ---
 
@@ -138,30 +145,29 @@ In ES5, we use `Function.prototype` to simulate classes:
 const Person = function(firstName, lastName) {
   this.firstName = firstName;
   this.lastName = lastName;
-}
+};
 
 // Add a fullName() method to the Person prototype property:
 
 Person.prototype.fullName = function() {
-  return this.firstName + '  ' + this.lastName;
-}
+  return this.firstName + "  " + this.lastName;
+};
 
 // Create a new object with the Person() constructor:
 
-const joe = new Person('Joe', 'Schmo');
+const joe = new Person("Joe", "Schmo");
 
 console.log(joe.fullName());
 ```
 
 ---
 
-# ES.next Classes
+# ES2015 Classes
 
-Classes work the same in ES.next, but with cleaner syntax:
+Classes work the same in ES2015, but with cleaner syntax:
 
 ```js
 class Person {
-
   constructor(firstName, lastName) {
     this.firstName = firstName;
     this.lastName = lastName;
@@ -170,10 +176,9 @@ class Person {
   fullName() {
     return `${this.firstName} ${this.lastName}`;
   }
-
 }
 
-let joe = new Person('Joe', 'Schmo');
+let joe = new Person("Joe", "Schmo");
 console.log(joe.fullName());
 ```
 
@@ -186,9 +191,9 @@ console.log(joe.fullName());
 Instances let you create **reusable** structured data. Think of a `class` like a factory that creates instances by using the word `new`. This is called **instantiation**.
 
 ```js
-let joe = new Person('Joe', 'Schmo');
-let mary = new Person('Mary', 'Jones');
-let al = new Person('Barrack', 'Obama');
+let joe = new Person("Joe", "Schmo");
+let mary = new Person("Mary", "Jones");
+let al = new Person("Barrack", "Obama");
 ```
 
 In this example, `joe`, `mary`, and `al` are instances of `Person`.
@@ -203,12 +208,10 @@ In this example, `joe`, `mary`, and `al` are instances of `Person`.
 
 ```js
 class Person {
-
-   constructor(firstName, lastName) {
-      this.firstName = firstName;
-      this.lastName = lastName;
-   }
-
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
 }
 ```
 
@@ -224,16 +227,14 @@ In this example, `firstName` is a property of `Person`.
 
 ```js
 class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
 
-   constructor(firstName, lastName) {
-      this.firstName = firstName;
-      this.lastName = lastName;
-   }
-
-   greet() {
-      console.log('hello');
-   }
-
+  greet() {
+    console.log("hello");
+  }
 }
 ```
 
@@ -269,7 +270,7 @@ What does `this` refer to in the previous example?
 
 # Exercise 2
 
-Pick one of the classes your group modelled in the previous soccer game exercise, and use that to **write your first ES.next class**.
+Pick one of the classes your group modelled in the previous soccer game exercise, and use that to **write your first ES2015 class**.
 
 Ensure that you set all the appropriate **properties** in the `constructor` and create all the required **methods** for your class.
 
@@ -289,16 +290,16 @@ Just like functions, classes can be imported and exported from module:
 // In "Person.js" file
 
 export default class Person {
-   //...class code here
+  //...class code here
 }
 ```
 
 ```js
 // In "class.js" file
 
-import Person from './person.js';
+import Person from "./person.js";
 
-let Joe = new Person('Joe', 'Schmo');
+let Joe = new Person("Joe", "Schmo");
 ```
 
 The `default` keyword allows this class to be set to any variable name when it's imported.
@@ -313,7 +314,7 @@ We can also use **named exports** with class modules. Here you must make sure th
 // In "person.js" file
 
 class Person {
-   //...class code here
+  //...class code here
 }
 
 export { Person };
@@ -322,9 +323,9 @@ export { Person };
 ```js
 // In "class.js" file
 
-import { Person } from './person.js'; // must be called "Person"
+import { Person } from "./person.js"; // must be called "Person"
 
-let Joe = new Person('Joe', 'Schmo');
+let Joe = new Person("Joe", "Schmo");
 ```
 
 ---
@@ -345,8 +346,7 @@ export default const hello = 'world'
 
 **C)** `import { hello } from 'file'`
 
-{% comment %} 
----
+## {% comment %}
 
 template: inverse
 
@@ -360,14 +360,14 @@ A class can **inherit** properties/methods from other classes:
 
 ```js
 class Person {
-   constructor(firstName, lastName) {
-      this.firstName = firstName;
-      this.lastName = lastName;
-   }
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
 
-   greet() {
-      console.log('hello');
-   }
+  greet() {
+    console.log("hello");
+  }
 }
 
 class Student extends Person {}
@@ -383,19 +383,20 @@ Use `super` to specify which properties will be inherited.
 
 ```js
 class Person {
-   constructor(name) {
-      this.name = name
-   }
+  constructor(name) {
+    this.name = name;
+  }
 }
 
 class Student extends Person {
-   constructor(prop) {  // pass name in 
-      super(prop);  // pass name to parent constructor
-      this.hasPencil = true;
-   }
+  constructor(prop) {
+    // pass name in
+    super(prop); // pass name to parent constructor
+    this.hasPencil = true;
+  }
 }
 
-let Joe = new Student('Joe');
+let Joe = new Student("Joe");
 Joe.name; // Joe
 ```
 
@@ -407,15 +408,15 @@ We can use **rest** and **spread** operators to pass multiple props to our paren
 
 ```js
 class Student extends Person {
-   constructor(...props) {
-      // create array of ['Joe', 'Schmo', 22] 
-      super(...props);
-      // call super('Joe', 'Schmo', 22)
-      this.hasPencil = true;
-   }
+  constructor(...props) {
+    // create array of ['Joe', 'Schmo', 22]
+    super(...props);
+    // call super('Joe', 'Schmo', 22)
+    this.hasPencil = true;
+  }
 }
 
-let Joe = new Student('Joe', 'Schmo', 22);
+let Joe = new Student("Joe", "Schmo", 22);
 ```
 
 ---
@@ -438,19 +439,20 @@ Now model our own classroom using the following classes. Note that `WebDevStuden
 - WebDevStudent
 
 **Instantiate your classmates** using `new WebDevStudent()`.
-{% endcomment %} 
+{% endcomment %}
 
 ---
 
 # What We've Learned
 
 - Basic concepts of object-oriented programming
-- How to use the new ES.next class syntax
-{% comment %} 
+- How to use the new ES2015 class syntax
+  {% comment %}
 - How inheritance works with subclasses
-{% endcomment %} 
+  {% endcomment %}
 
 ---
+
 template: inverse
 
 # Questions?
