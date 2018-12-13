@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 1 - Aloha Homepage
-due: Wednesday, October 17th (beginning of class)
+due: Tuesday, January 22nd (beginning of class)
 ---
 
 For Project 1, you're going to create a homepage for your client the Aloha Apparel Co. using HTML and CSS.
@@ -108,4 +108,4 @@ Want to challenge yourself? Your project could also:
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to [jim.bennett@redacademy.com](mailto:jim.bennett@redacademy.com).
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to dev@redacademy.com.

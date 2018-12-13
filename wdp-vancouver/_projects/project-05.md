@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 5 - Quotes on Dev
-due: Monday,November 26th (beginning of class)
+due: Monday, March 4th (beginning of class)
 ---
 
 For Project 5, you will combine your JavaScript and WordPress skills together to build out the functionality for a website called Quotes on Dev using the WordPress REST API.
@@ -108,7 +108,7 @@ Your project must:
 - Use Gutenberg blocks to support content layout for all post types
 - Enqueue CSS and JS files properly in the theme's functions.php file
 - Leverage the WP template hierarchy to generate all required templates for the website
-- Wrap jQuery code in an IIFE to make "$" available in no-conflict mode
+- Wrap jQuery code in an IIFE to make "\$" available in no-conflict mode
 - Validate theme files with Theme Check
 
 ### Functional Requirements
@@ -152,4 +152,4 @@ Once you have finished working on your site, please export your database by foll
 
 **Submitting your project:**
 
-When you're ready to submit your project, **please email a link to your GitHub repository containing your project** with your **database file attached** to [jim.bennett@redacademy.com](jim.bennett@redacademy.com).
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** with your **database file attached** to dev@redacademy.com.
