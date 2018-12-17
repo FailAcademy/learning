@@ -15,18 +15,20 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
 
-1. What is React Native?
-2. Dev environment config and debugging
-3. Basic mobile components
-4. Styling components
-5. Lists and data
-6. Project organization
+1.  What is React Native?
+2.  Dev environment config and debugging
+3.  Basic mobile components
+4.  Styling components
+5.  Lists and data
+6.  Project organization
 
 ---
+
 template: inverse
 
 # What Is React Native?
@@ -58,7 +60,7 @@ On top of that, RN also offers an (arguably) **better developer experience** and
 RN works because its **bridge** creates an interface between React and the host platform's native UI elements and APIs:
 
 .inline-images[
-  ![React Native bridge diagram](/public/img/slide-assets/rn-bridge.jpg)  
+![React Native bridge diagram](/public/img/slide-assets/rn-bridge.jpg)  
 ]
 
 ???
@@ -71,10 +73,11 @@ RN works because its **bridge** creates an interface between React and the host 
   - Serializable (the messages between JS and native)
 
 ---
+
 class: center, middle
 
 .large[
-  ![React Native threads diagram](/public/img/slide-assets/rn-threads.svg)  
+![React Native threads diagram](/public/img/slide-assets/rn-threads.svg)  
 ]
 
 ???
@@ -105,18 +108,16 @@ class: center, middle
 Recall that when we use React, we also need to include the `ReactDOM` module to render our components to the DOM:
 
 ```js
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 class App extends Component {
-   render() {
-      return (
-         <h1 id="title">Hello, world!</h1>
-      );
-   }
+  render() {
+    return <h1 id="title">Hello, world!</h1>;
+  }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 ---
@@ -126,8 +127,8 @@ ReactDOM.render(<App />, document.getElementById('root'));
 Our approach to building a React Native components is noticeably similar, but we import the `AppRegistry` module instead of `ReactDOM`:
 
 ```js
-import React, { Component } from 'react';
-import { AppRegistry, View, Text } from 'react-native';
+import React, { Component } from "react";
+import { AppRegistry, View, Text } from "react-native";
 
 class App extends Component {
   render() {
@@ -139,7 +140,7 @@ class App extends Component {
   }
 }
 
-AppRegistry.registerComponent('App', () => App);
+AppRegistry.registerComponent("App", () => App);
 ```
 
 ---
@@ -153,6 +154,7 @@ AppRegistry.registerComponent('App', () => App);
 - You can still **drop into native code** if you need to (e.g. to leverage APIs that aren't exposed in RN by default)
 
 ---
+
 template: inverse
 
 # Dev Environment Config and Debugging
@@ -163,9 +165,9 @@ template: inverse
 
 Before we can create our first React Native app, we must ensure we have the following tools installed:
 
-1. [Xcode](https://developer.apple.com/xcode/)
-2. [Homebrew](http://brew.sh/)
-3. [Node](https://nodejs.org/en/)
+1.  [Xcode](https://developer.apple.com/xcode/)
+2.  [Homebrew](http://brew.sh/)
+3.  [Node](https://nodejs.org/en/)
 
 You will likely also want to install a VS Code extension called **[React Native Tools](https://github.com/Microsoft/vscode-react-native)** and the **[React Native Debugger](https://github.com/jhen0409/react-native-debugger)**.
 
@@ -218,27 +220,27 @@ The generated directory structure for your project will include:
 ```bash
 |-- __tests__        # for Jest tests
 |-- android/         # boilerplate for Android
-|-- index.android.js # entry point for your app
-|-- index.ios.js     # entry point for your app
+|-- App.js           # where the top-level App component lives
+|-- index.js         # entry point for your app
 |-- ios/             # boilerplate for iOS
 |-- node_modules     # yes, we can use npm packages with RN!
 |-- package.json     # obviously...don't leave home without it
 |-  # ...            # other RN config files...
 ```
 
-For now, we will work primarily in `index.ios.js`, but will talk more in depth about project organization later in the lesson.
+For now, we will work primarily in `index.js`, but will talk more in depth about project organization later in the lesson.
 
 ---
 
 # Digging Deeper
 
-But how does RN know what component to bind to the view when our app launches? In our `index.ios.js` file we have:
+But how does RN know what component to bind to the view when our app launches? In our `index.js` file we have:
 
 ```js
-AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
+AppRegistry.registerComponent("HelloWorld", () => HelloWorld);
 ```
 
-And if we look in `ios/AppDelegate.m` we'll see:
+And if we look in `ios/HelloWorld/AppDelegate.m` we'll see:
 
 ```objective-c
 RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
@@ -254,13 +256,13 @@ For Android, we would see the Java equivalent in the `MainActivity.java` file.
 # Debugging Tools
 
 .left-column[
-  ![React Native debugging](/public/img/slide-assets/rn-ios-debugging.png)
+![React Native debugging](/public/img/slide-assets/rn-ios-debugging.png)
 ]
 
 .right-column[
-  React Native provides a handy suite of built-in dev tools. 
-  
-  By pressing `⌘ + D` inside of the iOS simulator, you'll see that you can enable remote JS debugging (in Chrome). Go to [localhost:8081/debugger-ui](localhost:8081/debugger-ui) and open your browser dev tools to view the console output.
+React Native provides a handy suite of built-in dev tools.
+
+By pressing `⌘ + D` inside of the iOS simulator, you'll see that you can enable remote JS debugging (in Chrome). Go to [localhost:8081/debugger-ui](localhost:8081/debugger-ui) and open your browser dev tools to view the console output.
 ]
 
 ---
@@ -273,6 +275,7 @@ For Android, we would see the Java equivalent in the `MainActivity.java` file.
 - The third-party [React Native Debugger](https://github.com/jhen0409/react-native-debugger) is essential for debugging your React and Redux code
 
 ---
+
 template: inverse
 
 # Basic Mobile Components
@@ -292,13 +295,13 @@ In React, we can use any HTML element we like to structure our components. But w
 
 # Mobile Components
 
-*Before we proceed...*
+_Before we proceed..._
 
 Unlike HTML elements, RN's built-in mobile UI components are modules we must selectively import from `react-native` wherever we want to use them in our own components:
 
 ```js
-import React, { Component } from 'react';
-import { Image, Text, View } from 'react-native';
+import React, { Component } from "react";
+import { Image, Text, View } from "react-native";
 
 // ...your component goes here
 ```
@@ -321,14 +324,14 @@ Note that there are no analogous components for `<em>` and `<strong>`, so adding
 
 # Image
 
-The `source` prop of an `<Image>` [(ref)](https://facebook.github.io/react-native/docs/image.html) component can point to an image asset bundled with your app, or an external image. 
+The `source` prop of an `<Image>` [(ref)](https://facebook.github.io/react-native/docs/image.html) component can point to an image asset bundled with your app, or an external image.
 
 Be sure to supply `@2x` and `@3x` versions if possible for static image resources. For network images **you must specify the height and width**.
 
 ```js
 <Image
   style={% raw %}{{ width: 300, height: 200, }}{% endraw %}
-  resizeMode={"contain"}
+  resizeMode={'contain'}
   source={% raw %}{{uri:'https://unsplash.it/600/400/?random'}}{% endraw %}
   // source={require('./img/puppies.png')} A LOCAL IMAGE!
 />
@@ -338,33 +341,16 @@ Be sure to supply `@2x` and `@3x` versions if possible for static image resource
 
 ---
 
-# Image
-
-Also note that `<Image>` components do not need to be self-closing in RN! 
-
-You wrap opening and closing `<Image>` tags around another component, then easily absolutely position the inner component on top of the image.
-
-```js
-<Image
-  style={% raw %}{{ width: 300, height: 200, }}{% endraw %}
-  source={% raw %}{{uri:'https://unsplash.it/600/400/?random'}}{% endraw %}
->
-  <Text>Some text...</Text>
-</Image>
-```
-
----
-
 # TextInput
 
 We may also want users to enter text into a `<TextInput>` [(ref)](https://facebook.github.io/react-native/docs/textinput.html) at some point...
 
 ```js
 <TextInput
-  style={% raw %}{{ height: 30, width: 100, borderWidth: 1, 
-    borderColor: "rgba(0,0,0,0.5)"}}{% endraw %}
+  style={% raw %}{{ height: 30, width: 100, borderWidth: 1,
+    borderColor: 'rgba(0,0,0,0.5)'}}{% endraw %}
   placeholder={'Type here'}
-  placeholderTextColor={"rgba(198,198,204,1)"}
+  placeholderTextColor={'rgba(198,198,204,1)'}
   onChangeText={(text) => {this.setState({text})}}
   onSubmitEditing={() => {this.setState({text: ''})}}
   value={(this.state && this.state.text) || ''}
@@ -380,9 +366,7 @@ Notice the built-in props that are available on listening to changes on the comp
 To change reduce an element's opacity on press, `<TouchableOpacity>` [(ref)](https://facebook.github.io/react-native/docs/touchableopacity.html):
 
 ```js
-<TouchableOpacity
-  onPress={() => {}}
-  activeOpacity={75 / 100}>
+<TouchableOpacity onPress={() => {}} activeOpacity={75 / 100}>
   <Text>Press me!</Text>
 </TouchableOpacity>
 ```
@@ -409,7 +393,7 @@ This differs from `<TouchableOpacity>` because an underlay colour is added that 
 
 # ScrollView
 
-By default your views will not be scrollable (i.e. they will be limited to the fixed size of the mobile device screen). 
+By default your views will not be scrollable (i.e. they will be limited to the fixed size of the mobile device screen).
 
 You will need a `<ScrollView>` [(ref)](https://facebook.github.io/react-native/docs/scrollview.html) component to create scrolling views:
 
@@ -432,6 +416,7 @@ Your turn! Go to the [React Native Docs](https://facebook.github.io/react-native
 Be creative and come up with a cool demo for the class.
 
 ---
+
 template: inverse
 
 # Styling Components
@@ -501,10 +486,10 @@ The previous style objects occasionally offer an advantage over the `StyleSheet.
 # StyleSheet.create
 
 **Example:**
- 
+
 ```js
-import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from "react";
+import { StyleSheet, Text, View } from "react-native";
 
 export default class HelloWorld extends Component {
   render() {
@@ -519,8 +504,8 @@ export default class HelloWorld extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-  },
+    alignItems: "center"
+  }
 });
 ```
 
@@ -547,6 +532,7 @@ Time for an RN layout challenge!
 See the [lesson page](/lesson/01-intro-to-react-native/) for more details...
 
 ---
+
 template: inverse
 
 # Lists and Data
@@ -572,6 +558,7 @@ The `<FlatList>` [(ref)](https://facebook.github.io/react-native/docs/flatlist.h
 To use either, you will need some data (in array format), a component to render each list item, and way to apply a unique key to each list item.
 
 ---
+
 class: center, middle
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/-VPM6ICgCk8?rel=0" frameborder="0" allowfullscreen></iframe>
@@ -587,7 +574,7 @@ constructor() {
   super();
   this.state = { data: ['Thing 1', 'Thing 2'] };
 }
-  
+
 render() {
   return (
     <FlatList
@@ -691,8 +678,8 @@ The `<SectionList>` component is very similar to the `<FlatList>`, but the data 
 ```js
 <SectionList
   sections={[
-    {title: 'ADP', data: ['Bob', 'Alice']},
-    {title: 'WDP', data: ['Anne', 'Mary', 'Joe']},
+    { title: "ADP", data: ["Bob", "Alice"] },
+    { title: "WDP", data: ["Anne", "Mary", "Joe"] }
   ]}
   renderItem={({ item }) => <Text>{item}</Text>}
   renderSectionHeader={({ section }) => <Text>{section.title}</Text>}
@@ -708,6 +695,7 @@ Now you're going to build a slightly more complex `<FlatList>` in your `HelloWor
 See the [lesson page](/lesson/01-intro-to-react-native/) for more details...
 
 ---
+
 template: inverse
 
 # Project Organization
@@ -726,24 +714,25 @@ Our project organization plan of attack:
 
 # Project Folder
 
-We won't want to depend on `index.ios.js` and `index.android.js` exclusively as our app grows. Let's add a directory to house all of our RN code called `app`:
+We won't want to depend on `index.js` exclusively as our app grows. Let's add a directory to house all of our RN code called `app`:
 
 ```bash
 |-- __tests__
 |-- android/
+|-- App.js
 |-- js/ # <----------- ADD THIS DIR!
-|-- index.android.js
-|-- index.ios.js
+|-- index.js
 |-- ios/
 |-- node_modules
 |-- package.json
+|-- # ...other config files
 ```
 
 ---
 
 # Project Folder
 
-Inside the `app` folder...
+Inside the `js` folder...
 
 ```bash
 |-- js/
@@ -751,37 +740,39 @@ Inside the `app` folder...
 |   |-- config     # keep configuration out of code!
 |   |-- assets     # static image assets and custom fonts
 |   |-- lib        # general functions (code re-use FTW!)
-|   |-- redux      # store and reducers go here
+|   |-- context    # create context and providers here
 |   |-- navigation # define routes and nav components
-|   |-- scenes     # container components that render each scene
-|   |-- index.js   # single entry point of a cross-platform app
+|   |-- screens    # container components that render each screen
+|   |-- App.js     # move App.js here!
 ```
 
-You will import `index.js` into `index.ios.js` and `index.android.js` and pass your top-level component into `AppRegistry.registerComponent()` to register your app.
+You will import `js/App.js` into the root `index.js` of your project and pass your top-level component into `AppRegistry.registerComponent()` to register your app.
 
 ---
 
 # Example
 
-In `index.ios.js` and `index.androids.js`:
+In `index.js`:
 
 ```js
-import { AppRegistry } from 'react-native';
-import HelloWorld from './app';
+import { AppRegistry } from "react-native";
+import App from "./js/App";
 
-AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
+AppRegistry.registerComponent("HelloWorld", () => App);
 ```
 
-In `app/index.js`:
+In `js/App.js`:
 
 ```js
-import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import React, { Component } from "react";
+import { View, Text } from "react-native";
 
-export default class HelloWorld extends Component {
+export default class App extends Component {
   render() {
     return (
-      <View><Text>Welcome to React Native!</Text></View>
+      <View>
+        <Text>Welcome to React Native!</Text>
+      </View>
     );
   }
 }
@@ -800,7 +791,7 @@ What to put in your `config` folder:
 |   |-- styles.js # for shared styles (typography, colours, etc.)
 ```
 
-**Note:** In RN, we typically want to **reuse styled components**, rather than reusing styles. 
+**Note:** In RN, we typically want to **reuse styled components**, rather than reusing styles.
 
 However, it usually make sense to set some base styles for our colours and typography (etc.) that can be imported into components throughout our app.
 
@@ -808,10 +799,10 @@ However, it usually make sense to set some base styles for our colours and typog
 
 # Scenes
 
-Each scene of your app will be a container/presentational component combo:
+Each screen of your app will be a container/presentational component combo:
 
 ```bash
-|-- scences/
+|-- screens/
 |   |-- User
 |   |   |-- index.js
 |   |   |-- styles.js
@@ -822,8 +813,8 @@ Each scene of your app will be a container/presentational component combo:
 And in the `index.js` we follow this pattern:
 
 ```js
-import UserContainer from './UserContainer';
-import User from './User';
+import UserContainer from "./UserContainer";
+import User from "./User";
 
 export { User };
 export default UserContainer;
@@ -833,7 +824,7 @@ export default UserContainer;
 
 # Components
 
-Use can use a similar directory structure for our reusable, stateless UI components:
+We can use a similar directory structure for our reusable, stateless UI components:
 
 ```bash
 |-- components/
@@ -846,7 +837,7 @@ Use can use a similar directory structure for our reusable, stateless UI compone
 In `index.js`:
 
 ```js
-import UserAvatar from './UserAvatar';
+import UserAvatar from "./UserAvatar";
 
 export default UserAvatar;
 ```
@@ -858,10 +849,11 @@ export default UserAvatar;
 - What React Native is and why it is awesome
 - How to configure our dev environments and debug RN apps
 - How to use and style RN's mobile UI components
-- How to use the ListView component to display fetched data 
+- How to use the ListView component to display fetched data
 - How to organize an RN project effectively
 
 ---
+
 template: inverse
 
 # Questions?

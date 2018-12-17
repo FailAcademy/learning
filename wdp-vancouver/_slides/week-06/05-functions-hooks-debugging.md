@@ -212,7 +212,7 @@ The **priority number** is an optional integer value on a scale of `1` to `999` 
 
 Time to learn more about WP actions and filters!
 
-You'll be assigned one of the following hooks to investigate... see the [lesson page](/lesson/05-functions-hooks-debugging/) for more details.
+You will be assigned one of the following hooks to investigate... see the [lesson page](/lesson/05-functions-hooks-debugging/) for more details.
 
 Specifically, figure out if your assigned hooks is an action or filter. What does it do? When does it fire or what does it modify? What is it good for?
 
@@ -368,7 +368,7 @@ template: inverse
 
 class: center, middle
 
-### What's functionality plugin?
+### What's a functionality plugin?
 
 A functionality plugin is just a plugin like any other plugin, but the main difference is that it's **not publicly distributed** and it's meant to be one custom plugin to **encompass all of the custom functionality** for your site.
 
@@ -425,12 +425,11 @@ Many schools of thoughts...
 
 ---
 
-# My Approach
+# Our Approach
 
 1.  Initialize a Git repo at the root of your `wp-content` folder
-2.  **Ignore everything**...then **selectively unignore** what you want in your repository (e.g. your specific custom theme, a functionality plugin, other bespoke plugins)
-3.  ...?
-4.  Profit!
+2.  **Ignore everything**...then **selectively unignore** what you want in your repository (e.g. your specific custom theme, a functionality plugin, other plugins)
+3.  Profit!
 
 ---
 
