@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 5 - Quotes on Dev
-due: Wednesday, June 6th (beginning of class)
+due: Tuesday, January 29th (beginning of class)
 ---
 
 For Project 5, you will combine your JavaScript and WordPress skills together to build out the functionality for a website called Quotes on Dev using the WordPress REST API.
@@ -108,7 +108,7 @@ Your project must:
 - Use Gutenberg blocks to support content layout for all post types
 - Enqueue CSS and JS files properly in the theme's functions.php file
 - Leverage the WP template hierarchy to generate all required templates for the website
-- Wrap jQuery code in an IIFE to make "$" available in no-conflict mode
+- Wrap jQuery code in an IIFE to make "\$" available in no-conflict mode
 - Validate theme files with Theme Check
 
 ### Functional Requirements

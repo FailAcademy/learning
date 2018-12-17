@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 3 - Pong Game
-due: Monday, April 16th (beginning of class)
+due: Monday, December 10th (beginning of class)
 ---
 
 For Project 3, you're going to re-create the classic [Pong game](https://en.wikipedia.org/wiki/Pong) using JavaScript.
