@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: React State and Events
-slides: ['_slides/week-03/02-state-events.md']
-lesson_date:  2018-07-17
+slides: ["_slides/week-03/02-state-events.md"]
+lesson_date: 2019-01-22
 ---
 
 ## Pre-work
@@ -101,6 +101,8 @@ To do that, we'll need to use one of React's lifecycle methods. It's up to you t
 ## Lab Activity
 
 Continue working on the client side of your Boomtown application now that you are able to load data from your server in it.
+
+Use the new container pattern that we learned today to make API calls to your GraphQL server using `<Query />` component to load data in your pages.
 
 **Tip!** In addition to the Material UI components, **[react-gravatar](https://github.com/KyleAMathews/react-gravatar)** to load user profile images based on their email addresses. This package is already installed in the Boomtown Stater&mdash;you simply need to read its docs and use it.
 

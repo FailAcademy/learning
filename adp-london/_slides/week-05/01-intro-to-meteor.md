@@ -11,11 +11,13 @@ class: center, middle, inverse
 ---
 
 # Introducing Meteor <br/>
+
 (with React)
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
@@ -29,6 +31,7 @@ layout: false
 7. Drawbacks of Meteor
 
 ---
+
 template: inverse
 
 # What is Meteor?
@@ -37,26 +40,25 @@ template: inverse
 
 class: center, middle
 
-
 ### Meteor is an open source platform for web, mobile, and desktop.
 
 And it's JavaScript all the way down!
 
 ---
+
 # Application Platforms
 
 <img width="200px" style="display:block; margin:0 auto;" src="/public/img/slide-assets/swiss-army-knife.jpg" />
 
-An **Application Platform** is an *integrated set of useful programs*.
+An **Application Platform** is an _integrated set of useful programs_.
 
 Meteor comes with everything a JavaScript developer might need to build a fully functioning application, out of the box.
 
 ---
 
-
 class: center, middle
 
-Meteor simplifies and improves the *Developer Experience* of building Client-Server applications:
+Meteor simplifies and improves the _Developer Experience_ of building Client-Server applications:
 
 - It's a complete and fully integrated suite of programs.
 - It's simple and powerful set of JavaScript APIs for working with those programs.
@@ -65,11 +67,10 @@ Meteor simplifies and improves the *Developer Experience* of building Client-Ser
 
 # Exercise 1
 
-Split into two groups. Imagine you're planning an application platform for *other developers* to use. Your platform should be geared towards developers who want to create Web Apps and should include all the necessary components. Feel free to **invent or imagine technology or solutions that don't currently exist**.
-
-When you've come up with a platform design, then come up with a marketing plan for your platform. When you have a marketing plan, you'll present it to the class. Your plan should highlight all of the reasons developers should choose your platform, over their own custom solution.
+Let's explore Meteor's package ecosystem. Search [https://atmospherejs.com/](https://atmospherejs.com/) for a package to add to the project you worked on in the pre-work. Add the package and it's features to your app.
 
 ---
+
 template: inverse
 
 # Client-Server Applications
@@ -99,6 +100,7 @@ shortcomings of this type of application have become obvious; here are a few:
 - UIs built over RESTful applications will need loading states everywhere!
 
 ---
+
 class: center, middle
 
 Meteor was created to address these and many other shortcomings in typical Client-Server application architecture.
@@ -119,7 +121,7 @@ template: inverse
 - Meteor was first introduced in 2011 under the name [Skybreak](https://blog.meteor.com/skybreak-is-now-meteor-e680d1dbaf84#.8iukm4iye).
 - The startup **The Meteor Development Group** (MDG) was incubated by Y Combinator.
 - In 2014, MDG acquired Y Combinator alum FathomDB.
-- In 2012 MDG received 11 million in funding from the investment firm *Andreessen Horowitz*.
+- In 2012 MDG received 11 million in funding from the investment firm _Andreessen Horowitz_.
 
 ---
 
@@ -136,12 +138,15 @@ class: center, middle
 Meteor in 2017
 
 ---
+
 template: inverse
 
 # Meteor's Parts
+
 What makes Meteor so Special?
 
 ---
+
 class: center, middle
 
 # Meteor's Parts
@@ -160,6 +165,7 @@ Because of Meteor's unique architecture, and in order to preserve its simple dev
 3rd party developers to contribute useful packages for use with Meteor, MDG built a proprietary packaging system.
 
 The community responded by building a package hub called:
+
 ### [Atmosphere](https://atmospherejs.com/)
 
 ---
@@ -173,7 +179,7 @@ use NPM.
 The result is that there are 2 ways of acquiring packages to use with your Meteor Project.
 
 - Meteor's packaging system is still very useful, and you'll use it to add and remove all of the **Standard Packages**
-that come built into Meteor.
+  that come built into Meteor.
 
 ---
 
@@ -184,9 +190,10 @@ This is no longer the case. MDG has created [Galaxy](https://www.meteor.com/host
 solution for Meteor apps.
 
 The Open Source community has also built deployment solutions. The 2 most popular are:
+
 - [MUP](https://github.com/zodern/meteor-up) Built by Arounoda Surispala, a hero in the Meteor OS community.
 - [meteor-now](https://www.npmjs.com/package/meteor-now) Built on the fantastic **[Now](https://zeit.co/now)** Node deployment tool.
-Install Now and deploy your example app to see just how easy it is...
+  Install Now and deploy your example app to see just how easy it is...
 
 ---
 
@@ -209,7 +216,7 @@ See if you can add the following features to the example project that is generat
 
 - A button that decrements the counter
 - A text input and button combination. When the user clicks the button, whatever text
-is in the input appears on screen.
+  is in the input appears on screen.
 
 Install the Meteor Dev Tools Chrome extension, and observe Meteor's DDP websocket
 transport protocol in action! Open the mongoDB shell using the `meteor mongo` command
@@ -227,6 +234,7 @@ Now that we know a little bit about What Meteor does, watch the following short 
 - [Evented Mind, Using Futures](https://www.eventedmind.com/items/nodejs-using-futures).
 
 ---
+
 template: inverse
 
 # Benefits of Meteor
@@ -244,6 +252,7 @@ template: inverse
 ... Anything else?
 
 ---
+
 template: inverse
 
 # Drawbacks of Meteor
@@ -262,6 +271,7 @@ template: inverse
 ... Anything else?
 
 ---
+
 template: inverse
 
 # Questions?

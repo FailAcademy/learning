@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Android Apps with React Native
-slides: ['_slides/week-08/04-android.md']
-lesson_date:  2018-08-23
+slides: ["_slides/week-08/04-android.md"]
+lesson_date: 2019-02-28
 ---
 
 ## Pre-work
@@ -14,7 +14,7 @@ Prior to class, please be sure to complete the following tasks.
 ### Step 1:
 
 Ensure you have JDK 8 installed on your computer (run `java -version` and ensure you are running 1.8.x).
-If JDK is not up to date, [install the latest version](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), accept the agreement, download JDK and then install latest version provided on this web page. You can also do this with Homebrew if you like.
+If JDK is not up to date, [install the latest version](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), accept the agreement, download JDK and then install latest version provided on this web page.
 
 You will also want to set your `$JAVA_HOME` environment variable in your `.bash_profile` too:
 

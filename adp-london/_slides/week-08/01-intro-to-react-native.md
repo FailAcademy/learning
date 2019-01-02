@@ -108,8 +108,8 @@ class: center, middle
 Recall that when we use React, we also need to include the `ReactDOM` module to render our components to the DOM:
 
 ```js
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
 class App extends Component {
   render() {
@@ -117,7 +117,7 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
 ---
@@ -127,8 +127,8 @@ ReactDOM.render(<App />, document.getElementById("root"));
 Our approach to building a React Native components is noticeably similar, but we import the `AppRegistry` module instead of `ReactDOM`:
 
 ```js
-import React, { Component } from "react";
-import { AppRegistry, View, Text } from "react-native";
+import React, { Component } from 'react';
+import { AppRegistry, View, Text } from 'react-native';
 
 class App extends Component {
   render() {
@@ -140,7 +140,7 @@ class App extends Component {
   }
 }
 
-AppRegistry.registerComponent("App", () => App);
+AppRegistry.registerComponent('App', () => App);
 ```
 
 ---
@@ -237,7 +237,7 @@ For now, we will work primarily in `index.js`, but will talk more in depth about
 But how does RN know what component to bind to the view when our app launches? In our `index.js` file we have:
 
 ```js
-AppRegistry.registerComponent("HelloWorld", () => HelloWorld);
+AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
 ```
 
 And if we look in `ios/HelloWorld/AppDelegate.m` we'll see:
@@ -300,8 +300,8 @@ _Before we proceed..._
 Unlike HTML elements, RN's built-in mobile UI components are modules we must selectively import from `react-native` wherever we want to use them in our own components:
 
 ```js
-import React, { Component } from "react";
-import { Image, Text, View } from "react-native";
+import React, { Component } from 'react';
+import { Image, Text, View } from 'react-native';
 
 // ...your component goes here
 ```
@@ -381,7 +381,7 @@ To highlight an element on press, use `<TouchableHighlight>` [(ref)](https://fac
 <TouchableHighlight
   onPress={() => {}}
   activeOpacity={75 / 100}
-  underlayColor={"rgb(210,210,210)"}
+  underlayColor={'rgb(210,210,210)'}
 >
   <Text>Press me!</Text>
 </TouchableHighlight>
@@ -488,8 +488,8 @@ The previous style objects occasionally offer an advantage over the `StyleSheet.
 **Example:**
 
 ```js
-import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { Component } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default class HelloWorld extends Component {
   render() {
@@ -504,8 +504,8 @@ export default class HelloWorld extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center"
-  }
+    alignItems: 'center',
+  },
 });
 ```
 
@@ -521,6 +521,7 @@ RN supports Flexbox for layouts, with some small differences:
 
 We also use CSS positioning in our layouts (e.g. `absolute`), but floats are not supported. The usual box model properties are available as well.
 
+**[Check out this Flexbox Cheat-Sheet](https://medium.com/wix-engineering/the-full-react-native-layout-cheat-sheet-a4147802405c)** <br/>
 **[You can read more on layouts here.](https://facebook.github.io/react-native/docs/flexbox.html)**
 
 ---
@@ -543,7 +544,6 @@ template: inverse
 
 React Native provides three different components for tranforming data into lists in your app UI:
 
-- [ListView](https://facebook.github.io/react-native/docs/listview.html) (older)
 - [FlatList](https://facebook.github.io/react-native/docs/flatlist.html) (simpler)
 - [SectionList](https://facebook.github.io/react-native/docs/sectionlist.html) (more features)
 
@@ -621,15 +621,9 @@ componentDidMount() {
     // if fetch is successful, read our JSON out of the response
     .then(response => response.json())
     .then(data => {
-      this.setState({ data });
+      this.setState({ data, isLoading:false });
     })
     .catch(error => console.log(`Error fetching JSON: ${error}`));
-}
-
-componentDidUpdate() {
-  if ( this.state.data && this.state.isLoading ) {
-    this.setState({ isLoading: false });
-  }
 }
 ```
 
@@ -678,8 +672,8 @@ The `<SectionList>` component is very similar to the `<FlatList>`, but the data 
 ```js
 <SectionList
   sections={[
-    { title: "ADP", data: ["Bob", "Alice"] },
-    { title: "WDP", data: ["Anne", "Mary", "Joe"] }
+    { title: 'ADP', data: ['Bob', 'Alice'] },
+    { title: 'WDP', data: ['Anne', 'Mary', 'Joe'] },
   ]}
   renderItem={({ item }) => <Text>{item}</Text>}
   renderSectionHeader={({ section }) => <Text>{section.title}</Text>}
@@ -755,17 +749,17 @@ You will import `js/App.js` into the root `index.js` of your project and pass yo
 In `index.js`:
 
 ```js
-import { AppRegistry } from "react-native";
-import App from "./js/App";
+import { AppRegistry } from 'react-native';
+import App from './js/App';
 
-AppRegistry.registerComponent("HelloWorld", () => App);
+AppRegistry.registerComponent('HelloWorld', () => App);
 ```
 
 In `js/App.js`:
 
 ```js
-import React, { Component } from "react";
-import { View, Text } from "react-native";
+import React, { Component } from 'react';
+import { View, Text } from 'react-native';
 
 export default class App extends Component {
   render() {
@@ -803,21 +797,21 @@ Each screen of your app will be a container/presentational component combo:
 
 ```bash
 |-- screens/
-|   |-- User
+|   |-- About
 |   |   |-- index.js
 |   |   |-- styles.js
-|   |   |-- User.js
-|   |   |-- UserContainer.js
+|   |   |-- About.js <-- (Stateless) Markup only
+|   |   |-- AboutContainer.js <-- (Stateful) Logic and state
 ```
 
 And in the `index.js` we follow this pattern:
 
 ```js
-import UserContainer from "./UserContainer";
-import User from "./User";
+import AboutContainer from './AboutContainer';
+import About from './About';
 
-export { User };
-export default UserContainer;
+export { About };
+export default AboutContainer;
 ```
 
 ---
@@ -837,7 +831,7 @@ We can use a similar directory structure for our reusable, stateless UI componen
 In `index.js`:
 
 ```js
-import UserAvatar from "./UserAvatar";
+import UserAvatar from './UserAvatar';
 
 export default UserAvatar;
 ```

@@ -1,13 +1,13 @@
 ---
 layout: lesson
 title: Introducing Meteor (with React)
-slides: ['_slides/week-05/01-intro-to-meteor.md']
-lesson_date: 2018-07-30
+slides: ["_slides/week-05/01-intro-to-meteor.md"]
+lesson_date: 2019-02-04
 ---
 
 ## Pre-work
 
-Before we begin working with Meteor this week, please read over the [Meteor Guide](https://guide.meteor.com/).
+Before we begin working with Meteor follow the [Creating your first app](https://www.meteor.com/tutorials/react/creating-an-app) tutorial. Please skip section 6. "Running on mobile".
 
 ---
 
@@ -41,11 +41,7 @@ Before we begin working with Meteor this week, please read over the [Meteor Guid
 
 ## Exercise 1
 
-**Design an application platform:**
-
-Split into two groups. Imagine you're planning an application platform for _other developers_ to use. Your platform should be geared towards developers who want to create Web Apps and should include all the necessary components. Feel free to **invent or imagine technology or solutions that don't currently exist**
-
-When you've come up with a platform design, then come up with a marketing plan for your platform. When you have a marketing plan, you'll present it to the class. Your plan should highlight all of the reasons developers should choose your platform, over their own custom solution.
+Let's explore Meteor's package ecosystem. Search [https://atmospherejs.com/](https://atmospherejs.com/) for a package to add to the project you worked on in the pre-work. Add the package and it's features to your app.
 
 ---
 

@@ -1,11 +1,13 @@
 ---
 layout: lesson
 title: React and Redux
-slides: ['_slides/week-04/02-react-and-redux.md']
-lesson_date: 2018-07-24
+slides: ["_slides/week-04/02-react-and-redux.md"]
+lesson_date: 2019-01-29
 ---
 
 ## Pre-Work
+
+- Finish mark up for the `shareItemForm` and `shareItemPreview`. From your `Share.js` file call these two components to render on the share page.
 
 - Read the [Redux docs on React](http://redux.js.org/docs/basics/UsageWithReact.html)
 

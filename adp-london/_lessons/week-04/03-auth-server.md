@@ -1,16 +1,16 @@
 ---
 layout: lesson
-title: Server-Side Authentication 
-slides: ['_slides/week-04/03-auth-server.md']
-lesson_date: 2018-07-25
+title: Server-Side Authentication
+slides: ["_slides/week-04/03-auth-server.md"]
+lesson_date: 2019-01-30
 ---
 
 ## Pre-Work
 
-Please look over the following:
+Take some time to check out the following:
 
 - [How does HTTPS Work?](https://blog.hartleybrody.com/https-certificates/)
-- [JSON Web Token Homepage (jwt.io)](https://jwt.io/)
+- [JWT FTW WTF?](https://www.youtube.com/watch?v=4wOfjF1_j_0)
 - [Apollo Authentication Docs](https://www.apollographql.com/docs/react/recipes/authentication.html)
 - [A fun video about Shared Key encryption](https://www.youtube.com/watch?v=r4HQ8Bp-pfw)
 
@@ -96,10 +96,10 @@ const apolloServer = new ApolloServer({
   context: ({ req }) => {
     return {
       req,
-      pgResource,
+      pgResource
     };
   },
-  schema,
+  schema
 });
 ```
 

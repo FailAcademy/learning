@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: React Native Animation
-slides: ['_slides/week-08/05-animation.md']
-lesson_date:  2018-08-24
+slides: ["_slides/week-08/05-animation.md"]
+lesson_date: 2019-03-01
 ---
 
 ## Pre-work

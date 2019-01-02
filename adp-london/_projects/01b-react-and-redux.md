@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 1 / Part 2 - Boomtown
-due: Monday, July 30th (beginning of class)
+due: Monday, February 4th (beginning of class)
 class: gh-check
 ---
 
@@ -11,67 +11,79 @@ Your project must connect to the server built in the first part of this project 
 
 ## Requirements
 
-To receive a “Pass” grade for this project, your submission will need to satisfy the following criteria:
+To receive a “Complete” for this project, your submission will need to satisfy the following criteria:
 
-### Common
-
-Your project must:
-
-- [ ] Be pushed to Github
-- [ ] Use [descriptive Git commits](http://chris.beams.io/posts/git-commit/)
-- [ ] Use small, single purpose Git commits
-- [ ] Contain `README.md` with project summary and setup
-- [ ] Contain a valid [`package.json`](http://browsenpm.org/package.json) file with all appropriate fields completed
-- [ ] Contain `.gitignore` file (ignoring `node_modules` and system files)
-- [ ] Run without errors with `npm start`
-- [ ] Have appropriate files compiled into a `public` directory (in the `server` directory)
-
-### Functional
+### Development Workflow Requirements
 
 Your project must:
 
-- [ ] Contain a login form allowing users to authenticate with email and password
+- [ ] Demonstrate effective organization of the project's root directory
+- [ ] Have a Git repository initialized in its root directory which is pushed to GitHub
+- [ ] Use a `.gitignore` to exclude unnecessary files/folders, and ensure that no unnecessary files/folders are erroneously committed to the repository
+- [ ] Contain an appropriate number of commits for the scope of the project
+- [ ] Use properly-formatted commit messages
+- [ ] Contain a `README.md` file describing the project (e.g. technologies used, personal learnings, installation instructions, etc.) and is appropriately formatted with Markdown
+- [ ] Remove extraneous code and comments from files
+- [ ] Contain a `package.json` with all applicable fields completed
+- [ ] Run app without errors
+- [ ] Resolve all errors and warnings that appear in developer tools console
+- [ ] Contain a build directory with code correctly compiled/transpiled and minified for production
+- [ ] Use Prettier to format code
+
+### JavaScript / Node.js Requirements
+
+Your project must:
+
+- [ ] Define variables where needed with `let` and `const`
+- [ ] Use functions to effectively organize code
+- [ ] Use consistent, descriptive variable and function names
+- [ ] Check for strict equality with comparison operators
+- [ ] Demonstrate effective use of control flow (loops, conditionals, etc.)
+- [ ] Use objects and arrays (and their built-in methods) to effectively work with data
+- [ ] Use default and named exports where appropriate
+- [ ] Use ES2015 modules with import and export keywords where appropriate
+- [ ] Use `require`/`module.exports` where appropriate
+- [ ] Demonstrate effective use of async control flow patterns
+
+### Server-side Requirements
+
+Your project must:
+
+- [ ] Write queries to efficiently retrieve data from a database
+- [ ] Build an API with GraphQL to expose appropriate data to client applications
+- [ ] Implement authentication and authorization to restrict user access to data
+
+### React Requirements
+
+Your project must:
+
+- [ ] Separate UI into components with correct level of abstraction
+- [ ] Use sub-directories to organize component files on a per component basis
+- [ ] Reflect the designer's vision for the application UI
+- [ ] Use functional stateless components (implement class components only when necessary)
+- [ ] Use `propTypes` to document all component props (with no validation errors)
+- [ ] Name components and component files/directories using Pascal case
+- [ ] Use component lifecycle methods only where required
+- [ ] Use React's Context API for state management where appropriate
+- [ ] Use Apollo Client's Query and Mutation components to manage data
+
+### Functional Requirements
+
+Your project must:
+
+- [ ] Use React Router to implement the full routing scheme for the app, and use routing to update the URL when the view changes
+- [ ] Contain an "items" page that displays a list of available items (with unavailable items hidden)
+- [ ] Contain a "profile" page for each user that displays profile data about each user with a list of their owned items
+- [ ] Contain a "share" page with a working form that allows users to add new items to the app
+- [ ] Contain a login form page where users authenticate with email and password
 - [ ] Implement form validation and provide user feedback resulting from invalid input data
-- [ ] Persist logged in state on page reload
+- [ ] Persist logged-in state on page reload
 - [ ] Contain a functioning logout button
-- [ ] Contain protected routes that are only visible to logged-in users
-- [ ] Allow logged-in users to share new items
-- [ ] Display shared items in a list view (with unavailable items hidden)
-- [ ] Display individual user data and owned items data in a profile view
-- [ ] Contain a working form for adding new items to the app
+- [ ] Contain protected routes that are only available to a logged-in user
 - [ ] Use Gravatar to display user avatars
-- [ ] Use routing to update the URL when the view changes
 - [ ] Refetch relevant GraphQL queries upon successful data mutation to keep the UI in sync
-- [ ] Use the container pattern using `react-adopt`
-
-### Development
-
-Your project must:
-
-- [ ] Contain components built using valid JSX
-- [ ] Use ES2015 `import` and `export`
-- [ ] Contain components created using `React.Component`, `const`, or `function` only
-- [ ] Use React Lifecycle methods if/where appropriate
-- [ ] Implement "presentational" and "container" patterns appropriately throughout the application
-- [ ] Implement React Router
-- [ ] Use [Apollo Client](https://github.com/apollographql/apollo-client) to query data from the GraphQL server
-- [ ] Use Apollo's [`Query`](https://www.apollographql.com/docs/react/essentials/queries.html) and [`Mutation`](https://www.apollographql.com/docs/react/essentials/mutations.html) components to manage application data
-- [ ] Implement Redux to manage the share items form UI state
-- [ ] Use [`react-redux`](https://github.com/reactjs/react-redux) `connect` to map state to props
-- [ ] Use [Material UI v1](https://material-ui.com/) as a UI component library
-- [ ] Reflect the designer's vision for the application's UI
-
-### Quality
-
-Your project must:
-
-- [ ] Contain an organized file tree (using the pattern established in the start project)
-- [ ] Use sub-directories to organize component files (on a per component basis)
-- [ ] Name component classes and their containing directories in Pascal case
-- [ ] Use `propType` validations for all components
-- [ ] Be free of `propType` validation errors in console
-- [ ] Be free of console warnings and errors
-- [ ] Be formatted with Prettier
+- [ ] Use Redux (with React Redux) to manage the share items form UI state
+- [ ] Use Material UI v1 as a UI component library, and select the correct components to realize the app's UI design
 
 ### Stretch Goals
 
@@ -81,4 +93,4 @@ Want to challenge yourself? Your project could also:
 
 ## Submission Instructions
 
-When you’re ready to submit your project, **please email a link to your GitHub repository containing your project** to mackenzie@redacademy.com.
+When you’re ready to submit your project, **please email a link to your GitHub repository containing your project** to sid@redacademy.com.

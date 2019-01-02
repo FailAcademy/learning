@@ -19,54 +19,63 @@
    {
       "title": "Day 1 Orientation",
       "allDay": true,
-      "start": "2018-07-03"
+      "start": "2019-01-07"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-07-12"
+      "start": "2019-01-11"
    },
    {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2018-07-20"
+    "start": "2019-01-17"
     },
     {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-07-27"
+      "start": "2019-02-01"
     },
-   {
-      "title": "Project Work Day",
-      "allDay": true,
-      "start": "2018-08-02"
-   },
-   {
-      "title": "Project Work Day",
-      "allDay": true,
-      "start": "2018-08-03"
-   },
   {
-     "title": "Interview Prep",
-     "allDay": true,
-     "start": "2018-08-13"
-  },
-   {
-      "title": "Self Directed Meteor Project Work",
-      "allDay": true,
-      "start": "2018-08-07",
-      "end": "2018-08-11"
-   },
+    "title": "Self Directed Meteor Project Work",
+    "allDay": true,
+    "start": "2019-02-07",
+    "end": "2019-02-16"
+ },
    {
       "title": "Portfolio Week",
       "allDay": true,
-      "start": "2018-08-27",
-      "end": "2018-09-01"
+      "start": "2019-03-04",
+      "end": "2019-03-09"
    },
    {
       "title": "Community Project Work",
       "allDay": true,
-      "start": "2018-09-04",
-      "end": "2018-09-21"
-   }
+      "start": "2019-03-11",
+      "end": "2019-03-29"
+   },
+    {
+      "title": "PPD Lesson",
+      "allDay": false,
+      "start": "2019-01-24T13:00:00+00:00",
+      "end": "2019-01-24T15:00:00+00:00"
+    },
+    {
+      "title": "PPD Lesson",
+      "allDay": false,
+      "start": "2019-02-07T13:00:00+00:00",
+      "end": "2019-02-07T15:00:00+00:00"
+    },
+    {
+      "title": "PPD Lesson",
+      "allDay": false,
+      "start": "2019-02-21T13:00:00+00:00",
+      "end": "2019-02-21T15:00:00+00:00"
+    },
+    {
+      "title": "PPD Lesson",
+      "allDay": false,
+      "start": "2019-03-07T13:00:00+00:00",
+      "end": "2019-03-07T15:00:00+00:00"
+    }
 ]
