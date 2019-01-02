@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Introducing React Native
-slides: ['_slides/week-08/01-intro-to-react-native.md']
-lesson_date: 2017-11-20
+slides: ["_slides/week-08/01-intro-to-react-native.md"]
+lesson_date: 2019-02-25
 ---
 
 ## Pre-work
@@ -10,6 +10,10 @@ lesson_date: 2017-11-20
 Prior to class, please install Xcode on your Mac:
 
 - [Xcode](https://developer.apple.com/xcode/)
+  - After installation, start Xcode and accept the terms and conditions agreement
+- Run "xcode-select --install" in your terminal
+  - Start your Xcode again and accept any terms and conditions required to get to the welcome screen of your Xcode.
+- Install [HomeBrew](https://brew.sh/)
 
 ---
 
@@ -67,30 +71,30 @@ Start with this code in your RN app:
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5FCFF',
+    backgroundColor: "#F5FCFF"
   },
   box: {
-    width: 50, 
-    height: 50,
+    width: 50,
+    height: 50
   },
   box1: {
-    backgroundColor: 'powderblue',
+    backgroundColor: "powderblue"
   },
   box2: {
-    backgroundColor: 'skyblue',
+    backgroundColor: "skyblue"
   },
   box3: {
-    backgroundColor: 'steelblue',
+    backgroundColor: "steelblue"
   },
   box4: {
-    backgroundColor: 'midnightblue',
-  },
+    backgroundColor: "midnightblue"
+  }
 });
 ```
 
 Your app should look like the first screenshot below. After adjusting the styles, your app should look like the second screenshot.
 
-**Hint:** Look into React Native's `Dimensions` module to complete this exercise. 
+**Hint:** Look into React Native's `Dimensions` module to complete this exercise.
 
 <p style="display: flex; justify-content: space-between;" }>
   <img src="/public/exercises/rn1-e2-start.png" alt="Exercise start screen cap" style="width: 48%; height: 48%; border: 1px solid #e2e2e2;"/>
@@ -123,13 +127,15 @@ In today's lab, we're going to start working on the R10 project.
 
 Begin by creating a new React Native app name `R10`. Working from the project's design comps, plan out the directory structure for your app.
 
-Your goal for today is to build out and style the `About` scene for your app. Don't worry about adding the toggling animation on the Code of Conduct points yet (we'll work on that at the end of the week). For now, just display all of the Code of Conduct content statically.
+You will need to **[install Apollo Client](https://www.apollographql.com/docs/react/essentials/get-started.html)** to access the GraphQL API data in your app (remember to use `yarn add` instead of `npm install`).
 
-Be sure to **add a loading state** to your sceen while content is being fetched...in other words, display an `ActivityIndicator` component in the scene until the request to Firebase for the Code of Conduct points is complete.
+Your goal for today is to build out and style the `About` screen for your app. Don't worry about adding the toggling animation on the Code of Conduct points yet (we'll work on that at the end of the week). For now, just display all of the Code of Conduct content statically.
 
-In preparation for tomorrow's lesson on navigation, you may also want to rough out container components for the app's other scenes (i.e. `Schedule`, `Session`, `Speaker`, and `Faves`).
+Be sure to **add a loading state** to your screen while content is being fetched... in other words, display an `ActivityIndicator` component in the screen until the request to the GraphQL API for the Code of Conduct points is complete.
 
-Be sure to set-up all of the colors for you app in an object exported from `config/styles.js` too.
+In preparation for tomorrow's lesson on navigation, you may also want to rough out container components for the app's other screens (i.e. `Schedule`, `Session`, `Speaker`, and `Faves`).
+
+Be sure to set-up all of the colors for your app in an object exported from `config/styles.js` too.
 
 ---
 
@@ -168,7 +174,9 @@ Miscellaneous RN resources:
 
 Resources for adding custom app splash screens and icons:
 
-- [iOS Human Interface Guidelines - Launch Screen](https://developer.apple.com/ios/human-interface-guidelines/graphics/launch-screen/)
 - [iOS Human Interface Guidelines - App Icon](https://developer.apple.com/ios/human-interface-guidelines/graphics/app-icon/)
-- [How to Add a Splash Screen to a React Native App (iOS and Android)](https://medium.com/handlebar-labs/how-to-add-a-splash-screen-to-a-react-native-app-ios-and-android-30a3cec835ae)
+- [iOS Human Interface Guidelines - Launch Screen](https://developer.apple.com/ios/human-interface-guidelines/graphics/launch-screen/)
 - [MapAppIcon](https://makeappicon.com/)
+- [iPhone X Launch Image Sizes (+ other sizes)](http://www.steventso.com/posts/iphone-x-app-icon-size-other-sizes/)
+- [How to Add a Splash Screen to a React Native App (iOS and Android)](https://medium.com/handlebar-labs/how-to-add-a-splash-screen-to-a-react-native-app-ios-and-android-30a3cec835ae)
+- [Splash Screen Pro](https://splashscreen.pro/) (a paid resource, but worth it!)

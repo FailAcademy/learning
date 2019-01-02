@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 5 - Community Project
-due: Friday, December 22nd (beginning of class)
+due: Friday, March 29th (beginning of class)
 ---
 
 For your final project, you will work in groups to build a mobile app for a RED Community Partner Project that has previously been through a UX/UI design process.
@@ -10,8 +10,8 @@ You will have to synthesize everything you have learned throughout the semester 
 
 Your course instructors will be available in-class while you work on your project to provide assistance where required.
 
-It is important that you **attend class everyday** during the final project lab time.
+It is important that you **attend class every day** during the final project lab time.
 
-All Community Projects are **due on December 22nd**. You will showcase your completed work with your team in a project demo to your community partner and instructors on that day.
+All Community Projects are **due on March 29th**. You will showcase your completed work with your team in a project demo to your community partner and instructors on that day.
 
 More details will be supplied regarding your assigned community partners and teammates at the end of Week 7.

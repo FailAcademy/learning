@@ -24,7 +24,7 @@ layout: false
 - Review TCP / UDP protocols
 - Model JavaScript's Event Loop
 - Build a simple TCP / UDP messaging server
-- Use Node's built in modules to read from you computer's filesystem
+- Use Node's built-in modules to read from your computer's filesystem
 
 
 
@@ -80,9 +80,9 @@ template: inverse
 
 **TCP & UDP** are the basic protocols of the internet. (nearly ) **All network communication on the internet is carried out by these 2 protocols.**
 
-### Take a minute to [read this link](http://www.diffen.com/difference/TCP_vs_UDP), for a good description of the differences between TCP & UPD, and how they are used.
+### Take a minute to [read this link](http://www.diffen.com/difference/TCP_vs_UDP), for a good description of the differences between TCP & UDP, and how they are used.
 
-When you're finished, create a folder called `TCP_Service`. Inside the folder run the command `npm init`.
+When you're finished, create a folder called `TCP_Service`. Inside the folder run the command `npm init -y`.
 
 ---
 
@@ -118,7 +118,7 @@ const server = net.createServer();
 
 server.on('connection', handleConnection);
 
-server.listen(9000, function() {
+server.listen(9000, () => {
   console.log('server listening to %j', server.address());
 });
 
@@ -141,8 +141,8 @@ we'll need to add some code to the `handleConnection` callback.
 
 ```js
 function handleConnection(conn) {
-  const remoteAddress = `${conn.remoteAddress}:${conn.remotePort}`;
-  console.log(`new client connection from ${remoteAddress}`);
+  const remoteAddressAndPort = `${conn.remoteAddress}:${conn.remotePort}`;
+  console.log(`new client connection from ${remoteAddressAndPort}`);
 }
 ```
 
@@ -156,7 +156,7 @@ function handleConnection(conn) {
 
 # Simple Netcat Client
 
-**We'll use Netcat to test our nre TCP/UDP server.**
+**We'll use Netcat to test our new TCP/UDP server.**
 
 Start your server new TCP Server, and from your command line in a separate terminal window, run:
 ```bash
@@ -286,7 +286,7 @@ Lets try to understand what our new Node process (uppercasing service) is doing 
 
 ### 🔥 Fire up your load testing suite
 
-Open 3 separate terminals & run each of the following commands in it's own terminal window.
+Open 3 separate terminals & run each of the following commands in its own terminal window.
 
 - **Start your node app using :** `pm2 start index.js` <br/> (from your project directory)
 - **Start the pm2 monitor :** `pm2 monit`

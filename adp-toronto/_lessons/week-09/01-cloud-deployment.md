@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Cloud Deployment
-lesson_date: 2017-12-01
+lesson_date: 2019-03-06
 ---
 
 ## Pre-work
@@ -49,7 +49,7 @@ To complete todays exercises we'll need to create accounts on the Cloud Hosting 
 **Configure your application's production environment settings**
 
 When deploying, we'll need to make sure we've provided the correct configuration and overrides so our
-application will run in it's new environment.
+application will run in its new environment.
 
 - Prepare your first project for deployment by setting all of the necessary production environment variables.
 
@@ -74,7 +74,7 @@ What you'll need to do:
 - Sign-up with Heroku
 - Create a new project using the Heroku web interface
 - Add the Postgres Heroku add-on
-- Set the correct environment variables in the Heroku Dashboard 
+- Set the correct environment variables in the Heroku Dashboard
 - Create a copy of your local Postgres database and upload it to Heroku
 - Configure git push deploys from your production build directory
 
@@ -84,9 +84,9 @@ What you'll need to do:
 
 If you deployed your Node/Postgres application, see if you can use Heroku to deploy your Meteor application!
 
-**Hints:** 
+**Hints:**
 
-- You'll need to use the MLab Heroku add-on, it costs 5$
+- You'll need to use the MLab Heroku add-on, it costs 5\$
 - You'll also need to configure [this Heroku Buildpack](https://github.com/AdmitHub/meteor-buildpack-horse)
 
 ---
@@ -100,8 +100,7 @@ Heroku:
 Digital Ocean has a number of excellent resources:
 
 - [Intro to Digital Ocean](https://www.digitalocean.com/products/)
-- [Digital Ocean Community](https://www.digitalocean.com/community/)
- -[Digital Ocean Tutorials](https://www.digitalocean.com/community/tutorials)
+- [Digital Ocean Community](https://www.digitalocean.com/community/) -[Digital Ocean Tutorials](https://www.digitalocean.com/community/tutorials)
 
 Amazon Web Services (AWS):
 

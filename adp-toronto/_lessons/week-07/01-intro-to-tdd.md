@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Intro to TDD
-slides: ['_slides/week-07/01-intro-to-tdd.md']
-lesson_date: 2017-11-14
+slides: ["_slides/week-07/01-intro-to-tdd.md"]
+lesson_date: 2019-02-19
 ---
 
 ## Pre-Work
@@ -10,7 +10,7 @@ lesson_date: 2017-11-14
 Prior to class, please read:
 
 - [How to Impress in a Junior Developer Job Interview
-](https://www.codementor.io/learn-programming/junior-developer-interview-tips-to-success)
+  ](https://www.codementor.io/learn-programming/junior-developer-interview-tips-to-success)
 - [I pity the fool who doesn't write unit tests](https://blog.codinghorror.com/i-pity-the-fool-who-doesnt-write-unit-tests/) and be prepared to explain why writing unit tests is an essential part of application development.
 - [5 Whiteboard Coding Tips for Interviews](http://product.hubspot.com/blog/5-whiteboard-coding-tips-for-interviews)
 
@@ -19,7 +19,7 @@ Prior to class, please read:
 ## Learning Objectives
 
 - Identify the general structure and goals of coding interviews.
-- Identify when code is *complete* and *working*.
+- Identify when code is _complete_ and _working_.
 - Take an interview question and break it into test scenarios.
 - Identify common edge-cases associated with algorithms.
 - Convert scenarios into unit tests using [Jest](https://github.com/facebook/jest).

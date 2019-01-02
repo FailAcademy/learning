@@ -1,13 +1,13 @@
 ---
 layout: lesson
 title: React Native Animation
-slides: ['_slides/week-08/05-animation.md']
-lesson_date: 2017-11-24
+slides: ["_slides/week-08/05-animation.md"]
+lesson_date: 2019-03-01
 ---
 
 ## Pre-work
 
-*There is no pre-work for this lesson.*
+_There is no pre-work for this lesson._
 
 ---
 
@@ -29,7 +29,7 @@ lesson_date: 2017-11-24
 
 ## Exercise 1
 
-Using what you just learned about `LayoutAnimation`, add animation to your About scene to toggle of the visibility of each Code of Conduct item when they are tapped.
+Using what you just learned about `LayoutAnimation`, add animation to your About screen to toggle of the visibility of each Code of Conduct item when they are tapped.
 
 Each Code of Conduct item should be closed by default.
 

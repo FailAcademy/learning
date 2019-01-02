@@ -1,13 +1,13 @@
 ---
 layout: lesson
 title: Pub-Sub and Security in Meteor
-slides: ['_slides/week-05/03-pubsub-security.md']
-lesson_date: 2017-11-01
+slides: ["_slides/week-05/03-pubsub-security.md"]
+lesson_date: 2019-02-06
 ---
 
 ## Pre-Work
 
-*There is no pre-work for this lesson.*
+_There is no pre-work for this lesson._
 
 ---
 

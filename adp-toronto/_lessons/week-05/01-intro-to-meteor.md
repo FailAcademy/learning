@@ -1,13 +1,13 @@
 ---
 layout: lesson
 title: Introducing Meteor (with React)
-slides: ['_slides/week-05/01-intro-to-meteor.md']
-lesson_date: 2017-10-30
+slides: ["_slides/week-05/01-intro-to-meteor.md"]
+lesson_date: 2019-02-04
 ---
 
 ## Pre-work
 
-Before we begin working with Meteor this week, please read over the [Meteor Guide](https://guide.meteor.com/).
+Before we begin working with Meteor follow the [Creating your first app](https://www.meteor.com/tutorials/react/creating-an-app) tutorial. Please skip section 6. "Running on mobile".
 
 ---
 
@@ -41,12 +41,7 @@ Before we begin working with Meteor this week, please read over the [Meteor Guid
 
 ## Exercise 1
 
-**Design an application platform:**
-
-
-Split into two groups. Imagine you're planning an application platform for *other developers* to use. Your platform should be geared towards developers who want to create Web Apps and should include all the necessary components. Feel free to **invent or imagine technology or solutions that don't currently exist**
-
-When you've come up with a platform design, then come up with a marketing plan for your platform. When you have a marketing plan, you'll present it to the class. Your plan should highlight all of the reasons developers should choose your platform, over their own custom solution.
+Let's explore Meteor's package ecosystem. Search [https://atmospherejs.com/](https://atmospherejs.com/) for a package to add to the project you worked on in the pre-work. Add the package and it's features to your app.
 
 ---
 
@@ -58,7 +53,7 @@ See if you can add the following features to the example project that is generat
 
 - A button that decrements the counter
 - A text input and button combination. When the user clicks the button, whatever text
-is in the input appears on screen.
+  is in the input appears on screen.
 
 Install the Meteor Dev Tools Chrome extension, and observe Meteor's DDP websocket
 transport protocol in action! Open the mongoDB shell using the `meteor mongo` command
@@ -77,33 +72,36 @@ Now that we know a little bit about What Meteor does, watch the following short 
 
 ## Lab Activity
 
-In today's lab, we'll start refactoring our React To-Do app from the the first week into a Meteor app. Please complete the following tasks before tomorrow's class.
+In today's lab, we'll start refactoring our React To-Do app from the first week into a Meteor app. Please complete the following tasks before tomorrow's class.
 
 ### Step 1: Installation
 
-1. Create new Meteor app by running `meteor create meteor-react-todo`.
-2. Also install React: `meteor npm install react react-dom prop-types --save`.
+1.  Create new Meteor app by running `meteor create meteor-react-todo`.
+2.  Change directory: `cd meteor-react-todo`.
+3.  Install React: `meteor npm install react react-dom prop-types --save`.
 
 ### Step 2: Copy-Pasta
 
-1. Move your existing `index.js` code to `client/main.js`.
-2. Move your existing `index.css` to `client/main.css`.
-3. Refactor the content in `client/main.html` to only contain the single `<div>` you'll use to render your React app.
-4. Create an `imports/ui/containers/App` directory in your Meteor app and move `App.js` and `App.css` there. Considering following component naming/organization best practices and rename `App.js` to `index.js` and `App.css` to `styles.css` too.
-5. Update all broken file import paths/names everywhere!
+1.  Copy your existing `index.js` code to `client/main.js`.
+2.  Copy your existing `index.css` to `client/main.css`.
+3.  Copy `registerServiceWorker.js` to the same destination directory (if you have this in your React To-Do app).
+4.  Refactor the content in `client/main.html` to only contain the single `<div>` you'll use to render your React app.
+5.  Create an `imports/ui/containers/App` directory in your Meteor app and move `App.js` and `App.css` there. Considering following component naming/organization best practices and rename `App.js` to `index.js` and `App.css` to `styles.css` too.
+6.  Import `./main.html` into 'client/main.js`.
+7.  Update all broken file import paths/names everywhere!
 
 ### Step 3: Meteor/React Initialization
 
-1. Add `import { Meteor } from 'meteor/meteor';` to `client/main.js`
-2. Wrap `ReactDOM.render` in `Meteor.startup( /* ... */ );` (because we don't want to try to render anything to the DOM before Meteor is ready!)
-3. Boom! Everything should be working again in your app.
+1.  Add `import { Meteor } from 'meteor/meteor';` to `client/main.js`
+2.  Wrap `ReactDOM.render` in `Meteor.startup( /* ... */ );` (because we don't want to try to render anything to the DOM before Meteor is ready!)
+3.  Boom! Everything should be working again in your app.
 
 ### Step 4: Clean-up
 
 Now would be a good time to consider refactoring some of the 'presentational' components out of the container `App` component...
 
-1. Move your `ToDoCount`, `ToDoInput`, `ClearButton`, and `ToDoItem` components into `imports/ui/components/<COMPONENT_NAME>` directories. 
-2. Now import these components into your main `App` component file instead.
+1.  Move your `ToDoCount`, `ToDoInput`, `ClearButton`, and `ToDoItem` components into `imports/ui/components/<COMPONENT_NAME>` directories.
+2.  Now import these components into your main `App` component file instead.
 
 ---
 

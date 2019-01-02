@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Collections and Accounts
-slides: ['_slides/week-05/02-collections-accounts.md']
-lesson_date: 2017-10-31
+slides: ["_slides/week-05/02-collections-accounts.md"]
+lesson_date: 2019-02-05
 ---
 
 ## Pre-Work
@@ -14,7 +14,7 @@ brew update
 brew install mongodb
 ```
 
-Also consider installing [RoboMongo](https://robomongo.org/) for a nice GUI for navigating your Mongo databases.
+Also consider installing [Mongo Compass](https://www.mongodb.com/download-center#compass) [RoboMongo](https://robomongo.org/) for a nice GUI for navigating your Mongo databases.
 
 ---
 
@@ -78,15 +78,15 @@ The `removeCompleted()` method will be the trickiest...how will you check to see
 
 ## Exercise 4
 
-Import the `<AccountsUIWrapper />` component into `App.js`. 
+Import the `<AccountsUIWrapper />` component into `App.js`.
 
-Add this component to the top of your `App` `render` method. Wrap it in a `<div>` with a class of `login-wrapper`. 
+Add this component to the top of your `App` `render` method. Wrap it in a `<div>` with a class of `login-wrapper`.
 
 Now wrap your existing to-do list `<div>` and your new accounts component in a new parent `<div>` will a class of `app-wrapper` (we'll need this for the CSS...).
 
 Now **[add this CSS](https://gist.github.com/mandiwise/29e4be3fbb737b883042ce7c92a87176)** to your `<AccountsUIWrapper />` component.
 
---- 
+---
 
 ## Exercise 5
 

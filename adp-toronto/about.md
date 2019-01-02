@@ -12,8 +12,3 @@ You’ll also learn how to interpret functional specifications and UX documentat
 ## Course Structure
 
 The Application Developer Professional Program picks up where the Web Developer program ends off. This program explores full-stack web development based on Node.js and React. Students in this program will build complex web applications requiring databases and user account management, as well as contemporary mobile application development using React Native and progressive web apps.
-
-## Your Instructors
-
-[Carlos Reyes](carlos@redacademy.com)<br/>
-[Ali Maqsood](alimaqsood@redacademy.com)
