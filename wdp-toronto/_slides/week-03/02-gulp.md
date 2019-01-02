@@ -20,11 +20,21 @@ layout: false
 
 # Agenda
 
-1. Introduce Node.js and npm
-1. Introduce and install Gulp
-1. Set up Gulp in your project
-1. Create named tasks
-1. Add ESLint to our project
+1.  Introduce Node.js and npm
+2.  Introduce and install Gulp
+3.  Set up Gulp in your project
+4.  Create named tasks
+5.  Add ESLint to our project
+
+???
+
+GET EVERYONE TO MAKE A COMMIT BEFORE THE LESSON!
+
+* Frame the lesson before you start! Why do we need Gulp, what will we use it for?
+* Writing Sass, minifying code, check for style errors in our code, and magically reloading our browser!
+* To use Gulp we, will need to install, because we need to be able to execute JS on our computers, not just in our browsers
+* Emphasize that the whole point of the day is to write JS that won't actually run in the browser in our Instanews project...
+* Gulp will be our little JS robot for doing on tasks on our website (while we develop) that we don't want to waste time doing on our (or that aren't feasible for us to do on our own)
 
 ---
 
@@ -46,9 +56,9 @@ Node is a cross-platform JavaScript runtime environment built on Chrome's V8 Jav
 
 Some vocabulary words:
 
-- **Runtime**: Think of this as the code that runs your JS code in a programming environment.
-- **JavaScript engine**: The thing that compiles and executes JavaScript source code, handles memory allocation for objects, takes care of garbage collection, etc.
-- **V8**: This is Google's open-source JS engine that is used in Google Chrome (written in C++).
+* **Runtime**: Think of this as the code that runs your JS code in a programming environment.
+* **JavaScript engine**: The thing that compiles and executes JavaScript source code, handles memory allocation for objects, takes care of garbage collection, etc.
+* **V8**: This is Google's open-source JS engine that is used in Google Chrome (written in C++).
 
 ---
 
@@ -92,11 +102,11 @@ This command will help us generate a `package.json` file for our project.
 
 #### Code along:
 
-- Emphsize that you need to be located within at the root of the Project 2 folder.
+* Emphsize that you need to be located within at the root of the Project 2 folder.
 
 If you don't have a P2 demo folder set up:
 
-- Get the class to help you make a new folder, index.html, and scripts.js. (command line review)
+* Get the class to help you make a new folder, index.html, and scripts.js. (command line review)
 
 ---
 
@@ -177,23 +187,33 @@ template: inverse
 
 # Anatomy of a Gulpfile
 
-1. Require the Gulp module
-2. Define a **Gulp Task**
-3. Write some code to run when that task is called
+1.  Require the Gulp module
+2.  Define a **Gulp Task**
+3.  Write some code to run when that task is called
 
 ```js
 // Require Gulp first!
 
-var gulp = require("gulp");
+const gulp = require("gulp");
 
 // This is a very basic Gulp task,
 // with a name and some code to run
 // when this task is called:
 
-gulp.task("default", function() {
+gulp.task("default", function(done) {
   console.log("Hello world");
+  done();
 });
 ```
+
+???
+
+**Why done?**
+
+* With Gulp 4, we need to tell Gulp when our task is done running
+* There are a number of way we can do this...we will see how to do this two way today (returning a Gulp stream from the callback funciton, or by explicitly calling the done function based into the callback as a parameter)
+
+See also: https://stackoverflow.com/a/36899424
 
 ---
 
@@ -214,10 +234,10 @@ We can add Gulp plugins to our project using npm...
 `npm install --save-dev gulp-terser gulp-rename`
 
 ```js
-var gulp = require("gulp"); // Load Gulp!
+const gulp = require("gulp"); // Load Gulp!
 
 // Now that we've installed the terser package we can require it:
-var terser = require("gulp-terser"),
+const terser = require("gulp-terser"),
   rename = require("gulp-rename");
 
 gulp.task("default", function() {
@@ -233,11 +253,19 @@ In this simple example we can see the magic of Gulp at work: `gulp.task`, `gulp.
 
 ???
 
-#### Syntax Note
+**Syntax Note:**
 
-When requiring node modules at the top, that the syntax can be comma seperated variable declaration (as seen in example) or each module as it's own statement (var statement with semi colon after each).
+When requiring node modules at the top, that the syntax can be comma seperated variable declaration (as seen in example) or each module as it's own statement (const statement with semi colon after each).
 
-Diff plugin docs write it different and students tend to get confused.
+Different plugin docs write it different and students tend to get confused.
+
+Also talk about `pipe`:
+
+* Streams are collections of data
+* "Pipe" just means to take the output of a command and use it as the input for the next command
+* Pipes are a general computing concept you will encounter many places, e.g.: `curl -s https://baconipsum.com/api/?type=all-meat | say`
+* The pipe command takes the output of one command and uses it as the input for another
+* The `pipe()` method is something we get from Node (check the docs!)
 
 ---
 
@@ -266,7 +294,7 @@ Why? Because you may not want to run all of the tasks you define at the same tim
 # Creating a Named Task
 
 ```js
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     terser = require('gulp-terser'),
     rename = require('gulp-rename');
 
@@ -277,15 +305,15 @@ gulp.task('scripts', function(){
     .pipe(gulp.dest('./build/js'))
 });
 
-gulp.task('say_hello', function(){
+gulp.task('say_hello', function(done) {
 	console.log('Hello!');
+  done();
 });
 
-// Modify our default task method by passing an array of task names
 gulp.task('default', gulp.parallel('say_hello', 'scripts');
 ```
 
-Running `gulp` will execute both tasks in sequence. To run an individual task, use the task name: e.g. `gulp scripts`.
+Running `gulp` will execute both tasks together. To run an individual task, use the task name: e.g. `gulp scripts`.
 
 ???
 
@@ -299,7 +327,7 @@ See documentation for further details.
 
 # Exercise 1
 
-Create a new folder in your project called `build` to store the uglified version of your files, then add Gulp to your project and implement the `gulp-terser` task as demonstrated.
+Add Gulp to your project and implement the `gulp-terser` task as demonstrated.
 
 Run the task and see what happens...
 
@@ -330,8 +358,8 @@ Wouldn't it be nice if we could automatically run Gulp tasks when files in your 
 We can create a `watch` task and call `gulp.watch()` within it to have Gulp watch certain files and automatically run tasks when those files change. For example:
 
 ```js
-gulp.task('watch', function() {
-   gulp.watch('js/*.js', gulp.series('scripts');
+gulp.task("watch", function() {
+  gulp.watch("js/*.js", gulp.series("scripts"));
 });
 ```
 
@@ -363,6 +391,24 @@ Learn how to do that here: **[www.browsersync.io/docs/gulp/](http://www.browsers
 
 **Hint:** We're already watching our JS source files, uglifying them, and moving the newly minified files into the `build` directory. Think about what file will we want to watch for changes on, and subsequently reload the browser afterward.
 
+???
+
+**Talk about localhost:**
+
+* A host is a computer on the network
+* Localhost is 127.0.0.1 at the IP address
+* Means “this computer itself”
+* Browsersync will start up a little web server for us, so we're no longer executing code right off our file system in our browser, we're loading our index.html file from a web server that's running in our project directory
+* A server is just program that accepts connections from other programs on the network
+* It sits around waiting for a client to connect to it
+
+* Most of the web addresses you see in the wild don't have a port number on them because the client usually figures out the port number from the URI scheme
+* HTTP URIs imply a port number of 80
+* HTTPS URIs imply a port number of 443
+* If you’re not using the default port, you need to specify
+* IP addresses distinguish computers; port numbers distinguish programs on those computers
+* For historical reasons, operating systems only allow the administrator (or root) account to listen on ports below 1024 (which is why we use port 3000, etc.)
+
 ---
 
 template: inverse
@@ -391,7 +437,9 @@ Once we set our styleguide/rules, ESLint will help us find potential issues in o
 
 ???
 
-_Important_ Examples ahead are using the `gulp-eslint` node module NOT `eslint` node module.
+**Important!**
+
+Examples ahead are using the `gulp-eslint` node module NOT `eslint` node module.
 
 Gulp will not work if they install the incorrect node module.
 
@@ -438,9 +486,9 @@ Take a look at the **[default ESLint config rules](http://eslint.org/docs/rules/
 
 How rules work in ESLint:
 
-- `off` or `0`: turn the rule off
-- `warn` or `1`: turn the rule on as a warning
-- `error` or `2`: turn the rule on as an error
+* `off` or `0`: turn the rule off
+* `warn` or `1`: turn the rule on as a warning
+* `error` or `2`: turn the rule on as an error
 
 _In other words:_
 
@@ -498,8 +546,8 @@ Add ESLint as a part of your build process with Gulp. Begin by installing [`gulp
 
 We have already created our `.eslintrc` files as part of the lesson, so now it's up to you to:
 
-1. Create a named `lint` task in your `gulpfile.js`
-2. Add the `lint` task as a dependency for the `scripts` task
+1.  Create a named `lint` task in your `gulpfile.js`
+2.  Add the `lint` task as a dependency for the `scripts` task
 
 ???
 
@@ -513,11 +561,11 @@ Note, lint errors means the task is stopped and will not make it to the minified
 
 # What We've Learned
 
-1. What Gulp is for and how we install it
-2. How to set up Gulp in our project
-3. How to create named tasks
-4. How to set-up ESLint in our project
-5. Why automation is important
+1.  What Gulp is for and how we install it
+2.  How to set up Gulp in our project
+3.  How to create named tasks
+4.  How to set-up ESLint in our project
+5.  Why automation is important
 
 ---
 

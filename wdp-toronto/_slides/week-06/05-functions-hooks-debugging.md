@@ -90,11 +90,11 @@ A page life cycle is nothing more than a combination of the **events** that take
 
 When a page is loaded on a WP site, many things happen during the page lifecycle:
 
-- Plugins are loaded
-- The active theme is initialized
-- WP figures out if a user is authenticated
-- Data is queried from the database and rendered
-- _And so on..._
+* Plugins are loaded
+* The active theme is initialized
+* WP figures out if a user is authenticated
+* Data is queried from the database and rendered
+* _And so on..._
 
 ---
 
@@ -139,7 +139,7 @@ They are primarily responsible for intercepting, managing, and returning data be
 class: center, middle
 
 .large[
-**Huh?**
+ **Huh?**
 ]
 
 ---
@@ -148,13 +148,13 @@ class: center, middle
 
 **Filters:**
 
-- Change something you're pulling out of WP (e.g. the content)
-- Change something you're putting in the WP database
+* Change something you're pulling out of WP (e.g. the content)
+* Change something you're putting in the WP database
 
 **Actions:**
 
-- Tying into existing WP processes, like saving a post or change a post status
-- Add an action to your plugin/theme to allow other devs to manipulate it without hacking
+* Tying into existing WP processes, like saving a post or change a post status
+* Add an action to your plugin/theme to allow other devs to manipulate it without hacking
 
 ---
 
@@ -212,7 +212,7 @@ The **priority number** is an optional integer value on a scale of `1` to `999` 
 
 Time to learn more about WP actions and filters!
 
-You'll be assigned one of the following hooks to investigate... see the [lesson page](/lesson/wordpress-functions-hooks-debugging/) for more details.
+You will be assigned one of the following hooks to investigate... see the [lesson page](/lesson/05-functions-hooks-debugging/) for more details.
 
 Specifically, figure out if your assigned hooks is an action or filter. What does it do? When does it fire or what does it modify? What is it good for?
 
@@ -244,9 +244,9 @@ The `functions.php` file is like a little WordPress plugin inside your theme (an
 
 # What's It For?
 
-- You can use it to call WordPress functions
-- You can define your own functions in there too
-- You can include other PHP files using `include()` or `require()` in it
+* You can use it to call WordPress functions
+* You can define your own functions in there too
+* You can include other PHP files using `include()` or `require()` in it
 
 ---
 
@@ -368,7 +368,7 @@ template: inverse
 
 class: center, middle
 
-### What's functionality plugin?
+### What's a functionality plugin?
 
 A functionality plugin is just a plugin like any other plugin, but the main difference is that it's **not publicly distributed** and it's meant to be one custom plugin to **encompass all of the custom functionality** for your site.
 
@@ -384,11 +384,11 @@ Why do we care about this?
 
 # What Goes In It?
 
-- Code that creates your custom post types
-- Code that creates your custom taxonomies
-- Code that creates your custom blocks and meta boxes
-- Code that adds/adjusts user roles
-- ...anything that should continue to exist on your site regardless of what theme is activated
+* Code that creates your custom post types
+* Code that creates your custom taxonomies
+* Code that creates your custom blocks and meta boxes
+* Code that adds/adjusts user roles
+* ...anything that should continue to exist on your site regardless of what theme is activated
 
 _We'll create our own functionality plugin for our projects next class we talk about custom post types, etc..._
 
@@ -425,12 +425,11 @@ Many schools of thoughts...
 
 ---
 
-# My Approach
+# Our Approach
 
 1.  Initialize a Git repo at the root of your `wp-content` folder
-2.  **Ignore everything**...then **selectively unignore** what you want in your repository (e.g. your specific custom theme, a functionality plugin, other bespoke plugins)
-3.  ...?
-4.  Profit!
+2.  **Ignore everything**...then **selectively unignore** what you want in your repository (e.g. your specific custom theme, a functionality plugin, other plugins)
+3.  Profit!
 
 ---
 
@@ -511,11 +510,11 @@ Initialize a Git repository in your project's `wp-content` directory in MAMP, ad
 
 # What We've Learned
 
-- What hooks are and the two different types in WP
-- How to (sanely) use and manage a `functions.php` file
-- When and how to use a functionality plugin
-- How to debug WordPress
-- How to version control our WP projects
+* What hooks are and the two different types in WP
+* How to (sanely) use and manage a `functions.php` file
+* When and how to use a functionality plugin
+* How to debug WordPress
+* How to version control our WP projects
 
 ---
 

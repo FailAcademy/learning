@@ -46,12 +46,12 @@ In doing, we can easily keep our custom post types, taxonomies, and fields separ
 
 # What Goes In It?
 
-- Code that creates your custom post types
-- Code that creates your custom taxonomies
-- Code that creates your custom fields
-- Code that creates custom blocks
-- Code that adds/adjusts user roles
-- _Or anything that should continue to exist on your site regardless of what theme is activated!_
+* Code that creates your custom post types
+* Code that creates your custom taxonomies
+* Code that creates your custom fields
+* Code that creates custom blocks
+* Code that adds/adjusts user roles
+* _Or anything that should continue to exist on your site regardless of what theme is activated!_
 
 ---
 
@@ -83,11 +83,11 @@ Blogging Platform &rarr; CMS
 
 WP comes with 5 default post types:
 
-- **Post** (Post Type: `post`)
-- **Page** (Post Type: `page`)
-- **Attachment** (Post Type: `attachment`)
-- **Revision** (Post Type: `revision`)
-- **Navigation menu** (Post Type: `nav_menu_item`)
+* **Post** (Post Type: `post`)
+* **Page** (Post Type: `page`)
+* **Attachment** (Post Type: `attachment`)
+* **Revision** (Post Type: `revision`)
+* **Navigation menu** (Post Type: `nav_menu_item`)
 
 ---
 
@@ -129,8 +129,8 @@ The ability to create new custom post types is **not** native to the WP admin UI
 
 Knowing that, you have two ways to create a CPT:
 
-- With code! (using the `register_post_type()` function)
-- Using a plugin (like [Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/)) that adds a UI for this to the WP admin area
+* With code! (using the `register_post_type()` function)
+* Using a plugin (like [Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/)) that adds a UI for this to the WP admin area
 
 We're going to learn how to do it the **code** way...
 
@@ -200,9 +200,9 @@ template: inverse
 
 WordPress has three taxonomies built-in by default:
 
-- **Category** (Taxonomy: `category`)
-- **Tags** (Taxonomy: `post_tag`)
-- **Post Formats** (Taxonomy: `post_format`)
+* **Category** (Taxonomy: `category`)
+* **Tags** (Taxonomy: `post_tag`)
+* **Post Formats** (Taxonomy: `post_format`)
 
 ---
 
@@ -218,9 +218,9 @@ class: center, middle
 
 # When and How Do We Make Them?
 
-- Whenever you need a special way to classify your content
-- Again, UX deliverables will help you make decisions
-- And again, we can create custom taxonomies using our own code, or by using a plugin (but we'll use code of course!)
+* Whenever you need a special way to classify your content
+* Again, UX deliverables will help you make decisions
+* And again, we can create custom taxonomies using our own code, or by using a plugin (but we'll use code of course!)
 
 ---
 
@@ -302,9 +302,9 @@ If we had an **Event** post type on our site to manage content for an online eve
 
 You have three options for adding custom fields to your site:
 
-- With your own code! (using the `add_meta_boxes` action)
-- Using a code library to expedite the process (like [CMB2](https://github.com/WebDevStudios/CMB2))
-- Using a plugin (like [Custom Field Suite](https://en-ca.wordpress.org/plugins/custom-field-suite/) or [Advanced Custom Fields](https://en-ca.wordpress.org/plugins/advanced-custom-fields/))
+* With your own code! (using the `add_meta_boxes` action)
+* Using a code library to expedite the process (like [CMB2](https://github.com/WebDevStudios/CMB2))
+* Using a plugin (like [Custom Field Suite](https://en-ca.wordpress.org/plugins/custom-field-suite/) or [Advanced Custom Fields](https://en-ca.wordpress.org/plugins/advanced-custom-fields/))
 
 ---
 
@@ -316,8 +316,8 @@ As usual, with great power comes great responsibility.
 
 ???
 
-- As developers, you need to make thoughtful decisions about how to implement custom fields (and custom blocks) to facilitate an intuitive editing experience for the "internal" end users of a website
-- Think about forward-compatibility of how you've structured/modeled your content is also important
+* As developers, you need to make thoughtful decisions about how to implement custom fields (and custom blocks) to facilitate an intuitive editing experience for the "internal" end users of a website
+* Think about forward-compatibility of how you've structured/modeled your content is also important
 
 ---
 
@@ -331,17 +331,15 @@ Important sidebar!
 
 # Content Requires Design
 
-- When people think about content in WP, they often just think of the ~~WYSIWYG~~ Gutenberg editor
-- Again, metadata about our content likely doesn't belong in a block (it may be tricky to make decisions about this!)
-- By strategically building out custom fields for our site, we are making our content more modular, repurpose-able, and future-friendly
+* When people think about content in WP, they often just think of the ~~WYSIWYG~~ Gutenberg editor
+* Again, metadata about our content likely doesn't belong in a block (it may be tricky to make decisions about this!)
+* By strategically building out custom fields for our site, we are making our content more modular, repurpose-able, and future-friendly
 
 ---
 
-class: center, middle
+template: inverse
 
-.large[
-Blobs vs. Chunks
-]
+# Blobs vs. Chunks
 
 ---
 
@@ -385,12 +383,12 @@ Download and install the [**Inhabitent Blocks plugin**](https://github.com/redac
 
 # What We've Learned
 
-- How to install and modify a functionality plugin
-- How and when to create custom post types
-- How and when to create custom taxonomies
-- How and when to create custom fields
-- How to create Gutenberg block templates
-- How to install and use custom Gutenberg blocks
+* How to install and modify a functionality plugin
+* How and when to create custom post types
+* How and when to create custom taxonomies
+* How and when to create custom fields
+* How to create Gutenberg block templates
+* How to install and use custom Gutenberg blocks
 
 ---
 

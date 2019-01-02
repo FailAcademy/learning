@@ -276,20 +276,26 @@ a {
 
 # @function
 
-You can also write your own Sass functions:
+You can also write your own Sass functions: <a href="https://codepen.io/redacademy/pen/zaVgbZ?editors=1100" target="_blank">Codepen</a>
 
 ```sass
-$grid-width: 40px;
-$gutter-width: 10px;
+$text-color: red;
 
-@function grid-width($n) {
-  @return $n * $grid-width + ($n - 1) * $gutter-width;
+@function set-contrast-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000; // Lighter background, return dark color
+  } @else {
+    @return #fff; // Darker background, return light color
+  }
 }
 
-#sidebar { width: grid-width(5); }
+h1 {
+  color: $text-color;
+  background: set-contrast-color($text-color);
+}
 ```
 
-You can check-out the full **[Sass function reference here](http://sass-lang.com/documentation/Sass/Script/Functions.html)**.
+<a href="http://thesassway.com/advanced/pure-sass-functions" target="_blank">More about using @function</a>
 
 ---
 
@@ -560,7 +566,7 @@ When you compile code, you convert it from one form (that you have written) to a
 Let's create a Gulp task to compile Sass for our project:
 
 ```js
-var sass = require("gulp-sass"),
+const sass = require("gulp-sass"),
   autoprefixer = require("gulp-autoprefixer"),
   cssnano = require("gulp-cssnano"),
   rename = require("gulp-rename");

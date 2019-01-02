@@ -1,42 +1,42 @@
 ---
 layout: lesson
 title: CSS3 & Responsive Web Design
-slides: ['_slides/week-01/03a-css3-rwd.md']
-lesson_date: 2018-10-04
+slides: ["_slides/week-01/03a-css3-rwd.md"]
+lesson_date: 2018-10-05
 ---
 
 ## Pre-Work
 
 Readings from _Learn to Code Advanced HTML & CSS_:
 
-* [Responsive Web Design](http://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
+- [Responsive Web Design](http://learn.shayhowe.com/advanced-html-css/responsive-web-design/)
 
 Also read through this article by Ethan Marcotte, which is widely credited with kicking off the responsive web design movement:
 
-* [Responsive Web Design](http://alistapart.com/article/responsive-web-design/)
+- [Responsive Web Design](http://alistapart.com/article/responsive-web-design/)
 
 ---
 
 ## Learning Objectives
 
-* Distinguish the differences between CSS2 and CSS3.
-* Explore other CSS3 features such as `border-radius`, `box-shadow`, gradients, and `opacity`.
-* Define "responsive web design" and its three components.
-* Distinguish between fixed, fluid, adaptive, responsive, and mobile-only websites.
-* Convert a fixed-width, desktop-sized website to be responsive (optimized for multiple breakpoints) using a mobile-first approach.
+- Distinguish the differences between CSS2 and CSS3.
+- Explore other CSS3 features such as `border-radius`, `box-shadow`, gradients, and `opacity`.
+- Define "responsive web design" and its three components.
+- Distinguish between fixed, fluid, adaptive, responsive, and mobile-only websites.
+- Convert a fixed-width, desktop-sized website to be responsive (optimized for multiple breakpoints) using a mobile-first approach.
 
 ---
 
 ## Keywords
 
-* [`border-radius`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
-* [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
-* [`opacity`](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
-* [Gradients](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
-* [Responsive web design](http://blog.teamtreehouse.com/modern-field-guide-responsive-web-design)
-* [Media queries](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries)
-* [`@media`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media)
-* [Mobile first](http://bradfrost.com/blog/web/mobile-first-responsive-web-design/)
+- [`border-radius`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
+- [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
+- [`opacity`](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
+- [Gradients](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Responsive web design](http://blog.teamtreehouse.com/modern-field-guide-responsive-web-design)
+- [Media queries](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries)
+- [`@media`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media)
+- [Mobile first](http://bradfrost.com/blog/web/mobile-first-responsive-web-design/)
 
 ---
 
@@ -44,10 +44,10 @@ Also read through this article by Ethan Marcotte, which is widely credited with 
 
 Your task is to find an example of a responsively-designed website. Take notes on:
 
-* Where are the main "breakpoints"? What happens at these breakpoints?
-* What happens to the navigation for mobile widths?
-* Are there ads on the site? How are they handled?
-* Does anything seem to be not-quite-right at any width?
+- Where are the main "breakpoints"? What happens at these breakpoints?
+- What happens to the navigation for mobile widths?
+- Are there ads on the site? How are they handled?
+- Does anything seem to be not-quite-right at any width?
 
 Afterward, we'll pair up and share our findings.
 
@@ -97,16 +97,16 @@ Your goal for today is to "refactor" your CSS into mobile-first media queries ba
 
 An excellent RWD resource:
 
-* [Responsive Web Design Basics](https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/?hl=en)
+- [Responsive Web Design Basics](https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/?hl=en)
 
 A CSS Tricks article helps demystify how media queries work:
 
-* [CSS Media Queries & Using Available Space](https://css-tricks.com/css-media-queries/)
+- [CSS Media Queries & Using Available Space](https://css-tricks.com/css-media-queries/)
 
 A collection of responsive web design patterns and resources:
 
-* [This is Responsive](http://bradfrost.github.io/this-is-responsive/)
+- [This is Responsive](http://bradfrost.github.io/this-is-responsive/)
 
 A showcase of inspirational responsively designed websites:
 
-* [Media Queries](http://mediaqueri.es/)
+- [Media Queries](http://mediaqueri.es/)

@@ -5,7 +5,7 @@ permalink:           pretty
 title:               Web Developer
 tagline:             'Learning Materials'
 description:         'Learning materials for the RED Academy Web Developer Professional Program.'
-url:                 http://red-wdf.herokuapp.com
+url:                 https://red-wdp.herokuapp.com
 baseurl:             ''
 paginate:            10
 paginate_path:       '/news/page:num/'
@@ -19,7 +19,7 @@ author:
 # Custom vars
 version:             1.0.0
 github:
-  repo:              https://github.com/redacademy/wdp-toronto
+  repo:              https://github.com/redacademy/LMS/tree/master/wdp-vancouver
 
 # Collections
 collections:

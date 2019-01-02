@@ -154,7 +154,7 @@ We can also store the results of `getElementById` in a variable to make it faste
 ```javascript
 // js/sayhello.js
 
-var el = document.getElementById("message");
+const el = document.getElementById("message");
 el.innerHTML = "We love dogs!";
 el.className = "red"; // adds class name of "red" to the element
 ```
@@ -389,7 +389,7 @@ It's that easy using the `.css()` method in jQuery!
 We can also store our jQuery selection in a variable for re-use later:
 
 ```javascript
-var $intro = $(".intro");
+const $intro = $(".intro");
 $intro.css("color", "red");
 $intro.addClass("greeting");
 ```
@@ -422,7 +422,7 @@ Using the code from our previous example, our script file would now look like th
 
 ```javascript
 $(function() {
-  var $intro = $(".intro");
+  const $intro = $(".intro");
   $intro.css("color", "red");
   $intro.addClass("greeting");
 });
@@ -528,7 +528,7 @@ We can use the `.prepend()`, `.append()`, and `.remove()` methods to update cont
 
 ```javascript
 // Add new a new item to the end of the list:
-var newContent = "<li>three</li>";
+const newContent = "<li>three</li>";
 $(".numbers").append(newContent);
 
 // Change the content of the second list item:
@@ -585,7 +585,7 @@ As we saw in an earlier example, we can also use jQuery to get and update an ele
 
 ```javascript
 // Get the font size and log it:
-var $fontSize = $("p").css("font-size");
+const $fontSize = $("p").css("font-size");
 console.log($fontSize);
 
 // Change the font size:

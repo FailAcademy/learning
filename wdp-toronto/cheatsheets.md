@@ -41,6 +41,25 @@ title: Additional Resources
 
 ---
 
+### TypeScript
+
+- Excellent [PluralSight course](https://www.pluralsight.com/courses/typescript) on TypeScript
+- [TypeScript Documentation](https://www.typescriptlang.org/)
+- [Typescript Examples Repo](https://github.com/Microsoft/TypeScriptSamples)
+
+---
+
+### Angular 2
+
+- [Journey Through The JavaScript MVC Jungle](http://www.smashingmagazine.com/2012/07/journey-through-the-javascript-mvc-jungle/)
+- [Excellent blog post](http://blog.thoughtram.io/angular/2015/05/18/dependency-injection-in-angular-2.html) all about Dependency Injection
+- Learn about [all of the ways to style Angular 2 Components](https://scotch.io/tutorials/all-the-ways-to-add-css-to-angular-2-components)
+- [Angular 2 Cheat-Sheet](https://angular.io/cheatsheet)
+- [Angular 2 QuickStart Documentation](https://angular.io/docs/ts/latest/tutorial/)
+- [TODO MVC Angular 2](http://todomvc.com/examples/typescript-angular/#/)
+
+---
+
 ### Chrome Extensions:
 
 Adds indentation and whitespace to JSON-formattted data:
@@ -140,9 +159,14 @@ An interface for organizing and sharing your GitHub Gists:
 
 ### WordPress.tv Viewing:
 
+**2015:**
 
 - [John P. Gamboa: Understanding and Combating Global Censorship with WordPress](http://wordpress.tv/2015/10/02/john-p-gamboa-understanding-and-combating-global-censorship-with-wordpress/)
 - [Stephanie Hobson: Accessibility With CSS – Making Websites Better for Everyone](http://wordpress.tv/2014/09/02/stephanie-hobson-accessibility-with-css-making-websites-better-for-everyone/)
+- [Matt Mullenweg: Keynote QandA – WordCamp Europe 2015](http://wordpress.tv/2015/07/04/matt-mullenweg-keynote-qanda-wordcamp-europe-2015/)
 - [Ryan McCue: The WordPress REST API](http://wordpress.tv/2015/10/02/ryan-mccue-wordpress-rest-api/)
+
+**2014:**
+
 - [Ben Lobaugh: Tips For Writing Secure Plugins and Themes](http://wordpress.tv/2014/09/11/ben-lobaugh-tips-for-writing-secure-plugins-and-themes/)
 - [Morten Rand-Hendriksen: Future Responsive Today – Embracing mobile-first with ‘picture’ and FlexBox](http://wordpress.tv/2014/09/17/morten-rand-hendriksen-future-responsive-today-embracing-mobile-first-with-and-flexbox/)

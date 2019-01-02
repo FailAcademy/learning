@@ -44,7 +44,7 @@ What is a CMS for?
 
 # Why WordPress?
 
-- It powers ~25% of the top 10 million websites
+- It powers ~30% of the top 10 million websites
 - More non-English than English downloads of WP
 - Very extendible via many different APIs
 - Backward compatibility
@@ -54,6 +54,7 @@ What is a CMS for?
 
 WordPress percentage changes often and is displayed on wordpress.org
 
+<a href="https://www.codeinwp.com/blog/wordpress-statistics/" target="_blank">wordpress-statistics</a>
 ---
 
 # Just for Blogs?
@@ -63,7 +64,7 @@ WordPress percentage changes often and is displayed on wordpress.org
 
 ---
 
-# .org vs. .com
+# .org vs .com
 
 - .com sites are a hosted service offered by [Automattic](https://automattic.com/)
 - .com sites don't offer much in the way of customization
@@ -102,9 +103,9 @@ We can also install WP locally using MAMP:
 
 Students independently try the local install. Then do a fresh install walk through together. Even if individuals figured it out, get everyone to start new.
 
-Note that there other slightly different ways to do the local install.
+Note that there are a few ways to install locally.
 
-_Note for students:_ where to find database credentials, change default installation values (admin, wp\_)
+*Let the students know:* where to find database credentials, change default installation values (admin, wp\_)
 
 ---
 
@@ -128,11 +129,13 @@ class: center, middle
 
 #### Exercise Suggestion
 
-WP Basics Handout - Get students to walk thought the UI components on the site and make notes on the worksheet. Tell them to note hidden gotchas and features that have not seem before ( ~10-15 mins).
+WP Basics Handout:
 
-After, get them to share highlights with tablemates ( ~5-8 mins).
+Get students to walk through the UI of WordPress and to make notes in their worksheets as to what they discover. ( ~10-15 mins).
 
-As a class, get each table to share their top highlights (~5 mins).
+Once 'complete', get them to share findings at their table ( ~5-8 mins).
+
+Finally, each table shares their findings with the class (~5 mins).
 
 ---
 
@@ -146,17 +149,23 @@ class: center, middle
 ![WP Database and Core](/public/img/slide-assets/wp-db-core-concept.svg)
 ]
 
+???
+
+They don't have to fill this in yet. Mention the db & core files and then goto the next slide. 
+
 ---
 
 # What Is It All For?
 
 - The **MySQL database** contains all of the data (content and saved settings) for your WP site
 - The **PHP** files generate your site on the server (with the help of the **Apache** web server) so it can be rendered as HTML in the browser
-- You can use PHP to get data our your database and populate your website with it&mdash;this is the difference between **dynamic sites** and static sites
+- You can use PHP to get data from your database and populate your website with it&mdash;this is the difference between **dynamic sites** and static sites
 
 ???
 
-For visual aid, I draw out the components and how they connect on the board with explaination.
+For visual aid, you can draw out the components & show how they connect. 
+
+In the next slides we can fill in the worksheet e.g. the core files & wp-content/
 
 ---
 
@@ -166,7 +175,7 @@ Let's take a look at the WordPress database files we just created when we instal
 
 To do that, go to the MAMP WebStart page and click on the **Tools > phpMyAdmin** in the menu.
 
-phpMyAdmin is a free tool (written in PHP) that can be used to manage MySQL databases via a web browser. We can also use a desktop-based app like Sequel Pro for that too.
+phpMyAdmin is a free tool (written in PHP) that can be used to manage MySQL databases via a web browser. We can also use a desktop-based app like Sequel Pro (Mac only) or MySQL Workbench.
 
 You can use the username `root` and password `root` to log into the phpMyAdmin interface.
 
@@ -184,6 +193,10 @@ Inside your WP installation directory...
 - `wp-includes/`
 - `wp-config.php`
 
+???
+
+Emphasize to never touch wp-admin/ or wp-includes/
+
 ---
 
 # What's Inside?
@@ -196,16 +209,16 @@ This is where you'll keep all of the code and content that's specific to your si
 
 ???
 
-#### Recap Exercise Suggestion
+#### Recap
 
-With a partner, fill out the side with the 'Internal Components' as a cheat sheet.
+wp-content is where we will be working.
 
 ---
 
 # WordPress Dashboard
 
 - **Settings**
-  - General, Reading, Discussion, and Permalinks
+  - General, Reading, Discussion, and **Permalinks**
 - **Users** ([Roles and Capabilities](https://codex.wordpress.org/Roles_and_Capabilities))
 - **Appearance**
   - Themes, Customize, Widgets, and Menus
@@ -213,7 +226,9 @@ With a partner, fill out the side with the 'Internal Components' as a cheat shee
 
 ???
 
-If not mentioned yet, point out the customizer.
+Be sure to mention how visiting the permalinks section helps with flushing permalinks, e.g. first step in debugging pages not working due to url rewrites.
+
+You can also mention the customizer.
 
 ---
 
@@ -423,9 +438,9 @@ Before proceeding a head, get them to try to make sense of the code above with a
 
 _What's happening in the loop..._
 
-- First we check to makes sure we have posts
+- First we check to make sure we have posts
 - Then we begin the loop (it will cycle however many times we've set in **Settings > Reading**)
-- We'll show the title of the post and it's full content
+- We'll show the title of the post and its full contents
 - Now we'll end the loop
 - If more posts are available we'll show pagination links
 - If no posts were found we'll tell people and wrap it up
@@ -438,7 +453,7 @@ _What's happening in the loop..._
 - `the_permalink()` displays the permalink URL for each post
 - `the_ID()` displays the ID of each post
 - `the_author()` displays the author name for each post
-- `the_content()` display the content of the post
+- `the_content()` displays the content of the post
 
 _These are examples of template tags in WordPress._
 
@@ -475,6 +490,10 @@ More on template tags here:
 https://codex.wordpress.org/Template_Tags
 
 **Note:** Many template tags only work in the loop, while some are global and can be used anywhere on your site.
+
+???
+
+<a href="https://codex.wordpress.org/Global_Variables" target="_blank">WP Global_Variables</a>
 
 ---
 

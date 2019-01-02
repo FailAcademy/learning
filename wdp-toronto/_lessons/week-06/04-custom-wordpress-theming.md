@@ -1,15 +1,15 @@
 ---
 layout: lesson
 title: Custom WordPress Theming
-slides: ['_slides/week-06/04-custom-wordpress-theming.md']
-lesson_date: 2018-11-06
+slides: ["_slides/week-06/04-custom-wordpress-theming.md"]
+lesson_date: 2018-11-08
 ---
 
 ## Pre-Work
 
 Prior to jumping into the theming class, you'll want to make sure you've wrapped your head around some important WordPress jargon:
 
-* [WordPress Semantics](https://codex.wordpress.org/WordPress_Semantics)
+- [WordPress Semantics](https://codex.wordpress.org/WordPress_Semantics)
 
 _Explore the links within that Codex entry for further clarification where needed!_
 
@@ -17,22 +17,22 @@ _Explore the links within that Codex entry for further clarification where neede
 
 ## Learning Objectives
 
-* Distinguish the difference between a child theme, parent theme, and starter theme.
-* Use a variety of templates to dynamically construct a website in WordPress.
-* Leverage the WordPress template hierarchy to customize page layouts.
-* Develop custom page templates and apply them to pages via the WordPress admin area.
-* Customize comment display, widgetized areas, and navigation menus in a theme.
+- Distinguish the difference between a child theme, parent theme, and starter theme.
+- Use a variety of templates to dynamically construct a website in WordPress.
+- Leverage the WordPress template hierarchy to customize page layouts.
+- Develop custom page templates and apply them to pages via the WordPress admin area.
+- Customize comment display, widgetized areas, and navigation menus in a theme.
 
 ---
 
 ## Keywords
 
-* [Child theme](https://codex.wordpress.org/Child_Themes)
-* Parent theme
-* Starter theme
-* [Templates](https://codex.wordpress.org/Templates)
-* [Template tags](https://codex.wordpress.org/Template_Tags)
-* [Template hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/)
+- [Child theme](https://codex.wordpress.org/Child_Themes)
+- Parent theme
+- Starter theme
+- [Templates](https://codex.wordpress.org/Templates)
+- [Template tags](https://codex.wordpress.org/Template_Tags)
+- [Template hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/)
 
 ---
 
@@ -74,8 +74,8 @@ We'll learn how to create a custom post type for the product content next week.
 
 The basic components of a WordPress theme, visualized:
 
-* [The anatomy of a WordPress theme](https://yoast.com/wordpress-theme-anatomy/)
+- [The anatomy of a WordPress theme](https://yoast.com/wordpress-theme-anatomy/)
 
 An interactive visual representation of the WordPress template hierarchy:
 
-* [The WordPress Template Hierarchy](http://wphierarchy.com/)
+- [The WordPress Template Hierarchy](http://wphierarchy.com/)

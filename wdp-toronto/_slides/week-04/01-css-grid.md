@@ -121,7 +121,7 @@ class: center, middle
 
 We can use responsive units such as:
 
-`%`, `em`, `rem`, `auto`, `vw`, `vh`, `vmin`, and `vmax`
+`%`, `em`, `rem`, `auto`, `vw`, and `vh`
 
 We also have a new unit to work with specific to grid, `fr`, which essentially means **fraction**.
 
@@ -136,7 +136,7 @@ We also have a new unit to work with specific to grid, `fr`, which essentially m
 
 # Exercise 1
 
-`%`, `em`, `rem`, `auto`, `vw`, `vh`, `vmin`, and `vmax`
+`%`, `em`, `rem`, `auto`, `vw`, and `vh`
 
 After seeing these **responsive units** again, let's take a few minutes and discuss what we know about them and research what we don't.
 
@@ -361,7 +361,7 @@ Try inspecting the grid. You should see something like this:
 
 Take a look at some of the grid examples on [GridByExample.com](https://gridbyexample.com/examples/).
 
-Inspect the site with Firefox dev tools. See if you notice anything interesting. How could you apply what you see here to previous project you've worked on?
+Inspect the site with Firefox dev tools. See if you notice anything interesting. How could you apply what you see here to a previous project you've worked on?
 
 Discuss your findings with a partner or in small groups.
 

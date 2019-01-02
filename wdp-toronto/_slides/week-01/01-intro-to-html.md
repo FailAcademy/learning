@@ -321,7 +321,6 @@ In HTML we can create both **ordered** and **unordered** lists:
 ```html
 <ul>
    <li>Apples</li>
-   <li>Bananas</li>
    <li>Oranges</li>
 </ul>
 ```
