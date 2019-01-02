@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to jQuery
 slides: ["_slides/week-02/04-intro-to-jquery.md"]
-lesson_date: 2018-10-12
+lesson_date: 2019-01-17
 ---
 
 ## Pre-Work
@@ -58,8 +58,8 @@ Using what you just learned about traversing the DOM and jQuery methods, come up
 
 ```html
 <article>
-   <p class="opening-line">The first line.</p>
-   <p>The second line.</p>
+  <p class="opening-line">The first line.</p>
+  <p>The second line.</p>
 </article>
 <p>A line outside the article.</p>
 ```
@@ -74,13 +74,10 @@ In this exercise, you're going create two click events&mdash;one that **adds ano
 
 ```html
 <div class="list-editor">
-   <ul class="my-list">
-      <li>
-         <span>My to-do</span> <a href="#" class="delete">[done]</a>
-      </li>
-   </ul>
-   <input type="text" name="new-item" />
-   <button>Add an item</button>
+  <ul class="my-list">
+    <li><span>My to-do</span> <a href="#" class="delete">[done]</a></li>
+  </ul>
+  <input type="text" name="new-item" /> <button>Add an item</button>
 </div>
 ```
 

@@ -2,7 +2,7 @@
 layout: lesson
 title: Web Accessibility
 slides: ["_slides/week-04/02-accessibility.md"]
-lesson_date: 2018-10-26
+lesson_date: 2019-01-30
 ---
 
 ## Pre-Work
@@ -70,7 +70,14 @@ In a Codepen, refactor this snippet of code to be more semantic, accessible HTML
 <div>
   <div><strong>All About Kittens</strong></div>
   <img src="http://placekitten.com/300/200" alt="kitten" />
-  <div>Learn all you ever wanted to know about kittens and more! <span onclick="location.href='all-about-kittens.html';" style="cursor: pointer; color: blue; text-decoration: underline;">Continue reading &rarr;</span></div>
+  <div>
+    Learn all you ever wanted to know about kittens and more!
+    <span
+      onclick="location.href='all-about-kittens.html';"
+      style="cursor: pointer; color: blue; text-decoration: underline;"
+      >Continue reading &rarr;</span
+    >
+  </div>
 </div>
 ```
 

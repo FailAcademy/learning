@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to Programming
 slides: ["_slides/week-02/02-intro-to-programming.md"]
-lesson_date: 2018-10-10
+lesson_date: 2019-01-15
 ---
 
 ## Pre-work
