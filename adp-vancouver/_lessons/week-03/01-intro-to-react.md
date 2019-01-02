@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Introducing React
-slides: ['_slides/week-03/01-intro-to-react.md']
-lesson_date: 2018-10-15
+slides: ["_slides/week-03/01-intro-to-react.md"]
+lesson_date: 2019-01-21
 ---
 
 ## Pre-work

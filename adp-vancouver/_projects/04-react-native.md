@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 4 - R10
-due: Monday, November 26th (beginning of class)
+due: Monday, March 4th (beginning of class)
 class: gh-check
 ---
 
@@ -127,4 +127,4 @@ Want to challenge yourself? Your project could also:
 
 ## Submission Instructions
 
-When you’re ready to submit your project, **please email a link to your GitHub repository containing your project** to mandi@redacademy.com.
+When you’re ready to submit your project, **please email a link to your GitHub repository containing your project** to sid@redacademy.com.

@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 3 - Coding Interview
-due: Monday, November 19th (beginning of class)
+due: Monday, February 25th (beginning of class)
 class: gh-check
 ---
 
@@ -54,7 +54,7 @@ Your project must:
 - [ ] Refill vending machine inventory
 - [ ] Re-supply vending machine change
 - [ ] Dispense inventory based on payment
-- [ ] Return change as coins (e.g. $0.35 is 1 quarter and 1 dime)
+- [ ] Return change as coins (e.g. \$0.35 is 1 quarter and 1 dime)
 
 ### Stretch Goals
 
@@ -65,4 +65,4 @@ Want to challenge yourself? Your project could also:
 
 ## Submission Instructions
 
-When you’re ready to submit your project, **please email a link to your GitHub repository containing your project** to mackenzie@redacademy.com.
+When you’re ready to submit your project, **please email a link to your GitHub repository containing your project** to sid@redacademy.com.

@@ -137,7 +137,7 @@ const DogSchema = {
   }
 };
 
-const realm = Realm({ schema: [DogSchema] });
+const realm = new Realm({ schema: [DogSchema] });
 
 export default realm;
 ```

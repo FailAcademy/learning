@@ -2,94 +2,79 @@
   {
     "title": "Pre-Work",
     "allDay": true,
-    "start": "2017-12-26",
-    "end": "2018-01-07"
+    "start": "2018-12-24",
+    "end": "2019-01-07"
   },
   {
     "title": "ADP/WDP Mentoring",
     "allDay": false,
-    "start": "2018-01-26T15:00:00+00:00",
-    "end": "2018-01-26T16:15:00+00:00"
+    "start": "2019-01-25T15:00:00+00:00",
+    "end": "2018-01-25T16:15:00+00:00"
   },
   {
     "title": "ADP/WDP Mentoring",
     "allDay": false,
-    "start": "2018-02-23T15:00:00+00:00",
-    "end": "2018-02-23T16:15:00+00:00"
-  },
-  {
-    "title": "UI/UX Project Pitches",
-    "allDay": true,
-    "start": "2018-02-13"
-  },
-  {
-    "title": "UI/UX Project Pitches",
-    "allDay": true,
-    "start": "2018-11-06"
-  },
-  {
-    "title": "UI/UX Client Presentations",
-    "allDay": true,
-    "start": "2018-11-09"
-  },
-  {
-    "title": "UI Handoff",
-    "allDay": true,
-    "start": "2018-11-15"
-  },
-  {
-    "title": "BC Family Day",
-    "allDay": true,
-    "start": "2018-02-12"
-  },
-  {
-    "title": "Good Friday",
-    "allDay": true,
-    "start": "2018-03-30"
-  },
-  {
-    "title": "Easter Monday",
-    "allDay": true,
-    "start": "2018-04-02"
-  },
-  {
-    "title": "Victoria Day",
-    "allDay": true,
-    "start": "2018-05-21"
-  },
-  {
-    "title": "Canada Day Stat",
-    "allDay": true,
-    "start": "2018-07-02"
-  },
-  {
-    "title": "BC Day",
-    "allDay": true,
-    "start": "2018-08-06"
-  },
-  {
-    "title": "Labour Day",
-    "allDay": true,
-    "start": "2018-09-03"
-  },
-  {
-    "title": "Thanksgiving Monday",
-    "allDay": true,
-    "start": "2018-10-08"
-  },
-  {
-    "title": "Remembrance Day Stat",
-    "allDay": true,
-    "start": "2018-11-12"
-  },
-  {
-    "title": "Christmas Day",
-    "allDay": true,
-    "start": "2018-12-25"
+    "start": "2019-02-22T15:00:00+00:00",
+    "end": "2019-02-22T16:15:00+00:00"
   },
   {
     "title": "New Years Day",
     "allDay": true,
-    "start": "2018-01-01"
+    "start": "2019-01-01"
+  },
+  {
+    "title": "Family Day",
+    "allDay": true,
+    "start": "2019-02-18"
+  },
+  {
+    "title": "Good Friday",
+    "allDay": true,
+    "start": "2019-04-19"
+  },
+  {
+    "title": "Easter Monday",
+    "allDay": true,
+    "start": "2019-04-22"
+  },
+  {
+    "title": "Victoria Day",
+    "allDay": true,
+    "start": "2019-05-20"
+  },
+  {
+    "title": "Canada Day Stat",
+    "allDay": true,
+    "start": "2019-07-01"
+  },
+  {
+    "title": "BC Day",
+    "allDay": true,
+    "start": "2019-08-05"
+  },
+  {
+    "title": "Labour Day",
+    "allDay": true,
+    "start": "2019-09-02"
+  },
+  {
+    "title": "Thanksgiving Monday",
+    "allDay": true,
+    "start": "2019-10-14"
+  },
+  {
+    "title": "Remembrance Day Stat",
+    "allDay": true,
+    "start": "2019-11-11"
+  },
+  {
+    "title": "Christmas Day",
+    "allDay": true,
+    "start": "2019-12-25"
+  },
+  {
+    "title": "New Years Day",
+    "allDay": true,
+    "start": "2020-01-01"
   }
 ]

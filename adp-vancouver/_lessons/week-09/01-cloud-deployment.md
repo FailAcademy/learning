@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Cloud Deployment
-lesson_date: 2018-11-29
+lesson_date: 2019-03-06
 ---
 
 ## Pre-work
@@ -86,7 +86,7 @@ If you deployed your Node/Postgres application, see if you can use Heroku to dep
 
 **Hints:**
 
-- You'll need to use the MLab Heroku add-on, it costs 5$
+- You'll need to use the MLab Heroku add-on, it costs 5\$
 - You'll also need to configure [this Heroku Buildpack](https://github.com/AdmitHub/meteor-buildpack-horse)
 
 ---

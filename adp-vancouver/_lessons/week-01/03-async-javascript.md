@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Asynchronous JavaScript
-slides: ['_slides/week-01/03-async-javascript.md']
-lesson_date: 2018-10-04
+slides: ["_slides/week-01/03-async-javascript.md"]
+lesson_date: 2019-01-10
 ---
 
 ## Pre-Work

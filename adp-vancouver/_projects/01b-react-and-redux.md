@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 1 / Part 2 - Boomtown
-due: Monday, October 29th (beginning of class)
+due: Monday, February 4th (beginning of class)
 class: gh-check
 ---
 
@@ -93,4 +93,4 @@ Want to challenge yourself? Your project could also:
 
 ## Submission Instructions
 
-When you’re ready to submit your project, **please email a link to your GitHub repository containing your project** to mackenzie@redacademy.com.
+When you’re ready to submit your project, **please email a link to your GitHub repository containing your project** to sid@redacademy.com.

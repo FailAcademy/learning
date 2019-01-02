@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Introducing React Native
-slides: ['_slides/week-08/01-intro-to-react-native.md']
-lesson_date: 2018-11-19
+slides: ["_slides/week-08/01-intro-to-react-native.md"]
+lesson_date: 2019-02-25
 ---
 
 ## Pre-work
@@ -71,24 +71,24 @@ Start with this code in your RN app:
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5FCFF',
+    backgroundColor: "#F5FCFF"
   },
   box: {
     width: 50,
-    height: 50,
+    height: 50
   },
   box1: {
-    backgroundColor: 'powderblue',
+    backgroundColor: "powderblue"
   },
   box2: {
-    backgroundColor: 'skyblue',
+    backgroundColor: "skyblue"
   },
   box3: {
-    backgroundColor: 'steelblue',
+    backgroundColor: "steelblue"
   },
   box4: {
-    backgroundColor: 'midnightblue',
-  },
+    backgroundColor: "midnightblue"
+  }
 });
 ```
 
