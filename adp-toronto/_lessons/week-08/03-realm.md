@@ -2,7 +2,7 @@
 layout: lesson
 title: Realm Databases
 slides: ["_slides/week-08/03-realm.md"]
-lesson_date: 2019-02-27
+lesson_date: 2019-03-06
 ---
 
 ## Pre-work

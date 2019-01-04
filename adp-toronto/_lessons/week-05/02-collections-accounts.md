@@ -2,7 +2,7 @@
 layout: lesson
 title: Collections and Accounts
 slides: ["_slides/week-05/02-collections-accounts.md"]
-lesson_date: 2019-02-05
+lesson_date: 2019-02-12
 ---
 
 ## Pre-Work
