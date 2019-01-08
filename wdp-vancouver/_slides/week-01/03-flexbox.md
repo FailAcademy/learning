@@ -273,7 +273,7 @@ The default value is `stretch` (so that items take up remaining space along the 
 
 Let's apply these flexbox concepts to Project 1.
 
-We'll start adding flexbox properties into the `<footer>` with following these steps:
+We'll start adding flexbox properties into the `<footer>` by following these steps:
 
 1. Apply `display: flex` to the appropriate element
 2. Figure out how to get the address and the social links aligned to the left and right sides of the footer

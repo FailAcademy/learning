@@ -24,7 +24,7 @@ layout: false
 2. Using `@font-face`
 3. Using Google Fonts
 4. Web font services
-5. Icons fonts
+5. Icon fonts
 
 ---
 

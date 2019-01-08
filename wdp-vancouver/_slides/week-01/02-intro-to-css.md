@@ -499,7 +499,7 @@ Don't worry about the background image yet, we'll get to that.
 
 template: inverse
 
-# Class & IDs
+# Classes & IDs
 
 ---
 

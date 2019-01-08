@@ -389,7 +389,7 @@ Let's implement BrowserSync in our projects with Gulp.
 
 Learn how to do that here: **[www.browsersync.io/docs/gulp/](http://www.browsersync.io/docs/gulp/)**
 
-**Hint:** We're already watching our JS source files, uglifying them, and moving the newly minified files into the `build` directory. Think about what file will we want to watch for changes on, and subsequently reload the browser afterward.
+**Hint:** We're already watching our JS source files, uglifying them, and moving the newly minified files into the `build` directory. Think about what file we will want to watch for changes on, and subsequently reload the browser afterward.
 
 ???
 
@@ -421,7 +421,7 @@ template: inverse
 
 Linting is a way for us to **check problematic patterns** in our code and make sure that it **adheres to certain style guidelines** for our project.
 
-Essentially, it's a way for you to set-up some rules about **how you want your code to always look**. You can then check your code again these rules, and ensure that you're following them.
+Essentially, it's a way for you to set-up some rules about **how you want your code to always look**. You can then check your code against these rules, and ensure that you're following them.
 
 _Why should we care about doing this?_
 
