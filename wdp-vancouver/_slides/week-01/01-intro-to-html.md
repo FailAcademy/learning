@@ -143,7 +143,7 @@ What three things do we need to make a webpage?
 
 1. **[Visual Studio Code](https://code.visualstudio.com/)**
 2. A file with an HTML extension
-3. An handful of HTML elements that are common to all webpages
+3. A handful of HTML elements that are common to all webpages
 
 ---
 
