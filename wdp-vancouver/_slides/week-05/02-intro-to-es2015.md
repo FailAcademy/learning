@@ -482,7 +482,7 @@ Use a template literal to refactor the following code.
 
 ```js
 function fullName(first, last, birthYear) {
-  return first + " " + last + ",\nage: " + 2016 - birthYear + ".";
+  return first + " " + last + ",\nage: " + 2018 - birthYear + ".";
 }
 
 fullName("Emma", "Morano", 1900);
