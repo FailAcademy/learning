@@ -1,13 +1,13 @@
 ---
 layout: lesson
 title: Intro to Databases with Postgres pt. II
-slides: ["_slides/week-01/02-introducing-postgres2.md"]
+slides: ['_slides/week-01/02-introducing-postgres2.md']
 lesson_date: 2019-01-09
 ---
 
 ## Pre-work
 
-Complete Part 2 _Joins and Subqueries_, from [these exercises](https://pgexercises.com/questions/joins/).
+To start, get familiar with SQL syntax. Complete Part 1, from [these exercises](https://www.pgexercises.com/questions/basic/).
 
 ---
 
@@ -68,9 +68,11 @@ Hint: Using the Postico GUI will prove much easier that the `psql` shell.
 
 ## Lab Activity
 
-To ensure we're ready to take the next step building our application,
-we'll need to ensure we have written all of the SQL queries we'll use in
-our project application:
+**Task 1**
+
+- To ensure we're ready to take the next step building our application,
+  we'll need to ensure we have written all of the SQL queries we'll use in
+  our project application:
 
 We've written some already. Here are the queries we'll need to write:
 
@@ -90,6 +92,10 @@ Use the _Postico_ app to connect to your local instance of Postgres. Once connec
 SQL query interface to test your queries. Once you've completed a query, save it to a `.sql` file.
 
 At the end of today you should have `.sql` files containing all of the queries necessary for your project.
+
+**Task 2**
+
+- Complete Part 2 _Joins and Subqueries_, from [these exercises](https://pgexercises.com/questions/joins/).
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Intro to Databases with Postgres
-slides: ["_slides/week-01/01-introducing-postgres.md"]
+slides: ['_slides/week-01/01-introducing-postgres.md']
 lesson_date: 2019-01-08
 ---
 
@@ -15,8 +15,6 @@ What makes RBDMS systems so useful? <br/>
 
 How does Postgres actually store you data? <br/>
 http://rachbelaid.com/introduction-to-postgres-physical-storage/
-
-To start, get familiar with SQL syntax. Complete Part 1, from [these exercises](https://www.pgexercises.com/questions/basic/).
 
 ---
 

@@ -133,7 +133,6 @@ Now that we have our data and relationships set up, let's write some SQL queries
 
 - Write a query that returns all of the tags for a given Item.
 - Write a query that returns the number of Items in the database.
-- Write a query that returns how many tags, on average, items have.
 - Write a query that returns all of the Items in your database sorted by most recently created.
 
 ---
