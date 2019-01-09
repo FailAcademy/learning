@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to PHP
 slides: ["_slides/week-06/01-intro-to-php.md"]
-lesson_date: 2018-11-08
+lesson_date: 2019-02-11
 ---
 
 ## Pre-Work
@@ -101,7 +101,10 @@ What you need to do to complete this lab:
 **Hint!** You can include the Roboto font on your site by adding this snippet to the `<head>` element:
 
 ```html
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic">
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic"
+/>
 ```
 
 **Extra hint!** The content area is `1000px` wide.

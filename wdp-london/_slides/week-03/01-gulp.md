@@ -30,11 +30,11 @@ layout: false
 
 GET EVERYONE TO MAKE A COMMIT BEFORE THE LESSON!
 
-- Frame the lesson before you start! Why do we need Gulp, what will we use it for?
-- Writing Sass, minifying code, check for style errors in our code, and magically reloading our browser!
-- To use Gulp we, will need to install, because we need to be able to execute JS on our computers, not just in our browsers
-- Emphasize that the whole point of the day is to write JS that won't actually run in the browser in our Instanews project...
-- Gulp will be our little JS robot for doing on tasks on our website (while we develop) that we don't want to waste time doing on our (or that aren't feasible for us to do on our own)
+* Frame the lesson before you start! Why do we need Gulp, what will we use it for?
+* Writing Sass, minifying code, check for style errors in our code, and magically reloading our browser!
+* To use Gulp we, will need to install, because we need to be able to execute JS on our computers, not just in our browsers
+* Emphasize that the whole point of the day is to write JS that won't actually run in the browser in our Instanews project...
+* Gulp will be our little JS robot for doing on tasks on our website (while we develop) that we don't want to waste time doing on our (or that aren't feasible for us to do on our own)
 
 ---
 
@@ -56,9 +56,9 @@ Node is a cross-platform JavaScript runtime environment built on Chrome's V8 Jav
 
 Some vocabulary words:
 
-- **Runtime**: Think of this as the code that runs your JS code in a programming environment.
-- **JavaScript engine**: The thing that compiles and executes JavaScript source code, handles memory allocation for objects, takes care of garbage collection, etc.
-- **V8**: This is Google's open-source JS engine that is used in Google Chrome (written in C++).
+* **Runtime**: Think of this as the code that runs your JS code in a programming environment.
+* **JavaScript engine**: The thing that compiles and executes JavaScript source code, handles memory allocation for objects, takes care of garbage collection, etc.
+* **V8**: This is Google's open-source JS engine that is used in Google Chrome (written in C++).
 
 ---
 
@@ -102,11 +102,11 @@ This command will help us generate a `package.json` file for our project.
 
 #### Code along:
 
-- Emphsize that you need to be located within at the root of the Project 2 folder.
+* Emphsize that you need to be located within at the root of the Project 2 folder.
 
 If you don't have a P2 demo folder set up:
 
-- Get the class to help you make a new folder, index.html, and scripts.js. (command line review)
+* Get the class to help you make a new folder, index.html, and scripts.js. (command line review)
 
 ---
 
@@ -210,8 +210,8 @@ gulp.task("default", function(done) {
 
 **Why done?**
 
-- With Gulp 4, we need to tell Gulp when our task is done running
-- There are a number of way we can do this...we will see how to do this two way today (returning a Gulp stream from the callback funciton, or by explicitly calling the done function based into the callback as a parameter)
+* With Gulp 4, we need to tell Gulp when our task is done running
+* There are a number of way we can do this...we will see how to do this two way today (returning a Gulp stream from the callback funciton, or by explicitly calling the done function based into the callback as a parameter)
 
 See also: https://stackoverflow.com/a/36899424
 
@@ -261,11 +261,11 @@ Different plugin docs write it different and students tend to get confused.
 
 Also talk about `pipe`:
 
-- Streams are collections of data
-- "Pipe" just means to take the output of a command and use it as the input for the next command
-- Pipes are a general computing concept you will encounter many places, e.g.: `curl -s https://baconipsum.com/api/?type=all-meat | say`
-- The pipe command takes the output of one command and uses it as the input for another
-- The `pipe()` method is something we get from Node (check the docs!)
+* Streams are collections of data
+* "Pipe" just means to take the output of a command and use it as the input for the next command
+* Pipes are a general computing concept you will encounter many places, e.g.: `curl -s https://baconipsum.com/api/?type=all-meat | say`
+* The pipe command takes the output of one command and uses it as the input for another
+* The `pipe()` method is something we get from Node (check the docs!)
 
 ---
 
@@ -395,19 +395,19 @@ Learn how to do that here: **[www.browsersync.io/docs/gulp/](http://www.browsers
 
 **Talk about localhost:**
 
-- A host is a computer on the network
-- Localhost is 127.0.0.1 at the IP address
-- Means “this computer itself”
-- Browsersync will start up a little web server for us, so we're no longer executing code right off our file system in our browser, we're loading our index.html file from a web server that's running in our project directory
-- A server is just program that accepts connections from other programs on the network
-- It sits around waiting for a client to connect to it
+* A host is a computer on the network
+* Localhost is 127.0.0.1 at the IP address
+* Means “this computer itself”
+* Browsersync will start up a little web server for us, so we're no longer executing code right off our file system in our browser, we're loading our index.html file from a web server that's running in our project directory
+* A server is just program that accepts connections from other programs on the network
+* It sits around waiting for a client to connect to it
 
-- Most of the web addresses you see in the wild don't have a port number on them because the client usually figures out the port number from the URI scheme
-- HTTP URIs imply a port number of 80
-- HTTPS URIs imply a port number of 443
-- If you’re not using the default port, you need to specify
-- IP addresses distinguish computers; port numbers distinguish programs on those computers
-- For historical reasons, operating systems only allow the administrator (or root) account to listen on ports below 1024 (which is why we use port 3000, etc.)
+* Most of the web addresses you see in the wild don't have a port number on them because the client usually figures out the port number from the URI scheme
+* HTTP URIs imply a port number of 80
+* HTTPS URIs imply a port number of 443
+* If you’re not using the default port, you need to specify
+* IP addresses distinguish computers; port numbers distinguish programs on those computers
+* For historical reasons, operating systems only allow the administrator (or root) account to listen on ports below 1024 (which is why we use port 3000, etc.)
 
 ---
 
@@ -486,9 +486,9 @@ Take a look at the **[default ESLint config rules](http://eslint.org/docs/rules/
 
 How rules work in ESLint:
 
-- `off` or `0`: turn the rule off
-- `warn` or `1`: turn the rule on as a warning
-- `error` or `2`: turn the rule on as an error
+* `off` or `0`: turn the rule off
+* `warn` or `1`: turn the rule on as a warning
+* `error` or `2`: turn the rule on as an error
 
 _In other words:_
 

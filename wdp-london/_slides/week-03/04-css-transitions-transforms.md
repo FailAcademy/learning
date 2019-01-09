@@ -168,7 +168,7 @@ class: center, middle
 
 ### What can be animated?
 
-**[Animatable Properties](http://www.w3.org/TR/css3-transitions/#animatable-properties-)**
+**[Animatable Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties)**
 
 ---
 
@@ -365,7 +365,7 @@ class: center, middle
 
 Now try experimenting with CSS transforms and keyframe animations.
 
-See the [lesson page](/lesson/css3-transitions-transforms/) for more details.
+See the [lesson page](/lesson/04-css-transitions-transforms/) for more details.
 
 ---
 

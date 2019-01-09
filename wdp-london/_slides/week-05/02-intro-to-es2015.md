@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Intro to ES.next Slides
+title: Intro to ES2015 Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Intro to ES.next
+# Intro to ES2015
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -20,30 +20,50 @@ layout: false
 
 # Agenda
 
-1. ES5 vs. ES.next (plus dev environment set-up)
+1. ES5 vs. ES2015 (plus dev environment set-up)
 2. `let` and `const`
 3. Arrow functions
-4. ES.next shorthand
+4. ES2015 shorthand
 5. `for...of` loops
 
 ---
 
 # JavaScript Changes
 
-Ecma International is the standards organization in charge of publishing each new specification of JavaScript:
+Ecma International is the standards organization in charge of publishing each new specification of ECMAScript:
 
-| Year | Release     |
-| ---- | ----------- |
-| 1997 | ES          |
-| 1998 | ES2         |
-| 1999 | ES3         |
-| ?    | ES4         |
-| 2009 | ES5         |
-| 2015 | ES6/ES.next |
+| Year | Release         |
+| ---- | --------------- |
+| 1997 | ES              |
+| 1998 | ES2             |
+| 1999 | ES3             |
+| -    | ES4 (abandoned) |
+| 2009 | ES5             |
 
 ---
 
-# ES.next Compatibility
+# JavaScript Changes
+
+From 2015 Ecma International changed the naming convention and release schedule, there will be a new release every year named after the year
+
+| Year | Release      |
+| ---- | ------------ |
+| 2015 | ES2015 (ES6) |
+| 2016 | ES2016 (ES7) |
+| 2017 | ES2017 (ES8) |
+| 2018 | ES2018 (ES9) |
+
+---
+
+# So what is ECMAScript / ES2015?
+
+The "ES" in ES6, ES2015 etc. stands for ECMAScript, named after the standards oganization Ecma International. JavaScript is the most popular implementation of ECMAScript, and is what we'll be using.
+
+ES2015 is a dynamic label used to reference the **next** version of ECMAScript coming out - the intention is that these updates will be made annually.
+
+---
+
+# ES5 / ES6 Compatibility
 
 How well does ES5 work in browsers today?
 
@@ -55,15 +75,15 @@ How about ES6?
 
 ---
 
-# Using ES.next Today
+# Using ES2015 Today
 
-**How do we use ES.next today?**
+**How do we use ES2015 today?**
 
 Answer: **Transpiling**
 
-Try to change your ES.next code to ES5 using the [Babel online REPL](https://babeljs.io/repl/).
+Try to change your ES2015 code to ES5 using the [Babel online REPL](https://babeljs.io/repl/).
 
-_We'll also need to transpile our code when we use TypeScript with Angular later in the course._
+We can use Babel to transpile our code, allowing us to use the latest JavaScript features even if they aren't yet supported by browsers.
 
 ---
 
@@ -75,16 +95,16 @@ template: inverse
 
 # Gulp Babel
 
-We'll need to use a Gulp plugin to transpile our ES.next code to ES5 during our build process. We can use [**Gulp-Babel**](https://www.npmjs.com/package/gulp-babel) for that:
+We'll need to use a Gulp plugin to transpile our ES2015 code to ES5 during our build process. We can use [**Gulp-Babel**](https://www.npmjs.com/package/gulp-babel) for that:
 
 ```js
-const gulp = require('gulp');
-const babel = require('gulp-babel');
+const gulp = require("gulp");
+const babel = require("gulp-babel");
 
-const input = 'src/index.js';
-const output = 'dist';
+const input = "src/index.js";
+const output = "dist";
 
-gulp.task('babel', () => {
+gulp.task("babel", () => {
   return gulp
     .src(input)
     .pipe(babel())
@@ -151,8 +171,8 @@ The variable `i` is hoisted to the top of the function and shared across each it
 ```
 
 ```js
-for (let i = 1; i < 6; i++) {
-  $('#' + i).click(function() {
+for (var i = 1; i < 6; i++) {
+  $("#" + i).click(function() {
     alert(i);
   });
 }
@@ -181,9 +201,9 @@ Conversely, `var` defines a variable globally, or locally to an entire function 
 Variables defined with `var` can lead to "name conflicts", where a coder overwrites a variable name, often unknowingly.
 
 ```js
-var teachers = ['Jim', 'Mack', 'Mandi', 'Rose', 'Sid'];
+var teachers = ["Jim", "Mack", "Mandi", "Rose", "Sid"];
 
-var teachers = ['Alice', 'Bob', 'Jane'];
+var teachers = ["Alice", "Bob", "Jane"];
 // teachers variable is redeclared
 ```
 
@@ -196,9 +216,9 @@ Both `let` and `const` prevent redeclaring with the same variable name (but you 
 `let` still allows reassigning of the value.
 
 ```js
-let teachers = ['Mandi', 'Jim', 'Rose', 'Mack', 'Sid'];
+let teachers = ["Mandi", "Jim", "Rose", "Mack", "Sid"];
 
-teachers = ['Alice', 'Bob', 'Jane'];
+teachers = ["Alice", "Bob", "Jane"];
 // note: not redeclared, only changing the value
 ```
 
@@ -211,9 +231,9 @@ However, some values could benefit from being marked as unchanging.
 `const` acts like `let`, but with the addition that its values cannot be reassigned.
 
 ```js
-const teachers = ['Jim', 'Mack', 'Mandi', 'Rose', 'Sid'];
+const teachers = ["Jim", "Mack", "Mandi", "Rose", "Sid"];
 
-teachers = ['Kyle', 'Kurtis', 'Rony'];
+teachers = ["Kyle", "Kurtis", "Rony"];
 // TypeError: Assignment to constant variable.
 ```
 
@@ -240,7 +260,7 @@ const array = [1, 2, 3];
 array.push(4);
 
 const object = { a: 1, b: 2 };
-object['c'] = 3;
+object["c"] = 3;
 ```
 
 ---
@@ -318,21 +338,21 @@ function counterES5() {
       this.seconds++;
       console.log(this.seconds);
     }.bind(this),
-    1000,
+    1000
   );
 }
 ```
 
 ---
 
-# ES.next Solution
+# ES2015 Solution
 
 Use an **arrow function** to bind the scope of the function where it is defined, rather than where it is called.
 
 This is also know as **lexical binding**.
 
 ```js
-function counterESnext() {
+function counterES2015() {
   this.seconds = 0;
 
   window.setInterval(() => {
@@ -350,7 +370,7 @@ function counterESnext() {
 
 ```js
 function sayHi() {
-  console.log('hi');
+  console.log("hi");
 }
 function addOne(x) {
   return x + 1;
@@ -367,10 +387,10 @@ var multiply = function(a, b) {
 
 # More Arrow Functions
 
-**ES.next `=>`:**
+**ES2015 `=>`:**
 
 ```js
-const sayHi = () => console.log('hi');
+const sayHi = () => console.log("hi");
 const addOne = x => x + 1;
 const multiply = (a, b) => {
   return a * b;
@@ -408,7 +428,7 @@ Use arrow functions to fix [this CodePen](http://codepen.io/redacademy/pen/mPjXV
 
 template: inverse
 
-# ES.next Shorthand
+# ES2015 Shorthand
 
 ---
 
@@ -419,12 +439,12 @@ Template literals (or template strings) are string literals that allow **string 
 **ES5:**
 
 ```js
-const name = 'Bob';
-var city = 'Vancouver';
-var description = name + ' lives in ' + city;
+const name = "Bob";
+var city = "Vancouver";
+var description = name + " lives in " + city;
 ```
 
-**ES.next:**
+**ES2015:**
 
 ```js
 const description = `${name} lives in ${city}`;
@@ -441,10 +461,10 @@ Template literals also preserve white space:
 **ES5:**
 
 ```js
-var funkyArrows = '\n-->\n    -->\n        ->\n';
+var funkyArrows = "\n-->\n    -->\n        ->\n";
 ```
 
-**ES.next:**
+**ES2015:**
 
 ```js
 const funkyArrows = `
@@ -462,10 +482,10 @@ Use a template literal to refactor the following code.
 
 ```js
 function fullName(first, last, birthYear) {
-  return first + ' ' + last + ',\nage: ' + 2016 - birthYear + '.';
+  return first + " " + last + ",\nage: " + 2016 - birthYear + ".";
 }
 
-fullName('Emma', 'Morano', 1900);
+fullName("Emma", "Morano", 1900);
 ```
 
 ---
@@ -480,11 +500,11 @@ With ES5, if we want to define object properties with names that match their cor
 function makePerson(name, city) {
   return {
     name: name,
-    city: city,
+    city: city
   };
 }
 
-makePerson('Mandi', 'Vancouver');
+makePerson("Mandi", "Vancouver");
 ```
 
 ---
@@ -493,17 +513,17 @@ makePerson('Mandi', 'Vancouver');
 
 The new property value shorthand allows us to abbreviate the initialization of a property within an object literal, provided that the property key matches an existing variable name.
 
-**ES.next:**
+**ES2015:**
 
 ```js
 function makePerson(name, city) {
   return {
     name,
-    city,
+    city
   };
 }
 
-makePerson('Mandi', 'Vancouver');
+makePerson("Mandi", "Vancouver");
 ```
 
 ---
@@ -532,7 +552,7 @@ Previously, we would work around this issue by testing parameter values in the b
 
 ```js
 function multiply(a, b) {
-  if (typeof b === 'undefined') {
+  if (typeof b === "undefined") {
     b = 1;
   }
 
@@ -547,7 +567,7 @@ multiply(1);
 
 With ES2015, default function parameters allow us to initialize parameters with default values if no value or `undefined` is passed.
 
-**ES.next:**
+**ES2015:**
 
 ```js
 function multiply(a, b = 1) {
@@ -568,7 +588,7 @@ Assigning object properties to individual variables is a bit tedious with ES5:
 ```js
 var point = {
   x: 1,
-  y: 2,
+  y: 2
 };
 
 var x = point.x;
@@ -584,12 +604,12 @@ console.log(y); // 2
 
 Destructuring allows us to assign properties from objects to individual variables with the same name:
 
-**ES.next:**
+**ES2015:**
 
 ```js
 const point = {
   x: 1,
-  y: 2,
+  y: 2
 };
 
 const { x, y } = point;
@@ -608,8 +628,8 @@ Another example using destructuring on an object:
 
 ```js
 var person = {
-  name: 'Mandi',
-  city: 'Vancouver',
+  name: "Mandi",
+  city: "Vancouver"
 };
 
 function getName(person) {
@@ -617,7 +637,7 @@ function getName(person) {
 }
 ```
 
-**ES.next:**
+**ES2015:**
 
 ```js
 function getName({ name }) {
@@ -634,13 +654,13 @@ We can also use destructuring on items in an array:
 **ES5:**
 
 ```js
-var winners = ['Bob', 'Alice', 'Jane'];
+var winners = ["Bob", "Alice", "Jane"];
 var first = winners[0];
 var second = winners[1];
 var third = winners[2];
 ```
 
-**ES.next:**
+**ES2015:**
 
 ```js
 const [first, second, third] = winners;
@@ -665,7 +685,7 @@ console.log(sum(1)); // 1
 console.log(sum(1, 2, 3, 4, 5)); // 15
 ```
 
-**Note:** No other named parameters can follow the spread parameter in the function declaration.
+**Note:** No other named parameters can follow the rest parameter in the function declaration.
 
 ---
 
@@ -712,7 +732,7 @@ function groceryList(...items) {
   }
 }
 
-groceryList('apples', 'oranges');
+groceryList("apples", "oranges");
 ```
 
 ---
@@ -731,7 +751,8 @@ The tax amount will need to be added to the subtotal of the summed item prices, 
 
 # What We've Learned
 
-- Syntactical differences between ES5 and ES.next
+- History of JavaScript and what ES2015 meant
+- Syntactical differences between ES5 and ES2015
 - How and where to replace `var` with `let` or `const`
 - How to use arrow functions
 - How to write more efficient JS with template literals, enhanced object literals, rest parameters, spread operators, and default parameters

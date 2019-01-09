@@ -20,10 +20,10 @@ layout: false
 
 # Agenda
 
-* Learn how to build SVGs from scratch
-* Practice OOP programming and logic in JavaScript
-* Build a "Pong" game using SVGs dynamically generated from ES.next classes
-* Have some fun with this :)
+- Learn how to build SVGs from scratch
+- Practice OOP programming and logic in JavaScript
+- Build a "Pong" game using SVGs dynamically generated from ES2015 classes
+- Have some fun with this :)
 
 ---
 
@@ -45,18 +45,18 @@ What is an SVG?<br /> What do they do for us?
 
 # SVG Features
 
-* **Solid browser support** (standard was developed in 1999)
-* **Scales like a champ**, so SVGs look great on high-density pixel displays...but they're small! (best of both worlds)
-* You can **embed them directly in an HTML document** (as inline SVGs) and target CSS or JS at them just like normal DOM elements (and animate them!)
-* You can include them in the `src` attribute of an `<img>` element (as we have done), but you won't be able to target CSS or JS directly at them
+- **Solid browser support** (standard was developed in 1999)
+- **Scales like a champ**, so SVGs look great on high-density pixel displays...but they're small! (best of both worlds)
+- You can **embed them directly in an HTML document** (as inline SVGs) and target CSS or JS at them just like normal DOM elements (and animate them!)
+- You can include them in the `src` attribute of an `<img>` element (as we have done), but you won't be able to target CSS or JS directly at them
 
 ---
 
 # SVG vs. HTML5 Canvas?
 
-* SVG is for rendering vector graphics, while canvas renders raster graphics
-* Canvas requires a single DOM element, `<canvas>`, that we draw a picture into (using JS)
-* After canvas draws the picture, it has no memory of what the pixels represent (so to create animations, you clear out the canvas element, then re-draw it)
+- SVG is for rendering vector graphics, while canvas renders raster graphics
+- Canvas requires a single DOM element, `<canvas>`, that we draw a picture into (using JS)
+- After canvas draws the picture, it has no memory of what the pixels represent (so to create animations, you clear out the canvas element, then re-draw it)
 
 ---
 
@@ -65,8 +65,14 @@ What is an SVG?<br /> What do they do for us?
 SVGs look a lot like HTML elements:
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" width="100" height="100">
-    <rect x="0" y="0" width="50" height="50" />
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  viewBox="0 0 100 100"
+  width="100"
+  height="100"
+>
+  <rect x="0" y="0" width="50" height="50" />
 </svg>
 ```
 
@@ -78,8 +84,8 @@ The `version="1.1"` attribute refers to the version of the SVG spec we're using.
 
 # SVG Workspace
 
-* **Viewport**: The viewport **defines visible area of the SVG**.The canvas where an SVG is drawn is conceptually infinite in both dimensions, but parts of the SVG that lie beyond the viewport are clipped off. The `width` and `height` attributes on an `<svg>` define the viewport dimenions.
-* **Viewbox**: The `viewBox` defines the coordinate system we will use to draw SVGs onto the canvas. Think of it as a **nested coordinate system** that can be larger or smaller than the viewport. The first two coordinates define the top/left `x` and `y` values of the `viewBox`, the last two define the height and width.
+- **Viewport**: The viewport **defines visible area of the SVG**.The canvas where an SVG is drawn is conceptually infinite in both dimensions, but parts of the SVG that lie beyond the viewport are clipped off. The `width` and `height` attributes on an `<svg>` define the viewport dimenions.
+- **Viewbox**: The `viewBox` defines the coordinate system we will use to draw SVGs onto the canvas. Think of it as a **nested coordinate system** that can be larger or smaller than the viewport. The first two coordinates define the top/left `x` and `y` values of the `viewBox`, the last two define the height and width.
 
 ---
 
@@ -87,10 +93,10 @@ The `version="1.1"` attribute refers to the version of the SVG spec we're using.
 
 Paste the SVG example (two slides back) into a Codepen...
 
-* Change the `viewBox` to `0 0 50 50`. What happens?
-* Now try `0 0 200 200`. What do you observe?
-* Next, try `25 25 100 100`. What happens to the rectangle now? Is this what you expect?
-* Finally, add `preserveAspectRatio="none"` as a new attribute on the SVG element, and change the `viewBox` value to `0 0 100 200`. How do you explain this behaviour?
+- Change the `viewBox` to `0 0 50 50`. What happens?
+- Now try `0 0 200 200`. What do you observe?
+- Next, try `25 25 100 100`. What happens to the rectangle now? Is this what you expect?
+- Finally, add `preserveAspectRatio="none"` as a new attribute on the SVG element, and change the `viewBox` value to `0 0 100 200`. How do you explain this behaviour?
 
 ---
 
@@ -201,19 +207,27 @@ We will generate our game board SVG with JS in this project, but before we do, l
 
 Your SVG should include:
 
-* A board (512 x 256 pixels, `#353535` background)
-* 2 paddles (56 x 8 pixels)
-* A ball in the center of the board (8 pixels radius)
-* A dividing line down the middle of the board (look into the `stroke-dasharray` attribute)
+- A board (512 x 256 pixels, `#353535` background)
+- 2 paddles (56 x 8 pixels)
+- A ball in the center of the board (8 pixels radius)
+- A dividing line down the middle of the board (look into the `stroke-dasharray` attribute)
 
 ???
 in **index.html** add
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="256" width="512" >
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="256" width="512">
   <rect height="256" width="512" fill="#353535" />
   <rect height="56" width="8" fill="white" x="10" y="100" />
-  <line stroke-dasharray="20, 15" x1="255" y1="0" x2="257" y2="256" stroke="white" stroke-width="4" />
+  <line
+    stroke-dasharray="20, 15"
+    x1="255"
+    y1="0"
+    x2="257"
+    y2="256"
+    stroke="white"
+    stroke-width="4"
+  />
   <rect height="56" width="8" fill="white" x="494" y="100" />
   <circle id="ball" r="8" cx="256" cy="128" fill="white" />
 </svg>
@@ -627,9 +641,9 @@ document.addEventListener("keydown", event => {
 });
 ```
 
-* What does a **key event** look like?
-* Write down the `key` for `a`, `z`, `↑`, `↓`, and `SPACE`.
-* Try replacing `keydown` with `keyup`
+- What does a **key event** look like?
+- Write down the `key` for `a`, `z`, `↑`, `↓`, and `SPACE`.
+- Try replacing `keydown` with `keyup`
 
 Fill in the key names in `settings.js`, then import your `KEYS` export into `Game.js`.
 
@@ -912,10 +926,10 @@ This will be our next challenge, Challenge 6
 
 Complete the following requirements for the paddles:
 
-* Instantiate paddles with their up/down keys
-* Write paddle methods that move the paddle **up** and **down**
-* Use `Math.max` and `Math.min` to prevent moving the paddle off the board
-* Replace your `console.log()` calls in the event listener callback with your new `up` and `down` methods
+- Instantiate paddles with their up/down keys
+- Write paddle methods that move the paddle **up** and **down**
+- Use `Math.max` and `Math.min` to prevent moving the paddle off the board
+- Replace your `console.log()` calls in the event listener callback with your new `up` and `down` methods
 
 ???
 
@@ -1004,9 +1018,9 @@ export default class Ball {
 
 Let's render the ball in the game now:
 
-* Render the ball as a `<circle>`
-* Instantiate a `Ball` on `Game` in the middle of the board
-* Call `this.ball.render()` in `Game`
+- Render the ball as a `<circle>`
+- Instantiate a `Ball` on `Game` in the middle of the board
+- Call `this.ball.render()` in `Game`
 
 ???
 
@@ -1108,8 +1122,8 @@ class: center, middle
 
 **Direction + Magnitude = Vector**
 
-* **Magnitude:** Quantities that have only a magnitude are called scalars (i.e. it's an amount)
-* **Direction:** Give an scalar magnitude direction, and you've made a vector
+- **Magnitude:** Quantities that have only a magnitude are called scalars (i.e. it's an amount)
+- **Direction:** Give an scalar magnitude direction, and you've made a vector
 
 In other words, it's a _numeric value in a specific direction_.
 
@@ -1286,8 +1300,8 @@ Flip that vector
 
 Flip that vector!
 
-* Make the ball `vx` flip to `-vx` when it hits a side wall
-* Make the ball `vy` flip to `-vy` when it hits a top or bottom wall
+- Make the ball `vx` flip to `-vx` when it hits a side wall
+- Make the ball `vy` flip to `-vy` when it hits a top or bottom wall
 
 ???
 
@@ -1373,9 +1387,9 @@ template: inverse
 
 In order to detect paddle/ball collision, we will need to know:
 
-* What space on the board's grid the `player1` and `player2` paddles occupy
-* The location of the ball's outermost horizontal edges
-* Whether any of the ball and paddle coordinates overlap
+- What space on the board's grid the `player1` and `player2` paddles occupy
+- The location of the ball's outermost horizontal edges
+- Whether any of the ball and paddle coordinates overlap
 
 _What game object should be detecting these collisions?_
 
@@ -1502,9 +1516,9 @@ paddleCollision(player1, player2) {
 
 Detect the right paddle collision. We need to test if:
 
-* The right edge of the ball is touching or beyond the left edge of the paddle
-* The right edge of the ball is touching or beyond the right edge of the paddle
-* The ball `cy` is between the top edge of the paddle and bottom edge of the paddle
+- The right edge of the ball is touching or beyond the left edge of the paddle
+- The right edge of the ball is touching or beyond the right edge of the paddle
+- The ball `cy` is between the top edge of the paddle and bottom edge of the paddle
 
 If all of these conditions are true, the paddle has been struck and we need to reverse the horizontal direction of the ball.
 
@@ -1549,9 +1563,9 @@ paddleCollision(player1, player2) {
 
 Now detect the left paddle collision. We need to test if:
 
-* The left edge of the ball is touching or beyond the right edge of the paddle
-* The left edge of the ball is touching or beyond the left edge of the paddle
-* The ball `cy` is between the top edge of the paddle and bottom edge of the paddle
+- The left edge of the ball is touching or beyond the right edge of the paddle
+- The left edge of the ball is touching or beyond the left edge of the paddle
+- The ball `cy` is between the top edge of the paddle and bottom edge of the paddle
 
 If true, again, we will reverse the ball. Be sure to call `paddleCollision` in your ball's `render` method now.
 
@@ -1605,8 +1619,8 @@ Next slide is the challenge to codify this.
 
 Time to start keeping score:
 
-* Write a `goal` method that increments a player's score **and** resets the ball to the middle of the board after a goal is scored
-* Call this method when the ball goes too far too the left or right side (...so where will you need to call this method?)
+- Write a `goal` method that increments a player's score **and** resets the ball to the middle of the board after a goal is scored
+- Call this method when the ball goes too far too the left or right side (...so where will you need to call this method?)
 
 For now, just call `console.log()` to view the score after each goal is score to make sure that it's working.
 
@@ -1769,11 +1783,11 @@ We made it!!!? 😎 😌
 
 # Stretch Goals
 
-* Trigger multiple balls
-* Create balls with special effects (different speeds, sizes, effects, etc.)
-* Trigger speed changes or size changes of paddles
-* Fire a shot from a paddle on key press
-* Declare a winner at a final score
+- Trigger multiple balls
+- Create balls with special effects (different speeds, sizes, effects, etc.)
+- Trigger speed changes or size changes of paddles
+- Fire a shot from a paddle on key press
+- Declare a winner at a final score
 
 ---
 

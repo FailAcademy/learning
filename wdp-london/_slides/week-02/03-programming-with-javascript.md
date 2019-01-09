@@ -78,7 +78,6 @@ Client-side vs. server-side?
 
 - Variables
 - Expressions (Math & truth checking)
-- Comparison Operators
 - Arrays (Sometimes called Lists)
 - Objects (Sometimes called classes)
 - Functions
@@ -132,8 +131,6 @@ This helps us understand what particular values may be at specific points in you
 console.log('hello!');
 ```
 
-This is an example of a *statement* in JavaScript.
-
 ---
 
 # Comments
@@ -163,19 +160,13 @@ Comments are always hidden from execution in the script, and do not affect the o
 
 ---
 
-# What Is Syntax?
+# What is Syntax?
 
 When we talk about programming, we will use specific words to describe the programs we are talking about.
 
 Here are a few examples:
 
 **Statement, Expression, Value, Declaration, Assignment, Conditional, Object, Function, Method**
-
----
-
-template: inverse
-
-# Statements, Variables and Types
 
 ---
 
@@ -186,10 +177,148 @@ Statements in JavaScript end with a `;`.
 Here is an example of a statement:
 
 ```js
-console.log('Hello World');
+a = b * 2;
 ```
 
 Statements are any combination of **variables**, **values**, and **operators**.
+
+---
+
+# Control Flow
+
+The most common control flow statement is the `if else` statement:
+Using `if` and `else` you can decide what code your program will run, depending on the **Truthyness** or **Falsiness** of a given statement, for example:
+
+```javascript
+// ...
+const hungry = 9000;
+
+if (hungry) {
+  eat();
+} else {
+  doWork();
+}
+```
+
+**What function will get called in this case?**
+
+---
+
+# Expressions
+
+A statement is made up of one or more **expressions**.
+
+An expression is any reference to a **variable** or **value**, (or a set of **variables** and **values**) combined with **operators**.
+
+Here is an example of an **if statement**:
+
+```js
+if (a > 21 || a * 4 === 32) {
+  console.log('Got a result!');
+}
+```
+
+---
+
+# Variables
+
+The **const** keyword defines a variable in JavaScript.
+
+This is what a **variable declaration** looks like:
+
+```js
+const color = 'red';
+const amount = 100;
+const list = ['first', 'second', 'third'];
+const result = amount * 10;
+```
+
+---
+
+# Uninitialized Variables
+
+We can **declare** variables, without assigning a value using `let`.
+
+Unassigned variables automatically get the JavaScript value `undefined`.
+
+```js
+let a;
+let b;
+let c;
+
+console.log(a); // logs "undefined"
+```
+
+---
+
+# Variable Pro Tips
+
+- Variables can hold _any_ JavaScript value!
+- Make sure your variable names are descriptive
+- Use `camelCase` for defining JS variables
+- You can only use the dollar sign and underscore special characters in variable names
+
+---
+
+# Which Is Which?
+
+Who can name what the **statements** and **variables** are in the following script?
+
+```js
+const today = new Date();
+const dayOfWeek = today.getDay();
+let greeting;
+
+if (dayOfWeek === 2) {
+  greeting = 'Today is Tuesday';
+} else {
+  greeting = 'Nope, not Tuesday!';
+}
+
+console.log(greeting);
+```
+
+---
+
+# Exercise 1
+
+Copy and paste this code into the browser console:
+
+```js
+console.log('Hello World!');
+const yourName = prompt("What's your name?");
+console.log(yourName);
+```
+
+If we wanted to store the value inputted into the `prompt` and print it out in an `console.log` afterward, how might we do that?
+
+And what would we do if wanted to output the value that was entered in the `prompt` with the string `Hello,` in front of it in the subsequent `console.log`?
+
+---
+
+template: inverse
+
+# Values, Types & Operators
+
+---
+
+# Primitives
+
+When working with operators (as we'll see in a moment), we'll have to ensure that the values we are using in our expressions are appropriate.
+
+That means numbers for math, strings for creating text, etc.
+
+Primitive values include:
+
+```js
+'I am a String'; // string
+'I am another string'; // string
+42; // number
+true; // boolean
+false; // boolean
+```
+
+There are two other primitives in ES5: `undefined` and `null`
 
 ---
 
@@ -202,9 +331,13 @@ JavaScript has basic arithmetic operators:
 In use:
 
 ```js
-3 + 2;
-(4 - 1) * 3;
+const quantity = 3 + 2;
+const total = (4 - 1) * 3;
+let totalAndOne = total++;
+let totalMinusOne = total--;
 ```
+
+_What will the above variables return?_
 
 ---
 
@@ -233,194 +366,6 @@ _What will the above variables return?_
 
 ---
 
-# Variables
-
-The **const** keyword defines a variable in JavaScript.
-
-This is what a **variable declaration** looks like:
-
-```js
-const colour = 'red';
-const amount = 100;
-const list = ['first', 'second', 'third'];
-const result = amount * 10;
-let value = 5;
-let counter = 0;
-```
-
----
-
-# Mutability
-
-`const` allows us to create variables that are **immutable**: we cannot change their value.
-
-```js
-const colour = 'red';
-colour = 'blue'; // error!
-```
-
-`let` allows us to create variables that are **mutable**
-
-```js
-let colour = 'red';
-colour = 'blue';
-```
-
----
-
-# Unassigned variables
-
-We can also **declare** variables, without assigning a value using `let`.
-
-Unassigned variables automatically get the JavaScript value `undefined`.
-
-```js
-let a;
-let b;
-let c;
-
-console.log(a); // logs "undefined"
-```
-
----
-
-# Primitives
-
-When working with operators (as we'll see in a moment), we'll have to ensure that the values we are using in our expressions are appropriate.
-
-That means numbers for math, strings for creating text, etc.
-
-Primitive values include:
-
-```js
-'I am a String'; // string
-'I am another string'; // string
-42; // number
-true; // boolean
-false; // boolean
-```
-
-There are two other primitives in ES5: `undefined` and `null`
-
----
-
-# Variable Pro Tips
-
-- Variables can hold _any_ JavaScript value!
-- Make sure your variable names are descriptive
-- Use `camelCase` for defining JS variables
-- You can only use the dollar sign and underscore special characters in variable names
-
----
-
-# camelCase?
-
-There are many types of **cases** we can use when programming. Since we can't use spaces in our variable names, we need different ways to separate words.
-
-```
-camelCaseLooksLikeThis
-PascalCaseLooksLikeThis
-kebab-case-looks-like-this
-snake_case_looks_like_this
-```
-
-Being consistent about using kebab-case for **CSS** and camelCase for **JS** allows us to keep our code organized and readable.
-
----
-
-# The typeof operator
-
-We can use `typeof` to determine the type of any variable in JavaScript.
-
-```js
-typeof 'A string'; // string
-typeof 3; // number
-typeof true; // boolean
-```
-
----
-
-# Exercise 1
-
-Copy and paste this code into the browser console:
-
-```js
-console.log('Hello World!');
-const yourName = prompt("What's your name?");
-console.log(yourName);
-```
-
-If we wanted to store the value inputted into the `prompt` and print it out in an `console.log` afterward, how might we do that?
-
-And what would we do if wanted to output the value that was entered in the `prompt` with the string `Hello,` in front of it in the subsequent `console.log`?
-
----
-
-# console.log() and variables
-
-The `+` operator is what we consider an *overloaded* operator.
-
-It behaves differently depending on what values are provided to it.
-
-```js
-3 + 2; // 5
-'Hello ' + 'World'; // 'Hello World'
-'3' + '2'; //32
-```
-
----
-
-# String concatenation
-
-We can use the `+` operator to build **strings** with **variables** inside of them:
-
-```js
-let color = 'green';
-let amount = 100;
-let unit = 'kg';
-
-console.log('The ' + color + ' box weighs ' + amount + unit + '.');
-```
-
-Note the extra spaces in the strings.
-
----
-
-# Exercise 2
-
-Create **variables** that hold the following **strings**:
-
-- Your name
-- Your age
-- Something you love
-
-`console.log()` a sentence, using string concatenation.
-
-```
-My name is John, I am 30 years old and I love concatenating strings.
-```
-
----
-
-# Exercise 3
-
-Create two variables, for a **width** and a **height**, and `console.log()` the **area**.
-
-<hr />
-
-Create a variable that holds a temperature in Celcius, and `console.log()` the same temeprature in Fahrenheit. 
-
-**Hint**: you can convert by subtracting 32, multiplying by 5, and dividing by 9.
-
-<hr />
-
----
-
-template: inverse
-
-# Comparisons and Truth
-
----
 # Comparison Operators
 
 We can also compare values and evaluate their result:
@@ -445,25 +390,6 @@ _What will the above expressions return?_
 
 ---
 
-# Control Flow
-
-The most common control flow statement is the `if else` statement:
-Using `if` and `else` you can decide what code your program will run, depending on the **Truthyness** or **Falsiness** of a given statement, for example:
-
-```javascript
-const hungry = true;
-
-if (hungry) {
-  eat();
-} else {
-  doWork();
-}
-```
-
-**What function will get called in this case?**
-
----
-
 # Comparison Operators and Conditionals
 
 Comparison operators are helpful when paired with conditional statements:
@@ -480,37 +406,6 @@ if (score >= 50) {
 
 _What will happen when this script runs?_
 
----
-
-template: inverse
-
-# Truthy and Falsy values
-
----
-
-# JavaScript Truth Table
-
-The following values are always `false`:
-
-- `false`
-- `undefined`
-- `""` (an empty string)
-- `null`
-- `0`
-- `NaN` (a special Number value meaning Not-a-Number!)
-
----
-
-# Short Circuits
-
-We can use **comparison operators** and **assignment** to get a value depending on some condition:
-
-```js
-// The value of a will either be true or false
-// depending on the truthiness of b & c ...
-
-const a = b && c;
-```
 ---
 
 # Type Coercion
@@ -560,6 +455,25 @@ Because of this unique behavior, it's a best practice to **always use `===` (tri
 
 ---
 
+template: inverse
+
+# Truthy and Falsy values
+
+---
+
+# JavaScript Truth Table
+
+The following values are always `false`:
+
+- `false`
+- `undefined`
+- `""` (an empty string)
+- `null`
+- `0`
+- `NaN` (a special Number value meaning Not-a-Number!)
+
+---
+
 # And (&&) and Or (||)
 
 In JavaScript we can check for **truthy** and **falsy** values.
@@ -570,6 +484,19 @@ For example, we can write an **if statement** like this:
 if (a < b || b > c) {
   console.log('Got a result');
 }
+```
+
+---
+
+# Short Circuits
+
+We can use **comparison operators** and **assignment** to get a value depending on some condition:
+
+```js
+// The value of a will either be true or false
+// depending on the truthiness of b & c ...
+
+const a = b && c;
 ```
 
 ---
@@ -957,10 +884,10 @@ function myFunction() {
 Let’s look at some variables and figure out if they will have local or global scope...
 
 ```js
-const fille = “Monique”;
+const fille = "Monique";
 
 function france() {
-  const garcon = “Henri”;
+  const garcon = "Henri";
 }
 ```
 
@@ -971,13 +898,13 @@ function france() {
 A more complex example:
 
 ```js
-const fille = “Monique”;
+const fille = "Monique";
 
 function france() {
-  const garcon = “Henri”;
+  const garcon = "Henri";
 
   function paris() {
-    const femme = “Marie”;
+    const femme = "Marie";
   }
 }
 ```
@@ -1059,14 +986,16 @@ template: inverse
 
 # While Loops
 
-While loops allow us to run a block of statements multiple times, as long as a conditial statement evaluates to `true`.
+While loops are helpful when you don't know how many times it needs to run:
 
 ```js
-const score = 0;
+let i = 0;
+let score = 0;
 
-while (score < 5) {
+while (i < 5) {
+  score = i;
   console.log('Your score : ' + score);
-  score++;
+  i++;
 }
 ```
 
@@ -1076,40 +1005,18 @@ _What do you think the final score will be after this loop runs?_
 
 # For Loops
 
-For loops allow for more control than our `while` loops. We can set up two additional statements that run:
-
-- When the loop starts. `let i = 1`
-- After every iteration of the loop. `i++`
+For loops allow you to set a specific number of times that the loop will run:
 
 ```js
+let count = 0;
+
 for (let i = 1; i < 5; i++) {
+  count = i;
   console.log('Current count: ' + count);
 }
 ```
 
-The conditional in the middle works the exact same as our `while` loops: as long as it is `true`, our loops will continue to run.
-
----
-
-# Exercise 
-
-Using `for` loops, `console.log()` the following sets of numbers:
-
-```js
-0 100 200 300 400 500 600 700 800 900 1000
-
-1 2 4 8 16 32 64 128
-
-0 2 4 6 8 10
-
-3 6 9 12 15
-
-9 8 7 6 5 4 3 2 1 0
-
-1 1 1 2 2 2 3 3 3 4 4 4
-
-0 1 2 3 4 0 1 2 3 4 0 1 2 3 4
-```
+You will likely find yourself using for loops most often with "arrays" (we'll get to those shortly...).
 
 ---
 
@@ -1125,7 +1032,7 @@ const shoppingList = ['coffee', 'peppers', 'apple juice'];
 
 const totalItems = shoppingList.length;
 
-for (const i = 0; i < totalItems; i++) {
+for (let i = 0; i < totalItems; i++) {
   console.log(shoppingList[i]);
 }
 ```

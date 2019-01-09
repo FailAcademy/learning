@@ -2,7 +2,7 @@
 layout: lesson
 title: Fonts on the Web
 slides: ["_slides/week-01/02a-web-fonts.md"]
-lesson_date: 2018-10-05
+lesson_date: 2019-01-10
 ---
 
 ## Pre-Work
@@ -49,7 +49,7 @@ To add the social media icons, check out Font Awesome's [Brand Icons](https://fo
 
 ## Lab Activity
 
-See the [Intro to CSS lesson](/lesson/intro-to-css/) for lab activity details.
+See the [Intro to CSS lesson](/lesson/02-intro-to-css/) for lab activity details.
 
 ---
 

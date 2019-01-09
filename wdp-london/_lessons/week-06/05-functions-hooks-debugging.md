@@ -2,7 +2,7 @@
 layout: lesson
 title: WordPress Functions, Hooks & Debugging
 slides: ["_slides/week-06/05-functions-hooks-debugging.md"]
-lesson_date: 2018-11-14
+lesson_date: 2019-02-15
 ---
 
 ## Pre-Work
@@ -10,6 +10,8 @@ lesson_date: 2018-11-14
 Some pre-reading on using "hooks" in WordPress:
 
 - [WordPress Hooks: Actions, Filters, and Examples](http://blog.teamtreehouse.com/hooks-wordpress-actions-filters-examples)
+
+- [WordPress Hooks: Actions, Filters, 2min video that explains this well](https://wpshout.com/wordpress-hooks-actions-filters-work/)
 
 Some pre-reading on adding CSS and JS files to a WordPress theme:
 
@@ -96,6 +98,8 @@ Some WordPress plugins that are helpful for debugging:
 - [Debug Bar](https://wordpress.org/plugins/debug-bar/)
 - [Query Monitor](https://wordpress.org/plugins/query-monitor/)
 - [Theme Check](https://wordpress.org/plugins/theme-check/)
+- [Show Current Template](https://wordpress.org/plugins/show-current-template/)
+- [Kint Debugger](https://wordpress.org/plugins/kint-debugger/)
 
 Two very readable articles on WP's event-driven architecture:
 

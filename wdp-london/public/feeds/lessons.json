@@ -13,117 +13,100 @@
    {
       "title": "Foundation Days",
       "allDay": true,
-      "start": "2018-10-01"
+      "start": "2019-01-07"
    },
    {
       "title": "Foundation Days",
       "allDay": true,
-      "start": "2018-10-02"
+      "start": "2019-01-08"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-10-15"
+      "start": "2019-01-18"
+   },
+   {
+     "title": "Project Work Day",
+     "allDay": true,
+     "start": "2019-01-21"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-10-23"
+      "start": "2019-01-28"
    },
-   {
-    "title": "Project Work Day",
-    "allDay": true,
-    "start": "2018-11-05"
-   },
-   {
-    "title": "Project Work Day",
-    "allDay": true,
-    "start": "2018-11-06"
-   },
-
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-11-20"
+      "start": "2019-02-18"
    },
-    {
+   {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-11-26"
+      "start": "2019-02-22"
    },
    {
-    "title": "Project Work Day",
-    "allDay": true,
-    "start": "2018-11-22"
-   },
-   {
-    "title": "Project Work Day",
-    "allDay": true,
-    "start": "2018-11-23"
-   },
-   {
-      "title": "Analytics & SEO Lesson (DM)",
-      "allDay": false,
-      "start": "2018-11-28T09:00:00+00:00",
-      "end": "2018-11-28T12:00:00+00:00"
-   },
-   {
-      "title": "Design Presentations",
+      "title": "Project Work Day",
       "allDay": true,
-      "start": "2018-11-30"
+      "start": "2019-02-25"
+   },
+   {
+      "title": "Project Work Day",
+      "allDay": true,
+      "start": "2019-02-27"
+   },
+   {
+      "title": "Project Work Day",
+      "allDay": true,
+      "start": "2019-02-28"
+   },
+   {
+      "title": "Project Work Day",
+      "allDay": true,
+      "start": "2019-03-01"
+   },
+      {
+      "title": "Pong Code Along",
+      "allDay": true,
+      "start": "2019-02-07"
+   },
+   {
+      "title": "Pong Code Along",
+      "allDay": true,
+      "start": "2019-02-08"
+   },
+   {
+      "title": "Programming with Javascript",
+      "allDay": true,
+      "start": "2019-01-17"
+   },
+   {
+      "title": "Programming with Javascript",
+      "allDay": true,
+      "start": "2019-01-17"
    },
    {
       "title": "GitHub Portfolio Development",
       "allDay": true,
-      "start": "2018-11-26",
-      "end": "2018-12-01"
+      "start": "2019-03-04",
+      "end": "2019-03-08"
    },
    {
       "title": "Community Project Work",
       "allDay": true,
-      "start": "2018-12-03",
-      "end": "2018-12-21"
+      "start": "2019-03-12",
+      "end": "2019-03-29"
    },
   {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2018-10-10T14:00:00+00:00",
-      "end": "2018-10-10T16:00:00+00:00"
+      "start": "2019-01-16T14:00:00+00:00",
+      "end": "2019-01-16T16:00:00+00:00"
   },
- 
   {
       "title": "PPD Lesson",
       "allDay": false,
-      "start": "2018-10-24T14:00:00+00:00",
-      "end": "2018-10-24T16:00:00+00:00"
-  },
- 
-  {
-      "title": "PPD Lesson",
-      "allDay": false,
-      "start": "2018-11-07T14:00:00+00:00",
-      "end": "2018-11-07T16:00:00+00:00"
-  },
-  
-  
-  {
-      "title": "PPD Lesson",
-      "allDay": false,
-      "start": "2018-11-21T14:00:00+00:00",
-      "end": "2018-11-21T16:00:00+00:00"
-  },
- 
-  {
-      "title": "PPD Lesson",
-      "allDay": false,
-      "start": "2018-12-05T14:00:00+00:00",
-      "end": "2018-12-05T16:00:00+00:00"
-  },
-  
-  {
-    "title": "PPD Lesson",
-    "allDay": false,
-    "start": "2018-12-19T14:00:00+00:00",
-      "end": "2018-12-19T16:00:00+00:00"
+      "start": "2018-01-30T14:00:00+00:00",
+      "end": "2018-01-30T16:00:00+00:00"
   }
 ]

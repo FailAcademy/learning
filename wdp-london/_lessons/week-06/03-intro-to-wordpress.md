@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to WordPress
 slides: ["_slides/week-06/03-intro-to-wordpress.md"]
-lesson_date: 2018-11-12
+lesson_date: 2019-02-13
 ---
 
 ## Pre-Work

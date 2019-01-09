@@ -2,7 +2,7 @@
 layout: lesson
 title: CSS3 Transitions & Transforms
 slides: ["_slides/week-03/04-css-transitions-transforms.md"]
-lesson_date: 2018-10-22
+lesson_date: 2019-01-25
 ---
 
 ## Pre-Work
@@ -56,9 +56,7 @@ Here's the HTML, CSS and JS you'll need to get started:
 ```html
 <!-- The HTML set-up... -->
 
-<div class="ball">
-   <i class="fa fa-futbol-o fa-5x"></i>
-</div>
+<div class="ball"><i class="fa fa-futbol-o fa-5x"></i></div>
 ```
 
 ```css

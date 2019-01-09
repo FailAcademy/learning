@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Developing with ES.next & Webpack Slides
+title: Developing with ES2015 & Webpack Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Developing with ES.next & Webpack
+# Developing with ES2015 & Webpack
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -20,7 +20,7 @@ layout: false
 
 # Agenda
 
-1.  ES.next Modules
+1.  ES2015 Modules
 2.  What is Webpack?
 3.  How to use Webpack
 
@@ -28,7 +28,7 @@ layout: false
 
 template: inverse
 
-# ES.next Modules
+# ES2015 Modules
 
 ---
 
@@ -47,9 +47,9 @@ Modularizing code in ES5 often meant polluting the global namespace. For example
 ```html
 <!DOCTYPE html>
 <body>
-	<p>Hello, world!</p>
-	<script src="./jquery.js"></script>
-	<script src="./my-script.js"></script>
+  <p>Hello, world!</p>
+  <script src="./jquery.js"></script>
+  <script src="./my-script.js"></script>
 </body>
 ```
 
@@ -67,24 +67,24 @@ let hello = $("p").css("color", "red");
 
 No native or agreed upon solution in ES5:
 
-* CommonJS
-* SystemJS
-* RequireJS (AMD)
-* ...and more!
+- CommonJS
+- SystemJS
+- RequireJS (AMD)
+- ...and more!
 
 ---
 
-# ES.next Modules
+# ES2015 Modules
 
-ES.next standardizes modules!
+ES2015 standardizes modules!
 
 Run: `npm install --save jquery`
 
 ```html
 <!DOCTYPE html>
 <body>
-	<p>Hello, world!</p>
-	<script src="./my-script.js"></script>
+  <p>Hello, world!</p>
+  <script src="./my-script.js"></script>
 </body>
 ```
 
@@ -99,7 +99,7 @@ All the code in the jQuery package is completely trapped inside of this module a
 
 ---
 
-# ES.next Modules
+# ES2015 Modules
 
 Using modules requires using `import`/`export` keywords:
 
@@ -141,8 +141,8 @@ Before we begin to use Webpack, we need to put it in context. To understand why 
 Now that we have some context for what Webpack is and what it does vs. other tools, follow the [Getting Started](https://webpack.js.org/concepts/)
 tutorial. Once completed we should be able to explain the following terms:
 
-* Module loader
-* Module bundler
+- Module loader
+- Module bundler
 
 How does Webpack treat CSS files? How is this different from the more traditional inclusion techniques we've seen so far in the course?
 
@@ -158,11 +158,11 @@ Follow the exercise instructions found on the [lesson page](/lesson/developing-w
 
 # What We've Learned
 
-* How to use `import` and `export` with ES.next modules
-* How to set-up Webpack in a project
-* How to bundle our JS and use Webpack
-* How to compile Sass with Webpack
-* How to make our code easier to debug with source maps in Webpack
+- How to use `import` and `export` with ES2015 modules
+- How to set-up Webpack in a project
+- How to bundle our JS and use Webpack
+- How to compile Sass with Webpack
+- How to make our code easier to debug with source maps in Webpack
 
 ---
 

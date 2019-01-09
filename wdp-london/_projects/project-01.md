@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 1 - Aloha Homepage
-due: Tuesday, October 16th (beginning of class)
+due: Tuesday, January 22nd (beginning of class)
 ---
 
 For Project 1, you're going to create a homepage for your client the Aloha Apparel Co. using HTML and CSS.
@@ -30,7 +30,7 @@ You can [download the project files here](https://s3-us-west-2.amazonaws.com/red
 **Screen Sizes:**
 
 - The width of the desktop-friendly content area is `1240px`
-- If undertaking the responsive stretch goal, the width of the tablet-friendly content area is `600px`
+- If you are implementing the tablet version, the width of the tablet-friendly content area is `600px`
 
 ## Requirements
 
@@ -104,8 +104,8 @@ Your project must:
 Want to challenge yourself? Your project could also:
 
 - Update the cart icon in the top-right corner of the header every time the user clicks the "Add to Cart" button for a product
-- Incorporate a fixed header at the top of the page so that the navigation menu is always invisible when the user scrolls down the page
+- Incorporate a fixed header at the top of the page so that the navigation menu is always visible when the user scrolls down the page
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to [jim.bennett@redacademy.com](mailto:jim.bennett@redacademy.com).
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to kiran@redacademy.com.

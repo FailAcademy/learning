@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: Intro to ES.next
-slides: ["_slides/week-05/02-intro-to-esnext.md"]
-lesson_date: 2018-10-31
+title: Intro to ES2015
+slides: ["_slides/week-05/02-intro-to-es2015.md"]
+lesson_date: 2019-02-05
 ---
 
 ## Pre-Work
@@ -22,15 +22,15 @@ Optional (but worthwhile!) additional viewing:
 - [14: Useful String Additions](https://laracasts.com/series/es6-cliffsnotes/episodes/14)
 - [15: Array#find and Array#includes](https://laracasts.com/series/es6-cliffsnotes/episodes/15)
 
-While watching each video, open the the **[Babel online REPL](http://babeljs.io/repl/)** and try writing out each ES.next code example into it to see how it would be implemented in ES5 syntax.
+While watching each video, open the the **[Babel online REPL](http://babeljs.io/repl/)** and try writing out each ES2015 code example into it to see how it would be implemented in ES5 syntax.
 
 ---
 
 ## Learning Objectives
 
-- Distinguish the major differences between ES.next and ES5 syntax.
+- Distinguish the major differences between ES2015 and ES5 syntax.
 - Distinguish the difference between compiling and transpiling code, and identify how use tools such as Babel and TypeScript enable more effective, modern JavaScript code.
-- Set up a basic development environment for an ES.next application using Gulp.
+- Set up a basic development environment for an ES2015 application using Gulp.
 - Use the block-scoped binding constructs `let` and `const` in lieu of `var` to define variables where appropriate.
 - Use arrow syntax to write functions that share the same lexical `this` as their surrounding code.
 - Use template literals, enhanced object literals, default parameters, destructuring, rest parameters, and spread operators as shorthand for writing less redundant code.
@@ -94,7 +94,7 @@ The tax amount will needed to be added to the subtotal of the summed item prices
 
 ## Lab Activity
 
-In today's lab, you're going to refactor your Instanews project to use ES.next syntax.
+In today's lab, you're going to refactor your Instanews project to use ES2015 syntax.
 
 To do this, start by creating a new branch on your project's repo called `esnext` and complete the lab tasks entirely on the new branch.
 

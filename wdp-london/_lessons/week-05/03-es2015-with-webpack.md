@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: Developing with ES.next & Webpack
-slides: ["_slides/week-05/03-esnext-with-webpack.md"]
-lesson_date: 2018-11-01
+title: Developing with ES2015 & Webpack
+slides: ["_slides/week-05/03-es2015-with-webpack.md"]
+lesson_date: 2019-02-06
 ---
 
 ## Pre-Work
