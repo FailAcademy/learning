@@ -35,6 +35,12 @@ template: inverse
 
 ---
 
+# CSS is fun!
+
+![CSS is awesome!](https://media.giphy.com/media/yYSSBtDgbbRzq/giphy.gif)
+
+---
+
 class: center, middle
 
 ### What does "CSS" mean?
