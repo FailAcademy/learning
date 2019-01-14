@@ -325,7 +325,7 @@ DROP TABLE "public"."items";
 Populating your Relational Database.
 Use what you know to create the **Tags** & **Users**, table!
 
-_Hint: use the `\du` command to check if the table was successfully created._
+_Hint: use the `\dt` command to check if the table was successfully created._
 
 ???
 
