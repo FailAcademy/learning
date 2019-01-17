@@ -58,6 +58,20 @@ To deploy, after your changes are merged into master:
 (If you do want to merge a *merge commit* you can use `git cherry-pick -m 1 [merge commit hash]`, but don't).<br/>
 `git push origin [your production branch]`<br/>
 
+### Distributing hanges to other LMSs
+
+
+from `master` run `git format-patch -1 HEAD` to create a patch file containing changes from the last commit. <br/> 
+**(which should be your squashed PR)**
+
+`git checkout [your production branch]`
+
+`patch < [path to the generated patch file]`
+
+You will see a 'file not found' error. Follow the promts and apply changes to the correct files!
+
+---
+
 For maximum flexibility, there are no checks on your production branches. For this to work smoothly, we'll all need to agree to keep things sane by following this workflow.
 
 
