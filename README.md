@@ -58,7 +58,7 @@ To deploy, after your changes are merged into master:
 (If you do want to merge a *merge commit* you can use `git cherry-pick -m 1 [merge commit hash]`, but don't).<br/>
 `git push origin [your production branch]`<br/>
 
-### Distributing hanges to other LMSs
+### Distributing Changes to Other LMSs
 
 
 from `master` run `git format-patch -1 HEAD` to create a patch file containing changes from the last commit. <br/> 
