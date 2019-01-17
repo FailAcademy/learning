@@ -55,16 +55,28 @@ class: center, middle
 Fixed vs. Fluid vs. Adaptive vs. Responsive ... GO!
 ]
 
+???
+
+* Responsive: built with media queries that target more general break points that scale images, wrap text and adjust layout
+* Adaptive: websites are built with media queries that target specific device sizes (e.g. iPhone, iPad, Android, etc). One of the problems with an adaptive layout, is that as new devices get introduced your code will need to be updated. Which isn’t ideal.
+* Fluid: websites are built using percentages for widths. The concept of fluid design was being used way before the term “responsive design” came about. It’s pretty safe to say, that fluid design evolved into responsive design.
+* Fixed: websites are built using fixed pixel widths. While a design with fixed dimensions can sometimes be the quickest way to get up and running, it’ll provide a less user friendly across multiple devices.
+* (One month)
+
 ---
 
 # vs. Mobile-Only
 
 * Mobile-only websites are designed specifically to be viewed on mobile devices
-* They are not the same the website as the desktop version
+* They are not the same website as the desktop version
 * Usually require "browser sniffing" (not foolproof)
 * You often find them on "m." sub-domains
 * Check out: https://m.facebook.com/
 * This is becoming less common today...
+
+???
+
+* Browser sniffing: Browser sniffing is the act of detecting the web browser a visitor is using in order to serve version-specific pages, scripts, images, or other content. The technique was popular around 10 years ago because Microsoft and Netscape introduced their own technologies and web standards were in their infancy. (Sitepoint)
 
 ---
 
@@ -73,6 +85,12 @@ class: center, middle
 .large[
 What are the 3 components of responsively designed websites?
 ]
+
+???
+
+* Flexible grids and layouts
+* Flexible images and media
+* Media Queries
 
 ---
 
@@ -108,6 +126,27 @@ aside {
 }
 ```
 
+???
+
+* Add borders
+* change container width to max-width
+* add flex to article and aside
+
+```
+.container {
+  display: flex;
+/*   max-width: 960px; */
+}
+article {
+  border: 1px solid #000;
+  flex: 1 auto;
+}
+aside {
+  border: 1px solid #000;
+  flex: 1;
+}
+```
+
 ---
 
 class: center, middle
@@ -129,6 +168,9 @@ Using `rem` units can make proportionally scaling font sizes a little much more 
 
 _Let see a quick demo of how this works..._
 
+???
+
+* Demo: https://codepen.io/redgarry/pen/dwgRKL
 ---
 
 template: inverse
@@ -294,6 +336,11 @@ Your task is to find an example of a responsively-designed website. Take notes o
 
 Afterward, we'll pair up and share our findings.
 
+???
+
+* Do in groups
+* How are ads' responsiveness managed? Do they disappear, scale, render a different size ad?
+
 ---
 
 template: inverse
@@ -307,6 +354,10 @@ class: center, middle
 .large[
 What does it mean to take a mobile-first approach to RWD?
 ]
+
+???
+
+* Exactly as it sounds - designing for mobile first, then tablet size(s), then desktop
 
 ---
 
@@ -346,6 +397,10 @@ Screenshots of what the website should look like at mobile, tablet, and desktop 
 
 **[Download the exercise &rarr;](/public/files/exercises/rwd-refactor.zip)**
 
+???
+
+* Instascoop refactor exercise
+
 ---
 
 # Exercise 3
@@ -354,7 +409,9 @@ Now that we've had a chance to brush up our RWD skills, let's strategize how we'
 
 Take a few moments to review the two narrower design comps and think about what areas of the site will specifically be affected by the changes that are happening at each breakpoint.
 
-Jot some idea out on your own, then you'll team up to discuss this with a partner. We'll then reconvene to discuss each other's findings, as well as any questions or concerns before starting with the lab work.
+Jot down some ideas on your own, then you'll team up to discuss this with a partner. We'll then reconvene to discuss each other's findings, as well as any questions or concerns before starting with the lab work.
+
+[Reading: Will I always use the same breakpoints?](https://medium.com/@uiuxlab/the-most-used-responsive-breakpoints-in-2017-of-mine-9588e9bd3a8a)
 
 ---
 
@@ -381,9 +438,14 @@ CSS3 provides us with these additional properties too:
 
 Let's teach each other about these CSS3 properties...
 
-Your task is to take your assigned property and create a demo of how it can be used for your classmates.
+Your task is to take your assigned property, research it, and create a demo of how it can be used for your classmates.
 
-Also take a look at Project 1, and see if you can recommend where it this property could potentially be used (if at all).
+Also take a look at your Project 1, and see if you can use your new knowledge of it to recommend where it could potentially be used (if at all).
+
+???
+
+* Pass out tags of properties
+
 
 ---
 
