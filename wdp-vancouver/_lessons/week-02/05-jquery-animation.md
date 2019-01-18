@@ -72,7 +72,7 @@ Do this on your project now!
 
 ## Lab Activity
 
-See the [Intro to jQuery](/lesson/intro-to-jquery/) for lab activity details.
+See the [Intro to jQuery](/lesson/04-intro-to-jquery/) for lab activity details.
 
 ---
 

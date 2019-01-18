@@ -7,11 +7,11 @@ lesson_date: 2019-01-17
 
 ## Pre-Work
 
-Readings from _Learn to Code Advanced HTML & CSS_:
+Follow this jQuery lesson from _Learn to Code Advanced HTML & CSS_:
 
 - [jQuery](http://learn.shayhowe.com/advanced-html-css/jquery/)
 
-Also before class, familiarize yourself with jQuery by completing the free **[Try jQuery](http://try.jquery.com/)** course on Code School.
+Also before class, try to familiarize yourself with jQuery by completing the [jQuery introduction lesson](https://www.codecademy.com/learn/learn-jquery/modules/learn-jquery-introduction) on Codeacademy.
 
 ---
 
