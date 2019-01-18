@@ -22,7 +22,7 @@ Sharing changes between repos is cumbersome and error prone. Strict sharing is u
  git pull origin master
 ```
 
-### Submitting updates
+### Submitting Updates
 
 **Step 1:**
 
@@ -62,7 +62,7 @@ To deploy, after your changes are merged into master:
 
 
 from `master` run `git format-patch -1 HEAD` to create a patch file containing changes from the last commit. <br/> 
-**(which should be your squashed PR)**
+**(your squashed PR)**
 
 `git checkout [your production branch]`
 
