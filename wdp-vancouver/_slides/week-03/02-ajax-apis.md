@@ -106,6 +106,13 @@ This one has three visible parts:
 
 **5xx — Server error.** Something went wrong on the server.
 
+???
+
+4xx and 5xx codes both indicate an error. The difference is on which end made the error. 
+
+* 4xx code - the error was caused by the user
+* 5xx code - the error was caused by something on the server side
+
 ---
 
 # Mini-Exercise
@@ -142,12 +149,12 @@ It's **asynchronous** because Ajax doesn’t block other events from happening w
 
 Methods for making Ajax requests:
 
-- `$.ajax()`
+- `.ajax()`
 - `.load()`
-- `$.get()`
-- `$.post()`
-- `$.getJSON()`
-- `$.getScript()`
+- `.get()`
+- `.post()`
+- `.getJSON()`
+- `.getScript()`
 
 ---
 
@@ -430,6 +437,10 @@ class: center, middle
 The NYT API requires that obtain an API key to access its various APIs' endpoints.
 
 Let's create an account on the NYT website so we can obtain a key to use on our projects right now...
+
+???
+
+Documentation on the 'Get Started' page is somewhat outdated - they should select/enable all APIs they want access to when creating their app
 
 ---
 
