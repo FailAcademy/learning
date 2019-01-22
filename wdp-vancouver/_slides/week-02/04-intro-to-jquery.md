@@ -220,6 +220,11 @@ To use jQuery you must include a link to its script file in your HTML document, 
 
 The best practice is to add it near the closing body tag, but it has to be included before any other script files that use jQuery.
 
+???
+
+Pop open a codepen and demonstrate jQuery not working if they're in the wrong order
+
+
 ---
 
 # Where Do You Get It?

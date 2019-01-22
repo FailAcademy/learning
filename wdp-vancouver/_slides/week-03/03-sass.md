@@ -196,7 +196,11 @@ a {
 }
 ```
 
-You'll want to make sure you choose intuitive, semantic variables names.
+You'll want to make sure you choose intuitive, semantic variable names.
+
+???
+
+Ask them for some examples of good and bad variable names.
 
 ---
 
@@ -247,6 +251,10 @@ select {
    margin-bottom: $base-margin + (2 * 3); /* will equal 7.5 */
 }
 ```
+
+???
+
+BEDMAS
 
 ---
 
@@ -502,9 +510,9 @@ template: inverse
 
 # Organizing SCSS Files
 
-You'll likely find many projects that use Sass organize their code into many specific **partials** and import them into a `style.scss` file.
+You'll likely find that many projects using Sass have organized their code into many specific **partials** and import them into a `style.scss` file.
 
-For example, for a project with a `scss` sub-folder and `style.scss` file at the root, you would like find a list of `@import` statements inside `style.scss` file:
+For example, for a project with a `scss` sub-folder and `style.scss` file at the root, you would likely find a list of `@import` statements inside `style.scss` file:
 
 ```sass
 @import 'scss/variables';
@@ -518,7 +526,7 @@ For example, for a project with a `scss` sub-folder and `style.scss` file at the
 
 # Organizing SCSS Files
 
-Note that you can add of leave off the `.scss` extension the file names, and also import CSS files as-is too:
+Note that you can add or not add the `.scss` extension the file names, and also import CSS files as-is too:
 
 ```sass
 @import 'foo';      // foo.scss is imported
@@ -591,7 +599,7 @@ gulp.task("sass", function() {
 
 # Nicer Error Reporting
 
-We can add easier-to-read error messages into our Gulp set-up to let us know when we have syntax error in our Sass. To do that, we'll have [install and add](https://www.npmjs.com/package/gulp-prettyerror) `gulp-prettyerror`:
+We can add easier-to-read error messages into our Gulp set-up to let us know when we have syntax error in our Sass. To do that, we'll have to [install and add](https://www.npmjs.com/package/gulp-prettyerror) `gulp-prettyerror`:
 
 ```js
 gulp.task("sass", function() {
