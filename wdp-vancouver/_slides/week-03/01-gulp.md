@@ -31,10 +31,10 @@ layout: false
 GET EVERYONE TO MAKE A COMMIT BEFORE THE LESSON!
 
 * Frame the lesson before you start! Why do we need Gulp, what will we use it for?
-* Writing Sass, minifying code, check for style errors in our code, and magically reloading our browser!
-* To use Gulp we, will need to install, because we need to be able to execute JS on our computers, not just in our browsers
-* Emphasize that the whole point of the day is to write JS that won't actually run in the browser in our Instanews project...
-* Gulp will be our little JS robot for doing on tasks on our website (while we develop) that we don't want to waste time doing on our (or that aren't feasible for us to do on our own)
+* We use Gulp for compiling Sass, minifying code, check for style errors in our code, and magically reloading our browser!
+* To use Gulp, we will need to install node, because we need to be able to execute JS on our computers, not just in our browsers
+* Emphasize that the whole point of the day is to write JS that won't actually run in the browser in our Instanews project (because we're using ES2015 syntax)...
+* Gulp will be our little JS robot for doing the tasks on our website (while we develop) that we don't want to waste time doing on our own (or that aren't feasible for us to do on our own)
 
 ---
 
@@ -70,7 +70,7 @@ class: center, middle
 
 # Dependencies
 
-The term **dependencies** is generally used to refer to any code your project **depends** on in order to work.
+The term **dependencies** is generally used to refer to any code that your project **depends** on in order to work.
 
 Our projects can have dependencies that are specific to our dev environments only (appropriately named **development dependencies**).
 
@@ -86,7 +86,7 @@ It's the largest ecosystem of open source libraries in the world.
 
 Initially npm was only useful to developers working in Node.js (i.e. not in the browser, like us) environments.
 
-However, since it's release, npm has become widely used to distribute modules for all JavaScript environments, thanks to tools like **[Browserify](http://browserify.org/)** and **[webpack](https://webpack.github.io/)** (more on those later).
+However, since its release, npm has become widely used to distribute modules for all JavaScript environments, thanks to tools like **[Browserify](http://browserify.org/)** and **[webpack](https://webpack.github.io/)** (more on those later).
 
 ---
 
@@ -211,7 +211,7 @@ gulp.task("default", function(done) {
 **Why done?**
 
 * With Gulp 4, we need to tell Gulp when our task is done running
-* There are a number of way we can do this...we will see how to do this two way today (returning a Gulp stream from the callback funciton, or by explicitly calling the done function based into the callback as a parameter)
+* There are a number of way we can do this...we will see how to do this two way today (returning a Gulp stream from the callback function, or by explicitly calling the done function based into the callback as a parameter)
 
 See also: https://stackoverflow.com/a/36899424
 
@@ -255,7 +255,7 @@ In this simple example we can see the magic of Gulp at work: `gulp.task`, `gulp.
 
 **Syntax Note:**
 
-When requiring node modules at the top, that the syntax can be comma seperated variable declaration (as seen in example) or each module as it's own statement (const statement with semi colon after each).
+When requiring node modules at the top, the syntax can be comma seperated variable declaration (as seen in example), or each module as its own statement (const statement with semi colon after each).
 
 Different plugin docs write it different and students tend to get confused.
 
@@ -279,7 +279,7 @@ class: center, middle
 
 ### Best Practice:
 
-You're `default` Gulp task should contain a reference to other specific **named tasks**.
+Your `default` Gulp task should contain a reference to other specific **named tasks**.
 
 ---
 
@@ -310,14 +310,14 @@ gulp.task('say_hello', function(done) {
   done();
 });
 
-gulp.task('default', gulp.parallel('say_hello', 'scripts');
+gulp.task('default', gulp.parallel('say_hello', 'scripts'));
 ```
 
 Running `gulp` will execute both tasks together. To run an individual task, use the task name: e.g. `gulp scripts`.
 
 ???
 
-`gulp.parallel` which executes multiple tasks at the same time.
+`gulp.parallel` which executes multiple tasks at the same time. Mention that one caveat of running tasks in parallel is that a cleaning task may wipe results from one task before completing another - careful planning is needed.
 
 The other option `gulp.series` runs multiple tasks in sequence.
 
@@ -553,9 +553,9 @@ We have already created our `.eslintrc` files as part of the lesson, so now it's
 
 Remind them to test the `lint` task.
 
-Show an example of the `link` task throwing an error and warning.
+Show an example of the `lint` task throwing an error and warning.
 
-Note, lint errors means the task is stopped and will not make it to the minified file.
+Note, the presence of lint errors means the task is stopped and will not make it to the minified file.
 
 ---
 
