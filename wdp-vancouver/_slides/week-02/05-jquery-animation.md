@@ -415,7 +415,7 @@ class: center, middle
 
 ### What's a plugin?
 
-Plugins allow us to extend jQuery to add additional functionality to suit needs of our websites.
+Plugins allow us to extend jQuery to add additional functionality to suit the needs of our websites.
 
 In other words, they allow us to easily do more cool stuff on our sites with jQuery, and with minimal effort on our parts!
 
