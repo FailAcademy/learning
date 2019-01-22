@@ -179,7 +179,7 @@ class: center, middle
 
 ### jQuery is just JavaScript!
 
-jQuery is library of code that makes it much easier to perform many essential tasks in JavaScript.
+jQuery is a library of code that makes it much easier to perform many essential tasks in JavaScript.
 
 Check out the [source code of the original jQuery release](http://genius.it/ejohn.org/files/jquery-original.html).
 
@@ -218,7 +218,7 @@ To use jQuery you must include a link to its script file in your HTML document, 
 </body>
 ```
 
-The best practice is to add it near the closing body tag, but it has be included before any other script files that use jQuery.
+The best practice is to add it near the closing body tag, but it has to be included before any other script files that use jQuery.
 
 ---
 
@@ -268,7 +268,7 @@ For example, take a typical HTML document:
 
 # What Is the DOM?
 
-The a visual representation of the DOM for this page would look something like this:
+The visual representation of the DOM for this page would look something like this:
 
 .inline-images[
 ![DOM diagram](/public/img/slide-assets/dom-diagram.svg)
@@ -314,7 +314,7 @@ Let's get to the fun stuff and look at a basic example. Take our previous code s
 </body>
 ```
 
-Let's see how we can use jQuery to **change the colour of the text** in the paragraph with class of `intro`.
+Let's see how we can use jQuery to **change the colour of the text** in the paragraph with a class of `intro`.
 
 ---
 
@@ -362,7 +362,7 @@ But what does that actually do?
 
 By writing `$('.intro')` in our code, we run a function that **returns** a **jQuery collection** (which is an object!), of matching elements.
 
-This is also know as **wrapping** the matching elements in the jQuery object.
+This is also known as **wrapping** the matching elements in the jQuery object.
 
 You can read more about the [jQuery object](https://learn.jquery.com/using-jquery-core/jquery-object/) in the docs.
 
@@ -564,6 +564,10 @@ And we can similarly remove them with `.removeClass()`:
 $("ul").removeClass("menu");
 ```
 
+???
+
+Mention they don't need to add the dot for class names when adding/removing classes, nor the '#' when working with ID's
+
 ---
 
 # Working with Attributes
@@ -597,6 +601,10 @@ We can even make multiple adjustments:
 ```javascript
 $("p").css({ "font-size": "18px", "font-weight": "bold" });
 ```
+
+???
+
+Mention that the use of leaving one parameter out uses it as a getter, vs both parameters as a setter
 
 ---
 
@@ -648,7 +656,7 @@ focus, blur, change, input, keydown, keyup, keypress, click, dblclick, mouseup, 
 
 # Event Anatomy
 
-The basis anatomy of an **event listener** in jQuery is as follows:
+The basic anatomy of an **event listener** in jQuery is as follows:
 
 * The target element to listen to
 * The event we want to react to
@@ -718,6 +726,10 @@ _In plain English please?_
 In all DOM event callbacks, jQuery passes an event object argument which contains information about the event, such as precisely when and where it occurred, what type of event it was, which element the event occurred on, etc.
 
 We can use this to our advantage!
+
+???
+
+Run a sample of console logged event, dig thru the properties (target, etc)
 
 ---
 
