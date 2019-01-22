@@ -66,9 +66,9 @@ from `master` run `git format-patch -1 HEAD` to create a patch file containing c
 
 `git checkout [your production branch]`
 
-`patch < [path to the generated patch file]`
+`git apply -p2 < ~/patch --directory=[dir containing your lms] --3way`
 
-You will see a 'file not found' error. Follow the promts and apply changes to the correct files!
+Solve conflicts and commit!
 
 ---
 
