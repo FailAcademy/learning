@@ -16,7 +16,7 @@ paginate_path: '/news/page:num/'
 author:
   name: Mandi Wise (forked from Mark Otto)
   url: https://twitter.com/mandiwise
-  email: mandi@redacademy.com
+  email: dev@redacademy.com.com
 
 # Custom vars
 version: 1.2.2
