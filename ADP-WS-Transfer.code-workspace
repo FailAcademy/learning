@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "adp-vancouver"
+		},
+		{
+			"path": "wdp-ws-vancouver"
 		}
 	],
 	"settings": {}
