@@ -407,6 +407,14 @@ How can you use this new method to conditionally render the `ClearButton` compon
 
 ---
 
+# Exercise 6
+
+Now add a `removeCompleted` method to the `App` component to make your "Clear completed" button work.
+
+**Hint** You're going to need to use `.filter()` to keep the todos that are not completed and update your state. Don't forget to pass your method as a prop to your child component.
+
+---
+
 template: inverse
 
 # Working with Refs
@@ -515,17 +523,19 @@ React gives us more opportunities to run code that will affect a component as it
 
 # Lifecycle Methods
 
-- `componentWillMount` (mounting)
+**[Component Lifecycle Methods Cheatsheet](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)**
+
+- `constructor` (mounting)
+- `render` (mounting/updating)
 - `componentDidMount` (mounting)
-- `componentWillReceiveProps` (updating)
 - `shouldComponentUpdate` (updating)
-- `componentWillUpdate` (updating)
+- `getSnapshotBeforeUpdate` (updating)
 - `componentDidUpdate` (updating)
 - `componentWillUnmount` (unmounting)
 
 ---
 
-# Exercise 6
+# Exercise 7
 
 Last but not least, we want to improve the UX of our to-do app and automatically focus the `<input>` element when the app is rendered.
 
@@ -553,7 +563,7 @@ template: inverse
 
 All required Apollo packages were added to your project with `npm install`, you just need to use them now :)
 
-The first stop will be `client/src/apollo/index.js` to make our client application aware of our GraphQL API by defining a `uri` for the API, and adding the `httpWithUploads` to the newly instantiated Apollo client.
+The first stop will be `client/src/apollo/index.js` to make our client application aware of our GraphQL API by defining a `uri` for the API, and adding the `httpLink` to the newly instantiated Apollo client.
 
 ???
 
@@ -597,12 +607,15 @@ What looks familiar? What looks new?
 
 # Write a Query
 
-Before we can use `<Query />` we'll need to write a query to pass it as prop.
+Before we can use `<Query>` we'll need to write a query to pass it as prop.
 
 In `client/src/apollo/queries.js` we will:
 
-- Create the `ItemFields` [**fragment**](https://www.apollographql.com/docs/angular/features/fragments.html)
-- Use that fragment to create the `ALL_ITEMS_QUERY`
+- Create a query to get `tags`
+
+- Back in our `HomeContainer.js` we will use `<Query>` to fetch all the `tags` from our `GraphQL` server and log them in console.
+
+**Note:** We do not need to fetch `tags` in our HomeContainer. This is just an example.
 
 ---
 
@@ -629,40 +642,15 @@ To avoid this, we will organize our project into **container components** (how t
 
 _Container components:_
 
+- Create/Update `state` and implement lifecycle methods
 - Should be responsible for **fetching data**
-- Should **define event handlers** and pass them as props
+- Should **define event handlers** and pass them as `props`
 
 _Presentational components:_
 
-- Should **never change prop data** (only receive it)
-- Should **format the data** for the view only
-
----
-
-# Create a Container
-
-We will use a more advanced pattern with `<Query />` in `client/src/pages/Items/ItemsContainer.js`.
-
-```js
-class ItemsContainer extends Component {
-  render() {
-    return (
-      <Query query={ALL_ITEMS_QUERY}>
-        {({ loading, error, data }) => {
-          if (loading) return <FullScreenLoader inverted />;
-          if (error) return <p>{`Error! ${error.message}`}</p>;
-          return <Items classes={this.props.classes} items={data.items} />;
-        }}
-      </Query>
-    );
-  }
-}
-
-export default withStyles(styles)(ItemsContainer);
-```
-
-???
-Challenge students to create a custom Error component instead of using a `<p>` tag.
+- Sould receive `props`
+- Should **never change `props` data**
+- Should use `props` and export `JSX` (view)
 
 ---
 

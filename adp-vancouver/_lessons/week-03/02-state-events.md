@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: React State and Events
-slides: ["_slides/week-03/02-state-events.md"]
+slides: ['_slides/week-03/02-state-events.md']
 lesson_date: 2019-01-22
 ---
 
@@ -92,6 +92,14 @@ How can you use this new method to conditionally render the `ClearButton` compon
 
 ## Exercise 6
 
+Now add a `removeCompleted` method to the `App` component to make your "Clear completed" button work.
+
+**Hint** You're going to need to use `.filter()` to keep the todos that are not completed and update your state. Don't forget to pass your method as a prop to your child component.
+
+---
+
+## Exercise 7
+
 Last but not least, we want to improve the UX of our to-do app and automatically focus the `<input>` element when the app is rendered.
 
 To do that, we'll need to use one of React's lifecycle methods. It's up to you to pick the right one and implement the code within it to focus the `<input>`.
@@ -99,6 +107,39 @@ To do that, we'll need to use one of React's lifecycle methods. It's up to you t
 ---
 
 ## Lab Activity
+
+### Task 1:
+
+In `client/src/apollo/queries.js`:
+
+- Create the `ItemFields` [**fragment**](https://www.apollographql.com/docs/angular/features/fragments.html)
+- Use that fragment to create the `ALL_ITEMS_QUERY`
+
+### Create a Container
+
+Use a more advanced pattern with `<Query>` in `client/src/pages/Items/ItemsContainer.js`.
+
+```js
+class ItemsContainer extends Component {
+  render() {
+    return (
+      <Query query={ALL_ITEMS_QUERY}>
+        {({ loading, error, data }) => {
+          if (loading) return <FullScreenLoader inverted />;
+          if (error) return <p>{`Error! ${error.message}`}</p>;
+          return <Items classes={this.props.classes} items={data.items} />;
+        }}
+      </Query>
+    );
+  }
+}
+
+export default withStyles(styles)(ItemsContainer);
+```
+
+**Challenge:** Create a custom Error component instead of using a `<p>` tag.
+
+### Task 2:
 
 Continue working on the client side of your Boomtown application now that you are able to load data from your server in it.
 
