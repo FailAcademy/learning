@@ -21,6 +21,6 @@ Lesson slidedecks are generated via [remark](https://github.com/gnab/remark) by 
 
 ## License
 
-Structural code is open-sourced under the [MIT license](LICENSE.md). Learning materials content is copyright (c) 2015 RED Academy.
+Structural code is open-sourced under the [MIT license](LICENSE.md). Learning materials content is copyright (c) RED Academy.
 
 <3
