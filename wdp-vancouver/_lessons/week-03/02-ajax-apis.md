@@ -88,7 +88,7 @@ Let's create an account on the NYT website so we can obtain a key to use on our 
 
 ## Lab Activity
 
-You're welcome to use either **Codepen** or a **code editor** to complete either of the following lab options.
+You're welcome to use either **CodePen** or a **code editor** to complete either of the following lab options.
 
 ### Option 1 (Easier)
 
@@ -98,7 +98,7 @@ Build a simple form that fetches data from the OpenWeatherMap API to populate a 
 
 You'll be using a **GET** method to fetch data via Ajax from the following endpoint:
 
-**http://api.openweathermap.org/data/2.5/weather?q=Vancouver,ca&appid=4a48e1e1428fd83889074671fbf259d9**
+**https://api.openweathermap.org/data/2.5/weather?q=Vancouver,ca&appid=4a48e1e1428fd83889074671fbf259d9**
 
 You'll use the `$.ajax()` method just as you did the GitHub API example, but append the required data (the main type of weather, the description, and the icon) when the button is clicked.
 
@@ -118,6 +118,8 @@ Writing the CSS and jQuery is up to you. Good luck!
 
 ### Option 2 (Harder)
 
+You'll need to do this one using a **code editor** rather than CodePen. 
+
 Build a simple form that fetches album data for a given artist using the iTunes API, and populate a webpage with that data as pictured:
 
 ![iTunes widget prototype](/public/files/labs/ajax-lab-itunes.gif)
@@ -126,7 +128,7 @@ You'll be using a **GET** method to fetch data via Ajax from the following endpo
 
 **https://itunes.apple.com/search?entity=album&limit=6&term=PLUS+THE+ARTIST+NAME**
 
-You'll use the `$.ajax()` method just as you did the GitHub API example, but append the required data (the thumbnail album artwork plus the album names) when a user searches for an artist name.
+You'll use the `$.getJSON()` method and append the required data (the thumbnail album artwork plus the album names) when a user searches for an artist name.
 
 **Additional hints:**
 
