@@ -386,6 +386,28 @@ Take a moment and read through this tutorial from DigitalOcean: <br/>
 
 ---
 
+# Lab Activity
+
+Building a TCP server from scratch is not something you'll normally do. There are a wide range of behaviors and edge cases we have not accounted for.
+
+In this lab, we'll use Node's `http` and `fs` modules to build a more typical webserver based on `HTTP`!<br/><br/>
+**Your new HTTP server should:**
+
+- Listen for `HTTP` requests on port `3000`
+- Serve an `index.html` file (which should be a properly formatted html document) when the url reads http://localhost:3000/index.html
+- Serve the right `HTTP` error code if the url is for any other file.
+
+Good luck!
+
+_Note:_
+
+The `HTTP` protocol is the backbone of the web. We're going to learn more about the `HTTP` protocol in upcoming lessons. Use this lab as an opportunity to explore and ask questions.
+
+Remember, `http` is just another _layer of abstraction_ built using the `TCP` protocol "under the hood" to handle the networking activity.
+<br/>
+
+---
+
 # What We've Learned
 
 - How to set up and use environment variables
