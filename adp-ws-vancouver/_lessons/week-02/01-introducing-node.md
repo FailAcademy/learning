@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Introducing Node
-slides: ['_slides/week-02/02-introducing-node.md']
+slides: ['_slides/week-02/01-introducing-node.md']
 lesson_date: 2019-04-16
 ---
 
@@ -88,7 +88,7 @@ Change your TCP service to deliver any incoming data to all connected clients.
 
 ---
 
-## Lab Activity
+## Lab Activity (Next Class)
 
 Building a TCP server from scratch is not something you'll normally do. There are a wide range of behaviors and edge cases we have not accounted for.
 
