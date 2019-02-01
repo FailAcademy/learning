@@ -157,6 +157,12 @@ tagid (itemTags): ON DELETE NO ACTION, ON UPDATE CASCADE
 
 ---
 
+## Lab Activity
+
+Please see the lesson page for the lab description.
+
+---
+
 # What We've Learned
 
 - How to use SQL constraints
