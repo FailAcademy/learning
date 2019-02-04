@@ -5,6 +5,16 @@
     "start": "2018-01-01"
   },
   {
+    "title": "Victoria Day",
+    "allDay": true,
+    "start": "2019-05-20"
+  },
+  {
+    "title": "Victoria Day Weekend",
+    "allDay": true,
+    "start": "2019-05-18"
+  },
+  {
     "title": "Good Friday",
     "allDay": true,
     "start": "2018-03-30"
