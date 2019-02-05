@@ -70,7 +70,7 @@ Now that we know a little bit about What Meteor does, watch the following short 
 
 ---
 
-## Lab Activity
+## Lab Activity (Next Class)
 
 In today's lab, we'll start refactoring our React To-Do app from the first week into a Meteor app. Please complete the following tasks before tomorrow's class.
 

@@ -82,7 +82,7 @@ Create your platform specific files, and read-up on the `DrawerNavigation` compo
 
 ---
 
-## Lab Activity
+## Lab Activity (Next Class)
 
 In today's lab, thoroughly review your app in an Android emulator to ensure it behaves as you would expect and adequately resembles the R10's prototypes.
 

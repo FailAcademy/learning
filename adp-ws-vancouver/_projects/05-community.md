@@ -12,6 +12,6 @@ Your course instructors will be available in-class while you work on your projec
 
 It is important that you **attend class every day** during the final project lab time.
 
-All Community Projects are **due on March 29th**. You will showcase your completed work with your team in a project demo to your community partner and instructors on that day.
+All Community Projects are **due on Sept 26th**. You will showcase your completed work with your team in a project demo to your community partner and instructors on that day.
 
 More details will be supplied regarding your assigned community partners and teammates at the end of Week 7.

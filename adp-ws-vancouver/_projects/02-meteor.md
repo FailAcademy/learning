@@ -9,7 +9,7 @@ Create a real-time JavaScript web application of your own choosing with a group.
 
 Your project must be built using Meteor as an application platform, with React as a rendering library and MongoDB as a database.
 
-Your group must submit your project proposal to your instructor **by the end Week 4**.
+Your group must submit your project proposal to your instructor **by the end Week 10**.
 
 ## Requirements
 
