@@ -120,21 +120,21 @@ _Note the `=>` and `const` syntax...more on that to come!_
 
 You'll need to install `gulp-babel` as a development dependency too. To do that, run:
 
-`npm install -D gulp-babel babel-core babel-preset-es2015`
+`npm install -D gulp-babel babel-core babel-preset-env`
 
-What is the `babel-preset-es2015` package for?
+What is the `babel-preset-env` package for?
 
 ---
 
 # Babel Presets
 
-[Presets](https://babeljs.io/docs/plugins/preset-es2015/) are sharable `.babelrc` configs or simply an array of babel plugins.
+[Presets](https://babeljs.io/docs/en/env) are sharable `.babelrc` configs or simply an array of babel plugins.
 
 To use a preset, you'll need to create a `.babelrc` file include the following code in it
 
 ```json
 {
-  "presets": ["es2015"]
+  "presets": ["env"]
 }
 ```
 
