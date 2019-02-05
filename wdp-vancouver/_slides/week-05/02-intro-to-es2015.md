@@ -59,7 +59,7 @@ From 2015 Ecma International changed the naming convention and release schedule,
 
 The "ES" in ES6, ES2015 etc. stands for ECMAScript, named after the standards oganization Ecma International. JavaScript is the most popular implementation of ECMAScript, and is what we'll be using.
 
-ES2015 is a dynamic label used to reference the **next** version of ECMAScript coming out - the intention is that these updates will be made annually.
+ES.Next is a dynamic label used to reference the **next** version of ECMAScript coming out - the intention is that these updates will be made annually.
 
 ---
 
