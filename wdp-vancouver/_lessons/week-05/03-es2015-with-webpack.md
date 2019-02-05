@@ -40,7 +40,7 @@ Also take some time before class to explore the [Webpack documentation](https://
 Set up a **new project** with Webpack:
 
 1.  Create a new folder for your project (**don't call it webpack!**):
-    - Remember to run `npm init` in your project's root directory.
+    - Remember to run `npm init` in your project's root directory. (**don't name the project webpack either!**)
     - Remember to create a `.gitignore` file and add `node_modules` at the top
 2.  Create the following folders within:
     - `src`
@@ -64,7 +64,7 @@ module.exports = {
 };
 ```
 
-Important: All of your `webpack.config.js` code will be inside of the above object separated by commas.
+**Important**: All of your `webpack.config.js` code will be inside of the above object separated by commas.
 
 Run `npm install -g webpack` and 
 run `npm install -g webpack-cli` and then
@@ -116,7 +116,7 @@ Now, add this snippet at the top of our `webpack.config.js`
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 ```
 
-Also add this to our `webpack.config.js` file to autogenerate `index.html` file in our `build` dir.
+Also add this to our `module.exports` in our `webpack.config.js` file to autogenerate `index.html` file in our `build` dir.
 
 ```js
 // generate default index.html file in build dir
@@ -127,9 +127,12 @@ Once this command is finished, from the terminal in the root of your project run
 
 Great! you can check your `build` dir and you should be able to see two files, `index.html` file and `bundle.js` file.
 
-Let's run start our server from terminal (in the root of your project): `webpack-dev-server`
+Let's start our server from terminal (in the root of your project): `webpack-dev-server`
 
 Congratulations, you have a development server that will reload your browser when you change the files in the `src` directory
+
+Documentation for HTML Webpack plugin can be found here:
+[https://www.npmjs.com/package/html-webpack-plugin](HTML Webpack plugin)
 
 ---
 
@@ -168,7 +171,7 @@ module: {
         }
       ]
     }
-  ];
+  ]
 }
 
 // ...the rest

@@ -72,6 +72,14 @@ No native or agreed upon solution in ES5:
 - RequireJS (AMD)
 - ...and more!
 
+???
+
+CommonJS - for server or for native desktop applications
+
+SystemJS - loads ES6 modules, AMD, CommonJS and global scripts in the browser and NodeJS
+
+RequireJS- another JavaScript file and module loader
+
 ---
 
 # ES2015 Modules
@@ -118,6 +126,18 @@ export function a() {}
 export default function b() {}
 ```
 
+???
+
+import defaultExport from "module-name"; importing whatever the default is from the module
+
+import { export } from "module-name"; import specific export from module
+
+import { export as alias } from "module-name"; import specific export from module, using a more convenient name
+
+export function a() {}; Exporting a named function
+
+export default function b() {} Exporting function b as the default
+
 ---
 
 template: inverse
@@ -133,6 +153,10 @@ Webpack is a JavaScript **module bundler**.
 It's an open-source project released by Facebook.
 
 Before we begin to use Webpack, we need to put it in context. To understand why it was created and how it works, read the [Getting Started](https://webpack.js.org/concepts/) section of the Webpack documentation.
+
+???
+
+Webpack builds an internal dependency graph (a directed graph representing dependencies of several objects/resources towards each other)
 
 ---
 
