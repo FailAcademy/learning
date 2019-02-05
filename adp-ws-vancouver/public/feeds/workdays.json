@@ -65,6 +65,51 @@
     "start": "2019-05-25"
   },
   {
+    "title": "Lab Work Day",
+    "allDay": true,
+    "start": "2019-05-28"
+  },
+  {
+    "title": "Lab Work Day",
+    "allDay": true,
+    "start": "2019-06-04"
+  },
+  {
+    "title": "Lab Work Day",
+    "allDay": true,
+    "start": "2019-06-06"
+  },
+  {
+    "title": "Lab Work Day",
+    "allDay": true,
+    "start": "2019-06-11"
+  },
+  {
+    "title": "Lab Work Day",
+    "allDay": true,
+    "start": "2019-07-09"
+  },
+  {
+    "title": "Lab Work Day",
+    "allDay": true,
+    "start": "2019-07-16"
+  },
+  {
+    "title": "Lab Work Day",
+    "allDay": true,
+    "start": "2019-07-18"
+  },
+  {
+    "title": "Lab Work Day",
+    "allDay": true,
+    "start": "2019-07-23"
+  },
+  {
+    "title": "Lab Work Day",
+    "allDay": true,
+    "start": "2019-07-25"
+  },
+  {
     "title": "Project Work Day",
     "allDay": true,
     "start": "2019-04-24"
@@ -92,12 +137,22 @@
   {
     "title": "Project Work Day",
     "allDay": true,
+    "start": "2019-05-29"
+  },
+  {
+    "title": "Project Work Day",
+    "allDay": true,
     "start": "2019-05-30"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
     "start": "2019-06-01"
+  },
+  {
+    "title": "Project Work Day",
+    "allDay": true,
+    "start": "2019-06-08"
   },
   {
     "title": "Project Work Day",
@@ -130,10 +185,15 @@
     "start": "2019-09-03"
   },
   {
+    "title": "Project Work Day",
+    "allDay": true,
+    "start": "2019-07-13"
+  },
+  {
     "title": "Meteor Project (P2) Group Work",
     "allDay": true,
     "start": "2019-06-12",
-    "end": "2019-06-28"
+    "end": "2019-06-27"
   },
   {
     "title": "GitHub Portfolio Development",
