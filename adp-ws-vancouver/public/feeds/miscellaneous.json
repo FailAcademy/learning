@@ -48,5 +48,11 @@
     "title": "New Years Day",
     "allDay": true,
     "start": "2019-01-01"
+  },
+  {
+    "title": "Break Week",
+    "allDay": true,
+    "start": "2019-07-01",
+    "end": "2019-07-07"
   }
 ]
