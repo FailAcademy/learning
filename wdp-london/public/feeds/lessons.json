@@ -38,7 +38,7 @@
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2019-02-18"
+      "start": "2019-02-19"
    },
    {
       "title": "Project Work Day",
@@ -97,6 +97,25 @@
       "start": "2019-03-12",
       "end": "2019-03-29"
    },
+   {
+      "title": "Presentation Skills",
+      "allDay": true,
+      "start": "2019-02-13",
+      "end": "2019-02-13"
+   },
+   {
+      "title": "PPD Lesson",
+      "allDay": true,
+      "start": "2019-02-13",
+      "end": "2019-02-13"
+   },
+   {
+      "title": "PPD Lesson",
+      "allDay": true,
+      "start": "2019-02-27",
+      "end": "2019-02-27"
+   },
+   
   {
       "title": "PPD Lesson",
       "allDay": false,
