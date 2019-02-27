@@ -62,6 +62,12 @@ WordPress percentage changes often and is displayed on wordpress.org
 - WordPress allows us to create **custom post types** and **custom taxonomies**, and also has a host of other features that make it far more CMS-like than it used to be
 - Some people even use it as an application platform...
 
+???
+
+Custom taxonomies: a grouping mechanism for some posts (or links or custom post types
+
+Wordpress USED to be just for blogging, but with the addition of more sophisticated plugins, like ordering/payment, it quickly became used for e-commerce more and more
+
 ---
 
 # .org vs .com
@@ -70,6 +76,11 @@ WordPress percentage changes often and is displayed on wordpress.org
 - .com sites don't offer much in the way of customization
 - .org sites are self-hosted by you
 - .org sites are entirely customizable via plugins and themes
+
+???
+
+* As you can see, there are pros and cons to both .org and .com, the main difference being customizability vs ease of launch
+
 
 ---
 
@@ -87,15 +98,21 @@ template: inverse
 
 ---
 
+class: center, middle
+
+# Download Wordpress
+
+[https://wordpress.org/download/](https://wordpress.org/download/)
+
+---
+
 # Exercise 1
 
-We can also install WP locally using MAMP:
-
-1.  [Download WordPress](https://wordpress.org/download/)
-2.  Unzip your download and move it to your `htdocs` folder (rename the unzipped folder if you like)
+1.  Unzip your download and move it to your `htdocs` folder
+2.  Start MAMP after choosing the folder you added to `htdocs` as the document root 
 3.  Go to phpMyAdmin (via MAMP) and create a new database
-4.  Rename `wp-config-sample.php` to `wp-config.php` and fill in your database name and MAMP credentials
-5.  Go to http://localhost:8888/YOUR-FOLDER/wp-admin/install.php and complete your install
+4.  Rename `wp-config-sample.php` to `wp-config.php` and fill in your database name and MAMP credentials from the MAMP start page
+5.  Go to http://localhost:8888/wp-admin/install.php
 
 ???
 
@@ -106,6 +123,8 @@ Students independently try the local install. Then do a fresh install walk throu
 Note that there are a few ways to install locally.
 
 *Let the students know:* where to find database credentials, change default installation values (admin, wp\_)
+
+(10~15 min)
 
 ---
 
@@ -250,6 +269,10 @@ class: center, middle
 And don't let other people do that either!!!
 ]
 
+???
+
+Admin and super admin roles are the only roles that can access the UI's file editor 
+
 ---
 
 # Creating Content
@@ -278,6 +301,28 @@ class: center, middle
 Single vs. Multisite
 ]
 
+???
+
+***For our purposes, we'll be using single site only, buuuut:***
+
+### Pros:
+* It’s free to use and super scalable because it supports as many WordPress sites as you need.
+* Quickly access all websites by logging in one time and managing all sites from one WordPress dashboard panel.
+* Only install your plugins and themes one time, resulting in less server strain.
+* It’s very shareable – central code is shared so you don’t need to update each individual site
+* the user base is shared, meaning usernames and passwords are consistent across all sites
+* plugins are shared so all sites have similar internal and external features, and themes are shared (though each site can have their own) so swapping designs across sites is easily done.
+
+
+### Cons: 
+
+* All users who are added to your network will be guests on all sites on your network. To allocate a different default role for users on individual sites, you must use a plugin.
+* Site administrators cannot install new themes or plugins and cannot edit the profiles of users on their individual sites. Only the Network Admin has the ability to perform these tasks in a WordPress network.
+* There is no way to restrict plugins on individual sites.
+* All themes are installed for the entire network. If you edit the code of one theme, you edit it for all sites using that theme. - Note: You can install plugins in order to allow each site to tweak their own CSS without affecting anyone else.
+* There are many plugins that aren’t WordPress Multisite compatible.
+* Changing hosts, or removing a single site from Multisite is a very difficult thing to do.
+
 ---
 
 # Mini-Exercise
@@ -302,7 +347,7 @@ template: inverse
 
 - Plugins add additional functionality to your website
 - The [.org plugin repository](https://wordpress.org/plugins/) contains all of the plugins that can be installed via the WordPress dashboard
-- You can also create you own custom plugins
+- You can also create your own custom plugins
 
 ---
 
@@ -315,6 +360,10 @@ template: inverse
 - Gravity Forms (paid)
 - Google XML Sitemaps
 
+???
+
+Share Gravity Forms plugin in slack
+
 ---
 
 class: center, middle
@@ -322,6 +371,12 @@ class: center, middle
 .large[
 Disabling vs. Uninstalling?
 ]
+
+???
+
+* Disabling is just making the plugin inactive, uninstalling is removing the actual files. Mention researching plugins a little bit and their removal, where DB tables are concerned. "Does this plugin remove its data on uninstall?" This can be found on the development page of some or most plugins
+
+* You can read more here: [proper removal of wordpress plugins](https://kinsta.com/blog/uninstall-wordpress-plugin)
 
 ---
 
@@ -345,7 +400,7 @@ class: center, middle
 
 ### Themes & Plugins PSA
 
-Quality matters! Poorly-written code in plugins and themes in one of the biggest ways WP gets hacked
+Quality matters! Poorly-written code in plugins and themes is one of the biggest ways WP gets hacked
 
 ---
 
@@ -430,7 +485,7 @@ You will likely (and should!) see something very similar to this in any theme's 
 
 ???
 
-Before proceeding a head, get them to try to make sense of the code above with a partner.
+Before proceeding ahead, get them to try to make sense of the code above with a partner.
 
 ---
 
@@ -531,6 +586,14 @@ get_permalink();
 `the_permalink()` echoes out the permalink.
 
 `get_permalink()` returns the permalink, but does not echo it out in the template.
+
+---
+
+class: center, middle
+
+.inline-images[
+![WP Database and Core](https://productiveprogrammer.io/wp-content/uploads/2016/10/wordpress-winning-meme.jpg)
+]
 
 ---
 
