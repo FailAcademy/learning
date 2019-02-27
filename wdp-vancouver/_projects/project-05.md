@@ -44,7 +44,7 @@ To receive a “Complete” for this project, your submission will need to satis
 ### Development Workflow Requirements
 
 - Demonstrate effective organization of the project's root directory
-- Have a Git repository initialized in its root directory which is pushed to GitHub
+- Have a Git repository initialized in the theme directory which is pushed to GitHub
 - Use a .gitignore to exclude unnecessary files/folders, and ensure that no unnecessary files/folders are erroneously committed to the repository
 - Contain an appropriate number of commits for the scope of the project
 - Contain a README.md file describing the project (e.g. technologies used, personal learnings, installation instructions, etc.) and is appropriately formatted with Markdown
