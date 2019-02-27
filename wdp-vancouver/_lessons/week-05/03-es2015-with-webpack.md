@@ -132,7 +132,7 @@ Let's start our server from terminal (in the root of your project): `webpack-dev
 Congratulations, you have a development server that will reload your browser when you change the files in the `src` directory
 
 Documentation for HTML Webpack plugin can be found here:
-[https://www.npmjs.com/package/html-webpack-plugin](HTML Webpack plugin)
+https://www.npmjs.com/package/html-webpack-plugin
 
 ---
 
