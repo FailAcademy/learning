@@ -1,13 +1,13 @@
 ---
 layout: lesson
-title: Embedded Databases
+title: Mobile Databases
 slides: ['_slides/week-08/03-mobile-databases.md']
 lesson_date: 2019-02-27
 ---
 
 ## Pre-work
 
-- Read [This Medium post](https://medium.com/building-with-react-native/what-is-asyncstorage-in-react-native-and-how-you-to-use-it-with-app-state-manager-1x09-b8c636ce5f6e) provides a good example of using AsyncStorage.
+- [This Medium post](https://medium.com/building-with-react-native/what-is-asyncstorage-in-react-native-and-how-you-to-use-it-with-app-state-manager-1x09-b8c636ce5f6e) provides a good example of using AsyncStorage.
 
 ---
 
@@ -30,7 +30,7 @@ lesson_date: 2019-02-27
 
 If you haven't already, create a `config/model.js` file in your project.
 
-In this file, import the `AsyncStorage` object from `react-native`;
+In this file, import the `AsyncStorage` object from `react-native`.
 
 ---
 
