@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Intro to Databases with Postgres pt. I
-slides: ['_slides/week-01/01-introducing-postgres.md']
+slides: ['_slides/week-01/01-introducing-postgres-I.md']
 lesson_date: 2019-04-09
 ---
 
@@ -48,7 +48,15 @@ creating and authorizing a new Database on your local machine. In a real product
 
 ---
 
+# Exercise 2 (At Home)
+
+Populating your Relational Database.
+Use what you know to create the **Tags** & **Users**, table!
+
+_Hint: use the `\dt` command to check if the table was successfully created._
+
+---
+
 ## Additional Resources
 
 - [Learn SQL - Codeacademy](https://www.codecademy.com/learn/learn-sql)
-- [Postgres Docs](http://www.Postgres.org/docs/9.6)
