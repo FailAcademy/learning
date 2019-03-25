@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Creating a Web Server with Express Slides
+title: Creating a Web Server with Express I Slides
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Creating a Web Server with Express
+# Creating a Web Server with Express I
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -23,8 +23,6 @@ layout: false
 1.  Install and create an Express app
 2.  Create a "Hello World" server using Express
 3.  Create an Express middleware
-4.  Parse requests coming into Express
-5.  Explore REST (in relation to Express)
 
 ---
 
@@ -415,7 +413,7 @@ Probably want to share this with the students to save time...
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Dev Quotes R Us</title>
   </head>
   <body>
@@ -427,9 +425,9 @@ Probably want to share this with the students to save time...
     <h2>Submit a Quote</h2>
     <form id="create-quote">
       <label for="text">Quote Text</label>
-      <input type="text" id="text" name="text">
+      <input type="text" id="text" name="text" />
       <label for="name">Speaker Name</label>
-      <input type="text" id="name" name="name">
+      <input type="text" id="name" name="name" />
       <button type="submit">Create Quote</button>
     </form>
 
@@ -449,7 +447,7 @@ function appendQuote(quote) {
   const deleteButton = document.createElement('button');
   deleteButton.setAttribute(
     'data-quote',
-    quote.name.replace(/\s+/g, '-').toLowerCase()
+    quote.name.replace(/\s+/g, '-').toLowerCase(),
   );
   deleteButton.textContent = 'Delete';
   blockquote.textContent = `"${quote.text}" — ${quote.name} `;
@@ -458,11 +456,11 @@ function appendQuote(quote) {
 }
 
 getQuotesButton.addEventListener('click', () => {
-  fetch('/quotes').then(
-    (response) => response.json()
-  ).then((quotes) => {
-    quotes.map(appendQuote);
-  });
+  fetch('/quotes')
+    .then(response => response.json())
+    .then(quotes => {
+      quotes.map(appendQuote);
+    });
 });
 ```
 
@@ -525,452 +523,10 @@ app.use(diyLogger);
 
 ---
 
-## Exercise 4
-
-Setting application configuration variables.
-
-Refactor:
-
-```
-const PORT = 3300;
-```
-
-To be:
-
-```
-app.set('PORT', process.env.PORT || 3300);
-const port = app.get('PORT');
-```
-
-- Why is it useful to set configuration values like this?
-- What is `process.env` ?
-
-???
-
-Discussion:
-
-What are the other values we'll need to configure for boomtown?
-Lead the discussion towards: 'How do you think we're going to store / connect to postgres from node?'
-ie. We'll need to use the app singleton to retrieve / store values from process.env
-
----
-
-template: inverse
-
-# Parsing Requests
-
----
-
-# Dynamic Routes
-
-Like with React Router, we can add route parameters:
-
-```js
-app.get('/quotes/:name', (request, response) => {
-  response.send(request.params.name);
-});
-```
-
-What do you see in your browser now when you navigate to `/quotes/someone`?
-
-???
-
-- Query string parameters are added to `request.query` object as properties too
-
----
-
-# Exercise 5
-
-Finish writing the route handler for `/quotes/:name`:
-
-```js
-app.get('/quotes/:name', (request, response) => {
-  const { name } = request.params;
-
-  // What array method can you use on the quotes array to return
-  // the first object in the array with a matching name?
-
-  if (/* there's no match... */) {
-    response.status(404).json('That person isn\'t quote-worthy.');
-  } else {
-    response.send(/* the quote object */);
-  }
-});
-```
-
-???
-
-Solution:
-
-```js
-app.get('/quotes/:name', (request, response) => {
-  const { name } = request.params;
-  const matchedQuote = quotes.find((quote) => name === quote.name);
-
-  if (!matchedQuote) {
-    response.status(404).json('That person isn\'t quote-worthy.');
-  } else {
-    response.json(matchedQuote.text);
-  }
-});
-```
-
----
-
-# POST Requests
-
-Time to add some new quotes to our app.
-
-Doing this in our Express app will be similar to sending `GET` requests, but we'll use a `POST` request instead.
-
-_But first, some initial set-up..._
-
----
-
-# Submit Form
-
-First, we'll need a form to send `POST` requests to our server from the client:
-
-```html
-<h2>Submit a Quote</h2>
-<form id="create-quote">
-  <label for="text">Quote Text</label>
-  <input type="text" id="text" name="text">
-  <label for="name">Speaker Name</label>
-  <input type="text" id="name" name="name">
-  <button type="submit">Create Quote</button>
-</form>
-```
-
----
-
-# POST Requests
-
-Now we finally get to handle the `POST` request we're sending from the client. First, we'll need some middleware to parse the JSON body of the incoming request:
-
-```js
-npm install --save body-parser
-```
-
-Now add this to your Express app:
-
-```js
-const bodyParser = require('body-parser');
-
-app.post('/quotes', bodyParser.json(), (request, response) => {
-  const newQuote = request.body;
-  // Add your new quote to the quotes array
-  // Then send back a 201 status
-  // And also send the new quote as JSON in the response
-});
-```
-
----
-
-# Exercise 6
-
-Now figure out how to finish writing the route handler for the `POST` request.
-
-Once you've finished that, jump back to your client-side JS and take the JSON response you get back from the server to append your new quote to the DOM.
-
-Improve UX by clearing out the form inputs after the response comes back too!
-
----
-
-# Remove a Quote
-
-The last bit of functionality will be to delete an individual quote from the list. We'll submit our request from the client like this:
-
-```js
-const container = document.getElementById('quotes');
-
-container.addEventListener('click', (event) => {
-  const clickedEl = event.target;
-  if (clickedEl.tagName === 'BUTTON') {
-    const name = clickedEl.getAttribute('name');
-    fetch(`/quotes/${name}`, {
-      method: 'DELETE',
-    }).then(() => {
-      const blockquote = clickedEl.parentNode;
-      blockquote.parentNode.removeChild(blockquote);
-    });
-  }
-});
-```
-
-???
-
-Explain to students that the URL for the `fetch()` command actually goes to `localhost:3300` – replace `/quotes/${name}` with `http://localhost:3300/quotes/${name}` to demonstrate this.
-
-However, it is best practice to not commit code that contains the FQDN, so revert it after demonstrating this.
-
----
-
-# DELETE Requests
-
-Not surprisingly, you'll handle a `DELETE` request like this in Express:
-
-```js
-app.delete('/quotes/:name', (request, response) => {
-  // Remove the quote from the quotes array
-  // Send back the 200 status with the response
-});
-```
-
----
-
-# Exercise 7
-
-Finish writing the route handler for the `DELETE` request.
-
-???
-
-```js
-app.delete('/quotes/:name', (request, response) => {
-  const { name } = request.params;
-  const newQuotes = quotes.filter(
-    quote => quote.name.replace(/\s+/g, '-').toLowerCase() !== name
-  );
-  response.status(200).send(newQuotes);
-});
-```
-
----
-
-# Bonus Round: Clean-up
-
-There's a way we can consolidate route code so that we're not making isolated calls to HTTP verb-related Express methods on the same routes.
-
-Also, the `index.js` file in our Express app is getting a bit messy. Typically, you wouldn't define all of your routes for an app in this top-level file. There's a built-in solution in Express for that as well.
-
-_Let's do some refactoring..._
-
----
-
-# Use app.route()
-
-Right now we have this in our app:
-
-```js
-app.get('/quotes' /* handler */);
-app.post('/quotes' /* handler */);
-app.get('/quotes/:name' /* handler */);
-app.delete('/quotes/:name' /* handler */);
-```
-
-We can use `app.route()` to consolidate route handling:
-
-```js
-app
-  .route('/quotes')
-  .get(/* handler */)
-  .post(/* handler */);
-
-app
-  .route('/quotes/:name')
-  .get(/* handler */)
-  .delete(/* handler */);
-```
-
----
-
-# Exercise 8
-
-Refactor your route-related code to use `app.route()`.
-
----
-
-# Routes in a Module
-
-It would also be nice to get all of the route handling code out of `index.js` into a dedicated module for quotes.
-
-Create a `quotes.js` file in your Express app and add:
-
-```js
-const express = require('express');
-const bodyParser = require('body-parser');
-
-const router = express.Router();
-
-// ...some code goes here
-
-export default router;
-```
-
-???
-
-- Creates modular, mountable route handlers
-- A Router instance is a complete middleware and routing system; for this reason, it is often referred to as a “mini-app”
-
----
-
-# Refactor Routes
-
-Now mount your router in your app:
-
-```js
-const quoteRoutes = require('./quotes');
-
-// ...
-
-app.use('/quotes', quoteRoutes);
-```
-
-And move all of the `app.route()` calls into `quotes.js`.
-
----
-
-# Exercise 9
-
-Our app won't work until we refactor what we just moved into `./quotes.js`.
-
-First, we won't call `.route()` on the `app` object (it doesn't exist here), we'll call it on the instance of the router we instantiated in this file (`router`).
-
-Second, the path argument passed into `.route()` will be relative to where it's mounted in `index.js`. What do we need to change in the path argument to reflect this?
-
-Don't forget to move your quotes array into `quotes.js` too!
-
----
-
-template: inverse
-
-# REST APIs
-
----
-
-class: center, middle
-
-.large[
-Surprise! We've been building up a REST API this whole time.
-]
-
----
-
-# What Is REST?
-
-- **RE**presentational **S**tate **T**ransfer
-- Conceived of by Roy Fielding in 2000 in his [doctoral dissertation](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
-- REST isn't an architecture, it's meant to be a way to judge architectures (i.e. it's a set of design criteria)
-- It's resource-driven, like the web
-
-???
-
-- All about stateless servers and structured access to resources
-- REST itself is pretty strict, but it's widely interpreted
-- Contrast to RPC which is action-driven
-- A tale of two APIs
-  - https://codex.wordpress.org/XML-RPC_WordPress_API
-  - https://developer.wordpress.org/rest-api/reference/
-
----
-
-# Rise to Popularity
-
-A few events contributed to the rise of REST:
-
-- The ubiquity of smartphones (iPhone launched in 2007)
-- Social media platforms (the Twitter sort-of-REST-ish API was a way to combat rogue API implementations)
-- Cloud computing (Amazon S3 launched in 2006 and initially didn't have a GUI, just a RESTful API)
-
----
-
-# How REST Works
-
-REST defines a type of architecture where **resources**, **identifiers** (URIs), and **actions** (HTTP verbs) are all we need to interact with resources hosted on the web.
-
-In other words, HTTP verbs provide semantic intention for the actions we want to take on resources, and URIs help us know where to find them.
-
-Taken together, REST enabled us to use the web as a **distributed application platform** whose **linked resources** communicate by **exchanging representations of resource state**.
-
----
-
-# Decisions We Made
-
-Thinking about the quotes app we just built...
-
-- What resources did we identify in our quotes app?
-- How did we structure the URIs?
-- What HTTP verbs did we use to send requests from the client?
-
----
-
-# Data &rarr; Resources
-
-How a data set splits into resources:
-
-1.  Pre-defined/one-off resources for important aspects of the application (e.g. the homepage)
-2.  Resources for every object exposed through the service (possibly infinite)
-3.  Resources as a result of algorithms applied to data sets (probably infinite)
-
----
-
-# RESTful URIs
-
-And we describe our resources with URI structure:
-
-- Use path variables to denote hierarchy (e.g. `/parent/child`)
-- Use punctuation to avoid implying hierarchy where one doesn't exist (e.g. `lat,long` or `lat;long`)
-- Use a query string as a input to an algorithm (e.g. `?search=`)
-
----
-
-# Exercise 10
-
-In small groups or pairs, you'll be assigned one of the following topics to research (with respect to how it relates to REST) and deliver a short presentation to class on your findings:
-
-- Data versus Resources versus Representations in REST
-- State in REST: The idea of "statelessness" and the difference between resource state and application state
-- The Richardson Maturity Model and where "hypermedia as the engine of application state" (HATEOAS) comes into play
-- Safety and idempotence of HTTP verbs used in REST APIs
-
-???
-
-**Data v. Resources v. Representations:**
-
-- Resource: a document, a row in a database, the results of running an algorithm, etc. (anything that can be streamed as bits)
-- Splitting an app into resources increases its surface area
-- Representation: any useful information about the state of the resource
-- Representations also provide levers of state (the next possible state)
-- Representations help capture the current or intended state of a resource (with metadata) (we represent with JSON)
-
-**State in REST:**
-
-- Statelessness: requests happen in isolation of each other and contain all the info they necessary to get what's needed from the server
-- The client doesn't need to coax the server into some state for the server to be receptive to a request
-- HTTP sessions on the server can break statelessness
-- Statelessness makes it easier to cache and scale a distributed app
-- Application state should be managed in the client, and reflects interactions
-- Resource state should be managed on the server, and reflects the semi-permanent state of data
-- Resource state is the same for every client
-
-**RMM & HATEOAS:**
-
-- Level 0: URI tunneling
-- Level 1: Resources
-- Level 2: HTTP verbs
-- Level 3: Hypermedia
-- HATEOAS: App state tracked by the client on its path through the web (the server guides it along the path through links and forms)
-- As an app reaches a new state, the next possible states are discovered (like a treasure hunt for nearby resources)
-
-**Safety & Idempotence:**
-
-- Safe: no server-side effects for which the client can be held responsible
-- Idempotent: generates absolute side effects
-- GET is safe and idempotent
-- PUT and DELETE are not safe but idempotent
-- PATCH and POST are not safe and not idempotent
-- POST overload in RPC
-- POST is often used as the wildcard operation of the web
-- In REST, POST is for creating subordinate resources
-
----
-
 # What We've Learned
 
 - How to set up a basic Express app
 - How to add middleware to Express
-- How to parse HTTP requests set to the Express server
-- What REST is, and why it's important
 
 ---
 

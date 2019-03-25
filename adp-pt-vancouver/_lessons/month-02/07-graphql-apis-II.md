@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: GraphQL APIs
-slides: ['_slides/week-03/01-graphql-apis.md']
+title: GraphQL APIs II
+slides: ['_slides/month-02/02-graphql-apis-II.md']
 lesson_date: 2019-04-22
 ---
 
@@ -152,16 +152,6 @@ Test them out in the GraphQL playground! You'll know you're done when running th
 More on graph theory:
 
 - [A Gentle Introduction to Graph Theory](https://dev.to/vaidehijoshi/a-gentle-introduction-to-graph-theory)
-
-More on the difference between GraphQL and REST:
-
-- [GraphQL vs. REST](https://dev-blog.apollodata.com/graphql-vs-rest-5d425123e34b)
-
-Great introductory GraphQL tutorials:
-
-- [The Fullstack Tutorial for GraphQL](https://www.howtographql.com/)
-- [Tutorial: How to build a GraphQL server](https://dev-blog.apollodata.com/tutorial-building-a-graphql-server-cddaa023c035)
-- [Understanding and Building a GraphQL Server](https://keywordbrain.com/blog/understanding-graphql-server/)
 
 Official Apollo docs:
 

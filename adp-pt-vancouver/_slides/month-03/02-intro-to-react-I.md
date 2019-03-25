@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Introducing React Slides
+title: Introducing React I Slides
 ---
 
 {% highlight html %}

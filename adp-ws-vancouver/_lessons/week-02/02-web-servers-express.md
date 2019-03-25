@@ -160,13 +160,12 @@ Refactor your route-related code to use `app.route()`.
 
 ## Exercise 10
 
-Our app won't work until we refactor what we just moved into `./quotes.js`.
+In small groups or pairs, you'll be assigned one of the following topics to research (with respect to how it relates to REST) and deliver a short presentation to class on your findings:
 
-First, we won't call `.route()` on the `app` object (it doesn't exist here), we'll call it on the instance of the router we instantiated in this file (`router`).
-
-Second, the path argument passed into `.route()` will be relative to where it's mounted in `index.js`. What do we need to change in the path argument to reflect this?
-
-Don't forget to move your quotes array into `quotes.js` too!
+- Data versus Resources versus Representations in REST
+- State in REST: The idea of "statelessness" and the difference between resource state and application state
+- The Richardson Maturity Model and where "hypermedia as the engine of application state" (HATEOAS) comes into play
+- Safety and idempotence of HTTP verbs used in REST APIs
 
 ---
 

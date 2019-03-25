@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: Intro to Databases with Postgres pt. I
-slides: ['_slides/week-01/01-introducing-postgres-I.md']
+title: Intro to Databases with Postgres I
+slides: ['_slides/month-01/01-introducing-postgres-I.md']
 lesson_date: 2019-04-09
 ---
 

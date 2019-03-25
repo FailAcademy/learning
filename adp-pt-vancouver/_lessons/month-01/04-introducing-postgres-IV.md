@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: Intro to Databases with Postgres pt. IV
-slides: ['_slides/week-01/04-introducing-postgres-IV.md']
+title: Intro to Databases with Postgres IV
+slides: ['_slides/month-01/04-introducing-postgres-IV.md']
 lesson_date: 2019-04-10
 ---
 

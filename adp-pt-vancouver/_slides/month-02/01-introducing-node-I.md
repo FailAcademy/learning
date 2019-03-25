@@ -22,9 +22,7 @@ layout: false
 
 - Understand the history and beginnings of Node
 - Review TCP/UDP protocols
-- Model JavaScript's event loop
-- Build a simple TCP/UDP messaging server
-- Use Node's built-in modules to read from your computer's filesystem
+- Run and debug a Node script
 
 ---
 
@@ -92,7 +90,7 @@ When you're finished, create a folder called `TCP_Service`. Inside the folder ru
 
 ---
 
-# Building a TCP Service
+# Building a TCP Server
 
 Your `package.json` should look like this:
 
@@ -113,7 +111,7 @@ Your `package.json` should look like this:
 
 ---
 
-# Building a TCP Service
+# Building a TCP Server
 
 Create a file called `index.js`. Use Node's [built-in `net` module](https://nodejs.org/api/net.html) to create a server which will handle incoming network connections (TCP/UDP):
 
@@ -136,7 +134,7 @@ Run this code by typing `node index.js`.
 
 ---
 
-# Building a TCP Service
+# Building a TCP Server
 
 In order to show when the **server** has received a connection from a **client**, we'll need to add some code to the `handleConnection` callback.
 
@@ -250,139 +248,6 @@ Open your debugger and set a breakpoint somewhere in your code. Send a message t
 Use the debugger and set a breakpoint in your `data` event handler. Intercept the incoming data, and use the debugger's console to change the value of the data parameter (the incoming data) before it's logged.
 
 Use [Netcat](https://en.wikipedia.org/wiki/Netcat) to send data to your new TCP service.
-
----
-
-# Completed TCP Service
-
-Finally, let's return some data from our service. At the moment does not send any information back to the client.
-
-Add the following code to your `data` handler to complete the service:
-
-```js
-// console.log ...
-conn.write(`Got "${d.trim()}". Let me uppercase: "${d.toUpperCase()}"`);
-```
-
-Now we have a friendly upper-casing service.
-
----
-
-template: inverse
-
-# Blocking & Non-Blocking Operations
-
----
-
-# Exercise 3
-
-Use your TCP server to read from your local file system. When your server receives a request, use Node's built-in `fs` module to read text from a `.txt` file and send the contents back to the connection.
-
-- Is reading from the filesystem an **async** or **sync** action?
-- In what circumstance is it useful to use blocking operations?
-
-Modify your existing code:
-
-```js
-function handleConnection(conn) {
-  // TODO: Read a welcome message from your filesystem
-  // And respond to the connection with the contents
-}
-```
-
----
-
-template: inverse
-
-# Internet Messaging with Node
-
----
-
-# Exercise 4
-
-Next we'll create a minimal chat server.
-
-Change your TCP service to deliver any incoming data to all connected clients.
-
-- Your server will need to store all connections
-- Messages a client sends to the server should not return to that client
-- But all other clients should receive that message
-
----
-
-# Process: Memory & CPU
-
-Introducing the code recommended on the previous slide may have introduced a memory leak.
-
-Run the load tester to find out!
-
-_What do we have to do to prevent the memory leak?_
-
-checkout this [post](https://www.nearform.com/blog/self-detect-memory-leak-node/) to find out.
-
----
-
-template: inverse
-
-# Environment Variables
-
----
-
-# Environment Variables
-
-Environment variables are:
-
-.large[...values available to a process, defined by the system where the process is executing. ]
-
----
-
-# Environment Variables
-
-In Express, we'll need to provide values to our application that will be used at runtime.
-
-.large[
-Environment variables should be *dynamic* depending on the 'Environment' where your app is running.
-]
-
-???
-
-Explanation:
-
-We don't want to have to manually specify specific variables for each environment, in our application code.
-
----
-
-# Defining Environments
-
-**Development** (Your computer)
-
-- Connections to Express ingress from `localhost` (localhost:3000).
-- Postgres is also running on `localhost` (localhost:5432)
-
-**Production** (On a server computer)
-
-- Connections to Express ingress via some domain, eg _boom.academy.red_
-- Postgres could be running on a separate domain.
-
----
-
-# Local Environment
-
-To view your local environment run the following command:
-
-```bash
-env
-```
-
-.large[What do you see?]
-
----
-
-# Learn to Use Environment Variables
-
-Take a moment and read through this tutorial from DigitalOcean: <br/>
-
-[How To Read and Set Environmental and Shell Variables](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-a-linux-vps)
 
 ---
 
