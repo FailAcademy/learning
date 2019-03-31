@@ -57,26 +57,26 @@ Fixed vs. Fluid vs. Adaptive vs. Responsive ... GO!
 
 ???
 
-* Responsive: built with media queries that target more general break points that scale images, wrap text and adjust layout
-* Adaptive: websites are built with media queries that target specific device sizes (e.g. iPhone, iPad, Android, etc). One of the problems with an adaptive layout, is that as new devices get introduced your code will need to be updated. Which isn’t ideal.
-* Fluid: websites are built using percentages for widths. The concept of fluid design was being used way before the term “responsive design” came about. It’s pretty safe to say, that fluid design evolved into responsive design.
-* Fixed: websites are built using fixed pixel widths. While a design with fixed dimensions can sometimes be the quickest way to get up and running, it’ll provide a less user friendly across multiple devices.
-* (One month)
+- Responsive: built with media queries that target more general break points that scale images, wrap text and adjust layout
+- Adaptive: websites are built with media queries that target specific device sizes (e.g. iPhone, iPad, Android, etc). One of the problems with an adaptive layout, is that as new devices get introduced your code will need to be updated. Which isn’t ideal.
+- Fluid: websites are built using percentages for widths. The concept of fluid design was being used way before the term “responsive design” came about. It’s pretty safe to say, that fluid design evolved into responsive design.
+- Fixed: websites are built using fixed pixel widths. While a design with fixed dimensions can sometimes be the quickest way to get up and running, it’ll provide a less user friendly across multiple devices.
+- (One month)
 
 ---
 
 # vs. Mobile-Only
 
-* Mobile-only websites are designed specifically to be viewed on mobile devices
-* They are not the same website as the desktop version
-* Usually require "browser sniffing" (not foolproof)
-* You often find them on "m." sub-domains
-* Check out: https://m.facebook.com/
-* This is becoming less common today...
+- Mobile-only websites are designed specifically to be viewed on mobile devices
+- They are not the same website as the desktop version
+- Usually require "browser sniffing" (not foolproof)
+- You often find them on "m." sub-domains
+- Check out: https://m.facebook.com/
+- This is becoming less common today...
 
 ???
 
-* Browser sniffing: Browser sniffing is the act of detecting the web browser a visitor is using in order to serve version-specific pages, scripts, images, or other content. The technique was popular around 10 years ago because Microsoft and Netscape introduced their own technologies and web standards were in their infancy. (Sitepoint)
+- Browser sniffing: Browser sniffing is the act of detecting the web browser a visitor is using in order to serve version-specific pages, scripts, images, or other content. The technique was popular around 10 years ago because Microsoft and Netscape introduced their own technologies and web standards were in their infancy. (Sitepoint)
 
 ---
 
@@ -88,9 +88,9 @@ What are the 3 components of responsively designed websites?
 
 ???
 
-* Flexible grids and layouts
-* Flexible images and media
-* Media Queries
+- Flexible grids and layouts
+- Flexible images and media
+- Media Queries
 
 ---
 
@@ -106,8 +106,8 @@ What needs to be done to make this layout flexible?
 
 ```html
 <div class="container">
-   <article>This is the content...</article>
-   <aside>This is the sidebar...</aside>
+  <article>This is the content...</article>
+  <aside>This is the sidebar...</aside>
 </div>
 ```
 
@@ -128,9 +128,9 @@ aside {
 
 ???
 
-* Add borders
-* change container width to max-width
-* add flex to article and aside
+- Add borders
+- change container width to max-width
+- add flex to article and aside
 
 ```
 .container {
@@ -161,8 +161,8 @@ And how do we make font and box model units flexible?
 
 _What's the difference?_
 
-* `em` units change the size relative to the **parent element**
-* `rem` units are always relative to the `font-size` set on the `<html>` element
+- `em` units change the size relative to the **parent element**
+- `rem` units are always relative to the `font-size` set on the `<html>` element
 
 Using `rem` units can make proportionally scaling font sizes a little much more manageable.
 
@@ -170,7 +170,8 @@ _Let see a quick demo of how this works..._
 
 ???
 
-* Demo: https://codepen.io/redgarry/pen/dwgRKL
+- Demo: https://codepen.io/redgarry/pen/dwgRKL
+
 ---
 
 template: inverse
@@ -185,10 +186,10 @@ Flexible layouts are great, but images and other media require special attention
 
 CSS offers some helpers to assist with this wrangling:
 
-* `max-width`
-* `min-width`
-* `max-height`
-* `min-height`
+- `max-width`
+- `min-width`
+- `max-height`
+- `min-height`
 
 ---
 
@@ -248,7 +249,7 @@ Even in pre-CSS3 days, we could target styles for different media types using th
 Today, we can take that a step further and target our stylesheets for more specific circumstances:
 
 ```html
-<link rel="stylesheet" href="styles.css" media="all and (max-width: 960px)">
+<link rel="stylesheet" href="styles.css" media="all and (max-width: 960px)" />
 ```
 
 The CSS in this stylesheet will apply to all types of media, but only if they are 960px wide or less.
@@ -264,7 +265,7 @@ We can target entire stylesheets or just parts of them at particular screen size
 ```html
 <!-- In the <head> tag of an .html file... -->
 
-<link rel="stylesheet" href="style.css" media="all and (max-width: 960px)">
+<link rel="stylesheet" href="style.css" media="all and (max-width: 960px)" />
 ```
 
 ```css
@@ -284,7 +285,7 @@ Using `@media` in a stylesheet is typically the preferred method&mdash;and it's 
 But whichever approach you take, there's a new `meta` tag you may want to include when building a responsive website:
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 ```
 
 Read more about [managing the viewport](https://css-tricks.com/snippets/html/responsive-meta-tag/).
@@ -329,17 +330,17 @@ Or target high-density pixel displays, like the Retina screens on Apple devices:
 
 Your task is to find an example of a responsively-designed website. Take notes on:
 
-* Where are the main breakpoints? What happens at these breakpoints?
-* What happens to the navigation for mobile widths?
-* Are there ads on the site? How are they handled?
-* Does anything seem to be not-quite-right at any width?
+- Where are the main breakpoints? What happens at these breakpoints?
+- What happens to the navigation for mobile widths?
+- Are there ads on the site? How are they handled?
+- Does anything seem to be not-quite-right at any width?
 
 Afterward, we'll pair up and share our findings.
 
 ???
 
-* Do in groups
-* How are ads' responsiveness managed? Do they disappear, scale, render a different size ad?
+- Do in groups
+- How are ads' responsiveness managed? Do they disappear, scale, render a different size ad?
 
 ---
 
@@ -357,7 +358,7 @@ What does it mean to take a mobile-first approach to RWD?
 
 ???
 
-* Exactly as it sounds - designing for mobile first, then tablet size(s), then desktop
+- Exactly as it sounds - designing for mobile first, then tablet size(s), then desktop
 
 ---
 
@@ -399,7 +400,7 @@ Screenshots of what the website should look like at mobile, tablet, and desktop 
 
 ???
 
-* Instascoop refactor exercise
+- Instascoop refactor exercise
 
 ---
 
@@ -410,8 +411,6 @@ Now that we've had a chance to brush up our RWD skills, let's strategize how we'
 Take a few moments to review the two narrower design comps and think about what areas of the site will specifically be affected by the changes that are happening at each breakpoint.
 
 Jot down some ideas on your own, then you'll team up to discuss this with a partner. We'll then reconvene to discuss each other's findings, as well as any questions or concerns before starting with the lab work.
-
-[Reading: Will I always use the same breakpoints?](https://medium.com/@uiuxlab/the-most-used-responsive-breakpoints-in-2017-of-mine-9588e9bd3a8a)
 
 ---
 
@@ -427,10 +426,10 @@ The `@media` syntax for media queries comes to us courtesy of CSS3.
 
 CSS3 provides us with these additional properties too:
 
-* `border-radius`
-* `box-shadow`
-* `opacity`
-* gradients
+- `border-radius`
+- `box-shadow`
+- `opacity`
+- gradients
 
 ---
 
@@ -444,18 +443,17 @@ Also take a look at your Project 1, and see if you can use your new knowledge of
 
 ???
 
-* Pass out tags of properties
-
+- Pass out tags of properties
 
 ---
 
 # What We've Learned
 
-* The difference between, fixed, fluid, adaptive, responsive, and mobile-only websites
-* The 3 components of RWD
-* How to write mobile-first media queries
-* Other mobile-first considerations
-* How to use `border-radius`, `box-shadow`, `opacity`, and gradients
+- The difference between, fixed, fluid, adaptive, responsive, and mobile-only websites
+- The 3 components of RWD
+- How to write mobile-first media queries
+- Other mobile-first considerations
+- How to use `border-radius`, `box-shadow`, `opacity`, and gradients
 
 ---
 

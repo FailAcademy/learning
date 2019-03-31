@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 1 - Aloha Homepage
-due: Tuesday, January 22nd (beginning of class)
+due: Monday, April 22nd (beginning of class)
 ---
 
 For Project 1, you're going to create a homepage for your client the Aloha Apparel Co. using HTML and CSS.
@@ -81,14 +81,6 @@ Your project must:
 - Check for strict equality with comparison operators
 - Demonstrate effective use of control flow (loops, conditionals, etc.)
 
-### jQuery Requirements
-
-Your project must:
-
-- Wrap jQuery code in document-ready (use short-hand)
-- Use variables to store references to DOM elements wrapped in the jQuery object that are accessed more than once
-- Add event listeners with jQuery and respond to events appropriately in callbacks
-
 ### Functional Requirements
 
 Your project must:
@@ -96,7 +88,7 @@ Your project must:
 - Contain a single `.html` file and an external `.css` file (CSS reset may be included in a separate file)
 - Incorporate a list-based navigation menu
 - Incorporate "smooth scrolling" into the menu so that it navigates to specific sub-headings within the page
-- Incorporate an image slider using jQuery for the featured product area (Flickity is a good choice)
+- Incorporate an image slider using a JavaScript plugin for the featured product area (Flickity is a good choice)
 - Display an alert box that says "Thanks for subscribing!" whenever a user successfully submits the newsletter form with a valid email address, otherwise they should see a message in the alert box that asks them to enter a valid email address
 
 ### Stretch Goals
