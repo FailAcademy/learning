@@ -809,8 +809,7 @@ In this exercise, you're going to use jQuery to create an accordian-style show/h
 
 # What We've Learned
 
-- How to use JavaScript on web pages
-- What jQuery is
+- What jQuery is and what it's for
 - How to change the way a website looks using jQuery
 - How to add interactivity to a page with jQuery
 - How we can bring our websites to life with jQuery's animation methods
