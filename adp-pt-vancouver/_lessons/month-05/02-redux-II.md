@@ -1,13 +1,11 @@
 ---
 layout: lesson
 title: Redux
-slides: ['_slides/week-06/02-redux.md']
+slides: ['_slides/month-05/02-redux-II.md']
 lesson_date: 2019-05-15
 ---
 
 ## Pre-Work
-
-Read through the sections of the [Redux Docs Introduction](http://redux.js.org/docs/introduction/index.html). Be prepared to explain the problem Redux is trying to solve.
 
 Read [You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367). Be prepared to give an example of:
 
@@ -18,50 +16,19 @@ Read [You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-ne
 
 ## Learning Objectives
 
-- Explain the benefits of using Redux to model state.
 - Identify the different roles of the Redux store, reducers, actions, action-creators, and action-types.
-- Setup a basic project using Redux in raw JavaScript.
 - Explain the results of calling `dispatch(action)` and `getState()`.
 
 ---
 
 ## Keywords
 
-- [Redux](http://redux.js.org/index.html)
-- [Store](http://redux.js.org/docs/basics/Store.html)
 - [Dispatch](http://redux.js.org/docs/api/Store.html#dispatch)
-- [Reducer](http://redux.js.org/docs/basics/Reducers.html)
 - [Action](http://redux.js.org/docs/basics/Actions.html)
 
 ---
 
 ## Exercise 1
-
-Now create an action for decrementing the count, as well as its corresponding action creator.
-
----
-
-## Exercise 2
-
-Now write the case for `DECREMENT_COUNT` in your reducer.
-
----
-
-## Exercise 3
-
-Now that you have your actions, reducers, and store created, you can actually dispatch actions to your store and get state from your store.
-
-Head over to `src/main.js` in the root of your app, import the `store`, import the action creator functions, then try dispatching the actions and get something from the store:
-
-```js
-store.dispatch(incrementCount());
-store.dispatch(decrementCount());
-// try console-logging something from the store with store.getState()
-```
-
----
-
-## Exercise 4
 
 Let's add information from the store to the UI. Add the following code to `src/main.js` and fill in the blanks:
 
@@ -86,7 +53,7 @@ decrementButton.addEventListener('click', () => {
 
 ---
 
-## Exercise 5
+## Exercise 2
 
 Time to finish the counter app! You will need to:
 
@@ -120,13 +87,7 @@ Read the [Redux docs on React](http://redux.js.org/docs/basics/UsageWithReact.ht
 
 ## Additional Resources
 
-A Redux tutorial its creator, Dan Abramov:
-
-- [Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux)
-
 Some helpful resources for learning more about Redux:
 
-- [Scotch.io: Getting Started with Redux](https://scotch.io/bar-talk/getting-started-with-redux-an-intro)
 - [Redux Without Profanity](https://tonyhb.gitbooks.io/redux-without-profanity/content/index.html)
 - [Cartoon Guide to Redux](https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6)
-- [Learn Redux](https://learnredux.com/)
