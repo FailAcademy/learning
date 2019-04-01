@@ -2,7 +2,7 @@
 layout: lesson
 title: IA for WordPress
 slides: ["_slides/week-14/01-ia-for-wordpress-slides.md"]
-lesson_date: 2019-01-02
+lesson_date: 2019-07-08
 ---
 
 ## Pre-work

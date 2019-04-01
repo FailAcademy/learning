@@ -2,93 +2,93 @@
   {
     "title": "Pre-Work",
     "allDay": true,
-    "start": "2018-09-17",
-    "end": "2018-10-01"
+    "start": "2019-03-25",
+    "end": "2019-04-08"
   },
   {
     "title": "No Class",
     "allDay": true,
-    "start": "2018-10-06"
+    "start": "2019-04-20"
   },
   {
     "title": "No Class",
     "allDay": true,
-    "start": "2018-11-10"
-  },
-  {
-    "title": "Meet the Talent",
-    "allDay": true,
-    "start": "2019-02-13"
+    "start": "2019-05-18"
   },
   {
     "title": "No Class",
     "allDay": true,
-    "start": "2019-02-16"
-  },
-  {
-    "title": "Celebration!",
-    "allDay": true,
-    "start": "2019-03-23"
+    "start": "2019-08-03"
   },
   {
     "title": "Break Week",
     "allDay": true,
-    "start": "2018-12-24",
-    "end": "2019-01-01"
+    "start": "2019-06-24",
+    "end": "2019-07-02"
   },
   {
-    "title": "BC Family Day",
+    "title": "Celebration!",
+    "allDay": true,
+    "start": "2019-09-28"
+  },
+  {
+    "title": "New Years Day",
+    "allDay": true,
+    "start": "2019-01-01"
+  },
+  {
+    "title": "Family Day",
     "allDay": true,
     "start": "2019-02-18"
   },
   {
     "title": "Good Friday",
     "allDay": true,
-    "start": "2018-03-30"
+    "start": "2019-04-19"
   },
   {
     "title": "Easter Monday",
     "allDay": true,
-    "start": "2018-04-02"
+    "start": "2019-04-22"
   },
   {
     "title": "Victoria Day",
     "allDay": true,
-    "start": "2018-05-21"
+    "start": "2019-05-20"
   },
   {
     "title": "Canada Day Stat",
     "allDay": true,
-    "start": "2018-07-02"
+    "start": "2019-07-01"
   },
   {
     "title": "BC Day",
     "allDay": true,
-    "start": "2018-08-06"
+    "start": "2019-08-05"
   },
   {
     "title": "Labour Day",
     "allDay": true,
-    "start": "2018-09-03"
+    "start": "2019-09-02"
   },
   {
     "title": "Thanksgiving Monday",
     "allDay": true,
-    "start": "2018-10-08"
+    "start": "2019-10-14"
   },
   {
     "title": "Remembrance Day Stat",
     "allDay": true,
-    "start": "2018-11-12"
+    "start": "2019-11-11"
   },
   {
     "title": "Christmas Day",
     "allDay": true,
-    "start": "2018-12-25"
+    "start": "2019-12-25"
   },
   {
     "title": "New Years Day",
     "allDay": true,
-    "start": "2019-01-01"
+    "start": "2020-01-01"
   }
 ]

@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to CSS - Box Model and Selectors
 slides: ["_slides/week-01/02-intro-to-css-1-slides.md"]
-lesson_date: 2018-10-03
+lesson_date: 2019-04-10
 ---
 
 ## Pre-Work
