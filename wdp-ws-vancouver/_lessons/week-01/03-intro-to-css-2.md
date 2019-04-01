@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to CSS - Positioning, Background Images and Colour
 slides: ["_slides/week-01/03-intro-to-css-2-slides.md"]
-lesson_date: 2018-10-04
+lesson_date: 2019-04-11
 ---
 
 ## Pre-work

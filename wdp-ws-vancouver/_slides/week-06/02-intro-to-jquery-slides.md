@@ -1,0 +1,523 @@
+---
+layout: slidedeck
+title: Intro to jQuery Slides
+---
+
+{% highlight html %}
+name: inverse
+layout: true
+class: center, middle, inverse
+
+---
+
+# Introduction to jQuery
+
+.title-logo[![Red logo](/public/img/red-logo-white.svg)]
+
+---
+
+layout: false
+
+# Agenda
+
+1. What is jQuery? What is it for?
+2. jQuery basics (traversing and chaining)
+3. Working HTML elements and attributes
+4. Working with CSS in jQuery
+5. Creating event listeners with jQuery
+
+---
+
+template: inverse
+
+# What is jQuery?
+
+---
+
+class: center, middle
+
+### jQuery is just JavaScript!
+
+jQuery is a library of code that makes it much easier to perform many essential tasks in JavaScript.
+
+Check out the [source code of the original jQuery release](http://genius.it/ejohn.org/files/jquery-original.html).
+
+---
+
+# What Is jQuery for?
+
+- Find elements using CSS-style selectors
+- Change content on the page
+- Add animations to elements
+- Watch what a user does and react to what they do
+- Fetch new content
+
+---
+
+# jQuery's Claim to Fame
+
+jQuery's main claim to fame&mdash;and it's original purpose&mdash;was to make selecting and manipulating DOM elements simpler.
+
+It does this by wrapping JavaScript's _native_ DOM manipulation methods in an easy to use **API** (i.e. no more long method names like `getElementByClassName()`), and to provide **convenience methods** for parsing and updating HTML.
+
+---
+
+# How Do You Use jQuery?
+
+To use jQuery you must include a link to its script file in your HTML document, just like any other JS file:
+
+```html
+<body>
+  <h1>My Page</h1>
+  <p class="intro">Welcome to my page!</p>
+  <p></p>
+  <p>Thanks for stopping by.</p>
+  <!-- The rest of the page content... -->
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/my-script-file.js"></script>
+</body>
+```
+
+The best practice is to add it near the closing body tag, but it has to be included before any other script files that use jQuery.
+
+???
+
+Pop open a Codepen and demonstrate jQuery not working if they're in the wrong order
+
+---
+
+# Where Do You Get It?
+
+You can find different versions of jQuery from [jquery.com](http://jquery.com/download/):
+
+- The compressed **production** version of jQuery has been "minified" and has all of the whitespace removed
+- The uncompressed **development** version of jQuery still has its whitespace and is easier to read if you want to explore the library's internals
+
+---
+
+template: inverse
+
+# Let's Use Some jQuery
+
+---
+
+# How Does It Work?
+
+Let's get to the fun stuff and look at a basic example. Take our previous code snippet:
+
+```html
+<body>
+  <h1>My Page</h1>
+  <p class="intro">Welcome to my page!</p>
+  <p>Thanks for stopping by.</p>
+  <!-- The rest of the page content... -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/my-script-file.js"></script>
+</body>
+```
+
+Let's see how we can use jQuery to **change the colour of the text** in the paragraph with a class of `intro`.
+
+---
+
+# How Does It Work?
+
+To use jQuery to find the element with a class of `.intro`, we must use the `jQuery()` function and pass the CSS selector as an argument:
+
+```javascript
+jQuery(".intro");
+```
+
+Although you'll generally see the jQuery method written using a dollar sign as shorthand:
+
+```javascript
+$(".intro");
+```
+
+---
+
+# How Does It Work?
+
+Now contrast the jQuery approach:
+
+```javascript
+$(".intro");
+```
+
+With using regular JavaScript:
+
+```javascript
+document.getElementsByClassName("intro");
+
+// or...
+
+document.querySelector(".intro");
+```
+
+It's easy to see why using jQuery is so appealing!
+
+---
+
+# What We Just Did...
+
+But what does that actually do?
+
+By writing `$('.intro')` in our code, we run a function that **returns** a **jQuery collection** (which is an object!), of matching elements.
+
+This is also known as **wrapping** the matching elements in the jQuery object.
+
+You can read more about the [jQuery object](https://learn.jquery.com/using-jquery-core/jquery-object/) in the docs.
+
+---
+
+# And Why Do We Care?
+
+Our jQuery object may look like an array, but has a special set of **methods** you can call on it.
+
+Now that our `.intro` elements are "wrapped" in a jQuery object, all of **jQuery's methods are available** for us to use on those elements. Let's see how that works...
+
+---
+
+# So What Next?
+
+Now let's actually change the colour of the text using jQuery:
+
+```javascript
+$(".intro").css("color", "red");
+```
+
+It's that easy using the `.css()` method in jQuery!
+
+We can also store our jQuery selection in a variable for re-use later:
+
+```javascript
+const $intro = $(".intro");
+$intro.css("color", "red");
+$intro.addClass("greeting");
+```
+
+---
+
+# But There's a Catch!
+
+Before we can start interacting with the DOM, we still need to make sure the browser has fully constructed the DOM tree.
+
+For this reason, you will often see jQuery wrapped in the following code:
+
+```javascript
+$(document).ready(function() {
+  // your jQuery code here...
+});
+
+// Or more commonly, you'll see the shorthand version:
+
+$(function() {
+  // your jQuery code here...
+});
+```
+
+???
+
+**Note:** Point out that this is like what already used with regular JS:
+
+```js
+document.addEventListener("DOMContentLoaded", function() {
+  // all of your JS code goes here
+});
+```
+
+---
+
+# But There's a Catch!
+
+Using the code from our previous example, our script file would now look like this:
+
+```javascript
+$(function() {
+  const $intro = $(".intro");
+  $intro.css("color", "red");
+  $intro.addClass("greeting");
+});
+```
+
+---
+
+# More jQuery Methods
+
+We just used the `.css()` and `.ready()` methods, but jQuery has many more.
+
+For instance we can use jQuery methods to **traverse** the DOM:
+
+- `.children()`
+- `.parents()`
+- `.siblings()`
+
+---
+
+# Traversing the DOM
+
+Given the following mark-up...
+
+```html
+<div class="page-wrapper">
+  <h1>My Blog Post</h1>
+  <article class="post">
+    <p class="opening-line">It was the best of times,</p>
+    <p>it was the blurst of times...</p>
+  </article>
+</div>
+```
+
+---
+
+# Traversing the DOM
+
+...try this jQuery out in Codepen and see what happens:
+
+```javascript
+$(function() {
+  $(".opening-line")
+    .siblings()
+    .addClass("second-line");
+
+  $("article")
+    .children(".opening-line")
+    .css("font-style", "italic");
+
+  $("p")
+    .parent()
+    .siblings()
+    .text("A Tale of Two Blog Posts");
+});
+```
+
+---
+
+# Chaining
+
+In the last jQuery code snippet, we just saw multiple examples of **chaining**.
+
+Chaining allows you to place several methods on the same selector at once, which makes your code more compact:
+
+```javascript
+// Chained:
+$("#menu")
+  .addClass(".active")
+  .css("margin-right", "10px");
+
+// Unchained:
+$("#menu").addClass(".active");
+$("#menu").css("margin-right", "10px");
+```
+
+---
+
+template: inverse
+
+# Doing More with the DOM
+
+---
+
+# Getting Element Content
+
+We've already seen a preview of how jQuery helps you manipulate the DOM, but let's dive a little deeper:
+
+- the `.html()` method will get the HTML inside the first element of the matched set (and its descendents)
+- the `.text()` method will just get the text from inside the first element of the matched set (and its descendents)
+
+---
+
+# Updating Content
+
+We can use the `.prepend()`, `.append()`, and `.remove()` methods to update content:
+
+```html
+<ul class="numbers">
+  <li>one</li>
+  <li>two</li>
+</ul>
+```
+
+```javascript
+// Add new a new item to the end of the list:
+const newContent = "<li>three</li>";
+$(".numbers").append(newContent);
+
+// Change the content of the second list item:
+$(".numbers li:nth-child(2)").text("2");
+
+// Remove the first item from the list:
+$(".numbers")
+  .children(":first")
+  .remove();
+```
+
+---
+
+# Updating Content
+
+Note that `.prepend()` and `.append()` will add content inside the element's opening and closing tags respectively.
+
+The `.before()` and `.after()` methods will add content just before or just after the selected element.
+
+---
+
+# Working with Attributes
+
+As we have seen, it's very easy to add classes to elements with jQuery using `.addClass()`:
+
+```javascript
+$("ul").addClass("menu");
+```
+
+And we can similarly remove them with `.removeClass()`:
+
+```javascript
+$("ul").removeClass("menu");
+```
+
+???
+
+Mention they don't need to add the dot for class names when adding/removing classes, nor the '#' when working with ID's
+
+---
+
+# Working with Attributes
+
+We can also target other element attributes using the `.attr()` and `.prop()` methods:
+
+```javascript
+$("li").attr("id", "active");
+$("input").prop("disabled", true);
+```
+
+Ostensibly, `.attr()` and `.prop()` do very similar things, but `.prop()` offers a slightly more modern, semantic approach and allows you to work with element attributes that are booleans, like the example above.
+
+---
+
+# Working with CSS
+
+As we saw in an earlier example, we can also use jQuery to get and update an elements styles:
+
+```javascript
+// Get the font size and log it:
+const $fontSize = $("p").css("font-size");
+console.log($fontSize);
+
+// Change the font size:
+$("p").css("font-size", "18px");
+```
+
+We can even make multiple adjustments:
+
+```javascript
+$("p").css({ "font-size": "18px", "font-weight": "bold" });
+```
+
+???
+
+Mention that the use of leaving one parameter out uses it as a getter, vs both parameters as a setter
+
+---
+
+# Exercise 1
+
+Using what you just learned about traversing the DOM and jQuery methods, come up with at least three unique solutions for changing the color of the text to red in the second `<p>` inside the `<article>` using jQuery only (no CSS!).
+
+[See the lesson page](/lesson/02-intro-to-jquery/) for further instructions.
+
+---
+
+template: inverse
+
+# Event Listeners
+
+---
+
+# Events in jQuery
+
+jQuery makes it even easier to create event listeners than we've seen with regular JavaScript.
+
+To do this, we usually use the `.on()` method:
+
+```javascript
+$("button").on("click", function() {
+  // Code to run when button clicked...
+});
+```
+
+There are many different kinds of events in jQuery...
+
+---
+
+class: middle
+
+.large[
+focus, blur, change, input, keydown, keyup, keypress, click, dblclick, mouseup, mousedown, mouseover, mousemove, mouseout, hover, submit, select, ready, load, unload, error, resize, scroll
+]
+
+---
+
+# Events in jQuery
+
+For basic event handlers to work, they must be attached to elements that exist when your code makes the call to `.on()`.
+
+If the following button was dynamically added to the page after the page loaded, the alert would not appear:
+
+```javascript
+$("button").on("click", function() {
+  alert("You clicked the button");
+});
+
+$("div").append("<button>My Button</button>");
+```
+
+???
+
+Relate this back to what we've seen with `element.addEventListener()`.
+
+---
+
+# Event Delegation
+
+Alternatively, we can use **event delegation** to attach events to elements.
+
+Event delegation allows us to attach events to children of an element, even if they do not exist at the time of the page load.
+
+```javascript
+$("div").on("click", "button", function() {
+  alert("You clicked the button");
+});
+```
+
+Can you spot the difference in this approach?
+
+---
+
+# Event Delegation
+
+Bonus! Using the event delegation approach can also be beneficial for code performance as it allows you to attach an event to a single parent element instead of many lower-level ones.
+
+---
+
+# Exercise 2
+
+In this exercise, you're going create two click events&mdash;one that **adds another list item** to the list below, and one that **crosses off an item** in the list when its "done" link is clicked.
+
+[See the lesson page](/lesson/02-intro-to-jquery/) for further instructions.
+
+---
+
+# What We've Learned
+
+* What jQuery is and what it's for
+* What the DOM is and how to traverse it
+* How to change the way a website looks using jQuery
+
+---
+
+template: inverse
+
+# Questions?
+
+{% endhighlight %}

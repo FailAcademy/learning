@@ -2,7 +2,7 @@
 layout: lesson
 title: Responsive Web Design
 slides: ["_slides/week-02/01-rwd-slides.md"]
-lesson_date: 2018-10-10
+lesson_date: 2019-04-15
 ---
 
 ## Pre-Work

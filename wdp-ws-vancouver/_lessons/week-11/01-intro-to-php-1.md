@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to PHP - Variables and Arrays
 slides: ["_slides/week-11/01-intro-to-php-1-slides.md"]
-lesson_date: 2018-12-10
+lesson_date: 2019-06-17
 ---
 
 ## Pre-Work
