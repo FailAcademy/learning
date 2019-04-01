@@ -17,7 +17,6 @@ Also before class, try to familiarize yourself with jQuery by completing the [jQ
 
 ## Learning Objectives
 
-- Write JavaScript in a `.js` file and add it to a webpage.
 - Distinguish what jQuery is in relation to JavaScript.
 - Define what the browser’s Document Object Model (DOM) is, and traverse it using jQuery methods.
 - Manipulate the appearance of DOM elements using jQuery.
