@@ -2,10 +2,14 @@
 layout: lesson
 title: Git
 slides: ["_slides/week-02/01b-git.md"]
-lesson_date: 2019-01-15
+lesson_date: 2019-04-15
 ---
 
 ## Pre-work
+
+### Introduction to Git
+
+- [Introduction](https://www.pluralsight.com/courses/code-school-git-real)
 
 ### Tutorials
 

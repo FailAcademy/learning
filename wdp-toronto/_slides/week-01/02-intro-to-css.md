@@ -35,6 +35,12 @@ template: inverse
 
 ---
 
+# CSS is fun!
+
+![CSS is awesome!](https://media.giphy.com/media/yYSSBtDgbbRzq/giphy.gif)
+
+---
+
 class: center, middle
 
 ### What does "CSS" mean?
@@ -392,7 +398,7 @@ But there's another distinction to be made...<br />an element can also be **inli
 | Has top/bottom margin & padding       | Has top/bottom margin & padding | No top/bottom margin or padding |
 | Has left/right margin & padding       | Has left/right margin & padding | Has left/right margin & padding |
 | Can have set height and width         | Can have set height and width   | Cannot have set width or height |
-| Forces a line break after the element | Does not a force a line break   | Does not force a line break     |
+| Forces a line break after the element | Does not force a line break   | Does not force a line break     |
 
 ---
 
@@ -499,7 +505,7 @@ Don't worry about the background image yet, we'll get to that.
 
 template: inverse
 
-# Class & IDs
+# Classes & IDs
 
 ---
 

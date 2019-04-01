@@ -143,7 +143,7 @@ What three things do we need to make a webpage?
 
 1. **[Visual Studio Code](https://code.visualstudio.com/)**
 2. A file with an HTML extension
-3. An handful of HTML elements that are common to all webpages
+3. A handful of HTML elements that are common to all webpages
 
 ---
 
@@ -346,7 +346,7 @@ Or horizontal rules:
 <p>This paragraph shifts to a different topic.</p>
 ```
 
-Notice something special about these elements? They don't contain an text, an are represented by a single, self-closing tag. These are called **empty elements**.
+Notice something special about these elements? They don't contain any text, and are represented by a single, self-closing tag. These are called **empty elements**.
 
 ---
 
@@ -708,7 +708,7 @@ _Functionally they are the same if their types are the same._
 
 # What We've Learned
 
-* What HTML is and it's basic elements
+* What HTML is and its basic elements
 * How to create a webpage on your computer
 * New HTML5 elements
 * How to create links and add images

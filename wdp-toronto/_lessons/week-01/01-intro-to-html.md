@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Intro to Your Computer & HTML
-slides: ["_slides/week-01/01-intro-to-html.md"]
-lesson_date: 2019-01-08
+slides: ['_slides/week-01/01-intro-to-html.md']
+lesson_date: 2019-04-09
 ---
 
 ## Pre-Work

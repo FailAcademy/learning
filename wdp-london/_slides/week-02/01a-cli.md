@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: The Command Line Interface
+title: The Command Line Interface Slides
 ---
 
 {% highlight html %}

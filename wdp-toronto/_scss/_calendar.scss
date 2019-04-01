@@ -5,60 +5,60 @@
  */
 
 #calendar {
-   h2 {
-      color: #969696;
-      @include font-size(1.25);
-      padding-top: 10px;
-   }
+  h2 {
+    color: #969696;
+    @include font-size(1.25);
+    padding-top: 10px;
+  }
 
-   .fc-button {
-      font-family: "Roboto", Helvetica, Arial, sans-serif;
-      font-weight: 700;
-      text-transform: none;
+  .fc-button {
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
 
-      &:hover {
-         background-color: #f5f5f5;
-         border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
-      }
-   }
+    &:hover {
+      background-color: #f5f5f5;
+      border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    }
+  }
 
-   .fc-state-hover {
-      background-position: 0 0;
-      -webkit-transition: none;
-   	   -moz-transition: none;
-   	     -o-transition: none;
-   	        transition: none;
-   }
+  .fc-state-hover {
+    background-position: 0 0;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
 
-   table {
-      margin-bottom: 0;
-   }
+  table {
+    margin-bottom: 0;
+  }
 
-   tbody tr:nth-child(odd) td,
-   tbody tr:nth-child(odd) th {
-      background-color: #fafafa;
-   }
+  tbody tr:nth-child(odd) td,
+  tbody tr:nth-child(odd) th {
+    background-color: #fafafa;
+  }
 
-   .fc-content-skeleton {
+  .fc-content-skeleton {
+    height: 100%;
+
+    table {
       height: 100%;
+    }
+  }
 
-      table {
-         height: 100%;
-      }
-   }
+  .fc-popover,
+  .fc-row,
+  hr,
+  tbody,
+  td,
+  th,
+  thead {
+    border-color: #e2e2e2;
+  }
 
-   .fc-popover,
-   .fc-row,
-   hr,
-   tbody,
-   td,
-   th,
-   thead {
-      border-color: #e2e2e2;
-   }
-
-   .fc-event {
-      @include font-size(.75);
-      font-weight: 100;
-   }
+  .fc-event {
+    @include font-size(0.75);
+    font-weight: 100;
+  }
 }

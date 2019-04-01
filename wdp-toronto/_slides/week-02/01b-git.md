@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Git
+title: Git Slides
 ---
 
 {% highlight html %}

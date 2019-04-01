@@ -7,6 +7,11 @@ $(function() {
         textColor: "#fff"
       },
       {
+        url: "public/feeds/workdays.json",
+        color: "#008383",
+        textColor: "#fff"
+      },
+      {
         url: "public/feeds/deadlines.json",
         color: "#e2231a",
         textColor: "#fff"

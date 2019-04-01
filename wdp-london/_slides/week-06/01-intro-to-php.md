@@ -154,6 +154,17 @@ Time to try out some PHP:
 - Let's try echoing **Hello World!** inside of a properly structured webpage in your `index.php` now...
 - Note that you don't need to add the closing `?>` at the end of a PHP file if it's meant specifically for PHP, not HTML
 
+???
+
+```
+<div class="wrapper">
+  <h1>Static Layout Example</h1>
+  <header>HEADER</header>
+  <nav>NAV</nav>
+  <section>SECTION</section>
+</div>
+```
+
 ---
 
 # What's Happening Here?
@@ -582,6 +593,10 @@ And to **remove** an item at a particular **index**:
 ```php
 unset( $months[2] );
 ```
+
+???
+
+I know this seems like a lot, but remember.... (next slide)
 
 ---
 class: center, middle
