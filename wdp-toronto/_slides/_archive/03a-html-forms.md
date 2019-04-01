@@ -15,6 +15,7 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
@@ -24,11 +25,13 @@ layout: false
 3. Working with forms in CSS
 
 ---
+
 template: inverse
 
 # Creating Forms
 
 ---
+
 class: center, middle
 
 ### Forms on the Web
@@ -36,11 +39,13 @@ class: center, middle
 The concept of a **form** on the web is borrowed from print, but today they provide an important way for users to **interact** with a website and **send/receive information** from a server.
 
 ---
+
 class: center, middle
 
 ![HTTP request diagram](/public/img/slide-assets/http-request-diagram.svg)
 
 ---
+
 class: center, middle
 
 ### How often do you use a search engine?
@@ -48,6 +53,7 @@ class: center, middle
 Google's search input allows us to **GET** info from a server.
 
 ---
+
 class: center, middle
 
 ### How often do you shop online?
@@ -55,13 +61,15 @@ class: center, middle
 When you fill out a form to make a purchase online, the **POST** method is used to send your payment information and allow a vendor to process your order with the data they receive.
 
 ---
+
 class: center, middle
 
 .large[
-   If you think about it, most websites today would be pretty boring if they didn't have forms!
+If you think about it, most websites today would be pretty boring if they didn't have forms!
 ]
 
 ---
+
 template: inverse
 
 # Common Form Elements
@@ -74,7 +82,7 @@ All forms on the web use the `<form>` element:
 
 ```html
 <form action="submit.php" method="get">
-   <!-- The form inputs go here... -->
+  <!-- The form inputs go here... -->
 </form>
 ```
 
@@ -90,8 +98,8 @@ We can use the `<input>` element inside a form to create a variety of different 
 
 ```html
 <form action="submit.php" method="post">
-   <input type="text" name="username" size="12" maxlength="12" />
-   <input type="checkbox" name="registered" checked="checked" />
+  <input type="text" name="username" size="12" maxlength="12" />
+  <input type="checkbox" name="registered" checked="checked" />
 </form>
 ```
 
@@ -107,8 +115,8 @@ To create radio inputs, we simply create multiple `<input>` elements with a type
 
 ```html
 <form action="submit.php" method="post">
-   <input type="radio" name="gender" value="male" id="male" />Male
-   <input type="radio" name="gender" value="female" id="female" />Female
+  <input type="radio" name="gender" value="male" id="male" />Male
+  <input type="radio" name="gender" value="female" id="female" />Female
 </form>
 ```
 
@@ -138,9 +146,10 @@ A `<textarea>` element will create a multi-line text input:
 
 ```html
 <form action="submit.php" method="post">
-   <textarea name="message" cols="10" rows="4">
+  <textarea name="message" cols="10" rows="4">
       Enter your message...
-   </textarea>
+   </textarea
+  >
 </form>
 ```
 
@@ -154,10 +163,10 @@ The `<select>` element is a special form element that will create a drop-down me
 
 ```html
 <form action="submit.php" method="get">
-   <select>
-      <option value="mac" selected="selected">Mac</option>
-      <option value="pc">PC</option>
-   </select>
+  <select>
+    <option value="mac" selected="selected">Mac</option>
+    <option value="pc">PC</option>
+  </select>
 </form>
 ```
 
@@ -172,9 +181,7 @@ The `<label>` tag is used to describe what an input is for, and helps with acces
 It can be used by either wrapping the `<input>` element it pertains to, or by giving it a `for` attribute that matches the `id` of the input it's labeling:
 
 ```html
-<label>
-   First Name: <input type="text" name="first_name" />
-</label>
+<label> First Name: <input type="text" name="first_name" /> </label>
 
 <label for="terms">I agree to the terms and conditions</label>
 <input type="checkbox" name="terms" id="terms" />
@@ -206,9 +213,10 @@ In lieu of a `<button>` element, you can may also see an `<input>` element with 
 
 The main difference between `<button>` and `<input type="submit" />` is that the input element is self-closing, while the button can contain content.
 
-*Functionally they are the same if their types are the same.*
+_Functionally they are the same if their types are the same._
 
 ---
+
 template: inverse
 
 # Forms and CSS
@@ -233,14 +241,14 @@ We can always target form inputs by their `id` or `class`, but we can also targe
 
 ```css
 input {
-   margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-input[type="text"],
-input[type="search"] {
-   color: #111;
-   font-family: Helvetica, sans-serif;
-   padding: 2px 5px;
+input[type='text'],
+input[type='search'] {
+  color: #111;
+  font-family: Helvetica, sans-serif;
+  padding: 2px 5px;
 }
 ```
 
@@ -252,11 +260,11 @@ The `:focus` pseudo-class also helps us target special styles toward the field t
 
 ```css
 input {
-   border: 1px solid #969696;
+  border: 1px solid #969696;
 }
 
 input:focus {
-   border: 1px solid #464646;
+  border: 1px solid #464646;
 }
 ```
 
@@ -268,12 +276,12 @@ And the `:active` pseudo-class allows to provide feedback to a user to let them 
 
 ```css
 button {
-   background-color: blue;
+  background-color: blue;
 }
 
 button:hover,
 button:active {
-   background-color: navy;
+  background-color: navy;
 }
 ```
 
@@ -285,14 +293,12 @@ We can also get creative spiffying up our buttons use CSS3:
 
 ```css
 button {
-   border: 0;
-   background-color: blue;
-   color: #fff;
-   padding: 10px 15px;
-   border-radius: 3px;
-   box-shadow:
-      inset 0px -3px 1px rgba(0, 0, 0, 0.45),
-      0px 2px 2px rgba(0, 0, 0, 0.25);
+  border: 0;
+  background-color: blue;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 3px;
+  box-shadow: inset 0px -3px 1px rgba(0, 0, 0, 0.45), 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
 ```
 
@@ -303,7 +309,7 @@ button {
 Build this form!
 
 .inline-images[
-   ![HTML form prototype](/public/files/exercises/html-forms-e1.png)
+![HTML form prototype](/public/files/exercises/html-forms-e1.png)
 ]
 
 ---
@@ -315,6 +321,7 @@ Build this form!
 - How to work with form elements in CSS
 
 ---
+
 template: inverse
 
 # Questions?

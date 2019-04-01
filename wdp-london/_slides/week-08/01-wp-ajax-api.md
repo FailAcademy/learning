@@ -327,7 +327,7 @@ A **resource** is a discrete entity within WordPress (e.g. post, page, comment, 
 
 - **Endpoints** are functions available through the API (e.g. updating post meta or deleting a taxonomy term)
 - A **route** is the “name” you use to access endpoints&mdash;so a route may have multiple endpoints depending on what you can do with it!
-- A **schema** is a representation of the format for the API's response data ([detailed resource here](https://developer.wordpress.org/rest-api/reference/))
+- A **schema** is a representation of the format for the API's request and response data ([detailed resource here](https://developer.wordpress.org/rest-api/reference/))
 
 ---
 
@@ -409,22 +409,24 @@ add_action( 'wp_enqueue_scripts', 'red_scripts' );
 This time we'll add the nonce in the request's header:
 
 ```js
-$('#close-comments').on('click', function(event) {
-   event.preventDefault();
+(function( $ ) {
+   $('#close-comments').on('click', function(event) {
+      event.preventDefault();
 
-   $.ajax({
-      method: 'post',
-      url: red_vars.rest_url + 'wp/v2/posts/' + red_vars.post_id,
-      data: {
-         comment_status: 'closed'
-      },
-      beforeSend: function(xhr) {
-         xhr.setRequestHeader( 'X-WP-Nonce', red_vars.wpapi_nonce );
-      }
-   }).done( function(response) {
-      alert('Success! Comments are closed for this post.');
+      $.ajax({
+         method: 'post',
+         url: red_vars.rest_url + 'wp/v2/posts/' + red_vars.post_id,
+         data: {
+            comment_status: 'closed'
+         },
+         beforeSend: function(xhr) {
+            xhr.setRequestHeader( 'X-WP-Nonce', red_vars.wpapi_nonce );
+         }
+      }).done( function(response) {
+         alert('Success! Comments are closed for this post.');
+      });
    });
-});
+})( jQuery );
 ```
 
 ---

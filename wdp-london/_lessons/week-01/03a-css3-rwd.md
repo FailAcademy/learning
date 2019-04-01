@@ -2,7 +2,7 @@
 layout: lesson
 title: CSS3 & Responsive Web Design
 slides: ["_slides/week-01/03a-css3-rwd.md"]
-lesson_date: 2019-01-11
+lesson_date: 2019-04-11
 ---
 
 ## Pre-Work
@@ -89,15 +89,16 @@ Also take a look at Project 1, and see if you can recommend where it this proper
 
 We'll continue to work on Project 1 in today's lab.
 
-Your goal for today is to "refactor" your CSS into mobile-first media queries based on the provided design comps.
+Your goal for today is to "refactor" your existing CSS into mobile-first media queries based on the provided design comps.
 
 ---
 
 ## Additional Resources
 
-An excellent RWD resource:
+Excellent RWD resources:
 
 - [Responsive Web Design Basics](https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/?hl=en)
+- [Reading: Will I always use the same breakpoints?](https://medium.com/@uiuxlab/the-most-used-responsive-breakpoints-in-2017-of-mine-9588e9bd3a8a)
 
 A CSS Tricks article helps demystify how media queries work:
 

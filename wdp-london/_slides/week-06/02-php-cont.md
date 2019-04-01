@@ -287,7 +287,7 @@ To convert array items into a comma-separated string, use the `implode()` functi
 
 ```php
 $skills = array( 'html', 'css', 'js', 'php' );
-$comma_separated = implode(',', $array);
+$comma_separated = implode(',', $skills);
 
 echo $comma_separated; // output: html,css,js,php
 ```
