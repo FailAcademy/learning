@@ -55,13 +55,13 @@ JavaScript objects are sometimes called **maps**, but you can just call them **o
 ```js
 const goals = [
   {
-    description: 'Learn about JavaScript objects',
-    dueDate: new Date('01-01-2020'),
+    description: "Learn about JavaScript objects",
+    dueDate: new Date("01-01-2020")
   },
   {
-    description: 'Stop wasting time posting gifs on Slack',
-    dueDate: new Date(),
-  },
+    description: "Stop wasting time posting gifs on Slack",
+    dueDate: new Date()
+  }
 ];
 ```
 
@@ -87,17 +87,17 @@ Often you'll use objects to represent real things (nouns) in your software, like
 
 ```js
 const zoo = {
-  name: 'Animal Apartments',
+  name: "Animal Apartments",
   zookeeper: {
-    name: 'G. Silverback',
-    email: 'gorillas@mist.com',
+    name: "G. Silverback",
+    email: "gorillas@mist.com"
   },
   animals: [
-    { name: 'panda', type: 'mammal', apt: 201 },
-    { name: 'parrot', type: 'bird', apt: 202 },
-    { name: 'porcupine', type: 'mammal', apt: 203 },
-    { name: 'porpoise', type: 'mammal', apt: 204 },
-  ],
+    { name: "panda", type: "mammal", apt: 201 },
+    { name: "parrot", type: "bird", apt: 202 },
+    { name: "porcupine", type: "mammal", apt: 203 },
+    { name: "porpoise", type: "mammal", apt: 204 }
+  ]
 };
 
 console.log(zoo.animals[3].name); // what does this log to the console?
@@ -111,17 +111,17 @@ Values stored inside objects are called **properties**. You can **read and write
 
 ```js
 const human = {
-  firstName: 'Richard',
-  lastName: 'Stallman',
+  firstName: "Richard",
+  lastName: "Stallman",
   height: 1.75,
-  beard: true,
+  beard: true
 };
 
 // DOT NOTATION
 const hasBeard = human.beard; // will equal true
 
 // BRACKET NOTATION
-const hasBeard = human['beard']; // will equal true
+const hasBeard = human["beard"]; // will equal true
 ```
 
 ---
@@ -133,19 +133,19 @@ Copy & paste this into your browser console (and press enter):
 ```js
 const human = {
   fingerCount: 5,
-  toeCount: 5,
+  toeCount: 5
 };
 
 const numFingers = human.fingerCount;
-const numToes = human['toeCount'];
+const numToes = human["toeCount"];
 
 human.bellybutton = true;
-human['opposable thumbs'] = true;
+human["opposable thumbs"] = true;
 
 console.log(human);
 ```
 
-*Did the output match what you were expecting?*
+_Did the output match what you were expecting?_
 
 ---
 
@@ -188,7 +188,7 @@ console.log(x); // 1
 console.log(y); // 2
 ```
 
-*That's much nicer!*
+_That's much nicer!_
 
 ---
 
@@ -340,9 +340,9 @@ class: center, middle
 
 ### More to Objects...
 
-Objects allow you to do more than read and write properties. 
+Objects allow you to do more than read and write properties.
 
-Objects can also *do* things by adding **methods** to them.
+Objects can also _do_ things by adding **methods** to them.
 
 ---
 
@@ -362,13 +362,13 @@ For object methods, we write `getName: function() {...}` instead of `function ge
 
 ```js
 const person = {
-  firstName: 'Richard',
-  lastName: 'Stallman',
+  firstName: "Richard",
+  lastName: "Stallman",
   height: 1.75,
   beard: true,
   getName: function() {
-    return this.firstName + ' ' + this.lastName;
-  },
+    return this.firstName + " " + this.lastName;
+  }
 };
 ```
 
@@ -380,12 +380,12 @@ We use dot notation to access object methods:
 
 ```js
 const person = {
-  firstName: 'Richard',
-  lastName: 'Stallman',
+  firstName: "Richard",
+  lastName: "Stallman",
   // ...
   getName: function() {
-    return this.firstName + ' ' + this.lastName;
-  },
+    return this.firstName + " " + this.lastName;
+  }
 };
 
 const fullName = person.getName(); // will return "Richard Stallman"
@@ -401,14 +401,14 @@ Inside of an object's method, it refers to the object itself:
 
 ```js
 const person = {
-  firstName: 'Richard',
-  lastName: 'Stallman',
+  firstName: "Richard",
+  lastName: "Stallman",
   // ...
   getName: function() {
     // use "this" to get properties of the object inside of a method
 
-    return this.firstName + ' ' + this.lastName;
-  },
+    return this.firstName + " " + this.lastName;
+  }
 };
 ```
 
@@ -423,7 +423,7 @@ Have students type `this` into the console...this is a great opportunity to talk
 class: center, middle
 
 .large[
-  Pause! Let's stop and consider why this is useful to us...
+Pause! Let's stop and consider why this is useful to us...
 ]
 
 ---
@@ -432,7 +432,7 @@ class: center, middle
 
 ### Data-Driven UI
 
-As a front-end developer, you'll write a lot of JavaScript that works with **arrays** of **objects**. 
+As a front-end developer, you'll write a lot of JavaScript that works with **arrays** of **objects**.
 
 Arrays of objects are common because _many software user-interfaces present dynamic lists of information to their users_.
 
@@ -508,7 +508,7 @@ template: inverse
 class: center, middle
 
 .large[
-  Sometimes creating objects isn't enough...
+Sometimes creating objects isn't enough...
 ]
 
 ---
@@ -516,7 +516,7 @@ class: center, middle
 class: center, middle
 
 .large[
-  We often need a smarter way to create multiple versions of the same *kind* of object...
+We often need a smarter way to create multiple versions of the same *kind* of object...
 ]
 
 ---
@@ -527,18 +527,18 @@ This doesn't feel very **DRY**...
 
 ```js
 const person1 = {
-  firstName: 'Richard',
-  lastName: 'Stallman',
+  firstName: "Richard",
+  lastName: "Stallman"
 };
 
 const person2 = {
-  firstName: 'Ada Lovelace',
-  lastName: 'Stallman',
+  firstName: "Ada",
+  lastName: "Lovelace"
 };
 
 const person3 = {
-  firstName: 'Grace',
-  lastName: 'Hopper',
+  firstName: "Grace",
+  lastName: "Hopper"
 };
 ```
 
@@ -566,11 +566,11 @@ In JavaScript, a prototype can refer to two things:
 
 `prototype`
 
-*The special property assigned to your functions*
+_The special property assigned to your functions_
 
 `[[Prototype]]` aka `__proto__`
 
-*This is a reference to the `prototype` of the function that the object was based on*
+_This is a reference to the `prototype` of the function that the object was based on_
 
 **Let's look at an example...**
 
@@ -581,8 +581,8 @@ In JavaScript, a prototype can refer to two things:
 Enter the following into your browser console:
 
 ```js
-const myArr = ['item 1'];
-myArr.__proto___
+const myArr = ["item 1"];
+myArr.__proto___;
 ```
 
 **What do you see?**
@@ -590,8 +590,10 @@ myArr.__proto___
 Now run this:
 
 ```js
-Array.prototype.getFirst = function () { return this[0] };
-myArr.getFirst()
+Array.prototype.getFirst = function() {
+  return this[0];
+};
+myArr.getFirst();
 ```
 
 **Did it work as expected?**
@@ -608,21 +610,21 @@ myArr.getFirst()
 
 - We also see all of the array methods that we were using yesterday
 - Because the `Array` prototype object includes these methods, any new array we create based on it can get access to those methods
-- So this means that you don't have to create your own `forEach` method and add it to *your specific array* every time you create own—the array you created can "look up the prototype chain" to see if an object it was based on has that method
+- So this means that you don't have to create your own `forEach` method and add it to _your specific array_ every time you create own—the array you created can "look up the prototype chain" to see if an object it was based on has that method
 - In this sense you can think of the `Array` prototype acting as a **delegate** on behalf of your array
 
 **Lastly:**
 
 - You can add methods to a prototype
 - Then all objects based on that prototype will have access to these methods too
-- *Generally not advisable to do this for built-in prototypes though* (breaks defaults!)
+- _Generally not advisable to do this for built-in prototypes though_ (breaks defaults!)
 
 ---
 
 class: center, middle
 
 .large[
-  But what if you want to create your own function to create special kinds of objects?
+But what if you want to create your own function to create special kinds of objects?
 ]
 
 (Spoiler alert! You can...)
@@ -638,18 +640,19 @@ function Library(inventory) {
   this.open = true;
   this.inventory = inventory;
   this.lent = [];
-  this.borrow = function(id) {
-    if (
-      this.inventory.find(book => book.id === id)
-      && this.lent.indexOf(id) === -1
-    ) {
-      this.lent.push(id);
-    } else {
-      console.log('This book has been lent...');
-    }
-  };
-  // this.returnItem ...etc
 }
+
+Library.prototype.borrow = function(id) {
+  if (
+    this.inventory.find(book => book.id === id) &&
+    this.lent.indexOf(id) === -1
+  ) {
+    this.lent.push(id);
+  } else {
+    console.log("This book has been lent...");
+  }
+};
+// Library.prototype.returnItems..etc.
 ```
 
 ???
@@ -659,10 +662,11 @@ Pause and walk through some interesting points...
 - The use of a function instead of an object to set properties and values
 - Use of a capital letter for `Library`
 - Using `this` inside a function
+- We add the `borrow` method to the `Library` prototype (instead of directly inside the constructor) so that it will only exist in `Library`, rather than each instance of an object created from it
 
 ---
 
-# Constructor Functions
+# Objects Made Easy
 
 Describing objects using constructor functions allows you to create multiple **instances** of your object using `new`.
 
@@ -670,11 +674,37 @@ To create a new library object, we write `new Library()`:
 
 ```js
 const myLibrary = new Library([
-  { title: '1984', author: 'Orwell', id: 1 },
-  { title: 'Dune', author: 'Herbert', id: 2 },
-  { title: '1Q84', author: 'Murakami', id: 3 },
+  { title: "1984", author: "Orwell", id: 1 },
+  { title: "Dune", author: "Herbert", id: 2 },
+  { title: "1Q84", author: "Murakami", id: 3 }
 ]);
 ```
+
+---
+
+# Under the Hood
+
+With our new `Library` constructor, we can now see an example of the other meaning of &ldquo;prototype&rdquo; in JS.
+
+Run the code from the previous two slides in the console, then run the following:
+
+```js
+Library.prototype
+```
+
+Now run this:
+
+```js
+myLibrary.__proto__
+```
+
+**What do you see now?**
+
+???
+
+- Rather than seeing the `myLibrary` object is based on the `Object` prototype (even though it's an object!) we can see that it was created with our `Library` constructor instead
+- As a result it has access to the `Library` prototype methods, as well as any of the usual `Object` methods (because this is the prototype that `Library` is based on)
+- This is what it means to go up the prototype chain...
 
 ---
 
@@ -684,15 +714,15 @@ We can tidy our code up even further with the use of additional constructors, an
 
 ```js
 const cookBookLibrary = new Library([
-  new CookBook('La Technique', 'Pepin'),
-  new CookBook("Cookin' it lovin' it", 'Fieri'),
-  new CookBook('The Pollan Family Table', 'Pollan'),
+  new CookBook("La Technique", "Pepin"),
+  new CookBook("Cookin' it lovin' it", "Fieri"),
+  new CookBook("The Pollan Family Table", "Pollan")
 ]);
 
 const carShare = new Library([
-  new CarShareVehicle('Hyundai', 'Accent'),
-  new CarShareVehicle('Geely Auto', 'Geely'),
-  new CarShareVehicle('Daihatsu', 'Tanto'),
+  new CarShareVehicle("Hyundai", "Accent"),
+  new CarShareVehicle("Geely Auto", "Geely"),
+  new CarShareVehicle("Daihatsu", "Tanto")
 ]);
 
 // ... use your new object instance!
@@ -714,7 +744,7 @@ function Ranger(name, zord) {
 
   this.state = {
     morphed: false,
-    joinedMegaZord: false,
+    joinedMegaZord: false
   };
 
   this.morph = function() {
@@ -744,11 +774,21 @@ class Ranger {
     }
   }
 }
-const blueRanger = new Ranger('Billy', 'Triceratops');
+const blueRanger = new Ranger("Billy", "Triceratops");
 blueRanger.morph();
 ```
 
 Ahh, much nicer. _More on classes later!_
+
+---
+
+# Exercise 3
+
+Refactor your previous `library` object to be created from the `Library` prototype instead.
+
+This means you'll need to re-write the `returnItem` and `close` methods to belong to the `Library` prototype as well now too.
+
+Once you re-write the methods, instantiate a new library with an inventory.
 
 ---
 

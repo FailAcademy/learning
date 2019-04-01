@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: JavaScript Objects
-slides: ['_slides/week-03/01-javascript-objects.md']
+slides: ["_slides/week-03/01-javascript-objects.md"]
 lesson_date: 2019-04-22
 ---
 
@@ -51,12 +51,12 @@ For inspiration, think of a typical social network user page.
 
 ## Exercise 2
 
-Using the "library" object from the previous example, finish implementing the logic for the `returnBook` and `close` methods.
+Using the `library` object from the previous example, finish implementing the logic for the `returnBook` and `close` methods.
 Be sure to implement the following logic in your methods:
 
 - You should not be able to return a book that is not lent
 - The `open` property should be changed when you close the library
-- *Anything else?*
+- _Anything else?_
 
 ```js
 const library = {
@@ -68,13 +68,23 @@ const library = {
   },
   close: function() {
     // how do you flip the "open" property?
-  },
+  }
 };
 ```
 
 Bonus challenge! Check to see if the library is open or closed before you allow a user to borrow or return a book.
 
 You may also want to implement another method to re-open the library (or figure out how to open and close the library using only one method).
+
+---
+
+## Exercise 3
+
+Refactor your previous `library` object to be created from the `Library` prototype instead.
+
+This means you'll need to re-write the `returnItem` and `close` methods to belong to the `Library` prototype as well now too.
+
+Once you re-write the methods, instantiate a new library with an inventory.
 
 ---
 
