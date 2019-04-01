@@ -37,7 +37,7 @@ Check out [JSBin](https://jsbin.com/). We'll be using it to test our code.
 
 ## Exercise 1
 
-Add items to your bucket list array, and write some JS to display each item in an `<li>` inside of the `<ul>`. 
+Add items to your bucket list array, and write some JS to display each item in an `<li>` inside of the `<ul>`.
 
 **Use JSBin to complete this exercise:<br />[https://jsbin.com/?html,js,output](https://jsbin.com/?html,js,output)**
 
@@ -158,6 +158,21 @@ You will need to add “smooth scrolling” into the menu so that menu items nav
 
 Search for help on the web when implementing this. [This CSS Tricks article](https://css-tricks.com/snippets/jquery/smooth-scrolling/) is a great place to start.
 
+The DRYest solution would involve using JS to get a list of all the link elements in the navigation menu, and then use `.forEach()` to loop over all of the link elements and add a `click` event listener to each.
+
+In the callback for the event listener, you can do the work of scrolling to the appropriate section with `.scrollIntoView()`. The trickiest part will be figuring out how to get to the right section in the callback!
+
+```js
+const navLinks = document.querySelectorAll(/* nav link selector */);
+
+navLinks.forEach(function(element) {
+  // add click listener for the element in this iteration of the loop
+  // how can you get the "href" attribute value of the clicked element to create a string that corresponds the id of the correct section?
+  // get the section by its id using the string from the last step
+  // scroll to that section with .scrollIntoView()
+});
+```
+
 **Requirement 2: Add a Slider**
 
 You can now add a slider to your site. You won't actually want write all of the code for a slider from scratch! You'll want to use a "plugin" for that. **[Flickity](https://flickity.metafizzy.co/)** is a great choice for a slider plugin.
@@ -172,10 +187,9 @@ Lastly, you'll need to add another event listener to execute some conditional lo
 
 You want to display an alert box that says “Thanks for subscribing!” whenever a user successfully submits the newsletter form with an email address (i.e. not an empty value!), otherwise they should see a message in the alert box that asks them to enter an email address.
 
-
 ### Optional: Happiness Journal
 
-*If you finish adding the required JS and styling Project 1, try this extra JS arrays challenge...*
+_If you finish adding the required JS and styling Project 1, try this extra JS arrays challenge..._
 
 Use the following code to build a functioning happiness journal.
 
