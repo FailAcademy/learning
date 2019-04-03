@@ -16,8 +16,6 @@ Read through the sections of the [Redux Docs Introduction](http://redux.js.org/d
 - Setup a basic project using Redux in raw JavaScript.
 - Explain the benefits of using Redux to model state.
 
----
-
 ## Keywords
 
 - [Redux](http://redux.js.org/index.html)
