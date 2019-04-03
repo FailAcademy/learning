@@ -15,6 +15,7 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
@@ -23,6 +24,7 @@ layout: false
 2. Explore the `Animated` module
 
 ---
+
 template: inverse
 
 # LayoutAnimation Module
@@ -61,7 +63,6 @@ render() {
 }
 ```
 
-
 ---
 
 # Presets
@@ -72,7 +73,7 @@ render() {
 - `linear`
 - `spring`
 
-*We can roll our own custom animation with this module too...*
+_We can roll our own custom animation with this module too..._
 
 ---
 
@@ -84,8 +85,8 @@ How to create a custom config object for `LayoutAnimation`:
 const animationConfig = {
   duration: 2000,
   update: {
-    type: 'spring', 
-    springDamping: 0.1, // lower == more dramatic spring 
+    type: 'spring',
+    springDamping: 0.1, // lower == more dramatic spring
   },
 };
 
@@ -104,7 +105,7 @@ We can also add `create` and `delete` properties to this object to animate views
 const animationConfig = {
   duration: 2000,
   create: {
-    type: 'spring', 
+    type: 'spring',
     property: 'scaleXY',
     springDamping: 0.7,
   },
@@ -160,7 +161,7 @@ import {
 
 constructor() {
   if (Platform.OS === 'android') {
-    UIManager.setLayoutAnimationEnabledExperimental 
+    UIManager.setLayoutAnimationEnabledExperimental
     && UIManager.setLayoutAnimationEnabledExperimental(true);
   }
 }
@@ -177,6 +178,7 @@ Each Code of Conduct item should be closed by default.
 Note that you can use one of the built-in `Presets` for this exercise, or create your own custom configuration object to control the animation if you like.
 
 ---
+
 template: inverse
 
 # Animated Module
@@ -196,7 +198,7 @@ template: inverse
 React Native support three different **animation types**:
 
 - `spring`: simple spring physics model that you can set `friction` (bounciness) and `tension` (speed) on
-- `decay`: starts with an initial velocity and slows to a stop, and you can set the `velocity` (required) and `deceleration` (rate of decay) 
+- `decay`: starts with an initial velocity and slows to a stop, and you can set the `velocity` (required) and `deceleration` (rate of decay)
 - `timing`: maps time range to easing value, and allows you to set the `duration` (default is 500ms), `easing` (type of curve), and `delay` (in milliseconds)
 
 ---
@@ -223,8 +225,8 @@ let AnimatedButton = Animated.createAnimatedComponent(Button);
 
 ```js
 this.state = {
-  translateValue: Animated.ValueXY()
-}
+  translateValue: Animated.ValueXY(),
+};
 ```
 
 Note that `Animated.ValueXY` is **for vectors only** (in other words, 2D animations, and it works well when responding to gestures with the `PanResponder` module).
@@ -239,11 +241,10 @@ We will use `Animated.Value()` for animating all other types of values (more on 
 
 ```js
 animateCircle = () => {
-  Animated.spring(
-    this.state.translateValue, 
-    { toValue: {x: 50, y: 100} },
-  ).start();
-}
+  Animated.spring(this.state.translateValue, {
+    toValue: { x: 50, y: 100 },
+  }).start();
+};
 ```
 
 Note that the first argument to `Animated.spring()` is the value we want to drive, and the second is the configuration for the animation.
@@ -256,11 +257,11 @@ Note that the first argument to `Animated.spring()` is the value we want to driv
 
 ```js
 render() {
-  let animatedStyles = { 
+  let animatedStyles = {
     transform: [
       { translateX: this.state.translateValue.x },
       { translateY: this.state.translateValue.y }
-    ] 
+    ]
   };
 
   return (
@@ -274,10 +275,11 @@ render() {
 ```
 
 ---
+
 class: center, middle
 
 .large[
-  Now let's animate different styles at the same time...
+Now let's animate different styles at the same time...
 ]
 
 ---
@@ -287,10 +289,10 @@ class: center, middle
 Set a new `Animated.Value()` in the `constructor`:
 
 ```js
-this.state = { 
+this.state = {
   translateValue: new Animated.ValueXY(),
-  color: new Animated.Value(0)
-}
+  color: new Animated.Value(0),
+};
 ```
 
 What you pass into `Animated.Value()` can range from `0` to `1`. This value represents the percentage of the animation's completion (from 0% to 100%).
@@ -303,17 +305,11 @@ To animate the colour of the component at the same time as the translate animati
 
 ```js
 Animated.parallel([
-  Animated.spring(
-    this.state.translateValue, 
-    { toValue: {x: 50, y: 100} },
-  ),
-  Animated.timing(
-    this.state.color,
-    { 
-      toValue: 1,
-      duration: 600,
-    }
-  )
+  Animated.spring(this.state.translateValue, { toValue: { x: 50, y: 100 } }),
+  Animated.timing(this.state.color, {
+    toValue: 1,
+    duration: 600,
+  }),
 ]).start();
 ```
 
@@ -330,7 +326,7 @@ render() {
     outputRange: ['red', 'pink']
   });
 
-  let animatedStyles = { 
+  let animatedStyles = {
     transform: [
       { translateX: this.state.translateValue.x },
       { translateY: this.state.translateValue.y }
@@ -364,7 +360,7 @@ We can map an `inputRange` of `[0, 1]` to an `outputRange` of `[0, 100]`, or map
 ```js
 const spin = this.state.spinValue.interpolate({
   inputRange: [0, 1],
-  outputRange: ['0deg', '360deg']
+  outputRange: ['0deg', '360deg'],
 });
 ```
 
@@ -374,27 +370,21 @@ const spin = this.state.spinValue.interpolate({
 
 ```js
 animateCircle = () => {
-  this.state.translateValue.setValue({x: 0, y: 0})
+  this.state.translateValue.setValue({ x: 0, y: 0 });
   this.state.color.setValue(0);
-  
+
   Animated.parallel([
-    Animated.spring(
-      this.state.translateValue, 
-      { toValue: {x: 50, y: 100} },
-    ),
-    Animated.timing(
-      this.state.color,
-      { 
-        toValue: 1,
-        duration: 600,
-      }
-    )
-  ]).start((animation) => {
+    Animated.spring(this.state.translateValue, { toValue: { x: 50, y: 100 } }),
+    Animated.timing(this.state.color, {
+      toValue: 1,
+      duration: 600,
+    }),
+  ]).start(animation => {
     if (animation.finished) {
       this.animateCircle();
     }
   }); // just pass a callback in here and recursively call the method
-}
+};
 ```
 
 ---
@@ -405,18 +395,12 @@ Rather than running our animation at the same time, we can run the one after ano
 
 ```js
 Animated.sequence([
-  Animated.spring(
-    this.state.translateValue, 
-    { toValue: {x: 50, y: 100} },
-  ),
-  Animated.timing(
-    this.state.color,
-    { 
-      toValue: 1,
-      duration: 600,
-      easing: Easing.linear
-    }
-  )
+  Animated.spring(this.state.translateValue, { toValue: { x: 50, y: 100 } }),
+  Animated.timing(this.state.color, {
+    toValue: 1,
+    duration: 600,
+    easing: Easing.linear,
+  }),
 ]).start();
 ```
 
@@ -436,6 +420,7 @@ Be sure to also change the "+" to a "-" when the item toggles open (and back aga
 - How to use the `Animated module` for more complex animations
 
 ---
+
 template: inverse
 
 # Questions?

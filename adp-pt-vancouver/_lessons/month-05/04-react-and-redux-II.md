@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: React and Redux
-slides: ['_slides/week-07/01-react-and-redux.md']
+title: React and Redux II
+slides: ['_slides/month-05/04-react-and-redux-II.md']
 lesson_date: 2019-05-21
 ---
 
@@ -13,8 +13,6 @@ You'll need to complete the lab activity from the previous lesson (Intro to Redu
 
 ## Learning Objectives
 
-- Review how React components interact with pros and state.
-- Identify the roles of React and Redux when used together to display views and store state.
 - Use Redux to write state-free code in React.
 - Use `react-redux`, with `<Provider>` and `connect`
 - Use the `dispatch` prop to send actions to the Redux store from a React component.
@@ -25,18 +23,10 @@ You'll need to complete the lab activity from the previous lesson (Intro to Redu
 
 - `Provider`
 - `connect`
-- `mapStateToProps`
-- `mapDispatchToProps`
 
 ---
 
 ## Exercise 1
-
-Let's build the `shareItemPreview` module together so we can grab this state from the Redux store in our `ShareItemPreview` component instead once we add `react-redux`.
-
----
-
-## Exercise 2
 
 Wire up the `FormSpy` component. It should send the values from the form to the store, but some of the values may be missing.
 Are you able to send the right tags to the store? What about the image preview, how does that work?
@@ -47,6 +37,24 @@ In this exercise, we'll use a class method to do the following:
   (Hint: you'll need to investigate the `btoa` JavaScript global function).
 - Dispatch all of the fields you'll need for the addItem mutation to the redux store, including the `base64` url.
 - include actions for reseting the form image preview, and reseting the form to it's `initialState`
+
+---
+
+## Exercise 2
+
+Write a `resetFileInput` function that can reset the image preview and set state to initial values.
+
+`Hint:` Use `resetNewItemImage` function from our Redux store.
+
+???
+
+```js
+resetFileInput() {
+this.fileInput.current.value = '';
+this.props.resetNewItemImage();
+this.setState({ fileSelected: false });
+}
+```
 
 ---
 
@@ -67,11 +75,10 @@ Be sure to include:
 - Data validation (Server & Client side)
 - Reset the Redux Store and the form when the Mutation is successful
 - Redirect to the Items page on complete
-- Refetch the `ALL_USER_ITEMS` query with the updated item (Client-Side)
+- Re-fetch the `ALL_USER_ITEMS` query with the updated item (Client-Side)
 
 ---
 
 ## Additional Resources
 
 - [Egghead.io React-Redux Tutorial](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)
-- [Quick Guide to React & Redux](https://www.reax.io/blog/2016/07/07/quick-guide-to-react-and-redux/)

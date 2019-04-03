@@ -361,12 +361,7 @@ In your `App` component, now add a method to remove a to-do item from the list w
 
 To do this, you will need to add a `removeToDo` prop to your `ToDo` component, and pass in a `removeToDo` method from the `App` component. This method should be called `onClick` on the button wrapping the garbage can icon.
 
-## **Hint:** To remove a to-do from the array of to-do objects stored in the state, you will need to call `.filter()` to create a new array of to-dos containing only the items **that are not the current item**, and set that new array to the value of `todos`.
-
-# What We've Learned
-
-- How to set an component's initial state in a `constructor`
-- How to alter state in response to some event
+**Hint:** To remove a to-do from the array of to-do objects stored in the state, you will need to call `.filter()` to create a new array of to-dos containing only the items **that are not the current item**, and set that new array to the value of `todos`.
 
 ---
 
@@ -379,6 +374,13 @@ And finally, we will pass it as a prop to the `ClearButton` component:
 ```
 
 **Bonus!** The proptype warning message is the console should be gone now that we have passed a method into that prop instead of an empty string.
+
+---
+
+# What We've Learned
+
+- How to set an component's initial state in a `constructor`
+- How to alter state in response to some event
 
 ---
 

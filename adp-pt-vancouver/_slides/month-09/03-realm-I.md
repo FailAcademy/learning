@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Realm Databases Slides
+title: Realm Databases I Slides
 ---
 
 {% highlight html %}
@@ -23,7 +23,6 @@ layout: false
 1.  Whats and whys of embedded databases
 2.  Adding Realm to a React Native project and defining schema
 3.  Saving and retrieving Realm data in an app
-4.  Use React's context API to manage faves state in our app
 
 ---
 
@@ -125,16 +124,16 @@ Realm supports the following basic types: **bool**, **int**, **float**, **double
 Creating a new data model with Realm couldn't be easier:
 
 ```js
-import Realm from "realm";
+import Realm from 'realm';
 
 const DogSchema = {
-  name: "Dog",
+  name: 'Dog',
   properties: {
-    id: "int",
-    name: "string",
-    breed: "string",
-    birthday: { type: "date", optional: true }
-  }
+    id: 'int',
+    name: 'string',
+    breed: 'string',
+    birthday: { type: 'date', optional: true },
+  },
 };
 
 const realm = new Realm({ schema: [DogSchema] });
@@ -197,10 +196,10 @@ const realm = new Realm({ schema: [DogSchema] });
 
 realm.write(() => {
   // Create a dog object
-  realm.create("Dog", { id: 1, name: "Gomez", breed: "Shih Tzu" });
+  realm.create('Dog', { id: 1, name: 'Gomez', breed: 'Shih Tzu' });
 
   // Passing "true" intelligently updates the object keyed off the id
-  realm.create("Dog", { id: 1, name: "Spot" }, true);
+  realm.create('Dog', { id: 1, name: 'Spot' }, true);
 });
 ```
 
@@ -212,11 +211,11 @@ And use `realm.delete()` to remove data:
 
 ```js
 realm.write(() => {
-  let dog = realm.create("Dog", { id: 2, name: "Rufus", breed: "Boxer" });
+  let dog = realm.create('Dog', { id: 2, name: 'Rufus', breed: 'Boxer' });
 
   realm.delete(dog); // delete Rufus :(
 
-  let allDogs = realm.objects("Dog");
+  let allDogs = realm.objects('Dog');
   realm.delete(allDogs); // delete all dogs :( :( :(
 });
 ```
@@ -228,22 +227,22 @@ realm.write(() => {
 The final piece of the CRUD puzzle is reading data from the database.
 
 ```js
-let dogs = realm.objects("Dog"); // get all the dog objects
+let dogs = realm.objects('Dog'); // get all the dog objects
 ```
 
 Get specific dog objects with filtering:
 
 ```js
 let dogId = 1;
-let gomez = dogs.filtered("id == $0", dogId);
+let gomez = dogs.filtered('id == $0', dogId);
 let dexter = dogs.filtered('breed = "Boston" AND name BEGINSWITH "D"');
 ```
 
 And sort our results too:
 
 ```js
-let ascDogs = dogs.sorted("name");
-let descDogs = dogs.sorted("name", true); // reverses the order
+let ascDogs = dogs.sorted('name');
+let descDogs = dogs.sorted('name', true); // reverses the order
 ```
 
 ---
@@ -256,7 +255,7 @@ To find out where your Realm database is stored locally, you can log the path to
 
 ```js
 realm = new Realm({ schema: [DogSchema] });
-console.log("the path is:", realm.path);
+console.log('the path is:', realm.path);
 ```
 
 ---
@@ -273,113 +272,12 @@ _Where (and how) will you use these functions?_
 
 ---
 
-template: inverse
-
-# Using Context to Manage Faves State
-
----
-
-# Faves Context
-
-We'll need to use React's context API to keep our app UI state in sync with our Realm database:
-
-```bash
-|-- context/
-|   |-- FavesContext
-|   |   |-- FavesContext.js
-|   |   |-- index.js
-```
-
-In `index.js` set up your exports for `FavesContext`:
-
-```js
-import FavesContext from "./FavesContext";
-import { FavesProvider } from "./FavesContext";
-
-export { FavesProvider };
-export default FavesContext;
-```
-
-_We'll create `FavesContext` and `FavesProvider` next..._
-
----
-
-# Create the Context
-
-Add this code to `FavesProvider.js`:
-
-```js
-import React, { Component } from "react";
-
-// import the Realm helpers you just created here
-
-const FavesContext = React.createContext();
-
-class FavesProvider extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      faveIds: []
-    };
-  }
-
-  // more code will go here!
-}
-
-export { FavesProvider };
-export default FavesContext;
-```
-
----
-
-# Render Provider
-
-We'll need to render the provider in this class too:
-
-```js
-// in FavesProvider.js
-
-render() {
-  return (
-    <FavesContext.Provider value={% raw %}{{ ...this.state }}{% endraw %}>
-      {this.props.children}
-    </FavesContext.Provider>
-  );
-}
-```
-
----
-
-# Exercise 3
-
-Our `FavesProvider` component doesn't do much for us yet except give us access to an empty array of `faveIds`.
-
-Write a `getFavedSessionIds` method for this class that uses one of your Realm helpers to get the current faves from the database, and then subsequently update the state of the `FavesProvider` with an array of the faved session IDs.
-
-Call this method in `componentDidMount` so that we fetch this data initially as the component mounts.
-
-Lastly, wrap your app in your `FavesProvider` in `App.js`.
-
----
-
-# Exercise 4
-
-Add `addFaveSession` and `removeFaveSession` methods to the `FavesProvider` component now. These methods should each have a `sessionId` parameter.
-
-Pass these methods along in the `value` prop of `FavesContext.Provider` (along with the `faveIds`).
-
-You will now be able to update your context where you use a `FavesContext.Consumer` component in your app.
-
----
-
 # What We've Learned
 
 - What an embedded database is in the context of a mobile app, and when its appropriate to use one
 - How to add Realm to a React Native app
 - How to define a schema with Realm
 - How to perform basic CRUD operations on a Realm database in React Native
-- How to manage UI state in relation to a Realm database
 
 ---
 
