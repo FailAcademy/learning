@@ -2,7 +2,7 @@
 layout: lesson
 title: Creating Web Servers with Express III
 slides: ['_slides/month-02/05-web-servers-express-III.md']
-lesson_date: 2019-04-18
+lesson_date: 2019-07-18
 ---
 
 ## Learning Objectives

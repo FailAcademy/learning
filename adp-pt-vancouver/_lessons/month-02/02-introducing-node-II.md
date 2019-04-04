@@ -2,7 +2,7 @@
 layout: lesson
 title: Introducing Node II
 slides: ['_slides/month-02/02-introducing-node-II.md']
-lesson_date: 2019-04-16
+lesson_date: 2019-07-04
 ---
 
 ## Learning Objectives

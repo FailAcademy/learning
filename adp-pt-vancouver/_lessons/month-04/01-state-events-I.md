@@ -2,7 +2,7 @@
 layout: lesson
 title: React State and Events I
 slides: ['_slides/month-04/01-state-events-I.md']
-lesson_date: 2019-05-06
+lesson_date: 2019-09-03
 ---
 
 ## Pre-work

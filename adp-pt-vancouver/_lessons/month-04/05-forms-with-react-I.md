@@ -2,7 +2,7 @@
 layout: lesson
 title: Forms with React
 slides: ['_slides/month-04/05-forms-with-react-I.md']
-lesson_date: 2019-05-13
+lesson_date: 2019-09-24
 ---
 
 ## Pre-Work

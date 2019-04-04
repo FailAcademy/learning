@@ -2,7 +2,7 @@
 layout: lesson
 title: Behaviour Driven Development
 slides: ['_slides/week-14/02-intro-to-bdd.md']
-lesson_date: 2019-07-10
+lesson_date: 2020-01-23
 ---
 
 ## Pre-Work
@@ -47,7 +47,7 @@ For your reference:
 
 ---
 
-## Lab Activity
+## Lab Activity (Next Class)
 
 In today's lab, you'll finish `processData` from the last exercise, as you have a scaffold for the `processData` function.
 

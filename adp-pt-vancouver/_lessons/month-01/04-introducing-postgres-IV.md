@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to Databases with Postgres IV
 slides: ['_slides/month-01/04-introducing-postgres-IV.md']
-lesson_date: 2019-04-10
+lesson_date: 2019-06-13
 ---
 
 ## Learning Objectives
@@ -27,7 +27,7 @@ Hint: Using the Postico GUI will prove much easier that the `psql` shell.
 
 ---
 
-## Lab Activity #1 (Next Class)
+## Lab Activity (Next Class)
 
 Populating your Relational Database.
 

@@ -2,7 +2,7 @@
 layout: lesson
 title: Creating Web Servers with Express II
 slides: ['_slides/month-02/04-web-servers-express-II.md']
-lesson_date: 2019-04-18
+lesson_date: 2019-07-16
 ---
 
 ## Learning Objectives

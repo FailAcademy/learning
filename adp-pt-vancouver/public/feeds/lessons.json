@@ -11,49 +11,9 @@
       "url": {{lesson.url | jsonify}}
    },{% endfor %}
    {
-      "title": "Day 1 Orientation",
+      "title": "Orientation Activities",
       "allDay": true,
-      "start": "2019-04-08"
-   },
-   {
-      "title": "Project Work Day",
-      "allDay": true,
-      "start": "2018-04-20"
-   },
-   {
-      "title": "Project Work Day",
-      "allDay": true,
-      "start": "2018-04-27"
-   },
-   {
-      "title": "Project Work Day",
-      "allDay": true,
-      "start": "2018-05-11"
-   },
-    {
-      "title": "Project Work Day",
-      "allDay": true,
-      "start": "2018-05-24"
-   },
-   {
-    "title": "Project Work Day",
-    "allDay": true,
-    "start": "2018-05-25"
-   },
-   {
-    "title": "Project Work Day",
-    "allDay": true,
-    "start": "2018-05-30"
-   },
-   {
-    "title": "Project Work Day",
-    "allDay": true,
-    "start": "2018-05-31"
-   },
-   {
-    "title": "Project Work Day",
-    "allDay": true,
-    "start": "2018-06-01"
+      "start": "2019-06-01"
    },
    {
       "title": "Intro to UX (Guest Lecture)",
@@ -81,75 +41,11 @@
       "allDay": true,
       "start": "2018-06-12",
       "end": "2018-06-29"
-   },
-   {
-      "title": "Townhall/PPD",
-      "allDay": false,
-      "start": "2019-04-13T10:00:00+00:00",
-      "end": "2019-04-13T12:00:00+00:00"
-    },
-   {
-      "title": "Townhall/PPD",
-      "allDay": false,
-      "start": "2019-04-20T10:00:00+00:00",
-      "end": "2019-04-20T12:00:00+00:00"
-    },
-    {
-       "title": "Townhall/PPD",
-       "allDay": false,
-       "start": "2019-04-27T10:00:00+00:00",
-       "end": "2019-04-27T12:00:00+00:00"
-     },{
-      "title": "Townhall/PPD",
-      "allDay": false,
-      "start": "2019-05-04T10:00:00+00:00",
-      "end": "2019-05-04T12:00:00+00:00"
-    },{
-      "title": "Townhall/PPD",
-      "allDay": false,
-      "start": "2019-05-11T10:00:00+00:00",
-      "end": "2019-05-11T12:00:00+00:00"
-    },{
-      "title": "Townhall/PPD",
-      "allDay": false,
-      "start": "2019-05-25T10:00:00+00:00",
-      "end": "2019-05-25T12:00:00+00:00"
-    },{
-      "title": "Townhall/PPD",
-      "allDay": false,
-      "start": "2019-06-01T10:00:00+00:00",
-      "end": "2019-06-01T12:00:00+00:00"
-    },{
-      "title": "Townhall/PPD",
-      "allDay": false,
-      "start": "2019-06-08T10:00:00+00:00",
-      "end": "2019-06-08T12:00:00+00:00"
-    },{
-      "title": "Townhall/PPD",
-      "allDay": false,
-      "start": "2019-06-15T10:00:00+00:00",
-      "end": "2019-06-15T12:00:00+00:00"
-    },{
-      "title": "Townhall/PPD",
-      "allDay": false,
-      "start": "2019-06-22T10:00:00+00:00",
-      "end": "2019-06-22T12:00:00+00:00"
-    },{
+   },{
       "title": "Townhall/PPD",
       "allDay": false,
       "start": "2019-06-29T10:00:00+00:00",
       "end": "2019-06-29T12:00:00+00:00"
-    },{
-      "title": "Townhall/PPD",
-      "allDay": false,
-      "start": "2019-07-13T10:00:00+00:00",
-      "end": "2019-07-13T12:00:00+00:00"
-    }
-    ,{
-      "title": "Townhall/PPD",
-      "allDay": false,
-      "start": "2019-07-20T10:00:00+00:00",
-      "end": "2019-07-20T12:00:00+00:00"
     },{
       "title": "Townhall/PPD",
       "allDay": false,
@@ -158,40 +54,43 @@
     },{
       "title": "Townhall/PPD",
       "allDay": false,
-      "start": "2019-08-03T10:00:00+00:00",
-      "end": "2019-08-03T12:00:00+00:00"
-    },{
-      "title": "Townhall/PPD",
-      "allDay": false,
-      "start": "2019-08-10T10:00:00+00:00",
-      "end": "2019-08-10T12:00:00+00:00"
-    },{
-      "title": "Townhall/PPD",
-      "allDay": false,
-      "start": "2019-08-17T10:00:00+00:00",
-      "end": "2019-08-17T12:00:00+00:00"
-    },{
-      "title": "Townhall/PPD",
-      "allDay": false,
       "start": "2019-08-24T10:00:00+00:00",
       "end": "2019-08-24T12:00:00+00:00"
-    }
-    ,{
-      "title": "Townhall/PPD",
-      "allDay": false,
-      "start": "2019-09-07T10:00:00+00:00",
-      "end": "2019-09-07T12:00:00+00:00"
-    }
-    ,{
-      "title": "Townhall/PPD",
-      "allDay": false,
-      "start": "2019-09-14T10:00:00+00:00",
-      "end": "2019-09-14T12:00:00+00:00"
-    }
-    ,{
+    },
+    {
       "title": "Townhall/PPD",
       "allDay": false,
       "start": "2019-09-21T10:00:00+00:00",
       "end": "2019-09-21T12:00:00+00:00"
+    },
+    {
+      "title": "Townhall/PPD",
+      "allDay": false,
+      "start": "2019-10-19T10:00:00+00:00",
+      "end": "2019-10-19T12:00:00+00:00"
+    },
+    {
+      "title": "Townhall/PPD",
+      "allDay": false,
+      "start": "2019-11-16T10:00:00+00:00",
+      "end": "2019-11-16T12:00:00+00:00"
+    },
+    {
+      "title": "Townhall/PPD",
+      "allDay": false,
+      "start": "2020-01-11T10:00:00+00:00",
+      "end": "2020-01-11T12:00:00+00:00"
+    },
+    {
+      "title": "Townhall/PPD",
+      "allDay": false,
+      "start": "2020-02-08T10:00:00+00:00",
+      "end": "2020-02-08T12:00:00+00:00"
+    },
+    {
+      "title": "Townhall/PPD",
+      "allDay": false,
+      "start": "2020-03-07T10:00:00+00:00",
+      "end": "2020-03-07T12:00:00+00:00"
     }
 ]

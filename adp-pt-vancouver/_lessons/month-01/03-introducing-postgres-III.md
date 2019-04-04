@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to Databases with Postgres III
 slides: ['_slides/month-01/03-introducing-postgres-III.md']
-lesson_date: 2019-04-10
+lesson_date: 2019-06-11
 ---
 
 ## Learning Objectives

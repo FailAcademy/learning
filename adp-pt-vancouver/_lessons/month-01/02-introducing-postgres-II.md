@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to Databases with Postgres II
 slides: ['_slides/month-01/02-introducing-postgres-II.md']
-lesson_date: 2019-04-09
+lesson_date: 2019-06-06
 ---
 
 ## Learning Objectives

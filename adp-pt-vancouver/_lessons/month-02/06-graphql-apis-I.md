@@ -1,10 +1,8 @@
-## '
-
+---
 layout: lesson
 title: GraphQL APIs I
 slides: ['_slides/month-02/06-graphql-apis-I.md']
-lesson_date: 2019-04-22
-
+lesson_date: 2019-07-25
 ---
 
 ## Pre-work
