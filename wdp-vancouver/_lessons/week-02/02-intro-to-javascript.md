@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Intro to JavaScript
-slides: ["_slides/week-02/02-intro-to-javascript.md"]
+slides: ['_slides/week-02/02-intro-to-javascript.md']
 lesson_date: 2019-04-17
 ---
 
@@ -69,7 +69,7 @@ Now add this HTML to the `<body>` tag of your new webpage:
 Use this code to store the `<span>` tag's **DOM element** in a **variable** named `nameEl`:
 
 ```js
-const nameEl = document.getElementById("name");
+const nameEl = document.getElementById('name');
 ```
 
 What is `nameEl`? Try `console.log(nameEl)` to find out.
@@ -95,8 +95,8 @@ And the following JavaScript to the top of `main.js`:
 ```js
 let age = 0;
 
-const ageEl = document.getElementById("age");
-const truthEl = document.getElementById("truth");
+const ageEl = document.getElementById('age');
+const truthEl = document.getElementById('truth');
 
 function isTrueAge(age, trueAge) {
   // we saw this in the slides...be sure to return true or false!
@@ -149,8 +149,6 @@ Here is the additional HTML you'll need to add to your project:
   <p id="errorMessage" hidden>Age must be between 0 and 100</p>
 </form>
 ```
-
-Read **[these instructions](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onsubmit)** on how to use the `onsubmit` method for html forms.
 
 Finally, here is the set-up for your `submit` event listener:
 

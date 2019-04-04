@@ -42,7 +42,6 @@ There three exercises at the end of this chapter—see if you can complete at le
 - [Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 - [Spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
-
 ---
 
 ## Exercise 1
@@ -185,25 +184,34 @@ Finish the code provided so it produces the output described in the code comment
 ```js
 const lifeInches = function() {
   // Local scope / closure
-  var total = 0;
-  return function(add) {
-    total += add;
-    return total;
+  let total = 0;
+  // Add a variable to track the starting age.
+  return function(inches, endAge, startAge) {
+    // only update the starting age if it's undefined.
+    if (inches && endAge) {
+      total = total + inches;
+      return (
+        "You've grown " + total + ' inches in ' + (endAge - firstAge) + ' years'
+      );
+    }
   };
 };
 
 const updateTotalInches = lifeInches();
 
-const calcInches = function(startAge, endAge, inchesPerYear) {
+const calcInches = function(startAge, endAge, inchesGrown) {
   // Finish this function using only the other functions provided.
-  // The final console.log statement should print 135, representing
-  // the total number of inches you've grown!
+  // You may need to add extra variables and parameters.
+  // The final console.log statement should print the correct values,
+  // representing the total number of inches grown!
 };
 
-calcInches(0, 10, 25);
-calcInches(10, 30, 100);
-calcInches(30, 90, 10);
-console.log(updateTotalInches());
+let growth = calcInches(5, 10, 25);
+
+growth = calcInches(10, 30, 100);
+growth = calcInches(30, 90, 10);
+
+console.log(growth);
 ```
 
 When you complete this part of the lab, revisit the exercises you have not yet completed from the [Functions chapter](https://eloquentjavascript.net/03_functions.html) in Eloquent JavaScript. You should be in a good position to finish those now.
