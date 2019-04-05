@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Redux
-slides: ["_slides/week-04/01-redux.md"]
-lesson_date: 2019-01-28
+slides: ['_slides/week-04/01-redux.md']
+lesson_date: 2019-04-29
 ---
 
 ## Pre-Work
@@ -66,19 +66,19 @@ store.dispatch(decrementCount());
 Let's add information from the store to the UI. Add the following code to `src/main.js` and fill in the blanks:
 
 ```js
-const incrementButton = document.getElementById("increment");
-const decrementButton = document.getElementById("decrement");
-const count = document.getElementById("count");
+const incrementButton = document.getElementById('increment');
+const decrementButton = document.getElementById('decrement');
+const count = document.getElementById('count');
 
 // How will we initially populate this span with content?
 count.textContent = null;
 
-incrementButton.addEventListener("click", () => {
+incrementButton.addEventListener('click', () => {
   // Dispatch an action
   // Update the count span text
 });
 
-decrementButton.addEventListener("click", () => {
+decrementButton.addEventListener('click', () => {
   // Dispatch an action
   // Update the count span text
 });
@@ -97,10 +97,10 @@ Time to finish the counter app! You will need to:
 ```js
 // Import the appropriate action creator
 
-const nameInput = document.getElementById("name");
-const countedName = document.getElementById("counted-name");
+const nameInput = document.getElementById('name');
+const countedName = document.getElementById('counted-name');
 
-nameInput.addEventListener("input", event => {
+nameInput.addEventListener('input', event => {
   // Dispatch an action (with the input value as an argument)
   // Update the name span text
 });

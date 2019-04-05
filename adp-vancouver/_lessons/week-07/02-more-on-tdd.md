@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: More on TDD
-slides: ["_slides/week-07/02-more-on-tdd.md"]
-lesson_date: 2019-02-20
+slides: ['_slides/week-07/02-more-on-tdd.md']
+lesson_date: 2019-05-22
 ---
 
 ## Pre-Work

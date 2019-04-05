@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 3 - Coding Interview
-due: Monday, February 25th (beginning of class)
+due: Monday, May 27th (beginning of class)
 class: gh-check
 ---
 

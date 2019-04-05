@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Creating a Web Server with Express
-slides: ["_slides/week-02/02-web-servers-express.md"]
-lesson_date: 2019-01-15
+slides: ['_slides/week-02/02-web-servers-express.md']
+lesson_date: 2019-04-16
 ---
 
 ## Pre-Work
@@ -75,7 +75,7 @@ function diyLogger(request, response, next) {
   const { url, method } = request;
   const { statusCode } = response;
 
-  response.on("finish", function() {
+  response.on('finish', function() {
     // ...what goes here?
   });
 
