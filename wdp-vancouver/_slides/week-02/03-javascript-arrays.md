@@ -72,9 +72,9 @@ const friends = [
 Add values to an array by separating them with commas:
 
 ```js
-const friends = ["Curie", "Einstein", "Turing", "Tesla"];
+const friends = ['Curie', 'Einstein', 'Turing', 'Tesla'];
 
-const enemies = ["Homework", "Spiders", "Darth Vader", "Hans Gruber"];
+const enemies = ['Homework', 'Spiders', 'Darth Vader', 'Hans Gruber'];
 ```
 
 _How do we find out how many enemies are in the above arrays?_
@@ -90,13 +90,7 @@ Be sure to demonstrate how `.length` works here too.
 You can put **any** JavaScript value into an array!
 
 ```js
-const mixedList = [
-  function() {}, 
-  42, 
-  "Bob", 
-  [1, 2, 30 - 27], 
-  anotherValue
-];
+const mixedList = [function() {}, 42, 'Bob', [1, 2, 30 - 27], anotherValue];
 ```
 
 **Can you think of examples of information (data) in arrays, in the UI of web pages you use every day? 📝**
@@ -105,16 +99,16 @@ const mixedList = [
 
 # Array Access
 
-Array elements are _always stored in the order they were added._ 
+Array elements are _always stored in the order they were added._
 
 In JS, individual array elements are accessed by their `index` position:
 
 ```js
 const rangers = [
-  ["Jason", "Triceratops"],
-  ["Billy", "Tyrannosaurus"],
-  ["Trini", "Sabre-toothed Tiger"],
-  ["Kimberly", "Pteradactyl"]
+  ['Jason', 'Triceratops'],
+  ['Billy', 'Tyrannosaurus'],
+  ['Trini', 'Sabre-toothed Tiger'],
+  ['Kimberly', 'Pteradactyl'],
 ];
 
 const blueRanger = rangers[0];
@@ -143,7 +137,7 @@ Sometimes it's useful to think about DOM elements as arrays:
 There are a few convenient DOM functions you can use to gather an array of elements:
 
 ```js
-const bucketListItemEls = document.querySelectorAll("ul li");
+const bucketListItemEls = document.querySelectorAll('ul li');
 // bucketListItemEls is an array of DOM elements!
 
 const importantItemText = bucketListItemEls[2].innerText;
@@ -154,7 +148,7 @@ const importantItemText = bucketListItemEls[2].innerText;
 
 # Exercise 1
 
-Add items to your bucket list array, and write some JS to display each item in an `<li>` inside of the `<ul>`. 
+Add items to your bucket list array, and write some JS to display each item in an `<li>` inside of the `<ul>`.
 
 **Use JSBin to complete this exercise:<br />[https://jsbin.com/?html,js,output](https://jsbin.com/?html,js,output)**
 
@@ -174,18 +168,20 @@ const bucketList = [
 ```
 
 ---
+
 template: inverse
 
 # Using Loops with Arrays
 
 ---
+
 class: center, middle
 
 ### What are loops?
 
 Loops are an important construct in programming that allow you to run the same code over and over again until a certain condition is met.
 
-*Why would these be helpful when working with arrays?*
+_Why would these be helpful when working with arrays?_
 
 ---
 
@@ -230,7 +226,7 @@ You will likely find yourself using for loops most often with "arrays" (we'll ge
 Let's take our friend list array and print it out in a list:
 
 ```js
-const friends = ["Curie", "Einstein", "Turing", "Tesla"];
+const friends = ['Curie', 'Einstein', 'Turing', 'Tesla'];
 
 // Remember how we manually set the max. number of loops before?
 // We can use the array "length" to get the number automatically:
@@ -252,14 +248,14 @@ We can use **built-in loop functions** to **loop over** each element in our arra
 
 ```js
 const bucketList = [
-  "Bend a spoon using only mind",
-  "Achieve PEGOT",
-  "Learn Esperanto"
+  'Bend a spoon using only mind',
+  'Achieve PEGOT',
+  'Learn Esperanto',
 ];
 
 // Access each item and that item's index position.
 bucketList.forEach(function(listItem, index) {
-  console.log("Item at index:", index, "is:", listItem);
+  console.log('Item at index:', index, 'is:', listItem);
 });
 ```
 
@@ -338,18 +334,17 @@ Team students up in pairs to code together may also be helpful!
 JavaScript has some useful built-in functions for searching through arrays. Here are the most common:
 
 ```js
-const items = ["first", 2, "third"];
+const items = ['first', 2, 'third'];
 
-const indexOfFirstString = items.indexOf(function(item) {
-  return typeof item === "string";
-});
+const items = ['first', 2, 'third'];
+const indexOfFirstString = items.indexOf('first');
 
 const found = items.find(function(item) {
-  return item === "third";
+  return item === 'third';
 });
 
 const hasNumber = items.some(function(item) {
-  return typeof item === "number";
+  return typeof item === 'number';
 });
 ```
 
@@ -392,10 +387,11 @@ console.log(numbers); // Again, not what you expected?
 Be sure to explain why sorting numbers does not do what it should.
 
 ---
+
 class: center, middle
 
 .large[
-  Modifying array items the hard way...
+Modifying array items the hard way...
 ]
 
 ---
@@ -449,10 +445,11 @@ function map(array, transform) {
 .footnote[Source - Eloquent JavaScript]
 
 ---
+
 class: center, middle
 
 .large[
-  Modifying array items the easier way...
+Modifying array items the easier way...
 ]
 
 ---
@@ -463,16 +460,16 @@ You'll filter and transform arrays _so often_, there are JavaScript built-in arr
 
 ```js
 const rangers = [
-  ["Jason", "Triceratops"],
-  ["Billy", "Tyrannosaurus"],
-  ["Trini", "Sabre-toothed Tiger"],
-  ["Kimberly", "Pteradactyl"]
+  ['Jason', 'Triceratops'],
+  ['Billy', 'Tyrannosaurus'],
+  ['Trini', 'Sabre-toothed Tiger'],
+  ['Kimberly', 'Pteradactyl'],
 ];
 
 const rangerNames = rangers.map(ranger => ranger[0]);
 
 const femaleRangers = rangers.filter(
-  ranger => ranger[0] === "Trini" || ranger[0] === "Kimberly"
+  ranger => ranger[0] === 'Trini' || ranger[0] === 'Kimberly',
 );
 ```
 

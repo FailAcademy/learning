@@ -100,11 +100,11 @@ function convertTemp(temp, convertFrom, convertTo) {
     return new Error('Temp must be a number.');
   }
   if (convertFrom === 'C' && convertTo === 'F') {
-    const celsius = ((temp - 32) * 5) / 9;
-    console.log(temp + '°F is ' + celsius + '°C');
-  } else if (convertFrom === 'F' && convertTo === 'C') {
     const fahrenheit = (temp * 9) / 5 + 32;
     console.log(temp + '°C is ' + fahrenheit + '°F');
+  } else if (convertFrom === 'F' && convertTo === 'C') {
+    const celsius = ((temp - 32) * 5) / 9;
+    console.log(temp + '°F is ' + celsius + '°C');
   } else {
     return new Error("Can't convert these arguments.");
   }
@@ -140,7 +140,7 @@ Functions can return functions. Refactor this code to produce the right `console
 ```js
 function loanAmount(amount, interest) {
   return function(numberOfMonths) {
-    return (amount * (interest * 100)) / numberOfMonths;
+    return (amount * (interest / 100)) / numberOfMonths;
   };
 }
 
@@ -159,12 +159,11 @@ Fix the following code with an arrow function so that the message logs to the co
 const message = {
   text: 'Hello',
   display: function() {
-    setInterval((function() {
-      console.log(this.text)
-    }, 1000)
-  }
-}
-
+    setInterval(function() {
+      console.log(this.text);
+    }, 1000);
+  },
+};
 message.display();
 ```
 
