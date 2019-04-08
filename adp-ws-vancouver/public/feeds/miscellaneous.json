@@ -20,6 +20,11 @@
     "start": "2019-05-20"
   },
   {
+    "title": "Canada Day",
+    "allDay": true,
+    "start": "2019-07-01"
+  },
+  {
     "title": "Victoria Day Weekend",
     "allDay": true,
     "start": "2019-05-18"
@@ -62,8 +67,8 @@
   {
     "title": "Break Week",
     "allDay": true,
-    "start": "2019-07-01",
-    "end": "2019-07-07"
+    "start": "2019-06-24",
+    "end": "2019-06-30"
   },
   {
     "title": "Celebration!",

@@ -157,6 +157,21 @@
   {
     "title": "Project Work Day",
     "allDay": true,
+    "start": "2019-07-02"
+  },
+  {
+    "title": "Project Work Day",
+    "allDay": true,
+    "start": "2019-07-03"
+  },
+  {
+    "title": "Lab Work Day",
+    "allDay": true,
+    "start": "2019-07-06"
+  },
+  {
+    "title": "Project Work Day",
+    "allDay": true,
     "start": "2019-07-20"
   },
   {
@@ -193,7 +208,7 @@
     "title": "Meteor Project (P2) Group Work",
     "allDay": true,
     "start": "2019-06-12",
-    "end": "2019-06-27"
+    "end": "2019-06-22"
   },
   {
     "title": "GitHub Portfolio Development",
