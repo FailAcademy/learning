@@ -34,6 +34,9 @@ collections:
   projects:
     output: true
     permalink: /project/:title/
+  learning_kits:
+    output: true
+    permalink: /learning-kits/:title/
 
 # Set the Sass partials directory, as we're using @imports
 sass:
