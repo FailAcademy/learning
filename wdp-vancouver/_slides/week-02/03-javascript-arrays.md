@@ -336,7 +336,6 @@ JavaScript has some useful built-in functions for searching through arrays. Here
 ```js
 const items = ['first', 2, 'third'];
 
-const items = ['first', 2, 'third'];
 const indexOfFirstString = items.indexOf('first');
 
 const found = items.find(function(item) {
