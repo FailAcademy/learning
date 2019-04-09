@@ -445,7 +445,6 @@ function counterES5() {
 }
 
 const counterA = new counterES5();
-window.setTimeout(counterA, 1000);
 ```
 
 ---

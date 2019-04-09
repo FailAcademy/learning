@@ -582,7 +582,7 @@ Enter the following into your browser console:
 
 ```js
 const myArr = ['item 1'];
-myArr.__proto___;
+myArr.__proto__;
 ```
 
 **What do you see?**
