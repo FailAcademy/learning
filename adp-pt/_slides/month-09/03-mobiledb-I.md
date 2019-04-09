@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Realm Databases
+# Mobile Databases I
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 

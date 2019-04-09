@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: Realm Databases
-slides: ['_slides/month-09/02-realm-II.md']
+title: Mobile Databases II
+slides: ['_slides/month-09/02-mobiledb-II.md']
 lesson_date: 2020-02-13
 ---
 

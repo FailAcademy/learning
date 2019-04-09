@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title: React Router
+title: React Router I
 slides: ['_slides/month-04/03-react-router-I.md']
 lesson_date: 2019-09-12
 ---
