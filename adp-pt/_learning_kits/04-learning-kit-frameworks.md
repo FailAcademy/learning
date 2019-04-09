@@ -6,10 +6,7 @@ title: Web Frameworks
 # Summary
 
 
-
-
 # Module Content
-
 
 
 
@@ -31,6 +28,10 @@ Build a "Hello World" application using a web framework that you are not using i
 
 
 ## Reflection Journal
+
+
+**"JavaScript fatigue is what happens when people use tools they don't need to solve problems they don't have."**
+- Lucas F Costa (Source: twitter @housecor)
 
 Write a reflection on one of the following questions: 
 

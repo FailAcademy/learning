@@ -5,7 +5,7 @@ title: Databases
 
 # Summary
 
-Databases are a fundamental part of most software. In this module we'll dive a little deeper into the common database "architectures" and find out about how databases are designed. As a reflection we'll consider how "Cloud Computing" helps developers deploy databases, but more importantly we'll take time to consider how are personal data  from the apps that we use every day is stored, and the future of "Big-Data".
+Databases are a fundamental part of most software. In this module you're encouraged to dive a little deeper into the common database "architectures" and find out about how databases are designed. As a reflection we'll consider how "Cloud Computing" helps developers deploy databases, but more importantly we'll take time to consider how are personal data  from the apps that we use every day is stored, and the future of "Big-Data".
 
 # Module Content
 
