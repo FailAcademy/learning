@@ -114,13 +114,15 @@ When the number of clicks reaches 10, add a second stage of evolution to the DOM
 
 ## Lab Activity
 
+Take a look at the [example of what we're going to build](https://redacademy.github.io/wdp-exercise-solutions/treeclicker/)
+
 Modify the project you built during the lesson with the following functionality:
 
-1. Create list of 10 stages of evolution.
-2. Transition between the different stages as you click the button.
-3. When your creature is fully evolved, you should `alert("Your creature has attained Saṃsāra.")`
+1. Create at least 5 stages of growth for your creature.
+2. Transition between the different stages as you click the button. One stage for 10 or more clicks.
+3. As your creature evolves, add some CSS using `element.style`
+4. When your creature is fully evolved, you should `alert("Your creature has attained Saṃsāra.")`
 
-Hint: You'll need to use an array to finish this exercise. We'll be covering Arrays in the next lesson, but now is your chance to try using them on your own.
 
 If you finish this lab before the end of class, then continue working on Project 1.
 
