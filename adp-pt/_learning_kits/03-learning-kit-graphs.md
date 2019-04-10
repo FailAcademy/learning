@@ -3,14 +3,14 @@ layout: project
 title: Graphs
 ---
 
-# Summary
+## Summary
 
-# Module Content
+## Module Content
 
-# Module Resources
+## Module Resources
 
-# Self-Directed Activity
+## Self-Directed Activity
 
-# Reflection Journal
+## Reflection Journal
 
 

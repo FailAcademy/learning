@@ -3,20 +3,21 @@ layout: project
 title: Web Frameworks
 ---
 
-# Summary
+## Summary
+
+It's a great time to be a JavaScript developer. JavaSctip is the most popular programming language by far, and JavaScript developers have created a wide range of useful tools for you to use, for free in your next web project. But, so much content can have it's drawbacks. In this module we'll explore popular web frameworks not discussed in-class, and we'll condier the downsides of having so much choice when it comes to building software with JavaScript.
+
+## Module Content
 
 
-# Module Content
 
-
-
-# Module Resources
+## Module Resources
 
 ???
 
-# Self-Directed Work
+## Self-Directed Work
 
-## Activity
+### Activity
 
 Build a "Hello World" application using a web framework that you are not using in this course (hint: we're using React). FOr example you may want to choose one of the following popular frameworks: 
  
@@ -27,8 +28,7 @@ Build a "Hello World" application using a web framework that you are not using i
  - [Backbone](https://backbonejs.org/)
 
 
-## Reflection Journal
-
+### Reflection Journal
 
 **"JavaScript fatigue is what happens when people use tools they don't need to solve problems they don't have."**
 - Lucas F Costa (Source: twitter @housecor)

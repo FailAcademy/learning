@@ -3,11 +3,11 @@ layout: project
 title: Databases
 ---
 
-# Summary
+## Summary
 
 Databases are a fundamental part of most software. In this module you're encouraged to dive a little deeper into the common database "architectures" and find out about how databases are designed. As a reflection we'll consider how "Cloud Computing" helps developers deploy databases, but more importantly we'll take time to consider how are personal data  from the apps that we use every day is stored, and the future of "Big-Data".
 
-# Module Content
+## Module Content
 
 - Review: Types of Databases
 - Intro to ACID transactions
@@ -15,18 +15,18 @@ Databases are a fundamental part of most software. In this module you're encoura
 - Investigate: What kind of databases are being used?
 - Reflection: The future of Big-Data 
 
-# Module Resources
+## Module Resources
 
 ???
 
 
-# Self-Directed Work
+## Self-Directed Work
 
-## Activity
+### Activity
 
 For this activity, choose 3 of your favourite apps and use google to discover what database technology they use. Specifically, see if you can find out the name (Postgres, MongoDB ... etc.), type (Relational, non-relational ...etc.) and try to determine which ACID tradeoffs they might make. When you're done, you'll compare your findings with your classmates. 
 
-## Reflection Journal
+### Reflection Journal
 
 Now that you know a little bit more about Databases, it;s time to think big about how data is commonly stored and accessed in modern computing. Watch [this video](https://www.youtube.com/watch?v=cidZRD3NzHg) and write a reflection using 2 of the following ideas: 
 
