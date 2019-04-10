@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Project 3 - Pong Game
+title: Project 2 - Pong Game
 due: Tuesday, May 14 (beginning of class)
 ---
 

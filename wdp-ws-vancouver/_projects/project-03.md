@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Project 2 - Instanews App
+title: Project 3 - Instanews App
 due: Monday, June 17th (beginning of class)
 ---
 
