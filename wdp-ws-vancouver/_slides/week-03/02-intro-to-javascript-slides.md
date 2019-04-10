@@ -217,7 +217,7 @@ In JavaScript, we can use `console.log()` to print values into the **browser con
 This helps us understand what particular values may be at specific points in your programs execution flow:
 
 ```js
-console.log("hello!");
+console.log('hello!');
 ```
 
 ---
@@ -267,9 +267,9 @@ You can elaborate, but don't get too academic...
 This is what a **variable declaration** looks like in JavaScript:
 
 ```js
-const color = "red";
+const color = 'red';
 const amount = 100;
-const list = ["first", "second", "third"];
+const list = ['first', 'second', 'third'];
 let result = amount * 10;
 ```
 
@@ -306,13 +306,13 @@ console.log(a); // logs "undefined"
 Make sure your variable names **describe** what they hold:
 
 ```js
-const myVar = "Albatross"; // what would be a better name?
+const myVar = 'Albatross'; // what would be a better name?
 ```
 
 Use **camel case** for defining JS variables
 
 ```js
-const firstName = "Anne"; // 🐫 🐫 👍
+const firstName = 'Anne'; // 🐫 🐫 👍
 ```
 
 Variables **can't start with numbers**, , can only use the **dollar sign** and **underscore** special characters, and **shouldn't start with capital letters**:
@@ -514,7 +514,7 @@ We can use the `getElementById` method to target that `<p>`, and update it's con
 ```javascript
 // js/main.js
 
-document.getElementById("message").innerHTML = "We love dogs!";
+document.getElementById('message').innerHTML = 'We love dogs!';
 ```
 
 ---
@@ -526,9 +526,9 @@ We can also store the results of `getElementById` in a variable to make it faste
 ```javascript
 // js/main.js
 
-const el = document.getElementById("message");
-el.innerHTML = "We love dogs!";
-el.className = "red"; // adds class name of "red" to the element
+const el = document.getElementById('message');
+el.innerHTML = 'We love dogs!';
+el.className = 'red'; // adds class name of "red" to the element
 ```
 
 ---
@@ -546,14 +546,14 @@ JavaScript **statements** end with a ✨ `;` ✨
 In the previous exercise we used the following code to **assign** a DOM element to a **variable** named `nameEl`:
 
 ```js
-const nameEl = document.getElementById("name");
+const nameEl = document.getElementById('name');
 ```
 
 This is called **assignment** or **binding**. You can bind **all types of values** to variables. You choose the name of the variable, and use the `=` operator to bind a value to it:
 
 ```js
 const number3 = 3;
-const name = "Mackenzie";
+const name = 'Mackenzie';
 const theNumberTen = 5 + 5;
 ```
 
@@ -580,8 +580,8 @@ That means numbers for math, strings for creating text, etc.
 Primitive values include:
 
 ```js
-"I am a String"; // string
-"I am another string"; // string
+'I am a String'; // string
+'I am another string'; // string
 42; // number
 true; // boolean
 false; // boolean
@@ -681,9 +681,9 @@ We can also compare values and evaluate their result:
 
 3 == 2;
 
-3 === "3";
+3 === '3';
 
-3 != "3";
+3 != '3';
 
 3 !== 2;
 ```
@@ -701,7 +701,7 @@ Getting used to how JavaScript handles primitives is an important part of using 
 Try this:
 
 ```js
-const a = "42";
+const a = '42';
 const b = Number(a);
 
 console.log(a); // "42"
@@ -718,8 +718,8 @@ For example, the `+` and `+=` operators can add numbers, or **concatenate** stri
 
 ```js
 const age = 20 + 22;
-let introduction = "I'm Ishmael, I am " + age + " years old.";
-introduction += " Nice to meet you";
+let introduction = "I'm Ishmael, I am " + age + ' years old.';
+introduction += ' Nice to meet you';
 
 // What is the value of introduction?
 ```
@@ -737,9 +737,9 @@ As an alternative to **concatenation**, or template strings are string literals 
 **ES5:**
 
 ```js
-const name = "Bob";
-var city = "Vancouver";
-var description = name + " lives in " + city;
+const name = 'Bob';
+var city = 'Vancouver';
+var description = name + ' lives in ' + city;
 ```
 
 **ES2015:**
@@ -794,7 +794,7 @@ true;
 } // Object
 []; // Array
 42;
-("foo");
+('foo');
 new Date();
 -42;
 3.14;
@@ -812,7 +812,7 @@ Infinity;
 !{};
 ![];
 !42;
-!"foo";
+!'foo';
 !new Date();
 !-42;
 !3.14;
@@ -851,7 +851,7 @@ An `if` statement will only execute code if the **expression** or **value** you'
 
 ```js
 if (10 < 5) {
-  console.log("Math!"); // Will this execute?
+  console.log('Math!'); // Will this execute?
 }
 ```
 
@@ -861,11 +861,11 @@ const soupTemp = 0;
 
 if (!soupTemp) {
   // reads like: "if NO soupTemp"
-  console.log("Soup is frozen...");
+  console.log('Soup is frozen...');
 } else if (soupTemp > 0 && soupTemp < 100) {
-  console.log("Soup is too cold.");
+  console.log('Soup is too cold.');
 } else {
-  console.log("Just right?");
+  console.log('Just right?');
 }
 ```
 
@@ -1011,11 +1011,11 @@ const soupTemp = 0;
 // Define your functions
 function checkSoupTemp() {
   if (!soupTemp) {
-    console.log("Soup is frozen...");
+    console.log('Soup is frozen...');
   } else if (soupTemp > 0 && soupTemp < 100) {
-    console.log("Soup is too cold.");
+    console.log('Soup is too cold.');
   } else {
-    console.log("Just right?");
+    console.log('Just right?');
   }
 }
 
@@ -1032,11 +1032,11 @@ Instead of declaring the `soupTemp` variable, we can pass it as an **argument** 
 ```js
 function checkSoupTemp(soupTemp) {
   if (!soupTemp) {
-    console.log("Soup is 0deg, frozen...");
+    console.log('Soup is 0deg, frozen...');
   } else if (soupTemp > 0 && soupTemp < 100) {
-    console.log("Soup is too damn cold.");
+    console.log('Soup is too damn cold.');
   } else {
-    console.log("Just Right?");
+    console.log('Just Right?');
   }
 }
 
@@ -1057,11 +1057,11 @@ Be sure to highlight the usefulness of using an argument here instead.
 ```js
 function checkSoupTemp(soupTemp) {
   if (!soupTemp) {
-    console.log("Soup is 0deg, frozen...");
+    console.log('Soup is 0deg, frozen...');
   } else if (soupTemp > 0 && soupTemp < 100) {
-    console.log("Soup is too damn cold.");
+    console.log('Soup is too damn cold.');
   } else {
-    console.log("Just Right?");
+    console.log('Just Right?');
   }
 }
 // soupTemp is out of scope, this will log "undefined"!
@@ -1080,11 +1080,11 @@ The result of calling a function can be assigned to a **variable**. The function
 ```js
 function checkSoupTemp(soupTemp) {
   if (!soupTemp) {
-    return "Soup is 0deg, frozen...";
+    return 'Soup is 0deg, frozen...';
   } else if (soupTemp > 0 && soupTemp < 100) {
-    return "Soup is too damn cold.";
+    return 'Soup is too damn cold.';
   } else {
-    return "Just Right?";
+    return 'Just Right?';
   }
 }
 
@@ -1102,7 +1102,7 @@ console.log(result);
 Arrow functions `() => {}` are special. The can return a value _implicitly_, without the need for the `return` keyword:
 
 ```js
-const isTrueAge = (age, trueAge) => (age == trueAge ? "true" : "false");
+const isTrueAge = (age, trueAge) => (age == trueAge ? 'true' : 'false');
 const checkAge = isTrueAge(0, 42);
 // What is the value of trueAge?
 ```
@@ -1172,10 +1172,10 @@ And event listeners uses this basic syntax:
 ```js
 // In a JS file...
 
-const button = document.getElementById("click-here");
+const button = document.getElementById('click-here');
 
-button.addEventListener("click", function(event) {
-  console.log("You clicked a button!");
+button.addEventListener('click', function(event) {
+  console.log('You clicked a button!');
 });
 ```
 
@@ -1213,9 +1213,9 @@ Every event handling callback function receives an **event object**, and this ob
 To access these methods and properties, we must pass in the event object as an argument for our function:
 
 ```js
-const button = document.getElementById("click-here");
+const button = document.getElementById('click-here');
 
-button.addEventListener("click", function(event) {
+button.addEventListener('click', function(event) {
   // Code to run when button is clicked...
 
   // Log the event object to the console to see what's inside
@@ -1266,9 +1266,9 @@ The event object has a method that allows us to do this. That method is called `
 ```
 
 ```js
-const button = document.getElementById("click-here");
+const button = document.getElementById('click-here');
 
-button.addEventListener("click", function(event) {
+button.addEventListener('click', function(event) {
   // Stop the default behavior on the button click
   event.preventDefault();
 
@@ -1293,7 +1293,7 @@ Before we start interacting with the DOM, we want to make sure the browser has *
 For this reason, you will often see JavaScript wrapped in the following code:
 
 ```js
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
   // all of your JS code goes here
 });
 ```
@@ -1309,7 +1309,7 @@ Waits until the DOM tree is constructed before the code executes.
 Compared to:
 
 ```js
-window.addEventListener("load", function() {});
+window.addEventListener('load', function() {});
 ```
 
 Which waits until the DOM tree is constructed and all external assets are loaded.

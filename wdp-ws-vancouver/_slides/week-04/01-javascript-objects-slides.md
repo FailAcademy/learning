@@ -55,13 +55,13 @@ JavaScript objects are sometimes called **maps**, but you can just call them **o
 ```js
 const goals = [
   {
-    description: "Learn about JavaScript objects",
-    dueDate: new Date("01-01-2020")
+    description: 'Learn about JavaScript objects',
+    dueDate: new Date('01-01-2020'),
   },
   {
-    description: "Stop wasting time posting gifs on Slack",
-    dueDate: new Date()
-  }
+    description: 'Stop wasting time posting gifs on Slack',
+    dueDate: new Date(),
+  },
 ];
 ```
 
@@ -87,17 +87,17 @@ Often you'll use objects to represent real things (nouns) in your software, like
 
 ```js
 const zoo = {
-  name: "Animal Apartments",
+  name: 'Animal Apartments',
   zookeeper: {
-    name: "G. Silverback",
-    email: "gorillas@mist.com"
+    name: 'G. Silverback',
+    email: 'gorillas@mist.com',
   },
   animals: [
-    { name: "panda", type: "mammal", apt: 201 },
-    { name: "parrot", type: "bird", apt: 202 },
-    { name: "porcupine", type: "mammal", apt: 203 },
-    { name: "porpoise", type: "mammal", apt: 204 }
-  ]
+    { name: 'panda', type: 'mammal', apt: 201 },
+    { name: 'parrot', type: 'bird', apt: 202 },
+    { name: 'porcupine', type: 'mammal', apt: 203 },
+    { name: 'porpoise', type: 'mammal', apt: 204 },
+  ],
 };
 
 console.log(zoo.animals[3].name); // what does this log to the console?
@@ -111,17 +111,17 @@ Values stored inside objects are called **properties**. You can **read and write
 
 ```js
 const human = {
-  firstName: "Richard",
-  lastName: "Stallman",
+  firstName: 'Richard',
+  lastName: 'Stallman',
   height: 1.75,
-  beard: true
+  beard: true,
 };
 
 // DOT NOTATION
 const hasBeard = human.beard; // will equal true
 
 // BRACKET NOTATION
-const hasBeard = human["beard"]; // will equal true
+const hasBeard = human['beard']; // will equal true
 ```
 
 ---
@@ -133,14 +133,14 @@ Copy & paste this into your browser console (and press enter):
 ```js
 const human = {
   fingerCount: 5,
-  toeCount: 5
+  toeCount: 5,
 };
 
 const numFingers = human.fingerCount;
-const numToes = human["toeCount"];
+const numToes = human['toeCount'];
 
 human.bellybutton = true;
-human["opposable thumbs"] = true;
+human['opposable thumbs'] = true;
 
 console.log(human);
 ```
@@ -158,7 +158,7 @@ You will often need to take property values out of objects and store them in the
 ```js
 var point = {
   x: 1,
-  y: 2
+  y: 2,
 };
 
 var x = point.x;
@@ -179,7 +179,7 @@ console.log(y); // 2
 ```js
 const point = {
   x: 1,
-  y: 2
+  y: 2,
 };
 
 const { x, y } = point;
@@ -198,8 +198,8 @@ You can even destructure property values from objects as you pass them into func
 
 ```js
 const person = {
-  name: "Marie",
-  city: "Vancouver"
+  name: 'Marie',
+  city: 'Vancouver',
 };
 
 // ES5 way:
@@ -224,7 +224,7 @@ Bonus! Destructuring work on arrays as well.
 **ES5:**
 
 ```js
-var winners = ["Bob", "Alice", "Jane"];
+var winners = ['Bob', 'Alice', 'Jane'];
 var first = winners[0];
 var second = winners[1];
 var third = winners[2];
@@ -282,9 +282,9 @@ console.log(object3.value); // → 10
 With primitive data types, the `=` operator works by value:
 
 ```js
-let fruit = "Granny Smith";
+let fruit = 'Granny Smith';
 let apple = fruit;
-apple = "Macintosh";
+apple = 'Macintosh';
 
 console.log(fruit); // "Granny Smith"
 console.log(apple); // "Macintosh"
@@ -300,10 +300,10 @@ With composite data types, the `=` operator works by reference:
 
 ```js
 var fruit = {
-  name: "Granny Smith"
+  name: 'Granny Smith',
 };
 let apple = fruit;
-fruit.name = "Macintosh";
+fruit.name = 'Macintosh';
 
 console.log(fruit.name); // "Granny Smith"
 console.log(apple.name); // "Granny Smith"
@@ -362,13 +362,13 @@ For object methods, we write `getName: function() {...}` instead of `function ge
 
 ```js
 const person = {
-  firstName: "Richard",
-  lastName: "Stallman",
+  firstName: 'Richard',
+  lastName: 'Stallman',
   height: 1.75,
   beard: true,
   getName: function() {
-    return this.firstName + " " + this.lastName;
-  }
+    return this.firstName + ' ' + this.lastName;
+  },
 };
 ```
 
@@ -380,12 +380,12 @@ We use dot notation to access object methods:
 
 ```js
 const person = {
-  firstName: "Richard",
-  lastName: "Stallman",
+  firstName: 'Richard',
+  lastName: 'Stallman',
   // ...
   getName: function() {
-    return this.firstName + " " + this.lastName;
-  }
+    return this.firstName + ' ' + this.lastName;
+  },
 };
 
 const fullName = person.getName(); // will return "Richard Stallman"
@@ -401,14 +401,14 @@ Inside of an object's method, it refers to the object itself:
 
 ```js
 const person = {
-  firstName: "Richard",
-  lastName: "Stallman",
+  firstName: 'Richard',
+  lastName: 'Stallman',
   // ...
   getName: function() {
     // use "this" to get properties of the object inside of a method
 
-    return this.firstName + " " + this.lastName;
-  }
+    return this.firstName + ' ' + this.lastName;
+  },
 };
 ```
 
@@ -448,17 +448,17 @@ Sometimes, you'll want to add functions to your objects. These object functions 
 
 ```js
 const library = {
-    open: true,
-    inventory: [
-        { title: '1984', author: 'Orwell', id: 1},
-        { title: 'Dune', author: 'Herbert', id: 2},
-        { title: '1Q84', author: 'Murakami' id: 3}
-    ]
-    lent: [],
-    borrow: function(id) {},
-    returnItem: function(id) {},
-    close: function() {}
-}
+  open: true,
+  inventory: [
+    { title: '1984', author: 'Orwell', id: 1 },
+    { title: 'Dune', author: 'Herbert', id: 2 },
+    { title: '1Q84', author: 'Murakami', id: 3 },
+  ],
+  lent: [],
+  borrow: function(id) {},
+  returnItem: function(id) {},
+  close: function() {},
+};
 ```
 
 ---
@@ -472,7 +472,7 @@ Using `this`, we can write a borrow function to help keep track what books have 
 borrow: function(id) {
   if (
     this.inventory.find(function(item) {
-      return item === id;
+      return item.id === id;
     })
     && this.lent.indexOf(id) === -1)
   {
@@ -527,18 +527,18 @@ This doesn't feel very **DRY**...
 
 ```js
 const person1 = {
-  firstName: "Richard",
-  lastName: "Stallman"
+  firstName: 'Richard',
+  lastName: 'Stallman',
 };
 
 const person2 = {
-  firstName: "Ada",
-  lastName: "Lovelace"
+  firstName: 'Ada',
+  lastName: 'Lovelace',
 };
 
 const person3 = {
-  firstName: "Grace",
-  lastName: "Hopper"
+  firstName: 'Grace',
+  lastName: 'Hopper',
 };
 ```
 
@@ -581,8 +581,8 @@ _This is a reference to the `prototype` of the function that the object was base
 Enter the following into your browser console:
 
 ```js
-const myArr = ["item 1"];
-myArr.__proto___;
+const myArr = ['item 1'];
+myArr.__proto__;
 ```
 
 **What do you see?**
@@ -649,7 +649,7 @@ Library.prototype.borrow = function(id) {
   ) {
     this.lent.push(id);
   } else {
-    console.log("This book has been lent...");
+    console.log('This book has been lent...');
   }
 };
 // Library.prototype.returnItems..etc.
@@ -674,9 +674,9 @@ To create a new library object, we write `new Library()`:
 
 ```js
 const myLibrary = new Library([
-  { title: "1984", author: "Orwell", id: 1 },
-  { title: "Dune", author: "Herbert", id: 2 },
-  { title: "1Q84", author: "Murakami", id: 3 }
+  { title: '1984', author: 'Orwell', id: 1 },
+  { title: 'Dune', author: 'Herbert', id: 2 },
+  { title: '1Q84', author: 'Murakami', id: 3 },
 ]);
 ```
 
@@ -689,13 +689,13 @@ With our new `Library` constructor, we can now see an example of the other meani
 Run the code from the previous two slides in the console, then run the following:
 
 ```js
-Library.prototype
+Library.prototype;
 ```
 
 Now run this:
 
 ```js
-myLibrary.__proto__
+myLibrary.__proto__;
 ```
 
 **What do you see now?**
@@ -714,15 +714,15 @@ We can tidy our code up even further with the use of additional constructors, an
 
 ```js
 const cookBookLibrary = new Library([
-  new CookBook("La Technique", "Pepin"),
-  new CookBook("Cookin' it lovin' it", "Fieri"),
-  new CookBook("The Pollan Family Table", "Pollan")
+  new CookBook('La Technique', 'Pepin'),
+  new CookBook("Cookin' it lovin' it", 'Fieri'),
+  new CookBook('The Pollan Family Table', 'Pollan'),
 ]);
 
 const carShare = new Library([
-  new CarShareVehicle("Hyundai", "Accent"),
-  new CarShareVehicle("Geely Auto", "Geely"),
-  new CarShareVehicle("Daihatsu", "Tanto")
+  new CarShareVehicle('Hyundai', 'Accent'),
+  new CarShareVehicle('Geely Auto', 'Geely'),
+  new CarShareVehicle('Daihatsu', 'Tanto'),
 ]);
 
 // ... use your new object instance!
@@ -744,7 +744,7 @@ function Ranger(name, zord) {
 
   this.state = {
     morphed: false,
-    joinedMegaZord: false
+    joinedMegaZord: false,
   };
 
   this.morph = function() {
@@ -774,7 +774,7 @@ class Ranger {
     }
   }
 }
-const blueRanger = new Ranger("Billy", "Triceratops");
+const blueRanger = new Ranger('Billy', 'Triceratops');
 blueRanger.morph();
 ```
 

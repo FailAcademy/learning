@@ -17,7 +17,7 @@ class: center, middle, inverse
 ---
 
 layout: false
- 
+
 # Agenda
 
 1. Beyond function basics
@@ -32,6 +32,7 @@ template: inverse
 # Beyond Function Basics
 
 ---
+
 class: center, middle
 
 ### &ldquo;Functions are the bread and butter of JavaScript programming.&rdquo;
@@ -63,9 +64,9 @@ Provide examples of each, or organize the students in small groups to quickly co
 
 # First-class Functions
 
-JavaScript treats functions as **first-class objects** because it allows you to treat functions like any other variable. 
+JavaScript treats functions as **first-class objects** because it allows you to treat functions like any other variable.
 
-*But what does this actually mean for us?*
+_But what does this actually mean for us?_
 
 1. We can assign **functions to variables**
 2. We can pass a **function as an argument** to another function
@@ -103,7 +104,7 @@ const doubledNumbers = numbers.map(function(number) {
 function sayHello(greeting) {
   return function(name) {
     return `${greeting}, ${name}`;
-  }
+  };
 }
 
 const sayHelloWithGreeting = sayHello('Hi');
@@ -117,7 +118,7 @@ class: center, middle
 ### Learn the Vocabulary:
 
 .inline-images[
-  ![Screenshot of a function definition](/public/img/slide-assets/function-diagram.png)
+![Screenshot of a function definition](/public/img/slide-assets/function-diagram.png)
 ]
 
 👆 This is a **function defintion.**
@@ -138,7 +139,7 @@ calculateTip(49.85, 15);
 isValidEmail(email);
 ```
 
-*Always use **camel case** when naming your functions.* 🐫 🐫 🐫
+_Always use **camel case** when naming your functions._ 🐫 🐫 🐫
 
 ---
 
@@ -219,7 +220,7 @@ console.log(exponent(2, 10)); // / Should log: 1024
 
 # Single Responsibility
 
-A function should usually only do **one thing**. 
+A function should usually only do **one thing**.
 
 This is called the **[single-responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)**, and it applies elsewhere in software too!
 
@@ -242,11 +243,11 @@ function convertTemp(temp, convertFrom, convertTo) {
     return new Error('Temp must be a number.');
   }
   if (convertFrom === 'C' && convertTo === 'F') {
-    const celsius = ((temp - 32) * 5) / 9;
-    console.log(temp + '°F is ' + celsius + '°C');
-  } else if (convertFrom === 'F' && convertTo === 'C') {
     const fahrenheit = (temp * 9) / 5 + 32;
     console.log(temp + '°C is ' + fahrenheit + '°F');
+  } else if (convertFrom === 'F' && convertTo === 'C') {
+    const celsius = ((temp - 32) * 5) / 9;
+    console.log(temp + '°F is ' + celsius + '°C');
   } else {
     return new Error("Can't convert these arguments.");
   }
@@ -285,7 +286,7 @@ console.log(add2Numbers(13, 13));
 console.log(num2);
 ```
 
-*What is the return value of this function? What will be logged to the console from the last two lines?*
+_What is the return value of this function? What will be logged to the console from the last two lines?_
 
 ---
 
@@ -348,7 +349,7 @@ We learned that functions can return functions. Refactor this code to produce th
 ```js
 function loanAmount(amount, interest) {
   return function(numberOfMonths) {
-    return (amount * (interest * 100)) / numberOfMonths;
+    return (amount * (interest / 100)) / numberOfMonths;
   };
 }
 
@@ -444,7 +445,6 @@ function counterES5() {
 }
 
 const counterA = new counterES5();
-window.setTimeout(counterA, 1000);
 ```
 
 ---
@@ -484,7 +484,7 @@ function counterES5() {
       this.seconds++;
       console.log(this.seconds);
     }.bind(this),
-    1000
+    1000,
   );
 }
 ```
@@ -516,7 +516,7 @@ function counterES2015() {
 
 ```js
 function sayHi() {
-  console.log("hi");
+  console.log('hi');
 }
 function addOne(x) {
   return x + 1;
@@ -536,7 +536,7 @@ var multiply = function(a, b) {
 **ES2015 `=>`:**
 
 ```js
-const sayHi = () => console.log("hi");
+const sayHi = () => console.log('hi');
 const addOne = x => x + 1;
 const multiply = (a, b) => {
   return a * b;
@@ -574,12 +574,11 @@ Fix the following code with an arrow function so that the message logs to the co
 const message = {
   text: 'Hello',
   display: function() {
-    setInterval((function() {
-      console.log(this.text)
-    }, 1000)
-  }
-}
-
+    setInterval(function() {
+      console.log(this.text);
+    }, 1000);
+  },
+};
 message.display();
 ```
 
@@ -622,7 +621,7 @@ const cubeVolume = function(side) {
 };
 ```
 
-*With ES5, there's no way to set up default parameter values for a function, which makes our code more error-prone...*
+_With ES5, there's no way to set up default parameter values for a function, which makes our code more error-prone..._
 
 ---
 
@@ -634,7 +633,7 @@ Previously, we would work around this issue by testing parameter values in the b
 
 ```js
 const cubeVolume = function(side) {
-  if (typeof side === undefined) {}
+  if (typeof side === undefined) {
     return new Error('Cube needs a side.');
   }
   const volume = side * side * side;
@@ -646,7 +645,7 @@ const cubeVolume = function(side) {
 
 Prompt the students: What is the parameter here?
 
-*Wouldn't it be nice if there was a way to set a default value in case no argument is passed?*
+_Wouldn't it be nice if there was a way to set a default value in case no argument is passed?_
 
 ---
 

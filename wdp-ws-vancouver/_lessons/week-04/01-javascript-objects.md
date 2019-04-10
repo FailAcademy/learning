@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: JavaScript Objects
-slides: ["_slides/week-04/01-javascript-objects-slides.md"]
+slides: ['_slides/week-04/01-javascript-objects-slides.md']
 lesson_date: 2019-04-30
 ---
 
@@ -68,7 +68,7 @@ const library = {
   },
   close: function() {
     // how do you flip the "open" property?
-  }
+  },
 };
 ```
 

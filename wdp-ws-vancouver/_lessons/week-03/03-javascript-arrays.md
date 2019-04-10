@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: JavaScript Arrays
-slides: ["_slides/week-03/03-javascript-arrays-slides.md"]
+slides: ['_slides/week-03/03-javascript-arrays-slides.md']
 lesson_date: 2019-04-25
 ---
 
@@ -86,10 +86,10 @@ const bucketList = [
 Start with the following code, and use what you know to complete the challenges listed below. 👩‍🏫
 
 ```js
-const messageForm = document.getElementById("message-form");
+const messageForm = document.getElementById('message-form');
 // define other variables here if needed
 
-messageForm.addEventListener("submit", function(event) {
+messageForm.addEventListener('submit', function(event) {
   event.preventDefault();
 
   // create a new <li> element to append to the DOM
@@ -127,10 +127,10 @@ It would be a good idea to write out each step you need to complete in a comment
 
 ```js
 const rangers = [
-  ["Jason", "Triceratops"],
-  ["Billy", "Tyrannosaurus"],
-  ["Trini", "Sabre-toothed Tiger"],
-  ["Kimberly", "Pteradactyl"]
+  ['Jason', 'Triceratops'],
+  ['Billy', 'Tyrannosaurus'],
+  ['Trini', 'Sabre-toothed Tiger'],
+  ['Kimberly', 'Pteradactyl'],
 ];
 ```
 
@@ -266,24 +266,24 @@ When you're finished, add some CSS to make things look nice!
   will display in the list.
 */
 
-const form = document.getElementById("happiness-form");
+const form = document.getElementById('happiness-form');
 const sortInputs = document.querySelectorAll('[name="sort"]');
 const filterInputs = document.querySelectorAll('[name="filter"]');
 
-form.addEventListener("submit", function(e) {
+form.addEventListener('submit', function(e) {
   e.preventDefault();
   // Get the values from the form.
   // Append a new entry to your list!
 });
 
 sortInputs.forEach(function(radioInput) {
-  radioInput.addEventListener("change", function(e) {
+  radioInput.addEventListener('change', function(e) {
     // use e.target.value to sort your entries
   });
 });
 
 filterInputs.forEach(function(radioInput) {
-  radioInput.addEventListener("change", function(e) {
+  radioInput.addEventListener('change', function(e) {
     // use e.target.value to filter your entries
   });
 });
