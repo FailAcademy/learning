@@ -16,8 +16,8 @@ Also read the following chapters from "Professor Frisby's Mostly Adequate Guide 
 - [Chapter 1: What ever are we doing?](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch01.md)
 - [Chapter 2: First Class Functions](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch02.md)
 - [Chapter 3: Pure Happiness with Pure Functions](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch03.md)
-- [Chapter 4: Currying](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch4.md)
-- [Chapter 5: Coding by Composing](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch5.md)
+- [Chapter 4: Currying](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch04.md)
+- [Chapter 5: Coding by Composing](https://github.com/MostlyAdequate/mostly-adequate-guide/blob/master/ch05.md)
 
 ---
 
