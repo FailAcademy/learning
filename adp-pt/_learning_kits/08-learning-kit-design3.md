@@ -1,9 +1,11 @@
 ---
 layout: project
-title: Progressive Web Apps
+title: UI Testing
 ---
 
 # Summary
+
+## Pick The Best Solution
 
 # Module Content
 
@@ -11,6 +13,4 @@ title: Progressive Web Apps
 
 # Self-Directed Activity
 
-# Reflection Journal
-
-
+# Reflection Activity

@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Graphs
+title: Working with REST APIs
 ---
 
 ## Summary
@@ -11,6 +11,4 @@ title: Graphs
 
 ## Self-Directed Activity
 
-## Reflection Journal
-
-
+## Reflection Activity

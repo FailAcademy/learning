@@ -1,11 +1,9 @@
 ---
 layout: project
-title: Node
+title: Web Servers vs. P2P
 ---
 
 ## Summary
-
-
 
 ## Module Content
 
@@ -13,6 +11,4 @@ title: Node
 
 ## Self-Directed Activity
 
-## Reflection Journal
-
-
+## Reflection Activity

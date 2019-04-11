@@ -5,12 +5,12 @@ title: Software Startups
 
 # Summary
 
+## Ideate Solutions
+
 # Module Content
 
 # Module Resources
 
 # Self-Directed Activity
 
-# Reflection Journal
-
-
+# Reflection Activity
