@@ -1,6 +1,6 @@
 ---
 layout: project
-title: UI Testing
+title: Building Things - Plan & Prototype
 ---
 
 # Summary

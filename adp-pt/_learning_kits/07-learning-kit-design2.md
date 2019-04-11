@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Software Startups
+title: Building Things - "Remix & Improve"
 ---
 
 # Summary

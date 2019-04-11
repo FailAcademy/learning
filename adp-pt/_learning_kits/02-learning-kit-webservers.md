@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Web Servers vs. P2P
+title: Web Servers & P2P
 ---
 
 ## Summary

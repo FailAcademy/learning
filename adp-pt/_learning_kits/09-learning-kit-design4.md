@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Progressive Web Apps
+title: Building Things - Refine & Test
 ---
 
 # Summary
