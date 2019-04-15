@@ -89,22 +89,25 @@ Add the following HTML to the code from the previous exercise:
 ```html
 <!-- previous HTML above -->
 <p>Current stage of evolution: <span id="evolution"></span></p>
-<button onclick="evolve()">Evolve</button>
+<button id="evolve">Evolve</button>
 ```
 
 And the following JavaScript to the top of `main.js`:
 
 ```js
+const evolveBtn = document.getElementById('evolve');
+
 let currentStage = 'Simple Spore';
 let clicks = 0;
 
 // Add the initial stage of evolution to the span id="evolution"
 
-function evolve() {
+evolveBtn.addEventListener("click", function evolve() {
   // add 1 to the clicks variable
   // When the number of clicks reaches 10, add a second stage of evolution to the DOM!
   // You choose the name of each additional stage.
-}
+});
+
 ```
 
 Now, first you'll need to replace the contents of `<span id="evolution"></span>` with the initial stage of evolution of your creature. Each time you click the "evolve" button you will keep track of the number of clicks by adding 1 to the `clicks` variable.
