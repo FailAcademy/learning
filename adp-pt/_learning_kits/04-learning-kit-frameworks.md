@@ -11,7 +11,11 @@ It's a great time to be a JavaScript developer. JavaSctip is the most popular pr
 
 ## Module Resources
 
-???
+- Create React App
+- Next JS
+- Nuxt JS
+- Generator Angular
+-
 
 ## Self-Directed Work
 
@@ -33,6 +37,6 @@ Build a "Hello World" application using a web framework that you are not using i
 
 Write a reflection on one of the following questions:
 
-Why are there so many web-frameworks? Do you think that variety is good for innovation, or confusing for newcomers? Be sure to include your opinions and you personal experience.
+Why are there so many JavaScript web-frameworks? Do you think that variety is good for innovation, or confusing for newcomers? Be sure to include your opinions and you personal experience.
 
 All of the JavaScript frameworks in this module and in the course are open-source projects. This means that you're free to use the code they contain for your own projects. Besides making money, which some do, why would someone (or, some company) spend time building complex software for free?
