@@ -535,7 +535,7 @@ el.className = "red"; // adds class name of "red" to the element
 
 # Exercise 2
 
-See the [lesson page](/lesson/03-intro-to-javascript/) for further instructions.
+See the [lesson page](/lesson/02-intro-to-javascript/) for further instructions.
 
 ---
 
@@ -694,7 +694,7 @@ _What will the above expressions return?_
 
 # Type Coercion
 
-In JavaScript, certain **operations** can change the value of primitives.
+In JavaScript, certain **operations** can change the **type** of primitives.
 
 Getting used to how JavaScript handles primitives is an important part of using the language, and also the cause of many bugs and frustrations for beginners.
 
@@ -706,6 +706,8 @@ const b = Number(a);
 
 console.log(a); // "42"
 console.log(b); // 42
+console.log(typeof a); // string
+console.log(typeof b); // number
 ```
 
 ---
@@ -1119,7 +1121,7 @@ Highlight the compactness!
 
 # Exercise 3
 
-See the [lesson page](/lesson/03-intro-to-javascript/) for further instructions.
+See the [lesson page](/lesson/02-intro-to-javascript/) for further instructions.
 
 ---
 
