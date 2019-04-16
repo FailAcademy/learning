@@ -352,7 +352,7 @@ Every Font Awesome icon also has a [Unicode value](http://fortawesome.github.io/
 ```
 
 ```css
-.menu-toggle {
+.menu-toggle span {
   display: none;
 }
 

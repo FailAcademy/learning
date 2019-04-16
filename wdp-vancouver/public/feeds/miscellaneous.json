@@ -16,6 +16,11 @@
     "start": "2019-02-18"
   },
   {
+    "title": "PPD: Values, Skills & Personalities",
+    "allDay": false,
+    "start": "2019-04-18"
+  },
+  {
     "title": "Good Friday",
     "allDay": true,
     "start": "2019-04-19"
@@ -26,9 +31,34 @@
     "start": "2019-04-22"
   },
   {
+    "title": "PPD: Collaboration & Group Dynamics",
+    "allDay": false,
+    "start": "2019-05-02"
+  },
+  {
+    "title": "PPD: Networking & Negotiations",
+    "allDay": false,
+    "start": "2019-05-09"
+  },
+  {
     "title": "Victoria Day",
     "allDay": true,
     "start": "2019-05-20"
+  },
+  {
+    "title": "PPD: Labour Laws and Your Rights in the Workplace",
+    "allDay": false,
+    "start": "2019-05-29"
+  },
+  {
+    "title": "PPD: Resume & LinkedIn",
+    "allDay": false,
+    "start": "2019-06-13"
+  },
+  {
+    "title": "PPD: Being Your Own Boss  ",
+    "allDay": false,
+    "start": "2019-06-20"
   },
   {
     "title": "Canada Day Stat",
