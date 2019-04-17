@@ -1119,19 +1119,11 @@ Highlight the compactness!
 
 ---
 
-# Exercise 3
-
-See the [lesson page](/lesson/02-intro-to-javascript/) for further instructions.
-
----
-
 template: inverse
 
 # The DOM and Event Listeners
 
 ---
-
-class: center, middle
 
 ### More Than Clicks
 
@@ -1217,8 +1209,6 @@ The function you pass into `addEventListener` as an argument is a callback, and 
 See the [lesson page](/lesson/02-intro-to-javascript/) for further instructions.
 
 ---
-
-template: inverse
 
 # The Event Object
 
