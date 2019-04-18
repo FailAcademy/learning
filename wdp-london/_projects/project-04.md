@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 4 - Inhabitent Site
-due: Tuesday, February 26th (beginning of class)
+due: Tuesday, May 28th (beginning of class)
 ---
 
 For Project 4, you will create a multi-page website with a blog for a camping supply company called Inhabitent Camping Supply Co. using WordPress as a content management system.
@@ -43,7 +43,7 @@ To receive a “Complete” for this project, your submission will need to satis
 Your project must:
 
 - Demonstrate effective organization of the project's root directory
-- Have a Git repository initialized in its root directory which is pushed to GitHub
+- Have a Git repository initialized in the `wp-content` directory which is pushed to GitHub
 - Use a `.gitignore` to exclude unnecessary files/folders, and ensure that no unnecessary files/folders are erroneously committed to the repository
 - Contain an appropriate number of commits for the scope of the project
 - Contain a `README.md` file describing the project (e.g. technologies used, personal learnings, installation instructions, etc.) and is appropriately formatted with Markdown
@@ -121,8 +121,8 @@ Your project must:
 - Contain a static "Find Us" page with an embeded Google Map and functioning contact form, styled appropriately (`page.php`)
 - Contain a "Journal" page assigned as the blog post index, styled appropriately (`home.php`)
 - Contain a single blog post view with a comments form and list, styled appropriately (`single.php`)
-- Contain a product archive called "Shop" that displays 16 posts per page in descending order by title, styled appropriately (`archive-product.php`)
-- Contain a product type archive that displays 16 posts per page in descending order by title, styled appropriately (`taxononomy-product_type.php`)
+- Contain a product archive called "Shop" that displays 16 posts per page in ascending order by title, styled appropriately (`archive-product.php`)
+- Contain a product type archive that displays 16 posts per page in ascending order by title, styled appropriately (`taxononomy-product_type.php`)
 - Contain a single product view, styled appropriately (`single-product.php`)
 - Contain a general archive (for authors, categories, etc.), styled appropriately (`archive.php`)
 - Contain a search results page, styled appropriately (`search.php`)

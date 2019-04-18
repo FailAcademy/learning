@@ -398,7 +398,7 @@ But there's another distinction to be made...<br />an element can also be **inli
 | Has top/bottom margin & padding       | Has top/bottom margin & padding | No top/bottom margin or padding |
 | Has left/right margin & padding       | Has left/right margin & padding | Has left/right margin & padding |
 | Can have set height and width         | Can have set height and width   | Cannot have set width or height |
-| Forces a line break after the element | Does not force a line break   | Does not force a line break     |
+| Forces a line break after the element | Does not force a line break     | Does not force a line break     |
 
 ---
 
@@ -593,7 +593,7 @@ Some tips for naming the classes and IDs in your HTML:
 
 ---
 
-# Attibute Selector
+# Attribute Selector
 
 We can always target form inputs by their `id` or `class`, but we can also target entire types of form elements using the [attribute selector](https://developer.mozilla.org/en/docs/Web/CSS/Attribute_selectors) in our CSS:
 

@@ -144,7 +144,7 @@ When we **program** we are simply writing a list of **instructions** for our com
 class: center, middle
 
 .large[
-What is programming language?
+What is a programming language?
 ]
 
 ???
@@ -535,7 +535,7 @@ el.className = "red"; // adds class name of "red" to the element
 
 # Exercise 2
 
-See the [lesson page](/lesson/03-intro-to-javascript/) for further instructions.
+See the [lesson page](/lesson/02-intro-to-javascript/) for further instructions.
 
 ---
 
@@ -595,7 +595,7 @@ Note that we can use double or single quotation marks to make strings in JavaScr
 
 ---
 
-# Smooth Operators
+# Operators
 
 Almost every programming language uses **operators**. Here are some useful categories of operators in JavaScript:
 
@@ -694,7 +694,7 @@ _What will the above expressions return?_
 
 # Type Coercion
 
-In JavaScript, certain **operations** can change the value of primitives.
+In JavaScript, certain **operations** can change the **type** of primitives.
 
 Getting used to how JavaScript handles primitives is an important part of using the language, and also the cause of many bugs and frustrations for beginners.
 
@@ -706,6 +706,8 @@ const b = Number(a);
 
 console.log(a); // "42"
 console.log(b); // 42
+console.log(typeof a); // string
+console.log(typeof b); // number
 ```
 
 ---
@@ -1073,7 +1075,7 @@ checkSoupTemp(75);
 
 ---
 
-# Functions Return
+# Function Return
 
 The result of calling a function can be assigned to a **variable**. The function's `return` value can be used in your program:
 
@@ -1099,7 +1101,7 @@ console.log(result);
 
 # Ternary + Implicit Return
 
-Arrow functions `() => {}` are special. The can return a value _implicitly_, without the need for the `return` keyword:
+Arrow function expressions `() => ()` are special. They can return a value _implicitly_, without the need for the `return` keyword:
 
 ```js
 const isTrueAge = (age, trueAge) => (age == trueAge ? "true" : "false");
@@ -1119,7 +1121,7 @@ Highlight the compactness!
 
 # Exercise 3
 
-See the [lesson page](/lesson/03-intro-to-javascript/) for further instructions.
+See the [lesson page](/lesson/02-intro-to-javascript/) for further instructions.
 
 ---
 
@@ -1133,7 +1135,11 @@ class: center, middle
 
 ### More Than Clicks
 
-We have see how we can write functions in our JavaScript and call them in the `onclick` attribute of an HTML element.
+```html
+<button onclick="alert('Button clicked!');">Click here</button>
+```
+
+We can call JavaScript functions using the `onclick` attribute of an HTML element, this will run the function when the element is clicked. 
 
 But there's a lot more that we can do to add interactivity to a webpage, and we can also use different syntax to accomplish this entirely in our JavaScript code!
 
@@ -1205,6 +1211,14 @@ In JavaScript we can pass functions as arguments to other functions, because **f
 The function you pass into `addEventListener` as an argument is a callback, and the code inside of it **will only run when that event fires off** in the DOM.
 
 ---
+
+# Exercise 3
+
+See the [lesson page](/lesson/02-intro-to-javascript/) for further instructions.
+
+---
+
+template: inverse
 
 # The Event Object
 

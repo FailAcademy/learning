@@ -11,6 +11,11 @@
     "start": "2019-01-01"
   },
   {
+    "title": "Family Day",
+    "allDay": true,
+    "start": "2019-02-18"
+  },
+  {
     "title": "Good Friday",
     "allDay": true,
     "start": "2019-04-19"
@@ -24,6 +29,21 @@
     "title": "Victoria Day",
     "allDay": true,
     "start": "2019-05-20"
+  },
+  {
+    "title": "Canada Day Stat",
+    "allDay": true,
+    "start": "2019-07-01"
+  },
+  {
+    "title": "BC Day",
+    "allDay": true,
+    "start": "2019-08-05"
+  },
+  {
+    "title": "Labour Day",
+    "allDay": true,
+    "start": "2019-09-02"
   },
   {
     "title": "Thanksgiving Monday",
