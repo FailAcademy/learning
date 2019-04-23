@@ -17,11 +17,11 @@ You can [download the project assets here](https://s3-us-west-2.amazonaws.com/re
 
 You can fetch content for this app at the following GraphQL endpoint:
 
-**https://api.graph.cool/simple/v1/cjh2hph6n6njl0108f6n59j3j**
+**https://r10.academy.red/graphl**
 
-To explore the schema for this GraphQL API, visit **[graphqlbin.com](https://www.graphqlbin.com/)** and paste in the above endpoint URL to launch the GraphQL Playground.
+To explore the schema for this GraphQL API, visit the same URL in your browser to launch the GraphQL playground interface.
 
-Please note that this API is read-only for unauthenticated users, so no mutation operations are permitted.
+Please note that this API is read-only, so no mutation operations are permitted.
 
 ## Design Specs
 
