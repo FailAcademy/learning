@@ -64,10 +64,9 @@ To deploy, after your changes are merged into master:
 
 `git push origin [your production branch]`
 
-**Distributing Changes to Other LMSes:**
+**Step 4 (Distributing Changes to Other LMSes - Optional):**
 
-from `master` run `git format-patch -1 HEAD` to create a patch file containing changes from the last commit. <br/>
-**(your squashed PR)**
+From `master` run `git format-patch -1 HEAD` to create a patch file containing changes from the last commit **(your squashed PR)**.
 
 `git checkout [your production branch]`
 
