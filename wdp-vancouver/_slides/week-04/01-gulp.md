@@ -194,14 +194,14 @@ template: inverse
 ```js
 // Require Gulp first!
 
-const gulp = require('gulp');
+const gulp = require("gulp");
 
 // This is a very basic Gulp task,
 // with a name and some code to run
 // when this task is called:
 
-gulp.task('default', function(done) {
-  console.log('Hello world');
+gulp.task("default", function(done) {
+  console.log("Hello world");
   done();
 });
 ```
@@ -234,18 +234,18 @@ We can add Gulp plugins to our project using npm...
 `npm install --save-dev gulp-terser gulp-rename`
 
 ```js
-const gulp = require('gulp'); // Load Gulp!
+const gulp = require("gulp"); // Load Gulp!
 
 // Now that we've installed the terser package we can require it:
-const terser = require('gulp-terser'),
-  rename = require('gulp-rename');
+const terser = require("gulp-terser"),
+  rename = require("gulp-rename");
 
-gulp.task('default', function() {
+gulp.task("default", function() {
   return gulp
-    .src('./js/*.js') // What files do we want gulp to consume?
+    .src("./js/*.js") // What files do we want gulp to consume?
     .pipe(terser()) // Call the terser function on these files
-    .pipe(rename({ extname: '.min.js' })) // Rename the uglified file
-    .pipe(gulp.dest('./build/js')); // Where do we put the result?
+    .pipe(rename({ extname: ".min.js" })) // Rename the uglified file
+    .pipe(gulp.dest("./build/js")); // Where do we put the result?
 });
 ```
 
@@ -294,24 +294,24 @@ Why? Because you may not want to run all of the tasks you define at the same tim
 # Creating a Named Task
 
 ```js
-const gulp = require('gulp'),
-  terser = require('gulp-terser'),
-  rename = require('gulp-rename');
+const gulp = require("gulp"),
+  terser = require("gulp-terser"),
+  rename = require("gulp-rename");
 
-gulp.task('scripts', function() {
+gulp.task("scripts", function() {
   return gulp
-    .src('./js/*.js')
+    .src("./js/*.js")
     .pipe(terser())
-    .pipe(rename({ extname: '.min.js' }))
-    .pipe(gulp.dest('./build/js'));
+    .pipe(rename({ extname: ".min.js" }))
+    .pipe(gulp.dest("./build/js"));
 });
 
-gulp.task('say_hello', function(done) {
-  console.log('Hello!');
+gulp.task("say_hello", function(done) {
+  console.log("Hello!");
   done();
 });
 
-gulp.task('default', gulp.parallel('say_hello', 'scripts'));
+gulp.task("default", gulp.parallel("say_hello", "scripts"));
 ```
 
 Running `gulp` will execute both tasks together. To run an individual task, use the task name: e.g. `gulp scripts`.
@@ -359,8 +359,8 @@ Wouldn't it be nice if we could automatically run Gulp tasks when files in your 
 We can create a `watch` task and call `gulp.watch()` within it to have Gulp watch certain files and automatically run tasks when those files change. For example:
 
 ```js
-gulp.task('watch', function() {
-  gulp.watch('js/*.js', gulp.series('scripts'));
+gulp.task("watch", function() {
+  gulp.watch("js/*.js", gulp.series("scripts"));
 });
 ```
 
@@ -462,7 +462,7 @@ touch .eslintrc
 
 # How It Works
 
-We need to format our config file in a specific way (see below). We will use the `eslint:recommended` rules instead of a separate styleguide.
+We need to format our config file in a specific way. We will use the `eslint:recommended` rules instead of a separate styleguide. Take a look at the **[default ESLint config rules](http://eslint.org/docs/rules/)**.
 
 ```js
 {
@@ -474,12 +474,12 @@ We need to format our config file in a specific way (see below). We will use the
     // any globals we want to allow will go here
   },
   "env": {
-    "browser": true
+    "es6": true,
+    "browser": true,
+    "node": true
   }
 }
 ```
-
-Take a look at the **[default ESLint config rules](http://eslint.org/docs/rules/)**.
 
 ---
 
