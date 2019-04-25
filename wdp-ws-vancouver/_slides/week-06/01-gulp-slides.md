@@ -461,7 +461,7 @@ touch .eslintrc
 
 # How It Works
 
-We need to format our config file in a specific way (see below). We will use the `eslint:recommended` rules instead of a separate styleguide.
+We need to format our config file in a specific way. We will use the `eslint:recommended` rules instead of a separate styleguide. Take a look at the **[default ESLint config rules](http://eslint.org/docs/rules/)**.
 
 ```js
 {
@@ -473,12 +473,12 @@ We need to format our config file in a specific way (see below). We will use the
     // any globals we want to allow will go here
   },
   "env": {
-    "browser": true
+    "es6": true,
+    "browser": true,
+    "node": true
   }
 }
 ```
-
-Take a look at the **[default ESLint config rules](http://eslint.org/docs/rules/)**.
 
 ---
 
