@@ -12,12 +12,36 @@ lesson_date: 2019-05-06
 
 ## Pre-Work
 
+### Prior to the OOP lesson:
+
 Watch these videos from Laracast's [ES2015 Crash Course](https://laracasts.com/series/es6-cliffsnotes):
 
 - [09: Classes](https://laracasts.com/series/es6-cliffsnotes/episodes/9)
 - [10: ES6 Modules](https://laracasts.com/series/es6-cliffsnotes/episodes/10)
 
-We'll be creating SVGs to build the Pong game in Project 3, so you'll want to take a look through this guide before class:
+### Prior to the Pong code-along:
+
+**Software installation:**
+
+Please download and install Node.js:
+
+- [Node.js website](https://nodejs.org/en/)
+
+Note: If you are working on a Mac, [consider installing Homebrew first](http://brew.sh/), then use Homebrew to install Node instead by running:
+
+`brew install node`
+
+**Video to watch:**
+
+Watch **the first 16 minutes** of this video for a brief introduction to Node and npm:
+
+- [Node.js Crash Course](https://www.youtube.com/watch?v=fBNz5xF-Kx4)
+
+_You can certainly watch the whole video if you have time, or bookmark it for later._
+
+**Reading:**
+
+We'll be creating SVGs to build the Pong game in Project 2, so you'll want to take a look through this guide before class:
 
 - [Pocket Guide to Writing SVG](http://svgpocketguide.com/book/)
 
