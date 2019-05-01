@@ -17,7 +17,7 @@
   },
   {
     "title": "PPD: Values, Skills & Personalities",
-    "allDay": false,
+    "allDay": true,
     "start": "2019-04-18"
   },
   {
@@ -32,12 +32,12 @@
   },
   {
     "title": "PPD: Collaboration & Group Dynamics",
-    "allDay": false,
+    "allDay": true,
     "start": "2019-05-02"
   },
   {
     "title": "PPD: Networking & Negotiations",
-    "allDay": false,
+    "allDay": true,
     "start": "2019-05-09"
   },
   {
@@ -47,17 +47,17 @@
   },
   {
     "title": "PPD: Labour Laws and Your Rights in the Workplace",
-    "allDay": false,
+    "allDay": true,
     "start": "2019-05-29"
   },
   {
     "title": "PPD: Resume & LinkedIn",
-    "allDay": false,
+    "allDay": true,
     "start": "2019-06-13"
   },
   {
     "title": "PPD: Being Your Own Boss  ",
-    "allDay": false,
+    "allDay": true,
     "start": "2019-06-20"
   },
   {
