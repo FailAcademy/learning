@@ -110,7 +110,7 @@ You can skip this challenge if already discussed the 4 classes, e.g. already whi
 
 # JS and the DOM
 
-Before we get started...we are in a jQuery-free zone!
+Before we get started...some review!
 
 So how do we **store references** to DOM elements using plain vanilla JS?
 
@@ -122,7 +122,7 @@ And how will we **set attributes/values** on those elements?
 
 # DOM Selectors
 
-So far we have only used jQuery to select DOM elements, be we can (of course!) do this with regular JS too:
+There are multiple ways to access DOM elements with JS:
 
 ```js
 document.querySelector("div.game-wrapper");
@@ -138,7 +138,7 @@ Try running these lines of code in your browser console to see what you get back
 
 # DOM Manipulation
 
-Just like with jQuery, we can create and append new elements to the DOM, and set/change their attributes:
+Recall that we can also create and append new elements to the DOM, and set/change their attributes:
 
 ```js
 let el = document.getElementById("game");
@@ -308,7 +308,14 @@ Lastly, how will you append the `<rect>` and `<line>` inside the `<svg>` rendere
 
 ???
 
-Update the render method in **Board.js**
+Talk about why taking an approach like this to get a reference to the game's outer SVG is not ideal:
+
+```js
+document.getElementsByTagName("svg")[0].appendChild(rect);
+document.getElementsByTagName("svg")[0].appendChild(line);
+```
+
+Update the render method in **Board.js**:
 
 ```
 render(svg) {
@@ -1598,29 +1605,41 @@ this.score2.render(svg, this.player2.score);
 
 Our pong game wouldn't be complete without sound effects!
 
-The Pong Starter comes with a few sound effects in the `public` directory. Let's instantiate a new `Audio` object inside of our `Ball` class `constructor`:
+The Pong Starter comes with a few sound effects in the `public` directory. Where do you think we'll need to add these two lines of code in the `Ball` class?
 
 ```js
-this.ping = new Audio("public/sounds/pong-01.wav");
+import pingSound from "../../public/sounds/pong-01.wav";
+```
+
+```js
+this.ping = new Audio(pingSound);
 ```
 
 This [`HTMLAudioElement`](https://developer.mozilla.org/en/docs/Web/API/HTMLAudioElement) provides a number of methods we can call to actually do something with this sound. How do we play it? Where should we call the appropriate method on it to make the "ping" sound?
 
 ???
 
-add to the constructor in **Ball.js**
+Add to the top of `Ball.js`:
 
-```
-this.ping = new Audio('public/sounds/pong-01.wav');
+```js
+import pingSound from "../../public/sounds/pong-01.wav";
 ```
 
-add to **paddleCollision** should be there just uncomment
+_The Parcel bundler requires the sound file to be imported, rather than passing the file path directly into the constructor!_
 
+Add to the constructor in `Ball.js`:
+
+```js
+this.ping = new Audio(pingSound);
 ```
+
+Add to `paddleCollision`:
+
+```js
 this.ping.play();
 ```
 
-Talk about other sounds they could use etc...
+Let students know they can use any sound they like :)
 
 ---
 

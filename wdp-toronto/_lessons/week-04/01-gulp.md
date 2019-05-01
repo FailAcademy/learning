@@ -7,21 +7,9 @@ lesson_date: 2019-04-29
 
 ## Pre-Work
 
-### Software Installation:
+Watch this video prior to class to gain some familiarity with what Gulp is capable of doing.
 
-Prior to class, please download and install Node.js:
-
-- [Node.js website](https://nodejs.org/en/)
-
-**Note:** If you are working on a Mac, [consider installing Homebrew first](http://brew.sh/), then use Homebrew to install Node instead by running:
-
-`brew install node`
-
-### Reading:
-
-Visit **[this GitHub repo](https://github.com/osscafe/gulp-cheatsheet)** and have a look at the **English JavaScript** cheatsheets to get a feeling for what Gulp does, and for the code we'll be writing in today's lesson.
-
-You are encouraged to save these cheatsheets for your own reference.
+- [Using Gulp 4 in your workflow for Sass and JS files](https://www.youtube.com/watch?time_continue=336&v=-lG0kDeuSJk)
 
 ---
 
