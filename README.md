@@ -104,7 +104,7 @@ curl -H "Authorization: token <very-long-access-token>" https://api.github.com/o
 
 Go to RED Academy's GitHub account and follow [these 5 steps](https://github.com/benbalter/jekyll-auth/blob/master/docs/getting-started.md#create-a-github-application) to set up the GitHub application that we will use for authentication purposes.
 
-Be sure to follow the established naming conventions (e.g. `red-city-course`)!
+Be sure to follow the established naming conventions (e.g. `red-course-code-city`)!
 
 _Note: If you mistakenly create the app under your personal account, be sure to transfer ownership of the app to RED Academy._
 
@@ -156,10 +156,10 @@ git push origin wdp-toronto-production
 
 **Step 3: Heroku App Configuration**
 
-Next, create your Heroku app by running the following command from your local site's directory while following the established naming conventions (e.g. `red-city-course`). For example:
+Next, create your Heroku app by running the following command from your local site's directory while following the established naming conventions (e.g. `red-course-code-city`). For example:
 
 ```bash
-heroku create red-to-wdp
+heroku create red-wdp-to
 ```
 
 _Note: The course name must match the name of the GitHub application you previously created!_
