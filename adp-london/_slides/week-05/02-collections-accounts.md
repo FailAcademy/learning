@@ -146,18 +146,37 @@ Luckily, MongoDB drivers take care of automatically converting and storing data 
 
 # Get Started
 
-To start-up the MongoDB server, enter this in your terminal:
+Make sure you install MongoDB development server from (**[this address](https://www.mongodb.com/download-center/community?jmp=docs)**) 
+if you haven't installed it using `brew`.
 
-Make sure you install MongoDB development server from (**[this address](https://www.mongodb.com/download-center/community?jmp=docs)**)
+Create the directory for MongoDB 
 
-Create the directory for MongoDB ```bash sudo mkdir -p /data/db/```
-Make sure the permission allow mongod user to RW the file we create. ```bash sudo chmod -R go+w /data/db```
-Don't forget to Export the binary package. ```bash export PATH=<path-to-mongodb-folder>/bin:$PATH
+```bash 
+mkdir -p $HOME/data/db/
+```
+
+Check if the `mongod` binary is in your `PATH`
+
+```bash
+which mongod
+```
+
+If not, don't forget to Export the binary package. You may need this in your `.bashrc` file as well.
+
+```bash 
+export PATH=<path-to-mongod-folder>/bin:$PATH
+```
+
+---
+
+# Get Started
 
 You're in good shape to start the server now.
 
+To start-up the MongoDB server, enter this in your terminal:
+
 ```bash
-mongod
+mongod -dbpath $HOME/data/db
 ```
 
 **Open another terminal window** and type the following to launch the Mongo shell:
