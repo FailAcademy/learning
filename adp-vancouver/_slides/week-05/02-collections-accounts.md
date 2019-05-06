@@ -1,7 +1,6 @@
 ---
 layout: slidedeck
 title: Collections and Accounts Slides
-
 ---
 
 {% highlight html %}
@@ -146,24 +145,21 @@ Luckily, MongoDB drivers take care of automatically converting and storing data 
 
 # Get Started
 
-Make sure you install MongoDB development server from (**[this address](https://www.mongodb.com/download-center/community?jmp=docs)**) 
-if you haven't installed it using `brew`.
+First, make sure you install MongoDB from (**[this address](https://www.mongodb.com/download-center/community?jmp=docs)**) if you haven't installed it using `brew`. Now create the directory for MongoDB:
 
-Create the directory for MongoDB 
-
-```bash 
+```bash
 mkdir -p $HOME/data/db/
 ```
 
-Check if the `mongod` binary is in your `PATH`
+Check if the `mongod` binary is in your `PATH`:
 
 ```bash
 which mongod
 ```
 
-If not, don't forget to Export the binary package. You may need this in your `.bashrc` file as well.
+If not, don't forget to `export` the binary package. You may need this in your `.bashrc`/`.bash_profile` file as well.
 
-```bash 
+```bash
 export PATH=<path-to-mongod-folder>/bin:$PATH
 ```
 
