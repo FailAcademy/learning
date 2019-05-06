@@ -184,10 +184,10 @@ Instances let you create **reusable** structured data. Think of a `class` like a
 ```js
 let joe = new Person("Joe", "Schmo");
 let mary = new Person("Mary", "Jones");
-let al = new Person("Barrack", "Obama");
+let barrack = new Person("Barrack", "Obama");
 ```
 
-In this example, `joe`, `mary`, and `al` are instances of `Person`.
+In this example, `joe`, `mary`, and `barrack` are instances of `Person`.
 
 **Keywords:** `new`
 
@@ -208,7 +208,7 @@ class Person {
 
 In this example, `firstName` is a property of `Person`.
 
-**Note:** The `constructor` method allows you to perform actions when an instance of a class is instantiated, so this our opportunity to initially define properties.
+**Note:** The `constructor` method is optional and allows you to perform actions when an instance of a class is instantiated, so this our opportunity to initially define properties.
 
 ---
 
@@ -253,7 +253,7 @@ What does `this` refer to in the previous example?
 
 **A)** The `Person` class
 
-**B)** The instance of `Person` called `joe`
+**B)** The instance of `Person` 
 
 **C)** `that`
 
@@ -261,7 +261,7 @@ What does `this` refer to in the previous example?
 
 # Exercise 2
 
-Pick one of the classes your group modelled in the previous soccer game exercise, and use that to **write your first ES2015 class**.
+Pick one of the classes your group modelled in the previous tennis game exercise, and use that to **write your first ES2015 class**.
 
 Ensure that you set all the appropriate **properties** in the `constructor` and create all the required **methods** for your class.
 
@@ -292,7 +292,7 @@ class Person {
 class Student extends Person {}
 ```
 
-In this example `Student` extends `Person`, which means it is a **subclass** of `Person` and therefor **inherits** all of the properties and methods from the `Person` class.
+In this example `Student` extends `Person`, which means it is a **subclass** of `Person` and therefore **inherits** all of the properties and methods from the `Person` class.
 
 ---
 
@@ -333,7 +333,7 @@ Joe.name; // Joe
 
 Now model our own classroom using the following classes. Note that `WebDevStudent` should be a subclass of `Student` and `Student` should be a subclass of `Person`. Create at least **three properties** and **one method** on each class.
 
-- Clazz (`class` is a reserved keyword in JS)
+- ClassRoom (`class` is a reserved keyword in JS)
 - Person
 - Student
 - WebDevStudent
