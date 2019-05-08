@@ -1,7 +1,7 @@
 ---
 layout: lesson
-title: Server-Side Authentication
-slides: ['_slides/week-07/02-auth-server.md']
+title: Server-Side Authentication I
+slides: ['_slides/month-06/03-auth-server-I.md']
 lesson_date: 2019-11-14
 ---
 

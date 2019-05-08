@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Mobile Databases II
-slides: ['_slides/month-09/02-mobiledb-II.md']
+slides: ['_slides/month-09/04-mobiledb-II.md']
 lesson_date: 2020-02-13
 ---
 

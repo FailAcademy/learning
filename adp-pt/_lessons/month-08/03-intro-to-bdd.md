@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Behaviour Driven Development
-slides: ['_slides/week-14/02-intro-to-bdd.md']
+slides: ['_slides/month-08/03-intro-to-bdd.md']
 lesson_date: 2020-01-23
 ---
 

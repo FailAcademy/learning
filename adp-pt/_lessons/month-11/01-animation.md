@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: React Native Animation
-slides: ['_slides/week-17/01-animation.md']
+slides: ['_slides/month-11/01-animation.md']
 lesson_date: 2020-03-10
 ---
 

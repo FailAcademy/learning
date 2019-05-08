@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Intro to TDD
-slides: ['_slides/week-12/01-intro-to-tdd.md']
+slides: ['_slides/month-08/01-intro-to-tdd.md']
 lesson_date: 2020-01-14
 ---
 

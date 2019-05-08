@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Introducing React II
-slides: ['_slides/month-03/02-intro-to-react-II.md']
+slides: ['_slides/month-03/03-intro-to-react-II.md']
 lesson_date: 2019-08-22
 ---
 

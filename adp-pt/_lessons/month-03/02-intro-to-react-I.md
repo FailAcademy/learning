@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Introducing React I
-slides: ['_slides/month-03/01-intro-to-react-I.md']
+slides: ['_slides/month-03/02-intro-to-react-I.md']
 lesson_date: 2019-08-20
 ---
 

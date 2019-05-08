@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Functional Programming
-slides: ['_slides/week-04/01-functional-programming.md']
+slides: ['_slides/month-03/01-functional-programming.md']
 lesson_date: 2019-08-15
 ---
 

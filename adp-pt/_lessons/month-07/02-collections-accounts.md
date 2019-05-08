@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Collections and Accounts
-slides: ['_slides/week-09/02-collections-accounts.md']
+slides: ['_slides/month-07/02-collections-accounts.md']
 lesson_date: 2019-12-10
 ---
 
