@@ -34,10 +34,11 @@ template: inverse
 
 # Lists and RN
 
-React Native provides three different components for tranforming data into lists in your app UI:
+React Native provides several different components for transforming data into lists in your app UI:
 
 - [FlatList](https://facebook.github.io/react-native/docs/flatlist.html) (simpler)
 - [SectionList](https://facebook.github.io/react-native/docs/sectionlist.html) (more features)
+- ListView (deprecated – do not use!)
 
 ---
 
@@ -164,8 +165,8 @@ The `<SectionList>` component is very similar to the `<FlatList>`, but the data 
 ```js
 <SectionList
   sections={[
-    { title: 'ADP', data: ['Bob', 'Alice'] },
-    { title: 'WDP', data: ['Anne', 'Mary', 'Joe'] },
+    { title: "ADP", data: ["Bob", "Alice"] },
+    { title: "WDP", data: ["Anne", "Mary", "Joe"] }
   ]}
   renderItem={({ item }) => <Text>{item}</Text>}
   renderSectionHeader={({ section }) => <Text>{section.title}</Text>}
@@ -200,7 +201,7 @@ Our project organization plan of attack:
 
 # Project Folder
 
-We won't want to depend on `index.js` exclusively as our app grows. Let's add a directory to house all of our RN code called `app`:
+We won't want to depend on `index.js` exclusively as our app grows. Let's add a directory to house all of our RN code called `js`:
 
 ```bash
 |-- __tests__
@@ -238,20 +239,20 @@ You will import `js/App.js` into the root `index.js` of your project and pass yo
 
 # Example
 
-In `index.js`:
-
 ```js
-import { AppRegistry } from 'react-native';
-import App from './js/App';
+// index.js
 
-AppRegistry.registerComponent('HelloWorld', () => App);
+import { AppRegistry } from "react-native";
+import App from "./js/App";
+
+AppRegistry.registerComponent("HelloWorld", () => App);
 ```
 
-In `js/App.js`:
-
 ```js
-import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+// js/App.js
+
+import React, { Component } from "react";
+import { View, Text } from "react-native";
 
 export default class App extends Component {
   render() {
@@ -283,7 +284,7 @@ However, it usually make sense to set some base styles for our colours and typog
 
 ---
 
-# Scenes
+# Screens
 
 Each screen of your app will be a container/presentational component combo:
 
@@ -299,8 +300,8 @@ Each screen of your app will be a container/presentational component combo:
 And in the `index.js` we follow this pattern:
 
 ```js
-import AboutContainer from './AboutContainer';
-import About from './About';
+import AboutContainer from "./AboutContainer";
+import About from "./About";
 
 export { About };
 export default AboutContainer;
@@ -323,7 +324,7 @@ We can use a similar directory structure for our reusable, stateless UI componen
 In `index.js`:
 
 ```js
-import UserAvatar from './UserAvatar';
+import UserAvatar from "./UserAvatar";
 
 export default UserAvatar;
 ```
@@ -332,10 +333,7 @@ export default UserAvatar;
 
 # What We've Learned
 
-- What React Native is and why it is awesome
-- How to configure our dev environments and debug RN apps
-- How to use and style RN's mobile UI components
-- How to use the ListView component to display fetched data
+- How to use list components to display fetched data
 - How to organize an RN project effectively
 
 ---

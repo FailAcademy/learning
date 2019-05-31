@@ -24,7 +24,8 @@ layout: false
 2.  Dev environment config and debugging
 3.  Basic mobile components
 4.  Styling components
-5.  Project organization
+5.  Lists and data
+6.  Project organization
 
 ---
 
@@ -107,8 +108,8 @@ class: center, middle
 Recall that when we use React, we also need to include the `ReactDOM` module to render our components to the DOM:
 
 ```js
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 class App extends Component {
   render() {
@@ -116,7 +117,7 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 ---
@@ -126,8 +127,8 @@ ReactDOM.render(<App />, document.getElementById('root'));
 Our approach to building a React Native components is noticeably similar, but we import the `AppRegistry` module instead of `ReactDOM`:
 
 ```js
-import React, { Component } from 'react';
-import { AppRegistry, View, Text } from 'react-native';
+import React, { Component } from "react";
+import { AppRegistry, View, Text } from "react-native";
 
 class App extends Component {
   render() {
@@ -139,7 +140,7 @@ class App extends Component {
   }
 }
 
-AppRegistry.registerComponent('App', () => App);
+AppRegistry.registerComponent("App", () => App);
 ```
 
 ---
@@ -236,7 +237,7 @@ For now, we will work primarily in `index.js`, but will talk more in depth about
 But how does RN know what component to bind to the view when our app launches? In our `index.js` file we have:
 
 ```js
-AppRegistry.registerComponent('HelloWorld', () => HelloWorld);
+AppRegistry.registerComponent("HelloWorld", () => HelloWorld);
 ```
 
 And if we look in `ios/HelloWorld/AppDelegate.m` we'll see:
@@ -299,8 +300,8 @@ _Before we proceed..._
 Unlike HTML elements, RN's built-in mobile UI components are modules we must selectively import from `react-native` wherever we want to use them in our own components:
 
 ```js
-import React, { Component } from 'react';
-import { Image, Text, View } from 'react-native';
+import React, { Component } from "react";
+import { Image, Text, View } from "react-native";
 
 // ...your component goes here
 ```
@@ -380,7 +381,7 @@ To highlight an element on press, use `<TouchableHighlight>` [(ref)](https://fac
 <TouchableHighlight
   onPress={() => {}}
   activeOpacity={75 / 100}
-  underlayColor={'rgb(210,210,210)'}
+  underlayColor={"rgb(210,210,210)"}
 >
   <Text>Press me!</Text>
 </TouchableHighlight>
@@ -487,8 +488,8 @@ The previous style objects occasionally offer an advantage over the `StyleSheet.
 **Example:**
 
 ```js
-import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from "react";
+import { StyleSheet, Text, View } from "react-native";
 
 export default class HelloWorld extends Component {
   render() {
@@ -503,8 +504,8 @@ export default class HelloWorld extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-  },
+    alignItems: "center"
+  }
 });
 ```
 
@@ -520,8 +521,7 @@ RN supports Flexbox for layouts, with some small differences:
 
 We also use CSS positioning in our layouts (e.g. `absolute`), but floats are not supported. The usual box model properties are available as well.
 
-**[Check out this Flexbox Cheat-Sheet](https://medium.com/wix-engineering/the-full-react-native-layout-cheat-sheet-a4147802405c)** <br/>
-**[You can read more on layouts here.](https://facebook.github.io/react-native/docs/flexbox.html)**
+Check out this **[Flexbox Cheat-Sheet](https://medium.com/wix-engineering/the-full-react-native-layout-cheat-sheet-a4147802405c)** and **[see the official docs](https://facebook.github.io/react-native/docs/flexbox.html)**.
 
 ---
 
