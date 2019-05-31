@@ -17,7 +17,7 @@ You can [download the project assets here](https://s3-us-west-2.amazonaws.com/re
 
 You can fetch content for this app at the following GraphQL endpoint:
 
-**https://r10.academy.red/graphl**
+**https://r10.academy.red/graphql**
 
 To explore the schema for this GraphQL API, visit the same URL in your browser to launch the GraphQL playground interface.
 
