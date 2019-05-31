@@ -843,7 +843,7 @@ export default UserAvatar;
 - What React Native is and why it is awesome
 - How to configure our dev environments and debug RN apps
 - How to use and style RN's mobile UI components
-- How to use the ListView component to display fetched data
+- How to use list components to display fetched data
 - How to organize an RN project effectively
 
 ---
