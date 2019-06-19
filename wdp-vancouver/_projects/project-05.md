@@ -152,4 +152,4 @@ Once you have finished working on your site, please export your database by foll
 
 **Submitting your project:**
 
-When you're ready to submit your project, **please email a link to your GitHub repository containing your project** with your **database file attached** to dev@redacademy.com.
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** with your **database file attached** to jim.bennett@redacademy.com
