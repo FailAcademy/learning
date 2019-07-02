@@ -33,7 +33,7 @@ layout: false
 
 .right-column[
 
-Here are the main takeaways from yesterday's lesson.
+Here are the main takeaways from the previous lesson.
 Can you think of any other important points?
 
 - Data is stored in tables
@@ -48,7 +48,7 @@ Can you think of any other important points?
 
 # Constraints in Detail
 
-Here is an example of a constrain we've added to a table in our Database:
+Here is an example of a **Constraint** we've added to a table in our Database:
 
 ```sql
 TEXT NOT NULL
@@ -56,7 +56,7 @@ TEXT NOT NULL
 
 Constraining our columns ensures that any data we add to our database is consistent.
 
-- What other constraints are present on the columns in tables we created?<br/>
+- What other constraints are present on the columns in tables we created?
 - Why are constraints important?
 
 .footnote[.red[*]

@@ -55,8 +55,10 @@ In this exercise, we'll go through the process of setting up a database for your
 
 - Create a new database using the Postgres cli.
 
-- Use the `CREATE USER <name> WITH PASSWORD <pw>;` command to create a new user and configure a password for each database.
+- Use the `CREATE USER <name> WITH PASSWORD '<pw>';` command to create a new user and configure a password for each database.
   See [documentation](https://www.Postgres.org/docs/9.6/static/sql-createuser.html).
+
+Use `boomtown` for the user, name, and password to make things simple to remember.
 
 (This setup is meant to mock a real world database setup, and to give us the opportunity to become familiar with
 creating and authorizing a new Database on your local machine. In a real production setting, our setup would be more complicated).
@@ -67,18 +69,15 @@ creating and authorizing a new Database on your local machine. In a real product
 
 Populating your Relational Database.
 
-- Use the `CREATE TABLE` command to set up some tables in our test database.
-- Set the appropriate data-types for each column in our schema.
+Use what you know to create the **Tags** & **Users**, table!
 
-**Data Types** <br/>
-What types of data do we need to model for our application?
+Tags will need to contain fields for ID and title. Users will need to contain fields for ID, email, full name and bio. 
 
-**Normalization** <br/>
-How should we "Normalize" the data in our schema, according to the rules of Third Normal Form?
+_Hint: use the `\dt` command to check if the table was successfully created._
 
-**Handling Ids** <br/>
-Each entry into the database for each of the schema should have an id. This will be necessary for building
-the relationships between data in out database.
+**Handling IDs** <br/>
+Each entry into the database for each of the schema should have an ID. This will be necessary for building
+the relationships between data in our database.
 
 - What data type is provided to implement and auto-incrementing id column?
 - What are some important behaviors of an auto-incrementing column?
@@ -87,10 +86,7 @@ the relationships between data in out database.
 
 ## Exercise 3
 
-Postgres is a 'Relational Database'. So far we have not specified any relationships between our tables.
-Let's create relationships between the tables we created in the last lesson.
-
-The relationships we'll create are defined as follows:
+Postgres is a 'Relational Database'. The relationships we can create are:
 
 - 1 to 1 (1:1)
 - 1 to many (1:n)
@@ -101,21 +97,8 @@ To do this we'll need to add "foreign key constraints" to some columns.
 **Many to many relationships** :<br/>
 Creating many to many relationships requires the creation of a "Link table".
 
-- How are Link Tables implemented.
-- Why are link tables necessary in order to define n:n relationships between columns in our database?
-- What are the many to many relationships in our project application's database?
+Use what you know, and see if you can reason about how to implement a many-to-many relationship between **Items** and **Tags** in your database.
 
----
-
-## Exercise 4
-
-Finish up your database by adding the Users table. <br/>
-Here are the columns we'll need to add:
-
-- id
-- email
-- fullname
-- bio
 
 ---
 

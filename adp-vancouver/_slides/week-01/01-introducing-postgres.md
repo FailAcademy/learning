@@ -36,9 +36,9 @@ A database is an organized collection of data. The data is typically organized t
 
 #Why we use Databases?
 
-Think of how we get the information about the weather from the newspaper. Information can be printed but it cannot be continuously updated without printing a new paper. We call this **static** data.
+Think of how we get the information about the weather from the newspaper. Information can be printed but it cannot be continuously updated without printing a new paper. We call this **static** data. Another example is a JSON file. 
 
-We've used static data in the form of a JSON file, in our project already. Today we're going to replace static data with a database, which will allow us to update the data in our application **dynamically**, whilst persisting that data.
+We can replace static data with a database, which will allow us to update the data in our application **dynamically**, whilst persisting that data.
 
 ---
 
@@ -81,7 +81,7 @@ Google for a diagram of a large relational system. Find one and show the student
 _It's Open Source!_
 
 ???
-Take the opportunity to contrast Open Source technology vs proprietary tech, ie Microsoft's MSSQL.
+Take the opportunity to contrast Open Source technology vs proprietary tech, i.e. Microsoft's MSSQL.
 
 ---
 
@@ -127,7 +127,6 @@ To learn more, type the following command into the shell:
 ```
 
 This command will list all of the SQL commands you can use to interact with your Relational Databases!<br/>
-_To return to the shell type ctrl+c_
 
 ---
 
@@ -158,14 +157,12 @@ In this exercise, we'll go through the process of setting up a database for your
 - Use the `CREATE USER <name> WITH PASSWORD '<pw>';` command to create a new user and configure a password for each database.
   See [documentation](https://www.Postgres.org/docs/9.6/static/sql-createuser.html).
 
-For ""boomtown
-
-(This setup is meant to mock a real world database setup, and to give us the opportunity to become familiar with
-creating and authorizing a new Database on your local machine. In a real production setting, our setup would be more complicated).
-
-- For the project, use 'boomtown' for the user, name, and password to make things simple to remember.
+For the project, use `boomtown` for the user, name, and password to make things simple to remember.
 
 ???
+
+This setup is meant to mock a real world database setup, and to give us the opportunity to become familiar with
+creating and authorizing a new Database on your local machine. In a real production setting, our setup would be more complicated.
 
 Encourage the students to use the Postgres Docs as well as the help commands to determine how to complete the exercise.
 
@@ -185,25 +182,25 @@ CREATE DATABASE <db-name>;
 GRANT ALL PRIVILEGES ON DATABASE <db-name> TO <db-user>;
 ```
 
-???
-
-- For the project, use 'boomtown' for the user, name, and password to make things simple to remember.
+- For the project, use 'boomtown' for the user, database name, and password to make things simple to remember.
 
 ---
 
 # More `psql` commands
 
-To list the databases we've created in the previous exercise use the following command from the psql shell:
+To list the databases we've created in the previous exercise use the following command from the `psql` shell:
 
 ```
 \l
 ```
 
-To list the new Postgres users we created use the following command from the psql shell:
+To list the new Postgres users we created use the following command from the `psql` shell:
 
 ```
 \du
 ```
+
+
 
 ---
 
@@ -249,7 +246,7 @@ class: center, middle
 
 # A Table for Items
 
-First, log into psql using a specific user & database with the following command:
+First, log into `psql` using a specific user & database with the following command:
 
 ```
 psql -U <db-user> -d <db-name>
@@ -261,7 +258,7 @@ Run the following **SQL** command to create your first table!
 CREATE TABLE IF NOT EXISTS items();
 ```
 
-- For the project, use 'boomtown' for the user, name, and password to make things simple to remember.
+- Remember we are using `boomtown` for the user, database name, and password.
 
 ---
 
@@ -276,7 +273,13 @@ ALTER TABLE items ADD COLUMN ownerid text;
 ALTER TABLE items ADD COLUMN borrowerid text;
 ```
 
-Copying and pasting each line into the psql shell allows us to modify the table we created, adding columns with their appropriate data types.
+Copying and pasting each line into the `psql` shell allows us to modify the table we created, adding columns with their appropriate data types.
+
+To check our work we can use this to list the table details:
+
+```
+\d+ <table-name>
+```
 
 ---
 
@@ -295,9 +298,9 @@ CREATE TABLE "public"."items" (
 
 ### Q & A
 
-What is the function of a Primary Key? <br/>
-What does the `serial` datatype do? <br/>
-What does the DEFAULT attribute mean? <br/>
+- What is the function of a Primary Key? <br/>
+- What does the `serial` datatype do? <br/>
+- What does the DEFAULT attribute mean? <br/>
 
 ???
 
@@ -324,6 +327,8 @@ DROP TABLE "public"."items";
 
 Populating your Relational Database.
 Use what you know to create the **Tags** & **Users**, table!
+
+Tags will need to contain fields for ID and title. Users will need to contain fields for ID, email, full name and bio. 
 
 _Hint: use the `\dt` command to check if the table was successfully created._
 
@@ -357,7 +362,7 @@ template: inverse
 
 We've created 2 tables in our database. Each table will hold information about a specific _thing_ in our application.
 
-Now, it's time to use our Relational Database to create relationships between them! But first it's helpful to know what kind of relationships we can define. Here are the most common:
+Now, it's time to use our **Relational Database** to create relationships between them! But first it's helpful to know what kind of relationships we can define. Here are the most common:
 
 - 1 to 1 (1:1)
 - 1 to many (1:n)
@@ -376,7 +381,7 @@ We haven't mentioned Users yet. Introduce them now.
 
 # Primary Keys in Action
 
-Imagine we're storing Users in our Database (We're going to put users in a separate database and connect them using GraphQL, which we'll talk about later):
+Imagine we're storing Users in our Database (We're actually going to put users in a separate database and connect them using GraphQL, which we'll talk about later):
 
 ```sql
 CREATE TABLE "public"."users" (
@@ -387,11 +392,13 @@ CREATE TABLE "public"."users" (
 );
 ```
 
+In Relational Databases, the PRIMARY KEY is used to define relationships between tables. 
+
 ---
 
 # Primary Keys in Action
 
-In Relational Databases, the PRIMARY KEY is used to define relationships between tables. To relate users to their items, we would use the PRIMARY KEY as follows, when creating the items table:
+To relate users to their items, we would use the keys from the users table for our `ownerid` and `borrowerid` fields:
 
 ```sql
 CREATE TABLE "public"."items" (
@@ -405,20 +412,31 @@ CREATE TABLE "public"."items" (
 );
 ```
 
-In what other table will we find the itemid?
+But `items` already exists, to remove columns we can use: 
+
+```sql
+ALTER TABLE items DROP COLUMN ownerid;
+ALTER TABLE items DROP COLUMN borrowerid;
+```
 
 ---
 
 # Primary Key Constraint
 
 ```sql
-"ownerid" integer REFERENCES users (id),
-"borrowerid" integer REFERENCES users (id)
+ALTER TABLE items ADD COLUMN ownerid integer REFERENCES users (id);
+ALTER TABLE items ADD COLUMN borrowerid integer REFERENCES users (id);
 ```
 
-These lines are telling Postgres that the values stored in these columns will be references to values stored in the `users` table, namely the userid of actual users.
+These lines are telling Postgres that the values stored in these columns will be references to values stored in the `users` table, namely the userid of actual users. 
 
 This is called a **Foreign Key constraint**, because no other value can be stored in this column, and it's a common way of defining relationships between tables in a relational database.
+
+To add the `CHECK`:
+
+```sql
+ALTER TABLE "public"."items" ADD CHECK (borrowerid != ownerid);
+```
 
 ???
 WARNING: This is just for example, we're not creating a user table for the project!
@@ -463,7 +481,7 @@ CREATE TABLE "public"."itemtags" (
 
 # Lab activity
 
-Now that we've created our schema (table) for our project application, use the `INSERT` command to populate your data base with some mock data.
+Now that we've created our schema (table) for our project application, use the `INSERT` command to populate your database with some mock data.
 
 Add the following mock data to your database:
 
