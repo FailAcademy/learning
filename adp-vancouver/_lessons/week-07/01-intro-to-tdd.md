@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to TDD
 slides: ['_slides/week-07/01-intro-to-tdd.md']
-lesson_date: 2019-05-21
+lesson_date: 2019-08-13
 ---
 
 ## Pre-Work

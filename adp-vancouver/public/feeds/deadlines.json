@@ -2,37 +2,37 @@
   {
     "title": "Boomtown Pt. 1 Due",
     "allDay": true,
-    "start": "2019-04-22",
+    "start": "2019-07-15",
     "url": "/project/01a-node-and-db/"
   },
   {
     "title": "Boomtown Pt. 2 Due",
     "allDay": true,
-    "start": "2019-05-06",
+    "start": "2019-07-29",
     "url": "/project/01b-react-and-redux"
   },
   {
     "title": "React + Meteor Project Due",
     "allDay": true,
-    "start": "2019-05-21",
+    "start": "2019-08-13",
     "url": "/project/02-meteor/"
   },
   {
     "title": "Coding Interview Due",
     "allDay": true,
-    "start": "2019-05-27",
+    "start": "2019-08-19",
     "url": "/project/03-coding-interview/"
   },
   {
     "title": "r10 Due",
     "allDay": true,
-    "start": "2019-06-03",
+    "start": "2019-08-26",
     "url": "/project/04-react-native"
   },
   {
     "title": "Community Project Due",
     "allDay": true,
-    "start": "2019-06-28",
+    "start": "2019-09-20",
     "url": "/project/05-community"
   }
 ]

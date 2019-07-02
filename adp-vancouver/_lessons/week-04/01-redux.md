@@ -2,7 +2,7 @@
 layout: lesson
 title: Redux
 slides: ['_slides/week-04/01-redux.md']
-lesson_date: 2019-04-29
+lesson_date: 2019-07-22
 ---
 
 ## Pre-Work

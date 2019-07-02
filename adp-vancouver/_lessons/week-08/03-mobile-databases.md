@@ -2,7 +2,7 @@
 layout: lesson
 title: Mobile Databases
 slides: ['_slides/week-08/03-mobile-databases.md']
-lesson_date: 2019-05-29
+lesson_date: 2019-08-21
 ---
 
 ## Pre-work

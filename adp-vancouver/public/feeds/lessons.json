@@ -17,65 +17,70 @@
    },
    {% endfor %}
    {
-      "title": "Day 1 Orientation",
+      "title": "Foundation Day 1",
       "allDay": true,
-      "start": "2019-04-08"
+      "start": "2019-07-02"
+   },
+   {
+    "title": "Foundation Day 2",
+    "allDay": true,
+    "start": "2019-07-03"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2019-04-12"
+      "start": "2019-07-11"
    },
    {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2019-04-18"
+    "start": "2019-07-12"
     },
     {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2019-05-03"
+      "start": "2019-07-26"
     },
   {
     "title": "Self Directed Meteor Project Work",
     "allDay": true,
-    "start": "2019-05-09",
-    "end": "2019-05-18"
+    "start": "2019-08-01",
+    "end": "2019-08-13"
  },
    {
       "title": "Portfolio Week",
       "allDay": true,
-      "start": "2019-06-03",
-      "end": "2019-06-08"
+      "start": "2019-08-26",
+      "end": "2019-09-02"
    },
    {
       "title": "Community Project Work",
       "allDay": true,
-      "start": "2019-06-10",
-      "end": "2019-06-29"
+      "start": "2019-09-03",
+      "end": "2019-09-20"
    },
     {
-      "title": "PPD Lesson",
+      "title": "Career Development",
       "allDay": false,
-      "start": "2019-01-24T13:00:00+00:00",
-      "end": "2019-01-24T15:00:00+00:00"
+      "start": "2019-08-01T13:00:00+00:00",
+      "end": "2019-08-01T15:00:00+00:00"
     },
     {
-      "title": "PPD Lesson",
+      "title": "Career Development",
       "allDay": false,
-      "start": "2019-02-07T13:00:00+00:00",
-      "end": "2019-02-07T15:00:00+00:00"
+      "start": "2019-08-22T13:00:00+00:00",
+      "end": "2019-08-22T15:00:00+00:00"
     },
     {
-      "title": "PPD Lesson",
+      "title": "Career Development",
       "allDay": false,
-      "start": "2019-02-21T13:00:00+00:00",
-      "end": "2019-02-21T15:00:00+00:00"
+      "start": "2019-09-05T13:00:00+00:00",
+      "end": "2019-09-05T15:00:00+00:00"
     },
     {
-      "title": "PPD Lesson",
+      "title": "Career Development",
       "allDay": false,
-      "start": "2019-03-07T13:00:00+00:00",
-      "end": "2019-03-07T15:00:00+00:00"
+      "start": "2019-09-12T13:00:00+00:00",
+      "end": "2019-09-12T15:00:00+00:00"
     }
 ]

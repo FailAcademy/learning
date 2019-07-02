@@ -2,7 +2,7 @@
 layout: lesson
 title: Client-Side Authentication
 slides: ['_slides/week-04/04-auth-client.md']
-lesson_date: 2019-05-02
+lesson_date: 2019-07-25
 ---
 
 ## Pre-Work
