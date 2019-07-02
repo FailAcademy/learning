@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 6 - GitHub Portfolio
-due: Monday, June 10th (beginning of class)
+due: Tuesday, September 3rd (beginning of class)
 ---
 
 For Project 6, you'll be getting your GitHub portfolio into tip-top shape.

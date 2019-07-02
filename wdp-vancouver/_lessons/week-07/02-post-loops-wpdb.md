@@ -2,7 +2,7 @@
 layout: lesson
 title: Custom Post Loops & the WP Database
 slides: ["_slides/week-07/02-post-loops-wpdb.md"]
-lesson_date: 2019-05-22
+lesson_date: 2019-08-14
 ---
 
 ## Pre-Work
