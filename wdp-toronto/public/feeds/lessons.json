@@ -11,28 +11,33 @@
       "url": {{lesson.url | jsonify}}
    },{% endfor %}
    {
-      "title": "Day 1 Orientation",
+      "title": "Foundation Day",
       "allDay": true,
-      "start": "2019-04-08"
+      "start": "2019-07-02"
+   },
+   {
+      "title": "Foundation Day",
+      "allDay": true,
+      "start": "2019-07-03"
    },
    {
       "title": "Project 1 Check-in",
       "allDay": true,
-      "start": "2019-04-16"
+      "start": "2019-07-12"
    },
    {
       "title": "Pong Code Along",
       "allDay": true,
-      "start": "2019-04-25"
+      "start": "2019-07-18"
    },
    {
     "title": "Pong Code Along",
     "allDay": true,
-    "start": "2019-04-26"
+    "start": "2019-07-19"
    },
    {
       "title": "Design Presentations",
       "allDay": true,
-      "start": "2019-06-07"
+      "start": "2019-08-30"
    }
 ]
