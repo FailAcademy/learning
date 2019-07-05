@@ -2,7 +2,7 @@
 layout: lesson
 title: JavaScript Functions
 slides: ['_slides/week-03/02-javascript-functions.md']
-lesson_date: 2019-07-16
+lesson_date: 2019-07-09
 ---
 
 ## Pre-Work

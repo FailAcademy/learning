@@ -1,13 +1,13 @@
 ---
 layout: lesson
-title: Object Oriented Programming in JS
+title: OOP - Pong Start
 slides:
   [
     "_slides/week-03/03a-oop-in-js.md",
     "_slides/week-03/03b-intro-to-svgs.md",
     "_slides/week-03/03c-pong.md",
   ]
-lesson_date: 2019-07-17
+lesson_date: 2019-07-16
 ---
 
 ## Pre-Work

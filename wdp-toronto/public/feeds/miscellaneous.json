@@ -16,46 +16,6 @@
     "start": "2019-02-18"
   },
   {
-    "title": "Career Dev: How to Find a Job + Networking",
-    "allDay": true,
-    "start": "2019-07-31"
-  },
-  {
-    "title": "Career Dev: How to Find a Job + Networking",
-    "allDay": true,
-    "start": "2019-08-01"
-  },
-  {
-    "title": "Career Dev: Resume + LinkedIn",
-    "allDay": true,
-    "start": "2019-08-21"
-  },
-  {
-    "title": "Career Dev: Resume + LinkedIn",
-    "allDay": true,
-    "start": "2019-08-22"
-  },
-  {
-    "title": "Career Dev: Contracts + Negotiations",
-    "allDay": true,
-    "start": "2019-09-04"
-  },
-  {
-    "title": "Career Dev: Contracts + Negotiations",
-    "allDay": true,
-    "start": "2019-09-05"
-  },
-  {
-    "title": "Career Dev: Mock Interviews",
-    "allDay": true,
-    "start": "2019-09-11"
-  },
-  {
-    "title": "Career Dev: Mock Interviews",
-    "allDay": true,
-    "start": "2019-09-12"
-  },
-  {
     "title": "Good Friday",
     "allDay": true,
     "start": "2019-04-19"
@@ -76,7 +36,7 @@
     "start": "2019-07-01"
   },
   {
-    "title": "BC Day",
+    "title": "Civic Holiday",
     "allDay": true,
     "start": "2019-08-05"
   },
@@ -104,5 +64,36 @@
     "title": "New Years Day",
     "allDay": true,
     "start": "2020-01-01"
+  },
+  {
+    "title": "PPD",
+    "allDay": true,
+    "start": "2019-07-10"
+  },
+  {
+    "title": "PPD",
+    "allDay": true,
+    "start": "2019-07-24"
+  },
+  {
+    "title": "PPD",
+    "allDay": true,
+    "start": "2019-08-07"
+  },
+  {
+    "title": "PPD",
+    "allDay": true,
+    "start": "2019-08-21"
+  },
+  {
+    "title": "Design Presentations",
+    "allDay": true,
+    "start": "2019-08-09"
+  },
+  {
+    "title": "Mock Interviews",
+    "allDay": true,
+    "start": "2019-09-04"
   }
+
 ]
