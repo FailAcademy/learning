@@ -2,7 +2,7 @@
 layout: lesson
 title: Ajax, JSON, and APIs
 slides: ["_slides/week-04/03-ajax-apis.md"]
-lesson_date: 2019-05-01
+lesson_date: 2019-07-23
 ---
 
 ## Pre-Work

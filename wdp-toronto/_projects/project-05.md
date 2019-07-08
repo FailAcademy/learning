@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 5 - Quotes on Dev
-due: Monday, March 4th (beginning of class)
+due: Monday, August 26th (beginning of class)
 ---
 
 For Project 5, you will combine your JavaScript and WordPress skills together to build out the functionality for a website called Quotes on Dev using the WordPress REST API.
@@ -44,7 +44,7 @@ To receive a “Complete” for this project, your submission will need to satis
 ### Development Workflow Requirements
 
 - Demonstrate effective organization of the project's root directory
-- Have a Git repository initialized in its root directory which is pushed to GitHub
+- Have a Git repository initialized in the theme directory which is pushed to GitHub
 - Use a .gitignore to exclude unnecessary files/folders, and ensure that no unnecessary files/folders are erroneously committed to the repository
 - Contain an appropriate number of commits for the scope of the project
 - Contain a README.md file describing the project (e.g. technologies used, personal learnings, installation instructions, etc.) and is appropriately formatted with Markdown
@@ -152,4 +152,4 @@ Once you have finished working on your site, please export your database by foll
 
 **Submitting your project:**
 
-When you're ready to submit your project, **please email a link to your GitHub repository containing your project** with your **database file attached** to rob.hyrkiel@redacademy.com.
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** with your **database file attached** to jim.bennett@redacademy.com
