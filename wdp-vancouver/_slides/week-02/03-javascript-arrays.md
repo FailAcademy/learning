@@ -24,9 +24,10 @@ layout: false
 
 # Agenda
 
-1. Array basics
-2. Use loops to iterate arrays
-3. Modify arrays with built-in methods
+1. **Array basics**, what are arrays and how to use them
+2. **Interacting with the DOM** gather and create html elements
+2. **Using loops** to iterate through arrays
+3. **Modify arrays** with built-in methods
 
 ---
 
@@ -57,7 +58,7 @@ let shoppingList = ["milk", "bread", "eggs"];
 
 - Index numbers in an array are like the property key names in regular objects
 - Instead of choosing the names, they are always set to numbers in ascending order
-- **Weirdness alert!** In JavaScript, counting always starts at 0
+- **note** that with JavaScript, counting Arrays always starts at **0**
 - Index numbers allow us to assign and access values in arrays
 
 ---
@@ -67,8 +68,12 @@ let shoppingList = ["milk", "bread", "eggs"];
 Add values to an array by separating them with commas:
 
 ```js
-const products = ['Stretch Knit Dress', 'Cotton Blue Shirt', 
-'Checked Stretch Dress', 'Blue Hipster Backpack'];
+const products = [
+  'Stretch Knit Dress', 
+  'Cotton Blue Shirt', 
+  'Checked Stretch Dress', 
+  'Blue Hipster Backpack'
+];
 ```
 
 Note that you can put **any** JavaScript value into an array, not just strings!
@@ -99,6 +104,11 @@ const hipsterBackpack = products[3];
 
 _How would we update the third element of the array?_
 
+---
+
+template: inverse
+
+# Interacting with the DOM
 
 ---
 
@@ -127,9 +137,78 @@ const importantItemText = bucketListItemEls[2].innerText;
 
 ---
 
+# Accessing Elements
+
+In the previous example we've seen how to grab a collection of html elements with `document.querySelectorAll` however there are many other `methods` available with the `document`.
+
+**Here are a few:**
+
+- `document.getElementById('idSelector');`
+- `document.getElementsByTagName('tagName');`
+- `document.getElementsByClassName('classSelector');`
+
+---
+
+# Creating Elements
+
+We can also create new elements with the document method `document.createElement('tagName');`
+
+For example to create a list item:
+
+```JavaScript
+// create a list item
+document.createElement('li');
+
+// create a div
+document.createElement('div');
+
+// create a paragraph
+document.createElement('p');
+```
+
+---
+
+# Appending Elements
+
+Creating elements is useful with JavaScript however we still need to append them to our html.
+
+First you need to get an element to append to e.g.
+
+```html
+<ul id="bucketList"></ul>
+```
+
+We can get the `<ul>` element and store a reference to it in a variable for access later e.g.
+
+```JavaScript
+const bucketListUl = document.getElementById('bucketList');
+```
+
+---
+
+# Appending Elements
+
+Now that we've stored a reference to the `<ul>` in a variable we can append to this element using the `.append()` method.
+First let's create an element to append and add some text to the element.
+
+```JavaScript
+// create a new list item
+const newListItem = document.createElement('li');
+// add some text to the list item
+newListItem.innerText = 'Master JavaScript';
+```
+
+With the element created we can now append it to the ul.
+
+```JavaScript
+bucketListUl.append(newListItem);
+```
+
+---
+
 # Exercise 1
 
-Add items to your bucket list array, and write some JS to display each item in an `<li>` inside of the `<ul>`.
+Add items to your bucket list array, and write some JS to display each item in an `<li>` appended to the `<ul>`.
 
 **Use JSBin to complete this exercise:<br />[https://jsbin.com/?html,js,output](https://jsbin.com/?html,js,output)**
 
@@ -372,7 +451,7 @@ Be sure to explain why sorting numbers does not do what it should.
 
 # Array `filter` and `map`
 
-You'll filter and transform arrays _so often_, there are JavaScript built-in array methods that you can (and will often) use to perform both **[filtering]((https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)** and **[mapping](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)** arrays
+You'll filter and transform arrays _so often_, there are JavaScript built-in array methods that you can (and will often) use to perform both **[filtering](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)** and **[mapping](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)** of Arrays
 
 - **filter** - allows us to filter an array so only certain elements are included. 
 
