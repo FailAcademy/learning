@@ -45,12 +45,13 @@ Stick to the lessons about strings and numbers first—we'll have plenty of time
 
 ## Exercise 1
 
-Let’s map the DOM for the homepage of our project sites…
+Let’s map the DOM for the homepage of our project sites.
 
-Take a piece of paper and map out in a tree-structure what the DOM looks like for your project site.
+Take a piece of paper and map out in a tree-structure what the DOM looks like for your project site (you probably want the paper in landscape orientation).
 
-Be as detailed as you possibly can. When you’re done, pair up with a classmate and explain the design of your DOM diagram to them.
+Think carefully about the parent / child relationship between nodes.
 
+When you’re done, pair up with a classmate and explain the design of your DOM diagram to them.
 ---
 
 ## Exercise 2
