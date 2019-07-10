@@ -52,6 +52,7 @@ Take a piece of paper and map out in a tree-structure what the DOM looks like fo
 Think carefully about the parent / child relationship between nodes.
 
 When you’re done, pair up with a classmate and explain the design of your DOM diagram to them.
+
 ---
 
 ## Exercise 2
