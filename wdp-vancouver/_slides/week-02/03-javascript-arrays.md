@@ -210,7 +210,7 @@ bucketListUl.append(newListItem);
 
 Add items to your bucket list array, and write some JS to display each item in an `<li>` appended to the `<ul>`.
 
-**Use JSBin to complete this exercise:<br />[https://jsbin.com/?html,js,output](https://jsbin.com/?html,js,output)**
+**Use [JSBin](https://jsbin.com/?html,js,output) or [CodePen](https://codepen.io/) to complete this exercise**
 
 ```js
 const bucketList = [
