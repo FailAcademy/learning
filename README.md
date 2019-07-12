@@ -4,6 +4,13 @@ This is the official RED Academy LMS Monorepo.
 
 Heavy-lifting done to create this repo thanks to [https://github.com/redacademy/monorepo-tools](https://github.com/redacademy/monorepo-tools)
 
+**Contents:**
+
+- [Rationale](https://github.com/redacademy/lms#rationale)
+- [How to Use](https://github.com/redacademy/lms#how-to-use)
+- [Add New Course Repos to the Monorepo](https://github.com/redacademy/lms#add-new-course-repos-to-the-monorepo)
+- [Configure Production Branches and Deploys](https://github.com/redacademy/lms#configure-production-branches-and-deploys)
+
 ## Rationale
 
 More attention = better quality.
@@ -74,9 +81,13 @@ From `master` run `git format-patch -1 HEAD` to create a patch file containing c
 
 Solve conflicts and commit!
 
----
-
 For maximum flexibility, there are no checks on your production branches. For this to work smoothly, we'll all need to agree to keep things sane by following this workflow.
+
+## Add New Course Repos to the Monorepo
+
+When a course repo is ready to be merged into the monorepo, use the bash script in this repo as a guide:
+
+**[monorepo-tools/monorepo_add.sh](https://github.com/redacademy/monorepo-tools/blob/master/monorepo_add.sh)**
 
 ## Configure Production Branches and Deploys
 
@@ -88,7 +99,9 @@ For reference, we use [timanovsky/subdir-heroku-buildpack](https://github.com/ti
 
 To complete these steps, you must have the Heroku Toolbelt installed locally:
 
-`brew install heroku-toolbelt`
+```bash
+brew install heroku-toolbelt
+```
 
 Once the Heroku Toolbelt is installed, you can log into RED Academy's Heroku account using heroku login provided you have the appropriate credentials.
 
