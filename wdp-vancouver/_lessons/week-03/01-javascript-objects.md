@@ -31,17 +31,15 @@ After reading the article, jot down a few notes about where you have see us use 
 - [`this`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 - [Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
 - [Prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype)
-- Value vs. Reference
-- [Destructuring Assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
 ---
 
 ## Exercise 1
 
-Using [JSBin](https://jsbin.com/?html,css,js,output), create an object to describe yourself. Be sure to include the following information:
+Using [JSBin](https://jsbin.com/?html,css,js,output) or [CodePen](https://codepen.io), create an object to describe yourself. Be sure to include the following information:
 
-- First name, last name, A URL to a profile image (can be any image), Your bucket list.
-- Include as a property a list of 3 of your closest friends, with the same properties.
+- First name, last name, A URL to a profile image (you can use a placeholder image from: https://picsum.photos/).
+- Include as a property a list, Array, of information e.g. your favorite foods or movies.
 
 When you're done, use JavaScript to display everything in HTML and add some CSS.
 
@@ -62,7 +60,7 @@ Be sure to implement the following logic in your methods:
 const library = {
   // YOUR OTHER CODE HERE...
   returnItem: function(id) {
-    // check the book id is the lent property array
+    // check if the book id is in the lent property array
     // if it's there, remove that ID from the lent array
     // otherwise, log out 'This book was never borrowed.'
   },
@@ -117,7 +115,7 @@ Great video from Laracast's [ES2015 Crash Course](https://laracasts.com/series/e
 
 - [08: Awesome Object Enhancements](https://laracasts.com/series/es6-cliffsnotes/episodes/8)
 
-More on value vs. reference:
+Value vs. reference:
 
 - [JavaScript Reference and Copy Variables](https://hackernoon.com/javascript-reference-and-copy-variables-b0103074fdf0)
 - [Grasp “By Value” and “By Reference” in JavaScript](https://hackernoon.com/grasp-by-value-and-by-reference-in-javascript-7ed75efa1293)

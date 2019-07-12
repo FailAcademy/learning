@@ -50,19 +50,41 @@ const emptyObject = {};
 
 # What Are Objects?
 
-JavaScript objects are sometimes called **maps**, but you can just call them **objects**. Here's two **objects** inside of an **array**:
+You can think of an Object as a noun e.g. **Person, Place or Thing**.
+
+Here's an example of a school represented as an Object.
 
 ```js
-const goals = [
+const school = {
+  name: 'RED Academy',
+  street: '1490 W Broadway #200',
+  city: 'Vancouver',
+  province: 'BC',
+  zip: 'V6H 4E8'
+}
+```
+
+
+---
+
+# What Are Objects?
+
+JavaScript Objects can be nested inside of an **array**. <br>
+Since an array is essentially a collection, the following example would be a collection of Objects each representing a single product:
+
+```js
+const products = [
   {
-    description: 'Learn about JavaScript objects',
-    dueDate: new Date('01-01-2020'),
+    name: 'Stretch Knit Dress',
+    category: 'dresses',
+    price: 169
   },
   {
-    description: 'Stop wasting time posting gifs on Slack',
-    dueDate: new Date(),
+    name: 'Cotton Blue Shirt',
+    category: 'shirts',
+    price: 89
   },
-];
+]; // how would you count how many products are in this array?
 ```
 
 ???
@@ -83,7 +105,7 @@ It's also worth pointing out `new Date()` here, esp. the `new` keyword (more to 
 
 # Objects
 
-Often you'll use objects to represent real things (nouns) in your software, like a zoo. You can nest objects within objects:
+Here is a more complex example of an Object. Notice how you can also nest objects within objects!
 
 ```js
 const zoo = {
@@ -93,10 +115,10 @@ const zoo = {
     email: 'gorillas@mist.com',
   },
   animals: [
-    { name: 'panda', type: 'mammal', apt: 201 },
-    { name: 'parrot', type: 'bird', apt: 202 },
-    { name: 'porcupine', type: 'mammal', apt: 203 },
-    { name: 'porpoise', type: 'mammal', apt: 204 },
+    { name: 'panda', type: 'mammal', apt: 201, favFood: 'bamboo' },
+    { name: 'parrot', type: 'bird', apt: 202, favFood: 'pistachios' },
+    { name: 'porcupine', type: 'mammal', apt: 203, favFood: 'nachos' },
+    { name: 'porpoise', type: 'mammal', apt: 204, favFood: 'noodles' },
   ],
 };
 
@@ -149,180 +171,12 @@ _Did the output match what you were expecting?_
 
 ---
 
-# Destructuring Objects
-
-You will often need to take property values out of objects and store them in their own variables for convenience. Assigning object properties to variables was a bit tedious before ES2015.
-
-**ES5 way:**
-
-```js
-var point = {
-  x: 1,
-  y: 2,
-};
-
-var x = point.x;
-var y = point.y;
-
-console.log(x); // 1
-console.log(y); // 2
-```
-
----
-
-# Destructuring Objects
-
-**Destructuring assignment** allows us to assign properties from objects to individual variables with the same name:
-
-**ES2015 way:**
-
-```js
-const point = {
-  x: 1,
-  y: 2,
-};
-
-const { x, y } = point;
-
-console.log(x); // 1
-console.log(y); // 2
-```
-
-_That's much nicer!_
-
----
-
-# Destructuring Objects
-
-You can even destructure property values from objects as you pass them into functions as arguments:
-
-```js
-const person = {
-  name: 'Marie',
-  city: 'Vancouver',
-};
-
-// ES5 way:
-
-function getName(person) {
-  return person.name;
-}
-
-// ES2015 way:
-
-function getName({ name }) {
-  return name;
-}
-```
-
----
-
-# Destructuring Arrays
-
-Bonus! Destructuring work on arrays as well.
-
-**ES5:**
-
-```js
-var winners = ['Bob', 'Alice', 'Jane'];
-var first = winners[0];
-var second = winners[1];
-var third = winners[2];
-```
-
-**ES2015:**
-
-```js
-const [first, second, third] = winners;
-```
-
----
-
-class: center, middle
-
-### JavaScript Weirdness Alert!
-
-When you make a copy of a JavaScript `Object` in another variable, it's not actually "copied" in the way you'd expect (as primitive values like `String`, `Number`, `Boolean`, `null`, and `undefined` are).
-
-Same goes for `Array` and `Function` types too!
-
----
-
-# Actually Copied?
-
-You must be careful when you need to make a copy of an object. Log this code to your console, and see what it outputs. Is the output what you expect? What do you think is happening?
-
-```js
-let object1 = { value: 10 };
-let object2 = object1;
-let object3 = { value: 10 };
-
-console.log(object1 == object2);
-console.log(object1 == object3);
-object1.value = 15;
-console.log(object2.value);
-console.log(object3.value);
-```
-
-.footnote[Source - Eloquent JavaScript]
-
-???
-
-```js
-console.log(object1 == object2); // → true
-console.log(object1 == object3); // → false
-console.log(object2.value); // → 15
-console.log(object3.value); // → 10
-```
-
----
-
-# Value vs. Reference
-
-With primitive data types, the `=` operator works by value:
-
-```js
-let fruit = 'Granny Smith';
-let apple = fruit;
-apple = 'Macintosh';
-
-console.log(fruit); // "Granny Smith"
-console.log(apple); // "Macintosh"
-
-// ↑ creates a copy the original variable
-```
-
----
-
-# Value vs. Reference
-
-With composite data types, the `=` operator works by reference:
-
-```js
-var fruit = {
-  name: 'Granny Smith',
-};
-let apple = fruit;
-fruit.name = 'Macintosh';
-
-console.log(fruit.name); // "Granny Smith"
-console.log(apple.name); // "Granny Smith"
-
-// ↑ creates an alias to the original object, rather than a new one
-```
-
-???
-
-**Further explanation:** Think of "reference" as having two different names that people call you (e.g. Elizabeth and Liz). Just because someone shortens your name to "Liz" doesn't mean that they have cloned you! You're still the same person going by a different name.
-
----
-
 # Exercise 1
 
-Using [JSBin](https://jsbin.com/?html,css,js,output), create an object to describe yourself. Be sure to include the following information:
+Using [JSBin](https://jsbin.com/?html,css,js,output) or [CodePen](https://codepen.io), create an object to describe yourself. Be sure to include the following information:
 
-- First name, last name, A URL to a profile image (can be any image), Your bucket list.
-- Include as a property a list of 3 of your closest friends, with the same properties.
+- First name, last name, A URL to a profile image (you can use a placeholder image from: https://picsum.photos/).
+- Include as a property a list, Array, of information e.g. your favorite foods or movies.
 
 When you're done, use JavaScript to display everything in HTML and add some CSS.
 
@@ -422,19 +276,11 @@ Have students type `this` into the console...this is a great opportunity to talk
 
 class: center, middle
 
-.large[
-Pause! Let's stop and consider why this is useful to us...
-]
-
----
-
-class: center, middle
-
 ### Data-Driven UI
 
 As a front-end developer, you'll write a lot of JavaScript that works with **arrays** of **objects**.
 
-Arrays of objects are common because _many software user-interfaces present dynamic lists of information to their users_.
+Arrays of objects are common because _many software user-interfaces present dynamic lists of information to their users e.g. the products example we saw earlier_.
 
 ???
 
@@ -444,7 +290,8 @@ Arrays of objects are common because _many software user-interfaces present dyna
 
 # Advanced Example
 
-Sometimes, you'll want to add functions to your objects. These object functions are called **methods**.
+To reiterate functions inside of objects are called **methods**. <br>
+Here we have a few methods e.g. **borrow**, **returnItem**, & **close**
 
 ```js
 const library = {
@@ -465,7 +312,7 @@ const library = {
 
 # Advanced Example
 
-Using `this`, we can write a borrow function to help keep track what books have been lent:
+Using `this`, we can write a borrow method to help keep track of what books have been lent:
 
 ```js
 // ...
@@ -484,7 +331,7 @@ borrow: function(id) {
 // ...
 ```
 
-**What is the value of the `lent` property now?**
+**How will the borrow method change the `lent` property?**
 
 ???
 
@@ -666,7 +513,7 @@ Pause and walk through some interesting points...
 
 ---
 
-# Objects Made Easy
+# Construct New Objects
 
 Describing objects using constructor functions allows you to create multiple **instances** of your object using `new`.
 
@@ -738,18 +585,15 @@ carShare.borrow(2);
 Sometimes you'll need to keep track of what your code is doing, objects are really useful for this. Tracking what your program is doing is another common use of objects.
 
 ```js
-function Ranger(name, zord) {
+function Transformer(name) {
   this.name = name;
-  this.zord = zord;
+  this.transformed = false;
 
-  this.state = {
-    morphed: false,
-    joinedMegaZord: false,
-  };
-
-  this.morph = function() {
-    if (!this.state.morphed) {
-      this.state.morphed = true;
+  this.transform = function() {
+    if (!this.transformed) {
+      this.transformed = true;
+    } else {
+      this.transformed = false;
     }
   };
 }
@@ -757,25 +601,40 @@ function Ranger(name, zord) {
 
 ---
 
-# Sneak Peak: Classes
+# Objects as State
 
-Instead of using a `function`, define a `class` (same result, better syntax) for objects we want to **instatiate**:
+And here is an example of the Object `transform` property at work. Be sure to console log the Object before and after the transform function to see how it changes.
 
 ```js
-class Ranger {
-  constructor(name, zord) {
+const bumbleBee = new Transformer('Bumblebee');
+console.log(bumbleBee); // inspect the new Object
+
+bumbleBee.transform(); // test the transform method
+console.log(bumbleBee); // notice how the state has changed?
+```
+
+---
+
+# Sneak Peak: Classes
+
+Instead of using a `function`, define a `class` (same result, better syntax) for objects we want to **instantiate**:
+
+```js
+class Transformer {
+  constructor(name) {
     this.name = name;
-    this.zord = zord;
-    this.morphed = false;
+    this.transformed = false;
   }
-  morph() {
-    if (!this.morphed) {
-      this.morphed = true;
+  transform() {
+    if (!this.transformed) {
+      this.transformed = true;
+    } else {
+      this.transformed = false;
     }
   }
 }
-const blueRanger = new Ranger('Billy', 'Triceratops');
-blueRanger.morph();
+const bumbleBee = new Transformer('Bumblebee');
+bumbleBee.transform();
 ```
 
 Ahh, much nicer. _More on classes later!_
