@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: Intro to WordPress
-slides: ['_slides/week-06/03-intro-to-wordpress.md']
-lesson_date: 2019-05-15
+title: Intro to WP - P2
+slides: ['_slides/week-06/03-intro-to-wordpress-p2.md']
+lesson_date: 2019-08-07
 ---
 
 ## Pre-Work
@@ -17,9 +17,6 @@ If you've never seen the WordPress admin interface before, watch this series of 
 
 ## Learning Objectives
 
-- Describe what a content management system is and its role in managing a website.
-- Identify the difference between [wordpress.org](https://wordpress.org/) and [wordpress.com](https://wordpress.com/).
-- Install WordPress in a local server environment.
 - Identify the essential components of a WordPress theme, including the loop.
 - Navigate the WordPress admin area to create posts and pages, and install plugins and themes.
 
@@ -37,18 +34,6 @@ If you've never seen the WordPress admin interface before, watch this series of 
 
 ## Exercise 1
 
-We can also install WP locally using MAMP:
-
-1.  [Download WordPress](https://wordpress.org/download/)
-2.  Unzip your download and move it to your `htdocs` folder (rename the unzipped folder if you like)
-3.  Go to phpMyAdmin (via MAMP) and create a new database
-4.  Rename `wp-config-sample.php` to `wp-config.php` and fill in your database name and MAMP credentials
-5.  Go to http://localhost:8888/YOUR-FOLDER/wp-admin/install.php and complete your install
-
----
-
-## Exercise 2
-
 Let's start customizing our WordPress installation.
 
 Install the [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) plugin and try creating a form. Follow the instructions it provides for including a form in a page (feel free to create a special page for this if you like).
@@ -59,7 +44,7 @@ Also try browsing for a new theme to install on your site and activate it. Take 
 
 ---
 
-## Exercise 3
+## Exercise 2
 
 Let's create our very first (and a very basic) WordPress theme.
 
@@ -73,17 +58,7 @@ But whoops! How can we link up the `style.css` file now that it's path is broken
 
 ## Lab Activity
 
-### Task 1:
-
-Today's lab is primarily dedicated to getting comfortable with the WordPress admin area and WP-style PHP before we jump into the project tomorrow.
-
-To begin, watch this video to further clarify how WordPress uses PHP with this video:
-
-- [Zac Gordon: PHP for WordPress](http://wordpress.tv/2015/09/20/zac-gordon-php-for-wordpress/)
-
-### Task 2:
-
-Next, apply some of the skills you learned earlier today by styling up a slightly more (Medium-inspired!) complex theme than what we built in Exercise 3.
+Apply some of the skills you learned earlier today by styling up a slightly more (Medium-inspired!) complex theme than what we built in Exercise 3.
 
 To start, you can **[download the lab files here](/public/files/labs/wp-theme-lab.zip)**.
 
@@ -102,15 +77,6 @@ From there, your task is to style the theme as per the included design comps. He
 
 **Also note:** Feel free to use the included `hello-world.jpg` image as a featured image to test with one of your posts, or use an image of your own.
 
-### Task 3:
-
-Finally, if you're a rockstar and blast through the first two tasks, check out this video on the Underscores starter theme (as we'll be using a "fork" of Underscores to build out Project 4):
-
-- [Morten Rand-Hendriksen: Building Themes From Scratch Using Underscores (\_S)](http://wordpress.tv/2015/06/09/morten-rand-hendriksen-building-themes-from-scratch-using-underscores-_s/)
-
-Lastly, be sure to spend some time with the WordPress admin area adding content, installing plugins, and generally familiarizing yourself with what's there!
-
----
 
 ## Additional Resources
 
