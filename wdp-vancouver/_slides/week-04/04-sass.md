@@ -73,7 +73,7 @@ Today, there are a few CSS preprocessors in popular use:
 - [Sass / SCSS](http://sass-lang.com/)
 - [Less](http://lesscss.org/)
 - [Stylus](https://learnboost.github.io/stylus/)
-- [Myth](http://www.myth.io/)
+- [PostCSS](https://postcss.org/)
 
 ---
 
@@ -126,7 +126,7 @@ Sass has some cool features compared to plain vanilla CSS:
 
 One of the handiest features of Sass is the ability to nest your CSS selectors. For instance, instead of writing this:
 
-```sass
+```scss
 .main-navigation {
    margin-left: 0;
 }
@@ -142,7 +142,7 @@ One of the handiest features of Sass is the ability to nest your CSS selectors. 
 
 You can write the same code this way with Sass:
 
-```sass
+```scss
 .main-navigation {
    margin-left: 0;
 
@@ -158,7 +158,7 @@ You can write the same code this way with Sass:
 
 You can nest pseudo-classes too using an ampersand:
 
-```sass
+```scss
 a {
    color: blue;
 
@@ -170,7 +170,7 @@ a {
 
 Or add a parent selector from inside of child:
 
-```sass
+```scss
 h3 {
    font-size: 1.5em;
 
@@ -188,7 +188,7 @@ Sass also allows you to define variables (much like in JS!), which can help you 
 
 In Sass you define variables as follows:
 
-```sass
+```scss
 $brand-red: #ed4343;
 
 a {
@@ -208,7 +208,7 @@ Ask them for some examples of good and bad variable names.
 
 Sass allows you to use both block-style and inline comments:
 
-```sass
+```scss
 /* A big, fat block-style comment! */
 $var: red;
 
@@ -224,7 +224,7 @@ Note that when you compile Sass, the inline comments will not be included in the
 
 With Sass, you can do math right in your CSS! For example:
 
-```sass
+```scss
 $base-margin: 1.5em;
 
 select {
@@ -240,7 +240,7 @@ When this Sass is compiled, the resulting margin will be `3em`.
 
 Keep in mind that order of operations apply!
 
-```sass
+```scss
 $base-margin: 1.5em;
 
 select {
@@ -262,7 +262,7 @@ BEDMAS
 
 Sass has a number of built-in functions that assist with doing math, manipulating colours, and more:
 
-```sass
+```scss
 $link-colour: #800800;
 
 a {
@@ -286,7 +286,7 @@ a {
 
 You can also write your own Sass functions: <a href="https://codepen.io/redacademy/pen/zaVgbZ?editors=1100" target="_blank">Codepen</a>
 
-```sass
+```scss
 $text-color: red;
 
 @function set-contrast-color($color) {
@@ -311,7 +311,7 @@ h1 {
 
 Using `@extend` lets you share a set of CSS properties from one selector to another:
 
-```sass
+```scss
 .message {
   border: 1px solid #ccc;
   padding: 10px;
@@ -335,7 +335,7 @@ Using `@extend` lets you share a set of CSS properties from one selector to anot
 
 We can also use a **placeholder** selector with `@extend`:
 
-```sass
+```scss
 %base-border {
    border: 1px solid #ccc;
    padding: 10px;
@@ -363,7 +363,7 @@ We can also use a **placeholder** selector with `@extend`:
 
 Mixins are little bundles that allow you to group properties together and apply them to a selector:
 
-```sass
+```scss
 // EXAMPLE 1:
 @mixin primary-links {
    color: blue;
@@ -389,7 +389,7 @@ a { @include primary-links; } // use @include to call the mixin
 
 Where mixins really shine is their ability to have **parameters**:
 
-```sass
+```scss
 // EXAMPLE 1:
 $base-color: pink;
 
@@ -426,7 +426,7 @@ use `@mixin` when you want the output CSS to change depending on how you call it
 
 The `@content` directive allows us to pass a content block into a mixin:
 
-```sass
+```scss
 $desktop-width: 1000px;
 
 @mixin desktop {
@@ -458,7 +458,7 @@ If an `@media` directive appears within a CSS rule, it will be bubbled up to the
 
 # Smarter Media Queries
 
-```sass
+```scss
 /* So this SCSS... */
 
 li {
@@ -498,7 +498,7 @@ But with great power...
 
 In this exercise, we'll refactor some CSS into SCSS, using the basic functionality we've learned.
 
-See the [lesson page](/lesson/sass-css-preprocessors/) for more details.
+See the [lesson page](/lesson/04-sass/) for more details.
 
 ---
 
@@ -514,7 +514,7 @@ You'll likely find that many projects using Sass have organized their code into 
 
 For example, for a project with a `scss` sub-folder and `style.scss` file at the root, you would likely find a list of `@import` statements inside `style.scss` file:
 
-```sass
+```scss
 @import 'scss/variables';
 @import 'scss/mixins';
 @import 'scss/reset';
@@ -528,7 +528,7 @@ For example, for a project with a `scss` sub-folder and `style.scss` file at the
 
 Note that you can add or not add the `.scss` extension the file names, and also import CSS files as-is too:
 
-```sass
+```scss
 @import 'foo';      // foo.scss is imported
 @import 'foo.scss'; // foo.scss is imported
 @import 'foo.css';  // statement left in place, as-is
@@ -543,7 +543,7 @@ CSS from the imported files is **added in place**, so the order of your imports 
 
 When creating **partials**, name your partial files beginning with an underscore. For example:
 
-```sass
+```scss
 // In a style.scss file, we can import _typography.scss...
 
 @import 'typography';
@@ -557,7 +557,7 @@ Without the underscore, Sass would compile that file into a stand-alone `typogra
 
 template: inverse
 
-# Compiling SCSS <br />(the easy way)
+# Compiling SCSS
 
 ---
 

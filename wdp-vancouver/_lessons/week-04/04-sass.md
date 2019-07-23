@@ -86,6 +86,10 @@ This afternoon, we’ll implement the following Sass enhancements in your Projec
 
 ## Additional Resources
 
+Code playground for testing Sass/Scss:
+
+- [Sass Meister](https://www.sassmeister.com/)
+
 Excellent online SASS Tutorials:
 
 - [The SASS way](http://thesassway.com/)
