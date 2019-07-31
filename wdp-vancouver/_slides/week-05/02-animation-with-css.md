@@ -426,7 +426,7 @@ Here we have 3 keyframes, however you can have many.
 }
 
 .box {
-   animation-name: resize 1s infinite alternate ease-in-out;
+   animation: resize 1s infinite alternate ease-in-out;
 }
 ```
 

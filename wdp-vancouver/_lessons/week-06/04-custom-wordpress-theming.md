@@ -9,7 +9,7 @@ lesson_date: 2019-08-09
 
 Prior to jumping into the theming class, you'll want to make sure you've wrapped your head around some important WordPress jargon:
 
-- [WordPress Semantics](https://codex.wordpress.org/WordPress_Semantics)
+- [WordPress Semantics](https://wordpress.org/support/article/wordpress-semantics/)
 
 _Explore the links within that Codex entry for further clarification where needed!_
 
