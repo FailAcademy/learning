@@ -329,7 +329,6 @@ class: center, middle
    Load JS right before `</body>`
 ]
 <br />
-(Except when we shouldn't...)
 
 ---
 class: center, middle
@@ -372,15 +371,6 @@ We can add the `async` or `defer` attributes on individual `<script>` elements t
 **Note:** Any JS that loads late and affects page layout can cause the content to shift though!
 
 ---
-class: center, middle
-
-&nbsp;                 | `async`                                 | `defer`
------------------------|-----------------------------------------|-------------------------------------------------
-**Executes when?**     | At the first available opportunity      | In the order it occurs in the document
-**Before what event?** | Before the `window`'s `load` event      | Before the `document`’s `DOMContentLoaded` event
-**When to use it?**    | When it doesn't rely on other scripts   | When it relies on or is relied upon by other scripts
-
----
 
 # Optimizing Fonts
 
@@ -389,7 +379,7 @@ Modern browsers are smart about only loading the font files they need, but we st
 - Add only the fonts you truly need to a website
 - Only add the weights and subsets that you need (easily customized with Google Fonts or Font Squirrel)
 - Make sure your fonts are cached (they rarely change!)
-- Use the [Font Loading API](https://drafts.csswg.org/css-font-loading/) to optimize text rendering in the CRP (fonts are lazyloaded by default, so the browser won't paint text pixels until the required fonts are available)
+- Optimize how your fonts are loading [Three Techniques for Performant Custom Font Usage](https://css-tricks.com/three-techniques-performant-custom-font-usage/)
 
 ---
 
@@ -410,9 +400,9 @@ Would click rates improve if you allow ads, etc. to block rendering (so they are
 
 Minification does things like removing whitespace, comments, and non-required semicolons, and reducing hex code lengths. We already do this to our CSS and JS with Gulp!
 
-Gzipping finds all repetitive strings and replaces them with pointers to the first instance of that string. It must be done at the server level (and how you do will depend on what kind of web server you're using).
+Gzipping finds repetitive strings and replaces them with pointers to the first instance of that string. It must be done at the server level (and how you do will depend on what kind of web server you're using).
 
-Gzipping is far more effective for improving performance. **Doing both is ideal.**
+**Doing both is ideal.** However since Gzipping requires server-side configuration it wont work for our current project. With WordPress there are [plugins](https://en-ca.wordpress.org/plugins/w3-total-cache/) that help with this. 
 
 ---
 
@@ -496,7 +486,7 @@ Also note that you can change background images with media queries. *Imagine if 
    height: 100vh;
 }
 
-/* loads for HiDPI screens only */
+/* change the background image for devices >= 600px */
 @media screen and (min-width: 600px) {
    .banner-image {
       background-image: url('images/tablet-team-banner.png');
