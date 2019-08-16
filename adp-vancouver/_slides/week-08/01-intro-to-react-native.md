@@ -31,7 +31,7 @@ layout: false
 
 # What Is React Native?
 
-React Native is an open-source (BSD-licensed) framework developed by Facebook.
+React Native is an open-source (BSD-licensed) library developed by Facebook.
 
 It uses the same fundamental UI building blocks as regular iOS and Android apps, but we get to **use JS and React to build truly native mobile apps** (instead of Objective-C, Swift, or Java).
 
@@ -55,35 +55,6 @@ RN works because its **bridge** creates an interface between React and the host 
   - Asynchronous
   - Batched (the native calls)
   - Serializable (the messages between JS and native)
-
----
-
-class: center, middle
-
-.large[
-![React Native threads diagram](/public/img/slide-assets/rn-threads.svg)  
-]
-
-???
-
-- The main/native thread launches app and deals with native UI
-- The JS thread is where the JS VM runs entirely
-- There's also a shadow queue (GCD Queue) where some layout concerns are take care of (e.g. flexbox properties, height, width)
-- Native modules can also create their own threads
-
-- Everything always starts on the native side
-- Native decides "I want to run this application now" and sends a call across the bridge to the app entry point
-- The call is serialized via a custom protocol
-- It kicks off `AppRegistry.registerComponent()`
-- Leads to a bunch of calls in JS, which can be calls back into native, e.g. the `UIManager` module
-
-- Touch events always start in native too
-- Call goes across bridge to JS thread to run application code to handle the event and set state, render, etc.
-- The JS side then dispatches view updates
-- The UI updates then happen on the main thread (this can happen at 60fps too)
-
-- The key here is that **JS is driving all the interactions and describing the UI**...because all events are routed through JS
-- And this is the point of React! (`UI = f(data)`)
 
 ---
 
@@ -129,12 +100,20 @@ AppRegistry.registerComponent("App", () => App);
 
 ---
 
-# Why Do It This Way?
+# What is `AppRegistry`?
+
+`AppRegistry` is the JS entry point to running all the React Native apps.
+
+You can register your app's root component with `AppRegistry.registerComponent`, then the native system will run the app when it's ready by calling `AppRegistry.runApplication`.
+
+---
+
+# Why Use React Native?
 
 - You can build **cross-platform** native apps using your existing JS/React skills (no Objective-C, Swift, or Java required!)
 - Maximizes potential **code re-use** (even between web apps)
 - There's a large (and growing!) **community** around it
-- RN allows you to **recompile your apps instantly** (With HMR! And a better debugging experience!!)
+- RN lets you iterate at lightning speed. You can see your changes as soon as you save them.
 - You can still **drop into native code** if you need to (e.g. to leverage APIs that aren't exposed in RN by default)
 
 ---
@@ -148,6 +127,8 @@ template: inverse
 # Dev Environment
 
 Before we can create our first React Native app, we must ensure we have the following tools installed:
+
+`Note:` Install stable versions of the following, not latest.
 
 1.  [Xcode](https://developer.apple.com/xcode/)
 2.  [Homebrew](http://brew.sh/)
@@ -177,11 +158,7 @@ cd HelloWorld
 
 # Your First RN App
 
-You're now ready to open your new project in VS Code.
-
-You can start the RN Packager Server from with VS Code by typing `⌘ + ⇧ + P` and picking **React Native: Start Packager**.
-
-From your project directory, now run:
+From your terminal go to your project directory and run:
 
 ```bash
 react-native run-ios
@@ -256,6 +233,7 @@ By pressing `⌘ + D` inside of the iOS simulator, you'll see that you can enabl
 - RN has a built-in inspector, perf monitor, etc.
 - To view iOS simulator logs from the CLI, you can run `react-native log-ios`
 - The red screen of death will often point you in the right direction...but not always
+- Check your bundler terminal for more details on the error. It usually leads towards a possible solution.
 - The third-party [React Native Debugger](https://github.com/jhen0409/react-native-debugger) is essential for debugging your React and Redux code
 
 ---
@@ -350,7 +328,7 @@ Notice the built-in props that are available on listening to changes on the comp
 To change reduce an element's opacity on press, `<TouchableOpacity>` [(ref)](https://facebook.github.io/react-native/docs/touchableopacity.html):
 
 ```js
-<TouchableOpacity onPress={() => {}} activeOpacity={75 / 100}>
+<TouchableOpacity onPress={() => {}} activeOpacity={0.75}>
   <Text>Press me!</Text>
 </TouchableOpacity>
 ```
@@ -529,7 +507,6 @@ React Native provides several different components for transforming data into li
 
 - [FlatList](https://facebook.github.io/react-native/docs/flatlist.html) (simpler)
 - [SectionList](https://facebook.github.io/react-native/docs/sectionlist.html) (more features)
-- ListView (deprecated – do not use!)
 
 ---
 
@@ -581,12 +558,11 @@ We often want to populate a list view with external data.
 Let's start by setting a state property to hold the data for the `FlatList` once fetched:
 
 ```js
-constructor() {
-  super();
-
+constructor(props) {
+  super(props);
   this.state = {
     data: [],
-    isLoading: true,
+    isLoading: false,
   };
 }
 ```
@@ -600,6 +576,7 @@ Then we'll fetch our data, and update state with it:
 ```js
 componentDidMount() {
   let endpoint = 'https://api.github.com/users/octocat/repos';
+  this.setState({loading: true})
 
   fetch(endpoint)
     // if fetch is successful, read our JSON out of the response
@@ -784,17 +761,15 @@ Each screen of your app will be a container/presentational component combo:
 |   |-- About
 |   |   |-- index.js
 |   |   |-- styles.js
-|   |   |-- About.js <-- (Stateless) Markup only
-|   |   |-- AboutContainer.js <-- (Stateful) Logic and state
+|   |   |-- About.js <-- Stateless component
+|   |   |-- AboutContainer.js <-- Stateful component
 ```
 
 And in the `index.js` we follow this pattern:
 
 ```js
 import AboutContainer from "./AboutContainer";
-import About from "./About";
 
-export { About };
 export default AboutContainer;
 ```
 
@@ -806,18 +781,18 @@ We can use a similar directory structure for our reusable, stateless UI componen
 
 ```bash
 |-- components/
-|   |-- UserAvatar
+|   |-- Loader
 |   |   |-- index.js
 |   |   |-- styles.js
-|   |   |-- UserAvatar.js
+|   |   |-- Loader.js
 ```
 
 In `index.js`:
 
 ```js
-import UserAvatar from "./UserAvatar";
+import Loader from "./Loader";
 
-export default UserAvatar;
+export default Loader;
 ```
 
 ---
