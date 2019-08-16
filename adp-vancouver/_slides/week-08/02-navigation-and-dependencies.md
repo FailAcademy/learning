@@ -37,13 +37,13 @@ template: inverse
 
 What we don't have:
 
-* The usual back and forward buttons
-* Browser history
-* Hypertext and URLs
+- The usual back and forward buttons
+- Browser history
+- Hypertext and URLs
 
 What we do have:
 
-* Established **platform-specific patterns** that people are accustomed to when navigating around native mobile apps
+- Established **platform-specific patterns** that people are accustomed to when navigating around native mobile apps
 
 ---
 
@@ -111,11 +111,11 @@ React Native has some built-in navigation components...
 
 See the docs: [NavigatorIOS](https://facebook.github.io/react-native/docs/navigatorios.html)
 
-* Integrated with UIKit (leverages its animation)
-* Built on top of `UINavigationController`
-* Uses routes to represent screens
-* Very stateful
-* No Android support
+- Integrated with UIKit (leverages its animation)
+- Built on top of `UINavigationController`
+- Uses routes to represent screens
+- Very stateful
+- No Android support
 
 ---
 
@@ -123,13 +123,13 @@ See the docs: [NavigatorIOS](https://facebook.github.io/react-native/docs/naviga
 
 **Tabs and Drawers:**
 
-* [TabBarIOS](https://facebook.github.io/react-native/docs/tabbarios.html)
-* [DrawerLayoutAndroid](https://facebook.github.io/react-native/docs/drawerlayoutandroid.html)
+- [TabBarIOS](https://facebook.github.io/react-native/docs/tabbarios.html)
+- [DrawerLayoutAndroid](https://facebook.github.io/react-native/docs/drawerlayoutandroid.html)
 
 **Deprecated:**
 
-* Navigator (cross-platform JS navigator)
-* NavigationExperimental
+- Navigator (cross-platform JS navigator)
+- NavigationExperimental
 
 ---
 
@@ -137,18 +137,10 @@ See the docs: [NavigatorIOS](https://facebook.github.io/react-native/docs/naviga
 
 Some of third-party solutions wrap the built-in navigator, others expose the platform's native navigation. Some popular options include:
 
-* [react-community/react-navigation](https://github.com/react-community/react-navigation)
-* [wix/react-native-navigation](https://github.com/wix/react-native-navigation)
-* [aksonov/react-native-router-flux](https://github.com/aksonov/react-native-router-flux)
-* ~~[expo/ex-navigation](https://github.com/expo/ex-navigation)~~ (deprecated)
-
----
-
-class: center, middle
-
-.large[
-So what do we use...?
-]
+- [react-community/react-navigation](https://github.com/react-community/react-navigation)
+- [wix/react-native-navigation](https://github.com/wix/react-native-navigation)
+- [aksonov/react-native-router-flux](https://github.com/aksonov/react-native-router-flux)
+- ~~[expo/ex-navigation](https://github.com/expo/ex-navigation)~~ (deprecated)
 
 ---
 
@@ -156,29 +148,29 @@ So what do we use...?
 
 Ideally, we want an all-in-one navigation solution with:
 
-* Support for **Android back button**
-* Integration with a (potentially cross-platform) **tab bar**
-* Support for **nested nav stacks** without creating state management headaches for ourselves
-* Good **performance** (uses native animation)
+- Support for **Android back button**
+- Integration with a (potentially cross-platform) **tab bar**
+- Support for **nested nav stacks** without creating state management headaches for ourselves
+- Good **performance** (uses native animation)
 
 ---
 
 # React Navigation
 
-* A JS-based navigator implementation
-* But with animation that run on the native UI thread!
-* Provides a set of defaults that can be customized
-* Supports tab navigation, sliding drawer navigation, the Android back button, and modals
-* Easily nests stack navigation within tab navigation
-* Can integrate its navigation state with your own Redux store (but this is optional, and we will skip it)
+- A JS-based navigator implementation
+- But with animation that run on the native UI thread!
+- Provides a set of defaults that can be customized
+- Supports tab navigation, sliding drawer navigation, the Android back button, and modals
+- Easily nests stack navigation within tab navigation
+- Can integrate its navigation state with your own Redux store (but this is optional, and we will skip it)
 
 ---
 
 # Configuration
 
-* `createStackNavigator` returns a React component and allows the app to transition between screens and manage history
-* `createStackNavigator` takes a route configuration object and options as arguments
-* We can also define our route configuration with the component itself using `static route = {}`
+- `createStackNavigator` returns a React component and allows the app to transition between screens and manage history
+- `createStackNavigator` takes a route configuration object and options as arguments
+- We can also define our route configuration with the component itself using `static route = {}`
 
 See the **[minimal navigation set up example](https://reactnavigation.org/docs/en/hello-react-navigation.html).**
 
@@ -209,16 +201,16 @@ If we were to simply push this screen onto the stack inside the tab bar, we woul
 Create a `NavigationLayout.js` file your `navigation` directory. Add this code to it:
 
 ```js
-import React from 'react';
+import React from "react";
 import {
   createStackNavigator,
-  createBottomTabNavigator
-} from 'react-navigation';
+  createBottomTabNavigator,
+} from "react-navigation";
 
-import AboutScreen from '../screens/About';
+import AboutScreen from "../screens/About";
 
 const AboutStack = createStackNavigator({
-  About: AboutScreen
+  About: AboutScreen,
 });
 
 // Dedicated stacks for Schedule and Faves will go here too!
@@ -258,40 +250,17 @@ template: inverse
 
 ---
 
-# Dependencies
+# Native Modules are now Autolinked
 
-Sometimes we need to install additional libraries in our apps, and these libraries will have native dependencies.
+As of React Native 0.60, most of the packages will be auto-linked.
 
-There are two way we can do this:
-
-1.  Automatic linking with `react-native link`
-2.  Manual linking (in Xcode or the Android directory)
-
----
-
-# Automatic Linking
-
-RN now has a built-in way to link dependencies from the CLI (was previously a separate package called `rnpm`).
-
-To use it, you'll need to install a package that requires linking:
-
-```bash
-yarn add <library-with-native-dependencies>
-```
-
-React Native will link your libs based on `dependencies` and `devDependencies` in your `package.json` file. Then you can link up your dependencies for iOS and Android by running:
-
-```bash
-react-native link
-```
-
-Voila! That's it.
+If you are using React Native < `0.60` then use we need to use `react-native link` command. (We are using RN `0.60`)
 
 ---
 
 # Exercise 4
 
-Our app is going to need some icons, so for that we're going to add the **[React Native Vector Icons package](https://github.com/oblador/react-native-vector-icons)**. Note that this package's native dependencies can be automatically linked with `react-native link`.
+Our app is going to need some icons, so for that we're going to add the **[React Native Vector Icons package](https://github.com/oblador/react-native-vector-icons)**.
 
 Next, import Ionicons into `NavigationLayout.js`. Add a `navigationOptions` key to your tab bar config object, and render the correct icon for each tab. An icon should be `white` if selected, and medium grey if not.
 
@@ -299,17 +268,9 @@ Next, import Ionicons into `NavigationLayout.js`. Add a `navigationOptions` key 
 
 ---
 
-# Manual Linking
-
-Sometimes we may need to manually link native dependencies in Xcode.
-
-For instance, React Native includes a `CameraRoll` module bundled with it, but if we want to use this library (to allow users to save images from the app to their camera roll) we need to manually link it. To do that, we need to open our project folder and navigate to `node_modules/react-native/Librares/...` and also open Xcode.
-
-**[Instructions for manual linking](https://facebook.github.io/react-native/docs/linking-libraries-ios.html#manual-linking)** are available in the React Native docs.
-
----
-
 # Exercise 5
+
+## Manual linking
 
 We want to use Montserrat as a custom font in our app, and `react-native link` can help with this too.
 
@@ -337,15 +298,13 @@ class: center, middle
 
 R10 has a linear gradient background in the navigation bar. We will need another package (with native dependencies) for that.
 
-Install `react-native-linear-gradient`, then `react-native link`, and restart your app again.
-
 Add a `config.js` file to the `navigation` directory with this:
 
 ```js
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Header } from 'react-navigation';
-import LinearGradient from 'react-native-linear-gradient';
+import React from "react";
+import { StyleSheet, View } from "react-native";
+import { Header } from "react-navigation";
+import LinearGradient from "react-native-linear-gradient";
 
 // ...more to come here!
 ```
@@ -385,8 +344,8 @@ export const sharedNavigationOptions = navigation => ({
   headerBackTitle: null,
   header: props => <GradientHeader {...props} />,
   headerStyle: {
-    backgroundColor: 'transparent'
-  }
+    backgroundColor: "transparent",
+  },
 });
 ```
 
@@ -400,18 +359,18 @@ Finally, use your `sharedNavigationOptions` in `NavigationLayout.js`:
 
 ```js
 // ADD THIS!
-import { sharedNavigationOptions } from './config';
+import { sharedNavigationOptions } from "./config";
 
 const AboutStack = createStackNavigator(
   {
-    About: AboutScreen
+    About: AboutScreen,
   },
   // AND THIS!
   {
     defaultNavigationOptions: ({ navigation }) => ({
-      ...sharedNavigationOptions(navigation)
-    })
-  }
+      ...sharedNavigationOptions(navigation),
+    }),
+  },
 );
 ```
 
@@ -419,10 +378,10 @@ const AboutStack = createStackNavigator(
 
 # What We've Learned
 
-* Special considerations for building out user-friendly navigation in mobile apps
-* What navigation options are built into React Native, and what third-party options are available
-* How to use a stack navigator and tab bar
-* How to add third-party libraries and link their dependencies both automatically and manually
+- Special considerations for building out user-friendly navigation in mobile apps
+- What navigation options are built into React Native, and what third-party options are available
+- How to use a stack navigator and tab bar
+- How to add third-party libraries and link font dependencies
 
 ---
 
