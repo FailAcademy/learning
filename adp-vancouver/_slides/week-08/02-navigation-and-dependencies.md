@@ -140,7 +140,6 @@ Some of third-party solutions wrap the built-in navigator, others expose the pla
 - [react-community/react-navigation](https://github.com/react-community/react-navigation)
 - [wix/react-native-navigation](https://github.com/wix/react-native-navigation)
 - [aksonov/react-native-router-flux](https://github.com/aksonov/react-native-router-flux)
-- ~~[expo/ex-navigation](https://github.com/expo/ex-navigation)~~ (deprecated)
 
 ---
 
@@ -168,11 +167,37 @@ Ideally, we want an all-in-one navigation solution with:
 
 # Configuration
 
+- `createAppContainer` is responsible for state management and linking your root navigator to the app enviroment. On Android, it handles the back button.
+
 - `createStackNavigator` returns a React component and allows the app to transition between screens and manage history
 - `createStackNavigator` takes a route configuration object and options as arguments
-- We can also define our route configuration with the component itself using `static route = {}`
 
-See the **[minimal navigation set up example](https://reactnavigation.org/docs/en/hello-react-navigation.html).**
+---
+
+# Hello React Navigation
+
+A Hello World Example with `React Navigation`
+
+```js
+import { createStackNavigator, createAppContainer } from "react-navigation";
+
+class HomeScreen extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+        <Text>Home Screen</Text>
+      </View>
+    );
+  }
+}
+const AppNavigator = createStackNavigator({
+  Home: {
+    screen: HomeScreen,
+  },
+});
+
+export default createAppContainer(AppNavigator);
+```
 
 ---
 
@@ -180,9 +205,9 @@ See the **[minimal navigation set up example](https://reactnavigation.org/docs/e
 
 First, install `react-navigation` in your R10 project. Next, create a `navigation` sub-directory in the `js` directory of R10. Add a file called `RootStackNavigator.js` to it.
 
-Import `createStackNavigator` from `react-navigation` in this new file, and use it to create a stack navigator with your About screen as its only route (you will need to import it!). Make this your default export from `RootStackNavigator.js`.
+Import `createStackNavigator` and `createAppContainer` from `react-navigation` in this new file, and use it to create a stack navigator with your About screen as its only route. Make this your default export from `RootStackNavigator.js`.
 
-Finally, import your new `RootStackNavigator` component into `App.js`, and nest it inside your `ApolloProvider` (removing the`About` component now). Does it work? How do you add a title to the navigation bar?
+Finally, import your new `RootStackNavigator` component into `App.js`, and nest it inside your `ApolloProvider`. Does it work? How do you add a title to the navigation bar?
 
 ---
 
@@ -269,8 +294,6 @@ Next, import Ionicons into `NavigationLayout.js`. Add a `navigationOptions` key 
 ---
 
 # Exercise 5
-
-## Manual linking
 
 We want to use Montserrat as a custom font in our app, and `react-native link` can help with this too.
 
