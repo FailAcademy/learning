@@ -29,23 +29,7 @@ layout: false
 
 ---
 
-template: inverse
-
 # What Is React Native?
-
----
-
-# What It Is Not...
-
-RN is **not like Cordova** (PhoneGap, Ionic, etc.), which allows you to build something that looks like a native app wrapped in a chromeless web browser in webview inside of a native app (these are known as hybrid apps).
-
-RN is also **not an HTML5 app or progressive web app**.
-
-And it's **not the only non-webview-based cross-platform** game in town, for example, you could also use also NativeScript (AngularJS/free), Xamarin (#C/freemium), and Appcelerator (JS/paid).
-
----
-
-# So What Is It?
 
 React Native is an open-source (BSD-licensed) framework developed by Facebook.
 
@@ -504,8 +488,8 @@ export default class HelloWorld extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center"
-  }
+    alignItems: "center",
+  },
 });
 ```
 
@@ -673,7 +657,7 @@ The `<SectionList>` component is very similar to the `<FlatList>`, but the data 
 <SectionList
   sections={[
     { title: "ADP", data: ["Bob", "Alice"] },
-    { title: "WDP", data: ["Anne", "Mary", "Joe"] }
+    { title: "WDP", data: ["Anne", "Mary", "Joe"] },
   ]}
   renderItem={({ item }) => <Text>{item}</Text>}
   renderSectionHeader={({ section }) => <Text>{section.title}</Text>}
