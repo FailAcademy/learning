@@ -283,9 +283,45 @@ If you are using React Native < `0.60` then use we need to use `react-native lin
 
 ---
 
-# Exercise 4
+# Installation and Linkning
 
 Our app is going to need some icons, so for that we're going to add the **[React Native Vector Icons package](https://github.com/oblador/react-native-vector-icons)**.
+
+`Note:` Until React Native Vector Icons README provides official information on linking this library use this.
+
+`yarn add react-native-vector-icons`
+
+Next, navigate to the `ios` dir, install Pods and get back to the root level of your project.
+
+```bash
+cd ios/
+pod install
+cd ..
+```
+
+---
+
+#Next
+
+create a file named `react-native.config.js` in the root of your project and add this snippet to link dependency.
+
+```js
+module.exports = {
+  assets: ["react-native-vector-icons"],
+};
+```
+
+and finally run
+
+```bash
+yarn react-native link
+```
+
+These steps should link the React Native Vector Icons package to your project.
+
+---
+
+# Exercise 4
 
 Next, import Ionicons into `NavigationLayout.js`. Add a `navigationOptions` key to your tab bar config object, and render the correct icon for each tab. An icon should be `white` if selected, and medium grey if not.
 
@@ -295,17 +331,17 @@ Next, import Ionicons into `NavigationLayout.js`. Add a `navigationOptions` key 
 
 # Exercise 5
 
-We want to use Montserrat as a custom font in our app, and `react-native link` can help with this too.
+We want to use Montserrat as a custom font in our app.
 
-Inside of the app's `package.json` file, add the following:
+Inside of the app's `react-native.config.js` file, add the following:
 
 ```js
-"rnpm": {
-  "assets": [ "js/assets/fonts" ]
-}
+module.exports = {
+  assets: ["react-native-vector-icons", "./js/assets/fonts"],
+};
 ```
 
-Move your project's fonts into the above directory and run `react-native link` again, then restart your app.
+Move your project's fonts into the above directory and run `yarn react-native link` again.
 
 Use Montserrat as the `fontFamily` for the tab bar labels now to test it out.
 
@@ -319,7 +355,9 @@ class: center, middle
 
 # Gradient Header
 
-R10 has a linear gradient background in the navigation bar. We will need another package (with native dependencies) for that.
+R10 has a linear gradient background in the navigation bar. We will need another package (with dependencies to add) for that.
+
+`Hint:` follow the steps we performed to add `React Native Vector Icons` to our project, to add `React Native Linear Gradient` package.
 
 Add a `config.js` file to the `navigation` directory with this:
 
