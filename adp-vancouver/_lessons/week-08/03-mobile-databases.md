@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: Mobile Databases
-slides: ['_slides/week-08/03-mobile-databases.md']
-lesson_date: 2019-08-21
+title: Async Storage
+slides: ["_slides/week-08/03-mobile-databases.md"]
+lesson_date: 2019-11-20
 ---
 
 ## Pre-work

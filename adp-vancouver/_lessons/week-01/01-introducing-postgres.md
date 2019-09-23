@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Intro to Databases with Postgres
-slides: ['_slides/week-01/01-introducing-postgres.md']
-lesson_date: 2019-07-03
+slides: ["_slides/week-01/01-introducing-postgres.md"]
+lesson_date: 2019-10-01
 ---
 
 ## Pre-Work
@@ -71,7 +71,7 @@ Populating your Relational Database.
 
 Use what you know to create the **Tags** & **Users**, table!
 
-Tags will need to contain fields for ID and title. Users will need to contain fields for ID, email, full name and bio. 
+Tags will need to contain fields for ID and title. Users will need to contain fields for ID, email, full name and bio.
 
 _Hint: use the `\dt` command to check if the table was successfully created._
 
@@ -98,7 +98,6 @@ To do this we'll need to add "foreign key constraints" to some columns.
 Creating many to many relationships requires the creation of a "Link table".
 
 Use what you know, and see if you can reason about how to implement a many-to-many relationship between **Items** and **Tags** in your database.
-
 
 ---
 
