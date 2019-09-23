@@ -6,7 +6,7 @@ slides:
     "_slides/week-07/01a-ia-for-wp.md",
     "_slides/week-07/01b-post-types-taxonomies-fields.md",
   ]
-lesson_date: 2019-08-13
+lesson_date: 2019-11-12
 ---
 
 ## Pre-Work

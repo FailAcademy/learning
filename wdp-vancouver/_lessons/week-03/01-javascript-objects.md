@@ -2,7 +2,7 @@
 layout: lesson
 title: JavaScript Objects
 slides: ["_slides/week-03/01-javascript-objects.md"]
-lesson_date: 2019-07-15
+lesson_date: 2019-10-11
 ---
 
 ## Pre-Work

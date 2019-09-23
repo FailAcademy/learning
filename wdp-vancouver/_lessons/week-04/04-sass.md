@@ -2,7 +2,7 @@
 layout: lesson
 title: Sass / CSS Preprocessors
 slides: ["_slides/week-04/04-sass.md"]
-lesson_date: 2019-07-26
+lesson_date: 2019-10-25
 ---
 
 ## Pre-Work

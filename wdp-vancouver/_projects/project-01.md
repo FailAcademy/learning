@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 1 - Aloha Homepage
-due: Monday, July 15th (beginning of class)
+due: Tuesday, October 15th (beginning of class)
 ---
 
 For Project 1, you're going to create a homepage for your client the Aloha Apparel Co. using HTML and CSS.
