@@ -25,6 +25,7 @@ layout: false
 3. Using Google Fonts
 4. Web font services
 5. Icon fonts
+6. CSS Positioning
 
 ---
 
@@ -377,6 +378,127 @@ To add the social media icons, check out Font Awesome's [Brand Icons](https://fo
 
 ---
 
+
+template: inverse
+
+# CSS Positioning
+
+---
+
+# Document Flow
+
+Notice how the `<h1>` takes an entire row, `display: block;` and the `<a>` tag is inline, `display: inline;`.
+
+.inline-images[
+![CSS Box Concept](/public/img/slide-assets/css-box-concept.svg)
+]
+
+---
+
+# Document Flow
+
+With **CSS Positioning** we can change the default flow and move things around the page as we see fit.
+
+There are a few position values that we can use. 
+The main ones are:
+
+* `static` (the default behaviour, aka **normal flow**)
+* `relative`
+* `absolute`
+* `fixed`
+
+---
+
+# Relative Positioning
+
+Relative positioning moves an element in relation to where it would have been in the normal flow:
+
+```css
+header h1 {
+  position: relative;
+  top: 5%;
+  right: 200px;
+}
+```
+
+To adjust an element's position relatively, we can either specify `top` or `bottom`, and `left` or `right` in `px`, `%`, `em`, or `rem` units.
+
+---
+
+# Absolute Positioning
+
+This is where things get really interesting. Setting `position` to `absolute` takes an element out of the normal flow.
+
+With absolute positioning, it's like the other elements on the page suddenly forget that it's there.
+
+```css
+header h1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+}
+```
+
+---
+
+# Absolute + Relative
+
+An element will be absolutely positioned to the **HTML document** unless you set `position: relative` on one of its parent elements.
+
+```css
+.page-wrapper {
+  position: relative;
+}
+
+header h1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+}
+```
+
+---
+
+# Fixed Positioning
+
+Fixed positioning is like absolute positioning, but it positions the element in relation to the **browser window** instead of the HTML document.
+
+This means that the element will stay put in one place on the screen as you scroll:
+
+```css
+header h1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #c8c8c8;
+}
+```
+
+---
+
+# z-index
+
+With elements that have `relative`, `absolute`, or `fixed` position set, we can apply another property called `z-index`.
+
+The z-index property let's us specify the **stacking order** of non-static, overlapping elements.
+
+Elements with a higher z-index will appear on top:
+
+```css
+header h1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  z-index: 100;
+}
+```
+
+---
+
 # What We've Learned
 
 * How to use `@font-face`
@@ -384,6 +506,7 @@ To add the social media icons, check out Font Awesome's [Brand Icons](https://fo
 * What licensed font services are available
 * What an icon font is and the advantages of using one
 * How to use Font Awesome
+* CSS Positioning
 
 ---
 
