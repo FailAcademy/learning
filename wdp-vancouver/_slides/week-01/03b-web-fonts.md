@@ -248,6 +248,8 @@ The old way...
 
 class: center, middle
 
+Spritesheet
+
 .inline-images[
 ![Image sprite example](/public/img/slide-assets/image-sprite-example.png)
 ]
@@ -266,8 +268,9 @@ There are a few ready-made icon fonts out there that you can use on your website
 
 * [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 * [IcoMoon](https://icomoon.io/)
+* [Material UI](https://material.io/resources/icons/?style=baseline)
 
-We're going to use Font Awesome for Project 1...
+*We're going to use Font Awesome for most projects.*
 
 ---
 
@@ -279,7 +282,7 @@ You would include this code in the `<head>` tag of your website:
 
 ```html
 <!-- Option 1: CDN Link -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
 
 <!-- Option 2: Direct Include -->
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
@@ -291,7 +294,7 @@ You would include this code in the `<head>` tag of your website:
 
 Now for the fun part&mdash;you actually get to start using the icons.
 
-Let's say we want to include a [bicycle icon](http://fortawesome.github.io/Font-Awesome/icon/bicycle/) on our website.
+Let's say we want to include a [bicycle icon](https://fontawesome.com/icons/bicycle?style=solid) on our website.
 
 All we would need to do is include an `<i>` tag with some special classes applied:
 
@@ -340,13 +343,14 @@ And animate the icons:
 ]
 <br />
 
-You can find all of Font Awesome's [icons referenced here](http://fortawesome.github.io/Font-Awesome/icons/) and [usage examples here](http://fortawesome.github.io/Font-Awesome/examples/).
+You can find all of Font Awesome's [icons referenced here](https://fontawesome.com/icons?d=gallery&m=free) and [usage examples here](http://fortawesome.github.io/Font-Awesome/examples/).
 
 ---
 
 # Using Font Awesome
 
-Every Font Awesome icon also has a [Unicode value](http://fortawesome.github.io/Font-Awesome/cheatsheet/). Using those values, we can use Font Awesome directly in our CSS too as a value in the `content` property:
+All [Font Awesome Icons](https://fontawesome.com/icons). 
+Here we can also find **Unicode** values which we can use directly in our CSS as a value for the `content` property:
 
 ```html
 <button class="menu-toggle"><span>Menu</span></button>
@@ -363,6 +367,17 @@ Every Font Awesome icon also has a [Unicode value](http://fortawesome.github.io/
   content: "\f0c9";
 }
 ```
+
+---
+
+# Font Awesome Unicode
+
+Here is a CodePen which you can use as a starting point to test different Unicode values.
+
+<iframe height="400" style="width: 100%;" scrolling="no" title="FontAwesome Example" src="https://codepen.io/redacademy/embed/aboxJrd?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/redacademy/pen/aboxJrd'>FontAwesome Example</a> by RED Academy
+  (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 
@@ -497,6 +512,27 @@ header h1 {
 }
 ```
 
+---
+
+class: center, middle
+
+Here is an example of using CSS Positioning with a Font Icon.
+
+<iframe height="500" style="width: 100%;" scrolling="no" title="FontAwesome Example with CSS Positioning" src="https://codepen.io/redacademy/embed/RwbOgPd?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/redacademy/pen/RwbOgPd'>FontAwesome Example with CSS Positioning</a> by RED Academy
+  (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+
+class: center, middle
+
+Another example, this time changing the icon & color on hover.
+
+<iframe height="500" style="width: 100%;" scrolling="no" title="FontAwesome Example with CSS Positioning 0.1" src="https://codepen.io/redacademy/embed/gOYyRgY?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/redacademy/pen/gOYyRgY'>FontAwesome Example with CSS Positioning 0.1</a> by RED Academy
+  (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 ---
 
 # What We've Learned
