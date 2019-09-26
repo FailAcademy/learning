@@ -53,20 +53,6 @@ CSS describes how an HTML element will be rendered on a screen. In other words, 
 
 ---
 
-# Before CSS...
-
-In the old days, we used to add styles to our websites like this:
-
-```html
-<p>
-   <font face="Arial" color="red" size="2">Some text...</font>
-</p>
-```
-
-Now imagine a large website with dozens of pages...can you see a major flaw in styling a website this way?
-
----
-
 class: center, middle
 
 .large[
