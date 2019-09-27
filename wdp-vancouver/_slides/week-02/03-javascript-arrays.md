@@ -46,9 +46,9 @@ The key for each value is an **index number**.
 ```js
 let shoppingList = ["milk", "bread", "eggs"];
 
-// shoppingList[0] = "milk"
-// shoppingList[1] = "bread"
-// shoppingList[2] = "eggs"
+// shoppingList[0]; // returns the value "milk"
+// shoppingList[1]; // returns the value "bread"
+// shoppingList[2]; // returns the value "eggs"
 ```
 
 
@@ -56,16 +56,26 @@ let shoppingList = ["milk", "bread", "eggs"];
 
 # Index Numbers?
 
-- Index numbers in an array are like the property key names in regular objects
-- Instead of choosing the names, they are always set to numbers in ascending order
 - **note** that with JavaScript, counting Arrays always starts at **0**
-- Index numbers allow us to assign and access values in arrays
+- Index numbers are used to assign and access array values
+
+In the previous slide we saw how to get a value e.g. to get the second value stored in the shoppingList array we would write:
+
+```JavaScript
+shoppingList[1]; // returns the value "bread"
+```
+
+To change a value we can access the array index and update the value.
+
+```JavaScript
+shoppingList[1] = "butter"; // index 1 is now "butter"
+```
 
 ---
 
 # Using Arrays
 
-Add values to an array by separating them with commas:
+Values in an array are separated by commas which don't all have to be on 1 line as we've seen with the shoppingList:
 
 ```js
 const products = [
@@ -78,7 +88,7 @@ const products = [
 
 Note that you can put **any** JavaScript value into an array, not just strings!
 
-_How do we find out how many products are in the above array?_
+_How could we find how many products are in the above array?_
 
 ???
 
@@ -88,9 +98,9 @@ Be sure to demonstrate how `.length` works here too.
 
 # Array Access
 
-Array elements are always stored in the order they were added.
+Array elements are always stored in the order they were added and we can create variables to reference array indexes. 
 
-In JS, individual array elements are accessed by their `index` position:
+It's a bit easier to read the variable "hipsterBackpack" and know what it contains instead of "products[3]".
 
 ```js
 const products = ['Stretch Knit Dress', 'Cotton Blue Shirt', 
@@ -103,6 +113,28 @@ const hipsterBackpack = products[3];
 ```
 
 _How would we update the third element of the array?_
+
+---
+
+# Array Access
+
+Arrays can also contain more complex information, as mentioned earlier "you can put any JavaScript value into an array", here is an example of an Array of Arrays.
+
+```js
+const products = [
+  ['Stretch Knit Dress', 169.00], 
+  ['Cotton Blue Shirt', 89.00], 
+  ['Checked Stretch Dress', 129.00], 
+  ['Blue Hipster Backpack', 69.00]
+];
+
+const knitDress = products[0];
+const cottonShirt = products[1];
+const checkedDress = products[2];
+const hipsterBackpack = products[3];
+```
+
+_How would we get the price of the knitDress?_
 
 ---
 
