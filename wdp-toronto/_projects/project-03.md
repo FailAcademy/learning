@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 3 - Instanews App
-due: Tuesday, August 6th (beginning of class)
+due: Tuesday, Oct 29th (beginning of class)
 ---
 
 For Project 3, you're going to create a one-page, responsive website that allows a user to filter top news story categories via the [New York Times API](http://developer.nytimes.com/docs/top_stories_api/).
@@ -17,14 +17,6 @@ You can [download the project files here](https://s3-us-west-2.amazonaws.com/red
 ## Requirements
 
 To receive a “Complete” for this project, your submission will need to satisfy the following criteria:
-
-### Peer Review Requirements
-
-You must:
-
-- Complete peer evaluation form
-- Post at least three issues on partner's repo
-- Submit one specific pull request where appropriate to patch an issue
 
 ### Development Workflow Requirements
 
@@ -101,7 +93,3 @@ Want to challenge yourself? Your project could also:
 - Incorporate a select element with custom styles applied (you will need a jQuery plugin for this)
 - Incorporate a combination of jQuery and CSS3-based animation to animate the movement of the header on search submit
 - Use CSS3 transitions to show and hide the article abstract on hover
-
-## Submission Instructions
-
-When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to jim.bennett@redacademy.com.
