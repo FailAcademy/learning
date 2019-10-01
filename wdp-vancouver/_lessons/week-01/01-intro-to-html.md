@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: Intro to Your Computer & HTML
+title: Intro to HTML
 slides: ['_slides/week-01/01-intro-to-html.md']
-lesson_date: 2019-07-03
+lesson_date: 2019-10-01
 ---
 
 ## Pre-Work
@@ -35,6 +35,34 @@ Before the first class, also be sure to work through all of the free modules in 
 - [Doctype](http://www.sitepoint.com/web-foundations/doctypes/)
 - [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
 - [Attribute](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
+
+---
+
+## Useful Note-Taking Applications 💡
+
+There are many ways to take notes however we strongly recommend using an application to help organize code related notes, "code-snippets".
+
+There are many code snippet apps out there however we Recommend Boostnote because it's free and it works with Windows, Mac, Linux, etc... https://boostnote.io/
+
+When using Boostnote you have 2 options **Markdown note** or **Snippet note**.
+**Markdown note** is useful for mixing code snippets with longer notes, recommended for general note taking.
+**Snippet notes** are more for saving re-usable bits of code to help you later, recommended for saving html, css, javascript, php, tested time saving snippets etc...
+
+**[Getting-Started with Boostnote](https://github.com/BoostIO/Boostnote/wiki/Getting-Started)**
+
+
+### Here are some great Snippet Apps.
+
+- [BoostNote](https://boostnote.io/) Free, Windows, Mac, Linux, *recommended*
+- [Lepton](https://hackjutsu.com/Lepton/) Free, Windows, Mac, Linux
+- [GistoApp](https://www.gistoapp.com/) Free, Windows, Mac, Linux
+- [SnippetsLab](https://www.renfei.org/snippets-lab/) Paid, Mac
+- [Quiver](https://happenapps.com/) Paid, Mac
+
+**Warning**, if you are taking notes with the default notes app on **Mac**, make sure you **turn off "use smart quotes and dashes"**.
+
+**To disable use smart quotes and dashes:**
+Go to `System Preferences -> Keyboard -> Text` and uncheck `use smart quotes and dashes`.
 
 ---
 

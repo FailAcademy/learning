@@ -50,18 +50,75 @@ What does "HTML" mean?
 
 ---
 
+
 class: center, middle
 
-.inline-images[
-![Traditional documents](/public/img/slide-assets/html-traditional-doc.svg)
+.large[
+Hyper Text Markup Language
 ]
 
 ---
 
 class: center, middle
 
+.large[ 
+But what does that mean? 🤔
+]
+
+---
+
+# Markup Language
+
+Let's start with the **ML** which stands for **Markup Language**.
+
+**A Markup Language is:** a computer language that uses **tags** to define **elements** within a **document**. 
+
+For example a **tag** like this `<p>` will create a **paragraph element** and anything we write between the opening and closing tags will be a paragraph e.g.
+
+```html
+<p>HTML paragraph</p>
+```
+
+---
+
+class: center, middle
+
+.large[ 
+Ok but what is **Hyper Text?** 🤔
+]
+
+---
+
+class: center, middle
+
+.large[ 
+Sounds a bit like **Information superhighway** or some 90's term doesn't it!
+]
+
+---
+class: center
+
+# Hyper Text
+
+
+Hyper Text basically means that you can jump from one page/resource to another directly.
+
+
 .inline-images[
 ![HyperText documents](/public/img/slide-assets/html-hypertext-doc.svg)
+]
+
+---
+
+class: center
+
+# Hyper Text
+
+You are not forced to go through each page to get to something like a contact page.
+
+
+.inline-images[
+![Traditional documents](/public/img/slide-assets/html-traditional-doc.svg)
 ]
 
 ---
@@ -74,7 +131,7 @@ template: inverse
 
 # A Basic Element
 
-If we wanted to markup a paragraph in HTML, our code would look like this:
+To recap, if we wanted to **markup** a paragraph in HTML, our code would look something like this:
 
 ```html
 <p>The quick brown fox jumps over the lazy dog.</p>
@@ -364,7 +421,7 @@ You'll likely also run into a structural element called a `<div>`:
 
 # Div-itis
 
-Before HTML5, our websites often relied heavily on `<div>` elements:
+Before HTML5, our websites often relied heavily on `<div>` elements.
 
 ```html
 <div id="header">
@@ -382,6 +439,30 @@ Before HTML5, our websites often relied heavily on `<div>` elements:
    &copy; 2015.
 </div>
 ```
+
+*Newer tags can help however this is not really div-itis. This is: *➡
+
+---
+
+# Div-itis
+
+Keep in mind divs are still fine to use however try to avoid things like nesting too many, e.g.
+
+```html
+<div class="banner-wrapper">
+   <div class="banner">
+      <div class="banner-inner">
+         <div class="banner-inner-inner">
+            <div class="banner-inner-inner-inner">
+               <h1>This is Div-itis!</h1>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+```
+
+So how many levels is ok? It depends but try to see if you can get the same result with 1 less div as a general rule. 💡
 
 ---
 

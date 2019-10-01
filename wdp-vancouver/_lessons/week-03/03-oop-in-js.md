@@ -7,7 +7,7 @@ slides:
     "_slides/week-03/03b-intro-to-svgs.md",
     "_slides/week-03/03c-pong.md",
   ]
-lesson_date: 2019-07-17
+lesson_date: 2019-10-16
 ---
 
 ## Pre-Work
@@ -76,17 +76,17 @@ We'll be creating SVGs to build the Pong game in Project 2, so you'll want to ta
 
 ## Exercise 1
 
-Imagine you want to create an **object-oriented model of a soccer game**&mdash;what kind of class "blueprints" would you need to create to represent all of the elements of the game as objects (e.g. a player, the ball, etc.)?
+Imagine you want to create an **object-oriented model of a tennis game**&mdash;what kind of class "blueprints" would you need to create to represent all of the elements of the game as objects (e.g. a player, the ball, etc.)?
 
 What kinds of **properties** (i.e. adjectives/traits) would be needed to describe each object, and what kinds of **methods** (i.e. verbs/actions) would be available to each object?
 
-Work in groups to create a **poster-based representation** your object-oriented soccer game, and present your work to the class.
+Work in groups to create a **poster-based representation** your object-oriented game, and present your work to the class.
 
 ---
 
 ## Exercise 2
 
-Pick one of the classes your group modeled in the previous soccer game exercise, and use that to **write your first ES2015 class**.
+Pick one of the classes your group modelled in the previous tennis game exercise, and use that to **write your first ES2015 class**.
 
 Ensure that you set all the appropriate **properties** in the `constructor` and create all the required **methods** for your class.
 
@@ -96,14 +96,12 @@ Ensure that you set all the appropriate **properties** in the `constructor` and 
 
 Now model our own classroom using the following classes. Note that `WebDevStudent` should be a subclass of `Student` and `Student` should be a subclass of `Person`. Create at least **three properties** and **one method** on each class.
 
-- Clazz \*
+- ClassRoom (`class` is a reserved keyword in JS)
 - Person
 - Student
 - WebDevStudent
 
-_(note: class is a keyword in JavaScript, and thus cannot be a valid name)_<br />
-
-_Instantiate your classmates using_ `new WebDevStudent()`.
+**Instantiate your classmates** using `new WebDevStudent()`.
 
 ## SVGs: Exercise 1
 

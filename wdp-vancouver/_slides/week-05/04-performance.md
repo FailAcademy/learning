@@ -139,6 +139,8 @@ class: center, middle
    Resource: **[Jank Free](http://jankfree.org/)**
 ]
 
+Let's explore Jankiness by playing a game 🕹 [Jank Invaders](https://jakearchibald.github.io/jank-invaders/)
+
 ---
 template: inverse
 
@@ -166,11 +168,13 @@ Improving the loading speed of a page boils down to two (seemingly) simple tasks
 
 - Geography (but CDNs can help)
 - Network (mobile, rural areas, etc.)
-- Browsers ([not everyone](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/) is using the latest version of Chrome)
+- Browsers ([What browsers are people using?](https://www.stetic.com/market-share/browser/))
 
 ---
 
 # Testing Page Speed
+
+Some options for testing page speed:
 
 - [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 - [WebPageTest](http://www.webpagetest.org/)
@@ -178,20 +182,55 @@ Improving the loading speed of a page boils down to two (seemingly) simple tasks
 - Your Chrome dev tools! (use the Network and Performance tabs)
 
 ---
-class: center, middle
 
-.inline-images[
-   ![Network tab in Chrome dev tools](/public/img/slide-assets/chrome-dev-tools-network.png)
-]
+# Testing Page Speed
 
-**Timeline is now in the Performance tab**
+Testing page speed with Chrome 🤔
+
+We can also test a websites performance with built built-in developer tools.
+
+In the Chrome DevTools, there is a tab labelled **Audits** where you can run test.
+It's using a Google product called **Lighthouse** to perform the tests.
+
+More about lighthouse audits: https://developers.google.com/web/tools/lighthouse/
+
 
 ---
-class: center, middle
 
+# Testing Page Speed
+
+With Chrome's DevTools we can also test for issues with the **Performance** and **Network** tabs.
+
+![Chrome dev tools tabs](/public/img/slide-assets/performance/devtools-tabs.png)
+
+---
+
+### Network Tab
+
+Press **command r** to reload the page and run the test.
 
 .inline-images[
-   ![Performance tab in Chrome dev tools](/public/img/slide-assets/chrome-dev-tools-timeline.png)
+   ![Chrome dev tools network tab](/public/img/slide-assets/performance/aloha-network-tab.png)
+]
+
+---
+
+### Performance Tab
+
+When you open the performance tab there will be no initial tests, so you will have to click the refresh button to run a test.
+
+.inline-images[
+   ![Chrome dev tools performance tab](/public/img/slide-assets/performance/aloha-performance-tab-1.png)
+]
+
+---
+
+### Performance Tab
+
+After the page reloads and the test is run your DevTools will look something like this:
+
+.inline-images[
+   ![Chrome dev tools performance tab](/public/img/slide-assets/performance/aloha-performance-tab-2.png)
 ]
 
 ---
@@ -224,10 +263,9 @@ Images account for **most of page weight**, <br />so big performance gains can b
 
 - Use SVGs (can be embedded directly in HTML)
 - Use icon fonts (customize with only the icons you need)
-- Create image sprites ([with SVGs](https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/))
 - Use CSS3 properties where you can
 - "Save for Web/Devices" using Photoshop, Gimp, or [Photopea](https://www.photopea.com/)
-- Compress/minify your images with [imagemin](https://github.com/sindresorhus/gulp-imagemin), [Compressor.io](https://compressor.io/compress) in your build tooling or the [ImageOptim](https://imageoptim.com/mac) app
+- Compress/minify your images with [imagemin](https://github.com/sindresorhus/gulp-imagemin), [Compressor.io](https://compressor.io/compress) in your build tooling, the web app [Tiny PNG](https://tinypng.com/) or the [ImageOptim](https://imageoptim.com/mac) app
 - Choose the right image format for the job...
 
 ---
@@ -291,7 +329,6 @@ class: center, middle
    Load JS right before `</body>`
 ]
 <br />
-(Except when we shouldn't...)
 
 ---
 class: center, middle
@@ -334,15 +371,6 @@ We can add the `async` or `defer` attributes on individual `<script>` elements t
 **Note:** Any JS that loads late and affects page layout can cause the content to shift though!
 
 ---
-class: center, middle
-
-&nbsp;                 | `async`                                 | `defer`
------------------------|-----------------------------------------|-------------------------------------------------
-**Executes when?**     | At the first available opportunity      | In the order it occurs in the document
-**Before what event?** | Before the `window`'s `load` event      | Before the `document`’s `DOMContentLoaded` event
-**When to use it?**    | When it doesn't rely on other scripts   | When it relies on or is relied upon by other scripts
-
----
 
 # Optimizing Fonts
 
@@ -351,7 +379,7 @@ Modern browsers are smart about only loading the font files they need, but we st
 - Add only the fonts you truly need to a website
 - Only add the weights and subsets that you need (easily customized with Google Fonts or Font Squirrel)
 - Make sure your fonts are cached (they rarely change!)
-- Use the [Font Loading API](https://drafts.csswg.org/css-font-loading/) to optimize text rendering in the CRP (fonts are lazyloaded by default, so the browser won't paint text pixels until the required fonts are available)
+- Optimize how your fonts are loading [Three Techniques for Performant Custom Font Usage](https://css-tricks.com/three-techniques-performant-custom-font-usage/)
 
 ---
 
@@ -372,9 +400,9 @@ Would click rates improve if you allow ads, etc. to block rendering (so they are
 
 Minification does things like removing whitespace, comments, and non-required semicolons, and reducing hex code lengths. We already do this to our CSS and JS with Gulp!
 
-Gzipping finds all repetitive strings and replaces them with pointers to the first instance of that string. It must be done at the server level (and how you do will depend on what kind of web server you're using).
+Gzipping finds repetitive strings and replaces them with pointers to the first instance of that string. It must be done at the server level (and how you do will depend on what kind of web server you're using).
 
-Gzipping is far more effective for improving performance. **Doing both is ideal.**
+**Doing both is ideal.** However since Gzipping requires server-side configuration it wont work for our current project. With WordPress there are [plugins](https://en-ca.wordpress.org/plugins/w3-total-cache/) that help with this. 
 
 ---
 
@@ -382,7 +410,7 @@ Gzipping is far more effective for improving performance. **Doing both is ideal.
 
 Let's better optimize the CSS and JS on our Aloha websites.
 
-First, analyze the current state of your CSS. Run your CSS code through the **[CSS Stats](http://cssstats.com/stats?link=http%3A%2F%2Fredacademy.github.io%2Faloha-apparel-pt2%2Fcss%2Fstyle-stretch.css)** and **[CSS Specificity Graph Generator](https://jonassebastianohlsson.com/specificity-graph/)** tools. Can you now see any obvious places where you could improve your CSS performance?
+First, analyze the current state of your CSS. Run your CSS code through the **[CSS Stats](https://cssstats.com/stats/?link=https://redacademy.github.io/aloha-apparel/build/css/style.min.css)** and **[CSS Specificity Graph Generator](https://jonassebastianohlsson.com/specificity-graph/)** tools. Can you now see any obvious places where you could improve your CSS performance?
 
 Next, adjust your `<script>` tags so they can no longer block content rendering on the page.
 
@@ -449,23 +477,19 @@ We already know that we can make big performance gains by optimizing our images,
 
 # Background Images
 
-**Pro-tip:** Remember that you can write resolution-dependent media queries to selectively load high resolution images:
+Also note that you can change background images with media queries. *Imagine if you have a background image of a team which looks good on desktop but on mobile it might crop the team members in strange ways.*
 
 ```css
-.hero {
-   background-image: url('images/hero.png');
-   width: 1600px;
-   height: 300px;
+.banner-image {
+   background-image: url('images/mobile-team-banner.png');
+   width: 100%;
+   height: 100vh;
 }
 
-/* loads for HiDPI screens only */
-@media
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-   .hero {
-      background-image: url('images/hero-hires.png');
-      width: 1600px;
-      height: 300px;
+/* change the background image for devices >= 600px */
+@media screen and (min-width: 600px) {
+   .banner-image {
+      background-image: url('images/tablet-team-banner.png');
    }
 }
 ```
@@ -474,7 +498,7 @@ We already know that we can make big performance gains by optimizing our images,
 
 # Using srcset
 
-We can also use the `srcset` attribute on an `<img>` element, which takes a comma-separated list of image URLs. Using the `x` descriptor allows you to load different versions of the same image for high-density displays:
+We can also use the `srcset` attribute on an `<img>` element, which takes a comma-separated list of image URLs. Using the `x` descriptor allows you to load different versions of the same image for high-density displays e.g. retina and 4k:
 
 ```html
 <img src="puppy.jpg"
@@ -482,28 +506,21 @@ We can also use the `srcset` attribute on an `<img>` element, which takes a comm
    alt="An adorable puppy"/>
 ```
 
-Using the `sizes` attribute with the `w` descriptor allow you to customize the size of the image based on the viewport:
-
-```html
-<img src="puppy.jpg" sizes="(max-width: 40em) 100vw, 50vw"
-   srcset="puppy.jpg 200w, puppy-large.jpg 400w, puppy-hd.jpg 600w"
-   alt="An adorable puppy"/>
-```
-
 ---
 
 # Picture Elements
 
-Where more **art direction** is needed (i.e. we want to load completely different images depending on the screen context), we can use the `<picture>` and `<source>` elements with `srcset`:
+Instead of using media queries to load different images when the screen-size changes we can use the `<picture>` element with `<source>` tags which provide `media` and `srcset` attributes.
 
 ```html
 <picture>
-   <source media="(max-width: 20em)" srcset="puppy-portrait.jpg 1x,
-   puppy-portrait-large.jpg 2x, puppy-portrait-hd.jpg 3x" />
-
-   <source media="(max-width: 40em)" srcset="puppy-landscape.jpg 1x,
+   <source media="(min-width: 40em)" srcset="puppy-landscape.jpg 1x,
    puppy-landscape-large.jpg 2x, puppy-landscape.jpg-hd.jpg 3x" />
 
+   <source media="(min-width: 20em)" srcset="puppy-portrait.jpg 1x,
+   puppy-portrait-large.jpg 2x, puppy-portrait-hd.jpg 3x" />
+
+   <!-- Fallback if browsers don't support the <source> tag -->
    <img src="puppy-landscape.jpg" alt="An adorable puppy" />
 </picture>
 ```

@@ -2,7 +2,7 @@
 layout: lesson
 title: Performance and Optimization
 slides: ["_slides/week-05/04-performance.md"]
-lesson_date: 2019-08-01
+lesson_date: 2019-10-31
 ---
 
 ## Pre-Work
@@ -68,7 +68,7 @@ Try doing a side-by-side comparison in a browser window of the original image (s
 
 Let's better optimize the CSS and JS on our Aloha websites.
 
-First, analyze the current state of your CSS. Run your CSS code through the **[CSS Stats](http://cssstats.com/stats?link=http%3A%2F%2Fredacademy.github.io%2Faloha-apparel-pt2%2Fcss%2Fstyle-stretch.css)** and **[CSS Specificity Graph Generator](https://jonassebastianohlsson.com/specificity-graph/)** tools. Can you now see any obvious places where you could improve your CSS performance?
+First, analyze the current state of your CSS. Run your CSS code through the **[CSS Stats](https://cssstats.com/stats/?link=https://redacademy.github.io/aloha-apparel/build/css/style.min.css)** and **[CSS Specificity Graph Generator](https://jonassebastianohlsson.com/specificity-graph/)** tools. Can you now see any obvious places where you could improve your CSS performance?
 
 Next, adjust your `<script>` tags so they can no longer block content rendering on the page.
 

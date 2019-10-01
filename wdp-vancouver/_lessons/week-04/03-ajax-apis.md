@@ -2,7 +2,7 @@
 layout: lesson
 title: Ajax, JSON, and APIs
 slides: ["_slides/week-04/03-ajax-apis.md"]
-lesson_date: 2019-07-24
+lesson_date: 2019-10-23
 ---
 
 ## Pre-Work
@@ -84,6 +84,12 @@ The NYT API requires that obtain an API key to access its various APIs' endpoint
 
 Let's create an account on the NYT website so we can obtain a key to use on our projects right now...
 
+Follow [**these steps**](https://developer.nytimes.com/get-started) to get started using the New York Times API.
+
+You will need to create an account and register an APP in order to work with the NYT API.
+
+The specific API we will be using is [**Top Stories**](https://developer.nytimes.com/docs/top-stories-product/1/overview)
+
 ---
 
 ## Lab Activity
@@ -160,6 +166,16 @@ Again, writing the CSS and jQuery is up to you. Good luck!
 ---
 
 ## Additional Resources
+
+More APIs to try:
+
+
+- JSON Placeholder, good for practice [jsonplaceholder](https://jsonplaceholder.typicode.com/)
+- Star Wars API [swapi](https://swapi.co/)
+- Pokémon API [pokeapi](https://pokeapi.co/)
+- Dad Joke API [icanhazdadjoke](https://icanhazdadjoke.com/api)
+- Taco API [Taco Fancy](http://taco-randomizer.herokuapp.com/)
+- Marvel API [Marvel](https://developer.marvel.com/)
 
 An older article, but still good background reading on APIs:
 

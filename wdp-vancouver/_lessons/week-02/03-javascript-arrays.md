@@ -2,12 +2,13 @@
 layout: lesson
 title: JavaScript Arrays
 slides: ["_slides/week-02/03-javascript-arrays.md"]
-lesson_date: 2019-07-11
+lesson_date: 2019-10-10
 ---
 
 ## Pre-Work
 
-Check out [JSBin](https://jsbin.com/). We'll be using it to test our code.
+Check out [JSBin](https://jsbin.com/) or [CodePen](https://codepen.io). 
+We'll be using these online editors to quickly test code.
 
 ---
 
@@ -39,7 +40,7 @@ Check out [JSBin](https://jsbin.com/). We'll be using it to test our code.
 
 Add items to your bucket list array, and write some JS to display each item in an `<li>` inside of the `<ul>`.
 
-**Use JSBin to complete this exercise:<br />[https://jsbin.com/?html,js,output](https://jsbin.com/?html,js,output)**
+**Use [JSBin](https://jsbin.com/?html,js,output) or [CodePen](https://codepen.io/) to complete this exercise**
 
 ```js
 const bucketList = [
@@ -126,19 +127,18 @@ It would be a good idea to write out each step you need to complete in a comment
 ## Exercise 4
 
 ```js
-const rangers = [
-  ["Jason", "Triceratops"],
-  ["Billy", "Tyrannosaurus"],
-  ["Trini", "Sabre-toothed Tiger"],
-  ["Kimberly", "Pteradactyl"]
+const products = [
+  ["Stretch Knit Dress", "dress"],
+  ["Cotton Blue Shirt", "shirt"],
+  ["Blue Hipster Backpack", "bag"]
 ];
 ```
 
 **Use built-in JavaScript array methods to:**
 
-1. Determine if the list above contains a ranger with 'Tyrannosaurus' avatar.
-2. Find the index of the ranger with 'Tyrannosaurus' avatar.
-3. `console.log` the name of the ranger with 'Tyrannosaurus' avatar.
+1. Determine if the Array above contains a product with a value of 'bag'.
+2. Find the index of the product with value of 'bag'.
+3. `console.log` the name of the product with the value of 'bag'.
 
 ---
 
@@ -146,13 +146,113 @@ const rangers = [
 
 ### Required: Add JS to Project 1
 
-There are three JavaScript requirements for Project 1. Spend the remainder of the day writing that code.
+There are **three JavaScript requirements for Project 1**. Spend the remainder of the day writing that code.
 
-Be sure to wrap all of the code you write in the following code (as in the previous lesson) to ensure the DOM is ready before you run your code:
+**Be sure to wrap all of the code you write in the following code** (as in the previous lesson) to **ensure the DOM is ready** before you run your code:
 
 `document.addEventListener("DOMContentLoaded", function() { ... }`
 
-**Requirement 1: Smooth Scrolling**
+---
+
+#### Requirement 1: Add a Slider
+
+You can now add a slider to your site. You won't actually want write all of the code for a slider from scratch! You can use a "plugin" for this called **[Flickity](https://flickity.metafizzy.co/)**.
+
+There are other slider plugins e.g. [OwlCarousel](https://owlcarousel2.github.io/OwlCarousel2/) however for consistency **we will all be using the Flickity plugin for this project**.
+
+You can follow the [getting started](https://flickity.metafizzy.co#getting-started) instructions first, and then review the [initialize with vanilla JavaScript](https://flickity.metafizzy.co/#initialize-with-vanilla-javascript) instructions to add Flickity to your project.
+
+Most plugins have some configuration options which can change the look and behaviour of the plugin.
+Here are the [options for Flickity](https://flickity.metafizzy.co/options.html).
+
+💡 **Flickity Guide**
+
+*Although I do recommend checking out the getting started guide above, here is a step by step guide that you can follow to get Flickity working with your project.*
+
+**Step 1:**
+Add Flickity's CSS and JS files, the easiest way to do this is to use the provided [CDN](https://en.wikipedia.org/wiki/Content_delivery_network).
+
+Add the following to the `<head>` of your html file. Make sure to add this CSS/JS links above your own CSS and JS files.
+
+```html
+<!-- Flickity CSS -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<!-- Flickity JavaScript -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+```
+
+**Step 2:**
+
+Where your "Most-Loved Products" section is add the following html.
+
+```html
+<div class="main-carousel">
+  <div class="carousel-cell">
+    <!-- product html here e.g. image, category, title & price  -->
+  </div>
+  <div class="carousel-cell">
+    <!-- product html here e.g. image, category, title & price  -->
+  </div>
+  <div class="carousel-cell">
+    <!-- product html here e.g. image, category, title & price  -->
+  </div>
+</div>
+```
+
+Once you've added the above html, start adding your other html inside of each carousel-cell's e.g. the product image, category, title & price.
+
+**Step 3:**
+
+Now we need to add some JavaScript to initialize the plugin.
+**If you don't have a JavaScript file setup, add one now and link to it in the `<head>` of your html file.**
+
+```js
+const elem = document.querySelector('.main-carousel');
+const flkty = new Flickity( elem, {
+  // options
+  cellAlign: 'left',
+  wrapAround: true,
+  freeScroll: true
+});
+```
+
+**Step 4:**
+
+Add some CSS to style the Flickity carousel at different breakpoints.
+Once you have your html inside of each carousel-cell you can adjust the widths and do some other styling like centering the content.
+
+```css
+/* mobile style */
+.carousel-cell {
+  width: 100%;
+  text-align: center;
+}
+
+/* media query example */
+@media screen and (min-width: 600px) {
+  .carousel-cell {
+    width: 25%;
+  }
+}
+```
+
+Now check and see if Flickity is working and try resizing your screen to see if the media query is working as expected.
+
+---
+
+#### Requirement 2: Conditionally Display an Alert
+
+Lastly, you'll need to add another event listener to execute some conditional logic when the email sign-up form is submitted.
+
+You want to display an alert box that says “Thanks for subscribing!” whenever a user successfully submits the newsletter form with an email address (i.e. not an empty value!), otherwise they should see a message in the alert box that asks them to enter an email address.
+
+Checking to see **if** the input has a value is all the JavaScript you will need for this. If you are looking into **regular expressions** you've gone too far. A bit of the validation will be working by using`type="email"` for the subscribe input field. This will provide some validation to check if a user is including an @ symbol etc...
+
+💡 You can use `.length` to check the value of an input field.
+
+---
+
+#### Requirement 3: Smooth Scrolling
 
 You will need to add “smooth scrolling” into the menu so that menu items navigate to related sub-headings within the page on click.
 
@@ -170,122 +270,6 @@ navLinks.forEach(function(element) {
   // how can you get the "href" attribute value of the clicked element to create a string that corresponds the id of the correct section?
   // get the section by its id using the string from the last step
   // scroll to that section with .scrollIntoView()
-});
-```
-
-**Requirement 2: Add a Slider**
-
-You can now add a slider to your site. You won't actually want write all of the code for a slider from scratch! You'll want to use a "plugin" for that. **[Flickity](https://flickity.metafizzy.co/)** is a great choice for a slider plugin.
-
-Follow the [getting started](https://flickity.metafizzy.co#getting-started) instructions first, and then review the [initialize with vanilla JavaScript](initialize-with-vanilla-javascript) instructions to add Flickty to your project.
-
-You will likely also need to review [what options are configurable](https://flickity.metafizzy.co/options.html) in Flickity's documentation.
-
-**Requirement 3: Conditionally Display an Alert**
-
-Lastly, you'll need to add another event listener to execute some conditional logic with the email sign-up form is submitted.
-
-You want to display an alert box that says “Thanks for subscribing!” whenever a user successfully submits the newsletter form with an email address (i.e. not an empty value!), otherwise they should see a message in the alert box that asks them to enter an email address.
-
-### Optional: Happiness Journal
-
-_If you finish adding the required JS and styling Project 1, try this extra JS arrays challenge..._
-
-Use the following code to build a functioning happiness journal.
-
-Ensure all of the controls implemented in HTML are functioning and producing the correct UI.
-
-When you're finished, add some CSS to make things look nice!
-
-```html
-<form id="happiness-form">
-  <div id="controls">
-    <div>
-      Order By:
-      <label for="h">
-        Happiest
-        <input type="radio" name="sort" value="h" />
-      </label>
-      <label for="u">
-        Unhappiest
-        <input type="radio" name="sort" value="u" />
-      </label>
-    </div>
-    <div>
-      Show only:
-      <label for="+3">
-        3 and above
-        <input type="radio" name="filter" value="+3" />
-      </label>
-      <label for="-3">
-        3 and below
-        <input type="radio" name="filter" value="-3" />
-      </label>
-    </div>
-  </div>
-  <h3>Happiness Journal</h3>
-  <ul id="happiness-journal">
-    Empty.
-    <!-- Add your journal entries here -->
-  </ul>
-
-  <h3>Add a new entry:</h3>
-  <fieldset>
-    <label for="happy-value">
-      <div>How are you feeling?</div>
-      1<input type="radio" name="happy-value" value="1" /> 2<input
-        type="radio"
-        name="happy-value"
-        value="2"
-      />
-      3<input type="radio" name="happy-value" value="3" /> 4<input
-        type="radio"
-        name="happy-value"
-        value="4"
-      />
-    </label>
-  </fieldset>
-  <fieldset>
-    <label for="notes">
-      <div>Add a note:</div>
-      <textarea name="notes" id="notes" cols="30"></textarea>
-    </label>
-  </fieldset>
-  <fieldset>
-    <button type="submit">Submit your feelings</button>
-  </fieldset>
-</form>
-```
-
-```js
-/* 
-  This is just the starter code for the exercise. 
-  Write your own additional logic and functions 
-  to update the view when the user interacts with your form.
-  Use an array (or multiple arrays) to store the data you
-  will display in the list.
-*/
-
-const form = document.getElementById("happiness-form");
-const sortInputs = document.querySelectorAll('[name="sort"]');
-const filterInputs = document.querySelectorAll('[name="filter"]');
-
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
-  // Get the values from the form.
-  // Append a new entry to your list!
-});
-
-sortInputs.forEach(function(radioInput) {
-  radioInput.addEventListener("change", function(e) {
-    // use e.target.value to sort your entries
-  });
-});
-
-filterInputs.forEach(function(radioInput) {
-  radioInput.addEventListener("change", function(e) {
-    // use e.target.value to filter your entries
-  });
 });
 ```
 

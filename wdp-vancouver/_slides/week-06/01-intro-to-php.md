@@ -585,7 +585,7 @@ $removed_month = array_shift( $months );
 To **add** a new item **to the beginning** of the array:
 
 ```php
-$removed_month = array_unshift( $months );
+array_unshift( $months, 'January' );
 ```
 
 And to **remove** an item at a particular **index**:
@@ -939,7 +939,7 @@ class: center, middle
 
 ## Danger Will Robinson!
 
-Modifying global variables can have intended consequences, especially as your codebase grows!
+Modifying global variables can have unintended consequences, especially as your codebase grows!
 
 [WordPress has global variables](https://codex.wordpress.org/Global_Variables) to access all kinds of data, but it's important to remember to access them only for display purposes, and not to modify their values.
 
@@ -985,7 +985,7 @@ PHP allows us to break our web pages into fragments, and dynamically include the
 ```php
 // in your index.php file
 
-include( 'header.php' );
+<?php include( 'header.php' ); ?>
 
   <body>
     <p>My content...</p>
@@ -1002,7 +1002,7 @@ Which enables...
 ```php
 // in your index.php file
 
-include( 'header.php' );
+<?php include( 'header.php' ); ?>
 
   <body>
     <p>My content...</p>
@@ -1013,7 +1013,7 @@ include( 'header.php' );
 ```php
 // in your about.php file
 
-include( 'header.php' );
+<?php include( 'header.php' ); ?>
 
   <body>
     <h1>My About Page</h1>

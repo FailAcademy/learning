@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: GraphQL APIs
-slides: ['_slides/week-02/03-graphql-apis.md']
-lesson_date: 2019-07-10
+slides: ["_slides/week-02/03-graphql-apis.md"]
+lesson_date: 2019-10-08
 ---
 
 ## Pre-work

@@ -2,7 +2,7 @@
 layout: lesson
 title: JavaScript Functions
 slides: ['_slides/week-03/02-javascript-functions.md']
-lesson_date: 2019-07-16
+lesson_date: 2019-10-15
 ---
 
 ## Pre-Work
@@ -50,14 +50,14 @@ In pairs or small groups, rename these functions using the rules-of-thumb we jus
 
 ```js
 function myFunction(age) {
-  var dogYears = 7 * age;
+  let dogYears = 7 * age;
   console.log('Your pup is ' + dogYears + ' dog-years old');
 }
 
 function makeItSo(radius) {
-  var circumference = Math.PI * 2 * radius;
+  let circumference = Math.PI * 2 * radius;
   console.log('The circumference is ' + circumference);
-  var area = Math.PI * radius * radius;
+  let area = Math.PI * radius * radius;
   console.log('The area is ' + area);
 }
 ```
@@ -115,38 +115,43 @@ function convertTemp(temp, convertFrom, convertTo) {
 
 ## Exercise 4
 
-Can you fix the scoping issues in this code without modifying the first line or the last line? (i.e. You may only modify the code in the function body.)
+Can you fix the scoping issues in this code by only modifying the code in the function body?
 
 ```js
-const timeOff = ['Mon', 'Tues', 'Weds'];
+const prices = [16.99, 42.99, 89.99];
 
-function bookVacation(days) {
-  timeOff = {
-    days: days,
-  };
-  return timeOff;
+function discountPrices(pricesToDiscount) {
+  
+  // Error: Assignment to constant variable.
+  prices = [];
+
+  pricesToDiscount.forEach(function(price, index) {
+    prices[index] = price * 0.9;
+  });
+  return prices;
 }
 
-const vacation = bookVacation(['Fri', 'Sat', 'Sun']);
-console.log(vacation); // error!
+const discountedPrices = discountPrices(prices);
+console.log(discountedPrices); 
 ```
 
 ---
 
 ## Exercise 5
 
-Functions can return functions. Refactor this code to produce the right `console.log` output.
+We learned that functions can return functions. Refactor this code to produce the right `console.log()` output:
 
 ```js
-function loanAmount(amount, interest) {
+function loanPayment(amount, interest) {
   return function(numberOfMonths) {
-    return (amount * (interest / 100)) / numberOfMonths;
+    return (amount * (1 + (interest / 100))) / numberOfMonths;
   };
 }
 
-// Refactor the code below. You may add new variables... etc.
-const loanPayment = undefined;
-console.log(loanPayment);
+// Refactor the code below so that it logs the monthly payment 
+// for a loan of $1000 at 15% interest over 10 months (i.e. 115)
+const loanAmount = loanPayment(1000, 15);
+console.log(loanAmount);
 ```
 
 ---
@@ -165,6 +170,21 @@ const message = {
   },
 };
 message.display();
+```
+
+---
+
+# Exercise 7 
+
+Amend the average function we wrote earlier to accept any number of arguments, using a rest parameter, rather than an array. 
+
+```js
+function average(...numbers) {
+  // Average the arguments passed in
+}
+
+average(5, 6, 7, 8, 9); // 7
+average(1, 2, 12); // 5
 ```
 
 ---

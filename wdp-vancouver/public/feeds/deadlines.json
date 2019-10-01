@@ -2,48 +2,48 @@
   {
     "title": "Project 1 Due",
     "allDay": true,
-    "start": "2019-07-15",
+    "start": "2019-10-15",
     "url": "/project/project-01/"
   },
   {
     "title": "Project 2 Due",
     "allDay": true,
-    "start": "2019-07-22",
+    "start": "2019-10-21",
     "url": "/project/project-02/"
   },
   {
     "title": "Project 3 Due",
     "allDay": true,
-    "start": "2019-08-06",
+    "start": "2019-11-04",
     "url": "/project/project-03/"
   },
   {
     "title": "P3 Peer Review Due",
     "allDay": true,
-    "start": "2019-08-09"
+    "start": "2019-11-22"
   },
   {
     "title": "Project 4 Due",
     "allDay": true,
-    "start": "2019-08-20",
+    "start": "2019-11-19",
     "url": "/project/project-04/"
   },
   {
     "title": "Project 5 Due",
     "allDay": true,
-    "start": "2019-08-26",
+    "start": "2019-11-25",
     "url": "/project/project-05/"
   },
   {
     "title": "GitHub Portfolio Due",
     "allDay": true,
-    "start": "2019-09-03",
+    "start": "2019-11-29",
     "url": "/project/project-06/"
   },
   {
     "title": "Community Project Due",
     "allDay": true,
-    "start": "2019-09-20",
+    "start": "2019-12-18",
     "url": "/project/project-07/"
   }
 ]

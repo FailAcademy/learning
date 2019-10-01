@@ -56,9 +56,7 @@ Do you need actually need an embedded database in your mobile app?
 
 # AsyncStorage
 
-If you just need a basic key-value store for a small amount of data, the `AsyncStorage` [(ref)](https://facebook.github.io/react-native/docs/asyncstorage.html) library built into React Native may do the trick.
-
-Think of `AsyncStorage` as being the React Native equivalent of a web brower's local storage API.
+If you just need a basic key-value store for a small amount of data, the `AsyncStorage` [(ref)](https://github.com/react-native-community/async-storage), a library that is managed by the React Native Community.
 
 Note that data stored in `AsyncStorage` won't be encrypted.
 
@@ -74,9 +72,13 @@ Note that data stored in `AsyncStorage` won't be encrypted.
 
 # Exercise 1
 
+Install `Async Storage`
+
+`yarn add @react-native-community/async-storage`
+
 If you haven't already, create a `config/model.js` file in your project.
 
-In this file, import the `AsyncStorage` object from `react-native`;
+In this file, import the `AsyncStorage` object from `@react-native-community/async-storage`;
 
 ---
 
@@ -91,7 +93,7 @@ template: inverse
 AsyncStorage con only store `String` values. That is ok, because we can use JavaScript's `JSON.stringify` & `JSON.parse` to encode and decode JS objects when we want to store (and retrieve them).
 
 ```js
-AsyncStorage.setItem('key', JSON.stringify({ value: 'Hey!' }));
+AsyncStorage.setItem("key", JSON.stringify({ value: "Hey!" }));
 ```
 
 ---
@@ -102,13 +104,13 @@ AsyncStorage.setItem('key', JSON.stringify({ value: 'Hey!' }));
 To store a value, you'll use the `setItem` method.
 
 ```js
-AsyncStorage.setItem('key', JSON.stringify({ value: 'Hey!' }));
+AsyncStorage.setItem("key", JSON.stringify({ value: "Hey!" }));
 ```
 
 To lookup this value you must use the `key`.
 
 ```js
-AsyncStorage.getItem('key'); // returns the string "{ value: 'Hey!'}"
+AsyncStorage.getItem("key"); // returns the string "{ value: 'Hey!'}"
 ```
 
 **Be careful:** If you store something using a `key` that you previously used, it will overwrite the value.
@@ -120,9 +122,9 @@ AsyncStorage.getItem('key'); // returns the string "{ value: 'Hey!'}"
 `AsyncStorage` methods are `async` and return a `Promise`. So, to bind the value in storage to a variable when querying, you'll need to `await` the result.
 
 ```js
-await AsyncStorage.setItem('key', JSON.stringify({ value: 'Hey!' }));
+await AsyncStorage.setItem("thisISaKey", JSON.stringify({ value: "Hey!" }));
 
-const result = await AsyncStorage.getItem('key');
+const result = await AsyncStorage.getItem("thisISaKey");
 
 console.log(JSON.parse(result).value); // logs 'Hey!'
 ```
@@ -139,7 +141,7 @@ To Remove an item from `AsyncStorage`,
 you need to know the `key`.
 
 ```js
-AsyncStorage.removeItem('key');
+AsyncStorage.removeItem("thisISaKey");
 ```
 
 _What does this method return?_
@@ -194,8 +196,8 @@ We'll need to use React's context API to keep our app UI state in sync with our 
 In `index.js` set up your exports for `FavesContext`:
 
 ```js
-import FavesContext from './FavesContext';
-import { FavesProvider } from './FavesContext';
+import FavesContext from "./FavesContext";
+import { FavesProvider } from "./FavesContext";
 
 export { FavesProvider };
 export default FavesContext;
@@ -210,9 +212,7 @@ _We'll create `FavesContext` and `FavesProvider` next..._
 Add this code to `FavesProvider.js`:
 
 ```js
-import React, { Component } from 'react';
-
-// import the Realm helpers you just created here
+import React, { Component } from "react";
 
 const FavesContext = React.createContext();
 
@@ -278,7 +278,7 @@ You will now be able to update your context where you use a `FavesContext.Consum
 
 - What an embedded database is in the context of a mobile app, and when its appropriate to use one
 - How to add AsyncStorage to a React Native app
-- How to perform basic CRUD operations using syncStorage in React Native
+- How to perform basic CRUD operations using AsyncStorage in React Native
 - How to manage UI state in relation to AsyncStorage
 
 ---

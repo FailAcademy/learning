@@ -20,10 +20,213 @@ layout: false
 
 # Agenda
 
-1. Beyond function basics
-2. Scope
-3. Arrow functions
-4. Smarter parameters and arguments
+1. What is a function?
+2. Beyond function basics
+3. Scope
+4. Arrow functions
+5. Smarter parameters and arguments
+
+---
+
+template: inverse
+
+# Function Basics
+
+---
+
+# What is a Function?
+
+Functions are specific chunks code that you can use to **repeat a set of instructions**.
+
+In other words, if you want your code to do something, you'll need to execute a function!
+
+In JavaScript **functions** are actually a type of object, meaning we can use them as values and assign them to variables.
+
+---
+
+# What Are They For?
+
+- Functions help us better organize our code
+- Functions allow us to group together statements
+- Functions allow us to only run certain steps in code when they are needed
+- Functions can be thought of as a black box; they take some input, perform complex work, and provide us with a value afterwards
+
+---
+
+# Creating a Function
+
+We can store our function using a **name** (e.g. `add` in this example):
+
+```js
+function add(a, b) {
+  return a + b;
+}
+```
+
+The `a` and `b` in parentheses are called **parameters**. They allow us to pass different **arguments** into the function whenever we use it.
+
+Parameters are not required to create a function (but we always need the parentheses even if they are empty).
+
+---
+
+# How to Use a Function
+
+Simply writing a function doesn't do much, to use it we need to **call** or **invoke** it (we can use either of these terms):
+
+```js
+// This is called "declaring" the function:
+
+function add(a, b) {
+  return a + b;
+}
+
+// This is called "calling" or "invoking" the function:
+
+const result = add(2, 2);
+```
+
+The output of function is called its **return value**. Here we store the return value in a variable. 
+
+_What will the value of `result` be?_
+
+---
+
+# Function Options
+
+There are many ways to create functions in JavaScript:
+
+```js
+function myFunction() {
+  // Function declaration
+} // No semicolon!
+
+const myFunction = function() {
+  // Function expression
+};
+
+const myFunction = function namedFunction() {
+  // Named function expression
+};
+
+const myFunction = () => {
+  // Arrow function expression
+};
+
+(function() {
+  // "IIFE" aka "Immediately invoked function expression"
+})();
+```
+
+???
+
+Briefly speak to the purpose and usefulness of each type of function, taking care to not get bogged down in the details of lexical binding of `this` with arrow functions yet... (more to come in the Functions lesson)
+
+---
+
+# Use Arguments
+
+Here we pass the `waterTemp` variable into the function as an **argument**:
+
+```js
+function checkWaterTemp(waterTemp) {
+  if (waterTemp <= 0) {
+    console.log("Water is frozen");
+  } else if (waterTemp > 0 && waterTemp < 100) {
+    console.log("Water is liquid");
+  } else {
+    console.log("Water is boiling");
+  }
+}
+
+// "Call" or "Invoke" the function 
+checkWaterTemp(-5);
+checkWaterTemp(15);
+checkWaterTemp(120);
+```
+
+???
+
+Be sure to highlight the usefulness of using an argument here instead.
+
+---
+
+# Function Return
+
+**Return values** allow us to pass data back from our functions:
+
+```js
+function checkWaterTemp(waterTemp) {
+  if (waterTemp <= 0) {
+    return "Water is frozen";
+  } else if (waterTemp > 0 && waterTemp < 100) {
+    return "Water is liquid";
+  } else {
+    return "Water is boiling";
+  }
+}
+
+// Invoke the function and bind the return value to a variable.
+const result = checkWaterTemp(60);
+console.log(result);
+```
+
+**Note:** Functions always return a value in JavaScript. If no return value is specified, the function will return `undefined`.
+
+???
+
+If this hasn't come up already, explain to students that this is why they see and `undefined` line in their console when they run `console.log()`.
+
+
+---
+
+class: center, middle
+
+### Learn the Vocabulary:
+
+.inline-images[
+![Screenshot of a function definition](/public/img/slide-assets/function-diagram.png)
+]
+
+👆 This is a **function defintion.**
+
+---
+
+# Sidebar: Ternary
+
+If your `if` statement is simple and short, you may want to use the **ternary operator**.
+
+Statements using the ternary operator use `?` and `:` to denote the branching condition, like so:
+
+`[expression] ? [if true] : [if false]`
+
+Example:
+
+```js
+let age = 22;
+const isAdult = age >= 18 ? true : false;
+// What will be the value of isAdult?
+```
+
+---
+
+# Ternary + Implicit Return
+
+Arrow function expressions `() => ()` are special. They can return a value _implicitly_, without the need for the `return` keyword:
+
+```js
+const checkAge = (age, minAge) => (age >= minAge ? "true" : "false");
+
+let isAdult = checkAge(16, 18); // What is the value of isAdult?
+isAdult = checkAge(50, 18); // How about now?
+```
+
+This syntax helps us realize the power of **functions as values** by giving us the ability to express value-functions with simple, readable syntax.
+
+???
+
+Show students how to write the (almost) equivalent code for this example using a regular function and explicit return.
+
+Highlight the compactness!
 
 ---
 
@@ -38,27 +241,6 @@ class: center, middle
 ### &ldquo;Functions are the bread and butter of JavaScript programming.&rdquo;
 
 – Eloquent JavaScript
-
----
-
-# Defining Functions
-
-There are **6 ways** to define a function in JavaScript.
-
-- [Function declaration](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/function)
-- [Function expression](https://developer.mozilla.org/en/docs/web/JavaScript/Reference/Operators/function)
-- [Shorthand method definition](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Method_definitions)
-- [Arrow function](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
-- [Function constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
-- [Generator function .red[\*]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)
-
-.footnote[.red[*] _You may ignore this one for now_]
-
-???
-
-**Ask:** Which have we seen/used so far?
-
-Provide examples of each, or organize the students in small groups to quickly come up with examples.
 
 ---
 
@@ -113,18 +295,6 @@ sayHelloWithGreeting('Bob');
 
 ---
 
-class: center, middle
-
-### Learn the Vocabulary:
-
-.inline-images[
-![Screenshot of a function definition](/public/img/slide-assets/function-diagram.png)
-]
-
-👆 This is a **function defintion.**
-
----
-
 # Function Names
 
 Functions names should describe what action the function takes. Good function names will _usually_ contain a **verb**.
@@ -149,14 +319,14 @@ In pairs or small groups, rename these functions using the rules-of-thumb we jus
 
 ```js
 function myFunction(age) {
-  var dogYears = 7 * age;
+  let dogYears = 7 * age;
   console.log('Your pup is ' + dogYears + ' dog-years old');
 }
 
 function makeItSo(radius) {
-  var circumference = Math.PI * 2 * radius;
+  let circumference = Math.PI * 2 * radius;
   console.log('The circumference is ' + circumference);
-  var area = Math.PI * radius * radius;
+  let area = Math.PI * radius * radius;
   console.log('The area is ' + area);
 }
 ```
@@ -165,32 +335,10 @@ You'll share your function names with the class afterward.
 
 ???
 
-- Survey the function names the students cam up with
+- Survey the function names the students came up with
 - Make sure they adhere to the rules described
 - Suggest better function names where appropriate
-- Remind them that naming things effectively is the hardest part of programming!
-
----
-
-# return
-
-Functions with a return statement are **functions as values**.
-
-```js
-function numberTen() {
-  return 10;
-}
-
-console.log(numberTen()); // logs 10
-```
-
-The **value** of `numberTen()` (calling the function) is `10`. This is just a simple example to demonstrate how things work.
-
-**Note:** Functions always return a value in JavaScript. If no return value is specified, the function will return `undefined`.
-
-???
-
-If this hasn't come up already, explain to students that this is why they see and `undefined` line in their console when they run `console.log()`.
+- Remind them that naming things effectively is one of the hardest parts of programming!
 
 ---
 
@@ -216,6 +364,28 @@ console.log(average([1, 2, 3, 4, 5])); // Should log: 3
 console.log(exponent(2, 10)); // / Should log: 1024
 ```
 
+???
+
+```js
+function exponent(number, exponent) {
+  return Math.pow(number, exponent); 
+}
+
+function average(numberList) {
+  let total = 0;
+
+  for(let i = 0; i < numberList.length; i++) {
+    total += numberList[i];
+  }
+
+  return total / numberList.length;
+}
+
+function roundUp(number) {
+  return Math.ceil(number);
+}
+```
+
 ---
 
 # Single Responsibility
@@ -226,16 +396,16 @@ This is called the **[single-responsibility principle](https://en.wikipedia.org/
 
 ```js
 // Can we split this function into multiple functions?
-makeBreakfastLunchAndDinner();
+createCarouselandEnableMobileMenu();
 ```
 
-Don't be afraid to split your code up into as many function as you need. Doing this will help you reason about your logic and help you spot bugs. 🐛 👀
+Don't be afraid to split your code up into as many functions as you need. Doing this will help you reason about your logic and help you spot bugs. 🐛 👀
 
 ---
 
 # Exercise 3
 
-This function is hard to read and can be improved using the single-responsibility principle. Refactor it's functionality to use more than one `function`.
+This function is hard to read and can be improved using the single-responsibility principle. Refactor its functionality to use more than one `function`.
 
 ```js
 function convertTemp(temp, convertFrom, convertTo) {
@@ -268,6 +438,30 @@ template: inverse
 
 ---
 
+# Function Scope
+
+**Arguments** are _local to the inside of the function_. Their value is not available outside. This is called **function scope**.
+
+```js
+function checkWaterTemp(waterTemp) {
+  if (waterTemp <= 0) {
+    console.log("Water is frozen");
+  } else if (waterTemp > 0 && waterTemp < 100) {
+    console.log("Water is liquid");
+  } else {
+    console.log("Water is boiling");
+  }
+}
+
+// waterTemp is out of scope, this will produce an error
+console.log(waterTemp);
+
+// "Call" or "Invoke" the function 
+checkWaterTemp(20);
+```
+
+---
+
 # Global vs. Local
 
 Inside the **function body** (local scope) you may read variables from **outside** (global scope), but not the other way around.
@@ -283,10 +477,11 @@ function add2Numbers(num1, num2) {
 
 // Global scope
 console.log(add2Numbers(13, 13));
+console.log(num1);
 console.log(num2);
 ```
 
-_What is the return value of this function? What will be logged to the console from the last two lines?_
+_What is the return value of this function? What will be logged to the console from the last three lines?_
 
 ---
 
@@ -294,50 +489,60 @@ _What is the return value of this function? What will be logged to the console f
 
 There are pros and cons to each type of variable scope:
 
-- **Global variables** can be **reused** throughout your code, but they **use more memory** and you may run into **naming collisions** with other scripts. (Don't use global scope!)
+- **Global variables** can be **reused** throughout your code, but they **use more memory** and you may run into **naming collisions** with other scripts
 - **Local variables** are more efficient because they **use less memory** and their **names are protected** within the function that they are defined, but they **can't be re-used** elsewhere in your code
+
+Generally we try to avoid using global variables.
 
 ---
 
 # Nested Functions
 
-Scope rules apply to nested functions too. Function scope creates a **context where you can safely declare local variables** that can't be overwritten from outside.
-
+Scope rules apply to nested functions too:
 ```js
 // Global Scope
-let unsafeVar = 5;
+let globalVar = 5;
 
 function someFunction() {
-  // Local Scope #1
+  let outerVar = 10;
+
   function someOtherFunction() {
-    let safeVar = 10;
-    // Local Scope #2
+    let innerVar = 15;
+    
+    // Can access globalVar, outerVar and innerVar here
+    console.log(globalVar + outerVar + innerVar); 
   }
-  unsafeVar = 15;
-  safeVar = 0;
+
+  // Can't access innerVar here
+  console.log(globalVar + outerVar + innerVar); 
 }
 
-console.log(safeVar, unsafeVar); // What is logged to the console?
+// Can only access globalVar here
+console.log(globalVar + outerVar + innerVar); 
 ```
 
 ---
 
 # Exercise 4
 
-Can you fix the scoping issues in this code without modifying the first line or the last line? (i.e. You may only modify the code in the function body.)
+Can you fix the scoping issues in this code by only modifying the code in the function body?
 
 ```js
-const timeOff = ['Mon', 'Tues', 'Weds'];
+const prices = [16.99, 42.99, 89.99];
 
-function bookVacation(days) {
-  timeOff = {
-    days: days,
-  };
-  return timeOff;
+function discountPrices(pricesToDiscount) {
+  
+  // Error: Assignment to constant variable.
+  prices = [];
+
+  pricesToDiscount.forEach(function(price, index) {
+    prices[index] = price * 0.9;
+  });
+  return prices;
 }
 
-const vacation = bookVacation(['Fri', 'Sat', 'Sun']);
-console.log(vacation); // error!
+const discountedPrices = discountPrices(prices);
+console.log(discountedPrices); 
 ```
 
 ---
@@ -347,15 +552,16 @@ console.log(vacation); // error!
 We learned that functions can return functions. Refactor this code to produce the right `console.log()` output:
 
 ```js
-function loanAmount(amount, interest) {
+function loanPayment(amount, interest) {
   return function(numberOfMonths) {
-    return (amount * (interest / 100)) / numberOfMonths;
+    return (amount * (1 + (interest / 100))) / numberOfMonths;
   };
 }
 
-// Refactor the code below. You may add new variables... etc.
-const loanPayment = undefined;
-console.log(loanPayment);
+// Refactor the code below so that it logs the monthly payment 
+// for a loan of $1000 at 15% interest over 10 months (i.e. 115)
+const loanAmount = loanPayment(1000, 15);
+console.log(loanAmount);
 ```
 
 ---
@@ -365,45 +571,45 @@ console.log(loanPayment);
 Run this code, what happens, why? 🤔
 
 ```js
-const giraffe = 'outer';
-function safari() {
-  console.log('Went to visit', giraffe);
-  const giraffe = 'inner';
+const name = 'Jack';
+function sayHello() {
+  console.log('Hello', name);
+  const name = 'Jill';
 }
-safari();
+sayHello();
 ```
 
 Now, run this code, what happens, why? 🤯
 
 ```js
-var zebra = 'outside';
-function safari() {
-  console.log('Went to visit', zebra);
-  var zebra = 'inside';
+var name = 'Jack';
+function sayHello() {
+  console.log('Hello', name);
+  var name = 'Jill';
 }
-safari();
+sayHello();
 ```
 
 .footnote[.red[***Avoid using `var`**]. Stick to `let` and `const`, _they do not get "hoisted"_.]
 
 ???
 
-You may ask: What is on "global scope", what is in "local scope"?
+You may ask: What is in "global scope", what is in "local scope"?
 
-Students may be surprised by what gets logged by the `var` example.
+Students may be surprised by what gets logged by the `var` example. You can also remove the `var name = 'Jill'` line (and move it above console.log) to demonstrate how var works. 
 
 Here you'll need to take time to explain var hoisting, but don't spend too much time, as we aren't going to see `var` in the course ever again.
 
 Hoisting results in the computer running the code like this:
 
 ```js
-var zebra = 'outside';
-function safari() {
-  var zebra;
-  console.log('Went to visit', zebra);
-  zebra = 'inside';
+var name = 'Jack';
+function sayHello() {
+  var name;
+  console.log('Hello', name);
+  name = 'Jill';
 }
-safari();
+sayHello();
 ```
 
 ---
@@ -433,7 +639,7 @@ Anonymous functions passed as callbacks to other functions **create their own sc
 _What this means..._
 
 ```js
-function counterES5() {
+function counterA() {
   // the value of "this" out here
   this.seconds = 0;
 
@@ -444,7 +650,7 @@ function counterES5() {
   }, 1000);
 }
 
-const counterA = new counterES5();
+const counter = new counterA();
 ```
 
 ---
@@ -456,7 +662,7 @@ const counterA = new counterES5();
 Store the outer function's `this` value in a variable:
 
 ```js
-function counterES5() {
+function counterB() {
   this.seconds = 0;
   const that = this;
 
@@ -465,6 +671,8 @@ function counterES5() {
     console.log(that.seconds);
   }, 1000);
 }
+
+const counter = new counterB();
 ```
 
 ---
@@ -476,7 +684,7 @@ function counterES5() {
 Use the `bind` method and pass `this` as an argument:
 
 ```js
-function counterES5() {
+function counterC() {
   this.seconds = 0;
 
   window.setInterval(
@@ -487,18 +695,22 @@ function counterES5() {
     1000,
   );
 }
+
+const counter = new counterC();
 ```
 
 ---
 
 # ES2015 Solution
 
+**Option 3:**
+
 Use an **arrow function** to bind the scope of the function where it is defined, rather than where it is called.
 
 This is also know as **lexical binding**.
 
 ```js
-function counterES2015() {
+function counterD() {
   this.seconds = 0;
 
   window.setInterval(() => {
@@ -506,44 +718,39 @@ function counterES2015() {
     console.log(this.seconds);
   }, 1000);
 }
+
+const counter = new counterD();
 ```
 
 ---
 
 # More Arrow Functions
 
-**ES5 `function`:**
-
 ```js
+// ES5
+
 function sayHi() {
   console.log('hi');
 }
+
 function addOne(x) {
   return x + 1;
 }
+
 function multiply(a, b) {
   return a * b;
 }
-var multiply = function(a, b) {
-  return a * b;
-};
 ```
-
----
-
-# More Arrow Functions
-
-**ES2015 `=>`:**
 
 ```js
+// ES2015
+
 const sayHi = () => console.log('hi');
+
 const addOne = x => x + 1;
-const multiply = (a, b) => {
-  return a * b;
-};
+
 const multiply = (a, b) => a * b;
 ```
-
 ---
 
 # Warning
@@ -615,8 +822,8 @@ template: inverse
 Parameters are variables you define to be used inside your function's body:
 
 ```js
-const cubeVolume = function(side) {
-  const volume = side * side * side;
+const cubeVolume = function(length) {
+  const volume = length * length * length;
   return volume;
 };
 ```
@@ -632,11 +839,11 @@ If you call a function without providing a value for a parameter, it will be bou
 Previously, we would work around this issue by testing parameter values in the body of the function and then assign a value if they were `undefined`:
 
 ```js
-const cubeVolume = function(side) {
+const cubeVolume = function(length) {
   if (typeof side === undefined) {
-    return new Error('Cube needs a side.');
+    return new Error('Cube needs a length.');
   }
-  const volume = side * side * side;
+  const volume = length * length * length;
   return volume;
 };
 ```
@@ -656,9 +863,9 @@ With ES2015, default function parameters allow us to initialize parameters with 
 If the function you designed may not always receive an **argument** value, You can provide a default value to bind to the **parameter**:
 
 ```js
-const cubeVolume = function(side = 0) {
+const cubeVolume = function(length = 1) {
   // No need to throw an error!
-  const volume = side * side * side;
+  const volume = length * length * length;
   return volume;
 };
 ```
@@ -683,6 +890,36 @@ console.log(sum(1, 2, 3, 4, 5)); // 15
 ```
 
 **Note:** No other named parameters can follow the rest parameter in the function declaration.
+
+---
+
+# Exercise 7 
+
+Amend the average function we wrote earlier to accept any number of arguments, using a rest parameter, rather than an array. 
+
+```js
+function average(...numbers) {
+  // Average the arguments passed in
+}
+
+average(5, 6, 7, 8, 9); // 7
+average(1, 2, 12); // 5
+```
+
+???
+
+```js
+function average(...numbers) {
+
+  let total = 0;
+
+  for(let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+
+  return total / numbers.length;
+}
+```
 
 ---
 

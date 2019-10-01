@@ -2,7 +2,7 @@
 layout: lesson
 title: Sass / CSS Preprocessors
 slides: ["_slides/week-04/04-sass.md"]
-lesson_date: 2019-07-26
+lesson_date: 2019-10-25
 ---
 
 ## Pre-Work
@@ -85,6 +85,10 @@ This afternoon, we’ll implement the following Sass enhancements in your Projec
 ---
 
 ## Additional Resources
+
+Code playground for testing Sass/Scss:
+
+- [Sass Meister](https://www.sassmeister.com/)
 
 Excellent online SASS Tutorials:
 

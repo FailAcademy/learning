@@ -60,7 +60,7 @@ Check out the [source code of the original jQuery release](http://genius.it/ejoh
 
 jQuery's main claim to fame&mdash;and it's original purpose&mdash;was to make selecting and manipulating DOM elements simpler.
 
-It does this by wrapping JavaScript's _native_ DOM manipulation methods in an easy to use **API** (i.e. no more long method names like `getElementByClassName()`), and to provide **convenience methods** for parsing and updating HTML.
+It does this by wrapping JavaScript's _native_ DOM manipulation methods in an easy to use **API** (i.e. no more long method names like `getElementsByClassName()`), and to provide **convenience methods** for parsing and updating HTML.
 
 ---
 
@@ -325,7 +325,7 @@ template: inverse
 We've already seen a preview of how jQuery helps you manipulate the DOM, but let's dive a little deeper:
 
 - the `.html()` method will get the HTML inside the first element of the matched set (and its descendents)
-- the `.text()` method will just get the text from inside the first element of the matched set (and its descendents)
+- the `.text()` method will get the text inside the first element of the matched set (and its descendents)
 
 ---
 

@@ -21,10 +21,10 @@ layout: false
 # Agenda
 
 1. What CSS is and how to use it
-2. The box model and block vs. inline elements
-3. Classes and IDs
-4. Color and backgrounds
-5. CSS "resets"
+2. CSS "resets"
+3. The box model and block vs. inline elements
+4. Classes and IDs
+5. Color & backgrounds 
 6. Developer tools
 
 ---
@@ -50,20 +50,6 @@ CSS stands for **Cascading Style Sheets**.
 CSS describes how an HTML element will be rendered on a screen. In other words, it allows us to add **styles** to our HTML.
 
 (But it's a not a programming language...)
-
----
-
-# Before CSS...
-
-In the old days, we used to add styles to our websites like this:
-
-```html
-<p>
-   <font face="Arial" color="red" size="2">Some text...</font>
-</p>
-```
-
-Now imagine a large website with dozens of pages...can you see a major flaw in styling a website this way?
 
 ---
 
@@ -95,7 +81,7 @@ class: center, middle
 
 # A CSS Ruleset
 
-But you can do a lot more than just change the background colour behind some paragraph text.
+But you can do a lot more than just change the background color behind some paragraph text.
 
 ```css
 p {
@@ -235,6 +221,30 @@ class: center, middle
 * It's easy to link the same stylesheet to multiple pages across your website
 * It's much easier to make global changes to your CSS that are immediately picked up throughout the website
 * Your website's content is clearly separated from your website's style
+
+---
+
+template: inverse
+
+# CSS Resets
+
+---
+
+class: center, middle
+
+.large[
+What's a CSS reset?<br />
+Why do we need one?
+]
+
+---
+
+# Popular Resets
+
+There are a few popular CSS resets used today:
+
+* [Eric Meyer reset](http://meyerweb.com/eric/tools/css/reset/)
+* [normalize.css](http://necolas.github.io/normalize.css/)
 
 ---
 
@@ -612,14 +622,6 @@ input[type="search"] {
 
 ---
 
-class: center, middle
-
-.large[
-Sidebar!
-]
-
----
-
 # Pseudo-classes
 
 **[Pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)** are special built-in keywords you can add to elements to describe some dynamic state of the element:
@@ -650,34 +652,31 @@ Question to ask:
 
 ---
 
-# Pseudo-classes
+# Pseudo-classes: State
 
-Pseudo-classes also allow us to select very specific child elements inside of a parent:
+Expanding on the previous example, lets think about how certain elements can have different states.
+Psuedo-classes can help with styling the state of UI elements. For example the `<a>` tag has different states such as:
 
-```css
-li:first-child {
-  border-left: 0;
-}
+- Hover, when the mouse-cursor moves over a link
+- Active, when a link is clicked, mouse-down state
+- Focus, when a link is clicked it becomes focused
+- Visited, after a link has been clicked it has been visited
 
-li:nth-child(2),
-li:nth-child(odd) {
-  color: blue;
-}
 
-li:nth-child(3n + 4) {
-  text-transform: uppercase; /* match children 4, 7, 10, etc. */
-}
+---
 
-li:last-child {
-  border-right: 0;
-}
-```
+class: center, middle
+
+<iframe height="500" style="width: 100%;" scrolling="no" title="Pseudo Classes: hover, focus, &amp; visited" src="https://codepen.io/redacademy/embed/JjPVbVp?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/redacademy/pen/JjPVbVp'>Pseudo Classes: hover, focus, &amp; visited</a> by RED Academy
+  (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 
 # Pseudo-classes & Forms
 
-The `:focus` pseudo-class also helps us target special styles toward the field that the user has currently activated.
+The `:focus` pseudo-class is also very useful when working with `<input>` elements, common when building Forms. 
 
 ```css
 input {
@@ -689,11 +688,13 @@ input:focus {
 }
 ```
 
+*Note that when an element is clicked on it gains **Focus**, there's an event we will use later, in JavaScript, called **Blur**. This happens When you click off of a focused element, it loses focus.* 🤓
+
 ---
 
 # Pseudo-classes & Forms
 
-And the `:active` pseudo-class allows to provide feedback to a user to let them know that a button has been activated:
+Similar to the `<a>` tag we can use the `:active` pseudo-class with buttons to provide feedback to a user when a button has been activated:
 
 ```css
 button {
@@ -718,143 +719,28 @@ We want our `container` class to keep everything inside of it at a width of `124
 
 Is there anywhere that you may need to create an extra wrapping `<div>` around some of your content to contain it without conflicting with a full-width background treatment?
 
----
-
-template: inverse
-
-# Position
-
----
-
-class: center, middle
-
-.inline-images[
-![CSS Box Concept](/public/img/slide-assets/css-box-concept.svg)
-]
-
----
-
-# Working with Position
-
-We can take even more control over our layouts using the CSS `position` property. The `position` property can take a specific array of values:
-
-* `static` (the default behaviour, aka **normal flow**)
-* `relative`
-* `absolute`
-* `fixed`
-
----
-
-# Relative Positioning
-
-Relative positioning moves an element in relation to where it would have been in the normal flow:
-
-```css
-header h1 {
-  position: relative;
-  top: 5%;
-  right: 200px;
-}
-```
-
-To adjust an element's position relatively, we can either specify `top` or `bottom`, and `left` or `right` in `px`, `%`, `em`, or `rem` units.
-
----
-
-# Absolute Positioning
-
-This is where things get really interesting. Setting `position` to `absolute` takes an element out of the normal flow.
-
-With absolute positioning, it's like the other elements on the page suddenly forget that it's there.
-
-```css
-header h1 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 200px;
-}
-```
-
----
-
-# Absolute + Relative
-
-An element will be absolutely positioned to the **HTML document** unless you set `position: relative` on one of its parent elements.
-
-```css
-.page-wrapper {
-  position: relative;
-}
-
-header h1 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 200px;
-}
-```
-
----
-
-# Fixed Positioning
-
-Fixed positioning is like absolute positioning, but it positions the element in relation to the **browser window** instead of the HTML document.
-
-This means that the element will stay put in one place on the screen as you scroll:
-
-```css
-header h1 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #c8c8c8;
-}
-```
-
----
-
-# z-index
-
-With elements that have `relative`, `absolute`, or `fixed` position set, we can apply another property called `z-index`.
-
-The z-index property let's us specify the **stacking order** of non-static, overlapping elements.
-
-Elements with a higher z-index will appear on top:
-
-```css
-header h1 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 200px;
-  z-index: 100;
-}
-```
 
 ---
 
 template: inverse
 
-# Colour on the Web
+# Color on the Web
 
 ---
 
 # Using Color
 
-On the web, we have four options for specifying the colours of our HTML elements:
+On the web, we have four options for specifying the colors of our HTML elements:
 
-* Colour names
+* Color names
 * HEX codes
 * RGB/RGBa values
-* HSL/HSLa values
 
 ---
 
-# Colour Names
+# Color Names
 
-There are 147 predefined colour names supported by browsers, which we can use like this:
+There are 147 predefined color names supported by browsers, which we can use like this:
 
 ```css
 p {
@@ -866,13 +752,13 @@ a {
 }
 ```
 
-Check out **[this list](http://en.wikipedia.org/wiki/Web_colors)** for all of the names of the predefined colours.
+Check out **[this list](http://en.wikipedia.org/wiki/Web_colors)** for all of the names of the predefined colors.
 
 ---
 
 # HEX Codes
 
-Alternatively, we can specify a HEX code that corresponds to a specific colour.
+Alternatively, we can specify a HEX code that corresponds to a specific color.
 
 For example, the HEX code for white is `#FFFFFF` (or `#FFF` in shorthand).
 
@@ -888,17 +774,17 @@ p {
 
 # HEX Codes
 
-To get a HEX code, you can use an [online colour picker tool](http://www.colorpicker.com/), or use the colour palette in an image editing program.
+To get a HEX code, you can use an [online color picker tool](https://www.colorzilla.com/), or use the color palette in an image editing program.
 
 .inline-images[
-![PS colour picker](../../public/img/slide-assets/color-picker-screenshot.png)
+![PS color picker](../../public/img/slide-assets/color-picker-screenshot.png)
 ]
 
 ---
 
-# RGB/RGBa Colours
+# RGB/RGBa Colors
 
-We can also use RGB (red, green, blue) values to specify colours in our CSS:
+We can also use RGB (red, green, blue) values to specify colors in our CSS:
 
 ```css
 a {
@@ -906,13 +792,13 @@ a {
 }
 ```
 
-The equivalent of this RGB colour in HEX would be `#ed4343`.
+The equivalent of this RGB color in HEX would be `#ed4343`.
 
 ---
 
-# RGB/RGBa Colours
+# RGB/RGBa Colors
 
-RGBa values allow us to also specify the **opacity** of the colour:
+RGBa values allow us to also specify the **opacity** of the color:
 
 ```css
 header {
@@ -921,102 +807,6 @@ header {
 ```
 
 The `a` that represents opacity is written as a decimal, with a range of `0` (fully transparent) to `1` (solid).
-
----
-
-# HSL/HSLa Colours
-
-Specifying colour using HSLa is similar to using RGBa.
-
-However, instead of giving coordinates for the amount of red, blue, or green to mix in the colour, we specify values for **hue**, **saturation**, and **lightness**.
-
-```css
-header {
-  background-color: hsla(360, 83%, 60%, 0.5);
-}
-```
-
----
-
-# Hue
-
-What we refer to as colour is technically referred to **hue**.
-
-Hues can be **chromatic** or **achromatic**.
-
-Hues can be **neutral** (white, black, or grey) or **near-neutral** (beige or off-white).
-
----
-
-class: center, middle
-
-.inline-images[
-![Hue](/public/img/slide-assets/color-hue.png)  
-]
-
-.footnote.right[
-_Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)_
-]
-
----
-
-# Value
-
-Value is the potential for a colour to be light or dark.
-
-**High value** colours have white added to them.
-
-**Low value** colours have black added to them.
-
----
-
-class: center, middle
-
-.inline-images[
-![High value](/public/img/slide-assets/color-value-high.png)  
-]
-
-.inline-images[
-![Low value](/public/img/slide-assets/color-value-low.png)
-]
-
-.footnote.right[
-_Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)_
-]
-
----
-
-# Saturation
-
-Saturation is the brightness or dullness of a hue.
-
-Colours can be **high chroma** (full intensity).
-
-Colours can be **low chroma** (made dull by adding a complement).
-
----
-
-class: center, middle
-
-.inline-images[
-![Saturation](/public/img/slide-assets/color-saturation.png)  
-]
-
-.footnote.right[
-_Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)_
-]
-
----
-
-class: center, middle
-
-.inline-images[
-![Hue saturation value model](/public/img/slide-assets/color-hue-sat-val.png)  
-]
-
-.footnote.right[
-_Source: [Designing for the Web](http://www.designingfortheweb.co.uk/part4/part4_chapter17.php)_
-]
 
 ---
 
@@ -1096,39 +886,38 @@ Declaring multiple background is just like declaring a single background, but yo
 
 ---
 
+# Background Gradients
+
+<iframe height="500" style="width: 100%;" scrolling="no" title="CSS Background Gradient" src="https://codepen.io/redacademy/embed/aboxpLj?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/redacademy/pen/aboxpLj'>CSS Background Gradient</a> by RED Academy
+  (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+
+# Gradient Resources
+
+- [gradpad](http://ourownthing.co.uk/gradpad.html)
+- [colorzilla](https://www.colorzilla.com/gradient-editor/)
+- [uigradients](https://uigradients.com/)
+
+And many more, just Google `CSS gradient generator`.
+Also note that generators can be a useful way of learning, over time you can try to memorize the code that generators create e.g. the order of properties and different values that can be used.
+
+If you Google `CSS generator` there will be many options you can try. Here's one example: [css3generator](http://css3generator.com/)
+
+---
+
 # Exercise 4
 
-There are two components to this exercise&mdash;adding some colour, and beginning to add background images.
+There are two components to this exercise&mdash;adding some color, and beginning to add background images.
 
-Change the colour of the links and the orange headings to `#e2574c`.
+Change the color of the links and the orange headings to `#e2574c`.
 
 Also add the floral background image to the banner area.
 
 **Challenge!** How could we get the partially transparent background layer and the photo of the girl to sit on top of this image (also as a background)?
 
----
-
-template: inverse
-
-# CSS Resets, Developer Tools & Resources
-
----
-
-class: center, middle
-
-.large[
-What's a CSS reset?<br />
-Why do we need one?
-]
-
----
-
-# Popular Resets
-
-There are a few popular CSS resets used today:
-
-* [Eric Meyer reset](http://meyerweb.com/eric/tools/css/reset/)
-* [normalize.css](http://necolas.github.io/normalize.css/)
 
 ---
 
@@ -1140,12 +929,39 @@ As a developer, what's the most important feature of your browser?
 
 ---
 
+template: inverse
+
+# Devtools
+
+---
+
+# Why Devtools
+
+DevTools are important because it gives us ability to inspect **things that are happening "behind the scenes"**. 🕵️‍♀️
+
+For example we can inspect elements, see how a site is structured, and we can inspect the CSS being applied to different elements. This is extremely useful when trying to figure out things like, **"why is the CSS I just wrote not working?"**.
+---
+
+# Devtools: Shortcuts
+
+How to open devtools with Keyboard shortcuts.
+
+Shortcut Actions |  Mac | Windows 
+-------|---------------------------------
+Last panel used | Command+Option+I | F12 or Control+Shift+I
+Console panel   | Command+Option+J | Control+Shift+J
+Elements panel  | Command+Shift+C | Control+Shift+C
+
+[chrome-devtools/shortcuts](https://developers.google.com/web/tools/chrome-devtools/shortcuts)
+
+---
+
 class: center, middle
 
 .large[
 Learn your dev tools:
 
-**[discover-devtools.codeschool.com](http://discover-devtools.codeschool.com/)**
+**[Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)**
 ]
 
 ---
@@ -1192,7 +1008,7 @@ I still need help!<br />Where do I go?
 * How specificity and inheritance work
 * How to use classes and IDs to target our styles
 * How to layout a webpage using position
-* How to add colour and background images via CSS
+* How to add color and background images via CSS
 * How to use a CSS reset, code validators, and a browser's developer tools
 
 ---

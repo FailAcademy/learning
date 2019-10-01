@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to CSS
 slides: ["_slides/week-01/02-intro-to-css.md"]
-lesson_date: 2019-07-04
+lesson_date: 2019-10-02
 ---
 
 ## Pre-Work
@@ -11,7 +11,6 @@ Readings from _Learn to Code HTML & CSS_:
 
 - [Getting to Know CSS](http://learn.shayhowe.com/html-css/getting-to-know-css/)
 - [Opening the Box Model](http://learn.shayhowe.com/html-css/opening-the-box-model/)
-- [Positioning Content](http://learn.shayhowe.com/html-css/positioning-content/)
 - [Working with Typography](http://learn.shayhowe.com/html-css/working-with-typography/)
 - [Setting Backgrounds and Gradients](http://learn.shayhowe.com/html-css/setting-backgrounds-and-gradients/)
 - [Creating Lists](http://learn.shayhowe.com/html-css/creating-lists/) (the CSS section now)
@@ -26,7 +25,6 @@ Also ensure that you have completed yesterday's lab activity before class&mdash;
 - Demonstrate competency with CSS box model properties.
 - Adjust the default appearance of HTML elements using a variety of selectors, including classes, IDs, pseudo-elements, and pseudo-classes.
 - Leverage how inheritance and specificity function in CSS.
-- Use CSS positioning properties to help implement page layouts.
 - Use hexadecimal and RGBa to change the colours of HTML elements.
 - Use CSS background properties to set background colors and images.
 - Define what a CSS "reset" is, why it's needed, and demonstrate how to use one.
@@ -40,7 +38,6 @@ Also ensure that you have completed yesterday's lab activity before class&mdash;
 - [Box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box_model)
 - [`class`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class)
 - [`id`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)
-- [`position`](https://developer.mozilla.org/en/docs/Web/CSS/position)
 - [`background`](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
 - [Web/Page Inspector](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector)
 

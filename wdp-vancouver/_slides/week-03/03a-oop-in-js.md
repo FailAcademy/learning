@@ -131,9 +131,9 @@ In ES5, we use `Function.prototype` in lieu of classes:
 
 ```js
 // We call this type of function a constructor...
-// It's job is to initialize new objects:
+// Its job is to initialize new objects:
 
-const Person = function(firstName, lastName) {
+var Person = function(firstName, lastName) {
   this.firstName = firstName;
   this.lastName = lastName;
 };
@@ -146,7 +146,7 @@ Person.prototype.fullName = function() {
 
 // Create a new object with the Person() constructor:
 
-const joe = new Person("Joe", "Schmo");
+var joe = new Person("Joe", "Schmo");
 
 console.log(joe.fullName());
 ```
@@ -245,6 +245,10 @@ The `constructor` is a special method. Why?
 
 **C)** Both A and B
 
+???
+
+Answer: B
+
 ---
 
 # Quiz 2
@@ -256,6 +260,11 @@ What does `this` refer to in the previous example?
 **B)** The instance of `Person` 
 
 **C)** `that`
+
+???
+
+Answer: B - When a function is used as a constructor (with the new keyword), its **this** is bound to the new object being constructed.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this#As_a_constructor
 
 ---
 
@@ -315,8 +324,8 @@ class Student extends Person {
   }
 }
 
-let Joe = new Student("Joe");
-Joe.name; // Joe
+let joe = new Student("Joe");
+joe.name; // Joe
 ```
 
 ---
@@ -331,7 +340,7 @@ Joe.name; // Joe
 
 # Exercise 3
 
-Now model our own classroom using the following classes. Note that `WebDevStudent` should be a subclass of `Student` and `Student` should be a subclass of `Person`. Create at least **three properties** and **one method** on each class.
+Now model our own classroom using the following classes. Note that `WebDevStudent` should be a subclass of `Student` and `Student` should be a subclass of `Person`. Create at least **two properties** and **one method** on each class.
 
 - ClassRoom (`class` is a reserved keyword in JS)
 - Person
@@ -434,7 +443,7 @@ export default function b() {}
 
 ---
 
-# Works Classes Too
+# Works With Classes Too
 
 Just like functions, classes can be imported and exported from module:
 
@@ -489,14 +498,18 @@ How do we import `hello` from `file.js` into a another file in the same director
 ```js
 // the file that contains this code is called "file.js"
 
-export default const hello = 'world'
+export default const hello = 'world';
 ```
 
-**A)** `import { hello } from './file'`
+**A)** `import { hello } from './file.js'`
 
-**B)** `import something from './file'`
+**B)** `import something from './file.js'`
 
-**C)** `import { hello } from 'file'`
+**C)** `import { hello } from 'file.js'`
+
+???
+
+Answer: A
 
 ---
 

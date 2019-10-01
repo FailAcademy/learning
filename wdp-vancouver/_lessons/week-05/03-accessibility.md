@@ -2,7 +2,7 @@
 layout: lesson
 title: Web Accessibility
 slides: ["_slides/week-05/03-accessibility.md"]
-lesson_date: 2019-07-31
+lesson_date: 2019-10-30
 ---
 
 ## Pre-Work

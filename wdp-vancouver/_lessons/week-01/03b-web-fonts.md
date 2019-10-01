@@ -2,7 +2,7 @@
 layout: lesson
 title: Fonts on the Web
 slides: ['_slides/week-01/03b-web-fonts.md']
-lesson_date: 2019-07-05
+lesson_date: 2019-10-04
 ---
 
 ## Pre-Work
@@ -10,6 +10,7 @@ lesson_date: 2019-07-05
 Readings from _Learn to Code HTML & CSS_:
 
 - [Working with Typography - Embedding Web Fonts](http://learn.shayhowe.com/html-css/working-with-typography/#embedding-web-fonts)
+- [Positioning Content](http://learn.shayhowe.com/html-css/positioning-content/)
 
 ---
 
@@ -26,6 +27,7 @@ Readings from _Learn to Code HTML & CSS_:
 - [`@font-face`](https://developer.mozilla.org/en/docs/Web/CSS/@font-face)
 - Icon font
 - SVG
+- [`position`](https://developer.mozilla.org/en/docs/Web/CSS/position)
 
 ---
 

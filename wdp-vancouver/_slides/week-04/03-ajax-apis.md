@@ -74,13 +74,13 @@ HTTP is just the language that web servers and clients use to talk to each other
 
 A URL is **an address for a resource** on the network:
 
-**https://red-wdp.herokuapp.com/lesson/01-ajax-apis/**
+**https://red-wdp.herokuapp.com/lesson/03-ajax-apis/**
 
 This one has three visible parts:
 
   - `https://` is the protocol
   - `red-wdp.herokuapp.com` is the hostname
-  - `/lesson/01-ajax-apis/` is the path
+  - `/lesson/03-ajax-apis/` is the path
 
 ---
 
@@ -313,7 +313,7 @@ That entire response was passed in as the `data` object parameter in the `.done(
 
 In this exercise, we're going to make a request to the GitHub API using some of jQuery's Ajax methods.
 
-[See the lesson page](/lesson/01-ajax-apis/) for further instructions.
+[See the lesson page](/lesson/03-ajax-apis/) for further instructions.
 
 ---
 template: inverse
@@ -393,7 +393,7 @@ $('button').on('click', function() {
 
 Let's try chaining another Ajax method to our previous example to ensure we take care of error handling.
 
-[See the lesson page](/lesson/01-ajax-apis/) for further instructions.
+[See the lesson page](/lesson/03-ajax-apis/) for further instructions.
 
 ---
 template: inverse
@@ -438,9 +438,11 @@ The NYT API requires that obtain an API key to access its various APIs' endpoint
 
 Let's create an account on the NYT website so we can obtain a key to use on our projects right now...
 
-???
+Follow [**these steps**](https://developer.nytimes.com/get-started) to get started using the New York Times API.
 
-Documentation on the 'Get Started' page is somewhat outdated - they should select/enable all APIs they want access to when creating their app
+You will need to create an account and register an APP in order to work with the NYT API.
+
+The specific API we will be using is [**Top Stories**](https://developer.nytimes.com/docs/top-stories-product/1/overview)
 
 ---
 
