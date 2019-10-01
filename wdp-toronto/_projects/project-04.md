@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 4 - Inhabitent Site
-due: Tuesday, August 20th (beginning of class)
+due: Monday, Nov 18th (beginning of class)
 ---
 
 For Project 4, you will create a multi-page website with a blog for a camping supply company called Inhabitent Camping Supply Co. using WordPress as a content management system.
@@ -152,7 +152,10 @@ Once you have finished working on your site, please export your database by foll
 3.  Go to Tools > Migrate DB in the WordPress admin area
 4.  Change the "Replace" fields so that the first field contains `//localhost/student` and the second contains `/Applications/MAMP/htdocs/student`
 5.  Click the Migrate button to export your DB
+<<<<<<< HEAD
+=======
 
 **Submitting your project:**
 
 When you're ready to submit your project, **please email a link to your GitHub repository containing your project** with your **database file attached** to jim.bennett@redacademy.com
+>>>>>>> master

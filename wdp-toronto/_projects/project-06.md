@@ -8,10 +8,6 @@ For Project 6, you'll be getting your GitHub portfolio into tip-top shape.
 
 This work is **one of the most important components of this course** because you'll want to be sure you're showcasing your best work to your future employers!
 
-## Requirements
-
-To receive a "Pass" grade for this project, you will need to revisit your Project 1-5 submissions and do the following:
-
 ### Project Organization
 
 - Remove unnecessary/redundant files (e.g. design comps, miscellaneous files from other projects, unused font files, etc.)

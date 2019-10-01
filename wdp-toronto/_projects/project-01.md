@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 1 - Aloha Homepage
-due: Monday, July 15th (beginning of class)
+due: Tuesday, Oct 15th (beginning of class)
 ---
 
 For Project 1, you're going to create a homepage for your client the Aloha Apparel Co. using HTML and CSS.
@@ -97,7 +97,10 @@ Want to challenge yourself? Your project could also:
 
 - Update the cart icon in the top-right corner of the header every time the user clicks the "Add to Cart" button for a product
 - Incorporate a fixed header at the top of the page so that the navigation menu is always visible when the user scrolls down the page
+<<<<<<< HEAD
+=======
 
 ## Submission Instructions
 
 When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to jim.bennett@redacademy.com
+>>>>>>> master

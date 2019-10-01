@@ -3,9 +3,9 @@ layout: lesson
 title: Custom Post Types, Taxonomies & Fields
 slides:
   [
-    "_slides/week-07/01b-post-types-taxonomies-fields.md",
+    "_slides/week-07/01-post-types-taxonomies-fields.md",
   ]
-lesson_date: 2019-08-12
+lesson_date: 2019-11-04
 ---
 
 ## Pre-Work
