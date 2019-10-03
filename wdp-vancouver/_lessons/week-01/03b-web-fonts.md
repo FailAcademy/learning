@@ -9,8 +9,8 @@ lesson_date: 2019-10-04
 
 Readings from _Learn to Code HTML & CSS_:
 
-- [Working with Typography - Embedding Web Fonts](http://learn.shayhowe.com/html-css/working-with-typography/#embedding-web-fonts)
-- [Positioning Content](http://learn.shayhowe.com/html-css/positioning-content/)
+- [Working with Typography - Embedding Web Fonts](https://css-tricks.com/snippets/css/using-font-face/)
+- [Positioning Content](https://css-tricks.com/almanac/properties/p/position/)
 
 ---
 
@@ -70,6 +70,7 @@ Avoiding faux italics and bolding with your `@font-face` fonts:
 
 Some Google Font design inspiration:
 
+- [Curated Google Font Pairings](https://typespiration.com/)
 - [Google Font Pairing](http://femmebot.github.io/google-type/)
 
 Free icon fonts to use on your websites:
