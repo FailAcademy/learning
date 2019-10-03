@@ -64,22 +64,6 @@ NO MORE POSITIONING HACKS!
 
 ---
 
-class: center, middle
-
-.inline-images[
-![Flexbox everywhere](/public/img/slide-assets/flexbox-everywhere.jpg)
-]
-
----
-
-class: center, middle
-
-.inline-images[
-![Flexbox tears of joy](/public/img/slide-assets/flexbox-tears.jpg)
-]
-
----
-
 template: inverse
 
 # Using Flexbox
@@ -134,21 +118,30 @@ When creating flexbox-based layouts, you need to keep a few things in mind:
 3. The flex items follow each other along the **main axis**
 4. The **cross axis** is perpendicular to the main axis
 
-_Let's clarify this by taking a closer look..._
-
 ---
 
 class: center, middle
 
-### Code-along time!
+.inline-images[
+![Flexbox everywhere](https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2014/10/flex-axes.png)
+]
 
-Open this CodePen and code along with me: **[codepen.io/redacademy/pen/eJyXPy](http://codepen.io/redacademy/pen/eJyXPy?editors=1100)**
+_Let's clarify this by taking a closer look..._
 
 ---
 
 template: inverse
 
 # Flex Container Properties
+
+---
+
+
+class: center, middle
+
+### Code-along time!
+
+Open this CodePen and code along with me: **[codepen.io/redacademy/pen/eJyXPy](http://codepen.io/redacademy/pen/eJyXPy?editors=1100)**
 
 ---
 
