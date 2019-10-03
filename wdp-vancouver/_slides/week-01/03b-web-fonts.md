@@ -238,35 +238,17 @@ But instead of containing letters and numbers, they contain symbols (aka **glyph
 
 ---
 
-class: center, middle
-
-.large[
-The old way...
-]
-
----
-
-class: center, middle
-
-Spritesheet
-
-.inline-images[
-![Image sprite example](/public/img/slide-assets/image-sprite-example.png)
-]
-
----
-
 template: inverse
 
 # Using an Icon Font
 
 ---
 
-# Pick a Font
+# Choosing an Icon Font
 
 There are a few ready-made icon fonts out there that you can use on your website for free:
 
-* [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+* [Font Awesome](https://fontawesome.com/)
 * [IcoMoon](https://icomoon.io/)
 * [Material UI](https://material.io/resources/icons/?style=baseline)
 
@@ -276,17 +258,74 @@ There are a few ready-made icon fonts out there that you can use on your website
 
 # Using Font Awesome
 
-To use Font Awesome, you can either externally link to it on a Content Delivery Network (CDN), or you can download and include the entire package directly on your website.
+There are a few different ways you can add FontAwesome, for example you can link to a CSS or JavaScript file.
 
-You would include this code in the `<head>` tag of your website:
+The differences are:
 
-```html
-<!-- Option 1: CDN Link -->
+- **CSS:** Easier to add, does not require creating an account.
+- **JavaScript:** Requires creating an account and a "font kit", the recommended way to add fonts according to FontAwesome.
+
+So why choose the JavaScript option?
+Next Slide...
+
+---
+
+# Using Font Awesome
+
+**Options:**
+
+- Web Fonts with **CSS**, battle-tested, however might not be as good for performance and accessibility.
+
+- SVG with **JavaScript**, newer however attempts to solve accessibility issues and to speed up performance.
+
+It's up to you as to which you prefer, for Project 1 we can use the CSS option as it's a bit easier however if you want to try the JavaScript option that's ok.
+
+[Font Awesome CSS JS differences ](https://fontawesome.com/how-to-use/on-the-web/other-topics/performance)
+
+---
+
+# Using Font Awesome
+
+**CSS Option:**
+
+To add Font Awesome you can add the following to the `<head>` of your HTML.
+
+```HTML
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
-
-<!-- Option 2: Direct Include -->
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 ```
+
+*Integrity and crossorigin both are just for added security e.g. to ensure the resources are delivered without unexpected manipulation.*
+
+---
+
+# Using Font Awesome
+
+**JavaScript Option:**
+
+**go to** [fontawesome.com/start](https://fontawesome.com/start) and enter your email.
+
+**Check your email** and follow the instructions to create an account.
+
+**Log in** and head back to the [getting started page](https://fontawesome.com/start).
+
+**Enter a name for your font kit**, e.g. something like red-academy or red-projects.
+
+Add the code for your font kit to your project, *see the next slide.*
+
+---
+
+# Using Font Awesome
+
+Once you've created a font kit, click on the kit and look for a button that says "Copy Kit Code". 
+
+Click the "Copy Kit Code" button and paste the code into the `<head>` of your html file.
+
+Here is an example of what your font kit code will look like: 
+```html
+<script src="https://kit.fontawesome.com/66e614d3c7.js" crossorigin="anonymous"></script>
+```
+
+*Note: please don't just copy our kit-code above, because if our kit changes your project fonts may break.*
 
 ---
 
@@ -345,6 +384,8 @@ And animate the icons:
 
 You can find all of Font Awesome's [icons referenced here](https://fontawesome.com/icons?d=gallery&m=free) and [usage examples here](http://fortawesome.github.io/Font-Awesome/examples/).
 
+Animation options: [animating-icons](https://fontawesome.com/how-to-use/on-the-web/styling/animating-icons)
+
 ---
 
 # Using Font Awesome
@@ -374,7 +415,7 @@ Here we can also find **Unicode** values which we can use directly in our CSS as
 
 Here is a CodePen which you can use as a starting point to test different Unicode values.
 
-<iframe height="400" style="width: 100%;" scrolling="no" title="FontAwesome Example" src="https://codepen.io/redacademy/embed/aboxJrd?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" style="width: 100%;" scrolling="no" title="FontAwesome Example" src="https://codepen.io/redacademy/embed/aboxJrd?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/redacademy/pen/aboxJrd'>FontAwesome Example</a> by RED Academy
   (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -494,6 +535,15 @@ header h1 {
 
 ---
 
+# Fixed Header
+
+<iframe height="450" style="width: 100%;" scrolling="no" title="CSS Fixed Header" src="https://codepen.io/redacademy/embed/XWWreNx?height=265&theme-id=0&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/redacademy/pen/XWWreNx'>CSS Fixed Header</a> by RED Academy
+  (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+
 # z-index
 
 With elements that have `relative`, `absolute`, or `fixed` position set, we can apply another property called `z-index`.
@@ -533,6 +583,7 @@ Another example, this time changing the icon & color on hover.
   See the Pen <a href='https://codepen.io/redacademy/pen/gOYyRgY'>FontAwesome Example with CSS Positioning 0.1</a> by RED Academy
   (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+
 ---
 
 # What We've Learned
