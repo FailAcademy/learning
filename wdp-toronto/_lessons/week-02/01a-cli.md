@@ -2,7 +2,7 @@
 layout: lesson
 title: The Command Line Interface
 slides: ["_slides/week-02/01a-cli.md"]
-lesson_date: 2019-07-08
+lesson_date: 2019-10-04
 ---
 
 ## Pre-Work
