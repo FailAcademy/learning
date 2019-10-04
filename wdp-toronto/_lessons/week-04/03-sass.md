@@ -2,11 +2,7 @@
 layout: lesson
 title: Sass / CSS Preprocessors
 slides: ["_slides/week-04/04-sass.md"]
-<<<<<<< HEAD:wdp-toronto/_lessons/week-04/03-sass.md
-lesson_date: 2019-10-23
-=======
 lesson_date: 2019-07-24
->>>>>>> master:wdp-toronto/_lessons/week-04/03-sass.md
 ---
 
 ## Pre-Work

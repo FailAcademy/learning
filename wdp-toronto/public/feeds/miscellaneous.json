@@ -66,19 +66,34 @@
     "start": "2020-01-01"
   },
   {
+    "title": "PPD",
+    "allDay": true,
+    "start": "2019-07-10"
+  },
+  {
+    "title": "PPD",
+    "allDay": true,
+    "start": "2019-07-24"
+  },
+  {
+    "title": "PPD",
+    "allDay": true,
+    "start": "2019-08-07"
+  },
+  {
+    "title": "PPD",
+    "allDay": true,
+    "start": "2019-08-21"
+  },
+  {
     "title": "Design Presentations",
     "allDay": true,
-    "start": "2019-11-01"
+    "start": "2019-08-09"
   },
   {
-    "title": "Deployment Workshop",
+    "title": "Mock Interviews",
     "allDay": true,
-    "start": "2019-12-20"
-  },
-  {
-    "title": "Accessibility Workshop",
-    "allDay": true,
-    "start": "2019-11-08"
+    "start": "2019-09-04"
   }
 
 ]

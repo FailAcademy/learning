@@ -13,26 +13,51 @@
    {
       "title": "Foundation Day",
       "allDay": true,
-      "start": "2019-09-30"
+      "start": "2019-07-02"
    },
    {
       "title": "Foundation Day",
       "allDay": true,
-      "start": "2019-10-01"
+      "start": "2019-07-03"
+   },
+   {
+      "title": "Project 1 Check-in",
+      "allDay": true,
+      "start": "2019-07-12"
+   },
+   {
+      "title": "Project 2 Check-in",
+      "allDay": true,
+      "start": "2019-07-19"
+   },
+   {
+      "title": "Project 3 Check-in",
+      "allDay": true,
+      "start": "2019-08-02"
+   },
+   {
+      "title": "Project 4 Check-in",
+      "allDay": true,
+      "start": "2019-08-16"
+   },
+   {
+      "title": "Project 5 Check-in",
+      "allDay": true,
+      "start": "2019-08-30"
    },
    {
       "title": "Pong Code Along",
       "allDay": true,
-      "start": "2019-10-15"
+      "start": "2019-07-16"
    },
    {
     "title": "Pong Code Along",
     "allDay": true,
-    "start": "2019-10-16"
+    "start": "2019-07-17"
    },
    {
       "title": "Pong Code Along",
       "allDay": true,
-      "start": "2019-10-17"
+      "start": "2019-07-18"
    }
 ]

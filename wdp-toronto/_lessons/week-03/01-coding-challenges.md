@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: JS Coding Challenges
-lesson_date: 2019-10-11
+lesson_date: 2019-07-15
 ---
 
 ## Learning Objectives
