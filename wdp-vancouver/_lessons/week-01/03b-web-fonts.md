@@ -41,17 +41,23 @@ You'll need to download both of the weights and their italic versions too for ea
 
 ## Exercise 2
 
-We're going to use Font Awesome to add the social media icons in the footer of the Project 1 website.
+We're going to use Font Awesome to add the social media icons in the footer of the Project 1 ( Aloha ) website.
 
-Download Font Awesome and add the font files and minified CSS file to your project, or load it from the Font Awesome CDN using a generated embed code instead.
+Add Font Awesome either using the CSS link from [cdnjs.com](https://cdnjs.com/libraries/font-awesome) or use the [JavaScript font kit](https://fontawesome.com/start).
 
-To add the social media icons, check out Font Awesome's [Brand Icons](https://fontawesome.com/icons?d=gallery&s=brands).
+To add the social media icons, check out Font Awesome's [Brand Icons](https://fontawesome.com/icons?d=gallery&s=brands&m=free).
 
 ---
 
 ## Lab Activity
 
-See the [Intro to CSS lesson](/lesson/02-intro-to-css/) for lab activity details.
+Continue working on Project 1 ( Aloha ).
+
+Things to work on:
+
+- HTML & CSS Layout with Flexbox.
+- Typography, format links, lists, paragraphs, headings and icons.
+- Subscribe form, HTML & CSS.
 
 ---
 

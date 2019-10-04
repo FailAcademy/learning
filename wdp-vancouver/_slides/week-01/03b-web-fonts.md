@@ -265,7 +265,7 @@ The differences are:
 - **CSS:** Easier to add, does not require creating an account.
 - **JavaScript:** Requires creating an account and a "font kit", the recommended way to add fonts according to FontAwesome.
 
-So why choose the JavaScript option?
+So which one do you choose?
 Next Slide...
 
 ---
@@ -424,13 +424,11 @@ Here is a CodePen which you can use as a starting point to test different Unicod
 
 # Exercise 2
 
-We're going to use Font Awesome to add the social media icons in the footer of the Project 1 website.
+We're going to use Font Awesome to add the social media icons in the footer of the Project 1 ( Aloha ) website.
 
-Download Font Awesome and add the font files and minified CSS file to your project (unless you choose to link to the CDN resource).
+Add Font Awesome either using the CSS link from [cdnjs.com](https://cdnjs.com/libraries/font-awesome) or use the [JavaScript font kit](https://fontawesome.com/start).
 
-Be sure to hook up the stylesheet in the `<head>` of your website too!
-
-To add the social media icons, check out Font Awesome's [Brand Icons](https://fontawesome.com/icons?d=gallery&s=brands).
+To add the social media icons, check out Font Awesome's [Brand Icons](https://fontawesome.com/icons?d=gallery&s=brands&m=free).
 
 ---
 
@@ -581,6 +579,17 @@ Another example, this time changing the icon & color on hover.
 
 <iframe height="500" style="width: 100%;" scrolling="no" title="FontAwesome Example with CSS Positioning 0.1" src="https://codepen.io/redacademy/embed/gOYyRgY?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/redacademy/pen/gOYyRgY'>FontAwesome Example with CSS Positioning 0.1</a> by RED Academy
+  (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+
+class: center, middle
+
+Absolute Positioned Form Example.
+
+<iframe height="450" style="width: 100%;" scrolling="no" title="CSS Position Absolute Form Input" src="https://codepen.io/redacademy/embed/MWWgGVm?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/redacademy/pen/MWWgGVm'>CSS Position Absolute Form Input</a> by RED Academy
   (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
