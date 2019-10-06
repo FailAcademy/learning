@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 3 - Instanews App
-due: Monday, June 17th (beginning of class)
+due: Monday, December 16th (beginning of class)
 ---
 
 For Project 2, you're going to create a one-page, responsive website that allows a user to filter top news story categories via the [New York Times API](http://developer.nytimes.com/docs/top_stories_api/).
@@ -104,4 +104,4 @@ Want to challenge yourself? Your project could also:
 
 ## Submission Instructions
 
-When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to [zareef.baksh@redacademy.com](zareef.baksh@redacademy.com).
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to [anvit.srivastav@redacemy.com](mailto:anvit.srivastav@redacademy.com).

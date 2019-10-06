@@ -2,7 +2,7 @@
 layout: lesson
 title: CSS Grid
 slides: ["_slides/week-08/01-grid-slides.md"]
-lesson_date: 2019-05-28
+lesson_date: 2019-11-26
 ---
 
 ## Pre-Work

@@ -2,7 +2,7 @@
 layout: lesson
 title: Sass
 slides: ["_slides/week-07/02-sass-slides.md"]
-lesson_date: 2019-05-25
+lesson_date: 2019-11-23
 ---
 
 ## Pre-Work

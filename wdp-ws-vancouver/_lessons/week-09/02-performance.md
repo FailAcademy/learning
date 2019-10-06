@@ -2,7 +2,7 @@
 layout: lesson
 title: Performance and Optimization
 slides: ["_slides/week-09/02-performance-slides.md"]
-lesson_date: 2019-06-06
+lesson_date: 2019-12-05
 ---
 
 ## Pre-Work

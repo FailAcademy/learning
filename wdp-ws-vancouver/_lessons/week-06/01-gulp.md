@@ -2,7 +2,7 @@
 layout: lesson
 title: Gulp
 slides: ["_slides/week-06/01-gulp-slides.md"]
-lesson_date: 2019-05-14
+lesson_date: 2019-11-14
 ---
 
 ## Pre-Work

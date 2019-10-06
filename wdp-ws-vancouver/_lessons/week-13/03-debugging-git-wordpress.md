@@ -2,7 +2,7 @@
 layout: lesson
 title: Debugging and Version Control in WordPress
 slides: ["_slides/week-13/03-debugging-git-wordpress-slides.md"]
-lesson_date: 2019-07-06
+lesson_date: 2020-01-07
 ---
 
 ## Pre-work

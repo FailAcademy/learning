@@ -2,7 +2,7 @@
 layout: lesson
 title: Ajax in WordPress and WP REST API
 slides: ["_slides/week-16/01-wp-ajax-rest-api-slides.md"]
-lesson_date: 2019-07-23
+lesson_date: 2020-01-23
 ---
 
 ## Pre-Work

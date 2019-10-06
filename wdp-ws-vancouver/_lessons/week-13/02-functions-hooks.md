@@ -2,7 +2,7 @@
 layout: lesson
 title: WordPress Functions and Hooks
 slides: ["_slides/week-13/02-functions-hooks-slides.md"]
-lesson_date: 2019-07-04
+lesson_date: 2020-01-06
 ---
 
 ## Pre-Work

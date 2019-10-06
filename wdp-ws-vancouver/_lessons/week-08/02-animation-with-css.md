@@ -2,7 +2,7 @@
 layout: lesson
 title: Animation with CSS
 slides: ["_slides/week-08/02-animation-with-css-slides.md"]
-lesson_date: 2019-05-30
+lesson_date: 2019-11-28
 ---
 
 ## Pre-Work
