@@ -2,7 +2,7 @@
 layout: lesson
 title: React and Redux
 slides: ['_slides/week-07/01-react-and-redux.md']
-lesson_date: 2019-05-21
+lesson_date: 2019-11-19
 ---
 
 ## Pre-Work
