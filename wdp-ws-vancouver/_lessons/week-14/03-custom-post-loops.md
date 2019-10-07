@@ -2,7 +2,7 @@
 layout: lesson
 title: Custom Post Loops
 slides: ["_slides/week-14/03-custom-post-loops-slides.md"]
-lesson_date: 2019-07-13
+lesson_date: 2020-01-14
 ---
 
 ## Pre-work

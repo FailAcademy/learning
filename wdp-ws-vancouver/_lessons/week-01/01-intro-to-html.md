@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to HTML
 slides: ["_slides/week-01/01-intro-to-html-slides.md"]
-lesson_date: 2019-04-09
+lesson_date: 2019-10-08
 ---
 
 ## Pre-Work

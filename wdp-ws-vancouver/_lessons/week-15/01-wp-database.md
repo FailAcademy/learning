@@ -2,7 +2,7 @@
 layout: lesson
 title: The WordPress Database
 slides: ["_slides/week-15/01-wp-database-slides.md"]
-lesson_date: 2019-07-15
+lesson_date: 2020-01-15
 ---
 
 ## Pre-work

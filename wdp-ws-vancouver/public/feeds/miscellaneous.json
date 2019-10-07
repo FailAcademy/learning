@@ -1,85 +1,15 @@
 [
   {
-    "title": "Pre-Work",
-    "allDay": true,
-    "start": "2019-03-25",
-    "end": "2019-04-08"
-  },
-  {
-    "title": "No Class",
-    "allDay": true,
-    "start": "2019-04-20"
-  },
-  {
-    "title": "No Class",
-    "allDay": true,
-    "start": "2019-05-18"
-  },
-  {
-    "title": "No Class",
-    "allDay": true,
-    "start": "2019-08-03"
-  },
-  {
-    "title": "Break Week",
-    "allDay": true,
-    "start": "2019-06-24",
-    "end": "2019-07-02"
-  },
-  {
-    "title": "Celebration!",
-    "allDay": true,
-    "start": "2019-09-28"
-  },
-  {
-    "title": "New Years Day",
-    "allDay": true,
-    "start": "2019-01-01"
-  },
-  {
-    "title": "Family Day",
-    "allDay": true,
-    "start": "2019-02-18"
-  },
-  {
-    "title": "Good Friday",
-    "allDay": true,
-    "start": "2019-04-19"
-  },
-  {
-    "title": "Easter Monday",
-    "allDay": true,
-    "start": "2019-04-22"
-  },
-  {
-    "title": "Victoria Day",
-    "allDay": true,
-    "start": "2019-05-20"
-  },
-  {
-    "title": "Canada Day Stat",
-    "allDay": true,
-    "start": "2019-07-01"
-  },
-  {
-    "title": "BC Day",
-    "allDay": true,
-    "start": "2019-08-05"
-  },
-  {
-    "title": "Labour Day",
-    "allDay": true,
-    "start": "2019-09-02"
-  },
-  {
     "title": "Thanksgiving Monday",
     "allDay": true,
-    "start": "2019-10-14"
+    "start": "2019-10-12",
+    "end": "2019-10-15"
   },
   {
     "title": "Remembrance Day Stat",
     "allDay": true,
-    "start": "2019-11-11"
+    "start": "2019-11-09",
+    "end": "2019-11-12"
   },
   {
     "title": "Christmas Day",
@@ -87,8 +17,25 @@
     "start": "2019-12-25"
   },
   {
+    "title": "Break Week",
+    "allDay": true,
+    "start": "2019-12-23",
+    "end": "2020-01-01"
+  },
+  {
     "title": "New Years Day",
     "allDay": true,
     "start": "2020-01-01"
+  },
+  {
+    "title": "Family Day",
+    "allDay": true,
+    "start": "2020-02-15",
+    "end": "2020-02-18"
+  },
+  {
+    "title": "Celebration!",
+    "allDay": true,
+    "start": "2020-03-28"
   }
 ]
