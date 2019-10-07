@@ -107,13 +107,10 @@ _Define your schema!_
   - `id` (its type is `ID` and it's required)
   - `title` (its type is `String` and it's required)
 
-- The `File` type has the following fields:
+- The `AuthPayload` type has the following fields:
 
-  - `id` (its type is `ID` and it's required)
-  - `filename` (its type is `String` and it's required)
-  - `mimetype` (its type is `String` and it's required)
-  - `encoding` (its type is `String` and it's required)
-  - `itemid` (its type is `ID` and it's required)
+  - `token` (its type is `String`)
+  - `user` (its type is `User`)
 
 - The `AssignedTag` input has the following fields:
 
@@ -133,7 +130,6 @@ _Define your schema!_
 - The `addItem` mutation has the following variables and returns an `Item`:
 
   - `item` (its type is `NewItemInput` and it's required)
-  - `image` (its type is `Upload`)
 
 ### Task 2:
 
@@ -142,6 +138,8 @@ _Now that you have a schema, create your resolvers._
 You'll start by transferring the SQL queries you wrote in Postico last week to the `server/api/pg-resource.js` file and completing all `@TODO` tasks in this file.
 
 As you create your helpers in `pg-resource.js`, use them in your resolvers in `server/api/resolvers/index.js`. Start with the queries, and work your way up to the mutation.
+
+`Hint`: Notice that `queryResolvers(app)` function in this `index.js` file is called from the `queries.js` file. Write your Query resolvers in the `server/api/resolvers/queries.js`
 
 Test them out in the GraphQL playground! You'll know you're done when running the queries returns the data you're expecting.
 
