@@ -86,9 +86,9 @@ Once you have Git installed, you'll need to run the following commands&mdash;one
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email you@email.com
-git config --global push.default matching
-git config --global alias.co checkout
 ```
+
+*Note that your git config email should match your github email which you can check by going to: https://github.com/settings/emails*
 
 ---
 

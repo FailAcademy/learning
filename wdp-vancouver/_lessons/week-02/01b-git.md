@@ -9,7 +9,7 @@ lesson_date: 2019-10-08
 
 ### Introduction to Git
 
-- [Introduction](https://www.pluralsight.com/courses/code-school-git-real)
+- [git - the simple guide](https://rogerdudler.github.io/git-guide/)
 
 ### Tutorials
 

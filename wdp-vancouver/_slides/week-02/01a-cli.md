@@ -147,7 +147,7 @@ There are three common aliases that we use to navigate our file tree:
 * `..`
 * `~`
 
-Split into three groups (one per alias). Research the alias, and describe a situation where you would use it.
+Research the aliases above, what is the difference and an example situation where you would use them.
 
 ???
 
