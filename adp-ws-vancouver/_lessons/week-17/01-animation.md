@@ -2,7 +2,7 @@
 layout: lesson
 title: React Native Animation
 slides: ['_slides/week-17/01-animation.md']
-lesson_date: 2019-07-29
+lesson_date: 2020-01-27
 ---
 
 ## Pre-work

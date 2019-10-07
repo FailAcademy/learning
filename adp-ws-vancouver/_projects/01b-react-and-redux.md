@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 1 / Part 2 - Boomtown
-due: Monday, June 3rd (beginning of class)
+due: Monday, December 2nd (beginning of class)
 class: gh-check
 ---
 

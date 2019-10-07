@@ -1,63 +1,21 @@
 [
   {
-    "title": "New Years Day",
+    "title": "Thanksgiving",
     "allDay": true,
-    "start": "2018-01-01"
+    "start": "2019-10-12",
+    "end": "2019-10-15"
   },
   {
-    "title": "Labour Day Weekend",
+    "title": "Rememberence Day",
     "allDay": true,
-    "start": "2019-08-31"
+    "start": "2019-11-09",
+    "end": "2019-11-12"
   },
   {
-    "title": "Labour Day",
+    "title": "Break Week",
     "allDay": true,
-    "start": "2019-09-02"
-  },
-  {
-    "title": "Victoria Day",
-    "allDay": true,
-    "start": "2019-05-20"
-  },
-  {
-    "title": "Canada Day",
-    "allDay": true,
-    "start": "2019-07-01"
-  },
-  {
-    "title": "Victoria Day Weekend",
-    "allDay": true,
-    "start": "2019-05-18"
-  },
-  {
-    "title": "Good Friday",
-    "allDay": true,
-    "start": "2018-03-30"
-  },
-  {
-    "title": "Easter Monday",
-    "allDay": true,
-    "start": "2018-04-02"
-  },
-  {
-    "title": "Bank Holiday",
-    "allDay": true,
-    "start": "2018-05-07"
-  },
-  {
-    "title": "Bank Holiday",
-    "allDay": true,
-    "start": "2018-05-28"
-  },
-  {
-    "title": "Bank Holiday",
-    "allDay": true,
-    "start": "2018-08-27"
-  },
-  {
-    "title": "Christmas Day",
-    "allDay": true,
-    "start": "2018-12-25"
+    "start": "2019-12-23",
+    "end": "2020-12-29"
   },
   {
     "title": "New Years Day",
@@ -65,15 +23,9 @@
     "start": "2019-01-01"
   },
   {
-    "title": "Break Week",
+    "title": "Family Day",
     "allDay": true,
-    "start": "2019-06-24",
-    "end": "2019-06-30"
-  },
-  {
-    "title": "Celebration!",
-    "allDay": true,
-    "start": "2019-09-28",
-    "end": "2019-09-28"
+    "start": "2020-02-15",
+    "end": "2020-02-18"
   }
 ]

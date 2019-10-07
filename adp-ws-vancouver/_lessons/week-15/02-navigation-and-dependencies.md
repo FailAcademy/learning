@@ -2,7 +2,7 @@
 layout: lesson
 title: Navigation and Dependencies
 slides: ['_slides/week-15/02-navigation-and-dependencies.md']
-lesson_date: 2019-07-17
+lesson_date: 2020-01-15
 ---
 
 ## Pre-work

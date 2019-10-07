@@ -2,7 +2,7 @@
 layout: lesson
 title: React Router
 slides: ['_slides/week-05/02-react-router.md']
-lesson_date: 2019-05-08
+lesson_date: 2019-11-07
 ---
 
 ## Pre-work
