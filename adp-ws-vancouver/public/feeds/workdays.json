@@ -17,6 +17,11 @@
   {
     "title": "Lab Work Day",
     "allDay": true,
+    "start": "2019-10-22"
+  },
+  {
+    "title": "Lab Work Day",
+    "allDay": true,
     "start": "2019-10-24"
   },
   {
@@ -118,6 +123,12 @@
     "title": "Meteor Project (P2) Group Work",
     "allDay": true,
     "start": "2019-12-11",
+    "end": "2020-12-22"
+  },
+  {
+    "title": "Meteor Project (P2) Group Work",
+    "allDay": true,
+    "start": "2020-01-02",
     "end": "2020-01-04"
   },
   {
@@ -176,15 +187,20 @@
     "start": "2020-01-30"
   },
   {
+    "title": "Project Work Day",
+    "allDay": true,
+    "start": "2020-02-01"
+  },
+  {
     "title": "GitHub Portfolio Development",
     "allDay": true,
     "start": "2020-02-03",
-    "end": "2020-02-13"
+    "end": "2020-02-14"
   },
   {
     "title": "Community Project Work",
     "allDay": true,
-    "start": "2020-02-19",
-    "end": "2020-03-25"
+    "start": "2020-02-18",
+    "end": "2020-03-27"
   }
 ]
