@@ -2,43 +2,43 @@
   {
     "title": "Project 1, Part 1 Due",
     "allDay": true,
-    "start": "2019-04-29 17:00:00",
+    "start": "2019-10-29",
     "url": "/project/01a-node-and-db/"
   },
   {
     "title": "Project 1, Part 2 Due",
     "allDay": true,
-    "start": "2019-06-03",
+    "start": "2019-12-02",
     "url": "/project/01b-react-and-redux/"
   },
   {
     "title": "Project 2 Due",
     "allDay": true,
-    "start": "2019-07-02",
+    "start": "2020-01-06",
     "url": "/project/02-meteor/"
   },
   {
     "title": "Project 3 Due",
     "allDay": true,
-    "start": "2019-07-15",
+    "start": "2020-01-13",
     "url": "/project/03-coding-interview/"
   },
   {
     "title": "Project 4 Due",
     "allDay": true,
-    "start": "2019-08-05",
+    "start": "2020-02-03",
     "url": "/project/04-react-native/"
   },
   {
     "title": "GitHub Portfolio Due",
     "allDay": true,
-    "start": "2019-08-19",
+    "start": "2020-02-18",
     "url": "/project/project-6-github-portfolio/"
   },
   {
     "title": "Community Project Due",
     "allDay": true,
-    "start": "2019-09-26",
+    "start": "2020-03-26",
     "url": "/project/05-community/"
   }
 ]
