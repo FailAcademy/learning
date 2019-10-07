@@ -2,7 +2,7 @@
 layout: lesson
 title: Android Apps with React Native
 slides: ['_slides/week-16/02-android.md']
-lesson_date: 2020-01-21
+lesson_date: 2020-01-22
 ---
 
 ## Pre-work
