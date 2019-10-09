@@ -316,17 +316,13 @@ Using `this`, we can write a borrow method to help keep track of what books have
 
 ```js
 // ...
-borrow: function(id) {
-  if (
-    this.inventory.find(function(item) {
-      return item.id === id;
-    })
-    && this.lent.indexOf(id) === -1)
-  {
-    this.lent.push(id);
-  } else {
-    console.log('This book has been lent...')
-  }
+borrow: function (id) {
+    if (this.lent.indexOf(id) === -1) {
+        console.log('Borrowed!');
+        this.lent.push(id);
+    } else {
+        console.log('This book has been lent...');
+    }
 },
 // ...
 ```
@@ -489,15 +485,13 @@ function Library(inventory) {
   this.lent = [];
 }
 
-Library.prototype.borrow = function(id) {
-  if (
-    this.inventory.find(book => book.id === id) &&
-    this.lent.indexOf(id) === -1
-  ) {
-    this.lent.push(id);
-  } else {
-    console.log('This book has been lent...');
-  }
+Library.prototype.borrow = function (id) {
+    if (this.lent.indexOf(id) === -1) {
+        console.log('Borrowed!');
+        this.lent.push(id);
+    } else {
+        console.log('This book has been lent...');
+    }
 };
 // Library.prototype.returnItems..etc.
 ```
