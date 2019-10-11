@@ -1,35 +1,29 @@
 [
   {
-    "title": "Project 1 Due",
+    "title": "Aloha Due",
     "allDay": true,
-    "start": "2019-10-15",
+    "start": "2019-10-16",
     "url": "/project/project-01/"
   },
   {
-    "title": "Project 2 Due",
-    "allDay": true,
-    "start": "2019-10-21",
-    "url": "/project/project-02/"
-  },
-  {
-    "title": "Project 3 Due",
+    "title": "Instanews Due",
     "allDay": true,
     "start": "2019-11-04",
     "url": "/project/project-03/"
   },
   {
-    "title": "P3 Peer Review Due",
+    "title": "Instanews Peer Review Due",
     "allDay": true,
     "start": "2019-11-22"
   },
   {
-    "title": "Project 4 Due",
+    "title": "Inhabitent Due",
     "allDay": true,
     "start": "2019-11-19",
     "url": "/project/project-04/"
   },
   {
-    "title": "Project 5 Due",
+    "title": "QOD Due",
     "allDay": true,
     "start": "2019-11-25",
     "url": "/project/project-05/"
