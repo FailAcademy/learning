@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: Functional Programming
-slides: ["_slides/week-02/04-functional-programming.md"]
+slides: ['_slides/week-02/04-functional-programming.md']
 lesson_date: 2019-10-17
 ---
 
@@ -94,11 +94,11 @@ Turn this list:
 const list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 ```
 
-Into `[8, 6, 4, 2]` using array methods and **only one line of code**. Do not mutate the original `list` array!
+Into `[2,4,6,8]` using array methods and **only one line of code**. Do not mutate the original `list` array!
 
-Add `.sort()` to the end of your array method chain.
+Once you figure this out, use `sort()` method at the end of your code making a chain of methods and the result should be `[8,6,4,2]`.
 
-Now add `10` to the original list. What happens when you sort it now? Why do you think this happens?
+Now, using `map` at the end of your chained methods to add `10` to each element of the array.
 
 ---
 
@@ -160,113 +160,9 @@ const emote = sentence => {
 
 ## Lab Activity
 
-### Functional Produce
+Continue working on your Boomtown and finish the `Items` page.
 
-Today we're going to automate grocery store fruit management.
-
-The task is to write three functions that can be chained together.
-
-The first, `countFruit` takes shipping company's poorly structured fruit data and converts it into usable form.
-
-```js
-// Before:
-
-const data = [
-  ['apples', 73],
-  ['pears', 12],
-  ['oranges', 97],
-  ['grapes', 387],
-  ['grapes', 88],
-  ['pears', 33],
-  ['apples', 75],
-  ['grapes', 23],
-  ['oranges', 86],
-  ['kiwis', 201]
-];
-
-// After:
-
-{ apples: 148, pears: 45, oranges: 183, grapes: 498, kiwis: 201 }
-```
-
-The second function, `stockUp`, adds an identical amount of fruit to each category.
-
-```js
-// Before:
-
-const fruit = {
-  apples: 148,
-  pears: 45,
-  oranges: 183,
-  grapes: 498,
-  kiwis: 201,
-};
-
-// stockUp is called with '5'
-
-// After:
-
-const fruit = {
-  apples: 153,
-  pears: 50,
-  oranges: 188,
-  grapes: 503,
-  kiwis: 206,
-};
-```
-
-The third function, `explain` will give a human readable output of the fruit inventory.
-
-```js
-// Data:
-
-const fruit = {
-  apples: 148,
-  pears: 45,
-  oranges: 183,
-  grapes: 498,
-  kiwis: 201,
-};
-```
-
-Ouput:
-
-```
-148 apples, 45 pears, 183 oranges, 498 grapes, 201 kiwis
-```
-
-These methods should be designed to be chained in order:
-
-```js
-data
-  .countFruit()
-  .stockUp(7)
-  .explain();
-```
-
-In order to chain these functions, you will need to extend both the `Array` and `Object` prototypes.
-
-Example:
-
-```js
-Array.prototype.countFruit = function() {
-  console.log(this); // Array available as 'this'
-  return {};
-};
-```
-
-These functions must be **pure**. In order to assure purity, use [Deep Freeze](https://github.com/substack/deep-freeze) to freeze `this` in each function. Deep Freeze will throw an error if you try to mutate anything it has frozen.
-
-```js
-// Make sure to run in strict mode
-"use strict";
-
-Object.prototype.stockUp = function(count) {
-  deepFreeze(this);
-  console.log(this); // Object available as 'this'
-  return {};
-};
-```
+`Hint:` `Item` page uses `ItemsGrid` component and `ItemCard` component.
 
 ---
 

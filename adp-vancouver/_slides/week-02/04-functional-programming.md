@@ -161,7 +161,7 @@ A pure function has three parts:
 2. Transformation
       |
       V
-3. Output(s)
+3. Output
 ```
 
 ???
@@ -287,6 +287,7 @@ Create examples of pure functions in JavaScript for each of the following cases:
 Be prepared to demo your functions for the class.
 
 ???
+
 ```
 // A function that uses a function as an input parameter
 function displayMessage(printFunction, message) {
@@ -492,11 +493,11 @@ Turn this list:
 const list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 ```
 
-Into `[8, 6, 4, 2]` using array methods and **only one line of code**. Do not mutate the original `list` array!
+Into `[2,4,6,8]` using array methods and **only one line of code**. Do not mutate the original `list` array!
 
-Once you figure this out, add `.sort()` to the end of your array method chain.
+Once you figure this out, use `sort()` method at the end of your code making a chain of methods and the result should be `[8,6,4,2]`.
 
-Now add `10` to the original list. What happens when you sort it now? Why do you think this happens?
+Now, using `map` at the end of your chained methods to add `10` to each element of the array.
 
 ---
 
@@ -567,6 +568,8 @@ When currying, you call a function with fewer arguments than it expects. It retu
 
 The idea with currying is that A function can move throughout your application and gradually receive the arguments it needs.
 
+Currying converts a function with multiple arguments into a series of functions each taking a single argment.
+
 ---
 
 # An Example
@@ -636,6 +639,14 @@ const where = timeTo('Arthur Dent');
 - Currying is a function that takes a function with multiple parameters as input and returns a function with exactly one parameter
 - Partial application is the process of applying a function to some of its arguments
 - The partially applied function gets returned for later use, i.e. a function that takes a function with multiple parameters and returns a function with fewer parameters
+
+---
+
+#Why use Currying?
+
+1. Write small reusable code modules (partial application with at least one fixed argument).
+
+2. Avoid calling a function with the same arguments.
 
 ---
 
