@@ -75,7 +75,7 @@ To use jQuery you must include a link to its script file in your HTML document, 
   <p></p>
   <p>Thanks for stopping by.</p>
   <!-- The rest of the page content... -->
-  <script src="js/jquery-3.3.1.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="js/my-script-file.js"></script>
 </body>
 ```
@@ -113,7 +113,7 @@ Let's get to the fun stuff and look at a basic example. Take our previous code s
   <p class="intro">Welcome to my page!</p>
   <p>Thanks for stopping by.</p>
   <!-- The rest of the page content... -->
-  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="js/my-script-file.js"></script>
 </body>
 ```
@@ -278,18 +278,15 @@ Given the following mark-up...
 
 ```javascript
 $(function() {
-  $(".opening-line")
-    .siblings()
-    .addClass("second-line");
+  $(".opening-line").siblings();
+  $(".opening-line").addClass("second-line");
 
-  $("article")
-    .children(".opening-line")
-    .css("font-style", "italic");
+  $("article").children(".opening-line");
+  $("article").css("font-style", "italic");
 
-  $("p")
-    .parent()
-    .siblings()
-    .text("A Tale of Two Blog Posts");
+  $("p").parent();
+  $("p").siblings();
+  $("p").text("A Tale of Two Blog Posts");
 });
 ```
 
@@ -297,19 +294,19 @@ $(function() {
 
 # Chaining
 
-In the last jQuery code snippet, we just saw multiple examples of **chaining**.
+In the last jQuery code snippet, we can use some **chaining** in our code.
 
 Chaining allows you to place several methods on the same selector at once, which makes your code more compact:
 
 ```javascript
 // Chained:
-$("#menu")
-  .addClass(".active")
-  .css("margin-right", "10px");
+$(".opening-line")
+  .siblings()
+  .addClass("second-line");
 
 // Unchained:
-$("#menu").addClass(".active");
-$("#menu").css("margin-right", "10px");
+$(".opening-line").siblings();
+$(".opening-line").addClass("second-line");
 ```
 
 ---
@@ -364,7 +361,7 @@ The `.before()` and `.after()` methods will add content just before or just afte
 
 ---
 
-# Working with Attributes
+# Working with Classes
 
 As we have seen, it's very easy to add classes to elements with jQuery using `.addClass()`:
 
