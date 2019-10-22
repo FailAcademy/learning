@@ -278,15 +278,18 @@ Given the following mark-up...
 
 ```javascript
 $(function() {
-  $(".opening-line").siblings();
-  $(".opening-line").addClass("second-line");
+  $(".opening-line")
+    .siblings()
+    .addClass("second-line");
 
-  $("article").children(".opening-line");
-  $("article").css("font-style", "italic");
+  $("article")
+    .children(".opening-line")
+    .css("font-style", "italic");
 
-  $("p").parent();
-  $("p").siblings();
-  $("p").text("A Tale of Two Blog Posts");
+  $("p")
+    .parent()
+    .siblings()
+    .text("A Tale of Two Blog Posts");
 });
 ```
 
@@ -301,11 +304,11 @@ Chaining allows you to place several methods on the same selector at once, which
 ```javascript
 // Chained:
 $(".opening-line")
-  .siblings()
+  .css('color', 'red')
   .addClass("second-line");
-
+  
 // Unchained:
-$(".opening-line").siblings();
+$(".opening-line").css('color', 'red');
 $(".opening-line").addClass("second-line");
 ```
 
