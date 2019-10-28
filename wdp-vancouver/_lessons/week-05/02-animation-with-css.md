@@ -100,10 +100,9 @@ A list of all transition-able CSS properties:
 
 Some excellent tutorials and demos for learning about CSS transitions, transforms, animations:
 
-- [CSS3 = Awesome](http://css3.bradshawenterprises.com/)
+- [Custom Bezier Curves, "easing"](https://cubic-bezier.com/)
 - [3D Transforms](https://desandro.github.io/3dtransforms/)
 - [Keyframe Animation Syntax](https://css-tricks.com/snippets/css/keyframe-animation-syntax/)
-- [Up and Running With CSS Keyframe Animations](https://webdesign.tutsplus.com/courses/up-and-running-with-css-keyframe-animations)
 - [Using CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_transitions)
 
 Some CSS transition inspiration:
