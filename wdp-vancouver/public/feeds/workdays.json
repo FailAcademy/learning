@@ -35,22 +35,27 @@
     "start": "2019-11-01"
   },
   {
-    "title": "Project Work Day",
+    "title": "Inhabitent Work Day",
     "allDay": true,
     "start": "2019-11-15"
   },
   {
-    "title": "Project Work Day",
+    "title": "Inhabitent Work Day",
+    "allDay": true,
+    "start": "2019-11-18"
+  },
+  {
+    "title": "QOD Work Day",
     "allDay": true,
     "start": "2019-11-20"
   },
   {
-    "title": "Project Work Day",
+    "title": "QOD Work Day",
     "allDay": true,
     "start": "2019-11-21"
   },
   {
-    "title": "Project Work Day",
+    "title": "QOD Work Day",
     "allDay": true,
     "start": "2019-11-22"
   },

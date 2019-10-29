@@ -69,7 +69,7 @@ class: center, middle
 
 ### Transitions Defined:
 
-CSS transitions **animate changes to a properties** over a defined period of time.
+CSS transitions **animate changes to properties** over a set period of time.
 
 ???
 ##### Emphasis steps:
@@ -579,7 +579,7 @@ Note that if you only have 2 keyframes you can also write this with `from` and `
 
 # Keyframe Example
 
-There's a fair amount of CSS in the previous example however one thing to note is the `forwards` value in the `animation property`. This will leave an animated element with the value being used in the last keyframe. Try removing the value `forwards` to see how this works.
+There's a fair amount of CSS in the last example however one thing to note is the `forwards` value in the `animation property`. This will leave an animated element with the value being used in the last keyframe. Try removing the value `forwards` to see how this works.
 
 ---
 
