@@ -20,7 +20,6 @@ Before today's class, ensure that you have deployed your Project 1 (Aloha homepa
 - Use an array of online tools and browser extensions to test page speed.
 - Describe methods for compressing image files and how to choose the best image format for a particular use case.
 - Describe what performance consideration must be made when building "mobile-first" websites.
-- Create a performance budget for a website.
 
 ---
 
@@ -40,7 +39,6 @@ Before today's class, ensure that you have deployed your Project 1 (Aloha homepa
 - gzipping
 - `srcset`
 - [`<picture>`](https://developer.mozilla.org/en/docs/Web/HTML/Element/picture)
-- Performance budget
 
 ---
 

@@ -24,7 +24,6 @@ layout: false
 3. Optimizing images
 4. Optimizing code
 5. Mobile-first performance
-6. Setting performance budgets
 
 ---
 template: inverse
