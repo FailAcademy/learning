@@ -9,6 +9,8 @@ lesson_date: 2019-10-31
 
 Before today's class, ensure that you have deployed your Project 1 (Aloha homepage) as a GitHub page.
 
+- [Web optimization a secret world to unleash](https://www.freecodecamp.org/news/web-optimization-a-secret-world-to-unleash-5fbdf1065945/)
+
 ---
 
 ## Learning Objectives
@@ -47,8 +49,8 @@ Before today's class, ensure that you have deployed your Project 1 (Aloha homepa
 Go to one of your favourite websites and do the following:
 
 - Use the Network tab in your dev tools to determine how many requests are made, its page weight, how long it takes to load, and whether its CRP appears to be optimized.
-- Use the Performance tab in your dev tools to identify possible source of jank on the page.
-- Run its URL through Google PageSpeed Insights and see what recommendations for desktop and mobile.
+- Use the Performance tab in your dev tools to record and identify possible issues.
+- Run the website URL through Google PageSpeed Insights and see what recommendations for desktop and mobile.
 
 Be prepared to share your insights with the class!
 
@@ -86,39 +88,19 @@ Be sure to include the hi-res versions in the `srcset` attributes for high-densi
 
 ---
 
-## Exercise 5
-
-Run the deployed version of your Aloha site through [WebPageTest](http://www.webpagetest.org/) and determine the current **Start Render**, **Document Complete**, and **Fully Loaded** times for your site. Also look in the Network tab of your dev tools and get the **page weight** and **number of requests** for your site.
-
-Compare these numbers with two of your classmates. Pick the top speeds and lowest page weight and number requests in your group, and then **subtract 20%**. This will be your target performance budget for your site.
-
-Based on what you've learned so far, what optimizations could you make to load the site and its assets within this budget?
-
----
-
 ## Lab Activity
 
-In today's lab, we'll be combining many of the techniques from the lesson to make a webpage as performant as possible
+Continue working on Instanews, be sure to **validate your HTML using the W3C Validator**.
 
-**[Download the lab files here](/public/files/labs/performance-lab.zip).**
+Validating HTML that's being appended using JavaScript/jQuery is a bit trickier, **please see the video below on how to do this**.
 
-_Be sure to run `npm install` after you download and extract the files!_
+<video controls width="100%">
+    <source src="/public/videos/validate-html-js.mp4"
+            type="video/mp4">
 
-Review the code in the downloaded files and determine how you can optimize for the fewest number of network requests, lightest page weight, and fastest load time.
+    Sorry, your browser doesn't support embedded videos.
+</video>
 
-For example:
-
-- Is there anything you can minify?
-- Can you reduce the sizes of any of the images or load them more responsively?
-- Can you reduce the number of requests you make for various image assets?
-- Can you reduce CSS selector specificity or the number of media queries used?
-- Is there a better way to load the script files?
-- How can you better optimize the critical rendering path?
-- _...and so on!_
-
-The catch with this lab is that **there must be no discernible difference** between the original visual appearance of the page and optimized visual appearance of the page.
-
-The student who manages to reduce the network requests, page weight, and load time by the widest margin by the end of class will win a prize :)
 
 ---
 

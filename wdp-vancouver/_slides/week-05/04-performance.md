@@ -178,14 +178,13 @@ Some options for testing page speed:
 
 - [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 - [WebPageTest](http://www.webpagetest.org/)
-- [YSlow](http://yslow.org/) browser extension
 - Your Chrome dev tools! (use the Network and Performance tabs)
 
 ---
 
 # Testing Page Speed
 
-Testing page speed with Chrome 🤔
+Testing page speed with Chrome dev tools 🤔
 
 We can also test a websites performance with built built-in developer tools.
 
@@ -240,8 +239,8 @@ After the page reloads and the test is run your DevTools will look something lik
 Go to one of your favourite websites and do the following:
 
 - Use the Network tab in your dev tools to determine how many requests are made, its page weight, how long it takes to load, and whether its CRP appears to be optimized.
-- Use the Performance tab in your dev tools to identify possible source of jank on the page.
-- Run its URL through Google PageSpeed Insights and see what recommendations for desktop and mobile.
+- Use the Performance tab in your dev tools to record and identify possible issues.
+- Run the website URL through Google PageSpeed Insights and see what recommendations for desktop and mobile.
 
 Be prepared to share your insights with the class!
 
@@ -319,6 +318,8 @@ Optimizing your mark-up is as simple as following the basic best practices we al
 - Don't use inline styles on your elements
 - Avoid div-itis (important for a11y too)
 - Remove commented-out code in production environments
+- **Always test with the W3C Validator!** 
+   If you have invalid HTML the browser will try to fix the errors however this can slow down the site significantly. [W3C Validator](https://validator.w3.org/)
 
 ---
 class: center, middle
@@ -331,14 +332,6 @@ class: center, middle
 <br />
 
 ---
-class: center, middle
-
-.large[
-   Why do we do this?<br />
-   When do we not do this?
-]
-
----
 
 # Optimizing CSS
 
@@ -347,28 +340,28 @@ CSS **performance** and **maintainability** are two peas in a pod:
 - Make as few requests to stylesheets as possible, but consider using page-specific styles for larger sites
 - Keep selector specificity under control
 - Clean up unused styles
-- Remove redundancies (modular classes FTW!)
-- Ask yourself if you really need Bootstrap, etc.
-- Be smart about how you write you media queries
+- Remove repetitive properties
+- Be smart about how you write you media queries, you don't need to re-declare all CSS properties
 
 ---
 
 # Optimizing JS
 
-JS resources can significantly impact the CRP because they block DOM construction.
+JS resources can significantly impact the CRP because they block DOM construction. 
 
-We can add the `async` or `defer` attributes on individual `<script>` elements to selectively prevent blocking:
+Moving JS scripts to be just before the closing body tag helps to not block the HTML/CSS from displaying.
 
 ```html
 <body>
    <h1>Hello, world!</h1>
    <!-- All the site content... -->
-   <script defer src="firstScript.js"></script>
-   <script async src="secondScript.js"></script>
+
+   <!-- load resources e.g. jQuery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <!-- load your script last -->
+   <script src="script.js"></script>
 </body>
 ```
-
-**Note:** Any JS that loads late and affects page layout can cause the content to shift though!
 
 ---
 
@@ -379,7 +372,7 @@ Modern browsers are smart about only loading the font files they need, but we st
 - Add only the fonts you truly need to a website
 - Only add the weights and subsets that you need (easily customized with Google Fonts or Font Squirrel)
 - Make sure your fonts are cached (they rarely change!)
-- Optimize how your fonts are loading [Three Techniques for Performant Custom Font Usage](https://css-tricks.com/three-techniques-performant-custom-font-usage/)
+- [Optimizing Google fonts performance](https://www.smashingmagazine.com/2019/06/optimizing-google-fonts-performance/)
 
 ---
 
@@ -387,8 +380,8 @@ Modern browsers are smart about only loading the font files they need, but we st
 
 Third-party content/scripts such as ad servers or social buttons can be performance liabilities on your site because:
 
-- They will require additional DNS look-ups
-- They will have page weight implications for your website
+- They will require additional HTTP requests
+- They will have page weight implications for your website, how large is the resource being loaded?
 
 *Be smart about how you load third-party content!*
 
@@ -398,9 +391,9 @@ Would click rates improve if you allow ads, etc. to block rendering (so they are
 
 # Minification & Gzipping
 
-Minification does things like removing whitespace, comments, and non-required semicolons, and reducing hex code lengths. We already do this to our CSS and JS with Gulp!
+Minification does things like removing whitespace, comments, and reducing hex code lengths. The good news is we are already doing this to our CSS and JS with Gulp!
 
-Gzipping finds repetitive strings and replaces them with pointers to the first instance of that string. It must be done at the server level (and how you do will depend on what kind of web server you're using).
+Gzipping finds repetitive strings and replaces them with "pointers" to the first instance of that string. It must be done server-side (and how you do will depend on what kind of web server you're using).
 
 **Doing both is ideal.** However since Gzipping requires server-side configuration it wont work for our current project. With WordPress there are [plugins](https://en-ca.wordpress.org/plugins/w3-total-cache/) that help with this. 
 
@@ -466,7 +459,7 @@ We already know that we can make big performance gains by optimizing our images,
    background-image: url('images/cat.png');
 }
 
-@media all and (max-width: 600px) {
+@media all and (min-width: 600px) {
    .parent {
       display: none;
    }
@@ -538,39 +531,6 @@ Inside the `index.html` file, add a `<picture>` element that loads the `pug-port
 Be sure to include the hi-res versions in the `srcset` attributes for high-density pixel displays, and use `pug-square.jpg` as a fallback for browsers that don't support `<picture>`.
 
 ---
-template: inverse
-
-# Performance Budgets
-
----
-
-# Aesthetics versus Performance
-
-Modern HTML/CSS/JS and web browsers are very powerful, but we must always be sure to ask **what impact a given choice** has on page weight, additional HTTP requests, and perceived performance.
-
-For example, what is the performance cost of adding a hero image, a hi-res video, another font file, an image slider, etc.?
-
-**We must find a happy medium balancing aesthetics with performance and make decisions that support the brand!**
-
----
-
-# Creating and Using a Performance Budget
-
-- A performance budget is a set of targets related to site performance that you do not want to exceed (e.g. page weight, total number of requests, load times)
-- It should be set early on in a project, and as a project evolves can help you make decisions around what you do or do not add to a page
-- How you set your targets will depend on your project... benchmarking "competitors" can be a good place to start
-
----
-
-# Exercise 5
-
-Run the deployed version of your Aloha site through [WebPageTest](http://www.webpagetest.org/) and determine the current **Start Render**, **Document Complete**, and **Fully Loaded** times for your site. Also look in the Network tab of your dev tools and get the **page weight** and **number of requests** for your site.
-
-Compare these numbers with two of your classmates. Pick the top speeds and lowest page weight and number requests in your group, and then **subtract 20%**. This will be your target performance budget for your site.
-
-Based on what you've learned so far, what optimizations could you make to load the site and its assets within this budget?
-
----
 
 # What We've Learned
 
@@ -578,7 +538,6 @@ Based on what you've learned so far, what optimizations could you make to load t
 - How to test page speed
 - How to optimize images and code
 - How to think about performance in a "mobile-first" way
-- What a performance budget is
 
 ---
 template: inverse
