@@ -344,12 +344,12 @@ _Note: You will need it for your lab activity..._
 
 When working with forms we can access form input values with `$_GET` or `$_POST`.
 
-An associative array of variables passed to the current script via the URL parameters (aka. query string).
+This creates an associative array of variables passed to the current script via the **URL parameters** (aka. query string).
 
 - PHP Docs: [$_GET](https://www.php.net/manual/en/reserved.variables.get.php)
 - PHP Docs: [$_POST](https://www.php.net/manual/en/reserved.variables.post.php)
 
-This is a query string `?search=tacocat` values passed after the `?` can be used as variables with $_GET.
+Here is a query string `?search=tacocat` values passed after the `?` can be used as variables with $_GET.
 
 ---
 
@@ -378,9 +378,11 @@ Using `$_GET`
 
 # Working with Forms
 
-The previous example shows how to use a form with `$_GET` which is great for searching e.g. notice the query string in a Google Search?
+The previous example shows how to use a form with `$_GET` which is great for creating a search form e.g. notice the query-string in a Google search?
 
-However you don't want to use query strings for sensitive information such as user passwords when creating an a new user, instead you should use the `post` method and `$_POST` to grab the values. The post method  will not create a query string and is more secure.
+However you don't always want to use query-strings, it's not recommended for sensitive information such as user passwords when creating an a new user. Instead you should use the `post` method and `$_POST` to send form values securely. 
+
+TL;DR:  The post method  will not create a query string and is more secure.
 
 ---
 
