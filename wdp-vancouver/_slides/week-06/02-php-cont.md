@@ -355,7 +355,24 @@ This is a query string `?search=tacocat` values passed after the `?` can be used
 
 # Working with Forms
 
-<iframe height="450px" width="100%" src="https://repl.it/@redacademy/PHP-Forms-dollarGET?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+Using `$_GET`
+
+```html
+<form method="get">
+  <input type="text" name="name" placeholder="your name" />
+  <input type="email" name="email" placeholder="your email"/>
+  <input type="submit">
+</form>
+
+<?php
+  $name = $_GET['name'];
+  $email = $_GET['email'];
+  echo "<p>Name: {$name}</p>";
+  echo "<p>Email: {$email}</p>";
+?>
+```
+
+[repl.it example](https://repl.it/@redacademy/PHP-Forms-dollarGET)
 
 ---
 
@@ -369,13 +386,27 @@ However you don't want to use query strings for sensitive information such as us
 
 # Working with Forms
 
-<iframe height="450px" width="100%" src="https://repl.it/@redacademy/PHP-Forms-dollarPOST?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+Using `$_POST`
 
----
+```html
+<form method="post" action="post.php">
+  <input type="text" name="name" placeholder="your name" />
+  <input type="email" name="email" placeholder="your email"/>
+  <input type="submit">
+</form>
+```
 
-# Form: Pirate Talk
+```php
+// post.php file, where the forms "action" is sending data
+<?php
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  echo "<p>Name: {$name}</p>";
+  echo "<p>Email: {$email}</p>";
+?>
+```
 
-<iframe height="400px" width="100%" src="https://repl.it/@redacademy/PHP-Form-Pirate-Talk?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+[repl.it example](https://repl.it/@redacademy/PHP-Forms-dollarPOST)
 
 ---
 
