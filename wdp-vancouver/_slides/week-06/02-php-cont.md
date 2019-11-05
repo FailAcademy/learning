@@ -19,8 +19,8 @@ layout: false
 
 # Agenda
 
-1. Cool PHP functions
-2. More on truthy/falsey
+1. Useful PHP functions
+2. More on truthy/falsey, booleans
 3. Alternative syntax
 4. Ternary Operators
 5. Handling arrays like a boss
@@ -28,14 +28,14 @@ layout: false
 ---
 template: inverse
 
-# Cool PHP Functions
+# Useful PHP Functions
 
 ---
 
 
 # Your PHP Toolbox
 
-PHP has a lot of cool function built right into it.
+PHP has a lot of useful functions built-in.
 
 We've already seen:
 
@@ -50,33 +50,29 @@ We can also generate random numbers with PHP:
 
 ```php
 echo rand(); // generate any random number
-echo rand(5, 15); // a number between 5 and 15 inclusive
+
+echo rand( 5, 15 ); // a number between 5 and 15 inclusive
 ```
 
 Or strip all of the HTML tags out of string:
 
 ```php
 $message = "<p>This is my bio</p>";
-echo strip_tags($message); // Will echo "This is my bio"
-```
 
-Or automatically put a range of numbers or letters in an array:
-
-```php
-range(0, 10); // array( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 )
-range('a', 'f'); // array( 'a', 'b', 'c', 'd', 'e', 'f' );
+echo strip_tags( $message ); // Will echo "This is my bio"
 ```
 
 ---
 
 # Your PHP Toolbox
 
-PHP is also a champ when it comes to formatting text.
+PHP is also great when it comes to formatting text.
 
-You can convert a string of text to all lower case letters:
+You can convert a string of text to all lower-case letters:
 
 ```php
 $my_string = 'Hello There!';
+
 echo strtolower( $my_string ); // output: hello there!
 ```
 
@@ -84,6 +80,7 @@ Or convert the first letter of every word in a string to uppercase:
 
 ```php
 $my_string = 'hello there!';
+
 echo ucwords( $my_string ); // output: Hello There!
 
 ```
@@ -92,14 +89,18 @@ echo ucwords( $my_string ); // output: Hello There!
 class: center, middle
 
 .large[
-  Seems kind of random...why do these functions matter?
+  There are many PHP functions!
+
+  **Over 700 functions** are built in that perform different tasks.
 ]
 
 ---
 class: center, middle
 
 .large[
-  Much work has been done for you... check the docs!
+  Dont' re-invent the wheel... [always check the docs](https://www.php.net/docs.php). 
+  
+  A function may exist to help solve a coding problem.
 ]
 
 ---
@@ -109,11 +110,14 @@ class: center, middle
 We can use PHP to format our dates in specific ways:
 
 ```php
-// format the current date/time
+// format the current date/time, Month, Day, Year
 $my_date = date('F j, Y');
 
-// format a specific date
-$halloween = date('F j, Y', 1446249600);
+// Get 1 week from todays date and formate Month, Day, Year
+// (7 * 24 * 60 * 60) = 7 days; 24 hours; 60 minutes; 60 seconds
+$next_week = time() + (7 * 24 * 60 * 60); 
+
+echo date('F j, Y', $next_week);
 ```
 
 You can format times with this function too!
@@ -207,6 +211,8 @@ if ( $color == 'blue' ) {
 And we use similar syntax `while` and `foreach` loops too:
 
 ```php
+$months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+
 foreach ( $months as $month ) {
   echo '<li>' . $month . '</li>';
 }
@@ -232,7 +238,7 @@ Ternary operators are like shorthand for `if/else`.
 So this:
 
 ```php
-$username = 'mandi';
+$username = 'Frodo';
 
 $message = isset( $username ) ? 'Hello ' . $username : 'Hello guest';
 ```
@@ -240,7 +246,7 @@ $message = isset( $username ) ? 'Hello ' . $username : 'Hello guest';
 Is the same as this:
 
 ```php
-$username = 'mandi';
+$username = 'Gandalf';
 
 if ( isset( $username ) ) {
   $message = 'Hello ' . $username;
@@ -314,15 +320,62 @@ Check out the [explode docs](http://php.net/manual/en/function.explode.php).
 
 # Sorting by a Key's Value
 
-This is getting really fancy, but you'll need it for your lab activity...
-
-To sort a multi-dimensional array based on the value of particular key, you can use `usort` with an anonymous callback function (in PHP 5.3+):
+To sort a multi-dimensional array based on the value of particular key, you can use `usort` with an anonymous callback function:
 
 ```php
+$blog_posts = [
+    ['title' => 'Programming Books', 'published' => '2019'],  
+    ['title' => 'Learning PHP', 'published' => '2017'],
+    ['title' => 'Hello World', 'published' => '2016']
+];
+
 usort($blog_posts, function($a, $b) {
-  return $a['date'] - $b['date'];
+  return $a['published'] - $b['published'];
 });
+
+var_dump($blog_posts); // check the sorted array
 ```
+
+_Note: You will need it for your lab activity..._
+
+---
+
+# Working with Forms
+
+When working with forms we can access form input values with `$_GET` or `$_POST`.
+
+An associative array of variables passed to the current script via the URL parameters (aka. query string).
+
+- PHP Docs: [$_GET](https://www.php.net/manual/en/reserved.variables.get.php)
+- PHP Docs: [$_POST](https://www.php.net/manual/en/reserved.variables.post.php)
+
+This is a query string `?search=tacocat` values passed after the `?` can be used as variables with $_GET.
+
+---
+
+# Working with Forms
+
+<iframe height="450px" width="100%" src="https://repl.it/@redacademy/PHP-Forms-dollarGET?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+---
+
+# Working with Forms
+
+The previous example shows how to use a form with `$_GET` which is great for searching e.g. notice the query string in a Google Search?
+
+However you don't want to use query strings for sensitive information such as user passwords when creating an a new user, instead you should use the `post` method and `$_POST` to grab the values. The post method  will not create a query string and is more secure.
+
+---
+
+# Working with Forms
+
+<iframe height="450px" width="100%" src="https://repl.it/@redacademy/PHP-Forms-dollarPOST?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+---
+
+# Form: Pirate Talk
+
+<iframe height="400px" width="100%" src="https://repl.it/@redacademy/PHP-Form-Pirate-Talk?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ---
 
@@ -336,7 +389,7 @@ See the [lesson page](/lesson/02-php-cont/) for more details.
 
 # What We've Learned
 
-- PHP functions such as `range()` and `date()`
+- PHP functions such as `rand()` and `date()`
 - Checking for truthiness and falsiness
 - Alternative syntax for loops and conditionals
 - WTF ternary operators

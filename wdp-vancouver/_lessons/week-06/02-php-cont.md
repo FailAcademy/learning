@@ -9,12 +9,14 @@ lesson_date: 2019-11-05
 
 _If you already finished watching all of the videos about arrays from the PHP Practitioner series, there's no additional pre-work for this lesson._
 
+However if you haven't please continue [The PHP Practitioner](https://laracasts.com/series/php-for-beginners) Videos 1-10.
+
 ---
 
 ## Learning Objectives
 
 - Build and interact with multi-dimensional arrays.
-- Explore PHP functions such as `rand()`, `range()`, and `date()`.
+- Explore PHP functions such as `rand()`, and `date()`.
 - Implement advanced techniques for dealing with arrays of data.
 - Explore alternative syntax for conditional statements and loops.
 
