@@ -36,50 +36,6 @@ template: inverse
 
 class: center, middle
 
-.large[
-First, some vocabulary words...
-]
-
----
-
-class: center, middle
-
-.large[
-WordPress is **not** MVC...
-]
-
----
-
-class: center, middle
-
-.inline-images[
-![MVC architecture](/public/img/slide-assets/mvc-architecture.png)
-]
-
-.footnote.right[Image credit: [Tomm McFarlin](https://tommcfarlin.com/wordpress-and-mvc/)]
-
----
-
-class: center, middle
-
-.inline-images[
-![Event-driven architecture](/public/img/slide-assets/event-driven-architecture.png)
-]
-
-.footnote.right[Image credit: [Tomm McFarlin](https://tommcfarlin.com/wordpress-and-mvc/)]
-
----
-
-class: center, middle
-
-.large[
-So how do we tap into this?
-]
-
----
-
-class: center, middle
-
 ### The WordPress Page Lifecycle
 
 A page life cycle is nothing more than a combination of the **events** that take place from when a browser requests a page to when the server returns the page to the browser.
