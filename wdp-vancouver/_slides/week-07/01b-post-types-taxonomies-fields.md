@@ -23,7 +23,7 @@ layout: false
 1.  Functionality plugins
 2.  Custom post types
 3.  Custom taxonomies
-4.  Custom fields/metaboxes (versus blocks)
+4.  Custom fields/metaboxes (vs Content Blocks)
 5.  Block templates and custom blocks
 
 ---
@@ -67,15 +67,7 @@ We'll learn more about plugin development later this week, but for now you can d
 
 template: inverse
 
-# Custom Post Types
-
----
-
-class: center, middle
-
-.large[
-Blogging Platform &rarr; CMS
-]
+# Post Types & Custom Post Types
 
 ---
 
@@ -115,7 +107,7 @@ class: center, middle
 
 class: center, middle
 
-### When Do We Make a CPT?
+### When Do We Make Custom Post Types?
 
 Whenever you need to create a special content type in WP to contain content that doesn't fit into the default types!
 
@@ -127,7 +119,7 @@ UX deliverables will help you make decisions about this.
 
 The ability to create new custom post types is **not** native to the WP admin UI.
 
-Knowing that, you have two ways to create a CPT:
+Knowing that, you have two ways to create a Custom Post Type:
 
 * With code! (using the `register_post_type()` function)
 * Using a plugin (like [Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/)) that adds a UI for this to the WP admin area
@@ -192,7 +184,7 @@ Once we have created our Product custom post type, how we will add its archive p
 
 template: inverse
 
-# Custom Taxonomies
+# Taxonomies & <br> Custom Taxonomies
 
 ---
 
@@ -260,7 +252,7 @@ Be sure to flush your permalinks again!
 
 template: inverse
 
-# Custom Fields <br />(versus Blocks)
+# Custom Fields vs Content Blocks
 
 ---
 
@@ -279,6 +271,13 @@ The second are known as **custom fields** (or **custom metaboxes** in WordPress 
 Custom taxonomies are meant for creating **classification schemes** for our content. They will be **term-based**, and they have **implications for the WordPress Template Hierarchy**.
 
 Custom fields are meant for more **arbitrary pieces of metadata**. They are a bit **more open-ended** (can take the form of text inputs, radio buttons, select menus, etc.), and they **don't have special templates** associated with them.
+
+---
+
+# What's the difference?
+
+- **Custom Taxonomies** = ‘Sleep’ many products can go under this classification
+- **Custom Fields** = ‘Price’ unique data for every product regardless of classification
 
 ---
 
@@ -304,7 +303,9 @@ You have three options for adding custom fields to your site:
 
 * With your own code! (using the `add_meta_boxes` action)
 * Using a code library to expedite the process (like [CMB2](https://github.com/WebDevStudios/CMB2))
-* Using a plugin (like [Custom Field Suite](https://en-ca.wordpress.org/plugins/custom-field-suite/) or [Advanced Custom Fields](https://en-ca.wordpress.org/plugins/advanced-custom-fields/))
+* Using a plugin (like [Advanced Custom Fields](https://en-ca.wordpress.org/plugins/advanced-custom-fields/)) 
+
+_Note: We will be using Advanced Custom Fields_ 😀
 
 ---
 
@@ -321,22 +322,6 @@ As usual, with great power comes great responsibility.
 
 ---
 
-class: center, middle
-
-.large[
-Important sidebar!
-]
-
----
-
-# Content Requires Design
-
-* When people think about content in WP, they often just think of the ~~WYSIWYG~~ Gutenberg editor
-* Again, metadata about our content likely doesn't belong in a block (it may be tricky to make decisions about this!)
-* By strategically building out custom fields for our site, we are making our content more modular, repurpose-able, and future-friendly
-
----
-
 template: inverse
 
 # Blobs vs. Chunks
@@ -349,35 +334,17 @@ class: center, middle
 
 <iframe src="https://player.vimeo.com/video/45965788" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-See also: [Adapting Ourselves to Adaptive Content](https://karenmcgrane.com/2012/09/04/adapting-ourselves-to-adaptive-content-video-slides-and-transcript-oh-my/)
+See also: [Implications Of Thinking In Blocks Instead Of Blobs](https://www.smashingmagazine.com/2018/11/implications-blocks-blobs/)
 
 ---
 
 # Exercise 3
 
-Let's install the [**Custom Field Suite**](https://en-ca.wordpress.org/plugins/custom-field-suite/) together, take a tour, and try creating a field group store the price of a product.
+Let's install the [**Advanced Custom Fields**](https://en-ca.wordpress.org/plugins/advanced-custom-fields/) together, take a tour, and try to create a field group to store the price of a product.
 
 Once we've created the price custom field, how do we get it to display in a template specific to single product posts? Check the [**WordPress Template Hierarchy**](https://wphierarchy.com/) to find out what template you'll need to create first.
 
-Next, check the [**Custom Field Suite docs**](http://customfieldsuite.com/) to figure out how display your price metadata in the template.
-
----
-
-# Exercise 4
-
-Gutenberg allows us to create [**Block Templates**](https://wordpress.org/gutenberg/handbook/templates/) to automatically add predetermined sets of blocks to custom post types (and "lock" the templates so no other blocks can be added, if this is required).
-
-Read the Gutenberg docs to create a block template for products. This template should have one `core/paragraph` block to add the product description. Be sure to add helpful placeholder text for the client in this block.
-
-Also be sure to set `'template_lock' => 'all'` in your product custom post type args so that no additional blocks can be added to the template.
-
----
-
-# Exercise 5
-
-We will use our first custom block for the hero image header on the About page.
-
-Download and install the [**Inhabitent Blocks plugin**](https://github.com/redacademy/inhabitent-blocks). Once activated, you can add the Hero Image Block to your About page content. Will you need to make any adjustments to your About page custom template now?
+Next, check the [**Advanced Custom Fields documentation**](https://www.advancedcustomfields.com/resources/) to figure out how display your price metadata in the template.
 
 ---
 
@@ -387,8 +354,6 @@ Download and install the [**Inhabitent Blocks plugin**](https://github.com/redac
 * How and when to create custom post types
 * How and when to create custom taxonomies
 * How and when to create custom fields
-* How to create Gutenberg block templates
-* How to install and use custom Gutenberg blocks
 
 ---
 

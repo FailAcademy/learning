@@ -96,7 +96,7 @@ Break up into groups of 4-5. Focus on 2 areas in the Inhabitent Project, Journal
 
 ---
 
-## CPT/CT: Exercise 1
+## Custom Post Types: Exercise 1
 
 Time to create a custom post type for our projects...let's build the **Product** custom post type together, and add it to our functionality plugin.
 
@@ -106,7 +106,7 @@ Once we have created our Product custom post type, how we will add its archive p
 
 ---
 
-## CPT/CT: Exercise 2
+## Custom Post Types: Exercise 2
 
 Now let's add a custom taxonomy called **Product Type** to our project. We generate the code together, and add it our functionality plugin as well.
 
@@ -114,37 +114,22 @@ Be sure to flush your permalinks again!
 
 ---
 
-## CPT/CT: Exercise 3
+## Custom Post Types: Exercise 3
 
-Let's install the [**Custom Field Suite**](https://en-ca.wordpress.org/plugins/custom-field-suite/) together, take a tour, and try creating a field group store the price of a product.
+Let's install the [**Advanced Custom Fields**](https://en-ca.wordpress.org/plugins/advanced-custom-fields/) together, take a tour, and try to create a field group to store the price of a product.
 
 Once we've created the price custom field, how do we get it to display in a template specific to single product posts? Check the [**WordPress Template Hierarchy**](https://wphierarchy.com/) to find out what template you'll need to create first.
 
-Next, check the [**Custom Field Suite docs**](http://customfieldsuite.com/) to figure out how display your price metadata in the template.
-
----
-
-## CPT/CT: Exercise 4
-
-Gutenberg allows us to create [**Block Templates**](https://wordpress.org/gutenberg/handbook/templates/) to automatically add predetermined sets of blocks to custom post types (and "lock" the templates so no other blocks can be added, if this is required).
-
-Read the Gutenberg docs to create a block template for products. This template should have one `core/paragraph` block to add the product description. Be sure to add helpful placeholder text for the client in this block.
-
-Also be sure to set `'template_lock' => 'all'` in your product custom post type args so that no additional blocks can be added to the template.
-
----
-
-## CPT/CT: Exercise 5
-
-We will use our first custom block for the hero image header on the About page.
-
-Download and install the [**Inhabitent Blocks plugin**](https://github.com/redacademy/inhabitent-blocks). Once activated, you can add the Hero Image Block to your About page content. Will you need to make any adjustments to your About page custom template now?
+Next, check the [**Advanced Custom Fields documentation**](https://www.advancedcustomfields.com/resources/) to figure out how display your price metadata in the template.
 
 ---
 
 ## Lab Activity
 
-Today's lab time will be spent working on Project 4. Today would be a good day to try adding all of your custom post types, taxonomies, and fields to your project, as well as their corresponding template files.
+Today's lab time will be spent continuing to work on Inhabitent. 
+Today would be a good day to try adding custom post types, taxonomies, and fields to your project, as well as their corresponding template files, if not done already.
+
+Next you can start to work on the Shop Page which will list the Custom Post Type for Products.
 
 ---
 
@@ -164,7 +149,6 @@ WordPress plugins that facilitate the addition of custom post types, taxonomies,
 
 - [Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/)
 - [Advanced Custom Fields](https://en-ca.wordpress.org/plugins/advanced-custom-fields/)
-- [Custom Field Suite](https://en-ca.wordpress.org/plugins/custom-field-suite/)
 
 A more "hands-on" approach to adding custom fields to the WordPress admin area:
 
