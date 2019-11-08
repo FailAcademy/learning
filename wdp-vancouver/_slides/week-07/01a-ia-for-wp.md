@@ -192,24 +192,7 @@ class: center, middle
 ]
 
 ---
-class: center, middle
 
-.inline-images[
-  ![Cluster analysis from R](/public/img/slide-assets/ia-cluster-analysis.jpg)
-]
-
----
-class: center, middle
-
-.inline-images[
-  ![Tree test results](/public/img/slide-assets/ia-tree-test-results.jpg)
-]
-
-???
-
-Tree testing can help with testing the findability of content within and IA.
-
----
 class: center, middle
 
 .inline-images[
@@ -265,13 +248,12 @@ class: center, middle
 
 # Exercise 2
 
-Using the sample IA provided, work in a group to decide how you would build that website out using appropriate WordPress APIs. Specifically, determine:
+Break up into groups of 4-5. Focus on 2 areas in the Inhabitent Project, Journal & Shop. Determine and plan out the IA for these areas. Ask the following:
 
-- Can you leverage built-in WP posts, pages, categories or tags in this IA? Where?
-- Will you need any custom post type or taxonomies?
-- What templates from the Template Hierarchy would you make use of in your theme? What would the files be named?
-
-When done, you will present your rationale to the class.
+- Do you need a custom post-type? For what area?
+- Where could you use the built in post-types WP comes with?
+- Will you need taxonomies?
+- What template file(s) from the Template-Hierarchy would you use in your theme? What would the theme file(s) be called?
 
 ---
 
