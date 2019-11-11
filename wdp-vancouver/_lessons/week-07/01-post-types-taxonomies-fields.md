@@ -124,9 +124,21 @@ Next, check the [**Advanced Custom Fields documentation**](https://www.advancedc
 
 ---
 
+## Custom Post Types: Exercise 4
+
+Add a banner-image using the "Featured Image" for the **Front Page** and **About Page**.
+
+1. Review the Journal page, to see how the "Featured Image" is being used
+2. Review the WordPress functions for showing ["Post Thumbnails"](https://codex.wordpress.org/Post_Thumbnails)
+3. Add a banner-image to `header.php` using the "Featured Image", also called "The Post Thumbnail"
+4. How would you add a title to the header **on-top of the banner-image**?
+5. How can you control where the banner appears? Try to find WordPress functions that check if the current-page is the front-page or the about-page.
+
+---
+
 ## Lab Activity
 
-Today's lab time will be spent continuing to work on Inhabitent. 
+Today's lab time will be spent continuing to work on Inhabitent.
 Today would be a good day to try adding custom post types, taxonomies, and fields to your project, as well as their corresponding template files, if not done already.
 
 Next you can start to work on the Shop Page which will list the Custom Post Type for Products.

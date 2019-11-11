@@ -303,7 +303,7 @@ You have three options for adding custom fields to your site:
 
 * With your own code! (using the `add_meta_boxes` action)
 * Using a code library to expedite the process (like [CMB2](https://github.com/WebDevStudios/CMB2))
-* Using a plugin (like [Advanced Custom Fields](https://en-ca.wordpress.org/plugins/advanced-custom-fields/)) 
+* Using a plugin (like [Advanced Custom Fields](https://en-ca.wordpress.org/plugins/advanced-custom-fields/))
 
 _Note: We will be using Advanced Custom Fields_ 😀
 
@@ -345,6 +345,15 @@ Let's install the [**Advanced Custom Fields**](https://en-ca.wordpress.org/plugi
 Once we've created the price custom field, how do we get it to display in a template specific to single product posts? Check the [**WordPress Template Hierarchy**](https://wphierarchy.com/) to find out what template you'll need to create first.
 
 Next, check the [**Advanced Custom Fields documentation**](https://www.advancedcustomfields.com/resources/) to figure out how display your price metadata in the template.
+
+---
+
+# Exercise 4
+
+Add a banner using the "Featured Image" for the **Front Page** and **About Page**.
+
+[See the lesson page](/lesson/01-post-types-taxonomies-fields/) for more details.
+
 
 ---
 
