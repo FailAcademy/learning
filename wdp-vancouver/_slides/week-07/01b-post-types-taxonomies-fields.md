@@ -309,19 +309,6 @@ _Note: We will be using Advanced Custom Fields_ 😀
 
 ---
 
-class: center, middle
-
-.large[
-As usual, with great power comes great responsibility.
-]
-
-???
-
-* As developers, you need to make thoughtful decisions about how to implement custom fields (and custom blocks) to facilitate an intuitive editing experience for the "internal" end users of a website
-* Think about forward-compatibility of how you've structured/modeled your content is also important
-
----
-
 template: inverse
 
 # Blobs vs. Chunks
