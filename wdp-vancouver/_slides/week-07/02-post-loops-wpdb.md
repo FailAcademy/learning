@@ -290,13 +290,6 @@ template: inverse
 # WP Database Tour
 
 ---
-class: center, middle
-
-.large[
-   Don't worry, back-end devs need not apply here!
-]
-
----
 
 # WP Does Most of the Heavy Lifting
 
@@ -342,7 +335,7 @@ class: center, middle
 - `wp_postmeta`
 - `wp_commentmeta`
 - `wp_usermeta`
-- `wp_termmeta` (new as of WP 4.4!)
+- `wp_termmeta`
 
 ---
 
