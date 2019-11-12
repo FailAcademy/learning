@@ -93,7 +93,7 @@ Write a function that takes a string and returns a new string that numerically i
 Examples:
 
 - `'aaabbbccc'` => `'a3b3c3'`
-- `'ghjff'` => `'g1h1j2f2'`
+- `'ghjff'` => `'g1h1j1f2'`
 
 To complete this lab, you will need to:
 
