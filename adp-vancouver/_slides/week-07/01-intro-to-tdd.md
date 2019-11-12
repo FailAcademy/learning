@@ -15,6 +15,7 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
@@ -26,11 +27,13 @@ layout: false
 5. Red Green Refactor
 
 ---
+
 template: inverse
 
 # Coding Interviews
 
 ---
+
 class: center, middle
 
 ### Coding Interviews
@@ -56,22 +59,25 @@ class: center, middle
 - Meeting with CEO or CTO for **final decision**
 
 ---
+
 class: center, middle
 
 .large[
-  This week, we're going to focus on tools to help you with the take-home and in-interview coding challenges.
+This week, we're going to focus on tools to help you with the take-home and in-interview coding challenges.
 ]
 
 ---
+
 template: inverse
 
 # Test Driven Development
 
 ---
+
 class: middle, center
 
 .large[
-  How do you know when your code is **done**?
+How do you know when your code is **done**?
 ]
 
 ???
@@ -83,10 +89,11 @@ The discussing here should be around getting some way of 'testing' whether code 
 - Are either of the above efficient? Can they be automated?
 
 ---
+
 class: middle, center
 
 .large[
-  How do you know if code that you've changed **works**?
+How do you know if code that you've changed **works**?
 ]
 
 ???
@@ -94,14 +101,15 @@ class: middle, center
 When you refactor existing code, how do you know it works?
 
 ---
+
 class: center, middle
 
 .inline-images[
-  ![Feedback loop](/public/img/slide-assets/feedback-loop-green.png)
+![Feedback loop](/public/img/slide-assets/feedback-loop-green.png)
 ]
 
 .large[
-  **Feedback!**
+**Feedback!**
 ]
 
 ???
@@ -113,10 +121,11 @@ Basically what we're talking about is the feedback loop.
 - You get feedback as to whether or not it works
 
 ---
+
 class: middle, center
 
 .large[
-  So how do we make that feedback loop smaller?
+So how do we make that feedback loop smaller?
 ]
 
 ???
@@ -129,7 +138,7 @@ Let's start with an exercise...
 
 # Example Question
 
-*This is an example coding test question...*
+_This is an example coding test question..._
 
 A frog wants to get to the other side of the road. The frog is currently located at position `start` and wants to get to a position greater than or equal to `end`. The frog always jumps a fixed distance, `jumpLength`.
 
@@ -169,31 +178,27 @@ npm init -y
 npm install --save-dev jest-cli
 ```
 
-Then, [install the RED Academy ESlint](https://www.npmjs.com/package/eslint-config-redacademy).
-
 ---
 
 # Our First Unit Test
 
 We've talked about how `frogJumps` works.
 
-Let's use TDD to write it! 
+Let's use TDD to write it!
 
 Step 1 is to write a test. Here's an example:
 
 ```js
 // __tests__/frog-jumps.spec.js
-const frogJumps = require('../lib/frog-jumps.js');
+const frogJumps = require("../lib/frog-jumps.js");
 
-describe('frogJumps', () => {
-
-  describe('when start is equal to end', () => {
-    it('should return 0', () => {
+describe("frogJumps", () => {
+  describe("when start is equal to end", () => {
+    it("should return 0", () => {
       const result = frogJumps(10, 10, 5);
       expect(result).toEqual(0);
     });
   });
-
 });
 ```
 
@@ -210,13 +215,13 @@ We're using **[Jest](https://facebook.github.io/jest/)** to write tests. Read th
 To make our tests match our Plain English specs, we use nested `describe` blocks. The `describe` takes a callback function as its second argument, allowing us to group tests with a similar context.
 
 ```js
-describe('Outer context', () => {
+describe("Outer context", () => {
   // Code/Tests specific to outer context
 
-  describe('Middle context', () => {
+  describe("Middle context", () => {
     // Code/Tests specific to middle context
 
-    describe('Inner context', () => {
+    describe("Inner context", () => {
       // Code/Tests specific to inner context
     });
   });
@@ -231,14 +236,14 @@ Nesting callbacks is generally considered bad practice outside of writing tests,
 
 If your code is indented properly, you will see a series of closing parens/braces in a 45 degree angle at the end of a file.
 
- ```js
-    // Good
-    });
-  });
+```js
+   // Good
+   });
+ });
 });
 
-    // Probably a bug
-    });
+   // Probably a bug
+   });
 });
 ```
 
@@ -249,8 +254,8 @@ If your code is indented properly, you will see a series of closing parens/brace
 When we pass strings to `describe` (other than the outermost `describe`) we use the format `when [some context]`:
 
 ```js
-describe('functionName', () => {
-  describe('when passed a certain type of argument', () => {
+describe("functionName", () => {
+  describe("when passed a certain type of argument", () => {
     // Test here
   });
 });
@@ -265,12 +270,12 @@ We write our actual tests (aka **assertions**) using `it` blocks. It blocks are 
 Within an `it`, we use the `expect` function with various **matchers**:
 
 ```js
-it('should return true', () => {
+it("should return true", () => {
   // 'toBe' matcher
   expect(result).toBe(true);
 });
 
-it('should return 100', () => {
+it("should return 100", () => {
   // 'toEqual' matcher
   expect(result).toEqual(100);
 });
@@ -284,22 +289,18 @@ Bringing it together:
 
 ```js
 // __tests__/frog-jumps.spec.js
-const frogJumps = require('../lib/frog-jumps.js');
+const frogJumps = require("../lib/frog-jumps.js");
 
 // Outer describe
-describe('frogJumps', () => {
-
+describe("frogJumps", () => {
   // Inner describe 'context'
-  describe('when start is equal to end', () => {
-
+  describe("when start is equal to end", () => {
     // Test
-    it('should return 0', () => {
-
+    it("should return 0", () => {
       // Assertion
       expect(frogJumps(10, 10, 5)).toEqual(0);
     });
   });
-
 });
 ```
 
@@ -339,13 +340,14 @@ npm test
 npm t
 ```
 
-*The test will fail, obviously!*
+_The test will fail, obviously!_
 
 ---
+
 class: center, middle
 
 .large[
-  <strong><span style="color: red">FAIL</span> -> <span style="color: green">PASS</span></strong>
+<strong><span style="color: red">FAIL</span> -> <span style="color: green">PASS</span></strong>
 ]
 
 ???
@@ -362,8 +364,8 @@ What we need to do now is write the minimal amount of code in order to get the t
 # Add Another Test
 
 ```js
-describe('when destination is exactly one jump away', () => {
-  it('should return 1', () => {
+describe("when destination is exactly one jump away", () => {
+  it("should return 1", () => {
     expect(frogJumps(5, 15, 10)).toEqual(1);
   });
 });
@@ -378,12 +380,13 @@ Run your tests, and fix the errors.
 - Once all the tests pass, you KNOW your code is done
 
 ---
+
 class: center, middle
 
 ### Red, Green, Refactor
 
 .inline-images[
-  ![Red Green Refactor](/public/img/slide-assets/red-green-refactor.png)
+![Red Green Refactor](/public/img/slide-assets/red-green-refactor.png)
 ]
 
 ???
@@ -403,9 +406,9 @@ Implement unit tests for each of the specifications you wrote for `frogJumps`.
 Think about the **Edge Cases**
 
 - Zero Arguments
-- Perfect match
-- Maximum Match
-- No Match
+- Perfect match (jump length = distance)
+- start point = end point
+- end point > start point
 
 ???
 
