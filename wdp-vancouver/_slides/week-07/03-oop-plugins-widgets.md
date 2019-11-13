@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# OOP, Plugin Dev and Widget API Slides
+# OOP, Plugin Development using the WP Widget API
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -20,9 +20,9 @@ layout: false
 
 # Agenda
 
-1. Objects and classes
+1. Objects and Classes
 2. Scope (public, private, protected)
-3. Widget API 101 (and inheritance in OOP)
+3. Widget API 101 (and extending classes)
 
 ---
 
@@ -93,7 +93,7 @@ $dog_1->colour = 'white';
 echo $dog_1->bark();
 ```
 
-We can create more than one object from a class too!
+We can create more than one object from a class!
 
 ```php
 $dog_2 = new Dog();
@@ -107,7 +107,7 @@ echo $dog_2->walk();
 
 ---
 
-# A More Salient Example
+# A Blog-Post Example
 
 An example of a simple (non-WP) blog post class:
 
@@ -115,17 +115,18 @@ An example of a simple (non-WP) blog post class:
 class Blog_Post {
 
    public $author;
-
+   public $post_name;
    public $publish_date;
-
    public $is_published;
 
    public function publish() {
-      // Publish the article here
+      // logic to publish the post would go here
+      echo "This blog-post has been published";
    }
 
    public function delete() {
-      // Delete the article here
+      // logic to delete the post would go here
+      echo "This blog-post has been deleted";
    }
 
 }
@@ -133,11 +134,11 @@ class Blog_Post {
 
 ---
 
-# Creating the Objects
+# Creating Objects
 
-The act of creating a new objects is known as **instantiation**.
+The act of creating a new object is known as **instantiation**.
 
-The `new` keyword instructs the computer to instantiate a new object based on the class.
+The `new` keyword instructs the computer to **instantiate** a new object based on the class "blueprint".
 
 ```php
 $first_post = new Blog_Post();
@@ -188,20 +189,39 @@ In PHP classes, the constructor function is always named `__construct`:
 
 ```php
 class Blog_Post {
+    public $author;
+    public $post_name;
+    public $publish_date;
+    public $is_published = false;
+ 
+    function __construct($author, $post_name, $publish_date) {
+       $this->author = $author;
+       $this->post_name = $post_name;
+       $this->publish_date = $publish_date;
+    }
+ 
+    public function publish(){
+       echo $this->post_name . " has been published.";
+    }
+    // more methods would go below e.g. delete()
+ }
+```
 
-   public $author;
+---
 
-   public $publish_date;
+# The Constructor
 
-   public $is_published = false;
+Creating a new Object from the **Blog_Post Class** by passing **Arguments** to the **Constructor**.
 
-   function __construct() {
-      $this->author = '';
-      $this->publish_date = null;
-   }
+```php
+$blog_post_1 = new Blog_Post('Elon Musk', 'SpaceX launch', '10102019');
+$blog_post_1->publish();
+```
 
-   // Other class methods here...
-}
+Note that the order in which you pass **arguments need to be passed in the same order as the constructor**.
+
+```php
+function __construct($author, $post_name, $publish_date)
 ```
 
 ---
@@ -243,13 +263,23 @@ We can have `public`, `protected`, or `private` scope:
 
 ---
 
+class: center, middle
+
+# Scope in PHP
+
+A visual example.
+
+<img style="margin: auto;" src="/public/img/slide-assets/oop/private-protected-public.jpg"/>
+
+---
+
 # Why Limit Visibility?
 
 Why would you want to hide properties and methods from the outside world (i.e. objects instantiated from from the class)?
 
 * To **encapsulate the data handling** within your objects
 * An **object should be a black box** where you feed arguments into your object and you get a response in return
-* This pattern makes your object **more independent** from the rest of your application, so you can change all of the internals of the object and it won't break your application
+* This pattern makes your object **more independent** from the rest of your application, so you can change all of the internals of the object and it won't break your application, e.g. you don't have to prefix function names!
 
 ---
 
@@ -259,20 +289,34 @@ Let's take a look at a `User` class that could go with our `Blog_Post` class and
 
 ```php
 class User {
+   private $first_name;
+   private $last_name;
 
-   private $first_name = 'John';
-
-   private $last_name = 'Smith';
-
-   public function get_first_name() {
-      return $this->first_name;
+   function __construct($first_name, $last_name){
+      $this->first_name = $first_name;
+      $this->last_name = $last_name;
    }
 
-   public function get_last_name() {
-      return $this->last_name;
+   public function get_fullname() {
+      // properties accessed with a method
+      return $this->first_name . ' ' . $this->last_name;
    }
-
 }
+```
+
+---
+
+# In Action
+
+```php
+$user = new User('Nikola', 'Tesla');
+
+// This works, since the function is public, and returns "Nikola Tesla"
+echo $user->get_fullname(); 
+
+// Accessing a private property directly will not work
+// Error: Cannot access private property User::$first_name
+echo $user->first_name; 
 ```
 
 ---
@@ -283,17 +327,15 @@ We can see why marking all properties as `public` may not be ideal here.
 
 You are likely to see them marked `protected` so they may also be used by subclasses, or `private` so that they may only be accessed internally.
 
-_These are simple concepts on the surface, but can often be difficult to strategically implement!_
-
 ---
 
 # Recapping...
 
 Classes should organize information so that:
 
-* information that should only be accessible and relevant to it should remain `private`
-* information that should be accessible by itself and its subclasses should be `protected`
-* information that should be accessible by third-party objects and subclasses should be `public`
+* Information that should only be accessible and relevant to it should remain `private`
+* Information that should be accessible by itself and its subclasses should be `protected`
+* Information that should be accessible by third-party objects and subclasses should be `public`
 
 ---
 
@@ -315,7 +357,7 @@ template: inverse
 
 * Plugins are found in `wp-content/plugins/`
 * Can be a single file or a directory with multiple files (where the main plugin file and the directory will usually share the same name)
-* Plugin names should be unique
+* Plugin names should be unique, to avoid conflicts
 
 ---
 
@@ -362,14 +404,14 @@ class: center, middle
 
 _When one class acts as parent for another child class._
 
-In OOP, as with people, children inherit from their parents, but parents do not inherit traits back from their children!
+In OOP, as with people, children inherit from their parents, but **parents do not inherit traits back from their children**. 
 
 ---
 
 # About Inheritance
 
-* When you create a child class from parent class, the child class inherits all the properties and methods of the parent class
-* Child classes cannot access `private` properties or methods of the parent
+* When you create a child-class from a parent-class, the child-class inherits all of the properties and methods from the parent-class
+* Child classes can not access `private` properties or methods of the parent
 * When we use the `protected` keyword that means that the given property or method is not available to the outside world, but it is available to child classes
 
 ---
@@ -393,17 +435,17 @@ And we will do exactly that with the **[WP_Widget class](https://github.com/Word
 ```php
 class My_Widget extends WP_Widget {
 
-   // Sets up the widgets name, etc.
+   // Sets up the widgets name, slug, and other options
    public function __construct() {
 
    }
 
-   // Outputs the content of the widget
+   // Outputs the content of the widget on the front-end
    public function widget( $args, $instance ) {
 
    }
 
-   // Outputs the options form on admin
+   // Outputs the options form in the dashboard appearance->widgets
    public function form( $instance ) {
 
    }
@@ -455,44 +497,6 @@ add_action( 'admin_menu', array($this, 'remove_submenus'), 110 );
 WP has to know where to call the `remove_submenus` method.
 
 Since it lives within our class, we have to tell WordPress to **call the method on the particular instantiated object** with which we are concerned.
-
----
-
-# Sidebar: Best Practice
-
-Calling hooks in your constructor isn't ideal&mdash;it leads to **tight coupling** between WordPress and the code in your class.
-
-Placing hooks in a class constructor means that you can't create an instance of your class without loading WordPress (makes unit testing messy, if not impossible).
-
-The `__construct` method should only be in charge of setting the internal state of a new object and **WP hooks don't have anything to do with setting up a new object's internal state**.
-
----
-
-# Sidebar: Best Practice
-
-That's better!
-
-```php
-class My_Plugin {
-
-   public function init() {
-      add_action( 'wp_loaded', array($this, 'on_loaded') );
-   }
-
-   public function on_loaded() {
-      add_action( 'admin_menu', array($this, 'remove_submenus'), 110 );
-   }
-
-   public function remove_submenus() {
-      remove_submenu_page( 'themes.php', 'theme-editor.php' );
-      remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
-   }
-
-}
-
-$my_plugin = new My_Plugin();
-$my_plugin->init();
-```
 
 ---
 
