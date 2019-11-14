@@ -192,8 +192,8 @@ class HomeScreen extends React.Component {
 }
 const AppNavigator = createStackNavigator({
   Home: {
-    screen: HomeScreen,
-  },
+    screen: HomeScreen
+  }
 });
 
 export default createAppContainer(AppNavigator);
@@ -203,9 +203,9 @@ export default createAppContainer(AppNavigator);
 
 # Exercise 1
 
-First, install `react-navigation` in your R10 project. Next, create a `navigation` sub-directory in the `js` directory of R10. Add a file called `RootStackNavigator.js` to it.
+First, follow [installation steps](https://reactnavigation.org/docs/en/getting-started.html) to install `react-navigation` in your R10 project. Next, create a `navigation` sub-directory in the `js` directory of R10. Add a file called `RootStackNavigator.js` to it.
 
-Import `createStackNavigator` and `createAppContainer` from `react-navigation` in this new file, and use it to create a stack navigator with your About screen as its only route. Make this your default export from `RootStackNavigator.js`.
+Import [createStackNavigator](https://reactnavigation.org/docs/en/stack-navigator.html) and [createAppContainer](https://reactnavigation.org/docs/en/app-containers.html#docsNav) in this new file, and use it to create a stack navigator with your About screen as its only route. Make this your default export from `RootStackNavigator.js`.
 
 Finally, import your new `RootStackNavigator` component into `App.js`, and nest it inside your `ApolloProvider`. Does it work? How do you add a title to the navigation bar?
 
@@ -227,18 +227,16 @@ Create a `NavigationLayout.js` file your `navigation` directory. Add this code t
 
 ```js
 import React from "react";
-import {
-  createStackNavigator,
-  createBottomTabNavigator,
-} from "react-navigation";
+import { createBottomTabNavigator } from "react-navigation-tabs";
+import { createStackNavigator } from "react-navigation-stack";
 
 import AboutScreen from "../screens/About";
 
 const AboutStack = createStackNavigator({
-  About: AboutScreen,
+  About: AboutScreen
 });
 
-// Dedicated stacks for Schedule and Faves will go here too!
+// Dedicated stacks for Schedule, Map and Faves will go here too!
 
 export default createBottomTabNavigator(/* ...some args go here */);
 ```
@@ -257,7 +255,7 @@ But we have a problem now! There are two navigation bars at the top of the app (
 
 # Exercise 3
 
-Add **[some tab bar options](https://reactnavigation.org/docs/en/tab-navigator.html#tabbaroptions-for-tabbarbottom-default-tab-bar-on-ios)** to configure its style.
+Add **[some tab bar options](https://reactnavigation.org/docs/en/bottom-tab-navigator.html#bottomtabnavigatorconfig)** to configure its style.
 
 Tab bar options are passed into `createBottomTabNavigator` as its second argument, e.g.:
 
@@ -307,7 +305,7 @@ create a file named `react-native.config.js` in the root of your project and add
 
 ```js
 module.exports = {
-  assets: ["react-native-vector-icons"],
+  assets: ["react-native-vector-icons"]
 };
 ```
 
@@ -337,7 +335,7 @@ Inside of the app's `react-native.config.js` file, add the following:
 
 ```js
 module.exports = {
-  assets: ["react-native-vector-icons", "./js/assets/fonts"],
+  assets: ["react-native-vector-icons", "./js/assets/fonts"]
 };
 ```
 
@@ -364,7 +362,7 @@ Add a `config.js` file to the `navigation` directory with this:
 ```js
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import { Header } from "react-navigation";
+import { Header } from "react-navigation-stack";
 import LinearGradient from "react-native-linear-gradient";
 
 // ...more to come here!
@@ -405,8 +403,8 @@ export const sharedNavigationOptions = navigation => ({
   headerBackTitle: null,
   header: props => <GradientHeader {...props} />,
   headerStyle: {
-    backgroundColor: "transparent",
-  },
+    backgroundColor: "transparent"
+  }
 });
 ```
 
@@ -424,14 +422,14 @@ import { sharedNavigationOptions } from "./config";
 
 const AboutStack = createStackNavigator(
   {
-    About: AboutScreen,
+    About: AboutScreen
   },
   // AND THIS!
   {
     defaultNavigationOptions: ({ navigation }) => ({
-      ...sharedNavigationOptions(navigation),
-    }),
-  },
+      ...sharedNavigationOptions(navigation)
+    })
+  }
 );
 ```
 
