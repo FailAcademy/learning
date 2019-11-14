@@ -34,11 +34,11 @@ _There is no pre-work for this lesson._
 
 ## Exercise 1
 
-First, install `react-navigation` in your R10 project. Next, create a `navigation` sub-directory in the `js` directory of R10. Add a file called `RootStackNavigator.js` to it.
+First, follow [installation steps](https://reactnavigation.org/docs/en/getting-started.html) to install `react-navigation` in your R10 project. Next, create a `navigation` sub-directory in the `js` directory of R10. Add a file called `RootStackNavigator.js` to it.
 
-Import `createStackNavigator` from `react-navigation` in this new file, and use it to create a stack navigator with your About screen as its only route (you will need to import it!). Make this your default export from `RootStackNavigator.js`.
+Import [createStackNavigator](https://reactnavigation.org/docs/en/stack-navigator.html) and [createAppContainer](https://reactnavigation.org/docs/en/app-containers.html#docsNav) in this new file, and use it to create a stack navigator with your About screen as its only route. Make this your default export from `RootStackNavigator.js`.
 
-Finally, import your new `RootStackNavigator` component into `App.js`, and nest it inside your `ApolloProvider` (removing the`About` component now). Does it work? How do you add a title to the navigation bar?
+Finally, import your new `RootStackNavigator` component into `App.js`, and nest it inside your `ApolloProvider`. Does it work? How do you add a title to the navigation bar?
 
 ---
 
@@ -54,7 +54,7 @@ But we have a problem now! There are two navigation bars at the top of the app (
 
 ## Exercise 3
 
-Add **[some tab bar options](https://reactnavigation.org/docs/en/tab-navigator.html#tabbaroptions-for-tabbarbottom-default-tab-bar-on-ios)** to configure its style.
+Add **[some tab bar options](https://reactnavigation.org/docs/en/bottom-tab-navigator.html#bottomtabnavigatorconfig)** to configure its style.
 
 Tab bar options are passed into `createBottomTabNavigator` as its second argument, e.g.:
 
@@ -68,8 +68,6 @@ We'll add the icons next!
 
 ## Exercise 4
 
-Our app is going to need some icons, so for that we're going to add the **[React Native Vector Icons package](https://github.com/oblador/react-native-vector-icons)**. Note that this package's native dependencies can be automatically linked with `react-native link`.
-
 Next, import Ionicons into `NavigationLayout.js`. Add a `navigationOptions` key to your tab bar config object, and render the correct icon for each tab. An icon should be `white` if selected, and medium grey if not.
 
 **[Use this example from the React Navigation docs](https://reactnavigation.org/docs/en/tab-based-navigation.html#customizing-the-appearance)** to help complete this exercise.
@@ -78,17 +76,17 @@ Next, import Ionicons into `NavigationLayout.js`. Add a `navigationOptions` key 
 
 ## Exercise 5
 
-We want to use Montserrat as a custom font in our app, and `react-native link` can help with this too.
+We want to use Montserrat as a custom font in our app.
 
-Inside of the app's `package.json` file, add the following:
+Inside of the app's `react-native.config.js` file, add the following:
 
 ```js
-"rnpm": {
-  "assets": [ "js/assets/fonts" ]
-}
+module.exports = {
+  assets: ["react-native-vector-icons", "./js/assets/fonts"]
+};
 ```
 
-Move your project's fonts into the above directory and run `react-native link` again, then restart your app.
+Move your project's fonts into the above directory and run `yarn react-native link` again.
 
 Use Montserrat as the `fontFamily` for the tab bar labels now to test it out.
 
@@ -140,7 +138,7 @@ React Native docs on navigation:
 
 React Navigation documentation:
 
-- [React Navigation (v2)](https://reactnavigation.org/)
+- [React Navigation](https://reactnavigation.org/)
 
 Best practices for mobile nav on iOS or Android:
 
