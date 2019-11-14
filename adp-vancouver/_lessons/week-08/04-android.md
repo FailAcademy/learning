@@ -9,40 +9,13 @@ lesson_date: 2019-11-21
 
 Prior to class, please be sure to complete the following tasks.
 
-(Hint: For sucessful installation follow these instruction carefully and DO NOT update Gradle or Maven if asked by Android Studio.)
+`Hint`: For sucessful installation follow these instruction carefully and DO NOT update Gradle or Maven if asked by Android Studio.
 
-### Step 1:
+`Note`: Do not install `Node` using `brew`
 
-Ensure you have JDK 8 installed on your computer (run `java -version` and ensure you are running 1.8.x).
-If JDK is not up to date, [install the latest version](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), accept the agreement, download JDK and then install latest version provided on this web page.
+[Follow instructions these instructions](https://facebook.github.io/react-native/docs/getting-started) - Select React Native CLI Quickstart, select your platform (macOS) and then select Target OS (Android)
 
-You will also want to set your `$JAVA_HOME` environment variable in your `.bash_profile` too:
-
-```bash
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/[JDK VERSION HERE]/Contents/Home"
-```
-
-### Step 2:
-
-Install Android Studio as per the instruction in the React Native docs:
-
-**[Android Development Environment](https://facebook.github.io/react-native/docs/getting-started.html#android-development-environment)**
-
-### Step 3:
-
-Create a new React Native project `react-native init AwesomeProject`.
-
-Set-up an Android emulator as per the instruction in the React Native docs:
-
-**[Preparing the Android Virtual Device](https://facebook.github.io/react-native/docs/getting-started.html#preparing-the-android-device)**
-
-Please note that this must be done from within a project's interface in Android Studio, so you will need to either create an empty project in Android Studio, or open your `android` directory from your RN project (`AwesomeProject`) in Android Studio to access the AVD Manager.
-
-### Step 4:
-
-Run your `AwesomeProject` with your android emulator `react-native run-android` from the project directory.
-
-(Note: Do not start working on your R10 project right away, first, try running `AwesomeProject` with your Android emulator. Do not Update Gradle or Maven for your RN project from Android Studio.)
+`Note`: Do not start working on your R10 project right away, first, try running `AwesomeProject` with your Android emulator. Do not Update Gradle or Maven for your RN project from Android Studio.
 
 ---
 
