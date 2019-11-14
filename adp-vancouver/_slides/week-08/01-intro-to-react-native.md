@@ -128,11 +128,10 @@ template: inverse
 
 Before we can create our first React Native app, we must ensure we have the following tools installed:
 
-`Note:` Install stable versions of the following, not latest.
-
-1.  [Xcode](https://developer.apple.com/xcode/)
+1.  [Xcode](https://developer.apple.com/xcode/) (`NOTE:` Install stable version, not beta)
 2.  [Homebrew](http://brew.sh/)
-3.  [Node](https://nodejs.org/en/)
+3.  [Node](https://nodejs.org/en/) (`NOTE:` Install stable version, not beta)
+4.  [Cocoapods](https://guides.cocoapods.org/using/getting-started.html)
 
 You will likely also want to install a VS Code extension called **[React Native Tools](https://github.com/Microsoft/vscode-react-native)** and the **[React Native Debugger](https://github.com/jhen0409/react-native-debugger)**.
 
@@ -164,7 +163,7 @@ From your terminal go to your project directory and run:
 react-native run-ios
 ```
 
-You can also add the `--simulator="iPhone SE"` flag to that command to launch your app on a specific device.
+You can also add the `--simulator="iPhone 8"` flag to that command to launch your app on a specific device.
 
 ???
 
@@ -466,8 +465,8 @@ export default class HelloWorld extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-  },
+    alignItems: "center"
+  }
 });
 ```
 
@@ -634,7 +633,7 @@ The `<SectionList>` component is very similar to the `<FlatList>`, but the data 
 <SectionList
   sections={[
     { title: "ADP", data: ["Bob", "Alice"] },
-    { title: "WDP", data: ["Anne", "Mary", "Joe"] },
+    { title: "WDP", data: ["Anne", "Mary", "Joe"] }
   ]}
   renderItem={({ item }) => <Text>{item}</Text>}
   renderSectionHeader={({ section }) => <Text>{section.title}</Text>}

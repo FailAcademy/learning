@@ -13,7 +13,10 @@ Prior to class, please install Xcode on your Mac:
   - After installation, start Xcode and accept the terms and conditions agreement
 - Run "xcode-select --install" in your terminal
   - Start your Xcode again and accept any terms and conditions required to get to the welcome screen of your Xcode.
+- Open Xcode, choose `Preferences`, go to `locations` and choose the most recent version in the `Command Line Tools`
 - Install [HomeBrew](https://brew.sh/)
+- Install watchman `brew install watchman`
+- Install cocoapods `sudo gem install cocoapods` (use `sudo` only when you are installing gem)
 
 ---
 
@@ -71,24 +74,24 @@ Start with this code in your RN app:
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F5FCFF",
+    backgroundColor: "#F5FCFF"
   },
   box: {
     width: 50,
-    height: 50,
+    height: 50
   },
   box1: {
-    backgroundColor: "powderblue",
+    backgroundColor: "powderblue"
   },
   box2: {
-    backgroundColor: "skyblue",
+    backgroundColor: "skyblue"
   },
   box3: {
-    backgroundColor: "steelblue",
+    backgroundColor: "steelblue"
   },
   box4: {
-    backgroundColor: "midnightblue",
-  },
+    backgroundColor: "midnightblue"
+  }
 });
 ```
 
