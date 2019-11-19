@@ -179,17 +179,19 @@ Ideally, we want an all-in-one navigation solution with:
 A Hello World Example with `React Navigation`
 
 ```js
-import { createStackNavigator, createAppContainer } from "react-navigation";
+import { createAppContainer } from "react-navigation";
+import { createStackNavigator } from "react-navigation-stack";
 
 class HomeScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <View>
         <Text>Home Screen</Text>
       </View>
     );
   }
 }
+
 const AppNavigator = createStackNavigator({
   Home: {
     screen: HomeScreen
