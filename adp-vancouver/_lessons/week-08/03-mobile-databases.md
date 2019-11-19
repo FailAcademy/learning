@@ -52,7 +52,7 @@ _Where (and how) will you use these functions?_
 
 Our `FavesProvider` component doesn't do much for us yet except give us access to an empty array of `faveIds`.
 
-Write a `getFavedSessionIds` method for this class that uses one of your Realm helpers to get the current faves from the database, and then subsequently update the state of the `FavesProvider` with an array of the faved session IDs.
+Write a `getFavedSessionIds` method in this class to get the current faves from the AsyncStorage, and then subsequently update the state of the `FavesProvider` with an array of the faved session IDs.
 
 Call this method in `componentDidMount` so that we fetch this data initially as the component mounts.
 

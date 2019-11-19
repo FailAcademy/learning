@@ -22,7 +22,7 @@ layout: false
 
 1.  Whats and whys of embedded databases
 2.  Introduction to AsyncStorage
-3.  Use AsyncStorage to perform CRUD of "Faves"
+3.  Use AsyncStorage to perform CRUD
 
 ---
 
@@ -49,7 +49,7 @@ template: inverse
 class: center, middle
 
 .large[
-Do you need actually need an embedded database in your mobile app?
+Do you actually need an embedded database in your mobile app?
 ]
 
 ---
@@ -90,7 +90,7 @@ template: inverse
 
 # Writing
 
-AsyncStorage con only store `String` values. That is ok, because we can use JavaScript's `JSON.stringify` & `JSON.parse` to encode and decode JS objects when we want to store (and retrieve them).
+AsyncStorage can only store `String` values. But that is ok, because we can use JavaScript's `JSON.stringify` & `JSON.parse` to encode and decode JS objects when we want to perform CRUD with AsyncStorage.
 
 ```js
 AsyncStorage.setItem("key", JSON.stringify({ value: "Hey!" }));
@@ -107,7 +107,7 @@ To store a value, you'll use the `setItem` method.
 AsyncStorage.setItem("key", JSON.stringify({ value: "Hey!" }));
 ```
 
-To lookup this value you must use the `key`.
+To retrieve this value you must use the `key`.
 
 ```js
 AsyncStorage.getItem("key"); // returns the string "{ value: 'Hey!'}"
@@ -122,16 +122,18 @@ AsyncStorage.getItem("key"); // returns the string "{ value: 'Hey!'}"
 `AsyncStorage` methods are `async` and return a `Promise`. So, to bind the value in storage to a variable when querying, you'll need to `await` the result.
 
 ```js
-await AsyncStorage.setItem("thisISaKey", JSON.stringify({ value: "Hey!" }));
+try {
+  await AsyncStorage.setItem("thisISaKey", JSON.stringify({ value: "Hey!" }));
 
-const result = await AsyncStorage.getItem("thisISaKey");
+  const result = await AsyncStorage.getItem("thisISaKey");
+} catch (e) {
+  throw e;
+}
 
 console.log(JSON.parse(result).value); // logs 'Hey!'
 ```
 
 **Remember**, `AsyncStorage` can only store strings. If you want to store an `Object`, you'll need to `stringify`/`parse` things!
-
-_Why is `AsyncStorage` async?_
 
 ---
 
@@ -156,8 +158,12 @@ We've already seen how to retrieve a _single value_.
 Here is the code for retrievng _all_ of the values in your `AsyncStorage`.
 
 ```js
-const keys = await AsyncStorage.getAllKeys();
-const values = await AsyncStorage.multiGet(keys);
+try {
+  const keys = await AsyncStorage.getAllKeys();
+  const values = await AsyncStorage.multiGet(keys);
+} catch (e) {
+  throw e;
+}
 ```
 
 ---
@@ -196,11 +202,11 @@ We'll need to use React's context API to keep our app UI state in sync with our 
 In `index.js` set up your exports for `FavesContext`:
 
 ```js
-import FavesContext from "./FavesContext";
-import { FavesProvider } from "./FavesContext";
+import { FavesContext } from "./FavesContext";
+import FavesProvider from "./FavesContext";
 
-export { FavesProvider };
-export default FavesContext;
+export default FavesProvider;
+export default { FavesContext };
 ```
 
 _We'll create `FavesContext` and `FavesProvider` next..._
@@ -214,22 +220,21 @@ Add this code to `FavesProvider.js`:
 ```js
 import React, { Component } from "react";
 
-const FavesContext = React.createContext();
+export const FavesContext = React.createContext();
 
 class FavesProvider extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      faveIds: [],
+      faveIds: []
     };
   }
 
   // more code will go here!
 }
 
-export { FavesProvider };
-export default FavesContext;
+export default FavesProvider;
 ```
 
 ---
@@ -256,7 +261,7 @@ render() {
 
 Our `FavesProvider` component doesn't do much for us yet except give us access to an empty array of `faveIds`.
 
-Write a `getFavedSessionIds` method for this class that uses one of your Realm helpers to get the current faves from the database, and then subsequently update the state of the `FavesProvider` with an array of the faved session IDs.
+Write a `getFavedSessionIds` method in this class to get the current faves from the AsyncStorage, and then subsequently update the state of the `FavesProvider` with an array of the faved session IDs.
 
 Call this method in `componentDidMount` so that we fetch this data initially as the component mounts.
 
