@@ -190,7 +190,7 @@ template: inverse
 
 # Faves Context
 
-We'll need to use React's context API to keep our app UI state in sync with our Realm database:
+We'll need to use React's context API to keep our app UI state in sync with our AsyncStorage:
 
 ```bash
 |-- context/
@@ -205,8 +205,8 @@ In `index.js` set up your exports for `FavesContext`:
 import { FavesContext } from "./FavesContext";
 import FavesProvider from "./FavesContext";
 
+export { FavesContext };
 export default FavesProvider;
-export default { FavesContext };
 ```
 
 _We'll create `FavesContext` and `FavesProvider` next..._
@@ -215,7 +215,7 @@ _We'll create `FavesContext` and `FavesProvider` next..._
 
 # Create the Context
 
-Add this code to `FavesProvider.js`:
+Add this code to `FavesContext.js`:
 
 ```js
 import React, { Component } from "react";
@@ -244,7 +244,7 @@ export default FavesProvider;
 We'll need to render the provider in this class too:
 
 ```js
-// in FavesProvider.js
+// in FavesContext.js
 
 render() {
   return (
