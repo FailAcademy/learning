@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Functional Programming
-slides: ['_slides/week-02/04-functional-programming.md']
-lesson_date: 2019-10-17
+slides: ["_slides/week-02/04-functional-programming.md"]
+lesson_date: 2020-1-29
 ---
 
 ## Pre-Work

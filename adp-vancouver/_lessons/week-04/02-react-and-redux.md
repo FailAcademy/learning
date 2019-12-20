@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: React and Redux
+title: React Context (project code along)
 slides: ["_slides/week-04/02-react-and-redux.md"]
-lesson_date: 2019-10-22
+lesson_date: 2020-2-4
 ---
 
 ## Pre-Work

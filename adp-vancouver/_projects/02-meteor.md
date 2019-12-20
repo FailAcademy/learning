@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 2 - React & Meteor
-due: Tuesday, November 12th (beginning of class)
+due: Tuesday, February 25th (beginning of class)
 class: gh-check
 ---
 

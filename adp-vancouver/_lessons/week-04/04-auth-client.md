@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: Client-Side Authentication
+title: Context + GraphQL Refetching
 slides: ["_slides/week-04/04-auth-client.md"]
-lesson_date: 2019-10-24
+lesson_date: 2020-2-5
 ---
 
 ## Pre-Work

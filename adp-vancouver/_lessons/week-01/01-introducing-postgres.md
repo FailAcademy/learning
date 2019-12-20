@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to Databases with Postgres
 slides: ["_slides/week-01/01-introducing-postgres.md"]
-lesson_date: 2019-10-01
+lesson_date: 2020-1-14
 ---
 
 ## Pre-Work

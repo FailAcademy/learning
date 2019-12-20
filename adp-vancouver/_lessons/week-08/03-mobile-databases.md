@@ -2,7 +2,7 @@
 layout: lesson
 title: Async Storage
 slides: ["_slides/week-08/03-mobile-databases.md"]
-lesson_date: 2019-11-20
+lesson_date: 2020-3-4
 ---
 
 ## Pre-work

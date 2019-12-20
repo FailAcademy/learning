@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: Redux
+title: React Context
 slides: ["_slides/week-04/01-redux.md"]
-lesson_date: 2019-10-21
+lesson_date: 2020-2-3
 ---
 
 ## Pre-Work
