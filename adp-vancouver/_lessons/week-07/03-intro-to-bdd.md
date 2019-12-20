@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: Behaviour Driven Development
+title: TDD + Interview
 slides: ["_slides/week-07/03-intro-to-bdd.md"]
-lesson_date: 2019-11-14
+lesson_date: 2020-2-27
 ---
 
 ## Pre-Work

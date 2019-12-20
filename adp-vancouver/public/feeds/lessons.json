@@ -19,45 +19,50 @@
    {
       "title": "Foundation Day 1",
       "allDay": true,
-      "start": "2019-09-30"
+      "start": "2020-1-13"
    },
    {
     "title": "Foundation Day 2",
     "allDay": true,
-    "start": "2019-10-01"
+    "start": "2020-1-14"
    },
    {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2019-10-09"
+      "start": "2020-1-22"
    },
    {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2019-10-10"
+    "start": "2020-1-23"
     },
     {
       "title": "Project Work Day",
       "allDay": true,
-      "start": "2019-10-25"
+      "start": "2020-1-31"
+    },
+    {
+      "title": "Project Work Day",
+      "allDay": true,
+      "start": "2020-2-7"
     },
   {
     "title": "Self Directed Meteor Project Work",
     "allDay": true,
-    "start": "2019-10-31",
-    "end": "2019-11-11"
+    "start": "2020-2-13",
+    "end": "2020-2-25"
  },
    {
       "title": "Portfolio Week",
       "allDay": true,
-      "start": "2019-11-25",
-      "end": "2019-11-30"
+      "start": "2020-3-9",
+      "end": "2020-3-14"
    },
    {
       "title": "Community Project Work",
       "allDay": true,
-      "start": "2019-12-02",
-      "end": "2019-12-21"
+      "start": "2020-3-16",
+      "end": "2020-4-3"
    },
     {
       "title": "Career Development",

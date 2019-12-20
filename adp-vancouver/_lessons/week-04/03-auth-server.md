@@ -1,8 +1,8 @@
 ---
 layout: lesson
-title: Server-Side Authentication
+title: Server + Client Authentication
 slides: ["_slides/week-04/03-auth-server.md"]
-lesson_date: 2019-10-23
+lesson_date: 2020-2-6
 ---
 
 ## Pre-Work
@@ -96,10 +96,10 @@ const apolloServer = new ApolloServer({
   context: ({ req }) => {
     return {
       req,
-      pgResource,
+      pgResource
     };
   },
-  schema,
+  schema
 });
 ```
 
