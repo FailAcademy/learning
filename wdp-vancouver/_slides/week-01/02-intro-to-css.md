@@ -24,7 +24,7 @@ layout: false
 2. CSS "resets"
 3. The box model and block vs. inline elements
 4. Classes and IDs
-5. Color & backgrounds 
+5. Color & backgrounds
 6. Developer tools
 
 ---
@@ -318,7 +318,7 @@ p {
 }
 ```
 
-You can target specific sides of a box by adding `-bottom`, `-top`, `-left`, or `-right` to the properties. Otherwise, the style will apply to all sides.
+You can target specific sides of a box by adding <br> `-bottom`, `-top`, `-left`, or `-right` to the properties. Otherwise, the style will apply to all sides.
 
 ---
 
@@ -676,7 +676,7 @@ class: center, middle
 
 # Pseudo-classes & Forms
 
-The `:focus` pseudo-class is also very useful when working with `<input>` elements, common when building Forms. 
+The `:focus` pseudo-class is also very useful when working with `<input>` elements, common when building Forms.
 
 ```css
 input {
@@ -946,7 +946,7 @@ For example we can inspect elements, see how a site is structured, and we can in
 
 How to open devtools with Keyboard shortcuts.
 
-Shortcut Actions |  Mac | Windows 
+Shortcut Actions |  Mac | Windows
 -------|---------------------------------
 Last panel used | Command+Option+I | F12 or Control+Shift+I
 Console panel   | Command+Option+J | Control+Shift+J

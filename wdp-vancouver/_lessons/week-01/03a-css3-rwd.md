@@ -32,11 +32,11 @@ Also read through this article by Ethan Marcotte, which is widely credited with 
 - [`border-radius`](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
 - [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
 - [`opacity`](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
-- [Gradients](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
-- [Responsive web design](http://blog.teamtreehouse.com/modern-field-guide-responsive-web-design)
-- [Media queries](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries)
+- [`Gradients`](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [`Responsive web design`](http://blog.teamtreehouse.com/modern-field-guide-responsive-web-design)
+- [`Media queries`](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries)
 - [`@media`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media)
-- [Mobile first](http://bradfrost.com/blog/web/mobile-first-responsive-web-design/)
+- [`Mobile first`](http://bradfrost.com/blog/web/mobile-first-responsive-web-design/)
 
 ---
 

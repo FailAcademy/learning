@@ -27,20 +27,20 @@ There three exercises at the end of this chapter—see if you can complete at le
 ## Keywords
 
 - [`function`](https://developer.mozilla.org/en-US/docs/Glossary/Function)
-- [Function declaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
-- [Function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
-- [`Function` constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
-- [Arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
-- [Method definitions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Method_definitions)
-- [Generator function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)
-- [Scope](https://developer.mozilla.org/en-US/docs/Glossary/Scope)
-- [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+- [`Function declaration`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`Function expression`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function)
+- [`Function constructor`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
+- [`Arrow functions`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [`Method definitions`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Method_definitions)
+- [`Generator function`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator)
+- [`Scope`](https://developer.mozilla.org/en-US/docs/Glossary/Scope)
+- [`Closures`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 - [`return`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return)
-- [Argument](https://developer.mozilla.org/en-US/docs/Glossary/Argument)
-- [Parameter](https://developer.mozilla.org/en-US/docs/Glossary/Parameter)
-- [Default parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
-- [Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
-- [Spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- [`Argument`](https://developer.mozilla.org/en-US/docs/Glossary/Argument)
+- [`Parameter`](https://developer.mozilla.org/en-US/docs/Glossary/Parameter)
+- [`Default parameters`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- [`Rest parameters`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- [`Spread syntax`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
 ---
 

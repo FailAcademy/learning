@@ -14,7 +14,7 @@ Readings from _Learn to Code HTML & CSS_:
 - [Creating Lists](http://learn.shayhowe.com/html-css/creating-lists/) (HTML section only)
 - [Building Forms](http://learn.shayhowe.com/html-css/building-forms/)
 
-Before the first class, also be sure to work through all of the free modules in Codeacademy's [HTML & CSS](https://www.codecademy.com/learn/web) tutorial.
+Before the first class, also be sure to work through all of the free modules in Codeacademy's [HTML](https://www.codecademy.com/learn/learn-html) & [CSS](https://www.codecademy.com/learn/learn-css) tutorials.
 
 ---
 
@@ -31,10 +31,10 @@ Before the first class, also be sure to work through all of the free modules in 
 
 **HTML**
 
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- [Doctype](http://www.sitepoint.com/web-foundations/doctypes/)
-- [Element](https://developer.mozilla.org/en/docs/Web/HTML/Element)
-- [Attribute](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
+- [`HTML`](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [`Doctype`](http://www.sitepoint.com/web-foundations/doctypes/)
+- [`Element`](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+- [`Attribute`](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
 
 ---
 
@@ -109,7 +109,7 @@ Before you get started, you should watch this video to reinforce the concepts le
 
 - [HTML - Hamburger Mark-up Language](http://www.dontfeartheinternet.com/02-html/)
 
-You're goal for the end of the first day is to have the different sections of the [Project 1](../../project/project-1-aloha-homepage/) website roughed-out in HTML.
+You're goal for the end of the first day is to have the different sections of the [Project 1](../../project/project-01/) website roughed-out in HTML.
 
 For help with how to get started, see the [RED HTML Wiki](https://redacademy.github.io/html-fundamentals/#setting-up-a-project).
 
@@ -124,10 +124,6 @@ Don't let the title of this article series put you off&mdash;it has some of the 
 Starting a site from scratch:
 
 - [Don't Fear Starting from Scratch - Part 1: HTML](http://www.dontfeartheinternet.com/04-from-scratch/)
-
-Some background information, for some context (and for fun):
-
-- [Story of the web #web25](http://www.storyoftheweb.org.uk/)
 
 A free online version of Jeremy Keith's "HTML5 for Web Designers" book:
 

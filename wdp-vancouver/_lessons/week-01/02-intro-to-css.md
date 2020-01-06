@@ -34,12 +34,12 @@ Also ensure that you have completed yesterday's lab activity before class&mdash;
 
 ## Keywords
 
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- [Box model](https://developer.mozilla.org/en-US/docs/Web/CSS/box_model)
+- [`CSS`](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [`Box model`](https://developer.mozilla.org/en-US/docs/Web/CSS/box_model)
 - [`class`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class)
 - [`id`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id)
 - [`background`](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
-- [Web/Page Inspector](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector)
+- [`Web/Page Inspector`](https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector)
 
 ---
 
@@ -121,14 +121,10 @@ Some CSS FAQs:
 
 - [Common CSS questions](https://developer.mozilla.org/en-US/docs/Web/CSS/Common_CSS_Questions)
 
-An article unpacking the nuances of the "clearfix" hack:
-
-- [Understanding the Humble Clearfix](http://fuseinteractive.ca/blog/understanding-humble-clearfix#.V3wi6ZMrKCQ)
-
 Master your browser's dev tools:
 
-- [discover-devtools.codeschool.com](http://discover-devtools.codeschool.com/)
 - [DevTools Digest: DevTools in 2016 and Beyond](https://developers.google.com/web/updates/2016/06/devtools-digest)
+- [Google Chrome Developers YouTube](https://www.youtube.com/user/ChromeDevelopers/playlists)
 
 Tools to help you validate your code:
 

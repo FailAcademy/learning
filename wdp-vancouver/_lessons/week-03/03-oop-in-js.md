@@ -69,8 +69,8 @@ We'll be creating SVGs to build the Pong game in Project 2, so you'll want to ta
 - [`super`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super)
 - [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 - [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
-- Module bundler
-- [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG)
+- [`Module bundler`](https://codeburst.io/modules-and-bundlers-why-are-we-even-f85230162aad)
+- [`SVG`](https://developer.mozilla.org/en-US/docs/Web/SVG)
 
 ---
 

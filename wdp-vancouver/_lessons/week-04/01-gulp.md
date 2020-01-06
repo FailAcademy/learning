@@ -84,10 +84,5 @@ Links to Gulp specific pages for reference:
 
 - [Gulp homepage](http://gulpjs.com/)
 - [Gulp plugins directory](http://gulpjs.com/plugins/)
-- [Gulp API documentation](https://github.com/gulpjs/gulp/blob/master/docs/API.md)
+- [Gulp API documentation](https://gulpjs.com/docs/en/getting-started/quick-start)
 - [Browsersync + Gulp.js](https://www.browsersync.io/docs/gulp/)
-
-Get to know other popular JavaScript task runners:
-
-- [Grunt](http://gruntjs.com/)
-- [Brocolli](http://broccolijs.com/)

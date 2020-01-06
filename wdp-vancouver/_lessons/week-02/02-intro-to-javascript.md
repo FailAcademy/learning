@@ -118,7 +118,7 @@ When the number of clicks reaches 10, add a second stage of evolution to the DOM
 
 ## Lab Activity
 
-Take a look at the [example of what we're going to build](https://redacademy.github.io/wdp-exercise-solutions/treeclicker/)
+Take a look at the [example of what we're going to build](https://redacademy.github.io/wdp-exercise-solutions/treeclicker/dist/)
 
 Modify the project you built during the lesson with the following functionality:
 
@@ -156,14 +156,11 @@ Background reading on ES2015:
 
 - [Learn ES2015](https://babeljs.io/docs/en/learn/#ecmascript-2015-features)
 - [ES2015 browser compatibility chart](https://caniuse.com/#search=es6)
-- [ECMA International website](https://www.ecma-international.org/memento/tc39.html)
 - [ES6 Overview in 350 Bullet Points](https://github.com/bevacqua/es6)
 
 Extra reading on ES2015 basics:
 
 - [Variable and Function Hoisting in ES2015](https://bitsofco.de/variable-and-function-hoisting-in-es2015/)
-- [Top ES2015 Features in 15 Minutes](https://kadira.io/blog/other/top-es2015-features-in-15-minutes)
-- [Learn ES2015 (ES6/Harmony) Now!](http://learnharmony.org/)
 - [ECMAScript 6 Learning](https://github.com/ericdouglas/ES6-Learning)
 - [ECMAScript 2015: Let's talk about ES6](https://medium.com/ecmascript-2015)
 - [ES6 for Humans](https://github.com/metagrover/ES6-for-humans)

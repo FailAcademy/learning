@@ -127,13 +127,13 @@ Let's see how we can use jQuery to **change the colour of the text** in the para
 To use jQuery to find the element with a class of `.intro`, we must use the `jQuery()` function and pass the CSS selector as an argument:
 
 ```javascript
-jQuery(".intro");
+jQuery('.intro');
 ```
 
 Although you'll generally see the jQuery method written using a dollar sign as shorthand:
 
 ```javascript
-$(".intro");
+$('.intro');
 ```
 
 ---
@@ -143,17 +143,17 @@ $(".intro");
 Now contrast the jQuery approach:
 
 ```javascript
-$(".intro");
+$('.intro');
 ```
 
 With using regular JavaScript:
 
 ```javascript
-document.getElementsByClassName("intro");
+document.getElementsByClassName('intro');
 
 // or...
 
-document.querySelector(".intro");
+document.querySelector('.intro');
 ```
 
 It's easy to see why using jQuery is so appealing!
@@ -185,7 +185,7 @@ Now that our `.intro` elements are "wrapped" in a jQuery object, all of **jQuery
 Now let's actually change the colour of the text using jQuery:
 
 ```javascript
-$(".intro").css("color", "red");
+$('.intro').css('color', 'red');
 ```
 
 It's that easy using the `.css()` method in jQuery!
@@ -193,9 +193,9 @@ It's that easy using the `.css()` method in jQuery!
 We can also store our jQuery selection in a variable for re-use later:
 
 ```javascript
-const $intro = $(".intro");
-$intro.css("color", "red");
-$intro.addClass("greeting");
+const $intro = $('.intro');
+$intro.css('color', 'red');
+$intro.addClass('greeting');
 ```
 
 ---
@@ -223,7 +223,7 @@ $(function() {
 **Note:** Point out that this is like what already used with regular JS:
 
 ```js
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
   // all of your JS code goes here
 });
 ```
@@ -236,9 +236,9 @@ Using the code from our previous example, our script file would now look like th
 
 ```javascript
 $(function() {
-  const $intro = $(".intro");
-  $intro.css("color", "red");
-  $intro.addClass("greeting");
+  const $intro = $('.intro');
+  $intro.css('color', 'red');
+  $intro.addClass('greeting');
 });
 ```
 
@@ -278,18 +278,18 @@ Given the following mark-up...
 
 ```javascript
 $(function() {
-  $(".opening-line")
+  $('.opening-line')
     .siblings()
-    .addClass("second-line");
+    .addClass('second-line');
 
-  $("article")
-    .children(".opening-line")
-    .css("font-style", "italic");
+  $('article')
+    .children('.opening-line')
+    .css('font-style', 'italic');
 
-  $("p")
+  $('p')
     .parent()
     .siblings()
-    .text("A Tale of Two Blog Posts");
+    .text('A Tale of Two Blog Posts');
 });
 ```
 
@@ -303,13 +303,13 @@ Chaining allows you to place several methods on the same selector at once, which
 
 ```javascript
 // Chained:
-$(".opening-line")
+$('.opening-line')
   .css('color', 'red')
-  .addClass("second-line");
-  
+  .addClass('second-line');
+
 // Unchained:
-$(".opening-line").css('color', 'red');
-$(".opening-line").addClass("second-line");
+$('.opening-line').css('color', 'red');
+$('.opening-line').addClass('second-line');
 ```
 
 ---
@@ -342,15 +342,15 @@ We can use the `.prepend()`, `.append()`, and `.remove()` methods to update cont
 
 ```javascript
 // Add new a new item to the end of the list:
-const newContent = "<li>three</li>";
-$(".numbers").append(newContent);
+const newContent = '<li>three</li>';
+$('.numbers').append(newContent);
 
 // Change the content of the second list item:
-$(".numbers li:nth-child(2)").text("2");
+$('.numbers li:nth-child(2)').text('2');
 
 // Remove the first item from the list:
-$(".numbers")
-  .children(":first")
+$('.numbers')
+  .children(':first')
   .remove();
 ```
 
@@ -369,13 +369,13 @@ The `.before()` and `.after()` methods will add content just before or just afte
 As we have seen, it's very easy to add classes to elements with jQuery using `.addClass()`:
 
 ```javascript
-$("ul").addClass("menu");
+$('ul').addClass('menu');
 ```
 
 And we can similarly remove them with `.removeClass()`:
 
 ```javascript
-$("ul").removeClass("menu");
+$('ul').removeClass('menu');
 ```
 
 ???
@@ -389,8 +389,8 @@ Mention they don't need to add the dot for class names when adding/removing clas
 We can also target other element attributes using the `.attr()` and `.prop()` methods:
 
 ```javascript
-$("li").attr("id", "active");
-$("input").prop("disabled", true);
+$('li').attr('id', 'active');
+$('input').prop('disabled', true);
 ```
 
 Ostensibly, `.attr()` and `.prop()` do very similar things, but `.prop()` offers a slightly more modern, semantic approach and allows you to work with element attributes that are booleans, like the example above.
@@ -403,17 +403,17 @@ As we saw in an earlier example, we can also use jQuery to get and update an ele
 
 ```javascript
 // Get the font size and log it:
-const $fontSize = $("p").css("font-size");
+const $fontSize = $('p').css('font-size');
 console.log($fontSize);
 
 // Change the font size:
-$("p").css("font-size", "18px");
+$('p').css('font-size', '18px');
 ```
 
 We can even make multiple adjustments:
 
 ```javascript
-$("p").css({ "font-size": "18px", "font-weight": "bold" });
+$('p').css({ 'font-size': '18px', 'font-weight': 'bold' });
 ```
 
 ???
@@ -426,7 +426,7 @@ Mention that the use of leaving one parameter out uses it as a getter, vs both p
 
 Using what you just learned about traversing the DOM and jQuery methods, come up with at least three unique solutions for changing the color of the text to red in the second `<p>` inside the `<article>` using jQuery only (no CSS!).
 
-[See the lesson page](/lesson/04-intro-to-jquery/) for further instructions.
+[See the lesson page](/lesson/02-intro-to-jquery/) for further instructions.
 
 ---
 
@@ -443,7 +443,7 @@ jQuery makes it even easier to create event listeners than we've seen with regul
 To do this, we usually use the `.on()` method:
 
 ```javascript
-$("button").on("click", function() {
+$('button').on('click', function() {
   // Code to run when button clicked...
 });
 ```
@@ -467,11 +467,11 @@ For basic event handlers to work, they must be attached to elements that exist w
 If the following button was dynamically added to the page after the page loaded, the alert would not appear:
 
 ```javascript
-$("button").on("click", function() {
-  alert("You clicked the button");
+$('button').on('click', function() {
+  alert('You clicked the button');
 });
 
-$("div").append("<button>My Button</button>");
+$('div').append('<button>My Button</button>');
 ```
 
 ???
@@ -487,8 +487,8 @@ Alternatively, we can use **event delegation** to attach events to elements.
 Event delegation allows us to attach events to children of an element, even if they do not exist at the time of the page load.
 
 ```javascript
-$("div").on("click", "button", function() {
-  alert("You clicked the button");
+$('div').on('click', 'button', function() {
+  alert('You clicked the button');
 });
 ```
 
@@ -506,7 +506,7 @@ Bonus! Using the event delegation approach can also be beneficial for code perfo
 
 In this exercise, you're going create two click events&mdash;one that **adds another list item** to the list below, and one that **crosses off an item** in the list when its "done" link is clicked.
 
-[See the lesson page](/lesson/04-intro-to-jquery/) for further instructions.
+[See the lesson page](/lesson/02-intro-to-jquery/) for further instructions.
 
 ---
 
@@ -580,11 +580,15 @@ You may have noticed that you can run functions once .animate() has completed.
 The basic structure looks like this.
 
 ```javascript
-$(".box").animate({
-  // animation runs
-}, 2000, function() {
-  // function run after animation finished, e.g. after 2000ms
-});
+$('.box').animate(
+  {
+    // animation runs
+  },
+  2000,
+  function() {
+    // function run after animation finished, e.g. after 2000ms
+  }
+);
 ```
 
 ---
@@ -690,8 +694,8 @@ Let's take a closer look at how we can use the `submit` event:
 
 ```html
 <form id="my-form">
-   <input type="text" id="my-text-input" />
-   <input type="submit" />
+  <input type="text" id="my-text-input" />
+  <input type="submit" />
 </form>
 ```
 
@@ -737,9 +741,9 @@ Similarly, we can also detect when a user chooses an `<option>` in a `<select>` 
 
 ```html
 <select id="my-select-menu">
-   <option value="">-- Pick an option --</option>
-   <option value="option1">Option 1</option>
-   <option value="option2">Option 2</option>
+  <option value="">-- Pick an option --</option>
+  <option value="option1">Option 1</option>
+  <option value="option2">Option 2</option>
 </select>
 ```
 
@@ -763,17 +767,18 @@ You can hide inputs by setting them to `display: none`:
 
 ```html
 <style>
-   label[for="fixins"], #fixins {
-     display: none;
-   }
+  label[for='fixins'],
+  #fixins {
+    display: none;
+  }
 </style>
 
 <form id="food-order">
-   <input type="checkbox" id="hamburger" />
-   <label for="hamburger">Yes, I would like a hamburger</label>
+  <input type="checkbox" id="hamburger" />
+  <label for="hamburger">Yes, I would like a hamburger</label>
 
-   <label for="fixins">What would you like on your hamburger?</label>
-   <input type="text" id="fixins" />
+  <label for="fixins">What would you like on your hamburger?</label>
+  <input type="text" id="fixins" />
 </form>
 ```
 
@@ -803,7 +808,7 @@ $('#hamburger').on('change', function() {
 
 In this exercise, you're going to use jQuery to create an accordian-style show/hide effect for a basic FAQ list.
 
-[See the lesson page](/lesson/05-jquery-animation/) for further instructions.
+[See the lesson page](/lesson/02-intro-to-jquery/) for further instructions.
 
 ---
 

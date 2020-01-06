@@ -129,8 +129,7 @@ Continue work on Project 1 based on what you've learned so far.
 
 Handy command line resources for beginners:
 
-- [The Command Line Crash Course](http://cli.learncodethehardway.org/book/)
-- [Command Line Cheat Sheet](http://www.git-tower.com/blog/command-line-cheat-sheet/)
+- [Command Line cheat-sheet](http://www.git-tower.com/blog/command-line-cheat-sheet/)
 - [Explain Shell](https://explainshell.com/)
 - [The Bash Guide](http://www.bash.academy/)
 

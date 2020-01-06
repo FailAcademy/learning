@@ -28,7 +28,7 @@ layout: false
 2. Programming and JavaScript Basics
 3. Using JavaScript on the Web
 4. Operators and Control Flow
-6. The DOM and Event Listeners
+5. The DOM and Event Listeners
 
 ---
 
@@ -52,11 +52,11 @@ class: center, middle
 
 # What is JavaScript?
 
-JavaScript shouldn't be confused with Java, they are completely different languages that happen to share a name. 
+JavaScript shouldn't be confused with Java, they are completely different languages that happen to share a name.
 
 "JavaScript was introduced in 1995 as a way to add programs to web pages in **Netscape Navigator.** The language has since been adopted by **all** other major graphical web browsers..."
 
- <img style="margin: 0 auto; margin-top:1rem;" alt="Netscape Logo" src="https://i154.photobucket.com/albums/s254/veronicatoro84/logoanim.gif"/>
+![Netscape logo](/public/img/slide-assets/js/netscape-logo.png)
 
 .footnote[–Marijn Haverbeke, Eloquent JavaScript]
 
@@ -68,7 +68,7 @@ Begin to bridge to JavaScript. Pause on this slide and go into as much detail as
 
 # Why Learn JavaScript?
 
-JavaScript allows us to create sophisticated interactive web applications and it powers much of the modern web. 
+JavaScript allows us to create sophisticated interactive web applications and it powers much of the modern web.
 
 Traditionally it was only used for the front-end of websites but it now has a much broader utility and can be used for server-side applications, mobile apps and games.
 
@@ -78,7 +78,7 @@ Learn JavaScript and you can make almost any software program you can imagine!
 
 Consider sharing links with students of interesting, unexpected ways JavaScript can be used, e.g.:
 
-- https://threejs.org/examples/ 
+- https://threejs.org/examples/
 - http://johnny-five.io/
 - https://facebook.github.io/react-360/
 
@@ -175,7 +175,7 @@ It is a set of rules that precisely defines a sequence of operations. This inclu
 
 ???
 
-Distinguish between syntax (the symbolic representation of what you're trying to say) and semantics (the actual meaning of what you are saying). Make a comparison to natrual language where "good morning" and "bonjour" have different syntax but convey the same semantics (if you understand both languages). 
+Distinguish between syntax (the symbolic representation of what you're trying to say) and semantics (the actual meaning of what you are saying). Make a comparison to natrual language where "good morning" and "bonjour" have different syntax but convey the same semantics (if you understand both languages).
 
 ---
 
@@ -233,11 +233,10 @@ In JavaScript, we can use `console.log()` to print values into the **browser con
 This helps us understand what particular values may be at specific points in your program's execution flow:
 
 ```js
-console.log("hello!");
+console.log('hello!');
 ```
 
 ---
-
 
 # Variables
 
@@ -264,21 +263,21 @@ Be sure to make sure students understand to only use `let` or `const` in their c
 
 # Data types
 
-JavaScript variables can hold different types of data. **Primitive** data types are the simplest. 
+JavaScript variables can hold different types of data. **Primitive** data types are the simplest.
 
 In JavaScript the primitive types are:
 
 ```js
-"I am a string" // string
-'I am also a string' // string
-42 // number
-true // boolean
-false // boolean
+'I am a string'; // string
+'I am also a string'; // string
+42; // number
+true; // boolean
+false; // boolean
 ```
 
 Plus two other types: `undefined` and `null`
 
-There are also **complex** data types (functions and objects) which have additional functionality. 
+There are also **complex** data types (functions and objects) which have additional functionality.
 
 ???
 
@@ -291,15 +290,15 @@ Note that we can use double or single quotation marks to make strings in JavaScr
 This is what a **variable declaration and assignment** looks like in JavaScript:
 
 ```js
-const city = "Vancouver"; // string
+const city = 'Vancouver'; // string
 let temperature = 20; // number
 let raining = true; // boolean
 let fahrenheit = temperature * 1.8 + 32; // number
 ```
 
-JavaScript has dynamic types, this means that the same variable can be used to hold different types of data. 
+JavaScript has dynamic types, this means that the same variable can be used to hold different types of data.
 
-You choose the name of the variable, and use the `=` operator to assign a value to it. 
+You choose the name of the variable, and use the `=` operator to assign a value to it.
 
 _Note: JavaScript **statements** end with a `;`_
 
@@ -310,11 +309,11 @@ _Note: JavaScript **statements** end with a `;`_
 Variables defined with `let` can be **reassigned** whereas those using `const` are fixed:
 
 ```js
-const city = "Vancouver"; 
+const city = 'Vancouver';
 let raining = true;
 
 raining = false; // works
-city = "Toronto"; // will display an error
+city = 'Toronto'; // will display an error
 ```
 
 We can also **declare** variables without assigning a value when using `let`. Unassigned variables automatically get the JavaScript value `undefined`.
@@ -336,13 +335,13 @@ Remind students that using const means we have to assign the value when the vari
 Make sure your variable names **describe** what they hold:
 
 ```js
-const myVar = "Albatross"; // what would be a better name?
+const myVar = 'Albatross'; // what would be a better name?
 ```
 
 Use **camel case** for defining JS variables
 
 ```js
-const firstName = "Anne"; // 🐫 🐫 👍
+const firstName = 'Anne'; // 🐫 🐫 👍
 ```
 
 Variables **can't start with numbers**, can only use the **dollar sign** and **underscore** special characters, and **shouldn't start with capital letters**:
@@ -394,7 +393,7 @@ To run JavaScript on your website, all you need is the `<script>` element:
     <!-- Your HTML content. -->
     <!-- <script> tag including your JavaScript code -->
     <script>
-      console.log("Hello, world!");
+      console.log('Hello, world!');
     </script>
   </body>
 </html>
@@ -490,7 +489,7 @@ The visual representation of the DOM for this page would look something like thi
 
 Take a piece of paper and map out in a tree-structure what the DOM looks like for your project site (you probably want the paper in landscape orientation).
 
-Think carefully about the parent / child relationship between nodes. 
+Think carefully about the parent / child relationship between nodes.
 
 When you’re done, pair up with a classmate and explain the design of your DOM diagram to them.
 
@@ -498,13 +497,13 @@ When you’re done, pair up with a classmate and explain the design of your DOM 
 
 # Functions
 
-In JavaScript we can call functions by typing their name and using parentheses to pass in any arguments. We've already seen this with `console.log` where `log` is the function. 
+In JavaScript we can call functions by typing their name and using parentheses to pass in any arguments. We've already seen this with `console.log` where `log` is the function.
 
 ```js
-console.log("Message to log"); // call console.log with a message
+console.log('Message to log'); // call console.log with a message
 ```
 
-Functions don't have to have any arguments but you always need the parentheses. 
+Functions don't have to have any arguments but you always need the parentheses.
 
 ```js
 myFunction(); // call myFunction with no arguments
@@ -512,14 +511,14 @@ myFunction(); // call myFunction with no arguments
 
 ---
 
-# Properties 
+# Properties
 
-Objects in JavaScript can have functions (more accurately called **methods**) and properties. 
+Objects in JavaScript can have functions (more accurately called **methods**) and properties.
 
 You can access methods and properties of objects in JavaScript using **dot notation**. Again, we saw this with `console.log` (where `log` is a method on the `console` object).
 
 ```js
-person.name = "James"; // the name property of the person object
+person.name = 'James'; // the name property of the person object
 person.sayName(); // the sayName method of the person object
 ```
 
@@ -537,7 +536,7 @@ element.innerHTML;
 element.className;
 ```
 
-**document** is an object for the HTML document that's currently loaded in the browser, it's the "Document Object" from DOM. 
+**document** is an object for the HTML document that's currently loaded in the browser, it's the "Document Object" from DOM.
 
 Note that **innerHTML** and **className** are a properties, whereas the others are methods.
 
@@ -570,9 +569,9 @@ We can use the `getElementById` method to target that `<p>`, and update it using
 
 ```javascript
 // js/main.js
-let messageElement = document.getElementById("message")
-messageElement.innerHTML = "We love dogs!";
-messageElement.className = "red"; // add a class name to the element
+let messageElement = document.getElementById('message');
+messageElement.innerHTML = 'We love dogs!';
+messageElement.className = 'red'; // add a class name to the element
 ```
 
 ---
@@ -585,13 +584,13 @@ Later we will look at using DOM manipulation to deal with input and output, for 
 - `alert` allows us to display information to the user (output)
 
 ```js
-let name = prompt("Please enter your name");
-alert("Hello " + name + " how are you?");
+let name = prompt('Please enter your name');
+alert('Hello ' + name + ' how are you?');
 ```
 
-Try both of these in your console. 
+Try both of these in your console.
 
-Note that we can use the `+` operator to **concatenate** (or join) strings and variables together. 
+Note that we can use the `+` operator to **concatenate** (or join) strings and variables together.
 
 ---
 
@@ -602,9 +601,9 @@ As an alternative to **concatenation** are string literals that allow **string i
 **Concatenation:**
 
 ```js
-const name = "Bob";
-const city = "Vancouver";
-const description = name + " lives in " + city;
+const name = 'Bob';
+const city = 'Vancouver';
+const description = name + ' lives in ' + city;
 ```
 
 **Interpolation:**
@@ -621,7 +620,6 @@ _Note that the template literal is surrounded by **back-ticks** (not single or d
 
 See the [lesson page](/lesson/02-intro-to-javascript/) for instructions.
 
-
 ---
 
 template: inverse
@@ -632,9 +630,9 @@ template: inverse
 
 # Operators
 
-Almost every programming language uses **operators**. 
+Almost every programming language uses **operators**.
 
-We'll look at operators for **assignment**, **logic**, **arithmetic** and **comparison**. 
+We'll look at operators for **assignment**, **logic**, **arithmetic** and **comparison**.
 
 [_You can find a list of every JavaScript operator here._](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
 
@@ -672,8 +670,6 @@ let takeJacket = !isWarm || isRaining; // Will this be true or false?
 ```
 
 Note that **NOT** negates the true / false value.
-
-
 
 ???
 
@@ -714,12 +710,12 @@ We can also compare values and evaluate their result using `>`, `<`, `>=`, `<=`,
 
 ```js
 const age = 20;
-const animal = "dog";
+const animal = 'dog';
 const completed = false;
 
 let isChild = age < 13;
 let isAdult = age >= 18;
-let isCat = animal == "cat";
+let isCat = animal == 'cat';
 let isPending = completed != true;
 ```
 
@@ -729,23 +725,22 @@ _What will the above expressions return?_
 
 # Double vs Triple Equals
 
-When comparing things using `==` JavaScript will convert both sides of the comparison to be the same type. 
+When comparing things using `==` JavaScript will convert both sides of the comparison to be the same type.
 
-We can also perform a **strict comparison** using `===` (triple equals). This additionally checks the **type** of the values, whereas `==` (double equals) just checks the values. 
+We can also perform a **strict comparison** using `===` (triple equals). This additionally checks the **type** of the values, whereas `==` (double equals) just checks the values.
 
 ```js
 true == 1; // true, because 1 gets interpreted as true
-"2" == 2; // true, because the string "2" gets converted to a number
+'2' == 2; // true, because the string "2" gets converted to a number
 true === 1; // false
-"2" === 2; // false
+'2' === 2; // false
 ```
-
 
 ---
 
 # Control Flow
 
-The most common control flow is the conditional `if else` statement. 
+The most common control flow is the conditional `if else` statement.
 
 Using `if` and `else` you can decide what code your program will run, depending on the **truthyness** or **falsiness** of a given statement, for example:
 
@@ -776,16 +771,17 @@ if (temperature <= 0) {
 
 ```js
 // You'll often check if something is NOT (!) false or falsey.
-if (!accountBalance) { // reads like: "if NO accountBalance"
-  console.log("No money in your account");
+if (!accountBalance) {
+  // reads like: "if NO accountBalance"
+  console.log('No money in your account');
 } else if (accountBalance > 0) {
-  console.log("You have money!");
+  console.log('You have money!');
 } else {
   console.log("You're overdrawn");
 }
 ```
-_What will this output if `accountBalance` is `-10`, `0`, `20`?_
 
+_What will this output if `accountBalance` is `-10`, `0`, `20`?_
 
 ---
 
@@ -801,7 +797,7 @@ template: inverse
 <button onclick="alert('Button clicked!');">Click here</button>
 ```
 
-We can call JavaScript functions using the `onclick` attribute of an HTML element, this will run the function when the element is clicked. 
+We can call JavaScript functions using the `onclick` attribute of an HTML element, this will run the function when the element is clicked.
 
 But there's a lot more that we can do to add interactivity to a webpage, and we can also accomplish this entirely in our JavaScript code without adding attributes throughout our markup!
 
@@ -840,10 +836,10 @@ Event listeners use this basic syntax:
 ```js
 // In a JS file...
 
-const button = document.getElementById("click-here");
+const button = document.getElementById('click-here');
 
-button.addEventListener("click", function(event) {
-  console.log("You clicked a button!");
+button.addEventListener('click', function(event) {
+  console.log('You clicked a button!');
 });
 ```
 
@@ -855,13 +851,13 @@ _Relate the code to what they just say in words on the previous slide._
 
 Be sure to highlight the `event` parameter in the callback function. And that we need to dig into exactly what a callback function is...
 
-Mention that event **handler** and event **listener** are just two terms for the same thing in JavaScript. 
+Mention that event **handler** and event **listener** are just two terms for the same thing in JavaScript.
 
 ---
 
 # Callback Functions
 
-Sometimes we don't want certain code to execute until something specific happens (e.g. an event on the webpage). 
+Sometimes we don't want certain code to execute until something specific happens (e.g. an event on the webpage).
 
 The simplest way to write this **asynchronous** code in JavaScript is to use the **callback** pattern. This is where we pass functions as arguments to other functions, we can do this because **functions are values**.
 
@@ -886,9 +882,9 @@ Every event handling callback function receives an **event object**, and this ob
 To access these methods and properties, we must pass in the event object as an argument for our callback function:
 
 ```js
-const button = document.getElementById("click-here");
+const button = document.getElementById('click-here');
 
-button.addEventListener("click", function(event) {
+button.addEventListener('click', function(event) {
   // Code to run when button is clicked...
 
   // Log the event object to the console to see what's inside
@@ -925,7 +921,7 @@ Sometimes we want to attach events to HTML elements that already have default be
 For instance, you may want to attach a special click handler to an `<a>` that performs a different action than clicking through to a link (e.g. revealing a hidden `<div>`). The event object has a `preventDefault` method that allows us to do this:
 
 ```js
-button.addEventListener("click", function(event) {
+button.addEventListener('click', function(event) {
   // Stop the default behavior on the button click
   event.preventDefault();
 
@@ -950,7 +946,7 @@ Before we start interacting with the DOM, we want to make sure the browser has *
 For this reason, you will often see JavaScript wrapped in the following code:
 
 ```js
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
   // all of your JS code goes here
 });
 ```
@@ -964,11 +960,10 @@ Waits until the DOM tree is constructed before the code executes.
 Compared to:
 
 ```js
-window.addEventListener("load", function() {});
+window.addEventListener('load', function() {});
 ```
 
 Which waits until the DOM tree is constructed and all external assets are loaded.
-
 
 ---
 

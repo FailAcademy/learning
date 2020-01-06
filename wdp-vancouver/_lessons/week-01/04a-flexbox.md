@@ -7,7 +7,8 @@ lesson_date: 2020-01-16
 
 ## Pre-Work
 
-_There is no pre-work for this lesson._
+**Start** the video lessons at [flexbox.io](https://flexbox.io/) <br>
+This is a series you should try to finish over the course of a few weeks as you progress through the Web Dev program.
 
 ---
 
