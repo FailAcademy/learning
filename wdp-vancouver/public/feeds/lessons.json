@@ -13,17 +13,17 @@
    {
       "title": "Foundation Day",
       "allDay": true,
-      "start": "2019-09-30"
+      "start": "2020-01-13"
    },
    {
       "title": "Foundation Day",
       "allDay": true,
-      "start": "2019-10-01"
+      "start": "2020-01-14"
    },
    {
       "title": "Intro to UX",
       "allDay": true,
-      "start": "2019-10-22"
+      "start": "2020-02-04"
    },
    {
       "title": "PPD 3-5pm",
@@ -49,5 +49,10 @@
       "title": "Design Presentations",
       "allDay": true,
       "start": "2019-12-20"
+   },
+   {
+      "title": "CP Presentations",
+      "allDay": true,
+      "start": "2020-04-03"
    }
 ]

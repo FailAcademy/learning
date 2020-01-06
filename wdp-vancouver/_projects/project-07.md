@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 7 - Community Project
-due: Tuesday, December 18th
+due: April 1st
 ---
 
 For your final project, you will work in groups to build a live, functioning version of a RED Community Partner Project that has previously been through a UX/UI design process.

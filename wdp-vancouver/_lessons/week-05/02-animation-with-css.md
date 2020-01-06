@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Animation with CSS
-slides: ["_slides/week-05/02-animation-with-css.md"]
-lesson_date: 2019-10-29
+slides: ['_slides/week-05/02-animation-with-css.md']
+lesson_date: 2020-02-11
 ---
 
 ## Pre-Work
@@ -75,8 +75,8 @@ Here's the HTML, CSS and JS you'll need to get started:
 ```js
 // The JS set-up...
 
-$(".ball").on("click", function() {
-  $(this).toggleClass("bouncy-bouncy");
+$('.ball').on('click', function() {
+  $(this).toggleClass('bouncy-bouncy');
 });
 ```
 

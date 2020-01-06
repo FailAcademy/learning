@@ -1,74 +1,51 @@
 [
   {
-    "title": "Aloha Work Day",
+    "title": "Aloha Work Day / \n Project Check-in",
     "allDay": true,
-    "start": "2019-10-15"
+    "start": "2020-01-24"
   },
   {
-    "title": "JavaScript Lab",
+    "title": "Pong Codealong",
     "allDay": true,
-    "start": "2019-10-15"
-  },
-  {
-    "title": "Review / Practice",
-    "allDay": true,
-    "start": "2019-10-18"
-  },
-  {
-    "title": "HTML & CSS Layout",
-    "allDay": true,
-    "start": "2019-10-18"
-  },
-  {
-    "title": "JavaScript Lab",
-    "allDay": true,
-    "start": "2019-10-18"
+    "start": "2020-01-30",
+    "end": "2020-02-01"
   },
   {
     "title": "Instanews Work Day",
     "allDay": true,
-    "start": "2019-10-24"
+    "start": "2020-02-07"
   },
   {
     "title": "Instanews Work Day",
     "allDay": true,
-    "start": "2019-11-01"
+    "start": "2020-02-14"
   },
   {
     "title": "Inhabitent Work Day",
     "allDay": true,
-    "start": "2019-11-15"
+    "start": "2020-02-28"
   },
   {
     "title": "Inhabitent Work Day",
     "allDay": true,
-    "start": "2019-11-18"
+    "start": "2020-03-02"
   },
   {
     "title": "QOD Work Day",
     "allDay": true,
-    "start": "2019-11-20"
-  },
-  {
-    "title": "QOD Work Day",
-    "allDay": true,
-    "start": "2019-11-21"
-  },
-  {
-    "title": "QOD Work Day",
-    "allDay": true,
-    "start": "2019-11-22"
+    "start": "2020-03-04",
+    "end": "2020-03-07"
   },
   {
     "title": "GitHub Portfolio Development",
     "allDay": true,
-    "start": "2019-11-25",
-    "end": "2019-11-30"
+    "start": "2020-03-09",
+    "end": "2020-03-14"
   },
   {
     "title": "Community Project Work",
     "allDay": true,
-    "start": "2019-12-02",
-    "end": "2019-12-20"
+    "start": "2020-03-16",
+    "end": "2020-04-04"
   }
 ]

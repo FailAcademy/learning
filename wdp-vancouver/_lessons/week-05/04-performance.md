@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Performance and Optimization
-slides: ["_slides/week-05/04-performance.md"]
-lesson_date: 2019-10-31
+slides: ['_slides/week-05/04-performance.md']
+lesson_date: 2020-02-13
 ---
 
 ## Pre-Work
@@ -97,8 +97,8 @@ Validating HTML that's being appended using JavaScript/jQuery is a bit trickier,
             type="video/mp4">
 
     Sorry, your browser doesn't support embedded videos.
-</video>
 
+</video>
 
 ---
 

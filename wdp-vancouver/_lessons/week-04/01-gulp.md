@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Gulp
-slides: ["_slides/week-04/01-gulp.md"]
-lesson_date: 2019-10-21
+slides: ['_slides/week-04/01-gulp.md']
+lesson_date: 2020-02-03
 ---
 
 ## Pre-Work

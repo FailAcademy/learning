@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: Ajax, JSON, and APIs
-slides: ["_slides/week-04/03-ajax-apis.md"]
-lesson_date: 2019-10-23
+slides: ['_slides/week-04/03-ajax-apis.md']
+lesson_date: 2020-02-05
 ---
 
 ## Pre-Work
@@ -55,7 +55,7 @@ Use this code to get started:
 ```
 
 ```js
-$("button").on("click", function() {
+$('button').on('click', function() {
   $.getJSON(/* Where are you getting the JSON from? */).done(function(data) {
     $.each(data, function(key, value) {
       /* Append your list items here */
@@ -168,7 +168,6 @@ Again, writing the CSS and jQuery is up to you. Good luck!
 ## Additional Resources
 
 More APIs to try:
-
 
 - JSON Placeholder, good for practice [jsonplaceholder](https://jsonplaceholder.typicode.com/)
 - Star Wars API [swapi](https://swapi.co/)

@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to HTML
 slides: ['_slides/week-01/01-intro-to-html.md']
-lesson_date: 2019-10-01
+lesson_date: 2020-01-14
 ---
 
 ## Pre-Work
@@ -50,10 +50,9 @@ When using Boostnote you have 2 options **Markdown note** or **Snippet note**.
 
 **[Getting-Started with Boostnote](https://github.com/BoostIO/Boostnote/wiki/Getting-Started)**
 
-
 ### Here are some great Snippet Apps.
 
-- [BoostNote](https://boostnote.io/) Free, Windows, Mac, Linux, *recommended*
+- [BoostNote](https://boostnote.io/) Free, Windows, Mac, Linux, _recommended_
 - [Lepton](https://hackjutsu.com/Lepton/) Free, Windows, Mac, Linux
 - [GistoApp](https://www.gistoapp.com/) Free, Windows, Mac, Linux
 - [SnippetsLab](https://www.renfei.org/snippets-lab/) Paid, Mac

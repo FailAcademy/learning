@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to JavaScript
 slides: ['_slides/week-02/02-intro-to-javascript.md']
-lesson_date: 2019-10-09
+lesson_date: 2020-01-22
 ---
 
 ## Pre-Work
@@ -104,12 +104,11 @@ let clicks = 0;
 
 // Add the initial stage of evolution to the span id="evolution"
 
-evolveBtn.addEventListener("click", function evolve() {
+evolveBtn.addEventListener('click', function evolve() {
   // add 1 to the clicks variable
   // When the number of clicks reaches 10, add a second stage of evolution to the DOM!
   // You choose the name of each additional stage.
 });
-
 ```
 
 Now, first you'll need to replace the contents of `<span id="evolution"></span>` with the initial stage of evolution of your creature. Each time you click the "evolve" button you will keep track of the number of clicks by adding 1 to the `clicks` variable.
@@ -127,7 +126,6 @@ Modify the project you built during the lesson with the following functionality:
 2. Transition between the different stages as you click the button. One stage for 10 or more clicks.
 3. As your creature evolves, add some CSS using `element.style`
 4. When your creature is fully evolved, you should `alert("Your creature has attained Saṃsāra.")`
-
 
 If you finish this lab before the end of class, then continue working on Project 1.
 

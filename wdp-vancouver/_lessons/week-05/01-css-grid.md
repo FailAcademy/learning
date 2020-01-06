@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: CSS Grid
-slides: ["_slides/week-05/01-css-grid.md"]
-lesson_date: 2019-10-28
+slides: ['_slides/week-05/01-css-grid.md']
+lesson_date: 2020-02-10
 ---
 
 ## Pre-Work

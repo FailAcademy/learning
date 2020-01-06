@@ -2,37 +2,43 @@
   {
     "title": "Aloha Due",
     "allDay": true,
-    "start": "2019-10-16",
+    "start": "2020-01-27",
     "url": "/project/project-01/"
+  },
+  {
+    "title": "Pong Due",
+    "allDay": true,
+    "start": "2020-02-03",
+    "url": "/project/project-02/"
   },
   {
     "title": "Instanews Due",
     "allDay": true,
-    "start": "2019-11-04",
+    "start": "2020-02-18",
     "url": "/project/project-03/"
   },
   {
     "title": "Inhabitent Due",
     "allDay": true,
-    "start": "2019-11-19",
+    "start": "2020-03-03",
     "url": "/project/project-04/"
   },
   {
     "title": "QOD Due",
     "allDay": true,
-    "start": "2019-11-25",
+    "start": "2020-03-09",
     "url": "/project/project-05/"
   },
   {
     "title": "GitHub Portfolio Due",
     "allDay": true,
-    "start": "2019-11-29",
+    "start": "2020-03-16",
     "url": "/project/project-06/"
   },
   {
     "title": "Community Project Due",
     "allDay": true,
-    "start": "2019-12-18",
+    "start": "2020-04-01",
     "url": "/project/project-07/"
   }
 ]

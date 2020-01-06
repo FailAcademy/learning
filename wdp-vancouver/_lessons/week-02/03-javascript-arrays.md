@@ -1,13 +1,13 @@
 ---
 layout: lesson
 title: JavaScript Arrays
-slides: ["_slides/week-02/03-javascript-arrays.md"]
-lesson_date: 2019-10-10
+slides: ['_slides/week-02/03-javascript-arrays.md']
+lesson_date: 2020-01-23
 ---
 
 ## Pre-Work
 
-Check out [JSBin](https://jsbin.com/) or [CodePen](https://codepen.io). 
+Check out [JSBin](https://jsbin.com/) or [CodePen](https://codepen.io).
 We'll be using these online editors to quickly test code.
 
 ---
@@ -87,10 +87,10 @@ const bucketList = [
 Start with the following code, and use what you know to complete the challenges listed below. 👩‍🏫
 
 ```js
-const messageForm = document.getElementById("message-form");
+const messageForm = document.getElementById('message-form');
 // define other variables here if needed
 
-messageForm.addEventListener("submit", function(event) {
+messageForm.addEventListener('submit', function(event) {
   event.preventDefault();
 
   // create a new <li> element to append to the DOM
@@ -128,9 +128,9 @@ It would be a good idea to write out each step you need to complete in a comment
 
 ```js
 const products = [
-  ["Stretch Knit Dress", "dress"],
-  ["Cotton Blue Shirt", "shirt"],
-  ["Blue Hipster Backpack", "bag"]
+  ['Stretch Knit Dress', 'dress'],
+  ['Cotton Blue Shirt', 'shirt'],
+  ['Blue Hipster Backpack', 'bag']
 ];
 ```
 
@@ -167,7 +167,7 @@ Here are the [options for Flickity](https://flickity.metafizzy.co/options.html).
 
 💡 **Flickity Guide**
 
-*Although I do recommend checking out the getting started guide above, here is a step by step guide that you can follow to get Flickity working with your project.*
+_Although I do recommend checking out the getting started guide above, here is a step by step guide that you can follow to get Flickity working with your project._
 
 **Step 1:**
 Add Flickity's CSS and JS files, the easiest way to do this is to use the provided [CDN](https://en.wikipedia.org/wiki/Content_delivery_network).
@@ -176,7 +176,10 @@ Add the following to the `<head>` of your html file. Make sure to add this CSS/J
 
 ```html
 <!-- Flickity CSS -->
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+/>
 <!-- Flickity JavaScript -->
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 ```
@@ -208,7 +211,7 @@ Now we need to add some JavaScript to initialize the plugin.
 
 ```js
 const elem = document.querySelector('.main-carousel');
-const flkty = new Flickity( elem, {
+const flkty = new Flickity(elem, {
   // options
   cellAlign: 'left',
   wrapAround: true,
