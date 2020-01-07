@@ -23,13 +23,13 @@ title: Additional Resources
 
 ---
 
-### ES2015
+### JavaScript
 
-- [Best things about ES2015!](https://kadira.io/blog/other/top-es2015-features-in-15-minutes)
-- [Interactive Practice](http://learnharmony.org/)
+- [JavaScript 30](https://javascript30.com/)
+- [Eloquent JavaScript](https://eloquentjavascript.net/)
 - [Babel homepage](https://babeljs.io/docs/learn-es2015/)
 - [List of ES6 Resources](https://github.com/ericdouglas/ES6-Learning)
-- [The official ES2015 Specification!](http://www.ecma-international.org/ecma-262/6.0/)
+- [The official ES2015 Specification](http://www.ecma-international.org/ecma-262/6.0/)
 
 ---
 
@@ -37,15 +37,22 @@ title: Additional Resources
 
 - [Webpack homepage](https://webpack.github.io/)
 - [Webpack How-to](https://github.com/petehunt/webpack-howto)
-- [Webpack Dev Server Documentation](https://webpack.github.io/docs/webpack-dev-server.html)
 
 ---
 
 ### TypeScript
 
-- Excellent [PluralSight course](https://www.pluralsight.com/courses/typescript) on TypeScript
 - [TypeScript Documentation](https://www.typescriptlang.org/)
 - [Typescript Examples Repo](https://github.com/Microsoft/TypeScriptSamples)
+
+---
+
+### React
+
+- [Official React Tutorial](https://reactjs.org/tutorial/tutorial.html)
+- [React.js for the Visual Learner](https://leanpub.com/reactjsforthevisuallearner/read)
+- [Learn React in 5 minutes](https://www.freecodecamp.org/news/learn-react-js-in-5-minutes-526472d292f4/)
+- [codecademy: Learn ReactJS](https://www.codecademy.com/learn/react-101)
 
 ---
 
@@ -54,7 +61,6 @@ title: Additional Resources
 - [Journey Through The JavaScript MVC Jungle](http://www.smashingmagazine.com/2012/07/journey-through-the-javascript-mvc-jungle/)
 - [Excellent blog post](http://blog.thoughtram.io/angular/2015/05/18/dependency-injection-in-angular-2.html) all about Dependency Injection
 - Learn about [all of the ways to style Angular 2 Components](https://scotch.io/tutorials/all-the-ways-to-add-css-to-angular-2-components)
-- [Angular 2 Cheat-Sheet](https://angular.io/cheatsheet)
 - [Angular 2 QuickStart Documentation](https://angular.io/docs/ts/latest/tutorial/)
 - [TODO MVC Angular 2](http://todomvc.com/examples/typescript-angular/#/)
 
