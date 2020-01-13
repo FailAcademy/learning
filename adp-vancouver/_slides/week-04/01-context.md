@@ -27,13 +27,9 @@ layout: false
 
 ---
 
-template: inverse
+class: center, middle
 
 # What is Context?
-
----
-
-class: center, middle
 
 It manages application state for React applications. It provides a way to pass data through the component tree without having to pass any props.
 
@@ -44,11 +40,15 @@ It manages application state for React applications. It provides a way to pass d
 
 ---
 
+class: center, middle
+
 Application state can be stored in a state and passed down to any children that require that information. Other components that are not children of this component can not access that data.
 
 Think of a stateful component that holds a state that can be accessed by any component in the tree. That's Context!
 
 ---
+
+class: center, middle
 
 .inline-images[
 ![Context](https://miro.medium.com/max/3472/1*Jx8BCxZFN2SCuhQtZqfgMQ.jpeg)
@@ -64,7 +64,7 @@ Create a file `UserContext` in the `Context` dir.
 
 ```js
 // UserContext.js
-import React, { createContext } from 'react';
+import React, { createContext } from "react";
 
 // create Context
 const UserContext = createContext();
@@ -84,9 +84,9 @@ export default class UserProvider extends Component {
     super(props);
     this.state = {
       user: {
-        name: 'James Bond',
+        name: "James Bond",
         age: 35,
-        code: 'OO7'
+        code: "OO7"
       }
     };
   }
@@ -106,6 +106,8 @@ class: center, middle
 `Note:` Provider component accepts a value prop that will be consumed by the Consumer component.
 
 ---
+
+class: middle
 
 In this example, we will pass user state as value prop in the `UserContext.Provider` component.
 
@@ -152,9 +154,9 @@ This React component lets you subscribe to the Context. Any changes in the Conte
 
 ```js
 // ProfileContainer.js
-import React, { Component } from 'react';
-import { UserContext } from '../../Context/UserContext';
-import Profile from './Profile';
+import React, { Component } from "react";
+import { UserContext } from "../../Context/UserContext";
+import Profile from "./Profile";
 
 class ProfileContainer extends Component {
   render() {
@@ -170,6 +172,8 @@ export default ProfileContainer;
 ```
 
 ---
+
+class: middle
 
 `Note:` Context.Consumer requires a function as a child that takes current Context value as an input and gives React node as an output.
 
