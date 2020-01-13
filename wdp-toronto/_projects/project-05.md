@@ -1,22 +1,18 @@
 ---
 layout: project
 title: Project 5 - Quotes on Dev
-due: Monday, Nov 25th (beginning of class)
+due: Monday, March 9th (beginning of class)
 ---
 
 For Project 5, you will combine your JavaScript and WordPress skills together to build out the functionality for a website called Quotes on Dev using the WordPress REST API.
 
-You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-05.zip).
-
 ## Set-up Instructions
 
-1.  Download and install a fresh copy of WordPress locally
-2.  Download the [`quotesondev-starter`](https://github.com/redacademy/quotesondev-starter) repo, move it into `wp-content/themes/`, then follow the installation instructions in the `README`
-3.  Activate the Quotes on Dev theme
-4.  [Download the project files](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-05.zip)
-5.  In WordPress, go to Tools > Import and install the WordPress importer plugin
-6.  Import the provided XML file to populate the site with content
-7.  Start themin'!
+1. [Download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-05.zip).
+
+2. [Download this starter theme to get going](https://github.com/robhyrk/wp-starter.git). Add this to your themes folder, rename it, and activate it within the WP dashboard. Update gulpfile.js proxy to match your environment.
+
+3. [Download the `quotesondev-starter`](https://github.com/redacademy/quotesondev-starter). Copy only the 'inc' folder AND functions.php file, then add these to your starter theme from step 2.
 
 ## Design Specifications
 
@@ -116,8 +112,7 @@ Your project must:
 Your project must:
 
 - Contain a static "About" page, styled appropriately (page.php)
-- Contain a static "Archives" page with a list of quote authors, categories, and tags, styled appropriately (custom page template)
-- Contain a Submit a Quote page with a functioning submission form for new quotes (custom page template)
+- Contain a Submit a Quote page with a functioning submission form for new quotes (page-submit.php)
 - Contain a blog post index assigned as the front page, styled appropriately (home.php)
 - Contain a single blog post view without comments, styled appropriately (single.php)
 - Contain a general archive (for categories, tags, etc.), styled appropriately (archive.php)
@@ -140,19 +135,9 @@ Create a custom WP API endpoint with your custom field data included, rather tha
 
 ## Submission Instructions
 
-Once you have finished working on your site, please export your database by following these instructions:
+**Note:** Please ensure browser sync is OFF before proceeding with the steps below.
 
-**Note:** Please ensure browser sync is OFF before proceeding with the steps below. VERY IMPORTANT.
-
-1.  Add your instructor as an Administrator to your site (username: `instructor` / password: `instructor` / email: dev@redacademy.com)
-2.  Install the WP Migrate DB plugin
-3.  Go to Tools > Migrate DB in the WordPress admin area
-4.  Change the "Replace" fields so that the first field contains `//localhost/student` and the second contains `/Applications/MAMP/htdocs/student`
-5.  Click the Migrate button to export your DB
-<<<<<<< HEAD
-=======
-
-**Submitting your project:**
-
-When you're ready to submit your project, **please email a link to your GitHub repository containing your project** with your **database file attached** to jim.bennett@redacademy.com
->>>>>>> master
+1.  Add your instructor as an Administrator to your site (username: `instructor` / password: `instructor` / email: rob.hyrkiel@redacademy.com)
+2.  Install the All-In-One Migration plugin
+3.  Run the plugin within the WP dashboard and export as a file [important: remove node_modules from within your themes folder temporarily when running the plugin]
+4.  Send the exported file to your instructor via Slack.
