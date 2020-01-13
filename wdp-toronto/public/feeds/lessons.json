@@ -13,26 +13,21 @@
    {
       "title": "Foundation Day",
       "allDay": true,
-      "start": "2019-09-30"
-   },
-   {
-      "title": "Foundation Day",
-      "allDay": true,
-      "start": "2019-10-01"
+      "start": "2020-01-13"
    },
    {
       "title": "Pong Code Along",
       "allDay": true,
-      "start": "2019-10-15"
+      "start": "2020-01-28"
    },
    {
     "title": "Pong Code Along",
     "allDay": true,
-    "start": "2019-10-16"
+    "start": "2020-01-29"
    },
    {
       "title": "Pong Code Along",
       "allDay": true,
-      "start": "2019-10-17"
+      "start": "2020-01-30"
    }
 ]
