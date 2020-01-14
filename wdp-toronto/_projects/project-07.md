@@ -1,7 +1,7 @@
 ---
 layout: project
-title: Community Partner Project
-due: Thursday, March 16th (beginning of class)
+title: Project 7 - Community Project
+due: Thursday, December 19th (beginning of class)
 ---
 
 For your final project, you will work in groups to build a live, functioning version of a RED Community Partner Project that has previously been through a UX/UI design process.
@@ -12,6 +12,6 @@ Your course instructors will be available in-class while you work on your projec
 
 It is important that you **attend class everyday** during the final project lab time.
 
-All Community Projects are **due on March 26th**. You will showcase your completed work with your team in a project demo to your community partner and instructors on that day.
+All Community Projects are **due on March 29th**. You will showcase your completed work with your team in a project demo to your community partner and instructors on that day.
 
 More details will be supplied regarding your assigned community partners and teammates at the end of Week 9.

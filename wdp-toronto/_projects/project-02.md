@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 2 - Pong Game
-due: Monday, Feb 3rd (beginning of class)
+due: Monday, Oct 22st (beginning of class)
 ---
 
 For Project 2, you're going to re-create the classic [Pong game](https://en.wikipedia.org/wiki/Pong) using JavaScript.
@@ -56,7 +56,10 @@ Your project must:
 Want to challenge yourself? Your project could also:
 
 - Implement a stretch goal of your own design (be creative!) that requires a substantial amount of programming with JavaScript
+<<<<<<< HEAD
+=======
 
 ## Submission Instructions
 
-Push your latest code to your Github for review.
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** to jim.bennett@redacademy.com.
+>>>>>>> master

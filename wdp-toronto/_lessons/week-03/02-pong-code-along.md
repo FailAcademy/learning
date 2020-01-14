@@ -7,7 +7,7 @@ slides:
     "_slides/week-03/03b-intro-to-svgs.md",
     "_slides/week-03/03c-pong.md",
   ]
-lesson_date: 2020-01-27
+lesson_date: 2019-10-15
 ---
 
 ## Pre-Work

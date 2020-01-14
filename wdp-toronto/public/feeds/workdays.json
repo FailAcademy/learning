@@ -2,64 +2,70 @@
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2020-01-24"
+    "start": "2019-10-18"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2020-01-31"
+    "start": "2019-10-28"
   },
   {
     "title": "Project Work Day",
     "allDay": true,
-    "start": "2020-02-11"
+    "start": "2019-11-06"
   },
   {
     "title": "WordPress: Project 4",
     "allDay": true,
-    "start": "2020-02-21",
-    "end": "2020-02-29"
+    "start": "2019-11-12",
+    "end": "2019-11-16"
   },
   {
-    "title": "WordPress: Project 5",
+    "title": "Project Work Day",
     "allDay": true,
-    "start": "2020-03-03",
-    "end": "2020-03-07"
+    "start": "2019-11-19",
+    "end": "2019-11-23"
+  },
+  {
+    "title": "Development Week",
+    "allDay": true,
+    "start": "2019-11-25",
+    "end": "2019-11-30"
   },
   {
     "title": "Community Project Work",
     "allDay": true,
-    "start": "2020-03-09",
-    "end": "2020-03-27"
+    "start": "2019-12-02",
+    "end": "2019-12-20"
   },
   {
-    "title": "Grad",
+    "title": "Prom",
     "allDay": true,
-    "start": "2020-03-27"
+    "start": "2019-12-20"
   },
   {
     "title": "Project 1 Check-in",
     "allDay": true,
-    "start": "2020-10-11"
+    "start": "2019-10-11"
  },
  {
     "title": "Project 2 Check-in",
     "allDay": true,
-    "start": "2020-10-18"
+    "start": "2019-10-18"
  },
  {
     "title": "Project 3 Check-in",
     "allDay": true,
-    "start": "2020-10-25"
+    "start": "2019-10-25"
  },
  {
     "title": "Project 4 Check-in",
     "allDay": true,
-    "start": "2020-11-08"
+    "start": "2019-11-08"
  },
  {
     "title": "Project 5 Check-in",
     "allDay": true,
-    "start": "2020-11-22"
+    "start": "2019-11-22"
  }
 ]

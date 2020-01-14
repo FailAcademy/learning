@@ -1,16 +1,12 @@
 ---
 layout: project
 title: Project 4 - Inhabitent Site
-due: Monday, March 2nd (beginning of class)
+due: Monday, Nov 18th (beginning of class)
 ---
 
 For Project 4, you will create a multi-page website with a blog for a camping supply company called Inhabitent Camping Supply Co. using WordPress as a content management system.
 
-## Set-up Instructions
-
-[1. Download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-04.zip).
-
-[2. Download this starter theme to get going](https://github.com/robhyrk/wp-starter.git). Add this to your themes folder, rename it, and activate it within the WP dashboard. Update gulpfile.js proxy to match your environment.
+You can [download the project files here](https://s3-us-west-2.amazonaws.com/red-wdp/project-files/project-04.zip).
 
 ## Design Specifications
 
@@ -131,8 +127,8 @@ Your project must:
 - Contain a general archive (for authors, categories, etc.), styled appropriately (`archive.php`)
 - Contain a search results page, styled appropriately (`search.php`)
 - Contain a 404 page, styled appropriately (`404.php`)
-- Include a custom widget that allows business hours to easily be edited in the sidebar
-- Add a toggle-able search form (check out the Ajax Lite search plugin) to the site header
+- Include a custom widget plugin that allows business hours to easily be edited in the sidebar
+- Add a toggle-able search form to the site header where the search input is automatically focused when the form is toggled open, and closed when the input is blurred if it is empty
 
 ### Stretch Goals
 
@@ -145,11 +141,21 @@ Want to challenge yourself? Your project could also:
 
 ## Submission Instructions
 
+**How to export your database:**
+
 Once you have finished working on your site, please export your database by following these instructions:
 
-**Note:** Please ensure browser sync is OFF before proceeding with the steps below.
+**Note:** Please ensure browser sync is OFF before proceeding with the steps below. VERY IMPORTANT.
 
-1.  Add your instructor as an Administrator to your site (username: `instructor` / password: `instructor` / email: rob.hyrkiel@redacademy.com)
-2.  Install the All-In-One Migration plugin
-3.  Run the plugin within the WP dashboard and export as a file [important: remove node_modules from within your themes folder temporarily when running the plugin]
-4.  Send the exported file to your instructor via Slack.
+1.  Add your instructor as an Administrator to your site (username: `instructor` / password: `instructor` / email: dev@redacademy.com)
+2.  Install the WP Migrate DB plugin
+3.  Go to Tools > Migrate DB in the WordPress admin area
+4.  Change the "Replace" fields so that the first field contains `//localhost/student` and the second contains `/Applications/MAMP/htdocs/student`
+5.  Click the Migrate button to export your DB
+<<<<<<< HEAD
+=======
+
+**Submitting your project:**
+
+When you're ready to submit your project, **please email a link to your GitHub repository containing your project** with your **database file attached** to jim.bennett@redacademy.com
+>>>>>>> master
