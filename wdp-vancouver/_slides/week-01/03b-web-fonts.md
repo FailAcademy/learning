@@ -21,9 +21,9 @@ layout: false
 # Agenda
 
 1. Custom fonts on the web
-2. Using `@font-face`
-3. Using Google Fonts
-4. Web font services
+2. Using Google Fonts
+3. Web font services
+4. Using `@font-face`
 5. Icon fonts
 6. CSS Positioning
 
@@ -73,7 +73,61 @@ Thanks to CSS3, <br />those days are over!
 
 template: inverse
 
-# @font-face
+# Adding fonts with Google Fonts
+
+---
+
+# Using Google Fonts
+
+One popular alternative to directly embedding fonts in your website with [Google Fonts](https://www.google.com/fonts).
+
+To use Google Fonts, simply select the font you want to use, and embed the link in the `<head>` of your website:
+
+```html
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+```
+
+You can then use it throughout your CSS:
+
+```css
+body {
+  font-family: "Roboto", sans-serif;
+}
+```
+
+---
+
+# Fonts vs. Performance
+
+When using custom fonts, be sure to think about performance:
+
+.inline-images[
+![Google Fonts weight](/public/img/slide-assets/google-fonts-weight.png)
+]
+
+---
+
+template: inverse
+
+# Web Font Services
+
+---
+
+# Third-Party Services
+
+For fonts with licensing restrictions, you may have to use a third-party web font services if you want to use the font on your website.
+
+Some of these services include:
+
+* [Typekit](https://typekit.com/)
+* [Hoefler & Co.](http://www.typography.com/cloud/welcome/)
+* [Webtype](http://www.webtype.com/)
+
+---
+
+template: inverse
+
+# Adding fonts with CSS @font-face
 
 ---
 
@@ -163,60 +217,6 @@ You'll need to download both of the weights and their italic versions too for ea
 
 template: inverse
 
-# Google Web Fonts
-
----
-
-# Using Google Fonts
-
-One popular alternative to directly embedding fonts in your website with `@font-face` is to use [Google Fonts](https://www.google.com/fonts).
-
-To use Google Fonts, simply select the font you want to use, and embed the link in the `<head>` of your website:
-
-```html
-<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-```
-
-You can then use it throughout your CSS:
-
-```css
-body {
-  font-family: "Roboto", sans-serif;
-}
-```
-
----
-
-# Fonts vs. Performance
-
-When using custom fonts (whether through `@font-face` or Google Fonts), be sure to think about performance:
-
-.inline-images[
-![Google Fonts weight](/public/img/slide-assets/google-fonts-weight.png)
-]
-
----
-
-template: inverse
-
-# Web Font Services
-
----
-
-# Third-Party Services
-
-For fonts with licensing restrictions, you may have to use a third-party web font services if you want to use the font on your website.
-
-Some of these services include:
-
-* [Typekit](https://typekit.com/)
-* [Hoefler & Co.](http://www.typography.com/cloud/welcome/)
-* [Webtype](http://www.webtype.com/)
-
----
-
-template: inverse
-
 # What's an Icon Font?
 
 ---
@@ -288,7 +288,7 @@ It's up to you as to which you prefer, for Project 1 we can use the CSS option a
 
 **CSS Option:**
 
-To add Font Awesome you can add the following to the `<head>` of your HTML.
+To add Font Awesome you can add the following to the `<head>` of your HTML. You can find CSS options here [cdnjs.com](https://cdnjs.com/libraries/font-awesome)
 
 ```HTML
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
