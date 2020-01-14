@@ -603,112 +603,6 @@ Some tips for naming the classes and IDs in your HTML:
 
 ---
 
-# Attribute Selector
-
-We can always target form inputs by their `id` or `class`, but we can also target entire types of form elements using the [attribute selector](https://developer.mozilla.org/en/docs/Web/CSS/Attribute_selectors) in our CSS:
-
-```css
-input {
-  margin-bottom: 10px;
-}
-
-input[type="text"],
-input[type="search"] {
-  color: #111;
-  font-family: Helvetica, sans-serif;
-  padding: 2px 5px;
-}
-```
-
----
-
-# Pseudo-classes
-
-**[Pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)** are special built-in keywords you can add to elements to describe some dynamic state of the element:
-
-```css
-a {
-  color: red;
-  text-decoration: none;
-}
-
-a:hover {
-  color: blue;
-  text-decoration: underline;
-}
-```
-
-You can use the `:link` and `:visited` pseudo-classes for links, and `:hover`, `:active`, and `:focus` pseudo-classes for a broader array of elements.
-
-???
-
-* Explain pseudo-classes are useful when styling forms.
-
-Question to ask:
-
-* What should happen to an individual form input when a user **focuses** it?
-* How should buttons react when hovered or clicked?
-* How should the form display on a mobile device to assist with usability?
-
----
-
-# Pseudo-classes: State
-
-Expanding on the previous example, lets think about how certain elements can have different states.
-Psuedo-classes can help with styling the state of UI elements. For example the `<a>` tag has different states such as:
-
-- Hover, when the mouse-cursor moves over a link
-- Active, when a link is clicked, mouse-down state
-- Focus, when a link is clicked it becomes focused
-- Visited, after a link has been clicked it has been visited
-
-
----
-
-class: center, middle
-
-<iframe height="500" style="width: 100%;" scrolling="no" title="Pseudo Classes: hover, focus, &amp; visited" src="https://codepen.io/redacademy/embed/JjPVbVp?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/redacademy/pen/JjPVbVp'>Pseudo Classes: hover, focus, &amp; visited</a> by RED Academy
-  (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-
----
-
-# Pseudo-classes & Forms
-
-The `:focus` pseudo-class is also very useful when working with `<input>` elements, common when building Forms.
-
-```css
-input {
-  border: 1px solid #969696;
-}
-
-input:focus {
-  border: 1px solid #464646;
-}
-```
-
-*Note that when an element is clicked on it gains **Focus**, there's an event we will use later, in JavaScript, called **Blur**. This happens When you click off of a focused element, it loses focus.* 🤓
-
----
-
-# Pseudo-classes & Forms
-
-Similar to the `<a>` tag we can use the `:active` pseudo-class with buttons to provide feedback to a user when a button has been activated:
-
-```css
-button {
-  background-color: blue;
-}
-
-button:hover,
-button:active {
-  background-color: navy;
-}
-```
-
----
-
 # Exercise 3
 
 Let's get the width of our website under control.
@@ -905,6 +799,112 @@ And many more, just Google `CSS gradient generator`.
 Also note that generators can be a useful way of learning, over time you can try to memorize the code that generators create e.g. the order of properties and different values that can be used.
 
 If you Google `CSS generator` there will be many options you can try. Here's one example: [css3generator](http://css3generator.com/)
+
+---
+
+# Attribute Selector
+
+We can always target form inputs by their `id` or `class`, but we can also target entire types of form elements using the [attribute selector](https://developer.mozilla.org/en/docs/Web/CSS/Attribute_selectors) in our CSS:
+
+```css
+input {
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="search"] {
+  color: #111;
+  font-family: Helvetica, sans-serif;
+  padding: 2px 5px;
+}
+```
+
+---
+
+# Pseudo-classes
+
+**[Pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)** are special built-in keywords you can add to elements to describe some dynamic state of the element:
+
+```css
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+```
+
+You can use the `:link` and `:visited` pseudo-classes for links, and `:hover`, `:active`, and `:focus` pseudo-classes for a broader array of elements.
+
+???
+
+* Explain pseudo-classes are useful when styling forms.
+
+Question to ask:
+
+* What should happen to an individual form input when a user **focuses** it?
+* How should buttons react when hovered or clicked?
+* How should the form display on a mobile device to assist with usability?
+
+---
+
+# Pseudo-classes: State
+
+Expanding on the previous example, lets think about how certain elements can have different states.
+Psuedo-classes can help with styling the state of UI elements. For example the `<a>` tag has different states such as:
+
+- Hover, when the mouse-cursor moves over a link
+- Active, when a link is clicked, mouse-down state
+- Focus, when a link is clicked it becomes focused
+- Visited, after a link has been clicked it has been visited
+
+
+---
+
+class: center, middle
+
+<iframe height="500" style="width: 100%;" scrolling="no" title="Pseudo Classes: hover, focus, &amp; visited" src="https://codepen.io/redacademy/embed/JjPVbVp?height=265&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/redacademy/pen/JjPVbVp'>Pseudo Classes: hover, focus, &amp; visited</a> by RED Academy
+  (<a href='https://codepen.io/redacademy'>@redacademy</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+---
+
+# Pseudo-classes & Forms
+
+The `:focus` pseudo-class is also very useful when working with `<input>` elements, common when building Forms.
+
+```css
+input {
+  border: 1px solid #969696;
+}
+
+input:focus {
+  border: 1px solid #464646;
+}
+```
+
+*Note that when an element is clicked on it gains **Focus**, there's an event we will use later, in JavaScript, called **Blur**. This happens When you click off of a focused element, it loses focus.* 🤓
+
+---
+
+# Pseudo-classes & Forms
+
+Similar to the `<a>` tag we can use the `:active` pseudo-class with buttons to provide feedback to a user when a button has been activated:
+
+```css
+button {
+  background-color: blue;
+}
+
+button:hover,
+button:active {
+  background-color: navy;
+}
+```
 
 ---
 
