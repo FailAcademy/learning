@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: React Context
-slides: ['_slides/week-04/01-context.md']
+slides: ["_slides/week-04/01-context.md"]
 lesson_date: 2020-2-3
 ---
 
@@ -13,7 +13,7 @@ Keep working on your project.
 
 ## Learning Objectives
 
-- What is Context?
+- What is React Context?
 - Why and When use Context?
 - What is Context Provider
 - What is Context Consumer
