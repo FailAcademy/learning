@@ -30,46 +30,39 @@ lesson_date: 2020-2-4
 
 ---
 
-## Exercise 1
+# Exercise 1
 
-**Redux** and **React** serve different roles. Discuss with a partner the role of each in terms of handling:
+1. Create a file called `ItemPreviewProvider.js` in the `context` dir.
+2. Create a context object.
+3. Create initial state for your context.
 
-- Data
-- Views
-- Logic
-- Events
+# Exercise 2
 
----
+1. Create `ItemPreviewProvider` class and use your `initialState` in the `constructor` of this class. `Hint: this.state = {...};`
 
-## Exercise 2
+2. Create a `Provider` for this context and pass `state` in the `value` prop.
 
-Before we install `react-redux`, install Redux and Redux dev tools in Boomtown just like we did in the earlier exercises this week.
+3. Create methods to `update` and `reset` the state (`itemPreview`).
 
-Create a `redux` directory, and rough out the file and sub-directory structure. Set up your `store.js` just as we did for the grocery store exercise.
+# Exercise 3
 
-What kind of modules (i.e. action and reducer combos) do you think we'll need for this Boomtown?
+Wrap your app with the `ItemPreviewProvider` component in the `index.js` (client root) file.
 
----
+# Exercise 4
 
-## Exercise 3
+From the `ShareItemPreview` component subscribe to the `ItemPreviewContext` using the `Consumer` component.
 
-Let's build the `shareItemPreview` module together so we can grab this state from the Redux store in our `ShareItemPreview` component instead once we add `react-redux`.
+Use the received `itemPreview` data to pass in the `ItemCard` component as prop.
 
----
+# Exercise 5
 
-## Exercise 4
+Our form should send the updated values to item preview context, but some of the values may be missing. Like `tags` and `updatePreview`.
 
-Wire up the `FormSpy` component. It should send the values from the form to the store, but some of the values may be missing.
-Are you able to send the right tags to the store? What about the image preview, how does that work?
+How can we get all the `tags` from the server and `updatePreview` method from our context?
 
-In this exercise, we'll use a class method to do the following:
+`Hint`: use the `<Query />` component in `ShareContainer.js` to query all the `tags` and pass them down to our `ShareItemForm.js`.
 
-- If the user has selected a a file using the file input, generate a `base64` url of that file.
-  (Hint: you'll need to investigate the `btoa` JavaScript global function).
-- Dispatch all of the fields you'll need for the addItem mutation to the redux store, including the `base64` url.
-- include actions for reseting the form image preview, and reseting the form to it's `initialState`
-
----
+`Hint`: To get access to the `updatePreview` method, use the Consumer component and wrap your existing JSX in this class.
 
 ## Lab Activity
 
@@ -84,9 +77,8 @@ Also, the `ShareItemPreview` should update as the user adds information to the f
 Be sure to include:
 
 - Form validation messages
-- Upload input should only accept images, under 10mb
 - Data validation (Server & Client side)
-- Reset the Redux Store and the form when the Mutation is successful
+- Reset the context state and the form when the Mutation is successful
 - Redirect to the Items page on complete
 - Refetch the `ALL_USER_ITEMS` query with the updated item (Client-Side)
 
