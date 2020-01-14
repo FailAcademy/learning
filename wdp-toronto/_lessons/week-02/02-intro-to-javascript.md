@@ -2,7 +2,7 @@
 layout: lesson
 title: Intro to JavaScript
 slides: ['_slides/week-02/02-intro-to-javascript.md']
-lesson_date: 2019-10-07
+lesson_date: 2020-01-20
 ---
 
 ## Pre-Work

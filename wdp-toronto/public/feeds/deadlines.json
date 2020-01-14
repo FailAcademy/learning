@@ -2,43 +2,43 @@
   {
     "title": "Project 1 Due",
     "allDay": true,
-    "start": "2019-10-15",
+    "start": "2020-01-27",
     "url": "/project/project-01/"
   },
   {
     "title": "Project 2 Due",
     "allDay": true,
-    "start": "2019-10-21",
+    "start": "2020-02-03",
     "url": "/project/project-02/"
   },
   {
     "title": "Project 3 Due",
     "allDay": true,
-    "start": "2019-10-29",
+    "start": "2020-02-12",
     "url": "/project/project-03/"
   },
   {
     "title": "Project 4 Due",
     "allDay": true,
-    "start": "2019-11-18",
+    "start": "2020-03-02",
     "url": "/project/project-04/"
   },
   {
     "title": "Project 5 Due",
     "allDay": true,
-    "start": "2019-11-25",
+    "start": "2020-03-09",
     "url": "/project/project-05/"
   },
   {
     "title": "Project 6 Due",
     "allDay": true,
-    "start": "2019-12-02",
+    "start": "2020-12-02",
     "url": "/project/project-06/"
   },
   {
     "title": "Community Project Due",
     "allDay": true,
-    "start": "2019-12-19",
+    "start": "2020-03-26",
     "url": "/project/project-07/"
   }
 ]

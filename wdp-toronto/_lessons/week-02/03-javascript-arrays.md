@@ -2,7 +2,7 @@
 layout: lesson
 title: JavaScript Arrays
 slides: ["_slides/week-02/03-javascript-arrays.md"]
-lesson_date: 2019-10-08
+lesson_date: 2020-01-21
 ---
 
 ## Pre-Work
