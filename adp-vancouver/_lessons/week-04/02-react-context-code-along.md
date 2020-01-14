@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title: React Context (project code along)
-slides: ["_slides/week-04/02-react-and-redux.md"]
+slides: ["_slides/week-04/02-react-context-code-along.md"]
 lesson_date: 2020-2-4
 ---
 
@@ -9,26 +9,24 @@ lesson_date: 2020-2-4
 
 - Finish mark up for the `shareItemForm` and `shareItemPreview`. From your `Share.js` file call these two components to render on the share page.
 
-- Read the [Redux docs on React](http://redux.js.org/docs/basics/UsageWithReact.html)
+- Read the [React Context](https://reactjs.org/docs/context.html)
 
 ---
 
 ## Learning Objectives
 
 - Review how React components interact with pros and state.
-- Identify the roles of React and Redux when used together to display views and store state.
-- Use Redux to write state-free code in React.
-- Use `react-redux`, with `<Provider>` and `connect`
-- Use the `dispatch` prop to send actions to the Redux store from a React component.
+- Identify the role of React context to store global state.
+- Use Context to write state-free code in React.
+- Use React context, provider, and consumer.
 
 ---
 
 ## Keywords
 
-- `Provider`
-- `connect`
-- `mapStateToProps`
-- `mapDispatchToProps`
+- `React Context`
+- `Context provider`
+- `Context consumer`
 
 ---
 
@@ -96,6 +94,6 @@ Be sure to include:
 
 ## Additional Resources
 
-- [React-Redux Docs](https://github.com/reactjs/react-redux)
-- [Egghead.io React-Redux Tutorial](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)
-- [Quick Guide to React & Redux](https://www.reax.io/blog/2016/07/07/quick-guide-to-react-and-redux/)
+- [Getting Started with React Context](https://www.taniarascia.com/using-context-api-in-react/)
+
+- [Working with React Context](https://www.toptal.com/react/react-context-api)
