@@ -65,17 +65,6 @@ Node programs are **single threaded** and **highly parallel**.
 
 template: inverse
 
-# OSI Model
-
----
-
-Let's talk about how internet works!
-![OSI Layers](/public/img/slide-assets/OSI_model.png)
-
----
-
-template: inverse
-
 # A Simple Node App
 
 ---
@@ -118,13 +107,13 @@ Your `package.json` should look like this:
 Create a file called `index.js`. Use Node's [built-in `net` module](https://nodejs.org/api/net.html) to create a server which will handle incoming network connections (TCP/UDP):
 
 ```js
-const net = require('net');
+const net = require("net");
 const server = net.createServer();
 
-server.on('connection', handleConnection);
+server.on("connection", handleConnection);
 
 server.listen(9000, () => {
-  console.log('server listening to %j', server.address());
+  console.log("server listening to %j", server.address());
 });
 
 function handleConnection() {
@@ -310,18 +299,6 @@ Change your TCP service to deliver any incoming data to all connected clients.
 
 ---
 
-# Process: Memory & CPU
-
-Introducing the code recommended on the previous slide may have introduced a memory leak.
-
-Run the load tester to find out!
-
-_What do we have to do to prevent the memory leak?_
-
-checkout this [post](https://www.nearform.com/blog/self-detect-memory-leak-node/) to find out.
-
----
-
 template: inverse
 
 # Environment Variables
@@ -386,34 +363,11 @@ Take a moment and read through this tutorial from DigitalOcean: <br/>
 
 ---
 
-# Lab Activity
-
-Building a TCP server from scratch is not something you'll normally do. There are a wide range of behaviors and edge cases we have not accounted for.
-
-In this lab, we'll use Node's `http` and `fs` modules to build a more typical webserver based on `HTTP`!<br/><br/>
-**Your new HTTP server should:**
-
-- Listen for `HTTP` requests on port `3000`
-- Serve an `index.html` file (which should be a properly formatted html document) when the url reads http://localhost:3000/index.html
-- Serve the right `HTTP` error code if the url is for any other file.
-
-Good luck!
-
-_Note:_
-
-The `HTTP` protocol is the backbone of the web. We're going to learn more about the `HTTP` protocol in upcoming lessons. Use this lab as an opportunity to explore and ask questions.
-
-Remember, `http` is just another _layer of abstraction_ built using the `TCP` protocol "under the hood" to handle the networking activity.
-<br/>
-
----
-
 # What We've Learned
 
 - How to set up and use environment variables
-- What Node is and what where it came from
+- What Node is and where it came from
 - What the TCP/UDP protocols are
-- What the JS event loop is
 - How blocking versus non-blocking operations work in Node
 
 ---

@@ -18,7 +18,6 @@ Take a look at how you can debug your Node application using Chrome Dev Tools be
 - Understand the history and beginnings of Node.
 - Review TCP/UDP protocols.
 - Describe the Client-Server Computing Model.
-- Model JavaScript's event loop.
 - Build a simple TCP/UDP messaging server.
 - Install and use Node's profiling tools.
 - Understand the difference between _blocking IO_ and _non-blocking IO_.
@@ -29,10 +28,7 @@ Take a look at how you can debug your Node application using Chrome Dev Tools be
 
 - Node
 - Single Threaded
-- Event Loop
 - TCP/UDP
-- Process Manager
-- Memory Leak
 - Blocking/Non-blocking IO
 - Core Module
 
