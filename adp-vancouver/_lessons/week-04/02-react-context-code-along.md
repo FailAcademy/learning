@@ -30,13 +30,13 @@ lesson_date: 2020-2-4
 
 ---
 
-# Exercise 1
+## Exercise 1
 
 1. Create a file called `ItemPreviewProvider.js` in the `context` dir.
 2. Create a context object.
 3. Create initial state for your context.
 
-# Exercise 2
+## Exercise 2
 
 1. Create `ItemPreviewProvider` class and use your `initialState` in the `constructor` of this class. `Hint: this.state = {...};`
 
@@ -44,17 +44,17 @@ lesson_date: 2020-2-4
 
 3. Create methods to `update` and `reset` the state (`itemPreview`).
 
-# Exercise 3
+## Exercise 3
 
 Wrap your app with the `ItemPreviewProvider` component in the `index.js` (client root) file.
 
-# Exercise 4
+## Exercise 4
 
 From the `ShareItemPreview` component subscribe to the `ItemPreviewContext` using the `Consumer` component.
 
 Use the received `itemPreview` data to pass in the `ItemCard` component as prop.
 
-# Exercise 5
+## Exercise 5
 
 Our form should send the updated values to item preview context, but some of the values may be missing. Like `tags` and `updatePreview`.
 
