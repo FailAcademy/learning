@@ -1,8 +1,8 @@
 ---
 layout: lesson
 title: CSS Best Practices
-slides: ["_slides/week-01/04b-css-best-practices.md"]
-lesson_date: 2019-10-07
+slides: ['_slides/week-01/04b-css-best-practices.md']
+lesson_date: 2020-01-20
 ---
 
 ## Pre-Work
