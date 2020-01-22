@@ -25,9 +25,9 @@ layout: false
 # Agenda
 
 1. **Array basics**, what are arrays and how to use them
-2. **Interacting with the DOM** gather and create html elements
-2. **Using loops** to iterate through arrays
-3. **Modify arrays** with built-in methods
+2. **Interacting with the DOM** gather and create HTML elements
+3. **Using loops** to iterate through arrays
+4. **Modify arrays** with built-in methods
 
 ---
 
@@ -39,49 +39,50 @@ template: inverse
 
 # What Are Arrays?
 
-Arrays are a special object in JavaScript that store a list of values. 
+Arrays are a special object in JavaScript that store a list of elements.
 
-The key for each value is an **index number**. 
+Elements can be accessed by using their **index number**.
 
 ```js
-let shoppingList = ["milk", "bread", "eggs"];
+// array of elements
+let shoppingList = ['milk', 'bread', 'eggs'];
 
-// shoppingList[0]; // returns the value "milk"
-// shoppingList[1]; // returns the value "bread"
-// shoppingList[2]; // returns the value "eggs"
+// accessing elements
+shoppingList[0]; // "milk"
+shoppingList[1]; // "bread"
+shoppingList[2]; // "eggs"
 ```
-
 
 ---
 
 # Index Numbers?
 
 - **note** that with JavaScript, counting Arrays always starts at **0**
-- Index numbers are used to assign and access array values
+- Index numbers are used to assign & access array elements
 
-In the previous slide we saw how to get a value e.g. to get the second value stored in the shoppingList array we would write:
+In the previous slide we saw how to access an element e.g. to get the second elements value in the shoppingList array we could write:
 
 ```JavaScript
-shoppingList[1]; // returns the value "bread"
+shoppingList[1]; // "bread"
 ```
 
-To change a value we can access the array index and update the value.
+To update an elements value.
 
 ```JavaScript
-shoppingList[1] = "butter"; // index 1 is now "butter"
+shoppingList[1] = "butter"; // changed "bread" to "butter"
 ```
 
 ---
 
 # Using Arrays
 
-Values in an array are separated by commas which don't all have to be on 1 line as we've seen with the shoppingList:
+Elements in an array are separated by commas which don't all have to be on 1 line as we've seen with the shoppingList:
 
 ```js
 const products = [
-  'Stretch Knit Dress', 
-  'Cotton Blue Shirt', 
-  'Checked Stretch Dress', 
+  'Stretch Knit Dress',
+  'Cotton Blue Shirt',
+  'Checked Stretch Dress',
   'Blue Hipster Backpack'
 ];
 ```
@@ -98,13 +99,16 @@ Be sure to demonstrate how `.length` works here too.
 
 # Array Access
 
-Array elements are always stored in the order they were added and we can create variables to reference array indexes. 
-
-It's a bit easier to read the variable "hipsterBackpack" and know what it contains instead of "products[3]".
+Array elements are stored in the order they are added.
+We can create variables to reference array elements.
 
 ```js
-const products = ['Stretch Knit Dress', 'Cotton Blue Shirt', 
-'Checked Stretch Dress', 'Blue Hipster Backpack'];
+const products = [
+  'Stretch Knit Dress',
+  'Cotton Blue Shirt',
+  'Checked Stretch Dress',
+  'Blue Hipster Backpack'
+];
 
 const knitDress = products[0];
 const cottonShirt = products[1];
@@ -122,10 +126,10 @@ Arrays can also contain more complex information, as mentioned earlier "you can 
 
 ```js
 const products = [
-  ['Stretch Knit Dress', 169.00], 
-  ['Cotton Blue Shirt', 89.00], 
-  ['Checked Stretch Dress', 129.00], 
-  ['Blue Hipster Backpack', 69.00]
+  ['Stretch Knit Dress', 169.0],
+  ['Cotton Blue Shirt', 89.0],
+  ['Checked Stretch Dress', 129.0],
+  ['Blue Hipster Backpack', 69.0]
 ];
 
 const knitDress = products[0];
@@ -146,7 +150,7 @@ template: inverse
 
 # Arrays of Elements
 
-Sometimes it's useful to think about DOM elements as arrays:
+We can also store DOM elements in an array-like structure:
 
 ```html
 <h2>Bucket List:</h2>
@@ -157,7 +161,7 @@ Sometimes it's useful to think about DOM elements as arrays:
 </ul>
 ```
 
-We can use `querySelectorAll` or `getElementsByClassName` to gather an array of elements:
+Using `querySelectorAll` or `getElementsByClassName` we can create a collection of HTML elements:
 
 ```js
 const bucketListItemEls = document.querySelectorAll('ul li');
@@ -171,7 +175,7 @@ const importantItemText = bucketListItemEls[2].innerText;
 
 # Accessing Elements
 
-In the previous example we've seen how to grab a collection of html elements with `document.querySelectorAll` however there are many other `methods` available with the `document`.
+In the previous example we've seen how to grab a collection of html elements with `document.querySelectorAll` however there are many other `methods` available with the `document` Object.
 
 **Here are a few:**
 
@@ -202,15 +206,15 @@ document.createElement('p');
 
 # Appending Elements
 
-Creating elements is useful with JavaScript however we still need to append them to our html.
+Creating elements is useful with JavaScript however we still need to append them to our HTML.
 
-First you need to get an element to append to e.g.
+First you need to get an element to append to:
 
 ```html
 <ul id="bucketList"></ul>
 ```
 
-We can get the `<ul>` element and store a reference to it in a variable for access later e.g.
+We can get the `<ul>` element and store a reference to it in a variable for access later:
 
 ```JavaScript
 const bucketListUl = document.getElementById('bucketList');
@@ -310,8 +314,6 @@ for (let i = 1; i < 5; i++) {
 }
 ```
 
-You will likely find yourself using for loops most often with "arrays" (we'll get to those shortly...).
-
 ---
 
 # Arrays and Loops
@@ -319,11 +321,15 @@ You will likely find yourself using for loops most often with "arrays" (we'll ge
 Let's take our products list array and print it out in a list:
 
 ```js
-const products = ['Stretch Knit Dress', 'Cotton Blue Shirt', 
-'Checked Stretch Dress', 'Blue Hipster Backpack'];
+const products = [
+  'Stretch Knit Dress',
+  'Cotton Blue Shirt',
+  'Checked Stretch Dress',
+  'Blue Hipster Backpack'
+];
 ```
 
-Remember how we manually set the maximum number of loops before? We can use the `length` array method to get the number automatically:
+We can use the `length` property to get the number of array elements:
 
 ```js
 const totalProducts = products.length;
@@ -342,16 +348,18 @@ Often, you'll need to perform an operation on an array that involves _every elem
 We can use **built-in loop functions** to **loop over** each element in our array, with a callback function for each element:
 
 ```js
-const products = ['Stretch Knit Dress', 'Cotton Blue Shirt', 
-'Checked Stretch Dress', 'Blue Hipster Backpack'];
+const products = [
+  'Stretch Knit Dress',
+  'Cotton Blue Shirt',
+  'Checked Stretch Dress',
+  'Blue Hipster Backpack'
+];
 
 // Access each item and that item's index position.
 products.forEach(function(listItem, index) {
   console.log('Item at index:', index, 'is:', listItem);
 });
 ```
-
-.footnote[_* More on looping later..._]
 
 ---
 
@@ -384,7 +392,7 @@ template: inverse
 
 # More Array Methods
 
-While `forEach` is helpful, and there are quite a few more built-in array functions (typically called array **methods**).
+While `forEach` is helpful, and there are quite a few more built-in array methods.
 
 Have a look at the many **[built-in array methods on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#)**.
 
@@ -485,30 +493,30 @@ Be sure to explain why sorting numbers does not do what it should.
 
 You'll filter and transform arrays _so often_, there are JavaScript built-in array methods that you can (and will often) use to perform both **[filtering](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)** and **[mapping](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)** of Arrays
 
-- **filter** - allows us to filter an array so only certain elements are included. 
+- **filter** - allows us to filter an array so only certain elements are included.
 
-- **map** - allows us to perform an operation on each element of the array. 
+- **map** - allows us to perform an operation on each element of the array.
 
 **Note**: `map` and `filter` both create a **new array**.
+
 ---
 
 # Array `filter`
 
-
 ```js
 const products = [
-  ['Stretch Knit Dress', 169.00],
-  ['Cotton Blue Shirt', 89.00],
-  ['Checked Stretch Dress', 129.00],
-  ['Blue Hipster Backpack', 69.00],
+  ['Stretch Knit Dress', 169.0],
+  ['Cotton Blue Shirt', 89.0],
+  ['Checked Stretch Dress', 129.0],
+  ['Blue Hipster Backpack', 69.0]
 ];
 
 const underOneHundred = products.filter(function(product) {
-  if(product[1] < 100.00) return true;
+  if (product[1] < 100.0) return true;
 });
 ```
 
-`filter` applies the callback function to each element of the array, only elements where the callback returns `true` are included in the resulting array. 
+`filter` applies the callback function to each element of the array, only elements where the callback returns `true` are included in the resulting array.
 
 _What will `underOneHundred` contain?_
 
@@ -522,21 +530,21 @@ It may also be worth discussing at this point why/when it's useful to leave orig
 
 ```js
 const products = [
-  ['Stretch Knit Dress', 169.00],
-  ['Cotton Blue Shirt', 89.00],
-  ['Checked Stretch Dress', 129.00],
-  ['Blue Hipster Backpack', 69.00],
+  ['Stretch Knit Dress', 169.0],
+  ['Cotton Blue Shirt', 89.0],
+  ['Checked Stretch Dress', 129.0],
+  ['Blue Hipster Backpack', 69.0]
 ];
 
-const productNames = products.map(function(product) { 
+const productNames = products.map(function(product) {
   return product[0];
 });
 ```
 
-`map` applies the callback function to each element of the array and creates a new array based on the return values of the callback. 
+`map` applies the callback function to each element of the array and creates a new array based on the return values of the callback.
 
 _What will `productNames` contain?_
- 
+
 ---
 
 # What We've Learned
