@@ -94,7 +94,7 @@ import {
   Switch,
   Link,
   Redirect
-} from 'react-router-dom';
+} from "react-router-dom";
 ```
 
 ---
@@ -257,7 +257,7 @@ Let's use the `NavLink` instead. First, import the component from `react-router-
 import {
   // ...other imports
   NavLink
-} from 'react-router-dom';
+} from "react-router-dom";
 ```
 
 ---
@@ -477,10 +477,10 @@ Open your dev tools console, and run this code, line by line:
 window.history;
 
 // Run this, then try navigating back and forth
-history.replaceState(null, null, 'hello');
+history.replaceState(null, null, "hello");
 
 // Run this, now try navigating back and forth again
-history.pushState(null, null, 'hello');
+history.pushState(null, null, "hello");
 ```
 
 What do you notice? Be sure to watch the browser's address bar will you do this...
@@ -508,23 +508,6 @@ It's also helpful it you're building a quick and dirty React app and don't want 
 
 ---
 
-# Other Routers
-
-`MemoryRouter`:
-
-- An entirely in-memory router (doesn't depend on URLs in the browser address bar)
-- Useful for testing and proof-of-concept
-
-`StaticRouter`:
-
-- Meant to be used with server-side rendering
-
-`NativeRouter`:
-
-- For use in React Native apps
-
----
-
 # withRouter
 
 Sometimes you need to access to the `history` object’s properties (or the `match` or `location` props) outside of the named route in your app.
@@ -538,11 +521,11 @@ To do this, you can wrap the component that needs access to these props in the `
 Example of `withRouter` in use:
 
 ```js
-import React, { PropTypes } from 'react';
-import { withRouter } from 'react-router-dom';
+import React, { PropTypes } from "react";
+import { withRouter } from "react-router-dom";
 
 const Header = ({ history }) => (
-  <button onClick={() => history.push('/')}>Go Home</button>
+  <button onClick={() => history.push("/")}>Go Home</button>
 );
 
 Header.propTypes = {
@@ -553,8 +536,6 @@ Header.propTypes = {
 
 export default withRouter(Header); // THIS IS HOW WE USE IT!
 ```
-
-_We'll do a lot more with HOCs in our app when we add Redux next week..._
 
 ---
 

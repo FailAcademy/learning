@@ -59,7 +59,7 @@ Also, provide a wildcard redirect to `/items` for any undefined route using `<Re
 
 In today's lab we will finish setting up the routes for our app.
 
-After that, the remainder of the time this week will be spent putting on the finishing touches on the Week 1 version of Boomtown. That means fully building out the front-end using Material UI components too!
+After that, the remainder of the time this week will be spent putting on the finishing touches on the Week 3 version of Boomtown. That means fully building out the front-end using Material UI components too!
 
 ---
 
