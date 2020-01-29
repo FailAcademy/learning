@@ -34,25 +34,21 @@ Prior to class, read through the following documentation:
 
 ## Exercise 1
 
-#### Think Outside the Box.
+### Controlled vs. Uncontrolled Inputs
 
-Typeform built a business out of exceptional form UX. How did they do it?
-
-Partner up and come up with at least 5 ways Typeform breaks with the typical conventions we're used to, when it comes to the design of Web Forms.
-
-In 15 minutes we'll discuss what you came up with.
+1. Create a controlled form that takes input of email and password. `Hint:` create `state` and event handlers.
+2. Create an uncontrolled form that takes input of email and password. `Hint:` use `Ref`.
+3. Find the difference between two forms. `Hint:` [uncontrolled vs controlled forms](https://itnext.io/controlled-vs-uncontrolled-components-in-react-5cd13b2075f9)
 
 ---
 
 ## Exercise 2
 
-### Controlled vs. Uncontrolled Inputs
+Form Validation is a critical first step in improving the UX of your app. <br/>
 
-In this course we'll learn how to build amazing Web Forms using React. Before we start there a few
-basics we'll need to understand when it comes to working with forms in React.
+`Client-Side validation is never a security measure.`
 
-[![Edit jnz04y6q1w](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/jnz04y6q1w?moduleview=1&view=editor)
-Click the button above and follow the instructions in the `@TODO` to learn the basics of how React handles form inputs.
+Create and validate your form that takes input of email and password with Final-Form following this example from the [documentation](https://final-form.org/docs/react-final-form/examples/record-level-validation).
 
 ---
 
@@ -61,10 +57,12 @@ Click the button above and follow the instructions in the `@TODO` to learn the b
 ### A "Final" Rebuild
 
 Now that you know how to build forms using React and React Final-Form, return to the
-form you built in _Exercise 2_ and rebuild it using React Final-Form and Material UI input components.
+form you built in _Exercise 2_ and rebuild it using Material UI input components.
 
-- Validate all inputs and display an error messages (on submit only. Hint: add a submit button)
+- Validate all inputs and display error messages (on submit only. Hint: add a submit button)
+
 - Remove error messages when the user begins to type in the invalid input (Hint: `meta` prop of the `Field` component)
+
 - _Only_ if the form is valid, display the resulting input values in the UI
 
 ---
