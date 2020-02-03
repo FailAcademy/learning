@@ -1,6 +1,6 @@
 ---
 layout: slidedeck
-title: Authentication From Scratch (Server)
+title: Authentication
 ---
 
 {% highlight html %}
@@ -10,7 +10,7 @@ class: center, middle, inverse
 
 ---
 
-# Authentication From Scratch (Server)
+# Authentication
 
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
@@ -150,10 +150,10 @@ to hash and salt an incoming password.
 
 ```js
 // DEMO CODE EXAMPLE
-const bodyParser = require('body-parser');
-const bcrypt = require('bcryptjs');
+const bodyParser = require("body-parser");
+const bcrypt = require("bcryptjs");
 
-app.use('/signup', bodyParser.json(), async (req, res) => {
+app.use("/signup", bodyParser.json(), async (req, res) => {
   const SALT = 10;
   const password = await bcrypt.hash(req.password, SALT);
   console.log(password);
@@ -252,10 +252,10 @@ const apolloServer = new ApolloServer({
     return {
       req, //<- Add this!
       // ... etc
-      pgResource,
+      pgResource
     };
   },
-  schema,
+  schema
 });
 ```
 
