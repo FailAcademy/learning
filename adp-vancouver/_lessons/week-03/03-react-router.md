@@ -43,7 +43,7 @@ Visit **[Reddit](http://reddit.com)**. Click on several links and map out how th
 
 ## Exercise 2
 
-Add routes to your project in `client/routes/Layout.js`:
+Add routes to your project in `client/routes/index.js`:
 
 - The Items List page (`/items`)
 - The Home page (`/welcome`)
