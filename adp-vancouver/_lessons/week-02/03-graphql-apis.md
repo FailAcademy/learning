@@ -90,7 +90,7 @@ _Define your schema!_
   - `description` (its type `String` and it's required)
   - `itemowner` (its type is `User` and it's required)
   - `tags` (its type is a list of `Tag`s)
-  - `created` (its type is the custom `Date` scalar and it's required)
+  - `created` (its type is `String` and it's required)
   - `borrower` (its type is `User`)
 
 - The `User` type has the following fields:
