@@ -125,19 +125,6 @@ applyTags = (tags, allTags) => {
 
 ---
 
-# Continue...
-
-```js
-generateTagsText = (tags, selected) => {
-  return tags
-    .map(t => (selected.indexOf(t.id) > -1 ? t.title : false))
-    .filter(e => e)
-    .join(", ");
-};
-```
-
----
-
 # Lab Activity
 
 ### Finishing up with the addItem Mutation
