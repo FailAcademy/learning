@@ -13,7 +13,7 @@ Visit the Sass homepage and take a look around:
 
 Please read through this introductory article on Sass before the lesson:
 
-- [Intro to Sass | SCSS101](https://codepen.io/sasstantrum/post/intro-to-sass)
+- [Intro to Sass](https://codepen.io/sasstantrum/post/intro-to-sass)
 
 ---
 

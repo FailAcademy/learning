@@ -583,16 +583,24 @@ gulp.task('sass', function() {
   return gulp
     .src('./sass/style.scss')
     .pipe(sass())
-    .pipe(
-      autoprefixer({
-        browsers: ['last 2 versions'],
-      }),
-    )
-    .pipe(gulp.dest('./build/css'))
+    .pipe(autoprefixer())
     .pipe(cssnano())
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('./build/css'));
 });
+```
+
+---
+# Adding support for older browser versions
+
+Autoprefixer can add automatically add vendor prefixes for older browsers. By default it only adds prefixes for the current and the last version, but we can add support for other browsers by setting a browserslist parameter in the package.json file.
+
+```json
+  "author": "Kevin McCallister",
+  "license": "ISC",
+  "browserslist" : ["last 2 versions"],
+  "devDependencies": {
+    …
 ```
 
 ---
@@ -602,17 +610,13 @@ gulp.task('sass', function() {
 We can add easier-to-read error messages into our Gulp set-up to let us know when we have syntax error in our Sass. To do that, we'll have to [install and add](https://www.npmjs.com/package/gulp-prettyerror) `gulp-prettyerror`:
 
 ```js
+const prettyError = require('gulp-prettyerror'); // ADD THIS LINE
 gulp.task('sass', function() {
   return gulp
     .src('./sass/style.scss')
     .pipe(prettyError()) // ADD THIS LINE
     .pipe(sass())
-    .pipe(
-      autoprefixer({
-        browsers: ['last 2 versions'],
-      }),
-    )
-    .pipe(gulp.dest('./build/css'))
+    .pipe(autoprefixer())
     .pipe(cssnano())
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('./build/css'));
