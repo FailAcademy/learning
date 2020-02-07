@@ -22,28 +22,43 @@
    },
    {
       "title": "PPD 3-5pm",
-      "allDay": true,
-      "start": "2019-11-21"
+      "allDay": false,
+      "start": "2020-01-29T15:00:00"
    },
    {
       "title": "Intro to SEO",
       "allDay": true,
-      "start": "2019-11-27"
+      "start": "2020-03-11"
    },
    {
       "title": "PPD 3-5pm",
-      "allDay": true,
-      "start": "2019-12-05"
+      "allDay": false,
+      "start": "2020-02-05T15:00:00"
    },
    {
       "title": "PPD 3-5pm",
-      "allDay": true,
-      "start": "2019-12-12"
+      "allDay": false,
+      "start": "2020-02-13T15:00:00"
+   },
+   {
+      "title": "PPD 3-5pm",
+      "allDay": false,
+      "start": "2020-03-19T15:00:00"
+   },
+   {
+      "title": "PPD 9-10pm (Mock Interview session)",
+      "allDay": false,
+      "start": "2020-03-23T09:00:00"
+   },
+   {
+      "title": "PPD 3-5pm",
+      "allDay": false,
+      "start": "2020-03-26T15:00:00"
    },
    {
       "title": "Design Presentations",
       "allDay": true,
-      "start": "2019-12-20"
+      "start": "2020-03-12"
    },
    {
       "title": "CP Presentations",
