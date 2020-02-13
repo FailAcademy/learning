@@ -15,27 +15,32 @@
     "start": "2020-02-11"
   },
   {
+    "title": "Project Work Day",
+    "allDay": true,
+    "start": "2020-02-14"
+  },
+  {
     "title": "WordPress: Project 4",
     "allDay": true,
-    "start": "2020-02-21",
-    "end": "2020-02-29"
+    "start": "2020-02-19",
+    "end": "2020-03-07"
   },
   {
     "title": "WordPress: Project 5",
     "allDay": true,
-    "start": "2020-03-03",
-    "end": "2020-03-07"
+    "start": "2020-03-09",
+    "end": "2020-03-14"
   },
   {
     "title": "Community Project Work",
     "allDay": true,
-    "start": "2020-03-09",
-    "end": "2020-03-27"
+    "start": "2020-03-16",
+    "end": "2020-04-02"
   },
   {
     "title": "Grad",
     "allDay": true,
-    "start": "2020-03-27"
+    "start": "2020-04-03"
   },
   {
     "title": "Project 1 Check-in",

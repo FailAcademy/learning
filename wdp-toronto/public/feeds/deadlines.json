@@ -14,19 +14,19 @@
   {
     "title": "Project 3 Due",
     "allDay": true,
-    "start": "2020-02-12",
+    "start": "2020-02-18",
     "url": "/project/project-03/"
   },
   {
     "title": "Project 4 Due",
     "allDay": true,
-    "start": "2020-03-02",
+    "start": "2020-03-09",
     "url": "/project/project-04/"
   },
   {
     "title": "Project 5 Due",
     "allDay": true,
-    "start": "2020-03-09",
+    "start": "2020-03-16",
     "url": "/project/project-05/"
   },
   {
@@ -38,7 +38,7 @@
   {
     "title": "Community Project Due",
     "allDay": true,
-    "start": "2020-03-26",
+    "start": "2020-04-02",
     "url": "/project/project-07/"
   }
 ]

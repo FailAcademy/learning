@@ -5,7 +5,7 @@ slides:
   [
     "_slides/week-07/01-post-types-taxonomies-fields.md",
   ]
-lesson_date: 2020-02-19
+lesson_date: 2020-02-24
 ---
 
 ## Pre-Work

@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Community Partner Project
-due: Thursday, March 16th (beginning of class)
+due: Thursday, April 2nd (beginning of class)
 ---
 
 For your final project, you will work in groups to build a live, functioning version of a RED Community Partner Project that has previously been through a UX/UI design process.

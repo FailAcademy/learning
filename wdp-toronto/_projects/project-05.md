@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 5 - Quotes on Dev
-due: Monday, March 9th (beginning of class)
+due: Monday, March 16th (beginning of class)
 ---
 
 For Project 5, you will combine your JavaScript and WordPress skills together to build out the functionality for a website called Quotes on Dev using the WordPress REST API.

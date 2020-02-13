@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project 4 - Inhabitent Site
-due: Monday, March 2nd (beginning of class)
+due: Monday, March 9th (beginning of class)
 ---
 
 For Project 4, you will create a multi-page website with a blog for a camping supply company called Inhabitent Camping Supply Co. using WordPress as a content management system.
@@ -108,7 +108,7 @@ Your project must:
 - Use a WordPress menu (configured through the admin interface) for the main site navigation
 - Use custom post types for additional content types where required (using a functionality plugin)
 - Use custom taxonomies for additional metadata where required (using a functionality plugin)
-- Use custom fields for additional metadata where required (using the Custom Field Suite plugin)
+- Use custom fields for additional metadata where required (using the Advanced Custom Fields plugin)
 - Use Gutenberg blocks to support content layout for all post types
 - Include a widgetized area in the sidebar
 - Enqueue CSS and JS files properly in the theme's functions.php file
