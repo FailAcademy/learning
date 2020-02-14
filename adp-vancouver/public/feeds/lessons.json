@@ -46,12 +46,18 @@
       "allDay": true,
       "start": "2020-2-7"
     },
-  {
-    "title": "Self Directed Meteor Project Work",
+    {
+      "title": "Self Directed Meteor Project Work",
+      "allDay": true,
+      "start": "2020-2-13",
+      "end": "2020-2-25"
+    },
+    {
+    "title": "TDD + Interview",
     "allDay": true,
-    "start": "2020-2-13",
-    "end": "2020-2-25"
- },
+    "start": "2020-2-27",
+    "end": "2020-2-27"
+    }, 
    {
       "title": "Portfolio Week",
       "allDay": true,
