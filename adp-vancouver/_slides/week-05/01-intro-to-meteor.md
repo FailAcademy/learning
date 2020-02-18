@@ -189,12 +189,6 @@ Historically, Meteor has been difficult to deploy, because of its unique archite
 This is no longer the case. MDG has created [Galaxy](https://www.meteor.com/hosting), an all in one paid hosting
 solution for Meteor apps.
 
-The Open Source community has also built deployment solutions. The 2 most popular are:
-
-- [MUP](https://github.com/zodern/meteor-up) Built by Arounoda Surispala, a hero in the Meteor OS community.
-- [meteor-now](https://www.npmjs.com/package/meteor-now) Built on the fantastic **[Now](https://zeit.co/now)** Node deployment tool.
-  Install Now and deploy your example app to see just how easy it is...
-
 ---
 
 # Meteor's Parts
