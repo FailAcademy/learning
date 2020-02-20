@@ -65,7 +65,7 @@ To deploy, after your changes are merged into master:
 
 `git checkout [your production branch]`
 
-`git cherry-pick [commit hash]`
+`git cherry-pick -X theirs [commit hash]`
 
 (If you do want to merge a _merge commit_ you can use `git cherry-pick -m 1 [merge commit hash]`, but don't.)
 
