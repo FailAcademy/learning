@@ -15,6 +15,7 @@ class: center, middle, inverse
 .title-logo[![Red logo](/public/img/red-logo-white.svg)]
 
 ---
+
 layout: false
 
 # Agenda
@@ -24,14 +25,16 @@ layout: false
 3. Time complexity
 4. Big O
 5. Using data structures to increase performance
-6. EVENT MORE TDD PRACTICE!
+6. EVEN MORE TDD PRACTICE!
 
 ---
+
 template: inverse
 
 # Review: <br />String Compression Lab
 
 ---
+
 template: inverse
 
 # More TDD Practice
@@ -56,15 +59,17 @@ The most obvious way to solve this problem is by using a nested loop. For each c
 This has a big O if n^2. [The solution is here.](https://github.com/redacademy/adp-exercise-solutions/blob/master/adp-testing-week/lib/first-unique.js)
 
 ---
+
 template: inverse
 
 # Time Complexity & Big O Notation
 
 ---
+
 class: center, middle
 
 .large[
-  How long did your algorithm take to execute?
+How long did your algorithm take to execute?
 ]
 
 ???
@@ -117,7 +122,7 @@ Grouped by orders of magnitude, defined using **Big O Notation**:
 
 - Constant `O(1)`
 - N Operations `O(n)`
-- N*N Operations `O(n^2)`
+- N\*N Operations `O(n^2)`
 - N^N Operations `O(n^n)`
 - N! Operations `O(n!)`
 
@@ -139,6 +144,7 @@ Figure out the time complexity of your solution to Exercise 1.
 - It will be n^2 because of the nested loop
 
 ---
+
 template: inverse
 
 # Strategies for Handling Time Complexity
@@ -147,8 +153,7 @@ template: inverse
 
 # Using Data Structures for Counting
 
-
-What if the first thing you do when iterating over an array is to 'count' the elements within it? 
+What if the first thing you do when iterating over an array is to 'count' the elements within it?
 
 How could this apply to the **First Unique Character** problem?
 
@@ -183,7 +188,7 @@ The function should return `5`.
 
 ???
 
-- Start with the **Brute Force** method. 
+- Start with the **Brute Force** method.
 - [The solution is available here](https://github.com/redacademy/adp-exercise-solutions/blob/master/adp-testing-week/lib/missing-integer.js).
 
 ---
@@ -196,7 +201,7 @@ The function should return `5`.
 - Store the count in an array
 - The index of the array element is the number being counted
 
-*What's our new time complexity?*
+_What's our new time complexity?_
 
 ???
 
