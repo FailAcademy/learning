@@ -216,7 +216,7 @@ For Android, we would see the Java equivalent in the `MainActivity.java` file.
 # Debugging Tools
 
 .left-column[
-![React Native debugging](/public/img/slide-assets/rn-ios-debugging.png)
+![React Native debugging](/public/img/slide-assets/ios-debugging-tool.png)
 ]
 
 .right-column[
