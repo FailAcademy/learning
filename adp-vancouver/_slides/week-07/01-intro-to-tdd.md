@@ -237,13 +237,13 @@ Nesting callbacks is generally considered bad practice outside of writing tests,
 If your code is indented properly, you will see a series of closing parens/braces in a 45 degree angle at the end of a file.
 
 ```js
-   // Good
-   });
- });
+    // Good
+    });
+  });
 });
 
-   // Probably a bug
-   });
+    // Probably a bug
+    });
 });
 ```
 
@@ -396,6 +396,31 @@ The process we've been going through is called red-green-refactor
 - We write a failing test (RED)
 - We write MINIMAL code to make it pass (GREEN)
 - We refactor the code to make it better, and run our tests to make sure it still works
+
+This might be a good time to point out some helpful features of test runners.
+Jest has both of these:
+
+- A "watch" mode so that the tests will immediately run again
+  when you make edits to your code.
+
+  `npm test -- --watch` or `npm test -- --watchAll`
+
+  The `--watch` version lets you rerun only the tests to do with files which were edited,
+  but needs the project to be a git or hg repository.
+
+  The dashes are required in the commands above so NPM knows the option "--watch" is for
+  the delegated test runner (jest), not for NPM itself.
+
+- A way to limit the tests to run.
+
+  Jest can take a filter as another parameter which will do a regex match on test files:
+
+  `npm test frog`
+
+  The dashes aren't needed here because `npm test` doesn't take any positional arguments,
+  so it knows you must mean them to be for the delegated runner.
+
+  Alternatively, the watch mode gives a menu from which you can interactively give a test filter.
 
 ---
 
